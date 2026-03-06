@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     /// <summary>
-    /// The cursor for the next page of records.
+    /// Specifies the paging information needed to retrieve the next set of results in a paginated API response
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CRM_Lists_NextPage : IAdditionalDataHolder, IParsable

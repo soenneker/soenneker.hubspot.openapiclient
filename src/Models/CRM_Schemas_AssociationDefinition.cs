@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     /// <summary>
-    /// Defines an association between two object types.
+    /// The definition of an association
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CRM_Schemas_AssociationDefinition : IAdditionalDataHolder, IParsable

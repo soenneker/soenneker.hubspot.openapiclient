@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     /// <summary>
-    /// The options available when a property is an enumeration
+    /// A HubSpot property option
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CRM_Schemas_Option : IAdditionalDataHolder, IParsable
