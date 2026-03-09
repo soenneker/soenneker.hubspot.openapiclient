@@ -33,7 +33,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.SitePages.Item.Draft.Push
         {
         }
         /// <summary>
-        /// Take any changes from the draft version of the Site Page and apply them to the live version.
+        /// Take any changes from the draft version of the website page and apply them to the live version.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -51,7 +51,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.SitePages.Item.Draft.Push
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Take any changes from the draft version of the Site Page and apply them to the live version.
+        /// Take any changes from the draft version of the website page and apply them to the live version.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

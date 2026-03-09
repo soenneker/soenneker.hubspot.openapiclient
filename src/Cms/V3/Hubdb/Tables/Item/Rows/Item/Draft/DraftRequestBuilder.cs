@@ -76,7 +76,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Hubdb.Tables.Item.Rows.Item.Dra
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Hubdb_HubDbTableRowV3>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Hubdb_HubDbTableRowV3.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Sparse updates a single row in the table&apos;s draft version.All the column values need not be specified. Only the columns or fields that needs to be modified can be specified.See the &quot;Create a row&quot; endpoint for instructions on how to format the JSON row definitions.
+        /// Partially update a single row in the table&apos;s draft version.All the column values need not be specified. Only the columns or fields that needs to be modified can be specified.See the &quot;Create a row&quot; endpoint for instructions on how to format the JSON row definitions.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Hubdb_HubDbTableRowV3"/></returns>
         /// <param name="body">The request body</param>
@@ -153,7 +153,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Hubdb.Tables.Item.Rows.Item.Dra
             return requestInfo;
         }
         /// <summary>
-        /// Sparse updates a single row in the table&apos;s draft version.All the column values need not be specified. Only the columns or fields that needs to be modified can be specified.See the &quot;Create a row&quot; endpoint for instructions on how to format the JSON row definitions.
+        /// Partially update a single row in the table&apos;s draft version.All the column values need not be specified. Only the columns or fields that needs to be modified can be specified.See the &quot;Create a row&quot; endpoint for instructions on how to format the JSON row definitions.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

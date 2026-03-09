@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders.Batc
         {
         }
         /// <summary>
-        /// Update the Folder objects identified in the request body.
+        /// Retrieve a batch of landing page folders as identified in the request body.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_BatchResponseContentFolder"/></returns>
         /// <param name="body">Wrapper for providing an array of strings as inputs.</param>
@@ -54,7 +54,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders.Batc
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_BatchResponseContentFolder>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_BatchResponseContentFolder.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Update the Folder objects identified in the request body.
+        /// Retrieve a batch of landing page folders as identified in the request body.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">Wrapper for providing an array of strings as inputs.</param>
@@ -85,7 +85,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders.Batc
             return new global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders.Batch.Read.ReadRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Update the Folder objects identified in the request body.
+        /// Retrieve a batch of landing page folders as identified in the request body.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ReadRequestBuilderPostQueryParameters 

@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Carts.Batch.Upsert
         {
         }
         /// <summary>
-        /// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
+        /// Create or update records identified by a unique property value as specified by the `idProperty` query parameter.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Carts_BatchResponseSimplePublicUpsertObject"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Carts.Batch.Upsert
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Carts_BatchResponseSimplePublicUpsertObject>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Carts_BatchResponseSimplePublicUpsertObject.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
+        /// Create or update records identified by a unique property value as specified by the `idProperty` query parameter.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

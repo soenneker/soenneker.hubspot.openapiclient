@@ -61,7 +61,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages
             get => new global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Schedule.ScheduleRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.cms.v3.pages.landingPages.item collection</summary>
-        /// <param name="position">The Landing Page id.</param>
+        /// <param name="position">The ID of the landing page.</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Item.WithObjectItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Item.WithObjectItemRequestBuilder this[string position]
         {
@@ -107,7 +107,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_CollectionResponseWithTotalPageForwardPaging>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_CollectionResponseWithTotalPageForwardPaging.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Create a new Landing Page
+        /// Create a new landing page.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_Page"/></returns>
         /// <param name="body">Model definition for a landing page or site page.</param>
@@ -146,7 +146,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages
             return requestInfo;
         }
         /// <summary>
-        /// Create a new Landing Page
+        /// Create a new landing page.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">Model definition for a landing page or site page.</param>

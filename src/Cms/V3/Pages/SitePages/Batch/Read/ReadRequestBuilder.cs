@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.SitePages.Batch.Read
         {
         }
         /// <summary>
-        /// Retrieve the Site Page objects identified in the request body.
+        /// Retrieve a batch of website pages as specified in the request body.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_BatchResponsePage"/></returns>
         /// <param name="body">Wrapper for providing an array of strings as inputs.</param>
@@ -54,7 +54,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.SitePages.Batch.Read
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_BatchResponsePage>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_BatchResponsePage.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieve the Site Page objects identified in the request body.
+        /// Retrieve a batch of website pages as specified in the request body.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">Wrapper for providing an array of strings as inputs.</param>
@@ -85,7 +85,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.SitePages.Batch.Read
             return new global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.SitePages.Batch.Read.ReadRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Retrieve the Site Page objects identified in the request body.
+        /// Retrieve a batch of website pages as specified in the request body.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ReadRequestBuilderPostQueryParameters 

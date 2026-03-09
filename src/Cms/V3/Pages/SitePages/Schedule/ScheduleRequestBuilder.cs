@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.SitePages.Schedule
         {
         }
         /// <summary>
-        /// Schedule a Site Page to be Published
+        /// Schedule a website page to published at a future time.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="body">Request body object for scheduling the publish of content</param>
@@ -54,7 +54,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.SitePages.Schedule
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Schedule a Site Page to be Published
+        /// Schedule a website page to published at a future time.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">Request body object for scheduling the publish of content</param>

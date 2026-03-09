@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Carts.Search
         {
         }
         /// <summary>
-        /// Execute a search for carts based on the specified search criteria, such as filters and properties, and retrieve the matching results.
+        /// Search for carts based on the specified search criteria, such as filters and properties, and retrieve the matching results.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Carts_CollectionResponseWithTotalSimplePublicObject"/></returns>
         /// <param name="body">Describes a search request</param>
@@ -54,7 +54,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Carts.Search
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Carts_CollectionResponseWithTotalSimplePublicObject>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Carts_CollectionResponseWithTotalSimplePublicObject.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Execute a search for carts based on the specified search criteria, such as filters and properties, and retrieve the matching results.
+        /// Search for carts based on the specified search criteria, such as filters and properties, and retrieve the matching results.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">Describes a search request</param>

@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Item.Revisio
         {
         }
         /// <summary>
-        /// Takes a specified version of a Landing Page, sets it as the new draft version of the Landing Page.
+        /// Specify a previous version of a landing page to set as the page draft.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_Page"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Item.Revisio
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_Page>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_Page.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Takes a specified version of a Landing Page, sets it as the new draft version of the Landing Page.
+        /// Specify a previous version of a landing page to set as the page draft.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

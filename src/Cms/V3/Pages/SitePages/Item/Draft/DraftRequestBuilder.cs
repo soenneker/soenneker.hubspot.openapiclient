@@ -46,7 +46,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.SitePages.Item.Draft
         {
         }
         /// <summary>
-        /// Retrieve the full draft version of the Site Page.
+        /// Retrieve the full draft version of a website page, specified by its ID.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_Page"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -64,7 +64,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.SitePages.Item.Draft
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_Page>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_Page.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Sparse updates the draft version of a single Site Page object identified by the id in the path.You only need to specify the column values that you are modifying.
+        /// Partially update the draft version of a website page, specified by page ID. You only need to specify the values for the details that you&apos;re modifying.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_Page"/></returns>
         /// <param name="body">Model definition for a landing page or site page.</param>
@@ -84,7 +84,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.SitePages.Item.Draft
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_Page>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_Page.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieve the full draft version of the Site Page.
+        /// Retrieve the full draft version of a website page, specified by its ID.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -103,7 +103,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.SitePages.Item.Draft
             return requestInfo;
         }
         /// <summary>
-        /// Sparse updates the draft version of a single Site Page object identified by the id in the path.You only need to specify the column values that you are modifying.
+        /// Partially update the draft version of a website page, specified by page ID. You only need to specify the values for the details that you&apos;re modifying.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">Model definition for a landing page or site page.</param>

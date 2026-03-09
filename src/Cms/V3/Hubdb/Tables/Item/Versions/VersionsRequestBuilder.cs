@@ -16,7 +16,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Hubdb.Tables.Item.Versions
     public partial class VersionsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.cms.v3.hubdb.tables.item.versions.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The ID of the version to delete.</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Hubdb.Tables.Item.Versions.Item.WithVersionItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Hubdb.Tables.Item.Versions.Item.WithVersionItemRequestBuilder this[long position]
         {
@@ -28,7 +28,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Hubdb.Tables.Item.Versions
             }
         }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.cms.v3.hubdb.tables.item.versions.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The ID of the version to delete.</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Hubdb.Tables.Item.Versions.Item.WithVersionItemRequestBuilder"/></returns>
         [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
         public global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Hubdb.Tables.Item.Versions.Item.WithVersionItemRequestBuilder this[string position]

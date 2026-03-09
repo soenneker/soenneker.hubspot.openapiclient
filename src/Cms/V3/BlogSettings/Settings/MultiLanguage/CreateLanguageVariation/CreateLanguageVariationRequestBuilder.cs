@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.BlogSettings.Settings.MultiLang
         {
         }
         /// <summary>
-        /// Create a new language variation from an existing blog
+        /// Create a new language variation from an existing blog.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Blog_Settings_Blog"/></returns>
         /// <param name="body">Request body object for creating new language variant blog.</param>
@@ -54,7 +54,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.BlogSettings.Settings.MultiLang
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Blog_Settings_Blog>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Blog_Settings_Blog.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Create a new language variation from an existing blog
+        /// Create a new language variation from an existing blog.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">Request body object for creating new language variant blog.</param>

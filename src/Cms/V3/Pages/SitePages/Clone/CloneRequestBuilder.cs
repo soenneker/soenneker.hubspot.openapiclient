@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.SitePages.Clone
         {
         }
         /// <summary>
-        /// Clone a Site Page
+        /// Create a copy of an existing website page.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_Page"/></returns>
         /// <param name="body">Request body object for cloning content.</param>
@@ -54,7 +54,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.SitePages.Clone
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_Page>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_Page.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Clone a Site Page
+        /// Create a copy of an existing website page.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">Request body object for cloning content.</param>

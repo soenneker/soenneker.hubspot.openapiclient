@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.SitePages.Batch.Create
         {
         }
         /// <summary>
-        /// Create the Site Page objects detailed in the request body.
+        /// Create a batch of website pages as specified in the request body.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_BatchResponsePage"/></returns>
         /// <param name="body">Wrapper for providing an array of pages as inputs.</param>
@@ -54,7 +54,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.SitePages.Batch.Create
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_BatchResponsePage>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_BatchResponsePage.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Create the Site Page objects detailed in the request body.
+        /// Create a batch of website pages as specified in the request body.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">Wrapper for providing an array of pages as inputs.</param>

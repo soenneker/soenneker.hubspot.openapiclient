@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.SitePages.MultiLanguage.D
         {
         }
         /// <summary>
-        /// Detach a site page from a multi-language group.
+        /// Detach a website page from a multi-language group.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="body">Request body object for detaching objects from multi-language groups.</param>
@@ -54,7 +54,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.SitePages.MultiLanguage.D
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Detach a site page from a multi-language group.
+        /// Detach a website page from a multi-language group.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">Request body object for detaching objects from multi-language groups.</param>

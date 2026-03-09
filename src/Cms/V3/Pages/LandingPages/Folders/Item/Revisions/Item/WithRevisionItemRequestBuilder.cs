@@ -40,7 +40,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders.Item
         {
         }
         /// <summary>
-        /// Retrieves a previous version of a Folder
+        /// Retrieve a previous version of a folder, specified by the folder ID and revision ID.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_VersionContentFolder"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -58,7 +58,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders.Item
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_VersionContentFolder>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_VersionContentFolder.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieves a previous version of a Folder
+        /// Retrieve a previous version of a folder, specified by the folder ID and revision ID.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

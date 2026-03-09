@@ -83,7 +83,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.SitePages
         {
         }
         /// <summary>
-        /// Get the list of site pages. Supports paging and filtering. This method would be useful for an integration that examined these models and used an external service to suggest edits.
+        /// Retrieve all website pages. Supports paging and filtering. This method would be useful for an integration that examined these models and used an external service to suggest edits.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_CollectionResponseWithTotalPageForwardPaging"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -101,7 +101,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.SitePages
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_CollectionResponseWithTotalPageForwardPaging>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_CollectionResponseWithTotalPageForwardPaging.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Create a new Site Page
+        /// Create a new website page.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_Page"/></returns>
         /// <param name="body">Model definition for a landing page or site page.</param>
@@ -121,7 +121,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.SitePages
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_Page>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_Page.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get the list of site pages. Supports paging and filtering. This method would be useful for an integration that examined these models and used an external service to suggest edits.
+        /// Retrieve all website pages. Supports paging and filtering. This method would be useful for an integration that examined these models and used an external service to suggest edits.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -140,7 +140,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.SitePages
             return requestInfo;
         }
         /// <summary>
-        /// Create a new Site Page
+        /// Create a new website page.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">Model definition for a landing page or site page.</param>
@@ -171,7 +171,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.SitePages
             return new global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.SitePages.SitePagesRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Get the list of site pages. Supports paging and filtering. This method would be useful for an integration that examined these models and used an external service to suggest edits.
+        /// Retrieve all website pages. Supports paging and filtering. This method would be useful for an integration that examined these models and used an external service to suggest edits.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class SitePagesRequestBuilderGetQueryParameters 

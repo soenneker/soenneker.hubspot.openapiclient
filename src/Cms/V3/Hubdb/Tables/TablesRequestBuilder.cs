@@ -25,7 +25,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Hubdb.Tables
             get => new global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Hubdb.Tables.Draft.DraftRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.cms.v3.hubdb.tables.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The ID or name of the HubDB table.</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Hubdb.Tables.Item.WithTableIdOrNameItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Hubdb.Tables.Item.WithTableIdOrNameItemRequestBuilder this[string position]
         {

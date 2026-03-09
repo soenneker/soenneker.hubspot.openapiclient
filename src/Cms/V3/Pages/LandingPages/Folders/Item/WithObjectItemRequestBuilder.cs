@@ -40,7 +40,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders.Item
         {
         }
         /// <summary>
-        /// Delete the Folder object identified by the id in the path.
+        /// Delete a landing page folder, specified by its ID.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -58,7 +58,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders.Item
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieve the Folder object identified by the id in the path.
+        /// Retrieve a landing page folder, specified by its ID.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_ContentFolder"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -76,7 +76,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders.Item
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_ContentFolder>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_ContentFolder.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Sparse updates a single Folder object identified by the id in the path.You only need to specify the column values that you are modifying.
+        /// Partially update a landing page folder, specified by the folder ID. You only need to specify the details values that you are modifying.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_ContentFolder"/></returns>
         /// <param name="body">Model definition for a content folder.</param>
@@ -96,7 +96,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders.Item
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_ContentFolder>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_ContentFolder.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Delete the Folder object identified by the id in the path.
+        /// Delete a landing page folder, specified by its ID.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -114,7 +114,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders.Item
             return requestInfo;
         }
         /// <summary>
-        /// Retrieve the Folder object identified by the id in the path.
+        /// Retrieve a landing page folder, specified by its ID.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -133,7 +133,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders.Item
             return requestInfo;
         }
         /// <summary>
-        /// Sparse updates a single Folder object identified by the id in the path.You only need to specify the column values that you are modifying.
+        /// Partially update a landing page folder, specified by the folder ID. You only need to specify the details values that you are modifying.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">Model definition for a content folder.</param>
@@ -164,7 +164,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders.Item
             return new global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders.Item.WithObjectItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Delete the Folder object identified by the id in the path.
+        /// Delete a landing page folder, specified by its ID.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithObjectItemRequestBuilderDeleteQueryParameters 
@@ -182,7 +182,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders.Item
         {
         }
         /// <summary>
-        /// Retrieve the Folder object identified by the id in the path.
+        /// Retrieve a landing page folder, specified by its ID.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithObjectItemRequestBuilderGetQueryParameters 
@@ -210,7 +210,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders.Item
         {
         }
         /// <summary>
-        /// Sparse updates a single Folder object identified by the id in the path.You only need to specify the column values that you are modifying.
+        /// Partially update a landing page folder, specified by the folder ID. You only need to specify the details values that you are modifying.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithObjectItemRequestBuilderPatchQueryParameters 

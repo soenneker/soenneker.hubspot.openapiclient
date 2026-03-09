@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders.Batc
         {
         }
         /// <summary>
-        /// Delete the Folder objects identified in the request body.
+        /// Delete a batch of folders as specified in the request body.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="body">Wrapper for providing an array of strings as inputs.</param>
@@ -54,7 +54,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders.Batc
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Delete the Folder objects identified in the request body.
+        /// Delete a batch of folders as specified in the request body.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">Wrapper for providing an array of strings as inputs.</param>

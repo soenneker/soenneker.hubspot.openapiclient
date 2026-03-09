@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Hubdb.Tables.Item.Rows.Draft.Ba
         {
         }
         /// <summary>
-        /// Permanently deletes rows from the draft version of the table, given a set of row IDs. Maximum of 100 row IDs per call.
+        /// Permanently delete rows from the draft version of a table, given a set of row IDs. Maximum of 100 row IDs per call.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Hubdb.Tables.Item.Rows.Draft.Ba
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Permanently deletes rows from the draft version of the table, given a set of row IDs. Maximum of 100 row IDs per call.
+        /// Permanently delete rows from the draft version of a table, given a set of row IDs. Maximum of 100 row IDs per call.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

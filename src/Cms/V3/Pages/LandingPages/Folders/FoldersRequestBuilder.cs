@@ -31,7 +31,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders
             get => new global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders.Cursor.CursorRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.cms.v3.pages.landingPages.folders.item collection</summary>
-        /// <param name="position">The Folder id.</param>
+        /// <param name="position">The ID of the landing page folder.</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders.Item.WithObjectItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders.Item.WithObjectItemRequestBuilder this[string position]
         {
@@ -77,7 +77,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_CollectionResponseWithTotalContentFolderForwardPaging>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_CollectionResponseWithTotalContentFolderForwardPaging.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Create a new Folder
+        /// Create a new folder for landing pages.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_ContentFolder"/></returns>
         /// <param name="body">Model definition for a content folder.</param>
@@ -116,7 +116,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders
             return requestInfo;
         }
         /// <summary>
-        /// Create a new Folder
+        /// Create a new folder for landing pages.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">Model definition for a content folder.</param>

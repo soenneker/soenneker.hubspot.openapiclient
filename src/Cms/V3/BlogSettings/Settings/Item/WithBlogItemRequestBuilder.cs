@@ -40,7 +40,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.BlogSettings.Settings.Item
         {
         }
         /// <summary>
-        /// Retrieve a specific by ID.
+        /// Retrieve a specific blog by its ID.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Blog_Settings_Blog"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -58,7 +58,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.BlogSettings.Settings.Item
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Blog_Settings_Blog>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Blog_Settings_Blog.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieve a specific by ID.
+        /// Retrieve a specific blog by its ID.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

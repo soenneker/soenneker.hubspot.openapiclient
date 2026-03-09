@@ -109,6 +109,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Hubdb.Tables.Item.Rows.Draft
             public int? Limit { get; set; }
             [QueryParameter("offset")]
             public int? Offset { get; set; }
+            /// <summary>The properties to return.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("properties")]
@@ -118,6 +119,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Hubdb.Tables.Item.Rows.Draft
             [QueryParameter("properties")]
             public string[] Properties { get; set; }
 #endif
+            /// <summary>The sorting of the returned data.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("sort")]

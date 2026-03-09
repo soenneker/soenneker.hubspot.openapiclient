@@ -19,7 +19,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Item.Revisio
     public partial class RevisionsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.cms.v3.pages.landingPages.item.revisions.item collection</summary>
-        /// <param name="position">The Landing Page version id.</param>
+        /// <param name="position">The ID of the specific version to retrieve.</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Item.Revisions.Item.WithRevisionItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Item.Revisions.Item.WithRevisionItemRequestBuilder this[string position]
         {
@@ -47,7 +47,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Item.Revisio
         {
         }
         /// <summary>
-        /// Retrieves all the previous versions of a Landing Page.
+        /// Retrieve all the previous versions of a landing page, specified by page ID.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_CollectionResponseWithTotalVersionPage"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Item.Revisio
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_CollectionResponseWithTotalVersionPage>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_CollectionResponseWithTotalVersionPage.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieves all the previous versions of a Landing Page.
+        /// Retrieve all the previous versions of a landing page, specified by page ID.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -93,7 +93,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Item.Revisio
             return new global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Item.Revisions.RevisionsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Retrieves all the previous versions of a Landing Page.
+        /// Retrieve all the previous versions of a landing page, specified by page ID.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class RevisionsRequestBuilderGetQueryParameters 

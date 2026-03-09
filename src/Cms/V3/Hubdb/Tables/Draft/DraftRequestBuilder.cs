@@ -107,10 +107,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Hubdb.Tables.Draft
             [QueryParameter("contentType")]
             public string ContentType { get; set; }
 #endif
+            /// <summary>Return drafts created after a specific date.</summary>
             [QueryParameter("createdAfter")]
             public DateTimeOffset? CreatedAfter { get; set; }
+            /// <summary>Return drafts created on a specific date.</summary>
             [QueryParameter("createdAt")]
             public DateTimeOffset? CreatedAt { get; set; }
+            /// <summary>Return drafts created before a specific date.</summary>
             [QueryParameter("createdBefore")]
             public DateTimeOffset? CreatedBefore { get; set; }
             [QueryParameter("isGetLocalizedSchema")]
@@ -127,10 +130,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Hubdb.Tables.Draft
             [QueryParameter("sort")]
             public string[] Sort { get; set; }
 #endif
+            /// <summary>Return drafts updated after a specific date.</summary>
             [QueryParameter("updatedAfter")]
             public DateTimeOffset? UpdatedAfter { get; set; }
+            /// <summary>Return drafts updated on a specific date.</summary>
             [QueryParameter("updatedAt")]
             public DateTimeOffset? UpdatedAt { get; set; }
+            /// <summary>Return drafts updated before a specific date.</summary>
             [QueryParameter("updatedBefore")]
             public DateTimeOffset? UpdatedBefore { get; set; }
         }

@@ -59,7 +59,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Carts
         {
         }
         /// <summary>
-        /// Read a page of carts. Control what is returned via the `properties` query param.
+        /// Retrieve all carts. You can control what is returned via the `properties` query parameter.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Carts_CollectionResponseSimplePublicObjectWithAssociationsForwardPaging"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -97,7 +97,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Carts
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Carts_SimplePublicObject>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Carts_SimplePublicObject.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Read a page of carts. Control what is returned via the `properties` query param.
+        /// Retrieve all carts. You can control what is returned via the `properties` query parameter.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -147,7 +147,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Carts
             return new global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Carts.CartsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Read a page of carts. Control what is returned via the `properties` query param.
+        /// Retrieve all carts. You can control what is returned via the `properties` query parameter.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class CartsRequestBuilderGetQueryParameters 
