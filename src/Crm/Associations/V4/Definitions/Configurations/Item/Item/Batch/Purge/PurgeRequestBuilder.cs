@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Associations.V4.Definitions.Config
         {
         }
         /// <summary>
-        /// This endpoint allows for the removal of multiple association configurations between two specified CRM object types in a single batch operation. It is useful for cleaning up or reorganizing associations between objects.
+        /// Batch delete limits that have been defined for association types between two object types.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Associations_Schema_BatchResponseVoid"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Associations.V4.Definitions.Config
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Associations_Schema_BatchResponseVoid>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Associations_Schema_BatchResponseVoid.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This endpoint allows for the removal of multiple association configurations between two specified CRM object types in a single batch operation. It is useful for cleaning up or reorganizing associations between objects.
+        /// Batch delete limits that have been defined for association types between two object types.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

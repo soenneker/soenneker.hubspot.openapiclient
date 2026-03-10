@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.BusinessUnits.V3.BusinessUnits.User.It
         {
         }
         /// <summary>
-        /// Get Business Units identified by `userId`. The `userId` refers to the user’s ID.
+        /// Retrieve the brands that a specific user can access.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Business_Units_Business_Units_CollectionResponsePublicBusinessUnitNoPaging"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.HubSpot.OpenApiClient.BusinessUnits.V3.BusinessUnits.User.It
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Business_Units_Business_Units_CollectionResponsePublicBusinessUnitNoPaging>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Business_Units_Business_Units_CollectionResponsePublicBusinessUnitNoPaging.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get Business Units identified by `userId`. The `userId` refers to the user’s ID.
+        /// Retrieve the brands that a specific user can access.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -80,7 +80,7 @@ namespace Soenneker.HubSpot.OpenApiClient.BusinessUnits.V3.BusinessUnits.User.It
             return new global::Soenneker.HubSpot.OpenApiClient.BusinessUnits.V3.BusinessUnits.User.Item.WithUserItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Get Business Units identified by `userId`. The `userId` refers to the user’s ID.
+        /// Retrieve the brands that a specific user can access.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithUserItemRequestBuilderGetQueryParameters 

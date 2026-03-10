@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Associations.V4.Definitions.Config
         {
         }
         /// <summary>
-        /// Update multiple association configurations between two specified CRM object types in a single batch operation.
+        /// Batch update association limits that have been configured between two object types.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Associations_Schema_BatchResponsePublicAssociationDefinitionConfigurationUpdateResult"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Associations.V4.Definitions.Config
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Associations_Schema_BatchResponsePublicAssociationDefinitionConfigurationUpdateResult>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Associations_Schema_BatchResponsePublicAssociationDefinitionConfigurationUpdateResult.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Update multiple association configurations between two specified CRM object types in a single batch operation.
+        /// Batch update association limits that have been configured between two object types.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

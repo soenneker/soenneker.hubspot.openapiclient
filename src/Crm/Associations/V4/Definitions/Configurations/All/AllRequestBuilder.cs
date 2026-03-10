@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Associations.V4.Definitions.Config
         {
         }
         /// <summary>
-        /// Fetch all configuration definitions for CRM associations, which include details about how different CRM object types are associated with each other.
+        /// Retrieve all configured association limits between objects, which include details about how different CRM object types are associated with each other.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Associations_Schema_CollectionResponsePublicAssociationDefinitionUserConfigurationNoPaging"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Associations.V4.Definitions.Config
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Associations_Schema_CollectionResponsePublicAssociationDefinitionUserConfigurationNoPaging>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Associations_Schema_CollectionResponsePublicAssociationDefinitionUserConfigurationNoPaging.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Fetch all configuration definitions for CRM associations, which include details about how different CRM object types are associated with each other.
+        /// Retrieve all configured association limits between objects, which include details about how different CRM object types are associated with each other.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
