@@ -3,7 +3,6 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
-using Soenneker.HubSpot.OpenApiClient.Cms.V3.Domains.Item.SecuritySettings;
 using Soenneker.HubSpot.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
@@ -18,11 +17,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Domains.Item
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithDomainItemRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The securitySettings property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Domains.Item.SecuritySettings.SecuritySettingsRequestBuilder SecuritySettings
-        {
-            get => new global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Domains.Item.SecuritySettings.SecuritySettingsRequestBuilder(PathParameters, RequestAdapter);
-        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Domains.Item.WithDomainItemRequestBuilder"/> and sets the default values.
         /// </summary>
