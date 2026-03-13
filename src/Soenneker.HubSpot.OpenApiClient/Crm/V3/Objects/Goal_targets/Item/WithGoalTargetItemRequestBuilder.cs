@@ -52,7 +52,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Goal_targets.Item
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Read an Object identified by `{goalTargetId}`. `{goalTargetId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param.
+        /// Retrieve a goal target by its ID. You can specify what is returned using the `properties` query parameter.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Goal_Targets_SimplePublicObjectWithAssociations"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -108,7 +108,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Goal_targets.Item
             return requestInfo;
         }
         /// <summary>
-        /// Read an Object identified by `{goalTargetId}`. `{goalTargetId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param.
+        /// Retrieve a goal target by its ID. You can specify what is returned using the `properties` query parameter.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -166,7 +166,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Goal_targets.Item
         {
         }
         /// <summary>
-        /// Read an Object identified by `{goalTargetId}`. `{goalTargetId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param.
+        /// Retrieve a goal target by its ID. You can specify what is returned using the `properties` query parameter.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithGoalTargetItemRequestBuilderGetQueryParameters 

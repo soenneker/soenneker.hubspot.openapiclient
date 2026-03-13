@@ -33,6 +33,9 @@ namespace Soenneker.HubSpot.OpenApiClient.ForecastingSettings.V3.ForecastTypes.I
         public WithForecastTypeItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/forecasting-settings/v3/forecast-types/{forecastTypeId}", rawUrl)
         {
         }
+        /// <summary>
+        /// Retrieve an individual forecast type
+        /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Forecast_Types_ForecastTypeSettingPublicResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -48,6 +51,9 @@ namespace Soenneker.HubSpot.OpenApiClient.ForecastingSettings.V3.ForecastTypes.I
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Forecast_Types_ForecastTypeSettingPublicResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Forecast_Types_ForecastTypeSettingPublicResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
+        /// <summary>
+        /// Retrieve an individual forecast type
+        /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

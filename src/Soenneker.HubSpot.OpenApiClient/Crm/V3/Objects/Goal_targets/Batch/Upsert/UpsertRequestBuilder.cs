@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Goal_targets.Batch.Upse
         {
         }
         /// <summary>
-        /// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
+        /// Create and update a batch of goal targets by a unique property. Goal targets that don&apos;t exist will be created, while existing goal targets will be updated.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Goal_Targets_BatchResponseSimplePublicUpsertObject"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Goal_targets.Batch.Upse
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Goal_Targets_BatchResponseSimplePublicUpsertObject>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Goal_Targets_BatchResponseSimplePublicUpsertObject.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
+        /// Create and update a batch of goal targets by a unique property. Goal targets that don&apos;t exist will be created, while existing goal targets will be updated.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
