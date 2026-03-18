@@ -5,6 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.HubSpot.OpenApiClient.Models;
 using Soenneker.HubSpot.OpenApiClient.Oauth.V3.Token.Introspect;
+using Soenneker.HubSpot.OpenApiClient.Oauth.V3.Token.Revoke;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -22,6 +23,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Oauth.V3.Token
         public global::Soenneker.HubSpot.OpenApiClient.Oauth.V3.Token.Introspect.IntrospectRequestBuilder Introspect
         {
             get => new global::Soenneker.HubSpot.OpenApiClient.Oauth.V3.Token.Introspect.IntrospectRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The revoke property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Oauth.V3.Token.Revoke.RevokeRequestBuilder Revoke
+        {
+            get => new global::Soenneker.HubSpot.OpenApiClient.Oauth.V3.Token.Revoke.RevokeRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Oauth.V3.Token.TokenRequestBuilder"/> and sets the default values.
