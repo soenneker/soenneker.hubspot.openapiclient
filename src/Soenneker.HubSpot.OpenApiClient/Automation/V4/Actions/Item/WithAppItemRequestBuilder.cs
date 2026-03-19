@@ -19,7 +19,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Automation.V4.Actions.Item
     public partial class WithAppItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.automation.v4.actions.item.item collection</summary>
-        /// <param name="position">The ID of the action definition to retrieve.</param>
+        /// <param name="position">Unique identifier of the item</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Automation.V4.Actions.Item.Item.WithDefinitionItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Automation.V4.Actions.Item.Item.WithDefinitionItemRequestBuilder this[string position]
         {

@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Automation.V4.Actions
             get => new global::Soenneker.HubSpot.OpenApiClient.Automation.V4.Actions.Callbacks.CallbacksRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.automation.v4.actions.item collection</summary>
-        /// <param name="position">The unique identifier for the app.</param>
+        /// <param name="position">Unique identifier of the item</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Automation.V4.Actions.Item.WithAppItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Automation.V4.Actions.Item.WithAppItemRequestBuilder this[int position]
         {
@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Automation.V4.Actions
             }
         }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.automation.v4.actions.item collection</summary>
-        /// <param name="position">The unique identifier for the app.</param>
+        /// <param name="position">Unique identifier of the item</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Automation.V4.Actions.Item.WithAppItemRequestBuilder"/></returns>
         [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
         public global::Soenneker.HubSpot.OpenApiClient.Automation.V4.Actions.Item.WithAppItemRequestBuilder this[string position]

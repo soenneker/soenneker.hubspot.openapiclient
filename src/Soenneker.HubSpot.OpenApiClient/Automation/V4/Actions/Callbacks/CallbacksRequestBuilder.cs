@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Automation.V4.Actions.Callbacks
             get => new global::Soenneker.HubSpot.OpenApiClient.Automation.V4.Actions.Callbacks.Complete.CompleteRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.automation.v4.actions.callbacks.item collection</summary>
-        /// <param name="position">The unique identifier for the specific callback to complete.</param>
+        /// <param name="position">Unique identifier of the item</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Automation.V4.Actions.Callbacks.Item.WithCallbackItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Automation.V4.Actions.Callbacks.Item.WithCallbackItemRequestBuilder this[string position]
         {

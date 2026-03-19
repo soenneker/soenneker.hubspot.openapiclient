@@ -32,9 +32,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Posts.Item.Draft.PushLive
         public PushLiveRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/cms/v3/blogs/posts/{objectId}/draft/push-live", rawUrl)
         {
         }
-        /// <summary>
-        /// Publish the draft version of the blog post, sending its content to the live page.
-        /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -50,9 +47,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Posts.Item.Draft.PushLive
             var requestInfo = ToPostRequestInformation(requestConfiguration);
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
-        /// <summary>
-        /// Publish the draft version of the blog post, sending its content to the live page.
-        /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

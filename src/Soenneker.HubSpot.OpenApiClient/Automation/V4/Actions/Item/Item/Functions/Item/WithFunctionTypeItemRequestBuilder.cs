@@ -19,7 +19,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Automation.V4.Actions.Item.Item.Functi
     public partial class WithFunctionTypeItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.automation.v4.actions.item.item.functions.item.item collection</summary>
-        /// <param name="position">The ID of the specific function within the workflow action definition.</param>
+        /// <param name="position">Unique identifier of the item</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Automation.V4.Actions.Item.Item.Functions.Item.Item.WithFunctionItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Automation.V4.Actions.Item.Item.Functions.Item.Item.WithFunctionItemRequestBuilder this[string position]
         {

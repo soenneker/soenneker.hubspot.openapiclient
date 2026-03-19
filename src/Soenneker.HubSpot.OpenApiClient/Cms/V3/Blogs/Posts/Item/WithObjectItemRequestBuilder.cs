@@ -45,9 +45,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Posts.Item
         public WithObjectItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/cms/v3/blogs/posts/{objectId}{?archived*,property*}", rawUrl)
         {
         }
-        /// <summary>
-        /// Delete a blog post by ID.
-        /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -63,47 +60,38 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Posts.Item
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
-        /// <summary>
-        /// Retrieve a blog post by the post ID.
-        /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Posts_BlogPost"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Tags_BlogPost"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Posts_BlogPost?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Posts.Item.WithObjectItemRequestBuilder.WithObjectItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Tags_BlogPost?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Posts.Item.WithObjectItemRequestBuilder.WithObjectItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Posts_BlogPost> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Posts.Item.WithObjectItemRequestBuilder.WithObjectItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Tags_BlogPost> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Posts.Item.WithObjectItemRequestBuilder.WithObjectItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Posts_BlogPost>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Posts_BlogPost.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Tags_BlogPost>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Tags_BlogPost.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
-        /// <summary>
-        /// Partially updates a single blog post by ID. You only need to specify the values that you want to update.
-        /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Posts_BlogPost"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Tags_BlogPost"/></returns>
         /// <param name="body">Model definition for a Blog Post.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Posts_BlogPost?> PatchAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Posts_BlogPost body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Posts.Item.WithObjectItemRequestBuilder.WithObjectItemRequestBuilderPatchQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Tags_BlogPost?> PatchAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Tags_BlogPost body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Posts.Item.WithObjectItemRequestBuilder.WithObjectItemRequestBuilderPatchQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Posts_BlogPost> PatchAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Posts_BlogPost body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Posts.Item.WithObjectItemRequestBuilder.WithObjectItemRequestBuilderPatchQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Tags_BlogPost> PatchAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Tags_BlogPost body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Posts.Item.WithObjectItemRequestBuilder.WithObjectItemRequestBuilderPatchQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPatchRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Posts_BlogPost>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Posts_BlogPost.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Tags_BlogPost>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Tags_BlogPost.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
-        /// <summary>
-        /// Delete a blog post by ID.
-        /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -119,9 +107,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Posts.Item
             requestInfo.Configure(requestConfiguration);
             return requestInfo;
         }
-        /// <summary>
-        /// Retrieve a blog post by the post ID.
-        /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -138,19 +123,16 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Posts.Item
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
         }
-        /// <summary>
-        /// Partially updates a single blog post by ID. You only need to specify the values that you want to update.
-        /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">Model definition for a Blog Post.</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPatchRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Posts_BlogPost body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Posts.Item.WithObjectItemRequestBuilder.WithObjectItemRequestBuilderPatchQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Tags_BlogPost body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Posts.Item.WithObjectItemRequestBuilder.WithObjectItemRequestBuilderPatchQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPatchRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Posts_BlogPost body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Posts.Item.WithObjectItemRequestBuilder.WithObjectItemRequestBuilderPatchQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Tags_BlogPost body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Posts.Item.WithObjectItemRequestBuilder.WithObjectItemRequestBuilderPatchQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -169,13 +151,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Posts.Item
         {
             return new global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Posts.Item.WithObjectItemRequestBuilder(rawUrl, RequestAdapter);
         }
-        /// <summary>
-        /// Delete a blog post by ID.
-        /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        #pragma warning disable CS1591
         public partial class WithObjectItemRequestBuilderDeleteQueryParameters 
+        #pragma warning restore CS1591
         {
-            /// <summary>Whether to return only results that have been deleted.</summary>
             [QueryParameter("archived")]
             public bool? Archived { get; set; }
         }
@@ -187,16 +167,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Posts.Item
         public partial class WithObjectItemRequestBuilderDeleteRequestConfiguration : RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Posts.Item.WithObjectItemRequestBuilder.WithObjectItemRequestBuilderDeleteQueryParameters>
         {
         }
-        /// <summary>
-        /// Retrieve a blog post by the post ID.
-        /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        #pragma warning disable CS1591
         public partial class WithObjectItemRequestBuilderGetQueryParameters 
+        #pragma warning restore CS1591
         {
-            /// <summary>Specifies whether to return deleted blog posts. Defaults to `false`.</summary>
             [QueryParameter("archived")]
             public bool? Archived { get; set; }
-            /// <summary>Specific properties to return.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("property")]
@@ -215,13 +192,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Posts.Item
         public partial class WithObjectItemRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Posts.Item.WithObjectItemRequestBuilder.WithObjectItemRequestBuilderGetQueryParameters>
         {
         }
-        /// <summary>
-        /// Partially updates a single blog post by ID. You only need to specify the values that you want to update.
-        /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        #pragma warning disable CS1591
         public partial class WithObjectItemRequestBuilderPatchQueryParameters 
+        #pragma warning restore CS1591
         {
-            /// <summary>Specifies whether to update deleted blog posts. Defaults to `false`.</summary>
             [QueryParameter("archived")]
             public bool? Archived { get; set; }
         }

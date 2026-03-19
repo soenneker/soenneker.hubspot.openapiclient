@@ -37,7 +37,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Authors
             get => new global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Authors.MultiLanguage.MultiLanguageRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.cms.v3.blogs.authors.item collection</summary>
-        /// <param name="position">The Blog Author id.</param>
+        /// <param name="position">Unique identifier of the item</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Authors.Item.WithObjectItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Authors.Item.WithObjectItemRequestBuilder this[string position]
         {
@@ -64,47 +64,38 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Authors
         public AuthorsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/cms/v3/blogs/authors{?after*,archived*,createdAfter*,createdAt*,createdBefore*,limit*,property*,sort*,updatedAfter*,updatedAt*,updatedBefore*}", rawUrl)
         {
         }
-        /// <summary>
-        /// Get the list of blog authors. Supports paging and filtering. This method would be useful for an integration that examined these models and used an external service to suggest edits.
-        /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Authors_CollectionResponseWithTotalBlogAuthorForwardPaging"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Tags_CollectionResponseWithTotalBlogAuthorForwardPaging"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Authors_CollectionResponseWithTotalBlogAuthorForwardPaging?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Authors.AuthorsRequestBuilder.AuthorsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Tags_CollectionResponseWithTotalBlogAuthorForwardPaging?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Authors.AuthorsRequestBuilder.AuthorsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Authors_CollectionResponseWithTotalBlogAuthorForwardPaging> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Authors.AuthorsRequestBuilder.AuthorsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Tags_CollectionResponseWithTotalBlogAuthorForwardPaging> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Authors.AuthorsRequestBuilder.AuthorsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Authors_CollectionResponseWithTotalBlogAuthorForwardPaging>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Authors_CollectionResponseWithTotalBlogAuthorForwardPaging.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Tags_CollectionResponseWithTotalBlogAuthorForwardPaging>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Tags_CollectionResponseWithTotalBlogAuthorForwardPaging.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
-        /// <summary>
-        /// Create a new Blog Author.
-        /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Authors_BlogAuthor"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Tags_BlogAuthor"/></returns>
         /// <param name="body">Model definition for a Blog Author.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Authors_BlogAuthor?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Authors_BlogAuthor body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Tags_BlogAuthor?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Tags_BlogAuthor body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Authors_BlogAuthor> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Authors_BlogAuthor body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Tags_BlogAuthor> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Tags_BlogAuthor body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Authors_BlogAuthor>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Authors_BlogAuthor.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Tags_BlogAuthor>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Tags_BlogAuthor.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
-        /// <summary>
-        /// Get the list of blog authors. Supports paging and filtering. This method would be useful for an integration that examined these models and used an external service to suggest edits.
-        /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -121,19 +112,16 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Authors
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
         }
-        /// <summary>
-        /// Create a new Blog Author.
-        /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">Model definition for a Blog Author.</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Authors_BlogAuthor body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Tags_BlogAuthor body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Authors_BlogAuthor body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Tags_BlogAuthor body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -152,13 +140,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Authors
         {
             return new global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Authors.AuthorsRequestBuilder(rawUrl, RequestAdapter);
         }
-        /// <summary>
-        /// Get the list of blog authors. Supports paging and filtering. This method would be useful for an integration that examined these models and used an external service to suggest edits.
-        /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        #pragma warning disable CS1591
         public partial class AuthorsRequestBuilderGetQueryParameters 
+        #pragma warning restore CS1591
         {
-            /// <summary>The cursor token value to get the next set of results. You can get this from the `paging.next.after` JSON property of a paged response containing more results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("after")]
@@ -168,22 +154,16 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Authors
             [QueryParameter("after")]
             public string After { get; set; }
 #endif
-            /// <summary>Specifies whether to return deleted Blog Authors. Defaults to `false`.</summary>
             [QueryParameter("archived")]
             public bool? Archived { get; set; }
-            /// <summary>Only return Blog Authors created after the specified time.</summary>
             [QueryParameter("createdAfter")]
             public DateTimeOffset? CreatedAfter { get; set; }
-            /// <summary>Only return Blog Authors created at exactly the specified time.</summary>
             [QueryParameter("createdAt")]
             public DateTimeOffset? CreatedAt { get; set; }
-            /// <summary>Only return Blog Authors created before the specified time.</summary>
             [QueryParameter("createdBefore")]
             public DateTimeOffset? CreatedBefore { get; set; }
-            /// <summary>The maximum number of results to return. Default is 100.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
-            /// <summary>Used to specify which properties of the Blog Authors to include in the response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("property")]
@@ -193,7 +173,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Authors
             [QueryParameter("property")]
             public string Property { get; set; }
 #endif
-            /// <summary>Specifies which fields to use for sorting results. Valid fields are `name`, `createdAt`, `updatedAt`, `createdBy`, `updatedBy`. `createdAt` will be used by default.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("sort")]
@@ -203,13 +182,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Authors
             [QueryParameter("sort")]
             public string[] Sort { get; set; }
 #endif
-            /// <summary>Only return Blog Authors last updated after the specified time.</summary>
             [QueryParameter("updatedAfter")]
             public DateTimeOffset? UpdatedAfter { get; set; }
-            /// <summary>Only return Blog Authors last updated at exactly the specified time.</summary>
             [QueryParameter("updatedAt")]
             public DateTimeOffset? UpdatedAt { get; set; }
-            /// <summary>Only return Blog Authors last updated before the specified time.</summary>
             [QueryParameter("updatedBefore")]
             public DateTimeOffset? UpdatedBefore { get; set; }
         }

@@ -33,6 +33,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Oauth.V3.Token.Revoke
         public RevokeRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/oauth/v3/token/revoke", rawUrl)
         {
         }
+        /// <summary>
+        /// Deletes/Revokes provided Refresh Token
+        /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -50,6 +53,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Oauth.V3.Token.Revoke
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
+        /// <summary>
+        /// Deletes/Revokes provided Refresh Token
+        /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
