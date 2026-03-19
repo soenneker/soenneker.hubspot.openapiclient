@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Tags_ForwardPaging Paging { get; set; }
 #endif
-        /// <summary>Results of batch operation.</summary>
+        /// <summary>Collection of blog tags.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Tags_Tag>? Results { get; set; }

@@ -17,9 +17,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The timestamp (ISO8601 format) when this Blog Tag was created.</summary>
         public DateTimeOffset? Created { get; set; }
-        /// <summary>The timestamp (ISO8601 format) when this Blog Author was deleted.</summary>
+        /// <summary>The timestamp (ISO8601 format) when this Blog Tag was deleted.</summary>
         public DateTimeOffset? DeletedAt { get; set; }
-        /// <summary>ID of object to set as primary in multi-language group.</summary>
+        /// <summary>The unique ID of the Blog Tag.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }
@@ -27,7 +27,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>Language of newly cloned object.</summary>
+        /// <summary>The explicitly defined ISO 639 language code of the tag.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Tags_Tag_language? Language { get; set; }
         /// <summary>The name of the tag.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -45,7 +45,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Slug { get; set; }
 #endif
-        /// <summary>ID of the primary blog author this object was translated from.</summary>
+        /// <summary>ID of the primary tag this object was translated from.</summary>
         public long? TranslatedFromId { get; set; }
         /// <summary>The timestamp (ISO8601 format) when this Blog Tag was updated.</summary>
         public DateTimeOffset? Updated { get; set; }

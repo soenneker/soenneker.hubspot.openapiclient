@@ -32,6 +32,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Posts.Item.Draft.Reset
         public ResetRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/cms/v3/blogs/posts/{objectId}/draft/reset", rawUrl)
         {
         }
+        /// <summary>
+        /// Discard all drafted content, resetting the draft to contain the content in the currently published version.
+        /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -47,6 +50,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Posts.Item.Draft.Reset
             var requestInfo = ToPostRequestInformation(requestConfiguration);
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
+        /// <summary>
+        /// Discard all drafted content, resetting the draft to contain the content in the currently published version.
+        /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
