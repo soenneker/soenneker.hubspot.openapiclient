@@ -90,7 +90,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.It
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class CompleteRequestBuilderPostQueryParameters 
         {
-            /// <summary>The accountId that is associated with this marketing event in the external event application.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("externalAccountId")]

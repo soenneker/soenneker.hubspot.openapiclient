@@ -13,7 +13,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CMS_Pages_AbTestRerunRequestVNext : IAdditionalDataHolder, IParsable
     {
-        /// <summary>The ID of the AB test associated with this page, if applicable</summary>
+        /// <summary>ID of the test to rerun.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AbTestId { get; set; }

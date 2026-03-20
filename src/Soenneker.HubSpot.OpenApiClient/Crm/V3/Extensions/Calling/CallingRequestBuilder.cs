@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Extensions.Calling
             get => new global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Extensions.Calling.Transcripts.TranscriptsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.crm.v3.extensions.calling.item collection</summary>
-        /// <param name="position">The unique identifier for the app whose calling extension settings are being retrieved.</param>
+        /// <param name="position">Unique identifier of the item</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Extensions.Calling.Item.WithAppItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Extensions.Calling.Item.WithAppItemRequestBuilder this[int position]
         {
@@ -46,7 +46,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Extensions.Calling
             }
         }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.crm.v3.extensions.calling.item collection</summary>
-        /// <param name="position">The unique identifier for the app whose calling extension settings are being retrieved.</param>
+        /// <param name="position">Unique identifier of the item</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Extensions.Calling.Item.WithAppItemRequestBuilder"/></returns>
         [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
         public global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Extensions.Calling.Item.WithAppItemRequestBuilder this[string position]

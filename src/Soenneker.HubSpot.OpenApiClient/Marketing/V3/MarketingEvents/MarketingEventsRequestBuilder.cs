@@ -35,11 +35,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents
         {
             get => new global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Batch.BatchRequestBuilder(PathParameters, RequestAdapter);
         }
-        /// <summary>The EmptyPathSegment property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.EmptyPathSegmentRequestBuilder EmptyPathSegment
-        {
-            get => new global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.EmptyPathSegmentRequestBuilder(PathParameters, RequestAdapter);
-        }
         /// <summary>The events property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.EventsRequestBuilder Events
         {
@@ -51,7 +46,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents
             get => new global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Participations.ParticipationsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.marketing.v3.marketingEvents.item collection</summary>
-        /// <param name="position">The internal ID of the marketing event in HubSpot</param>
+        /// <param name="position">The internal id of the marketing event in HubSpot.</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Item.AppItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Item.AppItemRequestBuilder this[string position]
         {

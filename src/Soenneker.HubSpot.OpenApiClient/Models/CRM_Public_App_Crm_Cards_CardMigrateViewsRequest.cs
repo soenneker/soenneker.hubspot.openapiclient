@@ -14,10 +14,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The extensionCardId property</summary>
-        public long? ExtensionCardId { get; set; }
-        /// <summary>The helpdeskExtensionCardId property</summary>
-        public long? HelpdeskExtensionCardId { get; set; }
+        /// <summary>The appCardId property</summary>
+        public long? AppCardId { get; set; }
+        /// <summary>The helpdeskAppCardId property</summary>
+        public long? HelpdeskAppCardId { get; set; }
         /// <summary>The legacyCrmCardId property</summary>
         public long? LegacyCrmCardId { get; set; }
         /// <summary>
@@ -45,8 +45,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "extensionCardId", n => { ExtensionCardId = n.GetLongValue(); } },
-                { "helpdeskExtensionCardId", n => { HelpdeskExtensionCardId = n.GetLongValue(); } },
+                { "appCardId", n => { AppCardId = n.GetLongValue(); } },
+                { "helpdeskAppCardId", n => { HelpdeskAppCardId = n.GetLongValue(); } },
                 { "legacyCrmCardId", n => { LegacyCrmCardId = n.GetLongValue(); } },
             };
         }
@@ -57,8 +57,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteLongValue("extensionCardId", ExtensionCardId);
-            writer.WriteLongValue("helpdeskExtensionCardId", HelpdeskExtensionCardId);
+            writer.WriteLongValue("appCardId", AppCardId);
+            writer.WriteLongValue("helpdeskAppCardId", HelpdeskAppCardId);
             writer.WriteLongValue("legacyCrmCardId", LegacyCrmCardId);
             writer.WriteAdditionalData(AdditionalData);
         }

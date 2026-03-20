@@ -25,7 +25,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Webhooks.V3.Item.Subscriptions
             get => new global::Soenneker.HubSpot.OpenApiClient.Webhooks.V3.Item.Subscriptions.Batch.BatchRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.webhooks.v3.item.subscriptions.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The ID of the target subscription.</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Webhooks.V3.Item.Subscriptions.Item.WithSubscriptionItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Webhooks.V3.Item.Subscriptions.Item.WithSubscriptionItemRequestBuilder this[int position]
         {
@@ -37,7 +37,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Webhooks.V3.Item.Subscriptions
             }
         }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.webhooks.v3.item.subscriptions.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The ID of the target subscription.</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Webhooks.V3.Item.Subscriptions.Item.WithSubscriptionItemRequestBuilder"/></returns>
         [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
         public global::Soenneker.HubSpot.OpenApiClient.Webhooks.V3.Item.Subscriptions.Item.WithSubscriptionItemRequestBuilder this[string position]

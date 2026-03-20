@@ -46,9 +46,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.ObjectLibrary.Enablement
         public EnablementRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/crm/v3/object-library/enablement", rawUrl)
         {
         }
-        /// <summary>
-        /// For all object types supporting enablement, returns whether they&apos;re enabled or disabled
-        /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Object_Library_PortalObjectTypeEnablementPublicResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -64,9 +61,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.ObjectLibrary.Enablement
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Object_Library_PortalObjectTypeEnablementPublicResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Object_Library_PortalObjectTypeEnablementPublicResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
-        /// <summary>
-        /// For all object types supporting enablement, returns whether they&apos;re enabled or disabled
-        /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

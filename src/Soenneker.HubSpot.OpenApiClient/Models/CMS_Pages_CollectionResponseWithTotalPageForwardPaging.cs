@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_ForwardPaging Paging { get; set; }
 #endif
-        /// <summary>Results of batch operation.</summary>
+        /// <summary>Collection of pages.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_Page>? Results { get; set; }
@@ -31,7 +31,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_Page> Results { get; set; }
 #endif
-        /// <summary>Total number of content folders.</summary>
+        /// <summary>Total number of pages.</summary>
         public int? Total { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_CollectionResponseWithTotalPageForwardPaging"/> and sets the default values.

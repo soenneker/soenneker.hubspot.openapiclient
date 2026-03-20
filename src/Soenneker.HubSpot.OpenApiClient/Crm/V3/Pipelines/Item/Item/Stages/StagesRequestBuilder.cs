@@ -65,7 +65,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Pipelines.Item.Item.Stages
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Pipelines_CollectionResponsePipelineStageNoPaging>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Pipelines_CollectionResponsePipelineStageNoPaging.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Create a new stage within the specified pipeline.
+        /// Create a pipeline stage
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Pipelines_PipelineStage"/></returns>
         /// <param name="body">An input used to create or replace a pipeline stage&apos;s definition.</param>
@@ -104,7 +104,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Pipelines.Item.Item.Stages
             return requestInfo;
         }
         /// <summary>
-        /// Create a new stage within the specified pipeline.
+        /// Create a pipeline stage
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">An input used to create or replace a pipeline stage&apos;s definition.</param>

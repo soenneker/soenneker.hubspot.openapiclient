@@ -75,6 +75,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         #pragma warning disable CS1591
         IDEMPOTENT_IGNORE,
         #pragma warning restore CS1591
+        [EnumMember(Value = "INVALID_APP_ID_ATTRIBUTION")]
+        #pragma warning disable CS1591
+        INVALID_APP_ID_ATTRIBUTION,
+        #pragma warning restore CS1591
         [EnumMember(Value = "INVALID_FROM_ADDRESS")]
         #pragma warning disable CS1591
         INVALID_FROM_ADDRESS,

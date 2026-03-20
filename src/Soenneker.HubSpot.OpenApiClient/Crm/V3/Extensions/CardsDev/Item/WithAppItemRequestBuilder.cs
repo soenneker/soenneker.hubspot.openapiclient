@@ -25,7 +25,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Extensions.CardsDev.Item
             get => new global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Extensions.CardsDev.Item.Views.ViewsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.crm.v3.extensions.cardsDev.item.item collection</summary>
-        /// <param name="position">The ID of the target card.</param>
+        /// <param name="position">Unique identifier of the item</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Extensions.CardsDev.Item.Item.WithCardItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Extensions.CardsDev.Item.Item.WithCardItemRequestBuilder this[string position]
         {

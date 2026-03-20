@@ -4,7 +4,6 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders.Batch;
-using Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders.Cursor;
 using Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders.Item;
 using Soenneker.HubSpot.OpenApiClient.Models;
 using System.Collections.Generic;
@@ -25,13 +24,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders
         {
             get => new global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders.Batch.BatchRequestBuilder(PathParameters, RequestAdapter);
         }
-        /// <summary>The cursor property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders.Cursor.CursorRequestBuilder Cursor
-        {
-            get => new global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders.Cursor.CursorRequestBuilder(PathParameters, RequestAdapter);
-        }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.cms.v3.pages.landingPages.folders.item collection</summary>
-        /// <param name="position">The ID of the landing page folder.</param>
+        /// <param name="position">Unique identifier of the item</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders.Item.WithObjectItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders.Item.WithObjectItemRequestBuilder this[string position]
         {
@@ -152,7 +146,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class FoldersRequestBuilderGetQueryParameters 
         {
-            /// <summary>The cursor token value to get the next set of results. You can get this from the `paging.next.after` JSON property of a paged response containing more results.</summary>
+            /// <summary>The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("after")]
@@ -162,22 +156,18 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders
             [QueryParameter("after")]
             public string After { get; set; }
 #endif
-            /// <summary>Specifies whether to return deleted Folders. Defaults to `false`.</summary>
+            /// <summary>Whether to return only results that have been archived.</summary>
             [QueryParameter("archived")]
             public bool? Archived { get; set; }
-            /// <summary>Only return Folders created after the specified time.</summary>
             [QueryParameter("createdAfter")]
             public DateTimeOffset? CreatedAfter { get; set; }
-            /// <summary>Only return Folders created at exactly the specified time.</summary>
             [QueryParameter("createdAt")]
             public DateTimeOffset? CreatedAt { get; set; }
-            /// <summary>Only return Folders created before the specified time.</summary>
             [QueryParameter("createdBefore")]
             public DateTimeOffset? CreatedBefore { get; set; }
-            /// <summary>The maximum number of results to return. Default is 100.</summary>
+            /// <summary>The maximum number of results to display per page.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
-            /// <summary>Specifies which properties of the landing page folders to include in the response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("property")]
@@ -187,7 +177,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders
             [QueryParameter("property")]
             public string Property { get; set; }
 #endif
-            /// <summary>Specifies which fields to use for sorting results. Valid fields are `name`, `createdAt`, `updatedAt`, `createdBy`, `updatedBy`. `createdAt` will be used by default.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("sort")]
@@ -197,13 +186,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders
             [QueryParameter("sort")]
             public string[] Sort { get; set; }
 #endif
-            /// <summary>Only return Folders last updated after the specified time.</summary>
             [QueryParameter("updatedAfter")]
             public DateTimeOffset? UpdatedAfter { get; set; }
-            /// <summary>Only return Folders last updated at exactly the specified time.</summary>
             [QueryParameter("updatedAt")]
             public DateTimeOffset? UpdatedAt { get; set; }
-            /// <summary>Only return Folders last updated before the specified time.</summary>
             [QueryParameter("updatedBefore")]
             public DateTimeOffset? UpdatedBefore { get; set; }
         }

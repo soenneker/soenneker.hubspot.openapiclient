@@ -31,7 +31,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.It
             get => new global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.Item.Complete.CompleteRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.marketing.v3.marketingEvents.events.item.item collection</summary>
-        /// <param name="position">&quot;The new subscriber state for the HubSpot contacts and the specified marketing event. For example: &apos;register&apos;, &apos;attend&apos; or &apos;cancel&apos;.&quot;</param>
+        /// <param name="position">Unique identifier of the item</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.Item.Item.WithSubscriberStateItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.Item.Item.WithSubscriberStateItemRequestBuilder this[string position]
         {
@@ -230,7 +230,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.It
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithExternalEventItemRequestBuilderDeleteQueryParameters 
         {
-            /// <summary>The accountId that is associated with this marketing event in the external event application</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("externalAccountId")]
@@ -255,7 +254,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.It
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithExternalEventItemRequestBuilderGetQueryParameters 
         {
-            /// <summary>The accountId that is associated with this marketing event in the external event application</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("externalAccountId")]
@@ -280,7 +278,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.It
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithExternalEventItemRequestBuilderPatchQueryParameters 
         {
-            /// <summary>The accountId that is associated with this marketing event in the external event application</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("externalAccountId")]

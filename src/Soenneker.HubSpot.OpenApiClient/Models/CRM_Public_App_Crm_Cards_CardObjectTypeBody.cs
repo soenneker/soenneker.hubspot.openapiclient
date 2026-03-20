@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>An internal identifier for this property. This value must be unique TODO.</summary>
+        /// <summary>A CRM object type where this card should be displayed.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Public_App_Crm_Cards_CardObjectTypeBody_name? Name { get; set; }
         /// <summary>An array of properties that should be sent to this card&apos;s target URL when the data fetch request is made. Must be valid properties for the corresponding CRM object type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

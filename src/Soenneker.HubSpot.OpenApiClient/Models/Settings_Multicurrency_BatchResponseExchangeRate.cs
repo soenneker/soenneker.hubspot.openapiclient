@@ -16,6 +16,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The datetime the response was completed</summary>
         public DateTimeOffset? CompletedAt { get; set; }
+        /// <summary>The errors property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.Settings_Multicurrency_StandardError>? Errors { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.Settings_Multicurrency_StandardError> Errors { get; set; }
+#endif
         /// <summary>The link to the next page with exchange rates.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -24,6 +32,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.Settings_Multicurrency_BatchResponseExchangeRate_links Links { get; set; }
 #endif
+        /// <summary>The numErrors property</summary>
+        public int? NumErrors { get; set; }
         /// <summary>The datetime the of the request.</summary>
         public DateTimeOffset? RequestedAt { get; set; }
         /// <summary>The results property</summary>
@@ -64,7 +74,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "completedAt", n => { CompletedAt = n.GetDateTimeOffsetValue(); } },
+                { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.Settings_Multicurrency_StandardError>(global::Soenneker.HubSpot.OpenApiClient.Models.Settings_Multicurrency_StandardError.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "links", n => { Links = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.Settings_Multicurrency_BatchResponseExchangeRate_links>(global::Soenneker.HubSpot.OpenApiClient.Models.Settings_Multicurrency_BatchResponseExchangeRate_links.CreateFromDiscriminatorValue); } },
+                { "numErrors", n => { NumErrors = n.GetIntValue(); } },
                 { "requestedAt", n => { RequestedAt = n.GetDateTimeOffsetValue(); } },
                 { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.Settings_Multicurrency_ExchangeRate>(global::Soenneker.HubSpot.OpenApiClient.Models.Settings_Multicurrency_ExchangeRate.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "startedAt", n => { StartedAt = n.GetDateTimeOffsetValue(); } },
@@ -79,7 +91,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDateTimeOffsetValue("completedAt", CompletedAt);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.Settings_Multicurrency_StandardError>("errors", Errors);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.Settings_Multicurrency_BatchResponseExchangeRate_links>("links", Links);
+            writer.WriteIntValue("numErrors", NumErrors);
             writer.WriteDateTimeOffsetValue("requestedAt", RequestedAt);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.Settings_Multicurrency_ExchangeRate>("results", Results);
             writer.WriteDateTimeOffsetValue("startedAt", StartedAt);

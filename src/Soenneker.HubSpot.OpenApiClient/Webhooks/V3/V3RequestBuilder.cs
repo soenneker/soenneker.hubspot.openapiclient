@@ -16,7 +16,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Webhooks.V3
     public partial class V3RequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.webhooks.v3.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The ID of the target app.</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Webhooks.V3.Item.WithAppItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Webhooks.V3.Item.WithAppItemRequestBuilder this[int position]
         {
@@ -28,7 +28,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Webhooks.V3
             }
         }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.webhooks.v3.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The ID of the target app.</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Webhooks.V3.Item.WithAppItemRequestBuilder"/></returns>
         [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
         public global::Soenneker.HubSpot.OpenApiClient.Webhooks.V3.Item.WithAppItemRequestBuilder this[string position]

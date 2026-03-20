@@ -13,11 +13,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Webhooks_Webhooks_SubscriptionResponse : IAdditionalDataHolder, IParsable
     {
-        /// <summary>Whether to activate or pause the webhook subscription. If true, the subscription will send webhook notifications. If false, the subscription is paused and will not send notifications.</summary>
+        /// <summary>Whether the subscription is active or paused. If true, the subscription will send webhook notifications. If false, the subscription is paused and will not send notifications.</summary>
         public bool? Active { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>When this subscription was created. Formatted as milliseconds from the [Unix epoch](#).</summary>
+        /// <summary>The timestamp when the webhook subscription was created, in ISO 8601 format (e.g., 2020-02-29T12:30:00Z).</summary>
         public DateTimeOffset? CreatedAt { get; set; }
         /// <summary>The type of event to listen for. Accepted values include contact.creation, contact.deletion, contact.propertyChange, and similar event types for other CRM objects and custom objects.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.Webhooks_Webhooks_SubscriptionResponse_eventType? EventType { get; set; }
@@ -29,7 +29,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string EventTypeName { get; set; }
 #endif
-        /// <summary>The unique ID of the subscription.</summary>
+        /// <summary>The unique ID of the webhook subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }
@@ -53,7 +53,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string PropertyName { get; set; }
 #endif
-        /// <summary>When this subscription was last updated. Formatted as milliseconds from the [Unix epoch](#).</summary>
+        /// <summary>The timestamp when the webhook subscription was last updated, in ISO 8601 format (e.g., 2020-02-29T12:30:00Z).</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Webhooks_Webhooks_SubscriptionResponse"/> and sets the default values.

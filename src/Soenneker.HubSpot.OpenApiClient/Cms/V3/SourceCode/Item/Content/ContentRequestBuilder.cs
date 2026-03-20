@@ -16,7 +16,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.SourceCode.Item.Content
     public partial class ContentRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.cms.v3.sourceCode.item.content.item collection</summary>
-        /// <param name="position">The file system location of the file.</param>
+        /// <param name="position">Unique identifier of the item</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Cms.V3.SourceCode.Item.Content.Item.WithPathItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Cms.V3.SourceCode.Item.Content.Item.WithPathItemRequestBuilder this[string position]
         {

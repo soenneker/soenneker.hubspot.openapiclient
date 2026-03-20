@@ -44,7 +44,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string HtmlTitle { get; set; }
 #endif
-        /// <summary>ID of object to set as primary in multi-language group.</summary>
+        /// <summary>The unique ID of the Blog.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }
@@ -52,7 +52,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>Designated language of the object to add to a multi-language group.</summary>
+        /// <summary>The explicitly defined language of the Blog. If null, the Blog will default to the language of the Domain.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Blog_Settings_Blog_language? Language { get; set; }
         /// <summary>The listingPageId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -88,7 +88,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string PublicTitle { get; set; }
 #endif
-        /// <summary>Path to this blog.</summary>
+        /// <summary>The path of the this blog. This field is appended to the domain to construct the url of this blog.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Slug { get; set; }

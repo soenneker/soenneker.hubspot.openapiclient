@@ -16,7 +16,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Attendanc
     public partial class WithExternalEventItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.marketing.v3.marketingEvents.attendance.item.item collection</summary>
-        /// <param name="position">&quot;The new subscriber state for the HubSpot contacts and the specified marketing event. For example: &apos;register&apos;, &apos;attend&apos; or &apos;cancel&apos;.&quot;</param>
+        /// <param name="position">Unique identifier of the item</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Attendance.Item.Item.WithSubscriberStateItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Attendance.Item.Item.WithSubscriberStateItemRequestBuilder this[string position]
         {

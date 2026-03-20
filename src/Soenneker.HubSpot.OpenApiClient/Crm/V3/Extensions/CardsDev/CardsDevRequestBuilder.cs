@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Extensions.CardsDev
             get => new global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Extensions.CardsDev.SampleResponse.SampleResponseRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.crm.v3.extensions.cardsDev.item collection</summary>
-        /// <param name="position">The ID of the target app.</param>
+        /// <param name="position">Unique identifier of the item</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Extensions.CardsDev.Item.WithAppItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Extensions.CardsDev.Item.WithAppItemRequestBuilder this[int position]
         {
@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Extensions.CardsDev
             }
         }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.crm.v3.extensions.cardsDev.item collection</summary>
-        /// <param name="position">The ID of the target app.</param>
+        /// <param name="position">Unique identifier of the item</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Extensions.CardsDev.Item.WithAppItemRequestBuilder"/></returns>
         [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
         public global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Extensions.CardsDev.Item.WithAppItemRequestBuilder this[string position]

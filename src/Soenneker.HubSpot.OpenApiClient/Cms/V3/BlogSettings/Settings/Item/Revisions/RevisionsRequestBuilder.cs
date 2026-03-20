@@ -19,7 +19,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.BlogSettings.Settings.Item.Revi
     public partial class RevisionsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.cms.v3.blogSettings.settings.item.revisions.item collection</summary>
-        /// <param name="position">The Blog version id.</param>
+        /// <param name="position">Unique identifier of the item</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Cms.V3.BlogSettings.Settings.Item.Revisions.Item.WithRevisionItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Cms.V3.BlogSettings.Settings.Item.Revisions.Item.WithRevisionItemRequestBuilder this[string position]
         {
@@ -49,20 +49,20 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.BlogSettings.Settings.Item.Revi
         /// <summary>
         /// Get the list of blog revisions. Results can be limited and filtered by creation or updated date.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Blog_Settings_CollectionResponseWithTotalVersionBlog"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Blog_Settings_CollectionResponseWithTotalBlogVersion"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Blog_Settings_CollectionResponseWithTotalVersionBlog?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.BlogSettings.Settings.Item.Revisions.RevisionsRequestBuilder.RevisionsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Blog_Settings_CollectionResponseWithTotalBlogVersion?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.BlogSettings.Settings.Item.Revisions.RevisionsRequestBuilder.RevisionsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Blog_Settings_CollectionResponseWithTotalVersionBlog> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.BlogSettings.Settings.Item.Revisions.RevisionsRequestBuilder.RevisionsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Blog_Settings_CollectionResponseWithTotalBlogVersion> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.BlogSettings.Settings.Item.Revisions.RevisionsRequestBuilder.RevisionsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Blog_Settings_CollectionResponseWithTotalVersionBlog>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Blog_Settings_CollectionResponseWithTotalVersionBlog.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Blog_Settings_CollectionResponseWithTotalBlogVersion>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Blog_Settings_CollectionResponseWithTotalBlogVersion.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get the list of blog revisions. Results can be limited and filtered by creation or updated date.
@@ -98,7 +98,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.BlogSettings.Settings.Item.Revi
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class RevisionsRequestBuilderGetQueryParameters 
         {
-            /// <summary>The cursor token value to get the next set of results. You can get this from the `paging.next.after` JSON property of a paged response containing more results.</summary>
+            /// <summary>The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("after")]
@@ -117,7 +117,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.BlogSettings.Settings.Item.Revi
             [QueryParameter("before")]
             public string Before { get; set; }
 #endif
-            /// <summary>The maximum number of results to return. Default is 100.</summary>
+            /// <summary>The maximum number of results to display per page.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
         }

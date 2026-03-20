@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.HubSpot.OpenApiClient.Cms.Blogs;
+using Soenneker.HubSpot.OpenApiClient.Cms.Pages;
 using Soenneker.HubSpot.OpenApiClient.Cms.V3;
 using System.Collections.Generic;
 using System.IO;
@@ -20,6 +21,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms
         public global::Soenneker.HubSpot.OpenApiClient.Cms.Blogs.BlogsRequestBuilder Blogs
         {
             get => new global::Soenneker.HubSpot.OpenApiClient.Cms.Blogs.BlogsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The pages property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Cms.Pages.PagesRequestBuilder Pages
+        {
+            get => new global::Soenneker.HubSpot.OpenApiClient.Cms.Pages.PagesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The v3 property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Cms.V3.V3RequestBuilder V3

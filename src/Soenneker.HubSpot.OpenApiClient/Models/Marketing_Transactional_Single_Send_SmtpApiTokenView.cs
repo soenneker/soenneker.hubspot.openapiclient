@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A name for the campaign tied to the SMTP API token.</summary>
+        /// <summary>A name for the campaign tied to the token.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CampaignName { get; set; }
@@ -43,7 +43,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string EmailCampaignId { get; set; }
 #endif
-        /// <summary>Identifier of event.</summary>
+        /// <summary>User name to log into the HubSpot SMTP server.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }

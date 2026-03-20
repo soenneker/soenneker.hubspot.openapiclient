@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>An internal identifier for this property. This value must be unique TODO.</summary>
+    /// <summary>A CRM object type where this card should be displayed.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum CRM_Public_App_Crm_Cards_CardObjectTypeBody_name
     {

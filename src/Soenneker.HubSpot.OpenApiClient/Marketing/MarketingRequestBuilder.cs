@@ -2,6 +2,7 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.HubSpot.OpenApiClient.Marketing.MarketingEvents;
 using Soenneker.HubSpot.OpenApiClient.Marketing.V3;
 using Soenneker.HubSpot.OpenApiClient.Marketing.V4;
 using System.Collections.Generic;
@@ -16,6 +17,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class MarketingRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The marketingEvents property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Marketing.MarketingEvents.MarketingEventsRequestBuilder MarketingEvents
+        {
+            get => new global::Soenneker.HubSpot.OpenApiClient.Marketing.MarketingEvents.MarketingEventsRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The v3 property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.V3RequestBuilder V3
         {

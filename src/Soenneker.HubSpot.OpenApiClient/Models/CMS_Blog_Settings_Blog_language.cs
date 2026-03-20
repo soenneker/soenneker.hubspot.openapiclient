@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>Designated language of the object to add to a multi-language group.</summary>
+    /// <summary>The explicitly defined language of the Blog. If null, the Blog will default to the language of the Domain.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum CMS_Blog_Settings_Blog_language
     {
@@ -787,6 +787,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         #pragma warning disable CS1591
         EnHk,
         #pragma warning restore CS1591
+        [EnumMember(Value = "en-id")]
+        #pragma warning disable CS1591
+        EnId,
+        #pragma warning restore CS1591
         [EnumMember(Value = "en-ie")]
         #pragma warning disable CS1591
         EnIe,
@@ -999,6 +1003,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         #pragma warning disable CS1591
         EnTc,
         #pragma warning restore CS1591
+        [EnumMember(Value = "en-th")]
+        #pragma warning disable CS1591
+        EnTh,
+        #pragma warning restore CS1591
         [EnumMember(Value = "en-tk")]
         #pragma warning disable CS1591
         EnTk,
@@ -1046,6 +1054,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         [EnumMember(Value = "en-vi")]
         #pragma warning disable CS1591
         EnVi,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "en-vn")]
+        #pragma warning disable CS1591
+        EnVn,
         #pragma warning restore CS1591
         [EnumMember(Value = "en-vu")]
         #pragma warning disable CS1591

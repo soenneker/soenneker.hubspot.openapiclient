@@ -15,11 +15,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.V3.CustomChannels
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CustomChannelsRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The EmptyPathSegment property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.CustomChannels.EmptyPathSegmentRequestBuilder EmptyPathSegment
-        {
-            get => new global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.CustomChannels.EmptyPathSegmentRequestBuilder(PathParameters, RequestAdapter);
-        }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.conversations.v3.customChannels.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.CustomChannels.Item.WithChannelItemRequestBuilder"/></returns>

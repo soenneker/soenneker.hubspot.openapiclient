@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.SourceCode
             get => new global::Soenneker.HubSpot.OpenApiClient.Cms.V3.SourceCode.Extract.ExtractRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.cms.v3.sourceCode.item collection</summary>
-        /// <param name="position">The environment of the file (&quot;draft&quot; or &quot;published&quot;).</param>
+        /// <param name="position">Unique identifier of the item</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Cms.V3.SourceCode.Item.WithEnvironmentItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Cms.V3.SourceCode.Item.WithEnvironmentItemRequestBuilder this[string position]
         {

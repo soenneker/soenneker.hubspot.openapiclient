@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>ID of object to set as primary in multi-language group.</summary>
+        /// <summary>ID of the object to add to a multi-language group.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }
@@ -25,7 +25,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>Designated language of the object to add to a multi-language group.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Blog_Settings_AttachToLangPrimaryRequestVNext_language? Language { get; set; }
-        /// <summary>ID of the primary object in the multi-language group.</summary>
+        /// <summary>ID of primary language object in multi-language group.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PrimaryId { get; set; }

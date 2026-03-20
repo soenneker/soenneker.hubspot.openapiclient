@@ -252,6 +252,18 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         #pragma warning disable CS1591
         Hs_calculated_phone_number_region_code,
         #pragma warning restore CS1591
+        [EnumMember(Value = "hs_chat_assistant_iql_date")]
+        #pragma warning disable CS1591
+        Hs_chat_assistant_iql_date,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "hs_chat_assistant_source")]
+        #pragma warning disable CS1591
+        Hs_chat_assistant_source,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "hs_chat_assistant_summary")]
+        #pragma warning disable CS1591
+        Hs_chat_assistant_summary,
+        #pragma warning restore CS1591
         [EnumMember(Value = "hs_clicked_linkedin_ad")]
         #pragma warning disable CS1591
         Hs_clicked_linkedin_ad,
@@ -319,6 +331,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         [EnumMember(Value = "hs_created_by_conversations")]
         #pragma warning disable CS1591
         Hs_created_by_conversations,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "hs_cross_account_note")]
+        #pragma warning disable CS1591
+        Hs_cross_account_note,
         #pragma warning restore CS1591
         [EnumMember(Value = "hs_cross_sell_opportunity")]
         #pragma warning disable CS1591

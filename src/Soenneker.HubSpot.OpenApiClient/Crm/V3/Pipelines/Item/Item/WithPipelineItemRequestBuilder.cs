@@ -46,7 +46,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Pipelines.Item.Item
         {
         }
         /// <summary>
-        /// Delete a pipeline identified by its unique pipelineId
+        /// Delete a pipeline
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -102,7 +102,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Pipelines.Item.Item
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Pipelines_Pipeline>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Pipelines_Pipeline.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Replace all properties of an existing pipeline with the provided values.
+        /// Replace a pipeline
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Pipelines_Pipeline"/></returns>
         /// <param name="body">The request body</param>
@@ -122,7 +122,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Pipelines.Item.Item
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Pipelines_Pipeline>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Pipelines_Pipeline.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Delete a pipeline identified by its unique pipelineId
+        /// Delete a pipeline
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -181,7 +181,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Pipelines.Item.Item
             return requestInfo;
         }
         /// <summary>
-        /// Replace all properties of an existing pipeline with the provided values.
+        /// Replace a pipeline
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -212,7 +212,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Pipelines.Item.Item
             return new global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Pipelines.Item.Item.WithPipelineItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Delete a pipeline identified by its unique pipelineId
+        /// Delete a pipeline
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithPipelineItemRequestBuilderDeleteQueryParameters 
@@ -258,7 +258,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Pipelines.Item.Item
         {
         }
         /// <summary>
-        /// Replace all properties of an existing pipeline with the provided values.
+        /// Replace a pipeline
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithPipelineItemRequestBuilderPutQueryParameters 

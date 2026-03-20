@@ -16,7 +16,7 @@ namespace Soenneker.HubSpot.OpenApiClient.BusinessUnits.V3.BusinessUnits.User
     public partial class UserRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.businessUnits.v3.businessUnits.user.item collection</summary>
-        /// <param name="position">The ID of the user.</param>
+        /// <param name="position">Unique identifier of the item</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.BusinessUnits.V3.BusinessUnits.User.Item.WithUserItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.BusinessUnits.V3.BusinessUnits.User.Item.WithUserItemRequestBuilder this[string position]
         {

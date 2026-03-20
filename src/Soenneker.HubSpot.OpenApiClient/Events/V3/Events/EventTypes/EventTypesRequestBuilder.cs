@@ -33,9 +33,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Events.V3.Events.EventTypes
         public EventTypesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/events/v3/events/event-types", rawUrl)
         {
         }
-        /// <summary>
-        /// &quot;Retrieve a list of event type names. You may use these event types to query the API for event occurrences of a desired type.Note: the `get_types` method is only supported in the Python SDK version `12.0.0-beta.1` or later. &quot;
-        /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Events_Events_VisibleExternalEventTypeNames"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -51,9 +48,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Events.V3.Events.EventTypes
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Events_Events_VisibleExternalEventTypeNames>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Events_Events_VisibleExternalEventTypeNames.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
-        /// <summary>
-        /// &quot;Retrieve a list of event type names. You may use these event types to query the API for event occurrences of a desired type.Note: the `get_types` method is only supported in the Python SDK version `12.0.0-beta.1` or later. &quot;
-        /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

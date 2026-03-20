@@ -16,6 +16,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The timestamp indicating when the batch operation was completed, in date-time format.</summary>
         public DateTimeOffset? CompletedAt { get; set; }
+        /// <summary>The errors property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Deal_Splits_StandardError>? Errors { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Deal_Splits_StandardError> Errors { get; set; }
+#endif
         /// <summary>A map of link names to associated URIs for additional resources or documentation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -24,6 +32,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Deal_Splits_BatchResponseDealToDealSplits_links Links { get; set; }
 #endif
+        /// <summary>The numErrors property</summary>
+        public int? NumErrors { get; set; }
         /// <summary>The timestamp indicating when the batch operation was requested, in date-time format.</summary>
         public DateTimeOffset? RequestedAt { get; set; }
         /// <summary>An array of deal-to-deal split objects representing the results of the batch operation.</summary>
@@ -64,7 +74,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "completedAt", n => { CompletedAt = n.GetDateTimeOffsetValue(); } },
+                { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Deal_Splits_StandardError>(global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Deal_Splits_StandardError.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "links", n => { Links = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Deal_Splits_BatchResponseDealToDealSplits_links>(global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Deal_Splits_BatchResponseDealToDealSplits_links.CreateFromDiscriminatorValue); } },
+                { "numErrors", n => { NumErrors = n.GetIntValue(); } },
                 { "requestedAt", n => { RequestedAt = n.GetDateTimeOffsetValue(); } },
                 { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Deal_Splits_DealToDealSplits>(global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Deal_Splits_DealToDealSplits.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "startedAt", n => { StartedAt = n.GetDateTimeOffsetValue(); } },
@@ -79,7 +91,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDateTimeOffsetValue("completedAt", CompletedAt);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Deal_Splits_StandardError>("errors", Errors);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Deal_Splits_BatchResponseDealToDealSplits_links>("links", Links);
+            writer.WriteIntValue("numErrors", NumErrors);
             writer.WriteDateTimeOffsetValue("requestedAt", RequestedAt);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Deal_Splits_DealToDealSplits>("results", Results);
             writer.WriteDateTimeOffsetValue("startedAt", StartedAt);

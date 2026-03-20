@@ -40,7 +40,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Pipelines.Item.Item.Stages.Item
         {
         }
         /// <summary>
-        /// Delete a specific stage from a pipeline.
+        /// Delete a pipeline stage
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -58,7 +58,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Pipelines.Item.Item.Stages.Item
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieve a specific stage from a pipeline using its ID.
+        /// Return a pipeline stage by ID
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Pipelines_PipelineStage"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -75,9 +75,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Pipelines.Item.Item.Stages.Item
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Pipelines_PipelineStage>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Pipelines_PipelineStage.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
-        /// <summary>
-        /// Perform a partial update on a specific stage of a pipeline.
-        /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Pipelines_PipelineStage"/></returns>
         /// <param name="body">An input used to update some properties on a pipeline definition.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -116,7 +113,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Pipelines.Item.Item.Stages.Item
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Pipelines_PipelineStage>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Pipelines_PipelineStage.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Delete a specific stage from a pipeline.
+        /// Delete a pipeline stage
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -134,7 +131,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Pipelines.Item.Item.Stages.Item
             return requestInfo;
         }
         /// <summary>
-        /// Retrieve a specific stage from a pipeline using its ID.
+        /// Return a pipeline stage by ID
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -152,9 +149,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Pipelines.Item.Item.Stages.Item
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
         }
-        /// <summary>
-        /// Perform a partial update on a specific stage of a pipeline.
-        /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">An input used to update some properties on a pipeline definition.</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

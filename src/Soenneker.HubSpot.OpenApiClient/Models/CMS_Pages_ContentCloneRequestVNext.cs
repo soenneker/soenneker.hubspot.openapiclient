@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string CloneName { get; set; }
 #endif
-        /// <summary>ID of object to set as primary in multi-language group.</summary>
+        /// <summary>ID of the object to be cloned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }
