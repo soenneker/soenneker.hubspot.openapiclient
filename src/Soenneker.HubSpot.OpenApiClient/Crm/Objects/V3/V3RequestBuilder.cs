@@ -28,7 +28,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Objects.V3
             get => new global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.V3.Projects.ProjectsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.crm.objects.v3.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The type of CRM object to retrieve (forecast).</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.V3.Item.WithObjectTypeItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.V3.Item.WithObjectTypeItemRequestBuilder this[string position]
         {

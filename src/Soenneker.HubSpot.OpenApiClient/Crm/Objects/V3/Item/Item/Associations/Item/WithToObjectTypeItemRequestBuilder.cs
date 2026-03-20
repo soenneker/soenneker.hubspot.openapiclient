@@ -46,21 +46,27 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Objects.V3.Item.Item.Associations.
         public WithToObjectTypeItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/crm/objects/v3/{objectType}/{objectId}/associations/{toObjectType}{?after*,includeFA*,limit*}", rawUrl)
         {
         }
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Forecasts_CollectionResponseAssociatedIdForwardPaging"/></returns>
+        /// <summary>
+        /// Retrieve associated object IDs for a given object type.
+        /// </summary>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Appointments_CollectionResponseAssociatedIdForwardPaging"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Forecasts_CollectionResponseAssociatedIdForwardPaging?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.V3.Item.Item.Associations.Item.WithToObjectTypeItemRequestBuilder.WithToObjectTypeItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Appointments_CollectionResponseAssociatedIdForwardPaging?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.V3.Item.Item.Associations.Item.WithToObjectTypeItemRequestBuilder.WithToObjectTypeItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Forecasts_CollectionResponseAssociatedIdForwardPaging> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.V3.Item.Item.Associations.Item.WithToObjectTypeItemRequestBuilder.WithToObjectTypeItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Appointments_CollectionResponseAssociatedIdForwardPaging> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.V3.Item.Item.Associations.Item.WithToObjectTypeItemRequestBuilder.WithToObjectTypeItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Forecasts_CollectionResponseAssociatedIdForwardPaging>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Forecasts_CollectionResponseAssociatedIdForwardPaging.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Appointments_CollectionResponseAssociatedIdForwardPaging>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Appointments_CollectionResponseAssociatedIdForwardPaging.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
+        /// <summary>
+        /// Retrieve associated object IDs for a given object type.
+        /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -86,10 +92,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Objects.V3.Item.Item.Associations.
         {
             return new global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.V3.Item.Item.Associations.Item.WithToObjectTypeItemRequestBuilder(rawUrl, RequestAdapter);
         }
+        /// <summary>
+        /// Retrieve associated object IDs for a given object type.
+        /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        #pragma warning disable CS1591
         public partial class WithToObjectTypeItemRequestBuilderGetQueryParameters 
-        #pragma warning restore CS1591
         {
             /// <summary>The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
