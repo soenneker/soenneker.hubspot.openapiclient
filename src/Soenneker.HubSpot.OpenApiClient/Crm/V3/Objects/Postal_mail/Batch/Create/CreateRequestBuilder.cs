@@ -33,9 +33,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Postal_mail.Batch.Creat
         public CreateRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/crm/v3/objects/postal_mail/batch/create", rawUrl)
         {
         }
-        /// <summary>
-        /// Create a batch of postal mail objects.
-        /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Postal_Mail_BatchResponseSimplePublicObject"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -53,9 +50,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Postal_mail.Batch.Creat
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Postal_Mail_BatchResponseSimplePublicObject>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Postal_Mail_BatchResponseSimplePublicObject.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
-        /// <summary>
-        /// Create a batch of postal mail objects.
-        /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

@@ -788,6 +788,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.SiteSearch.Search
         #pragma warning disable CS1591
         EnHk,
         #pragma warning restore CS1591
+        [EnumMember(Value = "en-id")]
+        #pragma warning disable CS1591
+        EnId,
+        #pragma warning restore CS1591
         [EnumMember(Value = "en-ie")]
         #pragma warning disable CS1591
         EnIe,
@@ -1000,6 +1004,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.SiteSearch.Search
         #pragma warning disable CS1591
         EnTc,
         #pragma warning restore CS1591
+        [EnumMember(Value = "en-th")]
+        #pragma warning disable CS1591
+        EnTh,
+        #pragma warning restore CS1591
         [EnumMember(Value = "en-tk")]
         #pragma warning disable CS1591
         EnTk,
@@ -1047,6 +1055,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.SiteSearch.Search
         [EnumMember(Value = "en-vi")]
         #pragma warning disable CS1591
         EnVi,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "en-vn")]
+        #pragma warning disable CS1591
+        EnVn,
         #pragma warning restore CS1591
         [EnumMember(Value = "en-vu")]
         #pragma warning disable CS1591

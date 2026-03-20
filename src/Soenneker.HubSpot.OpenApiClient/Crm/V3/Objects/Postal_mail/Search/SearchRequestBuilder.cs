@@ -33,9 +33,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Postal_mail.Search
         public SearchRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/crm/v3/objects/postal_mail/search", rawUrl)
         {
         }
-        /// <summary>
-        /// Search for postal mail objects using specific criteria in the request.
-        /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Postal_Mail_CollectionResponseWithTotalSimplePublicObject"/></returns>
         /// <param name="body">Describes a search request</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -53,9 +50,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Postal_mail.Search
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Postal_Mail_CollectionResponseWithTotalSimplePublicObject>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Postal_Mail_CollectionResponseWithTotalSimplePublicObject.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
-        /// <summary>
-        /// Search for postal mail objects using specific criteria in the request.
-        /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">Describes a search request</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

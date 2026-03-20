@@ -73,9 +73,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Postal_mail
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Postal_Mail_CollectionResponseSimplePublicObjectWithAssociationsForwardPaging>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Postal_Mail_CollectionResponseSimplePublicObjectWithAssociationsForwardPaging.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
-        /// <summary>
-        /// Create a postal mail object with the given properties and return a copy of the object, including the ID. 
-        /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Postal_Mail_SimplePublicObject"/></returns>
         /// <param name="body">Is the input object used to create a new CRM object, containing the properties to be set and optional associations to link the new record with other CRM objects.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -109,9 +106,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Postal_mail
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
         }
-        /// <summary>
-        /// Create a postal mail object with the given properties and return a copy of the object, including the ID. 
-        /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">Is the input object used to create a new CRM object, containing the properties to be set and optional associations to link the new record with other CRM objects.</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

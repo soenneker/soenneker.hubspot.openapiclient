@@ -33,9 +33,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Postal_mail.Batch.Upser
         public UpsertRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/crm/v3/objects/postal_mail/batch/upsert", rawUrl)
         {
         }
-        /// <summary>
-        /// Create or update postal mails identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
-        /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Postal_Mail_BatchResponseSimplePublicUpsertObject"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -53,9 +50,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Postal_mail.Batch.Upser
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Postal_Mail_BatchResponseSimplePublicUpsertObject>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Postal_Mail_BatchResponseSimplePublicUpsertObject.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
-        /// <summary>
-        /// Create or update postal mails identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
-        /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

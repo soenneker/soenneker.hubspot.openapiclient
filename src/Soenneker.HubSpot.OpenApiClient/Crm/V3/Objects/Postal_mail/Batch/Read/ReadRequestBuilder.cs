@@ -33,9 +33,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Postal_mail.Batch.Read
         public ReadRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/crm/v3/objects/postal_mail/batch/read{?archived*}", rawUrl)
         {
         }
-        /// <summary>
-        /// Retrieve multiple postal mail objects using their internal IDs or unique property values.
-        /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Postal_Mail_BatchResponseSimplePublicObject"/></returns>
         /// <param name="body">Specifies the input for reading a batch of CRM objects, including arrays of object IDs, requested property names (with optional history), and an optional unique identifying property.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -53,9 +50,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Postal_mail.Batch.Read
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Postal_Mail_BatchResponseSimplePublicObject>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Postal_Mail_BatchResponseSimplePublicObject.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
-        /// <summary>
-        /// Retrieve multiple postal mail objects using their internal IDs or unique property values.
-        /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">Specifies the input for reading a batch of CRM objects, including arrays of object IDs, requested property names (with optional history), and an optional unique identifying property.</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -84,11 +78,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Postal_mail.Batch.Read
         {
             return new global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Postal_mail.Batch.Read.ReadRequestBuilder(rawUrl, RequestAdapter);
         }
-        /// <summary>
-        /// Retrieve multiple postal mail objects using their internal IDs or unique property values.
-        /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        #pragma warning disable CS1591
         public partial class ReadRequestBuilderPostQueryParameters 
+        #pragma warning restore CS1591
         {
             /// <summary>Whether to return only results that have been archived.</summary>
             [QueryParameter("archived")]
