@@ -19,6 +19,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         #pragma warning disable CS1591
         ADDRESS_OPTED_OUT,
         #pragma warning restore CS1591
+        [EnumMember(Value = "ATTACHMENT_DOWNLOAD_QUEUE_FULL")]
+        #pragma warning disable CS1591
+        ATTACHMENT_DOWNLOAD_QUEUE_FULL,
+        #pragma warning restore CS1591
         [EnumMember(Value = "BLOCKED_ADDRESS")]
         #pragma warning disable CS1591
         BLOCKED_ADDRESS,
@@ -26,6 +30,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         [EnumMember(Value = "BLOCKED_DOMAIN")]
         #pragma warning disable CS1591
         BLOCKED_DOMAIN,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "BRAND_RECIPIENT_FATIGUE_SUPPRESSED")]
+        #pragma warning disable CS1591
+        BRAND_RECIPIENT_FATIGUE_SUPPRESSED,
         #pragma warning restore CS1591
         [EnumMember(Value = "CAMPAIGN_CANCELLED")]
         #pragma warning disable CS1591
@@ -66,6 +74,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         [EnumMember(Value = "IDEMPOTENT_IGNORE")]
         #pragma warning disable CS1591
         IDEMPOTENT_IGNORE,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "INVALID_APP_ID_ATTRIBUTION")]
+        #pragma warning disable CS1591
+        INVALID_APP_ID_ATTRIBUTION,
         #pragma warning restore CS1591
         [EnumMember(Value = "INVALID_FROM_ADDRESS")]
         #pragma warning disable CS1591
@@ -174,6 +186,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         [EnumMember(Value = "TOO_MANY_RECIPIENTS")]
         #pragma warning disable CS1591
         TOO_MANY_RECIPIENTS,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "UBB_GOVERNANCE_MISSING")]
+        #pragma warning disable CS1591
+        UBB_GOVERNANCE_MISSING,
         #pragma warning restore CS1591
         [EnumMember(Value = "UNCONFIGURED_SENDING_DOMAIN")]
         #pragma warning disable CS1591
