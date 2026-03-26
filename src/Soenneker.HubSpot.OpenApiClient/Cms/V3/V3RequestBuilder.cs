@@ -2,7 +2,6 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
-using Soenneker.HubSpot.OpenApiClient.Cms.V3.AuditLogs;
 using Soenneker.HubSpot.OpenApiClient.Cms.V3.BlogSettings;
 using Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs;
 using Soenneker.HubSpot.OpenApiClient.Cms.V3.Domains;
@@ -23,11 +22,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class V3RequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The auditLogs property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Cms.V3.AuditLogs.AuditLogsRequestBuilder AuditLogs
-        {
-            get => new global::Soenneker.HubSpot.OpenApiClient.Cms.V3.AuditLogs.AuditLogsRequestBuilder(PathParameters, RequestAdapter);
-        }
         /// <summary>The blogs property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.BlogsRequestBuilder Blogs
         {

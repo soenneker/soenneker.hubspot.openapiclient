@@ -2,8 +2,10 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.HubSpot.OpenApiClient.Cms.AuditLogs;
 using Soenneker.HubSpot.OpenApiClient.Cms.Blogs;
 using Soenneker.HubSpot.OpenApiClient.Cms.Pages;
+using Soenneker.HubSpot.OpenApiClient.Cms.UrlRedirects;
 using Soenneker.HubSpot.OpenApiClient.Cms.V3;
 using System.Collections.Generic;
 using System.IO;
@@ -17,6 +19,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CmsRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The auditLogs property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Cms.AuditLogs.AuditLogsRequestBuilder AuditLogs
+        {
+            get => new global::Soenneker.HubSpot.OpenApiClient.Cms.AuditLogs.AuditLogsRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The blogs property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Cms.Blogs.BlogsRequestBuilder Blogs
         {
@@ -26,6 +33,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms
         public global::Soenneker.HubSpot.OpenApiClient.Cms.Pages.PagesRequestBuilder Pages
         {
             get => new global::Soenneker.HubSpot.OpenApiClient.Cms.Pages.PagesRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The urlRedirects property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Cms.UrlRedirects.UrlRedirectsRequestBuilder UrlRedirects
+        {
+            get => new global::Soenneker.HubSpot.OpenApiClient.Cms.UrlRedirects.UrlRedirectsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The v3 property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Cms.V3.V3RequestBuilder V3

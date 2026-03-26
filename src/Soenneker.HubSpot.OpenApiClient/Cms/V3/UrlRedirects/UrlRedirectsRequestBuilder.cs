@@ -15,13 +15,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.UrlRedirects
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UrlRedirectsRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The EmptyPathSegment property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Cms.V3.UrlRedirects.EmptyPathSegmentRequestBuilder EmptyPathSegment
-        {
-            get => new global::Soenneker.HubSpot.OpenApiClient.Cms.V3.UrlRedirects.EmptyPathSegmentRequestBuilder(PathParameters, RequestAdapter);
-        }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.cms.v3.urlRedirects.item collection</summary>
-        /// <param name="position">The ID of the target redirect.</param>
+        /// <param name="position">Unique identifier of the item</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Cms.V3.UrlRedirects.Item.WithUrlRedirectItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Cms.V3.UrlRedirects.Item.WithUrlRedirectItemRequestBuilder this[string position]
         {

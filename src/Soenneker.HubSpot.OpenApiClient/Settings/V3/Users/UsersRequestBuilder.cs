@@ -17,11 +17,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Settings.V3.Users
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UsersRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The EmptyPathSegment property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Settings.V3.Users.EmptyPathSegmentRequestBuilder EmptyPathSegment
-        {
-            get => new global::Soenneker.HubSpot.OpenApiClient.Settings.V3.Users.EmptyPathSegmentRequestBuilder(PathParameters, RequestAdapter);
-        }
         /// <summary>The roles property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Settings.V3.Users.Roles.RolesRequestBuilder Roles
         {

@@ -2,6 +2,7 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.HubSpot.OpenApiClient.Settings.Users;
 using Soenneker.HubSpot.OpenApiClient.Settings.V3;
 using System.Collections.Generic;
 using System.IO;
@@ -15,6 +16,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Settings
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SettingsRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The users property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Settings.Users.UsersRequestBuilder Users
+        {
+            get => new global::Soenneker.HubSpot.OpenApiClient.Settings.Users.UsersRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The v3 property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Settings.V3.V3RequestBuilder V3
         {
