@@ -12,25 +12,25 @@ using System;
 namespace Soenneker.HubSpot.OpenApiClient.Files.V3.Folders.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \files\v3\folders\{folder-id}
+    /// Builds and executes requests for operations under \files\v3\folders\{folderId}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class FolderItemRequestBuilder : BaseRequestBuilder
+    public partial class WithFolderItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Files.V3.Folders.Item.FolderItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Files.V3.Folders.Item.WithFolderItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public FolderItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/files/v3/folders/{folder%2Did}{?properties*}", pathParameters)
+        public WithFolderItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/files/v3/folders/{folderId}{?properties*}", pathParameters)
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Files.V3.Folders.Item.FolderItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Files.V3.Folders.Item.WithFolderItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public FolderItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/files/v3/folders/{folder%2Did}{?properties*}", rawUrl)
+        public WithFolderItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/files/v3/folders/{folderId}{?properties*}", rawUrl)
         {
         }
         /// <summary>
@@ -59,11 +59,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Files.V3.Folders.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Files_Files_Folder?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Files.V3.Folders.Item.FolderItemRequestBuilder.FolderItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Files_Files_Folder?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Files.V3.Folders.Item.WithFolderItemRequestBuilder.WithFolderItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Files_Files_Folder> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Files.V3.Folders.Item.FolderItemRequestBuilder.FolderItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Files_Files_Folder> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Files.V3.Folders.Item.WithFolderItemRequestBuilder.WithFolderItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -114,11 +114,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Files.V3.Folders.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Files.V3.Folders.Item.FolderItemRequestBuilder.FolderItemRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Files.V3.Folders.Item.WithFolderItemRequestBuilder.WithFolderItemRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Files.V3.Folders.Item.FolderItemRequestBuilder.FolderItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Files.V3.Folders.Item.WithFolderItemRequestBuilder.WithFolderItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
@@ -151,25 +151,25 @@ namespace Soenneker.HubSpot.OpenApiClient.Files.V3.Folders.Item
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Files.V3.Folders.Item.FolderItemRequestBuilder"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Files.V3.Folders.Item.WithFolderItemRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::Soenneker.HubSpot.OpenApiClient.Files.V3.Folders.Item.FolderItemRequestBuilder WithUrl(string rawUrl)
+        public global::Soenneker.HubSpot.OpenApiClient.Files.V3.Folders.Item.WithFolderItemRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::Soenneker.HubSpot.OpenApiClient.Files.V3.Folders.Item.FolderItemRequestBuilder(rawUrl, RequestAdapter);
+            return new global::Soenneker.HubSpot.OpenApiClient.Files.V3.Folders.Item.WithFolderItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
         /// Configuration for the request such as headers, query parameters, and middleware options.
         /// </summary>
         [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class FolderItemRequestBuilderDeleteRequestConfiguration : RequestConfiguration<DefaultQueryParameters>
+        public partial class WithFolderItemRequestBuilderDeleteRequestConfiguration : RequestConfiguration<DefaultQueryParameters>
         {
         }
         /// <summary>
         /// Retrieve a folder by its ID.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class FolderItemRequestBuilderGetQueryParameters 
+        public partial class WithFolderItemRequestBuilderGetQueryParameters 
         {
             /// <summary>Properties to set on returned folder.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -187,7 +187,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Files.V3.Folders.Item
         /// </summary>
         [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class FolderItemRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Files.V3.Folders.Item.FolderItemRequestBuilder.FolderItemRequestBuilderGetQueryParameters>
+        public partial class WithFolderItemRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Files.V3.Folders.Item.WithFolderItemRequestBuilder.WithFolderItemRequestBuilderGetQueryParameters>
         {
         }
         /// <summary>
@@ -195,7 +195,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Files.V3.Folders.Item
         /// </summary>
         [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class FolderItemRequestBuilderPatchRequestConfiguration : RequestConfiguration<DefaultQueryParameters>
+        public partial class WithFolderItemRequestBuilderPatchRequestConfiguration : RequestConfiguration<DefaultQueryParameters>
         {
         }
     }

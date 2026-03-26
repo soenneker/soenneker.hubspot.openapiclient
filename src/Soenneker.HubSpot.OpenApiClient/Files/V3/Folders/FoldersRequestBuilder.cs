@@ -32,14 +32,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Files.V3.Folders
         }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.files.v3.folders.item collection</summary>
         /// <param name="position">ID of desired folder</param>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Files.V3.Folders.Item.FolderItemRequestBuilder"/></returns>
-        public global::Soenneker.HubSpot.OpenApiClient.Files.V3.Folders.Item.FolderItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Files.V3.Folders.Item.WithFolderItemRequestBuilder"/></returns>
+        public global::Soenneker.HubSpot.OpenApiClient.Files.V3.Folders.Item.WithFolderItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("folder%2Did", position);
-                return new global::Soenneker.HubSpot.OpenApiClient.Files.V3.Folders.Item.FolderItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("folderId", position);
+                return new global::Soenneker.HubSpot.OpenApiClient.Files.V3.Folders.Item.WithFolderItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
