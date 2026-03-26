@@ -67,40 +67,40 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Companies
         /// <summary>
         /// Retrieve all companies, using query parameters to control the information that gets returned.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Companies_CollectionResponseSimplePublicObjectWithAssociationsForwardPaging"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.C______crm_CollectionResponseSimplePublicObjectWithAssociationsForwardPaging"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Companies_CollectionResponseSimplePublicObjectWithAssociationsForwardPaging?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Companies.CompaniesRequestBuilder.CompaniesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.C______crm_CollectionResponseSimplePublicObjectWithAssociationsForwardPaging?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Companies.CompaniesRequestBuilder.CompaniesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Companies_CollectionResponseSimplePublicObjectWithAssociationsForwardPaging> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Companies.CompaniesRequestBuilder.CompaniesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.C______crm_CollectionResponseSimplePublicObjectWithAssociationsForwardPaging> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Companies.CompaniesRequestBuilder.CompaniesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Companies_CollectionResponseSimplePublicObjectWithAssociationsForwardPaging>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Companies_CollectionResponseSimplePublicObjectWithAssociationsForwardPaging.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.C______crm_CollectionResponseSimplePublicObjectWithAssociationsForwardPaging>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.C______crm_CollectionResponseSimplePublicObjectWithAssociationsForwardPaging.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Create a single company. Include a `properties` object to define [property values](https://developers.hubspot.com/docs/guides/api/crm/properties) for the company, along with an `associations` array to define [associations](https://developers.hubspot.com/docs/guides/api/crm/associations/associations-v4) with other CRM records.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Companies_SimplePublicObject"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.C______crm_SimplePublicObject"/></returns>
         /// <param name="body">Is the input object used to create a new CRM object, containing the properties to be set and optional associations to link the new record with other CRM objects.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Companies_SimplePublicObject?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Companies_SimplePublicObjectInputForCreate body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.C______crm_SimplePublicObject?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.C______crm_SimplePublicObjectInputForCreate body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Companies_SimplePublicObject> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Companies_SimplePublicObjectInputForCreate body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.C______crm_SimplePublicObject> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.C______crm_SimplePublicObjectInputForCreate body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Companies_SimplePublicObject>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Companies_SimplePublicObject.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.C______crm_SimplePublicObject>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.C______crm_SimplePublicObject.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve all companies, using query parameters to control the information that gets returned.
@@ -129,11 +129,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Companies
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Companies_SimplePublicObjectInputForCreate body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.C______crm_SimplePublicObjectInputForCreate body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Companies_SimplePublicObjectInputForCreate body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.C______crm_SimplePublicObjectInputForCreate body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

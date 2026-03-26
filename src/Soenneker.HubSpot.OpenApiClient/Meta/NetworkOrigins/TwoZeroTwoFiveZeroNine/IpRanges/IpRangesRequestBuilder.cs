@@ -42,20 +42,20 @@ namespace Soenneker.HubSpot.OpenApiClient.Meta.NetworkOrigins.TwoZeroTwoFiveZero
         /// <summary>
         /// Retrieve a collection of IP ranges associated with specific services and directions, such as EMAIL, API, DNS, or WEB_SCRAPING. The response includes details like CIDR notation, description, and the direction of IP traffic.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Meta_Origins_CollectionResponseIpRangeNoPaging"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseIpRangeNoPaging"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Meta_Origins_CollectionResponseIpRangeNoPaging?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Meta.NetworkOrigins.TwoZeroTwoFiveZeroNine.IpRanges.IpRangesRequestBuilder.IpRangesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseIpRangeNoPaging?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Meta.NetworkOrigins.TwoZeroTwoFiveZeroNine.IpRanges.IpRangesRequestBuilder.IpRangesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Meta_Origins_CollectionResponseIpRangeNoPaging> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Meta.NetworkOrigins.TwoZeroTwoFiveZeroNine.IpRanges.IpRangesRequestBuilder.IpRangesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseIpRangeNoPaging> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Meta.NetworkOrigins.TwoZeroTwoFiveZeroNine.IpRanges.IpRangesRequestBuilder.IpRangesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Meta_Origins_CollectionResponseIpRangeNoPaging>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Meta_Origins_CollectionResponseIpRangeNoPaging.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseIpRangeNoPaging>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseIpRangeNoPaging.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve a collection of IP ranges associated with specific services and directions, such as EMAIL, API, DNS, or WEB_SCRAPING. The response includes details like CIDR notation, description, and the direction of IP traffic.

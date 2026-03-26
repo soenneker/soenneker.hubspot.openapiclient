@@ -36,20 +36,20 @@ namespace Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Definition
         /// <summary>
         /// Get a list of subscription status definitions from the account.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Communication_Preferences_Subscriptions_ActionResponseWithResultsSubscriptionDefinition"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsSubscriptionDefinition"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Communication_Preferences_Subscriptions_ActionResponseWithResultsSubscriptionDefinition?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Definitions.DefinitionsRequestBuilder.DefinitionsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsSubscriptionDefinition?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Definitions.DefinitionsRequestBuilder.DefinitionsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Communication_Preferences_Subscriptions_ActionResponseWithResultsSubscriptionDefinition> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Definitions.DefinitionsRequestBuilder.DefinitionsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsSubscriptionDefinition> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Definitions.DefinitionsRequestBuilder.DefinitionsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Communication_Preferences_Subscriptions_ActionResponseWithResultsSubscriptionDefinition>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Communication_Preferences_Subscriptions_ActionResponseWithResultsSubscriptionDefinition.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsSubscriptionDefinition>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsSubscriptionDefinition.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get a list of subscription status definitions from the account.

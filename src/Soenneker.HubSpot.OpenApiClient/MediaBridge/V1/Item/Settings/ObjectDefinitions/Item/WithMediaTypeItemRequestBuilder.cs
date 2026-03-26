@@ -36,20 +36,20 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.V1.Item.Settings.ObjectDef
         /// <summary>
         /// Get the existing objects types that belong to the specified media type.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Media_Bridge_ObjectDefinitionResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ObjectDefinitionResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Media_Bridge_ObjectDefinitionResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.MediaBridge.V1.Item.Settings.ObjectDefinitions.Item.WithMediaTypeItemRequestBuilder.WithMediaTypeItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.ObjectDefinitionResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.MediaBridge.V1.Item.Settings.ObjectDefinitions.Item.WithMediaTypeItemRequestBuilder.WithMediaTypeItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Media_Bridge_ObjectDefinitionResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.MediaBridge.V1.Item.Settings.ObjectDefinitions.Item.WithMediaTypeItemRequestBuilder.WithMediaTypeItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.ObjectDefinitionResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.MediaBridge.V1.Item.Settings.ObjectDefinitions.Item.WithMediaTypeItemRequestBuilder.WithMediaTypeItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Media_Bridge_ObjectDefinitionResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Media_Bridge_ObjectDefinitionResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ObjectDefinitionResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ObjectDefinitionResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get the existing objects types that belong to the specified media type.

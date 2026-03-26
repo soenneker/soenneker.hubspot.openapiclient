@@ -33,37 +33,37 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.CustomChannels.V3
         public V3RequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/conversations/custom-channels/v3{?after*,defaultPageLength*,limit*,sort*}", rawUrl)
         {
         }
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Custom_Channels_CollectionResponseWithTotalPublicChannelIntegrationChannel"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalPublicChannelIntegrationChannel"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Custom_Channels_CollectionResponseWithTotalPublicChannelIntegrationChannel?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Conversations.CustomChannels.V3.V3RequestBuilder.V3RequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalPublicChannelIntegrationChannel?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Conversations.CustomChannels.V3.V3RequestBuilder.V3RequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Custom_Channels_CollectionResponseWithTotalPublicChannelIntegrationChannel> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Conversations.CustomChannels.V3.V3RequestBuilder.V3RequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalPublicChannelIntegrationChannel> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Conversations.CustomChannels.V3.V3RequestBuilder.V3RequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Custom_Channels_CollectionResponseWithTotalPublicChannelIntegrationChannel>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Custom_Channels_CollectionResponseWithTotalPublicChannelIntegrationChannel.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalPublicChannelIntegrationChannel>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalPublicChannelIntegrationChannel.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Custom_Channels_PublicChannelIntegrationChannel"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannel"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Custom_Channels_PublicChannelIntegrationChannel?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Custom_Channels_PublicChannelIntegrationChannelCreate body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannel?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelCreate body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Custom_Channels_PublicChannelIntegrationChannel> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Custom_Channels_PublicChannelIntegrationChannelCreate body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannel> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelCreate body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Custom_Channels_PublicChannelIntegrationChannel>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Custom_Channels_PublicChannelIntegrationChannel.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannel>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannel.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -86,11 +86,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.CustomChannels.V3
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Custom_Channels_PublicChannelIntegrationChannelCreate body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelCreate body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Custom_Channels_PublicChannelIntegrationChannelCreate body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelCreate body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

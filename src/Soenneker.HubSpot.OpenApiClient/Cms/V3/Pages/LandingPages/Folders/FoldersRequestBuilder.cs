@@ -55,40 +55,40 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders
         /// <summary>
         /// Get the list of Landing Page Folders. Supports paging and filtering. This method would be useful for an integration that examined these models and used an external service to suggest edits.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_CollectionResponseWithTotalContentFolderForwardPaging"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalContentFolderForwardPaging"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_CollectionResponseWithTotalContentFolderForwardPaging?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders.FoldersRequestBuilder.FoldersRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalContentFolderForwardPaging?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders.FoldersRequestBuilder.FoldersRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_CollectionResponseWithTotalContentFolderForwardPaging> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders.FoldersRequestBuilder.FoldersRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalContentFolderForwardPaging> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders.FoldersRequestBuilder.FoldersRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_CollectionResponseWithTotalContentFolderForwardPaging>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_CollectionResponseWithTotalContentFolderForwardPaging.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalContentFolderForwardPaging>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalContentFolderForwardPaging.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Create a new folder for landing pages.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_ContentFolder"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ContentFolder"/></returns>
         /// <param name="body">Model definition for a content folder.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_ContentFolder?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_ContentFolder body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.ContentFolder?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.ContentFolder body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_ContentFolder> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_ContentFolder body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.ContentFolder> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.ContentFolder body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_ContentFolder>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_ContentFolder.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ContentFolder>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ContentFolder.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get the list of Landing Page Folders. Supports paging and filtering. This method would be useful for an integration that examined these models and used an external service to suggest edits.
@@ -117,11 +117,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_ContentFolder body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.ContentFolder body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_ContentFolder body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.ContentFolder body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

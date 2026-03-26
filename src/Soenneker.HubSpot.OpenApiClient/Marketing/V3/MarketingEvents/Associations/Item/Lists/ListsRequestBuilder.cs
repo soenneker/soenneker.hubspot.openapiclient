@@ -49,20 +49,20 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Associati
         /// <summary>
         /// Gets lists associated with a marketing event by marketing event id
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_CollectionResponseWithTotalPublicList"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalPublicList"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_CollectionResponseWithTotalPublicList?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalPublicList?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_CollectionResponseWithTotalPublicList> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalPublicList> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_CollectionResponseWithTotalPublicList>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_CollectionResponseWithTotalPublicList.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalPublicList>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalPublicList.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Gets lists associated with a marketing event by marketing event id

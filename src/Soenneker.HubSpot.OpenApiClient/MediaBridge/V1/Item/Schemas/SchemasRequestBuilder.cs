@@ -49,20 +49,20 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.V1.Item.Schemas
         /// <summary>
         /// Get the schemas for all object types.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Media_Bridge_CollectionResponseObjectSchemaNoPaging"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseObjectSchemaNoPaging"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Media_Bridge_CollectionResponseObjectSchemaNoPaging?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.MediaBridge.V1.Item.Schemas.SchemasRequestBuilder.SchemasRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseObjectSchemaNoPaging?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.MediaBridge.V1.Item.Schemas.SchemasRequestBuilder.SchemasRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Media_Bridge_CollectionResponseObjectSchemaNoPaging> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.MediaBridge.V1.Item.Schemas.SchemasRequestBuilder.SchemasRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseObjectSchemaNoPaging> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.MediaBridge.V1.Item.Schemas.SchemasRequestBuilder.SchemasRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Media_Bridge_CollectionResponseObjectSchemaNoPaging>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Media_Bridge_CollectionResponseObjectSchemaNoPaging.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseObjectSchemaNoPaging>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseObjectSchemaNoPaging.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get the schemas for all object types.

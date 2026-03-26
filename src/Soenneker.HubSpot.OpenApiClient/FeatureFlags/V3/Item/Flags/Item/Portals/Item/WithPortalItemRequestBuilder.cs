@@ -36,58 +36,58 @@ namespace Soenneker.HubSpot.OpenApiClient.FeatureFlags.V3.Item.Flags.Item.Portal
         /// <summary>
         /// Delete an account-level flag state for a specific HubSpot account. No request body is included.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Public_App_Feature_Flags_V3_PortalFlagStateResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStateResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Public_App_Feature_Flags_V3_PortalFlagStateResponse?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStateResponse?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Public_App_Feature_Flags_V3_PortalFlagStateResponse> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStateResponse> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Public_App_Feature_Flags_V3_PortalFlagStateResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Public_App_Feature_Flags_V3_PortalFlagStateResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStateResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStateResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve the account-level flag state of a specific HubSpot account.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Public_App_Feature_Flags_V3_PortalFlagStateResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStateResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Public_App_Feature_Flags_V3_PortalFlagStateResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStateResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Public_App_Feature_Flags_V3_PortalFlagStateResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStateResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Public_App_Feature_Flags_V3_PortalFlagStateResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Public_App_Feature_Flags_V3_PortalFlagStateResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStateResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStateResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Specify an account-level flag state for a specific HubSpot account.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Public_App_Feature_Flags_V3_PortalFlagStateResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStateResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Public_App_Feature_Flags_V3_PortalFlagStateResponse?> PutAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Public_App_Feature_Flags_V3_PortalFlagStatePutRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStateResponse?> PutAsync(global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStatePutRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Public_App_Feature_Flags_V3_PortalFlagStateResponse> PutAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Public_App_Feature_Flags_V3_PortalFlagStatePutRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStateResponse> PutAsync(global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStatePutRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Public_App_Feature_Flags_V3_PortalFlagStateResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Public_App_Feature_Flags_V3_PortalFlagStateResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStateResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStateResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Delete an account-level flag state for a specific HubSpot account. No request body is included.
@@ -135,11 +135,11 @@ namespace Soenneker.HubSpot.OpenApiClient.FeatureFlags.V3.Item.Flags.Item.Portal
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPutRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Public_App_Feature_Flags_V3_PortalFlagStatePutRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPutRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStatePutRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPutRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Public_App_Feature_Flags_V3_PortalFlagStatePutRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPutRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStatePutRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

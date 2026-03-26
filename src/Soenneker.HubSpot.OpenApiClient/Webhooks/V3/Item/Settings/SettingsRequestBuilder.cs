@@ -54,40 +54,40 @@ namespace Soenneker.HubSpot.OpenApiClient.Webhooks.V3.Item.Settings
         /// <summary>
         /// Retrieve the webhook settings for the specified app, including the webhook’s target URL, throttle configuration, and create/update date.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Webhooks_Webhooks_SettingsResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Webhooks_SettingsResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Webhooks_Webhooks_SettingsResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Webhooks_SettingsResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Webhooks_Webhooks_SettingsResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Webhooks_SettingsResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Webhooks_Webhooks_SettingsResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Webhooks_Webhooks_SettingsResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Webhooks_SettingsResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Webhooks_SettingsResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Update webhook settings for the specified app.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Webhooks_Webhooks_SettingsResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Webhooks_SettingsResponse"/></returns>
         /// <param name="body">New or updated webhook settings for an app.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Webhooks_Webhooks_SettingsResponse?> PutAsync(global::Soenneker.HubSpot.OpenApiClient.Models.Webhooks_Webhooks_SettingsChangeRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Webhooks_SettingsResponse?> PutAsync(global::Soenneker.HubSpot.OpenApiClient.Models.SettingsChangeRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Webhooks_Webhooks_SettingsResponse> PutAsync(global::Soenneker.HubSpot.OpenApiClient.Models.Webhooks_Webhooks_SettingsChangeRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Webhooks_SettingsResponse> PutAsync(global::Soenneker.HubSpot.OpenApiClient.Models.SettingsChangeRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Webhooks_Webhooks_SettingsResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Webhooks_Webhooks_SettingsResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Webhooks_SettingsResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Webhooks_SettingsResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Delete the webhook settings for the specified app. Event subscriptions will not be deleted, but will be paused until another webhook is created.
@@ -134,11 +134,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Webhooks.V3.Item.Settings
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPutRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.Webhooks_Webhooks_SettingsChangeRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPutRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.SettingsChangeRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPutRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.Webhooks_Webhooks_SettingsChangeRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPutRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.SettingsChangeRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

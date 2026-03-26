@@ -36,22 +36,22 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Campaigns.Batch.Update
         /// <summary>
         /// This endpoint updates a batch of campaigns based on the provided input data.The maximum number of items in a batch request is 50.If an empty string (&quot;&quot;) is passed for any property in the Batch Update, it will reset that property&apos;s value.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Campaigns_Public_Api_BatchResponsePublicCampaign"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicCampaign"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Campaigns_Public_Api_BatchResponsePublicCampaign?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Campaigns_Public_Api_BatchInputPublicCampaignBatchUpdateItem body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicCampaign?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.BatchInputPublicCampaignBatchUpdateItem body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Campaigns_Public_Api_BatchResponsePublicCampaign> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Campaigns_Public_Api_BatchInputPublicCampaignBatchUpdateItem body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicCampaign> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.BatchInputPublicCampaignBatchUpdateItem body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Campaigns_Public_Api_BatchResponsePublicCampaign>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Campaigns_Public_Api_BatchResponsePublicCampaign.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicCampaign>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicCampaign.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// This endpoint updates a batch of campaigns based on the provided input data.The maximum number of items in a batch request is 50.If an empty string (&quot;&quot;) is passed for any property in the Batch Update, it will reset that property&apos;s value.
@@ -61,11 +61,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Campaigns.Batch.Update
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Campaigns_Public_Api_BatchInputPublicCampaignBatchUpdateItem body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.BatchInputPublicCampaignBatchUpdateItem body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Campaigns_Public_Api_BatchInputPublicCampaignBatchUpdateItem body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.BatchInputPublicCampaignBatchUpdateItem body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

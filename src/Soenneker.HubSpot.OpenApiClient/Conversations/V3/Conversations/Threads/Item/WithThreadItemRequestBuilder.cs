@@ -60,40 +60,40 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads
         /// <summary>
         /// Retrieve a single thread by its ID
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Conversations_Inbox___Messages_PublicThread"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicThread"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Conversations_Inbox___Messages_PublicThread?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads.Item.WithThreadItemRequestBuilder.WithThreadItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.PublicThread?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads.Item.WithThreadItemRequestBuilder.WithThreadItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Conversations_Inbox___Messages_PublicThread> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads.Item.WithThreadItemRequestBuilder.WithThreadItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.PublicThread> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads.Item.WithThreadItemRequestBuilder.WithThreadItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Conversations_Inbox___Messages_PublicThread>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Conversations_Inbox___Messages_PublicThread.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicThread>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicThread.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Updates a single thread. Either a thread&apos;s status can be updated, or the thread can be restored.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Conversations_Inbox___Messages_PublicThread"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicThread"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Conversations_Inbox___Messages_PublicThread?> PatchAsync(global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Conversations_Inbox___Messages_PublicThreadUpdateRequest body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads.Item.WithThreadItemRequestBuilder.WithThreadItemRequestBuilderPatchQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.PublicThread?> PatchAsync(global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadUpdateRequest body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads.Item.WithThreadItemRequestBuilder.WithThreadItemRequestBuilderPatchQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Conversations_Inbox___Messages_PublicThread> PatchAsync(global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Conversations_Inbox___Messages_PublicThreadUpdateRequest body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads.Item.WithThreadItemRequestBuilder.WithThreadItemRequestBuilderPatchQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.PublicThread> PatchAsync(global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadUpdateRequest body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads.Item.WithThreadItemRequestBuilder.WithThreadItemRequestBuilderPatchQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPatchRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Conversations_Inbox___Messages_PublicThread>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Conversations_Inbox___Messages_PublicThread.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicThread>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicThread.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Archives a single thread. The thread will be permanently deleted 30 days after placed in an archived state.
@@ -140,11 +140,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPatchRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Conversations_Inbox___Messages_PublicThreadUpdateRequest body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads.Item.WithThreadItemRequestBuilder.WithThreadItemRequestBuilderPatchQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadUpdateRequest body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads.Item.WithThreadItemRequestBuilder.WithThreadItemRequestBuilderPatchQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPatchRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Conversations_Inbox___Messages_PublicThreadUpdateRequest body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads.Item.WithThreadItemRequestBuilder.WithThreadItemRequestBuilderPatchQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadUpdateRequest body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads.Item.WithThreadItemRequestBuilder.WithThreadItemRequestBuilderPatchQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -177,10 +177,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithThreadItemRequestBuilderGetQueryParameters 
         {
-            /// <summary>Whether to return only results that have been archived. Default is false.</summary>
+            /// <summary>Whether to return only results that have been archived.</summary>
             [QueryParameter("archived")]
             public bool? Archived { get; set; }
-            /// <summary>You can specify an association type here of `TICKET`. If this is set the response will included a thread associations object and associated ticket id if present. If there are no associations to a ticket with this conversation, then the thread associations object will not be present on the response. </summary>
             [Obsolete("This property is deprecated, use AssociationAsGetAssociationQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -191,7 +190,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads
             [QueryParameter("association")]
             public string[] Association { get; set; }
 #endif
-            /// <summary>You can specify an association type here of `TICKET`. If this is set the response will included a thread associations object and associated ticket id if present. If there are no associations to a ticket with this conversation, then the thread associations object will not be present on the response. </summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("association")]
@@ -201,7 +199,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads
             [QueryParameter("association")]
             public global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads.Item.GetAssociationQueryParameterType[] AssociationAsGetAssociationQueryParameterType { get; set; }
 #endif
-            /// <summary>A specific property to include in the thread response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("property")]
@@ -226,7 +223,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithThreadItemRequestBuilderPatchQueryParameters 
         {
-            /// <summary>Whether the thread to update is archived. Default is false. A thread&apos;s status property can not be updated if the thread is archived.</summary>
+            /// <summary>Whether to return only results that have been archived.</summary>
             [QueryParameter("archived")]
             public bool? Archived { get; set; }
         }

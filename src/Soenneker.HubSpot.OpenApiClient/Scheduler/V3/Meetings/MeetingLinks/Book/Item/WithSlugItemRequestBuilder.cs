@@ -36,20 +36,20 @@ namespace Soenneker.HubSpot.OpenApiClient.Scheduler.V3.Meetings.MeetingLinks.Boo
         /// <summary>
         /// Get details about the initial information necessary for a meeting scheduler.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Scheduler_Meetings_ExternalBookingInfo"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBookingInfo"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Scheduler_Meetings_ExternalBookingInfo?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Scheduler.V3.Meetings.MeetingLinks.Book.Item.WithSlugItemRequestBuilder.WithSlugItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBookingInfo?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Scheduler.V3.Meetings.MeetingLinks.Book.Item.WithSlugItemRequestBuilder.WithSlugItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Scheduler_Meetings_ExternalBookingInfo> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Scheduler.V3.Meetings.MeetingLinks.Book.Item.WithSlugItemRequestBuilder.WithSlugItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBookingInfo> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Scheduler.V3.Meetings.MeetingLinks.Book.Item.WithSlugItemRequestBuilder.WithSlugItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Scheduler_Meetings_ExternalBookingInfo>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Scheduler_Meetings_ExternalBookingInfo.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBookingInfo>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBookingInfo.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get details about the initial information necessary for a meeting scheduler.

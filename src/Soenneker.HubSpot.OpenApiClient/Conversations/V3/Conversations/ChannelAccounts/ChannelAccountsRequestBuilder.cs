@@ -19,7 +19,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Channel
     public partial class ChannelAccountsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.conversations.v3.conversations.channelAccounts.item collection</summary>
-        /// <param name="position">The unique ID of the channel account.</param>
+        /// <param name="position">Unique identifier of the item</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.ChannelAccounts.Item.WithChannelAccountItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.ChannelAccounts.Item.WithChannelAccountItemRequestBuilder this[long position]
         {
@@ -31,7 +31,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Channel
             }
         }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.conversations.v3.conversations.channelAccounts.item collection</summary>
-        /// <param name="position">The unique ID of the channel account.</param>
+        /// <param name="position">Unique identifier of the item</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.ChannelAccounts.Item.WithChannelAccountItemRequestBuilder"/></returns>
         [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
         public global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.ChannelAccounts.Item.WithChannelAccountItemRequestBuilder this[string position]
@@ -62,20 +62,20 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Channel
         /// <summary>
         /// Retrieve a list of channel accounts, with optional filters and sorting.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Conversations_Inbox___Messages_CollectionResponseWithTotalPublicChannelAccountForwardPaging"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalPublicChannelAccount"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Conversations_Inbox___Messages_CollectionResponseWithTotalPublicChannelAccountForwardPaging?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.ChannelAccounts.ChannelAccountsRequestBuilder.ChannelAccountsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalPublicChannelAccount?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.ChannelAccounts.ChannelAccountsRequestBuilder.ChannelAccountsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Conversations_Inbox___Messages_CollectionResponseWithTotalPublicChannelAccountForwardPaging> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.ChannelAccounts.ChannelAccountsRequestBuilder.ChannelAccountsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalPublicChannelAccount> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.ChannelAccounts.ChannelAccountsRequestBuilder.ChannelAccountsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Conversations_Inbox___Messages_CollectionResponseWithTotalPublicChannelAccountForwardPaging>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Conversations_Inbox___Messages_CollectionResponseWithTotalPublicChannelAccountForwardPaging.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalPublicChannelAccount>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalPublicChannelAccount.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve a list of channel accounts, with optional filters and sorting.
@@ -121,10 +121,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Channel
             [QueryParameter("after")]
             public string After { get; set; }
 #endif
-            /// <summary>Whether to include archived channel accounts in the response.</summary>
+            /// <summary>Whether to return only results that have been archived.</summary>
             [QueryParameter("archived")]
             public bool? Archived { get; set; }
-            /// <summary>Limits results to channel accounts within a particular channel.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("channelId")]
@@ -134,10 +133,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Channel
             [QueryParameter("channelId")]
             public int?[] ChannelId { get; set; }
 #endif
-            /// <summary>The default number of results to display per page.</summary>
             [QueryParameter("defaultPageLength")]
             public int? DefaultPageLength { get; set; }
-            /// <summary>Limits results to channel accounts within a particular inbox.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("inboxId")]
@@ -150,7 +147,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Channel
             /// <summary>The maximum number of results to display per page.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
-            /// <summary>The sort order for the channel accounts.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("sort")]

@@ -36,20 +36,20 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.SiteSearch.Search
         /// <summary>
         /// Returns any website content matching the given search criteria for a given HubSpot account. Searches can be filtered by content type, domain, or URL path. Includes options for weighing results by recency and popularity, along with language support.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Site_Search_PublicSearchResults"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicSearchResults"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Site_Search_PublicSearchResults?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.SiteSearch.Search.SearchRequestBuilder.SearchRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSearchResults?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.SiteSearch.Search.SearchRequestBuilder.SearchRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Site_Search_PublicSearchResults> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.SiteSearch.Search.SearchRequestBuilder.SearchRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSearchResults> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.SiteSearch.Search.SearchRequestBuilder.SearchRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Site_Search_PublicSearchResults>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Site_Search_PublicSearchResults.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSearchResults>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicSearchResults.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Returns any website content matching the given search criteria for a given HubSpot account. Searches can be filtered by content type, domain, or URL path. Includes options for weighing results by recency and popularity, along with language support.

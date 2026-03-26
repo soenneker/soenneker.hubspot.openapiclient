@@ -36,40 +36,40 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Idmapping
         /// <summary>
         /// This API allows translation of legacy list id to list id. This is a temporary API allowed for mapping old id&apos;s to new id&apos;s and will expire on May 30th, 2025.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Lists_PublicMigrationMapping"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicMigrationMapping"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Lists_PublicMigrationMapping?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Idmapping.IdmappingRequestBuilder.IdmappingRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.PublicMigrationMapping?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Idmapping.IdmappingRequestBuilder.IdmappingRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Lists_PublicMigrationMapping> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Idmapping.IdmappingRequestBuilder.IdmappingRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.PublicMigrationMapping> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Idmapping.IdmappingRequestBuilder.IdmappingRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Lists_PublicMigrationMapping>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Lists_PublicMigrationMapping.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicMigrationMapping>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicMigrationMapping.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// This API allows translation of a batch of legacy list id&apos;s to list id&apos;s. This allows for a maximum of 10,000 id&apos;s. This is a temporary API allowed for mapping old id&apos;s to new id&apos;s and will expire on May 30th, 2025.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Lists_PublicBatchMigrationMapping"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicBatchMigrationMapping"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Lists_PublicBatchMigrationMapping?> PostAsync(List<string> body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.PublicBatchMigrationMapping?> PostAsync(List<string> body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Lists_PublicBatchMigrationMapping> PostAsync(List<string> body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.PublicBatchMigrationMapping> PostAsync(List<string> body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Lists_PublicBatchMigrationMapping>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Lists_PublicBatchMigrationMapping.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicBatchMigrationMapping>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicBatchMigrationMapping.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// This API allows translation of legacy list id to list id. This is a temporary API allowed for mapping old id&apos;s to new id&apos;s and will expire on May 30th, 2025.

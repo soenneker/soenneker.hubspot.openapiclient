@@ -36,20 +36,20 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.It
         /// <summary>
         /// Mark a marketing event as cancelled.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_MarketingEventDefaultResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventDefaultResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_MarketingEventDefaultResponse?> PostAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.Item.Cancel.CancelRequestBuilder.CancelRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventDefaultResponse?> PostAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.Item.Cancel.CancelRequestBuilder.CancelRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_MarketingEventDefaultResponse> PostAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.Item.Cancel.CancelRequestBuilder.CancelRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventDefaultResponse> PostAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.Item.Cancel.CancelRequestBuilder.CancelRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToPostRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_MarketingEventDefaultResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_MarketingEventDefaultResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventDefaultResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventDefaultResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Mark a marketing event as cancelled.

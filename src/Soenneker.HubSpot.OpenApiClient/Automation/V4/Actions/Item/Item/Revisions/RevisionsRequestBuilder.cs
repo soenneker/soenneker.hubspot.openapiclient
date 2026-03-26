@@ -49,20 +49,20 @@ namespace Soenneker.HubSpot.OpenApiClient.Automation.V4.Actions.Item.Item.Revisi
         /// <summary>
         /// Retrieve the versions of a definition by ID.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Automation_Actions_V4_CollectionResponsePublicActionRevisionForwardPaging"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponsePublicActionRevisionForwardPaging"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Automation_Actions_V4_CollectionResponsePublicActionRevisionForwardPaging?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Automation.V4.Actions.Item.Item.Revisions.RevisionsRequestBuilder.RevisionsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponsePublicActionRevisionForwardPaging?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Automation.V4.Actions.Item.Item.Revisions.RevisionsRequestBuilder.RevisionsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Automation_Actions_V4_CollectionResponsePublicActionRevisionForwardPaging> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Automation.V4.Actions.Item.Item.Revisions.RevisionsRequestBuilder.RevisionsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponsePublicActionRevisionForwardPaging> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Automation.V4.Actions.Item.Item.Revisions.RevisionsRequestBuilder.RevisionsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Automation_Actions_V4_CollectionResponsePublicActionRevisionForwardPaging>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Automation_Actions_V4_CollectionResponsePublicActionRevisionForwardPaging.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponsePublicActionRevisionForwardPaging>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponsePublicActionRevisionForwardPaging.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve the versions of a definition by ID.

@@ -54,40 +54,40 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Tags.Item
         /// <summary>
         /// Retrieve the Blog Tag object identified by the id in the path.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Tags_Tag"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Tag"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Tags_Tag?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Tags.Item.WithObjectItemRequestBuilder.WithObjectItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Tag?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Tags.Item.WithObjectItemRequestBuilder.WithObjectItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Tags_Tag> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Tags.Item.WithObjectItemRequestBuilder.WithObjectItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Tag> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Tags.Item.WithObjectItemRequestBuilder.WithObjectItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Tags_Tag>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Tags_Tag.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Tag>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Tag.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Sparse updates a single Blog Tag object identified by the id in the path.All the column values need not be specified. Only the that need to be modified can be specified.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Tags_Tag"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Tag"/></returns>
         /// <param name="body">Model definition for a Tag.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Tags_Tag?> PatchAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Tags_Tag body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Tags.Item.WithObjectItemRequestBuilder.WithObjectItemRequestBuilderPatchQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Tag?> PatchAsync(global::Soenneker.HubSpot.OpenApiClient.Models.Tag body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Tags.Item.WithObjectItemRequestBuilder.WithObjectItemRequestBuilderPatchQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Tags_Tag> PatchAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Tags_Tag body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Tags.Item.WithObjectItemRequestBuilder.WithObjectItemRequestBuilderPatchQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Tag> PatchAsync(global::Soenneker.HubSpot.OpenApiClient.Models.Tag body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Tags.Item.WithObjectItemRequestBuilder.WithObjectItemRequestBuilderPatchQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPatchRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Tags_Tag>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Tags_Tag.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Tag>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Tag.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Delete the Blog Tag object identified by the id in the path.
@@ -134,11 +134,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Tags.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPatchRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Tags_Tag body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Tags.Item.WithObjectItemRequestBuilder.WithObjectItemRequestBuilderPatchQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.Tag body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Tags.Item.WithObjectItemRequestBuilder.WithObjectItemRequestBuilderPatchQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPatchRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Tags_Tag body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Tags.Item.WithObjectItemRequestBuilder.WithObjectItemRequestBuilderPatchQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.Tag body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Tags.Item.WithObjectItemRequestBuilder.WithObjectItemRequestBuilderPatchQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

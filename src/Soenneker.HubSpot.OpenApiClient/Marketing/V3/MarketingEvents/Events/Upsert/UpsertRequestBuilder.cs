@@ -36,22 +36,22 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.Up
         /// <summary>
         /// Upserts multiple Marketing Events. If a Marketing Event with the specified ID already exists, it will be updated; otherwise, a new event will be created.Only Marketing Events originally created by the same app can be updated.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_BatchResponseMarketingEventPublicDefaultResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseMarketingEventPublicDefaultResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_BatchResponseMarketingEventPublicDefaultResponse?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_BatchInputMarketingEventCreateRequestParams body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseMarketingEventPublicDefaultResponse?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.BatchInputMarketingEventCreateRequestParams body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_BatchResponseMarketingEventPublicDefaultResponse> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_BatchInputMarketingEventCreateRequestParams body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseMarketingEventPublicDefaultResponse> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.BatchInputMarketingEventCreateRequestParams body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_BatchResponseMarketingEventPublicDefaultResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_BatchResponseMarketingEventPublicDefaultResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseMarketingEventPublicDefaultResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseMarketingEventPublicDefaultResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Upserts multiple Marketing Events. If a Marketing Event with the specified ID already exists, it will be updated; otherwise, a new event will be created.Only Marketing Events originally created by the same app can be updated.
@@ -61,11 +61,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.Up
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_BatchInputMarketingEventCreateRequestParams body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.BatchInputMarketingEventCreateRequestParams body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_BatchInputMarketingEventCreateRequestParams body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.BatchInputMarketingEventCreateRequestParams body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

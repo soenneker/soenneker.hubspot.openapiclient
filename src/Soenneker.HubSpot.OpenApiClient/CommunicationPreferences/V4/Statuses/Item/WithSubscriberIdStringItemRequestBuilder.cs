@@ -42,40 +42,40 @@ namespace Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Statuses.I
         /// <summary>
         /// Retrieve a contact&apos;s current email subscription preferences.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Communication_Preferences_Subscriptions_ActionResponseWithResultsPublicStatus"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsPublicStatus"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Communication_Preferences_Subscriptions_ActionResponseWithResultsPublicStatus?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Statuses.Item.WithSubscriberIdStringItemRequestBuilder.WithSubscriberIdStringItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsPublicStatus?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Statuses.Item.WithSubscriberIdStringItemRequestBuilder.WithSubscriberIdStringItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Communication_Preferences_Subscriptions_ActionResponseWithResultsPublicStatus> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Statuses.Item.WithSubscriberIdStringItemRequestBuilder.WithSubscriberIdStringItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsPublicStatus> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Statuses.Item.WithSubscriberIdStringItemRequestBuilder.WithSubscriberIdStringItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Communication_Preferences_Subscriptions_ActionResponseWithResultsPublicStatus>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Communication_Preferences_Subscriptions_ActionResponseWithResultsPublicStatus.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsPublicStatus>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsPublicStatus.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Set the subscription status of a specific contact.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Communication_Preferences_Subscriptions_ActionResponseWithResultsPublicStatus"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsPublicStatus"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Communication_Preferences_Subscriptions_ActionResponseWithResultsPublicStatus?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.Communication_Preferences_Subscriptions_PartialPublicStatusRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsPublicStatus?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.PartialPublicStatusRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Communication_Preferences_Subscriptions_ActionResponseWithResultsPublicStatus> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.Communication_Preferences_Subscriptions_PartialPublicStatusRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsPublicStatus> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.PartialPublicStatusRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Communication_Preferences_Subscriptions_ActionResponseWithResultsPublicStatus>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Communication_Preferences_Subscriptions_ActionResponseWithResultsPublicStatus.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsPublicStatus>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsPublicStatus.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve a contact&apos;s current email subscription preferences.
@@ -104,11 +104,11 @@ namespace Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Statuses.I
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.Communication_Preferences_Subscriptions_PartialPublicStatusRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.PartialPublicStatusRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.Communication_Preferences_Subscriptions_PartialPublicStatusRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.PartialPublicStatusRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

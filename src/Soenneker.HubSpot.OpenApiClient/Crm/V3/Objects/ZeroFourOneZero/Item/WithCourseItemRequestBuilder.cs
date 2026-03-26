@@ -54,40 +54,40 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.ZeroFourOneZero.Item
         /// <summary>
         /// Read an Object identified by `{courseId}`. `{courseId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Courses_SimplePublicObjectWithAssociations"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.C_________crm_SimplePublicObjectWithAssociations"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Courses_SimplePublicObjectWithAssociations?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.ZeroFourOneZero.Item.WithCourseItemRequestBuilder.WithCourseItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.C_________crm_SimplePublicObjectWithAssociations?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.ZeroFourOneZero.Item.WithCourseItemRequestBuilder.WithCourseItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Courses_SimplePublicObjectWithAssociations> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.ZeroFourOneZero.Item.WithCourseItemRequestBuilder.WithCourseItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.C_________crm_SimplePublicObjectWithAssociations> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.ZeroFourOneZero.Item.WithCourseItemRequestBuilder.WithCourseItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Courses_SimplePublicObjectWithAssociations>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Courses_SimplePublicObjectWithAssociations.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.C_________crm_SimplePublicObjectWithAssociations>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.C_________crm_SimplePublicObjectWithAssociations.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Perform a partial update of an Object identified by `{courseId}`or optionally a unique property value as specified by the `idProperty` query param. `{courseId}` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Courses_SimplePublicObject"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.C_________crm_SimplePublicObject"/></returns>
         /// <param name="body">Represents the input required to create or update a CRM object, containing an object with property names and their corresponding values.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Courses_SimplePublicObject?> PatchAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Courses_SimplePublicObjectInput body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.ZeroFourOneZero.Item.WithCourseItemRequestBuilder.WithCourseItemRequestBuilderPatchQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.C_________crm_SimplePublicObject?> PatchAsync(global::Soenneker.HubSpot.OpenApiClient.Models.C_________crm_SimplePublicObjectInput body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.ZeroFourOneZero.Item.WithCourseItemRequestBuilder.WithCourseItemRequestBuilderPatchQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Courses_SimplePublicObject> PatchAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Courses_SimplePublicObjectInput body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.ZeroFourOneZero.Item.WithCourseItemRequestBuilder.WithCourseItemRequestBuilderPatchQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.C_________crm_SimplePublicObject> PatchAsync(global::Soenneker.HubSpot.OpenApiClient.Models.C_________crm_SimplePublicObjectInput body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.ZeroFourOneZero.Item.WithCourseItemRequestBuilder.WithCourseItemRequestBuilderPatchQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPatchRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Courses_SimplePublicObject>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Courses_SimplePublicObject.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.C_________crm_SimplePublicObject>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.C_________crm_SimplePublicObject.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Move an Object identified by `{courseId}` to the recycling bin.
@@ -134,11 +134,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.ZeroFourOneZero.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPatchRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Courses_SimplePublicObjectInput body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.ZeroFourOneZero.Item.WithCourseItemRequestBuilder.WithCourseItemRequestBuilderPatchQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.C_________crm_SimplePublicObjectInput body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.ZeroFourOneZero.Item.WithCourseItemRequestBuilder.WithCourseItemRequestBuilderPatchQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPatchRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Courses_SimplePublicObjectInput body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.ZeroFourOneZero.Item.WithCourseItemRequestBuilder.WithCourseItemRequestBuilderPatchQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.C_________crm_SimplePublicObjectInput body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.ZeroFourOneZero.Item.WithCourseItemRequestBuilder.WithCourseItemRequestBuilderPatchQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

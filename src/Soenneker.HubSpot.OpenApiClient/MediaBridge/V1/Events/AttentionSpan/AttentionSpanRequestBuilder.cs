@@ -36,22 +36,22 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.V1.Events.AttentionSpan
         /// <summary>
         /// Create an event containing the viewers attention span details for the media.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Media_Bridge_AttentionSpanEvent"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEvent"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Media_Bridge_AttentionSpanEvent?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Media_Bridge_AttentionSpanEventRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEvent?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Media_Bridge_AttentionSpanEvent> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Media_Bridge_AttentionSpanEventRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEvent> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Media_Bridge_AttentionSpanEvent>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Media_Bridge_AttentionSpanEvent.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEvent>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEvent.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Create an event containing the viewers attention span details for the media.
@@ -61,11 +61,11 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.V1.Events.AttentionSpan
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Media_Bridge_AttentionSpanEventRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Media_Bridge_AttentionSpanEventRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

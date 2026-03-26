@@ -52,7 +52,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithEmailItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/marketing/v3/emails/{emailId}", pathParameters)
+        public WithEmailItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/marketing/v3/emails/{emailId}{?archived*,includeStats*,includedProperties*,marketingCampaignNames*,variantStats*,workflowNames*}", pathParameters)
         {
         }
         /// <summary>
@@ -60,22 +60,22 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithEmailItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/marketing/v3/emails/{emailId}", rawUrl)
+        public WithEmailItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/marketing/v3/emails/{emailId}{?archived*,includeStats*,includedProperties*,marketingCampaignNames*,variantStats*,workflowNames*}", rawUrl)
         {
         }
         /// <summary>
-        /// Delete an existing marketing email.
+        /// Delete a marketing email by its ID
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<Stream?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream?> DeleteAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Item.WithEmailItemRequestBuilder.WithEmailItemRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<Stream> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream> DeleteAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Item.WithEmailItemRequestBuilder.WithEmailItemRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -84,53 +84,53 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Item
         /// <summary>
         /// Get the details for a marketing email.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Emails_V3_PublicEmail"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmail"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Emails_V3_PublicEmail?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmail?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Item.WithEmailItemRequestBuilder.WithEmailItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Emails_V3_PublicEmail> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmail> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Item.WithEmailItemRequestBuilder.WithEmailItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Emails_V3_PublicEmail>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Emails_V3_PublicEmail.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmail>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmail.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Change properties of a marketing email.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Emails_V3_PublicEmail"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmail"/></returns>
         /// <param name="body">Properties of a marketing email you can update via the API.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Emails_V3_PublicEmail?> PatchAsync(global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Emails_V3_EmailUpdateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmail?> PatchAsync(global::Soenneker.HubSpot.OpenApiClient.Models.EmailUpdateRequest body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Item.WithEmailItemRequestBuilder.WithEmailItemRequestBuilderPatchQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Emails_V3_PublicEmail> PatchAsync(global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Emails_V3_EmailUpdateRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmail> PatchAsync(global::Soenneker.HubSpot.OpenApiClient.Models.EmailUpdateRequest body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Item.WithEmailItemRequestBuilder.WithEmailItemRequestBuilderPatchQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPatchRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Emails_V3_PublicEmail>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Emails_V3_PublicEmail.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmail>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmail.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Delete an existing marketing email.
+        /// Delete a marketing email by its ID
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Item.WithEmailItemRequestBuilder.WithEmailItemRequestBuilderDeleteQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Item.WithEmailItemRequestBuilder.WithEmailItemRequestBuilderDeleteQueryParameters>> requestConfiguration = default)
         {
 #endif
             var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
@@ -144,11 +144,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Item.WithEmailItemRequestBuilder.WithEmailItemRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Item.WithEmailItemRequestBuilder.WithEmailItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
@@ -164,11 +164,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPatchRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Emails_V3_EmailUpdateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.EmailUpdateRequest body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Item.WithEmailItemRequestBuilder.WithEmailItemRequestBuilderPatchQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPatchRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Emails_V3_EmailUpdateRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.EmailUpdateRequest body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Item.WithEmailItemRequestBuilder.WithEmailItemRequestBuilderPatchQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -188,27 +188,74 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Item
             return new global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Item.WithEmailItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
+        /// Delete a marketing email by its ID
         /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class WithEmailItemRequestBuilderDeleteRequestConfiguration : RequestConfiguration<DefaultQueryParameters>
+        public partial class WithEmailItemRequestBuilderDeleteQueryParameters 
         {
+            /// <summary>Whether to return only results that have been archived.</summary>
+            [QueryParameter("archived")]
+            public bool? Archived { get; set; }
         }
         /// <summary>
         /// Configuration for the request such as headers, query parameters, and middleware options.
         /// </summary>
         [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class WithEmailItemRequestBuilderGetRequestConfiguration : RequestConfiguration<DefaultQueryParameters>
+        public partial class WithEmailItemRequestBuilderDeleteRequestConfiguration : RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Item.WithEmailItemRequestBuilder.WithEmailItemRequestBuilderDeleteQueryParameters>
         {
+        }
+        /// <summary>
+        /// Get the details for a marketing email.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class WithEmailItemRequestBuilderGetQueryParameters 
+        {
+            /// <summary>Whether to return only results that have been archived.</summary>
+            [QueryParameter("archived")]
+            public bool? Archived { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("includedProperties")]
+            public string[]? IncludedProperties { get; set; }
+#nullable restore
+#else
+            [QueryParameter("includedProperties")]
+            public string[] IncludedProperties { get; set; }
+#endif
+            [QueryParameter("includeStats")]
+            public bool? IncludeStats { get; set; }
+            [QueryParameter("marketingCampaignNames")]
+            public bool? MarketingCampaignNames { get; set; }
+            [QueryParameter("variantStats")]
+            public bool? VariantStats { get; set; }
+            [QueryParameter("workflowNames")]
+            public bool? WorkflowNames { get; set; }
         }
         /// <summary>
         /// Configuration for the request such as headers, query parameters, and middleware options.
         /// </summary>
         [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class WithEmailItemRequestBuilderPatchRequestConfiguration : RequestConfiguration<DefaultQueryParameters>
+        public partial class WithEmailItemRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Item.WithEmailItemRequestBuilder.WithEmailItemRequestBuilderGetQueryParameters>
+        {
+        }
+        /// <summary>
+        /// Change properties of a marketing email.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class WithEmailItemRequestBuilderPatchQueryParameters 
+        {
+            /// <summary>Whether to return only results that have been archived.</summary>
+            [QueryParameter("archived")]
+            public bool? Archived { get; set; }
+        }
+        /// <summary>
+        /// Configuration for the request such as headers, query parameters, and middleware options.
+        /// </summary>
+        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class WithEmailItemRequestBuilderPatchRequestConfiguration : RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Item.WithEmailItemRequestBuilder.WithEmailItemRequestBuilderPatchQueryParameters>
         {
         }
     }

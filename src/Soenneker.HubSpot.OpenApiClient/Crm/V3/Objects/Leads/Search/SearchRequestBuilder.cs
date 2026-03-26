@@ -36,22 +36,22 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Leads.Search
         /// <summary>
         /// Perform a search for leads based on the provided filter groups, properties, and sorting options. The request allows for pagination and can return up to 200 results per page.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Leads_CollectionResponseWithTotalSimplePublicObject"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.C________________crm_CollectionResponseWithTotalSimplePublicObject"/></returns>
         /// <param name="body">Describes a search request</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Leads_CollectionResponseWithTotalSimplePublicObject?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Leads_PublicObjectSearchRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.C________________crm_CollectionResponseWithTotalSimplePublicObject?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.C__________________crm_PublicObjectSearchRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Leads_CollectionResponseWithTotalSimplePublicObject> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Leads_PublicObjectSearchRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.C________________crm_CollectionResponseWithTotalSimplePublicObject> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.C__________________crm_PublicObjectSearchRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Leads_CollectionResponseWithTotalSimplePublicObject>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Leads_CollectionResponseWithTotalSimplePublicObject.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.C________________crm_CollectionResponseWithTotalSimplePublicObject>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.C________________crm_CollectionResponseWithTotalSimplePublicObject.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Perform a search for leads based on the provided filter groups, properties, and sorting options. The request allows for pagination and can return up to 200 results per page.
@@ -61,11 +61,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Leads.Search
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Leads_PublicObjectSearchRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.C__________________crm_PublicObjectSearchRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Leads_PublicObjectSearchRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.C__________________crm_PublicObjectSearchRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

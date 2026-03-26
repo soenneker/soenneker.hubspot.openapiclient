@@ -66,40 +66,40 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Hubdb.Tables.Item.Draft
         /// <summary>
         /// Get the details for the draft version of a specific HubDB table. This will include the definitions for the columns in the table and the number of rows in the table.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Hubdb_HubDbTableV3"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Hubdb_HubDbTableV3?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Hubdb.Tables.Item.Draft.DraftRequestBuilder.DraftRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Hubdb.Tables.Item.Draft.DraftRequestBuilder.DraftRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Hubdb_HubDbTableV3> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Hubdb.Tables.Item.Draft.DraftRequestBuilder.DraftRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Hubdb.Tables.Item.Draft.DraftRequestBuilder.DraftRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Hubdb_HubDbTableV3>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Hubdb_HubDbTableV3.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &quot;Update an existing HubDB table. You can use this endpoint to add or remove columns to the table as well as restore an archived table. Tables updated using the endpoint will only modify the draft verion of the table. Use the `/publish` endpoint to push all the changes to the published version. To restore a table, include the query parameter `archived=true` and `\&quot;archived\&quot;: false` in the json body.**Note:** You need to include all the columns in the input when you are adding/removing/updating a column. If you do not include an already existing column in the request, it will be deleted.&quot;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Hubdb_HubDbTableV3"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Hubdb_HubDbTableV3?> PatchAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Hubdb_HubDbTableV3Request body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Hubdb.Tables.Item.Draft.DraftRequestBuilder.DraftRequestBuilderPatchQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3?> PatchAsync(global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3Request body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Hubdb.Tables.Item.Draft.DraftRequestBuilder.DraftRequestBuilderPatchQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Hubdb_HubDbTableV3> PatchAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Hubdb_HubDbTableV3Request body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Hubdb.Tables.Item.Draft.DraftRequestBuilder.DraftRequestBuilderPatchQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3> PatchAsync(global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3Request body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Hubdb.Tables.Item.Draft.DraftRequestBuilder.DraftRequestBuilderPatchQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPatchRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Hubdb_HubDbTableV3>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Hubdb_HubDbTableV3.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get the details for the draft version of a specific HubDB table. This will include the definitions for the columns in the table and the number of rows in the table.
@@ -128,11 +128,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Hubdb.Tables.Item.Draft
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPatchRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Hubdb_HubDbTableV3Request body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Hubdb.Tables.Item.Draft.DraftRequestBuilder.DraftRequestBuilderPatchQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3Request body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Hubdb.Tables.Item.Draft.DraftRequestBuilder.DraftRequestBuilderPatchQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPatchRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Hubdb_HubDbTableV3Request body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Hubdb.Tables.Item.Draft.DraftRequestBuilder.DraftRequestBuilderPatchQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3Request body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Hubdb.Tables.Item.Draft.DraftRequestBuilder.DraftRequestBuilderPatchQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

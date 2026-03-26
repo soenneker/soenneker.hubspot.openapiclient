@@ -36,22 +36,22 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Authors.Batch.Create
         /// <summary>
         /// Create the Blog Author objects detailed in the request body.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Authors_BatchResponseBlogAuthor"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseBlogAuthor"/></returns>
         /// <param name="body">Wrapper for providing an array of blog authors as inputs.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Authors_BatchResponseBlogAuthor?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Authors_BatchInputBlogAuthor body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseBlogAuthor?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.BatchInputBlogAuthor body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Authors_BatchResponseBlogAuthor> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Authors_BatchInputBlogAuthor body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseBlogAuthor> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.BatchInputBlogAuthor body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Authors_BatchResponseBlogAuthor>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Authors_BatchResponseBlogAuthor.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseBlogAuthor>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseBlogAuthor.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Create the Blog Author objects detailed in the request body.
@@ -61,11 +61,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Authors.Batch.Create
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Authors_BatchInputBlogAuthor body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.BatchInputBlogAuthor body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Authors_BatchInputBlogAuthor body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.BatchInputBlogAuthor body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

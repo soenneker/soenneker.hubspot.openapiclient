@@ -33,33 +33,33 @@ namespace Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Links.Gene
         public GenerateRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/communication-preferences/v4/links/generate?channel={channel}{&businessUnitId*}", rawUrl)
         {
         }
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Communication_Preferences_Subscriptions_LinkGenerationResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.LinkGenerationResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Communication_Preferences_Subscriptions_LinkGenerationResponse?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.Communication_Preferences_Subscriptions_LinkGenerationRequest body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Links.Generate.GenerateRequestBuilder.GenerateRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.LinkGenerationResponse?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.LinkGenerationRequest body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Links.Generate.GenerateRequestBuilder.GenerateRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Communication_Preferences_Subscriptions_LinkGenerationResponse> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.Communication_Preferences_Subscriptions_LinkGenerationRequest body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Links.Generate.GenerateRequestBuilder.GenerateRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.LinkGenerationResponse> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.LinkGenerationRequest body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Links.Generate.GenerateRequestBuilder.GenerateRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Communication_Preferences_Subscriptions_LinkGenerationResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Communication_Preferences_Subscriptions_LinkGenerationResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.LinkGenerationResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.LinkGenerationResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.Communication_Preferences_Subscriptions_LinkGenerationRequest body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Links.Generate.GenerateRequestBuilder.GenerateRequestBuilderPostQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.LinkGenerationRequest body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Links.Generate.GenerateRequestBuilder.GenerateRequestBuilderPostQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.Communication_Preferences_Subscriptions_LinkGenerationRequest body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Links.Generate.GenerateRequestBuilder.GenerateRequestBuilderPostQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.LinkGenerationRequest body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Links.Generate.GenerateRequestBuilder.GenerateRequestBuilderPostQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

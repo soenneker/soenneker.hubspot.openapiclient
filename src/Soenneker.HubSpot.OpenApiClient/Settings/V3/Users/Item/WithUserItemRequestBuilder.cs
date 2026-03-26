@@ -54,40 +54,40 @@ namespace Soenneker.HubSpot.OpenApiClient.Settings.V3.Users.Item
         /// <summary>
         /// Retrieves a user identified by `userId`. `userId` refers to the user&apos;s ID by default, or optionally email as specified by the `IdProperty` query param.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Settings_User_Provisioning_PublicUser"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicUser"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Settings_User_Provisioning_PublicUser?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Settings.V3.Users.Item.WithUserItemRequestBuilder.WithUserItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.PublicUser?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Settings.V3.Users.Item.WithUserItemRequestBuilder.WithUserItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Settings_User_Provisioning_PublicUser> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Settings.V3.Users.Item.WithUserItemRequestBuilder.WithUserItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.PublicUser> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Settings.V3.Users.Item.WithUserItemRequestBuilder.WithUserItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Settings_User_Provisioning_PublicUser>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Settings_User_Provisioning_PublicUser.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicUser>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicUser.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Modifies a user identified by `userId`. `userId` refers to the user&apos;s ID by default, or optionally email as specified by the `IdProperty` query param.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Settings_User_Provisioning_PublicUser"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicUser"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Settings_User_Provisioning_PublicUser?> PutAsync(global::Soenneker.HubSpot.OpenApiClient.Models.Settings_User_Provisioning_PublicUserUpdate body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Settings.V3.Users.Item.WithUserItemRequestBuilder.WithUserItemRequestBuilderPutQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.PublicUser?> PutAsync(global::Soenneker.HubSpot.OpenApiClient.Models.PublicUserUpdate body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Settings.V3.Users.Item.WithUserItemRequestBuilder.WithUserItemRequestBuilderPutQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Settings_User_Provisioning_PublicUser> PutAsync(global::Soenneker.HubSpot.OpenApiClient.Models.Settings_User_Provisioning_PublicUserUpdate body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Settings.V3.Users.Item.WithUserItemRequestBuilder.WithUserItemRequestBuilderPutQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.PublicUser> PutAsync(global::Soenneker.HubSpot.OpenApiClient.Models.PublicUserUpdate body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Settings.V3.Users.Item.WithUserItemRequestBuilder.WithUserItemRequestBuilderPutQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Settings_User_Provisioning_PublicUser>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Settings_User_Provisioning_PublicUser.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicUser>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicUser.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Removes a user identified by `userId`. `userId` refers to the user&apos;s ID by default, or optionally email as specified by the `IdProperty` query param.
@@ -134,11 +134,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Settings.V3.Users.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPutRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.Settings_User_Provisioning_PublicUserUpdate body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Settings.V3.Users.Item.WithUserItemRequestBuilder.WithUserItemRequestBuilderPutQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPutRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.PublicUserUpdate body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Settings.V3.Users.Item.WithUserItemRequestBuilder.WithUserItemRequestBuilderPutQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPutRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.Settings_User_Provisioning_PublicUserUpdate body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Settings.V3.Users.Item.WithUserItemRequestBuilder.WithUserItemRequestBuilderPutQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPutRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.PublicUserUpdate body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Settings.V3.Users.Item.WithUserItemRequestBuilder.WithUserItemRequestBuilderPutQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

@@ -48,37 +48,37 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Postal_mail.Item
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Postal_Mail_SimplePublicObjectWithAssociations"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.C_____________________________crm_SimplePublicObjectWithAssociations"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Postal_Mail_SimplePublicObjectWithAssociations?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Postal_mail.Item.WithPostalMailItemRequestBuilder.WithPostalMailItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.C_____________________________crm_SimplePublicObjectWithAssociations?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Postal_mail.Item.WithPostalMailItemRequestBuilder.WithPostalMailItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Postal_Mail_SimplePublicObjectWithAssociations> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Postal_mail.Item.WithPostalMailItemRequestBuilder.WithPostalMailItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.C_____________________________crm_SimplePublicObjectWithAssociations> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Postal_mail.Item.WithPostalMailItemRequestBuilder.WithPostalMailItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Postal_Mail_SimplePublicObjectWithAssociations>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Postal_Mail_SimplePublicObjectWithAssociations.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.C_____________________________crm_SimplePublicObjectWithAssociations>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.C_____________________________crm_SimplePublicObjectWithAssociations.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Postal_Mail_SimplePublicObject"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.C_____________________________crm_SimplePublicObject"/></returns>
         /// <param name="body">Represents the input required to create or update a CRM object, containing an object with property names and their corresponding values.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Postal_Mail_SimplePublicObject?> PatchAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Postal_Mail_SimplePublicObjectInput body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Postal_mail.Item.WithPostalMailItemRequestBuilder.WithPostalMailItemRequestBuilderPatchQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.C_____________________________crm_SimplePublicObject?> PatchAsync(global::Soenneker.HubSpot.OpenApiClient.Models.C__________________________crm_SimplePublicObjectInput body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Postal_mail.Item.WithPostalMailItemRequestBuilder.WithPostalMailItemRequestBuilderPatchQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Postal_Mail_SimplePublicObject> PatchAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Postal_Mail_SimplePublicObjectInput body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Postal_mail.Item.WithPostalMailItemRequestBuilder.WithPostalMailItemRequestBuilderPatchQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.C_____________________________crm_SimplePublicObject> PatchAsync(global::Soenneker.HubSpot.OpenApiClient.Models.C__________________________crm_SimplePublicObjectInput body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Postal_mail.Item.WithPostalMailItemRequestBuilder.WithPostalMailItemRequestBuilderPatchQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPatchRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Postal_Mail_SimplePublicObject>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Postal_Mail_SimplePublicObject.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.C_____________________________crm_SimplePublicObject>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.C_____________________________crm_SimplePublicObject.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -116,11 +116,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Postal_mail.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPatchRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Postal_Mail_SimplePublicObjectInput body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Postal_mail.Item.WithPostalMailItemRequestBuilder.WithPostalMailItemRequestBuilderPatchQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.C__________________________crm_SimplePublicObjectInput body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Postal_mail.Item.WithPostalMailItemRequestBuilder.WithPostalMailItemRequestBuilderPatchQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPatchRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Postal_Mail_SimplePublicObjectInput body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Postal_mail.Item.WithPostalMailItemRequestBuilder.WithPostalMailItemRequestBuilderPatchQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.C__________________________crm_SimplePublicObjectInput body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Postal_mail.Item.WithPostalMailItemRequestBuilder.WithPostalMailItemRequestBuilderPatchQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

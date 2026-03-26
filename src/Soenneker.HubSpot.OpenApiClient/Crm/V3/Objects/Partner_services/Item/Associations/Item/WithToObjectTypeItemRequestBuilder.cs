@@ -49,20 +49,20 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Partner_services.Item.A
         /// <summary>
         /// Retrieve a list of associations for a specific partner service, filtered by the type of associated object.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Partner_Services_CollectionResponseAssociatedIdForwardPaging"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.C_crm_CollectionResponseAssociatedIdForwardPaging"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Partner_Services_CollectionResponseAssociatedIdForwardPaging?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Partner_services.Item.Associations.Item.WithToObjectTypeItemRequestBuilder.WithToObjectTypeItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.C_crm_CollectionResponseAssociatedIdForwardPaging?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Partner_services.Item.Associations.Item.WithToObjectTypeItemRequestBuilder.WithToObjectTypeItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Partner_Services_CollectionResponseAssociatedIdForwardPaging> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Partner_services.Item.Associations.Item.WithToObjectTypeItemRequestBuilder.WithToObjectTypeItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.C_crm_CollectionResponseAssociatedIdForwardPaging> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Partner_services.Item.Associations.Item.WithToObjectTypeItemRequestBuilder.WithToObjectTypeItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Partner_Services_CollectionResponseAssociatedIdForwardPaging>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Partner_Services_CollectionResponseAssociatedIdForwardPaging.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.C_crm_CollectionResponseAssociatedIdForwardPaging>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.C_crm_CollectionResponseAssociatedIdForwardPaging.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve a list of associations for a specific partner service, filtered by the type of associated object.

@@ -19,7 +19,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads
     public partial class MessagesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.conversations.v3.conversations.threads.item.messages.item collection</summary>
-        /// <param name="position">The unique ID of the message.</param>
+        /// <param name="position">Unique identifier of the item</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads.Item.Messages.Item.WithMessageItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads.Item.Messages.Item.WithMessageItemRequestBuilder this[string position]
         {
@@ -49,40 +49,40 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads
         /// <summary>
         /// Retrieve the message history for a specific thread.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Conversations_Inbox___Messages_CollectionResponsePublicMessageForwardPaging"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponsePublicMessageForwardPaging"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Conversations_Inbox___Messages_CollectionResponsePublicMessageForwardPaging?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads.Item.Messages.MessagesRequestBuilder.MessagesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponsePublicMessageForwardPaging?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads.Item.Messages.MessagesRequestBuilder.MessagesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Conversations_Inbox___Messages_CollectionResponsePublicMessageForwardPaging> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads.Item.Messages.MessagesRequestBuilder.MessagesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponsePublicMessageForwardPaging> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads.Item.Messages.MessagesRequestBuilder.MessagesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Conversations_Inbox___Messages_CollectionResponsePublicMessageForwardPaging>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Conversations_Inbox___Messages_CollectionResponsePublicMessageForwardPaging.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponsePublicMessageForwardPaging>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponsePublicMessageForwardPaging.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Send a new message on a thread at the current timestamp.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Conversations_Inbox___Messages_PublicMessage"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessage"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Conversations_Inbox___Messages_PublicMessage?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Conversations_Inbox___Messages_PublicMessageEgg body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessage?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessageEgg body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Conversations_Inbox___Messages_PublicMessage> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Conversations_Inbox___Messages_PublicMessageEgg body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessage> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessageEgg body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Conversations_Inbox___Messages_PublicMessage>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Conversations_Inbox___Messages_PublicMessage.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessage>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessage.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve the message history for a specific thread.
@@ -111,11 +111,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Conversations_Inbox___Messages_PublicMessageEgg body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessageEgg body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Conversations_Inbox___Messages_PublicMessageEgg body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessageEgg body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -156,7 +156,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads
             /// <summary>The maximum number of results to display per page.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
-            /// <summary>A specific property to include in the message response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("property")]
@@ -166,7 +165,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads
             [QueryParameter("property")]
             public string Property { get; set; }
 #endif
-            /// <summary>Sort direction. Valid options are `createdAt` (ascending), and `-createdAt` (descending, default)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("sort")]

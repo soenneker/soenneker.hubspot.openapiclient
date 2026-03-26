@@ -36,22 +36,22 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Hubdb.Tables.Item.Rows.Draft.Ba
         /// <summary>
         /// Updates multiple rows as a batch in the draft version of the table, with a maximum of 100 rows per call. See the endpoint `PATCH /tables/{tableIdOrName}/rows/{rowId}/draft` for details on updating a single row.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Hubdb_BatchResponseHubDbTableRowV3"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseHubDbTableRowV3"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Hubdb_BatchResponseHubDbTableRowV3?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Hubdb_BatchInputHubDbTableRowV3BatchUpdateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseHubDbTableRowV3?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.BatchInputHubDbTableRowV3BatchUpdateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Hubdb_BatchResponseHubDbTableRowV3> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Hubdb_BatchInputHubDbTableRowV3BatchUpdateRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseHubDbTableRowV3> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.BatchInputHubDbTableRowV3BatchUpdateRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Hubdb_BatchResponseHubDbTableRowV3>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Hubdb_BatchResponseHubDbTableRowV3.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseHubDbTableRowV3>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseHubDbTableRowV3.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Updates multiple rows as a batch in the draft version of the table, with a maximum of 100 rows per call. See the endpoint `PATCH /tables/{tableIdOrName}/rows/{rowId}/draft` for details on updating a single row.
@@ -61,11 +61,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Hubdb.Tables.Item.Rows.Draft.Ba
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Hubdb_BatchInputHubDbTableRowV3BatchUpdateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.BatchInputHubDbTableRowV3BatchUpdateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Hubdb_BatchInputHubDbTableRowV3BatchUpdateRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.BatchInputHubDbTableRowV3BatchUpdateRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

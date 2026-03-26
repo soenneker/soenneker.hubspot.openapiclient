@@ -36,22 +36,22 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Item.UpdateListFilters
         /// <summary>
         /// Update the filter branch definition of a `DYNAMIC` list. Once updated, the list memberships will be re-evaluated and updated to match the new definition.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Lists_ListUpdateResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ListUpdateResponse"/></returns>
         /// <param name="body">The definition of the list filter branch update request.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Lists_ListUpdateResponse?> PutAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Lists_ListFilterUpdateRequest body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Item.UpdateListFilters.UpdateListFiltersRequestBuilder.UpdateListFiltersRequestBuilderPutQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.ListUpdateResponse?> PutAsync(global::Soenneker.HubSpot.OpenApiClient.Models.ListFilterUpdateRequest body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Item.UpdateListFilters.UpdateListFiltersRequestBuilder.UpdateListFiltersRequestBuilderPutQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Lists_ListUpdateResponse> PutAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Lists_ListFilterUpdateRequest body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Item.UpdateListFilters.UpdateListFiltersRequestBuilder.UpdateListFiltersRequestBuilderPutQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.ListUpdateResponse> PutAsync(global::Soenneker.HubSpot.OpenApiClient.Models.ListFilterUpdateRequest body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Item.UpdateListFilters.UpdateListFiltersRequestBuilder.UpdateListFiltersRequestBuilderPutQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Lists_ListUpdateResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Lists_ListUpdateResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ListUpdateResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ListUpdateResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Update the filter branch definition of a `DYNAMIC` list. Once updated, the list memberships will be re-evaluated and updated to match the new definition.
@@ -61,11 +61,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Item.UpdateListFilters
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPutRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Lists_ListFilterUpdateRequest body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Item.UpdateListFilters.UpdateListFiltersRequestBuilder.UpdateListFiltersRequestBuilderPutQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPutRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.ListFilterUpdateRequest body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Item.UpdateListFilters.UpdateListFiltersRequestBuilder.UpdateListFiltersRequestBuilderPutQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPutRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Lists_ListFilterUpdateRequest body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Item.UpdateListFilters.UpdateListFiltersRequestBuilder.UpdateListFiltersRequestBuilderPutQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPutRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.ListFilterUpdateRequest body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Item.UpdateListFilters.UpdateListFiltersRequestBuilder.UpdateListFiltersRequestBuilderPutQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

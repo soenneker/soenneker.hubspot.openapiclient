@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Statistics.Histogr
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public HistogramRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/marketing/v3/emails/statistics/histogram", pathParameters)
+        public HistogramRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/marketing/v3/emails/statistics/histogram{?emailIds*,endTimestamp*,interval*,startTimestamp*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,26 +30,26 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Statistics.Histogr
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public HistogramRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/marketing/v3/emails/statistics/histogram", rawUrl)
+        public HistogramRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/marketing/v3/emails/statistics/histogram{?emailIds*,endTimestamp*,interval*,startTimestamp*}", rawUrl)
         {
         }
         /// <summary>
         /// Get aggregated statistics in intervals for a specified time span. Each interval contains aggregated statistics of the emails that were sent in that time.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Emails_V3_CollectionResponseWithTotalEmailStatisticIntervalNoPaging"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalEmailStatisticInterval"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Emails_V3_CollectionResponseWithTotalEmailStatisticIntervalNoPaging?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalEmailStatisticInterval?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Statistics.Histogram.HistogramRequestBuilder.HistogramRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Emails_V3_CollectionResponseWithTotalEmailStatisticIntervalNoPaging> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalEmailStatisticInterval> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Statistics.Histogram.HistogramRequestBuilder.HistogramRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Emails_V3_CollectionResponseWithTotalEmailStatisticIntervalNoPaging>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Emails_V3_CollectionResponseWithTotalEmailStatisticIntervalNoPaging.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalEmailStatisticInterval>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalEmailStatisticInterval.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get aggregated statistics in intervals for a specified time span. Each interval contains aggregated statistics of the emails that were sent in that time.
@@ -58,11 +58,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Statistics.Histogr
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Statistics.Histogram.HistogramRequestBuilder.HistogramRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Statistics.Histogram.HistogramRequestBuilder.HistogramRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
@@ -80,11 +80,57 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Statistics.Histogr
             return new global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Statistics.Histogram.HistogramRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
+        /// Get aggregated statistics in intervals for a specified time span. Each interval contains aggregated statistics of the emails that were sent in that time.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class HistogramRequestBuilderGetQueryParameters 
+        {
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("emailIds")]
+            public long?[]? EmailIds { get; set; }
+#nullable restore
+#else
+            [QueryParameter("emailIds")]
+            public long?[] EmailIds { get; set; }
+#endif
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("endTimestamp")]
+            public string? EndTimestamp { get; set; }
+#nullable restore
+#else
+            [QueryParameter("endTimestamp")]
+            public string EndTimestamp { get; set; }
+#endif
+            [Obsolete("This property is deprecated, use IntervalAsGetIntervalQueryParameterType instead")]
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("interval")]
+            public string? Interval { get; set; }
+#nullable restore
+#else
+            [QueryParameter("interval")]
+            public string Interval { get; set; }
+#endif
+            [QueryParameter("interval")]
+            public global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Statistics.Histogram.GetIntervalQueryParameterType? IntervalAsGetIntervalQueryParameterType { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("startTimestamp")]
+            public string? StartTimestamp { get; set; }
+#nullable restore
+#else
+            [QueryParameter("startTimestamp")]
+            public string StartTimestamp { get; set; }
+#endif
+        }
+        /// <summary>
         /// Configuration for the request such as headers, query parameters, and middleware options.
         /// </summary>
         [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class HistogramRequestBuilderGetRequestConfiguration : RequestConfiguration<DefaultQueryParameters>
+        public partial class HistogramRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Statistics.Histogram.HistogramRequestBuilder.HistogramRequestBuilderGetQueryParameters>
         {
         }
     }

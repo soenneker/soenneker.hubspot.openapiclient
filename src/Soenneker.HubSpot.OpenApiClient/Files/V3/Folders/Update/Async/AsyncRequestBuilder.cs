@@ -42,22 +42,22 @@ namespace Soenneker.HubSpot.OpenApiClient.Files.V3.Folders.Update.Async
         /// <summary>
         /// Update properties of folder by given ID. This action happens asynchronously and will update all of the folder&apos;s children as well.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Files_Files_FolderUpdateTaskLocator"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.FolderUpdateTaskLocator"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Files_Files_FolderUpdateTaskLocator?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.Files_Files_FolderUpdateInputWithId body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.FolderUpdateTaskLocator?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.FolderUpdateInputWithId body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Files_Files_FolderUpdateTaskLocator> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.Files_Files_FolderUpdateInputWithId body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.FolderUpdateTaskLocator> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.FolderUpdateInputWithId body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Files_Files_FolderUpdateTaskLocator>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Files_Files_FolderUpdateTaskLocator.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.FolderUpdateTaskLocator>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.FolderUpdateTaskLocator.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Update properties of folder by given ID. This action happens asynchronously and will update all of the folder&apos;s children as well.
@@ -67,11 +67,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Files.V3.Folders.Update.Async
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.Files_Files_FolderUpdateInputWithId body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.FolderUpdateInputWithId body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.Files_Files_FolderUpdateInputWithId body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.FolderUpdateInputWithId body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

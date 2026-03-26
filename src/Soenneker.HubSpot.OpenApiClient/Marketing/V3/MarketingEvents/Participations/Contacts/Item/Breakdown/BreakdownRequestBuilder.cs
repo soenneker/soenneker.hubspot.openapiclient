@@ -36,20 +36,20 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Participa
         /// <summary>
         /// Read Contact&apos;s participations by identifier - email or internal id.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_CollectionResponseWithTotalParticipationBreakdown"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalParticipationBreakdown"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_CollectionResponseWithTotalParticipationBreakdown?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Participations.Contacts.Item.Breakdown.BreakdownRequestBuilder.BreakdownRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalParticipationBreakdown?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Participations.Contacts.Item.Breakdown.BreakdownRequestBuilder.BreakdownRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_CollectionResponseWithTotalParticipationBreakdown> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Participations.Contacts.Item.Breakdown.BreakdownRequestBuilder.BreakdownRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalParticipationBreakdown> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Participations.Contacts.Item.Breakdown.BreakdownRequestBuilder.BreakdownRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_CollectionResponseWithTotalParticipationBreakdown>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_CollectionResponseWithTotalParticipationBreakdown.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalParticipationBreakdown>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalParticipationBreakdown.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Read Contact&apos;s participations by identifier - email or internal id.

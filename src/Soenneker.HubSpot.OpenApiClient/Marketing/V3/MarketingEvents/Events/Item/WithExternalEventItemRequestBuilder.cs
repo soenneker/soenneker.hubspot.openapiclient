@@ -79,60 +79,60 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.It
         /// <summary>
         /// Returns the details of a Marketing Event with the specified externalAccountId, externalEventId, if it exists.Only Marketing Events created by the same app making the request can be retrieved.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_MarketingEventPublicReadResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventPublicReadResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_MarketingEventPublicReadResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.Item.WithExternalEventItemRequestBuilder.WithExternalEventItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventPublicReadResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.Item.WithExternalEventItemRequestBuilder.WithExternalEventItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_MarketingEventPublicReadResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.Item.WithExternalEventItemRequestBuilder.WithExternalEventItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventPublicReadResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.Item.WithExternalEventItemRequestBuilder.WithExternalEventItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_MarketingEventPublicReadResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_MarketingEventPublicReadResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventPublicReadResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventPublicReadResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Updates the details of an existing Marketing Event identified by its externalAccountId, externalEventId if it exists.Only Marketing Events created by the same app can be updated.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_MarketingEventPublicDefaultResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventPublicDefaultResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_MarketingEventPublicDefaultResponse?> PatchAsync(global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_MarketingEventUpdateRequestParams body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.Item.WithExternalEventItemRequestBuilder.WithExternalEventItemRequestBuilderPatchQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventPublicDefaultResponse?> PatchAsync(global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventUpdateRequestParams body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.Item.WithExternalEventItemRequestBuilder.WithExternalEventItemRequestBuilderPatchQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_MarketingEventPublicDefaultResponse> PatchAsync(global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_MarketingEventUpdateRequestParams body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.Item.WithExternalEventItemRequestBuilder.WithExternalEventItemRequestBuilderPatchQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventPublicDefaultResponse> PatchAsync(global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventUpdateRequestParams body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.Item.WithExternalEventItemRequestBuilder.WithExternalEventItemRequestBuilderPatchQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPatchRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_MarketingEventPublicDefaultResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_MarketingEventPublicDefaultResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventPublicDefaultResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventPublicDefaultResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Upserts a marketing event If there is an existing marketing event with the specified ID, it will be updated; otherwise a new event will be created.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_MarketingEventPublicDefaultResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventPublicDefaultResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_MarketingEventPublicDefaultResponse?> PutAsync(global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_MarketingEventCreateRequestParams body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventPublicDefaultResponse?> PutAsync(global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventCreateRequestParams body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_MarketingEventPublicDefaultResponse> PutAsync(global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_MarketingEventCreateRequestParams body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventPublicDefaultResponse> PutAsync(global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventCreateRequestParams body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_MarketingEventPublicDefaultResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_MarketingEventPublicDefaultResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventPublicDefaultResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventPublicDefaultResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Deletes the existing Marketing Event with the specified externalAccountId, externalEventId, if it exists.Only Marketing Events created by the same app can be deleted.
@@ -179,11 +179,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.It
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPatchRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_MarketingEventUpdateRequestParams body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.Item.WithExternalEventItemRequestBuilder.WithExternalEventItemRequestBuilderPatchQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventUpdateRequestParams body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.Item.WithExternalEventItemRequestBuilder.WithExternalEventItemRequestBuilderPatchQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPatchRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_MarketingEventUpdateRequestParams body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.Item.WithExternalEventItemRequestBuilder.WithExternalEventItemRequestBuilderPatchQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventUpdateRequestParams body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.Item.WithExternalEventItemRequestBuilder.WithExternalEventItemRequestBuilderPatchQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -201,11 +201,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.It
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPutRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_MarketingEventCreateRequestParams body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPutRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventCreateRequestParams body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPutRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_MarketingEventCreateRequestParams body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPutRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventCreateRequestParams body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

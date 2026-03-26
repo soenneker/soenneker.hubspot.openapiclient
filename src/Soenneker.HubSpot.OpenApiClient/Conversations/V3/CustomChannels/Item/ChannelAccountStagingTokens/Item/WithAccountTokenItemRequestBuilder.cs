@@ -36,22 +36,22 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.V3.CustomChannels.Item.C
         /// <summary>
         /// Update a channel account staging token&apos;s account name and delivery identifier. This information will be applied to the channel account created from this staging token. This is used for public apps.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Custom_Channels_PublicChannelAccountStagingToken"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelAccountStagingToken"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Custom_Channels_PublicChannelAccountStagingToken?> PatchAsync(global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Custom_Channels_PublicChannelAccountStagingTokenUpdateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelAccountStagingToken?> PatchAsync(global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelAccountStagingTokenUpdateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Custom_Channels_PublicChannelAccountStagingToken> PatchAsync(global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Custom_Channels_PublicChannelAccountStagingTokenUpdateRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelAccountStagingToken> PatchAsync(global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelAccountStagingTokenUpdateRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPatchRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Custom_Channels_PublicChannelAccountStagingToken>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Custom_Channels_PublicChannelAccountStagingToken.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelAccountStagingToken>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelAccountStagingToken.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Update a channel account staging token&apos;s account name and delivery identifier. This information will be applied to the channel account created from this staging token. This is used for public apps.
@@ -61,11 +61,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.V3.CustomChannels.Item.C
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPatchRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Custom_Channels_PublicChannelAccountStagingTokenUpdateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelAccountStagingTokenUpdateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPatchRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Custom_Channels_PublicChannelAccountStagingTokenUpdateRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelAccountStagingTokenUpdateRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

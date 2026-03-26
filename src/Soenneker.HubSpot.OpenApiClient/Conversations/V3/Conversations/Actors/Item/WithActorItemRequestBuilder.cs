@@ -36,20 +36,20 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Actors.
         /// <summary>
         /// Retrieve details of a single actor using the actor ID.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Conversations_Inbox___Messages_PublicActor"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicActor"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Conversations_Inbox___Messages_PublicActor?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Actors.Item.WithActorItemRequestBuilder.WithActorItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActor?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Actors.Item.WithActorItemRequestBuilder.WithActorItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Conversations_Inbox___Messages_PublicActor> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Actors.Item.WithActorItemRequestBuilder.WithActorItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActor> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Actors.Item.WithActorItemRequestBuilder.WithActorItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Conversations_Inbox___Messages_PublicActor>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Conversations_Inbox___Messages_PublicActor.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActor>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicActor.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve details of a single actor using the actor ID.
@@ -85,7 +85,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Actors.
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithActorItemRequestBuilderGetQueryParameters 
         {
-            /// <summary>A specific property to include in the actor response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("property")]

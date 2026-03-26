@@ -59,20 +59,20 @@ namespace Soenneker.HubSpot.OpenApiClient.UrlMappings.V3.UrlMappings
         public UrlMappingsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/url-mappings/v3/url-mappings", rawUrl)
         {
         }
-        /// <returns>A List&lt;global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Url_Mappings_UrlMapping&gt;</returns>
+        /// <returns>A List&lt;global::Soenneker.HubSpot.OpenApiClient.Models.UrlMapping&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<List<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Url_Mappings_UrlMapping>?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.HubSpot.OpenApiClient.Models.UrlMapping>?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<List<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Url_Mappings_UrlMapping>> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.HubSpot.OpenApiClient.Models.UrlMapping>> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Url_Mappings_UrlMapping>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Url_Mappings_UrlMapping.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.HubSpot.OpenApiClient.Models.UrlMapping>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.UrlMapping.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
             return collectionResult?.AsList();
         }
         /// <returns>A <see cref="Stream"/></returns>
@@ -81,11 +81,11 @@ namespace Soenneker.HubSpot.OpenApiClient.UrlMappings.V3.UrlMappings
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<Stream?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Url_Mappings_UrlMapping body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.UrlMapping body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<Stream> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Url_Mappings_UrlMapping body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.UrlMapping body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -113,11 +113,11 @@ namespace Soenneker.HubSpot.OpenApiClient.UrlMappings.V3.UrlMappings
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Url_Mappings_UrlMapping body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.UrlMapping body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Url_Mappings_UrlMapping body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.UrlMapping body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Statistics.List
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ListRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/marketing/v3/emails/statistics/list", pathParameters)
+        public ListRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/marketing/v3/emails/statistics/list{?emailIds*,endTimestamp*,property*,startTimestamp*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,26 +30,26 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Statistics.List
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ListRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/marketing/v3/emails/statistics/list", rawUrl)
+        public ListRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/marketing/v3/emails/statistics/list{?emailIds*,endTimestamp*,property*,startTimestamp*}", rawUrl)
         {
         }
         /// <summary>
         /// Use this endpoint to get aggregated statistics of emails sent in a specified time span. It also returns the list of emails that were sent during the time span.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Emails_V3_AggregateEmailStatistics"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.AggregateEmailStatistics"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Emails_V3_AggregateEmailStatistics?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.AggregateEmailStatistics?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Statistics.List.ListRequestBuilder.ListRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Emails_V3_AggregateEmailStatistics> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.AggregateEmailStatistics> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Statistics.List.ListRequestBuilder.ListRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Emails_V3_AggregateEmailStatistics>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Emails_V3_AggregateEmailStatistics.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.AggregateEmailStatistics>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.AggregateEmailStatistics.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Use this endpoint to get aggregated statistics of emails sent in a specified time span. It also returns the list of emails that were sent during the time span.
@@ -58,11 +58,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Statistics.List
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Statistics.List.ListRequestBuilder.ListRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Statistics.List.ListRequestBuilder.ListRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
@@ -80,11 +80,54 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Statistics.List
             return new global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Statistics.List.ListRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
+        /// Use this endpoint to get aggregated statistics of emails sent in a specified time span. It also returns the list of emails that were sent during the time span.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class ListRequestBuilderGetQueryParameters 
+        {
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("emailIds")]
+            public long?[]? EmailIds { get; set; }
+#nullable restore
+#else
+            [QueryParameter("emailIds")]
+            public long?[] EmailIds { get; set; }
+#endif
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("endTimestamp")]
+            public string? EndTimestamp { get; set; }
+#nullable restore
+#else
+            [QueryParameter("endTimestamp")]
+            public string EndTimestamp { get; set; }
+#endif
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("property")]
+            public string? Property { get; set; }
+#nullable restore
+#else
+            [QueryParameter("property")]
+            public string Property { get; set; }
+#endif
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("startTimestamp")]
+            public string? StartTimestamp { get; set; }
+#nullable restore
+#else
+            [QueryParameter("startTimestamp")]
+            public string StartTimestamp { get; set; }
+#endif
+        }
+        /// <summary>
         /// Configuration for the request such as headers, query parameters, and middleware options.
         /// </summary>
         [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ListRequestBuilderGetRequestConfiguration : RequestConfiguration<DefaultQueryParameters>
+        public partial class ListRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Statistics.List.ListRequestBuilder.ListRequestBuilderGetQueryParameters>
         {
         }
     }

@@ -36,20 +36,20 @@ namespace Soenneker.HubSpot.OpenApiClient.Scheduler.V3.Meetings.MeetingLinks.Boo
         /// <summary>
         /// Get the next availability times for a meeting page.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Scheduler_Meetings_ExternalLinkAvailabilityAndBusyTimes"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailabilityAndBusyTimes"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Scheduler_Meetings_ExternalLinkAvailabilityAndBusyTimes?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Scheduler.V3.Meetings.MeetingLinks.Book.AvailabilityPage.Item.WithSlugItemRequestBuilder.WithSlugItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailabilityAndBusyTimes?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Scheduler.V3.Meetings.MeetingLinks.Book.AvailabilityPage.Item.WithSlugItemRequestBuilder.WithSlugItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Scheduler_Meetings_ExternalLinkAvailabilityAndBusyTimes> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Scheduler.V3.Meetings.MeetingLinks.Book.AvailabilityPage.Item.WithSlugItemRequestBuilder.WithSlugItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailabilityAndBusyTimes> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Scheduler.V3.Meetings.MeetingLinks.Book.AvailabilityPage.Item.WithSlugItemRequestBuilder.WithSlugItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Scheduler_Meetings_ExternalLinkAvailabilityAndBusyTimes>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Scheduler_Meetings_ExternalLinkAvailabilityAndBusyTimes.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailabilityAndBusyTimes>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailabilityAndBusyTimes.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get the next availability times for a meeting page.

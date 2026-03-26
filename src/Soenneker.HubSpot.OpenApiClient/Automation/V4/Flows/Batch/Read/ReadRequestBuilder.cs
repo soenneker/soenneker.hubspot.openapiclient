@@ -36,22 +36,22 @@ namespace Soenneker.HubSpot.OpenApiClient.Automation.V4.Flows.Batch.Read
         /// <summary>
         /// Retrieve details of multiple automation flows by providing a batch of flow IDs in the request body. This endpoint allows for efficient retrieval of multiple flows at once, returning their details in a single response.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Automation_Automation_V4_BatchResponseApiFlow"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseApiFlow"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Automation_Automation_V4_BatchResponseApiFlow?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.Automation_Automation_V4_ApiFlowBatchInput body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseApiFlow?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchInput body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Automation_Automation_V4_BatchResponseApiFlow> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.Automation_Automation_V4_ApiFlowBatchInput body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseApiFlow> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchInput body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Automation_Automation_V4_BatchResponseApiFlow>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Automation_Automation_V4_BatchResponseApiFlow.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseApiFlow>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseApiFlow.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve details of multiple automation flows by providing a batch of flow IDs in the request body. This endpoint allows for efficient retrieval of multiple flows at once, returning their details in a single response.
@@ -61,11 +61,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Automation.V4.Flows.Batch.Read
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.Automation_Automation_V4_ApiFlowBatchInput body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchInput body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.Automation_Automation_V4_ApiFlowBatchInput body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchInput body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

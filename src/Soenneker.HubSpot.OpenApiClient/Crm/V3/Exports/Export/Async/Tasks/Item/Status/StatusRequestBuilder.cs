@@ -36,20 +36,20 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Exports.Export.Async.Tasks.Item
         /// <summary>
         /// Returns the status of the export with taskId, including the URL of the resulting file if the export status is COMPLETE
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Exports_ActionResponseWithSingleResultURI"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithSingleResultURI"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Exports_ActionResponseWithSingleResultURI?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithSingleResultURI?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Exports_ActionResponseWithSingleResultURI> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithSingleResultURI> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Exports_ActionResponseWithSingleResultURI>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Exports_ActionResponseWithSingleResultURI.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithSingleResultURI>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithSingleResultURI.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Returns the status of the export with taskId, including the URL of the resulting file if the export status is COMPLETE

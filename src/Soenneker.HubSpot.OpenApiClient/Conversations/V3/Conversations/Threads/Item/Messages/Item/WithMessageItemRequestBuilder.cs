@@ -42,20 +42,20 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads
         /// <summary>
         /// Retrieve a single message from a thread using the message ID.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Conversations_Inbox___Messages_PublicMessage"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessage"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Conversations_Inbox___Messages_PublicMessage?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads.Item.Messages.Item.WithMessageItemRequestBuilder.WithMessageItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessage?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads.Item.Messages.Item.WithMessageItemRequestBuilder.WithMessageItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Conversations_Inbox___Messages_PublicMessage> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads.Item.Messages.Item.WithMessageItemRequestBuilder.WithMessageItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessage> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads.Item.Messages.Item.WithMessageItemRequestBuilder.WithMessageItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Conversations_Inbox___Messages_PublicMessage>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Conversations_Inbox___Messages_PublicMessage.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessage>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessage.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve a single message from a thread using the message ID.
@@ -91,7 +91,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithMessageItemRequestBuilderGetQueryParameters 
         {
-            /// <summary>A specific property to include in the message response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("property")]

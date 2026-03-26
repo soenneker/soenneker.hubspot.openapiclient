@@ -42,22 +42,22 @@ namespace Soenneker.HubSpot.OpenApiClient.Automation.V4.Sequences.Enrollments
         /// <summary>
         /// Enroll a contact into a sequence using the specified user ID and sequence details.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Automation_Sequences_PublicSequenceEnrollmentLiteResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceEnrollmentLiteResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Automation_Sequences_PublicSequenceEnrollmentLiteResponse?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.Automation_Sequences_PublicSequenceEnrollmentRequest body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Automation.V4.Sequences.Enrollments.EnrollmentsRequestBuilder.EnrollmentsRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceEnrollmentLiteResponse?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceEnrollmentRequest body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Automation.V4.Sequences.Enrollments.EnrollmentsRequestBuilder.EnrollmentsRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Automation_Sequences_PublicSequenceEnrollmentLiteResponse> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.Automation_Sequences_PublicSequenceEnrollmentRequest body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Automation.V4.Sequences.Enrollments.EnrollmentsRequestBuilder.EnrollmentsRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceEnrollmentLiteResponse> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceEnrollmentRequest body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Automation.V4.Sequences.Enrollments.EnrollmentsRequestBuilder.EnrollmentsRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Automation_Sequences_PublicSequenceEnrollmentLiteResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Automation_Sequences_PublicSequenceEnrollmentLiteResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceEnrollmentLiteResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceEnrollmentLiteResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Enroll a contact into a sequence using the specified user ID and sequence details.
@@ -67,11 +67,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Automation.V4.Sequences.Enrollments
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.Automation_Sequences_PublicSequenceEnrollmentRequest body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Automation.V4.Sequences.Enrollments.EnrollmentsRequestBuilder.EnrollmentsRequestBuilderPostQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceEnrollmentRequest body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Automation.V4.Sequences.Enrollments.EnrollmentsRequestBuilder.EnrollmentsRequestBuilderPostQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.Automation_Sequences_PublicSequenceEnrollmentRequest body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Automation.V4.Sequences.Enrollments.EnrollmentsRequestBuilder.EnrollmentsRequestBuilderPostQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceEnrollmentRequest body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Automation.V4.Sequences.Enrollments.EnrollmentsRequestBuilder.EnrollmentsRequestBuilderPostQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

@@ -60,40 +60,40 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders.Item
         /// <summary>
         /// Retrieve a landing page folder, specified by its ID.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_ContentFolder"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ContentFolder"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_ContentFolder?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders.Item.WithObjectItemRequestBuilder.WithObjectItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.ContentFolder?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders.Item.WithObjectItemRequestBuilder.WithObjectItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_ContentFolder> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders.Item.WithObjectItemRequestBuilder.WithObjectItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.ContentFolder> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders.Item.WithObjectItemRequestBuilder.WithObjectItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_ContentFolder>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_ContentFolder.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ContentFolder>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ContentFolder.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Partially update a landing page folder, specified by the folder ID. You only need to specify the details values that you are modifying.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_ContentFolder"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ContentFolder"/></returns>
         /// <param name="body">Model definition for a content folder.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_ContentFolder?> PatchAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_ContentFolder body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders.Item.WithObjectItemRequestBuilder.WithObjectItemRequestBuilderPatchQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.ContentFolder?> PatchAsync(global::Soenneker.HubSpot.OpenApiClient.Models.ContentFolder body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders.Item.WithObjectItemRequestBuilder.WithObjectItemRequestBuilderPatchQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_ContentFolder> PatchAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_ContentFolder body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders.Item.WithObjectItemRequestBuilder.WithObjectItemRequestBuilderPatchQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.ContentFolder> PatchAsync(global::Soenneker.HubSpot.OpenApiClient.Models.ContentFolder body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders.Item.WithObjectItemRequestBuilder.WithObjectItemRequestBuilderPatchQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPatchRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_ContentFolder>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_ContentFolder.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ContentFolder>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ContentFolder.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Delete a landing page folder, specified by its ID.
@@ -140,11 +140,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPatchRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_ContentFolder body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders.Item.WithObjectItemRequestBuilder.WithObjectItemRequestBuilderPatchQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.ContentFolder body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders.Item.WithObjectItemRequestBuilder.WithObjectItemRequestBuilderPatchQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPatchRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Pages_ContentFolder body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders.Item.WithObjectItemRequestBuilder.WithObjectItemRequestBuilderPatchQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.ContentFolder body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Pages.LandingPages.Folders.Item.WithObjectItemRequestBuilder.WithObjectItemRequestBuilderPatchQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

@@ -36,20 +36,20 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Hubdb.Tables.Item.Draft.Publish
         /// <summary>
         /// Publishes the table by copying the data and table schema changes from draft version to the published version, meaning any website pages using data from the table will be updated.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Hubdb_HubDbTableV3"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Hubdb_HubDbTableV3?> PostAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Hubdb.Tables.Item.Draft.Publish.PublishRequestBuilder.PublishRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3?> PostAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Hubdb.Tables.Item.Draft.Publish.PublishRequestBuilder.PublishRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Hubdb_HubDbTableV3> PostAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Hubdb.Tables.Item.Draft.Publish.PublishRequestBuilder.PublishRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3> PostAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Hubdb.Tables.Item.Draft.Publish.PublishRequestBuilder.PublishRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToPostRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Hubdb_HubDbTableV3>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Hubdb_HubDbTableV3.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Publishes the table by copying the data and table schema changes from draft version to the published version, meaning any website pages using data from the table will be updated.

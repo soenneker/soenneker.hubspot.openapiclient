@@ -42,11 +42,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.It
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<Stream?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_BatchInputMarketingEventSubscriber body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.Item.Item.Upsert.UpsertRequestBuilder.UpsertRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.BatchInputMarketingEventSubscriber body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.Item.Item.Upsert.UpsertRequestBuilder.UpsertRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<Stream> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_BatchInputMarketingEventSubscriber body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.Item.Item.Upsert.UpsertRequestBuilder.UpsertRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.BatchInputMarketingEventSubscriber body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.Item.Item.Upsert.UpsertRequestBuilder.UpsertRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -61,11 +61,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.It
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_BatchInputMarketingEventSubscriber body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.Item.Item.Upsert.UpsertRequestBuilder.UpsertRequestBuilderPostQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.BatchInputMarketingEventSubscriber body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.Item.Item.Upsert.UpsertRequestBuilder.UpsertRequestBuilderPostQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_BatchInputMarketingEventSubscriber body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.Item.Item.Upsert.UpsertRequestBuilder.UpsertRequestBuilderPostQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.BatchInputMarketingEventSubscriber body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.Item.Item.Upsert.UpsertRequestBuilder.UpsertRequestBuilderPostQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

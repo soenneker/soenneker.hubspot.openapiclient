@@ -36,22 +36,22 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Posts.Batch.Update
         /// <summary>
         /// Update a batch of blog posts.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Posts_BatchResponseBlogPost"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseBlogPost"/></returns>
         /// <param name="body">Wrapper for providing an array of JSON nodes as inputs.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Posts_BatchResponseBlogPost?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Posts_BatchInputJsonNode body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Posts.Batch.Update.UpdateRequestBuilder.UpdateRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseBlogPost?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.C_cms_BatchInputJsonNode body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Posts.Batch.Update.UpdateRequestBuilder.UpdateRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Posts_BatchResponseBlogPost> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Posts_BatchInputJsonNode body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Posts.Batch.Update.UpdateRequestBuilder.UpdateRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseBlogPost> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.C_cms_BatchInputJsonNode body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Posts.Batch.Update.UpdateRequestBuilder.UpdateRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Posts_BatchResponseBlogPost>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Posts_BatchResponseBlogPost.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseBlogPost>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseBlogPost.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Update a batch of blog posts.
@@ -61,11 +61,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Posts.Batch.Update
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Posts_BatchInputJsonNode body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Posts.Batch.Update.UpdateRequestBuilder.UpdateRequestBuilderPostQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.C_cms_BatchInputJsonNode body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Posts.Batch.Update.UpdateRequestBuilder.UpdateRequestBuilderPostQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CMS_Posts_BatchInputJsonNode body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Posts.Batch.Update.UpdateRequestBuilder.UpdateRequestBuilderPostQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.C_cms_BatchInputJsonNode body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Posts.Batch.Update.UpdateRequestBuilder.UpdateRequestBuilderPostQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

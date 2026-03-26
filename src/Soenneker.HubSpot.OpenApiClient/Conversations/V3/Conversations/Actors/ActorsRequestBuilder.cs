@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Actors
             get => new global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Actors.Batch.BatchRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.conversations.v3.conversations.actors.item collection</summary>
-        /// <param name="position">The unique ID of the actor.</param>
+        /// <param name="position">Unique identifier of the item</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Actors.Item.WithActorItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Actors.Item.WithActorItemRequestBuilder this[string position]
         {

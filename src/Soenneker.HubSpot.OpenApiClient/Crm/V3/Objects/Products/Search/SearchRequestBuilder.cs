@@ -36,22 +36,22 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Products.Search
         /// <summary>
         /// Execute a search for products based on defined filters, properties, and sorting options. This endpoint allows for detailed querying of product data within the CRM, enabling users to retrieve specific product information by applying multiple filter groups and sorting criteria.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Products_CollectionResponseWithTotalSimplePublicObject"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.C__________________________crm_CollectionResponseWithTotalSimplePublicObject"/></returns>
         /// <param name="body">Describes a search request</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Products_CollectionResponseWithTotalSimplePublicObject?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Products_PublicObjectSearchRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.C__________________________crm_CollectionResponseWithTotalSimplePublicObject?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.C_____________________________crm_PublicObjectSearchRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Products_CollectionResponseWithTotalSimplePublicObject> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Products_PublicObjectSearchRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.C__________________________crm_CollectionResponseWithTotalSimplePublicObject> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.C_____________________________crm_PublicObjectSearchRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Products_CollectionResponseWithTotalSimplePublicObject>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Products_CollectionResponseWithTotalSimplePublicObject.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.C__________________________crm_CollectionResponseWithTotalSimplePublicObject>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.C__________________________crm_CollectionResponseWithTotalSimplePublicObject.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Execute a search for products based on defined filters, properties, and sorting options. This endpoint allows for detailed querying of product data within the CRM, enabling users to retrieve specific product information by applying multiple filter groups and sorting criteria.
@@ -61,11 +61,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Products.Search
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Products_PublicObjectSearchRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.C_____________________________crm_PublicObjectSearchRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Products_PublicObjectSearchRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.C_____________________________crm_PublicObjectSearchRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

@@ -36,20 +36,20 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Transactional.SmtpTokens.
         /// <summary>
         /// Allows the creation of a replacement password for a given token. Once the password is successfully reset, the old password for the token will be invalid.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Transactional_Single_Send_SmtpApiTokenView"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.SmtpApiTokenView"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Transactional_Single_Send_SmtpApiTokenView?> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.SmtpApiTokenView?> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Transactional_Single_Send_SmtpApiTokenView> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.SmtpApiTokenView> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToPostRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Transactional_Single_Send_SmtpApiTokenView>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Transactional_Single_Send_SmtpApiTokenView.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.SmtpApiTokenView>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.SmtpApiTokenView.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Allows the creation of a replacement password for a given token. Once the password is successfully reset, the old password for the token will be invalid.

@@ -49,20 +49,20 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V4.Objects.Item.Item.Associations.
         /// <summary>
         /// Retrieve all associations between a specific record and an object type. Limit 500 per call.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Associations_CollectionResponseMultiAssociatedObjectWithLabelForwardPaging"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseMultiAssociatedObjectWithLabelForwardPaging"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Associations_CollectionResponseMultiAssociatedObjectWithLabelForwardPaging?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V4.Objects.Item.Item.Associations.Item.WithToObjectTypeItemRequestBuilder.WithToObjectTypeItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseMultiAssociatedObjectWithLabelForwardPaging?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V4.Objects.Item.Item.Associations.Item.WithToObjectTypeItemRequestBuilder.WithToObjectTypeItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Associations_CollectionResponseMultiAssociatedObjectWithLabelForwardPaging> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V4.Objects.Item.Item.Associations.Item.WithToObjectTypeItemRequestBuilder.WithToObjectTypeItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseMultiAssociatedObjectWithLabelForwardPaging> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V4.Objects.Item.Item.Associations.Item.WithToObjectTypeItemRequestBuilder.WithToObjectTypeItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Associations_CollectionResponseMultiAssociatedObjectWithLabelForwardPaging>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Associations_CollectionResponseMultiAssociatedObjectWithLabelForwardPaging.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseMultiAssociatedObjectWithLabelForwardPaging>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseMultiAssociatedObjectWithLabelForwardPaging.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve all associations between a specific record and an object type. Limit 500 per call.

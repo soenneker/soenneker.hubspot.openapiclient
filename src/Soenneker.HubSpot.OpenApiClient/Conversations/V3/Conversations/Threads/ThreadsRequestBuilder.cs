@@ -19,7 +19,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads
     public partial class ThreadsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.conversations.v3.conversations.threads.item collection</summary>
-        /// <param name="position">The unique ID of the thread.</param>
+        /// <param name="position">Unique identifier of the item</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads.Item.WithThreadItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads.Item.WithThreadItemRequestBuilder this[long position]
         {
@@ -31,7 +31,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads
             }
         }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.conversations.v3.conversations.threads.item collection</summary>
-        /// <param name="position">The unique ID of the thread.</param>
+        /// <param name="position">Unique identifier of the item</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads.Item.WithThreadItemRequestBuilder"/></returns>
         [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
         public global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads.Item.WithThreadItemRequestBuilder this[string position]
@@ -48,7 +48,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ThreadsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/conversations/v3/conversations/threads{?after*,archived*,associatedContactId*,association*,inboxId*,latestMessageTimestampAfter*,limit*,property*,sort*,threadStatus*}", pathParameters)
+        public ThreadsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/conversations/v3/conversations/threads{?after*,archived*,associatedContactId*,associatedTicketId*,association*,inboxId*,latestMessageTimestampAfter*,limit*,property*,sort*,threadStatus*}", pathParameters)
         {
         }
         /// <summary>
@@ -56,26 +56,26 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ThreadsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/conversations/v3/conversations/threads{?after*,archived*,associatedContactId*,association*,inboxId*,latestMessageTimestampAfter*,limit*,property*,sort*,threadStatus*}", rawUrl)
+        public ThreadsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/conversations/v3/conversations/threads{?after*,archived*,associatedContactId*,associatedTicketId*,association*,inboxId*,latestMessageTimestampAfter*,limit*,property*,sort*,threadStatus*}", rawUrl)
         {
         }
         /// <summary>
         /// Retrieve a list of threads, with optional filters and sorting.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Conversations_Inbox___Messages_CollectionResponsePublicThreadForwardPaging"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponsePublicThreadForwardPaging"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Conversations_Inbox___Messages_CollectionResponsePublicThreadForwardPaging?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads.ThreadsRequestBuilder.ThreadsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponsePublicThreadForwardPaging?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads.ThreadsRequestBuilder.ThreadsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Conversations_Inbox___Messages_CollectionResponsePublicThreadForwardPaging> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads.ThreadsRequestBuilder.ThreadsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponsePublicThreadForwardPaging> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads.ThreadsRequestBuilder.ThreadsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Conversations_Inbox___Messages_CollectionResponsePublicThreadForwardPaging>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_Conversations_Inbox___Messages_CollectionResponsePublicThreadForwardPaging.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponsePublicThreadForwardPaging>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponsePublicThreadForwardPaging.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve a list of threads, with optional filters and sorting.
@@ -124,10 +124,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads
             /// <summary>Whether to return only results that have been archived.</summary>
             [QueryParameter("archived")]
             public bool? Archived { get; set; }
-            /// <summary>Retrieve a filtered list of conversations for a specific contact by its ID. This parameter cannot be used in conjunction with the `inboxId` property.</summary>
             [QueryParameter("associatedContactId")]
             public long? AssociatedContactId { get; set; }
-            /// <summary>You can specify an association type here of `TICKET`. If this is set the response will included a thread associations object and associated ticket id if present. If there are no associations to a ticket with this conversation, then the thread associations object will not be present on the response. </summary>
+            [QueryParameter("associatedTicketId")]
+            public long? AssociatedTicketId { get; set; }
             [Obsolete("This property is deprecated, use AssociationAsGetAssociationQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -138,7 +138,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads
             [QueryParameter("association")]
             public string[] Association { get; set; }
 #endif
-            /// <summary>You can specify an association type here of `TICKET`. If this is set the response will included a thread associations object and associated ticket id if present. If there are no associations to a ticket with this conversation, then the thread associations object will not be present on the response. </summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("association")]
@@ -148,7 +147,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads
             [QueryParameter("association")]
             public global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads.GetAssociationQueryParameterType[] AssociationAsGetAssociationQueryParameterType { get; set; }
 #endif
-            /// <summary>The ID of the conversations inbox you can optionally include to retrieve the associated messages for. This parameter cannot be used in conjunction with the `associatedContactId` property.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("inboxId")]
@@ -158,13 +156,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads
             [QueryParameter("inboxId")]
             public int?[] InboxId { get; set; }
 #endif
-            /// <summary>The minimum(earliest) `latestMessageTimestamp`. This is required only when sorting by `latestMessageTimestamp`.</summary>
             [QueryParameter("latestMessageTimestampAfter")]
             public DateTimeOffset? LatestMessageTimestampAfter { get; set; }
             /// <summary>The maximum number of results to display per page.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
-            /// <summary>A specific property to include in the thread response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("property")]
@@ -174,7 +170,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads
             [QueryParameter("property")]
             public string Property { get; set; }
 #endif
-            /// <summary>Set the sort order of the response. Valid options are `id` (default) and `latestMessageTimestamp` (which requires the `latestMessageTimestampAfter` field to also be set). If you’re filtering threads by `associatedContactId` , you can sort in descending order by prepending - to the sort option (e.g., `-id` or `-latestMessageTimestampAfter` ). Otherwise, results are always returned in ascending order.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("sort")]
@@ -184,7 +179,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads
             [QueryParameter("sort")]
             public string[] Sort { get; set; }
 #endif
-            /// <summary>The status of the associated conversations to filter by (either `OPEN` or `CLOSED`). This property must be provided if you’re including the `associatedContactId` query parameter.</summary>
+            [Obsolete("This property is deprecated, use ThreadStatusAsGetThreadStatusQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("threadStatus")]
@@ -194,6 +189,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads
             [QueryParameter("threadStatus")]
             public string ThreadStatus { get; set; }
 #endif
+            [QueryParameter("threadStatus")]
+            public global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads.GetThreadStatusQueryParameterType? ThreadStatusAsGetThreadStatusQueryParameterType { get; set; }
         }
         /// <summary>
         /// Configuration for the request such as headers, query parameters, and middleware options.

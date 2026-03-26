@@ -36,22 +36,22 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Subscriptions.Batch.Ups
         /// <summary>
         /// This endpoint allows you to perform a batch upsert operation on subscription objects, which will either update existing records or create new ones if they do not already exist. The operation returns the status, timestamps, and a list of successfully processed objects.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Commerce_Subscriptions_BatchResponseSimplePublicUpsertObject"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.C___crm_BatchResponseSimplePublicUpsertObject"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Commerce_Subscriptions_BatchResponseSimplePublicUpsertObject?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Commerce_Subscriptions_BatchInputSimplePublicObjectBatchInputUpsert body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.C___crm_BatchResponseSimplePublicUpsertObject?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.C___crm_BatchInputSimplePublicObjectBatchInputUpsert body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Commerce_Subscriptions_BatchResponseSimplePublicUpsertObject> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Commerce_Subscriptions_BatchInputSimplePublicObjectBatchInputUpsert body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.C___crm_BatchResponseSimplePublicUpsertObject> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.C___crm_BatchInputSimplePublicObjectBatchInputUpsert body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Commerce_Subscriptions_BatchResponseSimplePublicUpsertObject>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Commerce_Subscriptions_BatchResponseSimplePublicUpsertObject.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.C___crm_BatchResponseSimplePublicUpsertObject>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.C___crm_BatchResponseSimplePublicUpsertObject.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// This endpoint allows you to perform a batch upsert operation on subscription objects, which will either update existing records or create new ones if they do not already exist. The operation returns the status, timestamps, and a list of successfully processed objects.
@@ -61,11 +61,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Subscriptions.Batch.Ups
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Commerce_Subscriptions_BatchInputSimplePublicObjectBatchInputUpsert body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.C___crm_BatchInputSimplePublicObjectBatchInputUpsert body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CRM_Commerce_Subscriptions_BatchInputSimplePublicObjectBatchInputUpsert body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.C___crm_BatchInputSimplePublicObjectBatchInputUpsert body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

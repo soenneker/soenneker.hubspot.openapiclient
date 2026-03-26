@@ -36,22 +36,22 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Attendanc
         /// <summary>
         /// Records the participation of multiple HubSpot contacts in a Marketing Event using their email addresses.If a contact does not exist, it will be automatically created. The contactProperties field is used exclusively for creating new contacts and will not update properties of existing contacts.Additional Functionality:- Adds a timeline event to the contacts.Allowed Properties:For the state &quot;attend&quot;:- joinedAt- leftAt
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_BatchResponseSubscriberEmailResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseSubscriberEmailResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_BatchResponseSubscriberEmailResponse?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_BatchInputMarketingEventEmailSubscriber body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Attendance.Item.Item.EmailCreate.EmailCreateRequestBuilder.EmailCreateRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseSubscriberEmailResponse?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.BatchInputMarketingEventEmailSubscriber body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Attendance.Item.Item.EmailCreate.EmailCreateRequestBuilder.EmailCreateRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_BatchResponseSubscriberEmailResponse> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_BatchInputMarketingEventEmailSubscriber body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Attendance.Item.Item.EmailCreate.EmailCreateRequestBuilder.EmailCreateRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseSubscriberEmailResponse> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.BatchInputMarketingEventEmailSubscriber body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Attendance.Item.Item.EmailCreate.EmailCreateRequestBuilder.EmailCreateRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_BatchResponseSubscriberEmailResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_BatchResponseSubscriberEmailResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseSubscriberEmailResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseSubscriberEmailResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Records the participation of multiple HubSpot contacts in a Marketing Event using their email addresses.If a contact does not exist, it will be automatically created. The contactProperties field is used exclusively for creating new contacts and will not update properties of existing contacts.Additional Functionality:- Adds a timeline event to the contacts.Allowed Properties:For the state &quot;attend&quot;:- joinedAt- leftAt
@@ -61,11 +61,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Attendanc
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_BatchInputMarketingEventEmailSubscriber body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Attendance.Item.Item.EmailCreate.EmailCreateRequestBuilder.EmailCreateRequestBuilderPostQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.BatchInputMarketingEventEmailSubscriber body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Attendance.Item.Item.EmailCreate.EmailCreateRequestBuilder.EmailCreateRequestBuilderPostQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_Marketing_Events_BatchInputMarketingEventEmailSubscriber body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Attendance.Item.Item.EmailCreate.EmailCreateRequestBuilder.EmailCreateRequestBuilderPostQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.BatchInputMarketingEventEmailSubscriber body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Attendance.Item.Item.EmailCreate.EmailCreateRequestBuilder.EmailCreateRequestBuilderPostQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

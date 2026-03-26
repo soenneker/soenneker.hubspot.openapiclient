@@ -36,38 +36,38 @@ namespace Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Statuses.I
         /// <summary>
         /// Check whether a contact has unsubscribed from all email subscriptions. If a contact has not opted out of all communications, the response `results` array will be empty.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Communication_Preferences_Subscriptions_ActionResponseWithResultsPublicWideStatus"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsPublicWideStatus"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Communication_Preferences_Subscriptions_ActionResponseWithResultsPublicWideStatus?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Statuses.Item.UnsubscribeAll.UnsubscribeAllRequestBuilder.UnsubscribeAllRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsPublicWideStatus?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Statuses.Item.UnsubscribeAll.UnsubscribeAllRequestBuilder.UnsubscribeAllRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Communication_Preferences_Subscriptions_ActionResponseWithResultsPublicWideStatus> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Statuses.Item.UnsubscribeAll.UnsubscribeAllRequestBuilder.UnsubscribeAllRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsPublicWideStatus> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Statuses.Item.UnsubscribeAll.UnsubscribeAllRequestBuilder.UnsubscribeAllRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Communication_Preferences_Subscriptions_ActionResponseWithResultsPublicWideStatus>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Communication_Preferences_Subscriptions_ActionResponseWithResultsPublicWideStatus.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsPublicWideStatus>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsPublicWideStatus.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Unsubscribe a contact from all email subscriptions.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Communication_Preferences_Subscriptions_ActionResponseWithResultsPublicStatus"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsPublicStatus"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Communication_Preferences_Subscriptions_ActionResponseWithResultsPublicStatus?> PostAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Statuses.Item.UnsubscribeAll.UnsubscribeAllRequestBuilder.UnsubscribeAllRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsPublicStatus?> PostAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Statuses.Item.UnsubscribeAll.UnsubscribeAllRequestBuilder.UnsubscribeAllRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Communication_Preferences_Subscriptions_ActionResponseWithResultsPublicStatus> PostAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Statuses.Item.UnsubscribeAll.UnsubscribeAllRequestBuilder.UnsubscribeAllRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsPublicStatus> PostAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Statuses.Item.UnsubscribeAll.UnsubscribeAllRequestBuilder.UnsubscribeAllRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToPostRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Communication_Preferences_Subscriptions_ActionResponseWithResultsPublicStatus>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Communication_Preferences_Subscriptions_ActionResponseWithResultsPublicStatus.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsPublicStatus>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsPublicStatus.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Check whether a contact has unsubscribed from all email subscriptions. If a contact has not opted out of all communications, the response `results` array will be empty.
