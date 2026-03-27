@@ -31,7 +31,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Properties.Item
             get => new global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Properties.Item.Groups.GroupsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.crm.v3.properties.item.item collection</summary>
-        /// <param name="position">The name of the property to retrieve.</param>
+        /// <param name="position">Unique identifier of the item</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Properties.Item.Item.WithPropertyNameItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Properties.Item.Item.WithPropertyNameItemRequestBuilder this[string position]
         {
@@ -155,7 +155,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Properties.Item
             /// <summary>Whether to return only results that have been archived.</summary>
             [QueryParameter("archived")]
             public bool? Archived { get; set; }
-            /// <summary>&quot;Filter properties based on their sensitivity level. Accepted values are: highly_sensitive, non_sensitive, sensitive.&quot;</summary>
             [Obsolete("This property is deprecated, use DataSensitivityAsGetDataSensitivityQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -166,10 +165,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Properties.Item
             [QueryParameter("dataSensitivity")]
             public string DataSensitivity { get; set; }
 #endif
-            /// <summary>&quot;Filter properties based on their sensitivity level. Accepted values are: highly_sensitive, non_sensitive, sensitive.&quot;</summary>
             [QueryParameter("dataSensitivity")]
             public global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Properties.Item.GetDataSensitivityQueryParameterType? DataSensitivityAsGetDataSensitivityQueryParameterType { get; set; }
-            /// <summary>Specify the locale to retrieve properties in a particular language.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("locale")]
@@ -179,7 +176,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Properties.Item
             [QueryParameter("locale")]
             public string Locale { get; set; }
 #endif
-            /// <summary>A comma-separated list of specific properties to retrieve.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("properties")]

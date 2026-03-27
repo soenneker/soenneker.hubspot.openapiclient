@@ -13,15 +13,15 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FileObject : IAdditionalDataHolder, IParsable
     {
-        /// <summary>&quot;PUBLIC_INDEXABLE: File is publicly accessible by anyone who has the URL. Search engines can index the file. PUBLIC_NOT_INDEXABLE: File is publicly accessible by anyone who has the URL. Search engines *can&apos;t* index the file. PRIVATE: File is NOT publicly accessible. Requires a signed URL to see content. Search engines *can&apos;t* index the file.&quot;</summary>
+        /// <summary>File access. Can be PUBLIC_INDEXABLE, PUBLIC_NOT_INDEXABLE, PRIVATE.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.File_access? Access { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Marks whether the folder is deleted or not.</summary>
+        /// <summary>If the file is deleted.</summary>
         public bool? Archived { get; set; }
-        /// <summary>Timestamp of folder deletion.</summary>
+        /// <summary>Deletion time of the file object.</summary>
         public DateTimeOffset? ArchivedAt { get; set; }
-        /// <summary>Timestamp of folder creation.</summary>
+        /// <summary>Creation time of the file object.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
         /// <summary>Default hosting URL of the file. This will use one of HubSpot&apos;s provided URLs to serve the file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -41,7 +41,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>The expiresAt property</summary>
         public long? ExpiresAt { get; set; }
-        /// <summary>Extension of the requested file.</summary>
+        /// <summary>&quot;Extension of the file. ex: .jpg, .png, .gif, .pdf, etc.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Extension { get; set; }
@@ -57,7 +57,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string FileMd5 { get; set; }
 #endif
-        /// <summary>For image and video files. The height of the file.</summary>
+        /// <summary>For image and video files, the height of the content.</summary>
         public int? Height { get; set; }
         /// <summary>File ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -67,9 +67,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>Mark whether the file should be used in new content or not.</summary>
+        /// <summary>Previously &quot;archied&quot;. Indicates if the file should be used when creating new content like web pages.</summary>
         public bool? IsUsableInContent { get; set; }
-        /// <summary>New name. If specified the folder&apos;s name and fullPath will change. All children of the folder will be updated accordingly.</summary>
+        /// <summary>Name of the file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -77,7 +77,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>New parent folderId. If changed, the folder and all it&apos;s children will be moved into the specified folder. parentFolderId and parentFolderPath cannot be specified at the same time.</summary>
+        /// <summary>ID of the folder the file is in.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ParentFolderId { get; set; }
@@ -85,7 +85,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ParentFolderId { get; set; }
 #endif
-        /// <summary>Path of the folder in the file manager.</summary>
+        /// <summary>Path of the file in the file manager.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Path { get; set; }
@@ -93,7 +93,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Path { get; set; }
 #endif
-        /// <summary>Size in bytes of the requested file.</summary>
+        /// <summary>Size of the file in bytes.</summary>
         public long? Size { get; set; }
         /// <summary>The sourceGroup property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.File_sourceGroup? SourceGroup { get; set; }
@@ -105,9 +105,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Type { get; set; }
 #endif
-        /// <summary>Timestamp of the latest update to the folder.</summary>
+        /// <summary>Timestamp of the latest update to the file.</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
-        /// <summary>URL to download the new file from.</summary>
+        /// <summary>URL of the given file. This URL can change depending on the domain settings of the account. Will use the select file hosting domain.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Url { get; set; }
@@ -115,7 +115,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Url { get; set; }
 #endif
-        /// <summary>For image and video files. The width of the file.</summary>
+        /// <summary>For image and video files, the width of the content.</summary>
         public int? Width { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.FileObject"/> and sets the default values.

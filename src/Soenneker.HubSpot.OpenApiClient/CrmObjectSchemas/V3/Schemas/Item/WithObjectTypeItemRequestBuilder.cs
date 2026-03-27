@@ -187,13 +187,10 @@ namespace Soenneker.HubSpot.OpenApiClient.CrmObjectSchemas.V3.Schemas.Item
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithObjectTypeItemRequestBuilderGetQueryParameters 
         {
-            /// <summary>Include definitions of the associations related to the schema.</summary>
             [QueryParameter("includeAssociationDefinitions")]
             public bool? IncludeAssociationDefinitions { get; set; }
-            /// <summary>Include metadata about the audit trail of the schema.</summary>
             [QueryParameter("includeAuditMetadata")]
             public bool? IncludeAuditMetadata { get; set; }
-            /// <summary>Include definitions of the properties associated with the schema.</summary>
             [QueryParameter("includePropertyDefinitions")]
             public bool? IncludePropertyDefinitions { get; set; }
         }

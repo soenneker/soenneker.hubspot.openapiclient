@@ -84,7 +84,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Hubdb.Tables.Item.Draft.Export
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ExportRequestBuilderGetQueryParameters 
         {
-            /// <summary>The export format (CSV, XLS, XLSX).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("format")]

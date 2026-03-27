@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>When the object type was created.</summary>
+        /// <summary>When the association was defined.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
         /// <summary>ID of the primary object type to link from.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -25,7 +25,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string FromObjectTypeId { get; set; }
 #endif
-        /// <summary>A unique ID for this object type. Will be defined as {meta-type}-{unique ID}.</summary>
+        /// <summary>A unique ID for this association.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }
@@ -33,7 +33,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>A unique name for this object. For internal use only.</summary>
+        /// <summary>A unique name for this association.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -49,7 +49,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ToObjectTypeId { get; set; }
 #endif
-        /// <summary>When the object type was last updated.</summary>
+        /// <summary>When the association was last updated.</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Crm_object_schemas_AssociationDefinition"/> and sets the default values.

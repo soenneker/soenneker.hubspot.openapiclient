@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A description of the property that will be shown as help text in HubSpot.</summary>
+        /// <summary>A description of the option.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Description { get; set; }
@@ -23,11 +23,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>Property groups are displayed in order starting with the lowest positive integer value. Values of -1 will cause the property group to be displayed after any positive values.</summary>
+        /// <summary>Options are displayed in order starting with the lowest positive integer value. Values of -1 will cause the option to be displayed after any positive values.</summary>
         public int? DisplayOrder { get; set; }
-        /// <summary>If true, the property won&apos;t be visible and can&apos;t be used in HubSpot.</summary>
+        /// <summary>Hidden options will not be displayed in HubSpot.</summary>
         public bool? Hidden { get; set; }
-        /// <summary>A human-readable label that will be shown in HubSpot.</summary>
+        /// <summary>A human-readable option label that will be shown in HubSpot.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Label { get; set; }

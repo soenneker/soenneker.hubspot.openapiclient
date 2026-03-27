@@ -19,7 +19,7 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.V1.Item.Settings.OembedDom
     public partial class OembedDomainsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.mediaBridge.v1.item.settings.oembedDomains.item collection</summary>
-        /// <param name="position">The ID for the oEmbed domain.</param>
+        /// <param name="position">Unique identifier of the item</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.MediaBridge.V1.Item.Settings.OembedDomains.Item.WithOEmbedDomainItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.MediaBridge.V1.Item.Settings.OembedDomains.Item.WithOEmbedDomainItemRequestBuilder this[string position]
         {
@@ -176,10 +176,8 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.V1.Item.Settings.OembedDom
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class OembedDomainsRequestBuilderDeleteQueryParameters 
         {
-            /// <summary>Filter response by Hub ID.</summary>
             [QueryParameter("domainPortalId")]
             public int? DomainPortalId { get; set; }
-            /// <summary>The ID of the oEmbed to delete.</summary>
             [QueryParameter("id")]
             public long? Id { get; set; }
         }
@@ -197,7 +195,6 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.V1.Item.Settings.OembedDom
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class OembedDomainsRequestBuilderGetQueryParameters 
         {
-            /// <summary>Filter response by Hub ID.</summary>
             [QueryParameter("domainPortalId")]
             public int? DomainPortalId { get; set; }
         }

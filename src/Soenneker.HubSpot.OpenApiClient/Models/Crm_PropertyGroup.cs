@@ -27,7 +27,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Label { get; set; }
 #endif
-        /// <summary>The name of the property to read or modify.</summary>
+        /// <summary>The internal property group name, which must be used when referencing the property group via the API.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }

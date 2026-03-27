@@ -13,7 +13,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FileUpdateInput : IAdditionalDataHolder, IParsable
     {
-        /// <summary>&quot;PUBLIC_INDEXABLE: File is publicly accessible by anyone who has the URL. Search engines can index the file. PUBLIC_NOT_INDEXABLE: File is publicly accessible by anyone who has the URL. Search engines *can&apos;t* index the file. PRIVATE: File is NOT publicly accessible. Requires a signed URL to see content. Search engines *can&apos;t* index the file.&quot;</summary>
+        /// <summary>&quot;NONE: Do not run any duplicate validation. REJECT: Reject the upload if a duplicate is found. RETURN_EXISTING: If a duplicate file is found, do not upload a new file and return the found duplicate instead.&quot;</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.FileUpdateInput_access? Access { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public DateTimeOffset? ExpiresAt { get; set; }
         /// <summary>Mark whether the file should be used in new content or not.</summary>
         public bool? IsUsableInContent { get; set; }
-        /// <summary>New name. If specified the folder&apos;s name and fullPath will change. All children of the folder will be updated accordingly.</summary>
+        /// <summary>New name for the file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -31,7 +31,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>New parent folderId. If changed, the folder and all it&apos;s children will be moved into the specified folder. parentFolderId and parentFolderPath cannot be specified at the same time.</summary>
+        /// <summary>FolderId where the file should be moved to. folderId and folderPath parameters cannot be set at the same time.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ParentFolderId { get; set; }

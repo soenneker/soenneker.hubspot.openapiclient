@@ -23,9 +23,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>Options are shown in order starting with the lowest positive integer value. Values of -1 will cause the option to be displayed after any positive values.</summary>
+        /// <summary>Options are displayed in order starting with the lowest positive integer value. Values of -1 will cause the option to be displayed after any positive values.</summary>
         public int? DisplayOrder { get; set; }
-        /// <summary>Hidden options won&apos;t be shown in HubSpot.</summary>
+        /// <summary>Hidden options will not be displayed in HubSpot.</summary>
         public bool? Hidden { get; set; }
         /// <summary>A human-readable option label that will be shown in HubSpot.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

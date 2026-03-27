@@ -14,16 +14,16 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Indicates the migration status of classic workflows.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? FlowMigrationStatusForClassicWorkflows { get; set; }
-#nullable restore
-#else
-        public string FlowMigrationStatusForClassicWorkflows { get; set; }
-#endif
         /// <summary>Specifies the type of coordinate, which defaults to WORKFLOW_ID.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchFetchMigrationWorkflowIdCoordinate_type? Type { get; set; }
+        /// <summary>The workflowId property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? WorkflowId { get; set; }
+#nullable restore
+#else
+        public string WorkflowId { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchFetchMigrationWorkflowIdCoordinate"/> and sets the default values.
         /// </summary>
@@ -49,8 +49,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "flowMigrationStatusForClassicWorkflows", n => { FlowMigrationStatusForClassicWorkflows = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchFetchMigrationWorkflowIdCoordinate_type>(); } },
+                { "workflowId", n => { WorkflowId = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -60,8 +60,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("flowMigrationStatusForClassicWorkflows", FlowMigrationStatusForClassicWorkflows);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchFetchMigrationWorkflowIdCoordinate_type>("type", Type);
+            writer.WriteStringValue("workflowId", WorkflowId);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

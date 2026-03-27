@@ -14,13 +14,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Indicates the migration status of flows.</summary>
+        /// <summary>The flowId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FlowMigrationStatuses { get; set; }
+        public string? FlowId { get; set; }
 #nullable restore
 #else
-        public string FlowMigrationStatuses { get; set; }
+        public string FlowId { get; set; }
 #endif
         /// <summary>Specifies the type of coordinate, which defaults to FLOW_ID.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchFetchMigrationFlowIdCoordinate_type? Type { get; set; }
@@ -49,7 +49,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "flowMigrationStatuses", n => { FlowMigrationStatuses = n.GetStringValue(); } },
+                { "flowId", n => { FlowId = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchFetchMigrationFlowIdCoordinate_type>(); } },
             };
         }
@@ -60,7 +60,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("flowMigrationStatuses", FlowMigrationStatuses);
+            writer.WriteStringValue("flowId", FlowId);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchFetchMigrationFlowIdCoordinate_type>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

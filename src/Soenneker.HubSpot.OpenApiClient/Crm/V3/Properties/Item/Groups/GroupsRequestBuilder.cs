@@ -19,7 +19,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Properties.Item.Groups
     public partial class GroupsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.crm.v3.properties.item.groups.item collection</summary>
-        /// <param name="position">The name of the property group to be read.</param>
+        /// <param name="position">Unique identifier of the item</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Properties.Item.Groups.Item.WithGroupNameItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Properties.Item.Groups.Item.WithGroupNameItemRequestBuilder this[string position]
         {
@@ -140,7 +140,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Properties.Item.Groups
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class GroupsRequestBuilderGetQueryParameters 
         {
-            /// <summary>Specifies the language locale for the property group names and descriptions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("locale")]

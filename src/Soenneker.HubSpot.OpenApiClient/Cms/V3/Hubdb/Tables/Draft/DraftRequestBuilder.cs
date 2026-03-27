@@ -36,20 +36,20 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Hubdb.Tables.Draft
         /// <summary>
         /// Returns the details for each draft table defined in the specified account, including column definitions.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalHubDbTableV3ForwardPaging"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalHubDbTableV3"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalHubDbTableV3ForwardPaging?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Hubdb.Tables.Draft.DraftRequestBuilder.DraftRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalHubDbTableV3?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Hubdb.Tables.Draft.DraftRequestBuilder.DraftRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalHubDbTableV3ForwardPaging> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Hubdb.Tables.Draft.DraftRequestBuilder.DraftRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalHubDbTableV3> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Hubdb.Tables.Draft.DraftRequestBuilder.DraftRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalHubDbTableV3ForwardPaging>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalHubDbTableV3ForwardPaging.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalHubDbTableV3>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalHubDbTableV3.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Returns the details for each draft table defined in the specified account, including column definitions.
@@ -107,13 +107,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Hubdb.Tables.Draft
             [QueryParameter("contentType")]
             public string ContentType { get; set; }
 #endif
-            /// <summary>Return drafts created after a specific date.</summary>
             [QueryParameter("createdAfter")]
             public DateTimeOffset? CreatedAfter { get; set; }
-            /// <summary>Return drafts created on a specific date.</summary>
             [QueryParameter("createdAt")]
             public DateTimeOffset? CreatedAt { get; set; }
-            /// <summary>Return drafts created before a specific date.</summary>
             [QueryParameter("createdBefore")]
             public DateTimeOffset? CreatedBefore { get; set; }
             [QueryParameter("isGetLocalizedSchema")]
@@ -130,13 +127,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Hubdb.Tables.Draft
             [QueryParameter("sort")]
             public string[] Sort { get; set; }
 #endif
-            /// <summary>Return drafts updated after a specific date.</summary>
             [QueryParameter("updatedAfter")]
             public DateTimeOffset? UpdatedAfter { get; set; }
-            /// <summary>Return drafts updated on a specific date.</summary>
             [QueryParameter("updatedAt")]
             public DateTimeOffset? UpdatedAt { get; set; }
-            /// <summary>Return drafts updated before a specific date.</summary>
             [QueryParameter("updatedBefore")]
             public DateTimeOffset? UpdatedBefore { get; set; }
         }

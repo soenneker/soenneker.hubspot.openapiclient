@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>Options are shown in order starting with the lowest positive integer value. Values of -1 will cause the option to be displayed after any positive values.</summary>
+        /// <summary>The order that this property should be displayed in the HubSpot UI relative to other properties for this object type. Properties are displayed in order starting with the lowest positive integer value. A value of -1 will cause the property to be displayed **after** any positive values.</summary>
         public int? DisplayOrder { get; set; }
         /// <summary>Specifies the reference type for external options associated with the property.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,7 +55,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public bool? HasUniqueValue { get; set; }
         /// <summary>Hidden options won&apos;t be shown in HubSpot.</summary>
         public bool? Hidden { get; set; }
-        /// <summary>A human-readable option label that will be shown in HubSpot.</summary>
+        /// <summary>A human-readable property label that will be shown in HubSpot.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Label { get; set; }
@@ -63,7 +63,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Label { get; set; }
 #endif
-        /// <summary>A unique name for this object. For internal use only.</summary>
+        /// <summary>The internal property name, which must be used when referencing the property from the API.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }

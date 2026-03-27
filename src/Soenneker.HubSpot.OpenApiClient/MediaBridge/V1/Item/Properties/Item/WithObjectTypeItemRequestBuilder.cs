@@ -31,7 +31,7 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.V1.Item.Properties.Item
             get => new global::Soenneker.HubSpot.OpenApiClient.MediaBridge.V1.Item.Properties.Item.Groups.GroupsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.mediaBridge.v1.item.properties.item.item collection</summary>
-        /// <param name="position">The name of the property to get the details for.</param>
+        /// <param name="position">Unique identifier of the item</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.MediaBridge.V1.Item.Properties.Item.Item.WithPropertyNameItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.MediaBridge.V1.Item.Properties.Item.Item.WithPropertyNameItemRequestBuilder this[string position]
         {
@@ -155,7 +155,6 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.V1.Item.Properties.Item
             /// <summary>Whether to return only results that have been archived.</summary>
             [QueryParameter("archived")]
             public bool? Archived { get; set; }
-            /// <summary>Filter the response to the specified properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("properties")]

@@ -16,7 +16,7 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.V1.Item.Properties
     public partial class PropertiesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.mediaBridge.v1.item.properties.item collection</summary>
-        /// <param name="position">The specific object type to get the details for.</param>
+        /// <param name="position">Unique identifier of the item</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.MediaBridge.V1.Item.Properties.Item.WithObjectTypeItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.MediaBridge.V1.Item.Properties.Item.WithObjectTypeItemRequestBuilder this[string position]
         {

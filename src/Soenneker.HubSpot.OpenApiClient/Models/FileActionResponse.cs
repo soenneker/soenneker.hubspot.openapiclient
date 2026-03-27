@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>When the requested changes have been completed.</summary>
+        /// <summary>Time of completion of task.</summary>
         public DateTimeOffset? CompletedAt { get; set; }
         /// <summary>Descriptive error messages.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -32,9 +32,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.FileActionResponse_links Links { get; set; }
 #endif
-        /// <summary>Number of errors resulting from the requested changes.</summary>
+        /// <summary>Number of errors resulting from the task.</summary>
         public int? NumErrors { get; set; }
-        /// <summary>Timestamp representing when the task was requested.</summary>
+        /// <summary>Timestamp of when the task was requested.</summary>
         public DateTimeOffset? RequestedAt { get; set; }
         /// <summary>File</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -44,11 +44,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.FileObject Result { get; set; }
 #endif
-        /// <summary>Timestamp representing when the task was started at.</summary>
+        /// <summary>Timestamp of when the task was started.</summary>
         public DateTimeOffset? StartedAt { get; set; }
         /// <summary>Current status of the task.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.FileActionResponse_status? Status { get; set; }
-        /// <summary>ID of the task.</summary>
+        /// <summary>ID of the requested task.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TaskId { get; set; }

@@ -174,7 +174,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Properties.Item.Item
             /// <summary>Whether to return only results that have been archived.</summary>
             [QueryParameter("archived")]
             public bool? Archived { get; set; }
-            /// <summary>&quot;Specifies the sensitivity level of the data, with options: highly_sensitive, non_sensitive, sensitive.&quot;</summary>
             [Obsolete("This property is deprecated, use DataSensitivityAsGetDataSensitivityQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -185,10 +184,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Properties.Item.Item
             [QueryParameter("dataSensitivity")]
             public string DataSensitivity { get; set; }
 #endif
-            /// <summary>&quot;Specifies the sensitivity level of the data, with options: highly_sensitive, non_sensitive, sensitive.&quot;</summary>
             [QueryParameter("dataSensitivity")]
             public global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Properties.Item.Item.GetDataSensitivityQueryParameterType? DataSensitivityAsGetDataSensitivityQueryParameterType { get; set; }
-            /// <summary>A query parameter to specify the locale for the response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("locale")]
@@ -198,7 +195,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Properties.Item.Item
             [QueryParameter("locale")]
             public string Locale { get; set; }
 #endif
-            /// <summary>A query parameter to specify which properties to include in the response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("properties")]

@@ -38,7 +38,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string FolderPath { get; set; }
 #endif
-        /// <summary>New name. If specified the folder&apos;s name and fullPath will change. All children of the folder will be updated accordingly.</summary>
+        /// <summary>Name to give the resulting file in the file manager.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }

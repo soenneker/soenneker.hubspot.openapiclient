@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The approximate country code of the login</summary>
+        /// <summary>The approximate country code</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CountryCode { get; set; }
@@ -33,7 +33,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>The time the activity took place.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
-        /// <summary>The login activity&apos;s unique ID.</summary>
+        /// <summary>The activity&apos;s unique ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }
@@ -73,7 +73,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ObjectId { get; set; }
 #endif
-        /// <summary>The approximate region code of the login</summary>
+        /// <summary>The approximate region code</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RegionCode { get; set; }

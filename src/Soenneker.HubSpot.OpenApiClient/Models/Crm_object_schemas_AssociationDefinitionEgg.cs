@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string FromObjectTypeId { get; set; }
 #endif
-        /// <summary>A unique name for this object. For internal use only.</summary>
+        /// <summary>A unique name for this association.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }

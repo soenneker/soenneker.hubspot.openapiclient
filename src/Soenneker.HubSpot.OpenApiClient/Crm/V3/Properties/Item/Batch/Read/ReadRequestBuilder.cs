@@ -90,7 +90,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Properties.Item.Batch.Read
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ReadRequestBuilderPostQueryParameters 
         {
-            /// <summary>Specifies the language locale for the property values.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("locale")]

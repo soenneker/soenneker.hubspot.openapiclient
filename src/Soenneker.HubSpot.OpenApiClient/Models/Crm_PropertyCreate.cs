@@ -32,7 +32,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>Property groups are displayed in order starting with the lowest positive integer value. Values of -1 will cause the property group to be displayed after any positive values.</summary>
+        /// <summary>Properties are displayed in order starting with the lowest positive integer value. Values of -1 will cause the property to be displayed after any positive values.</summary>
         public int? DisplayOrder { get; set; }
         /// <summary>Applicable only for &apos;enumeration&apos; type properties.  Should be set to true in conjunction with a &apos;referencedObjectType&apos; of &apos;OWNER&apos;.  Otherwise false.</summary>
         public bool? ExternalOptions { get; set; }
@@ -52,7 +52,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public bool? HasUniqueValue { get; set; }
         /// <summary>If true, the property won&apos;t be visible and can&apos;t be used in HubSpot.</summary>
         public bool? Hidden { get; set; }
-        /// <summary>A human-readable label that will be shown in HubSpot.</summary>
+        /// <summary>A human-readable property label that will be shown in HubSpot.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Label { get; set; }
@@ -60,7 +60,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Label { get; set; }
 #endif
-        /// <summary>The name of the property to read or modify.</summary>
+        /// <summary>The internal property name, which must be used when referencing the property via the API.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }

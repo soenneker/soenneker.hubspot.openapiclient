@@ -31,7 +31,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Automation.V4.Flows
             get => new global::Soenneker.HubSpot.OpenApiClient.Automation.V4.Flows.EmailCampaigns.EmailCampaignsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.automation.v4.flows.item collection</summary>
-        /// <param name="position">The unique identifier for the automation flow to be retrieved.</param>
+        /// <param name="position">Unique identifier of the item</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Automation.V4.Flows.Item.WithFlowItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Automation.V4.Flows.Item.WithFlowItemRequestBuilder this[string position]
         {
@@ -152,7 +152,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Automation.V4.Flows
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class FlowsRequestBuilderGetQueryParameters 
         {
-            /// <summary>A paging cursor token for retrieving subsequent pages.</summary>
+            /// <summary>The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("after")]
@@ -162,7 +162,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Automation.V4.Flows
             [QueryParameter("after")]
             public string After { get; set; }
 #endif
-            /// <summary>The maximum number of results to return, with a default value of 100.</summary>
+            /// <summary>The maximum number of results to display per page.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
         }

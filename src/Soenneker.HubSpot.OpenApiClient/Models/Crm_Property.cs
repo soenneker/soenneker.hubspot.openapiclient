@@ -51,9 +51,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>Property groups are displayed in order starting with the lowest positive integer value. Values of -1 will cause the property group to be displayed after any positive values.</summary>
+        /// <summary>Properties are shown in order, starting with the lowest positive integer value.</summary>
         public int? DisplayOrder { get; set; }
-        /// <summary>Applicable only for &apos;enumeration&apos; type properties.  Should be set to true in conjunction with a &apos;referencedObjectType&apos; of &apos;OWNER&apos;.  Otherwise false.</summary>
+        /// <summary>For default properties, true indicates that the options are stored externally to the property settings.</summary>
         public bool? ExternalOptions { get; set; }
         /// <summary>Controls how the property appears in HubSpot.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -75,11 +75,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>Whether or not the property&apos;s value must be unique. Once set, this can&apos;t be changed.</summary>
         public bool? HasUniqueValue { get; set; }
-        /// <summary>If true, the property won&apos;t be visible and can&apos;t be used in HubSpot.</summary>
+        /// <summary>Whether or not the property will be hidden from the HubSpot UI. It&apos;s recommended this be set to false for custom properties.</summary>
         public bool? Hidden { get; set; }
         /// <summary>This will be true for default object properties built into HubSpot.</summary>
         public bool? HubspotDefined { get; set; }
-        /// <summary>A human-readable label that will be shown in HubSpot.</summary>
+        /// <summary>A human-readable property label that will be shown in HubSpot.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Label { get; set; }
@@ -95,7 +95,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PropertyModificationMetadata ModificationMetadata { get; set; }
 #endif
-        /// <summary>The name of the property to read or modify.</summary>
+        /// <summary>The internal property name, which must be used when referencing the property via the API.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -103,7 +103,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>A list of valid options for the property. This field is required for enumerated properties.</summary>
+        /// <summary>A list of valid options for the property. This field is required for enumerated properties, but will be empty for other property types.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_Option>? Options { get; set; }
@@ -111,7 +111,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_Option> Options { get; set; }
 #endif
-        /// <summary>Should be set to &apos;OWNER&apos; when &apos;externalOptions&apos; is true, which causes the property to dynamically pull option values from the current HubSpot users.</summary>
+        /// <summary>If this property is related to other object(s), they&apos;ll be listed here.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ReferencedObjectType { get; set; }
@@ -129,7 +129,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>Whether or not the property will display the currency symbol set in the account settings.</summary>
         public bool? ShowCurrencySymbol { get; set; }
-        /// <summary>The data type of the property.</summary>
+        /// <summary>The property data type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Type { get; set; }

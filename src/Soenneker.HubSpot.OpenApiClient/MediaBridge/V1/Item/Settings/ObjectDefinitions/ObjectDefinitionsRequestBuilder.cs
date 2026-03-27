@@ -19,7 +19,7 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.V1.Item.Settings.ObjectDef
     public partial class ObjectDefinitionsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.mediaBridge.v1.item.settings.objectDefinitions.item collection</summary>
-        /// <param name="position">The type of media that you want to get the object types for.</param>
+        /// <param name="position">Unique identifier of the item</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.MediaBridge.V1.Item.Settings.ObjectDefinitions.Item.WithMediaTypeItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.MediaBridge.V1.Item.Settings.ObjectDefinitions.Item.WithMediaTypeItemRequestBuilder this[string position]
         {

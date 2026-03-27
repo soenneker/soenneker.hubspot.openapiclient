@@ -30,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>Property groups are displayed in order starting with the lowest positive integer value. Values of -1 will cause the property group to be displayed after any positive values.</summary>
+        /// <summary>Properties are displayed in order starting with the lowest positive integer value. Values of -1 will cause the Property to be displayed after any positive values.</summary>
         public int? DisplayOrder { get; set; }
         /// <summary>Controls how the property appears in HubSpot.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyUpdate_fieldType? FieldType { get; set; }
@@ -46,7 +46,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>If true, the property won&apos;t be visible and can&apos;t be used in HubSpot.</summary>
         public bool? Hidden { get; set; }
-        /// <summary>A human-readable label that will be shown in HubSpot.</summary>
+        /// <summary>A human-readable property label that will be shown in HubSpot.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Label { get; set; }
@@ -54,7 +54,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Label { get; set; }
 #endif
-        /// <summary>A list of valid options for the property. This field is required for enumerated properties.</summary>
+        /// <summary>A list of valid options for the property.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_OptionInput>? Options { get; set; }

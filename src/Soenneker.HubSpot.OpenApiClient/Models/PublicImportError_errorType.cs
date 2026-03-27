@@ -175,6 +175,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         #pragma warning disable CS1591
         INVALID_OBJECT_ID,
         #pragma warning restore CS1591
+        [EnumMember(Value = "INVALID_PROPERTY_VALUE_FORMAT")]
+        #pragma warning disable CS1591
+        INVALID_PROPERTY_VALUE_FORMAT,
+        #pragma warning restore CS1591
         [EnumMember(Value = "INVALID_RECORD_ID")]
         #pragma warning disable CS1591
         INVALID_RECORD_ID,

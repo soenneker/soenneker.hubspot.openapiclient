@@ -532,11 +532,19 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             }
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiEventBasedEnrollmentCriteria"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBasedEnrollmentCriteria"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiManualEnrollmentCriteria"/>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiDatasetBasedEnrollmentCriteria"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiEventBasedEnrollmentCriteria"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBasedEnrollmentCriteria"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiManualEnrollmentCriteria"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ApiPlatformFlow_enrollmentCriteria : IComposedTypeWrapper, IParsable
         {
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiDatasetBasedEnrollmentCriteria"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiDatasetBasedEnrollmentCriteria? ApiDatasetBasedEnrollmentCriteria { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiDatasetBasedEnrollmentCriteria ApiDatasetBasedEnrollmentCriteria { get; set; }
+#endif
             /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiEventBasedEnrollmentCriteria"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -571,7 +579,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
                 var result = new global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlow.ApiPlatformFlow_enrollmentCriteria();
-                if("ApiEventBasedEnrollmentCriteria".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                if("ApiDatasetBasedEnrollmentCriteria".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.ApiDatasetBasedEnrollmentCriteria = new global::Soenneker.HubSpot.OpenApiClient.Models.ApiDatasetBasedEnrollmentCriteria();
+                }
+                else if("ApiEventBasedEnrollmentCriteria".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
                     result.ApiEventBasedEnrollmentCriteria = new global::Soenneker.HubSpot.OpenApiClient.Models.ApiEventBasedEnrollmentCriteria();
                 }
@@ -591,7 +603,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
             public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
             {
-                if(ApiEventBasedEnrollmentCriteria != null)
+                if(ApiDatasetBasedEnrollmentCriteria != null)
+                {
+                    return ApiDatasetBasedEnrollmentCriteria.GetFieldDeserializers();
+                }
+                else if(ApiEventBasedEnrollmentCriteria != null)
                 {
                     return ApiEventBasedEnrollmentCriteria.GetFieldDeserializers();
                 }
@@ -612,7 +628,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             public virtual void Serialize(ISerializationWriter writer)
             {
                 if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(ApiEventBasedEnrollmentCriteria != null)
+                if(ApiDatasetBasedEnrollmentCriteria != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiDatasetBasedEnrollmentCriteria>(null, ApiDatasetBasedEnrollmentCriteria);
+                }
+                else if(ApiEventBasedEnrollmentCriteria != null)
                 {
                     writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiEventBasedEnrollmentCriteria>(null, ApiEventBasedEnrollmentCriteria);
                 }

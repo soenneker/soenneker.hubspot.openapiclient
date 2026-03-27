@@ -149,13 +149,10 @@ namespace Soenneker.HubSpot.OpenApiClient.CrmObjectSchemas.V3.Schemas
             /// <summary>Whether to return only results that have been archived.</summary>
             [QueryParameter("archived")]
             public bool? Archived { get; set; }
-            /// <summary>Whether to include association definitions in the response.</summary>
             [QueryParameter("includeAssociationDefinitions")]
             public bool? IncludeAssociationDefinitions { get; set; }
-            /// <summary>Whether to include audit metadata in the response.</summary>
             [QueryParameter("includeAuditMetadata")]
             public bool? IncludeAuditMetadata { get; set; }
-            /// <summary>Whether to include property definitions in the response.</summary>
             [QueryParameter("includePropertyDefinitions")]
             public bool? IncludePropertyDefinitions { get; set; }
         }

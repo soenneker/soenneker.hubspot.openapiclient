@@ -12,6 +12,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         #pragma warning disable CS1591
         CustomerFacing,
         #pragma warning restore CS1591
+        [EnumMember(Value = "Customer-facing public API")]
+        #pragma warning disable CS1591
+        CustomerFacingPublicAPI,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "Customer-facing UI")]
+        #pragma warning disable CS1591
+        CustomerFacingUI,
+        #pragma warning restore CS1591
         [EnumMember(Value = "Internal only")]
         #pragma warning disable CS1591
         InternalOnly,

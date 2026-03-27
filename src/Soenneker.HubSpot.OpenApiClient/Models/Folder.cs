@@ -28,7 +28,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>New name. If specified the folder&apos;s name and fullPath will change. All children of the folder will be updated accordingly.</summary>
+        /// <summary>Name of the folder.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -36,7 +36,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>New parent folderId. If changed, the folder and all it&apos;s children will be moved into the specified folder. parentFolderId and parentFolderPath cannot be specified at the same time.</summary>
+        /// <summary>ID of the parent folder.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ParentFolderId { get; set; }

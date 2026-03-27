@@ -30,6 +30,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
+        /// <summary>The senderActorId property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? SenderActorId { get; set; }
+#nullable restore
+#else
+        public string SenderActorId { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ChannelIntegrationParticipant"/> and sets the default values.
         /// </summary>
@@ -57,6 +65,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "deliveryIdentifier", n => { DeliveryIdentifier = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.C_conversations_PublicDeliveryIdentifier>(global::Soenneker.HubSpot.OpenApiClient.Models.C_conversations_PublicDeliveryIdentifier.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
+                { "senderActorId", n => { SenderActorId = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -68,6 +77,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.C_conversations_PublicDeliveryIdentifier>("deliveryIdentifier", DeliveryIdentifier);
             writer.WriteStringValue("name", Name);
+            writer.WriteStringValue("senderActorId", SenderActorId);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

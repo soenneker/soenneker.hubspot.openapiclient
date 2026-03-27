@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>New name. If specified the folder&apos;s name and fullPath will change. All children of the folder will be updated accordingly.</summary>
+        /// <summary>Desired name for the folder.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>New parent folderId. If changed, the folder and all it&apos;s children will be moved into the specified folder. parentFolderId and parentFolderPath cannot be specified at the same time.</summary>
+        /// <summary>FolderId of the parent of the created folder. If not specified, the folder will be created at the root level. parentFolderId and parentFolderPath cannot be set at the same time.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ParentFolderId { get; set; }

@@ -27,7 +27,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>For image and video files. The height of the file.</summary>
         public int? Height { get; set; }
-        /// <summary>New name. If specified the folder&apos;s name and fullPath will change. All children of the folder will be updated accordingly.</summary>
+        /// <summary>Name of the requested file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -45,7 +45,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Type { get; set; }
 #endif
-        /// <summary>URL to download the new file from.</summary>
+        /// <summary>Signed URL with access to the specified file. Anyone with this URL will be able to access the file until it expires.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Url { get; set; }

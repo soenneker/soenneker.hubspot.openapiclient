@@ -25,7 +25,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>The number of lists to include in the response. Defaults to `20` if no value is provided. The max `count` is `500`.</summary>
         public int? Count { get; set; }
-        /// <summary>The `listIds` that will be used to filter results by `listId`. If values are provided, then the response will only include results that have a `listId` in this array.If no value is provided, or if an empty list is provided, then the results will not be filtered by `listId`.</summary>
+        /// <summary>ILS list ids to be included in search results. If not specified, all lists matching other criteria will be included</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? ListIds { get; set; }

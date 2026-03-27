@@ -19,7 +19,7 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.V1.Item.Schemas.Item.Assoc
     public partial class AssociationsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.mediaBridge.v1.item.schemas.item.associations.item collection</summary>
-        /// <param name="position">The ID of the association definition to be deleted.</param>
+        /// <param name="position">Unique identifier of the item</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.MediaBridge.V1.Item.Schemas.Item.Associations.Item.WithAssociationItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.MediaBridge.V1.Item.Schemas.Item.Associations.Item.WithAssociationItemRequestBuilder this[string position]
         {

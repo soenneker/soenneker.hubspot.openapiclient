@@ -27,7 +27,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_object_schemas_AssociationDefinition> Associations { get; set; }
 #endif
-        /// <summary>When the object type was created.</summary>
+        /// <summary>When the object schema was created.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
         /// <summary>The createdByUserId property</summary>
         public int? CreatedByUserId { get; set; }
@@ -47,7 +47,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string FullyQualifiedName { get; set; }
 #endif
-        /// <summary>A unique ID for this object type. Will be defined as {meta-type}-{unique ID}.</summary>
+        /// <summary>A unique ID for this schema&apos;s object type. Will be defined as {meta-type}-{unique ID}.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }
@@ -63,7 +63,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.Crm_object_schemas_ObjectTypeDefinitionLabels Labels { get; set; }
 #endif
-        /// <summary>A unique name for this object. For internal use only.</summary>
+        /// <summary>A unique name for the schema&apos;s object type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -119,7 +119,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<string> SecondaryDisplayProperties { get; set; }
 #endif
-        /// <summary>When the object type was last updated.</summary>
+        /// <summary>When the object schema was last updated.</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>The updatedByUserId property</summary>
         public int? UpdatedByUserId { get; set; }

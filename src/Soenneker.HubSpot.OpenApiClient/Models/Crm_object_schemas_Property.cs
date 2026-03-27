@@ -29,7 +29,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string CalculationFormula { get; set; }
 #endif
-        /// <summary>When the object type was created.</summary>
+        /// <summary>When the property was created</summary>
         public DateTimeOffset? CreatedAt { get; set; }
         /// <summary>The internal ID of the user who created the property in HubSpot. This field may not exist if the property was created outside of HubSpot.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -51,7 +51,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>Options are shown in order starting with the lowest positive integer value. Values of -1 will cause the option to be displayed after any positive values.</summary>
+        /// <summary>The order that this property should be displayed in the HubSpot UI relative to other properties for this object type. Properties are displayed in order starting with the lowest positive integer value. A value of -1 will cause the property to be displayed **after** any positive values.</summary>
         public int? DisplayOrder { get; set; }
         /// <summary>For default properties, true indicates that the options are stored externally to the property settings.</summary>
         public bool? ExternalOptions { get; set; }
@@ -63,9 +63,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string FieldType { get; set; }
 #endif
-        /// <summary>Whether the property can be used in a HubSpot form.</summary>
+        /// <summary>Whether or not the property can be used in a HubSpot form.</summary>
         public bool? FormField { get; set; }
-        /// <summary>The name of the group this property belongs to.</summary>
+        /// <summary>The name of the property group the property belongs to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? GroupName { get; set; }
@@ -79,7 +79,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public bool? Hidden { get; set; }
         /// <summary>This will be true for default object properties built into HubSpot.</summary>
         public bool? HubspotDefined { get; set; }
-        /// <summary>A human-readable option label that will be shown in HubSpot.</summary>
+        /// <summary>A human-readable property label that will be shown in HubSpot.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Label { get; set; }
@@ -95,7 +95,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.Crm_object_schemas_PropertyModificationMetadata ModificationMetadata { get; set; }
 #endif
-        /// <summary>A unique name for this object. For internal use only.</summary>
+        /// <summary>The internal property name, which must be used when referencing the property via the API.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -103,7 +103,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>A list of available options for the property. This field is only required for enumerated properties.</summary>
+        /// <summary>A list of valid options for the property. This field is required for enumerated properties, but will be empty for other property types.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_object_schemas_Option>? Options { get; set; }
@@ -111,7 +111,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_object_schemas_Option> Options { get; set; }
 #endif
-        /// <summary>Defines the options this property will return, e.g. OWNER would return name of users on the portal.</summary>
+        /// <summary>If this property is related to other object(s), they&apos;ll be listed here.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ReferencedObjectType { get; set; }
@@ -127,9 +127,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<string> SensitiveDataCategories { get; set; }
 #endif
-        /// <summary>Whether the property will display the currency symbol in the HubSpot UI.</summary>
+        /// <summary>Whether the property will display the currency symbol set in the account settings.</summary>
         public bool? ShowCurrencySymbol { get; set; }
-        /// <summary>The data type of the property.</summary>
+        /// <summary>The property data type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Type { get; set; }

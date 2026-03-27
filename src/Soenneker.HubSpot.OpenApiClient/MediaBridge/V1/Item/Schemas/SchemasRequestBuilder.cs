@@ -19,7 +19,7 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.V1.Item.Schemas
     public partial class SchemasRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.mediaBridge.v1.item.schemas.item collection</summary>
-        /// <param name="position">The object type to get the schema for.</param>
+        /// <param name="position">Unique identifier of the item</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.MediaBridge.V1.Item.Schemas.Item.WithObjectTypeItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.MediaBridge.V1.Item.Schemas.Item.WithObjectTypeItemRequestBuilder this[string position]
         {

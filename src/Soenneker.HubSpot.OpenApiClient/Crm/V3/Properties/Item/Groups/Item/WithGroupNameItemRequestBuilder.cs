@@ -171,7 +171,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Properties.Item.Groups.Item
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithGroupNameItemRequestBuilderGetQueryParameters 
         {
-            /// <summary>The language locale for the response content.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("locale")]

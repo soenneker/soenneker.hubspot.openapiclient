@@ -28,6 +28,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         #pragma warning disable CS1591
         CUSTOM_SCRIPT,
         #pragma warning restore CS1591
+        [EnumMember(Value = "CUSTOM_SIGNAL")]
+        #pragma warning disable CS1591
+        CUSTOM_SIGNAL,
+        #pragma warning restore CS1591
         [EnumMember(Value = "IMPORT")]
         #pragma warning disable CS1591
         IMPORT,

@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Code { get; set; }
 #endif
-        /// <summary>Context about the error condition.</summary>
+        /// <summary>Context about the error condition</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.C____cms_ErrorDetail_context? Context { get; set; }

@@ -18,10 +18,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Model definition for forward paging.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.C___cms_ForwardPaging? Paging { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.C__cms_ForwardPaging? Paging { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.C___cms_ForwardPaging Paging { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.C__cms_ForwardPaging Paging { get; set; }
 #endif
         /// <summary>Collection of blog posts.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -58,7 +58,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "paging", n => { Paging = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.C___cms_ForwardPaging>(global::Soenneker.HubSpot.OpenApiClient.Models.C___cms_ForwardPaging.CreateFromDiscriminatorValue); } },
+                { "paging", n => { Paging = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.C__cms_ForwardPaging>(global::Soenneker.HubSpot.OpenApiClient.Models.C__cms_ForwardPaging.CreateFromDiscriminatorValue); } },
                 { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.BlogPost>(global::Soenneker.HubSpot.OpenApiClient.Models.BlogPost.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "total", n => { Total = n.GetIntValue(); } },
             };
@@ -70,7 +70,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.C___cms_ForwardPaging>("paging", Paging);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.C__cms_ForwardPaging>("paging", Paging);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.BlogPost>("results", Results);
             writer.WriteIntValue("total", Total);
             writer.WriteAdditionalData(AdditionalData);

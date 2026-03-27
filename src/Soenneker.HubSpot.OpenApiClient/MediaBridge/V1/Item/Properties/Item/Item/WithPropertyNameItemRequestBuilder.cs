@@ -174,7 +174,6 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.V1.Item.Properties.Item.It
             /// <summary>Whether to return only results that have been archived.</summary>
             [QueryParameter("archived")]
             public bool? Archived { get; set; }
-            /// <summary>Limit the response to only include the specified properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("properties")]

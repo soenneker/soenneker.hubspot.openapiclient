@@ -16,7 +16,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Properties
     public partial class PropertiesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.crm.v3.properties.item collection</summary>
-        /// <param name="position">The type of object for which properties are being retrieved.</param>
+        /// <param name="position">Unique identifier of the item</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Properties.Item.WithObjectTypeItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Properties.Item.WithObjectTypeItemRequestBuilder this[string position]
         {

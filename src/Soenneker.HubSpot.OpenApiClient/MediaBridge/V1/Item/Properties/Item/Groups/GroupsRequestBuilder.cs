@@ -19,7 +19,7 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.V1.Item.Properties.Item.Gr
     public partial class GroupsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.mediaBridge.v1.item.properties.item.groups.item collection</summary>
-        /// <param name="position">The name for the property group you want to get the details for.</param>
+        /// <param name="position">Unique identifier of the item</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.MediaBridge.V1.Item.Properties.Item.Groups.Item.WithGroupNameItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.MediaBridge.V1.Item.Properties.Item.Groups.Item.WithGroupNameItemRequestBuilder this[string position]
         {

@@ -85,7 +85,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Automation.V4.Flows.EmailCampaigns
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class EmailCampaignsRequestBuilderGetQueryParameters 
         {
-            /// <summary>A paging cursor token for retrieving subsequent pages.</summary>
+            /// <summary>The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("after")]
@@ -95,7 +95,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Automation.V4.Flows.EmailCampaigns
             [QueryParameter("after")]
             public string After { get; set; }
 #endif
-            /// <summary>A paging cursor token for retrieving previous pages.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("before")]
@@ -105,7 +104,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Automation.V4.Flows.EmailCampaigns
             [QueryParameter("before")]
             public string Before { get; set; }
 #endif
-            /// <summary>A query parameter to filter email campaigns by their associated flow IDs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("flowId")]
@@ -115,7 +113,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Automation.V4.Flows.EmailCampaigns
             [QueryParameter("flowId")]
             public string[] FlowId { get; set; }
 #endif
-            /// <summary>The maximum number of results to return.</summary>
+            /// <summary>The maximum number of results to display per page.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
         }

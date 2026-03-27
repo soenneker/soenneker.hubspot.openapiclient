@@ -15,11 +15,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Whether the pipeline is archived.</summary>
+        /// <summary>Whether the pipeline is archived. This property should only be provided when restoring an archived pipeline. If it&apos;s provided in any other call, the request will fail and a `400 Bad Request` will be returned.</summary>
         public bool? Archived { get; set; }
-        /// <summary>The order for displaying this pipeline stage. If two pipeline stages have a matching `displayOrder`, they will be sorted alphabetically by label.</summary>
+        /// <summary>The order for displaying this pipeline. If two pipelines have a matching `displayOrder`, they will be sorted alphabetically by label.</summary>
         public int? DisplayOrder { get; set; }
-        /// <summary>A label used to organize pipeline stages in HubSpot&apos;s UI. Each pipeline stage&apos;s label must be unique within that pipeline.</summary>
+        /// <summary>A unique label used to organize pipelines in HubSpot&apos;s UI</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Label { get; set; }

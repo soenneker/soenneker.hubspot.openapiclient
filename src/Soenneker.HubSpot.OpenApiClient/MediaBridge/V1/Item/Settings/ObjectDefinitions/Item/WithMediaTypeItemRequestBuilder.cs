@@ -85,7 +85,6 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.V1.Item.Settings.ObjectDef
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithMediaTypeItemRequestBuilderGetQueryParameters 
         {
-            /// <summary>Include the full definition in the response.</summary>
             [QueryParameter("includeFullDefinition")]
             public bool? IncludeFullDefinition { get; set; }
         }

@@ -19,6 +19,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         #pragma warning disable CS1591
         ACTIVITY_AUTO_ASSOCIATE,
         #pragma warning restore CS1591
+        [EnumMember(Value = "ACTIVITY_LOG_REVERT")]
+        #pragma warning disable CS1591
+        ACTIVITY_LOG_REVERT,
+        #pragma warning restore CS1591
         [EnumMember(Value = "ADS")]
         #pragma warning disable CS1591
         ADS,
@@ -166,6 +170,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         [EnumMember(Value = "DATA_ENRICHMENT")]
         #pragma warning disable CS1591
         DATA_ENRICHMENT,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "DATA_QUALITY")]
+        #pragma warning disable CS1591
+        DATA_QUALITY,
         #pragma warning restore CS1591
         [EnumMember(Value = "DATASET")]
         #pragma warning disable CS1591

@@ -18,7 +18,7 @@ using Soenneker.HubSpot.OpenApiClient.CrmObjectSchemas;
 using Soenneker.HubSpot.OpenApiClient.Events;
 using Soenneker.HubSpot.OpenApiClient.FeatureFlags;
 using Soenneker.HubSpot.OpenApiClient.Files;
-using Soenneker.HubSpot.OpenApiClient.ForecastingSettings;
+using Soenneker.HubSpot.OpenApiClient.ForecastSettings;
 using Soenneker.HubSpot.OpenApiClient.Marketing;
 using Soenneker.HubSpot.OpenApiClient.MediaBridge;
 using Soenneker.HubSpot.OpenApiClient.Meta;
@@ -102,10 +102,10 @@ namespace Soenneker.HubSpot.OpenApiClient
         {
             get => new global::Soenneker.HubSpot.OpenApiClient.Files.FilesRequestBuilder(PathParameters, RequestAdapter);
         }
-        /// <summary>The forecastingSettings property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.ForecastingSettings.ForecastingSettingsRequestBuilder ForecastingSettings
+        /// <summary>The forecastSettings property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.ForecastSettings.ForecastSettingsRequestBuilder ForecastSettings
         {
-            get => new global::Soenneker.HubSpot.OpenApiClient.ForecastingSettings.ForecastingSettingsRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.HubSpot.OpenApiClient.ForecastSettings.ForecastSettingsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The marketing property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Marketing.MarketingRequestBuilder Marketing
