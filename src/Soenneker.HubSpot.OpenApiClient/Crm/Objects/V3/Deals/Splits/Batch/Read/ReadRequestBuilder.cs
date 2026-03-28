@@ -33,6 +33,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Objects.V3.Deals.Splits.Batch.Read
         public ReadRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/crm/objects/v3/deals/splits/batch/read", rawUrl)
         {
         }
+        /// <summary>
+        /// Read a batch of deal split objects by their associated deal object internal ID
+        /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseDealToDealSplits"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -50,6 +53,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Objects.V3.Deals.Splits.Batch.Read
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseDealToDealSplits>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseDealToDealSplits.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
+        /// <summary>
+        /// Read a batch of deal split objects by their associated deal object internal ID
+        /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
