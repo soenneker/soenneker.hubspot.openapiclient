@@ -496,6 +496,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         #pragma warning disable CS1591
         Hs_email_last_send_date,
         #pragma warning restore CS1591
+        [EnumMember(Value = "hs_email_live_sourcing_restricted")]
+        #pragma warning disable CS1591
+        Hs_email_live_sourcing_restricted,
+        #pragma warning restore CS1591
         [EnumMember(Value = "hs_email_open")]
         #pragma warning disable CS1591
         Hs_email_open,
