@@ -6,6 +6,7 @@ using Microsoft.Kiota.Abstractions;
 using Soenneker.HubSpot.OpenApiClient.Crm.Lists.V3.Item.Memberships;
 using Soenneker.HubSpot.OpenApiClient.Crm.Lists.V3.Item.Restore;
 using Soenneker.HubSpot.OpenApiClient.Crm.Lists.V3.Item.ScheduleConversion;
+using Soenneker.HubSpot.OpenApiClient.Crm.Lists.V3.Item.SizeAndEditsHistory;
 using Soenneker.HubSpot.OpenApiClient.Crm.Lists.V3.Item.UpdateListFilters;
 using Soenneker.HubSpot.OpenApiClient.Crm.Lists.V3.Item.UpdateListName;
 using Soenneker.HubSpot.OpenApiClient.Models;
@@ -36,6 +37,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Lists.V3.Item
         public global::Soenneker.HubSpot.OpenApiClient.Crm.Lists.V3.Item.ScheduleConversion.ScheduleConversionRequestBuilder ScheduleConversion
         {
             get => new global::Soenneker.HubSpot.OpenApiClient.Crm.Lists.V3.Item.ScheduleConversion.ScheduleConversionRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The sizeAndEditsHistory property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Crm.Lists.V3.Item.SizeAndEditsHistory.SizeAndEditsHistoryRequestBuilder SizeAndEditsHistory
+        {
+            get => new global::Soenneker.HubSpot.OpenApiClient.Crm.Lists.V3.Item.SizeAndEditsHistory.SizeAndEditsHistoryRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The updateListFilters property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Crm.Lists.V3.Item.UpdateListFilters.UpdateListFiltersRequestBuilder UpdateListFilters
