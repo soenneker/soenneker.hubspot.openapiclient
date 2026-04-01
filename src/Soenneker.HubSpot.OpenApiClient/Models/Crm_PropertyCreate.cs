@@ -22,6 +22,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string CalculationFormula { get; set; }
 #endif
+        /// <summary>The currencyPropertyName property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CurrencyPropertyName { get; set; }
+#nullable restore
+#else
+        public string CurrencyPropertyName { get; set; }
+#endif
         /// <summary>&quot;Indicates the sensitivity level of the property, with options: highly_sensitive, non_sensitive, or sensitive.&quot;</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PropertyCreate_dataSensitivity? DataSensitivity { get; set; }
         /// <summary>A description of the property that will be shown as help text in HubSpot.</summary>
@@ -84,6 +92,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ReferencedObjectType { get; set; }
 #endif
+        /// <summary>The showCurrencySymbol property</summary>
+        public bool? ShowCurrencySymbol { get; set; }
         /// <summary>The data type of the property.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PropertyCreate_type? Type { get; set; }
         /// <summary>
@@ -112,6 +122,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "calculationFormula", n => { CalculationFormula = n.GetStringValue(); } },
+                { "currencyPropertyName", n => { CurrencyPropertyName = n.GetStringValue(); } },
                 { "dataSensitivity", n => { DataSensitivity = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PropertyCreate_dataSensitivity>(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "displayOrder", n => { DisplayOrder = n.GetIntValue(); } },
@@ -125,6 +136,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_OptionInput>(global::Soenneker.HubSpot.OpenApiClient.Models.Crm_OptionInput.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "referencedObjectType", n => { ReferencedObjectType = n.GetStringValue(); } },
+                { "showCurrencySymbol", n => { ShowCurrencySymbol = n.GetBoolValue(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PropertyCreate_type>(); } },
             };
         }
@@ -136,6 +148,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("calculationFormula", CalculationFormula);
+            writer.WriteStringValue("currencyPropertyName", CurrencyPropertyName);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PropertyCreate_dataSensitivity>("dataSensitivity", DataSensitivity);
             writer.WriteStringValue("description", Description);
             writer.WriteIntValue("displayOrder", DisplayOrder);
@@ -149,6 +162,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_OptionInput>("options", Options);
             writer.WriteStringValue("referencedObjectType", ReferencedObjectType);
+            writer.WriteBoolValue("showCurrencySymbol", ShowCurrencySymbol);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PropertyCreate_type>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

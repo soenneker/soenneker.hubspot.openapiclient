@@ -16,14 +16,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The completedAt property</summary>
         public DateTimeOffset? CompletedAt { get; set; }
-        /// <summary>The errors property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_StandardError>? Errors { get; set; }
-#nullable restore
-#else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_StandardError> Errors { get; set; }
-#endif
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -32,17 +24,15 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicActor_links Links { get; set; }
 #endif
-        /// <summary>The numErrors property</summary>
-        public int? NumErrors { get; set; }
         /// <summary>The requestedAt property</summary>
         public DateTimeOffset? RequestedAt { get; set; }
         /// <summary>The results property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicActor.BatchResponsePublicActor_results>? Results { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActor>? Results { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicActor.BatchResponsePublicActor_results> Results { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActor> Results { get; set; }
 #endif
         /// <summary>The startedAt property</summary>
         public DateTimeOffset? StartedAt { get; set; }
@@ -74,11 +64,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "completedAt", n => { CompletedAt = n.GetDateTimeOffsetValue(); } },
-                { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_StandardError>(global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_StandardError.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "links", n => { Links = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicActor_links>(global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicActor_links.CreateFromDiscriminatorValue); } },
-                { "numErrors", n => { NumErrors = n.GetIntValue(); } },
                 { "requestedAt", n => { RequestedAt = n.GetDateTimeOffsetValue(); } },
-                { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicActor.BatchResponsePublicActor_results>(global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicActor.BatchResponsePublicActor_results.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActor>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicActor.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "startedAt", n => { StartedAt = n.GetDateTimeOffsetValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicActor_status>(); } },
             };
@@ -91,189 +79,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDateTimeOffsetValue("completedAt", CompletedAt);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.Conversations_StandardError>("errors", Errors);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicActor_links>("links", Links);
-            writer.WriteIntValue("numErrors", NumErrors);
             writer.WriteDateTimeOffsetValue("requestedAt", RequestedAt);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicActor.BatchResponsePublicActor_results>("results", Results);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActor>("results", Results);
             writer.WriteDateTimeOffsetValue("startedAt", StartedAt);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicActor_status>("status", Status);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.AgentActor"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.BotActor"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.EmailActor"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorActor"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.LlmActor"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.SystemActor"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.VisitorActor"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class BatchResponsePublicActor_results : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.AgentActor"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.AgentActor? AgentActor { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.AgentActor AgentActor { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.BotActor"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.BotActor? BotActor { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.BotActor BotActor { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.EmailActor"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.EmailActor? EmailActor { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.EmailActor EmailActor { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorActor"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorActor? IntegratorActor { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorActor IntegratorActor { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.LlmActor"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.LlmActor? LlmActor { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.LlmActor LlmActor { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.SystemActor"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.SystemActor? SystemActor { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.SystemActor SystemActor { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.VisitorActor"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.VisitorActor? VisitorActor { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.VisitorActor VisitorActor { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicActor.BatchResponsePublicActor_results"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicActor.BatchResponsePublicActor_results CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
-                var result = new global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicActor.BatchResponsePublicActor_results();
-                if("AgentActor".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.AgentActor = new global::Soenneker.HubSpot.OpenApiClient.Models.AgentActor();
-                }
-                else if("BotActor".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.BotActor = new global::Soenneker.HubSpot.OpenApiClient.Models.BotActor();
-                }
-                else if("EmailActor".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.EmailActor = new global::Soenneker.HubSpot.OpenApiClient.Models.EmailActor();
-                }
-                else if("IntegratorActor".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.IntegratorActor = new global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorActor();
-                }
-                else if("LlmActor".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.LlmActor = new global::Soenneker.HubSpot.OpenApiClient.Models.LlmActor();
-                }
-                else if("SystemActor".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.SystemActor = new global::Soenneker.HubSpot.OpenApiClient.Models.SystemActor();
-                }
-                else if("VisitorActor".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.VisitorActor = new global::Soenneker.HubSpot.OpenApiClient.Models.VisitorActor();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(AgentActor != null)
-                {
-                    return AgentActor.GetFieldDeserializers();
-                }
-                else if(BotActor != null)
-                {
-                    return BotActor.GetFieldDeserializers();
-                }
-                else if(EmailActor != null)
-                {
-                    return EmailActor.GetFieldDeserializers();
-                }
-                else if(IntegratorActor != null)
-                {
-                    return IntegratorActor.GetFieldDeserializers();
-                }
-                else if(LlmActor != null)
-                {
-                    return LlmActor.GetFieldDeserializers();
-                }
-                else if(SystemActor != null)
-                {
-                    return SystemActor.GetFieldDeserializers();
-                }
-                else if(VisitorActor != null)
-                {
-                    return VisitorActor.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(AgentActor != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.AgentActor>(null, AgentActor);
-                }
-                else if(BotActor != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.BotActor>(null, BotActor);
-                }
-                else if(EmailActor != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailActor>(null, EmailActor);
-                }
-                else if(IntegratorActor != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorActor>(null, IntegratorActor);
-                }
-                else if(LlmActor != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LlmActor>(null, LlmActor);
-                }
-                else if(SystemActor != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.SystemActor>(null, SystemActor);
-                }
-                else if(VisitorActor != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.VisitorActor>(null, VisitorActor);
-                }
-            }
         }
     }
 }
