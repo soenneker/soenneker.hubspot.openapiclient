@@ -16,7 +16,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Lists.V3.ObjectTypeId
     public partial class ObjectTypeIdRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.crm.lists.v3.objectTypeId.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The object type ID of the list to retrieve.</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Crm.Lists.V3.ObjectTypeId.Item.WithObjectTypeItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Crm.Lists.V3.ObjectTypeId.Item.WithObjectTypeItemRequestBuilder this[string position]
         {

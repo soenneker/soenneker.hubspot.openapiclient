@@ -33,6 +33,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Lists.V3.ObjectTypeId.Item.Name.It
         public WithListNameItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/crm/lists/v3/object-type-id/{objectTypeId}/name/{listName}{?includeFilters*}", rawUrl)
         {
         }
+        /// <summary>
+        /// Retrieve a specific list by its name and object type ID. This endpoint allows you to fetch details about a list, including its properties and optionally its filters. It is useful for accessing list information based on specific criteria.
+        /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ListFetchResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -48,6 +51,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Lists.V3.ObjectTypeId.Item.Name.It
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ListFetchResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ListFetchResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
+        /// <summary>
+        /// Retrieve a specific list by its name and object type ID. This endpoint allows you to fetch details about a list, including its properties and optionally its filters. It is useful for accessing list information based on specific criteria.
+        /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -73,11 +79,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Lists.V3.ObjectTypeId.Item.Name.It
         {
             return new global::Soenneker.HubSpot.OpenApiClient.Crm.Lists.V3.ObjectTypeId.Item.Name.Item.WithListNameItemRequestBuilder(rawUrl, RequestAdapter);
         }
+        /// <summary>
+        /// Retrieve a specific list by its name and object type ID. This endpoint allows you to fetch details about a list, including its properties and optionally its filters. It is useful for accessing list information based on specific criteria.
+        /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        #pragma warning disable CS1591
         public partial class WithListNameItemRequestBuilderGetQueryParameters 
-        #pragma warning restore CS1591
         {
+            /// <summary>A boolean indicating whether to include filter details in the response. Defaults to false.</summary>
             [QueryParameter("includeFilters")]
             public bool? IncludeFilters { get; set; }
         }

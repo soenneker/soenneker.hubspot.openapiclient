@@ -16,7 +16,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Lists.V3.ObjectTypeId.Item.Name
     public partial class NameRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.crm.lists.v3.objectTypeId.item.name.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The name of the list to retrieve.</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Crm.Lists.V3.ObjectTypeId.Item.Name.Item.WithListNameItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Crm.Lists.V3.ObjectTypeId.Item.Name.Item.WithListNameItemRequestBuilder this[string position]
         {
