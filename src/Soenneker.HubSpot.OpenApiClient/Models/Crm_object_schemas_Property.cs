@@ -39,6 +39,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string CreatedUserId { get; set; }
 #endif
+        /// <summary>The name of the related currency property.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CurrencyPropertyName { get; set; }
+#nullable restore
+#else
+        public string CurrencyPropertyName { get; set; }
+#endif
         /// <summary>Indicates the sensitivity level of the property, such as &quot;non_sensitive&quot;, &quot;sensitive&quot;, or &quot;highly_sensitive&quot;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.Crm_object_schemas_Property_dataSensitivity? DataSensitivity { get; set; }
         /// <summary>Controls how date properties are displayed in the HubSpot UI, with options such as &apos;absolute&apos;, &apos;absolute_with_relative&apos;, &apos;time_since&apos;, and &apos;time_until&apos;.</summary>
@@ -178,6 +186,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "calculationFormula", n => { CalculationFormula = n.GetStringValue(); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "createdUserId", n => { CreatedUserId = n.GetStringValue(); } },
+                { "currencyPropertyName", n => { CurrencyPropertyName = n.GetStringValue(); } },
                 { "dataSensitivity", n => { DataSensitivity = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_object_schemas_Property_dataSensitivity>(); } },
                 { "dateDisplayHint", n => { DateDisplayHint = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_object_schemas_Property_dateDisplayHint>(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
@@ -214,6 +223,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("calculationFormula", CalculationFormula);
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
             writer.WriteStringValue("createdUserId", CreatedUserId);
+            writer.WriteStringValue("currencyPropertyName", CurrencyPropertyName);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_object_schemas_Property_dataSensitivity>("dataSensitivity", DataSensitivity);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_object_schemas_Property_dateDisplayHint>("dateDisplayHint", DateDisplayHint);
             writer.WriteStringValue("description", Description);
