@@ -33,19 +33,6 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.V1
                 return new global::Soenneker.HubSpot.OpenApiClient.MediaBridge.V1.Item.WithAppItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
-        /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.mediaBridge.v1.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.MediaBridge.V1.Item.WithAppItemRequestBuilder"/></returns>
-        [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-        public global::Soenneker.HubSpot.OpenApiClient.MediaBridge.V1.Item.WithAppItemRequestBuilder this[string position]
-        {
-            get
-            {
-                var urlTplParams = new Dictionary<string, object>(PathParameters);
-                if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("appId", position);
-                return new global::Soenneker.HubSpot.OpenApiClient.MediaBridge.V1.Item.WithAppItemRequestBuilder(urlTplParams, RequestAdapter);
-            }
-        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.MediaBridge.V1.V1RequestBuilder"/> and sets the default values.
         /// </summary>

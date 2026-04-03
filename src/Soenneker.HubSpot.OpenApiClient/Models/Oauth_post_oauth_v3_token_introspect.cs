@@ -9,7 +9,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class Oauth_post_oauth_v3_token_oauth_v3_token : IAdditionalDataHolder, IParsable
+    public partial class Oauth_post_oauth_v3_token_introspect : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,64 +30,38 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ClientSecret { get; set; }
 #endif
-        /// <summary>The code property</summary>
+        /// <summary>The token property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Code { get; set; }
+        public string? Token { get; set; }
 #nullable restore
 #else
-        public string Code { get; set; }
+        public string Token { get; set; }
 #endif
-        /// <summary>The code_verifier property</summary>
+        /// <summary>The token_type_hint property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CodeVerifier { get; set; }
+        public string? TokenTypeHint { get; set; }
 #nullable restore
 #else
-        public string CodeVerifier { get; set; }
-#endif
-        /// <summary>The grant_type property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.Oauth_post_oauth_v3_token_oauth_v3_token_grant_type? GrantType { get; set; }
-        /// <summary>The redirect_uri property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? RedirectUri { get; set; }
-#nullable restore
-#else
-        public string RedirectUri { get; set; }
-#endif
-        /// <summary>The refresh_token property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? RefreshToken { get; set; }
-#nullable restore
-#else
-        public string RefreshToken { get; set; }
-#endif
-        /// <summary>The scope property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Scope { get; set; }
-#nullable restore
-#else
-        public string Scope { get; set; }
+        public string TokenTypeHint { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Oauth_post_oauth_v3_token_oauth_v3_token"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Oauth_post_oauth_v3_token_introspect"/> and sets the default values.
         /// </summary>
-        public Oauth_post_oauth_v3_token_oauth_v3_token()
+        public Oauth_post_oauth_v3_token_introspect()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Oauth_post_oauth_v3_token_oauth_v3_token"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Oauth_post_oauth_v3_token_introspect"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.HubSpot.OpenApiClient.Models.Oauth_post_oauth_v3_token_oauth_v3_token CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HubSpot.OpenApiClient.Models.Oauth_post_oauth_v3_token_introspect CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.Oauth_post_oauth_v3_token_oauth_v3_token();
+            return new global::Soenneker.HubSpot.OpenApiClient.Models.Oauth_post_oauth_v3_token_introspect();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -99,12 +73,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "client_id", n => { ClientId = n.GetStringValue(); } },
                 { "client_secret", n => { ClientSecret = n.GetStringValue(); } },
-                { "code", n => { Code = n.GetStringValue(); } },
-                { "code_verifier", n => { CodeVerifier = n.GetStringValue(); } },
-                { "grant_type", n => { GrantType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.Oauth_post_oauth_v3_token_oauth_v3_token_grant_type>(); } },
-                { "redirect_uri", n => { RedirectUri = n.GetStringValue(); } },
-                { "refresh_token", n => { RefreshToken = n.GetStringValue(); } },
-                { "scope", n => { Scope = n.GetStringValue(); } },
+                { "token", n => { Token = n.GetStringValue(); } },
+                { "token_type_hint", n => { TokenTypeHint = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -116,12 +86,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("client_id", ClientId);
             writer.WriteStringValue("client_secret", ClientSecret);
-            writer.WriteStringValue("code", Code);
-            writer.WriteStringValue("code_verifier", CodeVerifier);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.Oauth_post_oauth_v3_token_oauth_v3_token_grant_type>("grant_type", GrantType);
-            writer.WriteStringValue("redirect_uri", RedirectUri);
-            writer.WriteStringValue("refresh_token", RefreshToken);
-            writer.WriteStringValue("scope", Scope);
+            writer.WriteStringValue("token", Token);
+            writer.WriteStringValue("token_type_hint", TokenTypeHint);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

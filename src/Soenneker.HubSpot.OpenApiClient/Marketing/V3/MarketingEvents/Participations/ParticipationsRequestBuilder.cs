@@ -33,19 +33,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Participa
                 return new global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Participations.Item.ExternalAccountItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
-        /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.marketing.v3.marketingEvents.participations.item collection</summary>
-        /// <param name="position">The internal id of the marketing event in HubSpot.</param>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Participations.Item.ExternalAccountItemRequestBuilder"/></returns>
-        [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-        public global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Participations.Item.ExternalAccountItemRequestBuilder this[string position]
-        {
-            get
-            {
-                var urlTplParams = new Dictionary<string, object>(PathParameters);
-                if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("externalAccount%2Did", position);
-                return new global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Participations.Item.ExternalAccountItemRequestBuilder(urlTplParams, RequestAdapter);
-            }
-        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Participations.ParticipationsRequestBuilder"/> and sets the default values.
         /// </summary>

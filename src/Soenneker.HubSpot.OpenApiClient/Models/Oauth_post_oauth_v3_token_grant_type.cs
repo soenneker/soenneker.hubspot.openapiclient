@@ -5,7 +5,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public enum Oauth_post_oauth_v3_token_oauth_v3_token_grant_type
+    public enum Oauth_post_oauth_v3_token_grant_type
     #pragma warning restore CS1591
     {
         [EnumMember(Value = "authorization_code")]

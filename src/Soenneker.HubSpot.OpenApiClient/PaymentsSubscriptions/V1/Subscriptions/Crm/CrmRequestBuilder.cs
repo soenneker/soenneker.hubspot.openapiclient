@@ -27,19 +27,6 @@ namespace Soenneker.HubSpot.OpenApiClient.PaymentsSubscriptions.V1.Subscriptions
                 return new global::Soenneker.HubSpot.OpenApiClient.PaymentsSubscriptions.V1.Subscriptions.Crm.Item.WithObjectItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
-        /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.paymentsSubscriptions.v1.subscriptions.crm.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.PaymentsSubscriptions.V1.Subscriptions.Crm.Item.WithObjectItemRequestBuilder"/></returns>
-        [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-        public global::Soenneker.HubSpot.OpenApiClient.PaymentsSubscriptions.V1.Subscriptions.Crm.Item.WithObjectItemRequestBuilder this[string position]
-        {
-            get
-            {
-                var urlTplParams = new Dictionary<string, object>(PathParameters);
-                if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("objectId", position);
-                return new global::Soenneker.HubSpot.OpenApiClient.PaymentsSubscriptions.V1.Subscriptions.Crm.Item.WithObjectItemRequestBuilder(urlTplParams, RequestAdapter);
-            }
-        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.PaymentsSubscriptions.V1.Subscriptions.Crm.CrmRequestBuilder"/> and sets the default values.
         /// </summary>

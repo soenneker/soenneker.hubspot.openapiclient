@@ -9,7 +9,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class Oauth_post_oauth_v3_token_introspect_oauth_v3_token_introspect : IAdditionalDataHolder, IParsable
+    public partial class Oauth_post_oauth_v3_token_revoke : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -47,21 +47,21 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string TokenTypeHint { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Oauth_post_oauth_v3_token_introspect_oauth_v3_token_introspect"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Oauth_post_oauth_v3_token_revoke"/> and sets the default values.
         /// </summary>
-        public Oauth_post_oauth_v3_token_introspect_oauth_v3_token_introspect()
+        public Oauth_post_oauth_v3_token_revoke()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Oauth_post_oauth_v3_token_introspect_oauth_v3_token_introspect"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Oauth_post_oauth_v3_token_revoke"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.HubSpot.OpenApiClient.Models.Oauth_post_oauth_v3_token_introspect_oauth_v3_token_introspect CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HubSpot.OpenApiClient.Models.Oauth_post_oauth_v3_token_revoke CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.Oauth_post_oauth_v3_token_introspect_oauth_v3_token_introspect();
+            return new global::Soenneker.HubSpot.OpenApiClient.Models.Oauth_post_oauth_v3_token_revoke();
         }
         /// <summary>
         /// The deserialization information for the current model

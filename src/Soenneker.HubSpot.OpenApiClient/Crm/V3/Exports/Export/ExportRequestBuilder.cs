@@ -33,19 +33,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Exports.Export
                 return new global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Exports.Export.Item.WithExportItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
-        /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.crm.v3.exports.export.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Exports.Export.Item.WithExportItemRequestBuilder"/></returns>
-        [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-        public global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Exports.Export.Item.WithExportItemRequestBuilder this[string position]
-        {
-            get
-            {
-                var urlTplParams = new Dictionary<string, object>(PathParameters);
-                if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("exportId", position);
-                return new global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Exports.Export.Item.WithExportItemRequestBuilder(urlTplParams, RequestAdapter);
-            }
-        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Exports.Export.ExportRequestBuilder"/> and sets the default values.
         /// </summary>

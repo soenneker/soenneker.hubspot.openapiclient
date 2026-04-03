@@ -27,19 +27,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.SourceCode.Extract.Async.Tasks
                 return new global::Soenneker.HubSpot.OpenApiClient.Cms.V3.SourceCode.Extract.Async.Tasks.Item.WithTaskItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
-        /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.cms.v3.sourceCode.extract.async.tasks.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Cms.V3.SourceCode.Extract.Async.Tasks.Item.WithTaskItemRequestBuilder"/></returns>
-        [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-        public global::Soenneker.HubSpot.OpenApiClient.Cms.V3.SourceCode.Extract.Async.Tasks.Item.WithTaskItemRequestBuilder this[string position]
-        {
-            get
-            {
-                var urlTplParams = new Dictionary<string, object>(PathParameters);
-                if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("taskId", position);
-                return new global::Soenneker.HubSpot.OpenApiClient.Cms.V3.SourceCode.Extract.Async.Tasks.Item.WithTaskItemRequestBuilder(urlTplParams, RequestAdapter);
-            }
-        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Cms.V3.SourceCode.Extract.Async.Tasks.TasksRequestBuilder"/> and sets the default values.
         /// </summary>

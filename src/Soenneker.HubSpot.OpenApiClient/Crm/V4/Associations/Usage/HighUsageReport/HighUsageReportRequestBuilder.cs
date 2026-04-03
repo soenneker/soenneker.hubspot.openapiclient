@@ -27,19 +27,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V4.Associations.Usage.HighUsageRep
                 return new global::Soenneker.HubSpot.OpenApiClient.Crm.V4.Associations.Usage.HighUsageReport.Item.WithUserItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
-        /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.crm.v4.associations.usage.highUsageReport.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Crm.V4.Associations.Usage.HighUsageReport.Item.WithUserItemRequestBuilder"/></returns>
-        [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-        public global::Soenneker.HubSpot.OpenApiClient.Crm.V4.Associations.Usage.HighUsageReport.Item.WithUserItemRequestBuilder this[string position]
-        {
-            get
-            {
-                var urlTplParams = new Dictionary<string, object>(PathParameters);
-                if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("userId", position);
-                return new global::Soenneker.HubSpot.OpenApiClient.Crm.V4.Associations.Usage.HighUsageReport.Item.WithUserItemRequestBuilder(urlTplParams, RequestAdapter);
-            }
-        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Crm.V4.Associations.Usage.HighUsageReport.HighUsageReportRequestBuilder"/> and sets the default values.
         /// </summary>

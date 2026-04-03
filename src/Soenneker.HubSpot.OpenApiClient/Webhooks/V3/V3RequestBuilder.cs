@@ -27,19 +27,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Webhooks.V3
                 return new global::Soenneker.HubSpot.OpenApiClient.Webhooks.V3.Item.WithAppItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
-        /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.webhooks.v3.item collection</summary>
-        /// <param name="position">The ID of the target app.</param>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Webhooks.V3.Item.WithAppItemRequestBuilder"/></returns>
-        [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-        public global::Soenneker.HubSpot.OpenApiClient.Webhooks.V3.Item.WithAppItemRequestBuilder this[string position]
-        {
-            get
-            {
-                var urlTplParams = new Dictionary<string, object>(PathParameters);
-                if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("appId", position);
-                return new global::Soenneker.HubSpot.OpenApiClient.Webhooks.V3.Item.WithAppItemRequestBuilder(urlTplParams, RequestAdapter);
-            }
-        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Webhooks.V3.V3RequestBuilder"/> and sets the default values.
         /// </summary>

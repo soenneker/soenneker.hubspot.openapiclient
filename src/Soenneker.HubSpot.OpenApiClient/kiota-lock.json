@@ -1,5 +1,5 @@
 {
-  "descriptionHash": "BED3CDE588036042812070FCFF82D31B7571E0C4D59A66F1F3190FDCA3BC4BBD1D5E84575E190B1DDB967DC6CDB490805234DF750B675CCF149234542302A4C5",
+  "descriptionHash": "EEF4EC0E2E74EF0708C0AFF44DC409F1526428DEDA3042AE5B3F12328C18D019A7B3FE7A40C722C339F84F6FF3B86E374691C0068FC508B18CD154B42134D695",
   "descriptionLocation": "../../fixed.json",
   "lockFileVersion": "1.0.0",
   "kiotaVersion": "1.30.0",
@@ -8,7 +8,7 @@
   "clientNamespaceName": "Soenneker.HubSpot.OpenApiClient",
   "language": "CSharp",
   "usesBackingStore": false,
-  "excludeBackwardCompatible": false,
+  "excludeBackwardCompatible": true,
   "includeAdditionalData": true,
   "disableSSLValidation": false,
   "serializers": [

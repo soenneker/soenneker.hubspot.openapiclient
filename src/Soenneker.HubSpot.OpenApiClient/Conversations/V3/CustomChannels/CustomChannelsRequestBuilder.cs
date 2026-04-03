@@ -27,19 +27,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.V3.CustomChannels
                 return new global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.CustomChannels.Item.WithChannelItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
-        /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.conversations.v3.customChannels.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.CustomChannels.Item.WithChannelItemRequestBuilder"/></returns>
-        [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-        public global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.CustomChannels.Item.WithChannelItemRequestBuilder this[string position]
-        {
-            get
-            {
-                var urlTplParams = new Dictionary<string, object>(PathParameters);
-                if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("channelId", position);
-                return new global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.CustomChannels.Item.WithChannelItemRequestBuilder(urlTplParams, RequestAdapter);
-            }
-        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.CustomChannels.CustomChannelsRequestBuilder"/> and sets the default values.
         /// </summary>
