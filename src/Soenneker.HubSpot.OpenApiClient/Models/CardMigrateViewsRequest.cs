@@ -14,6 +14,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The allowDuplicateAppCardIds property</summary>
+        public bool? AllowDuplicateAppCardIds { get; set; }
         /// <summary>The appCardId property</summary>
         public long? AppCardId { get; set; }
         /// <summary>The helpdeskAppCardId property</summary>
@@ -45,6 +47,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "allowDuplicateAppCardIds", n => { AllowDuplicateAppCardIds = n.GetBoolValue(); } },
                 { "appCardId", n => { AppCardId = n.GetLongValue(); } },
                 { "helpdeskAppCardId", n => { HelpdeskAppCardId = n.GetLongValue(); } },
                 { "legacyCrmCardId", n => { LegacyCrmCardId = n.GetLongValue(); } },
@@ -57,6 +60,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteBoolValue("allowDuplicateAppCardIds", AllowDuplicateAppCardIds);
             writer.WriteLongValue("appCardId", AppCardId);
             writer.WriteLongValue("helpdeskAppCardId", HelpdeskAppCardId);
             writer.WriteLongValue("legacyCrmCardId", LegacyCrmCardId);
