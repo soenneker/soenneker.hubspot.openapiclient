@@ -111,6 +111,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
+        /// <summary>&quot;Hint for how a number property is displayed and validated in HubSpot&apos;s UI. Can be: \&quot;unformatted\&quot;, \&quot;formatted\&quot;, \&quot;currency\&quot;, \&quot;percentage\&quot;, \&quot;duration\&quot;, or \&quot;probability\&quot;.&quot;</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.Crm_object_schemas_Property_numberDisplayHint? NumberDisplayHint { get; set; }
         /// <summary>A list of valid options for the property. This field is required for enumerated properties, but will be empty for other property types.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -201,6 +203,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "modificationMetadata", n => { ModificationMetadata = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_object_schemas_PropertyModificationMetadata>(global::Soenneker.HubSpot.OpenApiClient.Models.Crm_object_schemas_PropertyModificationMetadata.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
+                { "numberDisplayHint", n => { NumberDisplayHint = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_object_schemas_Property_numberDisplayHint>(); } },
                 { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_object_schemas_Option>(global::Soenneker.HubSpot.OpenApiClient.Models.Crm_object_schemas_Option.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "referencedObjectType", n => { ReferencedObjectType = n.GetStringValue(); } },
                 { "sensitiveDataCategories", n => { SensitiveDataCategories = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -238,6 +241,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("label", Label);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_object_schemas_PropertyModificationMetadata>("modificationMetadata", ModificationMetadata);
             writer.WriteStringValue("name", Name);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_object_schemas_Property_numberDisplayHint>("numberDisplayHint", NumberDisplayHint);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_object_schemas_Option>("options", Options);
             writer.WriteStringValue("referencedObjectType", ReferencedObjectType);
             writer.WriteCollectionOfPrimitiveValues<string>("sensitiveDataCategories", SensitiveDataCategories);

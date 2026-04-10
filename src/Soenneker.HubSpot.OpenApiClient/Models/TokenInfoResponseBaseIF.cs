@@ -9,35 +9,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class TokenInfoResponseBaseIF : IAdditionalDataHolder, IComposedTypeWrapper, IParsable
+    public partial class TokenInfoResponseBaseIF : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>The active property</summary>
+        public bool? Active { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicAccessTokenInfoResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAccessTokenInfoResponse? PublicAccessTokenInfoResponse { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAccessTokenInfoResponse PublicAccessTokenInfoResponse { get; set; }
-#endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicRefreshTokenInfoResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRefreshTokenInfoResponse? PublicRefreshTokenInfoResponse { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRefreshTokenInfoResponse PublicRefreshTokenInfoResponse { get; set; }
-#endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.TokenInfoResponseBaseIF"/> and sets the default values.
         /// </summary>
@@ -53,21 +31,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.TokenInfoResponseBaseIF CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
-            var result = new global::Soenneker.HubSpot.OpenApiClient.Models.TokenInfoResponseBaseIF();
-            if("PublicAccessTokenInfoResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.PublicAccessTokenInfoResponse = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicAccessTokenInfoResponse();
-            }
-            else if("PublicRefreshTokenInfoResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.PublicRefreshTokenInfoResponse = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicRefreshTokenInfoResponse();
-            }
-            else if(parseNode.GetStringValue() is string typeValue)
-            {
-                result.Type = typeValue;
-            }
-            return result;
+            return new global::Soenneker.HubSpot.OpenApiClient.Models.TokenInfoResponseBaseIF();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -75,15 +39,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(PublicAccessTokenInfoResponse != null)
+            return new Dictionary<string, Action<IParseNode>>
             {
-                return PublicAccessTokenInfoResponse.GetFieldDeserializers();
-            }
-            else if(PublicRefreshTokenInfoResponse != null)
-            {
-                return PublicRefreshTokenInfoResponse.GetFieldDeserializers();
-            }
-            return new Dictionary<string, Action<IParseNode>>();
+                { "active", n => { Active = n.GetBoolValue(); } },
+            };
         }
         /// <summary>
         /// Serializes information the current object
@@ -92,18 +51,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            if(PublicAccessTokenInfoResponse != null)
-            {
-                writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAccessTokenInfoResponse>(null, PublicAccessTokenInfoResponse);
-            }
-            else if(PublicRefreshTokenInfoResponse != null)
-            {
-                writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRefreshTokenInfoResponse>(null, PublicRefreshTokenInfoResponse);
-            }
-            else if(Type != null)
-            {
-                writer.WriteStringValue(null, Type);
-            }
+            writer.WriteBoolValue("active", Active);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

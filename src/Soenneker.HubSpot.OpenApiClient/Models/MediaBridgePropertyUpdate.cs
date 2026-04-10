@@ -22,6 +22,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string CalculationFormula { get; set; }
 #endif
+        /// <summary>The currencyPropertyName property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CurrencyPropertyName { get; set; }
+#nullable restore
+#else
+        public string CurrencyPropertyName { get; set; }
+#endif
         /// <summary>The description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -56,6 +64,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Label { get; set; }
 #endif
+        /// <summary>The numberDisplayHint property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.MediaBridgePropertyUpdate_numberDisplayHint? NumberDisplayHint { get; set; }
         /// <summary>The options property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -64,6 +74,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.OptionInput> Options { get; set; }
 #endif
+        /// <summary>The showCurrencySymbol property</summary>
+        public bool? ShowCurrencySymbol { get; set; }
         /// <summary>The type property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.MediaBridgePropertyUpdate_type? Type { get; set; }
         /// <summary>
@@ -92,6 +104,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "calculationFormula", n => { CalculationFormula = n.GetStringValue(); } },
+                { "currencyPropertyName", n => { CurrencyPropertyName = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "displayOrder", n => { DisplayOrder = n.GetIntValue(); } },
                 { "fieldType", n => { FieldType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MediaBridgePropertyUpdate_fieldType>(); } },
@@ -100,7 +113,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "hasUniqueValue", n => { HasUniqueValue = n.GetBoolValue(); } },
                 { "hidden", n => { Hidden = n.GetBoolValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
+                { "numberDisplayHint", n => { NumberDisplayHint = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MediaBridgePropertyUpdate_numberDisplayHint>(); } },
                 { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.OptionInput>(global::Soenneker.HubSpot.OpenApiClient.Models.OptionInput.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "showCurrencySymbol", n => { ShowCurrencySymbol = n.GetBoolValue(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MediaBridgePropertyUpdate_type>(); } },
             };
         }
@@ -112,6 +127,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("calculationFormula", CalculationFormula);
+            writer.WriteStringValue("currencyPropertyName", CurrencyPropertyName);
             writer.WriteStringValue("description", Description);
             writer.WriteIntValue("displayOrder", DisplayOrder);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MediaBridgePropertyUpdate_fieldType>("fieldType", FieldType);
@@ -120,7 +136,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteBoolValue("hasUniqueValue", HasUniqueValue);
             writer.WriteBoolValue("hidden", Hidden);
             writer.WriteStringValue("label", Label);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MediaBridgePropertyUpdate_numberDisplayHint>("numberDisplayHint", NumberDisplayHint);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.OptionInput>("options", Options);
+            writer.WriteBoolValue("showCurrencySymbol", ShowCurrencySymbol);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MediaBridgePropertyUpdate_type>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

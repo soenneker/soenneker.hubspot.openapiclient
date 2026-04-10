@@ -105,7 +105,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiActionDataValue"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiAppendObjectPropertyValue"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiEnrollmentEventPropertyValue"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiFetchedObjectPropertyValue"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiIncrementValue"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiObjectPropertyValue"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiRelativeDateTimeValue"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticAppendValue"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticValue"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimestampValue"/>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiActionDataValue"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiActionOutputObjectPropertyValue"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiAppendObjectPropertyValue"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiEnrollmentEventPropertyValue"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiFetchedObjectPropertyValue"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiIncrementValue"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiObjectPropertyValue"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiRelativeDateTimeValue"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticAppendValue"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticValue"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimestampValue"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ApiStaticBranchAction_inputValue : IComposedTypeWrapper, IParsable
@@ -117,6 +117,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #nullable restore
 #else
             public global::Soenneker.HubSpot.OpenApiClient.Models.ApiActionDataValue ApiActionDataValue { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiActionOutputObjectPropertyValue"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiActionOutputObjectPropertyValue? ApiActionOutputObjectPropertyValue { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiActionOutputObjectPropertyValue ApiActionOutputObjectPropertyValue { get; set; }
 #endif
             /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiAppendObjectPropertyValue"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -204,6 +212,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 {
                     result.ApiActionDataValue = new global::Soenneker.HubSpot.OpenApiClient.Models.ApiActionDataValue();
                 }
+                else if("ApiActionOutputObjectPropertyValue".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.ApiActionOutputObjectPropertyValue = new global::Soenneker.HubSpot.OpenApiClient.Models.ApiActionOutputObjectPropertyValue();
+                }
                 else if("ApiAppendObjectPropertyValue".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
                     result.ApiAppendObjectPropertyValue = new global::Soenneker.HubSpot.OpenApiClient.Models.ApiAppendObjectPropertyValue();
@@ -251,6 +263,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 if(ApiActionDataValue != null)
                 {
                     return ApiActionDataValue.GetFieldDeserializers();
+                }
+                else if(ApiActionOutputObjectPropertyValue != null)
+                {
+                    return ApiActionOutputObjectPropertyValue.GetFieldDeserializers();
                 }
                 else if(ApiAppendObjectPropertyValue != null)
                 {
@@ -300,6 +316,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 if(ApiActionDataValue != null)
                 {
                     writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiActionDataValue>(null, ApiActionDataValue);
+                }
+                else if(ApiActionOutputObjectPropertyValue != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiActionOutputObjectPropertyValue>(null, ApiActionOutputObjectPropertyValue);
                 }
                 else if(ApiAppendObjectPropertyValue != null)
                 {

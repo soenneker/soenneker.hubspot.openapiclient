@@ -112,6 +112,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ObjectTypeId { get; set; }
 #endif
+        /// <summary>The objectTypeIdString property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ObjectTypeIdString { get; set; }
+#nullable restore
+#else
+        public string ObjectTypeIdString { get; set; }
+#endif
         /// <summary>The ownerPortalId property</summary>
         public int? OwnerPortalId { get; set; }
         /// <summary>The permissioningType property</summary>
@@ -265,6 +273,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "metaTypeId", n => { MetaTypeId = n.GetIntValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "objectTypeId", n => { ObjectTypeId = n.GetStringValue(); } },
+                { "objectTypeIdString", n => { ObjectTypeIdString = n.GetStringValue(); } },
                 { "ownerPortalId", n => { OwnerPortalId = n.GetIntValue(); } },
                 { "permissioningType", n => { PermissioningType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.InboundDbObjectType_permissioningType>(); } },
                 { "pipelineCloseDatePropertyName", n => { PipelineCloseDatePropertyName = n.GetStringValue(); } },
@@ -313,6 +322,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteIntValue("metaTypeId", MetaTypeId);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("objectTypeId", ObjectTypeId);
+            writer.WriteStringValue("objectTypeIdString", ObjectTypeIdString);
             writer.WriteIntValue("ownerPortalId", OwnerPortalId);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.InboundDbObjectType_permissioningType>("permissioningType", PermissioningType);
             writer.WriteStringValue("pipelineCloseDatePropertyName", PipelineCloseDatePropertyName);

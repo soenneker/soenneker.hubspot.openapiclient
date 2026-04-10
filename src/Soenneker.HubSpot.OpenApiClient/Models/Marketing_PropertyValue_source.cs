@@ -291,6 +291,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         #pragma warning disable CS1591
         MARKETPLACE,
         #pragma warning restore CS1591
+        [EnumMember(Value = "MARKETS")]
+        #pragma warning disable CS1591
+        MARKETS,
+        #pragma warning restore CS1591
         [EnumMember(Value = "MEETINGS")]
         #pragma warning disable CS1591
         MEETINGS,
@@ -386,6 +390,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         [EnumMember(Value = "RESTORE_OBJECTS")]
         #pragma warning disable CS1591
         RESTORE_OBJECTS,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "REVENUE_PLATFORM")]
+        #pragma warning disable CS1591
+        REVENUE_PLATFORM,
         #pragma warning restore CS1591
         [EnumMember(Value = "SALES")]
         #pragma warning disable CS1591
