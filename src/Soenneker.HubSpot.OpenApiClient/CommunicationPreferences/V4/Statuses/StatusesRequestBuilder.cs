@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Statuses
             get => new global::Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Statuses.Batch.BatchRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.communicationPreferences.v4.statuses.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The unique identifier of the subscriber whose communication preferences status is being retrieved.</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Statuses.Item.WithSubscriberIdStringItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Statuses.Item.WithSubscriberIdStringItemRequestBuilder this[string position]
         {

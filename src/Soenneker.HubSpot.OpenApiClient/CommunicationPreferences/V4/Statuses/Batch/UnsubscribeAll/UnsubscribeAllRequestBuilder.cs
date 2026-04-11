@@ -96,10 +96,13 @@ namespace Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Statuses.B
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class UnsubscribeAllRequestBuilderPostQueryParameters 
         {
+            /// <summary>The ID of the business unit to which the operation applies. It is an optional parameter.</summary>
             [QueryParameter("businessUnitId")]
             public long? BusinessUnitId { get; set; }
+            /// <summary>The communication channel to unsubscribe from. This parameter is required and must be &apos;EMAIL&apos;.</summary>
             [QueryParameter("channel")]
             public global::Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Statuses.Batch.UnsubscribeAll.PostChannelQueryParameterType? Channel { get; set; }
+            /// <summary>A boolean indicating whether to include detailed processing information in the response. Defaults to false.</summary>
             [QueryParameter("verbose")]
             public bool? Verbose { get; set; }
         }

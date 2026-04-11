@@ -41,10 +41,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The outputFields property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ApiCustomCodeAction_outputFields>? OutputFields { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ApiEnumerationOutputField>? OutputFields { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ApiCustomCodeAction_outputFields> OutputFields { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ApiEnumerationOutputField> OutputFields { get; set; }
 #endif
         /// <summary>Specifies the runtime environment for the custom code action.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -100,7 +100,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "actionId", n => { ActionId = n.GetStringValue(); } },
                 { "connection", n => { Connection = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiConnection>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiConnection.CreateFromDiscriminatorValue); } },
                 { "inputFields", n => { InputFields = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ApiInputVariable>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiInputVariable.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "outputFields", n => { OutputFields = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ApiCustomCodeAction_outputFields>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiCustomCodeAction_outputFields.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "outputFields", n => { OutputFields = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ApiEnumerationOutputField>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiEnumerationOutputField.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "runtime", n => { Runtime = n.GetStringValue(); } },
                 { "secretNames", n => { SecretNames = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "sourceCode", n => { SourceCode = n.GetStringValue(); } },
@@ -117,7 +117,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("actionId", ActionId);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiConnection>("connection", Connection);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ApiInputVariable>("inputFields", InputFields);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ApiCustomCodeAction_outputFields>("outputFields", OutputFields);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ApiEnumerationOutputField>("outputFields", OutputFields);
             writer.WriteStringValue("runtime", Runtime);
             writer.WriteCollectionOfPrimitiveValues<string>("secretNames", SecretNames);
             writer.WriteStringValue("sourceCode", SourceCode);

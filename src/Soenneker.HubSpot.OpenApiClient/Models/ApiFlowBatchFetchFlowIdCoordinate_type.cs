@@ -3,13 +3,13 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>Specifies the type of time zone strategy, which defaults to STATIC_TIME_ZONE.</summary>
+    /// <summary>Specifies the type of coordinate:FLOW_ID.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum ApiTimeDelay_timeZoneStrategy_type
+    public enum ApiFlowBatchFetchFlowIdCoordinate_type
     {
-        [EnumMember(Value = "STATIC_TIME_ZONE")]
+        [EnumMember(Value = "FLOW_ID")]
         #pragma warning disable CS1591
-        STATIC_TIME_ZONE,
+        FLOW_ID,
         #pragma warning restore CS1591
     }
 }

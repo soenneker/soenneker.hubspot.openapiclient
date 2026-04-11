@@ -9,37 +9,37 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class ApiFlowBatchInput_inputs : IAdditionalDataHolder, IParsable
+    public partial class ApiStaticTimeZoneStrategy : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The unique identifier for the automation flow.</summary>
+        /// <summary>The identifier for the time zone.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FlowId { get; set; }
+        public string? TimeZoneId { get; set; }
 #nullable restore
 #else
-        public string FlowId { get; set; }
+        public string TimeZoneId { get; set; }
 #endif
-        /// <summary>Specifies the type of coordinate:FLOW_ID.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchInput_inputs_type? Type { get; set; }
+        /// <summary>Specifies the type of time zone strategy, which defaults to STATIC_TIME_ZONE.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticTimeZoneStrategy_type? Type { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchInput_inputs"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticTimeZoneStrategy"/> and sets the default values.
         /// </summary>
-        public ApiFlowBatchInput_inputs()
+        public ApiStaticTimeZoneStrategy()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchInput_inputs"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticTimeZoneStrategy"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchInput_inputs CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticTimeZoneStrategy CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchInput_inputs();
+            return new global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticTimeZoneStrategy();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -49,8 +49,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "flowId", n => { FlowId = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchInput_inputs_type>(); } },
+                { "timeZoneId", n => { TimeZoneId = n.GetStringValue(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticTimeZoneStrategy_type>(); } },
             };
         }
         /// <summary>
@@ -60,8 +60,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("flowId", FlowId);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchInput_inputs_type>("type", Type);
+            writer.WriteStringValue("timeZoneId", TimeZoneId);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticTimeZoneStrategy_type>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

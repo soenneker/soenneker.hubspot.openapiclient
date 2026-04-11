@@ -33,6 +33,9 @@ namespace Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Links.Gene
         public GenerateRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/communication-preferences/v4/links/generate?channel={channel}{&businessUnitId*}", rawUrl)
         {
         }
+        /// <summary>
+        /// Generate communication preference links for a subscriber. This endpoint allows you to create URLs for managing preferences and unsubscribing, which are useful for integrating communication preferences into your applications. Learn more about [generating preference page URLs and troubleshooting potential issues](https://developers.hubspot.com/docs/api-reference/legacy/communication-preferences/generate-url-guide).
+        /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.LinkGenerationResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -50,6 +53,9 @@ namespace Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Links.Gene
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.LinkGenerationResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.LinkGenerationResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
+        /// <summary>
+        /// Generate communication preference links for a subscriber. This endpoint allows you to create URLs for managing preferences and unsubscribing, which are useful for integrating communication preferences into your applications. Learn more about [generating preference page URLs and troubleshooting potential issues](https://developers.hubspot.com/docs/api-reference/legacy/communication-preferences/generate-url-guide).
+        /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -78,13 +84,16 @@ namespace Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Links.Gene
         {
             return new global::Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Links.Generate.GenerateRequestBuilder(rawUrl, RequestAdapter);
         }
+        /// <summary>
+        /// Generate communication preference links for a subscriber. This endpoint allows you to create URLs for managing preferences and unsubscribing, which are useful for integrating communication preferences into your applications. Learn more about [generating preference page URLs and troubleshooting potential issues](https://developers.hubspot.com/docs/api-reference/legacy/communication-preferences/generate-url-guide).
+        /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        #pragma warning disable CS1591
         public partial class GenerateRequestBuilderPostQueryParameters 
-        #pragma warning restore CS1591
         {
+            /// <summary>The ID of the business unit for which the links are being generated. Defaults to 0.</summary>
             [QueryParameter("businessUnitId")]
             public long? BusinessUnitId { get; set; }
+            /// <summary>The communication channel for which to generate links. Must be &apos;EMAIL&apos;.</summary>
             [QueryParameter("channel")]
             public global::Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Links.Generate.PostChannelQueryParameterType? Channel { get; set; }
         }

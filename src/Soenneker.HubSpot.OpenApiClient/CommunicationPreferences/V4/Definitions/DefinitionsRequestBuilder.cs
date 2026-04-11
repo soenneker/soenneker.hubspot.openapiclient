@@ -85,8 +85,10 @@ namespace Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Definition
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class DefinitionsRequestBuilderGetQueryParameters 
         {
+            /// <summary>An integer representing the ID of the business unit to filter the subscription definitions.</summary>
             [QueryParameter("businessUnitId")]
             public long? BusinessUnitId { get; set; }
+            /// <summary>A boolean indicating whether to include translations of the subscription definitions in the response.</summary>
             [QueryParameter("includeTranslations")]
             public bool? IncludeTranslations { get; set; }
         }

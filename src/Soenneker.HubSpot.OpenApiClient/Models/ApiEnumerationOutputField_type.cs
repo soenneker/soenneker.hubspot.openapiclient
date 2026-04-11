@@ -3,14 +3,13 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>Specifies that the type of the field is &apos;ENUMERATION&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public enum AbsoluteValue_operator
-    #pragma warning restore CS1591
+    public enum ApiEnumerationOutputField_type
     {
-        [EnumMember(Value = "ABSOLUTE_VALUE")]
+        [EnumMember(Value = "ENUMERATION")]
         #pragma warning disable CS1591
-        ABSOLUTE_VALUE,
+        ENUMERATION,
         #pragma warning restore CS1591
     }
 }

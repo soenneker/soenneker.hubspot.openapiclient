@@ -133,8 +133,10 @@ namespace Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Statuses.I
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithSubscriberIdStringItemRequestBuilderGetQueryParameters 
         {
+            /// <summary>An optional integer representing the ID of the business unit to filter the subscription status.</summary>
             [QueryParameter("businessUnitId")]
             public long? BusinessUnitId { get; set; }
+            /// <summary>The communication channel for which the subscription status is being retrieved. This parameter is required and currently supports &apos;EMAIL&apos; as a valid value.</summary>
             [QueryParameter("channel")]
             public global::Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Statuses.Item.GetChannelQueryParameterType? Channel { get; set; }
         }

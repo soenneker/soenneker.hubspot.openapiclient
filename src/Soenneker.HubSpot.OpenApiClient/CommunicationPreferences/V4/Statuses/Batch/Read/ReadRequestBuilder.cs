@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Statuses.B
         {
         }
         /// <summary>
-        /// Batch retrieve subscription statuses for a set of contacts.
+        /// Retrieve the communication preferences statuses for a batch of subscribers. This endpoint allows you to check the subscription status across a specified channel for multiple subscribers at once. It is useful for managing and auditing subscriber preferences in bulk.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicStatusBulkResponse"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Statuses.B
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicStatusBulkResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicStatusBulkResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Batch retrieve subscription statuses for a set of contacts.
+        /// Retrieve the communication preferences statuses for a batch of subscribers. This endpoint allows you to check the subscription status across a specified channel for multiple subscribers at once. It is useful for managing and auditing subscriber preferences in bulk.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -85,13 +85,15 @@ namespace Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Statuses.B
             return new global::Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Statuses.Batch.Read.ReadRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Batch retrieve subscription statuses for a set of contacts.
+        /// Retrieve the communication preferences statuses for a batch of subscribers. This endpoint allows you to check the subscription status across a specified channel for multiple subscribers at once. It is useful for managing and auditing subscriber preferences in bulk.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ReadRequestBuilderPostQueryParameters 
         {
+            /// <summary>The ID of the business unit to filter the statuses. It is an integer.</summary>
             [QueryParameter("businessUnitId")]
             public long? BusinessUnitId { get; set; }
+            /// <summary>A required string indicating the communication channel to filter by. Valid value is &apos;EMAIL&apos;.</summary>
             [QueryParameter("channel")]
             public global::Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Statuses.Batch.Read.PostChannelQueryParameterType? Channel { get; set; }
         }

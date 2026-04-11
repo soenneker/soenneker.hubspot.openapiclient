@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Statuses.B
         {
         }
         /// <summary>
-        /// Checks whether a set of contacts have opted out of all communications.
+        /// Retrieve the unsubscribe-all status for a batch of subscribers across specified channels. This endpoint is useful for checking the unsubscribe status of multiple subscribers in bulk, particularly for email channels.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicWideStatusBulkResponse"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Statuses.B
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicWideStatusBulkResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicWideStatusBulkResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Checks whether a set of contacts have opted out of all communications.
+        /// Retrieve the unsubscribe-all status for a batch of subscribers across specified channels. This endpoint is useful for checking the unsubscribe status of multiple subscribers in bulk, particularly for email channels.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -85,13 +85,15 @@ namespace Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Statuses.B
             return new global::Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Statuses.Batch.UnsubscribeAll.Read.ReadRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Checks whether a set of contacts have opted out of all communications.
+        /// Retrieve the unsubscribe-all status for a batch of subscribers across specified channels. This endpoint is useful for checking the unsubscribe status of multiple subscribers in bulk, particularly for email channels.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ReadRequestBuilderPostQueryParameters 
         {
+            /// <summary>The ID of the business unit. This is an optional parameter.</summary>
             [QueryParameter("businessUnitId")]
             public long? BusinessUnitId { get; set; }
+            /// <summary>The communication channel to check the unsubscribe status for. This parameter is required and currently only supports &apos;EMAIL&apos;.</summary>
             [QueryParameter("channel")]
             public global::Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Statuses.Batch.UnsubscribeAll.Read.PostChannelQueryParameterType? Channel { get; set; }
         }

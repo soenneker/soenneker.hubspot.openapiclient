@@ -3,13 +3,13 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>Specifies that the type of the field is &apos;ENUMERATION&apos;.</summary>
+    /// <summary>Specifies the type of time zone strategy, which defaults to STATIC_TIME_ZONE.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum ApiCustomCodeAction_outputFields_type
+    public enum ApiStaticTimeZoneStrategy_type
     {
-        [EnumMember(Value = "ENUMERATION")]
+        [EnumMember(Value = "STATIC_TIME_ZONE")]
         #pragma warning disable CS1591
-        ENUMERATION,
+        STATIC_TIME_ZONE,
         #pragma warning restore CS1591
     }
 }

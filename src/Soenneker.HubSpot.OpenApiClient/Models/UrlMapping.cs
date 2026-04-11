@@ -62,6 +62,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Label { get; set; }
 #endif
+        /// <summary>The lastUsedAt property</summary>
+        public long? LastUsedAt { get; set; }
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -139,6 +141,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "isRegex", n => { IsRegex = n.GetBoolValue(); } },
                 { "isTrailingSlashOptional", n => { IsTrailingSlashOptional = n.GetBoolValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
+                { "lastUsedAt", n => { LastUsedAt = n.GetLongValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "note", n => { Note = n.GetStringValue(); } },
                 { "portalId", n => { PortalId = n.GetIntValue(); } },
@@ -174,6 +177,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteBoolValue("isRegex", IsRegex);
             writer.WriteBoolValue("isTrailingSlashOptional", IsTrailingSlashOptional);
             writer.WriteStringValue("label", Label);
+            writer.WriteLongValue("lastUsedAt", LastUsedAt);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("note", Note);
             writer.WriteIntValue("portalId", PortalId);
