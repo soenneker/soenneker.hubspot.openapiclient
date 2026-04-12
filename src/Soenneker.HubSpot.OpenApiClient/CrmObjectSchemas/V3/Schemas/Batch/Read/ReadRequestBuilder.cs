@@ -36,22 +36,22 @@ namespace Soenneker.HubSpot.OpenApiClient.CrmObjectSchemas.V3.Schemas.Batch.Read
         /// <summary>
         /// Retrieve details of multiple custom object schemas by providing a batch request with specified inputs. This operation allows you to fetch schema information, including properties and associations, for multiple custom objects in a single API call.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Crm_object_schemas_CollectionResponseObjectSchemaNoPaging"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectSchemasCollectionResponseObjectSchemaNoPaging"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_object_schemas_CollectionResponseObjectSchemaNoPaging?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.ObjectSchemaBatchReadRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectSchemasCollectionResponseObjectSchemaNoPaging?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.ObjectSchemaBatchReadRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_object_schemas_CollectionResponseObjectSchemaNoPaging> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.ObjectSchemaBatchReadRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectSchemasCollectionResponseObjectSchemaNoPaging> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.ObjectSchemaBatchReadRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_object_schemas_CollectionResponseObjectSchemaNoPaging>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Crm_object_schemas_CollectionResponseObjectSchemaNoPaging.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectSchemasCollectionResponseObjectSchemaNoPaging>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectSchemasCollectionResponseObjectSchemaNoPaging.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve details of multiple custom object schemas by providing a batch request with specified inputs. This operation allows you to fetch schema information, including properties and associations, for multiple custom objects in a single API call.

@@ -19,10 +19,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The associations property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.Events_AssociationDefinition>? Associations { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.EventsAssociationDefinition>? Associations { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.Events_AssociationDefinition> Associations { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.EventsAssociationDefinition> Associations { get; set; }
 #endif
         /// <summary>The comboEventRules property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -111,10 +111,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The properties property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.Events_Property>? Properties { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.EventsProperty>? Properties { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.Events_Property> Properties { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.EventsProperty> Properties { get; set; }
 #endif
         /// <summary>The trackingType property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventTypeDefinition_trackingType? TrackingType { get; set; }
@@ -148,7 +148,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "archived", n => { Archived = n.GetBoolValue(); } },
-                { "associations", n => { Associations = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.Events_AssociationDefinition>(global::Soenneker.HubSpot.OpenApiClient.Models.Events_AssociationDefinition.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "associations", n => { Associations = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.EventsAssociationDefinition>(global::Soenneker.HubSpot.OpenApiClient.Models.EventsAssociationDefinition.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "comboEventRules", n => { ComboEventRules = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRuleBranch>(global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRuleBranch.CreateFromDiscriminatorValue); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "createdUserId", n => { CreatedUserId = n.GetIntValue(); } },
@@ -161,7 +161,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "objectTypeId", n => { ObjectTypeId = n.GetStringValue(); } },
                 { "primaryObject", n => { PrimaryObject = n.GetStringValue(); } },
                 { "primaryObjectId", n => { PrimaryObjectId = n.GetStringValue(); } },
-                { "properties", n => { Properties = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.Events_Property>(global::Soenneker.HubSpot.OpenApiClient.Models.Events_Property.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "properties", n => { Properties = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.EventsProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.EventsProperty.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "trackingType", n => { TrackingType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventTypeDefinition_trackingType>(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
                 { "updatedUserId", n => { UpdatedUserId = n.GetIntValue(); } },
@@ -175,7 +175,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("archived", Archived);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.Events_AssociationDefinition>("associations", Associations);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.EventsAssociationDefinition>("associations", Associations);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRuleBranch>("comboEventRules", ComboEventRules);
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
             writer.WriteIntValue("createdUserId", CreatedUserId);
@@ -188,7 +188,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("objectTypeId", ObjectTypeId);
             writer.WriteStringValue("primaryObject", PrimaryObject);
             writer.WriteStringValue("primaryObjectId", PrimaryObjectId);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.Events_Property>("properties", Properties);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.EventsProperty>("properties", Properties);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventTypeDefinition_trackingType>("trackingType", TrackingType);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             writer.WriteIntValue("updatedUserId", UpdatedUserId);

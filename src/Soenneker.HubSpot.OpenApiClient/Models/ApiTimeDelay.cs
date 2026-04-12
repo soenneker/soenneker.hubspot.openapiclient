@@ -37,10 +37,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Specifies the strategy for determining the time zone for the delay.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticTimeZoneStrategy? TimeZoneStrategy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeDelayTimeZoneStrategy? TimeZoneStrategy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticTimeZoneStrategy TimeZoneStrategy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeDelayTimeZoneStrategy TimeZoneStrategy { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeDelay"/> and sets the default values.
@@ -71,7 +71,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "delta", n => { Delta = n.GetIntValue(); } },
                 { "timeOfDay", n => { TimeOfDay = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeOfDay>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeOfDay.CreateFromDiscriminatorValue); } },
                 { "timeUnit", n => { TimeUnit = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeDelay_timeUnit>(); } },
-                { "timeZoneStrategy", n => { TimeZoneStrategy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticTimeZoneStrategy>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticTimeZoneStrategy.CreateFromDiscriminatorValue); } },
+                { "timeZoneStrategy", n => { TimeZoneStrategy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeDelayTimeZoneStrategy>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeDelayTimeZoneStrategy.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -85,7 +85,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteIntValue("delta", Delta);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeOfDay>("timeOfDay", TimeOfDay);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeDelay_timeUnit>("timeUnit", TimeUnit);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticTimeZoneStrategy>("timeZoneStrategy", TimeZoneStrategy);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeDelayTimeZoneStrategy>("timeZoneStrategy", TimeZoneStrategy);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

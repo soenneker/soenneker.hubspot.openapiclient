@@ -43,10 +43,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Options to choose for select and multi-select columns</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.Cms_Option>? Options { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CmsOption>? Options { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.Cms_Option> Options { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CmsOption> Options { get; set; }
 #endif
         /// <summary>Type of the column</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.ColumnRequest_type? Type { get; set; }
@@ -82,7 +82,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "maxNumberOfCharacters", n => { MaxNumberOfCharacters = n.GetIntValue(); } },
                 { "maxNumberOfOptions", n => { MaxNumberOfOptions = n.GetIntValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.Cms_Option>(global::Soenneker.HubSpot.OpenApiClient.Models.Cms_Option.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CmsOption>(global::Soenneker.HubSpot.OpenApiClient.Models.CmsOption.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ColumnRequest_type>(); } },
             };
         }
@@ -100,7 +100,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteIntValue("maxNumberOfCharacters", MaxNumberOfCharacters);
             writer.WriteIntValue("maxNumberOfOptions", MaxNumberOfOptions);
             writer.WriteStringValue("name", Name);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.Cms_Option>("options", Options);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CmsOption>("options", Options);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ColumnRequest_type>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

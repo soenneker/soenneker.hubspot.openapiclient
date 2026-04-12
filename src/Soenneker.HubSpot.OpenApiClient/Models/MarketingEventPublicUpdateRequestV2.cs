@@ -17,10 +17,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The customProperties property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_PropertyValue>? CustomProperties { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPropertyValue>? CustomProperties { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_PropertyValue> CustomProperties { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPropertyValue> CustomProperties { get; set; }
 #endif
         /// <summary>The end date and time of the marketing event</summary>
         public DateTimeOffset? EndDateTime { get; set; }
@@ -93,7 +93,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "customProperties", n => { CustomProperties = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_PropertyValue>(global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_PropertyValue.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "customProperties", n => { CustomProperties = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPropertyValue>(global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPropertyValue.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "endDateTime", n => { EndDateTime = n.GetDateTimeOffsetValue(); } },
                 { "eventCancelled", n => { EventCancelled = n.GetBoolValue(); } },
                 { "eventDescription", n => { EventDescription = n.GetStringValue(); } },
@@ -111,7 +111,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_PropertyValue>("customProperties", CustomProperties);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPropertyValue>("customProperties", CustomProperties);
             writer.WriteDateTimeOffsetValue("endDateTime", EndDateTime);
             writer.WriteBoolValue("eventCancelled", EventCancelled);
             writer.WriteStringValue("eventDescription", EventDescription);

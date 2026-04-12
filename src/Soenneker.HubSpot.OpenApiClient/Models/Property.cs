@@ -130,10 +130,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>A list of valid options for the property. This field is required for enumerated properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.Media_bridge_Option>? Options { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.MediaBridgeOption>? Options { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.Media_bridge_Option> Options { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.MediaBridgeOption> Options { get; set; }
 #endif
         /// <summary>Whether options can be modified after creation.</summary>
         public bool? OptionsAreMutable { get; set; }
@@ -227,7 +227,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "numberDisplayHint", n => { NumberDisplayHint = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.Property_numberDisplayHint>(); } },
                 { "optionSortStrategy", n => { OptionSortStrategy = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.Property_optionSortStrategy>(); } },
-                { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.Media_bridge_Option>(global::Soenneker.HubSpot.OpenApiClient.Models.Media_bridge_Option.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.MediaBridgeOption>(global::Soenneker.HubSpot.OpenApiClient.Models.MediaBridgeOption.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "optionsAreMutable", n => { OptionsAreMutable = n.GetBoolValue(); } },
                 { "owningAppId", n => { OwningAppId = n.GetLongValue(); } },
                 { "portalId", n => { PortalId = n.GetLongValue(); } },
@@ -282,7 +282,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteBoolValue("mutableDefinitionNotDeletable", MutableDefinitionNotDeletable);
             writer.WriteStringValue("name", Name);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.Property_numberDisplayHint>("numberDisplayHint", NumberDisplayHint);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.Media_bridge_Option>("options", Options);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.MediaBridgeOption>("options", Options);
             writer.WriteBoolValue("optionsAreMutable", OptionsAreMutable);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.Property_optionSortStrategy>("optionSortStrategy", OptionSortStrategy);
             writer.WriteLongValue("owningAppId", OwningAppId);

@@ -17,10 +17,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Specifies the reference point for the index, which can be one of several predefined time references such as NOW, TODAY, or specific fiscal periods.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicIndexedTimePoint.PublicIndexedTimePoint_indexReference? IndexReference { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicIndexedTimePointIndexReference? IndexReference { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicIndexedTimePoint.PublicIndexedTimePoint_indexReference IndexReference { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicIndexedTimePointIndexReference IndexReference { get; set; }
 #endif
         /// <summary>The offset property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -74,7 +74,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "indexReference", n => { IndexReference = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicIndexedTimePoint.PublicIndexedTimePoint_indexReference>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicIndexedTimePoint.PublicIndexedTimePoint_indexReference.CreateFromDiscriminatorValue); } },
+                { "indexReference", n => { IndexReference = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicIndexedTimePointIndexReference>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicIndexedTimePointIndexReference.CreateFromDiscriminatorValue); } },
                 { "offset", n => { Offset = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicIndexOffset>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicIndexOffset.CreateFromDiscriminatorValue); } },
                 { "timeType", n => { TimeType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicIndexedTimePoint_timeType>(); } },
                 { "timezoneSource", n => { TimezoneSource = n.GetStringValue(); } },
@@ -88,207 +88,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicIndexedTimePoint.PublicIndexedTimePoint_indexReference>("indexReference", IndexReference);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicIndexedTimePointIndexReference>("indexReference", IndexReference);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicIndexOffset>("offset", Offset);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicIndexedTimePoint_timeType>("timeType", TimeType);
             writer.WriteStringValue("timezoneSource", TimezoneSource);
             writer.WriteStringValue("zoneId", ZoneId);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicFiscalQuarterReference"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicFiscalYearReference"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicMonthReference"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicNowReference"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicQuarterReference"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicTodayReference"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicWeekReference"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicYearReference"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class PublicIndexedTimePoint_indexReference : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicFiscalQuarterReference"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicFiscalQuarterReference? PublicFiscalQuarterReference { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicFiscalQuarterReference PublicFiscalQuarterReference { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicFiscalYearReference"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicFiscalYearReference? PublicFiscalYearReference { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicFiscalYearReference PublicFiscalYearReference { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicMonthReference"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicMonthReference? PublicMonthReference { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicMonthReference PublicMonthReference { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicNowReference"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicNowReference? PublicNowReference { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicNowReference PublicNowReference { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicQuarterReference"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicQuarterReference? PublicQuarterReference { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicQuarterReference PublicQuarterReference { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicTodayReference"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicTodayReference? PublicTodayReference { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicTodayReference PublicTodayReference { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicWeekReference"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWeekReference? PublicWeekReference { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWeekReference PublicWeekReference { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicYearReference"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicYearReference? PublicYearReference { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicYearReference PublicYearReference { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicIndexedTimePoint.PublicIndexedTimePoint_indexReference"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicIndexedTimePoint.PublicIndexedTimePoint_indexReference CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicIndexedTimePoint.PublicIndexedTimePoint_indexReference();
-                if("PublicFiscalQuarterReference".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicFiscalQuarterReference = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicFiscalQuarterReference();
-                }
-                else if("PublicFiscalYearReference".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicFiscalYearReference = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicFiscalYearReference();
-                }
-                else if("PublicMonthReference".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicMonthReference = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicMonthReference();
-                }
-                else if("PublicNowReference".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicNowReference = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicNowReference();
-                }
-                else if("PublicQuarterReference".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicQuarterReference = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicQuarterReference();
-                }
-                else if("PublicTodayReference".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicTodayReference = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicTodayReference();
-                }
-                else if("PublicWeekReference".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicWeekReference = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicWeekReference();
-                }
-                else if("PublicYearReference".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicYearReference = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicYearReference();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(PublicFiscalQuarterReference != null)
-                {
-                    return PublicFiscalQuarterReference.GetFieldDeserializers();
-                }
-                else if(PublicFiscalYearReference != null)
-                {
-                    return PublicFiscalYearReference.GetFieldDeserializers();
-                }
-                else if(PublicMonthReference != null)
-                {
-                    return PublicMonthReference.GetFieldDeserializers();
-                }
-                else if(PublicNowReference != null)
-                {
-                    return PublicNowReference.GetFieldDeserializers();
-                }
-                else if(PublicQuarterReference != null)
-                {
-                    return PublicQuarterReference.GetFieldDeserializers();
-                }
-                else if(PublicTodayReference != null)
-                {
-                    return PublicTodayReference.GetFieldDeserializers();
-                }
-                else if(PublicWeekReference != null)
-                {
-                    return PublicWeekReference.GetFieldDeserializers();
-                }
-                else if(PublicYearReference != null)
-                {
-                    return PublicYearReference.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(PublicFiscalQuarterReference != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicFiscalQuarterReference>(null, PublicFiscalQuarterReference);
-                }
-                else if(PublicFiscalYearReference != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicFiscalYearReference>(null, PublicFiscalYearReference);
-                }
-                else if(PublicMonthReference != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicMonthReference>(null, PublicMonthReference);
-                }
-                else if(PublicNowReference != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicNowReference>(null, PublicNowReference);
-                }
-                else if(PublicQuarterReference != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicQuarterReference>(null, PublicQuarterReference);
-                }
-                else if(PublicTodayReference != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTodayReference>(null, PublicTodayReference);
-                }
-                else if(PublicWeekReference != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWeekReference>(null, PublicWeekReference);
-                }
-                else if(PublicYearReference != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicYearReference>(null, PublicYearReference);
-                }
-            }
         }
     }
 }

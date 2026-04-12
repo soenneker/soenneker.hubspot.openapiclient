@@ -93,10 +93,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Options to choose for select and multi-select columns</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.Cms_Option>? Options { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CmsOption>? Options { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.Cms_Option> Options { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CmsOption> Options { get; set; }
 #endif
         /// <summary>Type of the column</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.Column_type? Type { get; set; }
@@ -153,7 +153,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "optionCount", n => { OptionCount = n.GetIntValue(); } },
-                { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.Cms_Option>(global::Soenneker.HubSpot.OpenApiClient.Models.Cms_Option.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CmsOption>(global::Soenneker.HubSpot.OpenApiClient.Models.CmsOption.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.Column_type>(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
                 { "updatedBy", n => { UpdatedBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.SimpleUser>(global::Soenneker.HubSpot.OpenApiClient.Models.SimpleUser.CreateFromDiscriminatorValue); } },
@@ -182,7 +182,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("label", Label);
             writer.WriteStringValue("name", Name);
             writer.WriteIntValue("optionCount", OptionCount);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.Cms_Option>("options", Options);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CmsOption>("options", Options);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.Column_type>("type", Type);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.SimpleUser>("updatedBy", UpdatedBy);

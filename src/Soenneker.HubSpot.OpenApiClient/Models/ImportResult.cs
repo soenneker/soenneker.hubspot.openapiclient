@@ -19,10 +19,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>List of errors during import</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.C____cms_Error>? Errors { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CmsError_4>? Errors { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.C____cms_Error> Errors { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CmsError_4> Errors { get; set; }
 #endif
         /// <summary>Specifies whether row limit exceeded during import</summary>
         public bool? RowLimitExceeded { get; set; }
@@ -54,7 +54,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "duplicateRows", n => { DuplicateRows = n.GetIntValue(); } },
-                { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.C____cms_Error>(global::Soenneker.HubSpot.OpenApiClient.Models.C____cms_Error.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CmsError_4>(global::Soenneker.HubSpot.OpenApiClient.Models.CmsError_4.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "rowLimitExceeded", n => { RowLimitExceeded = n.GetBoolValue(); } },
                 { "rowsImported", n => { RowsImported = n.GetIntValue(); } },
             };
@@ -67,7 +67,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("duplicateRows", DuplicateRows);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.C____cms_Error>("errors", Errors);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CmsError_4>("errors", Errors);
             writer.WriteBoolValue("rowLimitExceeded", RowLimitExceeded);
             writer.WriteIntValue("rowsImported", RowsImported);
             writer.WriteAdditionalData(AdditionalData);

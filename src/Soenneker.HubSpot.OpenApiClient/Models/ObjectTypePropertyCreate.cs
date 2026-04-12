@@ -76,10 +76,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>A list of available options for the property. This field is only required for enumerated properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_object_schemas_OptionInput>? Options { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectSchemasOptionInput>? Options { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_object_schemas_OptionInput> Options { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectSchemasOptionInput> Options { get; set; }
 #endif
         /// <summary>Controls how the property options will be sorted in the HubSpot UI.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.ObjectTypePropertyCreate_optionSortStrategy? OptionSortStrategy { get; set; }
@@ -136,7 +136,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "numberDisplayHint", n => { NumberDisplayHint = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ObjectTypePropertyCreate_numberDisplayHint>(); } },
                 { "optionSortStrategy", n => { OptionSortStrategy = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ObjectTypePropertyCreate_optionSortStrategy>(); } },
-                { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_object_schemas_OptionInput>(global::Soenneker.HubSpot.OpenApiClient.Models.Crm_object_schemas_OptionInput.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectSchemasOptionInput>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectSchemasOptionInput.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "referencedObjectType", n => { ReferencedObjectType = n.GetStringValue(); } },
                 { "searchableInGlobalSearch", n => { SearchableInGlobalSearch = n.GetBoolValue(); } },
                 { "showCurrencySymbol", n => { ShowCurrencySymbol = n.GetBoolValue(); } },
@@ -162,7 +162,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("label", Label);
             writer.WriteStringValue("name", Name);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ObjectTypePropertyCreate_numberDisplayHint>("numberDisplayHint", NumberDisplayHint);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_object_schemas_OptionInput>("options", Options);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectSchemasOptionInput>("options", Options);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ObjectTypePropertyCreate_optionSortStrategy>("optionSortStrategy", OptionSortStrategy);
             writer.WriteStringValue("referencedObjectType", ReferencedObjectType);
             writer.WriteBoolValue("searchableInGlobalSearch", SearchableInGlobalSearch);

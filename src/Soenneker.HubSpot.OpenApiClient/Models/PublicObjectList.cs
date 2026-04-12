@@ -30,10 +30,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Defines the filter criteria for the list, allowing for complex logical operations and nested filter branches to determine list membership.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectList.PublicObjectList_filterBranch? FilterBranch { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectListFilterBranch? FilterBranch { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectList.PublicObjectList_filterBranch FilterBranch { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectListFilterBranch FilterBranch { get; set; }
 #endif
         /// <summary>The time when the filters for this list were last updated.</summary>
         public DateTimeOffset? FiltersUpdatedAt { get; set; }
@@ -135,7 +135,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "createdById", n => { CreatedById = n.GetStringValue(); } },
                 { "deletedAt", n => { DeletedAt = n.GetDateTimeOffsetValue(); } },
-                { "filterBranch", n => { FilterBranch = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectList.PublicObjectList_filterBranch>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectList.PublicObjectList_filterBranch.CreateFromDiscriminatorValue); } },
+                { "filterBranch", n => { FilterBranch = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectListFilterBranch>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectListFilterBranch.CreateFromDiscriminatorValue); } },
                 { "filtersUpdatedAt", n => { FiltersUpdatedAt = n.GetDateTimeOffsetValue(); } },
                 { "listId", n => { ListId = n.GetStringValue(); } },
                 { "listPermissions", n => { ListPermissions = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicListPermissions>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicListPermissions.CreateFromDiscriminatorValue); } },
@@ -160,7 +160,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
             writer.WriteStringValue("createdById", CreatedById);
             writer.WriteDateTimeOffsetValue("deletedAt", DeletedAt);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectList.PublicObjectList_filterBranch>("filterBranch", FilterBranch);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectListFilterBranch>("filterBranch", FilterBranch);
             writer.WriteDateTimeOffsetValue("filtersUpdatedAt", FiltersUpdatedAt);
             writer.WriteStringValue("listId", ListId);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicListPermissions>("listPermissions", ListPermissions);
@@ -174,201 +174,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             writer.WriteStringValue("updatedById", UpdatedById);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicAndFilterBranch"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicAssociationFilterBranch"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicNotAllFilterBranch"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicNotAnyFilterBranch"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicOrFilterBranch"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicPropertyAssociationFilterBranch"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicRestrictedFilterBranch"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicUnifiedEventsFilterBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class PublicObjectList_filterBranch : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicAndFilterBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicAndFilterBranch? CrmPublicAndFilterBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicAndFilterBranch CrmPublicAndFilterBranch { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicAssociationFilterBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicAssociationFilterBranch? CrmPublicAssociationFilterBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicAssociationFilterBranch CrmPublicAssociationFilterBranch { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicNotAllFilterBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicNotAllFilterBranch? CrmPublicNotAllFilterBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicNotAllFilterBranch CrmPublicNotAllFilterBranch { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicNotAnyFilterBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicNotAnyFilterBranch? CrmPublicNotAnyFilterBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicNotAnyFilterBranch CrmPublicNotAnyFilterBranch { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicOrFilterBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicOrFilterBranch? CrmPublicOrFilterBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicOrFilterBranch CrmPublicOrFilterBranch { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicPropertyAssociationFilterBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicPropertyAssociationFilterBranch? CrmPublicPropertyAssociationFilterBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicPropertyAssociationFilterBranch CrmPublicPropertyAssociationFilterBranch { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicRestrictedFilterBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicRestrictedFilterBranch? CrmPublicRestrictedFilterBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicRestrictedFilterBranch CrmPublicRestrictedFilterBranch { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicUnifiedEventsFilterBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicUnifiedEventsFilterBranch? CrmPublicUnifiedEventsFilterBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicUnifiedEventsFilterBranch CrmPublicUnifiedEventsFilterBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectList.PublicObjectList_filterBranch"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectList.PublicObjectList_filterBranch CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectList.PublicObjectList_filterBranch();
-                if("crm_PublicAndFilterBranch".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.CrmPublicAndFilterBranch = new global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicAndFilterBranch();
-                }
-                else if("crm_PublicAssociationFilterBranch".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.CrmPublicAssociationFilterBranch = new global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicAssociationFilterBranch();
-                }
-                else if("crm_PublicNotAllFilterBranch".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.CrmPublicNotAllFilterBranch = new global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicNotAllFilterBranch();
-                }
-                else if("crm_PublicNotAnyFilterBranch".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.CrmPublicNotAnyFilterBranch = new global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicNotAnyFilterBranch();
-                }
-                else if("crm_PublicOrFilterBranch".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.CrmPublicOrFilterBranch = new global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicOrFilterBranch();
-                }
-                else if("crm_PublicPropertyAssociationFilterBranch".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.CrmPublicPropertyAssociationFilterBranch = new global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicPropertyAssociationFilterBranch();
-                }
-                else if("crm_PublicRestrictedFilterBranch".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.CrmPublicRestrictedFilterBranch = new global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicRestrictedFilterBranch();
-                }
-                else if("crm_PublicUnifiedEventsFilterBranch".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.CrmPublicUnifiedEventsFilterBranch = new global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicUnifiedEventsFilterBranch();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(CrmPublicAndFilterBranch != null)
-                {
-                    return CrmPublicAndFilterBranch.GetFieldDeserializers();
-                }
-                else if(CrmPublicAssociationFilterBranch != null)
-                {
-                    return CrmPublicAssociationFilterBranch.GetFieldDeserializers();
-                }
-                else if(CrmPublicNotAllFilterBranch != null)
-                {
-                    return CrmPublicNotAllFilterBranch.GetFieldDeserializers();
-                }
-                else if(CrmPublicNotAnyFilterBranch != null)
-                {
-                    return CrmPublicNotAnyFilterBranch.GetFieldDeserializers();
-                }
-                else if(CrmPublicOrFilterBranch != null)
-                {
-                    return CrmPublicOrFilterBranch.GetFieldDeserializers();
-                }
-                else if(CrmPublicPropertyAssociationFilterBranch != null)
-                {
-                    return CrmPublicPropertyAssociationFilterBranch.GetFieldDeserializers();
-                }
-                else if(CrmPublicRestrictedFilterBranch != null)
-                {
-                    return CrmPublicRestrictedFilterBranch.GetFieldDeserializers();
-                }
-                else if(CrmPublicUnifiedEventsFilterBranch != null)
-                {
-                    return CrmPublicUnifiedEventsFilterBranch.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(CrmPublicAndFilterBranch != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicAndFilterBranch>(null, CrmPublicAndFilterBranch);
-                }
-                else if(CrmPublicAssociationFilterBranch != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicAssociationFilterBranch>(null, CrmPublicAssociationFilterBranch);
-                }
-                else if(CrmPublicNotAllFilterBranch != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicNotAllFilterBranch>(null, CrmPublicNotAllFilterBranch);
-                }
-                else if(CrmPublicNotAnyFilterBranch != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicNotAnyFilterBranch>(null, CrmPublicNotAnyFilterBranch);
-                }
-                else if(CrmPublicOrFilterBranch != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicOrFilterBranch>(null, CrmPublicOrFilterBranch);
-                }
-                else if(CrmPublicPropertyAssociationFilterBranch != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicPropertyAssociationFilterBranch>(null, CrmPublicPropertyAssociationFilterBranch);
-                }
-                else if(CrmPublicRestrictedFilterBranch != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicRestrictedFilterBranch>(null, CrmPublicRestrictedFilterBranch);
-                }
-                else if(CrmPublicUnifiedEventsFilterBranch != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicUnifiedEventsFilterBranch>(null, CrmPublicUnifiedEventsFilterBranch);
-                }
-            }
         }
     }
 }

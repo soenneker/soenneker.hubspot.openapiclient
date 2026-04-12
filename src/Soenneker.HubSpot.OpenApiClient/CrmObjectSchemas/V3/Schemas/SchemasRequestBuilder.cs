@@ -55,40 +55,40 @@ namespace Soenneker.HubSpot.OpenApiClient.CrmObjectSchemas.V3.Schemas
         /// <summary>
         /// Retrieve all custom object schemas, with options to include property definitions, association definitions, and audit metadata.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Crm_object_schemas_CollectionResponseObjectSchemaNoPaging"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectSchemasCollectionResponseObjectSchemaNoPaging"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_object_schemas_CollectionResponseObjectSchemaNoPaging?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.CrmObjectSchemas.V3.Schemas.SchemasRequestBuilder.SchemasRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectSchemasCollectionResponseObjectSchemaNoPaging?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.CrmObjectSchemas.V3.Schemas.SchemasRequestBuilder.SchemasRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_object_schemas_CollectionResponseObjectSchemaNoPaging> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.CrmObjectSchemas.V3.Schemas.SchemasRequestBuilder.SchemasRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectSchemasCollectionResponseObjectSchemaNoPaging> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.CrmObjectSchemas.V3.Schemas.SchemasRequestBuilder.SchemasRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_object_schemas_CollectionResponseObjectSchemaNoPaging>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Crm_object_schemas_CollectionResponseObjectSchemaNoPaging.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectSchemasCollectionResponseObjectSchemaNoPaging>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectSchemasCollectionResponseObjectSchemaNoPaging.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Create a new custom object schema by defining its properties and associations.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Crm_object_schemas_ObjectSchema"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectSchemasObjectSchema"/></returns>
         /// <param name="body">Defines a new object type, its properties, and associations.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_object_schemas_ObjectSchema?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.ObjectSchemaEgg body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectSchemasObjectSchema?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.ObjectSchemaEgg body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_object_schemas_ObjectSchema> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.ObjectSchemaEgg body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectSchemasObjectSchema> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.ObjectSchemaEgg body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_object_schemas_ObjectSchema>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Crm_object_schemas_ObjectSchema.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectSchemasObjectSchema>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectSchemasObjectSchema.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve all custom object schemas, with options to include property definitions, association definitions, and audit metadata.

@@ -79,10 +79,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Defines the structure and constraints of the field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.FieldTypeDefinition.FieldTypeDefinition_schema? Schema { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.FieldTypeDefinitionSchema? Schema { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.FieldTypeDefinition.FieldTypeDefinition_schema Schema { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.FieldTypeDefinitionSchema Schema { get; set; }
 #endif
         /// <summary>Specifies the data type of the field, with accepted values like bool, date, datetime, enumeration, json, number, object_coordinates, phone_number, string.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.FieldTypeDefinition_type? Type { get; set; }
@@ -123,7 +123,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.Option>(global::Soenneker.HubSpot.OpenApiClient.Models.Option.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "optionsUrl", n => { OptionsUrl = n.GetStringValue(); } },
                 { "referencedObjectType", n => { ReferencedObjectType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FieldTypeDefinition_referencedObjectType>(); } },
-                { "schema", n => { Schema = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.FieldTypeDefinition.FieldTypeDefinition_schema>(global::Soenneker.HubSpot.OpenApiClient.Models.FieldTypeDefinition.FieldTypeDefinition_schema.CreateFromDiscriminatorValue); } },
+                { "schema", n => { Schema = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.FieldTypeDefinitionSchema>(global::Soenneker.HubSpot.OpenApiClient.Models.FieldTypeDefinitionSchema.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FieldTypeDefinition_type>(); } },
                 { "useChirp", n => { UseChirp = n.GetBoolValue(); } },
             };
@@ -145,185 +145,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.Option>("options", Options);
             writer.WriteStringValue("optionsUrl", OptionsUrl);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FieldTypeDefinition_referencedObjectType>("referencedObjectType", ReferencedObjectType);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.FieldTypeDefinition.FieldTypeDefinition_schema>("schema", Schema);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.FieldTypeDefinitionSchema>("schema", Schema);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FieldTypeDefinition_type>("type", Type);
             writer.WriteBoolValue("useChirp", UseChirp);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ArrayFieldSchema"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.BooleanFieldSchema"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.DoubleFieldSchema"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IntegerFieldSchema"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.LongFieldSchema"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ObjectFieldSchema"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.StringFieldSchema"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class FieldTypeDefinition_schema : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ArrayFieldSchema"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.ArrayFieldSchema? ArrayFieldSchema { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.ArrayFieldSchema ArrayFieldSchema { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.BooleanFieldSchema"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.BooleanFieldSchema? BooleanFieldSchema { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.BooleanFieldSchema BooleanFieldSchema { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.DoubleFieldSchema"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.DoubleFieldSchema? DoubleFieldSchema { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.DoubleFieldSchema DoubleFieldSchema { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IntegerFieldSchema"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.IntegerFieldSchema? IntegerFieldSchema { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.IntegerFieldSchema IntegerFieldSchema { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.LongFieldSchema"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.LongFieldSchema? LongFieldSchema { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.LongFieldSchema LongFieldSchema { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ObjectFieldSchema"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.ObjectFieldSchema? ObjectFieldSchema { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.ObjectFieldSchema ObjectFieldSchema { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.StringFieldSchema"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.StringFieldSchema? StringFieldSchema { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.StringFieldSchema StringFieldSchema { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.FieldTypeDefinition.FieldTypeDefinition_schema"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.HubSpot.OpenApiClient.Models.FieldTypeDefinition.FieldTypeDefinition_schema CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.HubSpot.OpenApiClient.Models.FieldTypeDefinition.FieldTypeDefinition_schema();
-                if("ArrayFieldSchema".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ArrayFieldSchema = new global::Soenneker.HubSpot.OpenApiClient.Models.ArrayFieldSchema();
-                }
-                else if("BooleanFieldSchema".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.BooleanFieldSchema = new global::Soenneker.HubSpot.OpenApiClient.Models.BooleanFieldSchema();
-                }
-                else if("DoubleFieldSchema".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.DoubleFieldSchema = new global::Soenneker.HubSpot.OpenApiClient.Models.DoubleFieldSchema();
-                }
-                else if("IntegerFieldSchema".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.IntegerFieldSchema = new global::Soenneker.HubSpot.OpenApiClient.Models.IntegerFieldSchema();
-                }
-                else if("LongFieldSchema".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.LongFieldSchema = new global::Soenneker.HubSpot.OpenApiClient.Models.LongFieldSchema();
-                }
-                else if("ObjectFieldSchema".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ObjectFieldSchema = new global::Soenneker.HubSpot.OpenApiClient.Models.ObjectFieldSchema();
-                }
-                else if("StringFieldSchema".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.StringFieldSchema = new global::Soenneker.HubSpot.OpenApiClient.Models.StringFieldSchema();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(ArrayFieldSchema != null)
-                {
-                    return ArrayFieldSchema.GetFieldDeserializers();
-                }
-                else if(BooleanFieldSchema != null)
-                {
-                    return BooleanFieldSchema.GetFieldDeserializers();
-                }
-                else if(DoubleFieldSchema != null)
-                {
-                    return DoubleFieldSchema.GetFieldDeserializers();
-                }
-                else if(IntegerFieldSchema != null)
-                {
-                    return IntegerFieldSchema.GetFieldDeserializers();
-                }
-                else if(LongFieldSchema != null)
-                {
-                    return LongFieldSchema.GetFieldDeserializers();
-                }
-                else if(ObjectFieldSchema != null)
-                {
-                    return ObjectFieldSchema.GetFieldDeserializers();
-                }
-                else if(StringFieldSchema != null)
-                {
-                    return StringFieldSchema.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(ArrayFieldSchema != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ArrayFieldSchema>(null, ArrayFieldSchema);
-                }
-                else if(BooleanFieldSchema != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.BooleanFieldSchema>(null, BooleanFieldSchema);
-                }
-                else if(DoubleFieldSchema != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.DoubleFieldSchema>(null, DoubleFieldSchema);
-                }
-                else if(IntegerFieldSchema != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.IntegerFieldSchema>(null, IntegerFieldSchema);
-                }
-                else if(LongFieldSchema != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LongFieldSchema>(null, LongFieldSchema);
-                }
-                else if(ObjectFieldSchema != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ObjectFieldSchema>(null, ObjectFieldSchema);
-                }
-                else if(StringFieldSchema != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.StringFieldSchema>(null, StringFieldSchema);
-                }
-            }
         }
     }
 }

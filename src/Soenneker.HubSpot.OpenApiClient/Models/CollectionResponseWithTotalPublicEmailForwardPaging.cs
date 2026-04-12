@@ -18,18 +18,18 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The paging property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.C__marketing_ForwardPaging? Paging { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingForwardPaging_2? Paging { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.C__marketing_ForwardPaging Paging { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingForwardPaging_2 Paging { get; set; }
 #endif
         /// <summary>Collection of emails.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_PublicEmail>? Results { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPublicEmail>? Results { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_PublicEmail> Results { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPublicEmail> Results { get; set; }
 #endif
         /// <summary>Total number of content emails.</summary>
         public int? Total { get; set; }
@@ -58,8 +58,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "paging", n => { Paging = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.C__marketing_ForwardPaging>(global::Soenneker.HubSpot.OpenApiClient.Models.C__marketing_ForwardPaging.CreateFromDiscriminatorValue); } },
-                { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_PublicEmail>(global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_PublicEmail.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "paging", n => { Paging = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingForwardPaging_2>(global::Soenneker.HubSpot.OpenApiClient.Models.MarketingForwardPaging_2.CreateFromDiscriminatorValue); } },
+                { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPublicEmail>(global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPublicEmail.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "total", n => { Total = n.GetIntValue(); } },
             };
         }
@@ -70,8 +70,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.C__marketing_ForwardPaging>("paging", Paging);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_PublicEmail>("results", Results);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingForwardPaging_2>("paging", Paging);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPublicEmail>("results", Results);
             writer.WriteIntValue("total", Total);
             writer.WriteAdditionalData(AdditionalData);
         }

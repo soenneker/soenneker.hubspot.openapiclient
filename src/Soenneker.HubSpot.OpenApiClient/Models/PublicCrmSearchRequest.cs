@@ -17,18 +17,18 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The filterGroups property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.C______________crm_FilterGroup>? FilterGroups { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup_14>? FilterGroups { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.C______________crm_FilterGroup> FilterGroups { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup_14> FilterGroups { get; set; }
 #endif
         /// <summary>The filters property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.C______________crm_Filter>? Filters { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilter_14>? Filters { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.C______________crm_Filter> Filters { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilter_14> Filters { get; set; }
 #endif
         /// <summary>The search query string, to filter CRM records.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -71,8 +71,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "filterGroups", n => { FilterGroups = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.C______________crm_FilterGroup>(global::Soenneker.HubSpot.OpenApiClient.Models.C______________crm_FilterGroup.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "filters", n => { Filters = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.C______________crm_Filter>(global::Soenneker.HubSpot.OpenApiClient.Models.C______________crm_Filter.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "filterGroups", n => { FilterGroups = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup_14>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup_14.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "filters", n => { Filters = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilter_14>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilter_14.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "query", n => { Query = n.GetStringValue(); } },
                 { "sorts", n => { Sorts = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
@@ -84,8 +84,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.C______________crm_FilterGroup>("filterGroups", FilterGroups);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.C______________crm_Filter>("filters", Filters);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup_14>("filterGroups", FilterGroups);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilter_14>("filters", Filters);
             writer.WriteStringValue("query", Query);
             writer.WriteCollectionOfPrimitiveValues<string>("sorts", Sorts);
             writer.WriteAdditionalData(AdditionalData);

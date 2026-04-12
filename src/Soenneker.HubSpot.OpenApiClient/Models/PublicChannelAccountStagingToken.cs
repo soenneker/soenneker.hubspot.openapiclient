@@ -35,10 +35,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The deliveryIdentifier property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.C_conversations_PublicDeliveryIdentifier? DeliveryIdentifier { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicDeliveryIdentifier_1? DeliveryIdentifier { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.C_conversations_PublicDeliveryIdentifier DeliveryIdentifier { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicDeliveryIdentifier_1 DeliveryIdentifier { get; set; }
 #endif
         /// <summary>The genericChannelId property</summary>
         public int? GenericChannelId { get; set; }
@@ -74,7 +74,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "accountName", n => { AccountName = n.GetStringValue(); } },
                 { "accountToken", n => { AccountToken = n.GetStringValue(); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
-                { "deliveryIdentifier", n => { DeliveryIdentifier = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.C_conversations_PublicDeliveryIdentifier>(global::Soenneker.HubSpot.OpenApiClient.Models.C_conversations_PublicDeliveryIdentifier.CreateFromDiscriminatorValue); } },
+                { "deliveryIdentifier", n => { DeliveryIdentifier = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicDeliveryIdentifier_1>(global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicDeliveryIdentifier_1.CreateFromDiscriminatorValue); } },
                 { "genericChannelId", n => { GenericChannelId = n.GetIntValue(); } },
                 { "inboxId", n => { InboxId = n.GetIntValue(); } },
                 { "userId", n => { UserId = n.GetIntValue(); } },
@@ -90,7 +90,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("accountName", AccountName);
             writer.WriteStringValue("accountToken", AccountToken);
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.C_conversations_PublicDeliveryIdentifier>("deliveryIdentifier", DeliveryIdentifier);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicDeliveryIdentifier_1>("deliveryIdentifier", DeliveryIdentifier);
             writer.WriteIntValue("genericChannelId", GenericChannelId);
             writer.WriteIntValue("inboxId", InboxId);
             writer.WriteIntValue("userId", UserId);

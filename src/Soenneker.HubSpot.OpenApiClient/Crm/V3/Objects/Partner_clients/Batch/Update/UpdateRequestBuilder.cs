@@ -36,22 +36,22 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Partner_clients.Batch.U
         /// <summary>
         /// This endpoint allows you to update several partner client records at once by providing a batch of CRM object records with their respective IDs and properties. It is useful for synchronizing data across systems or making bulk updates efficiently.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.C_________________________crm_BatchResponseSimplePublicObject"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponseSimplePublicObject_25"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.C_________________________crm_BatchResponseSimplePublicObject?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.C________________________crm_BatchInputSimplePublicObjectBatchInput body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponseSimplePublicObject_25?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchInputSimplePublicObjectBatchInput_24 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.C_________________________crm_BatchResponseSimplePublicObject> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.C________________________crm_BatchInputSimplePublicObjectBatchInput body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponseSimplePublicObject_25> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchInputSimplePublicObjectBatchInput_24 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.C_________________________crm_BatchResponseSimplePublicObject>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.C_________________________crm_BatchResponseSimplePublicObject.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponseSimplePublicObject_25>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponseSimplePublicObject_25.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// This endpoint allows you to update several partner client records at once by providing a batch of CRM object records with their respective IDs and properties. It is useful for synchronizing data across systems or making bulk updates efficiently.
@@ -61,11 +61,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Partner_clients.Batch.U
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.C________________________crm_BatchInputSimplePublicObjectBatchInput body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchInputSimplePublicObjectBatchInput_24 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.C________________________crm_BatchInputSimplePublicObjectBatchInput body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchInputSimplePublicObjectBatchInput_24 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

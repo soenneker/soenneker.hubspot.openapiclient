@@ -54,40 +54,40 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Subscriptions.Item
         /// <summary>
         /// Retrieve a specific subscription by its ID, including its properties and associations.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.C____crm_SimplePublicObjectWithAssociations"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectWithAssociations_4"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.C____crm_SimplePublicObjectWithAssociations?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Subscriptions.Item.WithSubscriptionItemRequestBuilder.WithSubscriptionItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectWithAssociations_4?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Subscriptions.Item.WithSubscriptionItemRequestBuilder.WithSubscriptionItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.C____crm_SimplePublicObjectWithAssociations> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Subscriptions.Item.WithSubscriptionItemRequestBuilder.WithSubscriptionItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectWithAssociations_4> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Subscriptions.Item.WithSubscriptionItemRequestBuilder.WithSubscriptionItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.C____crm_SimplePublicObjectWithAssociations>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.C____crm_SimplePublicObjectWithAssociations.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectWithAssociations_4>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectWithAssociations_4.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Update a specific subscription by its ID with new property values.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.C____crm_SimplePublicObject"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject_4"/></returns>
         /// <param name="body">Represents the input required to create or update a CRM object, containing an object with property names and their corresponding values.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.C____crm_SimplePublicObject?> PatchAsync(global::Soenneker.HubSpot.OpenApiClient.Models.C____crm_SimplePublicObjectInput body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Subscriptions.Item.WithSubscriptionItemRequestBuilder.WithSubscriptionItemRequestBuilderPatchQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject_4?> PatchAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectInput_4 body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Subscriptions.Item.WithSubscriptionItemRequestBuilder.WithSubscriptionItemRequestBuilderPatchQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.C____crm_SimplePublicObject> PatchAsync(global::Soenneker.HubSpot.OpenApiClient.Models.C____crm_SimplePublicObjectInput body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Subscriptions.Item.WithSubscriptionItemRequestBuilder.WithSubscriptionItemRequestBuilderPatchQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject_4> PatchAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectInput_4 body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Subscriptions.Item.WithSubscriptionItemRequestBuilder.WithSubscriptionItemRequestBuilderPatchQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPatchRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.C____crm_SimplePublicObject>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.C____crm_SimplePublicObject.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject_4>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject_4.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Delete a specific subscription by its ID.
@@ -134,11 +134,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Subscriptions.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPatchRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.C____crm_SimplePublicObjectInput body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Subscriptions.Item.WithSubscriptionItemRequestBuilder.WithSubscriptionItemRequestBuilderPatchQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectInput_4 body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Subscriptions.Item.WithSubscriptionItemRequestBuilder.WithSubscriptionItemRequestBuilderPatchQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPatchRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.C____crm_SimplePublicObjectInput body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Subscriptions.Item.WithSubscriptionItemRequestBuilder.WithSubscriptionItemRequestBuilderPatchQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectInput_4 body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects.Subscriptions.Item.WithSubscriptionItemRequestBuilder.WithSubscriptionItemRequestBuilderPatchQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

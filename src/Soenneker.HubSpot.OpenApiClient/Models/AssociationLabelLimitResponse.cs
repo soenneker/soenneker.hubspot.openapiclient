@@ -25,10 +25,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The fromObjectType property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.Crm_ObjectTypeDefinition? FromObjectType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectTypeDefinition? FromObjectType { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.Crm_ObjectTypeDefinition FromObjectType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectTypeDefinition FromObjectType { get; set; }
 #endif
         /// <summary>The maximum number of association labels allowed.</summary>
         public int? Limit { get; set; }
@@ -37,10 +37,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The toObjectType property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.Crm_ObjectTypeDefinition? ToObjectType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectTypeDefinition? ToObjectType { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.Crm_ObjectTypeDefinition ToObjectType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectTypeDefinition ToObjectType { get; set; }
 #endif
         /// <summary>The current number of association labels used.</summary>
         public int? Usage { get; set; }
@@ -70,10 +70,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "allLabels", n => { AllLabels = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "fromObjectType", n => { FromObjectType = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_ObjectTypeDefinition>(global::Soenneker.HubSpot.OpenApiClient.Models.Crm_ObjectTypeDefinition.CreateFromDiscriminatorValue); } },
+                { "fromObjectType", n => { FromObjectType = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectTypeDefinition>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectTypeDefinition.CreateFromDiscriminatorValue); } },
                 { "limit", n => { Limit = n.GetIntValue(); } },
                 { "percentage", n => { Percentage = n.GetDoubleValue(); } },
-                { "toObjectType", n => { ToObjectType = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_ObjectTypeDefinition>(global::Soenneker.HubSpot.OpenApiClient.Models.Crm_ObjectTypeDefinition.CreateFromDiscriminatorValue); } },
+                { "toObjectType", n => { ToObjectType = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectTypeDefinition>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectTypeDefinition.CreateFromDiscriminatorValue); } },
                 { "usage", n => { Usage = n.GetIntValue(); } },
             };
         }
@@ -85,10 +85,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("allLabels", AllLabels);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_ObjectTypeDefinition>("fromObjectType", FromObjectType);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectTypeDefinition>("fromObjectType", FromObjectType);
             writer.WriteIntValue("limit", Limit);
             writer.WriteDoubleValue("percentage", Percentage);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_ObjectTypeDefinition>("toObjectType", ToObjectType);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectTypeDefinition>("toObjectType", ToObjectType);
             writer.WriteIntValue("usage", Usage);
             writer.WriteAdditionalData(AdditionalData);
         }

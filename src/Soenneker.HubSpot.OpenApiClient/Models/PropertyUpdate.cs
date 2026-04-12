@@ -67,10 +67,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>A list of valid options for the property.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_OptionInput>? Options { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmOptionInput>? Options { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_OptionInput> Options { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmOptionInput> Options { get; set; }
 #endif
         /// <summary>The showCurrencySymbol property</summary>
         public bool? ShowCurrencySymbol { get; set; }
@@ -111,7 +111,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "hidden", n => { Hidden = n.GetBoolValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "numberDisplayHint", n => { NumberDisplayHint = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyUpdate_numberDisplayHint>(); } },
-                { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_OptionInput>(global::Soenneker.HubSpot.OpenApiClient.Models.Crm_OptionInput.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmOptionInput>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmOptionInput.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "showCurrencySymbol", n => { ShowCurrencySymbol = n.GetBoolValue(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyUpdate_type>(); } },
             };
@@ -133,7 +133,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteBoolValue("hidden", Hidden);
             writer.WriteStringValue("label", Label);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyUpdate_numberDisplayHint>("numberDisplayHint", NumberDisplayHint);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_OptionInput>("options", Options);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmOptionInput>("options", Options);
             writer.WriteBoolValue("showCurrencySymbol", ShowCurrencySymbol);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyUpdate_type>("type", Type);
             writer.WriteAdditionalData(AdditionalData);

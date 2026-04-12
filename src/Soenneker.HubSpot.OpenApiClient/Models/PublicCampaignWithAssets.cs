@@ -25,10 +25,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The businessUnits property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_PublicBusinessUnit>? BusinessUnits { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPublicBusinessUnit>? BusinessUnits { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_PublicBusinessUnit> BusinessUnits { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPublicBusinessUnit> BusinessUnits { get; set; }
 #endif
         /// <summary>The date and time when the campaign was created, formatted as a date-time string.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
@@ -76,7 +76,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "assets", n => { Assets = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignWithAssets_assets>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignWithAssets_assets.CreateFromDiscriminatorValue); } },
-                { "businessUnits", n => { BusinessUnits = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_PublicBusinessUnit>(global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_PublicBusinessUnit.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "businessUnits", n => { BusinessUnits = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPublicBusinessUnit>(global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPublicBusinessUnit.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignWithAssets_properties>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignWithAssets_properties.CreateFromDiscriminatorValue); } },
@@ -91,7 +91,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignWithAssets_assets>("assets", Assets);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_PublicBusinessUnit>("businessUnits", BusinessUnits);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPublicBusinessUnit>("businessUnits", BusinessUnits);
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignWithAssets_properties>("properties", Properties);

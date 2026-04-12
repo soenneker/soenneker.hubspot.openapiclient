@@ -27,10 +27,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Defines the lower limit for the time range.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRangedTimeOperation.PublicRangedTimeOperation_lowerBoundTimePoint? LowerBoundTimePoint { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRangedTimeOperationLowerBoundTimePoint? LowerBoundTimePoint { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRangedTimeOperation.PublicRangedTimeOperation_lowerBoundTimePoint LowerBoundTimePoint { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRangedTimeOperationLowerBoundTimePoint LowerBoundTimePoint { get; set; }
 #endif
         /// <summary>Specifies the type of operation, which is &apos;TIME_RANGED&apos;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -69,10 +69,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Defines the upper limit for the time range.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRangedTimeOperation.PublicRangedTimeOperation_upperBoundTimePoint? UpperBoundTimePoint { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRangedTimeOperationUpperBoundTimePoint? UpperBoundTimePoint { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRangedTimeOperation.PublicRangedTimeOperation_upperBoundTimePoint UpperBoundTimePoint { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRangedTimeOperationUpperBoundTimePoint UpperBoundTimePoint { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicRangedTimeOperation"/> and sets the default values.
@@ -101,13 +101,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "includeObjectsWithNoValueSet", n => { IncludeObjectsWithNoValueSet = n.GetBoolValue(); } },
                 { "lowerBoundEndpointBehavior", n => { LowerBoundEndpointBehavior = n.GetStringValue(); } },
-                { "lowerBoundTimePoint", n => { LowerBoundTimePoint = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRangedTimeOperation.PublicRangedTimeOperation_lowerBoundTimePoint>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicRangedTimeOperation.PublicRangedTimeOperation_lowerBoundTimePoint.CreateFromDiscriminatorValue); } },
+                { "lowerBoundTimePoint", n => { LowerBoundTimePoint = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRangedTimeOperationLowerBoundTimePoint>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicRangedTimeOperationLowerBoundTimePoint.CreateFromDiscriminatorValue); } },
                 { "operationType", n => { OperationType = n.GetStringValue(); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
                 { "propertyParser", n => { PropertyParser = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRangedTimeOperation_type>(); } },
                 { "upperBoundEndpointBehavior", n => { UpperBoundEndpointBehavior = n.GetStringValue(); } },
-                { "upperBoundTimePoint", n => { UpperBoundTimePoint = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRangedTimeOperation.PublicRangedTimeOperation_upperBoundTimePoint>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicRangedTimeOperation.PublicRangedTimeOperation_upperBoundTimePoint.CreateFromDiscriminatorValue); } },
+                { "upperBoundTimePoint", n => { UpperBoundTimePoint = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRangedTimeOperationUpperBoundTimePoint>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicRangedTimeOperationUpperBoundTimePoint.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -119,204 +119,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("includeObjectsWithNoValueSet", IncludeObjectsWithNoValueSet);
             writer.WriteStringValue("lowerBoundEndpointBehavior", LowerBoundEndpointBehavior);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRangedTimeOperation.PublicRangedTimeOperation_lowerBoundTimePoint>("lowerBoundTimePoint", LowerBoundTimePoint);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRangedTimeOperationLowerBoundTimePoint>("lowerBoundTimePoint", LowerBoundTimePoint);
             writer.WriteStringValue("operationType", OperationType);
             writer.WriteStringValue("operator", Operator);
             writer.WriteStringValue("propertyParser", PropertyParser);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRangedTimeOperation_type>("type", Type);
             writer.WriteStringValue("upperBoundEndpointBehavior", UpperBoundEndpointBehavior);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRangedTimeOperation.PublicRangedTimeOperation_upperBoundTimePoint>("upperBoundTimePoint", UpperBoundTimePoint);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRangedTimeOperationUpperBoundTimePoint>("upperBoundTimePoint", UpperBoundTimePoint);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicDatePoint"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicIndexedTimePoint"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicPropertyReferencedTime"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class PublicRangedTimeOperation_lowerBoundTimePoint : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicDatePoint"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicDatePoint? PublicDatePoint { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicDatePoint PublicDatePoint { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicIndexedTimePoint"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicIndexedTimePoint? PublicIndexedTimePoint { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicIndexedTimePoint PublicIndexedTimePoint { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicPropertyReferencedTime"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPropertyReferencedTime? PublicPropertyReferencedTime { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPropertyReferencedTime PublicPropertyReferencedTime { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicRangedTimeOperation.PublicRangedTimeOperation_lowerBoundTimePoint"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicRangedTimeOperation.PublicRangedTimeOperation_lowerBoundTimePoint CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicRangedTimeOperation.PublicRangedTimeOperation_lowerBoundTimePoint();
-                if("PublicDatePoint".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicDatePoint = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicDatePoint();
-                }
-                else if("PublicIndexedTimePoint".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicIndexedTimePoint = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicIndexedTimePoint();
-                }
-                else if("PublicPropertyReferencedTime".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicPropertyReferencedTime = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicPropertyReferencedTime();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(PublicDatePoint != null)
-                {
-                    return PublicDatePoint.GetFieldDeserializers();
-                }
-                else if(PublicIndexedTimePoint != null)
-                {
-                    return PublicIndexedTimePoint.GetFieldDeserializers();
-                }
-                else if(PublicPropertyReferencedTime != null)
-                {
-                    return PublicPropertyReferencedTime.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(PublicDatePoint != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicDatePoint>(null, PublicDatePoint);
-                }
-                else if(PublicIndexedTimePoint != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicIndexedTimePoint>(null, PublicIndexedTimePoint);
-                }
-                else if(PublicPropertyReferencedTime != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicPropertyReferencedTime>(null, PublicPropertyReferencedTime);
-                }
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicDatePoint"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicIndexedTimePoint"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicPropertyReferencedTime"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class PublicRangedTimeOperation_upperBoundTimePoint : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicDatePoint"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicDatePoint? PublicDatePoint { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicDatePoint PublicDatePoint { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicIndexedTimePoint"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicIndexedTimePoint? PublicIndexedTimePoint { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicIndexedTimePoint PublicIndexedTimePoint { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicPropertyReferencedTime"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPropertyReferencedTime? PublicPropertyReferencedTime { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPropertyReferencedTime PublicPropertyReferencedTime { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicRangedTimeOperation.PublicRangedTimeOperation_upperBoundTimePoint"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicRangedTimeOperation.PublicRangedTimeOperation_upperBoundTimePoint CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicRangedTimeOperation.PublicRangedTimeOperation_upperBoundTimePoint();
-                if("PublicDatePoint".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicDatePoint = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicDatePoint();
-                }
-                else if("PublicIndexedTimePoint".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicIndexedTimePoint = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicIndexedTimePoint();
-                }
-                else if("PublicPropertyReferencedTime".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicPropertyReferencedTime = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicPropertyReferencedTime();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(PublicDatePoint != null)
-                {
-                    return PublicDatePoint.GetFieldDeserializers();
-                }
-                else if(PublicIndexedTimePoint != null)
-                {
-                    return PublicIndexedTimePoint.GetFieldDeserializers();
-                }
-                else if(PublicPropertyReferencedTime != null)
-                {
-                    return PublicPropertyReferencedTime.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(PublicDatePoint != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicDatePoint>(null, PublicDatePoint);
-                }
-                else if(PublicIndexedTimePoint != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicIndexedTimePoint>(null, PublicIndexedTimePoint);
-                }
-                else if(PublicPropertyReferencedTime != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicPropertyReferencedTime>(null, PublicPropertyReferencedTime);
-                }
-            }
         }
     }
 }

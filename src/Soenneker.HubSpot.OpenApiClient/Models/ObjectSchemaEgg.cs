@@ -36,10 +36,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Singular and plural labels for the object. Used in CRM display.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.Crm_object_schemas_ObjectTypeDefinitionLabels? Labels { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectSchemasObjectTypeDefinitionLabels? Labels { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.Crm_object_schemas_ObjectTypeDefinitionLabels Labels { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectSchemasObjectTypeDefinitionLabels Labels { get; set; }
 #endif
         /// <summary>A unique name for this object. For internal use only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -117,7 +117,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "allowsSensitiveProperties", n => { AllowsSensitiveProperties = n.GetBoolValue(); } },
                 { "associatedObjects", n => { AssociatedObjects = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "labels", n => { Labels = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_object_schemas_ObjectTypeDefinitionLabels>(global::Soenneker.HubSpot.OpenApiClient.Models.Crm_object_schemas_ObjectTypeDefinitionLabels.CreateFromDiscriminatorValue); } },
+                { "labels", n => { Labels = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectSchemasObjectTypeDefinitionLabels>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectSchemasObjectTypeDefinitionLabels.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "primaryDisplayProperty", n => { PrimaryDisplayProperty = n.GetStringValue(); } },
                 { "properties", n => { Properties = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ObjectTypePropertyCreate>(global::Soenneker.HubSpot.OpenApiClient.Models.ObjectTypePropertyCreate.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -136,7 +136,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteBoolValue("allowsSensitiveProperties", AllowsSensitiveProperties);
             writer.WriteCollectionOfPrimitiveValues<string>("associatedObjects", AssociatedObjects);
             writer.WriteStringValue("description", Description);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_object_schemas_ObjectTypeDefinitionLabels>("labels", Labels);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectSchemasObjectTypeDefinitionLabels>("labels", Labels);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("primaryDisplayProperty", PrimaryDisplayProperty);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ObjectTypePropertyCreate>("properties", Properties);

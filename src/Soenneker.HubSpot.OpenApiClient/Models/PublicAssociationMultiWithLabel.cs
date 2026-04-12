@@ -17,18 +17,18 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Contains the Id of a Public Object</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicObjectId? From { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId? From { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicObjectId From { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId From { get; set; }
 #endif
         /// <summary>The paging property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.C_crm_Paging? Paging { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPaging_1? Paging { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.C_crm_Paging Paging { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPaging_1 Paging { get; set; }
 #endif
         /// <summary>The to property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -63,8 +63,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "from", n => { From = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicObjectId>(global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicObjectId.CreateFromDiscriminatorValue); } },
-                { "paging", n => { Paging = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.C_crm_Paging>(global::Soenneker.HubSpot.OpenApiClient.Models.C_crm_Paging.CreateFromDiscriminatorValue); } },
+                { "from", n => { From = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId.CreateFromDiscriminatorValue); } },
+                { "paging", n => { Paging = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPaging_1>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPaging_1.CreateFromDiscriminatorValue); } },
                 { "to", n => { To = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.MultiAssociatedObjectWithLabel>(global::Soenneker.HubSpot.OpenApiClient.Models.MultiAssociatedObjectWithLabel.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -75,8 +75,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.Crm_PublicObjectId>("from", From);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.C_crm_Paging>("paging", Paging);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId>("from", From);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPaging_1>("paging", Paging);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.MultiAssociatedObjectWithLabel>("to", To);
             writer.WriteAdditionalData(AdditionalData);
         }

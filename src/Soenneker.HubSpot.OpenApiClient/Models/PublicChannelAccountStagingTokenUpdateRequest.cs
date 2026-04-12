@@ -25,10 +25,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The deliveryIdentifier property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.C_conversations_PublicDeliveryIdentifier? DeliveryIdentifier { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicDeliveryIdentifier_1? DeliveryIdentifier { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.C_conversations_PublicDeliveryIdentifier DeliveryIdentifier { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicDeliveryIdentifier_1 DeliveryIdentifier { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelAccountStagingTokenUpdateRequest"/> and sets the default values.
@@ -56,7 +56,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "accountName", n => { AccountName = n.GetStringValue(); } },
-                { "deliveryIdentifier", n => { DeliveryIdentifier = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.C_conversations_PublicDeliveryIdentifier>(global::Soenneker.HubSpot.OpenApiClient.Models.C_conversations_PublicDeliveryIdentifier.CreateFromDiscriminatorValue); } },
+                { "deliveryIdentifier", n => { DeliveryIdentifier = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicDeliveryIdentifier_1>(global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicDeliveryIdentifier_1.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,7 +67,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("accountName", AccountName);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.C_conversations_PublicDeliveryIdentifier>("deliveryIdentifier", DeliveryIdentifier);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicDeliveryIdentifier_1>("deliveryIdentifier", DeliveryIdentifier);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

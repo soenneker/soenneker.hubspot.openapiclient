@@ -17,10 +17,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>A list of PropertyValues. These can be whatever kind of property names and values you want. However, they must already exist on the HubSpot account&apos;s definition of the MarketingEvent Object. If they don&apos;t they will be filtered out and not set.In order to do this you&apos;ll need to create a new PropertyGroup on the HubSpot account&apos;s MarketingEvent object for your specific app and create the Custom Property you want to track on that HubSpot account. Do not create any new default properties on the MarketingEvent object as that will apply to all HubSpot accounts.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_PropertyValue>? CustomProperties { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPropertyValue>? CustomProperties { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_PropertyValue> CustomProperties { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPropertyValue> CustomProperties { get; set; }
 #endif
         /// <summary>The end date and time of the marketing event.</summary>
         public DateTimeOffset? EndDateTime { get; set; }
@@ -103,7 +103,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "customProperties", n => { CustomProperties = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_PropertyValue>(global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_PropertyValue.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "customProperties", n => { CustomProperties = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPropertyValue>(global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPropertyValue.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "endDateTime", n => { EndDateTime = n.GetDateTimeOffsetValue(); } },
                 { "eventCancelled", n => { EventCancelled = n.GetBoolValue(); } },
                 { "eventCompleted", n => { EventCompleted = n.GetBoolValue(); } },
@@ -123,7 +123,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.Marketing_PropertyValue>("customProperties", CustomProperties);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPropertyValue>("customProperties", CustomProperties);
             writer.WriteDateTimeOffsetValue("endDateTime", EndDateTime);
             writer.WriteBoolValue("eventCancelled", EventCancelled);
             writer.WriteBoolValue("eventCompleted", EventCompleted);

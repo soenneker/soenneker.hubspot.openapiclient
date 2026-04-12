@@ -41,10 +41,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>&quot;A list of available options for the property if it is an enumeration. NOTE: This field is only applicable for enumerated properties.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.Events_OptionInput>? Options { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.EventsOptionInput>? Options { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.Events_OptionInput> Options { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.EventsOptionInput> Options { get; set; }
 #endif
         /// <summary>&quot;The data type of the property. Can be one of the following: [string, number, enumeration, datetime]&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -82,7 +82,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.Events_OptionInput>(global::Soenneker.HubSpot.OpenApiClient.Models.Events_OptionInput.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.EventsOptionInput>(global::Soenneker.HubSpot.OpenApiClient.Models.EventsOptionInput.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
             };
         }
@@ -96,7 +96,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("label", Label);
             writer.WriteStringValue("name", Name);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.Events_OptionInput>("options", Options);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.EventsOptionInput>("options", Options);
             writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

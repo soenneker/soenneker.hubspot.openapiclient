@@ -89,10 +89,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The properties property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.Property_1>? Properties { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.Property1>? Properties { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.Property_1> Properties { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.Property1> Properties { get; set; }
 #endif
         /// <summary>The requiredProperties property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -159,7 +159,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "objectTypeId", n => { ObjectTypeId = n.GetStringValue(); } },
                 { "primaryDisplayProperty", n => { PrimaryDisplayProperty = n.GetStringValue(); } },
-                { "properties", n => { Properties = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.Property_1>(global::Soenneker.HubSpot.OpenApiClient.Models.Property_1.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "properties", n => { Properties = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.Property1>(global::Soenneker.HubSpot.OpenApiClient.Models.Property1.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "requiredProperties", n => { RequiredProperties = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "searchableProperties", n => { SearchableProperties = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "secondaryDisplayProperties", n => { SecondaryDisplayProperties = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -186,7 +186,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("objectTypeId", ObjectTypeId);
             writer.WriteStringValue("primaryDisplayProperty", PrimaryDisplayProperty);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.Property_1>("properties", Properties);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.Property1>("properties", Properties);
             writer.WriteCollectionOfPrimitiveValues<string>("requiredProperties", RequiredProperties);
             writer.WriteCollectionOfPrimitiveValues<string>("searchableProperties", SearchableProperties);
             writer.WriteCollectionOfPrimitiveValues<string>("secondaryDisplayProperties", SecondaryDisplayProperties);

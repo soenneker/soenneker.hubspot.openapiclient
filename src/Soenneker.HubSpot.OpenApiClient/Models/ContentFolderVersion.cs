@@ -35,10 +35,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Model definition for a version user. Contains addition information about the user who created a version.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.Cms_VersionUser? User { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CmsVersionUser? User { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.Cms_VersionUser User { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CmsVersionUser User { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ContentFolderVersion"/> and sets the default values.
@@ -68,7 +68,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "object", n => { Object = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ContentFolder>(global::Soenneker.HubSpot.OpenApiClient.Models.ContentFolder.CreateFromDiscriminatorValue); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
-                { "user", n => { User = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.Cms_VersionUser>(global::Soenneker.HubSpot.OpenApiClient.Models.Cms_VersionUser.CreateFromDiscriminatorValue); } },
+                { "user", n => { User = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CmsVersionUser>(global::Soenneker.HubSpot.OpenApiClient.Models.CmsVersionUser.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -81,7 +81,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ContentFolder>("object", Object);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.Cms_VersionUser>("user", User);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CmsVersionUser>("user", User);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

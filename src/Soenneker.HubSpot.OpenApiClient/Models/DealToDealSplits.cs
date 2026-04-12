@@ -25,10 +25,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An array of deal split objects, each representing a portion of the deal assigned to an owner.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.C___________crm_SimplePublicObject>? Splits { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject_11>? Splits { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.C___________crm_SimplePublicObject> Splits { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject_11> Splits { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.DealToDealSplits"/> and sets the default values.
@@ -56,7 +56,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "splits", n => { Splits = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.C___________crm_SimplePublicObject>(global::Soenneker.HubSpot.OpenApiClient.Models.C___________crm_SimplePublicObject.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "splits", n => { Splits = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject_11>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject_11.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -67,7 +67,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("id", Id);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.C___________crm_SimplePublicObject>("splits", Splits);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject_11>("splits", Splits);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
