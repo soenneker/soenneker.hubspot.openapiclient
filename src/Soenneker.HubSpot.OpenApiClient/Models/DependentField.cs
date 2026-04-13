@@ -25,10 +25,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>A form field that will be conditionally displayed based on whether the dependent condition is met.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.DependentFieldDependentField? DependentFieldProp { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.DependentField.DependentField_dependentField? DependentFieldProp { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.DependentFieldDependentField DependentFieldProp { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.DependentField.DependentField_dependentField DependentFieldProp { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.DependentField"/> and sets the default values.
@@ -56,7 +56,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "dependentCondition", n => { DependentCondition = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.DependentFieldFilter>(global::Soenneker.HubSpot.OpenApiClient.Models.DependentFieldFilter.CreateFromDiscriminatorValue); } },
-                { "dependentField", n => { DependentFieldProp = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.DependentFieldDependentField>(global::Soenneker.HubSpot.OpenApiClient.Models.DependentFieldDependentField.CreateFromDiscriminatorValue); } },
+                { "dependentField", n => { DependentFieldProp = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.DependentField.DependentField_dependentField>(global::Soenneker.HubSpot.OpenApiClient.Models.DependentField.DependentField_dependentField.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,8 +67,303 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.DependentFieldFilter>("dependentCondition", DependentCondition);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.DependentFieldDependentField>("dependentField", DependentFieldProp);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.DependentField.DependentField_dependentField>("dependentField", DependentFieldProp);
             writer.WriteAdditionalData(AdditionalData);
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.DatepickerField"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.DropdownField"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.EmailField"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.FileField"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.MobilePhoneField"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.MultiLineTextField"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.MultipleCheckboxesField"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.NumberField"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkRadioField"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PhoneField"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.RadioField"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.SingleCheckboxField"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.SingleLineTextField"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class DependentField_dependentField : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.DatepickerField"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.DatepickerField? DatepickerField { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.DatepickerField DatepickerField { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.DropdownField"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.DropdownField? DropdownField { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.DropdownField DropdownField { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.EmailField"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.EmailField? EmailField { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.EmailField EmailField { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.FileField"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.FileField? FileField { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.FileField FileField { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.MobilePhoneField"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.MobilePhoneField? MobilePhoneField { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.MobilePhoneField MobilePhoneField { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.MultiLineTextField"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.MultiLineTextField? MultiLineTextField { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.MultiLineTextField MultiLineTextField { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.MultipleCheckboxesField"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.MultipleCheckboxesField? MultipleCheckboxesField { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.MultipleCheckboxesField MultipleCheckboxesField { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.NumberField"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.NumberField? NumberField { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.NumberField NumberField { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkRadioField"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkRadioField? PaymentLinkRadioField { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkRadioField PaymentLinkRadioField { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PhoneField"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.PhoneField? PhoneField { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.PhoneField PhoneField { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.RadioField"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.RadioField? RadioField { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.RadioField RadioField { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.SingleCheckboxField"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.SingleCheckboxField? SingleCheckboxField { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.SingleCheckboxField SingleCheckboxField { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.SingleLineTextField"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.SingleLineTextField? SingleLineTextField { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.SingleLineTextField SingleLineTextField { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.DependentField.DependentField_dependentField"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.HubSpot.OpenApiClient.Models.DependentField.DependentField_dependentField CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Soenneker.HubSpot.OpenApiClient.Models.DependentField.DependentField_dependentField();
+                if("DatepickerField".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.DatepickerField = new global::Soenneker.HubSpot.OpenApiClient.Models.DatepickerField();
+                }
+                else if("DropdownField".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.DropdownField = new global::Soenneker.HubSpot.OpenApiClient.Models.DropdownField();
+                }
+                else if("EmailField".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.EmailField = new global::Soenneker.HubSpot.OpenApiClient.Models.EmailField();
+                }
+                else if("FileField".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.FileField = new global::Soenneker.HubSpot.OpenApiClient.Models.FileField();
+                }
+                else if("MobilePhoneField".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.MobilePhoneField = new global::Soenneker.HubSpot.OpenApiClient.Models.MobilePhoneField();
+                }
+                else if("MultiLineTextField".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.MultiLineTextField = new global::Soenneker.HubSpot.OpenApiClient.Models.MultiLineTextField();
+                }
+                else if("MultipleCheckboxesField".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.MultipleCheckboxesField = new global::Soenneker.HubSpot.OpenApiClient.Models.MultipleCheckboxesField();
+                }
+                else if("NumberField".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.NumberField = new global::Soenneker.HubSpot.OpenApiClient.Models.NumberField();
+                }
+                else if("PaymentLinkRadioField".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.PaymentLinkRadioField = new global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkRadioField();
+                }
+                else if("PhoneField".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.PhoneField = new global::Soenneker.HubSpot.OpenApiClient.Models.PhoneField();
+                }
+                else if("RadioField".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.RadioField = new global::Soenneker.HubSpot.OpenApiClient.Models.RadioField();
+                }
+                else if("SingleCheckboxField".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.SingleCheckboxField = new global::Soenneker.HubSpot.OpenApiClient.Models.SingleCheckboxField();
+                }
+                else if("SingleLineTextField".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.SingleLineTextField = new global::Soenneker.HubSpot.OpenApiClient.Models.SingleLineTextField();
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                if(DatepickerField != null)
+                {
+                    return DatepickerField.GetFieldDeserializers();
+                }
+                else if(DropdownField != null)
+                {
+                    return DropdownField.GetFieldDeserializers();
+                }
+                else if(EmailField != null)
+                {
+                    return EmailField.GetFieldDeserializers();
+                }
+                else if(FileField != null)
+                {
+                    return FileField.GetFieldDeserializers();
+                }
+                else if(MobilePhoneField != null)
+                {
+                    return MobilePhoneField.GetFieldDeserializers();
+                }
+                else if(MultiLineTextField != null)
+                {
+                    return MultiLineTextField.GetFieldDeserializers();
+                }
+                else if(MultipleCheckboxesField != null)
+                {
+                    return MultipleCheckboxesField.GetFieldDeserializers();
+                }
+                else if(NumberField != null)
+                {
+                    return NumberField.GetFieldDeserializers();
+                }
+                else if(PaymentLinkRadioField != null)
+                {
+                    return PaymentLinkRadioField.GetFieldDeserializers();
+                }
+                else if(PhoneField != null)
+                {
+                    return PhoneField.GetFieldDeserializers();
+                }
+                else if(RadioField != null)
+                {
+                    return RadioField.GetFieldDeserializers();
+                }
+                else if(SingleCheckboxField != null)
+                {
+                    return SingleCheckboxField.GetFieldDeserializers();
+                }
+                else if(SingleLineTextField != null)
+                {
+                    return SingleLineTextField.GetFieldDeserializers();
+                }
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(DatepickerField != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.DatepickerField>(null, DatepickerField);
+                }
+                else if(DropdownField != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.DropdownField>(null, DropdownField);
+                }
+                else if(EmailField != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailField>(null, EmailField);
+                }
+                else if(FileField != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.FileField>(null, FileField);
+                }
+                else if(MobilePhoneField != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MobilePhoneField>(null, MobilePhoneField);
+                }
+                else if(MultiLineTextField != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MultiLineTextField>(null, MultiLineTextField);
+                }
+                else if(MultipleCheckboxesField != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MultipleCheckboxesField>(null, MultipleCheckboxesField);
+                }
+                else if(NumberField != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.NumberField>(null, NumberField);
+                }
+                else if(PaymentLinkRadioField != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkRadioField>(null, PaymentLinkRadioField);
+                }
+                else if(PhoneField != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PhoneField>(null, PhoneField);
+                }
+                else if(RadioField != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.RadioField>(null, RadioField);
+                }
+                else if(SingleCheckboxField != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.SingleCheckboxField>(null, SingleCheckboxField);
+                }
+                else if(SingleLineTextField != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.SingleLineTextField>(null, SingleLineTextField);
+                }
+            }
         }
     }
 }

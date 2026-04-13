@@ -17,10 +17,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Defines the primary action for a card, which can be either an action hook or an iframe.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.TopLevelActionsPrimary? Primary { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.TopLevelActions.TopLevelActions_primary? Primary { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.TopLevelActionsPrimary Primary { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.TopLevelActions.TopLevelActions_primary Primary { get; set; }
 #endif
         /// <summary>Specifies a list of secondary actions for a card, each of which can be an action hook or an iframe.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -63,7 +63,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "primary", n => { Primary = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.TopLevelActionsPrimary>(global::Soenneker.HubSpot.OpenApiClient.Models.TopLevelActionsPrimary.CreateFromDiscriminatorValue); } },
+                { "primary", n => { Primary = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.TopLevelActions.TopLevelActions_primary>(global::Soenneker.HubSpot.OpenApiClient.Models.TopLevelActions.TopLevelActions_primary.CreateFromDiscriminatorValue); } },
                 { "secondary", n => { Secondary = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.TopLevelActions.TopLevelActions_secondary>(global::Soenneker.HubSpot.OpenApiClient.Models.TopLevelActions.TopLevelActions_secondary.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "settings", n => { Settings = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.IFrameActionBody>(global::Soenneker.HubSpot.OpenApiClient.Models.IFrameActionBody.CreateFromDiscriminatorValue); } },
             };
@@ -75,10 +75,85 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.TopLevelActionsPrimary>("primary", Primary);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.TopLevelActions.TopLevelActions_primary>("primary", Primary);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.TopLevelActions.TopLevelActions_secondary>("secondary", Secondary);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.IFrameActionBody>("settings", Settings);
             writer.WriteAdditionalData(AdditionalData);
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ActionHookActionBody"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IFrameActionBody"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class TopLevelActions_primary : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ActionHookActionBody"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.ActionHookActionBody? ActionHookActionBody { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.ActionHookActionBody ActionHookActionBody { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IFrameActionBody"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.IFrameActionBody? IFrameActionBody { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.IFrameActionBody IFrameActionBody { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.TopLevelActions.TopLevelActions_primary"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.HubSpot.OpenApiClient.Models.TopLevelActions.TopLevelActions_primary CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Soenneker.HubSpot.OpenApiClient.Models.TopLevelActions.TopLevelActions_primary();
+                if("ActionHookActionBody".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.ActionHookActionBody = new global::Soenneker.HubSpot.OpenApiClient.Models.ActionHookActionBody();
+                }
+                else if("IFrameActionBody".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.IFrameActionBody = new global::Soenneker.HubSpot.OpenApiClient.Models.IFrameActionBody();
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                if(ActionHookActionBody != null)
+                {
+                    return ActionHookActionBody.GetFieldDeserializers();
+                }
+                else if(IFrameActionBody != null)
+                {
+                    return IFrameActionBody.GetFieldDeserializers();
+                }
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(ActionHookActionBody != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionHookActionBody>(null, ActionHookActionBody);
+                }
+                else if(IFrameActionBody != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.IFrameActionBody>(null, IFrameActionBody);
+                }
+            }
         }
         /// <summary>
         /// Composed type wrapper for classes <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ActionHookActionBody"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IFrameActionBody"/>

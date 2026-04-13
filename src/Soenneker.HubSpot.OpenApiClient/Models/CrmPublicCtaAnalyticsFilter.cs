@@ -17,10 +17,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Specifies the criteria for refining the filter by coalescing.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilterCoalescingRefineBy? CoalescingRefineBy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilter.CrmPublicCtaAnalyticsFilter_coalescingRefineBy? CoalescingRefineBy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilterCoalescingRefineBy CoalescingRefineBy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilter.CrmPublicCtaAnalyticsFilter_coalescingRefineBy CoalescingRefineBy { get; set; }
 #endif
         /// <summary>The name of the Call-to-Action (CTA) to be used in the filter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -43,10 +43,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Specifies the criteria for refining the filter by pruning.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilterPruningRefineBy? PruningRefineBy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilter.CrmPublicCtaAnalyticsFilter_pruningRefineBy? PruningRefineBy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilterPruningRefineBy PruningRefineBy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilter.CrmPublicCtaAnalyticsFilter_pruningRefineBy PruningRefineBy { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilter"/> and sets the default values.
@@ -74,11 +74,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "coalescingRefineBy", n => { CoalescingRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilterCoalescingRefineBy>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilterCoalescingRefineBy.CreateFromDiscriminatorValue); } },
+                { "coalescingRefineBy", n => { CoalescingRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilter.CrmPublicCtaAnalyticsFilter_coalescingRefineBy>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilter.CrmPublicCtaAnalyticsFilter_coalescingRefineBy.CreateFromDiscriminatorValue); } },
                 { "ctaName", n => { CtaName = n.GetStringValue(); } },
                 { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilter_filterType>(); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
-                { "pruningRefineBy", n => { PruningRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilterPruningRefineBy>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilterPruningRefineBy.CreateFromDiscriminatorValue); } },
+                { "pruningRefineBy", n => { PruningRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilter.CrmPublicCtaAnalyticsFilter_pruningRefineBy>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilter.CrmPublicCtaAnalyticsFilter_pruningRefineBy.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -88,12 +88,442 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilterCoalescingRefineBy>("coalescingRefineBy", CoalescingRefineBy);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilter.CrmPublicCtaAnalyticsFilter_coalescingRefineBy>("coalescingRefineBy", CoalescingRefineBy);
             writer.WriteStringValue("ctaName", CtaName);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilter_filterType>("filterType", FilterType);
             writer.WriteStringValue("operator", Operator);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilterPruningRefineBy>("pruningRefineBy", PruningRefineBy);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilter.CrmPublicCtaAnalyticsFilter_pruningRefineBy>("pruningRefineBy", PruningRefineBy);
             writer.WriteAdditionalData(AdditionalData);
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAbsoluteComparativeTimestampRefineBy"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAbsoluteRangedTimestampRefineBy"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAllHistoryRefineBy"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicNumOccurrencesRefineBy"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperation"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRelativeComparativeTimestampRefineBy"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRelativeRangedTimestampRefineBy"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicSetOccurrencesRefineBy"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimePointOperation"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class CrmPublicCtaAnalyticsFilter_coalescingRefineBy : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAbsoluteComparativeTimestampRefineBy"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAbsoluteComparativeTimestampRefineBy? CrmPublicAbsoluteComparativeTimestampRefineBy { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAbsoluteComparativeTimestampRefineBy CrmPublicAbsoluteComparativeTimestampRefineBy { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAbsoluteRangedTimestampRefineBy"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAbsoluteRangedTimestampRefineBy? CrmPublicAbsoluteRangedTimestampRefineBy { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAbsoluteRangedTimestampRefineBy CrmPublicAbsoluteRangedTimestampRefineBy { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAllHistoryRefineBy"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAllHistoryRefineBy? CrmPublicAllHistoryRefineBy { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAllHistoryRefineBy CrmPublicAllHistoryRefineBy { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicNumOccurrencesRefineBy"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicNumOccurrencesRefineBy? CrmPublicNumOccurrencesRefineBy { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicNumOccurrencesRefineBy CrmPublicNumOccurrencesRefineBy { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperation"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperation? CrmPublicRangedTimeOperation { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperation CrmPublicRangedTimeOperation { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRelativeComparativeTimestampRefineBy"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRelativeComparativeTimestampRefineBy? CrmPublicRelativeComparativeTimestampRefineBy { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRelativeComparativeTimestampRefineBy CrmPublicRelativeComparativeTimestampRefineBy { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRelativeRangedTimestampRefineBy"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRelativeRangedTimestampRefineBy? CrmPublicRelativeRangedTimestampRefineBy { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRelativeRangedTimestampRefineBy CrmPublicRelativeRangedTimestampRefineBy { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicSetOccurrencesRefineBy"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicSetOccurrencesRefineBy? CrmPublicSetOccurrencesRefineBy { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicSetOccurrencesRefineBy CrmPublicSetOccurrencesRefineBy { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimePointOperation"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimePointOperation? CrmPublicTimePointOperation { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimePointOperation CrmPublicTimePointOperation { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilter.CrmPublicCtaAnalyticsFilter_coalescingRefineBy"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilter.CrmPublicCtaAnalyticsFilter_coalescingRefineBy CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilter.CrmPublicCtaAnalyticsFilter_coalescingRefineBy();
+                if("CrmPublicAbsoluteComparativeTimestampRefineBy".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.CrmPublicAbsoluteComparativeTimestampRefineBy = new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAbsoluteComparativeTimestampRefineBy();
+                }
+                else if("CrmPublicAbsoluteRangedTimestampRefineBy".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.CrmPublicAbsoluteRangedTimestampRefineBy = new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAbsoluteRangedTimestampRefineBy();
+                }
+                else if("CrmPublicAllHistoryRefineBy".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.CrmPublicAllHistoryRefineBy = new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAllHistoryRefineBy();
+                }
+                else if("CrmPublicNumOccurrencesRefineBy".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.CrmPublicNumOccurrencesRefineBy = new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicNumOccurrencesRefineBy();
+                }
+                else if("CrmPublicRangedTimeOperation".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.CrmPublicRangedTimeOperation = new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperation();
+                }
+                else if("CrmPublicRelativeComparativeTimestampRefineBy".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.CrmPublicRelativeComparativeTimestampRefineBy = new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRelativeComparativeTimestampRefineBy();
+                }
+                else if("CrmPublicRelativeRangedTimestampRefineBy".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.CrmPublicRelativeRangedTimestampRefineBy = new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRelativeRangedTimestampRefineBy();
+                }
+                else if("CrmPublicSetOccurrencesRefineBy".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.CrmPublicSetOccurrencesRefineBy = new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicSetOccurrencesRefineBy();
+                }
+                else if("CrmPublicTimePointOperation".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.CrmPublicTimePointOperation = new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimePointOperation();
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                if(CrmPublicAbsoluteComparativeTimestampRefineBy != null)
+                {
+                    return CrmPublicAbsoluteComparativeTimestampRefineBy.GetFieldDeserializers();
+                }
+                else if(CrmPublicAbsoluteRangedTimestampRefineBy != null)
+                {
+                    return CrmPublicAbsoluteRangedTimestampRefineBy.GetFieldDeserializers();
+                }
+                else if(CrmPublicAllHistoryRefineBy != null)
+                {
+                    return CrmPublicAllHistoryRefineBy.GetFieldDeserializers();
+                }
+                else if(CrmPublicNumOccurrencesRefineBy != null)
+                {
+                    return CrmPublicNumOccurrencesRefineBy.GetFieldDeserializers();
+                }
+                else if(CrmPublicRangedTimeOperation != null)
+                {
+                    return CrmPublicRangedTimeOperation.GetFieldDeserializers();
+                }
+                else if(CrmPublicRelativeComparativeTimestampRefineBy != null)
+                {
+                    return CrmPublicRelativeComparativeTimestampRefineBy.GetFieldDeserializers();
+                }
+                else if(CrmPublicRelativeRangedTimestampRefineBy != null)
+                {
+                    return CrmPublicRelativeRangedTimestampRefineBy.GetFieldDeserializers();
+                }
+                else if(CrmPublicSetOccurrencesRefineBy != null)
+                {
+                    return CrmPublicSetOccurrencesRefineBy.GetFieldDeserializers();
+                }
+                else if(CrmPublicTimePointOperation != null)
+                {
+                    return CrmPublicTimePointOperation.GetFieldDeserializers();
+                }
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(CrmPublicAbsoluteComparativeTimestampRefineBy != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAbsoluteComparativeTimestampRefineBy>(null, CrmPublicAbsoluteComparativeTimestampRefineBy);
+                }
+                else if(CrmPublicAbsoluteRangedTimestampRefineBy != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAbsoluteRangedTimestampRefineBy>(null, CrmPublicAbsoluteRangedTimestampRefineBy);
+                }
+                else if(CrmPublicAllHistoryRefineBy != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAllHistoryRefineBy>(null, CrmPublicAllHistoryRefineBy);
+                }
+                else if(CrmPublicNumOccurrencesRefineBy != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicNumOccurrencesRefineBy>(null, CrmPublicNumOccurrencesRefineBy);
+                }
+                else if(CrmPublicRangedTimeOperation != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperation>(null, CrmPublicRangedTimeOperation);
+                }
+                else if(CrmPublicRelativeComparativeTimestampRefineBy != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRelativeComparativeTimestampRefineBy>(null, CrmPublicRelativeComparativeTimestampRefineBy);
+                }
+                else if(CrmPublicRelativeRangedTimestampRefineBy != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRelativeRangedTimestampRefineBy>(null, CrmPublicRelativeRangedTimestampRefineBy);
+                }
+                else if(CrmPublicSetOccurrencesRefineBy != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicSetOccurrencesRefineBy>(null, CrmPublicSetOccurrencesRefineBy);
+                }
+                else if(CrmPublicTimePointOperation != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimePointOperation>(null, CrmPublicTimePointOperation);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAbsoluteComparativeTimestampRefineBy"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAbsoluteRangedTimestampRefineBy"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAllHistoryRefineBy"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicNumOccurrencesRefineBy"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperation"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRelativeComparativeTimestampRefineBy"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRelativeRangedTimestampRefineBy"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicSetOccurrencesRefineBy"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimePointOperation"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class CrmPublicCtaAnalyticsFilter_pruningRefineBy : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAbsoluteComparativeTimestampRefineBy"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAbsoluteComparativeTimestampRefineBy? CrmPublicAbsoluteComparativeTimestampRefineBy { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAbsoluteComparativeTimestampRefineBy CrmPublicAbsoluteComparativeTimestampRefineBy { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAbsoluteRangedTimestampRefineBy"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAbsoluteRangedTimestampRefineBy? CrmPublicAbsoluteRangedTimestampRefineBy { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAbsoluteRangedTimestampRefineBy CrmPublicAbsoluteRangedTimestampRefineBy { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAllHistoryRefineBy"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAllHistoryRefineBy? CrmPublicAllHistoryRefineBy { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAllHistoryRefineBy CrmPublicAllHistoryRefineBy { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicNumOccurrencesRefineBy"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicNumOccurrencesRefineBy? CrmPublicNumOccurrencesRefineBy { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicNumOccurrencesRefineBy CrmPublicNumOccurrencesRefineBy { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperation"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperation? CrmPublicRangedTimeOperation { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperation CrmPublicRangedTimeOperation { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRelativeComparativeTimestampRefineBy"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRelativeComparativeTimestampRefineBy? CrmPublicRelativeComparativeTimestampRefineBy { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRelativeComparativeTimestampRefineBy CrmPublicRelativeComparativeTimestampRefineBy { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRelativeRangedTimestampRefineBy"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRelativeRangedTimestampRefineBy? CrmPublicRelativeRangedTimestampRefineBy { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRelativeRangedTimestampRefineBy CrmPublicRelativeRangedTimestampRefineBy { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicSetOccurrencesRefineBy"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicSetOccurrencesRefineBy? CrmPublicSetOccurrencesRefineBy { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicSetOccurrencesRefineBy CrmPublicSetOccurrencesRefineBy { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimePointOperation"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimePointOperation? CrmPublicTimePointOperation { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimePointOperation CrmPublicTimePointOperation { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilter.CrmPublicCtaAnalyticsFilter_pruningRefineBy"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilter.CrmPublicCtaAnalyticsFilter_pruningRefineBy CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilter.CrmPublicCtaAnalyticsFilter_pruningRefineBy();
+                if("CrmPublicAbsoluteComparativeTimestampRefineBy".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.CrmPublicAbsoluteComparativeTimestampRefineBy = new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAbsoluteComparativeTimestampRefineBy();
+                }
+                else if("CrmPublicAbsoluteRangedTimestampRefineBy".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.CrmPublicAbsoluteRangedTimestampRefineBy = new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAbsoluteRangedTimestampRefineBy();
+                }
+                else if("CrmPublicAllHistoryRefineBy".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.CrmPublicAllHistoryRefineBy = new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAllHistoryRefineBy();
+                }
+                else if("CrmPublicNumOccurrencesRefineBy".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.CrmPublicNumOccurrencesRefineBy = new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicNumOccurrencesRefineBy();
+                }
+                else if("CrmPublicRangedTimeOperation".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.CrmPublicRangedTimeOperation = new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperation();
+                }
+                else if("CrmPublicRelativeComparativeTimestampRefineBy".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.CrmPublicRelativeComparativeTimestampRefineBy = new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRelativeComparativeTimestampRefineBy();
+                }
+                else if("CrmPublicRelativeRangedTimestampRefineBy".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.CrmPublicRelativeRangedTimestampRefineBy = new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRelativeRangedTimestampRefineBy();
+                }
+                else if("CrmPublicSetOccurrencesRefineBy".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.CrmPublicSetOccurrencesRefineBy = new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicSetOccurrencesRefineBy();
+                }
+                else if("CrmPublicTimePointOperation".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.CrmPublicTimePointOperation = new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimePointOperation();
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                if(CrmPublicAbsoluteComparativeTimestampRefineBy != null)
+                {
+                    return CrmPublicAbsoluteComparativeTimestampRefineBy.GetFieldDeserializers();
+                }
+                else if(CrmPublicAbsoluteRangedTimestampRefineBy != null)
+                {
+                    return CrmPublicAbsoluteRangedTimestampRefineBy.GetFieldDeserializers();
+                }
+                else if(CrmPublicAllHistoryRefineBy != null)
+                {
+                    return CrmPublicAllHistoryRefineBy.GetFieldDeserializers();
+                }
+                else if(CrmPublicNumOccurrencesRefineBy != null)
+                {
+                    return CrmPublicNumOccurrencesRefineBy.GetFieldDeserializers();
+                }
+                else if(CrmPublicRangedTimeOperation != null)
+                {
+                    return CrmPublicRangedTimeOperation.GetFieldDeserializers();
+                }
+                else if(CrmPublicRelativeComparativeTimestampRefineBy != null)
+                {
+                    return CrmPublicRelativeComparativeTimestampRefineBy.GetFieldDeserializers();
+                }
+                else if(CrmPublicRelativeRangedTimestampRefineBy != null)
+                {
+                    return CrmPublicRelativeRangedTimestampRefineBy.GetFieldDeserializers();
+                }
+                else if(CrmPublicSetOccurrencesRefineBy != null)
+                {
+                    return CrmPublicSetOccurrencesRefineBy.GetFieldDeserializers();
+                }
+                else if(CrmPublicTimePointOperation != null)
+                {
+                    return CrmPublicTimePointOperation.GetFieldDeserializers();
+                }
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(CrmPublicAbsoluteComparativeTimestampRefineBy != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAbsoluteComparativeTimestampRefineBy>(null, CrmPublicAbsoluteComparativeTimestampRefineBy);
+                }
+                else if(CrmPublicAbsoluteRangedTimestampRefineBy != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAbsoluteRangedTimestampRefineBy>(null, CrmPublicAbsoluteRangedTimestampRefineBy);
+                }
+                else if(CrmPublicAllHistoryRefineBy != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAllHistoryRefineBy>(null, CrmPublicAllHistoryRefineBy);
+                }
+                else if(CrmPublicNumOccurrencesRefineBy != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicNumOccurrencesRefineBy>(null, CrmPublicNumOccurrencesRefineBy);
+                }
+                else if(CrmPublicRangedTimeOperation != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperation>(null, CrmPublicRangedTimeOperation);
+                }
+                else if(CrmPublicRelativeComparativeTimestampRefineBy != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRelativeComparativeTimestampRefineBy>(null, CrmPublicRelativeComparativeTimestampRefineBy);
+                }
+                else if(CrmPublicRelativeRangedTimestampRefineBy != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRelativeRangedTimestampRefineBy>(null, CrmPublicRelativeRangedTimestampRefineBy);
+                }
+                else if(CrmPublicSetOccurrencesRefineBy != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicSetOccurrencesRefineBy>(null, CrmPublicSetOccurrencesRefineBy);
+                }
+                else if(CrmPublicTimePointOperation != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimePointOperation>(null, CrmPublicTimePointOperation);
+                }
+            }
         }
     }
 }

@@ -27,10 +27,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The scheduled time for the list conversion, which can be based on a specific date or inactivity period.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionResponseRequestedConversionTime? RequestedConversionTime { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionResponse.PublicListConversionResponse_requestedConversionTime? RequestedConversionTime { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionResponseRequestedConversionTime RequestedConversionTime { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionResponse.PublicListConversionResponse_requestedConversionTime RequestedConversionTime { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionResponse"/> and sets the default values.
@@ -59,7 +59,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "convertedAt", n => { ConvertedAt = n.GetDateTimeOffsetValue(); } },
                 { "listId", n => { ListId = n.GetStringValue(); } },
-                { "requestedConversionTime", n => { RequestedConversionTime = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionResponseRequestedConversionTime>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionResponseRequestedConversionTime.CreateFromDiscriminatorValue); } },
+                { "requestedConversionTime", n => { RequestedConversionTime = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionResponse.PublicListConversionResponse_requestedConversionTime>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionResponse.PublicListConversionResponse_requestedConversionTime.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -71,8 +71,83 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDateTimeOffsetValue("convertedAt", ConvertedAt);
             writer.WriteStringValue("listId", ListId);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionResponseRequestedConversionTime>("requestedConversionTime", RequestedConversionTime);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionResponse.PublicListConversionResponse_requestedConversionTime>("requestedConversionTime", RequestedConversionTime);
             writer.WriteAdditionalData(AdditionalData);
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionDate"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionInactivity"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PublicListConversionResponse_requestedConversionTime : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionDate"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionDate? PublicListConversionDate { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionDate PublicListConversionDate { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionInactivity"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionInactivity? PublicListConversionInactivity { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionInactivity PublicListConversionInactivity { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionResponse.PublicListConversionResponse_requestedConversionTime"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionResponse.PublicListConversionResponse_requestedConversionTime CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionResponse.PublicListConversionResponse_requestedConversionTime();
+                if("PublicListConversionDate".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.PublicListConversionDate = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionDate();
+                }
+                else if("PublicListConversionInactivity".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.PublicListConversionInactivity = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionInactivity();
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                if(PublicListConversionDate != null)
+                {
+                    return PublicListConversionDate.GetFieldDeserializers();
+                }
+                else if(PublicListConversionInactivity != null)
+                {
+                    return PublicListConversionInactivity.GetFieldDeserializers();
+                }
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(PublicListConversionDate != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionDate>(null, PublicListConversionDate);
+                }
+                else if(PublicListConversionInactivity != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionInactivity>(null, PublicListConversionInactivity);
+                }
+            }
         }
     }
 }

@@ -45,10 +45,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Specifies the point in time used for the operation, which can be a date, indexed time, or property-referenced time.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicTimePointOperationTimePoint? TimePoint { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicTimePointOperation.PublicTimePointOperation_timePoint? TimePoint { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicTimePointOperationTimePoint TimePoint { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicTimePointOperation.PublicTimePointOperation_timePoint TimePoint { get; set; }
 #endif
         /// <summary>Indicates the specific type of the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -89,7 +89,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTimePointOperation_operationType>(); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
                 { "propertyParser", n => { PropertyParser = n.GetStringValue(); } },
-                { "timePoint", n => { TimePoint = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTimePointOperationTimePoint>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicTimePointOperationTimePoint.CreateFromDiscriminatorValue); } },
+                { "timePoint", n => { TimePoint = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTimePointOperation.PublicTimePointOperation_timePoint>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicTimePointOperation.PublicTimePointOperation_timePoint.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
             };
         }
@@ -105,9 +105,104 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTimePointOperation_operationType>("operationType", OperationType);
             writer.WriteStringValue("operator", Operator);
             writer.WriteStringValue("propertyParser", PropertyParser);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTimePointOperationTimePoint>("timePoint", TimePoint);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTimePointOperation.PublicTimePointOperation_timePoint>("timePoint", TimePoint);
             writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicDatePoint"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicIndexedTimePoint"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicPropertyReferencedTime"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PublicTimePointOperation_timePoint : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicDatePoint"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicDatePoint? PublicDatePoint { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicDatePoint PublicDatePoint { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicIndexedTimePoint"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicIndexedTimePoint? PublicIndexedTimePoint { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicIndexedTimePoint PublicIndexedTimePoint { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicPropertyReferencedTime"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPropertyReferencedTime? PublicPropertyReferencedTime { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPropertyReferencedTime PublicPropertyReferencedTime { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicTimePointOperation.PublicTimePointOperation_timePoint"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicTimePointOperation.PublicTimePointOperation_timePoint CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicTimePointOperation.PublicTimePointOperation_timePoint();
+                if("PublicDatePoint".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.PublicDatePoint = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicDatePoint();
+                }
+                else if("PublicIndexedTimePoint".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.PublicIndexedTimePoint = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicIndexedTimePoint();
+                }
+                else if("PublicPropertyReferencedTime".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.PublicPropertyReferencedTime = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicPropertyReferencedTime();
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                if(PublicDatePoint != null)
+                {
+                    return PublicDatePoint.GetFieldDeserializers();
+                }
+                else if(PublicIndexedTimePoint != null)
+                {
+                    return PublicIndexedTimePoint.GetFieldDeserializers();
+                }
+                else if(PublicPropertyReferencedTime != null)
+                {
+                    return PublicPropertyReferencedTime.GetFieldDeserializers();
+                }
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(PublicDatePoint != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicDatePoint>(null, PublicDatePoint);
+                }
+                else if(PublicIndexedTimePoint != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicIndexedTimePoint>(null, PublicIndexedTimePoint);
+                }
+                else if(PublicPropertyReferencedTime != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicPropertyReferencedTime>(null, PublicPropertyReferencedTime);
+                }
+            }
         }
     }
 }

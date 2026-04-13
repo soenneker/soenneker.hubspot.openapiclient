@@ -41,10 +41,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Represents the input value for the static branch action, which can be of various types such as action data, object property, or static value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticBranchActionInputValue? InputValue { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticBranchAction.ApiStaticBranchAction_inputValue? InputValue { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticBranchActionInputValue InputValue { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticBranchAction.ApiStaticBranchAction_inputValue InputValue { get; set; }
 #endif
         /// <summary>The staticBranches property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -84,7 +84,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "actionId", n => { ActionId = n.GetStringValue(); } },
                 { "defaultBranch", n => { DefaultBranch = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiConnection>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiConnection.CreateFromDiscriminatorValue); } },
                 { "defaultBranchName", n => { DefaultBranchName = n.GetStringValue(); } },
-                { "inputValue", n => { InputValue = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticBranchActionInputValue>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticBranchActionInputValue.CreateFromDiscriminatorValue); } },
+                { "inputValue", n => { InputValue = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticBranchAction.ApiStaticBranchAction_inputValue>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticBranchAction.ApiStaticBranchAction_inputValue.CreateFromDiscriminatorValue); } },
                 { "staticBranches", n => { StaticBranches = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticBranch>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticBranch.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticBranchAction_type>(); } },
             };
@@ -99,10 +99,265 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("actionId", ActionId);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiConnection>("defaultBranch", DefaultBranch);
             writer.WriteStringValue("defaultBranchName", DefaultBranchName);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticBranchActionInputValue>("inputValue", InputValue);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticBranchAction.ApiStaticBranchAction_inputValue>("inputValue", InputValue);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticBranch>("staticBranches", StaticBranches);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticBranchAction_type>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiActionDataValue"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiActionOutputObjectPropertyValue"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiAppendObjectPropertyValue"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiEnrollmentEventPropertyValue"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiFetchedObjectPropertyValue"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiIncrementValue"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiObjectPropertyValue"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiRelativeDateTimeValue"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticAppendValue"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticValue"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimestampValue"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class ApiStaticBranchAction_inputValue : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiActionDataValue"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiActionDataValue? ApiActionDataValue { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiActionDataValue ApiActionDataValue { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiActionOutputObjectPropertyValue"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiActionOutputObjectPropertyValue? ApiActionOutputObjectPropertyValue { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiActionOutputObjectPropertyValue ApiActionOutputObjectPropertyValue { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiAppendObjectPropertyValue"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiAppendObjectPropertyValue? ApiAppendObjectPropertyValue { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiAppendObjectPropertyValue ApiAppendObjectPropertyValue { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiEnrollmentEventPropertyValue"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiEnrollmentEventPropertyValue? ApiEnrollmentEventPropertyValue { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiEnrollmentEventPropertyValue ApiEnrollmentEventPropertyValue { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiFetchedObjectPropertyValue"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiFetchedObjectPropertyValue? ApiFetchedObjectPropertyValue { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiFetchedObjectPropertyValue ApiFetchedObjectPropertyValue { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiIncrementValue"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiIncrementValue? ApiIncrementValue { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiIncrementValue ApiIncrementValue { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiObjectPropertyValue"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiObjectPropertyValue? ApiObjectPropertyValue { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiObjectPropertyValue ApiObjectPropertyValue { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiRelativeDateTimeValue"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiRelativeDateTimeValue? ApiRelativeDateTimeValue { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiRelativeDateTimeValue ApiRelativeDateTimeValue { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticAppendValue"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticAppendValue? ApiStaticAppendValue { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticAppendValue ApiStaticAppendValue { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticValue"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticValue? ApiStaticValue { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticValue ApiStaticValue { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimestampValue"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimestampValue? ApiTimestampValue { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimestampValue ApiTimestampValue { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticBranchAction.ApiStaticBranchAction_inputValue"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticBranchAction.ApiStaticBranchAction_inputValue CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticBranchAction.ApiStaticBranchAction_inputValue();
+                if("ApiActionDataValue".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.ApiActionDataValue = new global::Soenneker.HubSpot.OpenApiClient.Models.ApiActionDataValue();
+                }
+                else if("ApiActionOutputObjectPropertyValue".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.ApiActionOutputObjectPropertyValue = new global::Soenneker.HubSpot.OpenApiClient.Models.ApiActionOutputObjectPropertyValue();
+                }
+                else if("ApiAppendObjectPropertyValue".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.ApiAppendObjectPropertyValue = new global::Soenneker.HubSpot.OpenApiClient.Models.ApiAppendObjectPropertyValue();
+                }
+                else if("ApiEnrollmentEventPropertyValue".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.ApiEnrollmentEventPropertyValue = new global::Soenneker.HubSpot.OpenApiClient.Models.ApiEnrollmentEventPropertyValue();
+                }
+                else if("ApiFetchedObjectPropertyValue".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.ApiFetchedObjectPropertyValue = new global::Soenneker.HubSpot.OpenApiClient.Models.ApiFetchedObjectPropertyValue();
+                }
+                else if("ApiIncrementValue".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.ApiIncrementValue = new global::Soenneker.HubSpot.OpenApiClient.Models.ApiIncrementValue();
+                }
+                else if("ApiObjectPropertyValue".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.ApiObjectPropertyValue = new global::Soenneker.HubSpot.OpenApiClient.Models.ApiObjectPropertyValue();
+                }
+                else if("ApiRelativeDateTimeValue".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.ApiRelativeDateTimeValue = new global::Soenneker.HubSpot.OpenApiClient.Models.ApiRelativeDateTimeValue();
+                }
+                else if("ApiStaticAppendValue".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.ApiStaticAppendValue = new global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticAppendValue();
+                }
+                else if("ApiStaticValue".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.ApiStaticValue = new global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticValue();
+                }
+                else if("ApiTimestampValue".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.ApiTimestampValue = new global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimestampValue();
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                if(ApiActionDataValue != null)
+                {
+                    return ApiActionDataValue.GetFieldDeserializers();
+                }
+                else if(ApiActionOutputObjectPropertyValue != null)
+                {
+                    return ApiActionOutputObjectPropertyValue.GetFieldDeserializers();
+                }
+                else if(ApiAppendObjectPropertyValue != null)
+                {
+                    return ApiAppendObjectPropertyValue.GetFieldDeserializers();
+                }
+                else if(ApiEnrollmentEventPropertyValue != null)
+                {
+                    return ApiEnrollmentEventPropertyValue.GetFieldDeserializers();
+                }
+                else if(ApiFetchedObjectPropertyValue != null)
+                {
+                    return ApiFetchedObjectPropertyValue.GetFieldDeserializers();
+                }
+                else if(ApiIncrementValue != null)
+                {
+                    return ApiIncrementValue.GetFieldDeserializers();
+                }
+                else if(ApiObjectPropertyValue != null)
+                {
+                    return ApiObjectPropertyValue.GetFieldDeserializers();
+                }
+                else if(ApiRelativeDateTimeValue != null)
+                {
+                    return ApiRelativeDateTimeValue.GetFieldDeserializers();
+                }
+                else if(ApiStaticAppendValue != null)
+                {
+                    return ApiStaticAppendValue.GetFieldDeserializers();
+                }
+                else if(ApiStaticValue != null)
+                {
+                    return ApiStaticValue.GetFieldDeserializers();
+                }
+                else if(ApiTimestampValue != null)
+                {
+                    return ApiTimestampValue.GetFieldDeserializers();
+                }
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(ApiActionDataValue != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiActionDataValue>(null, ApiActionDataValue);
+                }
+                else if(ApiActionOutputObjectPropertyValue != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiActionOutputObjectPropertyValue>(null, ApiActionOutputObjectPropertyValue);
+                }
+                else if(ApiAppendObjectPropertyValue != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiAppendObjectPropertyValue>(null, ApiAppendObjectPropertyValue);
+                }
+                else if(ApiEnrollmentEventPropertyValue != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiEnrollmentEventPropertyValue>(null, ApiEnrollmentEventPropertyValue);
+                }
+                else if(ApiFetchedObjectPropertyValue != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiFetchedObjectPropertyValue>(null, ApiFetchedObjectPropertyValue);
+                }
+                else if(ApiIncrementValue != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiIncrementValue>(null, ApiIncrementValue);
+                }
+                else if(ApiObjectPropertyValue != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiObjectPropertyValue>(null, ApiObjectPropertyValue);
+                }
+                else if(ApiRelativeDateTimeValue != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiRelativeDateTimeValue>(null, ApiRelativeDateTimeValue);
+                }
+                else if(ApiStaticAppendValue != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticAppendValue>(null, ApiStaticAppendValue);
+                }
+                else if(ApiStaticValue != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticValue>(null, ApiStaticValue);
+                }
+                else if(ApiTimestampValue != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimestampValue>(null, ApiTimestampValue);
+                }
+            }
         }
     }
 }

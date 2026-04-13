@@ -59,10 +59,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Specifies the operation used to compare the survey answer value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicSurveyMonkeyValueFilterValueComparison? ValueComparison { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicSurveyMonkeyValueFilter.CrmPublicSurveyMonkeyValueFilter_valueComparison? ValueComparison { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicSurveyMonkeyValueFilterValueComparison ValueComparison { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicSurveyMonkeyValueFilter.CrmPublicSurveyMonkeyValueFilter_valueComparison ValueComparison { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicSurveyMonkeyValueFilter"/> and sets the default values.
@@ -96,7 +96,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "surveyAnswerRowId", n => { SurveyAnswerRowId = n.GetStringValue(); } },
                 { "surveyId", n => { SurveyId = n.GetStringValue(); } },
                 { "surveyQuestion", n => { SurveyQuestion = n.GetStringValue(); } },
-                { "valueComparison", n => { ValueComparison = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicSurveyMonkeyValueFilterValueComparison>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicSurveyMonkeyValueFilterValueComparison.CreateFromDiscriminatorValue); } },
+                { "valueComparison", n => { ValueComparison = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicSurveyMonkeyValueFilter.CrmPublicSurveyMonkeyValueFilter_valueComparison>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicSurveyMonkeyValueFilter.CrmPublicSurveyMonkeyValueFilter_valueComparison.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -112,8 +112,383 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("surveyAnswerRowId", SurveyAnswerRowId);
             writer.WriteStringValue("surveyId", SurveyId);
             writer.WriteStringValue("surveyQuestion", SurveyQuestion);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicSurveyMonkeyValueFilterValueComparison>("valueComparison", ValueComparison);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicSurveyMonkeyValueFilter.CrmPublicSurveyMonkeyValueFilter_valueComparison>("valueComparison", ValueComparison);
             writer.WriteAdditionalData(AdditionalData);
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAllPropertyTypesOperation"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicBoolPropertyOperation"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCalendarDatePropertyOperation"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicComparativeDatePropertyOperation"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicComparativePropertyUpdatedOperation"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicDatePropertyOperation"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicDateTimePropertyOperation"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEnumerationPropertyOperation"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicMultiStringPropertyOperation"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicNumberPropertyOperation"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedDatePropertyOperation"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedNumberPropertyOperation"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperation"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRollingDateRangePropertyOperation"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRollingPropertyUpdatedOperation"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicStringPropertyOperation"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimePointOperation"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class CrmPublicSurveyMonkeyValueFilter_valueComparison : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAllPropertyTypesOperation"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAllPropertyTypesOperation? CrmPublicAllPropertyTypesOperation { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAllPropertyTypesOperation CrmPublicAllPropertyTypesOperation { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicBoolPropertyOperation"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicBoolPropertyOperation? CrmPublicBoolPropertyOperation { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicBoolPropertyOperation CrmPublicBoolPropertyOperation { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCalendarDatePropertyOperation"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCalendarDatePropertyOperation? CrmPublicCalendarDatePropertyOperation { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCalendarDatePropertyOperation CrmPublicCalendarDatePropertyOperation { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicComparativeDatePropertyOperation"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicComparativeDatePropertyOperation? CrmPublicComparativeDatePropertyOperation { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicComparativeDatePropertyOperation CrmPublicComparativeDatePropertyOperation { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicComparativePropertyUpdatedOperation"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicComparativePropertyUpdatedOperation? CrmPublicComparativePropertyUpdatedOperation { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicComparativePropertyUpdatedOperation CrmPublicComparativePropertyUpdatedOperation { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicDatePropertyOperation"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicDatePropertyOperation? CrmPublicDatePropertyOperation { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicDatePropertyOperation CrmPublicDatePropertyOperation { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicDateTimePropertyOperation"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicDateTimePropertyOperation? CrmPublicDateTimePropertyOperation { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicDateTimePropertyOperation CrmPublicDateTimePropertyOperation { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEnumerationPropertyOperation"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEnumerationPropertyOperation? CrmPublicEnumerationPropertyOperation { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEnumerationPropertyOperation CrmPublicEnumerationPropertyOperation { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicMultiStringPropertyOperation"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicMultiStringPropertyOperation? CrmPublicMultiStringPropertyOperation { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicMultiStringPropertyOperation CrmPublicMultiStringPropertyOperation { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicNumberPropertyOperation"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicNumberPropertyOperation? CrmPublicNumberPropertyOperation { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicNumberPropertyOperation CrmPublicNumberPropertyOperation { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedDatePropertyOperation"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedDatePropertyOperation? CrmPublicRangedDatePropertyOperation { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedDatePropertyOperation CrmPublicRangedDatePropertyOperation { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedNumberPropertyOperation"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedNumberPropertyOperation? CrmPublicRangedNumberPropertyOperation { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedNumberPropertyOperation CrmPublicRangedNumberPropertyOperation { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperation"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperation? CrmPublicRangedTimeOperation { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperation CrmPublicRangedTimeOperation { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRollingDateRangePropertyOperation"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRollingDateRangePropertyOperation? CrmPublicRollingDateRangePropertyOperation { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRollingDateRangePropertyOperation CrmPublicRollingDateRangePropertyOperation { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRollingPropertyUpdatedOperation"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRollingPropertyUpdatedOperation? CrmPublicRollingPropertyUpdatedOperation { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRollingPropertyUpdatedOperation CrmPublicRollingPropertyUpdatedOperation { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicStringPropertyOperation"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicStringPropertyOperation? CrmPublicStringPropertyOperation { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicStringPropertyOperation CrmPublicStringPropertyOperation { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimePointOperation"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimePointOperation? CrmPublicTimePointOperation { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimePointOperation CrmPublicTimePointOperation { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicSurveyMonkeyValueFilter.CrmPublicSurveyMonkeyValueFilter_valueComparison"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicSurveyMonkeyValueFilter.CrmPublicSurveyMonkeyValueFilter_valueComparison CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicSurveyMonkeyValueFilter.CrmPublicSurveyMonkeyValueFilter_valueComparison();
+                if("CrmPublicAllPropertyTypesOperation".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.CrmPublicAllPropertyTypesOperation = new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAllPropertyTypesOperation();
+                }
+                else if("CrmPublicBoolPropertyOperation".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.CrmPublicBoolPropertyOperation = new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicBoolPropertyOperation();
+                }
+                else if("CrmPublicCalendarDatePropertyOperation".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.CrmPublicCalendarDatePropertyOperation = new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCalendarDatePropertyOperation();
+                }
+                else if("CrmPublicComparativeDatePropertyOperation".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.CrmPublicComparativeDatePropertyOperation = new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicComparativeDatePropertyOperation();
+                }
+                else if("CrmPublicComparativePropertyUpdatedOperation".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.CrmPublicComparativePropertyUpdatedOperation = new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicComparativePropertyUpdatedOperation();
+                }
+                else if("CrmPublicDatePropertyOperation".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.CrmPublicDatePropertyOperation = new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicDatePropertyOperation();
+                }
+                else if("CrmPublicDateTimePropertyOperation".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.CrmPublicDateTimePropertyOperation = new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicDateTimePropertyOperation();
+                }
+                else if("CrmPublicEnumerationPropertyOperation".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.CrmPublicEnumerationPropertyOperation = new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEnumerationPropertyOperation();
+                }
+                else if("CrmPublicMultiStringPropertyOperation".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.CrmPublicMultiStringPropertyOperation = new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicMultiStringPropertyOperation();
+                }
+                else if("CrmPublicNumberPropertyOperation".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.CrmPublicNumberPropertyOperation = new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicNumberPropertyOperation();
+                }
+                else if("CrmPublicRangedDatePropertyOperation".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.CrmPublicRangedDatePropertyOperation = new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedDatePropertyOperation();
+                }
+                else if("CrmPublicRangedNumberPropertyOperation".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.CrmPublicRangedNumberPropertyOperation = new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedNumberPropertyOperation();
+                }
+                else if("CrmPublicRangedTimeOperation".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.CrmPublicRangedTimeOperation = new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperation();
+                }
+                else if("CrmPublicRollingDateRangePropertyOperation".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.CrmPublicRollingDateRangePropertyOperation = new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRollingDateRangePropertyOperation();
+                }
+                else if("CrmPublicRollingPropertyUpdatedOperation".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.CrmPublicRollingPropertyUpdatedOperation = new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRollingPropertyUpdatedOperation();
+                }
+                else if("CrmPublicStringPropertyOperation".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.CrmPublicStringPropertyOperation = new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicStringPropertyOperation();
+                }
+                else if("CrmPublicTimePointOperation".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.CrmPublicTimePointOperation = new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimePointOperation();
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                if(CrmPublicAllPropertyTypesOperation != null)
+                {
+                    return CrmPublicAllPropertyTypesOperation.GetFieldDeserializers();
+                }
+                else if(CrmPublicBoolPropertyOperation != null)
+                {
+                    return CrmPublicBoolPropertyOperation.GetFieldDeserializers();
+                }
+                else if(CrmPublicCalendarDatePropertyOperation != null)
+                {
+                    return CrmPublicCalendarDatePropertyOperation.GetFieldDeserializers();
+                }
+                else if(CrmPublicComparativeDatePropertyOperation != null)
+                {
+                    return CrmPublicComparativeDatePropertyOperation.GetFieldDeserializers();
+                }
+                else if(CrmPublicComparativePropertyUpdatedOperation != null)
+                {
+                    return CrmPublicComparativePropertyUpdatedOperation.GetFieldDeserializers();
+                }
+                else if(CrmPublicDatePropertyOperation != null)
+                {
+                    return CrmPublicDatePropertyOperation.GetFieldDeserializers();
+                }
+                else if(CrmPublicDateTimePropertyOperation != null)
+                {
+                    return CrmPublicDateTimePropertyOperation.GetFieldDeserializers();
+                }
+                else if(CrmPublicEnumerationPropertyOperation != null)
+                {
+                    return CrmPublicEnumerationPropertyOperation.GetFieldDeserializers();
+                }
+                else if(CrmPublicMultiStringPropertyOperation != null)
+                {
+                    return CrmPublicMultiStringPropertyOperation.GetFieldDeserializers();
+                }
+                else if(CrmPublicNumberPropertyOperation != null)
+                {
+                    return CrmPublicNumberPropertyOperation.GetFieldDeserializers();
+                }
+                else if(CrmPublicRangedDatePropertyOperation != null)
+                {
+                    return CrmPublicRangedDatePropertyOperation.GetFieldDeserializers();
+                }
+                else if(CrmPublicRangedNumberPropertyOperation != null)
+                {
+                    return CrmPublicRangedNumberPropertyOperation.GetFieldDeserializers();
+                }
+                else if(CrmPublicRangedTimeOperation != null)
+                {
+                    return CrmPublicRangedTimeOperation.GetFieldDeserializers();
+                }
+                else if(CrmPublicRollingDateRangePropertyOperation != null)
+                {
+                    return CrmPublicRollingDateRangePropertyOperation.GetFieldDeserializers();
+                }
+                else if(CrmPublicRollingPropertyUpdatedOperation != null)
+                {
+                    return CrmPublicRollingPropertyUpdatedOperation.GetFieldDeserializers();
+                }
+                else if(CrmPublicStringPropertyOperation != null)
+                {
+                    return CrmPublicStringPropertyOperation.GetFieldDeserializers();
+                }
+                else if(CrmPublicTimePointOperation != null)
+                {
+                    return CrmPublicTimePointOperation.GetFieldDeserializers();
+                }
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(CrmPublicAllPropertyTypesOperation != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAllPropertyTypesOperation>(null, CrmPublicAllPropertyTypesOperation);
+                }
+                else if(CrmPublicBoolPropertyOperation != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicBoolPropertyOperation>(null, CrmPublicBoolPropertyOperation);
+                }
+                else if(CrmPublicCalendarDatePropertyOperation != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCalendarDatePropertyOperation>(null, CrmPublicCalendarDatePropertyOperation);
+                }
+                else if(CrmPublicComparativeDatePropertyOperation != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicComparativeDatePropertyOperation>(null, CrmPublicComparativeDatePropertyOperation);
+                }
+                else if(CrmPublicComparativePropertyUpdatedOperation != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicComparativePropertyUpdatedOperation>(null, CrmPublicComparativePropertyUpdatedOperation);
+                }
+                else if(CrmPublicDatePropertyOperation != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicDatePropertyOperation>(null, CrmPublicDatePropertyOperation);
+                }
+                else if(CrmPublicDateTimePropertyOperation != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicDateTimePropertyOperation>(null, CrmPublicDateTimePropertyOperation);
+                }
+                else if(CrmPublicEnumerationPropertyOperation != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEnumerationPropertyOperation>(null, CrmPublicEnumerationPropertyOperation);
+                }
+                else if(CrmPublicMultiStringPropertyOperation != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicMultiStringPropertyOperation>(null, CrmPublicMultiStringPropertyOperation);
+                }
+                else if(CrmPublicNumberPropertyOperation != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicNumberPropertyOperation>(null, CrmPublicNumberPropertyOperation);
+                }
+                else if(CrmPublicRangedDatePropertyOperation != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedDatePropertyOperation>(null, CrmPublicRangedDatePropertyOperation);
+                }
+                else if(CrmPublicRangedNumberPropertyOperation != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedNumberPropertyOperation>(null, CrmPublicRangedNumberPropertyOperation);
+                }
+                else if(CrmPublicRangedTimeOperation != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperation>(null, CrmPublicRangedTimeOperation);
+                }
+                else if(CrmPublicRollingDateRangePropertyOperation != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRollingDateRangePropertyOperation>(null, CrmPublicRollingDateRangePropertyOperation);
+                }
+                else if(CrmPublicRollingPropertyUpdatedOperation != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRollingPropertyUpdatedOperation>(null, CrmPublicRollingPropertyUpdatedOperation);
+                }
+                else if(CrmPublicStringPropertyOperation != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicStringPropertyOperation>(null, CrmPublicStringPropertyOperation);
+                }
+                else if(CrmPublicTimePointOperation != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimePointOperation>(null, CrmPublicTimePointOperation);
+                }
+            }
         }
     }
 }

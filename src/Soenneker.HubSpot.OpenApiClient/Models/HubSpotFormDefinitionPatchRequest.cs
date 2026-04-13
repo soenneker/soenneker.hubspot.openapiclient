@@ -43,10 +43,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>&quot;Configuration for legal consent and data processing compliance options. Supports types: none, legitimate_interest, explicit_consent_to_process, implicit_consent_to_process.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.HubSpotFormDefinitionPatchRequestLegalConsentOptions? LegalConsentOptions { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.HubSpotFormDefinitionPatchRequest.HubSpotFormDefinitionPatchRequest_legalConsentOptions? LegalConsentOptions { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.HubSpotFormDefinitionPatchRequestLegalConsentOptions LegalConsentOptions { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.HubSpotFormDefinitionPatchRequest.HubSpotFormDefinitionPatchRequest_legalConsentOptions LegalConsentOptions { get; set; }
 #endif
         /// <summary>The name of the form. Expected to be unique for a hub.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -85,7 +85,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "configuration", n => { Configuration = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.HubSpotFormConfiguration>(global::Soenneker.HubSpot.OpenApiClient.Models.HubSpotFormConfiguration.CreateFromDiscriminatorValue); } },
                 { "displayOptions", n => { DisplayOptions = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.FormDisplayOptions>(global::Soenneker.HubSpot.OpenApiClient.Models.FormDisplayOptions.CreateFromDiscriminatorValue); } },
                 { "fieldGroups", n => { FieldGroups = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.FieldGroup>(global::Soenneker.HubSpot.OpenApiClient.Models.FieldGroup.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "legalConsentOptions", n => { LegalConsentOptions = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.HubSpotFormDefinitionPatchRequestLegalConsentOptions>(global::Soenneker.HubSpot.OpenApiClient.Models.HubSpotFormDefinitionPatchRequestLegalConsentOptions.CreateFromDiscriminatorValue); } },
+                { "legalConsentOptions", n => { LegalConsentOptions = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.HubSpotFormDefinitionPatchRequest.HubSpotFormDefinitionPatchRequest_legalConsentOptions>(global::Soenneker.HubSpot.OpenApiClient.Models.HubSpotFormDefinitionPatchRequest.HubSpotFormDefinitionPatchRequest_legalConsentOptions.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
             };
         }
@@ -100,9 +100,124 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.HubSpotFormConfiguration>("configuration", Configuration);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.FormDisplayOptions>("displayOptions", DisplayOptions);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.FieldGroup>("fieldGroups", FieldGroups);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.HubSpotFormDefinitionPatchRequestLegalConsentOptions>("legalConsentOptions", LegalConsentOptions);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.HubSpotFormDefinitionPatchRequest.HubSpotFormDefinitionPatchRequest_legalConsentOptions>("legalConsentOptions", LegalConsentOptions);
             writer.WriteStringValue("name", Name);
             writer.WriteAdditionalData(AdditionalData);
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsExplicitConsentToProcess"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsImplicitConsentToProcess"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsLegitimateInterest"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsNone"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class HubSpotFormDefinitionPatchRequest_legalConsentOptions : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsExplicitConsentToProcess"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsExplicitConsentToProcess? LegalConsentOptionsExplicitConsentToProcess { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsExplicitConsentToProcess LegalConsentOptionsExplicitConsentToProcess { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsImplicitConsentToProcess"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsImplicitConsentToProcess? LegalConsentOptionsImplicitConsentToProcess { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsImplicitConsentToProcess LegalConsentOptionsImplicitConsentToProcess { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsLegitimateInterest"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsLegitimateInterest? LegalConsentOptionsLegitimateInterest { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsLegitimateInterest LegalConsentOptionsLegitimateInterest { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsNone"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsNone? LegalConsentOptionsNone { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsNone LegalConsentOptionsNone { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.HubSpotFormDefinitionPatchRequest.HubSpotFormDefinitionPatchRequest_legalConsentOptions"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.HubSpot.OpenApiClient.Models.HubSpotFormDefinitionPatchRequest.HubSpotFormDefinitionPatchRequest_legalConsentOptions CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Soenneker.HubSpot.OpenApiClient.Models.HubSpotFormDefinitionPatchRequest.HubSpotFormDefinitionPatchRequest_legalConsentOptions();
+                if("LegalConsentOptionsExplicitConsentToProcess".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.LegalConsentOptionsExplicitConsentToProcess = new global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsExplicitConsentToProcess();
+                }
+                else if("LegalConsentOptionsImplicitConsentToProcess".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.LegalConsentOptionsImplicitConsentToProcess = new global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsImplicitConsentToProcess();
+                }
+                else if("LegalConsentOptionsLegitimateInterest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.LegalConsentOptionsLegitimateInterest = new global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsLegitimateInterest();
+                }
+                else if("LegalConsentOptionsNone".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.LegalConsentOptionsNone = new global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsNone();
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                if(LegalConsentOptionsExplicitConsentToProcess != null)
+                {
+                    return LegalConsentOptionsExplicitConsentToProcess.GetFieldDeserializers();
+                }
+                else if(LegalConsentOptionsImplicitConsentToProcess != null)
+                {
+                    return LegalConsentOptionsImplicitConsentToProcess.GetFieldDeserializers();
+                }
+                else if(LegalConsentOptionsLegitimateInterest != null)
+                {
+                    return LegalConsentOptionsLegitimateInterest.GetFieldDeserializers();
+                }
+                else if(LegalConsentOptionsNone != null)
+                {
+                    return LegalConsentOptionsNone.GetFieldDeserializers();
+                }
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(LegalConsentOptionsExplicitConsentToProcess != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsExplicitConsentToProcess>(null, LegalConsentOptionsExplicitConsentToProcess);
+                }
+                else if(LegalConsentOptionsImplicitConsentToProcess != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsImplicitConsentToProcess>(null, LegalConsentOptionsImplicitConsentToProcess);
+                }
+                else if(LegalConsentOptionsLegitimateInterest != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsLegitimateInterest>(null, LegalConsentOptionsLegitimateInterest);
+                }
+                else if(LegalConsentOptionsNone != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsNone>(null, LegalConsentOptionsNone);
+                }
+            }
         }
     }
 }
