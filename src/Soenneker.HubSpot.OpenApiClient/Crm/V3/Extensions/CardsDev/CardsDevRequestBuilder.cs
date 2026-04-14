@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Extensions.CardsDev
             get => new global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Extensions.CardsDev.SampleResponse.SampleResponseRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.crm.v3.extensions.cardsDev.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The id of the app containing the Legacy CRM Card(s)</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Extensions.CardsDev.Item.WithAppItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Extensions.CardsDev.Item.WithAppItemRequestBuilder this[int position]
         {
