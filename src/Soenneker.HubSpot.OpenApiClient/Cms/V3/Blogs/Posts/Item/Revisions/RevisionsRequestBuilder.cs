@@ -19,7 +19,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Posts.Item.Revisions
     public partial class RevisionsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.cms.v3.blogs.posts.item.revisions.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The ID of the revision to retrieve</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Posts.Item.Revisions.Item.WithRevisionItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Posts.Item.Revisions.Item.WithRevisionItemRequestBuilder this[string position]
         {
