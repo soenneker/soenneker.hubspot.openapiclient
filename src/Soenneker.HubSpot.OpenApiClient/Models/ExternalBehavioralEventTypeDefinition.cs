@@ -52,6 +52,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
+        /// <summary>The detailTemplate property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DetailTemplate { get; set; }
+#nullable restore
+#else
+        public string DetailTemplate { get; set; }
+#endif
         /// <summary>The fullyQualifiedName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -59,6 +67,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #nullable restore
 #else
         public string FullyQualifiedName { get; set; }
+#endif
+        /// <summary>The headerTemplate property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? HeaderTemplate { get; set; }
+#nullable restore
+#else
+        public string HeaderTemplate { get; set; }
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -154,7 +170,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "createdUserId", n => { CreatedUserId = n.GetIntValue(); } },
                 { "customMatchingId", n => { CustomMatchingId = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalObjectResolutionMappingResponse>(global::Soenneker.HubSpot.OpenApiClient.Models.ExternalObjectResolutionMappingResponse.CreateFromDiscriminatorValue); } },
                 { "description", n => { Description = n.GetStringValue(); } },
+                { "detailTemplate", n => { DetailTemplate = n.GetStringValue(); } },
                 { "fullyQualifiedName", n => { FullyQualifiedName = n.GetStringValue(); } },
+                { "headerTemplate", n => { HeaderTemplate = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "labels", n => { Labels = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.BehavioralEventTypeDefinitionLabels>(global::Soenneker.HubSpot.OpenApiClient.Models.BehavioralEventTypeDefinitionLabels.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
@@ -181,7 +199,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteIntValue("createdUserId", CreatedUserId);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalObjectResolutionMappingResponse>("customMatchingId", CustomMatchingId);
             writer.WriteStringValue("description", Description);
+            writer.WriteStringValue("detailTemplate", DetailTemplate);
             writer.WriteStringValue("fullyQualifiedName", FullyQualifiedName);
+            writer.WriteStringValue("headerTemplate", HeaderTemplate);
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.BehavioralEventTypeDefinitionLabels>("labels", Labels);
             writer.WriteStringValue("name", Name);

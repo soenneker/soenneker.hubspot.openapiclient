@@ -556,6 +556,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         #pragma warning disable CS1591
         Hs_enriched_email_bounce_detected,
         #pragma warning restore CS1591
+        [EnumMember(Value = "hs_excluded_from_cross_account_data_mirroring")]
+        #pragma warning disable CS1591
+        Hs_excluded_from_cross_account_data_mirroring,
+        #pragma warning restore CS1591
         [EnumMember(Value = "hs_facebook_ad_clicked")]
         #pragma warning disable CS1591
         Hs_facebook_ad_clicked,

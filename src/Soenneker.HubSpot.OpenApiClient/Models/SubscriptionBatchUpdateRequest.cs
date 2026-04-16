@@ -13,11 +13,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SubscriptionBatchUpdateRequest : IAdditionalDataHolder, IParsable
     {
-        /// <summary>Whether to activate or pause the webhook subscription. If true, the subscription will send webhook notifications. If false, the subscription is paused and will not send notifications.</summary>
+        /// <summary>Whether to activate or pause the webhook subscription. If true, the subscription will send webhook notifications. If false, the subscription is paused and will not send notifications. It is a boolean.</summary>
         public bool? Active { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The ID of the webhook subscription to update.</summary>
+        /// <summary>The ID of the webhook subscription to update. It is an integer.</summary>
         public int? Id { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionBatchUpdateRequest"/> and sets the default values.
