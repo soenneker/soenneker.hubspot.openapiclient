@@ -3,8 +3,6 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.HubSpot.OpenApiClient.Crm.Associations;
-using Soenneker.HubSpot.OpenApiClient.Crm.Imports;
-using Soenneker.HubSpot.OpenApiClient.Crm.Lists;
 using Soenneker.HubSpot.OpenApiClient.Crm.Objects;
 using Soenneker.HubSpot.OpenApiClient.Crm.V3;
 using Soenneker.HubSpot.OpenApiClient.Crm.V4;
@@ -24,16 +22,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm
         public global::Soenneker.HubSpot.OpenApiClient.Crm.Associations.AssociationsRequestBuilder Associations
         {
             get => new global::Soenneker.HubSpot.OpenApiClient.Crm.Associations.AssociationsRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The imports property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Crm.Imports.ImportsRequestBuilder Imports
-        {
-            get => new global::Soenneker.HubSpot.OpenApiClient.Crm.Imports.ImportsRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The lists property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Crm.Lists.ListsRequestBuilder Lists
-        {
-            get => new global::Soenneker.HubSpot.OpenApiClient.Crm.Lists.ListsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The objects property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.ObjectsRequestBuilder Objects

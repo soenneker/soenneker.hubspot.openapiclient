@@ -4,7 +4,9 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.HubSpot.OpenApiClient.Crm.V3.Exports;
 using Soenneker.HubSpot.OpenApiClient.Crm.V3.Extensions;
+using Soenneker.HubSpot.OpenApiClient.Crm.V3.Imports;
 using Soenneker.HubSpot.OpenApiClient.Crm.V3.Limits;
+using Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists;
 using Soenneker.HubSpot.OpenApiClient.Crm.V3.ObjectLibrary;
 using Soenneker.HubSpot.OpenApiClient.Crm.V3.Objects;
 using Soenneker.HubSpot.OpenApiClient.Crm.V3.Owners;
@@ -33,10 +35,20 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3
         {
             get => new global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Extensions.ExtensionsRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The imports property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Imports.ImportsRequestBuilder Imports
+        {
+            get => new global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Imports.ImportsRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The limits property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Limits.LimitsRequestBuilder Limits
         {
             get => new global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Limits.LimitsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The lists property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.ListsRequestBuilder Lists
+        {
+            get => new global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.ListsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The objectLibrary property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Crm.V3.ObjectLibrary.ObjectLibraryRequestBuilder ObjectLibrary

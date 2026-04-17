@@ -640,6 +640,30 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         #pragma warning disable CS1591
         Hs_full_name_or_email,
         #pragma warning restore CS1591
+        [EnumMember(Value = "hs_geohash_1")]
+        #pragma warning disable CS1591
+        Hs_geohash_1,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "hs_geohash_2")]
+        #pragma warning disable CS1591
+        Hs_geohash_2,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "hs_geohash_3")]
+        #pragma warning disable CS1591
+        Hs_geohash_3,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "hs_geohash_4")]
+        #pragma warning disable CS1591
+        Hs_geohash_4,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "hs_geohash_5")]
+        #pragma warning disable CS1591
+        Hs_geohash_5,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "hs_geohash_6")]
+        #pragma warning disable CS1591
+        Hs_geohash_6,
+        #pragma warning restore CS1591
         [EnumMember(Value = "hs_google_click_id")]
         #pragma warning disable CS1591
         Hs_google_click_id,

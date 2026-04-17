@@ -38,6 +38,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.ComplianceIds ComplianceIds { get; set; }
 #endif
+        /// <summary>The conversationId property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ConversationId { get; set; }
+#nullable restore
+#else
+        public string ConversationId { get; set; }
+#endif
         /// <summary>The identifier for the feature associated with the context.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -108,6 +116,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "applicationGroup", n => { ApplicationGroup = n.GetStringValue(); } },
                 { "applicationId", n => { ApplicationId = n.GetStringValue(); } },
                 { "complianceIds", n => { ComplianceIds = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ComplianceIds>(global::Soenneker.HubSpot.OpenApiClient.Models.ComplianceIds.CreateFromDiscriminatorValue); } },
+                { "conversationId", n => { ConversationId = n.GetStringValue(); } },
                 { "featureId", n => { FeatureId = n.GetStringValue(); } },
                 { "inferenceId", n => { InferenceId = n.GetStringValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObject_metadata>(global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObject_metadata.CreateFromDiscriminatorValue); } },
@@ -126,6 +135,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("applicationGroup", ApplicationGroup);
             writer.WriteStringValue("applicationId", ApplicationId);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ComplianceIds>("complianceIds", ComplianceIds);
+            writer.WriteStringValue("conversationId", ConversationId);
             writer.WriteStringValue("featureId", FeatureId);
             writer.WriteStringValue("inferenceId", InferenceId);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObject_metadata>("metadata", Metadata);
