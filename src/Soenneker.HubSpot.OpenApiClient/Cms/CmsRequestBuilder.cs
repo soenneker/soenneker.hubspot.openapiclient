@@ -3,7 +3,6 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.HubSpot.OpenApiClient.Cms.AuditLogs;
-using Soenneker.HubSpot.OpenApiClient.Cms.Blogs;
 using Soenneker.HubSpot.OpenApiClient.Cms.Pages;
 using Soenneker.HubSpot.OpenApiClient.Cms.UrlRedirects;
 using Soenneker.HubSpot.OpenApiClient.Cms.V3;
@@ -23,11 +22,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms
         public global::Soenneker.HubSpot.OpenApiClient.Cms.AuditLogs.AuditLogsRequestBuilder AuditLogs
         {
             get => new global::Soenneker.HubSpot.OpenApiClient.Cms.AuditLogs.AuditLogsRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The blogs property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Cms.Blogs.BlogsRequestBuilder Blogs
-        {
-            get => new global::Soenneker.HubSpot.OpenApiClient.Cms.Blogs.BlogsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The pages property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Cms.Pages.PagesRequestBuilder Pages
