@@ -37,7 +37,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string SubscriberIdString { get; set; }
 #endif
         /// <summary>The ID of the subscription to update.</summary>
-        public int? SubscriptionId { get; set; }
+        public long? SubscriptionId { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusRequest"/> and sets the default values.
         /// </summary>
@@ -68,7 +68,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "legalBasisExplanation", n => { LegalBasisExplanation = n.GetStringValue(); } },
                 { "statusState", n => { StatusState = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusRequest_statusState>(); } },
                 { "subscriberIdString", n => { SubscriberIdString = n.GetStringValue(); } },
-                { "subscriptionId", n => { SubscriptionId = n.GetIntValue(); } },
+                { "subscriptionId", n => { SubscriptionId = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -83,7 +83,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("legalBasisExplanation", LegalBasisExplanation);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusRequest_statusState>("statusState", StatusState);
             writer.WriteStringValue("subscriberIdString", SubscriberIdString);
-            writer.WriteIntValue("subscriptionId", SubscriptionId);
+            writer.WriteLongValue("subscriptionId", SubscriptionId);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -25,7 +25,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string ClientId { get; set; }
 #endif
         /// <summary>The expires_in property</summary>
-        public int? ExpiresIn { get; set; }
+        public long? ExpiresIn { get; set; }
         /// <summary>The hub_domain property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -110,7 +110,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "active", n => { Active = n.GetBoolValue(); } },
                 { "app_id", n => { AppId = n.GetIntValue(); } },
                 { "client_id", n => { ClientId = n.GetStringValue(); } },
-                { "expires_in", n => { ExpiresIn = n.GetIntValue(); } },
+                { "expires_in", n => { ExpiresIn = n.GetLongValue(); } },
                 { "hub_domain", n => { HubDomain = n.GetStringValue(); } },
                 { "hub_id", n => { HubId = n.GetIntValue(); } },
                 { "is_private_distribution", n => { IsPrivateDistribution = n.GetBoolValue(); } },
@@ -134,7 +134,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteBoolValue("active", Active);
             writer.WriteIntValue("app_id", AppId);
             writer.WriteStringValue("client_id", ClientId);
-            writer.WriteIntValue("expires_in", ExpiresIn);
+            writer.WriteLongValue("expires_in", ExpiresIn);
             writer.WriteStringValue("hub_domain", HubDomain);
             writer.WriteIntValue("hub_id", HubId);
             writer.WriteBoolValue("is_private_distribution", IsPrivateDistribution);

@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The datasetId property</summary>
-        public int? DatasetId { get; set; }
+        public long? DatasetId { get; set; }
         /// <summary>The shouldReEnroll property</summary>
         public bool? ShouldReEnroll { get; set; }
         /// <summary>The subviewId property</summary>
@@ -53,7 +53,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "datasetId", n => { DatasetId = n.GetIntValue(); } },
+                { "datasetId", n => { DatasetId = n.GetLongValue(); } },
                 { "shouldReEnroll", n => { ShouldReEnroll = n.GetBoolValue(); } },
                 { "subviewId", n => { SubviewId = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiDatasetBasedEnrollmentCriteria_type>(); } },
@@ -66,7 +66,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("datasetId", DatasetId);
+            writer.WriteLongValue("datasetId", DatasetId);
             writer.WriteBoolValue("shouldReEnroll", ShouldReEnroll);
             writer.WriteStringValue("subviewId", SubviewId);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiDatasetBasedEnrollmentCriteria_type>("type", Type);

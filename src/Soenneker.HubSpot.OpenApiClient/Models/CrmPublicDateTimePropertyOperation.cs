@@ -29,7 +29,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Indicates whether the timestamp requires conversion to a different time zone.</summary>
         public bool? RequiresTimeZoneConversion { get; set; }
         /// <summary>The specific point in time used in the operation.</summary>
-        public int? Timestamp { get; set; }
+        public long? Timestamp { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicDateTimePropertyOperation"/> and sets the default values.
         /// </summary>
@@ -60,7 +60,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicDateTimePropertyOperation_operationType>(); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
                 { "requiresTimeZoneConversion", n => { RequiresTimeZoneConversion = n.GetBoolValue(); } },
-                { "timestamp", n => { Timestamp = n.GetIntValue(); } },
+                { "timestamp", n => { Timestamp = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -74,7 +74,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicDateTimePropertyOperation_operationType>("operationType", OperationType);
             writer.WriteStringValue("operator", Operator);
             writer.WriteBoolValue("requiresTimeZoneConversion", RequiresTimeZoneConversion);
-            writer.WriteIntValue("timestamp", Timestamp);
+            writer.WriteLongValue("timestamp", Timestamp);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

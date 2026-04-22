@@ -17,7 +17,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The ID associated with the enrollment process.</summary>
-        public int? EnrollmentId { get; set; }
+        public long? EnrollmentId { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ActionExecutionIndexIdentifier"/> and sets the default values.
         /// </summary>
@@ -44,7 +44,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "actionExecutionIndex", n => { ActionExecutionIndex = n.GetIntValue(); } },
-                { "enrollmentId", n => { EnrollmentId = n.GetIntValue(); } },
+                { "enrollmentId", n => { EnrollmentId = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -55,7 +55,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("actionExecutionIndex", ActionExecutionIndex);
-            writer.WriteIntValue("enrollmentId", EnrollmentId);
+            writer.WriteLongValue("enrollmentId", EnrollmentId);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

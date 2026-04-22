@@ -17,7 +17,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Indicates whether objects without a value set should be included.</summary>
         public bool? IncludeObjectsWithNoValueSet { get; set; }
         /// <summary>Specifies the lower limit for the number range.</summary>
-        public int? LowerBound { get; set; }
+        public long? LowerBound { get; set; }
         /// <summary>Specifies the type of operation, which is &apos;NUMBER_RANGED&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRangedNumberPropertyOperation_operationType? OperationType { get; set; }
         /// <summary>Defines the operator used in the ranged number property operation.</summary>
@@ -29,7 +29,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Operator { get; set; }
 #endif
         /// <summary>Specifies the upper limit for the number range.</summary>
-        public int? UpperBound { get; set; }
+        public long? UpperBound { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicRangedNumberPropertyOperation"/> and sets the default values.
         /// </summary>
@@ -57,10 +57,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "includeObjectsWithNoValueSet", n => { IncludeObjectsWithNoValueSet = n.GetBoolValue(); } },
-                { "lowerBound", n => { LowerBound = n.GetIntValue(); } },
+                { "lowerBound", n => { LowerBound = n.GetLongValue(); } },
                 { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRangedNumberPropertyOperation_operationType>(); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
-                { "upperBound", n => { UpperBound = n.GetIntValue(); } },
+                { "upperBound", n => { UpperBound = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -71,10 +71,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("includeObjectsWithNoValueSet", IncludeObjectsWithNoValueSet);
-            writer.WriteIntValue("lowerBound", LowerBound);
+            writer.WriteLongValue("lowerBound", LowerBound);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRangedNumberPropertyOperation_operationType>("operationType", OperationType);
             writer.WriteStringValue("operator", Operator);
-            writer.WriteIntValue("upperBound", UpperBound);
+            writer.WriteLongValue("upperBound", UpperBound);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

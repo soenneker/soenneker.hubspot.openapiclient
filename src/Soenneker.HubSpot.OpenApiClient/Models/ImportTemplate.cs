@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The unique identifier for the specific saved template or previous import being referenced.</summary>
-        public int? TemplateId { get; set; }
+        public long? TemplateId { get; set; }
         /// <summary>The classification of what type of template this represents, and what is its origin or purpose.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.ImportTemplate_templateType? TemplateType { get; set; }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "templateId", n => { TemplateId = n.GetIntValue(); } },
+                { "templateId", n => { TemplateId = n.GetLongValue(); } },
                 { "templateType", n => { TemplateType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ImportTemplate_templateType>(); } },
             };
         }
@@ -54,7 +54,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("templateId", TemplateId);
+            writer.WriteLongValue("templateId", TemplateId);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ImportTemplate_templateType>("templateType", TemplateType);
             writer.WriteAdditionalData(AdditionalData);
         }

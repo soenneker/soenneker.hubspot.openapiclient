@@ -93,7 +93,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Location { get; set; }
 #endif
         /// <summary>The minimum buffer time in milliseconds between consecutive meetings.</summary>
-        public int? MeetingBufferTime { get; set; }
+        public long? MeetingBufferTime { get; set; }
         /// <summary>Indicates whether the meeting owner is prioritized during booking. Only applies to link types of ROUND_ROBIN.</summary>
         public bool? OwnerPrioritized { get; set; }
         /// <summary>The URL to redirect to after a meeting is booked.</summary>
@@ -153,7 +153,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "legalConsentOptions", n => { LegalConsentOptions = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentOptions>(global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentOptions.CreateFromDiscriminatorValue); } },
                 { "locale", n => { Locale = n.GetStringValue(); } },
                 { "location", n => { Location = n.GetStringValue(); } },
-                { "meetingBufferTime", n => { MeetingBufferTime = n.GetIntValue(); } },
+                { "meetingBufferTime", n => { MeetingBufferTime = n.GetLongValue(); } },
                 { "ownerPrioritized", n => { OwnerPrioritized = n.GetBoolValue(); } },
                 { "redirectUrl", n => { RedirectUrl = n.GetStringValue(); } },
                 { "startTimeIncrementMinutes", n => { StartTimeIncrementMinutes = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettings_startTimeIncrementMinutes>(); } },
@@ -180,7 +180,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentOptions>("legalConsentOptions", LegalConsentOptions);
             writer.WriteStringValue("locale", Locale);
             writer.WriteStringValue("location", Location);
-            writer.WriteIntValue("meetingBufferTime", MeetingBufferTime);
+            writer.WriteLongValue("meetingBufferTime", MeetingBufferTime);
             writer.WriteBoolValue("ownerPrioritized", OwnerPrioritized);
             writer.WriteStringValue("redirectUrl", RedirectUrl);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettings_startTimeIncrementMinutes>("startTimeIncrementMinutes", StartTimeIncrementMinutes);

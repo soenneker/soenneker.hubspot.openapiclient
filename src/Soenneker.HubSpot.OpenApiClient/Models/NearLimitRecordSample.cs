@@ -23,11 +23,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Label { get; set; }
 #endif
         /// <summary>The unique identifier for the object.</summary>
-        public int? ObjectId { get; set; }
+        public long? ObjectId { get; set; }
         /// <summary>The percentage of the limit that has been used.</summary>
         public double? Percentage { get; set; }
         /// <summary>The number of records currently in use.</summary>
-        public int? Usage { get; set; }
+        public long? Usage { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.NearLimitRecordSample"/> and sets the default values.
         /// </summary>
@@ -54,9 +54,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "label", n => { Label = n.GetStringValue(); } },
-                { "objectId", n => { ObjectId = n.GetIntValue(); } },
+                { "objectId", n => { ObjectId = n.GetLongValue(); } },
                 { "percentage", n => { Percentage = n.GetDoubleValue(); } },
-                { "usage", n => { Usage = n.GetIntValue(); } },
+                { "usage", n => { Usage = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -67,9 +67,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("label", Label);
-            writer.WriteIntValue("objectId", ObjectId);
+            writer.WriteLongValue("objectId", ObjectId);
             writer.WriteDoubleValue("percentage", Percentage);
-            writer.WriteIntValue("usage", Usage);
+            writer.WriteLongValue("usage", Usage);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

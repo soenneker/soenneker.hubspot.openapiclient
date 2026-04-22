@@ -27,7 +27,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Indicates the source of the request, with the default value being WORKFLOWS.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.WorkflowsRequestContext_source? Source { get; set; }
         /// <summary>The ID of the workflow associated with the request context.</summary>
-        public int? WorkflowId { get; set; }
+        public long? WorkflowId { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.WorkflowsRequestContext"/> and sets the default values.
         /// </summary>
@@ -57,7 +57,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "actionExecutionIndexIdentifier", n => { ActionExecutionIndexIdentifier = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionExecutionIndexIdentifier>(global::Soenneker.HubSpot.OpenApiClient.Models.ActionExecutionIndexIdentifier.CreateFromDiscriminatorValue); } },
                 { "actionId", n => { ActionId = n.GetLongValue(); } },
                 { "source", n => { Source = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.WorkflowsRequestContext_source>(); } },
-                { "workflowId", n => { WorkflowId = n.GetIntValue(); } },
+                { "workflowId", n => { WorkflowId = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -70,7 +70,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionExecutionIndexIdentifier>("actionExecutionIndexIdentifier", ActionExecutionIndexIdentifier);
             writer.WriteLongValue("actionId", ActionId);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.WorkflowsRequestContext_source>("source", Source);
-            writer.WriteIntValue("workflowId", WorkflowId);
+            writer.WriteLongValue("workflowId", WorkflowId);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -66,6 +66,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string JanusGroup { get; set; }
 #endif
+        /// <summary>The lookupAssociationSpec property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LookupAssociationSpec? LookupAssociationSpec { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LookupAssociationSpec LookupAssociationSpec { get; set; }
+#endif
         /// <summary>The objectTypeId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -147,6 +155,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "fulcrumPortalId", n => { FulcrumPortalId = n.GetIntValue(); } },
                 { "fulcrumTimestamp", n => { FulcrumTimestamp = n.GetLongValue(); } },
                 { "janusGroup", n => { JanusGroup = n.GetStringValue(); } },
+                { "lookupAssociationSpec", n => { LookupAssociationSpec = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LookupAssociationSpec>(global::Soenneker.HubSpot.OpenApiClient.Models.LookupAssociationSpec.CreateFromDiscriminatorValue); } },
                 { "objectTypeId", n => { ObjectTypeId = n.GetStringValue(); } },
                 { "permission", n => { Permission = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.FieldLevelPermission>(global::Soenneker.HubSpot.OpenApiClient.Models.FieldLevelPermission.CreateFromDiscriminatorValue); } },
                 { "property", n => { Property = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.Property>(global::Soenneker.HubSpot.OpenApiClient.Models.Property.CreateFromDiscriminatorValue); } },
@@ -170,6 +179,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteIntValue("fulcrumPortalId", FulcrumPortalId);
             writer.WriteLongValue("fulcrumTimestamp", FulcrumTimestamp);
             writer.WriteStringValue("janusGroup", JanusGroup);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LookupAssociationSpec>("lookupAssociationSpec", LookupAssociationSpec);
             writer.WriteStringValue("objectTypeId", ObjectTypeId);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.FieldLevelPermission>("permission", Permission);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.Property>("property", Property);

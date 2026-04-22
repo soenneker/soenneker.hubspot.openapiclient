@@ -31,7 +31,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectTypeDefinition FromObjectType { get; set; }
 #endif
         /// <summary>The maximum number of association labels allowed.</summary>
-        public int? Limit { get; set; }
+        public long? Limit { get; set; }
         /// <summary>The percentage of the association label limit that has been used.</summary>
         public double? Percentage { get; set; }
         /// <summary>The toObjectType property</summary>
@@ -43,7 +43,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectTypeDefinition ToObjectType { get; set; }
 #endif
         /// <summary>The current number of association labels used.</summary>
-        public int? Usage { get; set; }
+        public long? Usage { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.AssociationLabelLimitResponse"/> and sets the default values.
         /// </summary>
@@ -71,10 +71,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "allLabels", n => { AllLabels = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "fromObjectType", n => { FromObjectType = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectTypeDefinition>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectTypeDefinition.CreateFromDiscriminatorValue); } },
-                { "limit", n => { Limit = n.GetIntValue(); } },
+                { "limit", n => { Limit = n.GetLongValue(); } },
                 { "percentage", n => { Percentage = n.GetDoubleValue(); } },
                 { "toObjectType", n => { ToObjectType = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectTypeDefinition>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectTypeDefinition.CreateFromDiscriminatorValue); } },
-                { "usage", n => { Usage = n.GetIntValue(); } },
+                { "usage", n => { Usage = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -86,10 +86,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("allLabels", AllLabels);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectTypeDefinition>("fromObjectType", FromObjectType);
-            writer.WriteIntValue("limit", Limit);
+            writer.WriteLongValue("limit", Limit);
             writer.WriteDoubleValue("percentage", Percentage);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectTypeDefinition>("toObjectType", ToObjectType);
-            writer.WriteIntValue("usage", Usage);
+            writer.WriteLongValue("usage", Usage);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -55,7 +55,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The requiresTimeZoneConversion property</summary>
         public bool? RequiresTimeZoneConversion { get; set; }
         /// <summary>The timestamp property</summary>
-        public int? Timestamp { get; set; }
+        public long? Timestamp { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.DateTimePropertyOperation"/> and sets the default values.
         /// </summary>
@@ -90,7 +90,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "propertyType", n => { PropertyType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DateTimePropertyOperation_propertyType>(); } },
                 { "renderSpec", n => { RenderSpec = n.GetStringValue(); } },
                 { "requiresTimeZoneConversion", n => { RequiresTimeZoneConversion = n.GetBoolValue(); } },
-                { "timestamp", n => { Timestamp = n.GetIntValue(); } },
+                { "timestamp", n => { Timestamp = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -108,7 +108,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DateTimePropertyOperation_propertyType>("propertyType", PropertyType);
             writer.WriteStringValue("renderSpec", RenderSpec);
             writer.WriteBoolValue("requiresTimeZoneConversion", RequiresTimeZoneConversion);
-            writer.WriteIntValue("timestamp", Timestamp);
+            writer.WriteLongValue("timestamp", Timestamp);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

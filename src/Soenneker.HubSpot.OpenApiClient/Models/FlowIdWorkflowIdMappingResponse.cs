@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The unique identifier for the flow associated with the workflow.</summary>
-        public int? FlowId { get; set; }
+        public long? FlowId { get; set; }
         /// <summary>The unique identifier for the workflow associated with the flow.</summary>
         public int? WorkflowId { get; set; }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "flowId", n => { FlowId = n.GetIntValue(); } },
+                { "flowId", n => { FlowId = n.GetLongValue(); } },
                 { "workflowId", n => { WorkflowId = n.GetIntValue(); } },
             };
         }
@@ -54,7 +54,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("flowId", FlowId);
+            writer.WriteLongValue("flowId", FlowId);
             writer.WriteIntValue("workflowId", WorkflowId);
             writer.WriteAdditionalData(AdditionalData);
         }

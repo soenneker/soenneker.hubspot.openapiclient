@@ -19,7 +19,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The date and time when the sequence step was created.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
         /// <summary>The delay in milliseconds before the sequence step is executed.</summary>
-        public int? DelayMillis { get; set; }
+        public long? DelayMillis { get; set; }
         /// <summary>The emailPattern property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -75,7 +75,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "actionType", n => { ActionType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepResponse_actionType>(); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
-                { "delayMillis", n => { DelayMillis = n.GetIntValue(); } },
+                { "delayMillis", n => { DelayMillis = n.GetLongValue(); } },
                 { "emailPattern", n => { EmailPattern = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailPatternResponse>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailPatternResponse.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "stepOrder", n => { StepOrder = n.GetIntValue(); } },
@@ -92,7 +92,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepResponse_actionType>("actionType", ActionType);
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
-            writer.WriteIntValue("delayMillis", DelayMillis);
+            writer.WriteLongValue("delayMillis", DelayMillis);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailPatternResponse>("emailPattern", EmailPattern);
             writer.WriteStringValue("id", Id);
             writer.WriteIntValue("stepOrder", StepOrder);

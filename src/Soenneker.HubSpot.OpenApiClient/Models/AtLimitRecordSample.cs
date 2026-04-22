@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Label { get; set; }
 #endif
         /// <summary>The objectId of the object that is at its limit.</summary>
-        public int? ObjectId { get; set; }
+        public long? ObjectId { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.AtLimitRecordSample"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "label", n => { Label = n.GetStringValue(); } },
-                { "objectId", n => { ObjectId = n.GetIntValue(); } },
+                { "objectId", n => { ObjectId = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("label", Label);
-            writer.WriteIntValue("objectId", ObjectId);
+            writer.WriteLongValue("objectId", ObjectId);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
