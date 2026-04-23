@@ -71,7 +71,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string FeaturedImageUrl { get; set; }
 #endif
         /// <summary>The ID of the content.</summary>
-        public int? Id { get; set; }
+        public long? Id { get; set; }
         /// <summary>The inBeta property</summary>
         public bool? InBeta { get; set; }
         /// <summary>The isPrivate property</summary>
@@ -152,7 +152,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "domain", n => { Domain = n.GetStringValue(); } },
                 { "featuredImageUrl", n => { FeaturedImageUrl = n.GetStringValue(); } },
-                { "id", n => { Id = n.GetIntValue(); } },
+                { "id", n => { Id = n.GetLongValue(); } },
                 { "inBeta", n => { InBeta = n.GetBoolValue(); } },
                 { "isPrivate", n => { IsPrivate = n.GetBoolValue(); } },
                 { "language", n => { Language = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ContentSearchResult_language>(); } },
@@ -181,7 +181,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("domain", Domain);
             writer.WriteStringValue("featuredImageUrl", FeaturedImageUrl);
-            writer.WriteIntValue("id", Id);
+            writer.WriteLongValue("id", Id);
             writer.WriteBoolValue("inBeta", InBeta);
             writer.WriteBoolValue("isPrivate", IsPrivate);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ContentSearchResult_language>("language", Language);

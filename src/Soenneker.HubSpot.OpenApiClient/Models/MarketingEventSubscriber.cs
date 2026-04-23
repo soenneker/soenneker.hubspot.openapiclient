@@ -25,7 +25,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventSubscriber_properties Properties { get; set; }
 #endif
         /// <summary>The ID of the contact in HubSpot</summary>
-        public int? Vid { get; set; }
+        public long? Vid { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventSubscriber"/> and sets the default values.
         /// </summary>
@@ -53,7 +53,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "interactionDateTime", n => { InteractionDateTime = n.GetLongValue(); } },
                 { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventSubscriber_properties>(global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventSubscriber_properties.CreateFromDiscriminatorValue); } },
-                { "vid", n => { Vid = n.GetIntValue(); } },
+                { "vid", n => { Vid = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -65,7 +65,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteLongValue("interactionDateTime", InteractionDateTime);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventSubscriber_properties>("properties", Properties);
-            writer.WriteIntValue("vid", Vid);
+            writer.WriteLongValue("vid", Vid);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

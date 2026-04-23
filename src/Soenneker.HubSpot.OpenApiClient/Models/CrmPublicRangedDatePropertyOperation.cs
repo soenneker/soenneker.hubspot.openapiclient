@@ -17,7 +17,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Specifies whether objects without a set value should be included in the operation.</summary>
         public bool? IncludeObjectsWithNoValueSet { get; set; }
         /// <summary>The lower limit of the date range for the operation.</summary>
-        public int? LowerBound { get; set; }
+        public long? LowerBound { get; set; }
         /// <summary>Specifies the type of operation (RANGED_DATE).</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedDatePropertyOperation_operationType? OperationType { get; set; }
         /// <summary>Defines the operation to be applied in the ranged date property operation (IS_BETWEEN, IS_NOT_BETWEEN).</summary>
@@ -31,7 +31,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Indicates whether the operation requires conversion to a different time zone.</summary>
         public bool? RequiresTimeZoneConversion { get; set; }
         /// <summary>The upper limit of the date range for the operation.</summary>
-        public int? UpperBound { get; set; }
+        public long? UpperBound { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedDatePropertyOperation"/> and sets the default values.
         /// </summary>
@@ -59,11 +59,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "includeObjectsWithNoValueSet", n => { IncludeObjectsWithNoValueSet = n.GetBoolValue(); } },
-                { "lowerBound", n => { LowerBound = n.GetIntValue(); } },
+                { "lowerBound", n => { LowerBound = n.GetLongValue(); } },
                 { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedDatePropertyOperation_operationType>(); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
                 { "requiresTimeZoneConversion", n => { RequiresTimeZoneConversion = n.GetBoolValue(); } },
-                { "upperBound", n => { UpperBound = n.GetIntValue(); } },
+                { "upperBound", n => { UpperBound = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -74,11 +74,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("includeObjectsWithNoValueSet", IncludeObjectsWithNoValueSet);
-            writer.WriteIntValue("lowerBound", LowerBound);
+            writer.WriteLongValue("lowerBound", LowerBound);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedDatePropertyOperation_operationType>("operationType", OperationType);
             writer.WriteStringValue("operator", Operator);
             writer.WriteBoolValue("requiresTimeZoneConversion", RequiresTimeZoneConversion);
-            writer.WriteIntValue("upperBound", UpperBound);
+            writer.WriteLongValue("upperBound", UpperBound);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

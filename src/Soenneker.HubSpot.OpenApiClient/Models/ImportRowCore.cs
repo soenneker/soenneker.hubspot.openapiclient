@@ -25,7 +25,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Indicates whether this row contains values that were encrypted.</summary>
         public bool? ContainsEncryptedProperties { get; set; }
         /// <summary>The unique identifier of the uploaded file containing this row.</summary>
-        public int? FileId { get; set; }
+        public long? FileId { get; set; }
         /// <summary>The 1-indexed line number of this row in the source file. Line number 0 is reserved for file-wide errors that don&apos;t correspond to a specific row.</summary>
         public int? LineNumber { get; set; }
         /// <summary>The name of the spreadsheet sheet/page containing this row.</summary>
@@ -71,7 +71,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "additionalRowData", n => { AdditionalRowData = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "containsEncryptedProperties", n => { ContainsEncryptedProperties = n.GetBoolValue(); } },
-                { "fileId", n => { FileId = n.GetIntValue(); } },
+                { "fileId", n => { FileId = n.GetLongValue(); } },
                 { "lineNumber", n => { LineNumber = n.GetIntValue(); } },
                 { "pageName", n => { PageName = n.GetStringValue(); } },
                 { "rowData", n => { RowData = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -86,7 +86,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("additionalRowData", AdditionalRowData);
             writer.WriteBoolValue("containsEncryptedProperties", ContainsEncryptedProperties);
-            writer.WriteIntValue("fileId", FileId);
+            writer.WriteLongValue("fileId", FileId);
             writer.WriteIntValue("lineNumber", LineNumber);
             writer.WriteStringValue("pageName", PageName);
             writer.WriteCollectionOfPrimitiveValues<string>("rowData", RowData);

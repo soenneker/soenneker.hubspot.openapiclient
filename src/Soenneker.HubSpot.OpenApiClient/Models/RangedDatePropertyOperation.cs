@@ -25,7 +25,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The includeObjectsWithNoValueSet property</summary>
         public bool? IncludeObjectsWithNoValueSet { get; set; }
         /// <summary>The lowerBoundTimestamp property</summary>
-        public int? LowerBoundTimestamp { get; set; }
+        public long? LowerBoundTimestamp { get; set; }
         /// <summary>The operationType property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -57,7 +57,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The requiresTimeZoneConversion property</summary>
         public bool? RequiresTimeZoneConversion { get; set; }
         /// <summary>The upperBoundTimestamp property</summary>
-        public int? UpperBoundTimestamp { get; set; }
+        public long? UpperBoundTimestamp { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.RangedDatePropertyOperation"/> and sets the default values.
         /// </summary>
@@ -86,14 +86,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "defaultValue", n => { DefaultValue = n.GetStringValue(); } },
                 { "includeObjectsWithNoValueSet", n => { IncludeObjectsWithNoValueSet = n.GetBoolValue(); } },
-                { "lowerBoundTimestamp", n => { LowerBoundTimestamp = n.GetIntValue(); } },
+                { "lowerBoundTimestamp", n => { LowerBoundTimestamp = n.GetLongValue(); } },
                 { "operationType", n => { OperationType = n.GetStringValue(); } },
                 { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RangedDatePropertyOperation_operator>(); } },
                 { "operatorName", n => { OperatorName = n.GetStringValue(); } },
                 { "propertyType", n => { PropertyType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RangedDatePropertyOperation_propertyType>(); } },
                 { "renderSpec", n => { RenderSpec = n.GetStringValue(); } },
                 { "requiresTimeZoneConversion", n => { RequiresTimeZoneConversion = n.GetBoolValue(); } },
-                { "upperBoundTimestamp", n => { UpperBoundTimestamp = n.GetIntValue(); } },
+                { "upperBoundTimestamp", n => { UpperBoundTimestamp = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -105,14 +105,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("defaultValue", DefaultValue);
             writer.WriteBoolValue("includeObjectsWithNoValueSet", IncludeObjectsWithNoValueSet);
-            writer.WriteIntValue("lowerBoundTimestamp", LowerBoundTimestamp);
+            writer.WriteLongValue("lowerBoundTimestamp", LowerBoundTimestamp);
             writer.WriteStringValue("operationType", OperationType);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RangedDatePropertyOperation_operator>("operator", Operator);
             writer.WriteStringValue("operatorName", OperatorName);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RangedDatePropertyOperation_propertyType>("propertyType", PropertyType);
             writer.WriteStringValue("renderSpec", RenderSpec);
             writer.WriteBoolValue("requiresTimeZoneConversion", RequiresTimeZoneConversion);
-            writer.WriteIntValue("upperBoundTimestamp", UpperBoundTimestamp);
+            writer.WriteLongValue("upperBoundTimestamp", UpperBoundTimestamp);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

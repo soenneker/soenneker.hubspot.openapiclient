@@ -19,7 +19,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Specifies whether the table can be read by public without authorization</summary>
         public bool? AllowPublicApiAccess { get; set; }
         /// <summary>Number of columns including deleted</summary>
-        public int? ColumnCount { get; set; }
+        public long? ColumnCount { get; set; }
         /// <summary>List of columns in the table</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -123,7 +123,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "allowChildTables", n => { AllowChildTables = n.GetBoolValue(); } },
                 { "allowPublicApiAccess", n => { AllowPublicApiAccess = n.GetBoolValue(); } },
-                { "columnCount", n => { ColumnCount = n.GetIntValue(); } },
+                { "columnCount", n => { ColumnCount = n.GetLongValue(); } },
                 { "columns", n => { Columns = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.Column>(global::Soenneker.HubSpot.OpenApiClient.Models.Column.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "createdBy", n => { CreatedBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.SimpleUser>(global::Soenneker.HubSpot.OpenApiClient.Models.SimpleUser.CreateFromDiscriminatorValue); } },
@@ -152,7 +152,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("allowChildTables", AllowChildTables);
             writer.WriteBoolValue("allowPublicApiAccess", AllowPublicApiAccess);
-            writer.WriteIntValue("columnCount", ColumnCount);
+            writer.WriteLongValue("columnCount", ColumnCount);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.Column>("columns", Columns);
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.SimpleUser>("createdBy", CreatedBy);

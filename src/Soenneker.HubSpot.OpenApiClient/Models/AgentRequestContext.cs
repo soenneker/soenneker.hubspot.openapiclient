@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The unique identifier for the agent making the request.</summary>
-        public int? AgentId { get; set; }
+        public long? AgentId { get; set; }
         /// <summary>The chirpAiContextObject property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -60,7 +60,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "agentId", n => { AgentId = n.GetIntValue(); } },
+                { "agentId", n => { AgentId = n.GetLongValue(); } },
                 { "chirpAiContextObject", n => { ChirpAiContextObject = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObject>(global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObject.CreateFromDiscriminatorValue); } },
                 { "source", n => { Source = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AgentRequestContext_source>(); } },
                 { "trajectoryId", n => { TrajectoryId = n.GetStringValue(); } },
@@ -73,7 +73,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("agentId", AgentId);
+            writer.WriteLongValue("agentId", AgentId);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObject>("chirpAiContextObject", ChirpAiContextObject);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AgentRequestContext_source>("source", Source);
             writer.WriteStringValue("trajectoryId", TrajectoryId);

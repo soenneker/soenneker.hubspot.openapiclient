@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PreResolvedContact_contactPropertiesLeadingToMatch?> ContactPropertiesLeadingToMatch { get; set; }
 #endif
         /// <summary>The contactVid property</summary>
-        public int? ContactVid { get; set; }
+        public long? ContactVid { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PreResolvedContact"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "contactPropertiesLeadingToMatch", n => { ContactPropertiesLeadingToMatch = n.GetCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.PreResolvedContact_contactPropertiesLeadingToMatch>()?.AsList(); } },
-                { "contactVid", n => { ContactVid = n.GetIntValue(); } },
+                { "contactVid", n => { ContactVid = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.PreResolvedContact_contactPropertiesLeadingToMatch>("contactPropertiesLeadingToMatch", ContactPropertiesLeadingToMatch);
-            writer.WriteIntValue("contactVid", ContactVid);
+            writer.WriteLongValue("contactVid", ContactVid);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -39,7 +39,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string SingularLabel { get; set; }
 #endif
         /// <summary>The number of records used for the object type.</summary>
-        public int? Usage { get; set; }
+        public long? Usage { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.UsageForObjectType"/> and sets the default values.
         /// </summary>
@@ -68,7 +68,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "objectTypeId", n => { ObjectTypeId = n.GetStringValue(); } },
                 { "pluralLabel", n => { PluralLabel = n.GetStringValue(); } },
                 { "singularLabel", n => { SingularLabel = n.GetStringValue(); } },
-                { "usage", n => { Usage = n.GetIntValue(); } },
+                { "usage", n => { Usage = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -81,7 +81,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("objectTypeId", ObjectTypeId);
             writer.WriteStringValue("pluralLabel", PluralLabel);
             writer.WriteStringValue("singularLabel", SingularLabel);
-            writer.WriteIntValue("usage", Usage);
+            writer.WriteLongValue("usage", Usage);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

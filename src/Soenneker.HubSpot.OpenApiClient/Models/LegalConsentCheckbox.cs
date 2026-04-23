@@ -25,7 +25,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Whether this checkbox is required when submitting the form.</summary>
         public bool? Required { get; set; }
         /// <summary>The ID of the subscription type associated with this consent checkbox.</summary>
-        public int? SubscriptionTypeId { get; set; }
+        public long? SubscriptionTypeId { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentCheckbox"/> and sets the default values.
         /// </summary>
@@ -53,7 +53,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "required", n => { Required = n.GetBoolValue(); } },
-                { "subscriptionTypeId", n => { SubscriptionTypeId = n.GetIntValue(); } },
+                { "subscriptionTypeId", n => { SubscriptionTypeId = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -65,7 +65,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("label", Label);
             writer.WriteBoolValue("required", Required);
-            writer.WriteIntValue("subscriptionTypeId", SubscriptionTypeId);
+            writer.WriteLongValue("subscriptionTypeId", SubscriptionTypeId);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

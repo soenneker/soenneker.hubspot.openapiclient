@@ -23,11 +23,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.UsageForObjectType> ByObjectType { get; set; }
 #endif
         /// <summary>The maximum number of custom object records allowed.</summary>
-        public int? OverallLimit { get; set; }
+        public long? OverallLimit { get; set; }
         /// <summary>The percentage of the overall custom object record limit that has been used.</summary>
         public double? OverallPercentage { get; set; }
         /// <summary>The total number of custom object records currently in use.</summary>
-        public int? OverallUsage { get; set; }
+        public long? OverallUsage { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CustomObjectRecordLimitResponse"/> and sets the default values.
         /// </summary>
@@ -54,9 +54,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "byObjectType", n => { ByObjectType = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.UsageForObjectType>(global::Soenneker.HubSpot.OpenApiClient.Models.UsageForObjectType.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "overallLimit", n => { OverallLimit = n.GetIntValue(); } },
+                { "overallLimit", n => { OverallLimit = n.GetLongValue(); } },
                 { "overallPercentage", n => { OverallPercentage = n.GetDoubleValue(); } },
-                { "overallUsage", n => { OverallUsage = n.GetIntValue(); } },
+                { "overallUsage", n => { OverallUsage = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -67,9 +67,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.UsageForObjectType>("byObjectType", ByObjectType);
-            writer.WriteIntValue("overallLimit", OverallLimit);
+            writer.WriteLongValue("overallLimit", OverallLimit);
             writer.WriteDoubleValue("overallPercentage", OverallPercentage);
-            writer.WriteIntValue("overallUsage", OverallUsage);
+            writer.WriteLongValue("overallUsage", OverallUsage);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

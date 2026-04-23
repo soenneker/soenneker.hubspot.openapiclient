@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Email { get; set; }
 #endif
         /// <summary>The internal ID of the contact</summary>
-        public int? Vid { get; set; }
+        public long? Vid { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.SubscriberEmailResponse"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "email", n => { Email = n.GetStringValue(); } },
-                { "vid", n => { Vid = n.GetIntValue(); } },
+                { "vid", n => { Vid = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("email", Email);
-            writer.WriteIntValue("vid", Vid);
+            writer.WriteLongValue("vid", Vid);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

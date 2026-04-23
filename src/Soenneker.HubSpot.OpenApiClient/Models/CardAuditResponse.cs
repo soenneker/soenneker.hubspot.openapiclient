@@ -25,7 +25,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The ID of the user who initiated the action.</summary>
         public int? InitiatingUserId { get; set; }
         /// <summary>The ID of the card.</summary>
-        public int? ObjectTypeId { get; set; }
+        public long? ObjectTypeId { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CardAuditResponse"/> and sets the default values.
         /// </summary>
@@ -56,7 +56,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "authSource", n => { AuthSource = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CardAuditResponse_authSource>(); } },
                 { "changedAt", n => { ChangedAt = n.GetLongValue(); } },
                 { "initiatingUserId", n => { InitiatingUserId = n.GetIntValue(); } },
-                { "objectTypeId", n => { ObjectTypeId = n.GetIntValue(); } },
+                { "objectTypeId", n => { ObjectTypeId = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -71,7 +71,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CardAuditResponse_authSource>("authSource", AuthSource);
             writer.WriteLongValue("changedAt", ChangedAt);
             writer.WriteIntValue("initiatingUserId", InitiatingUserId);
-            writer.WriteIntValue("objectTypeId", ObjectTypeId);
+            writer.WriteLongValue("objectTypeId", ObjectTypeId);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
