@@ -131,6 +131,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         #pragma warning disable CS1591
         COMPANY_INSIGHTS,
         #pragma warning restore CS1591
+        [EnumMember(Value = "CONNECTED_ACCOUNT")]
+        #pragma warning disable CS1591
+        CONNECTED_ACCOUNT,
+        #pragma warning restore CS1591
         [EnumMember(Value = "CONTACTS")]
         #pragma warning disable CS1591
         CONTACTS,
