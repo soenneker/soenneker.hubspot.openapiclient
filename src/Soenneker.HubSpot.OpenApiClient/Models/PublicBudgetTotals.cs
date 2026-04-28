@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The budgetItems property</summary>
+        /// <summary>An array of budget items associated with the campaign. Each item is represented by a PublicBudgetItem object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicBudgetItem>? BudgetItems { get; set; }
@@ -28,7 +28,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicBudgetTotals_currencyCode? CurrencyCode { get; set; }
         /// <summary>The remaining budget available for the campaign after accounting for all spend items.</summary>
         public double? RemainingBudget { get; set; }
-        /// <summary>The spendItems property</summary>
+        /// <summary>An array of spend items associated with the campaign. Each item is represented by a PublicSpendItem object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSpendItem>? SpendItems { get; set; }

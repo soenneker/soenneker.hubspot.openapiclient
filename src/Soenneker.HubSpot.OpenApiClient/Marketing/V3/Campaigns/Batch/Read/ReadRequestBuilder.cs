@@ -90,6 +90,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Campaigns.Batch.Read
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ReadRequestBuilderPostQueryParameters 
         {
+            /// <summary>&quot;End date to fetch asset metrics, formatted as YYYY-MM-DD. This date is used to fetch the metrics associated with the assets for a specified period.  If not provided, no asset metrics will be fetched.Example: 2024-01-27&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("endDate")]
@@ -99,6 +100,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Campaigns.Batch.Read
             [QueryParameter("endDate")]
             public string EndDate { get; set; }
 #endif
+            /// <summary>&quot;A comma-separated list of the properties to be returned in the response. If any of the specified properties has empty value on the requested object(s), they will be ignored and not returned in response. If this parameter is empty, the response will include an empty properties map.Example: hs_name, hs_campaign_status, hs_notes&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("properties")]
@@ -108,6 +110,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Campaigns.Batch.Read
             [QueryParameter("properties")]
             public string[] Properties { get; set; }
 #endif
+            /// <summary>&quot;Start date to fetch asset metrics, formatted as YYYY-MM-DD. This date is used to fetch the metrics associated with the assets for a specified period.  If not provided, no asset metrics will be fetched.Example: 2023-01-20&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("startDate")]

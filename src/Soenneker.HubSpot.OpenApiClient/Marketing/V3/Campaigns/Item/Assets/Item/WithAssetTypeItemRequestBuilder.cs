@@ -19,7 +19,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Campaigns.Item.Assets.Ite
     public partial class WithAssetTypeItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.marketing.v3.campaigns.item.assets.item.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">&quot;The ID of the asset to associate with the campaign. Required.          Example: 82649548308&quot;</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Campaigns.Item.Assets.Item.Item.WithAssetItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Campaigns.Item.Assets.Item.Item.WithAssetItemRequestBuilder this[string position]
         {
@@ -108,6 +108,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Campaigns.Item.Assets.Ite
             [QueryParameter("after")]
             public string After { get; set; }
 #endif
+            /// <summary>&quot;The end date for fetching asset metrics, in YYYY-MM-DD format.       Optional. Example: 2000-01-27&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("endDate")]
@@ -127,6 +128,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Campaigns.Item.Assets.Ite
             [QueryParameter("limit")]
             public string Limit { get; set; }
 #endif
+            /// <summary>&quot;The start date for fetching asset metrics, in YYYY-MM-DD format.   Optional. Example: 2000-01-20&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("startDate")]

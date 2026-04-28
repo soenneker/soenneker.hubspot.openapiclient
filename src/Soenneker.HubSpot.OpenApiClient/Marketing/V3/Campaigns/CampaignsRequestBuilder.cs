@@ -25,7 +25,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Campaigns
             get => new global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Campaigns.Batch.BatchRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.marketing.v3.campaigns.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">&quot;The UUID of the campaign, requiredExample: 9dbec438-53e2-4b28-8c0f-38f56574a6e8&quot;</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Campaigns.Item.WithCampaignGuItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Campaigns.Item.WithCampaignGuItemRequestBuilder this[string position]
         {
@@ -52,6 +52,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Campaigns
         public CampaignsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/marketing/v3/campaigns{?after*,limit*,name*,properties*,sort*}", rawUrl)
         {
         }
+        /// <summary>
+        /// Get a page of campaigns    
+        /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalPublicCampaign"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -67,6 +70,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Campaigns
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalPublicCampaign>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalPublicCampaign.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
+        /// <summary>
+        /// &quot;Create a campaign with the given properties and return a copy of the object, including the ID. Note: The &apos;hs_goal&apos; property is deprecated and will be ignored if provided.    &quot;
+        /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaign"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -84,6 +90,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Campaigns
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaign>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaign.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
+        /// <summary>
+        /// Get a page of campaigns    
+        /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -100,6 +109,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Campaigns
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
         }
+        /// <summary>
+        /// &quot;Create a campaign with the given properties and return a copy of the object, including the ID. Note: The &apos;hs_goal&apos; property is deprecated and will be ignored if provided.    &quot;
+        /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -128,10 +140,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Campaigns
         {
             return new global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Campaigns.CampaignsRequestBuilder(rawUrl, RequestAdapter);
         }
+        /// <summary>
+        /// Get a page of campaigns    
+        /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        #pragma warning disable CS1591
         public partial class CampaignsRequestBuilderGetQueryParameters 
-        #pragma warning restore CS1591
         {
             /// <summary>The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -146,6 +159,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Campaigns
             /// <summary>The maximum number of results to display per page.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
+            /// <summary>Filter campaigns by name. Optional.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("name")]
@@ -155,6 +169,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Campaigns
             [QueryParameter("name")]
             public string Name { get; set; }
 #endif
+            /// <summary>&quot;A comma-separated list of properties to include in the response.   Unrecognized properties are ignored. Optional. Example: hs_name,hs_budget, hs_notes&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("properties")]
@@ -164,6 +179,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Campaigns
             [QueryParameter("properties")]
             public string[] Properties { get; set; }
 #endif
+            /// <summary>The property to sort results by. Optional.  </summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("sort")]

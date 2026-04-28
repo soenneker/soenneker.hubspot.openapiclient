@@ -16,7 +16,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Campaigns.Item.Assets
     public partial class AssetsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.marketing.v3.campaigns.item.assets.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">&quot;The type of asset to associate with the campaign. Required.Example: BLOG_POST.&quot;</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Campaigns.Item.Assets.Item.WithAssetTypeItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Campaigns.Item.Assets.Item.WithAssetTypeItemRequestBuilder this[string position]
         {

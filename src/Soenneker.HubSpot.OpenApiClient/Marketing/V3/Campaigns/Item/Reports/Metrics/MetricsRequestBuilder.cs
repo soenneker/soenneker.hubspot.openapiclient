@@ -85,6 +85,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Campaigns.Item.Reports.Me
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class MetricsRequestBuilderGetQueryParameters 
         {
+            /// <summary>&quot;The end date for fetching attribution data, in YYYY-MM-DD format.Optional. Example: 2000-01-27       &quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("endDate")]
@@ -94,6 +95,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Campaigns.Item.Reports.Me
             [QueryParameter("endDate")]
             public string EndDate { get; set; }
 #endif
+            /// <summary>&quot;The start date for fetching attribution data, in YYYY-MM-DD format.Optional. Example: 2000-01-20&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("startDate")]

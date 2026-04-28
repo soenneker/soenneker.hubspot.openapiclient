@@ -25,7 +25,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Campaigns.Item.Budget
             get => new global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Campaigns.Item.Budget.Totals.TotalsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.marketing.v3.campaigns.item.budget.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">&quot;The ID of the budget item, required. Example: 352                   &quot;</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Campaigns.Item.Budget.Item.WithBudgetItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Campaigns.Item.Budget.Item.WithBudgetItemRequestBuilder this[long position]
         {

@@ -95,6 +95,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Campaigns.Item.Reports.Co
             [QueryParameter("after")]
             public string After { get; set; }
 #endif
+            /// <summary>&quot;The end date for fetching contact data, in YYYY-MM-DD format.        Optional. Example: 2000-01-27    &quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("endDate")]
@@ -107,6 +108,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Campaigns.Item.Reports.Co
             /// <summary>The maximum number of results to display per page.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
+            /// <summary>&quot;The start date for fetching contact data, in YYYY-MM-DD format.    Optional. Example: 2000-01-20&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("startDate")]

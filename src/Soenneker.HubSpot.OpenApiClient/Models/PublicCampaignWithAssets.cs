@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignWithAssets_assets Assets { get; set; }
 #endif
-        /// <summary>The businessUnits property</summary>
+        /// <summary>An array of business units associated with the campaign, each represented by a PublicBusinessUnit object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPublicBusinessUnit>? BusinessUnits { get; set; }
