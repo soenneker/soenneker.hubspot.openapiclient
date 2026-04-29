@@ -22,6 +22,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Message { get; set; }
 #endif
+        /// <summary>The remainingPortalCount property</summary>
+        public long? RemainingPortalCount { get; set; }
+        /// <summary>The startedAt property</summary>
+        public long? StartedAt { get; set; }
+        /// <summary>The totalPortalCount property</summary>
+        public long? TotalPortalCount { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CardMigrateViewsResponse"/> and sets the default values.
         /// </summary>
@@ -48,6 +54,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "message", n => { Message = n.GetStringValue(); } },
+                { "remainingPortalCount", n => { RemainingPortalCount = n.GetLongValue(); } },
+                { "startedAt", n => { StartedAt = n.GetLongValue(); } },
+                { "totalPortalCount", n => { TotalPortalCount = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -58,6 +67,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("message", Message);
+            writer.WriteLongValue("remainingPortalCount", RemainingPortalCount);
+            writer.WriteLongValue("startedAt", StartedAt);
+            writer.WriteLongValue("totalPortalCount", TotalPortalCount);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
