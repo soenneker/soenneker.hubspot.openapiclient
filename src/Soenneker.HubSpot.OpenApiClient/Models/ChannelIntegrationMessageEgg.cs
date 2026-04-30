@@ -58,14 +58,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>The messageDirection property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.ChannelIntegrationMessageEgg_messageDirection? MessageDirection { get; set; }
-        /// <summary>The preResolvedContacts property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PreResolvedContacts? PreResolvedContacts { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PreResolvedContacts PreResolvedContacts { get; set; }
-#endif
         /// <summary>The recipients property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -132,7 +124,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "integrationIdempotencyId", n => { IntegrationIdempotencyId = n.GetStringValue(); } },
                 { "integrationThreadId", n => { IntegrationThreadId = n.GetStringValue(); } },
                 { "messageDirection", n => { MessageDirection = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ChannelIntegrationMessageEgg_messageDirection>(); } },
-                { "preResolvedContacts", n => { PreResolvedContacts = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PreResolvedContacts>(global::Soenneker.HubSpot.OpenApiClient.Models.PreResolvedContacts.CreateFromDiscriminatorValue); } },
                 { "recipients", n => { Recipients = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ChannelIntegrationParticipant>(global::Soenneker.HubSpot.OpenApiClient.Models.ChannelIntegrationParticipant.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "richText", n => { RichText = n.GetStringValue(); } },
                 { "senders", n => { Senders = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ChannelIntegrationParticipant>(global::Soenneker.HubSpot.OpenApiClient.Models.ChannelIntegrationParticipant.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -154,7 +145,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("integrationIdempotencyId", IntegrationIdempotencyId);
             writer.WriteStringValue("integrationThreadId", IntegrationThreadId);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ChannelIntegrationMessageEgg_messageDirection>("messageDirection", MessageDirection);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PreResolvedContacts>("preResolvedContacts", PreResolvedContacts);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ChannelIntegrationParticipant>("recipients", Recipients);
             writer.WriteStringValue("richText", RichText);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ChannelIntegrationParticipant>("senders", Senders);
