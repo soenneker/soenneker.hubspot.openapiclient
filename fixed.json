@@ -63217,6 +63217,7 @@
         "required": [
           "applicationGroup",
           "applicationId",
+          "isPrivate",
           "metadata",
           "otelContextHolder",
           "unstructuredSources"
