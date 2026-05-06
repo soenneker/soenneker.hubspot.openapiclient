@@ -14,6 +14,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The timestamp for when the migration ended.</summary>
+        public long? EndedAt { get; set; }
         /// <summary>A human readable message describing the error along with remediation steps where appropriate</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -22,11 +24,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Message { get; set; }
 #endif
-        /// <summary>The remainingPortalCount property</summary>
+        /// <summary>The number of portals that remain to be swapped from the Legacy CRM Card to the App Card</summary>
         public long? RemainingPortalCount { get; set; }
-        /// <summary>The startedAt property</summary>
+        /// <summary>The timestamp for when the migration started.</summary>
         public long? StartedAt { get; set; }
-        /// <summary>The totalPortalCount property</summary>
+        /// <summary>The total number of portals that have access to the Legacy CRM Card</summary>
         public long? TotalPortalCount { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CardMigrateViewsResponse"/> and sets the default values.
@@ -53,6 +55,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "endedAt", n => { EndedAt = n.GetLongValue(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "remainingPortalCount", n => { RemainingPortalCount = n.GetLongValue(); } },
                 { "startedAt", n => { StartedAt = n.GetLongValue(); } },
@@ -66,6 +69,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteLongValue("endedAt", EndedAt);
             writer.WriteStringValue("message", Message);
             writer.WriteLongValue("remainingPortalCount", RemainingPortalCount);
             writer.WriteLongValue("startedAt", StartedAt);

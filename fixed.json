@@ -191038,6 +191038,12 @@
         ],
         "type": "object",
         "properties": {
+          "endedAt": {
+            "type": "integer",
+            "description": "The timestamp for when the migration ended.",
+            "format": "int64",
+            "example": null
+          },
           "message": {
             "type": "string",
             "description": "A human readable message describing the error along with remediation steps where appropriate",
@@ -191045,16 +191051,19 @@
           },
           "remainingPortalCount": {
             "type": "integer",
+            "description": "The number of portals that remain to be swapped from the Legacy CRM Card to the App Card",
             "format": "int64",
             "example": null
           },
           "startedAt": {
             "type": "integer",
+            "description": "The timestamp for when the migration started.",
             "format": "int64",
             "example": null
           },
           "totalPortalCount": {
             "type": "integer",
+            "description": "The total number of portals that have access to the Legacy CRM Card",
             "format": "int64",
             "example": null
           }
