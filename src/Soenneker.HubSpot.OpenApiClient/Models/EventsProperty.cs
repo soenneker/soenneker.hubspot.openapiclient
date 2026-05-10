@@ -116,10 +116,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>A list of valid options for the property. This field is required for enumerated properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.EventsOption>? Options { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.EventsOption1>? Options { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.EventsOption> Options { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.EventsOption1> Options { get; set; }
 #endif
         /// <summary>Deprecated. Use externalOptionsReferenceType instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -204,7 +204,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "modificationMetadata", n => { ModificationMetadata = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsPropertyModificationMetadata>(global::Soenneker.HubSpot.OpenApiClient.Models.EventsPropertyModificationMetadata.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "numberDisplayHint", n => { NumberDisplayHint = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsProperty_numberDisplayHint>(); } },
-                { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.EventsOption>(global::Soenneker.HubSpot.OpenApiClient.Models.EventsOption.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.EventsOption1>(global::Soenneker.HubSpot.OpenApiClient.Models.EventsOption1.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "referencedObjectType", n => { ReferencedObjectType = n.GetStringValue(); } },
                 { "sensitiveDataCategories", n => { SensitiveDataCategories = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "showCurrencySymbol", n => { ShowCurrencySymbol = n.GetBoolValue(); } },
@@ -242,7 +242,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsPropertyModificationMetadata>("modificationMetadata", ModificationMetadata);
             writer.WriteStringValue("name", Name);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsProperty_numberDisplayHint>("numberDisplayHint", NumberDisplayHint);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.EventsOption>("options", Options);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.EventsOption1>("options", Options);
             writer.WriteStringValue("referencedObjectType", ReferencedObjectType);
             writer.WriteCollectionOfPrimitiveValues<string>("sensitiveDataCategories", SensitiveDataCategories);
             writer.WriteBoolValue("showCurrencySymbol", ShowCurrencySymbol);
