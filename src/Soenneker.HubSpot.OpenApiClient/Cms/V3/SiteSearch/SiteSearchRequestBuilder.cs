@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.HubSpot.OpenApiClient.Cms.V3.SiteSearch.IndexedData;
+using Soenneker.HubSpot.OpenApiClient.Cms.V3.SiteSearch.Search;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -19,6 +20,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.SiteSearch
         public global::Soenneker.HubSpot.OpenApiClient.Cms.V3.SiteSearch.IndexedData.IndexedDataRequestBuilder IndexedData
         {
             get => new global::Soenneker.HubSpot.OpenApiClient.Cms.V3.SiteSearch.IndexedData.IndexedDataRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The search property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Cms.V3.SiteSearch.Search.SearchRequestBuilder Search
+        {
+            get => new global::Soenneker.HubSpot.OpenApiClient.Cms.V3.SiteSearch.Search.SearchRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Cms.V3.SiteSearch.SiteSearchRequestBuilder"/> and sets the default values.
