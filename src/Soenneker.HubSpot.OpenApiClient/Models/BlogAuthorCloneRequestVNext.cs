@@ -47,6 +47,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string PrimaryLanguage { get; set; }
 #endif
+        /// <summary>The usePublished property</summary>
+        public bool? UsePublished { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.BlogAuthorCloneRequestVNext"/> and sets the default values.
         /// </summary>
@@ -76,6 +78,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "language", n => { Language = n.GetStringValue(); } },
                 { "primaryLanguage", n => { PrimaryLanguage = n.GetStringValue(); } },
+                { "usePublished", n => { UsePublished = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -89,6 +92,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("language", Language);
             writer.WriteStringValue("primaryLanguage", PrimaryLanguage);
+            writer.WriteBoolValue("usePublished", UsePublished);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

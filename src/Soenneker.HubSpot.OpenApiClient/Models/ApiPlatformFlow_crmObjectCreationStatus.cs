@@ -8,13 +8,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     public enum ApiPlatformFlow_crmObjectCreationStatus
     #pragma warning restore CS1591
     {
-        [EnumMember(Value = "PENDING")]
-        #pragma warning disable CS1591
-        PENDING,
-        #pragma warning restore CS1591
         [EnumMember(Value = "COMPLETE")]
         #pragma warning disable CS1591
         COMPLETE,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "PENDING")]
+        #pragma warning disable CS1591
+        PENDING,
         #pragma warning restore CS1591
     }
 }

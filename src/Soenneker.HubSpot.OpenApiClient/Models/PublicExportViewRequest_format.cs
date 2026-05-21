@@ -8,6 +8,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     public enum PublicExportViewRequest_format
     #pragma warning restore CS1591
     {
+        [EnumMember(Value = "CSV")]
+        #pragma warning disable CS1591
+        CSV,
+        #pragma warning restore CS1591
         [EnumMember(Value = "XLS")]
         #pragma warning disable CS1591
         XLS,
@@ -15,10 +19,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         [EnumMember(Value = "XLSX")]
         #pragma warning disable CS1591
         XLSX,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "CSV")]
-        #pragma warning disable CS1591
-        CSV,
         #pragma warning restore CS1591
     }
 }

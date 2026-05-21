@@ -9,9 +9,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class HubSpotFormDefinition : global::Soenneker.HubSpot.OpenApiClient.Models.FormDefinitionBase, IParsable
+    public partial class HubSpotFormDefinition : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The archived property</summary>
         public bool? Archived { get; set; }
         /// <summary>The archivedAt property</summary>
@@ -73,8 +75,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.HubSpotFormDefinition"/> and sets the default values.
         /// </summary>
-        public HubSpotFormDefinition() : base()
+        public HubSpotFormDefinition()
         {
+            AdditionalData = new Dictionary<string, object>();
             FormType = global::Soenneker.HubSpot.OpenApiClient.Models.HubSpotFormDefinition_formType.Hubspot;
         }
         /// <summary>
@@ -82,7 +85,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.HubSpotFormDefinition"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.HubSpot.OpenApiClient.Models.HubSpotFormDefinition CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HubSpot.OpenApiClient.Models.HubSpotFormDefinition CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.HubSpot.OpenApiClient.Models.HubSpotFormDefinition();
@@ -91,9 +94,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
                 { "archived", n => { Archived = n.GetBoolValue(); } },
                 { "archivedAt", n => { ArchivedAt = n.GetDateTimeOffsetValue(); } },
@@ -112,10 +115,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
             writer.WriteBoolValue("archived", Archived);
             writer.WriteDateTimeOffsetValue("archivedAt", ArchivedAt);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.HubSpotFormConfiguration>("configuration", Configuration);
@@ -127,6 +129,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.HubSpotFormDefinition.HubSpotFormDefinition_legalConsentOptions>("legalConsentOptions", LegalConsentOptions);
             writer.WriteStringValue("name", Name);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
+            writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
         /// Composed type wrapper for classes <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsExplicitConsentToProcess"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsImplicitConsentToProcess"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsLegitimateInterest"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsNone"/>

@@ -9,7 +9,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class ApiContactFlowPutRequest : global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowPutRequest, IParsable
+    public partial class ApiContactFlowPutRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>The actions property</summary>
@@ -20,6 +20,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ApiContactFlowPutRequest.ApiContactFlowPutRequest_actions> Actions { get; set; }
 #endif
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The blockedDates property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -120,6 +122,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeWindow> TimeWindows { get; set; }
 #endif
+        /// <summary>The type property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiContactFlowPutRequest_type? Type { get; set; }
         /// <summary>The unEnrollmentSetting property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -137,11 +141,18 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Uuid { get; set; }
 #endif
         /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiContactFlowPutRequest"/> and sets the default values.
+        /// </summary>
+        public ApiContactFlowPutRequest()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
+        /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiContactFlowPutRequest"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.HubSpot.OpenApiClient.Models.ApiContactFlowPutRequest CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HubSpot.OpenApiClient.Models.ApiContactFlowPutRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.HubSpot.OpenApiClient.Models.ApiContactFlowPutRequest();
@@ -150,9 +161,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
                 { "actions", n => { Actions = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ApiContactFlowPutRequest.ApiContactFlowPutRequest_actions>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiContactFlowPutRequest.ApiContactFlowPutRequest_actions.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "blockedDates", n => { BlockedDates = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ApiBlockedDate>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiBlockedDate.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -169,6 +180,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "startActionId", n => { StartActionId = n.GetStringValue(); } },
                 { "suppressionListIds", n => { SuppressionListIds = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
                 { "timeWindows", n => { TimeWindows = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeWindow>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeWindow.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiContactFlowPutRequest_type>(); } },
                 { "unEnrollmentSetting", n => { UnEnrollmentSetting = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiUnEnrollmentSetting>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiUnEnrollmentSetting.CreateFromDiscriminatorValue); } },
                 { "uuid", n => { Uuid = n.GetStringValue(); } },
             };
@@ -177,10 +189,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ApiContactFlowPutRequest.ApiContactFlowPutRequest_actions>("actions", Actions);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ApiBlockedDate>("blockedDates", BlockedDates);
             writer.WriteBoolValue("canEnrollFromSalesforce", CanEnrollFromSalesforce);
@@ -196,8 +207,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("startActionId", StartActionId);
             writer.WriteCollectionOfPrimitiveValues<int?>("suppressionListIds", SuppressionListIds);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeWindow>("timeWindows", TimeWindows);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiContactFlowPutRequest_type>("type", Type);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiUnEnrollmentSetting>("unEnrollmentSetting", UnEnrollmentSetting);
             writer.WriteStringValue("uuid", Uuid);
+            writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
         /// Composed type wrapper for classes <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiABTestBranchAction"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiCustomCodeAction"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBranchAction"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiSingleConnectionAction"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticBranchAction"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiWebhookAction"/>
@@ -700,7 +713,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             }
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranch"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationFilterBranch"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAllFilterBranch"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAnyFilterBranch"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicOrFilterBranch"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicPropertyAssociationFilterBranch"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicRestrictedFilterBranch"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilterBranch"/>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranch"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationFilterBranch"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAllFilterBranch"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAnyFilterBranch"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicOrFilterBranch"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicRestrictedFilterBranch"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilterBranch"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ApiContactFlowPutRequest_goalFilterBranch : IComposedTypeWrapper, IParsable
@@ -744,14 +757,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #nullable restore
 #else
             public global::Soenneker.HubSpot.OpenApiClient.Models.PublicOrFilterBranch PublicOrFilterBranch { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicPropertyAssociationFilterBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPropertyAssociationFilterBranch? PublicPropertyAssociationFilterBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPropertyAssociationFilterBranch PublicPropertyAssociationFilterBranch { get; set; }
 #endif
             /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicRestrictedFilterBranch"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -799,10 +804,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 {
                     result.PublicOrFilterBranch = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicOrFilterBranch();
                 }
-                else if("PublicPropertyAssociationFilterBranch".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicPropertyAssociationFilterBranch = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicPropertyAssociationFilterBranch();
-                }
                 else if("PublicRestrictedFilterBranch".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
                     result.PublicRestrictedFilterBranch = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicRestrictedFilterBranch();
@@ -838,10 +839,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 else if(PublicOrFilterBranch != null)
                 {
                     return PublicOrFilterBranch.GetFieldDeserializers();
-                }
-                else if(PublicPropertyAssociationFilterBranch != null)
-                {
-                    return PublicPropertyAssociationFilterBranch.GetFieldDeserializers();
                 }
                 else if(PublicRestrictedFilterBranch != null)
                 {
@@ -879,10 +876,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 else if(PublicOrFilterBranch != null)
                 {
                     writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicOrFilterBranch>(null, PublicOrFilterBranch);
-                }
-                else if(PublicPropertyAssociationFilterBranch != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicPropertyAssociationFilterBranch>(null, PublicPropertyAssociationFilterBranch);
                 }
                 else if(PublicRestrictedFilterBranch != null)
                 {

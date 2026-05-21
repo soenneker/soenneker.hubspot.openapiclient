@@ -7,13 +7,12 @@ using System.IO;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicAccessTokenInfoResponse"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicRefreshTokenInfoResponse"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class TokenInfoResponseBaseIF : IAdditionalDataHolder, IComposedTypeWrapper, IParsable
-    #pragma warning restore CS1591
+    public partial class TokenInfoResponseBaseIF : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicAccessTokenInfoResponse"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -30,21 +29,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRefreshTokenInfoResponse PublicRefreshTokenInfoResponse { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.TokenInfoResponseBaseIF"/> and sets the default values.
-        /// </summary>
-        public TokenInfoResponseBaseIF()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -62,10 +46,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             else if("PublicRefreshTokenInfoResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.PublicRefreshTokenInfoResponse = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicRefreshTokenInfoResponse();
-            }
-            else if(parseNode.GetStringValue() is string typeValue)
-            {
-                result.Type = typeValue;
             }
             return result;
         }
@@ -100,11 +80,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRefreshTokenInfoResponse>(null, PublicRefreshTokenInfoResponse);
             }
-            else if(Type != null)
-            {
-                writer.WriteStringValue(null, Type);
-            }
-            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

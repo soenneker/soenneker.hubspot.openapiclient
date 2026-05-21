@@ -78,24 +78,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Item.SizeAndEditsHistory.
         public partial class BetweenRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("endDate")]
-            public string? EndDate { get; set; }
-#nullable restore
-#else
-            [QueryParameter("endDate")]
-            public string EndDate { get; set; }
-#endif
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
+            public DateTimeOffset? EndDate { get; set; }
             [QueryParameter("startDate")]
-            public string? StartDate { get; set; }
-#nullable restore
-#else
-            [QueryParameter("startDate")]
-            public string StartDate { get; set; }
-#endif
+            public DateTimeOffset? StartDate { get; set; }
         }
     }
 }

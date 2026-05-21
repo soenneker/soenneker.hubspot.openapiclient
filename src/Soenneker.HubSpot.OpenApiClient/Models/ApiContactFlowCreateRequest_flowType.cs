@@ -8,10 +8,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     public enum ApiContactFlowCreateRequest_flowType
     #pragma warning restore CS1591
     {
-        [EnumMember(Value = "WORKFLOW")]
-        #pragma warning disable CS1591
-        WORKFLOW,
-        #pragma warning restore CS1591
         [EnumMember(Value = "ACTION_SET")]
         #pragma warning disable CS1591
         ACTION_SET,
@@ -19,6 +15,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         [EnumMember(Value = "UNKNOWN")]
         #pragma warning disable CS1591
         UNKNOWN,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "WORKFLOW")]
+        #pragma warning disable CS1591
+        WORKFLOW,
         #pragma warning restore CS1591
     }
 }

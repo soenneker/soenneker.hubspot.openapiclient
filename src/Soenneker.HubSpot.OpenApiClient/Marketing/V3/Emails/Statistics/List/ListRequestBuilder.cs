@@ -94,15 +94,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Statistics.List
             [QueryParameter("emailIds")]
             public long?[] EmailIds { get; set; }
 #endif
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("endTimestamp")]
-            public string? EndTimestamp { get; set; }
-#nullable restore
-#else
-            [QueryParameter("endTimestamp")]
-            public string EndTimestamp { get; set; }
-#endif
+            public DateTimeOffset? EndTimestamp { get; set; }
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("property")]
@@ -112,15 +105,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Statistics.List
             [QueryParameter("property")]
             public string Property { get; set; }
 #endif
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("startTimestamp")]
-            public string? StartTimestamp { get; set; }
-#nullable restore
-#else
-            [QueryParameter("startTimestamp")]
-            public string StartTimestamp { get; set; }
-#endif
+            public DateTimeOffset? StartTimestamp { get; set; }
         }
     }
 }

@@ -8,10 +8,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     public enum ApiPlatformFlowPutRequest_type
     #pragma warning restore CS1591
     {
-        [EnumMember(Value = "CONTACT_FLOW")]
-        #pragma warning disable CS1591
-        CONTACT_FLOW,
-        #pragma warning restore CS1591
         [EnumMember(Value = "PLATFORM_FLOW")]
         #pragma warning disable CS1591
         PLATFORM_FLOW,

@@ -6,6 +6,7 @@ using Microsoft.Kiota.Abstractions;
 using Soenneker.HubSpot.OpenApiClient.Automation.V4.Flows.Batch;
 using Soenneker.HubSpot.OpenApiClient.Automation.V4.Flows.EmailCampaigns;
 using Soenneker.HubSpot.OpenApiClient.Automation.V4.Flows.Item;
+using Soenneker.HubSpot.OpenApiClient.Automation.V4.Flows.Performance;
 using Soenneker.HubSpot.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
@@ -29,6 +30,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Automation.V4.Flows
         public global::Soenneker.HubSpot.OpenApiClient.Automation.V4.Flows.EmailCampaigns.EmailCampaignsRequestBuilder EmailCampaigns
         {
             get => new global::Soenneker.HubSpot.OpenApiClient.Automation.V4.Flows.EmailCampaigns.EmailCampaignsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The performance property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Automation.V4.Flows.Performance.PerformanceRequestBuilder Performance
+        {
+            get => new global::Soenneker.HubSpot.OpenApiClient.Automation.V4.Flows.Performance.PerformanceRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.automation.v4.flows.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>

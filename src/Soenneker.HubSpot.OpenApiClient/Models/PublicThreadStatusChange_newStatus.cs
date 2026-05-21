@@ -8,13 +8,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     public enum PublicThreadStatusChange_newStatus
     #pragma warning restore CS1591
     {
-        [EnumMember(Value = "OPEN")]
-        #pragma warning disable CS1591
-        OPEN,
-        #pragma warning restore CS1591
         [EnumMember(Value = "CLOSED")]
         #pragma warning disable CS1591
         CLOSED,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "OPEN")]
+        #pragma warning disable CS1591
+        OPEN,
         #pragma warning restore CS1591
     }
 }

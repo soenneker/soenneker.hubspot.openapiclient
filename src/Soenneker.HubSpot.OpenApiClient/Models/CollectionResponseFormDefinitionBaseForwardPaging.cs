@@ -25,10 +25,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The results property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseFormDefinitionBaseForwardPaging_results>? Results { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.HubSpotFormDefinition>? Results { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseFormDefinitionBaseForwardPaging_results> Results { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.HubSpotFormDefinition> Results { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseFormDefinitionBaseForwardPaging"/> and sets the default values.
@@ -56,7 +56,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "paging", n => { Paging = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingForwardPaging_1>(global::Soenneker.HubSpot.OpenApiClient.Models.MarketingForwardPaging_1.CreateFromDiscriminatorValue); } },
-                { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseFormDefinitionBaseForwardPaging_results>(global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseFormDefinitionBaseForwardPaging_results.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.HubSpotFormDefinition>(global::Soenneker.HubSpot.OpenApiClient.Models.HubSpotFormDefinition.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -67,7 +67,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingForwardPaging_1>("paging", Paging);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseFormDefinitionBaseForwardPaging_results>("results", Results);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.HubSpotFormDefinition>("results", Results);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -9,9 +9,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class PublicWelcomeMessage : global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessage, IParsable
+    public partial class PublicWelcomeMessage : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The archived property</summary>
         public bool? Archived { get; set; }
         /// <summary>The channelAccountId property</summary>
@@ -96,14 +98,23 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Text { get; set; }
 #endif
+        /// <summary>The type property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWelcomeMessage_type? Type { get; set; }
         /// <summary>The updatedAt property</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicWelcomeMessage"/> and sets the default values.
+        /// </summary>
+        public PublicWelcomeMessage()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicWelcomeMessage"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.HubSpot.OpenApiClient.Models.PublicWelcomeMessage CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicWelcomeMessage CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicWelcomeMessage();
@@ -112,9 +123,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
                 { "archived", n => { Archived = n.GetBoolValue(); } },
                 { "channelAccountId", n => { ChannelAccountId = n.GetStringValue(); } },
@@ -128,6 +139,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "richText", n => { RichText = n.GetStringValue(); } },
                 { "senders", n => { Senders = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSender>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicSender.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "text", n => { Text = n.GetStringValue(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWelcomeMessage_type>(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
             };
         }
@@ -135,10 +147,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
             writer.WriteBoolValue("archived", Archived);
             writer.WriteStringValue("channelAccountId", ChannelAccountId);
             writer.WriteStringValue("channelId", ChannelId);
@@ -151,7 +162,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("richText", RichText);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSender>("senders", Senders);
             writer.WriteStringValue("text", Text);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWelcomeMessage_type>("type", Type);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

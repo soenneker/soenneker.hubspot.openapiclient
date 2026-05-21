@@ -31,11 +31,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails
         {
             get => new global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Clone.CloneRequestBuilder(PathParameters, RequestAdapter);
         }
-        /// <summary>The EmptyPathSegment property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.EmptyPathSegmentRequestBuilder EmptyPathSegment
-        {
-            get => new global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.EmptyPathSegmentRequestBuilder(PathParameters, RequestAdapter);
-        }
         /// <summary>The statistics property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Statistics.StatisticsRequestBuilder Statistics
         {
