@@ -1108,6 +1108,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         #pragma warning disable CS1591
         Hs_source_portal_id,
         #pragma warning restore CS1591
+        [EnumMember(Value = "hs_sourced_contact_origin")]
+        #pragma warning disable CS1591
+        Hs_sourced_contact_origin,
+        #pragma warning restore CS1591
         [EnumMember(Value = "hs_state_code")]
         #pragma warning disable CS1591
         Hs_state_code,

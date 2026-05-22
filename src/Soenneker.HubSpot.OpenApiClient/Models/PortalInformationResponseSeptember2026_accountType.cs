@@ -3,9 +3,10 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>The type of account, such as APP_DEVELOPER, DEVELOPER_TEST, SANDBOX, or STANDARD.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum PortalInformationResponse_accountType
+    #pragma warning disable CS1591
+    public enum PortalInformationResponseSeptember2026_accountType
+    #pragma warning restore CS1591
     {
         [EnumMember(Value = "APP_DEVELOPER")]
         #pragma warning disable CS1591

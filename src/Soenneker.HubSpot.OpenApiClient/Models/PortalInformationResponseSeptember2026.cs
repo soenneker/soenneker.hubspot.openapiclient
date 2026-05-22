@@ -9,11 +9,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class PortalInformationResponse : IAdditionalDataHolder, IParsable
+    public partial class PortalInformationResponseSeptember2026 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The type of account, such as APP_DEVELOPER, DEVELOPER_TEST, SANDBOX, or STANDARD.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PortalInformationResponse_accountType? AccountType { get; set; }
+        /// <summary>The accountType property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PortalInformationResponseSeptember2026_accountType? AccountType { get; set; }
         /// <summary>The additionalCurrencies property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -24,7 +24,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The primary currency used by the company.</summary>
+        /// <summary>The companyCurrency property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CompanyCurrency { get; set; }
@@ -32,7 +32,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string CompanyCurrency { get; set; }
 #endif
-        /// <summary>The location where the account&apos;s data is hosted.</summary>
+        /// <summary>The createdAt property</summary>
+        public long? CreatedAt { get; set; }
+        /// <summary>The dataHostingLocation property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DataHostingLocation { get; set; }
@@ -40,9 +42,17 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string DataHostingLocation { get; set; }
 #endif
-        /// <summary>The unique identifier for the HubSpot account.</summary>
+        /// <summary>The portalId property</summary>
         public int? PortalId { get; set; }
-        /// <summary>The time zone in which the account operates.</summary>
+        /// <summary>The portalName property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? PortalName { get; set; }
+#nullable restore
+#else
+        public string PortalName { get; set; }
+#endif
+        /// <summary>The timeZone property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TimeZone { get; set; }
@@ -50,7 +60,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string TimeZone { get; set; }
 #endif
-        /// <summary>The domain used for accessing the HubSpot user interface.</summary>
+        /// <summary>The uiDomain property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UiDomain { get; set; }
@@ -58,7 +68,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string UiDomain { get; set; }
 #endif
-        /// <summary>The time zone offset from UTC in hours and minutes.</summary>
+        /// <summary>The utcOffset property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UtcOffset { get; set; }
@@ -66,24 +76,24 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string UtcOffset { get; set; }
 #endif
-        /// <summary>The time zone offset from UTC in milliseconds.</summary>
+        /// <summary>The utcOffsetMilliseconds property</summary>
         public long? UtcOffsetMilliseconds { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PortalInformationResponse"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PortalInformationResponseSeptember2026"/> and sets the default values.
         /// </summary>
-        public PortalInformationResponse()
+        public PortalInformationResponseSeptember2026()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PortalInformationResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PortalInformationResponseSeptember2026"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.HubSpot.OpenApiClient.Models.PortalInformationResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HubSpot.OpenApiClient.Models.PortalInformationResponseSeptember2026 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PortalInformationResponse();
+            return new global::Soenneker.HubSpot.OpenApiClient.Models.PortalInformationResponseSeptember2026();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -93,11 +103,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "accountType", n => { AccountType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PortalInformationResponse_accountType>(); } },
+                { "accountType", n => { AccountType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PortalInformationResponseSeptember2026_accountType>(); } },
                 { "additionalCurrencies", n => { AdditionalCurrencies = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "companyCurrency", n => { CompanyCurrency = n.GetStringValue(); } },
+                { "createdAt", n => { CreatedAt = n.GetLongValue(); } },
                 { "dataHostingLocation", n => { DataHostingLocation = n.GetStringValue(); } },
                 { "portalId", n => { PortalId = n.GetIntValue(); } },
+                { "portalName", n => { PortalName = n.GetStringValue(); } },
                 { "timeZone", n => { TimeZone = n.GetStringValue(); } },
                 { "uiDomain", n => { UiDomain = n.GetStringValue(); } },
                 { "utcOffset", n => { UtcOffset = n.GetStringValue(); } },
@@ -111,11 +123,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PortalInformationResponse_accountType>("accountType", AccountType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PortalInformationResponseSeptember2026_accountType>("accountType", AccountType);
             writer.WriteCollectionOfPrimitiveValues<string>("additionalCurrencies", AdditionalCurrencies);
             writer.WriteStringValue("companyCurrency", CompanyCurrency);
+            writer.WriteLongValue("createdAt", CreatedAt);
             writer.WriteStringValue("dataHostingLocation", DataHostingLocation);
             writer.WriteIntValue("portalId", PortalId);
+            writer.WriteStringValue("portalName", PortalName);
             writer.WriteStringValue("timeZone", TimeZone);
             writer.WriteStringValue("uiDomain", UiDomain);
             writer.WriteStringValue("utcOffset", UtcOffset);
