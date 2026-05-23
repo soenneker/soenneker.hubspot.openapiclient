@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.HubSpot.OpenApiClient.Cms.UrlRedirects.V3.UrlMappings;
 using Soenneker.HubSpot.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
@@ -17,6 +18,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.UrlRedirects.V3
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class V3RequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The urlMappings property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Cms.UrlRedirects.V3.UrlMappings.UrlMappingsRequestBuilder UrlMappings
+        {
+            get => new global::Soenneker.HubSpot.OpenApiClient.Cms.UrlRedirects.V3.UrlMappings.UrlMappingsRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Cms.UrlRedirects.V3.V3RequestBuilder"/> and sets the default values.
         /// </summary>

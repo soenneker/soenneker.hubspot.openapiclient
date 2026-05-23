@@ -261,7 +261,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             }
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicAdsSearchFilter"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicAdsTimeFilter"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationInListFilter"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignInfluencedFilter"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicCommunicationSubscriptionFilter"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicConstantFilter"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicCtaAnalyticsFilter"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailEventFilter"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailSubscriptionFilter"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicEventAnalyticsFilter"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicFormSubmissionFilter"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicFormSubmissionOnPageFilter"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicInListFilter"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicIntegrationEventFilter"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicPageViewAnalyticsFilter"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicPrivacyAnalyticsFilter"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicPropertyFilter"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicSurveyMonkeyFilter"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicSurveyMonkeyValueFilter"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilter"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicWebinarFilter"/>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicAdsSearchFilter"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicAdsTimeFilter"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationInListFilter"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicCommunicationSubscriptionFilter"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicConstantFilter"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicCtaAnalyticsFilter"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailEventFilter"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailSubscriptionFilter"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicEventAnalyticsFilter"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicFormSubmissionFilter"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicFormSubmissionOnPageFilter"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicInListFilter"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicIntegrationEventFilter"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicPageViewAnalyticsFilter"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicPrivacyAnalyticsFilter"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicPropertyFilter"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicSurveyMonkeyFilter"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicSurveyMonkeyValueFilter"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilter"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicWebinarFilter"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class PublicNotAllFilterBranch_filters : IComposedTypeWrapper, IParsable
@@ -289,14 +289,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #nullable restore
 #else
             public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationInListFilter PublicAssociationInListFilter { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignInfluencedFilter"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignInfluencedFilter? PublicCampaignInfluencedFilter { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignInfluencedFilter PublicCampaignInfluencedFilter { get; set; }
 #endif
             /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicCommunicationSubscriptionFilter"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -456,10 +448,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 {
                     result.PublicAssociationInListFilter = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationInListFilter();
                 }
-                else if("PublicCampaignInfluencedFilter".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicCampaignInfluencedFilter = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignInfluencedFilter();
-                }
                 else if("PublicCommunicationSubscriptionFilter".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
                     result.PublicCommunicationSubscriptionFilter = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicCommunicationSubscriptionFilter();
@@ -547,10 +535,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 else if(PublicAssociationInListFilter != null)
                 {
                     return PublicAssociationInListFilter.GetFieldDeserializers();
-                }
-                else if(PublicCampaignInfluencedFilter != null)
-                {
-                    return PublicCampaignInfluencedFilter.GetFieldDeserializers();
                 }
                 else if(PublicCommunicationSubscriptionFilter != null)
                 {
@@ -640,10 +624,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 else if(PublicAssociationInListFilter != null)
                 {
                     writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationInListFilter>(null, PublicAssociationInListFilter);
-                }
-                else if(PublicCampaignInfluencedFilter != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignInfluencedFilter>(null, PublicCampaignInfluencedFilter);
                 }
                 else if(PublicCommunicationSubscriptionFilter != null)
                 {

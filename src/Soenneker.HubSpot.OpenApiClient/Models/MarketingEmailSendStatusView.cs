@@ -17,7 +17,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Time when the send was completed.</summary>
         public DateTimeOffset? CompletedAt { get; set; }
-        /// <summary>The ID of a send event.</summary>
+        /// <summary>The eventId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventIdView? EventId { get; set; }

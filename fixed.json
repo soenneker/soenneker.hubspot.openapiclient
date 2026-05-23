@@ -14947,6 +14947,148 @@
         ]
       }
     },
+    "/cms/url-redirects/v3/url-mappings": {
+      "get": {
+        "tags": [
+          "Basic"
+        ],
+        "operationId": "cms-get-cms-url-redirects-v3-url-mappings",
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CmsUrlMapping"
+                  }
+                },
+                "example": null
+              }
+            }
+          },
+          "default": {
+            "$ref": "#/components/responses/__________cms_Error"
+          }
+        },
+        "security": [
+          {
+            "__________cms_oauth2": [
+              "content"
+            ]
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "Basic"
+        ],
+        "operationId": "cms-post-cms-url-redirects-v3-url-mappings",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CmsUrlMapping"
+              },
+              "example": null
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "$ref": "#/components/responses/__________cms_Error"
+          }
+        },
+        "security": [
+          {
+            "__________cms_oauth2": [
+              "content"
+            ]
+          }
+        ]
+      }
+    },
+    "/cms/url-redirects/v3/url-mappings/{id}": {
+      "get": {
+        "tags": [
+          "Basic"
+        ],
+        "operationId": "cms-get-cms-url-redirects-v3-url-mappings-id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "\\d+",
+              "type": "integer",
+              "format": "int64",
+              "example": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CmsUrlMapping"
+                },
+                "example": null
+              }
+            }
+          },
+          "default": {
+            "$ref": "#/components/responses/__________cms_Error"
+          }
+        },
+        "security": [
+          {
+            "__________cms_oauth2": [
+              "content"
+            ]
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "Basic"
+        ],
+        "operationId": "cms-delete-cms-url-redirects-v3-url-mappings-id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "\\d+",
+              "type": "integer",
+              "format": "int64",
+              "example": null
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "$ref": "#/components/responses/__________cms_Error"
+          }
+        },
+        "security": [
+          {
+            "__________cms_oauth2": [
+              "content"
+            ]
+          },
+          {
+            "__________cms_oauth2": [
+              "cms-url-redirects-delete"
+            ]
+          }
+        ]
+      }
+    },
     "/cms/v3/url-redirects/{urlRedirectId}": {
       "get": {
         "tags": [
@@ -95016,6 +95158,13 @@
         }
       },
       "AccessTokenResponse": {
+        "required": [
+          "access_token",
+          "expires_in",
+          "refresh_token",
+          "token_type",
+          "token_use"
+        ],
         "type": "object",
         "properties": {
           "access_token": {
@@ -95071,6 +95220,12 @@
         "x-hubspot-sub-type-impl": true
       },
       "ClientCredentialsTokenResponse": {
+        "required": [
+          "access_token",
+          "expires_in",
+          "token_type",
+          "token_use"
+        ],
         "type": "object",
         "properties": {
           "access_token": {
@@ -95230,6 +95385,20 @@
         "example": null
       },
       "PublicAccessTokenInfoResponse": {
+        "required": [
+          "active",
+          "app_id",
+          "client_id",
+          "expires_in",
+          "hub_id",
+          "is_private_distribution",
+          "scopes",
+          "signed_access_token",
+          "token",
+          "token_type",
+          "token_use",
+          "user_id"
+        ],
         "type": "object",
         "properties": {
           "active": {
@@ -95305,6 +95474,17 @@
         "x-hubspot-sub-type-impl": true
       },
       "PublicRefreshTokenInfoResponse": {
+        "required": [
+          "active",
+          "app_id",
+          "client_id",
+          "hub_id",
+          "scopes",
+          "token",
+          "token_type",
+          "token_use",
+          "user_id"
+        ],
         "type": "object",
         "properties": {
           "active": {
@@ -101854,9 +102034,6 @@
                   "$ref": "#/components/schemas/PublicCommunicationSubscriptionFilter"
                 },
                 {
-                  "$ref": "#/components/schemas/PublicCampaignInfluencedFilter"
-                },
-                {
                   "$ref": "#/components/schemas/PublicSurveyMonkeyFilter"
                 },
                 {
@@ -102000,9 +102177,6 @@
                 },
                 {
                   "$ref": "#/components/schemas/PublicCommunicationSubscriptionFilter"
-                },
-                {
-                  "$ref": "#/components/schemas/PublicCampaignInfluencedFilter"
                 },
                 {
                   "$ref": "#/components/schemas/PublicSurveyMonkeyFilter"
@@ -102247,33 +102421,6 @@
           "useFiscalYear": {
             "type": "boolean",
             "description": "Determines if the fiscal year should be used in the operation.",
-            "example": null
-          }
-        },
-        "example": null,
-        "x-hubspot-sub-type-impl": true
-      },
-      "PublicCampaignInfluencedFilter": {
-        "title": "CAMPAIGN_INFLUENCED",
-        "required": [
-          "campaignId",
-          "filterType"
-        ],
-        "type": "object",
-        "properties": {
-          "campaignId": {
-            "type": "string",
-            "description": "The identifier for the campaign used in the campaign influenced filter.",
-            "example": null
-          },
-          "filterType": {
-            "enum": [
-              "CAMPAIGN_INFLUENCED"
-            ],
-            "type": "string",
-            "additionalProperties": false,
-            "description": "Indicates the type of filter, which defaults to CAMPAIGN_INFLUENCED.",
-            "default": "CAMPAIGN_INFLUENCED",
             "example": null
           }
         },
@@ -103820,9 +103967,6 @@
                   "$ref": "#/components/schemas/PublicCommunicationSubscriptionFilter"
                 },
                 {
-                  "$ref": "#/components/schemas/PublicCampaignInfluencedFilter"
-                },
-                {
                   "$ref": "#/components/schemas/PublicSurveyMonkeyFilter"
                 },
                 {
@@ -103951,9 +104095,6 @@
                 },
                 {
                   "$ref": "#/components/schemas/PublicCommunicationSubscriptionFilter"
-                },
-                {
-                  "$ref": "#/components/schemas/PublicCampaignInfluencedFilter"
                 },
                 {
                   "$ref": "#/components/schemas/PublicSurveyMonkeyFilter"
@@ -104200,9 +104341,6 @@
                 },
                 {
                   "$ref": "#/components/schemas/PublicCommunicationSubscriptionFilter"
-                },
-                {
-                  "$ref": "#/components/schemas/PublicCampaignInfluencedFilter"
                 },
                 {
                   "$ref": "#/components/schemas/PublicSurveyMonkeyFilter"
@@ -104914,9 +105052,6 @@
                   "$ref": "#/components/schemas/PublicCommunicationSubscriptionFilter"
                 },
                 {
-                  "$ref": "#/components/schemas/PublicCampaignInfluencedFilter"
-                },
-                {
                   "$ref": "#/components/schemas/PublicSurveyMonkeyFilter"
                 },
                 {
@@ -105611,9 +105746,6 @@
                 },
                 {
                   "$ref": "#/components/schemas/PublicCommunicationSubscriptionFilter"
-                },
-                {
-                  "$ref": "#/components/schemas/PublicCampaignInfluencedFilter"
                 },
                 {
                   "$ref": "#/components/schemas/PublicSurveyMonkeyFilter"
@@ -158292,10 +158424,12 @@
           },
           "destination": {
             "type": "string",
+            "description": "The destination URL, where the target URL should be redirected if it matches the `routePrefix`.",
             "example": null
           },
           "id": {
             "type": "integer",
+            "description": "The unique ID of this URL redirect.",
             "format": "int64",
             "example": null
           },
@@ -158309,22 +158443,27 @@
           },
           "isMatchFullUrl": {
             "type": "boolean",
+            "description": "Whether the `routePrefix` should match on the entire URL, including the domain.",
             "example": null
           },
           "isMatchQueryString": {
             "type": "boolean",
+            "description": "Whether the `routePrefix` should match on the entire URL path, including the query string.",
             "example": null
           },
           "isOnlyAfterNotFound": {
             "type": "boolean",
+            "description": "Whether the URL redirect mapping should apply only if a live page on the URL isn't found. If False, the URL redirect mapping will take precedence over any existing page.",
             "example": null
           },
           "isPattern": {
             "type": "boolean",
+            "description": "Whether the `routePrefix` should match based on pattern.",
             "example": null
           },
           "isProtocolAgnostic": {
             "type": "boolean",
+            "description": "Whether the `routePrefix` should match both HTTP and HTTPS protocols.",
             "example": null
           },
           "isRegex": {
@@ -158333,6 +158472,7 @@
           },
           "isTrailingSlashOptional": {
             "type": "boolean",
+            "description": "Whether a trailing slash will be ignored.",
             "example": null
           },
           "label": {
@@ -158359,16 +158499,19 @@
           },
           "precedence": {
             "type": "integer",
+            "description": "Used to prioritize URL redirection. If a given URL matches more than one redirect, the one with the **lower** precedence will be used.",
             "format": "int32",
             "example": null
           },
           "redirectStyle": {
             "type": "integer",
+            "description": "\"The type of redirect to create. Options include: 301 (permanent), 302 (temporary), or 305 (proxy). Find more details [here](https://knowledge.hubspot.com/cos-general/how-to-redirect-a-hubspot-page).\"",
             "format": "int32",
             "example": null
           },
           "routePrefix": {
             "type": "string",
+            "description": "The target incoming URL, path, or pattern to match for redirection.",
             "example": null
           },
           "updated": {
@@ -255191,7 +255334,6 @@
             "example": null
           }
         },
-        "description": "The ID of a send event.",
         "example": null
       },
       "MarketingForwardPaging_4": {
@@ -255272,7 +255414,6 @@
             "example": null
           }
         },
-        "description": "A JSON object containing anything you want to override.",
         "example": null
       },
       "MarketingPublicSingleSendRequestEgg": {
@@ -255308,7 +255449,6 @@
             "$ref": "#/components/schemas/MarketingPublicSingleSendEmail"
           }
         },
-        "description": "A request to send a single transactional email asynchronously.",
         "example": null
       },
       "SmtpApiTokenRequestEgg": {
@@ -255329,7 +255469,6 @@
             "example": null
           }
         },
-        "description": "A request object to create a SMTP API token",
         "example": null
       },
       "SmtpApiTokenView": {
@@ -255380,7 +255519,6 @@
             "example": null
           }
         },
-        "description": "A SMTP API token provides both an ID and password that can be used to send email through the HubSpot SMTP API.",
         "example": null
       },
       "CollectionResponseIpRangeNoPaging": {
@@ -276510,6 +276648,13 @@
         },
         "example": null
       },
+      "CmsGetCmsUrlRedirectsV3UrlMappings200": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/CmsUrlMapping"
+        },
+        "example": null
+      },
       "CrmPutCrmV4ObjectsObjectTypeObjectIdAssociationsToObjectTypeToObjectIdCreate": {
         "type": "array",
         "items": {
@@ -278321,6 +278466,7 @@
             "authorizationUrl": "https://app.hubspot.com/oauth/authorize",
             "tokenUrl": "https://api.hubapi.com/oauth/v1/token",
             "scopes": {
+              "cms-url-redirects-delete": "",
               "content": ""
             }
           }
