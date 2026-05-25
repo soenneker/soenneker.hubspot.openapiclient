@@ -100795,6 +100795,25 @@
         "example": null
       },
       "ApiContactFlow": {
+        "required": [
+          "actions",
+          "blockedDates",
+          "canEnrollFromSalesforce",
+          "createdAt",
+          "crmObjectCreationStatus",
+          "customProperties",
+          "dataSources",
+          "flowType",
+          "id",
+          "isEnabled",
+          "nextAvailableActionId",
+          "objectTypeId",
+          "revisionId",
+          "suppressionListIds",
+          "timeWindows",
+          "type",
+          "updatedAt"
+        ],
         "type": "object",
         "properties": {
           "actions": {
@@ -101042,6 +101061,19 @@
         "x-hubspot-sub-type-impl": true
       },
       "ApiContactFlowCreateRequest": {
+        "required": [
+          "actions",
+          "blockedDates",
+          "canEnrollFromSalesforce",
+          "customProperties",
+          "dataSources",
+          "flowType",
+          "isEnabled",
+          "objectTypeId",
+          "suppressionListIds",
+          "timeWindows",
+          "type"
+        ],
         "type": "object",
         "properties": {
           "actions": {
@@ -101259,6 +101291,17 @@
         "x-hubspot-sub-type-impl": true
       },
       "ApiContactFlowPutRequest": {
+        "required": [
+          "actions",
+          "blockedDates",
+          "canEnrollFromSalesforce",
+          "customProperties",
+          "isEnabled",
+          "revisionId",
+          "suppressionListIds",
+          "timeWindows",
+          "type"
+        ],
         "type": "object",
         "properties": {
           "actions": {
@@ -102540,6 +102583,23 @@
         "x-hubspot-sub-type-impl": true
       },
       "ApiPlatformFlow": {
+        "required": [
+          "actions",
+          "blockedDates",
+          "createdAt",
+          "crmObjectCreationStatus",
+          "customProperties",
+          "dataSources",
+          "flowType",
+          "id",
+          "isEnabled",
+          "nextAvailableActionId",
+          "objectTypeId",
+          "revisionId",
+          "timeWindows",
+          "type",
+          "updatedAt"
+        ],
         "type": "object",
         "properties": {
           "actions": {
@@ -102760,6 +102820,17 @@
         "x-hubspot-sub-type-impl": true
       },
       "ApiPlatformFlowCreateRequest": {
+        "required": [
+          "actions",
+          "blockedDates",
+          "customProperties",
+          "dataSources",
+          "flowType",
+          "isEnabled",
+          "objectTypeId",
+          "timeWindows",
+          "type"
+        ],
         "type": "object",
         "properties": {
           "actions": {
@@ -102950,6 +103021,15 @@
         "x-hubspot-sub-type-impl": true
       },
       "ApiPlatformFlowPutRequest": {
+        "required": [
+          "actions",
+          "blockedDates",
+          "customProperties",
+          "isEnabled",
+          "revisionId",
+          "timeWindows",
+          "type"
+        ],
         "type": "object",
         "properties": {
           "actions": {
