@@ -133520,6 +133520,20 @@
             "type": "boolean",
             "example": null
           },
+          "textDisplayHint": {
+            "enum": [
+              "domain_name",
+              "email",
+              "ip_address",
+              "multi_line",
+              "phone_number",
+              "physical_address",
+              "postal_code",
+              "unformatted_single_line"
+            ],
+            "type": "string",
+            "example": null
+          },
           "type": {
             "enum": [
               "bool",
@@ -139181,6 +139195,20 @@
             "type": "boolean",
             "example": null
           },
+          "textDisplayHint": {
+            "enum": [
+              "domain_name",
+              "email",
+              "ip_address",
+              "multi_line",
+              "phone_number",
+              "physical_address",
+              "postal_code",
+              "unformatted_single_line"
+            ],
+            "type": "string",
+            "example": null
+          },
           "type": {
             "enum": [
               "bool",
@@ -139778,6 +139806,20 @@
           },
           "showCurrencySymbol": {
             "type": "boolean",
+            "example": null
+          },
+          "textDisplayHint": {
+            "enum": [
+              "domain_name",
+              "email",
+              "ip_address",
+              "multi_line",
+              "phone_number",
+              "physical_address",
+              "postal_code",
+              "unformatted_single_line"
+            ],
+            "type": "string",
             "example": null
           },
           "type": {
@@ -223575,6 +223617,21 @@
             "description": "Whether or not the property will display the currency symbol set in the account settings.",
             "example": null
           },
+          "textDisplayHint": {
+            "enum": [
+              "domain_name",
+              "email",
+              "ip_address",
+              "multi_line",
+              "phone_number",
+              "physical_address",
+              "postal_code",
+              "unformatted_single_line"
+            ],
+            "type": "string",
+            "description": "Hint for how the text is displayed and validated in HubSpot's UI. Can be: \"unformatted_single_line\", \"multi_line\", \"email\", \"phone_number\", \"domain_name\", \"ip_address\", \"physical_address\", or \"postal_code\".",
+            "example": null
+          },
           "type": {
             "type": "string",
             "description": "The property data type.",
@@ -223748,6 +223805,20 @@
           },
           "showCurrencySymbol": {
             "type": "boolean",
+            "example": null
+          },
+          "textDisplayHint": {
+            "enum": [
+              "domain_name",
+              "email",
+              "ip_address",
+              "multi_line",
+              "phone_number",
+              "physical_address",
+              "postal_code",
+              "unformatted_single_line"
+            ],
+            "type": "string",
             "example": null
           },
           "type": {
@@ -224012,6 +224083,20 @@
           },
           "showCurrencySymbol": {
             "type": "boolean",
+            "example": null
+          },
+          "textDisplayHint": {
+            "enum": [
+              "domain_name",
+              "email",
+              "ip_address",
+              "multi_line",
+              "phone_number",
+              "physical_address",
+              "postal_code",
+              "unformatted_single_line"
+            ],
+            "type": "string",
             "example": null
           },
           "type": {
@@ -228168,6 +228253,21 @@
           "showCurrencySymbol": {
             "type": "boolean",
             "description": "Whether the property will display the currency symbol set in the account settings.",
+            "example": null
+          },
+          "textDisplayHint": {
+            "enum": [
+              "domain_name",
+              "email",
+              "ip_address",
+              "multi_line",
+              "phone_number",
+              "physical_address",
+              "postal_code",
+              "unformatted_single_line"
+            ],
+            "type": "string",
+            "description": "Hint for how the text is displayed and validated in HubSpot's UI. Can be: \"unformatted_single_line\", \"multi_line\", \"email\", \"phone_number\", \"domain_name\", \"ip_address\", \"physical_address\", or \"postal_code\".",
             "example": null
           },
           "type": {
@@ -239626,6 +239726,21 @@
           "showCurrencySymbol": {
             "type": "boolean",
             "description": "Whether to show the currency symbol in HubSpot's UI.",
+            "example": null
+          },
+          "textDisplayHint": {
+            "enum": [
+              "domain_name",
+              "email",
+              "ip_address",
+              "multi_line",
+              "phone_number",
+              "physical_address",
+              "postal_code",
+              "unformatted_single_line"
+            ],
+            "type": "string",
+            "description": "Hint for how the text is displayed and validated in HubSpot's UI. Can be: \"unformatted_single_line\", \"multi_line\", \"email\", \"phone_number\", \"domain_name\", \"ip_address\", \"physical_address\", or \"postal_code\".",
             "example": null
           },
           "type": {
@@ -257985,6 +258100,7 @@
             "example": null
           }
         },
+        "description": "The ID of a send event.",
         "example": null
       },
       "____marketing_ForwardPaging": {
@@ -258065,6 +258181,7 @@
             "example": null
           }
         },
+        "description": "A JSON object containing anything you want to override.",
         "example": null
       },
       "marketing_PublicSingleSendRequestEgg": {
@@ -258102,6 +258219,7 @@
             "$ref": "#/components/schemas/marketing_PublicSingleSendEmail"
           }
         },
+        "description": "A request to send a single transactional email asynchronously.",
         "example": null
       },
       "SmtpApiTokenRequestEgg": {
@@ -258122,6 +258240,7 @@
             "example": null
           }
         },
+        "description": "A request object to create a SMTP API token",
         "example": null
       },
       "SmtpApiTokenView": {
@@ -258172,6 +258291,7 @@
             "example": null
           }
         },
+        "description": "A SMTP API token provides both an ID and password that can be used to send email through the HubSpot SMTP API.",
         "example": null
       },
       "CollectionResponseIpRangeNoPaging": {

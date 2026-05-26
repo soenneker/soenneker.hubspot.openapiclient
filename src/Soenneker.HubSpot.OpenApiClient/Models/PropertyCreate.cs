@@ -96,6 +96,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>The showCurrencySymbol property</summary>
         public bool? ShowCurrencySymbol { get; set; }
+        /// <summary>The textDisplayHint property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyCreate_textDisplayHint? TextDisplayHint { get; set; }
         /// <summary>The type property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyCreate_type? Type { get; set; }
         /// <summary>
@@ -140,6 +142,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.OptionInput>(global::Soenneker.HubSpot.OpenApiClient.Models.OptionInput.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "referencedObjectType", n => { ReferencedObjectType = n.GetStringValue(); } },
                 { "showCurrencySymbol", n => { ShowCurrencySymbol = n.GetBoolValue(); } },
+                { "textDisplayHint", n => { TextDisplayHint = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyCreate_textDisplayHint>(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyCreate_type>(); } },
             };
         }
@@ -167,6 +170,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.OptionInput>("options", Options);
             writer.WriteStringValue("referencedObjectType", ReferencedObjectType);
             writer.WriteBoolValue("showCurrencySymbol", ShowCurrencySymbol);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyCreate_textDisplayHint>("textDisplayHint", TextDisplayHint);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyCreate_type>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

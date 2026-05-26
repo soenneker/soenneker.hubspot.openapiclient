@@ -139,6 +139,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>Whether to show the currency symbol in HubSpot&apos;s UI.</summary>
         public bool? ShowCurrencySymbol { get; set; }
+        /// <summary>&quot;Hint for how the text is displayed and validated in HubSpot&apos;s UI. Can be: \&quot;unformatted_single_line\&quot;, \&quot;multi_line\&quot;, \&quot;email\&quot;, \&quot;phone_number\&quot;, \&quot;domain_name\&quot;, \&quot;ip_address\&quot;, \&quot;physical_address\&quot;, or \&quot;postal_code\&quot;.&quot;</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EventsProperty_textDisplayHint? TextDisplayHint { get; set; }
         /// <summary>The data type of the property, such as string or number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -208,6 +210,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "referencedObjectType", n => { ReferencedObjectType = n.GetStringValue(); } },
                 { "sensitiveDataCategories", n => { SensitiveDataCategories = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "showCurrencySymbol", n => { ShowCurrencySymbol = n.GetBoolValue(); } },
+                { "textDisplayHint", n => { TextDisplayHint = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsProperty_textDisplayHint>(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
                 { "updatedUserId", n => { UpdatedUserId = n.GetStringValue(); } },
@@ -246,6 +249,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("referencedObjectType", ReferencedObjectType);
             writer.WriteCollectionOfPrimitiveValues<string>("sensitiveDataCategories", SensitiveDataCategories);
             writer.WriteBoolValue("showCurrencySymbol", ShowCurrencySymbol);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsProperty_textDisplayHint>("textDisplayHint", TextDisplayHint);
             writer.WriteStringValue("type", Type);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             writer.WriteStringValue("updatedUserId", UpdatedUserId);

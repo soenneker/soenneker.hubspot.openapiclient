@@ -74,6 +74,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>The showCurrencySymbol property</summary>
         public bool? ShowCurrencySymbol { get; set; }
+        /// <summary>The textDisplayHint property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyUpdate_textDisplayHint? TextDisplayHint { get; set; }
         /// <summary>The data type of the property.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyUpdate_type? Type { get; set; }
         /// <summary>
@@ -113,6 +115,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "numberDisplayHint", n => { NumberDisplayHint = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyUpdate_numberDisplayHint>(); } },
                 { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmOptionInput>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmOptionInput.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "showCurrencySymbol", n => { ShowCurrencySymbol = n.GetBoolValue(); } },
+                { "textDisplayHint", n => { TextDisplayHint = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyUpdate_textDisplayHint>(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyUpdate_type>(); } },
             };
         }
@@ -135,6 +138,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyUpdate_numberDisplayHint>("numberDisplayHint", NumberDisplayHint);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmOptionInput>("options", Options);
             writer.WriteBoolValue("showCurrencySymbol", ShowCurrencySymbol);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyUpdate_textDisplayHint>("textDisplayHint", TextDisplayHint);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyUpdate_type>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

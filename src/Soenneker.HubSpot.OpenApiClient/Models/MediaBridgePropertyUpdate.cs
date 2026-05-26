@@ -76,6 +76,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>The showCurrencySymbol property</summary>
         public bool? ShowCurrencySymbol { get; set; }
+        /// <summary>The textDisplayHint property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.MediaBridgePropertyUpdate_textDisplayHint? TextDisplayHint { get; set; }
         /// <summary>The type property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.MediaBridgePropertyUpdate_type? Type { get; set; }
         /// <summary>
@@ -116,6 +118,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "numberDisplayHint", n => { NumberDisplayHint = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MediaBridgePropertyUpdate_numberDisplayHint>(); } },
                 { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.OptionInput>(global::Soenneker.HubSpot.OpenApiClient.Models.OptionInput.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "showCurrencySymbol", n => { ShowCurrencySymbol = n.GetBoolValue(); } },
+                { "textDisplayHint", n => { TextDisplayHint = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MediaBridgePropertyUpdate_textDisplayHint>(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MediaBridgePropertyUpdate_type>(); } },
             };
         }
@@ -139,6 +142,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MediaBridgePropertyUpdate_numberDisplayHint>("numberDisplayHint", NumberDisplayHint);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.OptionInput>("options", Options);
             writer.WriteBoolValue("showCurrencySymbol", ShowCurrencySymbol);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MediaBridgePropertyUpdate_textDisplayHint>("textDisplayHint", TextDisplayHint);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MediaBridgePropertyUpdate_type>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
