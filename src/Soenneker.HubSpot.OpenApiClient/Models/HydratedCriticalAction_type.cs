@@ -531,6 +531,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         #pragma warning disable CS1591
         TEAM_USER_DELETED,
         #pragma warning restore CS1591
+        [EnumMember(Value = "TEMPLATE_DELETED")]
+        #pragma warning disable CS1591
+        TEMPLATE_DELETED,
+        #pragma warning restore CS1591
         [EnumMember(Value = "TEMPLATE_MODIFIED")]
         #pragma warning disable CS1591
         TEMPLATE_MODIFIED,
