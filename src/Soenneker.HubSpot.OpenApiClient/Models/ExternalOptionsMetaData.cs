@@ -22,6 +22,16 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.FilteringMetaData Filter { get; set; }
 #endif
+        /// <summary>The fromObjectId property</summary>
+        public long? FromObjectId { get; set; }
+        /// <summary>The propertyName property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? PropertyName { get; set; }
+#nullable restore
+#else
+        public string PropertyName { get; set; }
+#endif
         /// <summary>The relatedObjectTypeId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -56,6 +66,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "filter", n => { Filter = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.FilteringMetaData>(global::Soenneker.HubSpot.OpenApiClient.Models.FilteringMetaData.CreateFromDiscriminatorValue); } },
+                { "fromObjectId", n => { FromObjectId = n.GetLongValue(); } },
+                { "propertyName", n => { PropertyName = n.GetStringValue(); } },
                 { "relatedObjectTypeId", n => { RelatedObjectTypeId = n.GetStringValue(); } },
             };
         }
@@ -67,6 +79,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.FilteringMetaData>("filter", Filter);
+            writer.WriteLongValue("fromObjectId", FromObjectId);
+            writer.WriteStringValue("propertyName", PropertyName);
             writer.WriteStringValue("relatedObjectTypeId", RelatedObjectTypeId);
             writer.WriteAdditionalData(AdditionalData);
         }

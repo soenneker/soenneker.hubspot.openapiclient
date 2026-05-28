@@ -716,6 +716,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         #pragma warning disable CS1591
         Hs_is_enriched,
         #pragma warning restore CS1591
+        [EnumMember(Value = "hs_is_mass_marketing_activation_disallowed")]
+        #pragma warning disable CS1591
+        Hs_is_mass_marketing_activation_disallowed,
+        #pragma warning restore CS1591
         [EnumMember(Value = "hs_is_merge_revertible")]
         #pragma warning disable CS1591
         Hs_is_merge_revertible,
