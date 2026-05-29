@@ -175,6 +175,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         #pragma warning disable CS1591
         CUSTOMER_AGENT,
         #pragma warning restore CS1591
+        [EnumMember(Value = "CUSTOMER_PORTAL")]
+        #pragma warning disable CS1591
+        CUSTOMER_PORTAL,
+        #pragma warning restore CS1591
         [EnumMember(Value = "DATA_ENRICHMENT")]
         #pragma warning disable CS1591
         DATA_ENRICHMENT,

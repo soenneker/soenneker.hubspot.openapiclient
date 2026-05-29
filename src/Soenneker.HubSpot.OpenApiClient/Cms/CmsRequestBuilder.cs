@@ -4,7 +4,6 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.HubSpot.OpenApiClient.Cms.AuditLogs;
 using Soenneker.HubSpot.OpenApiClient.Cms.Pages;
-using Soenneker.HubSpot.OpenApiClient.Cms.SiteSearch;
 using Soenneker.HubSpot.OpenApiClient.Cms.UrlRedirects;
 using Soenneker.HubSpot.OpenApiClient.Cms.V3;
 using System.Collections.Generic;
@@ -28,11 +27,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms
         public global::Soenneker.HubSpot.OpenApiClient.Cms.Pages.PagesRequestBuilder Pages
         {
             get => new global::Soenneker.HubSpot.OpenApiClient.Cms.Pages.PagesRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The siteSearch property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Cms.SiteSearch.SiteSearchRequestBuilder SiteSearch
-        {
-            get => new global::Soenneker.HubSpot.OpenApiClient.Cms.SiteSearch.SiteSearchRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The urlRedirects property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Cms.UrlRedirects.UrlRedirectsRequestBuilder UrlRedirects
