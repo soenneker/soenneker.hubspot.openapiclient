@@ -116,6 +116,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         #pragma warning disable CS1591
         GLOBAL_CONTENT,
         #pragma warning restore CS1591
+        [EnumMember(Value = "GLOBAL_STYLES_THEME")]
+        #pragma warning disable CS1591
+        GLOBAL_STYLES_THEME,
+        #pragma warning restore CS1591
         [EnumMember(Value = "HUBDB_TABLE")]
         #pragma warning disable CS1591
         HUBDB_TABLE,
