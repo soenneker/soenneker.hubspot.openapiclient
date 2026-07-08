@@ -49,7 +49,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string OperationType { get; set; }
 #endif
         /// <summary>The operator property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ComparativeDatePropertyOperation_operator? Operator { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ComparativeDatePropertyOperationOperator? Operator { get; set; }
         /// <summary>The operatorName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -59,7 +59,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string OperatorName { get; set; }
 #endif
         /// <summary>The propertyType property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ComparativeDatePropertyOperation_propertyType? PropertyType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ComparativeDatePropertyOperationPropertyType? PropertyType { get; set; }
         /// <summary>The renderSpec property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -74,7 +74,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public ComparativeDatePropertyOperation()
         {
             AdditionalData = new Dictionary<string, object>();
-            PropertyType = global::Soenneker.HubSpot.OpenApiClient.Models.ComparativeDatePropertyOperation_propertyType.DatetimeComparative;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -99,9 +98,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "defaultValue", n => { DefaultValue = n.GetStringValue(); } },
                 { "includeObjectsWithNoValueSet", n => { IncludeObjectsWithNoValueSet = n.GetBoolValue(); } },
                 { "operationType", n => { OperationType = n.GetStringValue(); } },
-                { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ComparativeDatePropertyOperation_operator>(); } },
+                { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ComparativeDatePropertyOperationOperator>(); } },
                 { "operatorName", n => { OperatorName = n.GetStringValue(); } },
-                { "propertyType", n => { PropertyType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ComparativeDatePropertyOperation_propertyType>(); } },
+                { "propertyType", n => { PropertyType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ComparativeDatePropertyOperationPropertyType>(); } },
                 { "renderSpec", n => { RenderSpec = n.GetStringValue(); } },
             };
         }
@@ -117,9 +116,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("defaultValue", DefaultValue);
             writer.WriteBoolValue("includeObjectsWithNoValueSet", IncludeObjectsWithNoValueSet);
             writer.WriteStringValue("operationType", OperationType);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ComparativeDatePropertyOperation_operator>("operator", Operator);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ComparativeDatePropertyOperationOperator>("operator", Operator);
             writer.WriteStringValue("operatorName", OperatorName);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ComparativeDatePropertyOperation_propertyType>("propertyType", PropertyType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ComparativeDatePropertyOperationPropertyType>("propertyType", PropertyType);
             writer.WriteStringValue("renderSpec", RenderSpec);
             writer.WriteAdditionalData(AdditionalData);
         }

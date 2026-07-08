@@ -27,10 +27,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>A collection of URLs linking to related resources or documentation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicBulkOptOutFromAllResponse_links? Links { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicBulkOptOutFromAllResponseLinksProperty? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicBulkOptOutFromAllResponse_links Links { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicBulkOptOutFromAllResponseLinksProperty Links { get; set; }
 #endif
         /// <summary>The total number of errors encountered during the bulk opt-out operation.</summary>
         public int? NumErrors { get; set; }
@@ -47,7 +47,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The date and time when the bulk opt-out operation began.</summary>
         public DateTimeOffset? StartedAt { get; set; }
         /// <summary>The current status of the bulk opt-out operation, which can be PENDING, PROCESSING, CANCELED, or COMPLETE.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicBulkOptOutFromAllResponse_status? Status { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicBulkOptOutFromAllResponseStatus? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicBulkOptOutFromAllResponse"/> and sets the default values.
         /// </summary>
@@ -75,12 +75,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "completedAt", n => { CompletedAt = n.GetDateTimeOffsetValue(); } },
                 { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CommunicationPreferencesStandardError>(global::Soenneker.HubSpot.OpenApiClient.Models.CommunicationPreferencesStandardError.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicBulkOptOutFromAllResponse_links>(global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicBulkOptOutFromAllResponse_links.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicBulkOptOutFromAllResponseLinksProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicBulkOptOutFromAllResponseLinksProperty.CreateFromDiscriminatorValue); } },
                 { "numErrors", n => { NumErrors = n.GetIntValue(); } },
                 { "requestedAt", n => { RequestedAt = n.GetDateTimeOffsetValue(); } },
                 { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicBulkOptOutFromAllResponse>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicBulkOptOutFromAllResponse.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "startedAt", n => { StartedAt = n.GetDateTimeOffsetValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicBulkOptOutFromAllResponse_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicBulkOptOutFromAllResponseStatus>(); } },
             };
         }
         /// <summary>
@@ -92,12 +92,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDateTimeOffsetValue("completedAt", CompletedAt);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CommunicationPreferencesStandardError>("errors", Errors);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicBulkOptOutFromAllResponse_links>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicBulkOptOutFromAllResponseLinksProperty>("links", Links);
             writer.WriteIntValue("numErrors", NumErrors);
             writer.WriteDateTimeOffsetValue("requestedAt", RequestedAt);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicBulkOptOutFromAllResponse>("results", Results);
             writer.WriteDateTimeOffsetValue("startedAt", StartedAt);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicBulkOptOutFromAllResponse_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicBulkOptOutFromAllResponseStatus>("status", Status);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -17,18 +17,18 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The paging property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging_30? Paging { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging31? Paging { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging_30 Paging { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging31 Paging { get; set; }
 #endif
         /// <summary>The results property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociatedId_26>? Results { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociatedId27>? Results { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociatedId_26> Results { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociatedId27> Results { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmCollectionResponseAssociatedIdForwardPaging"/> and sets the default values.
@@ -55,8 +55,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "paging", n => { Paging = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging_30>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging_30.CreateFromDiscriminatorValue); } },
-                { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociatedId_26>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociatedId_26.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "paging", n => { Paging = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging31>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging31.CreateFromDiscriminatorValue); } },
+                { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociatedId27>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociatedId27.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -66,8 +66,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging_30>("paging", Paging);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociatedId_26>("results", Results);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging31>("paging", Paging);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociatedId27>("results", Results);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

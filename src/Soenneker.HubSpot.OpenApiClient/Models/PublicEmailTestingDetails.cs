@@ -14,13 +14,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     public partial class PublicEmailTestingDetails : IAdditionalDataHolder, IParsable
     {
         /// <summary>Version of the email that should be sent if there are too few recipients to conduct an AB test.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetails_abSampleSizeDefault? AbSampleSizeDefault { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetailsAbSampleSizeDefault? AbSampleSizeDefault { get; set; }
         /// <summary>Version of the email that should be sent if the results are inconclusive after the test period, master or variant.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetails_abSamplingDefault? AbSamplingDefault { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetailsAbSamplingDefault? AbSamplingDefault { get; set; }
         /// <summary>Status of the AB test.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetails_abStatus? AbStatus { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetailsAbStatus? AbStatus { get; set; }
         /// <summary>Metric to determine the version that will be sent to the remaining contacts.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetails_abSuccessMetric? AbSuccessMetric { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetailsAbSuccessMetric? AbSuccessMetric { get; set; }
         /// <summary>The size of your test group.</summary>
         public int? AbTestPercentage { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -62,10 +62,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "abSampleSizeDefault", n => { AbSampleSizeDefault = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetails_abSampleSizeDefault>(); } },
-                { "abSamplingDefault", n => { AbSamplingDefault = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetails_abSamplingDefault>(); } },
-                { "abStatus", n => { AbStatus = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetails_abStatus>(); } },
-                { "abSuccessMetric", n => { AbSuccessMetric = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetails_abSuccessMetric>(); } },
+                { "abSampleSizeDefault", n => { AbSampleSizeDefault = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetailsAbSampleSizeDefault>(); } },
+                { "abSamplingDefault", n => { AbSamplingDefault = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetailsAbSamplingDefault>(); } },
+                { "abStatus", n => { AbStatus = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetailsAbStatus>(); } },
+                { "abSuccessMetric", n => { AbSuccessMetric = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetailsAbSuccessMetric>(); } },
                 { "abTestPercentage", n => { AbTestPercentage = n.GetIntValue(); } },
                 { "hoursToWait", n => { HoursToWait = n.GetIntValue(); } },
                 { "isAbVariation", n => { IsAbVariation = n.GetBoolValue(); } },
@@ -79,10 +79,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetails_abSampleSizeDefault>("abSampleSizeDefault", AbSampleSizeDefault);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetails_abSamplingDefault>("abSamplingDefault", AbSamplingDefault);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetails_abStatus>("abStatus", AbStatus);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetails_abSuccessMetric>("abSuccessMetric", AbSuccessMetric);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetailsAbSampleSizeDefault>("abSampleSizeDefault", AbSampleSizeDefault);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetailsAbSamplingDefault>("abSamplingDefault", AbSamplingDefault);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetailsAbStatus>("abStatus", AbStatus);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetailsAbSuccessMetric>("abSuccessMetric", AbSuccessMetric);
             writer.WriteIntValue("abTestPercentage", AbTestPercentage);
             writer.WriteIntValue("hoursToWait", HoursToWait);
             writer.WriteBoolValue("isAbVariation", IsAbVariation);

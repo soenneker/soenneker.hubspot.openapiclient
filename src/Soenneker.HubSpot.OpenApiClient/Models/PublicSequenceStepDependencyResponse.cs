@@ -17,7 +17,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The date and time when the step dependency was created.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
         /// <summary>The type of dependency between sequence steps with accepted values being TASK_COMPLETION or MANUAL_PAUSE.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepDependencyResponse_dependencyType? DependencyType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepDependencyResponseDependencyType? DependencyType { get; set; }
         /// <summary>The unique identifier of the step dependency.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -74,7 +74,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
-                { "dependencyType", n => { DependencyType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepDependencyResponse_dependencyType>(); } },
+                { "dependencyType", n => { DependencyType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepDependencyResponseDependencyType>(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "reliesOnSequenceStepId", n => { ReliesOnSequenceStepId = n.GetStringValue(); } },
                 { "reliesOnStepOrder", n => { ReliesOnStepOrder = n.GetIntValue(); } },
@@ -91,7 +91,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepDependencyResponse_dependencyType>("dependencyType", DependencyType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepDependencyResponseDependencyType>("dependencyType", DependencyType);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("reliesOnSequenceStepId", ReliesOnSequenceStepId);
             writer.WriteIntValue("reliesOnStepOrder", ReliesOnStepOrder);

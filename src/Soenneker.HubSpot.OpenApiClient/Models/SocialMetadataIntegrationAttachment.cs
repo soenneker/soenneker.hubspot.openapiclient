@@ -17,13 +17,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The socialMetadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsSocialMetadata_1? SocialMetadata { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsSocialMetadata2? SocialMetadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsSocialMetadata_1 SocialMetadata { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsSocialMetadata2 SocialMetadata { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.SocialMetadataIntegrationAttachment_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.SocialMetadataIntegrationAttachmentType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.SocialMetadataIntegrationAttachment"/> and sets the default values.
         /// </summary>
@@ -49,8 +49,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "socialMetadata", n => { SocialMetadata = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsSocialMetadata_1>(global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsSocialMetadata_1.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SocialMetadataIntegrationAttachment_type>(); } },
+                { "socialMetadata", n => { SocialMetadata = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsSocialMetadata2>(global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsSocialMetadata2.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SocialMetadataIntegrationAttachmentType>(); } },
             };
         }
         /// <summary>
@@ -60,8 +60,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsSocialMetadata_1>("socialMetadata", SocialMetadata);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SocialMetadataIntegrationAttachment_type>("type", Type);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsSocialMetadata2>("socialMetadata", SocialMetadata);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SocialMetadataIntegrationAttachmentType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

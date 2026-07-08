@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Description { get; set; }
 #endif
         /// <summary>The type of field, with accepted values including booleancheckbox, calculation_equation, checkbox, date, file, html, number, phonenumber, radio, select, text, and textarea.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicFieldTypeDefinition_fieldType? FieldType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicFieldTypeDefinitionFieldType? FieldType { get; set; }
         /// <summary>Additional information or guidance about the field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -65,9 +65,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string OptionsUrl { get; set; }
 #endif
         /// <summary>The type of object that the field references, with accepted values including OWNER.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicFieldTypeDefinition_referencedObjectType? ReferencedObjectType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicFieldTypeDefinitionReferencedObjectType? ReferencedObjectType { get; set; }
         /// <summary>The data type of the field, with accepted values including bool, date, datetime, enumeration, json, number, object_coordinates, phone_number, and string.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicFieldTypeDefinition_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicFieldTypeDefinitionType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicFieldTypeDefinition"/> and sets the default values.
         /// </summary>
@@ -94,14 +94,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "fieldType", n => { FieldType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicFieldTypeDefinition_fieldType>(); } },
+                { "fieldType", n => { FieldType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicFieldTypeDefinitionFieldType>(); } },
                 { "helpText", n => { HelpText = n.GetStringValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicOption>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicOption.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "optionsUrl", n => { OptionsUrl = n.GetStringValue(); } },
-                { "referencedObjectType", n => { ReferencedObjectType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicFieldTypeDefinition_referencedObjectType>(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicFieldTypeDefinition_type>(); } },
+                { "referencedObjectType", n => { ReferencedObjectType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicFieldTypeDefinitionReferencedObjectType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicFieldTypeDefinitionType>(); } },
             };
         }
         /// <summary>
@@ -112,14 +112,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("description", Description);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicFieldTypeDefinition_fieldType>("fieldType", FieldType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicFieldTypeDefinitionFieldType>("fieldType", FieldType);
             writer.WriteStringValue("helpText", HelpText);
             writer.WriteStringValue("label", Label);
             writer.WriteStringValue("name", Name);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicOption>("options", Options);
             writer.WriteStringValue("optionsUrl", OptionsUrl);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicFieldTypeDefinition_referencedObjectType>("referencedObjectType", ReferencedObjectType);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicFieldTypeDefinition_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicFieldTypeDefinitionReferencedObjectType>("referencedObjectType", ReferencedObjectType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicFieldTypeDefinitionType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

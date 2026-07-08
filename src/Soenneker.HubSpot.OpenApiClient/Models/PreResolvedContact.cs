@@ -17,10 +17,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The contactPropertiesLeadingToMatch property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PreResolvedContact_contactPropertiesLeadingToMatch?>? ContactPropertiesLeadingToMatch { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PreResolvedContactContactPropertiesLeadingToMatchItem?>? ContactPropertiesLeadingToMatch { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PreResolvedContact_contactPropertiesLeadingToMatch?> ContactPropertiesLeadingToMatch { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PreResolvedContactContactPropertiesLeadingToMatchItem?> ContactPropertiesLeadingToMatch { get; set; }
 #endif
         /// <summary>The contactVid property</summary>
         public long? ContactVid { get; set; }
@@ -49,7 +49,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "contactPropertiesLeadingToMatch", n => { ContactPropertiesLeadingToMatch = n.GetCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.PreResolvedContact_contactPropertiesLeadingToMatch>()?.AsList(); } },
+                { "contactPropertiesLeadingToMatch", n => { ContactPropertiesLeadingToMatch = n.GetCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.PreResolvedContactContactPropertiesLeadingToMatchItem>()?.AsList(); } },
                 { "contactVid", n => { ContactVid = n.GetLongValue(); } },
             };
         }
@@ -60,7 +60,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.PreResolvedContact_contactPropertiesLeadingToMatch>("contactPropertiesLeadingToMatch", ContactPropertiesLeadingToMatch);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.PreResolvedContactContactPropertiesLeadingToMatchItem>("contactPropertiesLeadingToMatch", ContactPropertiesLeadingToMatch);
             writer.WriteLongValue("contactVid", ContactVid);
             writer.WriteAdditionalData(AdditionalData);
         }

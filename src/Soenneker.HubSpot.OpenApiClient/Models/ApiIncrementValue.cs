@@ -17,7 +17,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Specifies the amount to increment.</summary>
         public double? IncrementAmount { get; set; }
         /// <summary>Indicates the type of the increment value, which defaults to INCREMENT.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiIncrementValue_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiIncrementValueType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiIncrementValue"/> and sets the default values.
         /// </summary>
@@ -44,7 +44,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "incrementAmount", n => { IncrementAmount = n.GetDoubleValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiIncrementValue_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiIncrementValueType>(); } },
             };
         }
         /// <summary>
@@ -55,7 +55,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDoubleValue("incrementAmount", IncrementAmount);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiIncrementValue_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiIncrementValueType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

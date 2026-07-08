@@ -127,7 +127,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Forms
         public partial class FormsRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
-            /// <summary>The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("after")]
@@ -137,19 +136,17 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Forms
             [QueryParameter("after")]
             public string After { get; set; }
 #endif
-            /// <summary>Whether to return only results that have been archived.</summary>
             [QueryParameter("archived")]
             public bool? Archived { get; set; }
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("formTypes")]
-            public global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Forms.GetFormTypesQueryParameterType[]? FormTypes { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingGetMarketingV3FormsMarketingV3FormsFormTypesParameterItem[]? FormTypes { get; set; }
 #nullable restore
 #else
             [QueryParameter("formTypes")]
-            public global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Forms.GetFormTypesQueryParameterType[] FormTypes { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingGetMarketingV3FormsMarketingV3FormsFormTypesParameterItem[] FormTypes { get; set; }
 #endif
-            /// <summary>The maximum number of results to display per page.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
         }

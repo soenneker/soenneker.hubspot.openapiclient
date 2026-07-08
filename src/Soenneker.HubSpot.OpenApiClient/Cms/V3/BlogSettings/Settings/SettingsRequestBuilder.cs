@@ -25,7 +25,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.BlogSettings.Settings
             get => new global::Soenneker.HubSpot.OpenApiClient.Cms.V3.BlogSettings.Settings.MultiLanguage.MultiLanguageRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.cms.v3.blogSettings.settings.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The Blog ID.</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Cms.V3.BlogSettings.Settings.Item.WithBlogItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Cms.V3.BlogSettings.Settings.Item.WithBlogItemRequestBuilder this[string position]
         {
@@ -114,18 +114,22 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.BlogSettings.Settings
             [QueryParameter("after")]
             public string After { get; set; }
 #endif
-            /// <summary>Whether to return only results that have been archived.</summary>
+            /// <summary>Specifies whether to return archived Blogs. Defaults to `false`.</summary>
             [QueryParameter("archived")]
             public bool? Archived { get; set; }
+            /// <summary>Only return blogs created after the specified time.</summary>
             [QueryParameter("createdAfter")]
             public DateTimeOffset? CreatedAfter { get; set; }
+            /// <summary>Only return blogs created at exactly the specified time.</summary>
             [QueryParameter("createdAt")]
             public DateTimeOffset? CreatedAt { get; set; }
+            /// <summary>Only return blogs created before the specified time.</summary>
             [QueryParameter("createdBefore")]
             public DateTimeOffset? CreatedBefore { get; set; }
-            /// <summary>The maximum number of results to display per page.</summary>
+            /// <summary>The maximum number of results to return. Default is 100.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
+            /// <summary>Specifies which fields to use for sorting results. Valid fields are `name` and `id`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("sort")]
@@ -135,10 +139,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.BlogSettings.Settings
             [QueryParameter("sort")]
             public string[] Sort { get; set; }
 #endif
+            /// <summary>Only return blogs last updated after the specified time.</summary>
             [QueryParameter("updatedAfter")]
             public DateTimeOffset? UpdatedAfter { get; set; }
+            /// <summary>Only return blogs last updated at exactly the specified time.</summary>
             [QueryParameter("updatedAt")]
             public DateTimeOffset? UpdatedAt { get; set; }
+            /// <summary>Only return blogs last updated before the specified time.</summary>
             [QueryParameter("updatedBefore")]
             public DateTimeOffset? UpdatedBefore { get; set; }
         }

@@ -17,34 +17,34 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Counters like number of `sent`, `open` or `delivered`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsData_counters? Counters { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsDataCountersProperty? Counters { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsData_counters Counters { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsDataCountersProperty Counters { get; set; }
 #endif
         /// <summary>Statistics by device.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsData_deviceBreakdown? DeviceBreakdown { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsDataDeviceBreakdownProperty? DeviceBreakdown { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsData_deviceBreakdown DeviceBreakdown { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsDataDeviceBreakdownProperty DeviceBreakdown { get; set; }
 #endif
         /// <summary>Number of emails that were dropped and bounced.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsData_qualifierStats? QualifierStats { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsDataQualifierStatsProperty? QualifierStats { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsData_qualifierStats QualifierStats { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsDataQualifierStatsProperty QualifierStats { get; set; }
 #endif
         /// <summary>Ratios like `openratio` or `clickratio`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsData_ratios? Ratios { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsDataRatiosProperty? Ratios { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsData_ratios Ratios { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsDataRatiosProperty Ratios { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsData"/> and sets the default values.
@@ -71,10 +71,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "counters", n => { Counters = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsData_counters>(global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsData_counters.CreateFromDiscriminatorValue); } },
-                { "deviceBreakdown", n => { DeviceBreakdown = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsData_deviceBreakdown>(global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsData_deviceBreakdown.CreateFromDiscriminatorValue); } },
-                { "qualifierStats", n => { QualifierStats = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsData_qualifierStats>(global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsData_qualifierStats.CreateFromDiscriminatorValue); } },
-                { "ratios", n => { Ratios = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsData_ratios>(global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsData_ratios.CreateFromDiscriminatorValue); } },
+                { "counters", n => { Counters = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsDataCountersProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsDataCountersProperty.CreateFromDiscriminatorValue); } },
+                { "deviceBreakdown", n => { DeviceBreakdown = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsDataDeviceBreakdownProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsDataDeviceBreakdownProperty.CreateFromDiscriminatorValue); } },
+                { "qualifierStats", n => { QualifierStats = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsDataQualifierStatsProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsDataQualifierStatsProperty.CreateFromDiscriminatorValue); } },
+                { "ratios", n => { Ratios = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsDataRatiosProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsDataRatiosProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -84,10 +84,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsData_counters>("counters", Counters);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsData_deviceBreakdown>("deviceBreakdown", DeviceBreakdown);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsData_qualifierStats>("qualifierStats", QualifierStats);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsData_ratios>("ratios", Ratios);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsDataCountersProperty>("counters", Counters);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsDataDeviceBreakdownProperty>("deviceBreakdown", DeviceBreakdown);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsDataQualifierStatsProperty>("qualifierStats", QualifierStats);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsDataRatiosProperty>("ratios", Ratios);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

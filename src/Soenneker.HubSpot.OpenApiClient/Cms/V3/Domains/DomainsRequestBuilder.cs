@@ -19,7 +19,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Domains
     public partial class DomainsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.cms.v3.domains.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The unique ID of the domain.</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Domains.Item.WithDomainItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Cms.V3.Domains.Item.WithDomainItemRequestBuilder this[string position]
         {
@@ -91,7 +91,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Domains
         public partial class DomainsRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
-            /// <summary>The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("after")]
@@ -101,7 +100,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Domains
             [QueryParameter("after")]
             public string After { get; set; }
 #endif
-            /// <summary>Whether to return only results that have been archived.</summary>
             [QueryParameter("archived")]
             public bool? Archived { get; set; }
             [QueryParameter("createdAfter")]
@@ -110,7 +108,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Domains
             public DateTimeOffset? CreatedAt { get; set; }
             [QueryParameter("createdBefore")]
             public DateTimeOffset? CreatedBefore { get; set; }
-            /// <summary>The maximum number of results to display per page.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

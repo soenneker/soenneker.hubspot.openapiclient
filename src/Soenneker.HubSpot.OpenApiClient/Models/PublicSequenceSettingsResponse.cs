@@ -17,7 +17,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The timestamp of when the sequence settings were created.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
         /// <summary>Specifies the days on which follow-up actions are allowed.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceSettingsResponse_eligibleFollowUpDays? EligibleFollowUpDays { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceSettingsResponseEligibleFollowUpDays? EligibleFollowUpDays { get; set; }
         /// <summary>The unique identifier for the sequence settings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -29,7 +29,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Indicates whether individual task reminders are enabled.</summary>
         public bool? IndividualTaskRemindersEnabled { get; set; }
         /// <summary>(deprecated) Defines the unenrollment strategy, with accepted values being ACCOUNT_BASED or LEAD_BASED. If ACCOUNT_BASED is used, all contacts associated with the same company will be unenrolled if one contact meets any of the unenrollment criteria.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceSettingsResponse_sellingStrategy? SellingStrategy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceSettingsResponseSellingStrategy? SellingStrategy { get; set; }
         /// <summary>Indicates the end minute of the time window during which automated emails can be sent.</summary>
         public int? SendWindowEndMinute { get; set; }
         /// <summary>Indicates the start minute of the time window during which automated emails can be sent.</summary>
@@ -64,10 +64,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
-                { "eligibleFollowUpDays", n => { EligibleFollowUpDays = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceSettingsResponse_eligibleFollowUpDays>(); } },
+                { "eligibleFollowUpDays", n => { EligibleFollowUpDays = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceSettingsResponseEligibleFollowUpDays>(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "individualTaskRemindersEnabled", n => { IndividualTaskRemindersEnabled = n.GetBoolValue(); } },
-                { "sellingStrategy", n => { SellingStrategy = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceSettingsResponse_sellingStrategy>(); } },
+                { "sellingStrategy", n => { SellingStrategy = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceSettingsResponseSellingStrategy>(); } },
                 { "sendWindowEndMinute", n => { SendWindowEndMinute = n.GetIntValue(); } },
                 { "sendWindowStartMinute", n => { SendWindowStartMinute = n.GetIntValue(); } },
                 { "taskReminderMinute", n => { TaskReminderMinute = n.GetIntValue(); } },
@@ -82,10 +82,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceSettingsResponse_eligibleFollowUpDays>("eligibleFollowUpDays", EligibleFollowUpDays);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceSettingsResponseEligibleFollowUpDays>("eligibleFollowUpDays", EligibleFollowUpDays);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("individualTaskRemindersEnabled", IndividualTaskRemindersEnabled);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceSettingsResponse_sellingStrategy>("sellingStrategy", SellingStrategy);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceSettingsResponseSellingStrategy>("sellingStrategy", SellingStrategy);
             writer.WriteIntValue("sendWindowEndMinute", SendWindowEndMinute);
             writer.WriteIntValue("sendWindowStartMinute", SendWindowStartMinute);
             writer.WriteIntValue("taskReminderMinute", TaskReminderMinute);

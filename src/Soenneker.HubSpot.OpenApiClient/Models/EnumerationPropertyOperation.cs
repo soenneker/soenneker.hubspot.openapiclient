@@ -33,7 +33,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string OperationType { get; set; }
 #endif
         /// <summary>The operator property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EnumerationPropertyOperation_operator? Operator { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EnumerationPropertyOperationOperator? Operator { get; set; }
         /// <summary>The operatorName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -43,7 +43,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string OperatorName { get; set; }
 #endif
         /// <summary>The propertyType property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EnumerationPropertyOperation_propertyType? PropertyType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EnumerationPropertyOperationPropertyType? PropertyType { get; set; }
         /// <summary>The renderSpec property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -66,7 +66,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public EnumerationPropertyOperation()
         {
             AdditionalData = new Dictionary<string, object>();
-            PropertyType = global::Soenneker.HubSpot.OpenApiClient.Models.EnumerationPropertyOperation_propertyType.Enumeration;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -89,9 +88,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "defaultValue", n => { DefaultValue = n.GetStringValue(); } },
                 { "includeObjectsWithNoValueSet", n => { IncludeObjectsWithNoValueSet = n.GetBoolValue(); } },
                 { "operationType", n => { OperationType = n.GetStringValue(); } },
-                { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EnumerationPropertyOperation_operator>(); } },
+                { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EnumerationPropertyOperationOperator>(); } },
                 { "operatorName", n => { OperatorName = n.GetStringValue(); } },
-                { "propertyType", n => { PropertyType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EnumerationPropertyOperation_propertyType>(); } },
+                { "propertyType", n => { PropertyType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EnumerationPropertyOperationPropertyType>(); } },
                 { "renderSpec", n => { RenderSpec = n.GetStringValue(); } },
                 { "values", n => { Values = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
@@ -106,9 +105,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("defaultValue", DefaultValue);
             writer.WriteBoolValue("includeObjectsWithNoValueSet", IncludeObjectsWithNoValueSet);
             writer.WriteStringValue("operationType", OperationType);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EnumerationPropertyOperation_operator>("operator", Operator);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EnumerationPropertyOperationOperator>("operator", Operator);
             writer.WriteStringValue("operatorName", OperatorName);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EnumerationPropertyOperation_propertyType>("propertyType", PropertyType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EnumerationPropertyOperationPropertyType>("propertyType", PropertyType);
             writer.WriteStringValue("renderSpec", RenderSpec);
             writer.WriteCollectionOfPrimitiveValues<string>("values", Values);
             writer.WriteAdditionalData(AdditionalData);

@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string FlowId { get; set; }
 #endif
         /// <summary>Specifies the type of coordinate, which defaults to FLOW_ID.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchFetchMigrationFlowIdCoordinate_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchFetchMigrationFlowIdCoordinateType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchFetchMigrationFlowIdCoordinate"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "flowId", n => { FlowId = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchFetchMigrationFlowIdCoordinate_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchFetchMigrationFlowIdCoordinateType>(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("flowId", FlowId);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchFetchMigrationFlowIdCoordinate_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchFetchMigrationFlowIdCoordinateType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

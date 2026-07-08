@@ -15,11 +15,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The month in which the fiscal year starts.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCalendarDatePropertyOperation_fiscalYearStart? FiscalYearStart { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCalendarDatePropertyOperationFiscalYearStart? FiscalYearStart { get; set; }
         /// <summary>Indicates whether objects with no value set for the property should be included.</summary>
         public bool? IncludeObjectsWithNoValueSet { get; set; }
         /// <summary>The type of operation, which is (CALENDAR_DATE).</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCalendarDatePropertyOperation_operationType? OperationType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCalendarDatePropertyOperationOperationType? OperationType { get; set; }
         /// <summary>Defines the operation to be applied to the calendar date property (IN_THIS_TIME_UNIT, IN_THIS_TIME_UNIT_SO_FAR, IN_NEXT_TIME_UNIT, IN_LAST_TIME_UNIT).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -46,7 +46,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public CrmPublicCalendarDatePropertyOperation()
         {
             AdditionalData = new Dictionary<string, object>();
-            OperationType = global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCalendarDatePropertyOperation_operationType.CALENDAR_DATE;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -66,9 +65,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "fiscalYearStart", n => { FiscalYearStart = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCalendarDatePropertyOperation_fiscalYearStart>(); } },
+                { "fiscalYearStart", n => { FiscalYearStart = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCalendarDatePropertyOperationFiscalYearStart>(); } },
                 { "includeObjectsWithNoValueSet", n => { IncludeObjectsWithNoValueSet = n.GetBoolValue(); } },
-                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCalendarDatePropertyOperation_operationType>(); } },
+                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCalendarDatePropertyOperationOperationType>(); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
                 { "timeUnit", n => { TimeUnit = n.GetStringValue(); } },
                 { "timeUnitCount", n => { TimeUnitCount = n.GetIntValue(); } },
@@ -82,9 +81,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCalendarDatePropertyOperation_fiscalYearStart>("fiscalYearStart", FiscalYearStart);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCalendarDatePropertyOperationFiscalYearStart>("fiscalYearStart", FiscalYearStart);
             writer.WriteBoolValue("includeObjectsWithNoValueSet", IncludeObjectsWithNoValueSet);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCalendarDatePropertyOperation_operationType>("operationType", OperationType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCalendarDatePropertyOperationOperationType>("operationType", OperationType);
             writer.WriteStringValue("operator", Operator);
             writer.WriteStringValue("timeUnit", TimeUnit);
             writer.WriteIntValue("timeUnitCount", TimeUnitCount);

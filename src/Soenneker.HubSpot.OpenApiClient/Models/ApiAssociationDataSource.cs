@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Defines the category of the association, with possible values being HUBSPOT_DEFINED, INTEGRATOR_DEFINED, or USER_DEFINED.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiAssociationDataSource_associationCategory? AssociationCategory { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiAssociationDataSourceAssociationCategory? AssociationCategory { get; set; }
         /// <summary>The ID representing the type of association.</summary>
         public int? AssociationTypeId { get; set; }
         /// <summary>The name of the data source.</summary>
@@ -43,7 +43,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public global::Soenneker.HubSpot.OpenApiClient.Models.ApiSort SortBy { get; set; }
 #endif
         /// <summary>Indicates the type of data source, which defaults to ASSOCIATION.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiAssociationDataSource_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiAssociationDataSourceType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiAssociationDataSource"/> and sets the default values.
         /// </summary>
@@ -69,12 +69,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "associationCategory", n => { AssociationCategory = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiAssociationDataSource_associationCategory>(); } },
+                { "associationCategory", n => { AssociationCategory = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiAssociationDataSourceAssociationCategory>(); } },
                 { "associationTypeId", n => { AssociationTypeId = n.GetIntValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "objectTypeId", n => { ObjectTypeId = n.GetStringValue(); } },
                 { "sortBy", n => { SortBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiSort>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiSort.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiAssociationDataSource_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiAssociationDataSourceType>(); } },
             };
         }
         /// <summary>
@@ -84,12 +84,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiAssociationDataSource_associationCategory>("associationCategory", AssociationCategory);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiAssociationDataSourceAssociationCategory>("associationCategory", AssociationCategory);
             writer.WriteIntValue("associationTypeId", AssociationTypeId);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("objectTypeId", ObjectTypeId);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiSort>("sortBy", SortBy);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiAssociationDataSource_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiAssociationDataSourceType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

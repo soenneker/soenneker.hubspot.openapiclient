@@ -17,10 +17,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The backgroundColor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicButtonStyleSettings_backgroundColor? BackgroundColor { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicButtonStyleSettingsBackgroundColorProperty? BackgroundColor { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicButtonStyleSettings_backgroundColor BackgroundColor { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicButtonStyleSettingsBackgroundColorProperty BackgroundColor { get; set; }
 #endif
         /// <summary>The cornerRadius property</summary>
         public int? CornerRadius { get; set; }
@@ -57,7 +57,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "backgroundColor", n => { BackgroundColor = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicButtonStyleSettings_backgroundColor>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicButtonStyleSettings_backgroundColor.CreateFromDiscriminatorValue); } },
+                { "backgroundColor", n => { BackgroundColor = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicButtonStyleSettingsBackgroundColorProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicButtonStyleSettingsBackgroundColorProperty.CreateFromDiscriminatorValue); } },
                 { "cornerRadius", n => { CornerRadius = n.GetIntValue(); } },
                 { "fontStyle", n => { FontStyle = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicFontStyle>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicFontStyle.CreateFromDiscriminatorValue); } },
             };
@@ -69,7 +69,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicButtonStyleSettings_backgroundColor>("backgroundColor", BackgroundColor);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicButtonStyleSettingsBackgroundColorProperty>("backgroundColor", BackgroundColor);
             writer.WriteIntValue("cornerRadius", CornerRadius);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicFontStyle>("fontStyle", FontStyle);
             writer.WriteAdditionalData(AdditionalData);

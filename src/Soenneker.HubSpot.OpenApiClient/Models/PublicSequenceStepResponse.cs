@@ -13,7 +13,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning restore CS1591
     {
         /// <summary>The type of action to be performed in the sequence step.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepResponse_actionType? ActionType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepResponseActionType? ActionType { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The date and time when the sequence step was created.</summary>
@@ -73,7 +73,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "actionType", n => { ActionType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepResponse_actionType>(); } },
+                { "actionType", n => { ActionType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepResponseActionType>(); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "delayMillis", n => { DelayMillis = n.GetLongValue(); } },
                 { "emailPattern", n => { EmailPattern = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailPatternResponse>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailPatternResponse.CreateFromDiscriminatorValue); } },
@@ -90,7 +90,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepResponse_actionType>("actionType", ActionType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepResponseActionType>("actionType", ActionType);
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
             writer.WriteLongValue("delayMillis", DelayMillis);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailPatternResponse>("emailPattern", EmailPattern);

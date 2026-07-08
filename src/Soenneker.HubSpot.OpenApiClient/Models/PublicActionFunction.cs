@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string FunctionSource { get; set; }
 #endif
         /// <summary>&quot;The type of function, with accepted values: POST_ACTION_EXECUTION, POST_FETCH_OPTIONS, PRE_ACTION_EXECUTION, PRE_FETCH_OPTIONS.&quot;</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionFunction_functionType? FunctionType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionFunctionFunctionType? FunctionType { get; set; }
         /// <summary>The unique identifier for the action function.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -58,7 +58,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "functionSource", n => { FunctionSource = n.GetStringValue(); } },
-                { "functionType", n => { FunctionType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionFunction_functionType>(); } },
+                { "functionType", n => { FunctionType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionFunctionFunctionType>(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
             };
         }
@@ -70,7 +70,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("functionSource", FunctionSource);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionFunction_functionType>("functionType", FunctionType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionFunctionFunctionType>("functionType", FunctionType);
             writer.WriteStringValue("id", Id);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -39,7 +39,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public List<string> HsAttendeeOwnerIds { get; set; }
 #endif
         /// <summary>The source of the engagement, will always be `MEETINGS`.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCalendarMeetingEventResponseProperties_hs_engagement_source? HsEngagementSource { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCalendarMeetingEventResponsePropertiesHsEngagementSource? HsEngagementSource { get; set; }
         /// <summary>The ID associated with the process created the engagement. Should always be empty when creating meeting events through this API.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -91,7 +91,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string HsMeetingLocation { get; set; }
 #endif
         /// <summary>&quot;The type of location for the meeting. Acceptable values are: ADDRESS, CUSTOM, PHONE.&quot;</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCalendarMeetingEventResponseProperties_hs_meeting_location_type? HsMeetingLocationType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCalendarMeetingEventResponsePropertiesHsMeetingLocationType? HsMeetingLocationType { get; set; }
         /// <summary>&quot;The outcome of the meeting. Acceptable default values are: SCHEDULED, COMPLETED, RESCHEDULED, NO_SHOW, CANCELED. This property can be changed to include additional custom values.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -156,7 +156,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "hs_activity_type", n => { HsActivityType = n.GetStringValue(); } },
                 { "hs_attachment_ids", n => { HsAttachmentIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "hs_attendee_owner_ids", n => { HsAttendeeOwnerIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "hs_engagement_source", n => { HsEngagementSource = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCalendarMeetingEventResponseProperties_hs_engagement_source>(); } },
+                { "hs_engagement_source", n => { HsEngagementSource = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCalendarMeetingEventResponsePropertiesHsEngagementSource>(); } },
                 { "hs_engagement_source_id", n => { HsEngagementSourceId = n.GetStringValue(); } },
                 { "hs_include_description_in_reminder", n => { HsIncludeDescriptionInReminder = n.GetStringValue(); } },
                 { "hs_internal_meeting_notes", n => { HsInternalMeetingNotes = n.GetStringValue(); } },
@@ -164,7 +164,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "hs_meeting_end_time", n => { HsMeetingEndTime = n.GetDateTimeOffsetValue(); } },
                 { "hs_meeting_external_url", n => { HsMeetingExternalUrl = n.GetStringValue(); } },
                 { "hs_meeting_location", n => { HsMeetingLocation = n.GetStringValue(); } },
-                { "hs_meeting_location_type", n => { HsMeetingLocationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCalendarMeetingEventResponseProperties_hs_meeting_location_type>(); } },
+                { "hs_meeting_location_type", n => { HsMeetingLocationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCalendarMeetingEventResponsePropertiesHsMeetingLocationType>(); } },
                 { "hs_meeting_outcome", n => { HsMeetingOutcome = n.GetStringValue(); } },
                 { "hs_meeting_start_time", n => { HsMeetingStartTime = n.GetDateTimeOffsetValue(); } },
                 { "hs_meeting_title", n => { HsMeetingTitle = n.GetStringValue(); } },
@@ -183,7 +183,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("hs_activity_type", HsActivityType);
             writer.WriteCollectionOfPrimitiveValues<string>("hs_attachment_ids", HsAttachmentIds);
             writer.WriteCollectionOfPrimitiveValues<string>("hs_attendee_owner_ids", HsAttendeeOwnerIds);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCalendarMeetingEventResponseProperties_hs_engagement_source>("hs_engagement_source", HsEngagementSource);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCalendarMeetingEventResponsePropertiesHsEngagementSource>("hs_engagement_source", HsEngagementSource);
             writer.WriteStringValue("hs_engagement_source_id", HsEngagementSourceId);
             writer.WriteStringValue("hs_include_description_in_reminder", HsIncludeDescriptionInReminder);
             writer.WriteStringValue("hs_internal_meeting_notes", HsInternalMeetingNotes);
@@ -191,7 +191,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("hs_meeting_end_time", HsMeetingEndTime);
             writer.WriteStringValue("hs_meeting_external_url", HsMeetingExternalUrl);
             writer.WriteStringValue("hs_meeting_location", HsMeetingLocation);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCalendarMeetingEventResponseProperties_hs_meeting_location_type>("hs_meeting_location_type", HsMeetingLocationType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCalendarMeetingEventResponsePropertiesHsMeetingLocationType>("hs_meeting_location_type", HsMeetingLocationType);
             writer.WriteStringValue("hs_meeting_outcome", HsMeetingOutcome);
             writer.WriteDateTimeOffsetValue("hs_meeting_start_time", HsMeetingStartTime);
             writer.WriteStringValue("hs_meeting_title", HsMeetingTitle);

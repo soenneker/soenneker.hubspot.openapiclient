@@ -47,7 +47,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string StaticValue { get; set; }
 #endif
         /// <summary>Indicates the type of data source, which defaults to STATIC_PROPERTY_FILTER.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticPropertyFilterDataSource_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticPropertyFilterDataSourceType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticPropertyFilterDataSource"/> and sets the default values.
         /// </summary>
@@ -77,7 +77,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "propertyName", n => { PropertyName = n.GetStringValue(); } },
                 { "sortBy", n => { SortBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiSort>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiSort.CreateFromDiscriminatorValue); } },
                 { "staticValue", n => { StaticValue = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticPropertyFilterDataSource_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticPropertyFilterDataSourceType>(); } },
             };
         }
         /// <summary>
@@ -91,7 +91,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("propertyName", PropertyName);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiSort>("sortBy", SortBy);
             writer.WriteStringValue("staticValue", StaticValue);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticPropertyFilterDataSource_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticPropertyFilterDataSourceType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -63,7 +63,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string PrivacyText { get; set; }
 #endif
         /// <summary>The legal consent type.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsExplicitConsentToProcess_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsExplicitConsentToProcessType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsExplicitConsentToProcess"/> and sets the default values.
         /// </summary>
@@ -95,7 +95,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "consentToProcessFooterText", n => { ConsentToProcessFooterText = n.GetStringValue(); } },
                 { "consentToProcessText", n => { ConsentToProcessText = n.GetStringValue(); } },
                 { "privacyText", n => { PrivacyText = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsExplicitConsentToProcess_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsExplicitConsentToProcessType>(); } },
             };
         }
         /// <summary>
@@ -111,7 +111,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("consentToProcessFooterText", ConsentToProcessFooterText);
             writer.WriteStringValue("consentToProcessText", ConsentToProcessText);
             writer.WriteStringValue("privacyText", PrivacyText);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsExplicitConsentToProcess_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsExplicitConsentToProcessType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

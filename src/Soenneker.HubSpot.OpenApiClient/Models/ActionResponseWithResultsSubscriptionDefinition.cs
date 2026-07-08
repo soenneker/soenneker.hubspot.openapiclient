@@ -27,10 +27,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>A collection of related links associated with the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsSubscriptionDefinition_links? Links { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsSubscriptionDefinitionLinksProperty? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsSubscriptionDefinition_links Links { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsSubscriptionDefinitionLinksProperty Links { get; set; }
 #endif
         /// <summary>The number of errors encountered during the operation.</summary>
         public int? NumErrors { get; set; }
@@ -47,7 +47,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The date and time when the operation started.</summary>
         public DateTimeOffset? StartedAt { get; set; }
         /// <summary>The current status of the operation, which can be PENDING, PROCESSING, CANCELED, or COMPLETE.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsSubscriptionDefinition_status? Status { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsSubscriptionDefinitionStatus? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsSubscriptionDefinition"/> and sets the default values.
         /// </summary>
@@ -75,12 +75,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "completedAt", n => { CompletedAt = n.GetDateTimeOffsetValue(); } },
                 { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CommunicationPreferencesStandardError>(global::Soenneker.HubSpot.OpenApiClient.Models.CommunicationPreferencesStandardError.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsSubscriptionDefinition_links>(global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsSubscriptionDefinition_links.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsSubscriptionDefinitionLinksProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsSubscriptionDefinitionLinksProperty.CreateFromDiscriminatorValue); } },
                 { "numErrors", n => { NumErrors = n.GetIntValue(); } },
                 { "requestedAt", n => { RequestedAt = n.GetDateTimeOffsetValue(); } },
                 { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionDefinition>(global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionDefinition.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "startedAt", n => { StartedAt = n.GetDateTimeOffsetValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsSubscriptionDefinition_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsSubscriptionDefinitionStatus>(); } },
             };
         }
         /// <summary>
@@ -92,12 +92,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDateTimeOffsetValue("completedAt", CompletedAt);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CommunicationPreferencesStandardError>("errors", Errors);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsSubscriptionDefinition_links>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsSubscriptionDefinitionLinksProperty>("links", Links);
             writer.WriteIntValue("numErrors", NumErrors);
             writer.WriteDateTimeOffsetValue("requestedAt", RequestedAt);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionDefinition>("results", Results);
             writer.WriteDateTimeOffsetValue("startedAt", StartedAt);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsSubscriptionDefinition_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsSubscriptionDefinitionStatus>("status", Status);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

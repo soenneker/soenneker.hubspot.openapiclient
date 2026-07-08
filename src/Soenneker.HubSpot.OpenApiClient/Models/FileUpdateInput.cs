@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     public partial class FileUpdateInput : IAdditionalDataHolder, IParsable
     {
         /// <summary>&quot;NONE: Do not run any duplicate validation. REJECT: Reject the upload if a duplicate is found. RETURN_EXISTING: If a duplicate file is found, do not upload a new file and return the found duplicate instead.&quot;</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.FileUpdateInput_access? Access { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.FileUpdateInputAccess? Access { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The clearExpires property</summary>
@@ -72,7 +72,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "access", n => { Access = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FileUpdateInput_access>(); } },
+                { "access", n => { Access = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FileUpdateInputAccess>(); } },
                 { "clearExpires", n => { ClearExpires = n.GetBoolValue(); } },
                 { "expiresAt", n => { ExpiresAt = n.GetDateTimeOffsetValue(); } },
                 { "isUsableInContent", n => { IsUsableInContent = n.GetBoolValue(); } },
@@ -88,7 +88,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FileUpdateInput_access>("access", Access);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FileUpdateInputAccess>("access", Access);
             writer.WriteBoolValue("clearExpires", ClearExpires);
             writer.WriteDateTimeOffsetValue("expiresAt", ExpiresAt);
             writer.WriteBoolValue("isUsableInContent", IsUsableInContent);

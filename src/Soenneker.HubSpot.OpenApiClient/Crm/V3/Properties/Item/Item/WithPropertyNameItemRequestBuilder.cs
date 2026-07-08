@@ -70,7 +70,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Properties.Item.Item
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CrmProperty>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CrmProperty.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Perform a partial update of a property identified by { propertyName }. Provided fields will be overwritten.
+        /// Perform a partial update of a property identified by &apos;{propertyName}&apos;. Provided fields will be overwritten.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmProperty"/></returns>
         /// <param name="body">The request body</param>
@@ -127,7 +127,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Properties.Item.Item
             return requestInfo;
         }
         /// <summary>
-        /// Perform a partial update of a property identified by { propertyName }. Provided fields will be overwritten.
+        /// Perform a partial update of a property identified by &apos;{propertyName}&apos;. Provided fields will be overwritten.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -167,7 +167,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Properties.Item.Item
             [QueryParameter("archived")]
             public bool? Archived { get; set; }
             [QueryParameter("dataSensitivity")]
-            public global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Properties.Item.Item.GetDataSensitivityQueryParameterType? DataSensitivity { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmGetCrmV3PropertiesObjectTypePropertyNameGetByNameDataSensitivityParameter? DataSensitivity { get; set; }
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("locale")]

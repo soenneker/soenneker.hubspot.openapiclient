@@ -175,11 +175,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("association")]
-            public global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads.Item.GetAssociationQueryParameterType[]? Association { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsGetConversationsV3ConversationsThreadsThreadIdAssociationParameterItem[]? Association { get; set; }
 #nullable restore
 #else
             [QueryParameter("association")]
-            public global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads.Item.GetAssociationQueryParameterType[] Association { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsGetConversationsV3ConversationsThreadsThreadIdAssociationParameterItem[] Association { get; set; }
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

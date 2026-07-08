@@ -28,7 +28,7 @@ namespace Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Statuses.I
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithSubscriberIdStringItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/communication-preferences/v4/statuses/{subscriberIdString}?channel={channel}{&businessUnitId*}", pathParameters)
+        public WithSubscriberIdStringItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/communication-preferences/v4/statuses/{subscriberIdString}{?businessUnitId*}", pathParameters)
         {
         }
         /// <summary>
@@ -36,7 +36,7 @@ namespace Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Statuses.I
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithSubscriberIdStringItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/communication-preferences/v4/statuses/{subscriberIdString}?channel={channel}{&businessUnitId*}", rawUrl)
+        public WithSubscriberIdStringItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/communication-preferences/v4/statuses/{subscriberIdString}{?businessUnitId*}", rawUrl)
         {
         }
         /// <summary>
@@ -91,7 +91,7 @@ namespace Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Statuses.I
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Statuses.Item.WithSubscriberIdStringItemRequestBuilder.WithSubscriberIdStringItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/communication-preferences/v4/statuses/{subscriberIdString}?channel={channel}{&businessUnitId*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -112,7 +112,7 @@ namespace Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Statuses.I
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, "{+baseurl}/communication-preferences/v4/statuses/{subscriberIdString}", PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
@@ -138,7 +138,7 @@ namespace Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Statuses.I
             public long? BusinessUnitId { get; set; }
             /// <summary>The communication channel for which the subscription status is being retrieved. This parameter is required and currently supports &apos;EMAIL&apos; as a valid value.</summary>
             [QueryParameter("channel")]
-            public global::Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Statuses.Item.GetChannelQueryParameterType? Channel { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CommunicationPreferencesGetCommunicationPreferencesV4StatusesSubscriberIdStringChannelParameter? Channel { get; set; }
         }
     }
 }

@@ -45,10 +45,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Specifies the key value pairs of the [metadata fields](https://developers.hubspot.com/docs/cms/guides/dynamic-pages/hubdb#dynamic-pages) with the associated column IDs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3_dynamicMetaTags? DynamicMetaTags { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3DynamicMetaTagsProperty? DynamicMetaTags { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3_dynamicMetaTags DynamicMetaTags { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3DynamicMetaTagsProperty DynamicMetaTags { get; set; }
 #endif
         /// <summary>Specifies creation of multi-level dynamic pages using child tables</summary>
         public bool? EnableChildTablePages { get; set; }
@@ -129,7 +129,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "createdBy", n => { CreatedBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.SimpleUser>(global::Soenneker.HubSpot.OpenApiClient.Models.SimpleUser.CreateFromDiscriminatorValue); } },
                 { "deleted", n => { Deleted = n.GetBoolValue(); } },
                 { "deletedAt", n => { DeletedAt = n.GetDateTimeOffsetValue(); } },
-                { "dynamicMetaTags", n => { DynamicMetaTags = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3_dynamicMetaTags>(global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3_dynamicMetaTags.CreateFromDiscriminatorValue); } },
+                { "dynamicMetaTags", n => { DynamicMetaTags = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3DynamicMetaTagsProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3DynamicMetaTagsProperty.CreateFromDiscriminatorValue); } },
                 { "enableChildTablePages", n => { EnableChildTablePages = n.GetBoolValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "isOrderedManually", n => { IsOrderedManually = n.GetBoolValue(); } },
@@ -158,7 +158,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.SimpleUser>("createdBy", CreatedBy);
             writer.WriteBoolValue("deleted", Deleted);
             writer.WriteDateTimeOffsetValue("deletedAt", DeletedAt);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3_dynamicMetaTags>("dynamicMetaTags", DynamicMetaTags);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3DynamicMetaTagsProperty>("dynamicMetaTags", DynamicMetaTags);
             writer.WriteBoolValue("enableChildTablePages", EnableChildTablePages);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("isOrderedManually", IsOrderedManually);

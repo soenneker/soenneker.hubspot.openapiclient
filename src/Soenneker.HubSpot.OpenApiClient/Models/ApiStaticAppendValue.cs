@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string StaticAppendValue { get; set; }
 #endif
         /// <summary>Indicates the type of the append action, which defaults to STATIC_APPEND_VALUE.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticAppendValue_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticAppendValueType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticAppendValue"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "staticAppendValue", n => { StaticAppendValue = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticAppendValue_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticAppendValueType>(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("staticAppendValue", StaticAppendValue);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticAppendValue_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticAppendValueType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -35,7 +35,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string OperationType { get; set; }
 #endif
         /// <summary>The operator property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.RangedNumberPropertyOperation_operator? Operator { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.RangedNumberPropertyOperationOperator? Operator { get; set; }
         /// <summary>The operatorName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -45,7 +45,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string OperatorName { get; set; }
 #endif
         /// <summary>The propertyType property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.RangedNumberPropertyOperation_propertyType? PropertyType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.RangedNumberPropertyOperationPropertyType? PropertyType { get; set; }
         /// <summary>The renderSpec property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -62,7 +62,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public RangedNumberPropertyOperation()
         {
             AdditionalData = new Dictionary<string, object>();
-            PropertyType = global::Soenneker.HubSpot.OpenApiClient.Models.RangedNumberPropertyOperation_propertyType.NumberRanged;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -86,9 +85,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "includeObjectsWithNoValueSet", n => { IncludeObjectsWithNoValueSet = n.GetBoolValue(); } },
                 { "lowerBound", n => { LowerBound = n.GetDoubleValue(); } },
                 { "operationType", n => { OperationType = n.GetStringValue(); } },
-                { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RangedNumberPropertyOperation_operator>(); } },
+                { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RangedNumberPropertyOperationOperator>(); } },
                 { "operatorName", n => { OperatorName = n.GetStringValue(); } },
-                { "propertyType", n => { PropertyType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RangedNumberPropertyOperation_propertyType>(); } },
+                { "propertyType", n => { PropertyType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RangedNumberPropertyOperationPropertyType>(); } },
                 { "renderSpec", n => { RenderSpec = n.GetStringValue(); } },
                 { "upperBound", n => { UpperBound = n.GetDoubleValue(); } },
             };
@@ -104,9 +103,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteBoolValue("includeObjectsWithNoValueSet", IncludeObjectsWithNoValueSet);
             writer.WriteDoubleValue("lowerBound", LowerBound);
             writer.WriteStringValue("operationType", OperationType);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RangedNumberPropertyOperation_operator>("operator", Operator);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RangedNumberPropertyOperationOperator>("operator", Operator);
             writer.WriteStringValue("operatorName", OperatorName);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RangedNumberPropertyOperation_propertyType>("propertyType", PropertyType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RangedNumberPropertyOperationPropertyType>("propertyType", PropertyType);
             writer.WriteStringValue("renderSpec", RenderSpec);
             writer.WriteDoubleValue("upperBound", UpperBound);
             writer.WriteAdditionalData(AdditionalData);

@@ -79,7 +79,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string LegalConsentTextSize { get; set; }
 #endif
         /// <summary>&quot;Horizontal alignment of the submit button. Values: left, center, right.&quot;</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.FormStyle_submitAlignment? SubmitAlignment { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.FormStyleSubmitAlignment? SubmitAlignment { get; set; }
         /// <summary>Hex color code for the submit button background.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -137,7 +137,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "labelTextSize", n => { LabelTextSize = n.GetStringValue(); } },
                 { "legalConsentTextColor", n => { LegalConsentTextColor = n.GetStringValue(); } },
                 { "legalConsentTextSize", n => { LegalConsentTextSize = n.GetStringValue(); } },
-                { "submitAlignment", n => { SubmitAlignment = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FormStyle_submitAlignment>(); } },
+                { "submitAlignment", n => { SubmitAlignment = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FormStyleSubmitAlignment>(); } },
                 { "submitColor", n => { SubmitColor = n.GetStringValue(); } },
                 { "submitFontColor", n => { SubmitFontColor = n.GetStringValue(); } },
                 { "submitSize", n => { SubmitSize = n.GetStringValue(); } },
@@ -158,7 +158,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("labelTextSize", LabelTextSize);
             writer.WriteStringValue("legalConsentTextColor", LegalConsentTextColor);
             writer.WriteStringValue("legalConsentTextSize", LegalConsentTextSize);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FormStyle_submitAlignment>("submitAlignment", SubmitAlignment);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FormStyleSubmitAlignment>("submitAlignment", SubmitAlignment);
             writer.WriteStringValue("submitColor", SubmitColor);
             writer.WriteStringValue("submitFontColor", SubmitFontColor);
             writer.WriteStringValue("submitSize", SubmitSize);

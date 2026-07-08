@@ -17,7 +17,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The number of timeUnits prior to the meeting start when the reminder will be sent.</summary>
         public int? NumberOfTimeUnits { get; set; }
         /// <summary>&quot;Accepted values are: WEEKS, DAYS, HOURS, MINUTES.&quot;</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalReminder_timeUnit? TimeUnit { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalReminderTimeUnit? TimeUnit { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExternalReminder"/> and sets the default values.
         /// </summary>
@@ -44,7 +44,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "numberOfTimeUnits", n => { NumberOfTimeUnits = n.GetIntValue(); } },
-                { "timeUnit", n => { TimeUnit = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalReminder_timeUnit>(); } },
+                { "timeUnit", n => { TimeUnit = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalReminderTimeUnit>(); } },
             };
         }
         /// <summary>
@@ -55,7 +55,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("numberOfTimeUnits", NumberOfTimeUnits);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalReminder_timeUnit>("timeUnit", TimeUnit);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalReminderTimeUnit>("timeUnit", TimeUnit);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -17,7 +17,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The archived property</summary>
         public bool? Archived { get; set; }
         /// <summary>The dataSensitivity property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.BatchReadInputPropertyName_dataSensitivity? DataSensitivity { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.BatchReadInputPropertyNameDataSensitivity? DataSensitivity { get; set; }
         /// <summary>The inputs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -52,7 +52,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "archived", n => { Archived = n.GetBoolValue(); } },
-                { "dataSensitivity", n => { DataSensitivity = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchReadInputPropertyName_dataSensitivity>(); } },
+                { "dataSensitivity", n => { DataSensitivity = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchReadInputPropertyNameDataSensitivity>(); } },
                 { "inputs", n => { Inputs = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyName>(global::Soenneker.HubSpot.OpenApiClient.Models.PropertyName.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -64,7 +64,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("archived", Archived);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchReadInputPropertyName_dataSensitivity>("dataSensitivity", DataSensitivity);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchReadInputPropertyNameDataSensitivity>("dataSensitivity", DataSensitivity);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyName>("inputs", Inputs);
             writer.WriteAdditionalData(AdditionalData);
         }

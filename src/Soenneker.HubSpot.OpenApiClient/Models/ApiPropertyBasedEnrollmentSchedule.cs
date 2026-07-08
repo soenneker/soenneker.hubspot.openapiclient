@@ -33,7 +33,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeOfDay TimeOfDay { get; set; }
 #endif
         /// <summary>Specifies the type of enrollment schedule, which is &apos;PROPERTY_BASED&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiPropertyBasedEnrollmentSchedule_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiPropertyBasedEnrollmentScheduleType? Type { get; set; }
         /// <summary>Indicates whether the enrollment schedule is set to repeat annually.</summary>
         public bool? Yearly { get; set; }
         /// <summary>
@@ -64,7 +64,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "dateProperty", n => { DateProperty = n.GetStringValue(); } },
                 { "daysDelta", n => { DaysDelta = n.GetIntValue(); } },
                 { "timeOfDay", n => { TimeOfDay = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeOfDay>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeOfDay.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiPropertyBasedEnrollmentSchedule_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiPropertyBasedEnrollmentScheduleType>(); } },
                 { "yearly", n => { Yearly = n.GetBoolValue(); } },
             };
         }
@@ -78,7 +78,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("dateProperty", DateProperty);
             writer.WriteIntValue("daysDelta", DaysDelta);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeOfDay>("timeOfDay", TimeOfDay);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiPropertyBasedEnrollmentSchedule_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiPropertyBasedEnrollmentScheduleType>("type", Type);
             writer.WriteBoolValue("yearly", Yearly);
             writer.WriteAdditionalData(AdditionalData);
         }

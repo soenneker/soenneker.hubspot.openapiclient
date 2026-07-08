@@ -17,10 +17,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The daysOfWeek property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeDelay_daysOfWeek?>? DaysOfWeek { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeDelayDaysOfWeekItem?>? DaysOfWeek { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeDelay_daysOfWeek?> DaysOfWeek { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeDelayDaysOfWeekItem?> DaysOfWeek { get; set; }
 #endif
         /// <summary>The amount of time to delay, specified as an integer.</summary>
         public int? Delta { get; set; }
@@ -33,14 +33,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeOfDay TimeOfDay { get; set; }
 #endif
         /// <summary>&quot;Defines the unit of time for the delay, with accepted values including: CENTURIES, DAYS, DECADES, ERAS, FOREVER, HALF_DAYS, HOURS, MICROS, MILLENNIA, MILLIS, MINUTES, MONTHS, NANOS, SECONDS, WEEKS, YEARS.&quot;</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeDelay_timeUnit? TimeUnit { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeDelayTimeUnit? TimeUnit { get; set; }
         /// <summary>Specifies the strategy for determining the time zone for the delay.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticTimeZoneStrategy? TimeZoneStrategy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeDelayTimeZoneStrategy? TimeZoneStrategy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticTimeZoneStrategy TimeZoneStrategy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeDelayTimeZoneStrategy TimeZoneStrategy { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeDelay"/> and sets the default values.
@@ -67,11 +67,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "daysOfWeek", n => { DaysOfWeek = n.GetCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeDelay_daysOfWeek>()?.AsList(); } },
+                { "daysOfWeek", n => { DaysOfWeek = n.GetCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeDelayDaysOfWeekItem>()?.AsList(); } },
                 { "delta", n => { Delta = n.GetIntValue(); } },
                 { "timeOfDay", n => { TimeOfDay = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeOfDay>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeOfDay.CreateFromDiscriminatorValue); } },
-                { "timeUnit", n => { TimeUnit = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeDelay_timeUnit>(); } },
-                { "timeZoneStrategy", n => { TimeZoneStrategy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticTimeZoneStrategy>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticTimeZoneStrategy.CreateFromDiscriminatorValue); } },
+                { "timeUnit", n => { TimeUnit = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeDelayTimeUnit>(); } },
+                { "timeZoneStrategy", n => { TimeZoneStrategy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeDelayTimeZoneStrategy>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeDelayTimeZoneStrategy.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -81,11 +81,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeDelay_daysOfWeek>("daysOfWeek", DaysOfWeek);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeDelayDaysOfWeekItem>("daysOfWeek", DaysOfWeek);
             writer.WriteIntValue("delta", Delta);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeOfDay>("timeOfDay", TimeOfDay);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeDelay_timeUnit>("timeUnit", TimeUnit);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticTimeZoneStrategy>("timeZoneStrategy", TimeZoneStrategy);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeDelayTimeUnit>("timeUnit", TimeUnit);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeDelayTimeZoneStrategy>("timeZoneStrategy", TimeZoneStrategy);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

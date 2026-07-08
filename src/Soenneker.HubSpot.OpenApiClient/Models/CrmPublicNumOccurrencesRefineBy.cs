@@ -19,7 +19,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The minimum number of occurrences required.</summary>
         public int? MinOccurrences { get; set; }
         /// <summary>The type of refinement (NUM_OCCURRENCES).</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicNumOccurrencesRefineBy_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicNumOccurrencesRefineByType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicNumOccurrencesRefineBy"/> and sets the default values.
         /// </summary>
@@ -47,7 +47,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "maxOccurrences", n => { MaxOccurrences = n.GetIntValue(); } },
                 { "minOccurrences", n => { MinOccurrences = n.GetIntValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicNumOccurrencesRefineBy_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicNumOccurrencesRefineByType>(); } },
             };
         }
         /// <summary>
@@ -59,7 +59,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("maxOccurrences", MaxOccurrences);
             writer.WriteIntValue("minOccurrences", MinOccurrences);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicNumOccurrencesRefineBy_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicNumOccurrencesRefineByType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

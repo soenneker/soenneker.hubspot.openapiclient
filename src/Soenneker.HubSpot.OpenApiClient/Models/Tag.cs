@@ -28,7 +28,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>The explicitly defined ISO 639 language code of the tag.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.Tag_language? Language { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.TagLanguage? Language { get; set; }
         /// <summary>The name of the tag.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -77,7 +77,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "created", n => { Created = n.GetDateTimeOffsetValue(); } },
                 { "deletedAt", n => { DeletedAt = n.GetDateTimeOffsetValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "language", n => { Language = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.Tag_language>(); } },
+                { "language", n => { Language = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TagLanguage>(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "slug", n => { Slug = n.GetStringValue(); } },
                 { "translatedFromId", n => { TranslatedFromId = n.GetLongValue(); } },
@@ -94,7 +94,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("created", Created);
             writer.WriteDateTimeOffsetValue("deletedAt", DeletedAt);
             writer.WriteStringValue("id", Id);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.Tag_language>("language", Language);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TagLanguage>("language", Language);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("slug", Slug);
             writer.WriteLongValue("translatedFromId", TranslatedFromId);

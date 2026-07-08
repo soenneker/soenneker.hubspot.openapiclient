@@ -33,7 +33,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string OperationType { get; set; }
 #endif
         /// <summary>The operator property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.DateTimePropertyOperation_operator? Operator { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.DateTimePropertyOperationOperator? Operator { get; set; }
         /// <summary>The operatorName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -43,7 +43,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string OperatorName { get; set; }
 #endif
         /// <summary>The propertyType property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.DateTimePropertyOperation_propertyType? PropertyType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.DateTimePropertyOperationPropertyType? PropertyType { get; set; }
         /// <summary>The renderSpec property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -62,7 +62,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public DateTimePropertyOperation()
         {
             AdditionalData = new Dictionary<string, object>();
-            PropertyType = global::Soenneker.HubSpot.OpenApiClient.Models.DateTimePropertyOperation_propertyType.Datetime;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -85,9 +84,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "defaultValue", n => { DefaultValue = n.GetStringValue(); } },
                 { "includeObjectsWithNoValueSet", n => { IncludeObjectsWithNoValueSet = n.GetBoolValue(); } },
                 { "operationType", n => { OperationType = n.GetStringValue(); } },
-                { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DateTimePropertyOperation_operator>(); } },
+                { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DateTimePropertyOperationOperator>(); } },
                 { "operatorName", n => { OperatorName = n.GetStringValue(); } },
-                { "propertyType", n => { PropertyType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DateTimePropertyOperation_propertyType>(); } },
+                { "propertyType", n => { PropertyType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DateTimePropertyOperationPropertyType>(); } },
                 { "renderSpec", n => { RenderSpec = n.GetStringValue(); } },
                 { "requiresTimeZoneConversion", n => { RequiresTimeZoneConversion = n.GetBoolValue(); } },
                 { "timestamp", n => { Timestamp = n.GetLongValue(); } },
@@ -103,9 +102,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("defaultValue", DefaultValue);
             writer.WriteBoolValue("includeObjectsWithNoValueSet", IncludeObjectsWithNoValueSet);
             writer.WriteStringValue("operationType", OperationType);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DateTimePropertyOperation_operator>("operator", Operator);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DateTimePropertyOperationOperator>("operator", Operator);
             writer.WriteStringValue("operatorName", OperatorName);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DateTimePropertyOperation_propertyType>("propertyType", PropertyType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DateTimePropertyOperationPropertyType>("propertyType", PropertyType);
             writer.WriteStringValue("renderSpec", RenderSpec);
             writer.WriteBoolValue("requiresTimeZoneConversion", RequiresTimeZoneConversion);
             writer.WriteLongValue("timestamp", Timestamp);

@@ -31,7 +31,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicTimeOffset TimeOffset { get; set; }
 #endif
         /// <summary>Specifies the type of refinement, which defaults to RELATIVE_COMPARATIVE.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRelativeComparativeTimestampRefineBy_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRelativeComparativeTimestampRefineByType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicRelativeComparativeTimestampRefineBy"/> and sets the default values.
         /// </summary>
@@ -59,7 +59,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "comparison", n => { Comparison = n.GetStringValue(); } },
                 { "timeOffset", n => { TimeOffset = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTimeOffset>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicTimeOffset.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRelativeComparativeTimestampRefineBy_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRelativeComparativeTimestampRefineByType>(); } },
             };
         }
         /// <summary>
@@ -71,7 +71,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("comparison", Comparison);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTimeOffset>("timeOffset", TimeOffset);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRelativeComparativeTimestampRefineBy_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRelativeComparativeTimestampRefineByType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

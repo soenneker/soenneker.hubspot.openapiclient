@@ -101,7 +101,7 @@ namespace Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Statuses.B
             public long? BusinessUnitId { get; set; }
             /// <summary>The communication channel to unsubscribe from. This parameter is required and must be &apos;EMAIL&apos;.</summary>
             [QueryParameter("channel")]
-            public global::Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Statuses.Batch.UnsubscribeAll.PostChannelQueryParameterType? Channel { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CommunicationPreferencesPostCommunicationPreferencesV4StatusesBatchUnsubscribeAllChannelParameter? Channel { get; set; }
             /// <summary>A boolean indicating whether to include detailed processing information in the response. Defaults to false.</summary>
             [QueryParameter("verbose")]
             public bool? Verbose { get; set; }

@@ -16,7 +16,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Folders.Item.Move
     public partial class MoveRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.crm.v3.lists.folders.item.move.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The ID for the target parent folder.</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Folders.Item.Move.Item.WithNewParentFolderItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Folders.Item.Move.Item.WithNewParentFolderItemRequestBuilder this[string position]
         {

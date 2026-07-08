@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Specifies the type of filter, which is (CONSTANT).</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicConstantFilter_filterType? FilterType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicConstantFilterFilterType? FilterType { get; set; }
         /// <summary>Indicates whether the filter should accept the condition.</summary>
         public bool? ShouldAccept { get; set; }
         /// <summary>Defines the source of the constant filter.</summary>
@@ -32,7 +32,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public CrmPublicConstantFilter()
         {
             AdditionalData = new Dictionary<string, object>();
-            FilterType = global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicConstantFilter_filterType.CONSTANT;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -52,7 +51,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicConstantFilter_filterType>(); } },
+                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicConstantFilterFilterType>(); } },
                 { "shouldAccept", n => { ShouldAccept = n.GetBoolValue(); } },
                 { "source", n => { Source = n.GetStringValue(); } },
             };
@@ -64,7 +63,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicConstantFilter_filterType>("filterType", FilterType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicConstantFilterFilterType>("filterType", FilterType);
             writer.WriteBoolValue("shouldAccept", ShouldAccept);
             writer.WriteStringValue("source", Source);
             writer.WriteAdditionalData(AdditionalData);

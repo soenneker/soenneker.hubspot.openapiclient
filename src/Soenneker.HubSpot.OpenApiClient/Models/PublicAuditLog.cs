@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The type of event that took place (CREATED, UPDATED, PUBLISHED, DELETED, UNPUBLISHED).</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditLog_event? Event { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditLogEvent? Event { get; set; }
         /// <summary>The name of the user who caused the event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -27,10 +27,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>&quot;Supplementary metadata associated with the audit log entry. It provides additional context about the audited event (ex: rows deleted/updated for a HubDB event, the specific fields that were changed for a Content Settings event).&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditLog_meta? Meta { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditLogMetaProperty? Meta { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditLog_meta Meta { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditLogMetaProperty Meta { get; set; }
 #endif
         /// <summary>The ID of the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -49,7 +49,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string ObjectName { get; set; }
 #endif
         /// <summary>The type of the object (BLOG, LANDING_PAGE, DOMAIN, HUBDB_TABLE etc.)</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditLog_objectType? ObjectType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditLogObjectType? ObjectType { get; set; }
         /// <summary>The timestamp at which the event occurred.</summary>
         public DateTimeOffset? Timestamp { get; set; }
         /// <summary>The ID of the user who caused the event.</summary>
@@ -85,12 +85,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "event", n => { Event = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditLog_event>(); } },
+                { "event", n => { Event = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditLogEvent>(); } },
                 { "fullName", n => { FullName = n.GetStringValue(); } },
-                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditLog_meta>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditLog_meta.CreateFromDiscriminatorValue); } },
+                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditLogMetaProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditLogMetaProperty.CreateFromDiscriminatorValue); } },
                 { "objectId", n => { ObjectId = n.GetStringValue(); } },
                 { "objectName", n => { ObjectName = n.GetStringValue(); } },
-                { "objectType", n => { ObjectType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditLog_objectType>(); } },
+                { "objectType", n => { ObjectType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditLogObjectType>(); } },
                 { "timestamp", n => { Timestamp = n.GetDateTimeOffsetValue(); } },
                 { "userId", n => { UserId = n.GetStringValue(); } },
             };
@@ -102,12 +102,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditLog_event>("event", Event);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditLogEvent>("event", Event);
             writer.WriteStringValue("fullName", FullName);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditLog_meta>("meta", Meta);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditLogMetaProperty>("meta", Meta);
             writer.WriteStringValue("objectId", ObjectId);
             writer.WriteStringValue("objectName", ObjectName);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditLog_objectType>("objectType", ObjectType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditLogObjectType>("objectType", ObjectType);
             writer.WriteDateTimeOffsetValue("timestamp", Timestamp);
             writer.WriteStringValue("userId", UserId);
             writer.WriteAdditionalData(AdditionalData);

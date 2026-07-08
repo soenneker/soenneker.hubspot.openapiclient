@@ -16,6 +16,22 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The appId property</summary>
         public int? AppId { get; set; }
+        /// <summary>The appInstallId property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AppInstallId { get; set; }
+#nullable restore
+#else
+        public string AppInstallId { get; set; }
+#endif
+        /// <summary>The audience property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Audience { get; set; }
+#nullable restore
+#else
+        public string Audience { get; set; }
+#endif
         /// <summary>The expiresAt property</summary>
         public long? ExpiresAt { get; set; }
         /// <summary>The hubId property</summary>
@@ -112,6 +128,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "appId", n => { AppId = n.GetIntValue(); } },
+                { "appInstallId", n => { AppInstallId = n.GetStringValue(); } },
+                { "audience", n => { Audience = n.GetStringValue(); } },
                 { "expiresAt", n => { ExpiresAt = n.GetLongValue(); } },
                 { "hubId", n => { HubId = n.GetIntValue(); } },
                 { "hublet", n => { Hublet = n.GetStringValue(); } },
@@ -136,6 +154,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("appId", AppId);
+            writer.WriteStringValue("appInstallId", AppInstallId);
+            writer.WriteStringValue("audience", Audience);
             writer.WriteLongValue("expiresAt", ExpiresAt);
             writer.WriteIntValue("hubId", HubId);
             writer.WriteStringValue("hublet", Hublet);

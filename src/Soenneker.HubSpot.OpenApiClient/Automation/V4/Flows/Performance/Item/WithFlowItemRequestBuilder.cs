@@ -79,11 +79,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Automation.V4.Flows.Performance.Item
         #pragma warning restore CS1591
         {
             [QueryParameter("bucketType")]
-            public global::Soenneker.HubSpot.OpenApiClient.Automation.V4.Flows.Performance.Item.GetBucketTypeQueryParameterType? BucketType { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.AutomationGetAutomationV4FlowsPerformanceFlowIdAutomationV4FlowsPerformanceFlowIdBucketTypeParameter? BucketType { get; set; }
             [QueryParameter("end")]
             public long? End { get; set; }
             [QueryParameter("firstDay")]
-            public global::Soenneker.HubSpot.OpenApiClient.Automation.V4.Flows.Performance.Item.GetFirstDayQueryParameterType? FirstDay { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.AutomationGetAutomationV4FlowsPerformanceFlowIdAutomationV4FlowsPerformanceFlowIdFirstDayParameter? FirstDay { get; set; }
             [QueryParameter("start")]
             public long? Start { get; set; }
         }

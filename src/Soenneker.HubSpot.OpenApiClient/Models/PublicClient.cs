@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The type of the client.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicClient_clientType? ClientType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicClientClientType? ClientType { get; set; }
         /// <summary>The ID of the client if the client is an integration.</summary>
         public int? IntegrationAppId { get; set; }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "clientType", n => { ClientType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicClient_clientType>(); } },
+                { "clientType", n => { ClientType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicClientClientType>(); } },
                 { "integrationAppId", n => { IntegrationAppId = n.GetIntValue(); } },
             };
         }
@@ -54,7 +54,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicClient_clientType>("clientType", ClientType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicClientClientType>("clientType", ClientType);
             writer.WriteIntValue("integrationAppId", IntegrationAppId);
             writer.WriteAdditionalData(AdditionalData);
         }

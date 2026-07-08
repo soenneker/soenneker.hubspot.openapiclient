@@ -17,7 +17,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The unique identifier for the specific saved template or previous import being referenced.</summary>
         public long? TemplateId { get; set; }
         /// <summary>The classification of what type of template this represents, and what is its origin or purpose.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ImportTemplate_templateType? TemplateType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ImportTemplateTemplateType? TemplateType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ImportTemplate"/> and sets the default values.
         /// </summary>
@@ -44,7 +44,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "templateId", n => { TemplateId = n.GetLongValue(); } },
-                { "templateType", n => { TemplateType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ImportTemplate_templateType>(); } },
+                { "templateType", n => { TemplateType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ImportTemplateTemplateType>(); } },
             };
         }
         /// <summary>
@@ -55,7 +55,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteLongValue("templateId", TemplateId);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ImportTemplate_templateType>("templateType", TemplateType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ImportTemplateTemplateType>("templateType", TemplateType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -37,7 +37,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails
             get => new global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Statistics.StatisticsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.marketing.v3.emails.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The marketing email ID.</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Item.WithEmailItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Item.WithEmailItemRequestBuilder this[string position]
         {
@@ -145,7 +145,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails
         public partial class EmailsRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
-            /// <summary>The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("after")]
@@ -155,7 +154,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails
             [QueryParameter("after")]
             public string After { get; set; }
 #endif
-            /// <summary>Whether to return only results that have been archived.</summary>
             [QueryParameter("archived")]
             public bool? Archived { get; set; }
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -186,7 +184,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails
             public bool? IncludeStats { get; set; }
             [QueryParameter("isPublished")]
             public bool? IsPublished { get; set; }
-            /// <summary>The maximum number of results to display per page.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
             [QueryParameter("marketingCampaignNames")]
@@ -207,7 +204,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails
             public string[] Sort { get; set; }
 #endif
             [QueryParameter("type")]
-            public global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.GetTypeQueryParameterType? Type { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingGetMarketingV3EmailsMarketingV3EmailsTypeParameter? Type { get; set; }
             [QueryParameter("updatedAfter")]
             public DateTimeOffset? UpdatedAfter { get; set; }
             [QueryParameter("updatedAt")]

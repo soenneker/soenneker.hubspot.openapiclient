@@ -19,10 +19,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>A collection of URLs linking to related resources or documentation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicCampaignWithAssets_links? Links { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicCampaignWithAssetsLinksProperty? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicCampaignWithAssets_links Links { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicCampaignWithAssetsLinksProperty Links { get; set; }
 #endif
         /// <summary>The timestamp when the batch request was initially made.</summary>
         public DateTimeOffset? RequestedAt { get; set; }
@@ -37,7 +37,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The timestamp when the processing of the batch request began.</summary>
         public DateTimeOffset? StartedAt { get; set; }
         /// <summary>&quot;The current processing status of the batch operation, with possible values: CANCELED, COMPLETE, PENDING, PROCESSING.&quot;</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicCampaignWithAssets_status? Status { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicCampaignWithAssetsStatus? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicCampaignWithAssets"/> and sets the default values.
         /// </summary>
@@ -64,11 +64,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "completedAt", n => { CompletedAt = n.GetDateTimeOffsetValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicCampaignWithAssets_links>(global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicCampaignWithAssets_links.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicCampaignWithAssetsLinksProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicCampaignWithAssetsLinksProperty.CreateFromDiscriminatorValue); } },
                 { "requestedAt", n => { RequestedAt = n.GetDateTimeOffsetValue(); } },
                 { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignWithAssets>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignWithAssets.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "startedAt", n => { StartedAt = n.GetDateTimeOffsetValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicCampaignWithAssets_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicCampaignWithAssetsStatus>(); } },
             };
         }
         /// <summary>
@@ -79,11 +79,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDateTimeOffsetValue("completedAt", CompletedAt);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicCampaignWithAssets_links>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicCampaignWithAssetsLinksProperty>("links", Links);
             writer.WriteDateTimeOffsetValue("requestedAt", RequestedAt);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignWithAssets>("results", Results);
             writer.WriteDateTimeOffsetValue("startedAt", StartedAt);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicCampaignWithAssets_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicCampaignWithAssetsStatus>("status", Status);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

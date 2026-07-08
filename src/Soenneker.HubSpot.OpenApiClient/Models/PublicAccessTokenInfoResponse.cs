@@ -73,7 +73,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string TokenType { get; set; }
 #endif
         /// <summary>The token_use property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAccessTokenInfoResponse_token_use? TokenUse { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAccessTokenInfoResponseTokenUse? TokenUse { get; set; }
         /// <summary>The user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -90,7 +90,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public PublicAccessTokenInfoResponse()
         {
             AdditionalData = new Dictionary<string, object>();
-            TokenUse = global::Soenneker.HubSpot.OpenApiClient.Models.PublicAccessTokenInfoResponse_token_use.Access_token;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -121,7 +120,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "signed_access_token", n => { SignedAccessToken = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.SignedAccessToken>(global::Soenneker.HubSpot.OpenApiClient.Models.SignedAccessToken.CreateFromDiscriminatorValue); } },
                 { "token", n => { Token = n.GetStringValue(); } },
                 { "token_type", n => { TokenType = n.GetStringValue(); } },
-                { "token_use", n => { TokenUse = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAccessTokenInfoResponse_token_use>(); } },
+                { "token_use", n => { TokenUse = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAccessTokenInfoResponseTokenUse>(); } },
                 { "user", n => { User = n.GetStringValue(); } },
                 { "user_id", n => { UserId = n.GetIntValue(); } },
             };
@@ -144,7 +143,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.SignedAccessToken>("signed_access_token", SignedAccessToken);
             writer.WriteStringValue("token", Token);
             writer.WriteStringValue("token_type", TokenType);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAccessTokenInfoResponse_token_use>("token_use", TokenUse);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAccessTokenInfoResponseTokenUse>("token_use", TokenUse);
             writer.WriteStringValue("user", User);
             writer.WriteIntValue("user_id", UserId);
             writer.WriteAdditionalData(AdditionalData);

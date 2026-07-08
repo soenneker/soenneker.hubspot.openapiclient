@@ -17,7 +17,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The contactId property</summary>
         public long? ContactId { get; set; }
         /// <summary>The externalPlayContext property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.MediaPlayedEvent_externalPlayContext? ExternalPlayContext { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.MediaPlayedEventExternalPlayContext? ExternalPlayContext { get; set; }
         /// <summary>The iframeUrl property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -53,7 +53,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string MediaName { get; set; }
 #endif
         /// <summary>The mediaType property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.MediaPlayedEvent_mediaType? MediaType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.MediaPlayedEventMediaType? MediaType { get; set; }
         /// <summary>The mediaUrl property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -103,7 +103,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string SessionId { get; set; }
 #endif
         /// <summary>The state property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.MediaPlayedEvent_state? State { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.MediaPlayedEventState? State { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.MediaPlayedEvent"/> and sets the default values.
         /// </summary>
@@ -130,13 +130,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "contactId", n => { ContactId = n.GetLongValue(); } },
-                { "externalPlayContext", n => { ExternalPlayContext = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MediaPlayedEvent_externalPlayContext>(); } },
+                { "externalPlayContext", n => { ExternalPlayContext = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MediaPlayedEventExternalPlayContext>(); } },
                 { "iframeUrl", n => { IframeUrl = n.GetStringValue(); } },
                 { "mediaBridgeId", n => { MediaBridgeId = n.GetLongValue(); } },
                 { "mediaBridgeObjectCoordinates", n => { MediaBridgeObjectCoordinates = n.GetStringValue(); } },
                 { "mediaBridgeObjectTypeId", n => { MediaBridgeObjectTypeId = n.GetStringValue(); } },
                 { "mediaName", n => { MediaName = n.GetStringValue(); } },
-                { "mediaType", n => { MediaType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MediaPlayedEvent_mediaType>(); } },
+                { "mediaType", n => { MediaType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MediaPlayedEventMediaType>(); } },
                 { "mediaUrl", n => { MediaUrl = n.GetStringValue(); } },
                 { "occurredTimestamp", n => { OccurredTimestamp = n.GetLongValue(); } },
                 { "pageId", n => { PageId = n.GetLongValue(); } },
@@ -146,7 +146,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "portalId", n => { PortalId = n.GetIntValue(); } },
                 { "providerId", n => { ProviderId = n.GetIntValue(); } },
                 { "sessionId", n => { SessionId = n.GetStringValue(); } },
-                { "state", n => { State = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MediaPlayedEvent_state>(); } },
+                { "state", n => { State = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MediaPlayedEventState>(); } },
             };
         }
         /// <summary>
@@ -157,13 +157,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteLongValue("contactId", ContactId);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MediaPlayedEvent_externalPlayContext>("externalPlayContext", ExternalPlayContext);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MediaPlayedEventExternalPlayContext>("externalPlayContext", ExternalPlayContext);
             writer.WriteStringValue("iframeUrl", IframeUrl);
             writer.WriteLongValue("mediaBridgeId", MediaBridgeId);
             writer.WriteStringValue("mediaBridgeObjectCoordinates", MediaBridgeObjectCoordinates);
             writer.WriteStringValue("mediaBridgeObjectTypeId", MediaBridgeObjectTypeId);
             writer.WriteStringValue("mediaName", MediaName);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MediaPlayedEvent_mediaType>("mediaType", MediaType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MediaPlayedEventMediaType>("mediaType", MediaType);
             writer.WriteStringValue("mediaUrl", MediaUrl);
             writer.WriteLongValue("occurredTimestamp", OccurredTimestamp);
             writer.WriteLongValue("pageId", PageId);
@@ -173,7 +173,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteIntValue("portalId", PortalId);
             writer.WriteIntValue("providerId", ProviderId);
             writer.WriteStringValue("sessionId", SessionId);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MediaPlayedEvent_state>("state", State);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MediaPlayedEventState>("state", State);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

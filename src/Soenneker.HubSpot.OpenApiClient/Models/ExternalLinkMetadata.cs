@@ -59,7 +59,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Slug { get; set; }
 #endif
         /// <summary>&quot;The type of the external meeting link. Accepted values are: PERSONAL_LINK, GROUP_CALENDAR, ROUND_ROBIN_CALENDAR.&quot;</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkMetadata_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkMetadataType? Type { get; set; }
         /// <summary>The Unix time in milliseconds when the meeting link was last updated.</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>The userIdsOfLinkMembers property</summary>
@@ -102,7 +102,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "organizerUserId", n => { OrganizerUserId = n.GetStringValue(); } },
                 { "slug", n => { Slug = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkMetadata_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkMetadataType>(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
                 { "userIdsOfLinkMembers", n => { UserIdsOfLinkMembers = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
@@ -121,7 +121,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("organizerUserId", OrganizerUserId);
             writer.WriteStringValue("slug", Slug);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkMetadata_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkMetadataType>("type", Type);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             writer.WriteCollectionOfPrimitiveValues<string>("userIdsOfLinkMembers", UserIdsOfLinkMembers);
             writer.WriteAdditionalData(AdditionalData);

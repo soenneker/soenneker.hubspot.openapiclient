@@ -25,7 +25,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string RangeType { get; set; }
 #endif
         /// <summary>Indicates the type of timestamp refinement, which defaults to ABSOLUTE_RANGED.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAbsoluteRangedTimestampRefineBy_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAbsoluteRangedTimestampRefineByType? Type { get; set; }
         /// <summary>Specifies the upper limit of the timestamp range.</summary>
         public long? UpperTimestamp { get; set; }
         /// <summary>
@@ -55,7 +55,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "lowerTimestamp", n => { LowerTimestamp = n.GetLongValue(); } },
                 { "rangeType", n => { RangeType = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAbsoluteRangedTimestampRefineBy_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAbsoluteRangedTimestampRefineByType>(); } },
                 { "upperTimestamp", n => { UpperTimestamp = n.GetLongValue(); } },
             };
         }
@@ -68,7 +68,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteLongValue("lowerTimestamp", LowerTimestamp);
             writer.WriteStringValue("rangeType", RangeType);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAbsoluteRangedTimestampRefineBy_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAbsoluteRangedTimestampRefineByType>("type", Type);
             writer.WriteLongValue("upperTimestamp", UpperTimestamp);
             writer.WriteAdditionalData(AdditionalData);
         }

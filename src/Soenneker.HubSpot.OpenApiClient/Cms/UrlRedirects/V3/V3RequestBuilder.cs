@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.HubSpot.OpenApiClient.Cms.UrlRedirects.V3.UrlMappings;
 using Soenneker.HubSpot.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
@@ -17,6 +18,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.UrlRedirects.V3
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class V3RequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The urlMappings property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Cms.UrlRedirects.V3.UrlMappings.UrlMappingsRequestBuilder UrlMappings
+        {
+            get => new global::Soenneker.HubSpot.OpenApiClient.Cms.UrlRedirects.V3.UrlMappings.UrlMappingsRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Cms.UrlRedirects.V3.V3RequestBuilder"/> and sets the default values.
         /// </summary>
@@ -114,7 +120,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.UrlRedirects.V3
         public partial class V3RequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
-            /// <summary>The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("after")]
@@ -124,7 +129,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.UrlRedirects.V3
             [QueryParameter("after")]
             public string After { get; set; }
 #endif
-            /// <summary>Whether to return only results that have been archived.</summary>
             [QueryParameter("archived")]
             public bool? Archived { get; set; }
             [QueryParameter("createdAfter")]
@@ -133,7 +137,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.UrlRedirects.V3
             public DateTimeOffset? CreatedAt { get; set; }
             [QueryParameter("createdBefore")]
             public DateTimeOffset? CreatedBefore { get; set; }
-            /// <summary>The maximum number of results to display per page.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

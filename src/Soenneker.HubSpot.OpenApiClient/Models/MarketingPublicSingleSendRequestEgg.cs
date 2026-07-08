@@ -7,33 +7,32 @@ using System.IO;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>
-    /// A request to send a single transactional email asynchronously.
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+    #pragma warning disable CS1591
     public partial class MarketingPublicSingleSendRequestEgg : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The contactProperties field is a map of contact property values. Each contact property value contains a name and value property. Each property will get set on the contact record and will be visible in the template under {{ contact.NAME }}. Use these properties when you want to set a contact property while you’re sending the email. For example, when sending a reciept you may want to set a last_paid_date property, as the sending of the receipt will have information about the last payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPublicSingleSendRequestEgg_contactProperties? ContactProperties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPublicSingleSendRequestEggContactPropertiesProperty? ContactProperties { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPublicSingleSendRequestEgg_contactProperties ContactProperties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPublicSingleSendRequestEggContactPropertiesProperty ContactProperties { get; set; }
 #endif
         /// <summary>&quot;The customProperties field is a map of property values. Each property value contains a name and value property. Each property will be visible in the template under {{ custom.NAME }}.Note: Custom properties do not currently support arrays. To provide a listing in an email, one workaround is to build an HTML list (either with tables or ul) and specify it as a custom property.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPublicSingleSendRequestEgg_customProperties? CustomProperties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPublicSingleSendRequestEggCustomPropertiesProperty? CustomProperties { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPublicSingleSendRequestEgg_customProperties CustomProperties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPublicSingleSendRequestEggCustomPropertiesProperty CustomProperties { get; set; }
 #endif
         /// <summary>The content ID for the transactional email, which can be found in email tool UI.</summary>
         public long? EmailId { get; set; }
-        /// <summary>A JSON object containing anything you want to override.</summary>
+        /// <summary>The message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPublicSingleSendEmail? Message { get; set; }
@@ -66,8 +65,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "contactProperties", n => { ContactProperties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPublicSingleSendRequestEgg_contactProperties>(global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPublicSingleSendRequestEgg_contactProperties.CreateFromDiscriminatorValue); } },
-                { "customProperties", n => { CustomProperties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPublicSingleSendRequestEgg_customProperties>(global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPublicSingleSendRequestEgg_customProperties.CreateFromDiscriminatorValue); } },
+                { "contactProperties", n => { ContactProperties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPublicSingleSendRequestEggContactPropertiesProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPublicSingleSendRequestEggContactPropertiesProperty.CreateFromDiscriminatorValue); } },
+                { "customProperties", n => { CustomProperties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPublicSingleSendRequestEggCustomPropertiesProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPublicSingleSendRequestEggCustomPropertiesProperty.CreateFromDiscriminatorValue); } },
                 { "emailId", n => { EmailId = n.GetLongValue(); } },
                 { "message", n => { Message = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPublicSingleSendEmail>(global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPublicSingleSendEmail.CreateFromDiscriminatorValue); } },
             };
@@ -79,8 +78,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPublicSingleSendRequestEgg_contactProperties>("contactProperties", ContactProperties);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPublicSingleSendRequestEgg_customProperties>("customProperties", CustomProperties);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPublicSingleSendRequestEggContactPropertiesProperty>("contactProperties", ContactProperties);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPublicSingleSendRequestEggCustomPropertiesProperty>("customProperties", CustomProperties);
             writer.WriteLongValue("emailId", EmailId);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPublicSingleSendEmail>("message", Message);
             writer.WriteAdditionalData(AdditionalData);

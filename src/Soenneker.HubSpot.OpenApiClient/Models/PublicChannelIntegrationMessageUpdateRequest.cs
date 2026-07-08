@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string ErrorMessage { get; set; }
 #endif
         /// <summary>Valid status are SENT, FAILED, and READ</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationMessageUpdateRequest_statusType? StatusType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationMessageUpdateRequestStatusType? StatusType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationMessageUpdateRequest"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "errorMessage", n => { ErrorMessage = n.GetStringValue(); } },
-                { "statusType", n => { StatusType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationMessageUpdateRequest_statusType>(); } },
+                { "statusType", n => { StatusType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationMessageUpdateRequestStatusType>(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("errorMessage", ErrorMessage);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationMessageUpdateRequest_statusType>("statusType", StatusType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationMessageUpdateRequestStatusType>("statusType", StatusType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

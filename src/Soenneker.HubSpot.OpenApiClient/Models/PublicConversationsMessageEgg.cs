@@ -17,10 +17,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The attachments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessageEgg.PublicConversationsMessageEgg_attachments>? Attachments { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessageEggAttachmentsItem>? Attachments { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessageEgg.PublicConversationsMessageEgg_attachments> Attachments { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessageEggAttachmentsItem> Attachments { get; set; }
 #endif
         /// <summary>The channelAccountId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -79,7 +79,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Text { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessageEgg_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessageEggType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessageEgg"/> and sets the default values.
         /// </summary>
@@ -105,7 +105,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "attachments", n => { Attachments = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessageEgg.PublicConversationsMessageEgg_attachments>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessageEgg.PublicConversationsMessageEgg_attachments.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "attachments", n => { Attachments = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessageEggAttachmentsItem>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessageEggAttachmentsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "channelAccountId", n => { ChannelAccountId = n.GetStringValue(); } },
                 { "channelId", n => { ChannelId = n.GetStringValue(); } },
                 { "recipients", n => { Recipients = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRecipientEgg>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicRecipientEgg.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -113,7 +113,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "senderActorId", n => { SenderActorId = n.GetStringValue(); } },
                 { "subject", n => { Subject = n.GetStringValue(); } },
                 { "text", n => { Text = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessageEgg_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessageEggType>(); } },
             };
         }
         /// <summary>
@@ -123,7 +123,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessageEgg.PublicConversationsMessageEgg_attachments>("attachments", Attachments);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessageEggAttachmentsItem>("attachments", Attachments);
             writer.WriteStringValue("channelAccountId", ChannelAccountId);
             writer.WriteStringValue("channelId", ChannelId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRecipientEgg>("recipients", Recipients);
@@ -131,103 +131,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("senderActorId", SenderActorId);
             writer.WriteStringValue("subject", Subject);
             writer.WriteStringValue("text", Text);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessageEgg_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessageEggType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicFileEgg"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicQuickRepliesEgg"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicSocialMediaEgg"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class PublicConversationsMessageEgg_attachments : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicFileEgg"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicFileEgg? PublicFileEgg { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicFileEgg PublicFileEgg { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicQuickRepliesEgg"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicQuickRepliesEgg? PublicQuickRepliesEgg { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicQuickRepliesEgg PublicQuickRepliesEgg { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicSocialMediaEgg"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSocialMediaEgg? PublicSocialMediaEgg { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSocialMediaEgg PublicSocialMediaEgg { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessageEgg.PublicConversationsMessageEgg_attachments"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessageEgg.PublicConversationsMessageEgg_attachments CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessageEgg.PublicConversationsMessageEgg_attachments();
-                if("PublicFileEgg".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicFileEgg = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicFileEgg();
-                }
-                else if("PublicQuickRepliesEgg".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicQuickRepliesEgg = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicQuickRepliesEgg();
-                }
-                else if("PublicSocialMediaEgg".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicSocialMediaEgg = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicSocialMediaEgg();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(PublicFileEgg != null)
-                {
-                    return PublicFileEgg.GetFieldDeserializers();
-                }
-                else if(PublicQuickRepliesEgg != null)
-                {
-                    return PublicQuickRepliesEgg.GetFieldDeserializers();
-                }
-                else if(PublicSocialMediaEgg != null)
-                {
-                    return PublicSocialMediaEgg.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(PublicFileEgg != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicFileEgg>(null, PublicFileEgg);
-                }
-                else if(PublicQuickRepliesEgg != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicQuickRepliesEgg>(null, PublicQuickRepliesEgg);
-                }
-                else if(PublicSocialMediaEgg != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSocialMediaEgg>(null, PublicSocialMediaEgg);
-                }
-            }
         }
     }
 }

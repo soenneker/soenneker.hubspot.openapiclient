@@ -17,13 +17,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The optionDecorators property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionData_optionDecorators? OptionDecorators { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionDataOptionDecoratorsProperty? OptionDecorators { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionData_optionDecorators OptionDecorators { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionDataOptionDecoratorsProperty OptionDecorators { get; set; }
 #endif
         /// <summary>The optionDecoratorStyle property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionData_optionDecoratorStyle? OptionDecoratorStyle { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionDataOptionDecoratorStyle? OptionDecoratorStyle { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionData"/> and sets the default values.
         /// </summary>
@@ -49,8 +49,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "optionDecoratorStyle", n => { OptionDecoratorStyle = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionData_optionDecoratorStyle>(); } },
-                { "optionDecorators", n => { OptionDecorators = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionData_optionDecorators>(global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionData_optionDecorators.CreateFromDiscriminatorValue); } },
+                { "optionDecoratorStyle", n => { OptionDecoratorStyle = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionDataOptionDecoratorStyle>(); } },
+                { "optionDecorators", n => { OptionDecorators = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionDataOptionDecoratorsProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionDataOptionDecoratorsProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -60,8 +60,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionData_optionDecorators>("optionDecorators", OptionDecorators);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionData_optionDecoratorStyle>("optionDecoratorStyle", OptionDecoratorStyle);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionDataOptionDecoratorsProperty>("optionDecorators", OptionDecorators);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionDataOptionDecoratorStyle>("optionDecoratorStyle", OptionDecoratorStyle);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -20,7 +20,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The timestamp when the webhook subscription was created, in ISO 8601 format (e.g., 2020-02-29T12:30:00Z).</summary>
         public DateTimeOffset? CreatedAt { get; set; }
         /// <summary>The type of event to listen for. Accepted values include contact.creation, contact.deletion, contact.propertyChange, and similar event types for other CRM objects and custom objects.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponse_eventType? EventType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponseEventType? EventType { get; set; }
         /// <summary>The name of the event to listen for. This is used with custom objects to specify custom event types beyond the standard eventType enum values.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -82,7 +82,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "active", n => { Active = n.GetBoolValue(); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
-                { "eventType", n => { EventType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponse_eventType>(); } },
+                { "eventType", n => { EventType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponseEventType>(); } },
                 { "eventTypeName", n => { EventTypeName = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "objectTypeId", n => { ObjectTypeId = n.GetStringValue(); } },
@@ -99,7 +99,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("active", Active);
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponse_eventType>("eventType", EventType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponseEventType>("eventType", EventType);
             writer.WriteStringValue("eventTypeName", EventTypeName);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("objectTypeId", ObjectTypeId);

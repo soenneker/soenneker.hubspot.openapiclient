@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeOfDay TimeOfDay { get; set; }
 #endif
         /// <summary>Specifies the type of enrollment schedule, which is &apos;DAILY&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiDailyEnrollmentSchedule_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiDailyEnrollmentScheduleType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiDailyEnrollmentSchedule"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "timeOfDay", n => { TimeOfDay = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeOfDay>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeOfDay.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiDailyEnrollmentSchedule_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiDailyEnrollmentScheduleType>(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeOfDay>("timeOfDay", TimeOfDay);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiDailyEnrollmentSchedule_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiDailyEnrollmentScheduleType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

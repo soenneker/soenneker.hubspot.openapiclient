@@ -97,7 +97,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Automation.V4.Sequences
         public partial class SequencesRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
-            /// <summary>The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("after")]
@@ -107,7 +106,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Automation.V4.Sequences
             [QueryParameter("after")]
             public string After { get; set; }
 #endif
-            /// <summary>The maximum number of results to display per page.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>&quot;The day of the week in the week reference, with accepted values including: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.&quot;</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWeekReference_dayOfWeek? DayOfWeek { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWeekReferenceDayOfWeek? DayOfWeek { get; set; }
         /// <summary>The hour component of the time in the week reference.</summary>
         public int? Hour { get; set; }
         /// <summary>The millisecond component of the time in the week reference.</summary>
@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The minute component of the time in the week reference.</summary>
         public int? Minute { get; set; }
         /// <summary>Indicates the type of reference, defaulting to &apos;WEEK&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWeekReference_referenceType? ReferenceType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWeekReferenceReferenceType? ReferenceType { get; set; }
         /// <summary>The second component of the time in the week reference.</summary>
         public int? Second { get; set; }
         /// <summary>
@@ -32,7 +32,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public PublicWeekReference()
         {
             AdditionalData = new Dictionary<string, object>();
-            ReferenceType = global::Soenneker.HubSpot.OpenApiClient.Models.PublicWeekReference_referenceType.WEEK;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -52,11 +51,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "dayOfWeek", n => { DayOfWeek = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWeekReference_dayOfWeek>(); } },
+                { "dayOfWeek", n => { DayOfWeek = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWeekReferenceDayOfWeek>(); } },
                 { "hour", n => { Hour = n.GetIntValue(); } },
                 { "millisecond", n => { Millisecond = n.GetIntValue(); } },
                 { "minute", n => { Minute = n.GetIntValue(); } },
-                { "referenceType", n => { ReferenceType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWeekReference_referenceType>(); } },
+                { "referenceType", n => { ReferenceType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWeekReferenceReferenceType>(); } },
                 { "second", n => { Second = n.GetIntValue(); } },
             };
         }
@@ -67,11 +66,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWeekReference_dayOfWeek>("dayOfWeek", DayOfWeek);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWeekReferenceDayOfWeek>("dayOfWeek", DayOfWeek);
             writer.WriteIntValue("hour", Hour);
             writer.WriteIntValue("millisecond", Millisecond);
             writer.WriteIntValue("minute", Minute);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWeekReference_referenceType>("referenceType", ReferenceType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWeekReferenceReferenceType>("referenceType", ReferenceType);
             writer.WriteIntValue("second", Second);
             writer.WriteAdditionalData(AdditionalData);
         }

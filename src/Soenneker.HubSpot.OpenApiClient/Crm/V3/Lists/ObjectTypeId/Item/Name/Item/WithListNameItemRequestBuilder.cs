@@ -85,7 +85,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.ObjectTypeId.Item.Name.It
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithListNameItemRequestBuilderGetQueryParameters 
         {
-            /// <summary>A boolean indicating whether to include filter details in the response. Defaults to false.</summary>
+            /// <summary>A flag indicating whether or not the response object list definition should include a filter branch definition. By default, object list definitions will not have their filter branch definitions included in the response.</summary>
             [QueryParameter("includeFilters")]
             public bool? IncludeFilters { get; set; }
         }

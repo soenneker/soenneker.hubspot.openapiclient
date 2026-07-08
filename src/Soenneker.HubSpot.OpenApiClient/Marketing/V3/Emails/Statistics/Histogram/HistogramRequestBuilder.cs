@@ -85,6 +85,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Statistics.Histogr
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class HistogramRequestBuilderGetQueryParameters 
         {
+            /// <summary>Filter by email IDs. Only include statistics of emails with these IDs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("emailIds")]
@@ -94,10 +95,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Statistics.Histogr
             [QueryParameter("emailIds")]
             public long?[] EmailIds { get; set; }
 #endif
+            /// <summary>The end timestamp of the time span, in ISO8601 representation.</summary>
             [QueryParameter("endTimestamp")]
             public DateTimeOffset? EndTimestamp { get; set; }
+            /// <summary>The interval to aggregate statistics for.</summary>
             [QueryParameter("interval")]
-            public global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Statistics.Histogram.GetIntervalQueryParameterType? Interval { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingGetMarketingV3EmailsStatisticsHistogramGetHistogramIntervalParameter? Interval { get; set; }
+            /// <summary>The start timestamp of the time span, in ISO8601 representation.</summary>
             [QueryParameter("startTimestamp")]
             public DateTimeOffset? StartTimestamp { get; set; }
         }

@@ -19,7 +19,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The numberOfDays property</summary>
         public int? NumberOfDays { get; set; }
         /// <summary>The operationType property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRollingPropertyUpdatedOperation_operationType? OperationType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRollingPropertyUpdatedOperationOperationType? OperationType { get; set; }
         /// <summary>The operator property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -34,7 +34,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public PublicRollingPropertyUpdatedOperation()
         {
             AdditionalData = new Dictionary<string, object>();
-            OperationType = global::Soenneker.HubSpot.OpenApiClient.Models.PublicRollingPropertyUpdatedOperation_operationType.ROLLING_PROPERTY_UPDATED;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -56,7 +55,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "includeObjectsWithNoValueSet", n => { IncludeObjectsWithNoValueSet = n.GetBoolValue(); } },
                 { "numberOfDays", n => { NumberOfDays = n.GetIntValue(); } },
-                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRollingPropertyUpdatedOperation_operationType>(); } },
+                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRollingPropertyUpdatedOperationOperationType>(); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
             };
         }
@@ -69,7 +68,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("includeObjectsWithNoValueSet", IncludeObjectsWithNoValueSet);
             writer.WriteIntValue("numberOfDays", NumberOfDays);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRollingPropertyUpdatedOperation_operationType>("operationType", OperationType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRollingPropertyUpdatedOperationOperationType>("operationType", OperationType);
             writer.WriteStringValue("operator", Operator);
             writer.WriteAdditionalData(AdditionalData);
         }

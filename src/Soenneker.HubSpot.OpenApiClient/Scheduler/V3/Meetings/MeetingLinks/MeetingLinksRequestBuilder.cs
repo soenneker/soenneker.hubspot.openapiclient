@@ -123,7 +123,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Scheduler.V3.Meetings.MeetingLinks
             public string OrganizerUserId { get; set; }
 #endif
             [QueryParameter("type")]
-            public global::Soenneker.HubSpot.OpenApiClient.Scheduler.V3.Meetings.MeetingLinks.GetTypeQueryParameterType? Type { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.SchedulerGetSchedulerV3MeetingsMeetingLinksTypeParameter? Type { get; set; }
         }
     }
 }

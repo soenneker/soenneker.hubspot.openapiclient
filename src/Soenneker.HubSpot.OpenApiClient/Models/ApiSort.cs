@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Missing { get; set; }
 #endif
         /// <summary>The order of sorting, with accepted values being ASC for ascending and DESC for descending.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiSort_order? Order { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiSortOrder? Order { get; set; }
         /// <summary>The name of the property to sort by.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -58,7 +58,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "missing", n => { Missing = n.GetStringValue(); } },
-                { "order", n => { Order = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiSort_order>(); } },
+                { "order", n => { Order = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiSortOrder>(); } },
                 { "property", n => { Property = n.GetStringValue(); } },
             };
         }
@@ -70,7 +70,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("missing", Missing);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiSort_order>("order", Order);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiSortOrder>("order", Order);
             writer.WriteStringValue("property", Property);
             writer.WriteAdditionalData(AdditionalData);
         }

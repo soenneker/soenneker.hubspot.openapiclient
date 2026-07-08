@@ -31,7 +31,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.It
             get => new global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.Item.Complete.CompleteRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.marketing.v3.marketingEvents.events.item.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">&quot;The new subscriber state for the HubSpot contacts and the specified marketing event. For example: &apos;register&apos;, &apos;attend&apos; or &apos;cancel&apos;.&quot;</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.Item.Item.WithSubscriberStateItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.Item.Item.WithSubscriberStateItemRequestBuilder this[string position]
         {
@@ -47,7 +47,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.It
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithExternalEventItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/marketing/v3/marketing-events/events/{externalEventId}?externalAccountId={externalAccountId}", pathParameters)
+        public WithExternalEventItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/marketing/v3/marketing-events/events/{externalEventId}", pathParameters)
         {
         }
         /// <summary>
@@ -55,7 +55,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.It
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithExternalEventItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/marketing/v3/marketing-events/events/{externalEventId}?externalAccountId={externalAccountId}", rawUrl)
+        public WithExternalEventItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/marketing/v3/marketing-events/events/{externalEventId}", rawUrl)
         {
         }
         /// <summary>
@@ -148,7 +148,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.It
         public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.Item.WithExternalEventItemRequestBuilder.WithExternalEventItemRequestBuilderDeleteQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.DELETE, "{+baseurl}/marketing/v3/marketing-events/events/{externalEventId}?externalAccountId={externalAccountId}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             return requestInfo;
         }
@@ -166,7 +166,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.It
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.Item.WithExternalEventItemRequestBuilder.WithExternalEventItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/marketing/v3/marketing-events/events/{externalEventId}?externalAccountId={externalAccountId}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -187,7 +187,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.It
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.PATCH, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.PATCH, "{+baseurl}/marketing/v3/marketing-events/events/{externalEventId}?externalAccountId={externalAccountId}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
@@ -209,7 +209,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.It
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.PUT, "{+baseurl}/marketing/v3/marketing-events/events/{externalEventId}", PathParameters);
+            var requestInfo = new RequestInformation(Method.PUT, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
@@ -230,6 +230,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.It
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithExternalEventItemRequestBuilderDeleteQueryParameters 
         {
+            /// <summary>The accountId that is associated with this marketing event in the external event application</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("externalAccountId")]
@@ -246,6 +247,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.It
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithExternalEventItemRequestBuilderGetQueryParameters 
         {
+            /// <summary>The accountId that is associated with this marketing event in the external event application</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("externalAccountId")]
@@ -262,6 +264,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.MarketingEvents.Events.It
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithExternalEventItemRequestBuilderPatchQueryParameters 
         {
+            /// <summary>The accountId that is associated with this marketing event in the external event application</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("externalAccountId")]

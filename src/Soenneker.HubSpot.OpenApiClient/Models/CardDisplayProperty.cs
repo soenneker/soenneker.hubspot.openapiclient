@@ -16,7 +16,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Type of data represented by this property.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CardDisplayProperty_dataType? DataType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CardDisplayPropertyDataType? DataType { get; set; }
         /// <summary>The label for this property as you&apos;d like it displayed to users.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -66,7 +66,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "dataType", n => { DataType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CardDisplayProperty_dataType>(); } },
+                { "dataType", n => { DataType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CardDisplayPropertyDataType>(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.DisplayOption>(global::Soenneker.HubSpot.OpenApiClient.Models.DisplayOption.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -79,7 +79,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CardDisplayProperty_dataType>("dataType", DataType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CardDisplayPropertyDataType>("dataType", DataType);
             writer.WriteStringValue("label", Label);
             writer.WriteStringValue("name", Name);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.DisplayOption>("options", Options);

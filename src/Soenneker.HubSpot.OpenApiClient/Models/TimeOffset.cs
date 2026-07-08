@@ -17,9 +17,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The amount property</summary>
         public long? Amount { get; set; }
         /// <summary>The offsetDirection property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffset_offsetDirection? OffsetDirection { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffsetOffsetDirection? OffsetDirection { get; set; }
         /// <summary>The timeUnit property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffset_timeUnit? TimeUnit { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffsetTimeUnit? TimeUnit { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffset"/> and sets the default values.
         /// </summary>
@@ -46,8 +46,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "amount", n => { Amount = n.GetLongValue(); } },
-                { "offsetDirection", n => { OffsetDirection = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffset_offsetDirection>(); } },
-                { "timeUnit", n => { TimeUnit = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffset_timeUnit>(); } },
+                { "offsetDirection", n => { OffsetDirection = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffsetOffsetDirection>(); } },
+                { "timeUnit", n => { TimeUnit = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffsetTimeUnit>(); } },
             };
         }
         /// <summary>
@@ -58,8 +58,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteLongValue("amount", Amount);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffset_offsetDirection>("offsetDirection", OffsetDirection);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffset_timeUnit>("timeUnit", TimeUnit);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffsetOffsetDirection>("offsetDirection", OffsetDirection);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffsetTimeUnit>("timeUnit", TimeUnit);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

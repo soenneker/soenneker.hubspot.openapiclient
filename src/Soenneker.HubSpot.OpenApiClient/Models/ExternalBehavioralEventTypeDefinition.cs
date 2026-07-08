@@ -133,7 +133,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.EventsProperty> Properties { get; set; }
 #endif
         /// <summary>The trackingType property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventTypeDefinition_trackingType? TrackingType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventTypeDefinitionTrackingType? TrackingType { get; set; }
         /// <summary>The updatedAt property</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>The updatedUserId property</summary>
@@ -180,7 +180,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "primaryObject", n => { PrimaryObject = n.GetStringValue(); } },
                 { "primaryObjectId", n => { PrimaryObjectId = n.GetStringValue(); } },
                 { "properties", n => { Properties = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.EventsProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.EventsProperty.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "trackingType", n => { TrackingType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventTypeDefinition_trackingType>(); } },
+                { "trackingType", n => { TrackingType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventTypeDefinitionTrackingType>(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
                 { "updatedUserId", n => { UpdatedUserId = n.GetIntValue(); } },
             };
@@ -209,7 +209,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("primaryObject", PrimaryObject);
             writer.WriteStringValue("primaryObjectId", PrimaryObjectId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.EventsProperty>("properties", Properties);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventTypeDefinition_trackingType>("trackingType", TrackingType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventTypeDefinitionTrackingType>("trackingType", TrackingType);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             writer.WriteIntValue("updatedUserId", UpdatedUserId);
             writer.WriteAdditionalData(AdditionalData);

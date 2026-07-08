@@ -25,10 +25,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The exportInternalValuesOptions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportListRequest_exportInternalValuesOptions?>? ExportInternalValuesOptions { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportListRequestExportInternalValuesOptionsItem?>? ExportInternalValuesOptions { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportListRequest_exportInternalValuesOptions?> ExportInternalValuesOptions { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportListRequestExportInternalValuesOptionsItem?> ExportInternalValuesOptions { get; set; }
 #endif
         /// <summary>The exportName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -39,15 +39,15 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string ExportName { get; set; }
 #endif
         /// <summary>The exportType property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportListRequest_exportType? ExportType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportListRequestExportType? ExportType { get; set; }
         /// <summary>The format property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportListRequest_format? Format { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportListRequestFormat? Format { get; set; }
         /// <summary>The includeLabeledAssociations property</summary>
         public bool? IncludeLabeledAssociations { get; set; }
         /// <summary>The includePrimaryDisplayPropertyForAssociatedObjects property</summary>
         public bool? IncludePrimaryDisplayPropertyForAssociatedObjects { get; set; }
         /// <summary>The language property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportListRequest_language? Language { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportListRequestLanguage? Language { get; set; }
         /// <summary>The listId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -80,7 +80,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public PublicExportListRequest()
         {
             AdditionalData = new Dictionary<string, object>();
-            ExportType = global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportListRequest_exportType.LIST;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -101,13 +100,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "associatedObjectType", n => { AssociatedObjectType = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "exportInternalValuesOptions", n => { ExportInternalValuesOptions = n.GetCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportListRequest_exportInternalValuesOptions>()?.AsList(); } },
+                { "exportInternalValuesOptions", n => { ExportInternalValuesOptions = n.GetCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportListRequestExportInternalValuesOptionsItem>()?.AsList(); } },
                 { "exportName", n => { ExportName = n.GetStringValue(); } },
-                { "exportType", n => { ExportType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportListRequest_exportType>(); } },
-                { "format", n => { Format = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportListRequest_format>(); } },
+                { "exportType", n => { ExportType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportListRequestExportType>(); } },
+                { "format", n => { Format = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportListRequestFormat>(); } },
                 { "includeLabeledAssociations", n => { IncludeLabeledAssociations = n.GetBoolValue(); } },
                 { "includePrimaryDisplayPropertyForAssociatedObjects", n => { IncludePrimaryDisplayPropertyForAssociatedObjects = n.GetBoolValue(); } },
-                { "language", n => { Language = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportListRequest_language>(); } },
+                { "language", n => { Language = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportListRequestLanguage>(); } },
                 { "listId", n => { ListId = n.GetStringValue(); } },
                 { "objectProperties", n => { ObjectProperties = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "objectType", n => { ObjectType = n.GetStringValue(); } },
@@ -122,13 +121,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("associatedObjectType", AssociatedObjectType);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportListRequest_exportInternalValuesOptions>("exportInternalValuesOptions", ExportInternalValuesOptions);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportListRequestExportInternalValuesOptionsItem>("exportInternalValuesOptions", ExportInternalValuesOptions);
             writer.WriteStringValue("exportName", ExportName);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportListRequest_exportType>("exportType", ExportType);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportListRequest_format>("format", Format);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportListRequestExportType>("exportType", ExportType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportListRequestFormat>("format", Format);
             writer.WriteBoolValue("includeLabeledAssociations", IncludeLabeledAssociations);
             writer.WriteBoolValue("includePrimaryDisplayPropertyForAssociatedObjects", IncludePrimaryDisplayPropertyForAssociatedObjects);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportListRequest_language>("language", Language);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportListRequestLanguage>("language", Language);
             writer.WriteStringValue("listId", ListId);
             writer.WriteCollectionOfPrimitiveValues<string>("objectProperties", ObjectProperties);
             writer.WriteStringValue("objectType", ObjectType);

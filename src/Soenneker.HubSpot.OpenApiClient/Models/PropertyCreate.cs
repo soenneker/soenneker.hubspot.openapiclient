@@ -31,7 +31,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string CurrencyPropertyName { get; set; }
 #endif
         /// <summary>The dataSensitivity property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyCreate_dataSensitivity? DataSensitivity { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyCreateDataSensitivity? DataSensitivity { get; set; }
         /// <summary>The description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -45,7 +45,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The externalOptions property</summary>
         public bool? ExternalOptions { get; set; }
         /// <summary>The fieldType property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyCreate_fieldType? FieldType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyCreateFieldType? FieldType { get; set; }
         /// <summary>The formField property</summary>
         public bool? FormField { get; set; }
         /// <summary>The groupName property</summary>
@@ -77,7 +77,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Name { get; set; }
 #endif
         /// <summary>The numberDisplayHint property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyCreate_numberDisplayHint? NumberDisplayHint { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyCreateNumberDisplayHint? NumberDisplayHint { get; set; }
         /// <summary>The options property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -97,9 +97,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The showCurrencySymbol property</summary>
         public bool? ShowCurrencySymbol { get; set; }
         /// <summary>The textDisplayHint property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyCreate_textDisplayHint? TextDisplayHint { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyCreateTextDisplayHint? TextDisplayHint { get; set; }
         /// <summary>The type property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyCreate_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyCreateType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PropertyCreate"/> and sets the default values.
         /// </summary>
@@ -127,23 +127,23 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "calculationFormula", n => { CalculationFormula = n.GetStringValue(); } },
                 { "currencyPropertyName", n => { CurrencyPropertyName = n.GetStringValue(); } },
-                { "dataSensitivity", n => { DataSensitivity = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyCreate_dataSensitivity>(); } },
+                { "dataSensitivity", n => { DataSensitivity = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyCreateDataSensitivity>(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "displayOrder", n => { DisplayOrder = n.GetIntValue(); } },
                 { "externalOptions", n => { ExternalOptions = n.GetBoolValue(); } },
-                { "fieldType", n => { FieldType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyCreate_fieldType>(); } },
+                { "fieldType", n => { FieldType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyCreateFieldType>(); } },
                 { "formField", n => { FormField = n.GetBoolValue(); } },
                 { "groupName", n => { GroupName = n.GetStringValue(); } },
                 { "hasUniqueValue", n => { HasUniqueValue = n.GetBoolValue(); } },
                 { "hidden", n => { Hidden = n.GetBoolValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "numberDisplayHint", n => { NumberDisplayHint = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyCreate_numberDisplayHint>(); } },
+                { "numberDisplayHint", n => { NumberDisplayHint = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyCreateNumberDisplayHint>(); } },
                 { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.OptionInput>(global::Soenneker.HubSpot.OpenApiClient.Models.OptionInput.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "referencedObjectType", n => { ReferencedObjectType = n.GetStringValue(); } },
                 { "showCurrencySymbol", n => { ShowCurrencySymbol = n.GetBoolValue(); } },
-                { "textDisplayHint", n => { TextDisplayHint = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyCreate_textDisplayHint>(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyCreate_type>(); } },
+                { "textDisplayHint", n => { TextDisplayHint = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyCreateTextDisplayHint>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyCreateType>(); } },
             };
         }
         /// <summary>
@@ -155,23 +155,23 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("calculationFormula", CalculationFormula);
             writer.WriteStringValue("currencyPropertyName", CurrencyPropertyName);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyCreate_dataSensitivity>("dataSensitivity", DataSensitivity);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyCreateDataSensitivity>("dataSensitivity", DataSensitivity);
             writer.WriteStringValue("description", Description);
             writer.WriteIntValue("displayOrder", DisplayOrder);
             writer.WriteBoolValue("externalOptions", ExternalOptions);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyCreate_fieldType>("fieldType", FieldType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyCreateFieldType>("fieldType", FieldType);
             writer.WriteBoolValue("formField", FormField);
             writer.WriteStringValue("groupName", GroupName);
             writer.WriteBoolValue("hasUniqueValue", HasUniqueValue);
             writer.WriteBoolValue("hidden", Hidden);
             writer.WriteStringValue("label", Label);
             writer.WriteStringValue("name", Name);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyCreate_numberDisplayHint>("numberDisplayHint", NumberDisplayHint);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyCreateNumberDisplayHint>("numberDisplayHint", NumberDisplayHint);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.OptionInput>("options", Options);
             writer.WriteStringValue("referencedObjectType", ReferencedObjectType);
             writer.WriteBoolValue("showCurrencySymbol", ShowCurrencySymbol);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyCreate_textDisplayHint>("textDisplayHint", TextDisplayHint);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyCreate_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyCreateTextDisplayHint>("textDisplayHint", TextDisplayHint);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyCreateType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

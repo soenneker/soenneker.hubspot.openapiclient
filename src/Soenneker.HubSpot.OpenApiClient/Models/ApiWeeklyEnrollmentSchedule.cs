@@ -17,10 +17,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The daysOfWeek property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ApiWeeklyEnrollmentSchedule_daysOfWeek?>? DaysOfWeek { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ApiWeeklyEnrollmentScheduleDaysOfWeekItem?>? DaysOfWeek { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ApiWeeklyEnrollmentSchedule_daysOfWeek?> DaysOfWeek { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ApiWeeklyEnrollmentScheduleDaysOfWeekItem?> DaysOfWeek { get; set; }
 #endif
         /// <summary>The timeOfDay property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -31,7 +31,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeOfDay TimeOfDay { get; set; }
 #endif
         /// <summary>Indicates the type of enrollment schedule, which is &apos;WEEKLY&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiWeeklyEnrollmentSchedule_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiWeeklyEnrollmentScheduleType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiWeeklyEnrollmentSchedule"/> and sets the default values.
         /// </summary>
@@ -57,9 +57,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "daysOfWeek", n => { DaysOfWeek = n.GetCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.ApiWeeklyEnrollmentSchedule_daysOfWeek>()?.AsList(); } },
+                { "daysOfWeek", n => { DaysOfWeek = n.GetCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.ApiWeeklyEnrollmentScheduleDaysOfWeekItem>()?.AsList(); } },
                 { "timeOfDay", n => { TimeOfDay = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeOfDay>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeOfDay.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiWeeklyEnrollmentSchedule_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiWeeklyEnrollmentScheduleType>(); } },
             };
         }
         /// <summary>
@@ -69,9 +69,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.ApiWeeklyEnrollmentSchedule_daysOfWeek>("daysOfWeek", DaysOfWeek);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.ApiWeeklyEnrollmentScheduleDaysOfWeekItem>("daysOfWeek", DaysOfWeek);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeOfDay>("timeOfDay", TimeOfDay);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiWeeklyEnrollmentSchedule_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiWeeklyEnrollmentScheduleType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

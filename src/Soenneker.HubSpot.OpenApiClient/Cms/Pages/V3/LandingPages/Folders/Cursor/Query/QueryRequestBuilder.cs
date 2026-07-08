@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.HubSpot.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -32,20 +33,20 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.Pages.V3.LandingPages.Folders.Curs
         public QueryRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/cms/pages/v3/landing-pages/folders/cursor/query{?after*,archived*,createdAfter*,createdAt*,createdBefore*,limit*,property*,sort*,updatedAfter*,updatedAt*,updatedBefore*}", rawUrl)
         {
         }
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Cms.Pages.V3.LandingPages.Folders.Cursor.Query.QueryGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CmsGetCmsPagesV3LandingPagesFoldersCursorQueryCmsPagesV3LandingPagesFoldersCursorQuery200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Cms.Pages.V3.LandingPages.Folders.Cursor.Query.QueryGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.Pages.V3.LandingPages.Folders.Cursor.Query.QueryRequestBuilder.QueryRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CmsGetCmsPagesV3LandingPagesFoldersCursorQueryCmsPagesV3LandingPagesFoldersCursorQuery200Response?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.Pages.V3.LandingPages.Folders.Cursor.Query.QueryRequestBuilder.QueryRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Cms.Pages.V3.LandingPages.Folders.Cursor.Query.QueryGetResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.Pages.V3.LandingPages.Folders.Cursor.Query.QueryRequestBuilder.QueryRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CmsGetCmsPagesV3LandingPagesFoldersCursorQueryCmsPagesV3LandingPagesFoldersCursorQuery200Response> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Cms.Pages.V3.LandingPages.Folders.Cursor.Query.QueryRequestBuilder.QueryRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Cms.Pages.V3.LandingPages.Folders.Cursor.Query.QueryGetResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Cms.Pages.V3.LandingPages.Folders.Cursor.Query.QueryGetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CmsGetCmsPagesV3LandingPagesFoldersCursorQueryCmsPagesV3LandingPagesFoldersCursorQuery200Response>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CmsGetCmsPagesV3LandingPagesFoldersCursorQueryCmsPagesV3LandingPagesFoldersCursorQuery200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

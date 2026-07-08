@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A CRM object type where this card should be displayed.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CardObjectTypeBody_name? Name { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CardObjectTypeBodyName? Name { get; set; }
         /// <summary>An array of properties that should be sent to this card&apos;s target URL when the data fetch request is made. Must be valid properties for the corresponding CRM object type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -49,7 +49,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "name", n => { Name = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CardObjectTypeBody_name>(); } },
+                { "name", n => { Name = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CardObjectTypeBodyName>(); } },
                 { "propertiesToSend", n => { PropertiesToSend = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }
@@ -60,7 +60,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CardObjectTypeBody_name>("name", Name);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CardObjectTypeBodyName>("name", Name);
             writer.WriteCollectionOfPrimitiveValues<string>("propertiesToSend", PropertiesToSend);
             writer.WriteAdditionalData(AdditionalData);
         }

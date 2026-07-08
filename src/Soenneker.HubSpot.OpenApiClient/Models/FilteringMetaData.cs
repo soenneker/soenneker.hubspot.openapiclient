@@ -34,6 +34,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<string> PipelineIds { get; set; }
 #endif
+        /// <summary>The teamIds property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? TeamIds { get; set; }
+#nullable restore
+#else
+        public List<string> TeamIds { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.FilteringMetaData"/> and sets the default values.
         /// </summary>
@@ -63,6 +71,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "includeUnconfirmedUsers", n => { IncludeUnconfirmedUsers = n.GetBoolValue(); } },
                 { "listProcessingTypes", n => { ListProcessingTypes = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "pipelineIds", n => { PipelineIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "teamIds", n => { TeamIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }
         /// <summary>
@@ -76,6 +85,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteBoolValue("includeUnconfirmedUsers", IncludeUnconfirmedUsers);
             writer.WriteCollectionOfPrimitiveValues<string>("listProcessingTypes", ListProcessingTypes);
             writer.WriteCollectionOfPrimitiveValues<string>("pipelineIds", PipelineIds);
+            writer.WriteCollectionOfPrimitiveValues<string>("teamIds", TeamIds);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

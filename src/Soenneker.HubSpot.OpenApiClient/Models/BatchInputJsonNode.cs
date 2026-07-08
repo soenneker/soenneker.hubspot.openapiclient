@@ -18,10 +18,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>JSON nodes to input.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.BatchInputJsonNode_inputs>? Inputs { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.BatchInputJsonNodeInputsItemProperty>? Inputs { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.BatchInputJsonNode_inputs> Inputs { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.BatchInputJsonNodeInputsItemProperty> Inputs { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.BatchInputJsonNode"/> and sets the default values.
@@ -48,7 +48,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "inputs", n => { Inputs = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.BatchInputJsonNode_inputs>(global::Soenneker.HubSpot.OpenApiClient.Models.BatchInputJsonNode_inputs.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "inputs", n => { Inputs = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.BatchInputJsonNodeInputsItemProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.BatchInputJsonNodeInputsItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -58,7 +58,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.BatchInputJsonNode_inputs>("inputs", Inputs);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.BatchInputJsonNodeInputsItemProperty>("inputs", Inputs);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

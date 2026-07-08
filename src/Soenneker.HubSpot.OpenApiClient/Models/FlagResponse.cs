@@ -17,7 +17,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The ID of the app</summary>
         public int? AppId { get; set; }
         /// <summary>The flag state for any portal that doesn&apos;t have an override value</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.FlagResponse_defaultState? DefaultState { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.FlagResponseDefaultState? DefaultState { get; set; }
         /// <summary>The name of the flag</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -27,7 +27,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string FlagName { get; set; }
 #endif
         /// <summary>An optional flag value that overrides all others for this flag name and app, including portal-level values</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.FlagResponse_overrideState? OverrideState { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.FlagResponseOverrideState? OverrideState { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.FlagResponse"/> and sets the default values.
         /// </summary>
@@ -54,9 +54,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "appId", n => { AppId = n.GetIntValue(); } },
-                { "defaultState", n => { DefaultState = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FlagResponse_defaultState>(); } },
+                { "defaultState", n => { DefaultState = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FlagResponseDefaultState>(); } },
                 { "flagName", n => { FlagName = n.GetStringValue(); } },
-                { "overrideState", n => { OverrideState = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FlagResponse_overrideState>(); } },
+                { "overrideState", n => { OverrideState = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FlagResponseOverrideState>(); } },
             };
         }
         /// <summary>
@@ -67,9 +67,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("appId", AppId);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FlagResponse_defaultState>("defaultState", DefaultState);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FlagResponseDefaultState>("defaultState", DefaultState);
             writer.WriteStringValue("flagName", FlagName);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FlagResponse_overrideState>("overrideState", OverrideState);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FlagResponseOverrideState>("overrideState", OverrideState);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

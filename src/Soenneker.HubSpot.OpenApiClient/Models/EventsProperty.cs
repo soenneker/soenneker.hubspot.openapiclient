@@ -48,9 +48,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string CurrencyPropertyName { get; set; }
 #endif
         /// <summary>Indicates the sensitivity level of the property, such as &quot;non_sensitive&quot;, &quot;sensitive&quot;, or &quot;highly_sensitive&quot;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EventsProperty_dataSensitivity? DataSensitivity { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EventsPropertyDataSensitivity? DataSensitivity { get; set; }
         /// <summary>The dateDisplayHint property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EventsProperty_dateDisplayHint? DateDisplayHint { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EventsPropertyDateDisplayHint? DateDisplayHint { get; set; }
         /// <summary>A summary of the property&apos;s purpose.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -112,7 +112,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Name { get; set; }
 #endif
         /// <summary>&quot;Hint for how a number property is displayed and validated in HubSpot&apos;s UI. Can be: \&quot;unformatted\&quot;, \&quot;formatted\&quot;, \&quot;currency\&quot;, \&quot;percentage\&quot;, \&quot;duration\&quot;, or \&quot;probability\&quot;.&quot;</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EventsProperty_numberDisplayHint? NumberDisplayHint { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EventsPropertyNumberDisplayHint? NumberDisplayHint { get; set; }
         /// <summary>A list of valid options for the property. This field is required for enumerated properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -140,7 +140,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Whether to show the currency symbol in HubSpot&apos;s UI.</summary>
         public bool? ShowCurrencySymbol { get; set; }
         /// <summary>&quot;Hint for how the text is displayed and validated in HubSpot&apos;s UI. Can be: \&quot;unformatted_single_line\&quot;, \&quot;multi_line\&quot;, \&quot;email\&quot;, \&quot;phone_number\&quot;, \&quot;domain_name\&quot;, \&quot;ip_address\&quot;, \&quot;physical_address\&quot;, or \&quot;postal_code\&quot;.&quot;</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EventsProperty_textDisplayHint? TextDisplayHint { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EventsPropertyTextDisplayHint? TextDisplayHint { get; set; }
         /// <summary>The data type of the property, such as string or number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -191,8 +191,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "createdUserId", n => { CreatedUserId = n.GetStringValue(); } },
                 { "currencyPropertyName", n => { CurrencyPropertyName = n.GetStringValue(); } },
-                { "dataSensitivity", n => { DataSensitivity = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsProperty_dataSensitivity>(); } },
-                { "dateDisplayHint", n => { DateDisplayHint = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsProperty_dateDisplayHint>(); } },
+                { "dataSensitivity", n => { DataSensitivity = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsPropertyDataSensitivity>(); } },
+                { "dateDisplayHint", n => { DateDisplayHint = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsPropertyDateDisplayHint>(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "displayOrder", n => { DisplayOrder = n.GetIntValue(); } },
                 { "externalOptions", n => { ExternalOptions = n.GetBoolValue(); } },
@@ -205,12 +205,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "modificationMetadata", n => { ModificationMetadata = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsPropertyModificationMetadata>(global::Soenneker.HubSpot.OpenApiClient.Models.EventsPropertyModificationMetadata.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "numberDisplayHint", n => { NumberDisplayHint = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsProperty_numberDisplayHint>(); } },
+                { "numberDisplayHint", n => { NumberDisplayHint = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsPropertyNumberDisplayHint>(); } },
                 { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.EventsOption1>(global::Soenneker.HubSpot.OpenApiClient.Models.EventsOption1.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "referencedObjectType", n => { ReferencedObjectType = n.GetStringValue(); } },
                 { "sensitiveDataCategories", n => { SensitiveDataCategories = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "showCurrencySymbol", n => { ShowCurrencySymbol = n.GetBoolValue(); } },
-                { "textDisplayHint", n => { TextDisplayHint = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsProperty_textDisplayHint>(); } },
+                { "textDisplayHint", n => { TextDisplayHint = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsPropertyTextDisplayHint>(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
                 { "updatedUserId", n => { UpdatedUserId = n.GetStringValue(); } },
@@ -230,8 +230,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
             writer.WriteStringValue("createdUserId", CreatedUserId);
             writer.WriteStringValue("currencyPropertyName", CurrencyPropertyName);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsProperty_dataSensitivity>("dataSensitivity", DataSensitivity);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsProperty_dateDisplayHint>("dateDisplayHint", DateDisplayHint);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsPropertyDataSensitivity>("dataSensitivity", DataSensitivity);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsPropertyDateDisplayHint>("dateDisplayHint", DateDisplayHint);
             writer.WriteStringValue("description", Description);
             writer.WriteIntValue("displayOrder", DisplayOrder);
             writer.WriteBoolValue("externalOptions", ExternalOptions);
@@ -244,12 +244,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("label", Label);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsPropertyModificationMetadata>("modificationMetadata", ModificationMetadata);
             writer.WriteStringValue("name", Name);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsProperty_numberDisplayHint>("numberDisplayHint", NumberDisplayHint);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsPropertyNumberDisplayHint>("numberDisplayHint", NumberDisplayHint);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.EventsOption1>("options", Options);
             writer.WriteStringValue("referencedObjectType", ReferencedObjectType);
             writer.WriteCollectionOfPrimitiveValues<string>("sensitiveDataCategories", SensitiveDataCategories);
             writer.WriteBoolValue("showCurrencySymbol", ShowCurrencySymbol);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsProperty_textDisplayHint>("textDisplayHint", TextDisplayHint);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsPropertyTextDisplayHint>("textDisplayHint", TextDisplayHint);
             writer.WriteStringValue("type", Type);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             writer.WriteStringValue("updatedUserId", UpdatedUserId);

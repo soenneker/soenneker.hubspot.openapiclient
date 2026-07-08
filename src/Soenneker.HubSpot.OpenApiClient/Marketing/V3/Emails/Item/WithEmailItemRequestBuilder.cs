@@ -215,6 +215,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Item
             [QueryParameter("includedProperties")]
             public string[] IncludedProperties { get; set; }
 #endif
+            /// <summary>Include statistics with email</summary>
             [QueryParameter("includeStats")]
             public bool? IncludeStats { get; set; }
             [QueryParameter("marketingCampaignNames")]

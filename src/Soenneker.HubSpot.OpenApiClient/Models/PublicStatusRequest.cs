@@ -15,9 +15,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The type of communication channel. Currently, only `EMAIL` is supported.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusRequest_channel? Channel { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusRequestChannel? Channel { get; set; }
         /// <summary>The legal basis for communication.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusRequest_legalBasis? LegalBasis { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusRequestLegalBasis? LegalBasis { get; set; }
         /// <summary>The explanation for the legal basis.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -27,7 +27,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string LegalBasisExplanation { get; set; }
 #endif
         /// <summary>The status of the contact&apos;s subscription.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusRequest_statusState? StatusState { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusRequestStatusState? StatusState { get; set; }
         /// <summary>The contact&apos;s email address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -63,10 +63,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "channel", n => { Channel = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusRequest_channel>(); } },
-                { "legalBasis", n => { LegalBasis = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusRequest_legalBasis>(); } },
+                { "channel", n => { Channel = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusRequestChannel>(); } },
+                { "legalBasis", n => { LegalBasis = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusRequestLegalBasis>(); } },
                 { "legalBasisExplanation", n => { LegalBasisExplanation = n.GetStringValue(); } },
-                { "statusState", n => { StatusState = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusRequest_statusState>(); } },
+                { "statusState", n => { StatusState = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusRequestStatusState>(); } },
                 { "subscriberIdString", n => { SubscriberIdString = n.GetStringValue(); } },
                 { "subscriptionId", n => { SubscriptionId = n.GetLongValue(); } },
             };
@@ -78,10 +78,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusRequest_channel>("channel", Channel);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusRequest_legalBasis>("legalBasis", LegalBasis);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusRequestChannel>("channel", Channel);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusRequestLegalBasis>("legalBasis", LegalBasis);
             writer.WriteStringValue("legalBasisExplanation", LegalBasisExplanation);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusRequest_statusState>("statusState", StatusState);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusRequestStatusState>("statusState", StatusState);
             writer.WriteStringValue("subscriberIdString", SubscriberIdString);
             writer.WriteLongValue("subscriptionId", SubscriptionId);
             writer.WriteAdditionalData(AdditionalData);

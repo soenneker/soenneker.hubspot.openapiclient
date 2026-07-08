@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Specifies the type of connection between actions in the automation flow.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiConnection_edgeType? EdgeType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiConnectionEdgeType? EdgeType { get; set; }
         /// <summary>The identifier for the subsequent action in the automation sequence.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -49,7 +49,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "edgeType", n => { EdgeType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiConnection_edgeType>(); } },
+                { "edgeType", n => { EdgeType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiConnectionEdgeType>(); } },
                 { "nextActionId", n => { NextActionId = n.GetStringValue(); } },
             };
         }
@@ -60,7 +60,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiConnection_edgeType>("edgeType", EdgeType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiConnectionEdgeType>("edgeType", EdgeType);
             writer.WriteStringValue("nextActionId", NextActionId);
             writer.WriteAdditionalData(AdditionalData);
         }

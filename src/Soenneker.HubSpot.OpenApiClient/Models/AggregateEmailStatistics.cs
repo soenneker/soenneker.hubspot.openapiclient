@@ -26,10 +26,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The aggregated statistics per campaign.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AggregateEmailStatistics_campaignAggregations? CampaignAggregations { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AggregateEmailStatisticsCampaignAggregationsProperty? CampaignAggregations { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AggregateEmailStatistics_campaignAggregations CampaignAggregations { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AggregateEmailStatisticsCampaignAggregationsProperty CampaignAggregations { get; set; }
 #endif
         /// <summary>List of email IDs that were sent during the time span.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -65,7 +65,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "aggregate", n => { Aggregate = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsData>(global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsData.CreateFromDiscriminatorValue); } },
-                { "campaignAggregations", n => { CampaignAggregations = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.AggregateEmailStatistics_campaignAggregations>(global::Soenneker.HubSpot.OpenApiClient.Models.AggregateEmailStatistics_campaignAggregations.CreateFromDiscriminatorValue); } },
+                { "campaignAggregations", n => { CampaignAggregations = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.AggregateEmailStatisticsCampaignAggregationsProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.AggregateEmailStatisticsCampaignAggregationsProperty.CreateFromDiscriminatorValue); } },
                 { "emails", n => { Emails = n.GetCollectionOfPrimitiveValues<long?>()?.AsList(); } },
             };
         }
@@ -77,7 +77,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsData>("aggregate", Aggregate);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.AggregateEmailStatistics_campaignAggregations>("campaignAggregations", CampaignAggregations);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.AggregateEmailStatisticsCampaignAggregationsProperty>("campaignAggregations", CampaignAggregations);
             writer.WriteCollectionOfPrimitiveValues<long?>("emails", Emails);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -77,7 +77,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Whether the thread is marked as spam.</summary>
         public bool? Spam { get; set; }
         /// <summary>&quot;The thread&apos;s status: `OPEN` or `CLOSED`.&quot;</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicThread_status? Status { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadStatus? Status { get; set; }
         /// <summary>The threadAssociations property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -124,7 +124,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "originalChannelAccountId", n => { OriginalChannelAccountId = n.GetStringValue(); } },
                 { "originalChannelId", n => { OriginalChannelId = n.GetStringValue(); } },
                 { "spam", n => { Spam = n.GetBoolValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicThread_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadStatus>(); } },
                 { "threadAssociations", n => { ThreadAssociations = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadAssociations>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadAssociations.CreateFromDiscriminatorValue); } },
             };
         }
@@ -148,7 +148,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("originalChannelAccountId", OriginalChannelAccountId);
             writer.WriteStringValue("originalChannelId", OriginalChannelId);
             writer.WriteBoolValue("spam", Spam);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicThread_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadStatus>("status", Status);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadAssociations>("threadAssociations", ThreadAssociations);
             writer.WriteAdditionalData(AdditionalData);
         }

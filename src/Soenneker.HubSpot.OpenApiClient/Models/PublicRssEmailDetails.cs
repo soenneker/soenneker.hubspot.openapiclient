@@ -26,7 +26,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The blogImageMaxWidth property</summary>
         public int? BlogImageMaxWidth { get; set; }
         /// <summary>The blogLayout property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetails_blogLayout? BlogLayout { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetailsBlogLayout? BlogLayout { get; set; }
         /// <summary>The hubspotBlogId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -48,10 +48,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The timing property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetails_timing? Timing { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetailsTimingProperty? Timing { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetails_timing Timing { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetailsTimingProperty Timing { get; set; }
 #endif
         /// <summary>The url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -90,11 +90,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "blogEmailType", n => { BlogEmailType = n.GetStringValue(); } },
                 { "blogImageMaxWidth", n => { BlogImageMaxWidth = n.GetIntValue(); } },
-                { "blogLayout", n => { BlogLayout = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetails_blogLayout>(); } },
+                { "blogLayout", n => { BlogLayout = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetailsBlogLayout>(); } },
                 { "hubspotBlogId", n => { HubspotBlogId = n.GetStringValue(); } },
                 { "maxEntries", n => { MaxEntries = n.GetIntValue(); } },
                 { "rssEntryTemplate", n => { RssEntryTemplate = n.GetStringValue(); } },
-                { "timing", n => { Timing = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetails_timing>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetails_timing.CreateFromDiscriminatorValue); } },
+                { "timing", n => { Timing = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetailsTimingProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetailsTimingProperty.CreateFromDiscriminatorValue); } },
                 { "url", n => { Url = n.GetStringValue(); } },
                 { "useHeadlineAsSubject", n => { UseHeadlineAsSubject = n.GetBoolValue(); } },
             };
@@ -108,11 +108,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("blogEmailType", BlogEmailType);
             writer.WriteIntValue("blogImageMaxWidth", BlogImageMaxWidth);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetails_blogLayout>("blogLayout", BlogLayout);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetailsBlogLayout>("blogLayout", BlogLayout);
             writer.WriteStringValue("hubspotBlogId", HubspotBlogId);
             writer.WriteIntValue("maxEntries", MaxEntries);
             writer.WriteStringValue("rssEntryTemplate", RssEntryTemplate);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetails_timing>("timing", Timing);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetailsTimingProperty>("timing", Timing);
             writer.WriteStringValue("url", Url);
             writer.WriteBoolValue("useHeadlineAsSubject", UseHeadlineAsSubject);
             writer.WriteAdditionalData(AdditionalData);

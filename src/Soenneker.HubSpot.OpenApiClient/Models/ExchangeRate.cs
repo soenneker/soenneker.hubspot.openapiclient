@@ -21,7 +21,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The date the exchange rate is in effect.</summary>
         public DateTimeOffset? EffectiveAt { get; set; }
         /// <summary>This represents the three-letter currency code (such as USD for US Dollar) of the currency you are converting from.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExchangeRate_fromCurrencyCode? FromCurrencyCode { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExchangeRateFromCurrencyCode? FromCurrencyCode { get; set; }
         /// <summary>A unique identifier for the exchange rate</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -31,7 +31,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>This represents the three-letter currency code (such as USD for US Dollar) of the currency you are converting to.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExchangeRate_toCurrencyCode? ToCurrencyCode { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExchangeRateToCurrencyCode? ToCurrencyCode { get; set; }
         /// <summary>The date the exchange rate was last updated.</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>This indicates if the exchange rate is shown in the MultiCurrency settings page.</summary>
@@ -64,9 +64,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "conversionRate", n => { ConversionRate = n.GetDoubleValue(); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "effectiveAt", n => { EffectiveAt = n.GetDateTimeOffsetValue(); } },
-                { "fromCurrencyCode", n => { FromCurrencyCode = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExchangeRate_fromCurrencyCode>(); } },
+                { "fromCurrencyCode", n => { FromCurrencyCode = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExchangeRateFromCurrencyCode>(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "toCurrencyCode", n => { ToCurrencyCode = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExchangeRate_toCurrencyCode>(); } },
+                { "toCurrencyCode", n => { ToCurrencyCode = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExchangeRateToCurrencyCode>(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
                 { "visibleInUI", n => { VisibleInUI = n.GetBoolValue(); } },
             };
@@ -81,9 +81,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteDoubleValue("conversionRate", ConversionRate);
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
             writer.WriteDateTimeOffsetValue("effectiveAt", EffectiveAt);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExchangeRate_fromCurrencyCode>("fromCurrencyCode", FromCurrencyCode);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExchangeRateFromCurrencyCode>("fromCurrencyCode", FromCurrencyCode);
             writer.WriteStringValue("id", Id);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExchangeRate_toCurrencyCode>("toCurrencyCode", ToCurrencyCode);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExchangeRateToCurrencyCode>("toCurrencyCode", ToCurrencyCode);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             writer.WriteBoolValue("visibleInUI", VisibleInUI);
             writer.WriteAdditionalData(AdditionalData);

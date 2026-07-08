@@ -59,7 +59,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTeam> Teams { get; set; }
 #endif
         /// <summary>The type of the owner, which can be either PERSON or QUEUE.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicOwner_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicOwnerType? Type { get; set; }
         /// <summary>The date and time when the owner was last updated.</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>The user ID of the owner.</summary>
@@ -98,7 +98,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "lastName", n => { LastName = n.GetStringValue(); } },
                 { "teams", n => { Teams = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTeam>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicTeam.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicOwner_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicOwnerType>(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
                 { "userId", n => { UserId = n.GetIntValue(); } },
                 { "userIdIncludingInactive", n => { UserIdIncludingInactive = n.GetIntValue(); } },
@@ -118,7 +118,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("lastName", LastName);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTeam>("teams", Teams);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicOwner_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicOwnerType>("type", Type);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             writer.WriteIntValue("userId", UserId);
             writer.WriteIntValue("userIdIncludingInactive", UserIdIncludingInactive);

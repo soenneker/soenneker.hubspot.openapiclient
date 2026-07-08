@@ -43,13 +43,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Contains the fields associated with the single connection action.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiSingleConnectionAction_fields? Fields { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiSingleConnectionActionFieldsProperty? Fields { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiSingleConnectionAction_fields Fields { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiSingleConnectionActionFieldsProperty Fields { get; set; }
 #endif
         /// <summary>Indicates the type of the action, which defaults to SINGLE_CONNECTION.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiSingleConnectionAction_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiSingleConnectionActionType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiSingleConnectionAction"/> and sets the default values.
         /// </summary>
@@ -79,8 +79,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "actionTypeId", n => { ActionTypeId = n.GetStringValue(); } },
                 { "actionTypeVersion", n => { ActionTypeVersion = n.GetIntValue(); } },
                 { "connection", n => { Connection = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiConnection>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiConnection.CreateFromDiscriminatorValue); } },
-                { "fields", n => { Fields = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiSingleConnectionAction_fields>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiSingleConnectionAction_fields.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiSingleConnectionAction_type>(); } },
+                { "fields", n => { Fields = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiSingleConnectionActionFieldsProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiSingleConnectionActionFieldsProperty.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiSingleConnectionActionType>(); } },
             };
         }
         /// <summary>
@@ -94,8 +94,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("actionTypeId", ActionTypeId);
             writer.WriteIntValue("actionTypeVersion", ActionTypeVersion);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiConnection>("connection", Connection);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiSingleConnectionAction_fields>("fields", Fields);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiSingleConnectionAction_type>("type", Type);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiSingleConnectionActionFieldsProperty>("fields", Fields);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiSingleConnectionActionType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

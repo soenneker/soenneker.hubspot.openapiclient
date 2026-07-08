@@ -33,6 +33,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Folders.Item.Rename
         public RenameRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/crm/v3/lists/folders/{folderId}/rename{?newFolderName*}", rawUrl)
         {
         }
+        /// <summary>
+        /// Renames the given folderId with a new name.
+        /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ListFolderFetchResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -48,6 +51,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Folders.Item.Rename
             var requestInfo = ToPutRequestInformation(requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ListFolderFetchResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ListFolderFetchResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
+        /// <summary>
+        /// Renames the given folderId with a new name.
+        /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -73,11 +79,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Folders.Item.Rename
         {
             return new global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Folders.Item.Rename.RenameRequestBuilder(rawUrl, RequestAdapter);
         }
+        /// <summary>
+        /// Renames the given folderId with a new name.
+        /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        #pragma warning disable CS1591
         public partial class RenameRequestBuilderPutQueryParameters 
-        #pragma warning restore CS1591
         {
+            /// <summary>The new name of the folder.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("newFolderName")]

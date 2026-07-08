@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Extensions.Calling
             get => new global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Extensions.Calling.Transcripts.TranscriptsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.crm.v3.extensions.calling.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The unique identifier for the app whose calling extension settings are being retrieved.</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Extensions.Calling.Item.WithAppItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Extensions.Calling.Item.WithAppItemRequestBuilder this[int position]
         {

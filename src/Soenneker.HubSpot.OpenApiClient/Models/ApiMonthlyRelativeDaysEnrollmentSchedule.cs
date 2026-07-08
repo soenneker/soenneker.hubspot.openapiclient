@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>&quot;One of the possible relative days to enroll can be: LAST_DAY_OF_MONTH, or FIRST_MONDAY_OF_MONTH&quot;</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiMonthlyRelativeDaysEnrollmentSchedule_monthlyRelativeDays? MonthlyRelativeDays { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiMonthlyRelativeDaysEnrollmentScheduleMonthlyRelativeDays? MonthlyRelativeDays { get; set; }
         /// <summary>The timeOfDay property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -25,7 +25,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeOfDay TimeOfDay { get; set; }
 #endif
         /// <summary>&quot;The type of schedule, always: MONTHLY_RELATIVE_DAYS&quot;</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiMonthlyRelativeDaysEnrollmentSchedule_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiMonthlyRelativeDaysEnrollmentScheduleType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiMonthlyRelativeDaysEnrollmentSchedule"/> and sets the default values.
         /// </summary>
@@ -51,9 +51,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "monthlyRelativeDays", n => { MonthlyRelativeDays = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiMonthlyRelativeDaysEnrollmentSchedule_monthlyRelativeDays>(); } },
+                { "monthlyRelativeDays", n => { MonthlyRelativeDays = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiMonthlyRelativeDaysEnrollmentScheduleMonthlyRelativeDays>(); } },
                 { "timeOfDay", n => { TimeOfDay = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeOfDay>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeOfDay.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiMonthlyRelativeDaysEnrollmentSchedule_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiMonthlyRelativeDaysEnrollmentScheduleType>(); } },
             };
         }
         /// <summary>
@@ -63,9 +63,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiMonthlyRelativeDaysEnrollmentSchedule_monthlyRelativeDays>("monthlyRelativeDays", MonthlyRelativeDays);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiMonthlyRelativeDaysEnrollmentScheduleMonthlyRelativeDays>("monthlyRelativeDays", MonthlyRelativeDays);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeOfDay>("timeOfDay", TimeOfDay);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiMonthlyRelativeDaysEnrollmentSchedule_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiMonthlyRelativeDaysEnrollmentScheduleType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

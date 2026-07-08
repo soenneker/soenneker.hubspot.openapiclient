@@ -15,9 +15,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The state that the flag should have if there are no overrides for a particular portal</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.FlagPutRequest_defaultState? DefaultState { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.FlagPutRequestDefaultState? DefaultState { get; set; }
         /// <summary>A flag value that supercedes all other overrides, including portal-level values. Mostly used for things like emergency overrides</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.FlagPutRequest_overrideState? OverrideState { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.FlagPutRequestOverrideState? OverrideState { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.FlagPutRequest"/> and sets the default values.
         /// </summary>
@@ -43,8 +43,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "defaultState", n => { DefaultState = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FlagPutRequest_defaultState>(); } },
-                { "overrideState", n => { OverrideState = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FlagPutRequest_overrideState>(); } },
+                { "defaultState", n => { DefaultState = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FlagPutRequestDefaultState>(); } },
+                { "overrideState", n => { OverrideState = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FlagPutRequestOverrideState>(); } },
             };
         }
         /// <summary>
@@ -54,8 +54,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FlagPutRequest_defaultState>("defaultState", DefaultState);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FlagPutRequest_overrideState>("overrideState", OverrideState);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FlagPutRequestDefaultState>("defaultState", DefaultState);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FlagPutRequestOverrideState>("overrideState", OverrideState);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

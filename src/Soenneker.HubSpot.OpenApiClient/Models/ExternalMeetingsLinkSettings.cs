@@ -17,10 +17,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An array containing the closed range availability for a meeting link. Closed range times are provided as minute offsets from midnight (e.g., 540 corresponds to 9am).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettings_availability? Availability { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettingsAvailabilityProperty? Availability { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettings_availability Availability { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettingsAvailabilityProperty Availability { get; set; }
 #endif
         /// <summary>The end date for a meeting link&apos;s custom availability window, represented as Unix time in milliseconds.</summary>
         public long? CustomAvailabilityEndDate { get; set; }
@@ -105,7 +105,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string RedirectUrl { get; set; }
 #endif
         /// <summary>The increment for available start times of meetings, spelt out as a word (e.g. 15 minute increment corresponds to `FIFTEEN`). `MEETING_DURATION` is also a valid value.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettings_startTimeIncrementMinutes? StartTimeIncrementMinutes { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettingsStartTimeIncrementMinutes? StartTimeIncrementMinutes { get; set; }
         /// <summary>Legacy property that indicates the number of weeks in advance that availability is advertised. May be outdated or superseded by other properties.</summary>
         public int? WeeksToAdvertise { get; set; }
         /// <summary>The welcomeScreenInfo property</summary>
@@ -141,7 +141,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "availability", n => { Availability = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettings_availability>(global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettings_availability.CreateFromDiscriminatorValue); } },
+                { "availability", n => { Availability = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettingsAvailabilityProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettingsAvailabilityProperty.CreateFromDiscriminatorValue); } },
                 { "customAvailabilityEndDate", n => { CustomAvailabilityEndDate = n.GetLongValue(); } },
                 { "customAvailabilityStartDate", n => { CustomAvailabilityStartDate = n.GetLongValue(); } },
                 { "displayInfo", n => { DisplayInfo = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkDisplayInfo>(global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkDisplayInfo.CreateFromDiscriminatorValue); } },
@@ -156,7 +156,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "meetingBufferTime", n => { MeetingBufferTime = n.GetLongValue(); } },
                 { "ownerPrioritized", n => { OwnerPrioritized = n.GetBoolValue(); } },
                 { "redirectUrl", n => { RedirectUrl = n.GetStringValue(); } },
-                { "startTimeIncrementMinutes", n => { StartTimeIncrementMinutes = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettings_startTimeIncrementMinutes>(); } },
+                { "startTimeIncrementMinutes", n => { StartTimeIncrementMinutes = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettingsStartTimeIncrementMinutes>(); } },
                 { "weeksToAdvertise", n => { WeeksToAdvertise = n.GetIntValue(); } },
                 { "welcomeScreenInfo", n => { WelcomeScreenInfo = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsWelcomeScreenInfo>(global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsWelcomeScreenInfo.CreateFromDiscriminatorValue); } },
             };
@@ -168,7 +168,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettings_availability>("availability", Availability);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettingsAvailabilityProperty>("availability", Availability);
             writer.WriteLongValue("customAvailabilityEndDate", CustomAvailabilityEndDate);
             writer.WriteLongValue("customAvailabilityStartDate", CustomAvailabilityStartDate);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkDisplayInfo>("displayInfo", DisplayInfo);
@@ -183,7 +183,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteLongValue("meetingBufferTime", MeetingBufferTime);
             writer.WriteBoolValue("ownerPrioritized", OwnerPrioritized);
             writer.WriteStringValue("redirectUrl", RedirectUrl);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettings_startTimeIncrementMinutes>("startTimeIncrementMinutes", StartTimeIncrementMinutes);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettingsStartTimeIncrementMinutes>("startTimeIncrementMinutes", StartTimeIncrementMinutes);
             writer.WriteIntValue("weeksToAdvertise", WeeksToAdvertise);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsWelcomeScreenInfo>("welcomeScreenInfo", WelcomeScreenInfo);
             writer.WriteAdditionalData(AdditionalData);

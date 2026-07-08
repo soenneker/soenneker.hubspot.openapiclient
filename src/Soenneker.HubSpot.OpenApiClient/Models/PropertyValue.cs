@@ -16,7 +16,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The sensitivity level of the property, such as &quot;non_sensitive&quot;, &quot;sensitive&quot;, and &quot;highly_sensitive&quot;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyValue_dataSensitivity? DataSensitivity { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyValueDataSensitivity? DataSensitivity { get; set; }
         /// <summary>Whether the property value is encrypted.</summary>
         public bool? IsEncrypted { get; set; }
         /// <summary>Indicates if the value exceeds normal size limits.</summary>
@@ -44,7 +44,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The timestamp when the value was selected by a user, if applicable.</summary>
         public long? SelectedByUserTimestamp { get; set; }
         /// <summary>The origin of the property value, such as &quot;IMPORT&quot; or &quot;API&quot;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyValue_source? Source { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyValueSource? Source { get; set; }
         /// <summary>The ID of the property source indicating where it was created.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -132,7 +132,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "dataSensitivity", n => { DataSensitivity = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyValue_dataSensitivity>(); } },
+                { "dataSensitivity", n => { DataSensitivity = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyValueDataSensitivity>(); } },
                 { "isEncrypted", n => { IsEncrypted = n.GetBoolValue(); } },
                 { "isLargeValue", n => { IsLargeValue = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
@@ -140,7 +140,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "requestId", n => { RequestId = n.GetStringValue(); } },
                 { "selectedByUser", n => { SelectedByUser = n.GetBoolValue(); } },
                 { "selectedByUserTimestamp", n => { SelectedByUserTimestamp = n.GetLongValue(); } },
-                { "source", n => { Source = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyValue_source>(); } },
+                { "source", n => { Source = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyValueSource>(); } },
                 { "sourceId", n => { SourceId = n.GetStringValue(); } },
                 { "sourceLabel", n => { SourceLabel = n.GetStringValue(); } },
                 { "sourceMetadata", n => { SourceMetadata = n.GetStringValue(); } },
@@ -160,7 +160,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyValue_dataSensitivity>("dataSensitivity", DataSensitivity);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyValueDataSensitivity>("dataSensitivity", DataSensitivity);
             writer.WriteBoolValue("isEncrypted", IsEncrypted);
             writer.WriteBoolValue("isLargeValue", IsLargeValue);
             writer.WriteStringValue("name", Name);
@@ -168,7 +168,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("requestId", RequestId);
             writer.WriteBoolValue("selectedByUser", SelectedByUser);
             writer.WriteLongValue("selectedByUserTimestamp", SelectedByUserTimestamp);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyValue_source>("source", Source);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyValueSource>("source", Source);
             writer.WriteStringValue("sourceId", SourceId);
             writer.WriteStringValue("sourceLabel", SourceLabel);
             writer.WriteStringValue("sourceMetadata", SourceMetadata);

@@ -19,7 +19,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Indicates the number of days for the rolling date range.</summary>
         public int? NumberOfDays { get; set; }
         /// <summary>Specifies the type of operation, which defaults to &apos;ROLLING_DATE_RANGE&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRollingDateRangePropertyOperation_operationType? OperationType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRollingDateRangePropertyOperationOperationType? OperationType { get; set; }
         /// <summary>Defines the operator used in the rolling date range operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -36,7 +36,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public PublicRollingDateRangePropertyOperation()
         {
             AdditionalData = new Dictionary<string, object>();
-            OperationType = global::Soenneker.HubSpot.OpenApiClient.Models.PublicRollingDateRangePropertyOperation_operationType.ROLLING_DATE_RANGE;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -58,7 +57,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "includeObjectsWithNoValueSet", n => { IncludeObjectsWithNoValueSet = n.GetBoolValue(); } },
                 { "numberOfDays", n => { NumberOfDays = n.GetIntValue(); } },
-                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRollingDateRangePropertyOperation_operationType>(); } },
+                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRollingDateRangePropertyOperationOperationType>(); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
                 { "requiresTimeZoneConversion", n => { RequiresTimeZoneConversion = n.GetBoolValue(); } },
             };
@@ -72,7 +71,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("includeObjectsWithNoValueSet", IncludeObjectsWithNoValueSet);
             writer.WriteIntValue("numberOfDays", NumberOfDays);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRollingDateRangePropertyOperation_operationType>("operationType", OperationType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRollingDateRangePropertyOperationOperationType>("operationType", OperationType);
             writer.WriteStringValue("operator", Operator);
             writer.WriteBoolValue("requiresTimeZoneConversion", RequiresTimeZoneConversion);
             writer.WriteAdditionalData(AdditionalData);

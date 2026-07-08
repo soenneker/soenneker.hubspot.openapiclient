@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string PropertyToken { get; set; }
 #endif
         /// <summary>Indicates the type of the fetched object property, which defaults to FETCHED_OBJECT_PROPERTY.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiFetchedObjectPropertyValue_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiFetchedObjectPropertyValueType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiFetchedObjectPropertyValue"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "propertyToken", n => { PropertyToken = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiFetchedObjectPropertyValue_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiFetchedObjectPropertyValueType>(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("propertyToken", PropertyToken);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiFetchedObjectPropertyValue_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiFetchedObjectPropertyValueType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The minute component of the month reference.</summary>
         public int? Minute { get; set; }
         /// <summary>Indicates the type of reference, (MONTH).</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicMonthReference_referenceType? ReferenceType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicMonthReferenceReferenceType? ReferenceType { get; set; }
         /// <summary>The second component of the month reference.</summary>
         public int? Second { get; set; }
         /// <summary>
@@ -32,7 +32,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public CrmPublicMonthReference()
         {
             AdditionalData = new Dictionary<string, object>();
-            ReferenceType = global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicMonthReference_referenceType.MONTH;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -56,7 +55,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "hour", n => { Hour = n.GetIntValue(); } },
                 { "millisecond", n => { Millisecond = n.GetIntValue(); } },
                 { "minute", n => { Minute = n.GetIntValue(); } },
-                { "referenceType", n => { ReferenceType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicMonthReference_referenceType>(); } },
+                { "referenceType", n => { ReferenceType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicMonthReferenceReferenceType>(); } },
                 { "second", n => { Second = n.GetIntValue(); } },
             };
         }
@@ -71,7 +70,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteIntValue("hour", Hour);
             writer.WriteIntValue("millisecond", Millisecond);
             writer.WriteIntValue("minute", Minute);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicMonthReference_referenceType>("referenceType", ReferenceType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicMonthReferenceReferenceType>("referenceType", ReferenceType);
             writer.WriteIntValue("second", Second);
             writer.WriteAdditionalData(AdditionalData);
         }

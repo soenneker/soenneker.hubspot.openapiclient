@@ -17,10 +17,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Summarized outcomes of each row a developer attempted to import into HubSpot.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportMetadata_counters? Counters { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportMetadataCountersProperty? Counters { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportMetadata_counters Counters { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportMetadataCountersProperty Counters { get; set; }
 #endif
         /// <summary>The IDs of files uploaded in the File Manager API.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -63,7 +63,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "counters", n => { Counters = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportMetadata_counters>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportMetadata_counters.CreateFromDiscriminatorValue); } },
+                { "counters", n => { Counters = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportMetadataCountersProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportMetadataCountersProperty.CreateFromDiscriminatorValue); } },
                 { "fileIds", n => { FileIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "objectLists", n => { ObjectLists = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectListRecord>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectListRecord.CreateFromDiscriminatorValue)?.AsList(); } },
             };
@@ -75,7 +75,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportMetadata_counters>("counters", Counters);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportMetadataCountersProperty>("counters", Counters);
             writer.WriteCollectionOfPrimitiveValues<string>("fileIds", FileIds);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectListRecord>("objectLists", ObjectLists);
             writer.WriteAdditionalData(AdditionalData);

@@ -17,23 +17,23 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Defines the filter branch used to determine list-based enrollment criteria.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBasedEnrollmentCriteria.ApiListBasedEnrollmentCriteria_listFilterBranch? ListFilterBranch { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBasedEnrollmentCriteriaListFilterBranch? ListFilterBranch { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBasedEnrollmentCriteria.ApiListBasedEnrollmentCriteria_listFilterBranch ListFilterBranch { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBasedEnrollmentCriteriaListFilterBranch ListFilterBranch { get; set; }
 #endif
         /// <summary>The reEnrollmentTriggersFilterBranches property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBasedEnrollmentCriteria.ApiListBasedEnrollmentCriteria_reEnrollmentTriggersFilterBranches>? ReEnrollmentTriggersFilterBranches { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBasedEnrollmentCriteriaReEnrollmentTriggersFilterBranchesItem>? ReEnrollmentTriggersFilterBranches { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBasedEnrollmentCriteria.ApiListBasedEnrollmentCriteria_reEnrollmentTriggersFilterBranches> ReEnrollmentTriggersFilterBranches { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBasedEnrollmentCriteriaReEnrollmentTriggersFilterBranchesItem> ReEnrollmentTriggersFilterBranches { get; set; }
 #endif
         /// <summary>Determines if objects should be re-enrolled when they meet the criteria again.</summary>
         public bool? ShouldReEnroll { get; set; }
         /// <summary>Specifies the type of enrollment criteria, which defaults to &apos;LIST_BASED&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBasedEnrollmentCriteria_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBasedEnrollmentCriteriaType? Type { get; set; }
         /// <summary>Indicates whether objects not meeting the criteria should be unenrolled.</summary>
         public bool? UnEnrollObjectsNotMeetingCriteria { get; set; }
         /// <summary>
@@ -61,10 +61,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "listFilterBranch", n => { ListFilterBranch = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBasedEnrollmentCriteria.ApiListBasedEnrollmentCriteria_listFilterBranch>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBasedEnrollmentCriteria.ApiListBasedEnrollmentCriteria_listFilterBranch.CreateFromDiscriminatorValue); } },
-                { "reEnrollmentTriggersFilterBranches", n => { ReEnrollmentTriggersFilterBranches = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBasedEnrollmentCriteria.ApiListBasedEnrollmentCriteria_reEnrollmentTriggersFilterBranches>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBasedEnrollmentCriteria.ApiListBasedEnrollmentCriteria_reEnrollmentTriggersFilterBranches.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "listFilterBranch", n => { ListFilterBranch = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBasedEnrollmentCriteriaListFilterBranch>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBasedEnrollmentCriteriaListFilterBranch.CreateFromDiscriminatorValue); } },
+                { "reEnrollmentTriggersFilterBranches", n => { ReEnrollmentTriggersFilterBranches = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBasedEnrollmentCriteriaReEnrollmentTriggersFilterBranchesItem>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBasedEnrollmentCriteriaReEnrollmentTriggersFilterBranchesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "shouldReEnroll", n => { ShouldReEnroll = n.GetBoolValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBasedEnrollmentCriteria_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBasedEnrollmentCriteriaType>(); } },
                 { "unEnrollObjectsNotMeetingCriteria", n => { UnEnrollObjectsNotMeetingCriteria = n.GetBoolValue(); } },
             };
         }
@@ -75,362 +75,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBasedEnrollmentCriteria.ApiListBasedEnrollmentCriteria_listFilterBranch>("listFilterBranch", ListFilterBranch);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBasedEnrollmentCriteria.ApiListBasedEnrollmentCriteria_reEnrollmentTriggersFilterBranches>("reEnrollmentTriggersFilterBranches", ReEnrollmentTriggersFilterBranches);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBasedEnrollmentCriteriaListFilterBranch>("listFilterBranch", ListFilterBranch);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBasedEnrollmentCriteriaReEnrollmentTriggersFilterBranchesItem>("reEnrollmentTriggersFilterBranches", ReEnrollmentTriggersFilterBranches);
             writer.WriteBoolValue("shouldReEnroll", ShouldReEnroll);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBasedEnrollmentCriteria_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBasedEnrollmentCriteriaType>("type", Type);
             writer.WriteBoolValue("unEnrollObjectsNotMeetingCriteria", UnEnrollObjectsNotMeetingCriteria);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranch"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationFilterBranch"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAllFilterBranch"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAnyFilterBranch"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicOrFilterBranch"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicRestrictedFilterBranch"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilterBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ApiListBasedEnrollmentCriteria_listFilterBranch : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranch? PublicAndFilterBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranch PublicAndFilterBranch { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationFilterBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationFilterBranch? PublicAssociationFilterBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationFilterBranch PublicAssociationFilterBranch { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAllFilterBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAllFilterBranch? PublicNotAllFilterBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAllFilterBranch PublicNotAllFilterBranch { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAnyFilterBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAnyFilterBranch? PublicNotAnyFilterBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAnyFilterBranch PublicNotAnyFilterBranch { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicOrFilterBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicOrFilterBranch? PublicOrFilterBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicOrFilterBranch PublicOrFilterBranch { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicRestrictedFilterBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRestrictedFilterBranch? PublicRestrictedFilterBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRestrictedFilterBranch PublicRestrictedFilterBranch { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilterBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilterBranch? PublicUnifiedEventsFilterBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilterBranch PublicUnifiedEventsFilterBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBasedEnrollmentCriteria.ApiListBasedEnrollmentCriteria_listFilterBranch"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBasedEnrollmentCriteria.ApiListBasedEnrollmentCriteria_listFilterBranch CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBasedEnrollmentCriteria.ApiListBasedEnrollmentCriteria_listFilterBranch();
-                if("PublicAndFilterBranch".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicAndFilterBranch = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranch();
-                }
-                else if("PublicAssociationFilterBranch".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicAssociationFilterBranch = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationFilterBranch();
-                }
-                else if("PublicNotAllFilterBranch".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicNotAllFilterBranch = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAllFilterBranch();
-                }
-                else if("PublicNotAnyFilterBranch".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicNotAnyFilterBranch = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAnyFilterBranch();
-                }
-                else if("PublicOrFilterBranch".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicOrFilterBranch = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicOrFilterBranch();
-                }
-                else if("PublicRestrictedFilterBranch".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicRestrictedFilterBranch = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicRestrictedFilterBranch();
-                }
-                else if("PublicUnifiedEventsFilterBranch".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicUnifiedEventsFilterBranch = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilterBranch();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(PublicAndFilterBranch != null)
-                {
-                    return PublicAndFilterBranch.GetFieldDeserializers();
-                }
-                else if(PublicAssociationFilterBranch != null)
-                {
-                    return PublicAssociationFilterBranch.GetFieldDeserializers();
-                }
-                else if(PublicNotAllFilterBranch != null)
-                {
-                    return PublicNotAllFilterBranch.GetFieldDeserializers();
-                }
-                else if(PublicNotAnyFilterBranch != null)
-                {
-                    return PublicNotAnyFilterBranch.GetFieldDeserializers();
-                }
-                else if(PublicOrFilterBranch != null)
-                {
-                    return PublicOrFilterBranch.GetFieldDeserializers();
-                }
-                else if(PublicRestrictedFilterBranch != null)
-                {
-                    return PublicRestrictedFilterBranch.GetFieldDeserializers();
-                }
-                else if(PublicUnifiedEventsFilterBranch != null)
-                {
-                    return PublicUnifiedEventsFilterBranch.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(PublicAndFilterBranch != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranch>(null, PublicAndFilterBranch);
-                }
-                else if(PublicAssociationFilterBranch != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationFilterBranch>(null, PublicAssociationFilterBranch);
-                }
-                else if(PublicNotAllFilterBranch != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAllFilterBranch>(null, PublicNotAllFilterBranch);
-                }
-                else if(PublicNotAnyFilterBranch != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAnyFilterBranch>(null, PublicNotAnyFilterBranch);
-                }
-                else if(PublicOrFilterBranch != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicOrFilterBranch>(null, PublicOrFilterBranch);
-                }
-                else if(PublicRestrictedFilterBranch != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRestrictedFilterBranch>(null, PublicRestrictedFilterBranch);
-                }
-                else if(PublicUnifiedEventsFilterBranch != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilterBranch>(null, PublicUnifiedEventsFilterBranch);
-                }
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranch"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationFilterBranch"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAllFilterBranch"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAnyFilterBranch"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicOrFilterBranch"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicRestrictedFilterBranch"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilterBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ApiListBasedEnrollmentCriteria_reEnrollmentTriggersFilterBranches : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranch? PublicAndFilterBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranch PublicAndFilterBranch { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationFilterBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationFilterBranch? PublicAssociationFilterBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationFilterBranch PublicAssociationFilterBranch { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAllFilterBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAllFilterBranch? PublicNotAllFilterBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAllFilterBranch PublicNotAllFilterBranch { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAnyFilterBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAnyFilterBranch? PublicNotAnyFilterBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAnyFilterBranch PublicNotAnyFilterBranch { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicOrFilterBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicOrFilterBranch? PublicOrFilterBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicOrFilterBranch PublicOrFilterBranch { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicRestrictedFilterBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRestrictedFilterBranch? PublicRestrictedFilterBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRestrictedFilterBranch PublicRestrictedFilterBranch { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilterBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilterBranch? PublicUnifiedEventsFilterBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilterBranch PublicUnifiedEventsFilterBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBasedEnrollmentCriteria.ApiListBasedEnrollmentCriteria_reEnrollmentTriggersFilterBranches"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBasedEnrollmentCriteria.ApiListBasedEnrollmentCriteria_reEnrollmentTriggersFilterBranches CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBasedEnrollmentCriteria.ApiListBasedEnrollmentCriteria_reEnrollmentTriggersFilterBranches();
-                if("PublicAndFilterBranch".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicAndFilterBranch = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranch();
-                }
-                else if("PublicAssociationFilterBranch".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicAssociationFilterBranch = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationFilterBranch();
-                }
-                else if("PublicNotAllFilterBranch".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicNotAllFilterBranch = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAllFilterBranch();
-                }
-                else if("PublicNotAnyFilterBranch".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicNotAnyFilterBranch = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAnyFilterBranch();
-                }
-                else if("PublicOrFilterBranch".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicOrFilterBranch = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicOrFilterBranch();
-                }
-                else if("PublicRestrictedFilterBranch".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicRestrictedFilterBranch = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicRestrictedFilterBranch();
-                }
-                else if("PublicUnifiedEventsFilterBranch".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicUnifiedEventsFilterBranch = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilterBranch();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(PublicAndFilterBranch != null)
-                {
-                    return PublicAndFilterBranch.GetFieldDeserializers();
-                }
-                else if(PublicAssociationFilterBranch != null)
-                {
-                    return PublicAssociationFilterBranch.GetFieldDeserializers();
-                }
-                else if(PublicNotAllFilterBranch != null)
-                {
-                    return PublicNotAllFilterBranch.GetFieldDeserializers();
-                }
-                else if(PublicNotAnyFilterBranch != null)
-                {
-                    return PublicNotAnyFilterBranch.GetFieldDeserializers();
-                }
-                else if(PublicOrFilterBranch != null)
-                {
-                    return PublicOrFilterBranch.GetFieldDeserializers();
-                }
-                else if(PublicRestrictedFilterBranch != null)
-                {
-                    return PublicRestrictedFilterBranch.GetFieldDeserializers();
-                }
-                else if(PublicUnifiedEventsFilterBranch != null)
-                {
-                    return PublicUnifiedEventsFilterBranch.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(PublicAndFilterBranch != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranch>(null, PublicAndFilterBranch);
-                }
-                else if(PublicAssociationFilterBranch != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationFilterBranch>(null, PublicAssociationFilterBranch);
-                }
-                else if(PublicNotAllFilterBranch != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAllFilterBranch>(null, PublicNotAllFilterBranch);
-                }
-                else if(PublicNotAnyFilterBranch != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAnyFilterBranch>(null, PublicNotAnyFilterBranch);
-                }
-                else if(PublicOrFilterBranch != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicOrFilterBranch>(null, PublicOrFilterBranch);
-                }
-                else if(PublicRestrictedFilterBranch != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRestrictedFilterBranch>(null, PublicRestrictedFilterBranch);
-                }
-                else if(PublicUnifiedEventsFilterBranch != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilterBranch>(null, PublicUnifiedEventsFilterBranch);
-                }
-            }
         }
     }
 }

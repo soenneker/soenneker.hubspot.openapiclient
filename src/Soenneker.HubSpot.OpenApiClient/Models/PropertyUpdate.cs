@@ -41,7 +41,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Properties are displayed in order starting with the lowest positive integer value. Values of -1 will cause the Property to be displayed after any positive values.</summary>
         public int? DisplayOrder { get; set; }
         /// <summary>Controls how the property appears in HubSpot.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyUpdate_fieldType? FieldType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyUpdateFieldType? FieldType { get; set; }
         /// <summary>Whether or not the property can be used in a HubSpot form.</summary>
         public bool? FormField { get; set; }
         /// <summary>The name of the property group the property belongs to.</summary>
@@ -63,7 +63,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Label { get; set; }
 #endif
         /// <summary>The numberDisplayHint property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyUpdate_numberDisplayHint? NumberDisplayHint { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyUpdateNumberDisplayHint? NumberDisplayHint { get; set; }
         /// <summary>A list of valid options for the property.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -75,9 +75,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The showCurrencySymbol property</summary>
         public bool? ShowCurrencySymbol { get; set; }
         /// <summary>The textDisplayHint property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyUpdate_textDisplayHint? TextDisplayHint { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyUpdateTextDisplayHint? TextDisplayHint { get; set; }
         /// <summary>The data type of the property.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyUpdate_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyUpdateType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PropertyUpdate"/> and sets the default values.
         /// </summary>
@@ -107,16 +107,16 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "currencyPropertyName", n => { CurrencyPropertyName = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "displayOrder", n => { DisplayOrder = n.GetIntValue(); } },
-                { "fieldType", n => { FieldType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyUpdate_fieldType>(); } },
+                { "fieldType", n => { FieldType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyUpdateFieldType>(); } },
                 { "formField", n => { FormField = n.GetBoolValue(); } },
                 { "groupName", n => { GroupName = n.GetStringValue(); } },
                 { "hidden", n => { Hidden = n.GetBoolValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
-                { "numberDisplayHint", n => { NumberDisplayHint = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyUpdate_numberDisplayHint>(); } },
+                { "numberDisplayHint", n => { NumberDisplayHint = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyUpdateNumberDisplayHint>(); } },
                 { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmOptionInput>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmOptionInput.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "showCurrencySymbol", n => { ShowCurrencySymbol = n.GetBoolValue(); } },
-                { "textDisplayHint", n => { TextDisplayHint = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyUpdate_textDisplayHint>(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyUpdate_type>(); } },
+                { "textDisplayHint", n => { TextDisplayHint = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyUpdateTextDisplayHint>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyUpdateType>(); } },
             };
         }
         /// <summary>
@@ -130,16 +130,16 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("currencyPropertyName", CurrencyPropertyName);
             writer.WriteStringValue("description", Description);
             writer.WriteIntValue("displayOrder", DisplayOrder);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyUpdate_fieldType>("fieldType", FieldType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyUpdateFieldType>("fieldType", FieldType);
             writer.WriteBoolValue("formField", FormField);
             writer.WriteStringValue("groupName", GroupName);
             writer.WriteBoolValue("hidden", Hidden);
             writer.WriteStringValue("label", Label);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyUpdate_numberDisplayHint>("numberDisplayHint", NumberDisplayHint);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyUpdateNumberDisplayHint>("numberDisplayHint", NumberDisplayHint);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmOptionInput>("options", Options);
             writer.WriteBoolValue("showCurrencySymbol", ShowCurrencySymbol);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyUpdate_textDisplayHint>("textDisplayHint", TextDisplayHint);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyUpdate_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyUpdateTextDisplayHint>("textDisplayHint", TextDisplayHint);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyUpdateType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

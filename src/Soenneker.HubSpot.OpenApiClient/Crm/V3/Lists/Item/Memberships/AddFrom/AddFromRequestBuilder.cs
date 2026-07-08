@@ -16,7 +16,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Item.Memberships.AddFrom
     public partial class AddFromRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.crm.v3.lists.item.memberships.addFrom.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The **ILS ID** of the *source list* to grab the records from, which are then added to the *destination list*.</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Item.Memberships.AddFrom.Item.WithSourceListItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Item.Memberships.AddFrom.Item.WithSourceListItemRequestBuilder this[string position]
         {

@@ -17,10 +17,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The mediaTypes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorObjectCreationRequest_mediaTypes?>? MediaTypes { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorObjectCreationRequestMediaTypesItem?>? MediaTypes { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorObjectCreationRequest_mediaTypes?> MediaTypes { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorObjectCreationRequestMediaTypesItem?> MediaTypes { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorObjectCreationRequest"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "mediaTypes", n => { MediaTypes = n.GetCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorObjectCreationRequest_mediaTypes>()?.AsList(); } },
+                { "mediaTypes", n => { MediaTypes = n.GetCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorObjectCreationRequestMediaTypesItem>()?.AsList(); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorObjectCreationRequest_mediaTypes>("mediaTypes", MediaTypes);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorObjectCreationRequestMediaTypesItem>("mediaTypes", MediaTypes);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

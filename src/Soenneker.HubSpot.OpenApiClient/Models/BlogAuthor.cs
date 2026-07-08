@@ -76,7 +76,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>The explicitly defined ISO 639 language code of the blog author.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.BlogAuthor_language? Language { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.BlogAuthorLanguage? Language { get; set; }
         /// <summary>URL to the blog author&apos;s LinkedIn page.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -155,7 +155,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "facebook", n => { Facebook = n.GetStringValue(); } },
                 { "fullName", n => { FullName = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "language", n => { Language = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.BlogAuthor_language>(); } },
+                { "language", n => { Language = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.BlogAuthorLanguage>(); } },
                 { "linkedin", n => { Linkedin = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "slug", n => { Slug = n.GetStringValue(); } },
@@ -181,7 +181,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("facebook", Facebook);
             writer.WriteStringValue("fullName", FullName);
             writer.WriteStringValue("id", Id);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.BlogAuthor_language>("language", Language);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.BlogAuthorLanguage>("language", Language);
             writer.WriteStringValue("linkedin", Linkedin);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("slug", Slug);

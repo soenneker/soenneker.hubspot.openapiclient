@@ -33,10 +33,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The hsCustomerAgentContext property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.IdentificationTokenGenerationRequest_hsCustomerAgentContext? HsCustomerAgentContext { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.IdentificationTokenGenerationRequestHsCustomerAgentContextProperty? HsCustomerAgentContext { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.IdentificationTokenGenerationRequest_hsCustomerAgentContext HsCustomerAgentContext { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.IdentificationTokenGenerationRequestHsCustomerAgentContextProperty HsCustomerAgentContext { get; set; }
 #endif
         /// <summary>The last name of the visitor that you wish to identify. This value will only be set in HubSpot for new contacts and existing contacts where last name is unknown. Optional.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -73,7 +73,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "firstName", n => { FirstName = n.GetStringValue(); } },
-                { "hsCustomerAgentContext", n => { HsCustomerAgentContext = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.IdentificationTokenGenerationRequest_hsCustomerAgentContext>(global::Soenneker.HubSpot.OpenApiClient.Models.IdentificationTokenGenerationRequest_hsCustomerAgentContext.CreateFromDiscriminatorValue); } },
+                { "hsCustomerAgentContext", n => { HsCustomerAgentContext = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.IdentificationTokenGenerationRequestHsCustomerAgentContextProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.IdentificationTokenGenerationRequestHsCustomerAgentContextProperty.CreateFromDiscriminatorValue); } },
                 { "lastName", n => { LastName = n.GetStringValue(); } },
             };
         }
@@ -86,7 +86,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("email", Email);
             writer.WriteStringValue("firstName", FirstName);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.IdentificationTokenGenerationRequest_hsCustomerAgentContext>("hsCustomerAgentContext", HsCustomerAgentContext);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.IdentificationTokenGenerationRequestHsCustomerAgentContextProperty>("hsCustomerAgentContext", HsCustomerAgentContext);
             writer.WriteStringValue("lastName", LastName);
             writer.WriteAdditionalData(AdditionalData);
         }

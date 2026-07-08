@@ -51,10 +51,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>A key-value map of event-specific properties. The available properties depend on the event type definition.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalUnifiedEvent_properties? Properties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalUnifiedEventPropertiesProperty? Properties { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalUnifiedEvent_properties Properties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalUnifiedEventPropertiesProperty Properties { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExternalUnifiedEvent"/> and sets the default values.
@@ -86,7 +86,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "objectId", n => { ObjectId = n.GetStringValue(); } },
                 { "objectType", n => { ObjectType = n.GetStringValue(); } },
                 { "occurredAt", n => { OccurredAt = n.GetDateTimeOffsetValue(); } },
-                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalUnifiedEvent_properties>(global::Soenneker.HubSpot.OpenApiClient.Models.ExternalUnifiedEvent_properties.CreateFromDiscriminatorValue); } },
+                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalUnifiedEventPropertiesProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.ExternalUnifiedEventPropertiesProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -101,7 +101,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("objectId", ObjectId);
             writer.WriteStringValue("objectType", ObjectType);
             writer.WriteDateTimeOffsetValue("occurredAt", OccurredAt);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalUnifiedEvent_properties>("properties", Properties);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalUnifiedEventPropertiesProperty>("properties", Properties);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

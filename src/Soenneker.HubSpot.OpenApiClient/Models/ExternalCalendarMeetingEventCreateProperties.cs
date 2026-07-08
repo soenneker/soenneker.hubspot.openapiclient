@@ -65,7 +65,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string HsMeetingLocation { get; set; }
 #endif
         /// <summary>&quot;The type of location for the meeting. Acceptable values are: ADDRESS, CUSTOM, PHONE.&quot;</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCalendarMeetingEventCreateProperties_hs_meeting_location_type? HsMeetingLocationType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCalendarMeetingEventCreatePropertiesHsMeetingLocationType? HsMeetingLocationType { get; set; }
         /// <summary>&quot;The outcome of the meeting. Acceptable default values are: SCHEDULED, COMPLETED, RESCHEDULED, NO_SHOW, CANCELED. This property can be changed to include additional custom values.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -126,7 +126,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "hs_meeting_body", n => { HsMeetingBody = n.GetStringValue(); } },
                 { "hs_meeting_end_time", n => { HsMeetingEndTime = n.GetDateTimeOffsetValue(); } },
                 { "hs_meeting_location", n => { HsMeetingLocation = n.GetStringValue(); } },
-                { "hs_meeting_location_type", n => { HsMeetingLocationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCalendarMeetingEventCreateProperties_hs_meeting_location_type>(); } },
+                { "hs_meeting_location_type", n => { HsMeetingLocationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCalendarMeetingEventCreatePropertiesHsMeetingLocationType>(); } },
                 { "hs_meeting_outcome", n => { HsMeetingOutcome = n.GetStringValue(); } },
                 { "hs_meeting_start_time", n => { HsMeetingStartTime = n.GetDateTimeOffsetValue(); } },
                 { "hs_meeting_title", n => { HsMeetingTitle = n.GetStringValue(); } },
@@ -148,7 +148,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("hs_meeting_body", HsMeetingBody);
             writer.WriteDateTimeOffsetValue("hs_meeting_end_time", HsMeetingEndTime);
             writer.WriteStringValue("hs_meeting_location", HsMeetingLocation);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCalendarMeetingEventCreateProperties_hs_meeting_location_type>("hs_meeting_location_type", HsMeetingLocationType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCalendarMeetingEventCreatePropertiesHsMeetingLocationType>("hs_meeting_location_type", HsMeetingLocationType);
             writer.WriteStringValue("hs_meeting_outcome", HsMeetingOutcome);
             writer.WriteDateTimeOffsetValue("hs_meeting_start_time", HsMeetingStartTime);
             writer.WriteStringValue("hs_meeting_title", HsMeetingTitle);

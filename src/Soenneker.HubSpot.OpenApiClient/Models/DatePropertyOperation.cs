@@ -27,7 +27,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The includeObjectsWithNoValueSet property</summary>
         public bool? IncludeObjectsWithNoValueSet { get; set; }
         /// <summary>The month property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.DatePropertyOperation_month? Month { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.DatePropertyOperationMonth? Month { get; set; }
         /// <summary>The operationType property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -37,7 +37,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string OperationType { get; set; }
 #endif
         /// <summary>The operator property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.DatePropertyOperation_operator? Operator { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.DatePropertyOperationOperator? Operator { get; set; }
         /// <summary>The operatorName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -47,7 +47,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string OperatorName { get; set; }
 #endif
         /// <summary>The propertyType property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.DatePropertyOperation_propertyType? PropertyType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.DatePropertyOperationPropertyType? PropertyType { get; set; }
         /// <summary>The renderSpec property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -64,7 +64,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public DatePropertyOperation()
         {
             AdditionalData = new Dictionary<string, object>();
-            PropertyType = global::Soenneker.HubSpot.OpenApiClient.Models.DatePropertyOperation_propertyType.Date;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -87,11 +86,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "day", n => { Day = n.GetIntValue(); } },
                 { "defaultValue", n => { DefaultValue = n.GetStringValue(); } },
                 { "includeObjectsWithNoValueSet", n => { IncludeObjectsWithNoValueSet = n.GetBoolValue(); } },
-                { "month", n => { Month = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DatePropertyOperation_month>(); } },
+                { "month", n => { Month = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DatePropertyOperationMonth>(); } },
                 { "operationType", n => { OperationType = n.GetStringValue(); } },
-                { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DatePropertyOperation_operator>(); } },
+                { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DatePropertyOperationOperator>(); } },
                 { "operatorName", n => { OperatorName = n.GetStringValue(); } },
-                { "propertyType", n => { PropertyType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DatePropertyOperation_propertyType>(); } },
+                { "propertyType", n => { PropertyType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DatePropertyOperationPropertyType>(); } },
                 { "renderSpec", n => { RenderSpec = n.GetStringValue(); } },
                 { "year", n => { Year = n.GetIntValue(); } },
             };
@@ -106,11 +105,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteIntValue("day", Day);
             writer.WriteStringValue("defaultValue", DefaultValue);
             writer.WriteBoolValue("includeObjectsWithNoValueSet", IncludeObjectsWithNoValueSet);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DatePropertyOperation_month>("month", Month);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DatePropertyOperationMonth>("month", Month);
             writer.WriteStringValue("operationType", OperationType);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DatePropertyOperation_operator>("operator", Operator);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DatePropertyOperationOperator>("operator", Operator);
             writer.WriteStringValue("operatorName", OperatorName);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DatePropertyOperation_propertyType>("propertyType", PropertyType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DatePropertyOperationPropertyType>("propertyType", PropertyType);
             writer.WriteStringValue("renderSpec", RenderSpec);
             writer.WriteIntValue("year", Year);
             writer.WriteAdditionalData(AdditionalData);

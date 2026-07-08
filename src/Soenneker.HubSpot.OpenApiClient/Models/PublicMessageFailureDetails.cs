@@ -25,10 +25,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The errorMessageTokens property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessageFailureDetails_errorMessageTokens? ErrorMessageTokens { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessageFailureDetailsErrorMessageTokensProperty? ErrorMessageTokens { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessageFailureDetails_errorMessageTokens ErrorMessageTokens { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessageFailureDetailsErrorMessageTokensProperty ErrorMessageTokens { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessageFailureDetails"/> and sets the default values.
@@ -56,7 +56,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "errorMessage", n => { ErrorMessage = n.GetStringValue(); } },
-                { "errorMessageTokens", n => { ErrorMessageTokens = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessageFailureDetails_errorMessageTokens>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessageFailureDetails_errorMessageTokens.CreateFromDiscriminatorValue); } },
+                { "errorMessageTokens", n => { ErrorMessageTokens = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessageFailureDetailsErrorMessageTokensProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessageFailureDetailsErrorMessageTokensProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,7 +67,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("errorMessage", ErrorMessage);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessageFailureDetails_errorMessageTokens>("errorMessageTokens", ErrorMessageTokens);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessageFailureDetailsErrorMessageTokensProperty>("errorMessageTokens", ErrorMessageTokens);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -17,10 +17,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The indexed fields in HubSpot.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.IndexedData_fields? Fields { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.IndexedDataFieldsProperty? Fields { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.IndexedData_fields Fields { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.IndexedDataFieldsProperty Fields { get; set; }
 #endif
         /// <summary>The ID of the document in HubSpot.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -31,7 +31,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>The type of document. Can be `SITE_PAGE`, `LANDING_PAGE`, `BLOG_POST`, `LISTING_PAGE`, or `KNOWLEDGE_ARTICLE`.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.IndexedData_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.IndexedDataType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IndexedData"/> and sets the default values.
         /// </summary>
@@ -57,9 +57,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "fields", n => { Fields = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.IndexedData_fields>(global::Soenneker.HubSpot.OpenApiClient.Models.IndexedData_fields.CreateFromDiscriminatorValue); } },
+                { "fields", n => { Fields = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.IndexedDataFieldsProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.IndexedDataFieldsProperty.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.IndexedData_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.IndexedDataType>(); } },
             };
         }
         /// <summary>
@@ -69,9 +69,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.IndexedData_fields>("fields", Fields);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.IndexedDataFieldsProperty>("fields", Fields);
             writer.WriteStringValue("id", Id);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.IndexedData_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.IndexedDataType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

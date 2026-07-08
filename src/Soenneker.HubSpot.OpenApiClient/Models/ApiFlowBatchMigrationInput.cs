@@ -17,10 +17,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The inputs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchMigrationInput.ApiFlowBatchMigrationInput_inputs>? Inputs { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchMigrationInputInputsItem>? Inputs { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchMigrationInput.ApiFlowBatchMigrationInput_inputs> Inputs { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchMigrationInputInputsItem> Inputs { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchMigrationInput"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "inputs", n => { Inputs = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchMigrationInput.ApiFlowBatchMigrationInput_inputs>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchMigrationInput.ApiFlowBatchMigrationInput_inputs.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "inputs", n => { Inputs = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchMigrationInputInputsItem>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchMigrationInputInputsItem.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -57,83 +57,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchMigrationInput.ApiFlowBatchMigrationInput_inputs>("inputs", Inputs);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchMigrationInputInputsItem>("inputs", Inputs);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchFetchMigrationFlowIdCoordinate"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchFetchMigrationWorkflowIdCoordinate"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ApiFlowBatchMigrationInput_inputs : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchFetchMigrationFlowIdCoordinate"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchFetchMigrationFlowIdCoordinate? ApiFlowBatchFetchMigrationFlowIdCoordinate { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchFetchMigrationFlowIdCoordinate ApiFlowBatchFetchMigrationFlowIdCoordinate { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchFetchMigrationWorkflowIdCoordinate"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchFetchMigrationWorkflowIdCoordinate? ApiFlowBatchFetchMigrationWorkflowIdCoordinate { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchFetchMigrationWorkflowIdCoordinate ApiFlowBatchFetchMigrationWorkflowIdCoordinate { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchMigrationInput.ApiFlowBatchMigrationInput_inputs"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchMigrationInput.ApiFlowBatchMigrationInput_inputs CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchMigrationInput.ApiFlowBatchMigrationInput_inputs();
-                if("ApiFlowBatchFetchMigrationFlowIdCoordinate".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ApiFlowBatchFetchMigrationFlowIdCoordinate = new global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchFetchMigrationFlowIdCoordinate();
-                }
-                else if("ApiFlowBatchFetchMigrationWorkflowIdCoordinate".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ApiFlowBatchFetchMigrationWorkflowIdCoordinate = new global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchFetchMigrationWorkflowIdCoordinate();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(ApiFlowBatchFetchMigrationFlowIdCoordinate != null)
-                {
-                    return ApiFlowBatchFetchMigrationFlowIdCoordinate.GetFieldDeserializers();
-                }
-                else if(ApiFlowBatchFetchMigrationWorkflowIdCoordinate != null)
-                {
-                    return ApiFlowBatchFetchMigrationWorkflowIdCoordinate.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(ApiFlowBatchFetchMigrationFlowIdCoordinate != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchFetchMigrationFlowIdCoordinate>(null, ApiFlowBatchFetchMigrationFlowIdCoordinate);
-                }
-                else if(ApiFlowBatchFetchMigrationWorkflowIdCoordinate != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchFetchMigrationWorkflowIdCoordinate>(null, ApiFlowBatchFetchMigrationWorkflowIdCoordinate);
-                }
-            }
         }
     }
 }

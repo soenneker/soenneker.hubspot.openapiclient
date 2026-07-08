@@ -102,7 +102,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string EmailCampaignGroupId { get; set; }
 #endif
         /// <summary>The emailTemplateMode property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmail_emailTemplateMode? EmailTemplateMode { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailEmailTemplateMode? EmailTemplateMode { get; set; }
         /// <summary>The ID of the feedback survey linked to the email.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -140,7 +140,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The jitterSendTime property</summary>
         public bool? JitterSendTime { get; set; }
         /// <summary>The language property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmail_language? Language { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailLanguage? Language { get; set; }
         /// <summary>The name of the email, as displayed on the email dashboard.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -204,7 +204,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Determines whether the email will be sent immediately on publish.</summary>
         public bool? SendOnPublish { get; set; }
         /// <summary>The email state.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmail_state? State { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailState? State { get; set; }
         /// <summary>The stats property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -262,7 +262,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailToDetails To { get; set; }
 #endif
         /// <summary>The email type, this is derived from other properties on the email such as subcategory.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmail_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailType? Type { get; set; }
         /// <summary>The unpublishedAt property</summary>
         public DateTimeOffset? UnpublishedAt { get; set; }
         /// <summary>The date and time of the last update to the email, in ISO8601 representation.</summary>
@@ -337,7 +337,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "createdById", n => { CreatedById = n.GetStringValue(); } },
                 { "deletedAt", n => { DeletedAt = n.GetDateTimeOffsetValue(); } },
                 { "emailCampaignGroupId", n => { EmailCampaignGroupId = n.GetStringValue(); } },
-                { "emailTemplateMode", n => { EmailTemplateMode = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmail_emailTemplateMode>(); } },
+                { "emailTemplateMode", n => { EmailTemplateMode = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailEmailTemplateMode>(); } },
                 { "feedbackSurveyId", n => { FeedbackSurveyId = n.GetStringValue(); } },
                 { "folderId", n => { FolderId = n.GetLongValue(); } },
                 { "folderIdV2", n => { FolderIdV2 = n.GetLongValue(); } },
@@ -347,7 +347,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "isPublished", n => { IsPublished = n.GetBoolValue(); } },
                 { "isTransactional", n => { IsTransactional = n.GetBoolValue(); } },
                 { "jitterSendTime", n => { JitterSendTime = n.GetBoolValue(); } },
-                { "language", n => { Language = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmail_language>(); } },
+                { "language", n => { Language = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailLanguage>(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "previewKey", n => { PreviewKey = n.GetStringValue(); } },
                 { "primaryEmailCampaignId", n => { PrimaryEmailCampaignId = n.GetStringValue(); } },
@@ -358,7 +358,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "publishedByName", n => { PublishedByName = n.GetStringValue(); } },
                 { "rssData", n => { RssData = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetails>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetails.CreateFromDiscriminatorValue); } },
                 { "sendOnPublish", n => { SendOnPublish = n.GetBoolValue(); } },
-                { "state", n => { State = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmail_state>(); } },
+                { "state", n => { State = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailState>(); } },
                 { "stats", n => { Stats = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsData>(global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsData.CreateFromDiscriminatorValue); } },
                 { "subcategory", n => { Subcategory = n.GetStringValue(); } },
                 { "subject", n => { Subject = n.GetStringValue(); } },
@@ -366,7 +366,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "teamsWithAccess", n => { TeamsWithAccess = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "testing", n => { Testing = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetails>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetails.CreateFromDiscriminatorValue); } },
                 { "to", n => { To = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailToDetails>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailToDetails.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmail_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailType>(); } },
                 { "unpublishedAt", n => { UnpublishedAt = n.GetDateTimeOffsetValue(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
                 { "updatedById", n => { UpdatedById = n.GetStringValue(); } },
@@ -395,7 +395,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("createdById", CreatedById);
             writer.WriteDateTimeOffsetValue("deletedAt", DeletedAt);
             writer.WriteStringValue("emailCampaignGroupId", EmailCampaignGroupId);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmail_emailTemplateMode>("emailTemplateMode", EmailTemplateMode);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailEmailTemplateMode>("emailTemplateMode", EmailTemplateMode);
             writer.WriteStringValue("feedbackSurveyId", FeedbackSurveyId);
             writer.WriteLongValue("folderId", FolderId);
             writer.WriteLongValue("folderIdV2", FolderIdV2);
@@ -405,7 +405,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteBoolValue("isPublished", IsPublished);
             writer.WriteBoolValue("isTransactional", IsTransactional);
             writer.WriteBoolValue("jitterSendTime", JitterSendTime);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmail_language>("language", Language);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailLanguage>("language", Language);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("previewKey", PreviewKey);
             writer.WriteStringValue("primaryEmailCampaignId", PrimaryEmailCampaignId);
@@ -416,7 +416,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("publishedByName", PublishedByName);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetails>("rssData", RssData);
             writer.WriteBoolValue("sendOnPublish", SendOnPublish);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmail_state>("state", State);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailState>("state", State);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsData>("stats", Stats);
             writer.WriteStringValue("subcategory", Subcategory);
             writer.WriteStringValue("subject", Subject);
@@ -424,7 +424,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("teamsWithAccess", TeamsWithAccess);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetails>("testing", Testing);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailToDetails>("to", To);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmail_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailType>("type", Type);
             writer.WriteDateTimeOffsetValue("unpublishedAt", UnpublishedAt);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             writer.WriteStringValue("updatedById", UpdatedById);

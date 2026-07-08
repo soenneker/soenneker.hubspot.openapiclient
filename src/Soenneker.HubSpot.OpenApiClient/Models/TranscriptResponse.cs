@@ -27,7 +27,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>The transcriptSource property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.TranscriptResponse_transcriptSource? TranscriptSource { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.TranscriptResponseTranscriptSource? TranscriptSource { get; set; }
         /// <summary>The transcriptUtterances property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -66,7 +66,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "engagementId", n => { EngagementId = n.GetLongValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "transcriptSource", n => { TranscriptSource = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TranscriptResponse_transcriptSource>(); } },
+                { "transcriptSource", n => { TranscriptSource = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TranscriptResponseTranscriptSource>(); } },
                 { "transcriptUtterances", n => { TranscriptUtterances = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.TranscriptUtterance>(global::Soenneker.HubSpot.OpenApiClient.Models.TranscriptUtterance.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
             };
@@ -81,7 +81,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
             writer.WriteLongValue("engagementId", EngagementId);
             writer.WriteStringValue("id", Id);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TranscriptResponse_transcriptSource>("transcriptSource", TranscriptSource);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TranscriptResponseTranscriptSource>("transcriptSource", TranscriptSource);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.TranscriptUtterance>("transcriptUtterances", TranscriptUtterances);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             writer.WriteAdditionalData(AdditionalData);

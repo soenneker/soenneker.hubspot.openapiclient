@@ -42,15 +42,15 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>&quot;A JSON object containing properties that are not present on all object pipelines.For `deals` pipelines, the `probability` field is required (`{ \&quot;probability\&quot;: 0.5 }`), and represents the likelihood a deal will close. Possible values are between 0.0 and 1.0 in increments of 0.1.For `tickets` pipelines, the `ticketState` field is optional (`{ \&quot;ticketState\&quot;: \&quot;OPEN\&quot; }`), and represents whether the ticket remains open or has been closed by a member of your Support team. Possible values are `OPEN` or `CLOSED`.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStage_metadata? Metadata { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStage_metadata Metadata { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>The date the pipeline stage was last updated.</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>Defines the level of write access for the pipeline stage, with possible values being CRM_PERMISSIONS_ENFORCEMENT, READ_ONLY, or INTERNAL_ONLY.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStage_writePermissions? WritePermissions { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageWritePermissions? WritePermissions { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStage"/> and sets the default values.
         /// </summary>
@@ -82,9 +82,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "displayOrder", n => { DisplayOrder = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStage_metadata>(global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStage_metadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageMetadataProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
-                { "writePermissions", n => { WritePermissions = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStage_writePermissions>(); } },
+                { "writePermissions", n => { WritePermissions = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageWritePermissions>(); } },
             };
         }
         /// <summary>
@@ -100,9 +100,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteIntValue("displayOrder", DisplayOrder);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("label", Label);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStage_metadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageMetadataProperty>("metadata", Metadata);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStage_writePermissions>("writePermissions", WritePermissions);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageWritePermissions>("writePermissions", WritePermissions);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

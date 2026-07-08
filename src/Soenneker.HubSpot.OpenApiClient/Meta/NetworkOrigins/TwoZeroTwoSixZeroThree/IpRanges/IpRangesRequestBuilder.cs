@@ -87,20 +87,20 @@ namespace Soenneker.HubSpot.OpenApiClient.Meta.NetworkOrigins.TwoZeroTwoSixZeroT
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("direction")]
-            public global::Soenneker.HubSpot.OpenApiClient.Meta.NetworkOrigins.TwoZeroTwoSixZeroThree.IpRanges.GetDirectionQueryParameterType[]? Direction { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.MetaGetMetaNetworkOrigins202603IpRangesMetaNetworkOrigins202603IpRangesDirectionParameterItem[]? Direction { get; set; }
 #nullable restore
 #else
             [QueryParameter("direction")]
-            public global::Soenneker.HubSpot.OpenApiClient.Meta.NetworkOrigins.TwoZeroTwoSixZeroThree.IpRanges.GetDirectionQueryParameterType[] Direction { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.MetaGetMetaNetworkOrigins202603IpRangesMetaNetworkOrigins202603IpRangesDirectionParameterItem[] Direction { get; set; }
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("service")]
-            public global::Soenneker.HubSpot.OpenApiClient.Meta.NetworkOrigins.TwoZeroTwoSixZeroThree.IpRanges.GetServiceQueryParameterType[]? Service { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.MetaGetMetaNetworkOrigins202603IpRangesMetaNetworkOrigins202603IpRangesServiceParameterItem[]? Service { get; set; }
 #nullable restore
 #else
             [QueryParameter("service")]
-            public global::Soenneker.HubSpot.OpenApiClient.Meta.NetworkOrigins.TwoZeroTwoSixZeroThree.IpRanges.GetServiceQueryParameterType[] Service { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.MetaGetMetaNetworkOrigins202603IpRangesMetaNetworkOrigins202603IpRangesServiceParameterItem[] Service { get; set; }
 #endif
         }
     }

@@ -51,7 +51,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>The newStatus property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadStatusChange_newStatus? NewStatus { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadStatusChangeNewStatus? NewStatus { get; set; }
         /// <summary>The recipients property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -69,7 +69,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSender> Senders { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadStatusChange_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadStatusChangeType? Type { get; set; }
         /// <summary>The updatedAt property</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>
@@ -103,10 +103,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "createdBy", n => { CreatedBy = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "newStatus", n => { NewStatus = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadStatusChange_newStatus>(); } },
+                { "newStatus", n => { NewStatus = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadStatusChangeNewStatus>(); } },
                 { "recipients", n => { Recipients = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRecipient>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicRecipient.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "senders", n => { Senders = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSender>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicSender.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadStatusChange_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadStatusChangeType>(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
             };
         }
@@ -123,10 +123,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
             writer.WriteStringValue("createdBy", CreatedBy);
             writer.WriteStringValue("id", Id);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadStatusChange_newStatus>("newStatus", NewStatus);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadStatusChangeNewStatus>("newStatus", NewStatus);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRecipient>("recipients", Recipients);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSender>("senders", Senders);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadStatusChange_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadStatusChangeType>("type", Type);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             writer.WriteAdditionalData(AdditionalData);
         }

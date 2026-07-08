@@ -56,7 +56,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Determines whether the email send time should be randomized to avoid sending all emails at the exact same time.</summary>
         public bool? JitterSendTime { get; set; }
         /// <summary>The language code for the email, such as &apos;en&apos; for English.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailUpdateRequest_language? Language { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailUpdateRequestLanguage? Language { get; set; }
         /// <summary>The name of the email, as displayed on the email dashboard.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -78,9 +78,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Determines whether the email will be sent immediately on publish.</summary>
         public bool? SendOnPublish { get; set; }
         /// <summary>The email state.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailUpdateRequest_state? State { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailUpdateRequestState? State { get; set; }
         /// <summary>The email subcategory.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailUpdateRequest_subcategory? Subcategory { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailUpdateRequestSubcategory? Subcategory { get; set; }
         /// <summary>The subject of the email.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -154,13 +154,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "folderIdV2", n => { FolderIdV2 = n.GetLongValue(); } },
                 { "from", n => { From = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailFromDetails>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailFromDetails.CreateFromDiscriminatorValue); } },
                 { "jitterSendTime", n => { JitterSendTime = n.GetBoolValue(); } },
-                { "language", n => { Language = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailUpdateRequest_language>(); } },
+                { "language", n => { Language = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailUpdateRequestLanguage>(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "publishDate", n => { PublishDate = n.GetDateTimeOffsetValue(); } },
                 { "rssData", n => { RssData = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetails>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetails.CreateFromDiscriminatorValue); } },
                 { "sendOnPublish", n => { SendOnPublish = n.GetBoolValue(); } },
-                { "state", n => { State = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailUpdateRequest_state>(); } },
-                { "subcategory", n => { Subcategory = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailUpdateRequest_subcategory>(); } },
+                { "state", n => { State = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailUpdateRequestState>(); } },
+                { "subcategory", n => { Subcategory = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailUpdateRequestSubcategory>(); } },
                 { "subject", n => { Subject = n.GetStringValue(); } },
                 { "subscriptionDetails", n => { SubscriptionDetails = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailSubscriptionDetails>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailSubscriptionDetails.CreateFromDiscriminatorValue); } },
                 { "testing", n => { Testing = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetails>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetails.CreateFromDiscriminatorValue); } },
@@ -183,13 +183,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteLongValue("folderIdV2", FolderIdV2);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailFromDetails>("from", From);
             writer.WriteBoolValue("jitterSendTime", JitterSendTime);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailUpdateRequest_language>("language", Language);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailUpdateRequestLanguage>("language", Language);
             writer.WriteStringValue("name", Name);
             writer.WriteDateTimeOffsetValue("publishDate", PublishDate);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetails>("rssData", RssData);
             writer.WriteBoolValue("sendOnPublish", SendOnPublish);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailUpdateRequest_state>("state", State);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailUpdateRequest_subcategory>("subcategory", Subcategory);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailUpdateRequestState>("state", State);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailUpdateRequestSubcategory>("subcategory", Subcategory);
             writer.WriteStringValue("subject", Subject);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailSubscriptionDetails>("subscriptionDetails", SubscriptionDetails);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetails>("testing", Testing);

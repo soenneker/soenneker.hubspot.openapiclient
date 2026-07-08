@@ -45,10 +45,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object containing the raw data associated with the audit event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditInfo_rawObject? RawObject { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditInfoRawObjectProperty? RawObject { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditInfo_rawObject RawObject { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditInfoRawObjectProperty RawObject { get; set; }
 #endif
         /// <summary>The date and time when the audit event took place.</summary>
         public DateTimeOffset? Timestamp { get; set; }
@@ -82,7 +82,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "identifier", n => { Identifier = n.GetStringValue(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "portalId", n => { PortalId = n.GetIntValue(); } },
-                { "rawObject", n => { RawObject = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditInfo_rawObject>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditInfo_rawObject.CreateFromDiscriminatorValue); } },
+                { "rawObject", n => { RawObject = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditInfoRawObjectProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditInfoRawObjectProperty.CreateFromDiscriminatorValue); } },
                 { "timestamp", n => { Timestamp = n.GetDateTimeOffsetValue(); } },
             };
         }
@@ -98,7 +98,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("identifier", Identifier);
             writer.WriteStringValue("message", Message);
             writer.WriteIntValue("portalId", PortalId);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditInfo_rawObject>("rawObject", RawObject);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditInfoRawObjectProperty>("rawObject", RawObject);
             writer.WriteDateTimeOffsetValue("timestamp", Timestamp);
             writer.WriteAdditionalData(AdditionalData);
         }

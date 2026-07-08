@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public List<string> RuleArguments { get; set; }
 #endif
         /// <summary>The category of validation applied to the property, such as FORMAT, ALPHANUMERIC, or MAX_LENGTH.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPropertyValidationRule_ruleType? RuleType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPropertyValidationRuleRuleType? RuleType { get; set; }
         /// <summary>The shouldApplyNormalization property</summary>
         public bool? ShouldApplyNormalization { get; set; }
         /// <summary>
@@ -52,7 +52,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "ruleArguments", n => { RuleArguments = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "ruleType", n => { RuleType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicPropertyValidationRule_ruleType>(); } },
+                { "ruleType", n => { RuleType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicPropertyValidationRuleRuleType>(); } },
                 { "shouldApplyNormalization", n => { ShouldApplyNormalization = n.GetBoolValue(); } },
             };
         }
@@ -64,7 +64,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("ruleArguments", RuleArguments);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicPropertyValidationRule_ruleType>("ruleType", RuleType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicPropertyValidationRuleRuleType>("ruleType", RuleType);
             writer.WriteBoolValue("shouldApplyNormalization", ShouldApplyNormalization);
             writer.WriteAdditionalData(AdditionalData);
         }

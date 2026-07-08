@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string ContactProperty { get; set; }
 #endif
         /// <summary>Indicates the type of the contact property anchor, which defaults to CONTACT_PROPERTY_ANCHOR.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiContactPropertyAnchor_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiContactPropertyAnchorType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiContactPropertyAnchor"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "contactProperty", n => { ContactProperty = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiContactPropertyAnchor_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiContactPropertyAnchorType>(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("contactProperty", ContactProperty);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiContactPropertyAnchor_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiContactPropertyAnchorType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

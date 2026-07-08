@@ -49,7 +49,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CmsOption> Options { get; set; }
 #endif
         /// <summary>Type of the column</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ColumnRequest_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ColumnRequestType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ColumnRequest"/> and sets the default values.
         /// </summary>
@@ -83,7 +83,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "maxNumberOfOptions", n => { MaxNumberOfOptions = n.GetIntValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CmsOption>(global::Soenneker.HubSpot.OpenApiClient.Models.CmsOption.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ColumnRequest_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ColumnRequestType>(); } },
             };
         }
         /// <summary>
@@ -101,7 +101,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteIntValue("maxNumberOfOptions", MaxNumberOfOptions);
             writer.WriteStringValue("name", Name);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CmsOption>("options", Options);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ColumnRequest_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ColumnRequestType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

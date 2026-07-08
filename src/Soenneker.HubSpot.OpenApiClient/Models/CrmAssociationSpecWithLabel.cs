@@ -16,7 +16,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Association category. Can be HUBSPOT_DEFINED, USER_DEFINED, INTEGRATOR_DEFINED or WORK</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecWithLabel_category? Category { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecWithLabelCategory? Category { get; set; }
         /// <summary>An optional descriptor that provides additional context about the relationship between associated records, such as &quot;Mentor&quot; and &quot;Mentee&quot;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -52,7 +52,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "category", n => { Category = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecWithLabel_category>(); } },
+                { "category", n => { Category = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecWithLabelCategory>(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "typeId", n => { TypeId = n.GetIntValue(); } },
             };
@@ -64,7 +64,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecWithLabel_category>("category", Category);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecWithLabelCategory>("category", Category);
             writer.WriteStringValue("label", Label);
             writer.WriteIntValue("typeId", TypeId);
             writer.WriteAdditionalData(AdditionalData);

@@ -19,10 +19,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Available booking slots for the meeting, grouped by the duration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailability_linkAvailabilityByDuration? LinkAvailabilityByDuration { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailabilityLinkAvailabilityByDurationProperty? LinkAvailabilityByDuration { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailability_linkAvailabilityByDuration LinkAvailabilityByDuration { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailabilityLinkAvailabilityByDurationProperty LinkAvailabilityByDuration { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailability"/> and sets the default values.
@@ -50,7 +50,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "hasMore", n => { HasMore = n.GetBoolValue(); } },
-                { "linkAvailabilityByDuration", n => { LinkAvailabilityByDuration = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailability_linkAvailabilityByDuration>(global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailability_linkAvailabilityByDuration.CreateFromDiscriminatorValue); } },
+                { "linkAvailabilityByDuration", n => { LinkAvailabilityByDuration = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailabilityLinkAvailabilityByDurationProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailabilityLinkAvailabilityByDurationProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("hasMore", HasMore);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailability_linkAvailabilityByDuration>("linkAvailabilityByDuration", LinkAvailabilityByDuration);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailabilityLinkAvailabilityByDurationProperty>("linkAvailabilityByDuration", LinkAvailabilityByDuration);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

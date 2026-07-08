@@ -95,7 +95,7 @@ namespace Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Links.Gene
             public long? BusinessUnitId { get; set; }
             /// <summary>The communication channel for which to generate links. Must be &apos;EMAIL&apos;.</summary>
             [QueryParameter("channel")]
-            public global::Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Links.Generate.PostChannelQueryParameterType? Channel { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CommunicationPreferencesPostCommunicationPreferencesV4LinksGenerateCommunicationPreferencesV4LinksGenerateChannelParameter? Channel { get; set; }
         }
     }
 }

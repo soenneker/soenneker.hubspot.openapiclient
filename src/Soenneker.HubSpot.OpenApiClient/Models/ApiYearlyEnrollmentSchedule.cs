@@ -17,7 +17,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The day of the month for the yearly enrollment schedule.</summary>
         public int? DayOfMonth { get; set; }
         /// <summary>&quot;The month for the yearly enrollment schedule, with accepted values including: APRIL, AUGUST, DECEMBER, FEBRUARY, JANUARY, JULY, JUNE, MARCH, MAY, NOVEMBER, OCTOBER, SEPTEMBER.&quot;</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiYearlyEnrollmentSchedule_month? Month { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiYearlyEnrollmentScheduleMonth? Month { get; set; }
         /// <summary>The timeOfDay property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -27,7 +27,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeOfDay TimeOfDay { get; set; }
 #endif
         /// <summary>Indicates the type of enrollment schedule, which defaults to &apos;YEARLY&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiYearlyEnrollmentSchedule_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiYearlyEnrollmentScheduleType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiYearlyEnrollmentSchedule"/> and sets the default values.
         /// </summary>
@@ -54,9 +54,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "dayOfMonth", n => { DayOfMonth = n.GetIntValue(); } },
-                { "month", n => { Month = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiYearlyEnrollmentSchedule_month>(); } },
+                { "month", n => { Month = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiYearlyEnrollmentScheduleMonth>(); } },
                 { "timeOfDay", n => { TimeOfDay = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeOfDay>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeOfDay.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiYearlyEnrollmentSchedule_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiYearlyEnrollmentScheduleType>(); } },
             };
         }
         /// <summary>
@@ -67,9 +67,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("dayOfMonth", DayOfMonth);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiYearlyEnrollmentSchedule_month>("month", Month);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiYearlyEnrollmentScheduleMonth>("month", Month);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeOfDay>("timeOfDay", TimeOfDay);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiYearlyEnrollmentSchedule_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiYearlyEnrollmentScheduleType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

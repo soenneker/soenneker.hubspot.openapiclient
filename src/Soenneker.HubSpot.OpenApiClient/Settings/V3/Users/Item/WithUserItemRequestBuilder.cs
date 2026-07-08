@@ -164,7 +164,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Settings.V3.Users.Item
         public partial class WithUserItemRequestBuilderDeleteQueryParameters 
         {
             [QueryParameter("idProperty")]
-            public global::Soenneker.HubSpot.OpenApiClient.Settings.V3.Users.Item.DeleteIdPropertyQueryParameterType? IdProperty { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.SettingsDeleteSettingsV3UsersUserIdArchiveIdPropertyParameter? IdProperty { get; set; }
         }
         /// <summary>
         /// Retrieves a user identified by `userId`. `userId` refers to the user&apos;s ID by default, or optionally email as specified by the `IdProperty` query param.
@@ -173,7 +173,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Settings.V3.Users.Item
         public partial class WithUserItemRequestBuilderGetQueryParameters 
         {
             [QueryParameter("idProperty")]
-            public global::Soenneker.HubSpot.OpenApiClient.Settings.V3.Users.Item.GetIdPropertyQueryParameterType? IdProperty { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.SettingsGetSettingsV3UsersUserIdGetByIdIdPropertyParameter? IdProperty { get; set; }
         }
         /// <summary>
         /// Modifies a user identified by `userId`. `userId` refers to the user&apos;s ID by default, or optionally email as specified by the `IdProperty` query param.
@@ -182,7 +182,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Settings.V3.Users.Item
         public partial class WithUserItemRequestBuilderPutQueryParameters 
         {
             [QueryParameter("idProperty")]
-            public global::Soenneker.HubSpot.OpenApiClient.Settings.V3.Users.Item.PutIdPropertyQueryParameterType? IdProperty { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.SettingsPutSettingsV3UsersUserIdUpdateIdPropertyParameter? IdProperty { get; set; }
         }
     }
 }

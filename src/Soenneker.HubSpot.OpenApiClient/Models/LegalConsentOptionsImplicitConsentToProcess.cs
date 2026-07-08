@@ -47,7 +47,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string PrivacyText { get; set; }
 #endif
         /// <summary>The legal consent type.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsImplicitConsentToProcess_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsImplicitConsentToProcessType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsImplicitConsentToProcess"/> and sets the default values.
         /// </summary>
@@ -77,7 +77,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "communicationsCheckboxes", n => { CommunicationsCheckboxes = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentCheckbox>(global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentCheckbox.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "consentToProcessText", n => { ConsentToProcessText = n.GetStringValue(); } },
                 { "privacyText", n => { PrivacyText = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsImplicitConsentToProcess_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsImplicitConsentToProcessType>(); } },
             };
         }
         /// <summary>
@@ -91,7 +91,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentCheckbox>("communicationsCheckboxes", CommunicationsCheckboxes);
             writer.WriteStringValue("consentToProcessText", ConsentToProcessText);
             writer.WriteStringValue("privacyText", PrivacyText);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsImplicitConsentToProcess_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsImplicitConsentToProcessType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

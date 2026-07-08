@@ -25,10 +25,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The extensionStatusMap property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExtensionData_extensionStatusMap? ExtensionStatusMap { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExtensionDataExtensionStatusMapProperty? ExtensionStatusMap { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExtensionData_extensionStatusMap ExtensionStatusMap { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExtensionDataExtensionStatusMapProperty ExtensionStatusMap { get; set; }
 #endif
         /// <summary>The optionDecoratorsExtensionData property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -88,7 +88,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "caseChangeTestExtensionData", n => { CaseChangeTestExtensionData = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CaseChangeTestExtensionData>(global::Soenneker.HubSpot.OpenApiClient.Models.CaseChangeTestExtensionData.CreateFromDiscriminatorValue); } },
-                { "extensionStatusMap", n => { ExtensionStatusMap = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExtensionData_extensionStatusMap>(global::Soenneker.HubSpot.OpenApiClient.Models.ExtensionData_extensionStatusMap.CreateFromDiscriminatorValue); } },
+                { "extensionStatusMap", n => { ExtensionStatusMap = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExtensionDataExtensionStatusMapProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.ExtensionDataExtensionStatusMapProperty.CreateFromDiscriminatorValue); } },
                 { "optionDecoratorsExtensionData", n => { OptionDecoratorsExtensionData = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionData>(global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionData.CreateFromDiscriminatorValue); } },
                 { "requiredPropertiesExtensionData", n => { RequiredPropertiesExtensionData = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.RequiredPropertiesExtensionData>(global::Soenneker.HubSpot.OpenApiClient.Models.RequiredPropertiesExtensionData.CreateFromDiscriminatorValue); } },
                 { "softRequiredPropertiesExtensionData", n => { SoftRequiredPropertiesExtensionData = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.SoftRequiredPropertiesExtensionData>(global::Soenneker.HubSpot.OpenApiClient.Models.SoftRequiredPropertiesExtensionData.CreateFromDiscriminatorValue); } },
@@ -103,7 +103,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CaseChangeTestExtensionData>("caseChangeTestExtensionData", CaseChangeTestExtensionData);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExtensionData_extensionStatusMap>("extensionStatusMap", ExtensionStatusMap);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExtensionDataExtensionStatusMapProperty>("extensionStatusMap", ExtensionStatusMap);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionData>("optionDecoratorsExtensionData", OptionDecoratorsExtensionData);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.RequiredPropertiesExtensionData>("requiredPropertiesExtensionData", RequiredPropertiesExtensionData);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.SoftRequiredPropertiesExtensionData>("softRequiredPropertiesExtensionData", SoftRequiredPropertiesExtensionData);

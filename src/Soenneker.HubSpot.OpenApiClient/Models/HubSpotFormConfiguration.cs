@@ -25,9 +25,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Whether the form can be edited.</summary>
         public bool? Editable { get; set; }
         /// <summary>The embedType property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.HubSpotFormConfiguration_embedType? EmbedType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.HubSpotFormConfigurationEmbedType? EmbedType { get; set; }
         /// <summary>The language of the form.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.HubSpotFormConfiguration_language? Language { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.HubSpotFormConfigurationLanguage? Language { get; set; }
         /// <summary>The lifecycleStages property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -88,8 +88,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "cloneable", n => { Cloneable = n.GetBoolValue(); } },
                 { "createNewContactForNewEmail", n => { CreateNewContactForNewEmail = n.GetBoolValue(); } },
                 { "editable", n => { Editable = n.GetBoolValue(); } },
-                { "embedType", n => { EmbedType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.HubSpotFormConfiguration_embedType>(); } },
-                { "language", n => { Language = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.HubSpotFormConfiguration_language>(); } },
+                { "embedType", n => { EmbedType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.HubSpotFormConfigurationEmbedType>(); } },
+                { "language", n => { Language = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.HubSpotFormConfigurationLanguage>(); } },
                 { "lifecycleStages", n => { LifecycleStages = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.LifecycleStage>(global::Soenneker.HubSpot.OpenApiClient.Models.LifecycleStage.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "notifyContactOwner", n => { NotifyContactOwner = n.GetBoolValue(); } },
                 { "notifyRecipients", n => { NotifyRecipients = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -110,8 +110,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteBoolValue("cloneable", Cloneable);
             writer.WriteBoolValue("createNewContactForNewEmail", CreateNewContactForNewEmail);
             writer.WriteBoolValue("editable", Editable);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.HubSpotFormConfiguration_embedType>("embedType", EmbedType);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.HubSpotFormConfiguration_language>("language", Language);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.HubSpotFormConfigurationEmbedType>("embedType", EmbedType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.HubSpotFormConfigurationLanguage>("language", Language);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.LifecycleStage>("lifecycleStages", LifecycleStages);
             writer.WriteBoolValue("notifyContactOwner", NotifyContactOwner);
             writer.WriteCollectionOfPrimitiveValues<string>("notifyRecipients", NotifyRecipients);

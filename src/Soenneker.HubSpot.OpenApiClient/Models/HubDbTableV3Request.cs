@@ -29,10 +29,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Specifies the key value pairs of the [metadata fields](https://developers.hubspot.com/docs/cms/guides/dynamic-pages/hubdb#dynamic-pages) with the associated column IDs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3Request_dynamicMetaTags? DynamicMetaTags { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3RequestDynamicMetaTagsProperty? DynamicMetaTags { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3Request_dynamicMetaTags DynamicMetaTags { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3RequestDynamicMetaTagsProperty DynamicMetaTags { get; set; }
 #endif
         /// <summary>Specifies creation of multi-level dynamic pages using child tables</summary>
         public bool? EnableChildTablePages { get; set; }
@@ -82,7 +82,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "allowChildTables", n => { AllowChildTables = n.GetBoolValue(); } },
                 { "allowPublicApiAccess", n => { AllowPublicApiAccess = n.GetBoolValue(); } },
                 { "columns", n => { Columns = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ColumnRequest>(global::Soenneker.HubSpot.OpenApiClient.Models.ColumnRequest.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "dynamicMetaTags", n => { DynamicMetaTags = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3Request_dynamicMetaTags>(global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3Request_dynamicMetaTags.CreateFromDiscriminatorValue); } },
+                { "dynamicMetaTags", n => { DynamicMetaTags = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3RequestDynamicMetaTagsProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3RequestDynamicMetaTagsProperty.CreateFromDiscriminatorValue); } },
                 { "enableChildTablePages", n => { EnableChildTablePages = n.GetBoolValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
@@ -99,7 +99,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteBoolValue("allowChildTables", AllowChildTables);
             writer.WriteBoolValue("allowPublicApiAccess", AllowPublicApiAccess);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ColumnRequest>("columns", Columns);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3Request_dynamicMetaTags>("dynamicMetaTags", DynamicMetaTags);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3RequestDynamicMetaTagsProperty>("dynamicMetaTags", DynamicMetaTags);
             writer.WriteBoolValue("enableChildTablePages", EnableChildTablePages);
             writer.WriteStringValue("label", Label);
             writer.WriteStringValue("name", Name);

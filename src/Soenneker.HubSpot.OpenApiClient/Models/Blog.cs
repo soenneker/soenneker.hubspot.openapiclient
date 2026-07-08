@@ -53,7 +53,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>The explicitly defined language of the Blog. If null, the Blog will default to the language of the Domain.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.Blog_language? Language { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.BlogLanguage? Language { get; set; }
         /// <summary>The listingPageId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -73,10 +73,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Rules for require member registration to access private content.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.Blog_publicAccessRules>? PublicAccessRules { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.BlogPublicAccessRulesItem>? PublicAccessRules { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.Blog_publicAccessRules> PublicAccessRules { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.BlogPublicAccessRulesItem> PublicAccessRules { get; set; }
 #endif
         /// <summary>Boolean to determine whether or not to respect publicAccessRules.</summary>
         public bool? PublicAccessRulesEnabled { get; set; }
@@ -138,10 +138,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "htmlTitle", n => { HtmlTitle = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "language", n => { Language = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.Blog_language>(); } },
+                { "language", n => { Language = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.BlogLanguage>(); } },
                 { "listingPageId", n => { ListingPageId = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "publicAccessRules", n => { PublicAccessRules = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.Blog_publicAccessRules>(global::Soenneker.HubSpot.OpenApiClient.Models.Blog_publicAccessRules.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "publicAccessRules", n => { PublicAccessRules = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.BlogPublicAccessRulesItem>(global::Soenneker.HubSpot.OpenApiClient.Models.BlogPublicAccessRulesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "publicAccessRulesEnabled", n => { PublicAccessRulesEnabled = n.GetBoolValue(); } },
                 { "publicTitle", n => { PublicTitle = n.GetStringValue(); } },
                 { "slug", n => { Slug = n.GetStringValue(); } },
@@ -163,10 +163,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("htmlTitle", HtmlTitle);
             writer.WriteStringValue("id", Id);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.Blog_language>("language", Language);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.BlogLanguage>("language", Language);
             writer.WriteStringValue("listingPageId", ListingPageId);
             writer.WriteStringValue("name", Name);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.Blog_publicAccessRules>("publicAccessRules", PublicAccessRules);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.BlogPublicAccessRulesItem>("publicAccessRules", PublicAccessRules);
             writer.WriteBoolValue("publicAccessRulesEnabled", PublicAccessRulesEnabled);
             writer.WriteStringValue("publicTitle", PublicTitle);
             writer.WriteStringValue("slug", Slug);

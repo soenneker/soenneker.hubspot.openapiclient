@@ -17,9 +17,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The lowerTimestamp property</summary>
         public long? LowerTimestamp { get; set; }
         /// <summary>The rangeType property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteRangedTimestampRefineBy_rangeType? RangeType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteRangedTimestampRefineByRangeType? RangeType { get; set; }
         /// <summary>The type property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteRangedTimestampRefineBy_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteRangedTimestampRefineByType? Type { get; set; }
         /// <summary>The upperTimestamp property</summary>
         public long? UpperTimestamp { get; set; }
         /// <summary>
@@ -48,8 +48,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "lowerTimestamp", n => { LowerTimestamp = n.GetLongValue(); } },
-                { "rangeType", n => { RangeType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteRangedTimestampRefineBy_rangeType>(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteRangedTimestampRefineBy_type>(); } },
+                { "rangeType", n => { RangeType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteRangedTimestampRefineByRangeType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteRangedTimestampRefineByType>(); } },
                 { "upperTimestamp", n => { UpperTimestamp = n.GetLongValue(); } },
             };
         }
@@ -61,8 +61,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteLongValue("lowerTimestamp", LowerTimestamp);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteRangedTimestampRefineBy_rangeType>("rangeType", RangeType);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteRangedTimestampRefineBy_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteRangedTimestampRefineByRangeType>("rangeType", RangeType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteRangedTimestampRefineByType>("type", Type);
             writer.WriteLongValue("upperTimestamp", UpperTimestamp);
             writer.WriteAdditionalData(AdditionalData);
         }

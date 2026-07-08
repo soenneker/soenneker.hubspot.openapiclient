@@ -24,7 +24,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>Designated language of the object to add to a multi-language group.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AttachToLangPrimaryRequestVNext_language? Language { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AttachToLangPrimaryRequestVNextLanguage? Language { get; set; }
         /// <summary>ID of primary language object in multi-language group.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string PrimaryId { get; set; }
 #endif
         /// <summary>Primary language of the multi-language group.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AttachToLangPrimaryRequestVNext_primaryLanguage? PrimaryLanguage { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AttachToLangPrimaryRequestVNextPrimaryLanguage? PrimaryLanguage { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.AttachToLangPrimaryRequestVNext"/> and sets the default values.
         /// </summary>
@@ -61,9 +61,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "language", n => { Language = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AttachToLangPrimaryRequestVNext_language>(); } },
+                { "language", n => { Language = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AttachToLangPrimaryRequestVNextLanguage>(); } },
                 { "primaryId", n => { PrimaryId = n.GetStringValue(); } },
-                { "primaryLanguage", n => { PrimaryLanguage = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AttachToLangPrimaryRequestVNext_primaryLanguage>(); } },
+                { "primaryLanguage", n => { PrimaryLanguage = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AttachToLangPrimaryRequestVNextPrimaryLanguage>(); } },
             };
         }
         /// <summary>
@@ -74,9 +74,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("id", Id);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AttachToLangPrimaryRequestVNext_language>("language", Language);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AttachToLangPrimaryRequestVNextLanguage>("language", Language);
             writer.WriteStringValue("primaryId", PrimaryId);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AttachToLangPrimaryRequestVNext_primaryLanguage>("primaryLanguage", PrimaryLanguage);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AttachToLangPrimaryRequestVNextPrimaryLanguage>("primaryLanguage", PrimaryLanguage);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -17,7 +17,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The day of the month for the blocked date.</summary>
         public int? DayOfMonth { get; set; }
         /// <summary>&quot;The month of the blocked date, with accepted values including: APRIL, AUGUST, DECEMBER, FEBRUARY, JANUARY, JULY, JUNE, MARCH, MAY, NOVEMBER, OCTOBER, SEPTEMBER.&quot;</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiBlockedDate_month? Month { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiBlockedDateMonth? Month { get; set; }
         /// <summary>The year of the blocked date.</summary>
         public int? Year { get; set; }
         /// <summary>
@@ -46,7 +46,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "dayOfMonth", n => { DayOfMonth = n.GetIntValue(); } },
-                { "month", n => { Month = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiBlockedDate_month>(); } },
+                { "month", n => { Month = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiBlockedDateMonth>(); } },
                 { "year", n => { Year = n.GetIntValue(); } },
             };
         }
@@ -58,7 +58,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("dayOfMonth", DayOfMonth);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiBlockedDate_month>("month", Month);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiBlockedDateMonth>("month", Month);
             writer.WriteIntValue("year", Year);
             writer.WriteAdditionalData(AdditionalData);
         }

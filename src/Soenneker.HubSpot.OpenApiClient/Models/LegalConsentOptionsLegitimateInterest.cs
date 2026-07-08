@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>&quot;The lawful basis for data processing under legitimate interest. Values: lead (processing for lead generation), client (processing for existing clients), other (other legitimate interests). Default: lead.&quot;</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsLegitimateInterest_lawfulBasis? LawfulBasis { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsLegitimateInterestLawfulBasis? LawfulBasis { get; set; }
         /// <summary>Text explaining the privacy policy and data handling practices.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -33,7 +33,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public List<long?> SubscriptionTypeIds { get; set; }
 #endif
         /// <summary>The legal consent type.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsLegitimateInterest_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsLegitimateInterestType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsLegitimateInterest"/> and sets the default values.
         /// </summary>
@@ -59,10 +59,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "lawfulBasis", n => { LawfulBasis = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsLegitimateInterest_lawfulBasis>(); } },
+                { "lawfulBasis", n => { LawfulBasis = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsLegitimateInterestLawfulBasis>(); } },
                 { "privacyText", n => { PrivacyText = n.GetStringValue(); } },
                 { "subscriptionTypeIds", n => { SubscriptionTypeIds = n.GetCollectionOfPrimitiveValues<long?>()?.AsList(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsLegitimateInterest_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsLegitimateInterestType>(); } },
             };
         }
         /// <summary>
@@ -72,10 +72,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsLegitimateInterest_lawfulBasis>("lawfulBasis", LawfulBasis);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsLegitimateInterestLawfulBasis>("lawfulBasis", LawfulBasis);
             writer.WriteStringValue("privacyText", PrivacyText);
             writer.WriteCollectionOfPrimitiveValues<long?>("subscriptionTypeIds", SubscriptionTypeIds);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsLegitimateInterest_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.LegalConsentOptionsLegitimateInterestType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

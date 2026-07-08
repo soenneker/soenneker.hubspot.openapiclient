@@ -18,18 +18,18 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The contactProperties field is a map of contact property values. Each contact property value contains a name and value property. Each property will get set on the contact record and will be visible in the template under {{ contact.NAME }}. Use these properties when you want to set a contact property while you’re sending the email. For example, when sending a receipt you may want to set a last_paid_date property, as the sending of the receipt will have information about the last payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEgg_contactProperties? ContactProperties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEggContactPropertiesProperty? ContactProperties { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEgg_contactProperties ContactProperties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEggContactPropertiesProperty ContactProperties { get; set; }
 #endif
         /// <summary>&quot;The customProperties field is a map of property values. Each property value contains a name and value property. Each property will be visible in the template under {{ custom.NAME }}.Note: Custom properties do not currently support arrays. To provide a listing in an email, one workaround is to build an HTML list (either with tables or ul) and specify it as a custom property.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEgg_customProperties? CustomProperties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEggCustomPropertiesProperty? CustomProperties { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEgg_customProperties CustomProperties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEggCustomPropertiesProperty CustomProperties { get; set; }
 #endif
         /// <summary>The content ID for the email, which can be found in email tool UI.</summary>
         public long? EmailId { get; set; }
@@ -66,8 +66,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "contactProperties", n => { ContactProperties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEgg_contactProperties>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEgg_contactProperties.CreateFromDiscriminatorValue); } },
-                { "customProperties", n => { CustomProperties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEgg_customProperties>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEgg_customProperties.CreateFromDiscriminatorValue); } },
+                { "contactProperties", n => { ContactProperties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEggContactPropertiesProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEggContactPropertiesProperty.CreateFromDiscriminatorValue); } },
+                { "customProperties", n => { CustomProperties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEggCustomPropertiesProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEggCustomPropertiesProperty.CreateFromDiscriminatorValue); } },
                 { "emailId", n => { EmailId = n.GetLongValue(); } },
                 { "message", n => { Message = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendEmail>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendEmail.CreateFromDiscriminatorValue); } },
             };
@@ -79,8 +79,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEgg_contactProperties>("contactProperties", ContactProperties);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEgg_customProperties>("customProperties", CustomProperties);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEggContactPropertiesProperty>("contactProperties", ContactProperties);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEggCustomPropertiesProperty>("customProperties", CustomProperties);
             writer.WriteLongValue("emailId", EmailId);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendEmail>("message", Message);
             writer.WriteAdditionalData(AdditionalData);

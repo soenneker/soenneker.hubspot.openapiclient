@@ -32,7 +32,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string CardLabel { get; set; }
 #endif
         /// <summary>The number version of the response.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorCardPayloadResponse_responseVersion? ResponseVersion { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorCardPayloadResponseResponseVersion? ResponseVersion { get; set; }
         /// <summary>A list of up to five valid card sub categories.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -78,7 +78,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "allItemsLinkUrl", n => { AllItemsLinkUrl = n.GetStringValue(); } },
                 { "cardLabel", n => { CardLabel = n.GetStringValue(); } },
-                { "responseVersion", n => { ResponseVersion = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorCardPayloadResponse_responseVersion>(); } },
+                { "responseVersion", n => { ResponseVersion = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorCardPayloadResponseResponseVersion>(); } },
                 { "sections", n => { Sections = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorObjectResult>(global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorObjectResult.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "topLevelActions", n => { TopLevelActions = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.TopLevelActions>(global::Soenneker.HubSpot.OpenApiClient.Models.TopLevelActions.CreateFromDiscriminatorValue); } },
                 { "totalCount", n => { TotalCount = n.GetIntValue(); } },
@@ -93,7 +93,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("allItemsLinkUrl", AllItemsLinkUrl);
             writer.WriteStringValue("cardLabel", CardLabel);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorCardPayloadResponse_responseVersion>("responseVersion", ResponseVersion);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorCardPayloadResponseResponseVersion>("responseVersion", ResponseVersion);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorObjectResult>("sections", Sections);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.TopLevelActions>("topLevelActions", TopLevelActions);
             writer.WriteIntValue("totalCount", TotalCount);

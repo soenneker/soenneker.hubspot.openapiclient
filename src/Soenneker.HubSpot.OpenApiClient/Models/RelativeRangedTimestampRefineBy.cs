@@ -23,9 +23,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffset LowerBoundOffset { get; set; }
 #endif
         /// <summary>The rangeType property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.RelativeRangedTimestampRefineBy_rangeType? RangeType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.RelativeRangedTimestampRefineByRangeType? RangeType { get; set; }
         /// <summary>The type property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.RelativeRangedTimestampRefineBy_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.RelativeRangedTimestampRefineByType? Type { get; set; }
         /// <summary>The upperBoundOffset property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -60,8 +60,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "lowerBoundOffset", n => { LowerBoundOffset = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffset>(global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffset.CreateFromDiscriminatorValue); } },
-                { "rangeType", n => { RangeType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RelativeRangedTimestampRefineBy_rangeType>(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RelativeRangedTimestampRefineBy_type>(); } },
+                { "rangeType", n => { RangeType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RelativeRangedTimestampRefineByRangeType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RelativeRangedTimestampRefineByType>(); } },
                 { "upperBoundOffset", n => { UpperBoundOffset = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffset>(global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffset.CreateFromDiscriminatorValue); } },
             };
         }
@@ -73,8 +73,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffset>("lowerBoundOffset", LowerBoundOffset);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RelativeRangedTimestampRefineBy_rangeType>("rangeType", RangeType);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RelativeRangedTimestampRefineBy_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RelativeRangedTimestampRefineByRangeType>("rangeType", RangeType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RelativeRangedTimestampRefineByType>("type", Type);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffset>("upperBoundOffset", UpperBoundOffset);
             writer.WriteAdditionalData(AdditionalData);
         }

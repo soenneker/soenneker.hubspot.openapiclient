@@ -39,7 +39,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Channel { get; set; }
 #endif
         /// <summary>Indicates the type of filter, which defaults to COMMUNICATION_SUBSCRIPTION.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCommunicationSubscriptionFilter_filterType? FilterType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCommunicationSubscriptionFilterFilterType? FilterType { get; set; }
         /// <summary>The subscriptionIds property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -62,7 +62,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public PublicCommunicationSubscriptionFilter()
         {
             AdditionalData = new Dictionary<string, object>();
-            FilterType = global::Soenneker.HubSpot.OpenApiClient.Models.PublicCommunicationSubscriptionFilter_filterType.COMMUNICATION_SUBSCRIPTION;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -85,7 +84,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "acceptedOptStates", n => { AcceptedOptStates = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "businessUnitId", n => { BusinessUnitId = n.GetStringValue(); } },
                 { "channel", n => { Channel = n.GetStringValue(); } },
-                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCommunicationSubscriptionFilter_filterType>(); } },
+                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCommunicationSubscriptionFilterFilterType>(); } },
                 { "subscriptionIds", n => { SubscriptionIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "subscriptionType", n => { SubscriptionType = n.GetStringValue(); } },
             };
@@ -100,7 +99,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("acceptedOptStates", AcceptedOptStates);
             writer.WriteStringValue("businessUnitId", BusinessUnitId);
             writer.WriteStringValue("channel", Channel);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCommunicationSubscriptionFilter_filterType>("filterType", FilterType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCommunicationSubscriptionFilterFilterType>("filterType", FilterType);
             writer.WriteCollectionOfPrimitiveValues<string>("subscriptionIds", SubscriptionIds);
             writer.WriteStringValue("subscriptionType", SubscriptionType);
             writer.WriteAdditionalData(AdditionalData);

@@ -19,10 +19,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The key-value set of the properties of the contact</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventSubscriber_properties? Properties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventSubscriberPropertiesProperty? Properties { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventSubscriber_properties Properties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventSubscriberPropertiesProperty Properties { get; set; }
 #endif
         /// <summary>The ID of the contact in HubSpot</summary>
         public long? Vid { get; set; }
@@ -52,7 +52,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "interactionDateTime", n => { InteractionDateTime = n.GetLongValue(); } },
-                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventSubscriber_properties>(global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventSubscriber_properties.CreateFromDiscriminatorValue); } },
+                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventSubscriberPropertiesProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventSubscriberPropertiesProperty.CreateFromDiscriminatorValue); } },
                 { "vid", n => { Vid = n.GetLongValue(); } },
             };
         }
@@ -64,7 +64,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteLongValue("interactionDateTime", InteractionDateTime);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventSubscriber_properties>("properties", Properties);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventSubscriberPropertiesProperty>("properties", Properties);
             writer.WriteLongValue("vid", Vid);
             writer.WriteAdditionalData(AdditionalData);
         }

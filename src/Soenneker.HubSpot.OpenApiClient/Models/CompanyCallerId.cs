@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Specifies the type of caller ID, which is set to &apos;COMPANY&apos; by default.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CompanyCallerId_callerIdType? CallerIdType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CompanyCallerIdCallerIdType? CallerIdType { get; set; }
         /// <summary>The name associated with the company caller ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -38,7 +38,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public CompanyCallerId()
         {
             AdditionalData = new Dictionary<string, object>();
-            CallerIdType = global::Soenneker.HubSpot.OpenApiClient.Models.CompanyCallerId_callerIdType.COMPANY;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -58,7 +57,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "callerIdType", n => { CallerIdType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CompanyCallerId_callerIdType>(); } },
+                { "callerIdType", n => { CallerIdType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CompanyCallerIdCallerIdType>(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "objectCoordinates", n => { ObjectCoordinates = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ObjectCoordinates>(global::Soenneker.HubSpot.OpenApiClient.Models.ObjectCoordinates.CreateFromDiscriminatorValue); } },
             };
@@ -70,7 +69,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CompanyCallerId_callerIdType>("callerIdType", CallerIdType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CompanyCallerIdCallerIdType>("callerIdType", CallerIdType);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ObjectCoordinates>("objectCoordinates", ObjectCoordinates);
             writer.WriteAdditionalData(AdditionalData);

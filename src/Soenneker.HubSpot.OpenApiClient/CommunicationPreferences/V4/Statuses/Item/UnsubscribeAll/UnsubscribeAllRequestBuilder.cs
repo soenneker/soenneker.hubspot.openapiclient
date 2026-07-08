@@ -127,7 +127,7 @@ namespace Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Statuses.I
             public long? BusinessUnitId { get; set; }
             /// <summary>The communication channel to unsubscribe from. Must be &apos;EMAIL&apos;.</summary>
             [QueryParameter("channel")]
-            public global::Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Statuses.Item.UnsubscribeAll.GetChannelQueryParameterType? Channel { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CommunicationPreferencesGetCommunicationPreferencesV4StatusesSubscriberIdStringUnsubscribeAllChannelParameter? Channel { get; set; }
             /// <summary>A boolean indicating whether to include detailed information in the response. Defaults to false.</summary>
             [QueryParameter("verbose")]
             public bool? Verbose { get; set; }
@@ -143,7 +143,7 @@ namespace Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Statuses.I
             public long? BusinessUnitId { get; set; }
             /// <summary>The communication channel to unsubscribe from. Must be &apos;EMAIL&apos;.</summary>
             [QueryParameter("channel")]
-            public global::Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Statuses.Item.UnsubscribeAll.PostChannelQueryParameterType? Channel { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CommunicationPreferencesPostCommunicationPreferencesV4StatusesSubscriberIdStringUnsubscribeAllChannelParameter? Channel { get; set; }
             /// <summary>A boolean flag indicating whether to include detailed information in the response. Defaults to false.</summary>
             [QueryParameter("verbose")]
             public bool? Verbose { get; set; }

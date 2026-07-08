@@ -17,7 +17,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Indicates whether the enrollment should be repeated.</summary>
         public bool? ShouldReEnroll { get; set; }
         /// <summary>Specifies the type of enrollment criteria, which is &apos;MANUAL&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiManualEnrollmentCriteria_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiManualEnrollmentCriteriaType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiManualEnrollmentCriteria"/> and sets the default values.
         /// </summary>
@@ -44,7 +44,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "shouldReEnroll", n => { ShouldReEnroll = n.GetBoolValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiManualEnrollmentCriteria_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiManualEnrollmentCriteriaType>(); } },
             };
         }
         /// <summary>
@@ -55,7 +55,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("shouldReEnroll", ShouldReEnroll);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiManualEnrollmentCriteria_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiManualEnrollmentCriteriaType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

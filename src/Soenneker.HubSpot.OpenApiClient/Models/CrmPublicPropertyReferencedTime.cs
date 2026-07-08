@@ -31,7 +31,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string ReferenceType { get; set; }
 #endif
         /// <summary>Defines the type of time (PROPERTY_REFERENCED).</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPropertyReferencedTime_timeType? TimeType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPropertyReferencedTimeTimeType? TimeType { get; set; }
         /// <summary>Specifies the source of the time zone information for the property (CUSTOM, USER, PORTAL).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -54,7 +54,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public CrmPublicPropertyReferencedTime()
         {
             AdditionalData = new Dictionary<string, object>();
-            TimeType = global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPropertyReferencedTime_timeType.PROPERTY_REFERENCED;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -76,7 +75,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "property", n => { Property = n.GetStringValue(); } },
                 { "referenceType", n => { ReferenceType = n.GetStringValue(); } },
-                { "timeType", n => { TimeType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPropertyReferencedTime_timeType>(); } },
+                { "timeType", n => { TimeType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPropertyReferencedTimeTimeType>(); } },
                 { "timezoneSource", n => { TimezoneSource = n.GetStringValue(); } },
                 { "zoneId", n => { ZoneId = n.GetStringValue(); } },
             };
@@ -90,7 +89,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("property", Property);
             writer.WriteStringValue("referenceType", ReferenceType);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPropertyReferencedTime_timeType>("timeType", TimeType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPropertyReferencedTimeTimeType>("timeType", TimeType);
             writer.WriteStringValue("timezoneSource", TimezoneSource);
             writer.WriteStringValue("zoneId", ZoneId);
             writer.WriteAdditionalData(AdditionalData);

@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The category of the association, which can be HUBSPOT_DEFINED, INTEGRATOR_DEFINED, or USER_DEFINED.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationDefinitionConfigurationUpdateResult_category? Category { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationDefinitionConfigurationUpdateResultCategory? Category { get; set; }
         /// <summary>An integer value used to uniquely identify a specific association type within its Association Category.</summary>
         public int? TypeId { get; set; }
         /// <summary>The maximum number of object IDs that a user can enforce for associations.</summary>
@@ -45,7 +45,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "category", n => { Category = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationDefinitionConfigurationUpdateResult_category>(); } },
+                { "category", n => { Category = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationDefinitionConfigurationUpdateResultCategory>(); } },
                 { "typeId", n => { TypeId = n.GetIntValue(); } },
                 { "userEnforcedMaxToObjectIds", n => { UserEnforcedMaxToObjectIds = n.GetIntValue(); } },
             };
@@ -57,7 +57,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationDefinitionConfigurationUpdateResult_category>("category", Category);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationDefinitionConfigurationUpdateResultCategory>("category", Category);
             writer.WriteIntValue("typeId", TypeId);
             writer.WriteIntValue("userEnforcedMaxToObjectIds", UserEnforcedMaxToObjectIds);
             writer.WriteAdditionalData(AdditionalData);

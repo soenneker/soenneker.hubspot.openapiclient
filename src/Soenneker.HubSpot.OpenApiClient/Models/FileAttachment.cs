@@ -23,9 +23,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string FileId { get; set; }
 #endif
         /// <summary>The fileUsageType property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.FileAttachment_fileUsageType? FileUsageType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.FileAttachmentFileUsageType? FileUsageType { get; set; }
         /// <summary>The type property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.FileAttachment_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.FileAttachmentType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.FileAttachment"/> and sets the default values.
         /// </summary>
@@ -52,8 +52,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "fileId", n => { FileId = n.GetStringValue(); } },
-                { "fileUsageType", n => { FileUsageType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FileAttachment_fileUsageType>(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FileAttachment_type>(); } },
+                { "fileUsageType", n => { FileUsageType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FileAttachmentFileUsageType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FileAttachmentType>(); } },
             };
         }
         /// <summary>
@@ -64,8 +64,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("fileId", FileId);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FileAttachment_fileUsageType>("fileUsageType", FileUsageType);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FileAttachment_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FileAttachmentFileUsageType>("fileUsageType", FileUsageType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FileAttachmentType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

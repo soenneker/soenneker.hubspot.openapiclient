@@ -16,7 +16,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A deprecated field to determine the type of card returned.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CardFetchBody_cardType? CardType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CardFetchBodyCardType? CardType { get; set; }
         /// <summary>An array of CRM object types where this card should be displayed. HubSpot will call your data fetch URL whenever a user visits a record page of the types defined here.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -66,7 +66,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "cardType", n => { CardType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CardFetchBody_cardType>(); } },
+                { "cardType", n => { CardType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CardFetchBodyCardType>(); } },
                 { "objectTypes", n => { ObjectTypes = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CardObjectTypeBody>(global::Soenneker.HubSpot.OpenApiClient.Models.CardObjectTypeBody.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "serverlessFunction", n => { ServerlessFunction = n.GetStringValue(); } },
                 { "targetUrl", n => { TargetUrl = n.GetStringValue(); } },
@@ -79,7 +79,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CardFetchBody_cardType>("cardType", CardType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CardFetchBodyCardType>("cardType", CardType);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CardObjectTypeBody>("objectTypes", ObjectTypes);
             writer.WriteStringValue("serverlessFunction", ServerlessFunction);
             writer.WriteStringValue("targetUrl", TargetUrl);

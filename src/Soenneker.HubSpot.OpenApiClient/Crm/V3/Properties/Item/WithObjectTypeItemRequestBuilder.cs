@@ -156,7 +156,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Properties.Item
             [QueryParameter("archived")]
             public bool? Archived { get; set; }
             [QueryParameter("dataSensitivity")]
-            public global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Properties.Item.GetDataSensitivityQueryParameterType? DataSensitivity { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmGetCrmV3PropertiesObjectTypeGetAllDataSensitivityParameter? DataSensitivity { get; set; }
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("locale")]

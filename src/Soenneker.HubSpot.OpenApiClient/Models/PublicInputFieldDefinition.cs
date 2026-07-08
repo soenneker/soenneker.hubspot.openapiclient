@@ -19,10 +19,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The supportedValueTypes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicInputFieldDefinition_supportedValueTypes?>? SupportedValueTypes { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicInputFieldDefinitionSupportedValueTypesItem?>? SupportedValueTypes { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicInputFieldDefinition_supportedValueTypes?> SupportedValueTypes { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicInputFieldDefinitionSupportedValueTypesItem?> SupportedValueTypes { get; set; }
 #endif
         /// <summary>The typeDefinition property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -58,7 +58,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "isRequired", n => { IsRequired = n.GetBoolValue(); } },
-                { "supportedValueTypes", n => { SupportedValueTypes = n.GetCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicInputFieldDefinition_supportedValueTypes>()?.AsList(); } },
+                { "supportedValueTypes", n => { SupportedValueTypes = n.GetCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicInputFieldDefinitionSupportedValueTypesItem>()?.AsList(); } },
                 { "typeDefinition", n => { TypeDefinition = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicFieldTypeDefinition>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicFieldTypeDefinition.CreateFromDiscriminatorValue); } },
             };
         }
@@ -70,7 +70,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("isRequired", IsRequired);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicInputFieldDefinition_supportedValueTypes>("supportedValueTypes", SupportedValueTypes);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicInputFieldDefinitionSupportedValueTypesItem>("supportedValueTypes", SupportedValueTypes);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicFieldTypeDefinition>("typeDefinition", TypeDefinition);
             writer.WriteAdditionalData(AdditionalData);
         }

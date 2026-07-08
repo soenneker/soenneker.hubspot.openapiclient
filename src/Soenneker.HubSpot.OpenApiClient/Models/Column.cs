@@ -49,18 +49,18 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Foreign ids</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.Column_foreignIdsById? ForeignIdsById { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByIdProperty? ForeignIdsById { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.Column_foreignIdsById ForeignIdsById { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByIdProperty ForeignIdsById { get; set; }
 #endif
         /// <summary>Foreign ids by name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.Column_foreignIdsByName? ForeignIdsByName { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByNameProperty? ForeignIdsByName { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.Column_foreignIdsByName ForeignIdsByName { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByNameProperty ForeignIdsByName { get; set; }
 #endif
         /// <summary>Foreign table id referenced</summary>
         public long? ForeignTableId { get; set; }
@@ -99,7 +99,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CmsOption> Options { get; set; }
 #endif
         /// <summary>Type of the column</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.Column_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ColumnType? Type { get; set; }
         /// <summary>The timestamp when the column was last updated.</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>The updatedBy property</summary>
@@ -146,15 +146,15 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "foreignColumnId", n => { ForeignColumnId = n.GetIntValue(); } },
                 { "foreignIds", n => { ForeignIds = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ForeignId>(global::Soenneker.HubSpot.OpenApiClient.Models.ForeignId.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "foreignIdsById", n => { ForeignIdsById = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.Column_foreignIdsById>(global::Soenneker.HubSpot.OpenApiClient.Models.Column_foreignIdsById.CreateFromDiscriminatorValue); } },
-                { "foreignIdsByName", n => { ForeignIdsByName = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.Column_foreignIdsByName>(global::Soenneker.HubSpot.OpenApiClient.Models.Column_foreignIdsByName.CreateFromDiscriminatorValue); } },
+                { "foreignIdsById", n => { ForeignIdsById = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByIdProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByIdProperty.CreateFromDiscriminatorValue); } },
+                { "foreignIdsByName", n => { ForeignIdsByName = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByNameProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByNameProperty.CreateFromDiscriminatorValue); } },
                 { "foreignTableId", n => { ForeignTableId = n.GetLongValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "optionCount", n => { OptionCount = n.GetIntValue(); } },
                 { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CmsOption>(global::Soenneker.HubSpot.OpenApiClient.Models.CmsOption.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.Column_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ColumnType>(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
                 { "updatedBy", n => { UpdatedBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.SimpleUser>(global::Soenneker.HubSpot.OpenApiClient.Models.SimpleUser.CreateFromDiscriminatorValue); } },
                 { "updatedByUserId", n => { UpdatedByUserId = n.GetIntValue(); } },
@@ -175,15 +175,15 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteIntValue("foreignColumnId", ForeignColumnId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ForeignId>("foreignIds", ForeignIds);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.Column_foreignIdsById>("foreignIdsById", ForeignIdsById);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.Column_foreignIdsByName>("foreignIdsByName", ForeignIdsByName);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByIdProperty>("foreignIdsById", ForeignIdsById);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByNameProperty>("foreignIdsByName", ForeignIdsByName);
             writer.WriteLongValue("foreignTableId", ForeignTableId);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("label", Label);
             writer.WriteStringValue("name", Name);
             writer.WriteIntValue("optionCount", OptionCount);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CmsOption>("options", Options);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.Column_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ColumnType>("type", Type);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.SimpleUser>("updatedBy", UpdatedBy);
             writer.WriteIntValue("updatedByUserId", UpdatedByUserId);

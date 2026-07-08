@@ -39,7 +39,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Headline { get; set; }
 #endif
         /// <summary>&quot;Option for determining which avatar to display on scheduling page. Accepted values are: PROFILE_IMAGE, COMPANY_LOGO, CUSTOM_AVATAR,&quot;</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkDisplayInfo_publicDisplayAvatarOption? PublicDisplayAvatarOption { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkDisplayInfoPublicDisplayAvatarOption? PublicDisplayAvatarOption { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkDisplayInfo"/> and sets the default values.
         /// </summary>
@@ -68,7 +68,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "avatar", n => { Avatar = n.GetStringValue(); } },
                 { "companyAvatar", n => { CompanyAvatar = n.GetStringValue(); } },
                 { "headline", n => { Headline = n.GetStringValue(); } },
-                { "publicDisplayAvatarOption", n => { PublicDisplayAvatarOption = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkDisplayInfo_publicDisplayAvatarOption>(); } },
+                { "publicDisplayAvatarOption", n => { PublicDisplayAvatarOption = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkDisplayInfoPublicDisplayAvatarOption>(); } },
             };
         }
         /// <summary>
@@ -81,7 +81,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("avatar", Avatar);
             writer.WriteStringValue("companyAvatar", CompanyAvatar);
             writer.WriteStringValue("headline", Headline);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkDisplayInfo_publicDisplayAvatarOption>("publicDisplayAvatarOption", PublicDisplayAvatarOption);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkDisplayInfoPublicDisplayAvatarOption>("publicDisplayAvatarOption", PublicDisplayAvatarOption);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

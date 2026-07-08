@@ -27,7 +27,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Month { get; set; }
 #endif
         /// <summary>Specifies the type of operation (DATE).</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicDatePropertyOperation_operationType? OperationType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicDatePropertyOperationOperationType? OperationType { get; set; }
         /// <summary>Defines the operation to be applied in the date property operation (IS_LESS_THAN_X_DAYS_AGO, IS_MORE_THAN_X_DAYS_AGO, IS_LESS_THAN_X_DAYS_FROM_NOW, IS_MORE_THAN_X_DAYS_FROM_NOW).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -44,7 +44,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public CrmPublicDatePropertyOperation()
         {
             AdditionalData = new Dictionary<string, object>();
-            OperationType = global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicDatePropertyOperation_operationType.DATE;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -67,7 +66,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "day", n => { Day = n.GetIntValue(); } },
                 { "includeObjectsWithNoValueSet", n => { IncludeObjectsWithNoValueSet = n.GetBoolValue(); } },
                 { "month", n => { Month = n.GetStringValue(); } },
-                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicDatePropertyOperation_operationType>(); } },
+                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicDatePropertyOperationOperationType>(); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
                 { "year", n => { Year = n.GetIntValue(); } },
             };
@@ -82,7 +81,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteIntValue("day", Day);
             writer.WriteBoolValue("includeObjectsWithNoValueSet", IncludeObjectsWithNoValueSet);
             writer.WriteStringValue("month", Month);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicDatePropertyOperation_operationType>("operationType", OperationType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicDatePropertyOperationOperationType>("operationType", OperationType);
             writer.WriteStringValue("operator", Operator);
             writer.WriteIntValue("year", Year);
             writer.WriteAdditionalData(AdditionalData);

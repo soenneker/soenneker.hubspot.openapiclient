@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public List<string> Gates { get; set; }
 #endif
         /// <summary>The operator property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.DefaultRequirements_operator? Operator { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.DefaultRequirementsOperator? Operator { get; set; }
         /// <summary>The scopeNames property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -66,7 +66,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "gates", n => { Gates = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DefaultRequirements_operator>(); } },
+                { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DefaultRequirementsOperator>(); } },
                 { "scopeNames", n => { ScopeNames = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "settings", n => { Settings = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
@@ -79,7 +79,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("gates", Gates);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DefaultRequirements_operator>("operator", Operator);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DefaultRequirementsOperator>("operator", Operator);
             writer.WriteCollectionOfPrimitiveValues<string>("scopeNames", ScopeNames);
             writer.WriteCollectionOfPrimitiveValues<string>("settings", Settings);
             writer.WriteAdditionalData(AdditionalData);

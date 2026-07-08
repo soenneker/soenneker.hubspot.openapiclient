@@ -25,14 +25,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEventFilterMetadata> FilterLines { get; set; }
 #endif
         /// <summary>Indicates the type of filter (INTEGRATION_EVENT).</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicIntegrationEventFilter_filterType? FilterType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicIntegrationEventFilterFilterType? FilterType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicIntegrationEventFilter"/> and sets the default values.
         /// </summary>
         public CrmPublicIntegrationEventFilter()
         {
             AdditionalData = new Dictionary<string, object>();
-            FilterType = global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicIntegrationEventFilter_filterType.INTEGRATION_EVENT;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -54,7 +53,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "eventTypeId", n => { EventTypeId = n.GetIntValue(); } },
                 { "filterLines", n => { FilterLines = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEventFilterMetadata>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEventFilterMetadata.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicIntegrationEventFilter_filterType>(); } },
+                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicIntegrationEventFilterFilterType>(); } },
             };
         }
         /// <summary>
@@ -66,7 +65,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("eventTypeId", EventTypeId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEventFilterMetadata>("filterLines", FilterLines);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicIntegrationEventFilter_filterType>("filterType", FilterType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicIntegrationEventFilterFilterType>("filterType", FilterType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

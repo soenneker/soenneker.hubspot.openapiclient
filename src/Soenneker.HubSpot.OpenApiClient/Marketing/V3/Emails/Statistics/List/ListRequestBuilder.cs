@@ -85,6 +85,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Statistics.List
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ListRequestBuilderGetQueryParameters 
         {
+            /// <summary>Filter by email IDs. Only include statistics of emails with these IDs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("emailIds")]
@@ -94,8 +95,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Statistics.List
             [QueryParameter("emailIds")]
             public long?[] EmailIds { get; set; }
 #endif
+            /// <summary>The end timestamp of the time span, in ISO8601 representation.</summary>
             [QueryParameter("endTimestamp")]
             public DateTimeOffset? EndTimestamp { get; set; }
+            /// <summary>Specifies which email properties should be returned. All properties will be returned by default.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("property")]
@@ -105,6 +108,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Statistics.List
             [QueryParameter("property")]
             public string Property { get; set; }
 #endif
+            /// <summary>The start timestamp of the time span, in ISO8601 representation.</summary>
             [QueryParameter("startTimestamp")]
             public DateTimeOffset? StartTimestamp { get; set; }
         }

@@ -31,7 +31,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string CurrencyPropertyName { get; set; }
 #endif
         /// <summary>&quot;Indicates the sensitivity level of the property, with options: highly_sensitive, non_sensitive, or sensitive.&quot;</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreate_dataSensitivity? DataSensitivity { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreateDataSensitivity? DataSensitivity { get; set; }
         /// <summary>A description of the property that will be shown as help text in HubSpot.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -45,7 +45,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Applicable only for &apos;enumeration&apos; type properties.  Should be set to true in conjunction with a &apos;referencedObjectType&apos; of &apos;OWNER&apos;.  Otherwise false.</summary>
         public bool? ExternalOptions { get; set; }
         /// <summary>Controls how the property appears in HubSpot.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreate_fieldType? FieldType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreateFieldType? FieldType { get; set; }
         /// <summary>Whether or not the property can be used in a HubSpot form.</summary>
         public bool? FormField { get; set; }
         /// <summary>The name of the property group the property belongs to.</summary>
@@ -77,7 +77,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Name { get; set; }
 #endif
         /// <summary>The numberDisplayHint property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreate_numberDisplayHint? NumberDisplayHint { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreateNumberDisplayHint? NumberDisplayHint { get; set; }
         /// <summary>A list of valid options for the property. This field is required for enumerated properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -97,9 +97,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The showCurrencySymbol property</summary>
         public bool? ShowCurrencySymbol { get; set; }
         /// <summary>The textDisplayHint property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreate_textDisplayHint? TextDisplayHint { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreateTextDisplayHint? TextDisplayHint { get; set; }
         /// <summary>The data type of the property.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreate_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreateType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreate"/> and sets the default values.
         /// </summary>
@@ -127,23 +127,23 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "calculationFormula", n => { CalculationFormula = n.GetStringValue(); } },
                 { "currencyPropertyName", n => { CurrencyPropertyName = n.GetStringValue(); } },
-                { "dataSensitivity", n => { DataSensitivity = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreate_dataSensitivity>(); } },
+                { "dataSensitivity", n => { DataSensitivity = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreateDataSensitivity>(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "displayOrder", n => { DisplayOrder = n.GetIntValue(); } },
                 { "externalOptions", n => { ExternalOptions = n.GetBoolValue(); } },
-                { "fieldType", n => { FieldType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreate_fieldType>(); } },
+                { "fieldType", n => { FieldType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreateFieldType>(); } },
                 { "formField", n => { FormField = n.GetBoolValue(); } },
                 { "groupName", n => { GroupName = n.GetStringValue(); } },
                 { "hasUniqueValue", n => { HasUniqueValue = n.GetBoolValue(); } },
                 { "hidden", n => { Hidden = n.GetBoolValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "numberDisplayHint", n => { NumberDisplayHint = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreate_numberDisplayHint>(); } },
+                { "numberDisplayHint", n => { NumberDisplayHint = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreateNumberDisplayHint>(); } },
                 { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmOptionInput>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmOptionInput.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "referencedObjectType", n => { ReferencedObjectType = n.GetStringValue(); } },
                 { "showCurrencySymbol", n => { ShowCurrencySymbol = n.GetBoolValue(); } },
-                { "textDisplayHint", n => { TextDisplayHint = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreate_textDisplayHint>(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreate_type>(); } },
+                { "textDisplayHint", n => { TextDisplayHint = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreateTextDisplayHint>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreateType>(); } },
             };
         }
         /// <summary>
@@ -155,23 +155,23 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("calculationFormula", CalculationFormula);
             writer.WriteStringValue("currencyPropertyName", CurrencyPropertyName);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreate_dataSensitivity>("dataSensitivity", DataSensitivity);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreateDataSensitivity>("dataSensitivity", DataSensitivity);
             writer.WriteStringValue("description", Description);
             writer.WriteIntValue("displayOrder", DisplayOrder);
             writer.WriteBoolValue("externalOptions", ExternalOptions);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreate_fieldType>("fieldType", FieldType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreateFieldType>("fieldType", FieldType);
             writer.WriteBoolValue("formField", FormField);
             writer.WriteStringValue("groupName", GroupName);
             writer.WriteBoolValue("hasUniqueValue", HasUniqueValue);
             writer.WriteBoolValue("hidden", Hidden);
             writer.WriteStringValue("label", Label);
             writer.WriteStringValue("name", Name);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreate_numberDisplayHint>("numberDisplayHint", NumberDisplayHint);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreateNumberDisplayHint>("numberDisplayHint", NumberDisplayHint);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmOptionInput>("options", Options);
             writer.WriteStringValue("referencedObjectType", ReferencedObjectType);
             writer.WriteBoolValue("showCurrencySymbol", ShowCurrencySymbol);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreate_textDisplayHint>("textDisplayHint", TextDisplayHint);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreate_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreateTextDisplayHint>("textDisplayHint", TextDisplayHint);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreateType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -19,7 +19,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The minimum allowable value for the double field.</summary>
         public double? Minimum { get; set; }
         /// <summary>Indicates the field type as DOUBLE.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.DoubleFieldSchema_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.DoubleFieldSchemaType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.DoubleFieldSchema"/> and sets the default values.
         /// </summary>
@@ -47,7 +47,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "maximum", n => { Maximum = n.GetDoubleValue(); } },
                 { "minimum", n => { Minimum = n.GetDoubleValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DoubleFieldSchema_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DoubleFieldSchemaType>(); } },
             };
         }
         /// <summary>
@@ -59,7 +59,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDoubleValue("maximum", Maximum);
             writer.WriteDoubleValue("minimum", Minimum);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DoubleFieldSchema_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DoubleFieldSchemaType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

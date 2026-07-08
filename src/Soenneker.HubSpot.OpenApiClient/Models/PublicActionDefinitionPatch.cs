@@ -33,10 +33,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The inputFieldDependencies property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionPatch.PublicActionDefinitionPatch_inputFieldDependencies>? InputFieldDependencies { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionPatchInputFieldDependenciesItem>? InputFieldDependencies { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionPatch.PublicActionDefinitionPatch_inputFieldDependencies> InputFieldDependencies { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionPatchInputFieldDependenciesItem> InputFieldDependencies { get; set; }
 #endif
         /// <summary>The inputFields property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -49,10 +49,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Contains labels for the action, including names and descriptions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionPatch_labels? Labels { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionPatchLabelsProperty? Labels { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionPatch_labels Labels { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionPatchLabelsProperty Labels { get; set; }
 #endif
         /// <summary>The objectRequestOptions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -107,9 +107,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "actionUrl", n => { ActionUrl = n.GetStringValue(); } },
                 { "executionRules", n => { ExecutionRules = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExecutionTranslationRule>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicExecutionTranslationRule.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "inputFieldDependencies", n => { InputFieldDependencies = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionPatch.PublicActionDefinitionPatch_inputFieldDependencies>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionPatch.PublicActionDefinitionPatch_inputFieldDependencies.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "inputFieldDependencies", n => { InputFieldDependencies = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionPatchInputFieldDependenciesItem>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionPatchInputFieldDependenciesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "inputFields", n => { InputFields = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicInputFieldDefinition>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicInputFieldDefinition.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "labels", n => { Labels = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionPatch_labels>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionPatch_labels.CreateFromDiscriminatorValue); } },
+                { "labels", n => { Labels = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionPatchLabelsProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionPatchLabelsProperty.CreateFromDiscriminatorValue); } },
                 { "objectRequestOptions", n => { ObjectRequestOptions = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectRequestOptions>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectRequestOptions.CreateFromDiscriminatorValue); } },
                 { "objectTypes", n => { ObjectTypes = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "outputFields", n => { OutputFields = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.OutputFieldDefinition>(global::Soenneker.HubSpot.OpenApiClient.Models.OutputFieldDefinition.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -125,89 +125,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("actionUrl", ActionUrl);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExecutionTranslationRule>("executionRules", ExecutionRules);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionPatch.PublicActionDefinitionPatch_inputFieldDependencies>("inputFieldDependencies", InputFieldDependencies);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionPatchInputFieldDependenciesItem>("inputFieldDependencies", InputFieldDependencies);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicInputFieldDefinition>("inputFields", InputFields);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionPatch_labels>("labels", Labels);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionPatchLabelsProperty>("labels", Labels);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectRequestOptions>("objectRequestOptions", ObjectRequestOptions);
             writer.WriteCollectionOfPrimitiveValues<string>("objectTypes", ObjectTypes);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.OutputFieldDefinition>("outputFields", OutputFields);
             writer.WriteBoolValue("published", Published);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicConditionalSingleFieldDependency"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleFieldDependency"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class PublicActionDefinitionPatch_inputFieldDependencies : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicConditionalSingleFieldDependency"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicConditionalSingleFieldDependency? PublicConditionalSingleFieldDependency { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicConditionalSingleFieldDependency PublicConditionalSingleFieldDependency { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleFieldDependency"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleFieldDependency? PublicSingleFieldDependency { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleFieldDependency PublicSingleFieldDependency { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionPatch.PublicActionDefinitionPatch_inputFieldDependencies"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionPatch.PublicActionDefinitionPatch_inputFieldDependencies CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionPatch.PublicActionDefinitionPatch_inputFieldDependencies();
-                if("PublicConditionalSingleFieldDependency".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicConditionalSingleFieldDependency = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicConditionalSingleFieldDependency();
-                }
-                else if("PublicSingleFieldDependency".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicSingleFieldDependency = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleFieldDependency();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(PublicConditionalSingleFieldDependency != null)
-                {
-                    return PublicConditionalSingleFieldDependency.GetFieldDeserializers();
-                }
-                else if(PublicSingleFieldDependency != null)
-                {
-                    return PublicSingleFieldDependency.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(PublicConditionalSingleFieldDependency != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicConditionalSingleFieldDependency>(null, PublicConditionalSingleFieldDependency);
-                }
-                else if(PublicSingleFieldDependency != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleFieldDependency>(null, PublicSingleFieldDependency);
-                }
-            }
         }
     }
 }

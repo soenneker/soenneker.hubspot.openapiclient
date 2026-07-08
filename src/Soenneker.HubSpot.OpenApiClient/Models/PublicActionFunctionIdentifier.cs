@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>&quot;The type of function, with accepted values: POST_ACTION_EXECUTION, POST_FETCH_OPTIONS, PRE_ACTION_EXECUTION, PRE_FETCH_OPTIONS.&quot;</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionFunctionIdentifier_functionType? FunctionType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionFunctionIdentifierFunctionType? FunctionType { get; set; }
         /// <summary>The unique identifier for the function.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -49,7 +49,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "functionType", n => { FunctionType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionFunctionIdentifier_functionType>(); } },
+                { "functionType", n => { FunctionType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionFunctionIdentifierFunctionType>(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
             };
         }
@@ -60,7 +60,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionFunctionIdentifier_functionType>("functionType", FunctionType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionFunctionIdentifierFunctionType>("functionType", FunctionType);
             writer.WriteStringValue("id", Id);
             writer.WriteAdditionalData(AdditionalData);
         }

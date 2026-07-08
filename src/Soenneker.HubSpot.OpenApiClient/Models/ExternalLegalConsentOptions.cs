@@ -33,7 +33,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Whether the legal basis for processing is legitimate interest.</summary>
         public bool? IsLegitimateInterest { get; set; }
         /// <summary>&quot;The legal basis for processing under legitimate interest. Accepted values are: LEGITIMATE_INTEREST_PQL, LEGITIMATE_INTEREST_CLIENT, PERFORMANCE_OF_CONTRACT, CONSENT_WITH_NOTICE, NON_GDPR, PROCESS_AND_STORE, LEGITIMATE_INTEREST_OTHER.&quot;</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentOptions_legitimateInterestLegalBasis? LegitimateInterestLegalBasis { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentOptionsLegitimateInterestLegalBasis? LegitimateInterestLegalBasis { get; set; }
         /// <summary>The legitimateInterestSubscriptionTypes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -75,7 +75,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string ProcessingConsentText { get; set; }
 #endif
         /// <summary>&quot;The type of consent required for processing. Accepted values are: IMPLICIT, REQUIRED_CHECKBOX.&quot;</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentOptions_processingConsentType? ProcessingConsentType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentOptionsProcessingConsentType? ProcessingConsentType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentOptions"/> and sets the default values.
         /// </summary>
@@ -104,13 +104,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "communicationConsentCheckboxes", n => { CommunicationConsentCheckboxes = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCommunicationConsentCheckbox>(global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCommunicationConsentCheckbox.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "communicationConsentText", n => { CommunicationConsentText = n.GetStringValue(); } },
                 { "isLegitimateInterest", n => { IsLegitimateInterest = n.GetBoolValue(); } },
-                { "legitimateInterestLegalBasis", n => { LegitimateInterestLegalBasis = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentOptions_legitimateInterestLegalBasis>(); } },
+                { "legitimateInterestLegalBasis", n => { LegitimateInterestLegalBasis = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentOptionsLegitimateInterestLegalBasis>(); } },
                 { "legitimateInterestSubscriptionTypes", n => { LegitimateInterestSubscriptionTypes = n.GetCollectionOfPrimitiveValues<long?>()?.AsList(); } },
                 { "privacyPolicyText", n => { PrivacyPolicyText = n.GetStringValue(); } },
                 { "processingConsentCheckboxLabel", n => { ProcessingConsentCheckboxLabel = n.GetStringValue(); } },
                 { "processingConsentFooterText", n => { ProcessingConsentFooterText = n.GetStringValue(); } },
                 { "processingConsentText", n => { ProcessingConsentText = n.GetStringValue(); } },
-                { "processingConsentType", n => { ProcessingConsentType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentOptions_processingConsentType>(); } },
+                { "processingConsentType", n => { ProcessingConsentType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentOptionsProcessingConsentType>(); } },
             };
         }
         /// <summary>
@@ -123,13 +123,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCommunicationConsentCheckbox>("communicationConsentCheckboxes", CommunicationConsentCheckboxes);
             writer.WriteStringValue("communicationConsentText", CommunicationConsentText);
             writer.WriteBoolValue("isLegitimateInterest", IsLegitimateInterest);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentOptions_legitimateInterestLegalBasis>("legitimateInterestLegalBasis", LegitimateInterestLegalBasis);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentOptionsLegitimateInterestLegalBasis>("legitimateInterestLegalBasis", LegitimateInterestLegalBasis);
             writer.WriteCollectionOfPrimitiveValues<long?>("legitimateInterestSubscriptionTypes", LegitimateInterestSubscriptionTypes);
             writer.WriteStringValue("privacyPolicyText", PrivacyPolicyText);
             writer.WriteStringValue("processingConsentCheckboxLabel", ProcessingConsentCheckboxLabel);
             writer.WriteStringValue("processingConsentFooterText", ProcessingConsentFooterText);
             writer.WriteStringValue("processingConsentText", ProcessingConsentText);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentOptions_processingConsentType>("processingConsentType", ProcessingConsentType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentOptionsProcessingConsentType>("processingConsentType", ProcessingConsentType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

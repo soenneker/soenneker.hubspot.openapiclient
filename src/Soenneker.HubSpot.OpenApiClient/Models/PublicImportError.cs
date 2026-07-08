@@ -25,7 +25,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string ErrorMessage { get; set; }
 #endif
         /// <summary>The classification of what went wrong during import processing.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportError_errorType? ErrorType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportErrorErrorType? ErrorType { get; set; }
         /// <summary>Additional human-readable context about the error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -69,7 +69,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The zero-based column index in the import file where the error occurred</summary>
         public int? KnownColumnNumber { get; set; }
         /// <summary>The CRM object type affected by this error.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportError_objectType? ObjectType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportErrorObjectType? ObjectType { get; set; }
         /// <summary>The modern object type identifier for the CRM object affected by this error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -113,14 +113,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "createdAt", n => { CreatedAt = n.GetLongValue(); } },
                 { "errorMessage", n => { ErrorMessage = n.GetStringValue(); } },
-                { "errorType", n => { ErrorType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportError_errorType>(); } },
+                { "errorType", n => { ErrorType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportErrorErrorType>(); } },
                 { "extraContext", n => { ExtraContext = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "invalidPropertyValue", n => { InvalidPropertyValue = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyValue>(global::Soenneker.HubSpot.OpenApiClient.Models.PropertyValue.CreateFromDiscriminatorValue); } },
                 { "invalidValue", n => { InvalidValue = n.GetStringValue(); } },
                 { "invalidValueToDisplay", n => { InvalidValueToDisplay = n.GetStringValue(); } },
                 { "knownColumnNumber", n => { KnownColumnNumber = n.GetIntValue(); } },
-                { "objectType", n => { ObjectType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportError_objectType>(); } },
+                { "objectType", n => { ObjectType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportErrorObjectType>(); } },
                 { "objectTypeId", n => { ObjectTypeId = n.GetStringValue(); } },
                 { "sourceData", n => { SourceData = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ImportRowCore>(global::Soenneker.HubSpot.OpenApiClient.Models.ImportRowCore.CreateFromDiscriminatorValue); } },
             };
@@ -134,14 +134,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteLongValue("createdAt", CreatedAt);
             writer.WriteStringValue("errorMessage", ErrorMessage);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportError_errorType>("errorType", ErrorType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportErrorErrorType>("errorType", ErrorType);
             writer.WriteStringValue("extraContext", ExtraContext);
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyValue>("invalidPropertyValue", InvalidPropertyValue);
             writer.WriteStringValue("invalidValue", InvalidValue);
             writer.WriteStringValue("invalidValueToDisplay", InvalidValueToDisplay);
             writer.WriteIntValue("knownColumnNumber", KnownColumnNumber);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportError_objectType>("objectType", ObjectType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportErrorObjectType>("objectType", ObjectType);
             writer.WriteStringValue("objectTypeId", ObjectTypeId);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ImportRowCore>("sourceData", SourceData);
             writer.WriteAdditionalData(AdditionalData);

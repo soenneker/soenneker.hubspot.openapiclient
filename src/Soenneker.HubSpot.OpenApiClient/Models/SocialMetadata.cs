@@ -39,7 +39,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string MediaTitle { get; set; }
 #endif
         /// <summary>The mediaType property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.SocialMetadata_mediaType? MediaType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.SocialMetadataMediaType? MediaType { get; set; }
         /// <summary>The mediaUrl property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -92,7 +92,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "mediaTitle", n => { MediaTitle = n.GetStringValue(); } },
-                { "mediaType", n => { MediaType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SocialMetadata_mediaType>(); } },
+                { "mediaType", n => { MediaType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SocialMetadataMediaType>(); } },
                 { "mediaUrl", n => { MediaUrl = n.GetStringValue(); } },
                 { "mediaUrlString", n => { MediaUrlString = n.GetStringValue(); } },
                 { "thumbnailUrl", n => { ThumbnailUrl = n.GetStringValue(); } },
@@ -108,7 +108,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("mediaTitle", MediaTitle);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SocialMetadata_mediaType>("mediaType", MediaType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SocialMetadataMediaType>("mediaType", MediaType);
             writer.WriteStringValue("mediaUrl", MediaUrl);
             writer.WriteStringValue("mediaUrlString", MediaUrlString);
             writer.WriteStringValue("thumbnailUrl", ThumbnailUrl);

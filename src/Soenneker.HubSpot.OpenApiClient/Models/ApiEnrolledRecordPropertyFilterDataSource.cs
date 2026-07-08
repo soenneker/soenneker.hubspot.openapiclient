@@ -47,7 +47,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public global::Soenneker.HubSpot.OpenApiClient.Models.ApiSort SortBy { get; set; }
 #endif
         /// <summary>Indicates the type of data source, which defaults to ENROLLED_RECORD_PROPERTY_FILTER.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiEnrolledRecordPropertyFilterDataSource_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiEnrolledRecordPropertyFilterDataSourceType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiEnrolledRecordPropertyFilterDataSource"/> and sets the default values.
         /// </summary>
@@ -77,7 +77,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "propertyName", n => { PropertyName = n.GetStringValue(); } },
                 { "recordFieldName", n => { RecordFieldName = n.GetStringValue(); } },
                 { "sortBy", n => { SortBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiSort>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiSort.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiEnrolledRecordPropertyFilterDataSource_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiEnrolledRecordPropertyFilterDataSourceType>(); } },
             };
         }
         /// <summary>
@@ -91,7 +91,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("propertyName", PropertyName);
             writer.WriteStringValue("recordFieldName", RecordFieldName);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiSort>("sortBy", SortBy);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiEnrolledRecordPropertyFilterDataSource_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiEnrolledRecordPropertyFilterDataSourceType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

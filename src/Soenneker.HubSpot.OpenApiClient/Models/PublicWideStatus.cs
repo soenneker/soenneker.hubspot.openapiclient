@@ -17,9 +17,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The ID of the business unit associated with the status.</summary>
         public long? BusinessUnitId { get; set; }
         /// <summary>The type of communication channel, with &apos;EMAIL&apos; as the only supported option.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWideStatus_channel? Channel { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWideStatusChannel? Channel { get; set; }
         /// <summary>The subscription status of the contact, which can be &apos;SUBSCRIBED&apos;, &apos;UNSUBSCRIBED&apos;, or &apos;NOT_SPECIFIED&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWideStatus_status? Status { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWideStatusStatus? Status { get; set; }
         /// <summary>The email address of the contact.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -31,7 +31,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The date and time when the status was recorded.</summary>
         public DateTimeOffset? Timestamp { get; set; }
         /// <summary>The type of wide status, which can be &apos;PORTAL_WIDE&apos; or &apos;BUSINESS_UNIT_WIDE&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWideStatus_wideStatusType? WideStatusType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWideStatusWideStatusType? WideStatusType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicWideStatus"/> and sets the default values.
         /// </summary>
@@ -58,11 +58,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "businessUnitId", n => { BusinessUnitId = n.GetLongValue(); } },
-                { "channel", n => { Channel = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWideStatus_channel>(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWideStatus_status>(); } },
+                { "channel", n => { Channel = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWideStatusChannel>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWideStatusStatus>(); } },
                 { "subscriberIdString", n => { SubscriberIdString = n.GetStringValue(); } },
                 { "timestamp", n => { Timestamp = n.GetDateTimeOffsetValue(); } },
-                { "wideStatusType", n => { WideStatusType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWideStatus_wideStatusType>(); } },
+                { "wideStatusType", n => { WideStatusType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWideStatusWideStatusType>(); } },
             };
         }
         /// <summary>
@@ -73,11 +73,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteLongValue("businessUnitId", BusinessUnitId);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWideStatus_channel>("channel", Channel);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWideStatus_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWideStatusChannel>("channel", Channel);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWideStatusStatus>("status", Status);
             writer.WriteStringValue("subscriberIdString", SubscriberIdString);
             writer.WriteDateTimeOffsetValue("timestamp", Timestamp);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWideStatus_wideStatusType>("wideStatusType", WideStatusType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWideStatusWideStatusType>("wideStatusType", WideStatusType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string PropertyName { get; set; }
 #endif
         /// <summary>Indicates the type of the object property, which defaults to OBJECT_PROPERTY.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiObjectPropertyValue_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiObjectPropertyValueType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiObjectPropertyValue"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "propertyName", n => { PropertyName = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiObjectPropertyValue_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiObjectPropertyValueType>(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("propertyName", PropertyName);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiObjectPropertyValue_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiObjectPropertyValueType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

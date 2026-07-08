@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public global::Soenneker.HubSpot.OpenApiClient.Models.AssociationSpec AssociationSpec { get; set; }
 #endif
         /// <summary>The cardinality property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LookupAssociationSpec_cardinality? Cardinality { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LookupAssociationSpecCardinality? Cardinality { get; set; }
         /// <summary>The maxToObjectIds property</summary>
         public int? MaxToObjectIds { get; set; }
         /// <summary>The toObjectTypeId property</summary>
@@ -60,7 +60,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "associationSpec", n => { AssociationSpec = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.AssociationSpec>(global::Soenneker.HubSpot.OpenApiClient.Models.AssociationSpec.CreateFromDiscriminatorValue); } },
-                { "cardinality", n => { Cardinality = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.LookupAssociationSpec_cardinality>(); } },
+                { "cardinality", n => { Cardinality = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.LookupAssociationSpecCardinality>(); } },
                 { "maxToObjectIds", n => { MaxToObjectIds = n.GetIntValue(); } },
                 { "toObjectTypeId", n => { ToObjectTypeId = n.GetStringValue(); } },
             };
@@ -73,7 +73,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.AssociationSpec>("associationSpec", AssociationSpec);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.LookupAssociationSpec_cardinality>("cardinality", Cardinality);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.LookupAssociationSpecCardinality>("cardinality", Cardinality);
             writer.WriteIntValue("maxToObjectIds", MaxToObjectIds);
             writer.WriteStringValue("toObjectTypeId", ToObjectTypeId);
             writer.WriteAdditionalData(AdditionalData);

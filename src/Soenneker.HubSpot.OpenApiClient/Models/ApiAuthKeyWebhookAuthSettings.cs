@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Specifies where the authentication key is located, with possible values being HEADER or QUERY_PARAM.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiAuthKeyWebhookAuthSettings_location? Location { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiAuthKeyWebhookAuthSettingsLocation? Location { get; set; }
         /// <summary>The name associated with the authentication key.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -33,7 +33,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string SecretName { get; set; }
 #endif
         /// <summary>Indicates the type of authentication, which defaults to AUTH_KEY.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiAuthKeyWebhookAuthSettings_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiAuthKeyWebhookAuthSettingsType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiAuthKeyWebhookAuthSettings"/> and sets the default values.
         /// </summary>
@@ -59,10 +59,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "location", n => { Location = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiAuthKeyWebhookAuthSettings_location>(); } },
+                { "location", n => { Location = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiAuthKeyWebhookAuthSettingsLocation>(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "secretName", n => { SecretName = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiAuthKeyWebhookAuthSettings_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiAuthKeyWebhookAuthSettingsType>(); } },
             };
         }
         /// <summary>
@@ -72,10 +72,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiAuthKeyWebhookAuthSettings_location>("location", Location);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiAuthKeyWebhookAuthSettingsLocation>("location", Location);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("secretName", SecretName);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiAuthKeyWebhookAuthSettings_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiAuthKeyWebhookAuthSettingsType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

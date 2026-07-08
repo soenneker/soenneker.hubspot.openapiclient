@@ -25,7 +25,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Text { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.MessageHeaderAttachment_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.MessageHeaderAttachmentType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.MessageHeaderAttachment"/> and sets the default values.
         /// </summary>
@@ -53,7 +53,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "fileId", n => { FileId = n.GetLongValue(); } },
                 { "text", n => { Text = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MessageHeaderAttachment_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MessageHeaderAttachmentType>(); } },
             };
         }
         /// <summary>
@@ -65,7 +65,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteLongValue("fileId", FileId);
             writer.WriteStringValue("text", Text);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MessageHeaderAttachment_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MessageHeaderAttachmentType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

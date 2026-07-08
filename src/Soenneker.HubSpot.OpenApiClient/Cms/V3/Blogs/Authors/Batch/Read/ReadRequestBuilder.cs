@@ -90,7 +90,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.Blogs.Authors.Batch.Read
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ReadRequestBuilderPostQueryParameters 
         {
-            /// <summary>Whether to return only results that have been archived.</summary>
+            /// <summary>Specifies whether to return deleted Blog Authors. Defaults to `false`.</summary>
             [QueryParameter("archived")]
             public bool? Archived { get; set; }
         }

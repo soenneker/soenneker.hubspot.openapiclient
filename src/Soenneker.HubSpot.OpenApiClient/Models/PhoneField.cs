@@ -39,7 +39,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Description { get; set; }
 #endif
         /// <summary>Determines how the field will be displayed and validated.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PhoneField_fieldType? FieldType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PhoneFieldFieldType? FieldType { get; set; }
         /// <summary>Whether a field should be hidden or not. Hidden fields won&apos;t appear on the form, but can be used to pass a value to a property without requiring the customer to fill it in.</summary>
         public bool? Hidden { get; set; }
         /// <summary>The main label for the form field.</summary>
@@ -92,7 +92,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public PhoneField()
         {
             AdditionalData = new Dictionary<string, object>();
-            FieldType = global::Soenneker.HubSpot.OpenApiClient.Models.PhoneField_fieldType.Phone;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -115,7 +114,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "defaultValue", n => { DefaultValue = n.GetStringValue(); } },
                 { "dependentFields", n => { DependentFields = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.DependentField>(global::Soenneker.HubSpot.OpenApiClient.Models.DependentField.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "fieldType", n => { FieldType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PhoneField_fieldType>(); } },
+                { "fieldType", n => { FieldType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PhoneFieldFieldType>(); } },
                 { "hidden", n => { Hidden = n.GetBoolValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
@@ -136,7 +135,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("defaultValue", DefaultValue);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.DependentField>("dependentFields", DependentFields);
             writer.WriteStringValue("description", Description);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PhoneField_fieldType>("fieldType", FieldType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PhoneFieldFieldType>("fieldType", FieldType);
             writer.WriteBoolValue("hidden", Hidden);
             writer.WriteStringValue("label", Label);
             writer.WriteStringValue("name", Name);

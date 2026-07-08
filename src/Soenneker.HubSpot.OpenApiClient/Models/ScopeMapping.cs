@@ -13,11 +13,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning restore CS1591
     {
         /// <summary>The accessLevel property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ScopeMapping_accessLevel? AccessLevel { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ScopeMappingAccessLevel? AccessLevel { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The requestAction property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ScopeMapping_requestAction? RequestAction { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ScopeMappingRequestAction? RequestAction { get; set; }
         /// <summary>The scopeName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -51,8 +51,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "accessLevel", n => { AccessLevel = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ScopeMapping_accessLevel>(); } },
-                { "requestAction", n => { RequestAction = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ScopeMapping_requestAction>(); } },
+                { "accessLevel", n => { AccessLevel = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ScopeMappingAccessLevel>(); } },
+                { "requestAction", n => { RequestAction = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ScopeMappingRequestAction>(); } },
                 { "scopeName", n => { ScopeName = n.GetStringValue(); } },
             };
         }
@@ -63,8 +63,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ScopeMapping_accessLevel>("accessLevel", AccessLevel);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ScopeMapping_requestAction>("requestAction", RequestAction);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ScopeMappingAccessLevel>("accessLevel", AccessLevel);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ScopeMappingRequestAction>("requestAction", RequestAction);
             writer.WriteStringValue("scopeName", ScopeName);
             writer.WriteAdditionalData(AdditionalData);
         }

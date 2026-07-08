@@ -17,7 +17,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Time when the send was completed.</summary>
         public DateTimeOffset? CompletedAt { get; set; }
-        /// <summary>The ID of a send event.</summary>
+        /// <summary>The eventId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventIdView? EventId { get; set; }
@@ -36,11 +36,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Time when the send was requested.</summary>
         public DateTimeOffset? RequestedAt { get; set; }
         /// <summary>Result of the send.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEmailSendStatusView_sendResult? SendResult { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEmailSendStatusViewSendResult? SendResult { get; set; }
         /// <summary>Time when the send began processing.</summary>
         public DateTimeOffset? StartedAt { get; set; }
         /// <summary>Status of the send request.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEmailSendStatusView_status? Status { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEmailSendStatusViewStatus? Status { get; set; }
         /// <summary>Identifier used to query the status of the send.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -78,9 +78,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "eventId", n => { EventId = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventIdView>(global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventIdView.CreateFromDiscriminatorValue); } },
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "requestedAt", n => { RequestedAt = n.GetDateTimeOffsetValue(); } },
-                { "sendResult", n => { SendResult = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEmailSendStatusView_sendResult>(); } },
+                { "sendResult", n => { SendResult = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEmailSendStatusViewSendResult>(); } },
                 { "startedAt", n => { StartedAt = n.GetDateTimeOffsetValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEmailSendStatusView_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEmailSendStatusViewStatus>(); } },
                 { "statusId", n => { StatusId = n.GetStringValue(); } },
             };
         }
@@ -95,9 +95,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventIdView>("eventId", EventId);
             writer.WriteStringValue("message", Message);
             writer.WriteDateTimeOffsetValue("requestedAt", RequestedAt);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEmailSendStatusView_sendResult>("sendResult", SendResult);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEmailSendStatusViewSendResult>("sendResult", SendResult);
             writer.WriteDateTimeOffsetValue("startedAt", StartedAt);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEmailSendStatusView_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEmailSendStatusViewStatus>("status", Status);
             writer.WriteStringValue("statusId", StatusId);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -25,7 +25,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string FlagName { get; set; }
 #endif
         /// <summary>The state of the flag for this portal</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStateResponse_flagState? FlagState { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStateResponseFlagState? FlagState { get; set; }
         /// <summary>The ID of the portal</summary>
         public int? PortalId { get; set; }
         /// <summary>
@@ -55,7 +55,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "appId", n => { AppId = n.GetIntValue(); } },
                 { "flagName", n => { FlagName = n.GetStringValue(); } },
-                { "flagState", n => { FlagState = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStateResponse_flagState>(); } },
+                { "flagState", n => { FlagState = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStateResponseFlagState>(); } },
                 { "portalId", n => { PortalId = n.GetIntValue(); } },
             };
         }
@@ -68,7 +68,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("appId", AppId);
             writer.WriteStringValue("flagName", FlagName);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStateResponse_flagState>("flagState", FlagState);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStateResponseFlagState>("flagState", FlagState);
             writer.WriteIntValue("portalId", PortalId);
             writer.WriteAdditionalData(AdditionalData);
         }

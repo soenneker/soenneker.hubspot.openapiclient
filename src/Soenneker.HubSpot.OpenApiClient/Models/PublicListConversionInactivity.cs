@@ -15,18 +15,17 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Specifies the type of conversion (INACTIVITY).</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionInactivity_conversionType? ConversionType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionInactivityConversionType? ConversionType { get; set; }
         /// <summary>Value used to paginate through lists. The `offset` provided in the response can be used in the next request to fetch the next page of results. Defaults to `0` if no offset is provided.</summary>
         public int? Offset { get; set; }
         /// <summary>The unit of time for the inactivity period, such as (DAY, MONTH, WEEK).</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionInactivity_timeUnit? TimeUnit { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionInactivityTimeUnit? TimeUnit { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionInactivity"/> and sets the default values.
         /// </summary>
         public PublicListConversionInactivity()
         {
             AdditionalData = new Dictionary<string, object>();
-            ConversionType = global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionInactivity_conversionType.INACTIVITY;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -46,9 +45,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "conversionType", n => { ConversionType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionInactivity_conversionType>(); } },
+                { "conversionType", n => { ConversionType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionInactivityConversionType>(); } },
                 { "offset", n => { Offset = n.GetIntValue(); } },
-                { "timeUnit", n => { TimeUnit = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionInactivity_timeUnit>(); } },
+                { "timeUnit", n => { TimeUnit = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionInactivityTimeUnit>(); } },
             };
         }
         /// <summary>
@@ -58,9 +57,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionInactivity_conversionType>("conversionType", ConversionType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionInactivityConversionType>("conversionType", ConversionType);
             writer.WriteIntValue("offset", Offset);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionInactivity_timeUnit>("timeUnit", TimeUnit);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionInactivityTimeUnit>("timeUnit", TimeUnit);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

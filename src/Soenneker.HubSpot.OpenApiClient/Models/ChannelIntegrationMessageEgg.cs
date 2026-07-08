@@ -19,10 +19,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The attachments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ChannelIntegrationMessageEgg.ChannelIntegrationMessageEgg_attachments>? Attachments { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ChannelIntegrationMessageEggAttachmentsItem>? Attachments { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ChannelIntegrationMessageEgg.ChannelIntegrationMessageEgg_attachments> Attachments { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ChannelIntegrationMessageEggAttachmentsItem> Attachments { get; set; }
 #endif
         /// <summary>The channelAccountId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -57,7 +57,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string IntegrationThreadId { get; set; }
 #endif
         /// <summary>The messageDirection property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ChannelIntegrationMessageEgg_messageDirection? MessageDirection { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ChannelIntegrationMessageEggMessageDirection? MessageDirection { get; set; }
         /// <summary>The preResolvedContacts property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -126,12 +126,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "associateWithContactId", n => { AssociateWithContactId = n.GetLongValue(); } },
-                { "attachments", n => { Attachments = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ChannelIntegrationMessageEgg.ChannelIntegrationMessageEgg_attachments>(global::Soenneker.HubSpot.OpenApiClient.Models.ChannelIntegrationMessageEgg.ChannelIntegrationMessageEgg_attachments.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "attachments", n => { Attachments = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ChannelIntegrationMessageEggAttachmentsItem>(global::Soenneker.HubSpot.OpenApiClient.Models.ChannelIntegrationMessageEggAttachmentsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "channelAccountId", n => { ChannelAccountId = n.GetStringValue(); } },
                 { "inReplyToId", n => { InReplyToId = n.GetStringValue(); } },
                 { "integrationIdempotencyId", n => { IntegrationIdempotencyId = n.GetStringValue(); } },
                 { "integrationThreadId", n => { IntegrationThreadId = n.GetStringValue(); } },
-                { "messageDirection", n => { MessageDirection = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ChannelIntegrationMessageEgg_messageDirection>(); } },
+                { "messageDirection", n => { MessageDirection = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ChannelIntegrationMessageEggMessageDirection>(); } },
                 { "preResolvedContacts", n => { PreResolvedContacts = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PreResolvedContacts>(global::Soenneker.HubSpot.OpenApiClient.Models.PreResolvedContacts.CreateFromDiscriminatorValue); } },
                 { "recipients", n => { Recipients = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ChannelIntegrationParticipant>(global::Soenneker.HubSpot.OpenApiClient.Models.ChannelIntegrationParticipant.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "richText", n => { RichText = n.GetStringValue(); } },
@@ -148,12 +148,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteLongValue("associateWithContactId", AssociateWithContactId);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ChannelIntegrationMessageEgg.ChannelIntegrationMessageEgg_attachments>("attachments", Attachments);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ChannelIntegrationMessageEggAttachmentsItem>("attachments", Attachments);
             writer.WriteStringValue("channelAccountId", ChannelAccountId);
             writer.WriteStringValue("inReplyToId", InReplyToId);
             writer.WriteStringValue("integrationIdempotencyId", IntegrationIdempotencyId);
             writer.WriteStringValue("integrationThreadId", IntegrationThreadId);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ChannelIntegrationMessageEgg_messageDirection>("messageDirection", MessageDirection);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ChannelIntegrationMessageEggMessageDirection>("messageDirection", MessageDirection);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PreResolvedContacts>("preResolvedContacts", PreResolvedContacts);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ChannelIntegrationParticipant>("recipients", Recipients);
             writer.WriteStringValue("richText", RichText);
@@ -161,181 +161,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("text", Text);
             writer.WriteDateTimeOffsetValue("timestamp", Timestamp);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ContactAttachment"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.FileAttachment"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.LocationAttachment"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.MessageHeaderAttachment"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.QuickRepliesAttachment"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.SocialMetadataIntegrationAttachment"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.UnsupportedContentAttachment"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ChannelIntegrationMessageEgg_attachments : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ContactAttachment"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.ContactAttachment? ContactAttachment { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.ContactAttachment ContactAttachment { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.FileAttachment"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.FileAttachment? FileAttachment { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.FileAttachment FileAttachment { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.LocationAttachment"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.LocationAttachment? LocationAttachment { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.LocationAttachment LocationAttachment { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.MessageHeaderAttachment"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.MessageHeaderAttachment? MessageHeaderAttachment { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.MessageHeaderAttachment MessageHeaderAttachment { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.QuickRepliesAttachment"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.QuickRepliesAttachment? QuickRepliesAttachment { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.QuickRepliesAttachment QuickRepliesAttachment { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.SocialMetadataIntegrationAttachment"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.SocialMetadataIntegrationAttachment? SocialMetadataIntegrationAttachment { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.SocialMetadataIntegrationAttachment SocialMetadataIntegrationAttachment { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.UnsupportedContentAttachment"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.UnsupportedContentAttachment? UnsupportedContentAttachment { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.UnsupportedContentAttachment UnsupportedContentAttachment { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ChannelIntegrationMessageEgg.ChannelIntegrationMessageEgg_attachments"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.HubSpot.OpenApiClient.Models.ChannelIntegrationMessageEgg.ChannelIntegrationMessageEgg_attachments CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.HubSpot.OpenApiClient.Models.ChannelIntegrationMessageEgg.ChannelIntegrationMessageEgg_attachments();
-                if("ContactAttachment".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ContactAttachment = new global::Soenneker.HubSpot.OpenApiClient.Models.ContactAttachment();
-                }
-                else if("FileAttachment".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.FileAttachment = new global::Soenneker.HubSpot.OpenApiClient.Models.FileAttachment();
-                }
-                else if("LocationAttachment".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.LocationAttachment = new global::Soenneker.HubSpot.OpenApiClient.Models.LocationAttachment();
-                }
-                else if("MessageHeaderAttachment".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.MessageHeaderAttachment = new global::Soenneker.HubSpot.OpenApiClient.Models.MessageHeaderAttachment();
-                }
-                else if("QuickRepliesAttachment".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.QuickRepliesAttachment = new global::Soenneker.HubSpot.OpenApiClient.Models.QuickRepliesAttachment();
-                }
-                else if("SocialMetadataIntegrationAttachment".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.SocialMetadataIntegrationAttachment = new global::Soenneker.HubSpot.OpenApiClient.Models.SocialMetadataIntegrationAttachment();
-                }
-                else if("UnsupportedContentAttachment".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.UnsupportedContentAttachment = new global::Soenneker.HubSpot.OpenApiClient.Models.UnsupportedContentAttachment();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(ContactAttachment != null)
-                {
-                    return ContactAttachment.GetFieldDeserializers();
-                }
-                else if(FileAttachment != null)
-                {
-                    return FileAttachment.GetFieldDeserializers();
-                }
-                else if(LocationAttachment != null)
-                {
-                    return LocationAttachment.GetFieldDeserializers();
-                }
-                else if(MessageHeaderAttachment != null)
-                {
-                    return MessageHeaderAttachment.GetFieldDeserializers();
-                }
-                else if(QuickRepliesAttachment != null)
-                {
-                    return QuickRepliesAttachment.GetFieldDeserializers();
-                }
-                else if(SocialMetadataIntegrationAttachment != null)
-                {
-                    return SocialMetadataIntegrationAttachment.GetFieldDeserializers();
-                }
-                else if(UnsupportedContentAttachment != null)
-                {
-                    return UnsupportedContentAttachment.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(ContactAttachment != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ContactAttachment>(null, ContactAttachment);
-                }
-                else if(FileAttachment != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.FileAttachment>(null, FileAttachment);
-                }
-                else if(LocationAttachment != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LocationAttachment>(null, LocationAttachment);
-                }
-                else if(MessageHeaderAttachment != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MessageHeaderAttachment>(null, MessageHeaderAttachment);
-                }
-                else if(QuickRepliesAttachment != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.QuickRepliesAttachment>(null, QuickRepliesAttachment);
-                }
-                else if(SocialMetadataIntegrationAttachment != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.SocialMetadataIntegrationAttachment>(null, SocialMetadataIntegrationAttachment);
-                }
-                else if(UnsupportedContentAttachment != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.UnsupportedContentAttachment>(null, UnsupportedContentAttachment);
-                }
-            }
         }
     }
 }

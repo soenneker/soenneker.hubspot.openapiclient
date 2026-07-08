@@ -15,14 +15,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Indicates the source of the test request, with the only accepted value being &apos;TEST&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.TestRequestContext_source? Source { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.TestRequestContextSource? Source { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.TestRequestContext"/> and sets the default values.
         /// </summary>
         public TestRequestContext()
         {
             AdditionalData = new Dictionary<string, object>();
-            Source = global::Soenneker.HubSpot.OpenApiClient.Models.TestRequestContext_source.TEST;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -42,7 +41,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "source", n => { Source = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TestRequestContext_source>(); } },
+                { "source", n => { Source = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TestRequestContextSource>(); } },
             };
         }
         /// <summary>
@@ -52,7 +51,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TestRequestContext_source>("source", Source);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TestRequestContextSource>("source", Source);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

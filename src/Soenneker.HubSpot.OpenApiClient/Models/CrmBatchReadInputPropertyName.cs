@@ -17,7 +17,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Specifies whether the property is archived.</summary>
         public bool? Archived { get; set; }
         /// <summary>Indicates the sensitivity level of the data, such as &apos;non_sensitive&apos;, &apos;sensitive&apos;, or &apos;highly_sensitive&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchReadInputPropertyName_dataSensitivity? DataSensitivity { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchReadInputPropertyNameDataSensitivity? DataSensitivity { get; set; }
         /// <summary>The inputs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -52,7 +52,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "archived", n => { Archived = n.GetBoolValue(); } },
-                { "dataSensitivity", n => { DataSensitivity = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchReadInputPropertyName_dataSensitivity>(); } },
+                { "dataSensitivity", n => { DataSensitivity = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchReadInputPropertyNameDataSensitivity>(); } },
                 { "inputs", n => { Inputs = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyName>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyName.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -64,7 +64,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("archived", Archived);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchReadInputPropertyName_dataSensitivity>("dataSensitivity", DataSensitivity);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchReadInputPropertyNameDataSensitivity>("dataSensitivity", DataSensitivity);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyName>("inputs", Inputs);
             writer.WriteAdditionalData(AdditionalData);
         }

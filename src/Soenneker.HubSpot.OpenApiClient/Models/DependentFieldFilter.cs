@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The comparison operator used to evaluate the dependent field condition. Supports equality (eq, neq), string operations (contains, doesnt_contain, str_starts_with, str_ends_with), numeric comparisons (lt, lte, gt, gte), range checks (between, not_between), set operations (set_any, set_not_any, set_eq, set_neq), and time-based conditions (within_time, within_time_reverse).</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.DependentFieldFilter_operator? Operator { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.DependentFieldFilterOperator? Operator { get; set; }
         /// <summary>The end value for range-based operators (between, not_between). Must be provided together with rangeStart.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -73,7 +73,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DependentFieldFilter_operator>(); } },
+                { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DependentFieldFilterOperator>(); } },
                 { "rangeEnd", n => { RangeEnd = n.GetStringValue(); } },
                 { "rangeStart", n => { RangeStart = n.GetStringValue(); } },
                 { "value", n => { Value = n.GetStringValue(); } },
@@ -87,7 +87,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DependentFieldFilter_operator>("operator", Operator);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DependentFieldFilterOperator>("operator", Operator);
             writer.WriteStringValue("rangeEnd", RangeEnd);
             writer.WriteStringValue("rangeStart", RangeStart);
             writer.WriteStringValue("value", Value);

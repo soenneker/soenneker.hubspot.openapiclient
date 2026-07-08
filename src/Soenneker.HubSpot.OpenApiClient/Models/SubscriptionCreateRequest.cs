@@ -18,7 +18,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Type of event to listen for. Can be one of `create`, `delete`, `deletedForPrivacy`, or `propertyChange`.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionCreateRequest_eventType? EventType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionCreateRequestEventType? EventType { get; set; }
         /// <summary>The name of the event to listen for. This is used with custom objects to specify custom event types beyond the standard eventType enum values.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -69,7 +69,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "active", n => { Active = n.GetBoolValue(); } },
-                { "eventType", n => { EventType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionCreateRequest_eventType>(); } },
+                { "eventType", n => { EventType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionCreateRequestEventType>(); } },
                 { "eventTypeName", n => { EventTypeName = n.GetStringValue(); } },
                 { "objectTypeId", n => { ObjectTypeId = n.GetStringValue(); } },
                 { "propertyName", n => { PropertyName = n.GetStringValue(); } },
@@ -83,7 +83,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("active", Active);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionCreateRequest_eventType>("eventType", EventType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionCreateRequestEventType>("eventType", EventType);
             writer.WriteStringValue("eventTypeName", EventTypeName);
             writer.WriteStringValue("objectTypeId", ObjectTypeId);
             writer.WriteStringValue("propertyName", PropertyName);

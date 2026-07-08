@@ -17,7 +17,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Whether this thread is archived. Set to false to restore the thread.</summary>
         public bool? Archived { get; set; }
         /// <summary>&quot;The thread&apos;s status: `OPEN` or `CLOSED`.&quot;</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadUpdateRequest_status? Status { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadUpdateRequestStatus? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadUpdateRequest"/> and sets the default values.
         /// </summary>
@@ -44,7 +44,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "archived", n => { Archived = n.GetBoolValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadUpdateRequest_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadUpdateRequestStatus>(); } },
             };
         }
         /// <summary>
@@ -55,7 +55,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("archived", Archived);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadUpdateRequest_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadUpdateRequestStatus>("status", Status);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

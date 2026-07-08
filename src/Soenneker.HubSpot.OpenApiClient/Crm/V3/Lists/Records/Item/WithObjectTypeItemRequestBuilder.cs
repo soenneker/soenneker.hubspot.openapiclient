@@ -16,7 +16,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Records.Item
     public partial class WithObjectTypeItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.crm.v3.lists.records.item.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">Id of the record</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Records.Item.Item.WithRecordItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Records.Item.Item.WithRecordItemRequestBuilder this[string position]
         {

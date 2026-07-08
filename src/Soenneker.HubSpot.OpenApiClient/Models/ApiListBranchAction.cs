@@ -47,7 +47,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBranch> ListBranches { get; set; }
 #endif
         /// <summary>Indicates the type of action, which defaults to LIST_BRANCH.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBranchAction_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBranchActionType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBranchAction"/> and sets the default values.
         /// </summary>
@@ -77,7 +77,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "defaultBranch", n => { DefaultBranch = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiConnection>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiConnection.CreateFromDiscriminatorValue); } },
                 { "defaultBranchName", n => { DefaultBranchName = n.GetStringValue(); } },
                 { "listBranches", n => { ListBranches = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBranch>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBranch.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBranchAction_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBranchActionType>(); } },
             };
         }
         /// <summary>
@@ -91,7 +91,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiConnection>("defaultBranch", DefaultBranch);
             writer.WriteStringValue("defaultBranchName", DefaultBranchName);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBranch>("listBranches", ListBranches);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBranchAction_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBranchActionType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

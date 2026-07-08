@@ -43,9 +43,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Subject { get; set; }
 #endif
         /// <summary>The priority level assigned to the task.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicTaskPatternResponse_taskPriority? TaskPriority { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicTaskPatternResponseTaskPriority? TaskPriority { get; set; }
         /// <summary>The type of task, such as an email or call.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicTaskPatternResponse_taskType? TaskType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicTaskPatternResponseTaskType? TaskType { get; set; }
         /// <summary>The identifier for the template used in the task.</summary>
         public long? TemplateId { get; set; }
         /// <summary>The order of the step to which the email thread is related.</summary>
@@ -82,8 +82,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "notes", n => { Notes = n.GetStringValue(); } },
                 { "queueId", n => { QueueId = n.GetIntValue(); } },
                 { "subject", n => { Subject = n.GetStringValue(); } },
-                { "taskPriority", n => { TaskPriority = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTaskPatternResponse_taskPriority>(); } },
-                { "taskType", n => { TaskType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTaskPatternResponse_taskType>(); } },
+                { "taskPriority", n => { TaskPriority = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTaskPatternResponseTaskPriority>(); } },
+                { "taskType", n => { TaskType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTaskPatternResponseTaskType>(); } },
                 { "templateId", n => { TemplateId = n.GetLongValue(); } },
                 { "threadEmailToStepOrder", n => { ThreadEmailToStepOrder = n.GetIntValue(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
@@ -101,8 +101,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("notes", Notes);
             writer.WriteIntValue("queueId", QueueId);
             writer.WriteStringValue("subject", Subject);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTaskPatternResponse_taskPriority>("taskPriority", TaskPriority);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTaskPatternResponse_taskType>("taskType", TaskType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTaskPatternResponseTaskPriority>("taskPriority", TaskPriority);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTaskPatternResponseTaskType>("taskType", TaskType);
             writer.WriteLongValue("templateId", TemplateId);
             writer.WriteIntValue("threadEmailToStepOrder", ThreadEmailToStepOrder);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);

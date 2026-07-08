@@ -19,17 +19,17 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>A map of link names to associated URIs containing documentation about the error or recommended remediation steps</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponse_links? Links { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseLinksProperty? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponse_links Links { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseLinksProperty Links { get; set; }
 #endif
         /// <summary>The timestamp indicating when the action was requested.</summary>
         public DateTimeOffset? RequestedAt { get; set; }
         /// <summary>The timestamp indicating when the action was started.</summary>
         public DateTimeOffset? StartedAt { get; set; }
         /// <summary>&quot;The current status of the action, with possible values: CANCELED, COMPLETE, PENDING, PROCESSING.&quot;</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponse_status? Status { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseStatus? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponse"/> and sets the default values.
         /// </summary>
@@ -56,10 +56,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "completedAt", n => { CompletedAt = n.GetDateTimeOffsetValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponse_links>(global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponse_links.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseLinksProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseLinksProperty.CreateFromDiscriminatorValue); } },
                 { "requestedAt", n => { RequestedAt = n.GetDateTimeOffsetValue(); } },
                 { "startedAt", n => { StartedAt = n.GetDateTimeOffsetValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponse_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseStatus>(); } },
             };
         }
         /// <summary>
@@ -70,10 +70,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDateTimeOffsetValue("completedAt", CompletedAt);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponse_links>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseLinksProperty>("links", Links);
             writer.WriteDateTimeOffsetValue("requestedAt", RequestedAt);
             writer.WriteDateTimeOffsetValue("startedAt", StartedAt);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponse_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseStatus>("status", Status);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

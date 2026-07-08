@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Indicates the type of filter being applied (IN_LIST).</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicInListFilter_filterType? FilterType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicInListFilterFilterType? FilterType { get; set; }
         /// <summary>The ID of the list used in the association filter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -46,7 +46,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public CrmPublicInListFilter()
         {
             AdditionalData = new Dictionary<string, object>();
-            FilterType = global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicInListFilter_filterType.IN_LIST;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -66,7 +65,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicInListFilter_filterType>(); } },
+                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicInListFilterFilterType>(); } },
                 { "listId", n => { ListId = n.GetStringValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicInListFilterMetadata>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicInListFilterMetadata.CreateFromDiscriminatorValue); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
@@ -79,7 +78,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicInListFilter_filterType>("filterType", FilterType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicInListFilterFilterType>("filterType", FilterType);
             writer.WriteStringValue("listId", ListId);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicInListFilterMetadata>("metadata", Metadata);
             writer.WriteStringValue("operator", Operator);

@@ -90,7 +90,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Files.V3.Files.Item.SignedUrl
             public long? ExpirationSeconds { get; set; }
             /// <summary>For image files. This will resize the image to the desired size before sharing. Does not affect the original file, just the file served by this signed URL.</summary>
             [QueryParameter("size")]
-            public global::Soenneker.HubSpot.OpenApiClient.Files.V3.Files.Item.SignedUrl.GetSizeQueryParameterType? Size { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.FilesGetFilesV3FilesFileIdSignedUrlGetSignedUrlSizeParameter? Size { get; set; }
             /// <summary>If size is provided, this will upscale the image to fit the size dimensions.</summary>
             [QueryParameter("upscale")]
             public bool? Upscale { get; set; }

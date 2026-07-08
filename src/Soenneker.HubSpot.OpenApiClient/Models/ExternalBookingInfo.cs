@@ -57,7 +57,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string LinkId { get; set; }
 #endif
         /// <summary>&quot;The type of the meeting link. Accepted values are: GROUP_CALENDAR, PERSONAL_LINK, ROUND_ROBIN_CALENDAR.&quot;</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBookingInfo_linkType? LinkType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBookingInfoLinkType? LinkType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBookingInfo"/> and sets the default values.
         /// </summary>
@@ -89,7 +89,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "isOffline", n => { IsOffline = n.GetBoolValue(); } },
                 { "linkAvailability", n => { LinkAvailability = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailability>(global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailability.CreateFromDiscriminatorValue); } },
                 { "linkId", n => { LinkId = n.GetStringValue(); } },
-                { "linkType", n => { LinkType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBookingInfo_linkType>(); } },
+                { "linkType", n => { LinkType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBookingInfoLinkType>(); } },
             };
         }
         /// <summary>
@@ -105,7 +105,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteBoolValue("isOffline", IsOffline);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailability>("linkAvailability", LinkAvailability);
             writer.WriteStringValue("linkId", LinkId);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBookingInfo_linkType>("linkType", LinkType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBookingInfoLinkType>("linkType", LinkType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -43,10 +43,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The event properties to update. Takes the format of key-value pairs (property internal name and property value). Learn more about [HubSpot&apos;s default event properties](https://developers.hubspot.com/docs/guides/api/analytics-and-events/custom-events/custom-event-definitions#hubspot-s-default-event-properties).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EventsBehavioralEventHttpCompletionRequest_properties? Properties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EventsBehavioralEventHttpCompletionRequestPropertiesProperty? Properties { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EventsBehavioralEventHttpCompletionRequest_properties Properties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EventsBehavioralEventHttpCompletionRequestPropertiesProperty Properties { get; set; }
 #endif
         /// <summary>The visitor&apos;s usertoken. Used for associating the event data with a CRM record.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -93,7 +93,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "eventName", n => { EventName = n.GetStringValue(); } },
                 { "objectId", n => { ObjectId = n.GetStringValue(); } },
                 { "occurredAt", n => { OccurredAt = n.GetDateTimeOffsetValue(); } },
-                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsBehavioralEventHttpCompletionRequest_properties>(global::Soenneker.HubSpot.OpenApiClient.Models.EventsBehavioralEventHttpCompletionRequest_properties.CreateFromDiscriminatorValue); } },
+                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsBehavioralEventHttpCompletionRequestPropertiesProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.EventsBehavioralEventHttpCompletionRequestPropertiesProperty.CreateFromDiscriminatorValue); } },
                 { "utk", n => { Utk = n.GetStringValue(); } },
                 { "uuid", n => { Uuid = n.GetStringValue(); } },
             };
@@ -109,7 +109,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("eventName", EventName);
             writer.WriteStringValue("objectId", ObjectId);
             writer.WriteDateTimeOffsetValue("occurredAt", OccurredAt);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsBehavioralEventHttpCompletionRequest_properties>("properties", Properties);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsBehavioralEventHttpCompletionRequestPropertiesProperty>("properties", Properties);
             writer.WriteStringValue("utk", Utk);
             writer.WriteStringValue("uuid", Uuid);
             writer.WriteAdditionalData(AdditionalData);

@@ -32,7 +32,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Name { get; set; }
 #endif
         /// <summary>The type of status.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.DisplayOption_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.DisplayOptionType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.DisplayOption"/> and sets the default values.
         /// </summary>
@@ -60,7 +60,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DisplayOption_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DisplayOptionType>(); } },
             };
         }
         /// <summary>
@@ -72,7 +72,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("label", Label);
             writer.WriteStringValue("name", Name);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DisplayOption_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DisplayOptionType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

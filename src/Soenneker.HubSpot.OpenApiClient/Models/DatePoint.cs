@@ -27,9 +27,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The second property</summary>
         public int? Second { get; set; }
         /// <summary>The timeType property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.DatePoint_timeType? TimeType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.DatePointTimeType? TimeType { get; set; }
         /// <summary>The timezoneSource property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.DatePoint_timezoneSource? TimezoneSource { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.DatePointTimezoneSource? TimezoneSource { get; set; }
         /// <summary>The year property</summary>
         public int? Year { get; set; }
         /// <summary>The zoneId property</summary>
@@ -46,7 +46,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public DatePoint()
         {
             AdditionalData = new Dictionary<string, object>();
-            TimeType = global::Soenneker.HubSpot.OpenApiClient.Models.DatePoint_timeType.DATE;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -72,8 +71,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "minute", n => { Minute = n.GetIntValue(); } },
                 { "month", n => { Month = n.GetIntValue(); } },
                 { "second", n => { Second = n.GetIntValue(); } },
-                { "timeType", n => { TimeType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DatePoint_timeType>(); } },
-                { "timezoneSource", n => { TimezoneSource = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DatePoint_timezoneSource>(); } },
+                { "timeType", n => { TimeType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DatePointTimeType>(); } },
+                { "timezoneSource", n => { TimezoneSource = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DatePointTimezoneSource>(); } },
                 { "year", n => { Year = n.GetIntValue(); } },
                 { "zoneId", n => { ZoneId = n.GetStringValue(); } },
             };
@@ -91,8 +90,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteIntValue("minute", Minute);
             writer.WriteIntValue("month", Month);
             writer.WriteIntValue("second", Second);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DatePoint_timeType>("timeType", TimeType);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DatePoint_timezoneSource>("timezoneSource", TimezoneSource);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DatePointTimeType>("timeType", TimeType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DatePointTimezoneSource>("timezoneSource", TimezoneSource);
             writer.WriteIntValue("year", Year);
             writer.WriteStringValue("zoneId", ZoneId);
             writer.WriteAdditionalData(AdditionalData);

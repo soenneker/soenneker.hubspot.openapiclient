@@ -93,7 +93,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string LastModifiedPropertyName { get; set; }
 #endif
         /// <summary>The metaType property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.InboundDbObjectType_metaType? MetaType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.InboundDbObjectTypeMetaType? MetaType { get; set; }
         /// <summary>The metaTypeId property</summary>
         public int? MetaTypeId { get; set; }
         /// <summary>The name property</summary>
@@ -123,7 +123,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The ownerPortalId property</summary>
         public int? OwnerPortalId { get; set; }
         /// <summary>The permissioningType property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.InboundDbObjectType_permissioningType? PermissioningType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.InboundDbObjectTypePermissioningType? PermissioningType { get; set; }
         /// <summary>The pipelineCloseDatePropertyName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -215,17 +215,17 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string SingularForm { get; set; }
 #endif
         /// <summary>The status property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.InboundDbObjectType_status? Status { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.InboundDbObjectTypeStatus? Status { get; set; }
         /// <summary>The visibilities property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.InboundDbObjectType_visibilities?>? Visibilities { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.InboundDbObjectTypeVisibilitiesItem?>? Visibilities { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.InboundDbObjectType_visibilities?> Visibilities { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.InboundDbObjectTypeVisibilitiesItem?> Visibilities { get; set; }
 #endif
         /// <summary>The visibility property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.InboundDbObjectType_visibility? Visibility { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.InboundDbObjectTypeVisibility? Visibility { get; set; }
         /// <summary>The writeScopeName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -277,13 +277,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "integrationAppId", n => { IntegrationAppId = n.GetIntValue(); } },
                 { "janusGroup", n => { JanusGroup = n.GetStringValue(); } },
                 { "lastModifiedPropertyName", n => { LastModifiedPropertyName = n.GetStringValue(); } },
-                { "metaType", n => { MetaType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.InboundDbObjectType_metaType>(); } },
+                { "metaType", n => { MetaType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.InboundDbObjectTypeMetaType>(); } },
                 { "metaTypeId", n => { MetaTypeId = n.GetIntValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "objectTypeId", n => { ObjectTypeId = n.GetStringValue(); } },
                 { "objectTypeIdString", n => { ObjectTypeIdString = n.GetStringValue(); } },
                 { "ownerPortalId", n => { OwnerPortalId = n.GetIntValue(); } },
-                { "permissioningType", n => { PermissioningType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.InboundDbObjectType_permissioningType>(); } },
+                { "permissioningType", n => { PermissioningType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.InboundDbObjectTypePermissioningType>(); } },
                 { "pipelineCloseDatePropertyName", n => { PipelineCloseDatePropertyName = n.GetStringValue(); } },
                 { "pipelinePropertyName", n => { PipelinePropertyName = n.GetStringValue(); } },
                 { "pipelineStagePropertyName", n => { PipelineStagePropertyName = n.GetStringValue(); } },
@@ -296,9 +296,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "scopeMappings", n => { ScopeMappings = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ScopeMapping>(global::Soenneker.HubSpot.OpenApiClient.Models.ScopeMapping.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "secondaryDisplayLabelPropertyNames", n => { SecondaryDisplayLabelPropertyNames = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "singularForm", n => { SingularForm = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.InboundDbObjectType_status>(); } },
-                { "visibilities", n => { Visibilities = n.GetCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.InboundDbObjectType_visibilities>()?.AsList(); } },
-                { "visibility", n => { Visibility = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.InboundDbObjectType_visibility>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.InboundDbObjectTypeStatus>(); } },
+                { "visibilities", n => { Visibilities = n.GetCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.InboundDbObjectTypeVisibilitiesItem>()?.AsList(); } },
+                { "visibility", n => { Visibility = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.InboundDbObjectTypeVisibility>(); } },
                 { "writeScopeName", n => { WriteScopeName = n.GetStringValue(); } },
             };
         }
@@ -327,13 +327,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteIntValue("integrationAppId", IntegrationAppId);
             writer.WriteStringValue("janusGroup", JanusGroup);
             writer.WriteStringValue("lastModifiedPropertyName", LastModifiedPropertyName);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.InboundDbObjectType_metaType>("metaType", MetaType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.InboundDbObjectTypeMetaType>("metaType", MetaType);
             writer.WriteIntValue("metaTypeId", MetaTypeId);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("objectTypeId", ObjectTypeId);
             writer.WriteStringValue("objectTypeIdString", ObjectTypeIdString);
             writer.WriteIntValue("ownerPortalId", OwnerPortalId);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.InboundDbObjectType_permissioningType>("permissioningType", PermissioningType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.InboundDbObjectTypePermissioningType>("permissioningType", PermissioningType);
             writer.WriteStringValue("pipelineCloseDatePropertyName", PipelineCloseDatePropertyName);
             writer.WriteStringValue("pipelinePropertyName", PipelinePropertyName);
             writer.WriteStringValue("pipelineStagePropertyName", PipelineStagePropertyName);
@@ -346,9 +346,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ScopeMapping>("scopeMappings", ScopeMappings);
             writer.WriteCollectionOfPrimitiveValues<string>("secondaryDisplayLabelPropertyNames", SecondaryDisplayLabelPropertyNames);
             writer.WriteStringValue("singularForm", SingularForm);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.InboundDbObjectType_status>("status", Status);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.InboundDbObjectType_visibilities>("visibilities", Visibilities);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.InboundDbObjectType_visibility>("visibility", Visibility);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.InboundDbObjectTypeStatus>("status", Status);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.InboundDbObjectTypeVisibilitiesItem>("visibilities", Visibilities);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.InboundDbObjectTypeVisibility>("visibility", Visibility);
             writer.WriteStringValue("writeScopeName", WriteScopeName);
             writer.WriteAdditionalData(AdditionalData);
         }

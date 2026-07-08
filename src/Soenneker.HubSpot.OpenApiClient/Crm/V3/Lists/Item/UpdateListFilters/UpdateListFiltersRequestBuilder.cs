@@ -33,6 +33,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Item.UpdateListFilters
         public UpdateListFiltersRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/crm/v3/lists/{listId}/update-list-filters{?enrollObjectsInWorkflows*}", rawUrl)
         {
         }
+        /// <summary>
+        /// Update the filter branch definition of a `DYNAMIC` list. Once updated, the list memberships will be re-evaluated and updated to match the new definition.
+        /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ListUpdateResponse"/></returns>
         /// <param name="body">The definition of the list filter branch update request.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -50,6 +53,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Item.UpdateListFilters
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ListUpdateResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ListUpdateResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
+        /// <summary>
+        /// Update the filter branch definition of a `DYNAMIC` list. Once updated, the list memberships will be re-evaluated and updated to match the new definition.
+        /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The definition of the list filter branch update request.</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -78,11 +84,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Item.UpdateListFilters
         {
             return new global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Item.UpdateListFilters.UpdateListFiltersRequestBuilder(rawUrl, RequestAdapter);
         }
+        /// <summary>
+        /// Update the filter branch definition of a `DYNAMIC` list. Once updated, the list memberships will be re-evaluated and updated to match the new definition.
+        /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        #pragma warning disable CS1591
         public partial class UpdateListFiltersRequestBuilderPutQueryParameters 
-        #pragma warning restore CS1591
         {
+            /// <summary>A flag indicating whether or not the memberships added to the list as a result of the filter change should be enrolled in workflows that are relevant to this list.</summary>
             [QueryParameter("enrollObjectsInWorkflows")]
             public bool? EnrollObjectsInWorkflows { get; set; }
         }

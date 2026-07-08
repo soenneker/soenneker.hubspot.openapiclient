@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.HubSpot.OpenApiClient.Files.V3.Files.Item.Download;
 using Soenneker.HubSpot.OpenApiClient.Files.V3.Files.Item.GdprDelete;
 using Soenneker.HubSpot.OpenApiClient.Files.V3.Files.Item.SignedUrl;
 using Soenneker.HubSpot.OpenApiClient.Models;
@@ -19,6 +20,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Files.V3.Files.Item
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithFileItemRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The download property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Files.V3.Files.Item.Download.DownloadRequestBuilder Download
+        {
+            get => new global::Soenneker.HubSpot.OpenApiClient.Files.V3.Files.Item.Download.DownloadRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The gdprDelete property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Files.V3.Files.Item.GdprDelete.GdprDeleteRequestBuilder GdprDelete
         {

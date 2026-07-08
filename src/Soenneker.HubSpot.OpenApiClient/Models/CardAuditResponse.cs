@@ -13,13 +13,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning restore CS1591
     {
         /// <summary>&quot;The type of action performed, with possible values: CREATE, DELETE, UPDATE.&quot;</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CardAuditResponse_actionType? ActionType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CardAuditResponseActionType? ActionType { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The ID of the application associated with the card.</summary>
         public int? ApplicationId { get; set; }
         /// <summary>&quot;The source of authentication for the action, with possible values: APP, EXTERNAL, INTERNAL.&quot;</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CardAuditResponse_authSource? AuthSource { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CardAuditResponseAuthSource? AuthSource { get; set; }
         /// <summary>The timestamp indicating when the change occurred.</summary>
         public long? ChangedAt { get; set; }
         /// <summary>The ID of the user who initiated the action.</summary>
@@ -51,9 +51,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "actionType", n => { ActionType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CardAuditResponse_actionType>(); } },
+                { "actionType", n => { ActionType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CardAuditResponseActionType>(); } },
                 { "applicationId", n => { ApplicationId = n.GetIntValue(); } },
-                { "authSource", n => { AuthSource = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CardAuditResponse_authSource>(); } },
+                { "authSource", n => { AuthSource = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CardAuditResponseAuthSource>(); } },
                 { "changedAt", n => { ChangedAt = n.GetLongValue(); } },
                 { "initiatingUserId", n => { InitiatingUserId = n.GetIntValue(); } },
                 { "objectTypeId", n => { ObjectTypeId = n.GetLongValue(); } },
@@ -66,9 +66,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CardAuditResponse_actionType>("actionType", ActionType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CardAuditResponseActionType>("actionType", ActionType);
             writer.WriteIntValue("applicationId", ApplicationId);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CardAuditResponse_authSource>("authSource", AuthSource);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CardAuditResponseAuthSource>("authSource", AuthSource);
             writer.WriteLongValue("changedAt", ChangedAt);
             writer.WriteIntValue("initiatingUserId", InitiatingUserId);
             writer.WriteLongValue("objectTypeId", ObjectTypeId);

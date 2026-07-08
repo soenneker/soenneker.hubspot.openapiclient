@@ -89,7 +89,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Owners.Item
             [QueryParameter("archived")]
             public bool? Archived { get; set; }
             [QueryParameter("idProperty")]
-            public global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Owners.Item.GetIdPropertyQueryParameterType? IdProperty { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmGetCrmV3OwnersOwnerIdGetByIdIdPropertyParameter? IdProperty { get; set; }
         }
     }
 }

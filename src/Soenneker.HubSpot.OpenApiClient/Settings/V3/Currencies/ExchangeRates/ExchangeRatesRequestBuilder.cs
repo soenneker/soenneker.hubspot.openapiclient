@@ -169,12 +169,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Settings.V3.Currencies.ExchangeRates
             public string After { get; set; }
 #endif
             [QueryParameter("fromCurrencyCode")]
-            public global::Soenneker.HubSpot.OpenApiClient.Settings.V3.Currencies.ExchangeRates.GetFromCurrencyCodeQueryParameterType? FromCurrencyCode { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.SettingsGetSettingsV3CurrenciesExchangeRatesFromCurrencyCodeParameter? FromCurrencyCode { get; set; }
             /// <summary>The maximum number of results to display per page.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
             [QueryParameter("toCurrencyCode")]
-            public global::Soenneker.HubSpot.OpenApiClient.Settings.V3.Currencies.ExchangeRates.GetToCurrencyCodeQueryParameterType? ToCurrencyCode { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.SettingsGetSettingsV3CurrenciesExchangeRatesToCurrencyCodeParameter? ToCurrencyCode { get; set; }
         }
     }
 }

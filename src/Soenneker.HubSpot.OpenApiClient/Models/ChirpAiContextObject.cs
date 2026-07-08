@@ -67,28 +67,28 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Additional metadata related to the context, represented as key-value pairs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObject_metadata? Metadata { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObjectMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObject_metadata Metadata { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObjectMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>Holds OpenTelemetry context information as key-value pairs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObject_otelContextHolder? OtelContextHolder { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObjectOtelContextHolderProperty? OtelContextHolder { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObject_otelContextHolder OtelContextHolder { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObjectOtelContextHolderProperty OtelContextHolder { get; set; }
 #endif
         /// <summary>The identifier for the trajectory, formatted as a UUID.</summary>
         public Guid? TrajectoryId { get; set; }
         /// <summary>The unstructuredSources property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObject_unstructuredSources?>? UnstructuredSources { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObjectUnstructuredSourcesItem?>? UnstructuredSources { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObject_unstructuredSources?> UnstructuredSources { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObjectUnstructuredSourcesItem?> UnstructuredSources { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObject"/> and sets the default values.
@@ -122,10 +122,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "featureId", n => { FeatureId = n.GetStringValue(); } },
                 { "inferenceId", n => { InferenceId = n.GetStringValue(); } },
                 { "isPrivate", n => { IsPrivate = n.GetBoolValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObject_metadata>(global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObject_metadata.CreateFromDiscriminatorValue); } },
-                { "otelContextHolder", n => { OtelContextHolder = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObject_otelContextHolder>(global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObject_otelContextHolder.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObjectMetadataProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObjectMetadataProperty.CreateFromDiscriminatorValue); } },
+                { "otelContextHolder", n => { OtelContextHolder = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObjectOtelContextHolderProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObjectOtelContextHolderProperty.CreateFromDiscriminatorValue); } },
                 { "trajectoryId", n => { TrajectoryId = n.GetGuidValue(); } },
-                { "unstructuredSources", n => { UnstructuredSources = n.GetCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObject_unstructuredSources>()?.AsList(); } },
+                { "unstructuredSources", n => { UnstructuredSources = n.GetCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObjectUnstructuredSourcesItem>()?.AsList(); } },
             };
         }
         /// <summary>
@@ -142,10 +142,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("featureId", FeatureId);
             writer.WriteStringValue("inferenceId", InferenceId);
             writer.WriteBoolValue("isPrivate", IsPrivate);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObject_metadata>("metadata", Metadata);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObject_otelContextHolder>("otelContextHolder", OtelContextHolder);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObjectMetadataProperty>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObjectOtelContextHolderProperty>("otelContextHolder", OtelContextHolder);
             writer.WriteGuidValue("trajectoryId", TrajectoryId);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObject_unstructuredSources>("unstructuredSources", UnstructuredSources);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObjectUnstructuredSourcesItem>("unstructuredSources", UnstructuredSources);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

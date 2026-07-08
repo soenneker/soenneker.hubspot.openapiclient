@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string AppendPropertyName { get; set; }
 #endif
         /// <summary>Indicates the type of the action, which defaults to APPEND_OBJECT_PROPERTY.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiAppendObjectPropertyValue_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiAppendObjectPropertyValueType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiAppendObjectPropertyValue"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "appendPropertyName", n => { AppendPropertyName = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiAppendObjectPropertyValue_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiAppendObjectPropertyValueType>(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("appendPropertyName", AppendPropertyName);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiAppendObjectPropertyValue_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiAppendObjectPropertyValueType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

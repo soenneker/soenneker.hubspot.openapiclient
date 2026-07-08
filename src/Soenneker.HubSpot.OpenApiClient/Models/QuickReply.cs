@@ -31,7 +31,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Value { get; set; }
 #endif
         /// <summary>The valueType property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.QuickReply_valueType? ValueType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.QuickReplyValueType? ValueType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.QuickReply"/> and sets the default values.
         /// </summary>
@@ -59,7 +59,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "value", n => { Value = n.GetStringValue(); } },
-                { "valueType", n => { ValueType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.QuickReply_valueType>(); } },
+                { "valueType", n => { ValueType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.QuickReplyValueType>(); } },
             };
         }
         /// <summary>
@@ -71,7 +71,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("label", Label);
             writer.WriteStringValue("value", Value);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.QuickReply_valueType>("valueType", ValueType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.QuickReplyValueType>("valueType", ValueType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -41,7 +41,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string SubmitButtonText { get; set; }
 #endif
         /// <summary>The theme used for styling the input fields. This will not apply if the form is added to a HubSpot CMS page.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.FormDisplayOptions_theme? Theme { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.FormDisplayOptionsTheme? Theme { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.FormDisplayOptions"/> and sets the default values.
         /// </summary>
@@ -71,7 +71,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "renderRawHtml", n => { RenderRawHtml = n.GetBoolValue(); } },
                 { "style", n => { Style = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.FormStyle>(global::Soenneker.HubSpot.OpenApiClient.Models.FormStyle.CreateFromDiscriminatorValue); } },
                 { "submitButtonText", n => { SubmitButtonText = n.GetStringValue(); } },
-                { "theme", n => { Theme = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FormDisplayOptions_theme>(); } },
+                { "theme", n => { Theme = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FormDisplayOptionsTheme>(); } },
             };
         }
         /// <summary>
@@ -85,7 +85,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteBoolValue("renderRawHtml", RenderRawHtml);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.FormStyle>("style", Style);
             writer.WriteStringValue("submitButtonText", SubmitButtonText);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FormDisplayOptions_theme>("theme", Theme);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FormDisplayOptionsTheme>("theme", Theme);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

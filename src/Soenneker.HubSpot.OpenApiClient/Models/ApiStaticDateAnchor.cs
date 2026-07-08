@@ -17,9 +17,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The day of the month for the static date anchor.</summary>
         public int? DayOfMonth { get; set; }
         /// <summary>&quot;The month component of the static date anchor, with accepted values including: APRIL, AUGUST, DECEMBER, FEBRUARY, JANUARY, JULY, JUNE, MARCH, MAY, NOVEMBER, OCTOBER, SEPTEMBER.&quot;</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticDateAnchor_month? Month { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticDateAnchorMonth? Month { get; set; }
         /// <summary>Indicates the type of the date anchor, which defaults to STATIC_DATE_ANCHOR.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticDateAnchor_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticDateAnchorType? Type { get; set; }
         /// <summary>The year component of the static date anchor.</summary>
         public int? Year { get; set; }
         /// <summary>
@@ -48,8 +48,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "dayOfMonth", n => { DayOfMonth = n.GetIntValue(); } },
-                { "month", n => { Month = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticDateAnchor_month>(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticDateAnchor_type>(); } },
+                { "month", n => { Month = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticDateAnchorMonth>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticDateAnchorType>(); } },
                 { "year", n => { Year = n.GetIntValue(); } },
             };
         }
@@ -61,8 +61,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("dayOfMonth", DayOfMonth);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticDateAnchor_month>("month", Month);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticDateAnchor_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticDateAnchorMonth>("month", Month);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticDateAnchorType>("type", Type);
             writer.WriteIntValue("year", Year);
             writer.WriteAdditionalData(AdditionalData);
         }

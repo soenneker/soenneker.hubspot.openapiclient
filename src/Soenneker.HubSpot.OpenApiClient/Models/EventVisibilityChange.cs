@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The eventType property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EventVisibilityChange_eventType? EventType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EventVisibilityChangeEventType? EventType { get; set; }
         /// <summary>The showInReporting property</summary>
         public bool? ShowInReporting { get; set; }
         /// <summary>The showInTimeline property</summary>
@@ -49,7 +49,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "eventType", n => { EventType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventVisibilityChange_eventType>(); } },
+                { "eventType", n => { EventType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventVisibilityChangeEventType>(); } },
                 { "showInReporting", n => { ShowInReporting = n.GetBoolValue(); } },
                 { "showInTimeline", n => { ShowInTimeline = n.GetBoolValue(); } },
                 { "showInWorkflows", n => { ShowInWorkflows = n.GetBoolValue(); } },
@@ -63,7 +63,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventVisibilityChange_eventType>("eventType", EventType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventVisibilityChangeEventType>("eventType", EventType);
             writer.WriteBoolValue("showInReporting", ShowInReporting);
             writer.WriteBoolValue("showInTimeline", ShowInTimeline);
             writer.WriteBoolValue("showInWorkflows", ShowInWorkflows);

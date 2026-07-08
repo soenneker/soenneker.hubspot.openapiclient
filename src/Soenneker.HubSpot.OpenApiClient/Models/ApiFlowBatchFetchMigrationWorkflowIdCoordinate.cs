@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Specifies the type of coordinate, which defaults to WORKFLOW_ID.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchFetchMigrationWorkflowIdCoordinate_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchFetchMigrationWorkflowIdCoordinateType? Type { get; set; }
         /// <summary>The workflowId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -49,7 +49,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchFetchMigrationWorkflowIdCoordinate_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchFetchMigrationWorkflowIdCoordinateType>(); } },
                 { "workflowId", n => { WorkflowId = n.GetStringValue(); } },
             };
         }
@@ -60,7 +60,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchFetchMigrationWorkflowIdCoordinate_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowBatchFetchMigrationWorkflowIdCoordinateType>("type", Type);
             writer.WriteStringValue("workflowId", WorkflowId);
             writer.WriteAdditionalData(AdditionalData);
         }

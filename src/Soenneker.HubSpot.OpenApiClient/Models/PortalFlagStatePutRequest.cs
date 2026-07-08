@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The state that the given flag should be in for this portal</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStatePutRequest_flagState? FlagState { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStatePutRequestFlagState? FlagState { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStatePutRequest"/> and sets the default values.
         /// </summary>
@@ -41,7 +41,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "flagState", n => { FlagState = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStatePutRequest_flagState>(); } },
+                { "flagState", n => { FlagState = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStatePutRequestFlagState>(); } },
             };
         }
         /// <summary>
@@ -51,7 +51,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStatePutRequest_flagState>("flagState", FlagState);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStatePutRequestFlagState>("flagState", FlagState);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

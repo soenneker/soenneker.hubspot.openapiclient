@@ -27,7 +27,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string SubviewId { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiDatasetBasedEnrollmentCriteria_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiDatasetBasedEnrollmentCriteriaType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiDatasetBasedEnrollmentCriteria"/> and sets the default values.
         /// </summary>
@@ -56,7 +56,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "datasetId", n => { DatasetId = n.GetLongValue(); } },
                 { "shouldReEnroll", n => { ShouldReEnroll = n.GetBoolValue(); } },
                 { "subviewId", n => { SubviewId = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiDatasetBasedEnrollmentCriteria_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiDatasetBasedEnrollmentCriteriaType>(); } },
             };
         }
         /// <summary>
@@ -69,7 +69,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteLongValue("datasetId", DatasetId);
             writer.WriteBoolValue("shouldReEnroll", ShouldReEnroll);
             writer.WriteStringValue("subviewId", SubviewId);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiDatasetBasedEnrollmentCriteria_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiDatasetBasedEnrollmentCriteriaType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

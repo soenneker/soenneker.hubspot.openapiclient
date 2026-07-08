@@ -17,7 +17,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The date and time when the automation flow was created, formatted as a date-time string.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
         /// <summary>Specifies the type of the automation flow (PLATFORM vs. CONTACT)</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowListing_flowType? FlowType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowListingFlowType? FlowType { get; set; }
         /// <summary>The unique identifier for the automation flow.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -88,7 +88,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
-                { "flowType", n => { FlowType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowListing_flowType>(); } },
+                { "flowType", n => { FlowType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowListingFlowType>(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "isEnabled", n => { IsEnabled = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
@@ -106,7 +106,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowListing_flowType>("flowType", FlowType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiFlowListingFlowType>("flowType", FlowType);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("isEnabled", IsEnabled);
             writer.WriteStringValue("name", Name);

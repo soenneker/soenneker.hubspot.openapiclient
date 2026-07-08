@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The flag state for this portal (e.g. ON or OFF)</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.BatchPortalEntry_flagState? FlagState { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.BatchPortalEntryFlagState? FlagState { get; set; }
         /// <summary>The ID of the portal</summary>
         public int? PortalId { get; set; }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "flagState", n => { FlagState = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchPortalEntry_flagState>(); } },
+                { "flagState", n => { FlagState = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchPortalEntryFlagState>(); } },
                 { "portalId", n => { PortalId = n.GetIntValue(); } },
             };
         }
@@ -54,7 +54,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchPortalEntry_flagState>("flagState", FlagState);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchPortalEntryFlagState>("flagState", FlagState);
             writer.WriteIntValue("portalId", PortalId);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -33,6 +33,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Folders.MoveList
         public MoveListRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/crm/v3/lists/folders/move-list", rawUrl)
         {
         }
+        /// <summary>
+        /// Given a list and a folder, the list will be moved to that folder.
+        /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -50,6 +53,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Folders.MoveList
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
+        /// <summary>
+        /// Given a list and a folder, the list will be moved to that folder.
+        /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

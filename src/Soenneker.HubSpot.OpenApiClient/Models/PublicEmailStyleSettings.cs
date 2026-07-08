@@ -31,7 +31,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string BackgroundImage { get; set; }
 #endif
         /// <summary>The backgroundImageType property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailStyleSettings_backgroundImageType? BackgroundImageType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailStyleSettingsBackgroundImageType? BackgroundImageType { get; set; }
         /// <summary>The bodyBorderColor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -257,7 +257,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "backgroundColor", n => { BackgroundColor = n.GetStringValue(); } },
                 { "backgroundImage", n => { BackgroundImage = n.GetStringValue(); } },
-                { "backgroundImageType", n => { BackgroundImageType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailStyleSettings_backgroundImageType>(); } },
+                { "backgroundImageType", n => { BackgroundImageType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailStyleSettingsBackgroundImageType>(); } },
                 { "bodyBorderColor", n => { BodyBorderColor = n.GetStringValue(); } },
                 { "bodyBorderColorChoice", n => { BodyBorderColorChoice = n.GetStringValue(); } },
                 { "bodyBorderWidth", n => { BodyBorderWidth = n.GetDoubleValue(); } },
@@ -296,7 +296,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("backgroundColor", BackgroundColor);
             writer.WriteStringValue("backgroundImage", BackgroundImage);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailStyleSettings_backgroundImageType>("backgroundImageType", BackgroundImageType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailStyleSettingsBackgroundImageType>("backgroundImageType", BackgroundImageType);
             writer.WriteStringValue("bodyBorderColor", BodyBorderColor);
             writer.WriteStringValue("bodyBorderColorChoice", BodyBorderColorChoice);
             writer.WriteDoubleValue("bodyBorderWidth", BodyBorderWidth);

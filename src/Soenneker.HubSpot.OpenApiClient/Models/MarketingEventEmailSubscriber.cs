@@ -17,10 +17,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The key-value set that contains properties of the contact.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriber_contactProperties? ContactProperties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberContactPropertiesProperty? ContactProperties { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriber_contactProperties ContactProperties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberContactPropertiesProperty ContactProperties { get; set; }
 #endif
         /// <summary>The email address of the contact in HubSpot to associate with the event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -35,10 +35,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The key-value set that contains properties of the marketing event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriber_properties? Properties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberPropertiesProperty? Properties { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriber_properties Properties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberPropertiesProperty Properties { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriber"/> and sets the default values.
@@ -65,10 +65,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "contactProperties", n => { ContactProperties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriber_contactProperties>(global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriber_contactProperties.CreateFromDiscriminatorValue); } },
+                { "contactProperties", n => { ContactProperties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberContactPropertiesProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberContactPropertiesProperty.CreateFromDiscriminatorValue); } },
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "interactionDateTime", n => { InteractionDateTime = n.GetLongValue(); } },
-                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriber_properties>(global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriber_properties.CreateFromDiscriminatorValue); } },
+                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberPropertiesProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberPropertiesProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -78,10 +78,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriber_contactProperties>("contactProperties", ContactProperties);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberContactPropertiesProperty>("contactProperties", ContactProperties);
             writer.WriteStringValue("email", Email);
             writer.WriteLongValue("interactionDateTime", InteractionDateTime);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriber_properties>("properties", Properties);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberPropertiesProperty>("properties", Properties);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

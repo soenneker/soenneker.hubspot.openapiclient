@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Indicates the type of filter, (WEBINAR).</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicWebinarFilter_filterType? FilterType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicWebinarFilterFilterType? FilterType { get; set; }
         /// <summary>Specifies the operation to be performed by the filter (HAS_WEBINAR_REGISTRATION, NOT_HAS_WEBINAR_REGISTRATION, HAS_WEBINAR_ATTENDANCE, NOT_HAS_WEBINAR_ATTENDANCE).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -38,7 +38,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public CrmPublicWebinarFilter()
         {
             AdditionalData = new Dictionary<string, object>();
-            FilterType = global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicWebinarFilter_filterType.WEBINAR;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -58,7 +57,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicWebinarFilter_filterType>(); } },
+                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicWebinarFilterFilterType>(); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
                 { "webinarId", n => { WebinarId = n.GetStringValue(); } },
             };
@@ -70,7 +69,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicWebinarFilter_filterType>("filterType", FilterType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicWebinarFilterFilterType>("filterType", FilterType);
             writer.WriteStringValue("operator", Operator);
             writer.WriteStringValue("webinarId", WebinarId);
             writer.WriteAdditionalData(AdditionalData);

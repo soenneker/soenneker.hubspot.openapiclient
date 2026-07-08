@@ -55,7 +55,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Street { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ContactAddress_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ContactAddressType? Type { get; set; }
         /// <summary>The zip property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -94,7 +94,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "countryCode", n => { CountryCode = n.GetStringValue(); } },
                 { "state", n => { State = n.GetStringValue(); } },
                 { "street", n => { Street = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ContactAddress_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ContactAddressType>(); } },
                 { "zip", n => { Zip = n.GetStringValue(); } },
             };
         }
@@ -110,7 +110,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("countryCode", CountryCode);
             writer.WriteStringValue("state", State);
             writer.WriteStringValue("street", Street);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ContactAddress_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ContactAddressType>("type", Type);
             writer.WriteStringValue("zip", Zip);
             writer.WriteAdditionalData(AdditionalData);
         }

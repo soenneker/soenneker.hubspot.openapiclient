@@ -95,7 +95,7 @@ namespace Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Statuses.B
             public long? BusinessUnitId { get; set; }
             /// <summary>A required string indicating the communication channel to filter by. Valid value is &apos;EMAIL&apos;.</summary>
             [QueryParameter("channel")]
-            public global::Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.V4.Statuses.Batch.Read.PostChannelQueryParameterType? Channel { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.CommunicationPreferencesPostCommunicationPreferencesV4StatusesBatchReadChannelParameter? Channel { get; set; }
         }
     }
 }

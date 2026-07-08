@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>&quot;The calendar provider associated with the user. Accepted values are: GOOGLE, OFFICE365, EXCHANGE, UNKNOWN.&quot;</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsUser_calendarProvider? CalendarProvider { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsUserCalendarProvider? CalendarProvider { get; set; }
         /// <summary>The ID for the meetings user. This value is different than the userId.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -67,7 +67,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "calendarProvider", n => { CalendarProvider = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsUser_calendarProvider>(); } },
+                { "calendarProvider", n => { CalendarProvider = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsUserCalendarProvider>(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "isSalesStarter", n => { IsSalesStarter = n.GetBoolValue(); } },
                 { "userId", n => { UserId = n.GetStringValue(); } },
@@ -81,7 +81,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsUser_calendarProvider>("calendarProvider", CalendarProvider);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsUserCalendarProvider>("calendarProvider", CalendarProvider);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("isSalesStarter", IsSalesStarter);
             writer.WriteStringValue("userId", UserId);

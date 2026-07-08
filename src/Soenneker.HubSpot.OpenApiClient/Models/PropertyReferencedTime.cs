@@ -23,11 +23,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Property { get; set; }
 #endif
         /// <summary>The referenceType property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyReferencedTime_referenceType? ReferenceType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyReferencedTimeReferenceType? ReferenceType { get; set; }
         /// <summary>The timeType property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyReferencedTime_timeType? TimeType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyReferencedTimeTimeType? TimeType { get; set; }
         /// <summary>The timezoneSource property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyReferencedTime_timezoneSource? TimezoneSource { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyReferencedTimeTimezoneSource? TimezoneSource { get; set; }
         /// <summary>The zoneId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -42,7 +42,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public PropertyReferencedTime()
         {
             AdditionalData = new Dictionary<string, object>();
-            TimeType = global::Soenneker.HubSpot.OpenApiClient.Models.PropertyReferencedTime_timeType.PROPERTY_REFERENCED;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -63,9 +62,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "property", n => { Property = n.GetStringValue(); } },
-                { "referenceType", n => { ReferenceType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyReferencedTime_referenceType>(); } },
-                { "timeType", n => { TimeType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyReferencedTime_timeType>(); } },
-                { "timezoneSource", n => { TimezoneSource = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyReferencedTime_timezoneSource>(); } },
+                { "referenceType", n => { ReferenceType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyReferencedTimeReferenceType>(); } },
+                { "timeType", n => { TimeType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyReferencedTimeTimeType>(); } },
+                { "timezoneSource", n => { TimezoneSource = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyReferencedTimeTimezoneSource>(); } },
                 { "zoneId", n => { ZoneId = n.GetStringValue(); } },
             };
         }
@@ -77,9 +76,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("property", Property);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyReferencedTime_referenceType>("referenceType", ReferenceType);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyReferencedTime_timeType>("timeType", TimeType);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyReferencedTime_timezoneSource>("timezoneSource", TimezoneSource);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyReferencedTimeReferenceType>("referenceType", ReferenceType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyReferencedTimeTimeType>("timeType", TimeType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyReferencedTimeTimezoneSource>("timezoneSource", TimezoneSource);
             writer.WriteStringValue("zoneId", ZoneId);
             writer.WriteAdditionalData(AdditionalData);
         }

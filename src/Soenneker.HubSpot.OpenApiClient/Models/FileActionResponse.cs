@@ -27,10 +27,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Link to check the status of the requested task.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.FileActionResponse_links? Links { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.FileActionResponseLinksProperty? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.FileActionResponse_links Links { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.FileActionResponseLinksProperty Links { get; set; }
 #endif
         /// <summary>Number of errors resulting from the task.</summary>
         public int? NumErrors { get; set; }
@@ -47,7 +47,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Timestamp of when the task was started.</summary>
         public DateTimeOffset? StartedAt { get; set; }
         /// <summary>Current status of the task.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.FileActionResponse_status? Status { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.FileActionResponseStatus? Status { get; set; }
         /// <summary>ID of the requested task.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -83,12 +83,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "completedAt", n => { CompletedAt = n.GetDateTimeOffsetValue(); } },
                 { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.FilesStandardError>(global::Soenneker.HubSpot.OpenApiClient.Models.FilesStandardError.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.FileActionResponse_links>(global::Soenneker.HubSpot.OpenApiClient.Models.FileActionResponse_links.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.FileActionResponseLinksProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.FileActionResponseLinksProperty.CreateFromDiscriminatorValue); } },
                 { "numErrors", n => { NumErrors = n.GetIntValue(); } },
                 { "requestedAt", n => { RequestedAt = n.GetDateTimeOffsetValue(); } },
                 { "result", n => { Result = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.FileObject>(global::Soenneker.HubSpot.OpenApiClient.Models.FileObject.CreateFromDiscriminatorValue); } },
                 { "startedAt", n => { StartedAt = n.GetDateTimeOffsetValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FileActionResponse_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FileActionResponseStatus>(); } },
                 { "taskId", n => { TaskId = n.GetStringValue(); } },
             };
         }
@@ -101,12 +101,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDateTimeOffsetValue("completedAt", CompletedAt);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.FilesStandardError>("errors", Errors);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.FileActionResponse_links>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.FileActionResponseLinksProperty>("links", Links);
             writer.WriteIntValue("numErrors", NumErrors);
             writer.WriteDateTimeOffsetValue("requestedAt", RequestedAt);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.FileObject>("result", Result);
             writer.WriteDateTimeOffsetValue("startedAt", StartedAt);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FileActionResponse_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FileActionResponseStatus>("status", Status);
             writer.WriteStringValue("taskId", TaskId);
             writer.WriteAdditionalData(AdditionalData);
         }

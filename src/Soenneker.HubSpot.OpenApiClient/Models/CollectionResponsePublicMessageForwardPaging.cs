@@ -25,10 +25,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The results property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponsePublicMessageForwardPaging.CollectionResponsePublicMessageForwardPaging_results>? Results { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponsePublicMessageForwardPagingResultsItem>? Results { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponsePublicMessageForwardPaging.CollectionResponsePublicMessageForwardPaging_results> Results { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponsePublicMessageForwardPagingResultsItem> Results { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponsePublicMessageForwardPaging"/> and sets the default values.
@@ -56,7 +56,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "paging", n => { Paging = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsForwardPaging>(global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsForwardPaging.CreateFromDiscriminatorValue); } },
-                { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponsePublicMessageForwardPaging.CollectionResponsePublicMessageForwardPaging_results>(global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponsePublicMessageForwardPaging.CollectionResponsePublicMessageForwardPaging_results.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponsePublicMessageForwardPagingResultsItem>(global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponsePublicMessageForwardPagingResultsItem.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -67,163 +67,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsForwardPaging>("paging", Paging);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponsePublicMessageForwardPaging.CollectionResponsePublicMessageForwardPaging_results>("results", Results);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponsePublicMessageForwardPagingResultsItem>("results", Results);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssignmentMessage"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicComment"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessage"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadInboxChange"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadStatusChange"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicWelcomeMessage"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class CollectionResponsePublicMessageForwardPaging_results : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssignmentMessage"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssignmentMessage? PublicAssignmentMessage { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssignmentMessage PublicAssignmentMessage { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicComment"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicComment? PublicComment { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicComment PublicComment { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessage"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessage? PublicConversationsMessage { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessage PublicConversationsMessage { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadInboxChange"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadInboxChange? PublicThreadInboxChange { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadInboxChange PublicThreadInboxChange { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadStatusChange"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadStatusChange? PublicThreadStatusChange { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadStatusChange PublicThreadStatusChange { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicWelcomeMessage"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWelcomeMessage? PublicWelcomeMessage { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWelcomeMessage PublicWelcomeMessage { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponsePublicMessageForwardPaging.CollectionResponsePublicMessageForwardPaging_results"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponsePublicMessageForwardPaging.CollectionResponsePublicMessageForwardPaging_results CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponsePublicMessageForwardPaging.CollectionResponsePublicMessageForwardPaging_results();
-                if("PublicAssignmentMessage".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicAssignmentMessage = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssignmentMessage();
-                }
-                else if("PublicComment".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicComment = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicComment();
-                }
-                else if("PublicConversationsMessage".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicConversationsMessage = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessage();
-                }
-                else if("PublicThreadInboxChange".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicThreadInboxChange = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadInboxChange();
-                }
-                else if("PublicThreadStatusChange".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicThreadStatusChange = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadStatusChange();
-                }
-                else if("PublicWelcomeMessage".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicWelcomeMessage = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicWelcomeMessage();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(PublicAssignmentMessage != null)
-                {
-                    return PublicAssignmentMessage.GetFieldDeserializers();
-                }
-                else if(PublicComment != null)
-                {
-                    return PublicComment.GetFieldDeserializers();
-                }
-                else if(PublicConversationsMessage != null)
-                {
-                    return PublicConversationsMessage.GetFieldDeserializers();
-                }
-                else if(PublicThreadInboxChange != null)
-                {
-                    return PublicThreadInboxChange.GetFieldDeserializers();
-                }
-                else if(PublicThreadStatusChange != null)
-                {
-                    return PublicThreadStatusChange.GetFieldDeserializers();
-                }
-                else if(PublicWelcomeMessage != null)
-                {
-                    return PublicWelcomeMessage.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(PublicAssignmentMessage != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssignmentMessage>(null, PublicAssignmentMessage);
-                }
-                else if(PublicComment != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicComment>(null, PublicComment);
-                }
-                else if(PublicConversationsMessage != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessage>(null, PublicConversationsMessage);
-                }
-                else if(PublicThreadInboxChange != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadInboxChange>(null, PublicThreadInboxChange);
-                }
-                else if(PublicThreadStatusChange != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadStatusChange>(null, PublicThreadStatusChange);
-                }
-                else if(PublicWelcomeMessage != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWelcomeMessage>(null, PublicWelcomeMessage);
-                }
-            }
         }
     }
 }

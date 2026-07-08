@@ -17,7 +17,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The number of contacts attributed to the campaign.</summary>
         public int? ContactsNumber { get; set; }
         /// <summary>The currency code used for the revenue attribution, with accepted values including AED, AFN, ALL, and others.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.RevenueAttributionAggregate_currencyCode? CurrencyCode { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.RevenueAttributionAggregateCurrencyCode? CurrencyCode { get; set; }
         /// <summary>The total amount of deals attributed to the campaign.</summary>
         public double? DealAmount { get; set; }
         /// <summary>The number of deals attributed to the campaign.</summary>
@@ -50,7 +50,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "contactsNumber", n => { ContactsNumber = n.GetIntValue(); } },
-                { "currencyCode", n => { CurrencyCode = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RevenueAttributionAggregate_currencyCode>(); } },
+                { "currencyCode", n => { CurrencyCode = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RevenueAttributionAggregateCurrencyCode>(); } },
                 { "dealAmount", n => { DealAmount = n.GetDoubleValue(); } },
                 { "dealsNumber", n => { DealsNumber = n.GetIntValue(); } },
                 { "revenueAmount", n => { RevenueAmount = n.GetDoubleValue(); } },
@@ -64,7 +64,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("contactsNumber", ContactsNumber);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RevenueAttributionAggregate_currencyCode>("currencyCode", CurrencyCode);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RevenueAttributionAggregateCurrencyCode>("currencyCode", CurrencyCode);
             writer.WriteDoubleValue("dealAmount", DealAmount);
             writer.WriteIntValue("dealsNumber", DealsNumber);
             writer.WriteDoubleValue("revenueAmount", RevenueAmount);

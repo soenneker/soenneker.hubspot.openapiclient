@@ -23,10 +23,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Contains additional properties related to the engagement.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequest_engagementProperties? EngagementProperties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequestEngagementPropertiesProperty? EngagementProperties { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequest_engagementProperties EngagementProperties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequestEngagementPropertiesProperty EngagementProperties { get; set; }
 #endif
         /// <summary>The unique identifier for the call from an external system.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -37,7 +37,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string ExternalCallId { get; set; }
 #endif
         /// <summary>&quot;The final status of the call, with accepted values including: BUSY, CALLING_CRM_USER, CANCELED, COMPLETED, CONNECTING, FAILED, HOLD, IN_PROGRESS, MISSED, NO_ANSWER, QUEUED, RINGING, UNKNOWN.&quot;</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequest_finalCallStatus? FinalCallStatus { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequestFinalCallStatus? FinalCallStatus { get; set; }
         /// <summary>The fromNumber property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -92,9 +92,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "callStartedTimestamp", n => { CallStartedTimestamp = n.GetDateTimeOffsetValue(); } },
                 { "createEngagement", n => { CreateEngagement = n.GetBoolValue(); } },
                 { "durationSeconds", n => { DurationSeconds = n.GetIntValue(); } },
-                { "engagementProperties", n => { EngagementProperties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequest_engagementProperties>(global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequest_engagementProperties.CreateFromDiscriminatorValue); } },
+                { "engagementProperties", n => { EngagementProperties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequestEngagementPropertiesProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequestEngagementPropertiesProperty.CreateFromDiscriminatorValue); } },
                 { "externalCallId", n => { ExternalCallId = n.GetStringValue(); } },
-                { "finalCallStatus", n => { FinalCallStatus = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequest_finalCallStatus>(); } },
+                { "finalCallStatus", n => { FinalCallStatus = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequestFinalCallStatus>(); } },
                 { "fromNumber", n => { FromNumber = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.FormattedPhoneNumber>(global::Soenneker.HubSpot.OpenApiClient.Models.FormattedPhoneNumber.CreateFromDiscriminatorValue); } },
                 { "potentialRecipientUserIds", n => { PotentialRecipientUserIds = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
                 { "toNumber", n => { ToNumber = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.FormattedPhoneNumber>(global::Soenneker.HubSpot.OpenApiClient.Models.FormattedPhoneNumber.CreateFromDiscriminatorValue); } },
@@ -111,9 +111,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("callStartedTimestamp", CallStartedTimestamp);
             writer.WriteBoolValue("createEngagement", CreateEngagement);
             writer.WriteIntValue("durationSeconds", DurationSeconds);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequest_engagementProperties>("engagementProperties", EngagementProperties);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequestEngagementPropertiesProperty>("engagementProperties", EngagementProperties);
             writer.WriteStringValue("externalCallId", ExternalCallId);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequest_finalCallStatus>("finalCallStatus", FinalCallStatus);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequestFinalCallStatus>("finalCallStatus", FinalCallStatus);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.FormattedPhoneNumber>("fromNumber", FromNumber);
             writer.WriteCollectionOfPrimitiveValues<int?>("potentialRecipientUserIds", PotentialRecipientUserIds);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.FormattedPhoneNumber>("toNumber", ToNumber);

@@ -33,6 +33,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Search
         public SearchRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/crm/v3/lists/search", rawUrl)
         {
         }
+        /// <summary>
+        /// Search lists by list name or page through all lists by providing an empty `query` value.
+        /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ListSearchResponse"/></returns>
         /// <param name="body">The request object used for searching through lists.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -50,6 +53,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Search
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ListSearchResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ListSearchResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
+        /// <summary>
+        /// Search lists by list name or page through all lists by providing an empty `query` value.
+        /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request object used for searching through lists.</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

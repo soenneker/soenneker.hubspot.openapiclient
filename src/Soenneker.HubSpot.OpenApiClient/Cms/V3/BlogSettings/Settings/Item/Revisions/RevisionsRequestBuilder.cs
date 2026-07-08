@@ -19,7 +19,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.BlogSettings.Settings.Item.Revi
     public partial class RevisionsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.cms.v3.blogSettings.settings.item.revisions.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The Blog version id.</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Cms.V3.BlogSettings.Settings.Item.Revisions.Item.WithRevisionItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Cms.V3.BlogSettings.Settings.Item.Revisions.Item.WithRevisionItemRequestBuilder this[string position]
         {
@@ -117,7 +117,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.V3.BlogSettings.Settings.Item.Revi
             [QueryParameter("before")]
             public string Before { get; set; }
 #endif
-            /// <summary>The maximum number of results to display per page.</summary>
+            /// <summary>The maximum number of results to return. Default is 100.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
         }

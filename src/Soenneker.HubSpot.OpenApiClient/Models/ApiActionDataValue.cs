@@ -31,7 +31,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string DataKey { get; set; }
 #endif
         /// <summary>Indicates the type of data value, which defaults to FIELD_DATA.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiActionDataValue_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiActionDataValueType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiActionDataValue"/> and sets the default values.
         /// </summary>
@@ -59,7 +59,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "actionId", n => { ActionId = n.GetStringValue(); } },
                 { "dataKey", n => { DataKey = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiActionDataValue_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiActionDataValueType>(); } },
             };
         }
         /// <summary>
@@ -71,7 +71,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("actionId", ActionId);
             writer.WriteStringValue("dataKey", DataKey);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiActionDataValue_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiActionDataValueType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

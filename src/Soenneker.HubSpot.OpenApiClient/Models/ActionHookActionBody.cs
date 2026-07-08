@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public global::Soenneker.HubSpot.OpenApiClient.Models.ActionConfirmationBody Confirmation { get; set; }
 #endif
         /// <summary>The HTTP method to be used when making the call, which can be set to GET, POST, PUT, DELETE, or PATCH. If using GET or DELETE</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ActionHookActionBody_httpMethod? HttpMethod { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ActionHookActionBodyHttpMethod? HttpMethod { get; set; }
         /// <summary>The label for this property as you&apos;d like it displayed to users.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -41,7 +41,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public List<string> PropertyNamesIncluded { get; set; }
 #endif
         /// <summary>The type of status.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ActionHookActionBody_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ActionHookActionBodyType? Type { get; set; }
         /// <summary>The URL endpoint that will be called when the action is triggered.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -76,10 +76,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "confirmation", n => { Confirmation = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionConfirmationBody>(global::Soenneker.HubSpot.OpenApiClient.Models.ActionConfirmationBody.CreateFromDiscriminatorValue); } },
-                { "httpMethod", n => { HttpMethod = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionHookActionBody_httpMethod>(); } },
+                { "httpMethod", n => { HttpMethod = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionHookActionBodyHttpMethod>(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "propertyNamesIncluded", n => { PropertyNamesIncluded = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionHookActionBody_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionHookActionBodyType>(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
         }
@@ -91,10 +91,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionConfirmationBody>("confirmation", Confirmation);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionHookActionBody_httpMethod>("httpMethod", HttpMethod);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionHookActionBodyHttpMethod>("httpMethod", HttpMethod);
             writer.WriteStringValue("label", Label);
             writer.WriteCollectionOfPrimitiveValues<string>("propertyNamesIncluded", PropertyNamesIncluded);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionHookActionBody_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionHookActionBodyType>("type", Type);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);
         }

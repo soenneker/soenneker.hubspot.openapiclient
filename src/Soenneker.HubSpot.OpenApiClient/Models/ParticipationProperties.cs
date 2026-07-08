@@ -25,7 +25,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string AttendancePercentage { get; set; }
 #endif
         /// <summary>The state of the participation</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ParticipationProperties_attendanceState? AttendanceState { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ParticipationPropertiesAttendanceState? AttendanceState { get; set; }
         /// <summary>Timestamp of when the participation occurred</summary>
         public long? OccurredAt { get; set; }
         /// <summary>
@@ -55,7 +55,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "attendanceDurationSeconds", n => { AttendanceDurationSeconds = n.GetIntValue(); } },
                 { "attendancePercentage", n => { AttendancePercentage = n.GetStringValue(); } },
-                { "attendanceState", n => { AttendanceState = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ParticipationProperties_attendanceState>(); } },
+                { "attendanceState", n => { AttendanceState = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ParticipationPropertiesAttendanceState>(); } },
                 { "occurredAt", n => { OccurredAt = n.GetLongValue(); } },
             };
         }
@@ -68,7 +68,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("attendanceDurationSeconds", AttendanceDurationSeconds);
             writer.WriteStringValue("attendancePercentage", AttendancePercentage);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ParticipationProperties_attendanceState>("attendanceState", AttendanceState);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ParticipationPropertiesAttendanceState>("attendanceState", AttendanceState);
             writer.WriteLongValue("occurredAt", OccurredAt);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -19,10 +19,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The attachments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicComment.PublicComment_attachments>? Attachments { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCommentAttachmentsItem>? Attachments { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicComment.PublicComment_attachments> Attachments { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCommentAttachmentsItem> Attachments { get; set; }
 #endif
         /// <summary>The client property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -91,7 +91,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Text { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicComment_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCommentType? Type { get; set; }
         /// <summary>The updatedAt property</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>
@@ -120,7 +120,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "archived", n => { Archived = n.GetBoolValue(); } },
-                { "attachments", n => { Attachments = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicComment.PublicComment_attachments>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicComment.PublicComment_attachments.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "attachments", n => { Attachments = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCommentAttachmentsItem>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicCommentAttachmentsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "client", n => { Client = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicClient>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicClient.CreateFromDiscriminatorValue); } },
                 { "conversationsThreadId", n => { ConversationsThreadId = n.GetStringValue(); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
@@ -130,7 +130,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "richText", n => { RichText = n.GetStringValue(); } },
                 { "senders", n => { Senders = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSender>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicSender.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "text", n => { Text = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicComment_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCommentType>(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
             };
         }
@@ -142,7 +142,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("archived", Archived);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicComment.PublicComment_attachments>("attachments", Attachments);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCommentAttachmentsItem>("attachments", Attachments);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicClient>("client", Client);
             writer.WriteStringValue("conversationsThreadId", ConversationsThreadId);
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
@@ -152,204 +152,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("richText", RichText);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSender>("senders", Senders);
             writer.WriteStringValue("text", Text);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicComment_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCommentType>("type", Type);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicContact"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicFile"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicLocation"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessageHeader"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicQuickReplies"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicSocialMetadataAttachment"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnsupportedContent"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadata"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class PublicComment_attachments : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicContact"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicContact? PublicContact { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicContact PublicContact { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicFile"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicFile? PublicFile { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicFile PublicFile { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicLocation"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicLocation? PublicLocation { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicLocation PublicLocation { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessageHeader"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessageHeader? PublicMessageHeader { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessageHeader PublicMessageHeader { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicQuickReplies"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicQuickReplies? PublicQuickReplies { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicQuickReplies PublicQuickReplies { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicSocialMetadataAttachment"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSocialMetadataAttachment? PublicSocialMetadataAttachment { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSocialMetadataAttachment PublicSocialMetadataAttachment { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnsupportedContent"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnsupportedContent? PublicUnsupportedContent { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnsupportedContent PublicUnsupportedContent { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadata"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadata? PublicWhatsAppTemplateMetadata { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadata PublicWhatsAppTemplateMetadata { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicComment.PublicComment_attachments"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicComment.PublicComment_attachments CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicComment.PublicComment_attachments();
-                if("PublicContact".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicContact = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicContact();
-                }
-                else if("PublicFile".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicFile = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicFile();
-                }
-                else if("PublicLocation".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicLocation = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicLocation();
-                }
-                else if("PublicMessageHeader".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicMessageHeader = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessageHeader();
-                }
-                else if("PublicQuickReplies".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicQuickReplies = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicQuickReplies();
-                }
-                else if("PublicSocialMetadataAttachment".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicSocialMetadataAttachment = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicSocialMetadataAttachment();
-                }
-                else if("PublicUnsupportedContent".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicUnsupportedContent = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnsupportedContent();
-                }
-                else if("PublicWhatsAppTemplateMetadata".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicWhatsAppTemplateMetadata = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadata();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(PublicContact != null)
-                {
-                    return PublicContact.GetFieldDeserializers();
-                }
-                else if(PublicFile != null)
-                {
-                    return PublicFile.GetFieldDeserializers();
-                }
-                else if(PublicLocation != null)
-                {
-                    return PublicLocation.GetFieldDeserializers();
-                }
-                else if(PublicMessageHeader != null)
-                {
-                    return PublicMessageHeader.GetFieldDeserializers();
-                }
-                else if(PublicQuickReplies != null)
-                {
-                    return PublicQuickReplies.GetFieldDeserializers();
-                }
-                else if(PublicSocialMetadataAttachment != null)
-                {
-                    return PublicSocialMetadataAttachment.GetFieldDeserializers();
-                }
-                else if(PublicUnsupportedContent != null)
-                {
-                    return PublicUnsupportedContent.GetFieldDeserializers();
-                }
-                else if(PublicWhatsAppTemplateMetadata != null)
-                {
-                    return PublicWhatsAppTemplateMetadata.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(PublicContact != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicContact>(null, PublicContact);
-                }
-                else if(PublicFile != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicFile>(null, PublicFile);
-                }
-                else if(PublicLocation != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicLocation>(null, PublicLocation);
-                }
-                else if(PublicMessageHeader != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessageHeader>(null, PublicMessageHeader);
-                }
-                else if(PublicQuickReplies != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicQuickReplies>(null, PublicQuickReplies);
-                }
-                else if(PublicSocialMetadataAttachment != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSocialMetadataAttachment>(null, PublicSocialMetadataAttachment);
-                }
-                else if(PublicUnsupportedContent != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnsupportedContent>(null, PublicUnsupportedContent);
-                }
-                else if(PublicWhatsAppTemplateMetadata != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadata>(null, PublicWhatsAppTemplateMetadata);
-                }
-            }
         }
     }
 }

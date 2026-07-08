@@ -91,7 +91,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Owners
         public partial class OwnersRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
-            /// <summary>The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("after")]
@@ -101,10 +100,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Owners
             [QueryParameter("after")]
             public string After { get; set; }
 #endif
-            /// <summary>Whether to return only results that have been archived.</summary>
             [QueryParameter("archived")]
             public bool? Archived { get; set; }
-            /// <summary>Filter by email address (optional)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("email")]
@@ -114,7 +111,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Owners
             [QueryParameter("email")]
             public string Email { get; set; }
 #endif
-            /// <summary>The maximum number of results to display per page.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
         }

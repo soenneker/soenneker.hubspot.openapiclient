@@ -27,7 +27,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.QuickReply> QuickReplies { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicQuickReplies_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicQuickRepliesType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicQuickReplies"/> and sets the default values.
         /// </summary>
@@ -56,7 +56,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "allowMultiSelect", n => { AllowMultiSelect = n.GetBoolValue(); } },
                 { "allowUserInput", n => { AllowUserInput = n.GetBoolValue(); } },
                 { "quickReplies", n => { QuickReplies = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.QuickReply>(global::Soenneker.HubSpot.OpenApiClient.Models.QuickReply.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicQuickReplies_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicQuickRepliesType>(); } },
             };
         }
         /// <summary>
@@ -69,7 +69,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteBoolValue("allowMultiSelect", AllowMultiSelect);
             writer.WriteBoolValue("allowUserInput", AllowUserInput);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.QuickReply>("quickReplies", QuickReplies);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicQuickReplies_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicQuickRepliesType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

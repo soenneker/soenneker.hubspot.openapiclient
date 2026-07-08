@@ -19,7 +19,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Item.Revisions
     public partial class RevisionsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.marketing.v3.emails.item.revisions.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The ID of a revision.</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Item.Revisions.Item.WithRevisionItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Item.Revisions.Item.WithRevisionItemRequestBuilder this[string position]
         {
@@ -108,6 +108,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Item.Revisions
             [QueryParameter("after")]
             public string After { get; set; }
 #endif
+            /// <summary>The cursor token value to get the previous set of results. You can get this from the `paging.prev.before` JSON property of a paged response containing more results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("before")]
@@ -117,7 +118,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.V3.Emails.Item.Revisions
             [QueryParameter("before")]
             public string Before { get; set; }
 #endif
-            /// <summary>The maximum number of results to display per page.</summary>
+            /// <summary>The maximum number of results to return. Default is 100.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
         }

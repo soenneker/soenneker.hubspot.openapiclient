@@ -26,10 +26,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Links for where to check information related to the task. The `status` link gives the URL for where to check the status of the task.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlTaskLocator_links? Links { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlTaskLocatorLinksProperty? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlTaskLocator_links Links { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlTaskLocatorLinksProperty Links { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlTaskLocator"/> and sets the default values.
@@ -57,7 +57,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlTaskLocator_links>(global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlTaskLocator_links.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlTaskLocatorLinksProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlTaskLocatorLinksProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -68,7 +68,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlTaskLocator_links>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlTaskLocatorLinksProperty>("links", Links);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

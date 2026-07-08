@@ -42,9 +42,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string CurrencyPropertyName { get; set; }
 #endif
         /// <summary>Indicates the sensitivity level of the property, such as &quot;non_sensitive&quot;, &quot;sensitive&quot;, or &quot;highly_sensitive&quot;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.Property_dataSensitivity? DataSensitivity { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyDataSensitivity? DataSensitivity { get; set; }
         /// <summary>The dateDisplayHint property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.Property_dateDisplayHint? DateDisplayHint { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyDateDisplayHint? DateDisplayHint { get; set; }
         /// <summary>Whether the property has been deleted.</summary>
         public bool? Deleted { get; set; }
         /// <summary>A summary of the property&apos;s purpose.</summary>
@@ -56,7 +56,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Description { get; set; }
 #endif
         /// <summary>&quot;The mode in which the property is displayed. Can be: \&quot;current_value\&quot; or \&quot;all_unique_versions\&quot;.&quot;</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.Property_displayMode? DisplayMode { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyDisplayMode? DisplayMode { get; set; }
         /// <summary>The position of the item relative to others in the list.</summary>
         public int? DisplayOrder { get; set; }
         /// <summary>The enforceMultivalueUniqueness property</summary>
@@ -126,7 +126,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Name { get; set; }
 #endif
         /// <summary>&quot;Hint for how a number property is displayed and validated in HubSpot&apos;s UI. Can be: \&quot;unformatted\&quot;, \&quot;formatted\&quot;, \&quot;currency\&quot;, \&quot;percentage\&quot;, \&quot;duration\&quot;, or \&quot;probability\&quot;.&quot;</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.Property_numberDisplayHint? NumberDisplayHint { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyNumberDisplayHint? NumberDisplayHint { get; set; }
         /// <summary>A list of valid options for the property. This field is required for enumerated properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -138,7 +138,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Whether options can be modified after creation.</summary>
         public bool? OptionsAreMutable { get; set; }
         /// <summary>Specifies how to sort property options. Can be either &quot;DISPLAY_ORDER&quot; to defer to the displayOrder field, or &quot;ALPHABETICAL&quot;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.Property_optionSortStrategy? OptionSortStrategy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyOptionSortStrategy? OptionSortStrategy { get; set; }
         /// <summary>The owningAppId property</summary>
         public long? OwningAppId { get; set; }
         /// <summary>The ID of the HubSpot account where the property is defined.</summary>
@@ -148,11 +148,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Indicates if the property&apos;s value is read-only.</summary>
         public bool? ReadOnlyValue { get; set; }
         /// <summary>Deprecated. Use externalOptionsReferenceType instead.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.Property_referencedObjectType? ReferencedObjectType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyReferencedObjectType? ReferencedObjectType { get; set; }
         /// <summary>Whether the property is searchable globaly.</summary>
         public bool? SearchableInGlobalSearch { get; set; }
         /// <summary>The searchTextAnalysisMode property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.Property_searchTextAnalysisMode? SearchTextAnalysisMode { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertySearchTextAnalysisMode? SearchTextAnalysisMode { get; set; }
         /// <summary>When sensitiveData is true, lists the type of sensitive data contained in the property (e.g., &quot;HIPAA&quot;).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -164,9 +164,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Whether to show the currency symbol in HubSpot&apos;s UI.</summary>
         public bool? ShowCurrencySymbol { get; set; }
         /// <summary>&quot;Hint for how the text is displayed and validated in HubSpot&apos;s UI. Can be: \&quot;unformatted_single_line\&quot;, \&quot;multi_line\&quot;, \&quot;email\&quot;, \&quot;phone_number\&quot;, \&quot;domain_name\&quot;, \&quot;ip_address\&quot;, \&quot;physical_address\&quot;, or \&quot;postal_code\&quot;.&quot;</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.Property_textDisplayHint? TextDisplayHint { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyTextDisplayHint? TextDisplayHint { get; set; }
         /// <summary>The data type of the property, such as string or number.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.Property_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyType? Type { get; set; }
         /// <summary>The timestamp when the property was last updated, in ISO 8601 format.</summary>
         public long? UpdatedAt { get; set; }
         /// <summary>
@@ -201,11 +201,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "createdAt", n => { CreatedAt = n.GetLongValue(); } },
                 { "createdUserId", n => { CreatedUserId = n.GetLongValue(); } },
                 { "currencyPropertyName", n => { CurrencyPropertyName = n.GetStringValue(); } },
-                { "dataSensitivity", n => { DataSensitivity = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.Property_dataSensitivity>(); } },
-                { "dateDisplayHint", n => { DateDisplayHint = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.Property_dateDisplayHint>(); } },
+                { "dataSensitivity", n => { DataSensitivity = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyDataSensitivity>(); } },
+                { "dateDisplayHint", n => { DateDisplayHint = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyDateDisplayHint>(); } },
                 { "deleted", n => { Deleted = n.GetBoolValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "displayMode", n => { DisplayMode = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.Property_displayMode>(); } },
+                { "displayMode", n => { DisplayMode = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyDisplayMode>(); } },
                 { "displayOrder", n => { DisplayOrder = n.GetIntValue(); } },
                 { "enforceMultivalueUniqueness", n => { EnforceMultivalueUniqueness = n.GetBoolValue(); } },
                 { "externalOptions", n => { ExternalOptions = n.GetBoolValue(); } },
@@ -225,21 +225,21 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "mutableDefinitionNotDeletable", n => { MutableDefinitionNotDeletable = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "numberDisplayHint", n => { NumberDisplayHint = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.Property_numberDisplayHint>(); } },
-                { "optionSortStrategy", n => { OptionSortStrategy = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.Property_optionSortStrategy>(); } },
+                { "numberDisplayHint", n => { NumberDisplayHint = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyNumberDisplayHint>(); } },
+                { "optionSortStrategy", n => { OptionSortStrategy = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyOptionSortStrategy>(); } },
                 { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.MediaBridgeOption>(global::Soenneker.HubSpot.OpenApiClient.Models.MediaBridgeOption.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "optionsAreMutable", n => { OptionsAreMutable = n.GetBoolValue(); } },
                 { "owningAppId", n => { OwningAppId = n.GetLongValue(); } },
                 { "portalId", n => { PortalId = n.GetLongValue(); } },
                 { "readOnlyDefinition", n => { ReadOnlyDefinition = n.GetBoolValue(); } },
                 { "readOnlyValue", n => { ReadOnlyValue = n.GetBoolValue(); } },
-                { "referencedObjectType", n => { ReferencedObjectType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.Property_referencedObjectType>(); } },
-                { "searchTextAnalysisMode", n => { SearchTextAnalysisMode = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.Property_searchTextAnalysisMode>(); } },
+                { "referencedObjectType", n => { ReferencedObjectType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyReferencedObjectType>(); } },
+                { "searchTextAnalysisMode", n => { SearchTextAnalysisMode = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertySearchTextAnalysisMode>(); } },
                 { "searchableInGlobalSearch", n => { SearchableInGlobalSearch = n.GetBoolValue(); } },
                 { "sensitiveDataCategories", n => { SensitiveDataCategories = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "showCurrencySymbol", n => { ShowCurrencySymbol = n.GetBoolValue(); } },
-                { "textDisplayHint", n => { TextDisplayHint = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.Property_textDisplayHint>(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.Property_type>(); } },
+                { "textDisplayHint", n => { TextDisplayHint = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyTextDisplayHint>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyType>(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetLongValue(); } },
             };
         }
@@ -257,11 +257,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteLongValue("createdAt", CreatedAt);
             writer.WriteLongValue("createdUserId", CreatedUserId);
             writer.WriteStringValue("currencyPropertyName", CurrencyPropertyName);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.Property_dataSensitivity>("dataSensitivity", DataSensitivity);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.Property_dateDisplayHint>("dateDisplayHint", DateDisplayHint);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyDataSensitivity>("dataSensitivity", DataSensitivity);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyDateDisplayHint>("dateDisplayHint", DateDisplayHint);
             writer.WriteBoolValue("deleted", Deleted);
             writer.WriteStringValue("description", Description);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.Property_displayMode>("displayMode", DisplayMode);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyDisplayMode>("displayMode", DisplayMode);
             writer.WriteIntValue("displayOrder", DisplayOrder);
             writer.WriteBoolValue("enforceMultivalueUniqueness", EnforceMultivalueUniqueness);
             writer.WriteBoolValue("externalOptions", ExternalOptions);
@@ -281,21 +281,21 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("label", Label);
             writer.WriteBoolValue("mutableDefinitionNotDeletable", MutableDefinitionNotDeletable);
             writer.WriteStringValue("name", Name);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.Property_numberDisplayHint>("numberDisplayHint", NumberDisplayHint);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyNumberDisplayHint>("numberDisplayHint", NumberDisplayHint);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.MediaBridgeOption>("options", Options);
             writer.WriteBoolValue("optionsAreMutable", OptionsAreMutable);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.Property_optionSortStrategy>("optionSortStrategy", OptionSortStrategy);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyOptionSortStrategy>("optionSortStrategy", OptionSortStrategy);
             writer.WriteLongValue("owningAppId", OwningAppId);
             writer.WriteLongValue("portalId", PortalId);
             writer.WriteBoolValue("readOnlyDefinition", ReadOnlyDefinition);
             writer.WriteBoolValue("readOnlyValue", ReadOnlyValue);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.Property_referencedObjectType>("referencedObjectType", ReferencedObjectType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyReferencedObjectType>("referencedObjectType", ReferencedObjectType);
             writer.WriteBoolValue("searchableInGlobalSearch", SearchableInGlobalSearch);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.Property_searchTextAnalysisMode>("searchTextAnalysisMode", SearchTextAnalysisMode);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertySearchTextAnalysisMode>("searchTextAnalysisMode", SearchTextAnalysisMode);
             writer.WriteCollectionOfPrimitiveValues<string>("sensitiveDataCategories", SensitiveDataCategories);
             writer.WriteBoolValue("showCurrencySymbol", ShowCurrencySymbol);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.Property_textDisplayHint>("textDisplayHint", TextDisplayHint);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.Property_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyTextDisplayHint>("textDisplayHint", TextDisplayHint);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyType>("type", Type);
             writer.WriteLongValue("updatedAt", UpdatedAt);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -25,9 +25,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string ExportName { get; set; }
 #endif
         /// <summary>The current state of the export process.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportResponse_exportState? ExportState { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportResponseExportState? ExportState { get; set; }
         /// <summary>The type of export, which can be either VIEW or LIST.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportResponse_exportType? ExportType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportResponseExportType? ExportType { get; set; }
         /// <summary>The unique ID of the export.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -83,8 +83,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "exportName", n => { ExportName = n.GetStringValue(); } },
-                { "exportState", n => { ExportState = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportResponse_exportState>(); } },
-                { "exportType", n => { ExportType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportResponse_exportType>(); } },
+                { "exportState", n => { ExportState = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportResponseExportState>(); } },
+                { "exportType", n => { ExportType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportResponseExportType>(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "objectProperties", n => { ObjectProperties = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "objectType", n => { ObjectType = n.GetStringValue(); } },
@@ -101,8 +101,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
             writer.WriteStringValue("exportName", ExportName);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportResponse_exportState>("exportState", ExportState);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportResponse_exportType>("exportType", ExportType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportResponseExportState>("exportState", ExportState);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportResponseExportType>("exportType", ExportType);
             writer.WriteStringValue("id", Id);
             writer.WriteCollectionOfPrimitiveValues<string>("objectProperties", ObjectProperties);
             writer.WriteStringValue("objectType", ObjectType);

@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     public partial class FileObject : IAdditionalDataHolder, IParsable
     {
         /// <summary>File access. Can be PUBLIC_INDEXABLE, PUBLIC_NOT_INDEXABLE, PRIVATE.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.File_access? Access { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.FileAccess? Access { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>If the file is deleted.</summary>
@@ -96,7 +96,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Size of the file in bytes.</summary>
         public long? Size { get; set; }
         /// <summary>The sourceGroup property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.File_sourceGroup? SourceGroup { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.FileSourceGroup? SourceGroup { get; set; }
         /// <summary>Type of the file. Can be IMG, DOCUMENT, AUDIO, MOVIE, or OTHER.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -142,7 +142,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "access", n => { Access = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.File_access>(); } },
+                { "access", n => { Access = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FileAccess>(); } },
                 { "archived", n => { Archived = n.GetBoolValue(); } },
                 { "archivedAt", n => { ArchivedAt = n.GetDateTimeOffsetValue(); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
@@ -158,7 +158,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "parentFolderId", n => { ParentFolderId = n.GetStringValue(); } },
                 { "path", n => { Path = n.GetStringValue(); } },
                 { "size", n => { Size = n.GetLongValue(); } },
-                { "sourceGroup", n => { SourceGroup = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.File_sourceGroup>(); } },
+                { "sourceGroup", n => { SourceGroup = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FileSourceGroup>(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
@@ -172,7 +172,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.File_access>("access", Access);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FileAccess>("access", Access);
             writer.WriteBoolValue("archived", Archived);
             writer.WriteDateTimeOffsetValue("archivedAt", ArchivedAt);
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
@@ -188,7 +188,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("parentFolderId", ParentFolderId);
             writer.WriteStringValue("path", Path);
             writer.WriteLongValue("size", Size);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.File_sourceGroup>("sourceGroup", SourceGroup);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FileSourceGroup>("sourceGroup", SourceGroup);
             writer.WriteStringValue("type", Type);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             writer.WriteStringValue("url", Url);

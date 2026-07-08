@@ -25,7 +25,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The total budget allocated for the campaign.</summary>
         public double? BudgetTotal { get; set; }
         /// <summary>The currency code used for the budget and spend amounts, following ISO 4217 standards.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicBudgetTotals_currencyCode? CurrencyCode { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicBudgetTotalsCurrencyCode? CurrencyCode { get; set; }
         /// <summary>The remaining budget available for the campaign after accounting for all spend items.</summary>
         public double? RemainingBudget { get; set; }
         /// <summary>An array of spend items associated with the campaign. Each item is represented by a PublicSpendItem object.</summary>
@@ -65,7 +65,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "budgetItems", n => { BudgetItems = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicBudgetItem>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicBudgetItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "budgetTotal", n => { BudgetTotal = n.GetDoubleValue(); } },
-                { "currencyCode", n => { CurrencyCode = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicBudgetTotals_currencyCode>(); } },
+                { "currencyCode", n => { CurrencyCode = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicBudgetTotalsCurrencyCode>(); } },
                 { "remainingBudget", n => { RemainingBudget = n.GetDoubleValue(); } },
                 { "spendItems", n => { SpendItems = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSpendItem>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicSpendItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "spendTotal", n => { SpendTotal = n.GetDoubleValue(); } },
@@ -80,7 +80,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicBudgetItem>("budgetItems", BudgetItems);
             writer.WriteDoubleValue("budgetTotal", BudgetTotal);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicBudgetTotals_currencyCode>("currencyCode", CurrencyCode);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicBudgetTotalsCurrencyCode>("currencyCode", CurrencyCode);
             writer.WriteDoubleValue("remainingBudget", RemainingBudget);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSpendItem>("spendItems", SpendItems);
             writer.WriteDoubleValue("spendTotal", SpendTotal);

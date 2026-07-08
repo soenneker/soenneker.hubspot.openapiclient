@@ -15,10 +15,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The actions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequest.ApiPlatformFlowPutRequest_actions>? Actions { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequestActionsItem>? Actions { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequest.ApiPlatformFlowPutRequest_actions> Actions { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequestActionsItem> Actions { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -33,10 +33,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The customProperties property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequest_customProperties? CustomProperties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequestCustomPropertiesProperty? CustomProperties { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequest_customProperties CustomProperties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequestCustomPropertiesProperty CustomProperties { get; set; }
 #endif
         /// <summary>The description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -49,18 +49,18 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The enrollmentCriteria property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequest.ApiPlatformFlowPutRequest_enrollmentCriteria? EnrollmentCriteria { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequestEnrollmentCriteria? EnrollmentCriteria { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequest.ApiPlatformFlowPutRequest_enrollmentCriteria EnrollmentCriteria { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequestEnrollmentCriteria EnrollmentCriteria { get; set; }
 #endif
         /// <summary>The enrollmentSchedule property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequest.ApiPlatformFlowPutRequest_enrollmentSchedule? EnrollmentSchedule { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequestEnrollmentSchedule? EnrollmentSchedule { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequest.ApiPlatformFlowPutRequest_enrollmentSchedule EnrollmentSchedule { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequestEnrollmentSchedule EnrollmentSchedule { get; set; }
 #endif
         /// <summary>The isEnabled property</summary>
         public bool? IsEnabled { get; set; }
@@ -91,10 +91,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The suppressionFilterBranch property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequest.ApiPlatformFlowPutRequest_suppressionFilterBranch? SuppressionFilterBranch { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequestSuppressionFilterBranch? SuppressionFilterBranch { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequest.ApiPlatformFlowPutRequest_suppressionFilterBranch SuppressionFilterBranch { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequestSuppressionFilterBranch SuppressionFilterBranch { get; set; }
 #endif
         /// <summary>The timeWindows property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -105,7 +105,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeWindow> TimeWindows { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequest_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequestType? Type { get; set; }
         /// <summary>The uuid property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -139,19 +139,19 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "actions", n => { Actions = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequest.ApiPlatformFlowPutRequest_actions>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequest.ApiPlatformFlowPutRequest_actions.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "actions", n => { Actions = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequestActionsItem>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequestActionsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "blockedDates", n => { BlockedDates = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ApiBlockedDate>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiBlockedDate.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "customProperties", n => { CustomProperties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequest_customProperties>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequest_customProperties.CreateFromDiscriminatorValue); } },
+                { "customProperties", n => { CustomProperties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequestCustomPropertiesProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequestCustomPropertiesProperty.CreateFromDiscriminatorValue); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "enrollmentCriteria", n => { EnrollmentCriteria = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequest.ApiPlatformFlowPutRequest_enrollmentCriteria>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequest.ApiPlatformFlowPutRequest_enrollmentCriteria.CreateFromDiscriminatorValue); } },
-                { "enrollmentSchedule", n => { EnrollmentSchedule = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequest.ApiPlatformFlowPutRequest_enrollmentSchedule>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequest.ApiPlatformFlowPutRequest_enrollmentSchedule.CreateFromDiscriminatorValue); } },
+                { "enrollmentCriteria", n => { EnrollmentCriteria = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequestEnrollmentCriteria>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequestEnrollmentCriteria.CreateFromDiscriminatorValue); } },
+                { "enrollmentSchedule", n => { EnrollmentSchedule = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequestEnrollmentSchedule>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequestEnrollmentSchedule.CreateFromDiscriminatorValue); } },
                 { "isEnabled", n => { IsEnabled = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "revisionId", n => { RevisionId = n.GetStringValue(); } },
                 { "startActionId", n => { StartActionId = n.GetStringValue(); } },
-                { "suppressionFilterBranch", n => { SuppressionFilterBranch = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequest.ApiPlatformFlowPutRequest_suppressionFilterBranch>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequest.ApiPlatformFlowPutRequest_suppressionFilterBranch.CreateFromDiscriminatorValue); } },
+                { "suppressionFilterBranch", n => { SuppressionFilterBranch = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequestSuppressionFilterBranch>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequestSuppressionFilterBranch.CreateFromDiscriminatorValue); } },
                 { "timeWindows", n => { TimeWindows = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeWindow>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeWindow.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequest_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequestType>(); } },
                 { "uuid", n => { Uuid = n.GetStringValue(); } },
             };
         }
@@ -162,621 +162,21 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequest.ApiPlatformFlowPutRequest_actions>("actions", Actions);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequestActionsItem>("actions", Actions);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ApiBlockedDate>("blockedDates", BlockedDates);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequest_customProperties>("customProperties", CustomProperties);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequestCustomPropertiesProperty>("customProperties", CustomProperties);
             writer.WriteStringValue("description", Description);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequest.ApiPlatformFlowPutRequest_enrollmentCriteria>("enrollmentCriteria", EnrollmentCriteria);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequest.ApiPlatformFlowPutRequest_enrollmentSchedule>("enrollmentSchedule", EnrollmentSchedule);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequestEnrollmentCriteria>("enrollmentCriteria", EnrollmentCriteria);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequestEnrollmentSchedule>("enrollmentSchedule", EnrollmentSchedule);
             writer.WriteBoolValue("isEnabled", IsEnabled);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("revisionId", RevisionId);
             writer.WriteStringValue("startActionId", StartActionId);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequest.ApiPlatformFlowPutRequest_suppressionFilterBranch>("suppressionFilterBranch", SuppressionFilterBranch);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequestSuppressionFilterBranch>("suppressionFilterBranch", SuppressionFilterBranch);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeWindow>("timeWindows", TimeWindows);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequest_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequestType>("type", Type);
             writer.WriteStringValue("uuid", Uuid);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiABTestBranchAction"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiCustomCodeAction"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBranchAction"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiSingleConnectionAction"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticBranchAction"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiWebhookAction"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ApiPlatformFlowPutRequest_actions : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiABTestBranchAction"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiABTestBranchAction? ApiABTestBranchAction { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiABTestBranchAction ApiABTestBranchAction { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiCustomCodeAction"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiCustomCodeAction? ApiCustomCodeAction { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiCustomCodeAction ApiCustomCodeAction { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBranchAction"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBranchAction? ApiListBranchAction { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBranchAction ApiListBranchAction { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiSingleConnectionAction"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiSingleConnectionAction? ApiSingleConnectionAction { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiSingleConnectionAction ApiSingleConnectionAction { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticBranchAction"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticBranchAction? ApiStaticBranchAction { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticBranchAction ApiStaticBranchAction { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiWebhookAction"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiWebhookAction? ApiWebhookAction { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiWebhookAction ApiWebhookAction { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequest.ApiPlatformFlowPutRequest_actions"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequest.ApiPlatformFlowPutRequest_actions CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequest.ApiPlatformFlowPutRequest_actions();
-                if("ApiABTestBranchAction".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ApiABTestBranchAction = new global::Soenneker.HubSpot.OpenApiClient.Models.ApiABTestBranchAction();
-                }
-                else if("ApiCustomCodeAction".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ApiCustomCodeAction = new global::Soenneker.HubSpot.OpenApiClient.Models.ApiCustomCodeAction();
-                }
-                else if("ApiListBranchAction".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ApiListBranchAction = new global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBranchAction();
-                }
-                else if("ApiSingleConnectionAction".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ApiSingleConnectionAction = new global::Soenneker.HubSpot.OpenApiClient.Models.ApiSingleConnectionAction();
-                }
-                else if("ApiStaticBranchAction".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ApiStaticBranchAction = new global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticBranchAction();
-                }
-                else if("ApiWebhookAction".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ApiWebhookAction = new global::Soenneker.HubSpot.OpenApiClient.Models.ApiWebhookAction();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(ApiABTestBranchAction != null)
-                {
-                    return ApiABTestBranchAction.GetFieldDeserializers();
-                }
-                else if(ApiCustomCodeAction != null)
-                {
-                    return ApiCustomCodeAction.GetFieldDeserializers();
-                }
-                else if(ApiListBranchAction != null)
-                {
-                    return ApiListBranchAction.GetFieldDeserializers();
-                }
-                else if(ApiSingleConnectionAction != null)
-                {
-                    return ApiSingleConnectionAction.GetFieldDeserializers();
-                }
-                else if(ApiStaticBranchAction != null)
-                {
-                    return ApiStaticBranchAction.GetFieldDeserializers();
-                }
-                else if(ApiWebhookAction != null)
-                {
-                    return ApiWebhookAction.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(ApiABTestBranchAction != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiABTestBranchAction>(null, ApiABTestBranchAction);
-                }
-                else if(ApiCustomCodeAction != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiCustomCodeAction>(null, ApiCustomCodeAction);
-                }
-                else if(ApiListBranchAction != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBranchAction>(null, ApiListBranchAction);
-                }
-                else if(ApiSingleConnectionAction != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiSingleConnectionAction>(null, ApiSingleConnectionAction);
-                }
-                else if(ApiStaticBranchAction != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiStaticBranchAction>(null, ApiStaticBranchAction);
-                }
-                else if(ApiWebhookAction != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiWebhookAction>(null, ApiWebhookAction);
-                }
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiDatasetBasedEnrollmentCriteria"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiEventBasedEnrollmentCriteria"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBasedEnrollmentCriteria"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiManualEnrollmentCriteria"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ApiPlatformFlowPutRequest_enrollmentCriteria : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiDatasetBasedEnrollmentCriteria"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiDatasetBasedEnrollmentCriteria? ApiDatasetBasedEnrollmentCriteria { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiDatasetBasedEnrollmentCriteria ApiDatasetBasedEnrollmentCriteria { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiEventBasedEnrollmentCriteria"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiEventBasedEnrollmentCriteria? ApiEventBasedEnrollmentCriteria { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiEventBasedEnrollmentCriteria ApiEventBasedEnrollmentCriteria { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBasedEnrollmentCriteria"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBasedEnrollmentCriteria? ApiListBasedEnrollmentCriteria { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBasedEnrollmentCriteria ApiListBasedEnrollmentCriteria { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiManualEnrollmentCriteria"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiManualEnrollmentCriteria? ApiManualEnrollmentCriteria { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiManualEnrollmentCriteria ApiManualEnrollmentCriteria { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequest.ApiPlatformFlowPutRequest_enrollmentCriteria"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequest.ApiPlatformFlowPutRequest_enrollmentCriteria CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequest.ApiPlatformFlowPutRequest_enrollmentCriteria();
-                if("ApiDatasetBasedEnrollmentCriteria".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ApiDatasetBasedEnrollmentCriteria = new global::Soenneker.HubSpot.OpenApiClient.Models.ApiDatasetBasedEnrollmentCriteria();
-                }
-                else if("ApiEventBasedEnrollmentCriteria".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ApiEventBasedEnrollmentCriteria = new global::Soenneker.HubSpot.OpenApiClient.Models.ApiEventBasedEnrollmentCriteria();
-                }
-                else if("ApiListBasedEnrollmentCriteria".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ApiListBasedEnrollmentCriteria = new global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBasedEnrollmentCriteria();
-                }
-                else if("ApiManualEnrollmentCriteria".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ApiManualEnrollmentCriteria = new global::Soenneker.HubSpot.OpenApiClient.Models.ApiManualEnrollmentCriteria();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(ApiDatasetBasedEnrollmentCriteria != null)
-                {
-                    return ApiDatasetBasedEnrollmentCriteria.GetFieldDeserializers();
-                }
-                else if(ApiEventBasedEnrollmentCriteria != null)
-                {
-                    return ApiEventBasedEnrollmentCriteria.GetFieldDeserializers();
-                }
-                else if(ApiListBasedEnrollmentCriteria != null)
-                {
-                    return ApiListBasedEnrollmentCriteria.GetFieldDeserializers();
-                }
-                else if(ApiManualEnrollmentCriteria != null)
-                {
-                    return ApiManualEnrollmentCriteria.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(ApiDatasetBasedEnrollmentCriteria != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiDatasetBasedEnrollmentCriteria>(null, ApiDatasetBasedEnrollmentCriteria);
-                }
-                else if(ApiEventBasedEnrollmentCriteria != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiEventBasedEnrollmentCriteria>(null, ApiEventBasedEnrollmentCriteria);
-                }
-                else if(ApiListBasedEnrollmentCriteria != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiListBasedEnrollmentCriteria>(null, ApiListBasedEnrollmentCriteria);
-                }
-                else if(ApiManualEnrollmentCriteria != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiManualEnrollmentCriteria>(null, ApiManualEnrollmentCriteria);
-                }
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiDailyEnrollmentSchedule"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiMonthlyRelativeDaysEnrollmentSchedule"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiMonthlySpecificDaysEnrollmentSchedule"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiPropertyBasedEnrollmentSchedule"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiWeeklyEnrollmentSchedule"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiYearlyEnrollmentSchedule"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ApiPlatformFlowPutRequest_enrollmentSchedule : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiDailyEnrollmentSchedule"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiDailyEnrollmentSchedule? ApiDailyEnrollmentSchedule { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiDailyEnrollmentSchedule ApiDailyEnrollmentSchedule { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiMonthlyRelativeDaysEnrollmentSchedule"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiMonthlyRelativeDaysEnrollmentSchedule? ApiMonthlyRelativeDaysEnrollmentSchedule { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiMonthlyRelativeDaysEnrollmentSchedule ApiMonthlyRelativeDaysEnrollmentSchedule { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiMonthlySpecificDaysEnrollmentSchedule"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiMonthlySpecificDaysEnrollmentSchedule? ApiMonthlySpecificDaysEnrollmentSchedule { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiMonthlySpecificDaysEnrollmentSchedule ApiMonthlySpecificDaysEnrollmentSchedule { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiPropertyBasedEnrollmentSchedule"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiPropertyBasedEnrollmentSchedule? ApiPropertyBasedEnrollmentSchedule { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiPropertyBasedEnrollmentSchedule ApiPropertyBasedEnrollmentSchedule { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiWeeklyEnrollmentSchedule"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiWeeklyEnrollmentSchedule? ApiWeeklyEnrollmentSchedule { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiWeeklyEnrollmentSchedule ApiWeeklyEnrollmentSchedule { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiYearlyEnrollmentSchedule"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiYearlyEnrollmentSchedule? ApiYearlyEnrollmentSchedule { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.ApiYearlyEnrollmentSchedule ApiYearlyEnrollmentSchedule { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequest.ApiPlatformFlowPutRequest_enrollmentSchedule"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequest.ApiPlatformFlowPutRequest_enrollmentSchedule CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequest.ApiPlatformFlowPutRequest_enrollmentSchedule();
-                if("ApiDailyEnrollmentSchedule".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ApiDailyEnrollmentSchedule = new global::Soenneker.HubSpot.OpenApiClient.Models.ApiDailyEnrollmentSchedule();
-                }
-                else if("ApiMonthlyRelativeDaysEnrollmentSchedule".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ApiMonthlyRelativeDaysEnrollmentSchedule = new global::Soenneker.HubSpot.OpenApiClient.Models.ApiMonthlyRelativeDaysEnrollmentSchedule();
-                }
-                else if("ApiMonthlySpecificDaysEnrollmentSchedule".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ApiMonthlySpecificDaysEnrollmentSchedule = new global::Soenneker.HubSpot.OpenApiClient.Models.ApiMonthlySpecificDaysEnrollmentSchedule();
-                }
-                else if("ApiPropertyBasedEnrollmentSchedule".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ApiPropertyBasedEnrollmentSchedule = new global::Soenneker.HubSpot.OpenApiClient.Models.ApiPropertyBasedEnrollmentSchedule();
-                }
-                else if("ApiWeeklyEnrollmentSchedule".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ApiWeeklyEnrollmentSchedule = new global::Soenneker.HubSpot.OpenApiClient.Models.ApiWeeklyEnrollmentSchedule();
-                }
-                else if("ApiYearlyEnrollmentSchedule".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ApiYearlyEnrollmentSchedule = new global::Soenneker.HubSpot.OpenApiClient.Models.ApiYearlyEnrollmentSchedule();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(ApiDailyEnrollmentSchedule != null)
-                {
-                    return ApiDailyEnrollmentSchedule.GetFieldDeserializers();
-                }
-                else if(ApiMonthlyRelativeDaysEnrollmentSchedule != null)
-                {
-                    return ApiMonthlyRelativeDaysEnrollmentSchedule.GetFieldDeserializers();
-                }
-                else if(ApiMonthlySpecificDaysEnrollmentSchedule != null)
-                {
-                    return ApiMonthlySpecificDaysEnrollmentSchedule.GetFieldDeserializers();
-                }
-                else if(ApiPropertyBasedEnrollmentSchedule != null)
-                {
-                    return ApiPropertyBasedEnrollmentSchedule.GetFieldDeserializers();
-                }
-                else if(ApiWeeklyEnrollmentSchedule != null)
-                {
-                    return ApiWeeklyEnrollmentSchedule.GetFieldDeserializers();
-                }
-                else if(ApiYearlyEnrollmentSchedule != null)
-                {
-                    return ApiYearlyEnrollmentSchedule.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(ApiDailyEnrollmentSchedule != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiDailyEnrollmentSchedule>(null, ApiDailyEnrollmentSchedule);
-                }
-                else if(ApiMonthlyRelativeDaysEnrollmentSchedule != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiMonthlyRelativeDaysEnrollmentSchedule>(null, ApiMonthlyRelativeDaysEnrollmentSchedule);
-                }
-                else if(ApiMonthlySpecificDaysEnrollmentSchedule != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiMonthlySpecificDaysEnrollmentSchedule>(null, ApiMonthlySpecificDaysEnrollmentSchedule);
-                }
-                else if(ApiPropertyBasedEnrollmentSchedule != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiPropertyBasedEnrollmentSchedule>(null, ApiPropertyBasedEnrollmentSchedule);
-                }
-                else if(ApiWeeklyEnrollmentSchedule != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiWeeklyEnrollmentSchedule>(null, ApiWeeklyEnrollmentSchedule);
-                }
-                else if(ApiYearlyEnrollmentSchedule != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiYearlyEnrollmentSchedule>(null, ApiYearlyEnrollmentSchedule);
-                }
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranch"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationFilterBranch"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAllFilterBranch"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAnyFilterBranch"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicOrFilterBranch"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicRestrictedFilterBranch"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilterBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ApiPlatformFlowPutRequest_suppressionFilterBranch : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranch? PublicAndFilterBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranch PublicAndFilterBranch { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationFilterBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationFilterBranch? PublicAssociationFilterBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationFilterBranch PublicAssociationFilterBranch { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAllFilterBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAllFilterBranch? PublicNotAllFilterBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAllFilterBranch PublicNotAllFilterBranch { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAnyFilterBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAnyFilterBranch? PublicNotAnyFilterBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAnyFilterBranch PublicNotAnyFilterBranch { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicOrFilterBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicOrFilterBranch? PublicOrFilterBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicOrFilterBranch PublicOrFilterBranch { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicRestrictedFilterBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRestrictedFilterBranch? PublicRestrictedFilterBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRestrictedFilterBranch PublicRestrictedFilterBranch { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilterBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilterBranch? PublicUnifiedEventsFilterBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilterBranch PublicUnifiedEventsFilterBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequest.ApiPlatformFlowPutRequest_suppressionFilterBranch"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequest.ApiPlatformFlowPutRequest_suppressionFilterBranch CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.HubSpot.OpenApiClient.Models.ApiPlatformFlowPutRequest.ApiPlatformFlowPutRequest_suppressionFilterBranch();
-                if("PublicAndFilterBranch".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicAndFilterBranch = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranch();
-                }
-                else if("PublicAssociationFilterBranch".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicAssociationFilterBranch = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationFilterBranch();
-                }
-                else if("PublicNotAllFilterBranch".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicNotAllFilterBranch = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAllFilterBranch();
-                }
-                else if("PublicNotAnyFilterBranch".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicNotAnyFilterBranch = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAnyFilterBranch();
-                }
-                else if("PublicOrFilterBranch".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicOrFilterBranch = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicOrFilterBranch();
-                }
-                else if("PublicRestrictedFilterBranch".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicRestrictedFilterBranch = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicRestrictedFilterBranch();
-                }
-                else if("PublicUnifiedEventsFilterBranch".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PublicUnifiedEventsFilterBranch = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilterBranch();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(PublicAndFilterBranch != null)
-                {
-                    return PublicAndFilterBranch.GetFieldDeserializers();
-                }
-                else if(PublicAssociationFilterBranch != null)
-                {
-                    return PublicAssociationFilterBranch.GetFieldDeserializers();
-                }
-                else if(PublicNotAllFilterBranch != null)
-                {
-                    return PublicNotAllFilterBranch.GetFieldDeserializers();
-                }
-                else if(PublicNotAnyFilterBranch != null)
-                {
-                    return PublicNotAnyFilterBranch.GetFieldDeserializers();
-                }
-                else if(PublicOrFilterBranch != null)
-                {
-                    return PublicOrFilterBranch.GetFieldDeserializers();
-                }
-                else if(PublicRestrictedFilterBranch != null)
-                {
-                    return PublicRestrictedFilterBranch.GetFieldDeserializers();
-                }
-                else if(PublicUnifiedEventsFilterBranch != null)
-                {
-                    return PublicUnifiedEventsFilterBranch.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(PublicAndFilterBranch != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranch>(null, PublicAndFilterBranch);
-                }
-                else if(PublicAssociationFilterBranch != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationFilterBranch>(null, PublicAssociationFilterBranch);
-                }
-                else if(PublicNotAllFilterBranch != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAllFilterBranch>(null, PublicNotAllFilterBranch);
-                }
-                else if(PublicNotAnyFilterBranch != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAnyFilterBranch>(null, PublicNotAnyFilterBranch);
-                }
-                else if(PublicOrFilterBranch != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicOrFilterBranch>(null, PublicOrFilterBranch);
-                }
-                else if(PublicRestrictedFilterBranch != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRestrictedFilterBranch>(null, PublicRestrictedFilterBranch);
-                }
-                else if(PublicUnifiedEventsFilterBranch != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilterBranch>(null, PublicUnifiedEventsFilterBranch);
-                }
-            }
         }
     }
 }

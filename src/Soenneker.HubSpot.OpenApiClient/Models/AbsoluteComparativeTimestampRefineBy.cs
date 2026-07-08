@@ -15,11 +15,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The comparison property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteComparativeTimestampRefineBy_comparison? Comparison { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteComparativeTimestampRefineByComparison? Comparison { get; set; }
         /// <summary>The timestamp property</summary>
         public long? Timestamp { get; set; }
         /// <summary>The type property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteComparativeTimestampRefineBy_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteComparativeTimestampRefineByType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteComparativeTimestampRefineBy"/> and sets the default values.
         /// </summary>
@@ -45,9 +45,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "comparison", n => { Comparison = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteComparativeTimestampRefineBy_comparison>(); } },
+                { "comparison", n => { Comparison = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteComparativeTimestampRefineByComparison>(); } },
                 { "timestamp", n => { Timestamp = n.GetLongValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteComparativeTimestampRefineBy_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteComparativeTimestampRefineByType>(); } },
             };
         }
         /// <summary>
@@ -57,9 +57,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteComparativeTimestampRefineBy_comparison>("comparison", Comparison);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteComparativeTimestampRefineByComparison>("comparison", Comparison);
             writer.WriteLongValue("timestamp", Timestamp);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteComparativeTimestampRefineBy_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteComparativeTimestampRefineByType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

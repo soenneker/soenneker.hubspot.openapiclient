@@ -17,10 +17,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The paging property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CmsPaging_3? Paging { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CmsPaging4? Paging { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CmsPaging_3 Paging { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CmsPaging4 Paging { get; set; }
 #endif
         /// <summary>The results property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -33,7 +33,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The total number of rows available in the collection.</summary>
         public int? Total { get; set; }
         /// <summary>Indicates the type of response, which is &apos;STREAMING&apos; by default.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.StreamingCollectionResponseWithTotalHubDbTableRowV3_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.StreamingCollectionResponseWithTotalHubDbTableRowV3Type? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.StreamingCollectionResponseWithTotalHubDbTableRowV3"/> and sets the default values.
         /// </summary>
@@ -59,10 +59,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "paging", n => { Paging = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CmsPaging_3>(global::Soenneker.HubSpot.OpenApiClient.Models.CmsPaging_3.CreateFromDiscriminatorValue); } },
+                { "paging", n => { Paging = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CmsPaging4>(global::Soenneker.HubSpot.OpenApiClient.Models.CmsPaging4.CreateFromDiscriminatorValue); } },
                 { "results", n => { Results = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "total", n => { Total = n.GetIntValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.StreamingCollectionResponseWithTotalHubDbTableRowV3_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.StreamingCollectionResponseWithTotalHubDbTableRowV3Type>(); } },
             };
         }
         /// <summary>
@@ -72,10 +72,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CmsPaging_3>("paging", Paging);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CmsPaging4>("paging", Paging);
             writer.WriteCollectionOfPrimitiveValues<string>("results", Results);
             writer.WriteIntValue("total", Total);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.StreamingCollectionResponseWithTotalHubDbTableRowV3_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.StreamingCollectionResponseWithTotalHubDbTableRowV3Type>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

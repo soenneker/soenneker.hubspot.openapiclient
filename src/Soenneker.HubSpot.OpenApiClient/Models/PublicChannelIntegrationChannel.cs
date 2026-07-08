@@ -17,10 +17,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The capabilities property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannel_capabilities? Capabilities { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelCapabilitiesProperty? Capabilities { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannel_capabilities Capabilities { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelCapabilitiesProperty Capabilities { get; set; }
 #endif
         /// <summary>The channelAccountConnectionRedirectUrl property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -97,7 +97,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "capabilities", n => { Capabilities = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannel_capabilities>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannel_capabilities.CreateFromDiscriminatorValue); } },
+                { "capabilities", n => { Capabilities = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelCapabilitiesProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelCapabilitiesProperty.CreateFromDiscriminatorValue); } },
                 { "channelAccountConnectionRedirectUrl", n => { ChannelAccountConnectionRedirectUrl = n.GetStringValue(); } },
                 { "channelDescription", n => { ChannelDescription = n.GetStringValue(); } },
                 { "channelLogoUrl", n => { ChannelLogoUrl = n.GetStringValue(); } },
@@ -114,7 +114,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannel_capabilities>("capabilities", Capabilities);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelCapabilitiesProperty>("capabilities", Capabilities);
             writer.WriteStringValue("channelAccountConnectionRedirectUrl", ChannelAccountConnectionRedirectUrl);
             writer.WriteStringValue("channelDescription", ChannelDescription);
             writer.WriteStringValue("channelLogoUrl", ChannelLogoUrl);

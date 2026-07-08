@@ -19,25 +19,25 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The crmObjectIds property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadata_crmObjectIds? CrmObjectIds { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadataCrmObjectIdsProperty? CrmObjectIds { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadata_crmObjectIds CrmObjectIds { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadataCrmObjectIdsProperty CrmObjectIds { get; set; }
 #endif
         /// <summary>The mappedTemplateId property</summary>
         public long? MappedTemplateId { get; set; }
         /// <summary>The parameters property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadata_parameters? Parameters { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadataParametersProperty? Parameters { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadata_parameters Parameters { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadataParametersProperty Parameters { get; set; }
 #endif
         /// <summary>The rootMicId property</summary>
         public long? RootMicId { get; set; }
         /// <summary>The type property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadata_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadataType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadata"/> and sets the default values.
         /// </summary>
@@ -64,11 +64,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "contentId", n => { ContentId = n.GetLongValue(); } },
-                { "crmObjectIds", n => { CrmObjectIds = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadata_crmObjectIds>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadata_crmObjectIds.CreateFromDiscriminatorValue); } },
+                { "crmObjectIds", n => { CrmObjectIds = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadataCrmObjectIdsProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadataCrmObjectIdsProperty.CreateFromDiscriminatorValue); } },
                 { "mappedTemplateId", n => { MappedTemplateId = n.GetLongValue(); } },
-                { "parameters", n => { Parameters = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadata_parameters>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadata_parameters.CreateFromDiscriminatorValue); } },
+                { "parameters", n => { Parameters = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadataParametersProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadataParametersProperty.CreateFromDiscriminatorValue); } },
                 { "rootMicId", n => { RootMicId = n.GetLongValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadata_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadataType>(); } },
             };
         }
         /// <summary>
@@ -79,11 +79,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteLongValue("contentId", ContentId);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadata_crmObjectIds>("crmObjectIds", CrmObjectIds);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadataCrmObjectIdsProperty>("crmObjectIds", CrmObjectIds);
             writer.WriteLongValue("mappedTemplateId", MappedTemplateId);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadata_parameters>("parameters", Parameters);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadataParametersProperty>("parameters", Parameters);
             writer.WriteLongValue("rootMicId", RootMicId);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadata_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadataType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

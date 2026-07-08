@@ -17,10 +17,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The color property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicDividerStyleSettings_color? Color { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicDividerStyleSettingsColorProperty? Color { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicDividerStyleSettings_color Color { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicDividerStyleSettingsColorProperty Color { get; set; }
 #endif
         /// <summary>The height property</summary>
         public int? Height { get; set; }
@@ -57,7 +57,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "color", n => { Color = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicDividerStyleSettings_color>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicDividerStyleSettings_color.CreateFromDiscriminatorValue); } },
+                { "color", n => { Color = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicDividerStyleSettingsColorProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicDividerStyleSettingsColorProperty.CreateFromDiscriminatorValue); } },
                 { "height", n => { Height = n.GetIntValue(); } },
                 { "lineType", n => { LineType = n.GetStringValue(); } },
             };
@@ -69,7 +69,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicDividerStyleSettings_color>("color", Color);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicDividerStyleSettingsColorProperty>("color", Color);
             writer.WriteIntValue("height", Height);
             writer.WriteStringValue("lineType", LineType);
             writer.WriteAdditionalData(AdditionalData);

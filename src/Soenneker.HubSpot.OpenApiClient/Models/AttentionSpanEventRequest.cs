@@ -41,7 +41,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string ExternalId { get; set; }
 #endif
         /// <summary>The externalPlayContext property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequest_externalPlayContext? ExternalPlayContext { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequestExternalPlayContext? ExternalPlayContext { get; set; }
         /// <summary>The hsenc property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -61,7 +61,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string MediaName { get; set; }
 #endif
         /// <summary>The mediaType property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequest_mediaType? MediaType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequestMediaType? MediaType { get; set; }
         /// <summary>The mediaUrl property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -93,10 +93,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The rawDataMap property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequest_rawDataMap? RawDataMap { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequestRawDataMapProperty? RawDataMap { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequest_rawDataMap RawDataMap { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequestRawDataMapProperty RawDataMap { get; set; }
 #endif
         /// <summary>The rawDataString property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -143,17 +143,17 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "contactUtk", n => { ContactUtk = n.GetStringValue(); } },
                 { "derivedValues", n => { DerivedValues = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanCalculatedValues>(global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanCalculatedValues.CreateFromDiscriminatorValue); } },
                 { "externalId", n => { ExternalId = n.GetStringValue(); } },
-                { "externalPlayContext", n => { ExternalPlayContext = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequest_externalPlayContext>(); } },
+                { "externalPlayContext", n => { ExternalPlayContext = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequestExternalPlayContext>(); } },
                 { "_hsenc", n => { Hsenc = n.GetStringValue(); } },
                 { "mediaBridgeId", n => { MediaBridgeId = n.GetLongValue(); } },
                 { "mediaName", n => { MediaName = n.GetStringValue(); } },
-                { "mediaType", n => { MediaType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequest_mediaType>(); } },
+                { "mediaType", n => { MediaType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequestMediaType>(); } },
                 { "mediaUrl", n => { MediaUrl = n.GetStringValue(); } },
                 { "occurredTimestamp", n => { OccurredTimestamp = n.GetLongValue(); } },
                 { "pageId", n => { PageId = n.GetLongValue(); } },
                 { "pageName", n => { PageName = n.GetStringValue(); } },
                 { "pageUrl", n => { PageUrl = n.GetStringValue(); } },
-                { "rawDataMap", n => { RawDataMap = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequest_rawDataMap>(global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequest_rawDataMap.CreateFromDiscriminatorValue); } },
+                { "rawDataMap", n => { RawDataMap = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequestRawDataMapProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequestRawDataMapProperty.CreateFromDiscriminatorValue); } },
                 { "rawDataString", n => { RawDataString = n.GetStringValue(); } },
                 { "sessionId", n => { SessionId = n.GetStringValue(); } },
             };
@@ -169,17 +169,17 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("contactUtk", ContactUtk);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanCalculatedValues>("derivedValues", DerivedValues);
             writer.WriteStringValue("externalId", ExternalId);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequest_externalPlayContext>("externalPlayContext", ExternalPlayContext);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequestExternalPlayContext>("externalPlayContext", ExternalPlayContext);
             writer.WriteStringValue("_hsenc", Hsenc);
             writer.WriteLongValue("mediaBridgeId", MediaBridgeId);
             writer.WriteStringValue("mediaName", MediaName);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequest_mediaType>("mediaType", MediaType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequestMediaType>("mediaType", MediaType);
             writer.WriteStringValue("mediaUrl", MediaUrl);
             writer.WriteLongValue("occurredTimestamp", OccurredTimestamp);
             writer.WriteLongValue("pageId", PageId);
             writer.WriteStringValue("pageName", PageName);
             writer.WriteStringValue("pageUrl", PageUrl);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequest_rawDataMap>("rawDataMap", RawDataMap);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequestRawDataMapProperty>("rawDataMap", RawDataMap);
             writer.WriteStringValue("rawDataString", RawDataString);
             writer.WriteStringValue("sessionId", SessionId);
             writer.WriteAdditionalData(AdditionalData);

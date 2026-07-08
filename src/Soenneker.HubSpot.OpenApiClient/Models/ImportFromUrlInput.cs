@@ -13,13 +13,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning restore CS1591
     {
         /// <summary>&quot;PUBLIC_INDEXABLE: File is publicly accessible by anyone who has the URL. Search engines can index the file. PUBLIC_NOT_INDEXABLE: File is publicly accessible by anyone who has the URL. Search engines *can&apos;t* index the file. PRIVATE: File is NOT publicly accessible. Requires a signed URL to see content. Search engines *can&apos;t* index the file.&quot;</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlInput_access? Access { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlInputAccess? Access { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>&quot;ENTIRE_PORTAL: Look for a duplicate file in the entire account. EXACT_FOLDER: Look for a duplicate file in the provided folder.&quot;</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlInput_duplicateValidationScope? DuplicateValidationScope { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlInputDuplicateValidationScope? DuplicateValidationScope { get; set; }
         /// <summary>&quot;NONE: Do not run any duplicate validation. REJECT: Reject the upload if a duplicate is found. RETURN_EXISTING: If a duplicate file is found, do not upload a new file and return the found duplicate instead.&quot;</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlInput_duplicateValidationStrategy? DuplicateValidationStrategy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlInputDuplicateValidationStrategy? DuplicateValidationStrategy { get; set; }
         /// <summary>Specifies the date and time when the file will expire.</summary>
         public DateTimeOffset? ExpiresAt { get; set; }
         /// <summary>One of folderId or folderPath is required. Destination folderId for the uploaded file.</summary>
@@ -89,9 +89,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "access", n => { Access = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlInput_access>(); } },
-                { "duplicateValidationScope", n => { DuplicateValidationScope = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlInput_duplicateValidationScope>(); } },
-                { "duplicateValidationStrategy", n => { DuplicateValidationStrategy = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlInput_duplicateValidationStrategy>(); } },
+                { "access", n => { Access = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlInputAccess>(); } },
+                { "duplicateValidationScope", n => { DuplicateValidationScope = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlInputDuplicateValidationScope>(); } },
+                { "duplicateValidationStrategy", n => { DuplicateValidationStrategy = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlInputDuplicateValidationStrategy>(); } },
                 { "expiresAt", n => { ExpiresAt = n.GetDateTimeOffsetValue(); } },
                 { "folderId", n => { FolderId = n.GetStringValue(); } },
                 { "folderPath", n => { FolderPath = n.GetStringValue(); } },
@@ -108,9 +108,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlInput_access>("access", Access);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlInput_duplicateValidationScope>("duplicateValidationScope", DuplicateValidationScope);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlInput_duplicateValidationStrategy>("duplicateValidationStrategy", DuplicateValidationStrategy);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlInputAccess>("access", Access);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlInputDuplicateValidationScope>("duplicateValidationScope", DuplicateValidationScope);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlInputDuplicateValidationStrategy>("duplicateValidationStrategy", DuplicateValidationStrategy);
             writer.WriteDateTimeOffsetValue("expiresAt", ExpiresAt);
             writer.WriteStringValue("folderId", FolderId);
             writer.WriteStringValue("folderPath", FolderPath);

@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public List<string> FlowIds { get; set; }
 #endif
         /// <summary>Specifies the type of unenrollment setting, with possible values being ALL or SELECTIVE.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiUnEnrollmentSetting_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiUnEnrollmentSettingType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiUnEnrollmentSetting"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "flowIds", n => { FlowIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiUnEnrollmentSetting_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiUnEnrollmentSettingType>(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("flowIds", FlowIds);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiUnEnrollmentSetting_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiUnEnrollmentSettingType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

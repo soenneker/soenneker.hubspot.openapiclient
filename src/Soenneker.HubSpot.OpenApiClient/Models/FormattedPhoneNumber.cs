@@ -31,7 +31,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Extension { get; set; }
 #endif
         /// <summary>The type of phone number, with accepted values including FIXED_LINE, MOBILE, VOIP, and others.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.FormattedPhoneNumber_phoneNumberType? PhoneNumberType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.FormattedPhoneNumberPhoneNumberType? PhoneNumberType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.FormattedPhoneNumber"/> and sets the default values.
         /// </summary>
@@ -59,7 +59,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "e164Number", n => { E164Number = n.GetStringValue(); } },
                 { "extension", n => { Extension = n.GetStringValue(); } },
-                { "phoneNumberType", n => { PhoneNumberType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FormattedPhoneNumber_phoneNumberType>(); } },
+                { "phoneNumberType", n => { PhoneNumberType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FormattedPhoneNumberPhoneNumberType>(); } },
             };
         }
         /// <summary>
@@ -71,7 +71,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("e164Number", E164Number);
             writer.WriteStringValue("extension", Extension);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FormattedPhoneNumber_phoneNumberType>("phoneNumberType", PhoneNumberType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FormattedPhoneNumberPhoneNumberType>("phoneNumberType", PhoneNumberType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

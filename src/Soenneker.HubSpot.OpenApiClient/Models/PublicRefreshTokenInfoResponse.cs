@@ -61,7 +61,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string TokenType { get; set; }
 #endif
         /// <summary>The token_use property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRefreshTokenInfoResponse_token_use? TokenUse { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRefreshTokenInfoResponseTokenUse? TokenUse { get; set; }
         /// <summary>The user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -78,7 +78,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public PublicRefreshTokenInfoResponse()
         {
             AdditionalData = new Dictionary<string, object>();
-            TokenUse = global::Soenneker.HubSpot.OpenApiClient.Models.PublicRefreshTokenInfoResponse_token_use.Refresh_token;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -106,7 +105,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "scopes", n => { Scopes = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "token", n => { Token = n.GetStringValue(); } },
                 { "token_type", n => { TokenType = n.GetStringValue(); } },
-                { "token_use", n => { TokenUse = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRefreshTokenInfoResponse_token_use>(); } },
+                { "token_use", n => { TokenUse = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRefreshTokenInfoResponseTokenUse>(); } },
                 { "user", n => { User = n.GetStringValue(); } },
                 { "user_id", n => { UserId = n.GetIntValue(); } },
             };
@@ -126,7 +125,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("scopes", Scopes);
             writer.WriteStringValue("token", Token);
             writer.WriteStringValue("token_type", TokenType);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRefreshTokenInfoResponse_token_use>("token_use", TokenUse);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRefreshTokenInfoResponseTokenUse>("token_use", TokenUse);
             writer.WriteStringValue("user", User);
             writer.WriteIntValue("user_id", UserId);
             writer.WriteAdditionalData(AdditionalData);

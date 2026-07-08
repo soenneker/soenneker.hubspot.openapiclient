@@ -17,9 +17,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The ID of the business unit associated with the subscription.</summary>
         public long? BusinessUnitId { get; set; }
         /// <summary>The type of communication channel, with &apos;EMAIL&apos; as the only supported option.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatus_channel? Channel { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusChannel? Channel { get; set; }
         /// <summary>The legal basis for communication, with options including &apos;LEGITIMATE_INTEREST_PQL&apos;, &apos;LEGITIMATE_INTEREST_CLIENT&apos;, &apos;PERFORMANCE_OF_CONTRACT&apos;, &apos;CONSENT_WITH_NOTICE&apos;, &apos;NON_GDPR&apos;, &apos;PROCESS_AND_STORE&apos;, and &apos;LEGITIMATE_INTEREST_OTHER&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatus_legalBasis? LegalBasis { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusLegalBasis? LegalBasis { get; set; }
         /// <summary>An explanation for the legal basis used for communication.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -29,7 +29,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string LegalBasisExplanation { get; set; }
 #endif
         /// <summary>The reason for the successful change in subscription status, such as &apos;RESUBSCRIBE_OCCURRED&apos; or &apos;NO_STATUS_CHANGE&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatus_setStatusSuccessReason? SetStatusSuccessReason { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusSetStatusSuccessReason? SetStatusSuccessReason { get; set; }
         /// <summary>The origin or method through which the subscription status was set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -39,7 +39,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Source { get; set; }
 #endif
         /// <summary>The current subscription status of the contact, which can be &apos;SUBSCRIBED&apos;, &apos;UNSUBSCRIBED&apos;, or &apos;NOT_SPECIFIED&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatus_status? Status { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusStatus? Status { get; set; }
         /// <summary>The contact&apos;s email address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -86,12 +86,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "businessUnitId", n => { BusinessUnitId = n.GetLongValue(); } },
-                { "channel", n => { Channel = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatus_channel>(); } },
-                { "legalBasis", n => { LegalBasis = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatus_legalBasis>(); } },
+                { "channel", n => { Channel = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusChannel>(); } },
+                { "legalBasis", n => { LegalBasis = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusLegalBasis>(); } },
                 { "legalBasisExplanation", n => { LegalBasisExplanation = n.GetStringValue(); } },
-                { "setStatusSuccessReason", n => { SetStatusSuccessReason = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatus_setStatusSuccessReason>(); } },
+                { "setStatusSuccessReason", n => { SetStatusSuccessReason = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusSetStatusSuccessReason>(); } },
                 { "source", n => { Source = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatus_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusStatus>(); } },
                 { "subscriberIdString", n => { SubscriberIdString = n.GetStringValue(); } },
                 { "subscriptionId", n => { SubscriptionId = n.GetLongValue(); } },
                 { "subscriptionName", n => { SubscriptionName = n.GetStringValue(); } },
@@ -106,12 +106,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteLongValue("businessUnitId", BusinessUnitId);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatus_channel>("channel", Channel);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatus_legalBasis>("legalBasis", LegalBasis);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusChannel>("channel", Channel);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusLegalBasis>("legalBasis", LegalBasis);
             writer.WriteStringValue("legalBasisExplanation", LegalBasisExplanation);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatus_setStatusSuccessReason>("setStatusSuccessReason", SetStatusSuccessReason);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusSetStatusSuccessReason>("setStatusSuccessReason", SetStatusSuccessReason);
             writer.WriteStringValue("source", Source);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatus_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusStatus>("status", Status);
             writer.WriteStringValue("subscriberIdString", SubscriberIdString);
             writer.WriteLongValue("subscriptionId", SubscriptionId);
             writer.WriteStringValue("subscriptionName", SubscriptionName);

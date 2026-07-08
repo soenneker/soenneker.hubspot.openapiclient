@@ -69,6 +69,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Item
         public WithListItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/crm/v3/lists/{listId}{?includeFilters*}", rawUrl)
         {
         }
+        /// <summary>
+        /// Delete a list by **ILS list ID**. Lists deleted through this endpoint can be restored up to 90-days following the delete. After 90-days, the list is purged and can no longer be restored.
+        /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -84,6 +87,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Item
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
+        /// <summary>
+        /// Fetch a single list by **ILS list ID**.
+        /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ListFetchResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -99,6 +105,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Item
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ListFetchResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ListFetchResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
+        /// <summary>
+        /// Delete a list by **ILS list ID**. Lists deleted through this endpoint can be restored up to 90-days following the delete. After 90-days, the list is purged and can no longer be restored.
+        /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -114,6 +123,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Item
             requestInfo.Configure(requestConfiguration);
             return requestInfo;
         }
+        /// <summary>
+        /// Fetch a single list by **ILS list ID**.
+        /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -139,11 +151,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Item
         {
             return new global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Item.WithListItemRequestBuilder(rawUrl, RequestAdapter);
         }
+        /// <summary>
+        /// Fetch a single list by **ILS list ID**.
+        /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        #pragma warning disable CS1591
         public partial class WithListItemRequestBuilderGetQueryParameters 
-        #pragma warning restore CS1591
         {
+            /// <summary>A flag indicating whether or not the response object list definition should include a filter branch definition. By default, object list definitions will not have their filter branch definitions included in the response.</summary>
             [QueryParameter("includeFilters")]
             public bool? IncludeFilters { get; set; }
         }

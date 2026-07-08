@@ -25,10 +25,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>A collection of metrics associated with the campaign asset, represented as key-value pairs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignAsset_metrics? Metrics { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignAssetMetricsProperty? Metrics { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignAsset_metrics Metrics { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignAssetMetricsProperty Metrics { get; set; }
 #endif
         /// <summary>The name of the campaign asset.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -64,7 +64,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "metrics", n => { Metrics = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignAsset_metrics>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignAsset_metrics.CreateFromDiscriminatorValue); } },
+                { "metrics", n => { Metrics = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignAssetMetricsProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignAssetMetricsProperty.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
             };
         }
@@ -76,7 +76,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignAsset_metrics>("metrics", Metrics);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignAssetMetricsProperty>("metrics", Metrics);
             writer.WriteStringValue("name", Name);
             writer.WriteAdditionalData(AdditionalData);
         }

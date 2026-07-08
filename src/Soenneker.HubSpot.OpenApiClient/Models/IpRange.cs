@@ -31,9 +31,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Description { get; set; }
 #endif
         /// <summary>The direction of the IP traffic, which can be INGRESS or EGRESS.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.IpRange_direction? Direction { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.IpRangeDirection? Direction { get; set; }
         /// <summary>The service associated with the IP range, such as EMAIL, API, DNS, or WEB_SCRAPING.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.IpRange_service? Service { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.IpRangeService? Service { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IpRange"/> and sets the default values.
         /// </summary>
@@ -61,8 +61,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "cidr", n => { Cidr = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "direction", n => { Direction = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.IpRange_direction>(); } },
-                { "service", n => { Service = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.IpRange_service>(); } },
+                { "direction", n => { Direction = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.IpRangeDirection>(); } },
+                { "service", n => { Service = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.IpRangeService>(); } },
             };
         }
         /// <summary>
@@ -74,8 +74,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("cidr", Cidr);
             writer.WriteStringValue("description", Description);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.IpRange_direction>("direction", Direction);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.IpRange_service>("service", Service);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.IpRangeDirection>("direction", Direction);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.IpRangeService>("service", Service);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -49,7 +49,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists
             get => new global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Search.SearchRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.crm.v3.lists.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The **ILS ID** of the list to fetch.</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Item.WithListItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Item.WithListItemRequestBuilder this[string position]
         {

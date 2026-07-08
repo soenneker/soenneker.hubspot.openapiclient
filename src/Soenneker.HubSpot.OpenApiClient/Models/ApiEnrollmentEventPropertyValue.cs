@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string EnrollmentEventPropertyToken { get; set; }
 #endif
         /// <summary>Indicates the type of the enrollment event property, which defaults to ENROLLMENT_EVENT_PROPERTY.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiEnrollmentEventPropertyValue_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiEnrollmentEventPropertyValueType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiEnrollmentEventPropertyValue"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "enrollmentEventPropertyToken", n => { EnrollmentEventPropertyToken = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiEnrollmentEventPropertyValue_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiEnrollmentEventPropertyValueType>(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("enrollmentEventPropertyToken", EnrollmentEventPropertyToken);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiEnrollmentEventPropertyValue_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiEnrollmentEventPropertyValueType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

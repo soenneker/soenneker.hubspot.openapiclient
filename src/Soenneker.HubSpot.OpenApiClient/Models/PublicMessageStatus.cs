@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessageFailureDetails FailureDetails { get; set; }
 #endif
         /// <summary>The statusType property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessageStatus_statusType? StatusType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessageStatusStatusType? StatusType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessageStatus"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "failureDetails", n => { FailureDetails = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessageFailureDetails>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessageFailureDetails.CreateFromDiscriminatorValue); } },
-                { "statusType", n => { StatusType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessageStatus_statusType>(); } },
+                { "statusType", n => { StatusType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessageStatusStatusType>(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessageFailureDetails>("failureDetails", FailureDetails);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessageStatus_statusType>("statusType", StatusType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessageStatusStatusType>("statusType", StatusType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

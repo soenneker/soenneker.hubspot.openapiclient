@@ -118,11 +118,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("association")]
-            public global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads.GetAssociationQueryParameterType[]? Association { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsGetConversationsV3ConversationsThreadsAssociationParameterItem[]? Association { get; set; }
 #nullable restore
 #else
             [QueryParameter("association")]
-            public global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads.GetAssociationQueryParameterType[] Association { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsGetConversationsV3ConversationsThreadsAssociationParameterItem[] Association { get; set; }
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -157,7 +157,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads
             public string[] Sort { get; set; }
 #endif
             [QueryParameter("threadStatus")]
-            public global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.Conversations.Threads.GetThreadStatusQueryParameterType? ThreadStatus { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsGetConversationsV3ConversationsThreadsThreadStatusParameter? ThreadStatus { get; set; }
         }
     }
 }

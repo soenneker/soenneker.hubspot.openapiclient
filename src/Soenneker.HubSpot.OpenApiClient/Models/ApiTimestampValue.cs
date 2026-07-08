@@ -15,9 +15,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Specifies the type of timestamp, with the accepted value being EXECUTION_TIME.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimestampValue_timestampType? TimestampType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimestampValueTimestampType? TimestampType { get; set; }
         /// <summary>Indicates the type of the timestamp value, which defaults to TIMESTAMP.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimestampValue_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimestampValueType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimestampValue"/> and sets the default values.
         /// </summary>
@@ -43,8 +43,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "timestampType", n => { TimestampType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimestampValue_timestampType>(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimestampValue_type>(); } },
+                { "timestampType", n => { TimestampType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimestampValueTimestampType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimestampValueType>(); } },
             };
         }
         /// <summary>
@@ -54,8 +54,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimestampValue_timestampType>("timestampType", TimestampType);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimestampValue_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimestampValueTimestampType>("timestampType", TimestampType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimestampValueType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

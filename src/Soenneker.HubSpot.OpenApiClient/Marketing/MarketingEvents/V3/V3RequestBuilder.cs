@@ -78,7 +78,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.MarketingEvents.V3
         public partial class V3RequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
-            /// <summary>The cursor indicating the position of the last retrieved item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("after")]
@@ -88,7 +87,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.MarketingEvents.V3
             [QueryParameter("after")]
             public string After { get; set; }
 #endif
-            /// <summary>The limit for response size. The default value is 10, the max number is 100</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
         }

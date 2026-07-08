@@ -17,7 +17,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The HubSpot appId that is being used to auth this webhook call</summary>
         public int? AppId { get; set; }
         /// <summary>&quot;The type of auth: SIGNATURE&quot;</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiSignatureWebhookAuthSettings_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiSignatureWebhookAuthSettingsType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiSignatureWebhookAuthSettings"/> and sets the default values.
         /// </summary>
@@ -44,7 +44,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "appId", n => { AppId = n.GetIntValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiSignatureWebhookAuthSettings_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiSignatureWebhookAuthSettingsType>(); } },
             };
         }
         /// <summary>
@@ -55,7 +55,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("appId", AppId);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiSignatureWebhookAuthSettings_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiSignatureWebhookAuthSettingsType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

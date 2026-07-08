@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>&quot;Specifies the day of the week for the time window, with accepted values being: FRIDAY, MONDAY, SATURDAY, SUNDAY, THURSDAY, TUESDAY, WEDNESDAY.&quot;</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeWindow_day? Day { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeWindowDay? Day { get; set; }
         /// <summary>The endTime property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -57,7 +57,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "day", n => { Day = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeWindow_day>(); } },
+                { "day", n => { Day = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeWindowDay>(); } },
                 { "endTime", n => { EndTime = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeOfDay>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeOfDay.CreateFromDiscriminatorValue); } },
                 { "startTime", n => { StartTime = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeOfDay>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeOfDay.CreateFromDiscriminatorValue); } },
             };
@@ -69,7 +69,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeWindow_day>("day", Day);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeWindowDay>("day", Day);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeOfDay>("endTime", EndTime);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeOfDay>("startTime", StartTime);
             writer.WriteAdditionalData(AdditionalData);

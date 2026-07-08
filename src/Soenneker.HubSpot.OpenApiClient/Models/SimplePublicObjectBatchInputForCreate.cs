@@ -34,10 +34,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Key-value pairs representing the properties of the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.SimplePublicObjectBatchInputForCreate_properties? Properties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.SimplePublicObjectBatchInputForCreatePropertiesProperty? Properties { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.SimplePublicObjectBatchInputForCreate_properties Properties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.SimplePublicObjectBatchInputForCreatePropertiesProperty Properties { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.SimplePublicObjectBatchInputForCreate"/> and sets the default values.
@@ -66,7 +66,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "associations", n => { Associations = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationsForObject>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationsForObject.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "objectWriteTraceId", n => { ObjectWriteTraceId = n.GetStringValue(); } },
-                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.SimplePublicObjectBatchInputForCreate_properties>(global::Soenneker.HubSpot.OpenApiClient.Models.SimplePublicObjectBatchInputForCreate_properties.CreateFromDiscriminatorValue); } },
+                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.SimplePublicObjectBatchInputForCreatePropertiesProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.SimplePublicObjectBatchInputForCreatePropertiesProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -78,7 +78,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationsForObject>("associations", Associations);
             writer.WriteStringValue("objectWriteTraceId", ObjectWriteTraceId);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.SimplePublicObjectBatchInputForCreate_properties>("properties", Properties);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.SimplePublicObjectBatchInputForCreatePropertiesProperty>("properties", Properties);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

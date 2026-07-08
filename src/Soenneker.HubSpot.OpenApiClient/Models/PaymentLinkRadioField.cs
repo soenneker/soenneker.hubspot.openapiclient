@@ -39,7 +39,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Description { get; set; }
 #endif
         /// <summary>The field type identifier.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkRadioField_fieldType? FieldType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkRadioFieldFieldType? FieldType { get; set; }
         /// <summary>Whether the field is a hidden field.</summary>
         public bool? Hidden { get; set; }
         /// <summary>The visible label displayed with the field to describe its purpose to form users.</summary>
@@ -82,7 +82,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public PaymentLinkRadioField()
         {
             AdditionalData = new Dictionary<string, object>();
-            FieldType = global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkRadioField_fieldType.Payment_link_radio;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -105,7 +104,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "defaultValues", n => { DefaultValues = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "dependentFields", n => { DependentFields = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.DependentField>(global::Soenneker.HubSpot.OpenApiClient.Models.DependentField.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "fieldType", n => { FieldType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkRadioField_fieldType>(); } },
+                { "fieldType", n => { FieldType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkRadioFieldFieldType>(); } },
                 { "hidden", n => { Hidden = n.GetBoolValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
@@ -124,7 +123,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("defaultValues", DefaultValues);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.DependentField>("dependentFields", DependentFields);
             writer.WriteStringValue("description", Description);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkRadioField_fieldType>("fieldType", FieldType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkRadioFieldFieldType>("fieldType", FieldType);
             writer.WriteBoolValue("hidden", Hidden);
             writer.WriteStringValue("label", Label);
             writer.WriteStringValue("name", Name);

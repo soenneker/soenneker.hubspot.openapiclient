@@ -35,13 +35,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The complete import request configuration as a JSON object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponse_importRequestJson? ImportRequestJson { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportRequestJsonProperty? ImportRequestJson { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponse_importRequestJson ImportRequestJson { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportRequestJsonProperty ImportRequestJson { get; set; }
 #endif
         /// <summary>Indicates where/how the import was initiated.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponse_importSource? ImportSource { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportSource? ImportSource { get; set; }
         /// <summary>The importTemplate property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -69,7 +69,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Whether or not the import is a list of people disqualified from receiving emails.</summary>
         public bool? OptOutImport { get; set; }
         /// <summary>The status of the import.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponse_state? State { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseState? State { get; set; }
         /// <summary>The timestamp when the import record was last updated, formatted as an ISO 8601 instant.</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>
@@ -100,13 +100,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "importName", n => { ImportName = n.GetStringValue(); } },
-                { "importRequestJson", n => { ImportRequestJson = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponse_importRequestJson>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponse_importRequestJson.CreateFromDiscriminatorValue); } },
-                { "importSource", n => { ImportSource = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponse_importSource>(); } },
+                { "importRequestJson", n => { ImportRequestJson = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportRequestJsonProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportRequestJsonProperty.CreateFromDiscriminatorValue); } },
+                { "importSource", n => { ImportSource = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportSource>(); } },
                 { "importTemplate", n => { ImportTemplate = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ImportTemplate>(global::Soenneker.HubSpot.OpenApiClient.Models.ImportTemplate.CreateFromDiscriminatorValue); } },
                 { "mappedObjectTypeIds", n => { MappedObjectTypeIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportMetadata>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportMetadata.CreateFromDiscriminatorValue); } },
                 { "optOutImport", n => { OptOutImport = n.GetBoolValue(); } },
-                { "state", n => { State = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponse_state>(); } },
+                { "state", n => { State = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseState>(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
             };
         }
@@ -120,13 +120,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("importName", ImportName);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponse_importRequestJson>("importRequestJson", ImportRequestJson);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponse_importSource>("importSource", ImportSource);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportRequestJsonProperty>("importRequestJson", ImportRequestJson);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportSource>("importSource", ImportSource);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ImportTemplate>("importTemplate", ImportTemplate);
             writer.WriteCollectionOfPrimitiveValues<string>("mappedObjectTypeIds", MappedObjectTypeIds);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportMetadata>("metadata", Metadata);
             writer.WriteBoolValue("optOutImport", OptOutImport);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponse_state>("state", State);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseState>("state", State);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             writer.WriteAdditionalData(AdditionalData);
         }

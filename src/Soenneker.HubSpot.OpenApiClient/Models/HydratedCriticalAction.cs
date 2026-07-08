@@ -82,7 +82,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string RegionCode { get; set; }
 #endif
         /// <summary>The type of activity.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.HydratedCriticalAction_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.HydratedCriticalActionType? Type { get; set; }
         /// <summary>The user&apos;s unique ID.</summary>
         public int? UserId { get; set; }
         /// <summary>
@@ -119,7 +119,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "location", n => { Location = n.GetStringValue(); } },
                 { "objectId", n => { ObjectId = n.GetStringValue(); } },
                 { "regionCode", n => { RegionCode = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.HydratedCriticalAction_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.HydratedCriticalActionType>(); } },
                 { "userId", n => { UserId = n.GetIntValue(); } },
             };
         }
@@ -139,7 +139,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("location", Location);
             writer.WriteStringValue("objectId", ObjectId);
             writer.WriteStringValue("regionCode", RegionCode);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.HydratedCriticalAction_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.HydratedCriticalActionType>("type", Type);
             writer.WriteIntValue("userId", UserId);
             writer.WriteAdditionalData(AdditionalData);
         }

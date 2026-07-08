@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The currency code being added to the HubSpot portal for use with central exchange rates.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CurrencyCreateRequest_currencyCode? CurrencyCode { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CurrencyCreateRequestCurrencyCode? CurrencyCode { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CurrencyCreateRequest"/> and sets the default values.
         /// </summary>
@@ -41,7 +41,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "currencyCode", n => { CurrencyCode = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CurrencyCreateRequest_currencyCode>(); } },
+                { "currencyCode", n => { CurrencyCode = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CurrencyCreateRequestCurrencyCode>(); } },
             };
         }
         /// <summary>
@@ -51,7 +51,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CurrencyCreateRequest_currencyCode>("currencyCode", CurrencyCode);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CurrencyCreateRequestCurrencyCode>("currencyCode", CurrencyCode);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

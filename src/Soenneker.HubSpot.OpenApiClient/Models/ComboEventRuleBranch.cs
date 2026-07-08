@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRule> ComposingRules { get; set; }
 #endif
         /// <summary>The operationType property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRuleBranch_operationType? OperationType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRuleBranchOperationType? OperationType { get; set; }
         /// <summary>The ruleBranches property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -58,7 +58,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "composingRules", n => { ComposingRules = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRule>(global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRule.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRuleBranch_operationType>(); } },
+                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRuleBranchOperationType>(); } },
                 { "ruleBranches", n => { RuleBranches = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRuleBranch>(global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRuleBranch.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -70,7 +70,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRule>("composingRules", ComposingRules);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRuleBranch_operationType>("operationType", OperationType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRuleBranchOperationType>("operationType", OperationType);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRuleBranch>("ruleBranches", RuleBranches);
             writer.WriteAdditionalData(AdditionalData);
         }

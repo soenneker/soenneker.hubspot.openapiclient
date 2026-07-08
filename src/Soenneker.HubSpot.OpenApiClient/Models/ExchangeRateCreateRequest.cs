@@ -19,7 +19,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The date the exchange rate is in effect.</summary>
         public DateTimeOffset? EffectiveAt { get; set; }
         /// <summary>This represents the three-letter currency code (such as USD for US Dollar) of the currency you want to convert from.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExchangeRateCreateRequest_fromCurrencyCode? FromCurrencyCode { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExchangeRateCreateRequestFromCurrencyCode? FromCurrencyCode { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExchangeRateCreateRequest"/> and sets the default values.
         /// </summary>
@@ -47,7 +47,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "conversionRate", n => { ConversionRate = n.GetDoubleValue(); } },
                 { "effectiveAt", n => { EffectiveAt = n.GetDateTimeOffsetValue(); } },
-                { "fromCurrencyCode", n => { FromCurrencyCode = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExchangeRateCreateRequest_fromCurrencyCode>(); } },
+                { "fromCurrencyCode", n => { FromCurrencyCode = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExchangeRateCreateRequestFromCurrencyCode>(); } },
             };
         }
         /// <summary>
@@ -59,7 +59,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDoubleValue("conversionRate", ConversionRate);
             writer.WriteDateTimeOffsetValue("effectiveAt", EffectiveAt);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExchangeRateCreateRequest_fromCurrencyCode>("fromCurrencyCode", FromCurrencyCode);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExchangeRateCreateRequestFromCurrencyCode>("fromCurrencyCode", FromCurrencyCode);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

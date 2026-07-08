@@ -17,7 +17,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The ID of the contact in HubSpot’s system that consumed the media. This can be fetched using HubSpot&apos;s Get contact by usertoken (utk) API. The API also supports supplying a usertoken, and will handle converting this into a contact ID automatically.</summary>
         public long? ContactId { get; set; }
         /// <summary>The externalPlayContext property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEvent_externalPlayContext? ExternalPlayContext { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventExternalPlayContext? ExternalPlayContext { get; set; }
         /// <summary>The mediaBridgeId property</summary>
         public long? MediaBridgeId { get; set; }
         /// <summary>The mediaBridgeObjectCoordinates property</summary>
@@ -45,7 +45,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string MediaName { get; set; }
 #endif
         /// <summary>The mediaType property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEvent_mediaType? MediaType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventMediaType? MediaType { get; set; }
         /// <summary>The mediaUrl property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -140,12 +140,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "contactId", n => { ContactId = n.GetLongValue(); } },
-                { "externalPlayContext", n => { ExternalPlayContext = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEvent_externalPlayContext>(); } },
+                { "externalPlayContext", n => { ExternalPlayContext = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventExternalPlayContext>(); } },
                 { "mediaBridgeId", n => { MediaBridgeId = n.GetLongValue(); } },
                 { "mediaBridgeObjectCoordinates", n => { MediaBridgeObjectCoordinates = n.GetStringValue(); } },
                 { "mediaBridgeObjectTypeId", n => { MediaBridgeObjectTypeId = n.GetStringValue(); } },
                 { "mediaName", n => { MediaName = n.GetStringValue(); } },
-                { "mediaType", n => { MediaType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEvent_mediaType>(); } },
+                { "mediaType", n => { MediaType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventMediaType>(); } },
                 { "mediaUrl", n => { MediaUrl = n.GetStringValue(); } },
                 { "occurredTimestamp", n => { OccurredTimestamp = n.GetLongValue(); } },
                 { "pageId", n => { PageId = n.GetLongValue(); } },
@@ -169,12 +169,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteLongValue("contactId", ContactId);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEvent_externalPlayContext>("externalPlayContext", ExternalPlayContext);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventExternalPlayContext>("externalPlayContext", ExternalPlayContext);
             writer.WriteLongValue("mediaBridgeId", MediaBridgeId);
             writer.WriteStringValue("mediaBridgeObjectCoordinates", MediaBridgeObjectCoordinates);
             writer.WriteStringValue("mediaBridgeObjectTypeId", MediaBridgeObjectTypeId);
             writer.WriteStringValue("mediaName", MediaName);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEvent_mediaType>("mediaType", MediaType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventMediaType>("mediaType", MediaType);
             writer.WriteStringValue("mediaUrl", MediaUrl);
             writer.WriteLongValue("occurredTimestamp", OccurredTimestamp);
             writer.WriteLongValue("pageId", PageId);

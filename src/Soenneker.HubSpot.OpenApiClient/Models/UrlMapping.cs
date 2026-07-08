@@ -19,7 +19,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The contentGroupId property</summary>
         public long? ContentGroupId { get; set; }
         /// <summary>The cosObjectType property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.UrlMapping_cosObjectType? CosObjectType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.UrlMappingCosObjectType? CosObjectType { get; set; }
         /// <summary>The created property</summary>
         public long? Created { get; set; }
         /// <summary>The createdById property</summary>
@@ -125,7 +125,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "cdnPurgeEmbargoTime", n => { CdnPurgeEmbargoTime = n.GetLongValue(); } },
                 { "contentGroupId", n => { ContentGroupId = n.GetLongValue(); } },
-                { "cosObjectType", n => { CosObjectType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.UrlMapping_cosObjectType>(); } },
+                { "cosObjectType", n => { CosObjectType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.UrlMappingCosObjectType>(); } },
                 { "created", n => { Created = n.GetLongValue(); } },
                 { "createdById", n => { CreatedById = n.GetIntValue(); } },
                 { "deletedAt", n => { DeletedAt = n.GetLongValue(); } },
@@ -161,7 +161,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteLongValue("cdnPurgeEmbargoTime", CdnPurgeEmbargoTime);
             writer.WriteLongValue("contentGroupId", ContentGroupId);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.UrlMapping_cosObjectType>("cosObjectType", CosObjectType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.UrlMappingCosObjectType>("cosObjectType", CosObjectType);
             writer.WriteLongValue("created", Created);
             writer.WriteIntValue("createdById", CreatedById);
             writer.WriteLongValue("deletedAt", DeletedAt);

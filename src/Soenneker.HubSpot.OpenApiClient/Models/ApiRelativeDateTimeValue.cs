@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeDelay TimeDelay { get; set; }
 #endif
         /// <summary>Indicates the type of the value, which defaults to RELATIVE_DATETIME.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiRelativeDateTimeValue_type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiRelativeDateTimeValueType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiRelativeDateTimeValue"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "timeDelay", n => { TimeDelay = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeDelay>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeDelay.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiRelativeDateTimeValue_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiRelativeDateTimeValueType>(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiTimeDelay>("timeDelay", TimeDelay);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiRelativeDateTimeValue_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiRelativeDateTimeValueType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

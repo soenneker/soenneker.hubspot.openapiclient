@@ -20,7 +20,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>How many API calls an account has made for the current day.</summary>
         public int? CurrentUsage { get; set; }
         /// <summary>Status of fetching the information, including if the data came from the cache.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AccountInfoApiUsage_fetchStatus? FetchStatus { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AccountInfoApiUsageFetchStatus? FetchStatus { get; set; }
         /// <summary>Name of the limit type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -60,7 +60,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "collectedAt", n => { CollectedAt = n.GetDateTimeOffsetValue(); } },
                 { "currentUsage", n => { CurrentUsage = n.GetIntValue(); } },
-                { "fetchStatus", n => { FetchStatus = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AccountInfoApiUsage_fetchStatus>(); } },
+                { "fetchStatus", n => { FetchStatus = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AccountInfoApiUsageFetchStatus>(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "resetsAt", n => { ResetsAt = n.GetDateTimeOffsetValue(); } },
                 { "usageLimit", n => { UsageLimit = n.GetIntValue(); } },
@@ -75,7 +75,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDateTimeOffsetValue("collectedAt", CollectedAt);
             writer.WriteIntValue("currentUsage", CurrentUsage);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AccountInfoApiUsage_fetchStatus>("fetchStatus", FetchStatus);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AccountInfoApiUsageFetchStatus>("fetchStatus", FetchStatus);
             writer.WriteStringValue("name", Name);
             writer.WriteDateTimeOffsetValue("resetsAt", ResetsAt);
             writer.WriteIntValue("usageLimit", UsageLimit);

@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Records
             get => new global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Records.Memberships.MembershipsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.crm.v3.lists.records.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">Object type id of the record</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Records.Item.WithObjectTypeItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Crm.V3.Lists.Records.Item.WithObjectTypeItemRequestBuilder this[string position]
         {

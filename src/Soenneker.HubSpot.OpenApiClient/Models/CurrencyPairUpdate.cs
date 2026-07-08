@@ -15,9 +15,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>This represents the three-letter currency code (such as USD for US Dollar) of the currency you want to convert from.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CurrencyPairUpdate_fromCurrencyCode? FromCurrencyCode { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CurrencyPairUpdateFromCurrencyCode? FromCurrencyCode { get; set; }
         /// <summary>This represents the three-letter currency code (such as USD for US Dollar) of the currency you want to convert to.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CurrencyPairUpdate_toCurrencyCode? ToCurrencyCode { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CurrencyPairUpdateToCurrencyCode? ToCurrencyCode { get; set; }
         /// <summary>This indicates if the currency pair is shown in the MultiCurrency settings page. Setting this to false will remove the currency pair from the settings page.</summary>
         public bool? VisibleInUI { get; set; }
         /// <summary>
@@ -45,8 +45,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "fromCurrencyCode", n => { FromCurrencyCode = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CurrencyPairUpdate_fromCurrencyCode>(); } },
-                { "toCurrencyCode", n => { ToCurrencyCode = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CurrencyPairUpdate_toCurrencyCode>(); } },
+                { "fromCurrencyCode", n => { FromCurrencyCode = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CurrencyPairUpdateFromCurrencyCode>(); } },
+                { "toCurrencyCode", n => { ToCurrencyCode = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CurrencyPairUpdateToCurrencyCode>(); } },
                 { "visibleInUI", n => { VisibleInUI = n.GetBoolValue(); } },
             };
         }
@@ -57,8 +57,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CurrencyPairUpdate_fromCurrencyCode>("fromCurrencyCode", FromCurrencyCode);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CurrencyPairUpdate_toCurrencyCode>("toCurrencyCode", ToCurrencyCode);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CurrencyPairUpdateFromCurrencyCode>("fromCurrencyCode", FromCurrencyCode);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CurrencyPairUpdateToCurrencyCode>("toCurrencyCode", ToCurrencyCode);
             writer.WriteBoolValue("visibleInUI", VisibleInUI);
             writer.WriteAdditionalData(AdditionalData);
         }

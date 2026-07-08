@@ -31,7 +31,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string EntityType { get; set; }
 #endif
         /// <summary>Type of the filter (ADS_SEARCH)</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAdsSearchFilter_filterType? FilterType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAdsSearchFilterFilterType? FilterType { get; set; }
         /// <summary>Operator to be applied (CONTAINS, IS_EQUAL_TO, ENDS_WITH, STARTS_WITH, IS_KNOWN)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -62,7 +62,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public CrmPublicAdsSearchFilter()
         {
             AdditionalData = new Dictionary<string, object>();
-            FilterType = global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAdsSearchFilter_filterType.ADS_SEARCH;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -84,7 +83,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "adNetwork", n => { AdNetwork = n.GetStringValue(); } },
                 { "entityType", n => { EntityType = n.GetStringValue(); } },
-                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAdsSearchFilter_filterType>(); } },
+                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAdsSearchFilterFilterType>(); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
                 { "searchTermType", n => { SearchTermType = n.GetStringValue(); } },
                 { "searchTerms", n => { SearchTerms = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -99,7 +98,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("adNetwork", AdNetwork);
             writer.WriteStringValue("entityType", EntityType);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAdsSearchFilter_filterType>("filterType", FilterType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAdsSearchFilterFilterType>("filterType", FilterType);
             writer.WriteStringValue("operator", Operator);
             writer.WriteCollectionOfPrimitiveValues<string>("searchTerms", SearchTerms);
             writer.WriteStringValue("searchTermType", SearchTermType);
