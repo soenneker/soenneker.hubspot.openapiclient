@@ -17,10 +17,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Specifies the paging information needed to retrieve the next set of results in a paginated API response</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmNextPage21? Next { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmNextPage22? Next { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmNextPage21 Next { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmNextPage22 Next { get; set; }
 #endif
         /// <summary>specifies the paging information needed to retrieve the previous set of results in a paginated API response</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,7 +55,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "next", n => { Next = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmNextPage21>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmNextPage21.CreateFromDiscriminatorValue); } },
+                { "next", n => { Next = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmNextPage22>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmNextPage22.CreateFromDiscriminatorValue); } },
                 { "prev", n => { Prev = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPreviousPage20>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPreviousPage20.CreateFromDiscriminatorValue); } },
             };
         }
@@ -66,7 +66,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmNextPage21>("next", Next);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmNextPage22>("next", Next);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPreviousPage20>("prev", Prev);
             writer.WriteAdditionalData(AdditionalData);
         }

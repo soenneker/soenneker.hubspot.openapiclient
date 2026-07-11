@@ -14,9 +14,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Indicates the type of filter, which defaults to PRIVACY.</summary>
+        /// <summary>Specifies the type of filter (PRIVACY).</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPrivacyAnalyticsFilterFilterType? FilterType { get; set; }
-        /// <summary>Specifies the operator used in the privacy analytics filter.</summary>
+        /// <summary>Defines the operation to be applied within the filter (PRIVACY_CONSENT_GRANTED, PRIVACY_CONSENT_NOT_GRANTED).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Operator { get; set; }
@@ -24,7 +24,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Operator { get; set; }
 #endif
-        /// <summary>The name associated with the privacy analytics filter.</summary>
+        /// <summary>The name of the privacy setting used in the filter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PrivacyName { get; set; }

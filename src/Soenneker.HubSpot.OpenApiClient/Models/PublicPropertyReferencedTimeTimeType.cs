@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>Indicates the type of time reference, defaulting to &apos;PROPERTY_REFERENCED&apos;.</summary>
+    /// <summary>Defines the type of time (PROPERTY_REFERENCED).</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PublicPropertyReferencedTimeTimeType
     {

@@ -7,37 +7,64 @@ using System.IO;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>
-    /// Complete details for an event subscription.
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+    #pragma warning disable CS1591
     public partial class SubscriptionResponse : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
-        /// <summary>Whether the subscription is active or paused. If true, the subscription will send webhook notifications. If false, the subscription is paused and will not send notifications.</summary>
-        public bool? Active { get; set; }
+        /// <summary>An object containing overrides for actions, where each key is an action and the value is an ActionOverrideRequest object.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponseActionOverridesProperty? ActionOverrides { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponseActionOverridesProperty ActionOverrides { get; set; }
+#endif
+        /// <summary>An array of actions associated with the subscription. Valid actions include &apos;CREATE&apos;, &apos;UPDATE&apos;, &apos;DELETE&apos;, &apos;MERGE&apos;, &apos;RESTORE&apos;, &apos;ASSOCIATION_ADDED&apos;, &apos;ASSOCIATION_REMOVED&apos;, &apos;SNAPSHOT&apos;, &apos;APP_INSTALL&apos;, &apos;APP_UNINSTALL&apos;, &apos;ADDED_TO_LIST&apos;, &apos;REMOVED_FROM_LIST&apos;, and &apos;GDPR_DELETE&apos;.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponseActionsItem?>? Actions { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponseActionsItem?> Actions { get; set; }
+#endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The timestamp when the webhook subscription was created, in ISO 8601 format (e.g., 2020-02-29T12:30:00Z).</summary>
+        /// <summary>The unique identifier for the app associated with the subscription, represented as an integer.</summary>
+        public long? AppId { get; set; }
+        /// <summary>An array of strings representing the IDs of associated object types.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? AssociatedObjectTypeIds { get; set; }
+#nullable restore
+#else
+        public List<string> AssociatedObjectTypeIds { get; set; }
+#endif
+        /// <summary>The date and time when the subscription was created, in ISO 8601 format.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
-        /// <summary>The type of event to listen for. Accepted values include contact.creation, contact.deletion, contact.propertyChange, and similar event types for other CRM objects and custom objects.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponseEventType? EventType { get; set; }
-        /// <summary>The name of the event to listen for. This is used with custom objects to specify custom event types beyond the standard eventType enum values.</summary>
+        /// <summary>The unique identifier of the user who created the subscription, represented as an integer.</summary>
+        public long? CreatedBy { get; set; }
+        /// <summary>The date and time when the subscription was deleted, in ISO 8601 format, if applicable.</summary>
+        public DateTimeOffset? DeletedAt { get; set; }
+        /// <summary>The unique identifier for the subscription, represented as an integer.</summary>
+        public long? Id { get; set; }
+        /// <summary>An array of integers representing the IDs of lists associated with the subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EventTypeName { get; set; }
+        public List<long?>? ListIds { get; set; }
 #nullable restore
 #else
-        public string EventTypeName { get; set; }
+        public List<long?> ListIds { get; set; }
 #endif
-        /// <summary>The unique ID of the webhook subscription.</summary>
+        /// <summary>An array of integers representing the IDs of objects associated with the subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public List<long?>? ObjectIds { get; set; }
 #nullable restore
 #else
-        public string Id { get; set; }
+        public List<long?> ObjectIds { get; set; }
 #endif
-        /// <summary>The ID of the object type for the subscription. This can be a standard CRM object (e.g., &apos;contact&apos;, &apos;company&apos;, &apos;deal&apos;) or a custom object ID for custom object subscriptions.</summary>
+        /// <summary>The identifier for the type of object associated with the subscription, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ObjectTypeId { get; set; }
@@ -45,15 +72,19 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ObjectTypeId { get; set; }
 #endif
-        /// <summary>The internal name of the property to monitor for changes. Only applies when eventType is propertyChange.</summary>
+        /// <summary>The unique identifier for the portal associated with the subscription, represented as an integer.</summary>
+        public long? PortalId { get; set; }
+        /// <summary>An array of strings representing the properties associated with the subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PropertyName { get; set; }
+        public List<string>? Properties { get; set; }
 #nullable restore
 #else
-        public string PropertyName { get; set; }
+        public List<string> Properties { get; set; }
 #endif
-        /// <summary>The timestamp when the webhook subscription was last updated, in ISO 8601 format (e.g., 2020-02-29T12:30:00Z).</summary>
+        /// <summary>The type of subscription, indicating the nature of events it pertains to. Valid values include &apos;OBJECT&apos;, &apos;ASSOCIATION&apos;, &apos;EVENT&apos;, &apos;APP_LIFECYCLE_EVENT&apos;, &apos;LIST_MEMBERSHIP&apos;, and &apos;GDPR_PRIVACY_DELETION&apos;.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponseSubscriptionType? SubscriptionType { get; set; }
+        /// <summary>The date and time when the subscription was last updated, in ISO 8601 format.</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponse"/> and sets the default values.
@@ -80,13 +111,20 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "active", n => { Active = n.GetBoolValue(); } },
+                { "actionOverrides", n => { ActionOverrides = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponseActionOverridesProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponseActionOverridesProperty.CreateFromDiscriminatorValue); } },
+                { "actions", n => { Actions = n.GetCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponseActionsItem>()?.AsList(); } },
+                { "appId", n => { AppId = n.GetLongValue(); } },
+                { "associatedObjectTypeIds", n => { AssociatedObjectTypeIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
-                { "eventType", n => { EventType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponseEventType>(); } },
-                { "eventTypeName", n => { EventTypeName = n.GetStringValue(); } },
-                { "id", n => { Id = n.GetStringValue(); } },
+                { "createdBy", n => { CreatedBy = n.GetLongValue(); } },
+                { "deletedAt", n => { DeletedAt = n.GetDateTimeOffsetValue(); } },
+                { "id", n => { Id = n.GetLongValue(); } },
+                { "listIds", n => { ListIds = n.GetCollectionOfPrimitiveValues<long?>()?.AsList(); } },
+                { "objectIds", n => { ObjectIds = n.GetCollectionOfPrimitiveValues<long?>()?.AsList(); } },
                 { "objectTypeId", n => { ObjectTypeId = n.GetStringValue(); } },
-                { "propertyName", n => { PropertyName = n.GetStringValue(); } },
+                { "portalId", n => { PortalId = n.GetLongValue(); } },
+                { "properties", n => { Properties = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "subscriptionType", n => { SubscriptionType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponseSubscriptionType>(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
             };
         }
@@ -97,13 +135,20 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteBoolValue("active", Active);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponseActionOverridesProperty>("actionOverrides", ActionOverrides);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponseActionsItem>("actions", Actions);
+            writer.WriteLongValue("appId", AppId);
+            writer.WriteCollectionOfPrimitiveValues<string>("associatedObjectTypeIds", AssociatedObjectTypeIds);
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponseEventType>("eventType", EventType);
-            writer.WriteStringValue("eventTypeName", EventTypeName);
-            writer.WriteStringValue("id", Id);
+            writer.WriteLongValue("createdBy", CreatedBy);
+            writer.WriteDateTimeOffsetValue("deletedAt", DeletedAt);
+            writer.WriteLongValue("id", Id);
+            writer.WriteCollectionOfPrimitiveValues<long?>("listIds", ListIds);
+            writer.WriteCollectionOfPrimitiveValues<long?>("objectIds", ObjectIds);
             writer.WriteStringValue("objectTypeId", ObjectTypeId);
-            writer.WriteStringValue("propertyName", PropertyName);
+            writer.WriteLongValue("portalId", PortalId);
+            writer.WriteCollectionOfPrimitiveValues<string>("properties", Properties);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponseSubscriptionType>("subscriptionType", SubscriptionType);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             writer.WriteAdditionalData(AdditionalData);
         }

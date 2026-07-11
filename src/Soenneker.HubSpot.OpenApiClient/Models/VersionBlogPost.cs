@@ -7,11 +7,10 @@ using System.IO;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>
-    /// Model definition of a version of a blog post.
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+    #pragma warning disable CS1591
     public partial class VersionBlogPost : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -23,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>Model definition for a Blog Post.</summary>
+        /// <summary>The object property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.BlogPost? Object { get; set; }
@@ -33,7 +32,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>The timestamp (ISO8601 format) when this version of the Blog Post was updated.</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
-        /// <summary>Model definition for a version user. Contains addition information about the user who created a version.</summary>
+        /// <summary>The user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.CmsVersionUser2? User { get; set; }

@@ -7,21 +7,20 @@ using System.IO;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>
-    /// List of event subscriptions for your app
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+    #pragma warning disable CS1591
     public partial class SubscriptionListResponse : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>An array containing all active and paused event subscriptions configured for the app. Each item in the array is a SubscriptionResponse object.</summary>
+        /// <summary>An array of subscription responses, each detailing a specific subscription&apos;s properties and status.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponse>? Results { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.WebhooksJournalSubscriptionResponse>? Results { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponse> Results { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.WebhooksJournalSubscriptionResponse> Results { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionListResponse"/> and sets the default values.
@@ -48,7 +47,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponse>(global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponse.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.WebhooksJournalSubscriptionResponse>(global::Soenneker.HubSpot.OpenApiClient.Models.WebhooksJournalSubscriptionResponse.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -58,7 +57,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponse>("results", Results);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.WebhooksJournalSubscriptionResponse>("results", Results);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

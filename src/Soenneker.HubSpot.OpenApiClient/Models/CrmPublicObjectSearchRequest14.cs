@@ -26,10 +26,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Up to 6 groups of filters defining additional query criteria.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup14>? FilterGroups { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup15>? FilterGroups { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup14> FilterGroups { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup15> FilterGroups { get; set; }
 #endif
         /// <summary>The maximum results to return, up to 200 objects.</summary>
         public int? Limit { get; set; }
@@ -83,7 +83,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "after", n => { After = n.GetStringValue(); } },
-                { "filterGroups", n => { FilterGroups = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup14>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup14.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "filterGroups", n => { FilterGroups = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup15>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup15.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "limit", n => { Limit = n.GetIntValue(); } },
                 { "properties", n => { Properties = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "query", n => { Query = n.GetStringValue(); } },
@@ -98,7 +98,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("after", After);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup14>("filterGroups", FilterGroups);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup15>("filterGroups", FilterGroups);
             writer.WriteIntValue("limit", Limit);
             writer.WriteCollectionOfPrimitiveValues<string>("properties", Properties);
             writer.WriteStringValue("query", Query);

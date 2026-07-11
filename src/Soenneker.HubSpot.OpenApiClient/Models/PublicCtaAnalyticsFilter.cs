@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Defines the criteria for refining CTA analytics, using one of several possible schemas such as PublicNumOccurrencesRefineBy or PublicRelativeComparativeTimestampRefineBy.</summary>
+        /// <summary>Specifies the criteria for refining the filter by coalescing.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCtaAnalyticsFilterCoalescingRefineBy? CoalescingRefineBy { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCtaAnalyticsFilterCoalescingRefineBy CoalescingRefineBy { get; set; }
 #endif
-        /// <summary>The name of the call-to-action (CTA) used in the analytics filter.</summary>
+        /// <summary>The name of the Call-to-Action (CTA) to be used in the filter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CtaName { get; set; }
@@ -30,9 +30,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string CtaName { get; set; }
 #endif
-        /// <summary>Indicates the type of filter, which defaults to CTA.</summary>
+        /// <summary>Indicates the type of filter being applied, which is (CTA).</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCtaAnalyticsFilterFilterType? FilterType { get; set; }
-        /// <summary>Specifies the operator used in the CTA analytics filter.</summary>
+        /// <summary>Defines the operation to be applied within the filter (HAS_CLICKED_CTA, HAS_NOT_CLICKED_CTA, HAS_OPENED_CTA, HAS_NOT_OPENED_CTA, HAS_CLICKED_CTA_PLACEMENT, HAS_NOT_CLICKED_CTA_PLACEMENT, HAS_OPENED_CTA_PLACEMENT, HAS_NOT_OPENED_CTA_PLACEMENT).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Operator { get; set; }
@@ -40,7 +40,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Operator { get; set; }
 #endif
-        /// <summary>Specifies the criteria for pruning CTA analytics, using one of several possible schemas such as PublicNumOccurrencesRefineBy or PublicRelativeRangedTimestampRefineBy.</summary>
+        /// <summary>Specifies the criteria for refining the filter by pruning.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCtaAnalyticsFilterPruningRefineBy? PruningRefineBy { get; set; }

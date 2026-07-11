@@ -29,10 +29,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The results property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.LabelsBetweenObjectPair>? Results { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmLabelsBetweenObjectPair>? Results { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.LabelsBetweenObjectPair> Results { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmLabelsBetweenObjectPair> Results { get; set; }
 #endif
         /// <summary>The timestamp when the batch processing began, in ISO 8601 format.</summary>
         public DateTimeOffset? StartedAt { get; set; }
@@ -66,7 +66,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "completedAt", n => { CompletedAt = n.GetDateTimeOffsetValue(); } },
                 { "links", n => { Links = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseLabelsBetweenObjectPairLinksProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseLabelsBetweenObjectPairLinksProperty.CreateFromDiscriminatorValue); } },
                 { "requestedAt", n => { RequestedAt = n.GetDateTimeOffsetValue(); } },
-                { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.LabelsBetweenObjectPair>(global::Soenneker.HubSpot.OpenApiClient.Models.LabelsBetweenObjectPair.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmLabelsBetweenObjectPair>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmLabelsBetweenObjectPair.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "startedAt", n => { StartedAt = n.GetDateTimeOffsetValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseLabelsBetweenObjectPairStatus>(); } },
             };
@@ -81,7 +81,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("completedAt", CompletedAt);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseLabelsBetweenObjectPairLinksProperty>("links", Links);
             writer.WriteDateTimeOffsetValue("requestedAt", RequestedAt);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.LabelsBetweenObjectPair>("results", Results);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmLabelsBetweenObjectPair>("results", Results);
             writer.WriteDateTimeOffsetValue("startedAt", StartedAt);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseLabelsBetweenObjectPairStatus>("status", Status);
             writer.WriteAdditionalData(AdditionalData);

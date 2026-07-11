@@ -14,9 +14,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Indicates the type of filter, which defaults to SURVEY_MONKEY.</summary>
+        /// <summary>Indicates the type of filter being applied (SURVEY_MONKEY).</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSurveyMonkeyFilterFilterType? FilterType { get; set; }
-        /// <summary>Specifies the operator used in the filter.</summary>
+        /// <summary>Specifies the operation to be performed by the filter (HAS_RESPONDED_TO_SURVEY, HAS_NOT_RESPONDED_TO_SURVEY).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Operator { get; set; }
@@ -24,7 +24,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Operator { get; set; }
 #endif
-        /// <summary>The identifier for the survey.</summary>
+        /// <summary>The ID of the survey associated with the filter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SurveyId { get; set; }

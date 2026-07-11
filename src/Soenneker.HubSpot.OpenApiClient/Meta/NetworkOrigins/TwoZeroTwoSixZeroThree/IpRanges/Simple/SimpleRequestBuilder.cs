@@ -33,6 +33,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Meta.NetworkOrigins.TwoZeroTwoSixZeroT
         public SimpleRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/meta/network-origins/2026-03/ip-ranges/simple{?direction*,service*}", rawUrl)
         {
         }
+        /// <summary>
+        /// Retrieve a simplified list of IP ranges for specified services and directions in plain text format. This endpoint provides a straightforward representation of IP ranges without additional metadata.
+        /// </summary>
         /// <returns>A <see cref="string"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -48,6 +51,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Meta.NetworkOrigins.TwoZeroTwoSixZeroT
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             return await RequestAdapter.SendPrimitiveAsync<string>(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
+        /// <summary>
+        /// Retrieve a simplified list of IP ranges for specified services and directions in plain text format. This endpoint provides a straightforward representation of IP ranges without additional metadata.
+        /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -73,28 +79,29 @@ namespace Soenneker.HubSpot.OpenApiClient.Meta.NetworkOrigins.TwoZeroTwoSixZeroT
         {
             return new global::Soenneker.HubSpot.OpenApiClient.Meta.NetworkOrigins.TwoZeroTwoSixZeroThree.IpRanges.Simple.SimpleRequestBuilder(rawUrl, RequestAdapter);
         }
+        /// <summary>
+        /// Retrieve a simplified list of IP ranges for specified services and directions in plain text format. This endpoint provides a straightforward representation of IP ranges without additional metadata.
+        /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        #pragma warning disable CS1591
         public partial class SimpleRequestBuilderGetQueryParameters 
-        #pragma warning restore CS1591
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("direction")]
-            public global::Soenneker.HubSpot.OpenApiClient.Models.MetaGetMetaNetworkOrigins202603IpRangesSimpleMetaNetworkOrigins202603IpRangesSimpleDirectionParameterItem[]? Direction { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.MetaGetMetaNetworkOrigins202603IpRangesSimpleMetaNetworkOrigins202509IpRangesSimpleDirectionParameterItem[]? Direction { get; set; }
 #nullable restore
 #else
             [QueryParameter("direction")]
-            public global::Soenneker.HubSpot.OpenApiClient.Models.MetaGetMetaNetworkOrigins202603IpRangesSimpleMetaNetworkOrigins202603IpRangesSimpleDirectionParameterItem[] Direction { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.MetaGetMetaNetworkOrigins202603IpRangesSimpleMetaNetworkOrigins202509IpRangesSimpleDirectionParameterItem[] Direction { get; set; }
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("service")]
-            public global::Soenneker.HubSpot.OpenApiClient.Models.MetaGetMetaNetworkOrigins202603IpRangesSimpleMetaNetworkOrigins202603IpRangesSimpleServiceParameterItem[]? Service { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.MetaGetMetaNetworkOrigins202603IpRangesSimpleMetaNetworkOrigins202509IpRangesSimpleServiceParameterItem[]? Service { get; set; }
 #nullable restore
 #else
             [QueryParameter("service")]
-            public global::Soenneker.HubSpot.OpenApiClient.Models.MetaGetMetaNetworkOrigins202603IpRangesSimpleMetaNetworkOrigins202603IpRangesSimpleServiceParameterItem[] Service { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.MetaGetMetaNetworkOrigins202603IpRangesSimpleMetaNetworkOrigins202509IpRangesSimpleServiceParameterItem[] Service { get; set; }
 #endif
         }
     }

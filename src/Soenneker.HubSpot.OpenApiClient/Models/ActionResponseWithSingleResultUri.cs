@@ -19,10 +19,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The errors property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError19>? Errors { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError17>? Errors { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError19> Errors { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError17> Errors { get; set; }
 #endif
         /// <summary>A collection of related links associated with the export.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -74,7 +74,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "completedAt", n => { CompletedAt = n.GetDateTimeOffsetValue(); } },
-                { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError19>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError19.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError17>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError17.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "links", n => { Links = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithSingleResultUriLinksProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithSingleResultUriLinksProperty.CreateFromDiscriminatorValue); } },
                 { "numErrors", n => { NumErrors = n.GetIntValue(); } },
                 { "requestedAt", n => { RequestedAt = n.GetDateTimeOffsetValue(); } },
@@ -91,7 +91,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDateTimeOffsetValue("completedAt", CompletedAt);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError19>("errors", Errors);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError17>("errors", Errors);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithSingleResultUriLinksProperty>("links", Links);
             writer.WriteIntValue("numErrors", NumErrors);
             writer.WriteDateTimeOffsetValue("requestedAt", RequestedAt);

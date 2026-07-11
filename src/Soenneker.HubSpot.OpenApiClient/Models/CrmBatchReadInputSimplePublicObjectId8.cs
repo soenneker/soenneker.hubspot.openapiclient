@@ -7,14 +7,15 @@ using System.IO;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>
+    /// Specifies the input for reading a batch of CRM objects, including arrays of object IDs, requested property names (with optional history), and an optional unique identifying property.
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public partial class CrmBatchReadInputSimplePublicObjectId8 : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The idProperty property</summary>
+        /// <summary>When using a custom unique value property to retrieve records, the name of the property. Do not include this parameter if retrieving by record ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? IdProperty { get; set; }
@@ -30,7 +31,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectId8> Inputs { get; set; }
 #endif
-        /// <summary>The properties property</summary>
+        /// <summary>Key-value pairs for setting properties for the new object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Properties { get; set; }
@@ -38,7 +39,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<string> Properties { get; set; }
 #endif
-        /// <summary>The propertiesWithHistory property</summary>
+        /// <summary>Key-value pairs for setting properties for the new object and their histories.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? PropertiesWithHistory { get; set; }

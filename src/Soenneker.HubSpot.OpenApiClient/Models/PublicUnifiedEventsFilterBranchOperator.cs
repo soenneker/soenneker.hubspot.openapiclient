@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>Specifies the operator used in the unified events filter branch, with accepted values being HAS_COMPLETED or HAS_NOT_COMPLETED.</summary>
+    /// <summary>Defines the operation to be applied within the filter branch (HAS_COMPLETED, HAS_NOT_COMPLETED).</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PublicUnifiedEventsFilterBranchOperator
     {

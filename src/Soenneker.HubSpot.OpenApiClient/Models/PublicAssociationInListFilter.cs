@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Defines the category of the association.</summary>
+        /// <summary>Defines the category of the association, such as (HUBSPOT_DEFINED, USER_DEFINED, INTEGRATOR_DEFINED, WORK).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AssociationCategory { get; set; }
@@ -22,9 +22,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string AssociationCategory { get; set; }
 #endif
-        /// <summary>The ID representing the type of association.</summary>
+        /// <summary>The ID representing the type of association being filtered.</summary>
         public int? AssociationTypeId { get; set; }
-        /// <summary>Defines the criteria for refining associations using one of several possible schemas such as PublicNumOccurrencesRefineBy or PublicRelativeComparativeTimestampRefineBy.</summary>
+        /// <summary>Specifies the criteria for refining the association filter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationInListFilterCoalescingRefineBy? CoalescingRefineBy { get; set; }
@@ -32,9 +32,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationInListFilterCoalescingRefineBy CoalescingRefineBy { get; set; }
 #endif
-        /// <summary>Indicates the type of filter, which defaults to ASSOCIATION.</summary>
+        /// <summary>Indicates the type of filter being applied, which is &apos;ASSOCIATION&apos; by default.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationInListFilterFilterType? FilterType { get; set; }
-        /// <summary>The identifier of the list used in the association filter.</summary>
+        /// <summary>The ID of the list used in the association filter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ListId { get; set; }
@@ -42,7 +42,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ListId { get; set; }
 #endif
-        /// <summary>Specifies the operator used in the association filter.</summary>
+        /// <summary>Specifies the operation to be performed by the filter, such as &apos;IN_LIST&apos; or &apos;NOT_IN_LIST&apos;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Operator { get; set; }
@@ -50,7 +50,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Operator { get; set; }
 #endif
-        /// <summary>Specifies the type of object to which the association is made.</summary>
+        /// <summary>The type of object that the association filter is targeting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ToObjectType { get; set; }
@@ -58,7 +58,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ToObjectType { get; set; }
 #endif
-        /// <summary>Represents the ID of the object type associated with the filter.</summary>
+        /// <summary>The ID representing the type of object that the association filter is targeting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ToObjectTypeId { get; set; }

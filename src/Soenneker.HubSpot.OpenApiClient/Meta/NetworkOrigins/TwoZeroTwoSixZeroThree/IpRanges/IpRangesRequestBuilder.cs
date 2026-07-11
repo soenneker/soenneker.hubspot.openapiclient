@@ -39,6 +39,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Meta.NetworkOrigins.TwoZeroTwoSixZeroT
         public IpRangesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/meta/network-origins/2026-03/ip-ranges{?direction*,service*}", rawUrl)
         {
         }
+        /// <summary>
+        /// Retrieve a collection of IP ranges associated with specific services and directions, such as `EMAIL`, `API`, `DNS`, or `WEB_SCRAPING`. The response includes details like CIDR notation, description, and the direction of IP traffic.
+        /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseIpRangeNoPaging"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -54,6 +57,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Meta.NetworkOrigins.TwoZeroTwoSixZeroT
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseIpRangeNoPaging>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseIpRangeNoPaging.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
+        /// <summary>
+        /// Retrieve a collection of IP ranges associated with specific services and directions, such as `EMAIL`, `API`, `DNS`, or `WEB_SCRAPING`. The response includes details like CIDR notation, description, and the direction of IP traffic.
+        /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -79,28 +85,29 @@ namespace Soenneker.HubSpot.OpenApiClient.Meta.NetworkOrigins.TwoZeroTwoSixZeroT
         {
             return new global::Soenneker.HubSpot.OpenApiClient.Meta.NetworkOrigins.TwoZeroTwoSixZeroThree.IpRanges.IpRangesRequestBuilder(rawUrl, RequestAdapter);
         }
+        /// <summary>
+        /// Retrieve a collection of IP ranges associated with specific services and directions, such as `EMAIL`, `API`, `DNS`, or `WEB_SCRAPING`. The response includes details like CIDR notation, description, and the direction of IP traffic.
+        /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        #pragma warning disable CS1591
         public partial class IpRangesRequestBuilderGetQueryParameters 
-        #pragma warning restore CS1591
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("direction")]
-            public global::Soenneker.HubSpot.OpenApiClient.Models.MetaGetMetaNetworkOrigins202603IpRangesMetaNetworkOrigins202603IpRangesDirectionParameterItem[]? Direction { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.MetaGetMetaNetworkOrigins202603IpRangesMetaNetworkOrigins202509IpRangesDirectionParameterItem[]? Direction { get; set; }
 #nullable restore
 #else
             [QueryParameter("direction")]
-            public global::Soenneker.HubSpot.OpenApiClient.Models.MetaGetMetaNetworkOrigins202603IpRangesMetaNetworkOrigins202603IpRangesDirectionParameterItem[] Direction { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.MetaGetMetaNetworkOrigins202603IpRangesMetaNetworkOrigins202509IpRangesDirectionParameterItem[] Direction { get; set; }
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("service")]
-            public global::Soenneker.HubSpot.OpenApiClient.Models.MetaGetMetaNetworkOrigins202603IpRangesMetaNetworkOrigins202603IpRangesServiceParameterItem[]? Service { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.MetaGetMetaNetworkOrigins202603IpRangesMetaNetworkOrigins202509IpRangesServiceParameterItem[]? Service { get; set; }
 #nullable restore
 #else
             [QueryParameter("service")]
-            public global::Soenneker.HubSpot.OpenApiClient.Models.MetaGetMetaNetworkOrigins202603IpRangesMetaNetworkOrigins202603IpRangesServiceParameterItem[] Service { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.MetaGetMetaNetworkOrigins202603IpRangesMetaNetworkOrigins202509IpRangesServiceParameterItem[] Service { get; set; }
 #endif
         }
     }

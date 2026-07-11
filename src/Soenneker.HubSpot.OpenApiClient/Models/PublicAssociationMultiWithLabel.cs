@@ -33,10 +33,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The to property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.MultiAssociatedObjectWithLabel>? To { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmMultiAssociatedObjectWithLabel>? To { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.MultiAssociatedObjectWithLabel> To { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmMultiAssociatedObjectWithLabel> To { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationMultiWithLabel"/> and sets the default values.
@@ -65,7 +65,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "from", n => { From = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId.CreateFromDiscriminatorValue); } },
                 { "paging", n => { Paging = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPaging2>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPaging2.CreateFromDiscriminatorValue); } },
-                { "to", n => { To = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.MultiAssociatedObjectWithLabel>(global::Soenneker.HubSpot.OpenApiClient.Models.MultiAssociatedObjectWithLabel.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "to", n => { To = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmMultiAssociatedObjectWithLabel>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmMultiAssociatedObjectWithLabel.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -77,7 +77,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId>("from", From);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPaging2>("paging", Paging);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.MultiAssociatedObjectWithLabel>("to", To);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmMultiAssociatedObjectWithLabel>("to", To);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -3,25 +3,21 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>null</summary>
+    /// <summary>The comparison operator used in the filter, such as &quot;EQ&quot; or &quot;GT&quot;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum CrmFilter29Operator
     {
+        [EnumMember(Value = "BETWEEN")]
+        #pragma warning disable CS1591
+        Between,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "CONTAINS_TOKEN")]
+        #pragma warning disable CS1591
+        ContainsToken,
+        #pragma warning restore CS1591
         [EnumMember(Value = "EQ")]
         #pragma warning disable CS1591
         Eq,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "NEQ")]
-        #pragma warning disable CS1591
-        Neq,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "LT")]
-        #pragma warning disable CS1591
-        Lt,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "LTE")]
-        #pragma warning disable CS1591
-        Lte,
         #pragma warning restore CS1591
         [EnumMember(Value = "GT")]
         #pragma warning disable CS1591
@@ -31,33 +27,37 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         #pragma warning disable CS1591
         Gte,
         #pragma warning restore CS1591
-        [EnumMember(Value = "BETWEEN")]
+        [EnumMember(Value = "HAS_PROPERTY")]
         #pragma warning disable CS1591
-        Between,
+        HasProperty,
         #pragma warning restore CS1591
         [EnumMember(Value = "IN")]
         #pragma warning disable CS1591
         InValue,
         #pragma warning restore CS1591
-        [EnumMember(Value = "NOT_IN")]
+        [EnumMember(Value = "LT")]
         #pragma warning disable CS1591
-        NotIn,
+        Lt,
         #pragma warning restore CS1591
-        [EnumMember(Value = "HAS_PROPERTY")]
+        [EnumMember(Value = "LTE")]
         #pragma warning disable CS1591
-        HasProperty,
+        Lte,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "NEQ")]
+        #pragma warning disable CS1591
+        Neq,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "NOT_CONTAINS_TOKEN")]
+        #pragma warning disable CS1591
+        NotContainsToken,
         #pragma warning restore CS1591
         [EnumMember(Value = "NOT_HAS_PROPERTY")]
         #pragma warning disable CS1591
         NotHasProperty,
         #pragma warning restore CS1591
-        [EnumMember(Value = "CONTAINS_TOKEN")]
+        [EnumMember(Value = "NOT_IN")]
         #pragma warning disable CS1591
-        ContainsToken,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "NOT_CONTAINS_TOKEN")]
-        #pragma warning disable CS1591
-        NotContainsToken,
+        NotIn,
         #pragma warning restore CS1591
     }
 }

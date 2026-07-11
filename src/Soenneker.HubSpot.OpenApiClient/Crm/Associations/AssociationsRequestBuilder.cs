@@ -2,7 +2,7 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
-using Soenneker.HubSpot.OpenApiClient.Crm.Associations.V4;
+using Soenneker.HubSpot.OpenApiClient.Crm.Associations.TwoZeroTwoSixZeroThree;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -15,10 +15,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Associations
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AssociationsRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The v4 property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Crm.Associations.V4.V4RequestBuilder V4
+        /// <summary>The TwoZeroTwoSixZeroThree property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Crm.Associations.TwoZeroTwoSixZeroThree.TwoZeroTwoSixZeroThreeRequestBuilder TwoZeroTwoSixZeroThree
         {
-            get => new global::Soenneker.HubSpot.OpenApiClient.Crm.Associations.V4.V4RequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.HubSpot.OpenApiClient.Crm.Associations.TwoZeroTwoSixZeroThree.TwoZeroTwoSixZeroThreeRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Crm.Associations.AssociationsRequestBuilder"/> and sets the default values.

@@ -2,7 +2,6 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
-using Soenneker.HubSpot.OpenApiClient.Meta.NetworkOrigins.TwoZeroTwoFiveZeroNine;
 using Soenneker.HubSpot.OpenApiClient.Meta.NetworkOrigins.TwoZeroTwoSixZeroThree;
 using System.Collections.Generic;
 using System.IO;
@@ -16,11 +15,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Meta.NetworkOrigins
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class NetworkOriginsRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The TwoZeroTwoFiveZeroNine property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Meta.NetworkOrigins.TwoZeroTwoFiveZeroNine.TwoZeroTwoFiveZeroNineRequestBuilder TwoZeroTwoFiveZeroNine
-        {
-            get => new global::Soenneker.HubSpot.OpenApiClient.Meta.NetworkOrigins.TwoZeroTwoFiveZeroNine.TwoZeroTwoFiveZeroNineRequestBuilder(PathParameters, RequestAdapter);
-        }
         /// <summary>The TwoZeroTwoSixZeroThree property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Meta.NetworkOrigins.TwoZeroTwoSixZeroThree.TwoZeroTwoSixZeroThreeRequestBuilder TwoZeroTwoSixZeroThree
         {

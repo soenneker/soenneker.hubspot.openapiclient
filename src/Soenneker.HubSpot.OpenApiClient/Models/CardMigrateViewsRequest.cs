@@ -14,13 +14,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Defaults to false. This allow more than one Legacy CRM Card Migration to point to the same extension card. This is prevented by default to avoid accidental consolidation of cards.</summary>
+        /// <summary>The allowDuplicateAppCardIds property</summary>
         public bool? AllowDuplicateAppCardIds { get; set; }
-        /// <summary>The id of the App Card to replace the Legacy CRM Card in views</summary>
+        /// <summary>The appCardId property</summary>
         public long? AppCardId { get; set; }
-        /// <summary>The id of the Helpdesk App Card to replace the Legacy CRM Card in Helpdesk views. Only necessary if the Legacy CRM Card supported tickets, as then it would have been available on helpdesk views.</summary>
+        /// <summary>The helpdeskAppCardId property</summary>
         public long? HelpdeskAppCardId { get; set; }
-        /// <summary>The id of the Legacy CRM Card to swap</summary>
+        /// <summary>The legacyCrmCardId property</summary>
         public long? LegacyCrmCardId { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CardMigrateViewsRequest"/> and sets the default values.

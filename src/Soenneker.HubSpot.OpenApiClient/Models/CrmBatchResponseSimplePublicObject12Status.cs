@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>The status of the batch processing request. The expected value is &quot;COMPLETE&quot;.</summary>
+    /// <summary>&quot;The status of the batch processing request: \&quot;PENDING\&quot;, \&quot;PROCESSING\&quot;, \&quot;CANCELLED\&quot;, or \&quot;COMPLETE\&quot;&quot;</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum CrmBatchResponseSimplePublicObject12Status
     {

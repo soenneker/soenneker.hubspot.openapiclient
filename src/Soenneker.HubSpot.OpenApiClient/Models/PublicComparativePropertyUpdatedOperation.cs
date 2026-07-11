@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The name of the property used for comparison in the operation.</summary>
+        /// <summary>The name of the property to compare against in the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ComparisonPropertyName { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ComparisonPropertyName { get; set; }
 #endif
-        /// <summary>Specifies the default value used for comparison if the property value is not set.</summary>
+        /// <summary>The default value used for comparison if the actual comparison property value is not set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DefaultComparisonValue { get; set; }
@@ -30,11 +30,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string DefaultComparisonValue { get; set; }
 #endif
-        /// <summary>Indicates whether objects without a value set should be included.</summary>
+        /// <summary>Indicates whether objects with no value set for the property should be included in the operation.</summary>
         public bool? IncludeObjectsWithNoValueSet { get; set; }
-        /// <summary>Specifies the type of operation, which defaults to &apos;COMPARATIVE_PROPERTY_UPDATED&apos;.</summary>
+        /// <summary>Specifies the type of operation (COMPARATIVE_PROPERTY_UPDATED).</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicComparativePropertyUpdatedOperationOperationType? OperationType { get; set; }
-        /// <summary>Defines the operator used in the comparative property updated operation.</summary>
+        /// <summary>Defines the operation to be applied, such as comparison operators (IS_BEFORE, IS_AFTER).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Operator { get; set; }

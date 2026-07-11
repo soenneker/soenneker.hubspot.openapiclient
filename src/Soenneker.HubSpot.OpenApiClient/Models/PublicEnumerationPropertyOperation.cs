@@ -14,11 +14,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Indicates whether objects without a value set should be included.</summary>
+        /// <summary>Indicates whether objects with no value set for the property should be included in the operation.</summary>
         public bool? IncludeObjectsWithNoValueSet { get; set; }
-        /// <summary>Specifies the type of operation, which defaults to &apos;ENUMERATION&apos;.</summary>
+        /// <summary>Specifies the type of operation (ENUMERATION).</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEnumerationPropertyOperationOperationType? OperationType { get; set; }
-        /// <summary>Defines the operator used in the enumeration property operation.</summary>
+        /// <summary>Defines the operation to be applied in the enumeration property operation (IS_ANY_OF, IS_NONE_OF, IS_EXACTLY, IS_NOT_EXACTLY, CONTAINS_ALL, DOES_NOT_CONTAIN_ALL, HAS_EVER_BEEN_ANY_OF, HAS_NEVER_BEEN_ANY_OF, HAS_EVER_BEEN_EXACTLY, HAS_NEVER_BEEN_EXACTLY, HAS_EVER_CONTAINED_ALL, HAS_NEVER_CONTAINED_ALL).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Operator { get; set; }

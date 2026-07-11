@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationsForObject7> Associations { get; set; }
 #endif
-        /// <summary>The company property values to set.</summary>
+        /// <summary>Key-value pairs for setting properties for the new object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectInputForCreate7PropertiesProperty? Properties { get; set; }

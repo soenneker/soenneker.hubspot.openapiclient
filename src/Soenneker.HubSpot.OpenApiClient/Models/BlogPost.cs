@@ -7,11 +7,10 @@ using System.IO;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>
-    /// Model definition for a Blog Post.
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+    #pragma warning disable CS1591
     public partial class BlogPost : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
         /// <summary>&quot;The status of the AB test associated with this blog post, if applicableAvailable options: automated_loser_variant, automated_master, automated_variant, loser_variant, mab_master, mab_variant, master, variant&quot;</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.BlogPostAbStatus? AbStatus { get; set; }

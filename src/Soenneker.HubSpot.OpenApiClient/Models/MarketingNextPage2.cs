@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The pagination cursor token used to fetch the next page of results. Pass this value in subsequent requests to continue pagination.</summary>
+        /// <summary>The cursor token value to get the next set of results. Use this value as query parameter (&amp;after=...) to obtain the next page.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? After { get; set; }
@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string After { get; set; }
 #endif
-        /// <summary>The complete URL to retrieve the next page of results in paginated responses.</summary>
+        /// <summary>The link to the next page.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Link { get; set; }

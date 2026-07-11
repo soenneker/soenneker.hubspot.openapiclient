@@ -7,20 +7,21 @@ using System.IO;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>
+    /// A simple public object.
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public partial class CrmSimplePublicObject8 : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The archived property</summary>
+        /// <summary>Whether the object is archived.</summary>
         public bool? Archived { get; set; }
-        /// <summary>The archivedAt property</summary>
+        /// <summary>The timestamp when the object was archived, in ISO 8601 format.</summary>
         public DateTimeOffset? ArchivedAt { get; set; }
-        /// <summary>The createdAt property</summary>
+        /// <summary>The timestamp when the object was created, in ISO 8601 format.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
-        /// <summary>The id property</summary>
+        /// <summary>The unique ID of the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }
@@ -28,7 +29,15 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>The properties property</summary>
+        /// <summary>An identifier used for tracing the write request for the object.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ObjectWriteTraceId { get; set; }
+#nullable restore
+#else
+        public string ObjectWriteTraceId { get; set; }
+#endif
+        /// <summary>Key-value pairs representing the properties of the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject8PropertiesProperty? Properties { get; set; }
@@ -36,7 +45,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject8PropertiesProperty Properties { get; set; }
 #endif
-        /// <summary>The propertiesWithHistory property</summary>
+        /// <summary>Key-value pairs representing the properties of the object along with their history.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject8PropertiesWithHistoryProperty? PropertiesWithHistory { get; set; }
@@ -44,8 +53,24 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject8PropertiesWithHistoryProperty PropertiesWithHistory { get; set; }
 #endif
-        /// <summary>The updatedAt property</summary>
+        /// <summary>The timestamp when the object was last updated, in ISO 8601 format.</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
+        /// <summary>The URL associated with the object.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Url { get; set; }
+#nullable restore
+#else
+        public string Url { get; set; }
+#endif
+        /// <summary>The warnings property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectWarning8>? Warnings { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectWarning8> Warnings { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject8"/> and sets the default values.
         /// </summary>
@@ -75,9 +100,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "archivedAt", n => { ArchivedAt = n.GetDateTimeOffsetValue(); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
+                { "objectWriteTraceId", n => { ObjectWriteTraceId = n.GetStringValue(); } },
                 { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject8PropertiesProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject8PropertiesProperty.CreateFromDiscriminatorValue); } },
                 { "propertiesWithHistory", n => { PropertiesWithHistory = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject8PropertiesWithHistoryProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject8PropertiesWithHistoryProperty.CreateFromDiscriminatorValue); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
+                { "url", n => { Url = n.GetStringValue(); } },
+                { "warnings", n => { Warnings = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectWarning8>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectWarning8.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -91,9 +119,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("archivedAt", ArchivedAt);
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
             writer.WriteStringValue("id", Id);
+            writer.WriteStringValue("objectWriteTraceId", ObjectWriteTraceId);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject8PropertiesProperty>("properties", Properties);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject8PropertiesWithHistoryProperty>("propertiesWithHistory", PropertiesWithHistory);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
+            writer.WriteStringValue("url", Url);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectWarning8>("warnings", Warnings);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

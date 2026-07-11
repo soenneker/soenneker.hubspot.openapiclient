@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Indicates the type of filter, which defaults to EMAIL_SUBSCRIPTION.</summary>
+        /// <summary>Indicates the type of filter (EMAIL_SUBSCRIPTION).</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailSubscriptionFilterFilterType? FilterType { get; set; }
         /// <summary>The subscriptionIds property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -32,7 +32,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<string> SubscriptionIds { get; set; }
 #endif
-        /// <summary>Specifies the type of subscription associated with the email subscription filter.</summary>
+        /// <summary>The type of subscription related to the filter (PORTAL, BRAND, SUBSCRIPTION, HARDBOUNCE, SPAMREPORT).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SubscriptionType { get; set; }

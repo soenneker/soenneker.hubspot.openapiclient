@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The language in which the communication preference link should be presented, represented as a string.</summary>
+        /// <summary>The language in which the generated link should be presented, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Language { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Language { get; set; }
 #endif
-        /// <summary>The unique identifier for the subscriber, represented as a string. This property is required.</summary>
+        /// <summary>A string representing the unique identifier of the subscriber. This property is required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SubscriberIdString { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string SubscriberIdString { get; set; }
 #endif
-        /// <summary>The unique identifier for the subscription, represented as an integer.</summary>
+        /// <summary>The unique identifier for the subscription, represented as an integer in int64 format.</summary>
         public long? SubscriptionId { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.LinkGenerationRequest"/> and sets the default values.

@@ -14,17 +14,17 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;The day of the week in the week reference, with accepted values including: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.&quot;</summary>
+        /// <summary>The day of the week (SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY).</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWeekReferenceDayOfWeek? DayOfWeek { get; set; }
-        /// <summary>The hour component of the time in the week reference.</summary>
+        /// <summary>The hour component of the week reference.</summary>
         public int? Hour { get; set; }
-        /// <summary>The millisecond component of the time in the week reference.</summary>
+        /// <summary>The millisecond component of the week reference.</summary>
         public int? Millisecond { get; set; }
-        /// <summary>The minute component of the time in the week reference.</summary>
+        /// <summary>The minute component of the week reference.</summary>
         public int? Minute { get; set; }
-        /// <summary>Indicates the type of reference, defaulting to &apos;WEEK&apos;.</summary>
+        /// <summary>Indicates the type of reference (WEEK).</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWeekReferenceReferenceType? ReferenceType { get; set; }
-        /// <summary>The second component of the time in the week reference.</summary>
+        /// <summary>The second component of the week reference.</summary>
         public int? Second { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicWeekReference"/> and sets the default values.

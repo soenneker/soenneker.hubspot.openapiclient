@@ -14,9 +14,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The timestamp when the batch operation completed, in ISO 8601 format.</summary>
+        /// <summary>The date and time when the batch operation was completed, in ISO 8601 format.</summary>
         public DateTimeOffset? CompletedAt { get; set; }
-        /// <summary>An object containing URLs for related resources or operations.</summary>
+        /// <summary>A map of link names to associated URIs providing additional information about the batch operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseSubscriptionResponseLinksProperty? Links { get; set; }
@@ -24,19 +24,19 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseSubscriptionResponseLinksProperty Links { get; set; }
 #endif
-        /// <summary>The timestamp when the batch operation was requested, in ISO 8601 format.</summary>
+        /// <summary>The date and time when the batch operation was requested, in ISO 8601 format.</summary>
         public DateTimeOffset? RequestedAt { get; set; }
-        /// <summary>An array containing the successfully processed webhook subscriptions from the batch operation.</summary>
+        /// <summary>An array containing the results of the batch operation, with each item representing an individual subscription response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponse>? Results { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.WebhooksJournalSubscriptionResponse>? Results { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponse> Results { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.WebhooksJournalSubscriptionResponse> Results { get; set; }
 #endif
-        /// <summary>The timestamp when the batch operation started processing, in ISO 8601 format.</summary>
+        /// <summary>The date and time when the batch operation started, in ISO 8601 format.</summary>
         public DateTimeOffset? StartedAt { get; set; }
-        /// <summary>The status of the batch operation. Accepted values are &apos;PENDING&apos;, &apos;PROCESSING&apos;, &apos;CANCELED&apos;, or &apos;COMPLETE&apos;.</summary>
+        /// <summary>The current status of the batch operation. Valid values include &apos;PENDING&apos;, &apos;PROCESSING&apos;, &apos;CANCELED&apos;, and &apos;COMPLETE&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseSubscriptionResponseStatus? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseSubscriptionResponse"/> and sets the default values.
@@ -66,7 +66,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "completedAt", n => { CompletedAt = n.GetDateTimeOffsetValue(); } },
                 { "links", n => { Links = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseSubscriptionResponseLinksProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseSubscriptionResponseLinksProperty.CreateFromDiscriminatorValue); } },
                 { "requestedAt", n => { RequestedAt = n.GetDateTimeOffsetValue(); } },
-                { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponse>(global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponse.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.WebhooksJournalSubscriptionResponse>(global::Soenneker.HubSpot.OpenApiClient.Models.WebhooksJournalSubscriptionResponse.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "startedAt", n => { StartedAt = n.GetDateTimeOffsetValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseSubscriptionResponseStatus>(); } },
             };
@@ -81,7 +81,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("completedAt", CompletedAt);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseSubscriptionResponseLinksProperty>("links", Links);
             writer.WriteDateTimeOffsetValue("requestedAt", RequestedAt);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponse>("results", Results);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.WebhooksJournalSubscriptionResponse>("results", Results);
             writer.WriteDateTimeOffsetValue("startedAt", StartedAt);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseSubscriptionResponseStatus>("status", Status);
             writer.WriteAdditionalData(AdditionalData);

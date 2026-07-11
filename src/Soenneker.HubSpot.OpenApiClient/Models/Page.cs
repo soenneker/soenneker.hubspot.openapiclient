@@ -7,11 +7,10 @@ using System.IO;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>
-    /// Model definition for a landing page or site page.
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+    #pragma warning disable CS1591
     public partial class Page : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
         /// <summary>The status of the AB test associated with this page, if applicable</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PageAbStatus? AbStatus { get; set; }
@@ -25,7 +24,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The timestamp (ISO8601 format) when this page was deleted.</summary>
+        /// <summary>The timestamp when this page was deleted.</summary>
         public DateTimeOffset? ArchivedAt { get; set; }
         /// <summary>If True, the page will not show up in your dashboard, although the page could still be live.</summary>
         public bool? ArchivedInDashboard { get; set; }

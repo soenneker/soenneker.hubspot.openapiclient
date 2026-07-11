@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.AssociationSpecWithLabel> AssociationTypes { get; set; }
 #endif
-        /// <summary>The unique identifier for the target object in the association.</summary>
+        /// <summary>The ID of the target object in the association.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ToObjectId { get; set; }

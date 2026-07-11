@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     /// <summary>
-    /// The company property values to set.
+    /// Key-value pairs for setting properties for the new object.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CrmSimplePublicObjectInputForCreate7PropertiesProperty : IAdditionalDataHolder, IParsable

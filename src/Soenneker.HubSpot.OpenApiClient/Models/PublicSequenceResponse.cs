@@ -16,7 +16,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The date and time when the sequence was created.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
-        /// <summary>The dependencies property</summary>
+        /// <summary>An array of dependencies for the sequence steps, each represented as a PublicSequenceStepDependencyResponse object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepDependencyResponse>? Dependencies { get; set; }
@@ -56,7 +56,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceSettingsResponse Settings { get; set; }
 #endif
-        /// <summary>The steps property</summary>
+        /// <summary>An array of steps included in the sequence, each represented by a PublicSequenceStepResponse object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepResponse>? Steps { get; set; }

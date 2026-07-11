@@ -7,13 +7,12 @@ using System.IO;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>
-    /// Updated details for the subscription.
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+    #pragma warning disable CS1591
     public partial class SubscriptionPatchRequest : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
-        /// <summary>A boolean indicating whether to activate or pause the webhook subscription. If true, the subscription will send webhook notifications. If false, the subscription is paused and will not send notifications.</summary>
+        /// <summary>A boolean indicating whether the subscription is active. If true, the subscription is active; if false, it is inactive.</summary>
         public bool? Active { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }

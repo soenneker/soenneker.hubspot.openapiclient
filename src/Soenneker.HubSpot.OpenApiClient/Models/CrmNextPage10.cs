@@ -7,14 +7,15 @@ using System.IO;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>
+    /// Specifies the paging information needed to retrieve the next set of results in a paginated API response
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public partial class CrmNextPage10 : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The after property</summary>
+        /// <summary>A paging cursor token for retrieving subsequent pages.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? After { get; set; }
@@ -22,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string After { get; set; }
 #endif
-        /// <summary>The link property</summary>
+        /// <summary>A URL that can be used to retrieve the next page results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Link { get; set; }

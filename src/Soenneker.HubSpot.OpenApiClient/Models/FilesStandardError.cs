@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     /// <summary>
-    /// Represents a standard error response in the HubSpot API, providing detailed information about an error that occurred during an API request.
+    /// Ye olde error
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FilesStandardError : IAdditionalDataHolder, IParsable

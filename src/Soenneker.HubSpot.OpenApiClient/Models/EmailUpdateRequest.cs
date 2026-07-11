@@ -7,11 +7,10 @@ using System.IO;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>
-    /// Properties of a marketing email you can update via the API.
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+    #pragma warning disable CS1591
     public partial class EmailUpdateRequest : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
         /// <summary>The active domain of the email.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -35,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Campaign { get; set; }
 #endif
-        /// <summary>Data structure representing the content of the email.</summary>
+        /// <summary>The content property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContent? Content { get; set; }
@@ -45,7 +44,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>The ID of the folder where the email will be stored.</summary>
         public long? FolderIdV2 { get; set; }
-        /// <summary>Data structure representing the from fields on the email.</summary>
+        /// <summary>The from property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailFromDetails? From { get; set; }
@@ -67,7 +66,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>The date and time the email is scheduled for, in ISO8601 representation. This is only used in local time or scheduled emails.</summary>
         public DateTimeOffset? PublishDate { get; set; }
-        /// <summary>RSS related data if it is a blog or rss email.</summary>
+        /// <summary>The rssData property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetails? RssData { get; set; }
@@ -89,7 +88,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Subject { get; set; }
 #endif
-        /// <summary>Data structure representing the subscription fields of the email.</summary>
+        /// <summary>The subscriptionDetails property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailSubscriptionDetails? SubscriptionDetails { get; set; }
@@ -97,7 +96,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailSubscriptionDetails SubscriptionDetails { get; set; }
 #endif
-        /// <summary>AB testing related data. This property is only returned for AB type emails.</summary>
+        /// <summary>The testing property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetails? Testing { get; set; }
@@ -105,7 +104,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetails Testing { get; set; }
 #endif
-        /// <summary>Data structure representing the to fields of the email.</summary>
+        /// <summary>The to property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailToDetails? To { get; set; }

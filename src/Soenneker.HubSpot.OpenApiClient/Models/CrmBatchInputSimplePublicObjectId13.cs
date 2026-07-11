@@ -17,10 +17,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The inputs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectId13>? Inputs { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectId15>? Inputs { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectId13> Inputs { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectId15> Inputs { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchInputSimplePublicObjectId13"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "inputs", n => { Inputs = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectId13>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectId13.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "inputs", n => { Inputs = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectId15>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectId15.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectId13>("inputs", Inputs);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectId15>("inputs", Inputs);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

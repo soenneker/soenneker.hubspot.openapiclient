@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A URL string that directs the subscriber to a page where they can manage their communication preferences.</summary>
+        /// <summary>The URL where the subscriber can manage their communication preferences.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ManagePreferencesUrl { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ManagePreferencesUrl { get; set; }
 #endif
-        /// <summary>The unique identifier for the subscriber, represented as a string.</summary>
+        /// <summary>A string representing the unique identifier of the subscriber.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SubscriberIdString { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string SubscriberIdString { get; set; }
 #endif
-        /// <summary>A URL string that allows the subscriber to unsubscribe from all communications.</summary>
+        /// <summary>A string containing the URL for unsubscribing the subscriber from all communications.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UnsubscribeAllUrl { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string UnsubscribeAllUrl { get; set; }
 #endif
-        /// <summary>A URL string that allows the subscriber to unsubscribe from a single communication type.</summary>
+        /// <summary>A string containing the URL to unsubscribe the subscriber from a single communication.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UnsubscribeSingleUrl { get; set; }

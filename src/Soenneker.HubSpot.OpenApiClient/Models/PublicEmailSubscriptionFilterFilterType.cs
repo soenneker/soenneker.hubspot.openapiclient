@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>Indicates the type of filter, which defaults to EMAIL_SUBSCRIPTION.</summary>
+    /// <summary>Indicates the type of filter (EMAIL_SUBSCRIPTION).</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PublicEmailSubscriptionFilterFilterType
     {

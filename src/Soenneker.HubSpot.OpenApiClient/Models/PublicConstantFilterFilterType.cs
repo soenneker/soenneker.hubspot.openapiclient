@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>Indicates the type of filter, which defaults to CONSTANT.</summary>
+    /// <summary>Specifies the type of filter, which is (CONSTANT).</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PublicConstantFilterFilterType
     {

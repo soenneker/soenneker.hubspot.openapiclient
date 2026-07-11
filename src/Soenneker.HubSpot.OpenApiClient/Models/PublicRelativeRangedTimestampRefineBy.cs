@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicTimeOffset LowerBoundOffset { get; set; }
 #endif
-        /// <summary>Specifies the type of range used for the timestamp refinement.</summary>
+        /// <summary>Specifies the type of range for the refinement criteria (BETWEEN, NOT_BETWEEN).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RangeType { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string RangeType { get; set; }
 #endif
-        /// <summary>Indicates the type of timestamp refinement, which defaults to RELATIVE_RANGED.</summary>
+        /// <summary>Indicates the type of refinement (RELATIVE_RANGED).</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRelativeRangedTimestampRefineByType? Type { get; set; }
         /// <summary>The upperBoundOffset property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

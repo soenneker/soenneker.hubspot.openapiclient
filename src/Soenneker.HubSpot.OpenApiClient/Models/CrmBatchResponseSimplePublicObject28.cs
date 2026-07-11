@@ -7,16 +7,17 @@ using System.IO;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>
+    /// A public object batch response object
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public partial class CrmBatchResponseSimplePublicObject28 : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The completedAt property</summary>
+        /// <summary>The timestamp when the batch processing was completed, in ISO 8601 format.</summary>
         public DateTimeOffset? CompletedAt { get; set; }
-        /// <summary>The links property</summary>
+        /// <summary>An object containing relevant links related to the batch request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponseSimplePublicObject28LinksProperty? Links { get; set; }
@@ -24,7 +25,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponseSimplePublicObject28LinksProperty Links { get; set; }
 #endif
-        /// <summary>The requestedAt property</summary>
+        /// <summary>The timestamp when the batch request was initially made, in ISO 8601 format.</summary>
         public DateTimeOffset? RequestedAt { get; set; }
         /// <summary>The results property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -34,9 +35,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject29> Results { get; set; }
 #endif
-        /// <summary>The startedAt property</summary>
+        /// <summary>The timestamp when the batch processing began, in ISO 8601 format.</summary>
         public DateTimeOffset? StartedAt { get; set; }
-        /// <summary>The status property</summary>
+        /// <summary>&quot;The status of the batch processing request: \&quot;PENDING\&quot;, \&quot;PROCESSING\&quot;, \&quot;CANCELLED\&quot;, or \&quot;COMPLETE\&quot;&quot;</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponseSimplePublicObject28Status? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponseSimplePublicObject28"/> and sets the default values.

@@ -7,14 +7,15 @@ using System.IO;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>
+    /// An input that contains the information required to process a public GDPR data deletion request.
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public partial class CrmPublicGdprDeleteInput : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The idProperty property</summary>
+        /// <summary>The name of a property whose values are unique for this object. An alternative to identifying a contact by ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? IdProperty { get; set; }
@@ -22,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string IdProperty { get; set; }
 #endif
-        /// <summary>The objectId property</summary>
+        /// <summary>The ID of the contact to permanently delete.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ObjectId { get; set; }

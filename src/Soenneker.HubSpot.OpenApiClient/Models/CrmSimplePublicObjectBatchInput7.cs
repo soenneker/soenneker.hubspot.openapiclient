@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The ID to be updated. This can be the object ID, or the unique property value of the `idProperty` property.</summary>
+        /// <summary>The ID of the contact to update. This can be the object ID, or the unique property value of the `idProperty` property.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }
@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>The name of a property whose values are unique for this object</summary>
+        /// <summary>The name of a unique property, when identifying records by property. </summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? IdProperty { get; set; }
@@ -31,7 +31,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string IdProperty { get; set; }
 #endif
-        /// <summary>In each input object, set this field to a unique ID value to enable more granular debugging for error responses. Learn more about [multi-status errors](https://developers.hubspot.com/docs/reference/api/other-resources/error-handling#multi-status-errors).</summary>
+        /// <summary>A unique identifier for tracing the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ObjectWriteTraceId { get; set; }
@@ -39,7 +39,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ObjectWriteTraceId { get; set; }
 #endif
-        /// <summary>The company property values to set.</summary>
+        /// <summary>Key-value pairs representing the properties of the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectBatchInput7PropertiesProperty? Properties { get; set; }

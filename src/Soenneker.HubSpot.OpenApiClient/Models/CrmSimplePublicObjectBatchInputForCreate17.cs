@@ -18,10 +18,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The associations property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationsForObject19>? Associations { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationsForObject17>? Associations { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationsForObject19> Associations { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationsForObject17> Associations { get; set; }
 #endif
         /// <summary>An identifier used for tracing the creation or update request of the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -64,7 +64,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "associations", n => { Associations = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationsForObject19>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationsForObject19.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "associations", n => { Associations = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationsForObject17>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationsForObject17.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "objectWriteTraceId", n => { ObjectWriteTraceId = n.GetStringValue(); } },
                 { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectBatchInputForCreate17PropertiesProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectBatchInputForCreate17PropertiesProperty.CreateFromDiscriminatorValue); } },
             };
@@ -76,7 +76,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationsForObject19>("associations", Associations);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationsForObject17>("associations", Associations);
             writer.WriteStringValue("objectWriteTraceId", ObjectWriteTraceId);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectBatchInputForCreate17PropertiesProperty>("properties", Properties);
             writer.WriteAdditionalData(AdditionalData);

@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Defines the category of the association.</summary>
+        /// <summary>Specifies the category of the association for the filter branch (HUBSPOT_DEFINED, USER_DEFINED, INTEGRATOR_DEFINED, WORK).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AssociationCategory { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string AssociationCategory { get; set; }
 #endif
-        /// <summary>The ID representing the type of association.</summary>
+        /// <summary>Type id of the association</summary>
         public int? AssociationTypeId { get; set; }
         /// <summary>The filterBranches property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -32,7 +32,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationFilterBranchFilterBranchesItem> FilterBranches { get; set; }
 #endif
-        /// <summary>Defines the logical operator used to combine multiple filter branches.</summary>
+        /// <summary>Filter branch operator (AND)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FilterBranchOperator { get; set; }
@@ -40,7 +40,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string FilterBranchOperator { get; set; }
 #endif
-        /// <summary>Indicates the type of filter branch, defaulting to ASSOCIATION.</summary>
+        /// <summary>Type of the filter branch (ASSOCIATION)</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationFilterBranchFilterBranchType? FilterBranchType { get; set; }
         /// <summary>The filters property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -50,7 +50,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationFilterBranchFiltersItem> Filters { get; set; }
 #endif
-        /// <summary>Represents the ID of the object type associated with the filter branch.</summary>
+        /// <summary>The ID representing the type of object associated with the filter branch.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ObjectTypeId { get; set; }
@@ -58,7 +58,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ObjectTypeId { get; set; }
 #endif
-        /// <summary>Specifies the operator applied to the association filter.</summary>
+        /// <summary>Defines the operation to be applied within the filter branch (IN_LIST, NOT_IN_LIST).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Operator { get; set; }

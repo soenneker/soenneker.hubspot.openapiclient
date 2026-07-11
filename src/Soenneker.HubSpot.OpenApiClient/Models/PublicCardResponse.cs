@@ -12,7 +12,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     public partial class PublicCardResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>Configuration for custom user actions on cards.</summary>
+        /// <summary>The actions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.CardActions? Actions { get; set; }
@@ -32,7 +32,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>The date and time when the card was created.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
-        /// <summary>Configuration for displayed info on a card</summary>
+        /// <summary>The display property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.CardDisplayBody? Display { get; set; }

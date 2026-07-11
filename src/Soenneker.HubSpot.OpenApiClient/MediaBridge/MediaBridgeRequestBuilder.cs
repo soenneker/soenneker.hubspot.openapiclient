@@ -2,7 +2,7 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
-using Soenneker.HubSpot.OpenApiClient.MediaBridge.V1;
+using Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -15,10 +15,10 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class MediaBridgeRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The v1 property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.MediaBridge.V1.V1RequestBuilder V1
+        /// <summary>The TwoZeroTwoSixZeroThree property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.TwoZeroTwoSixZeroThreeRequestBuilder TwoZeroTwoSixZeroThree
         {
-            get => new global::Soenneker.HubSpot.OpenApiClient.MediaBridge.V1.V1RequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.TwoZeroTwoSixZeroThreeRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.MediaBridge.MediaBridgeRequestBuilder"/> and sets the default values.

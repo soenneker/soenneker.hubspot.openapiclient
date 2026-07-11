@@ -17,10 +17,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Contains the Id of a Public Object</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId14? To { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId13? To { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId14 To { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId13 To { get; set; }
 #endif
         /// <summary>The types property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,7 +55,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "to", n => { To = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId14>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId14.CreateFromDiscriminatorValue); } },
+                { "to", n => { To = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId13>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId13.CreateFromDiscriminatorValue); } },
                 { "types", n => { Types = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec14>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec14.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -66,7 +66,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId14>("to", To);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId13>("to", To);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec14>("types", Types);
             writer.WriteAdditionalData(AdditionalData);
         }

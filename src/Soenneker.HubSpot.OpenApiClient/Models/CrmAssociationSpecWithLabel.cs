@@ -15,9 +15,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Association category. Can be HUBSPOT_DEFINED, USER_DEFINED, INTEGRATOR_DEFINED or WORK</summary>
+        /// <summary>The category of the association, such as HUBSPOT_DEFINED, USER_DEFINED, or INTEGRATOR_DEFINED.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecWithLabelCategory? Category { get; set; }
-        /// <summary>An optional descriptor that provides additional context about the relationship between associated records, such as &quot;Mentor&quot; and &quot;Mentee&quot;.</summary>
+        /// <summary>A label describing the association between two objects.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Label { get; set; }
@@ -25,7 +25,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Label { get; set; }
 #endif
-        /// <summary>An integer value used to uniquely identify a specific association type within its Association Category.</summary>
+        /// <summary>The unique identifier for the type of association.</summary>
         public int? TypeId { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecWithLabel"/> and sets the default values.

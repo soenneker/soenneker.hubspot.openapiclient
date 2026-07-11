@@ -7,14 +7,15 @@ using System.IO;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>
+    /// Contains an array of CRM object records to be processed in a batch operation, each defined by their ID and properties.
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public partial class CrmSimplePublicObjectBatchInput : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The id property</summary>
+        /// <summary>The id to be updated. This can be the object id, or the unique property value of the idProperty property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }
@@ -22,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>The idProperty property</summary>
+        /// <summary>The name of a property whose values are unique for this object</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? IdProperty { get; set; }
@@ -30,7 +31,15 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string IdProperty { get; set; }
 #endif
-        /// <summary>The properties property</summary>
+        /// <summary>A unique identifier for tracing the request.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ObjectWriteTraceId { get; set; }
+#nullable restore
+#else
+        public string ObjectWriteTraceId { get; set; }
+#endif
+        /// <summary>Key-value pairs representing the properties of the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectBatchInputPropertiesProperty? Properties { get; set; }
@@ -65,6 +74,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "idProperty", n => { IdProperty = n.GetStringValue(); } },
+                { "objectWriteTraceId", n => { ObjectWriteTraceId = n.GetStringValue(); } },
                 { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectBatchInputPropertiesProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectBatchInputPropertiesProperty.CreateFromDiscriminatorValue); } },
             };
         }
@@ -77,6 +87,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("idProperty", IdProperty);
+            writer.WriteStringValue("objectWriteTraceId", ObjectWriteTraceId);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectBatchInputPropertiesProperty>("properties", Properties);
             writer.WriteAdditionalData(AdditionalData);
         }

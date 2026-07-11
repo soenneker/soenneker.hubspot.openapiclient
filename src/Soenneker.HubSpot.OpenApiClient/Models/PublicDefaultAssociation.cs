@@ -17,26 +17,26 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Defines the type, direction, and details of the relationship between two CRM objects.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec2? AssociationSpec { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec? AssociationSpec { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec2 AssociationSpec { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec AssociationSpec { get; set; }
 #endif
         /// <summary>Contains the Id of a Public Object</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId? From { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectId? From { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId From { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectId From { get; set; }
 #endif
         /// <summary>Contains the Id of a Public Object</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId? To { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectId? To { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId To { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectId To { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicDefaultAssociation"/> and sets the default values.
@@ -63,9 +63,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "associationSpec", n => { AssociationSpec = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec2>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec2.CreateFromDiscriminatorValue); } },
-                { "from", n => { From = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId.CreateFromDiscriminatorValue); } },
-                { "to", n => { To = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId.CreateFromDiscriminatorValue); } },
+                { "associationSpec", n => { AssociationSpec = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec.CreateFromDiscriminatorValue); } },
+                { "from", n => { From = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectId>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectId.CreateFromDiscriminatorValue); } },
+                { "to", n => { To = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectId>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectId.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -75,9 +75,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec2>("associationSpec", AssociationSpec);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId>("from", From);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId>("to", To);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec>("associationSpec", AssociationSpec);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectId>("from", From);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectId>("to", To);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

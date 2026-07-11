@@ -3,9 +3,17 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.HubSpot.OpenApiClient.Crm.Associations;
+using Soenneker.HubSpot.OpenApiClient.Crm.Exports;
+using Soenneker.HubSpot.OpenApiClient.Crm.Extensions;
+using Soenneker.HubSpot.OpenApiClient.Crm.Imports;
+using Soenneker.HubSpot.OpenApiClient.Crm.Limits;
+using Soenneker.HubSpot.OpenApiClient.Crm.Lists;
+using Soenneker.HubSpot.OpenApiClient.Crm.ObjectLibrary;
 using Soenneker.HubSpot.OpenApiClient.Crm.Objects;
-using Soenneker.HubSpot.OpenApiClient.Crm.V3;
-using Soenneker.HubSpot.OpenApiClient.Crm.V4;
+using Soenneker.HubSpot.OpenApiClient.Crm.Owners;
+using Soenneker.HubSpot.OpenApiClient.Crm.Pipelines;
+using Soenneker.HubSpot.OpenApiClient.Crm.Properties;
+using Soenneker.HubSpot.OpenApiClient.Crm.PropertyValidations;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -23,20 +31,60 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm
         {
             get => new global::Soenneker.HubSpot.OpenApiClient.Crm.Associations.AssociationsRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The exports property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Crm.Exports.ExportsRequestBuilder Exports
+        {
+            get => new global::Soenneker.HubSpot.OpenApiClient.Crm.Exports.ExportsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The extensions property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Crm.Extensions.ExtensionsRequestBuilder Extensions
+        {
+            get => new global::Soenneker.HubSpot.OpenApiClient.Crm.Extensions.ExtensionsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The imports property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Crm.Imports.ImportsRequestBuilder Imports
+        {
+            get => new global::Soenneker.HubSpot.OpenApiClient.Crm.Imports.ImportsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The limits property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Crm.Limits.LimitsRequestBuilder Limits
+        {
+            get => new global::Soenneker.HubSpot.OpenApiClient.Crm.Limits.LimitsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The lists property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Crm.Lists.ListsRequestBuilder Lists
+        {
+            get => new global::Soenneker.HubSpot.OpenApiClient.Crm.Lists.ListsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The objectLibrary property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Crm.ObjectLibrary.ObjectLibraryRequestBuilder ObjectLibrary
+        {
+            get => new global::Soenneker.HubSpot.OpenApiClient.Crm.ObjectLibrary.ObjectLibraryRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The objects property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.ObjectsRequestBuilder Objects
         {
             get => new global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.ObjectsRequestBuilder(PathParameters, RequestAdapter);
         }
-        /// <summary>The v3 property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Crm.V3.V3RequestBuilder V3
+        /// <summary>The owners property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Crm.Owners.OwnersRequestBuilder Owners
         {
-            get => new global::Soenneker.HubSpot.OpenApiClient.Crm.V3.V3RequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.HubSpot.OpenApiClient.Crm.Owners.OwnersRequestBuilder(PathParameters, RequestAdapter);
         }
-        /// <summary>The v4 property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Crm.V4.V4RequestBuilder V4
+        /// <summary>The pipelines property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Crm.Pipelines.PipelinesRequestBuilder Pipelines
         {
-            get => new global::Soenneker.HubSpot.OpenApiClient.Crm.V4.V4RequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.HubSpot.OpenApiClient.Crm.Pipelines.PipelinesRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The properties property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Crm.Properties.PropertiesRequestBuilder Properties
+        {
+            get => new global::Soenneker.HubSpot.OpenApiClient.Crm.Properties.PropertiesRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The propertyValidations property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Crm.PropertyValidations.PropertyValidationsRequestBuilder PropertyValidations
+        {
+            get => new global::Soenneker.HubSpot.OpenApiClient.Crm.PropertyValidations.PropertyValidationsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Crm.CrmRequestBuilder"/> and sets the default values.

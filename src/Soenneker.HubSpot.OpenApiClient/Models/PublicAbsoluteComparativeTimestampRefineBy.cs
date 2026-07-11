@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Defines the comparison operation used in the absolute comparative timestamp refinement.</summary>
+        /// <summary>Timestamp comparison options (BEFORE, AFTER)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Comparison { get; set; }
@@ -22,9 +22,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Comparison { get; set; }
 #endif
-        /// <summary>Specifies the timestamp used for the absolute comparative refinement, represented as an integer.</summary>
+        /// <summary>Timestamp to be used in refine by criteria</summary>
         public long? Timestamp { get; set; }
-        /// <summary>Indicates the type of refinement, which defaults to ABSOLUTE_COMPARATIVE.</summary>
+        /// <summary>type of refine by criteria (ABSOLUTE_COMPARATIVE)</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAbsoluteComparativeTimestampRefineByType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicAbsoluteComparativeTimestampRefineBy"/> and sets the default values.

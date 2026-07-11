@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     /// <summary>
-    /// Represents a standard error response in the HubSpot API, providing detailed information about an error that occurred during an API request.
+    /// Ye olde error
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class MarketingStandardError2 : IAdditionalDataHolder, IParsable
@@ -34,10 +34,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The detailed error objects.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingErrorDetail5>? Errors { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingErrorDetail3>? Errors { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingErrorDetail5> Errors { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingErrorDetail3> Errors { get; set; }
 #endif
         /// <summary>The ID of the request</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -106,7 +106,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "category", n => { Category = n.GetStringValue(); } },
                 { "context", n => { Context = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingStandardError2ContextProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.MarketingStandardError2ContextProperty.CreateFromDiscriminatorValue); } },
-                { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingErrorDetail5>(global::Soenneker.HubSpot.OpenApiClient.Models.MarketingErrorDetail5.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingErrorDetail3>(global::Soenneker.HubSpot.OpenApiClient.Models.MarketingErrorDetail3.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "links", n => { Links = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingStandardError2LinksProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.MarketingStandardError2LinksProperty.CreateFromDiscriminatorValue); } },
                 { "message", n => { Message = n.GetStringValue(); } },
@@ -123,7 +123,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("category", Category);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingStandardError2ContextProperty>("context", Context);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingErrorDetail5>("errors", Errors);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingErrorDetail3>("errors", Errors);
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingStandardError2LinksProperty>("links", Links);
             writer.WriteStringValue("message", Message);

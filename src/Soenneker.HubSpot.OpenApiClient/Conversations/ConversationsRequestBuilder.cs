@@ -3,7 +3,6 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.HubSpot.OpenApiClient.Conversations.CustomChannels;
-using Soenneker.HubSpot.OpenApiClient.Conversations.V3;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -16,20 +15,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ConversationsRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The conversations property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Conversations.Conversations.ConversationsRequestBuilder Conversations
-        {
-            get => new global::Soenneker.HubSpot.OpenApiClient.Conversations.Conversations.ConversationsRequestBuilder(PathParameters, RequestAdapter);
-        }
         /// <summary>The customChannels property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Conversations.CustomChannels.CustomChannelsRequestBuilder CustomChannels
         {
             get => new global::Soenneker.HubSpot.OpenApiClient.Conversations.CustomChannels.CustomChannelsRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The v3 property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.V3RequestBuilder V3
-        {
-            get => new global::Soenneker.HubSpot.OpenApiClient.Conversations.V3.V3RequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Conversations.ConversationsRequestBuilder"/> and sets the default values.

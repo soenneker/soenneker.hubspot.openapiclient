@@ -7,15 +7,14 @@ using System.IO;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>
-    /// Data structure representing the to fields of the email.
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+    #pragma warning disable CS1591
     public partial class PublicEmailToDetails : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Data structure representing lists of IDs that should be included and excluded.</summary>
+        /// <summary>The contactIds property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailRecipients? ContactIds { get; set; }
@@ -23,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailRecipients ContactIds { get; set; }
 #endif
-        /// <summary>Data structure representing lists of IDs that should be included and excluded.</summary>
+        /// <summary>The contactIlsLists property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailRecipients? ContactIlsLists { get; set; }
@@ -31,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailRecipients ContactIlsLists { get; set; }
 #endif
-        /// <summary>Data structure representing lists of IDs that should be included and excluded.</summary>
+        /// <summary>The contactLists property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailRecipients? ContactLists { get; set; }

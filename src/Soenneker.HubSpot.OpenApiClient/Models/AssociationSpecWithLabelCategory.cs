@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>The category of the association, such as HUBSPOT_DEFINED, USER_DEFINED, or INTEGRATOR_DEFINED.</summary>
+    /// <summary>The category of the association, such as &apos;HUBSPOT_DEFINED&apos;, &apos;USER_DEFINED&apos;, or &apos;INTEGRATOR_DEFINED&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum AssociationSpecWithLabelCategory
     {

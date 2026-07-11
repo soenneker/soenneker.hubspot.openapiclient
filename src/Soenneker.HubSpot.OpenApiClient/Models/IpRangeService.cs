@@ -19,6 +19,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         #pragma warning disable CS1591
         Email,
         #pragma warning restore CS1591
+        [EnumMember(Value = "TEST_SERVICE")]
+        #pragma warning disable CS1591
+        TestService,
+        #pragma warning restore CS1591
         [EnumMember(Value = "WEB_SCRAPING")]
         #pragma warning disable CS1591
         WebScraping,

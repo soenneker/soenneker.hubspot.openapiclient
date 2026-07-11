@@ -14,13 +14,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Determines if objects without a set value should be included.</summary>
+        /// <summary>Specifies whether objects without a set value should be included in the operation.</summary>
         public bool? IncludeObjectsWithNoValueSet { get; set; }
-        /// <summary>Specifies the lower limit for the date range.</summary>
+        /// <summary>The lower limit of the date range for the operation.</summary>
         public long? LowerBound { get; set; }
-        /// <summary>Specifies the type of operation, which is &apos;RANGED_DATE&apos;.</summary>
+        /// <summary>Specifies the type of operation (RANGED_DATE).</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRangedDatePropertyOperationOperationType? OperationType { get; set; }
-        /// <summary>Defines the operator used in the date range operation.</summary>
+        /// <summary>Defines the operation to be applied in the ranged date property operation (IS_BETWEEN, IS_NOT_BETWEEN).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Operator { get; set; }
@@ -28,9 +28,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Operator { get; set; }
 #endif
-        /// <summary>Indicates whether time zone conversion is needed.</summary>
+        /// <summary>Indicates whether the operation requires conversion to a different time zone.</summary>
         public bool? RequiresTimeZoneConversion { get; set; }
-        /// <summary>Specifies the upper limit for the date range.</summary>
+        /// <summary>The upper limit of the date range for the operation.</summary>
         public long? UpperBound { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicRangedDatePropertyOperation"/> and sets the default values.

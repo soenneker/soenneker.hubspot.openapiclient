@@ -36,7 +36,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public int? NumErrors { get; set; }
         /// <summary>Timestamp of when the task was requested.</summary>
         public DateTimeOffset? RequestedAt { get; set; }
-        /// <summary>File</summary>
+        /// <summary>The result property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.FileObject? Result { get; set; }

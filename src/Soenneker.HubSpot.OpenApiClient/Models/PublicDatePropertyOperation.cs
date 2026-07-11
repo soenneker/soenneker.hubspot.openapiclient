@@ -14,11 +14,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The day component of the date operation.</summary>
+        /// <summary>The day of the month for the date operation.</summary>
         public int? Day { get; set; }
-        /// <summary>Indicates whether objects without a value set should be included.</summary>
+        /// <summary>Indicates whether objects with no value set for the property should be included.</summary>
         public bool? IncludeObjectsWithNoValueSet { get; set; }
-        /// <summary>The month component of the date operation.</summary>
+        /// <summary>The month for the date operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Month { get; set; }
@@ -26,9 +26,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Month { get; set; }
 #endif
-        /// <summary>Specifies the type of operation, which defaults to &apos;DATE&apos;.</summary>
+        /// <summary>Specifies the type of operation (DATE).</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicDatePropertyOperationOperationType? OperationType { get; set; }
-        /// <summary>Defines the operator used in the date property operation.</summary>
+        /// <summary>Defines the operation to be applied in the date property operation (IS_LESS_THAN_X_DAYS_AGO, IS_MORE_THAN_X_DAYS_AGO, IS_LESS_THAN_X_DAYS_FROM_NOW, IS_MORE_THAN_X_DAYS_FROM_NOW).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Operator { get; set; }
@@ -36,7 +36,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Operator { get; set; }
 #endif
-        /// <summary>The year component of the date operation.</summary>
+        /// <summary>The year for the date operation.</summary>
         public int? Year { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicDatePropertyOperation"/> and sets the default values.

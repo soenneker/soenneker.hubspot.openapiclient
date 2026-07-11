@@ -17,10 +17,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The contactProfile property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsContactProfile2? ContactProfile { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ContactProfile? ContactProfile { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsContactProfile2 ContactProfile { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ContactProfile ContactProfile { get; set; }
 #endif
         /// <summary>The type property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.ContactAttachmentType? Type { get; set; }
@@ -49,7 +49,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "contactProfile", n => { ContactProfile = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsContactProfile2>(global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsContactProfile2.CreateFromDiscriminatorValue); } },
+                { "contactProfile", n => { ContactProfile = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ContactProfile>(global::Soenneker.HubSpot.OpenApiClient.Models.ContactProfile.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ContactAttachmentType>(); } },
             };
         }
@@ -60,7 +60,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsContactProfile2>("contactProfile", ContactProfile);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ContactProfile>("contactProfile", ContactProfile);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ContactAttachmentType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

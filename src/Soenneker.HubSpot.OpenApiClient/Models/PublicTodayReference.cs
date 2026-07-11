@@ -14,15 +14,15 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The hour component of the time in the today reference.</summary>
+        /// <summary>The hour component of the current day reference.</summary>
         public int? Hour { get; set; }
-        /// <summary>The millisecond component of the time in the today reference.</summary>
+        /// <summary>The millisecond component of the current day reference.</summary>
         public int? Millisecond { get; set; }
-        /// <summary>The minute component of the time in the today reference.</summary>
+        /// <summary>The minute component of the current day reference.</summary>
         public int? Minute { get; set; }
-        /// <summary>Indicates the type of reference, defaulting to &apos;TODAY&apos;.</summary>
+        /// <summary>Indicates the type of reference (TODAY).</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicTodayReferenceReferenceType? ReferenceType { get; set; }
-        /// <summary>The second component of the time in the today reference.</summary>
+        /// <summary>The second component of the current day reference.</summary>
         public int? Second { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicTodayReference"/> and sets the default values.

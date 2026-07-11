@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>Specifies the operator used in the email event filter, with accepted values being BOUNCED, LINK_CLICKED, MARKED_SPAM, OPENED, OPENED_BUT_LINK_NOT_CLICKED, OPENED_BUT_NOT_REPLIED, RECEIVED, RECEIVED_BUT_NOT_OPENED, REPLIED, SENT, SENT_BUT_LINK_NOT_CLICKED, SENT_BUT_NOT_RECEIVED, UNSUBSCRIBED.</summary>
+    /// <summary>Defines the operation to be applied within the filter (BOUNCED, LINK_CLICKED, MARKED_SPAM, OPENED, OPENED_BUT_LINK_NOT_CLICKED, OPENED_BUT_NOT_REPLIED, RECEIVED, RECEIVED_BUT_NOT_OPENED, REPLIED, SENT, SENT_BUT_LINK_NOT_CLICKED, SENT_BUT_NOT_RECEIVED, UNSUBSCRIBED).</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PublicEmailEventFilterOperator
     {

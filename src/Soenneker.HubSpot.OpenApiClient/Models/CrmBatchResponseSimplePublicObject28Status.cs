@@ -3,19 +3,10 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>&quot;The status of the batch processing request: \&quot;PENDING\&quot;, \&quot;PROCESSING\&quot;, \&quot;CANCELLED\&quot;, or \&quot;COMPLETE\&quot;&quot;</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum CrmBatchResponseSimplePublicObject28Status
-    #pragma warning restore CS1591
     {
-        [EnumMember(Value = "PENDING")]
-        #pragma warning disable CS1591
-        Pending,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "PROCESSING")]
-        #pragma warning disable CS1591
-        Processing,
-        #pragma warning restore CS1591
         [EnumMember(Value = "CANCELED")]
         #pragma warning disable CS1591
         Canceled,
@@ -23,6 +14,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         [EnumMember(Value = "COMPLETE")]
         #pragma warning disable CS1591
         Complete,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "PENDING")]
+        #pragma warning disable CS1591
+        Pending,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "PROCESSING")]
+        #pragma warning disable CS1591
+        Processing,
         #pragma warning restore CS1591
     }
 }

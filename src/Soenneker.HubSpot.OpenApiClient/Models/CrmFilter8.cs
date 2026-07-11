@@ -7,14 +7,15 @@ using System.IO;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>
+    /// Defines a single condition for searching CRM objects, specifying the property to filter on, the operator to use (such as equals, greater than, or contains), and the value(s) to compare against. 
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public partial class CrmFilter8 : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The highValue property</summary>
+        /// <summary>The upper boundary value when using ranged-based filters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? HighValue { get; set; }
@@ -22,9 +23,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string HighValue { get; set; }
 #endif
-        /// <summary>null</summary>
+        /// <summary>The comparison operator used in the filter, such as &quot;EQ&quot; or &quot;GT&quot;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilter8Operator? Operator { get; set; }
-        /// <summary>The propertyName property</summary>
+        /// <summary>The name of the property to apply the filter to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PropertyName { get; set; }
@@ -32,7 +33,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string PropertyName { get; set; }
 #endif
-        /// <summary>The value property</summary>
+        /// <summary>The value to match against the property.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Value { get; set; }
@@ -40,7 +41,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Value { get; set; }
 #endif
-        /// <summary>The values property</summary>
+        /// <summary>The values to match against the property.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Values { get; set; }

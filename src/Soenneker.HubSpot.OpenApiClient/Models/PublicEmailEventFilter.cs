@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The identifier for the application associated with the email event.</summary>
+        /// <summary>The ID of the application associated with the email event filter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AppId { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ClickUrl { get; set; }
 #endif
-        /// <summary>The identifier for the email associated with the event.</summary>
+        /// <summary>The ID of the email associated with the event filter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EmailId { get; set; }
@@ -38,9 +38,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string EmailId { get; set; }
 #endif
-        /// <summary>Indicates the type of filter, which defaults to EMAIL_EVENT.</summary>
+        /// <summary>Indicates the type of filter (EMAIL_EVENT).</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailEventFilterFilterType? FilterType { get; set; }
-        /// <summary>Specifies the level of the email event filter.</summary>
+        /// <summary>Specifies the level of the email event, such as EMAIL_API_CAMPAIGN_GROUP.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Level { get; set; }
@@ -48,9 +48,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Level { get; set; }
 #endif
-        /// <summary>Specifies the operator used in the email event filter, with accepted values being BOUNCED, LINK_CLICKED, MARKED_SPAM, OPENED, OPENED_BUT_LINK_NOT_CLICKED, OPENED_BUT_NOT_REPLIED, RECEIVED, RECEIVED_BUT_NOT_OPENED, REPLIED, SENT, SENT_BUT_LINK_NOT_CLICKED, SENT_BUT_NOT_RECEIVED, UNSUBSCRIBED.</summary>
+        /// <summary>Defines the operation to be applied within the filter (BOUNCED, LINK_CLICKED, MARKED_SPAM, OPENED, OPENED_BUT_LINK_NOT_CLICKED, OPENED_BUT_NOT_REPLIED, RECEIVED, RECEIVED_BUT_NOT_OPENED, REPLIED, SENT, SENT_BUT_LINK_NOT_CLICKED, SENT_BUT_NOT_RECEIVED, UNSUBSCRIBED).</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailEventFilterOperator? Operator { get; set; }
-        /// <summary>Specifies the criteria for refining email events, using one of several possible schemas such as PublicNumOccurrencesRefineBy or PublicRelativeRangedTimestampRefineBy.</summary>
+        /// <summary>Specifies the criteria for refining the filter by pruning.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailEventFilterPruningRefineBy? PruningRefineBy { get; set; }

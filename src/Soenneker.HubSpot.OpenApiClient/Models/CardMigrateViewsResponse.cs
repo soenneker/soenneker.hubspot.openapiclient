@@ -16,7 +16,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The timestamp for when the migration ended.</summary>
         public long? EndedAt { get; set; }
-        /// <summary>A human readable message describing the error along with remediation steps where appropriate</summary>
+        /// <summary>A human readable message describing the progress of the migration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Message { get; set; }

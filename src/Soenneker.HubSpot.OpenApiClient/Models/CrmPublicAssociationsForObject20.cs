@@ -17,18 +17,18 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Contains the Id of a Public Object</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId22? To { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId23? To { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId22 To { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId23 To { get; set; }
 #endif
         /// <summary>The types property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec22>? Types { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec24>? Types { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec22> Types { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec24> Types { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationsForObject20"/> and sets the default values.
@@ -55,8 +55,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "to", n => { To = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId22>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId22.CreateFromDiscriminatorValue); } },
-                { "types", n => { Types = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec22>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec22.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "to", n => { To = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId23>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId23.CreateFromDiscriminatorValue); } },
+                { "types", n => { Types = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec24>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec24.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -66,8 +66,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId22>("to", To);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec22>("types", Types);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId23>("to", To);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec24>("types", Types);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

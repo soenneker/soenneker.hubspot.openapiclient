@@ -14,19 +14,19 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The day component of the fiscal year reference, represented as an integer.</summary>
+        /// <summary>The day component of the fiscal year reference.</summary>
         public int? Day { get; set; }
-        /// <summary>The hour component of the time in the fiscal year reference.</summary>
+        /// <summary>The hour component of the fiscal year reference.</summary>
         public int? Hour { get; set; }
-        /// <summary>The millisecond component of the time in the fiscal year reference.</summary>
+        /// <summary>The millisecond component of the fiscal year reference.</summary>
         public int? Millisecond { get; set; }
-        /// <summary>The minute component of the time in the fiscal year reference.</summary>
+        /// <summary>The minute component of the fiscal year reference.</summary>
         public int? Minute { get; set; }
-        /// <summary>The month component of the fiscal year reference, represented as an integer.</summary>
+        /// <summary>The month component of the fiscal year reference.</summary>
         public int? Month { get; set; }
-        /// <summary>Indicates the type of reference, defaulting to &apos;FISCAL_YEAR&apos;.</summary>
+        /// <summary>Indicates the type of reference (FISCAL_YEAR).</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicFiscalYearReferenceReferenceType? ReferenceType { get; set; }
-        /// <summary>The second component of the time in the fiscal year reference.</summary>
+        /// <summary>The second component of the fiscal year reference.</summary>
         public int? Second { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicFiscalYearReference"/> and sets the default values.

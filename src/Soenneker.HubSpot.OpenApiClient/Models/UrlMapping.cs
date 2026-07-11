@@ -14,19 +14,19 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The cdnPurgeEmbargoTime property</summary>
+        /// <summary>A Unix timestamp in milliseconds indicating the embargo time for CDN purge related to the URL mapping.</summary>
         public long? CdnPurgeEmbargoTime { get; set; }
-        /// <summary>The contentGroupId property</summary>
+        /// <summary>A 64-bit integer representing the content group associated with the URL mapping.</summary>
         public long? ContentGroupId { get; set; }
-        /// <summary>The cosObjectType property</summary>
+        /// <summary>A string representing the type of content object associated with the URL mapping. Valid values include various content types such as &apos;CONTENT&apos;, &apos;LAYOUT&apos;, &apos;FILE&apos;, etc.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.UrlMappingCosObjectType? CosObjectType { get; set; }
-        /// <summary>The created property</summary>
+        /// <summary>A Unix timestamp in milliseconds indicating when the URL mapping was created.</summary>
         public long? Created { get; set; }
-        /// <summary>The createdById property</summary>
+        /// <summary>The identifier of the user who created the URL mapping.</summary>
         public int? CreatedById { get; set; }
-        /// <summary>The deletedAt property</summary>
+        /// <summary>A Unix timestamp in milliseconds indicating when the URL mapping was deleted.</summary>
         public long? DeletedAt { get; set; }
-        /// <summary>The destination URL, where the target URL should be redirected if it matches the `routePrefix`.</summary>
+        /// <summary>The destination URL to which the routePrefix is redirected.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Destination { get; set; }
@@ -34,27 +34,27 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Destination { get; set; }
 #endif
-        /// <summary>The unique ID of this URL redirect.</summary>
+        /// <summary>The unique identifier for the URL mapping, represented as a 64-bit integer.</summary>
         public long? Id { get; set; }
-        /// <summary>The internallyCreated property</summary>
+        /// <summary>A boolean indicating if the URL mapping was created internally by the system.</summary>
         public bool? InternallyCreated { get; set; }
-        /// <summary>The isActive property</summary>
+        /// <summary>A boolean indicating if the URL mapping is currently active.</summary>
         public bool? IsActive { get; set; }
-        /// <summary>Whether the `routePrefix` should match on the entire URL, including the domain.</summary>
+        /// <summary>A boolean indicating if the full URL should be matched.</summary>
         public bool? IsMatchFullUrl { get; set; }
-        /// <summary>Whether the `routePrefix` should match on the entire URL path, including the query string.</summary>
+        /// <summary>A boolean indicating if the query string should be matched.</summary>
         public bool? IsMatchQueryString { get; set; }
-        /// <summary>Whether the URL redirect mapping should apply only if a live page on the URL isn&apos;t found. If False, the URL redirect mapping will take precedence over any existing page.</summary>
+        /// <summary>A boolean indicating if the mapping should only be applied after a 404 Not Found response.</summary>
         public bool? IsOnlyAfterNotFound { get; set; }
-        /// <summary>Whether the `routePrefix` should match based on pattern.</summary>
+        /// <summary>A boolean indicating if the routePrefix is a pattern.</summary>
         public bool? IsPattern { get; set; }
-        /// <summary>Whether the `routePrefix` should match both HTTP and HTTPS protocols.</summary>
+        /// <summary>A boolean indicating if the mapping should ignore the URL protocol (http/https).</summary>
         public bool? IsProtocolAgnostic { get; set; }
-        /// <summary>The isRegex property</summary>
+        /// <summary>A boolean indicating if the routePrefix should be treated as a regular expression.</summary>
         public bool? IsRegex { get; set; }
-        /// <summary>Whether a trailing slash will be ignored.</summary>
+        /// <summary>A boolean indicating if the trailing slash in the URL is optional.</summary>
         public bool? IsTrailingSlashOptional { get; set; }
-        /// <summary>The label property</summary>
+        /// <summary>A label for the URL mapping.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Label { get; set; }
@@ -64,7 +64,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>The lastUsedAt property</summary>
         public long? LastUsedAt { get; set; }
-        /// <summary>The name property</summary>
+        /// <summary>The name of the URL mapping.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -72,7 +72,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>The note property</summary>
+        /// <summary>A string containing notes about the URL mapping.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Note { get; set; }
@@ -80,13 +80,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Note { get; set; }
 #endif
-        /// <summary>The portalId property</summary>
+        /// <summary>The identifier for the HubSpot portal associated with this URL mapping.</summary>
         public int? PortalId { get; set; }
-        /// <summary>Used to prioritize URL redirection. If a given URL matches more than one redirect, the one with the **lower** precedence will be used.</summary>
+        /// <summary>An integer representing the precedence of the URL mapping, used to determine order of evaluation.</summary>
         public int? Precedence { get; set; }
-        /// <summary>&quot;The type of redirect to create. Options include: 301 (permanent), 302 (temporary), or 305 (proxy). Find more details [here](https://knowledge.hubspot.com/cos-general/how-to-redirect-a-hubspot-page).&quot;</summary>
+        /// <summary>An integer representing the style of redirection used.</summary>
         public int? RedirectStyle { get; set; }
-        /// <summary>The target incoming URL, path, or pattern to match for redirection.</summary>
+        /// <summary>The prefix of the URL path that is being mapped.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RoutePrefix { get; set; }
@@ -94,9 +94,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string RoutePrefix { get; set; }
 #endif
-        /// <summary>The updated property</summary>
+        /// <summary>A Unix timestamp in milliseconds indicating when the URL mapping was last updated.</summary>
         public long? Updated { get; set; }
-        /// <summary>The updatedById property</summary>
+        /// <summary>The identifier of the user who last updated the URL mapping.</summary>
         public int? UpdatedById { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.UrlMapping"/> and sets the default values.

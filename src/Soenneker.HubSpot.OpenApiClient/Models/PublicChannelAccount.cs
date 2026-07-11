@@ -12,7 +12,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     public partial class PublicChannelAccount : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>Whether the channel account is turned on.</summary>
+        /// <summary>The active property</summary>
         public bool? Active { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public DateTimeOffset? ArchivedAt { get; set; }
         /// <summary>The authorized property</summary>
         public bool? Authorized { get; set; }
-        /// <summary>The ID of the channel that the channel account is an instance of.</summary>
+        /// <summary>The channelId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ChannelId { get; set; }
@@ -40,7 +40,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicDeliveryIdentifier DeliveryIdentifier { get; set; }
 #endif
-        /// <summary>The ID of the channel account.</summary>
+        /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }
@@ -48,7 +48,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>The ID of the conversations inbox that contains the channel account.</summary>
+        /// <summary>The inboxId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? InboxId { get; set; }
@@ -56,7 +56,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string InboxId { get; set; }
 #endif
-        /// <summary>The name of the channel account.</summary>
+        /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }

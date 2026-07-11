@@ -3,9 +3,14 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.HubSpot.OpenApiClient.Cms.AuditLogs;
+using Soenneker.HubSpot.OpenApiClient.Cms.BlogSettings;
+using Soenneker.HubSpot.OpenApiClient.Cms.Blogs;
+using Soenneker.HubSpot.OpenApiClient.Cms.Domains;
+using Soenneker.HubSpot.OpenApiClient.Cms.Hubdb;
 using Soenneker.HubSpot.OpenApiClient.Cms.Pages;
+using Soenneker.HubSpot.OpenApiClient.Cms.SiteSearch;
+using Soenneker.HubSpot.OpenApiClient.Cms.SourceCode;
 using Soenneker.HubSpot.OpenApiClient.Cms.UrlRedirects;
-using Soenneker.HubSpot.OpenApiClient.Cms.V3;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -23,20 +28,45 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms
         {
             get => new global::Soenneker.HubSpot.OpenApiClient.Cms.AuditLogs.AuditLogsRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The blogs property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Cms.Blogs.BlogsRequestBuilder Blogs
+        {
+            get => new global::Soenneker.HubSpot.OpenApiClient.Cms.Blogs.BlogsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The blogSettings property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Cms.BlogSettings.BlogSettingsRequestBuilder BlogSettings
+        {
+            get => new global::Soenneker.HubSpot.OpenApiClient.Cms.BlogSettings.BlogSettingsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The domains property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Cms.Domains.DomainsRequestBuilder Domains
+        {
+            get => new global::Soenneker.HubSpot.OpenApiClient.Cms.Domains.DomainsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The hubdb property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Cms.Hubdb.HubdbRequestBuilder Hubdb
+        {
+            get => new global::Soenneker.HubSpot.OpenApiClient.Cms.Hubdb.HubdbRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The pages property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Cms.Pages.PagesRequestBuilder Pages
         {
             get => new global::Soenneker.HubSpot.OpenApiClient.Cms.Pages.PagesRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The siteSearch property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Cms.SiteSearch.SiteSearchRequestBuilder SiteSearch
+        {
+            get => new global::Soenneker.HubSpot.OpenApiClient.Cms.SiteSearch.SiteSearchRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The sourceCode property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Cms.SourceCode.SourceCodeRequestBuilder SourceCode
+        {
+            get => new global::Soenneker.HubSpot.OpenApiClient.Cms.SourceCode.SourceCodeRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The urlRedirects property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Cms.UrlRedirects.UrlRedirectsRequestBuilder UrlRedirects
         {
             get => new global::Soenneker.HubSpot.OpenApiClient.Cms.UrlRedirects.UrlRedirectsRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The v3 property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Cms.V3.V3RequestBuilder V3
-        {
-            get => new global::Soenneker.HubSpot.OpenApiClient.Cms.V3.V3RequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Cms.CmsRequestBuilder"/> and sets the default values.

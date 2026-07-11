@@ -7,19 +7,18 @@ using System.IO;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>
-    /// Request to create a new webhook subscription for monitoring specific events. Each subscription defines which event type to listen for and whether to monitor all events of that type or specific property changes.
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+    #pragma warning disable CS1591
     public partial class SubscriptionCreateRequest : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
-        /// <summary>Determines if the subscription is active or paused. Defaults to false.</summary>
+        /// <summary>A boolean indicating whether the subscription is active.</summary>
         public bool? Active { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Type of event to listen for. Can be one of `create`, `delete`, `deletedForPrivacy`, or `propertyChange`.</summary>
+        /// <summary>A string representing the type of event to subscribe to. Valid values include various property changes, creations, deletions, merges, restorations, association changes, and event completions.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionCreateRequestEventType? EventType { get; set; }
-        /// <summary>The name of the event to listen for. This is used with custom objects to specify custom event types beyond the standard eventType enum values.</summary>
+        /// <summary>A string providing a human-readable name for the event type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EventTypeName { get; set; }
@@ -27,7 +26,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string EventTypeName { get; set; }
 #endif
-        /// <summary>The ID of the object type for the subscription. This can be a standard CRM object (e.g., &apos;contact&apos;, &apos;company&apos;, &apos;deal&apos;) or a custom object ID for custom object subscriptions.</summary>
+        /// <summary>A string representing the ID of the object type associated with the subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ObjectTypeId { get; set; }
@@ -35,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ObjectTypeId { get; set; }
 #endif
-        /// <summary>The internal name of the property to monitor for changes. Only applies when `eventType` is `propertyChange`.</summary>
+        /// <summary>A string indicating the specific property name related to the event type, if applicable.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PropertyName { get; set; }

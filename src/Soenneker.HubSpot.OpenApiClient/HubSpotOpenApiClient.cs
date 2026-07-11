@@ -15,21 +15,22 @@ using Soenneker.HubSpot.OpenApiClient.CommunicationPreferences;
 using Soenneker.HubSpot.OpenApiClient.Conversations;
 using Soenneker.HubSpot.OpenApiClient.Crm;
 using Soenneker.HubSpot.OpenApiClient.CrmObjectSchemas;
+using Soenneker.HubSpot.OpenApiClient.DataStudio;
+using Soenneker.HubSpot.OpenApiClient.DealSplits;
 using Soenneker.HubSpot.OpenApiClient.Events;
 using Soenneker.HubSpot.OpenApiClient.FeatureFlags;
 using Soenneker.HubSpot.OpenApiClient.Files;
-using Soenneker.HubSpot.OpenApiClient.ForecastSettings;
+using Soenneker.HubSpot.OpenApiClient.Integrators;
 using Soenneker.HubSpot.OpenApiClient.Marketing;
 using Soenneker.HubSpot.OpenApiClient.MediaBridge;
 using Soenneker.HubSpot.OpenApiClient.Meta;
 using Soenneker.HubSpot.OpenApiClient.Oauth;
-using Soenneker.HubSpot.OpenApiClient.PaymentsSubscriptions;
 using Soenneker.HubSpot.OpenApiClient.Scheduler;
 using Soenneker.HubSpot.OpenApiClient.Settings;
 using Soenneker.HubSpot.OpenApiClient.TaxRates;
 using Soenneker.HubSpot.OpenApiClient.UrlMappings;
 using Soenneker.HubSpot.OpenApiClient.VisitorIdentification;
-using Soenneker.HubSpot.OpenApiClient.Webhooks;
+using Soenneker.HubSpot.OpenApiClient.WebhooksJournal;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -87,6 +88,16 @@ namespace Soenneker.HubSpot.OpenApiClient
         {
             get => new global::Soenneker.HubSpot.OpenApiClient.CrmObjectSchemas.CrmObjectSchemasRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The dataStudio property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.DataStudio.DataStudioRequestBuilder DataStudio
+        {
+            get => new global::Soenneker.HubSpot.OpenApiClient.DataStudio.DataStudioRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The dealSplits property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.DealSplits.DealSplitsRequestBuilder DealSplits
+        {
+            get => new global::Soenneker.HubSpot.OpenApiClient.DealSplits.DealSplitsRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The events property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Events.EventsRequestBuilder Events
         {
@@ -102,10 +113,10 @@ namespace Soenneker.HubSpot.OpenApiClient
         {
             get => new global::Soenneker.HubSpot.OpenApiClient.Files.FilesRequestBuilder(PathParameters, RequestAdapter);
         }
-        /// <summary>The forecastSettings property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.ForecastSettings.ForecastSettingsRequestBuilder ForecastSettings
+        /// <summary>The integrators property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Integrators.IntegratorsRequestBuilder Integrators
         {
-            get => new global::Soenneker.HubSpot.OpenApiClient.ForecastSettings.ForecastSettingsRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.HubSpot.OpenApiClient.Integrators.IntegratorsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The marketing property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Marketing.MarketingRequestBuilder Marketing
@@ -126,11 +137,6 @@ namespace Soenneker.HubSpot.OpenApiClient
         public global::Soenneker.HubSpot.OpenApiClient.Oauth.OauthRequestBuilder Oauth
         {
             get => new global::Soenneker.HubSpot.OpenApiClient.Oauth.OauthRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The paymentsSubscriptions property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.PaymentsSubscriptions.PaymentsSubscriptionsRequestBuilder PaymentsSubscriptions
-        {
-            get => new global::Soenneker.HubSpot.OpenApiClient.PaymentsSubscriptions.PaymentsSubscriptionsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The scheduler property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Scheduler.SchedulerRequestBuilder Scheduler
@@ -157,10 +163,10 @@ namespace Soenneker.HubSpot.OpenApiClient
         {
             get => new global::Soenneker.HubSpot.OpenApiClient.VisitorIdentification.VisitorIdentificationRequestBuilder(PathParameters, RequestAdapter);
         }
-        /// <summary>The webhooks property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Webhooks.WebhooksRequestBuilder Webhooks
+        /// <summary>The webhooksJournal property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.WebhooksJournal.WebhooksJournalRequestBuilder WebhooksJournal
         {
-            get => new global::Soenneker.HubSpot.OpenApiClient.Webhooks.WebhooksRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.HubSpot.OpenApiClient.WebhooksJournal.WebhooksJournalRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.HubSpotOpenApiClient"/> and sets the default values.

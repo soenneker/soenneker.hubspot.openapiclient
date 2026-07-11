@@ -7,11 +7,10 @@ using System.IO;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>
-    /// AB testing related data. This property is only returned for AB type emails.
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+    #pragma warning disable CS1591
     public partial class PublicEmailTestingDetails : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
         /// <summary>Version of the email that should be sent if there are too few recipients to conduct an AB test.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetailsAbSampleSizeDefault? AbSampleSizeDefault { get; set; }

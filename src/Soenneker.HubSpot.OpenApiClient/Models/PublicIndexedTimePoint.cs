@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Specifies the reference point for the index, which can be one of several predefined time references such as NOW, TODAY, or specific fiscal periods.</summary>
+        /// <summary>Specifies the reference point in time for the indexed time point.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicIndexedTimePointIndexReference? IndexReference { get; set; }
@@ -30,9 +30,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicIndexOffset Offset { get; set; }
 #endif
-        /// <summary>Indicates the type of time point, which defaults to INDEXED.</summary>
+        /// <summary>Defines the type of time (INDEXED).</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicIndexedTimePointTimeType? TimeType { get; set; }
-        /// <summary>Specifies the source of the time zone information for the indexed time point.</summary>
+        /// <summary>Specifies the source of the time zone information for the indexed time point (CUSTOM, USER, PORTAL).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TimezoneSource { get; set; }
@@ -40,7 +40,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string TimezoneSource { get; set; }
 #endif
-        /// <summary>Defines the time zone identifier used for the indexed time point.</summary>
+        /// <summary>Indicates the identifier for the time zone associated with the indexed time point.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ZoneId { get; set; }

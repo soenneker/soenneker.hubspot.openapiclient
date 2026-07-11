@@ -2,7 +2,8 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
-using Soenneker.HubSpot.OpenApiClient.Automation.V4;
+using Soenneker.HubSpot.OpenApiClient.Automation.Actions;
+using Soenneker.HubSpot.OpenApiClient.Automation.Sequences;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -15,10 +16,15 @@ namespace Soenneker.HubSpot.OpenApiClient.Automation
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AutomationRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The v4 property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Automation.V4.V4RequestBuilder V4
+        /// <summary>The actions property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Automation.Actions.ActionsRequestBuilder Actions
         {
-            get => new global::Soenneker.HubSpot.OpenApiClient.Automation.V4.V4RequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.HubSpot.OpenApiClient.Automation.Actions.ActionsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The sequences property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Automation.Sequences.SequencesRequestBuilder Sequences
+        {
+            get => new global::Soenneker.HubSpot.OpenApiClient.Automation.Sequences.SequencesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Automation.AutomationRequestBuilder"/> and sets the default values.

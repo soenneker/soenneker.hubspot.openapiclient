@@ -2,7 +2,7 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
-using Soenneker.HubSpot.OpenApiClient.Crm.Objects.V3;
+using Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -15,10 +15,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Objects
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ObjectsRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The v3 property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.V3.V3RequestBuilder V3
+        /// <summary>The TwoZeroTwoSixZeroThree property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree.TwoZeroTwoSixZeroThreeRequestBuilder TwoZeroTwoSixZeroThree
         {
-            get => new global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.V3.V3RequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree.TwoZeroTwoSixZeroThreeRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.ObjectsRequestBuilder"/> and sets the default values.

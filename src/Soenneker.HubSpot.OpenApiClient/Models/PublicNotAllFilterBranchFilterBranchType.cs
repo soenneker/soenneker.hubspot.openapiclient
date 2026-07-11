@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>Indicates the type of filter branch, defaulting to NOT_ALL.</summary>
+    /// <summary>The type of the filter branch (NOT_ALL).</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PublicNotAllFilterBranchFilterBranchType
     {

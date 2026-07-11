@@ -7,16 +7,17 @@ using System.IO;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>
+    /// Defines the type, direction, and details of the relationship between two CRM objects.
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public partial class CrmAssociationSpec10 : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The associationCategory property</summary>
+        /// <summary>The category of the association, such as &quot;HUBSPOT_DEFINED&quot;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec10AssociationCategory? AssociationCategory { get; set; }
-        /// <summary>The associationTypeId property</summary>
+        /// <summary>The ID representing the specific type of association.</summary>
         public int? AssociationTypeId { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec10"/> and sets the default values.

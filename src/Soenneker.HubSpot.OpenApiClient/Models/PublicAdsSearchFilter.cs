@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Specifies the ad network associated with the ads search filter.</summary>
+        /// <summary>Ad network  (ADWORDS, FACEBOOK, LINKEDIN, ALL)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AdNetwork { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string AdNetwork { get; set; }
 #endif
-        /// <summary>Specifies the type of entity involved in the ads search filter.</summary>
+        /// <summary>Type of ad entity (KEYWORD, ADGROUP, AD, CAMPAIGN)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EntityType { get; set; }
@@ -30,9 +30,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string EntityType { get; set; }
 #endif
-        /// <summary>Indicates the type of filter, which defaults to ADS_SEARCH.</summary>
+        /// <summary>Type of the filter (ADS_SEARCH)</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAdsSearchFilterFilterType? FilterType { get; set; }
-        /// <summary>Defines the operator used in the ads search filter.</summary>
+        /// <summary>Operator to be applied (CONTAINS, IS_EQUAL_TO, ENDS_WITH, STARTS_WITH, IS_KNOWN)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Operator { get; set; }
@@ -48,7 +48,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<string> SearchTerms { get; set; }
 #endif
-        /// <summary>Indicates the type of search terms used in the ads search filter.</summary>
+        /// <summary>Search term to match an ad</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SearchTermType { get; set; }

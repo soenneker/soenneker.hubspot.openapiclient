@@ -7,14 +7,15 @@ using System.IO;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>
+    /// Input data for merging two records.
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public partial class CrmPublicMergeInput2 : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The objectIdToMerge property</summary>
+        /// <summary>The object ID of the record that the merge will not set as the current value after the merge.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ObjectIdToMerge { get; set; }
@@ -22,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ObjectIdToMerge { get; set; }
 #endif
-        /// <summary>The primaryObjectId property</summary>
+        /// <summary>The object ID of the record that the merge will generally set as the current value after the merge.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PrimaryObjectId { get; set; }

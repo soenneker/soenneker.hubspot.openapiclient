@@ -15,15 +15,15 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The timestamp when the batch process was completed, in ISO 8601 format.</summary>
+        /// <summary>The timestamp when the batch processing was completed, in ISO 8601 format.</summary>
         public DateTimeOffset? CompletedAt { get; set; }
         /// <summary>The errors property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError2>? Errors { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError>? Errors { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError2> Errors { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError> Errors { get; set; }
 #endif
         /// <summary>An object containing relevant links related to the batch request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -33,9 +33,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicDefaultAssociationLinksProperty Links { get; set; }
 #endif
-        /// <summary>The number of errors encountered during the batch processing.</summary>
+        /// <summary>The number of errors that occurred during the batch operation.</summary>
         public int? NumErrors { get; set; }
-        /// <summary>The timestamp when the batch process was initiated, in ISO 8601 format.</summary>
+        /// <summary>The timestamp when the batch request was initially made, in ISO 8601 format.</summary>
         public DateTimeOffset? RequestedAt { get; set; }
         /// <summary>The results property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -45,7 +45,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicDefaultAssociation> Results { get; set; }
 #endif
-        /// <summary>The timestamp when the batch process began execution, in ISO 8601 format.</summary>
+        /// <summary>The timestamp when the batch processing began, in ISO 8601 format.</summary>
         public DateTimeOffset? StartedAt { get; set; }
         /// <summary>&quot;The status of the batch processing request: \&quot;PENDING\&quot;, \&quot;PROCESSING\&quot;, \&quot;CANCELLED\&quot;, or \&quot;COMPLETE\&quot;.&quot;</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicDefaultAssociationStatus? Status { get; set; }
@@ -75,7 +75,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "completedAt", n => { CompletedAt = n.GetDateTimeOffsetValue(); } },
-                { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError2>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError2.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "links", n => { Links = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicDefaultAssociationLinksProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicDefaultAssociationLinksProperty.CreateFromDiscriminatorValue); } },
                 { "numErrors", n => { NumErrors = n.GetIntValue(); } },
                 { "requestedAt", n => { RequestedAt = n.GetDateTimeOffsetValue(); } },
@@ -92,7 +92,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDateTimeOffsetValue("completedAt", CompletedAt);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError2>("errors", Errors);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError>("errors", Errors);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicDefaultAssociationLinksProperty>("links", Links);
             writer.WriteIntValue("numErrors", NumErrors);
             writer.WriteDateTimeOffsetValue("requestedAt", RequestedAt);

@@ -3,9 +3,10 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.HubSpot.OpenApiClient.Marketing.Campaigns;
+using Soenneker.HubSpot.OpenApiClient.Marketing.EmailCampaigns;
+using Soenneker.HubSpot.OpenApiClient.Marketing.Emails;
 using Soenneker.HubSpot.OpenApiClient.Marketing.MarketingEvents;
-using Soenneker.HubSpot.OpenApiClient.Marketing.V3;
-using Soenneker.HubSpot.OpenApiClient.Marketing.V4;
+using Soenneker.HubSpot.OpenApiClient.Marketing.Transactional;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -23,20 +24,25 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing
         {
             get => new global::Soenneker.HubSpot.OpenApiClient.Marketing.Campaigns.CampaignsRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The emailCampaigns property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Marketing.EmailCampaigns.EmailCampaignsRequestBuilder EmailCampaigns
+        {
+            get => new global::Soenneker.HubSpot.OpenApiClient.Marketing.EmailCampaigns.EmailCampaignsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The emails property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Marketing.Emails.EmailsRequestBuilder Emails
+        {
+            get => new global::Soenneker.HubSpot.OpenApiClient.Marketing.Emails.EmailsRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The marketingEvents property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Marketing.MarketingEvents.MarketingEventsRequestBuilder MarketingEvents
         {
             get => new global::Soenneker.HubSpot.OpenApiClient.Marketing.MarketingEvents.MarketingEventsRequestBuilder(PathParameters, RequestAdapter);
         }
-        /// <summary>The v3 property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.V3RequestBuilder V3
+        /// <summary>The transactional property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Marketing.Transactional.TransactionalRequestBuilder Transactional
         {
-            get => new global::Soenneker.HubSpot.OpenApiClient.Marketing.V3.V3RequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The v4 property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Marketing.V4.V4RequestBuilder V4
-        {
-            get => new global::Soenneker.HubSpot.OpenApiClient.Marketing.V4.V4RequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.HubSpot.OpenApiClient.Marketing.Transactional.TransactionalRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Marketing.MarketingRequestBuilder"/> and sets the default values.

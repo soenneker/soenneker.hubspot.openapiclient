@@ -14,13 +14,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Indicates whether objects without a value set should be included.</summary>
+        /// <summary>Indicates whether objects with no value set for the property should be included in the operation.</summary>
         public bool? IncludeObjectsWithNoValueSet { get; set; }
-        /// <summary>Specifies the lower limit for the number range.</summary>
+        /// <summary>The lower limit of the number range for the operation.</summary>
         public long? LowerBound { get; set; }
-        /// <summary>Specifies the type of operation, which is &apos;NUMBER_RANGED&apos;.</summary>
+        /// <summary>Specifies the type of operation (NUMBER_RANGED).</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRangedNumberPropertyOperationOperationType? OperationType { get; set; }
-        /// <summary>Defines the operator used in the ranged number property operation.</summary>
+        /// <summary>Defines the operation to be applied in the ranged number property operation (IS_BETWEEN, IS_NOT_BETWEEN).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Operator { get; set; }
@@ -28,7 +28,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Operator { get; set; }
 #endif
-        /// <summary>Specifies the upper limit for the number range.</summary>
+        /// <summary>The upper limit of the number range for the operation.</summary>
         public long? UpperBound { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicRangedNumberPropertyOperation"/> and sets the default values.

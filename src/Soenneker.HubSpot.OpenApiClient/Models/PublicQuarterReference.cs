@@ -16,17 +16,17 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The day component of the quarter reference.</summary>
         public int? Day { get; set; }
-        /// <summary>The hour component of the time in the quarter reference.</summary>
+        /// <summary>The hour component of the quarter reference.</summary>
         public int? Hour { get; set; }
-        /// <summary>The millisecond component of the time in the quarter reference.</summary>
+        /// <summary>The millisecond component of the quarter reference.</summary>
         public int? Millisecond { get; set; }
-        /// <summary>The minute component of the time in the quarter reference.</summary>
+        /// <summary>The minute component of the quarter reference.</summary>
         public int? Minute { get; set; }
         /// <summary>The month component of the quarter reference.</summary>
         public int? Month { get; set; }
-        /// <summary>Indicates the type of reference, defaulting to &apos;QUARTER&apos;.</summary>
+        /// <summary>Indicates the type of reference (QUARTER).</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicQuarterReferenceReferenceType? ReferenceType { get; set; }
-        /// <summary>The second component of the time in the quarter reference.</summary>
+        /// <summary>The second component of the quarter reference.</summary>
         public int? Second { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicQuarterReference"/> and sets the default values.

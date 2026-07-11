@@ -14,11 +14,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Indicates whether objects without a value set should be included.</summary>
+        /// <summary>Indicates whether objects with no value set for the property should be included in the operation.</summary>
         public bool? IncludeObjectsWithNoValueSet { get; set; }
-        /// <summary>Specifies the type of operation, which defaults to &apos;NUMBER&apos;.</summary>
+        /// <summary>Specifies the type of operation (NUMBER).</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicNumberPropertyOperationOperationType? OperationType { get; set; }
-        /// <summary>Defines the operator used in the number property operation.</summary>
+        /// <summary>Defines the operation to be applied in the number property operation (IS_EQUAL_TO, IS_NOT_EQUAL_TO, IS_GREATER_THAN, IS_GREATER_THAN_OR_EQUAL_TO, IS_LESS_THAN, IS_LESS_THAN_OR_EQUAL_TO, HAS_EVER_BEEN_EQUAL_TO, HAS_NEVER_BEEN_EQUAL_TO).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Operator { get; set; }
@@ -26,7 +26,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Operator { get; set; }
 #endif
-        /// <summary>The numeric value involved in the operation.</summary>
+        /// <summary>The numeric value to be used in the operation.</summary>
         public double? Value { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicNumberPropertyOperation"/> and sets the default values.

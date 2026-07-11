@@ -7,15 +7,14 @@ using System.IO;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>
-    /// New or updated webhook settings for an app.
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+    #pragma warning disable CS1591
     public partial class SettingsChangeRequest : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A publicly available URL for HubSpot to call where event payloads will be delivered. This URL must be accessible to receive event notifications.</summary>
+        /// <summary>The URL to which webhook events will be sent. It is a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TargetUrl { get; set; }
@@ -23,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string TargetUrl { get; set; }
 #endif
-        /// <summary>Configuration details for webhook throttling.</summary>
+        /// <summary>The throttling property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.ThrottlingSettings? Throttling { get; set; }

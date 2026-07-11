@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAnyFilterBranchFilterBranchesItem> FilterBranches { get; set; }
 #endif
-        /// <summary>Defines the logical operator used to combine multiple filter branches.</summary>
+        /// <summary>Specifies the logical operator used to combine filters within the branch (NOT_ANY).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FilterBranchOperator { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string FilterBranchOperator { get; set; }
 #endif
-        /// <summary>Indicates the type of filter branch, defaulting to NOT_ANY.</summary>
+        /// <summary>Indicates the type of filter branch (NOT_ANY).</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAnyFilterBranchFilterBranchType? FilterBranchType { get; set; }
         /// <summary>The filters property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

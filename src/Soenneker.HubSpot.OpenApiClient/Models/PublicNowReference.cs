@@ -20,7 +20,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public int? Millisecond { get; set; }
         /// <summary>The minute component of the current time reference.</summary>
         public int? Minute { get; set; }
-        /// <summary>Indicates the type of reference, defaulting to &apos;NOW&apos;.</summary>
+        /// <summary>Indicates the type of reference (NOW).</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicNowReferenceReferenceType? ReferenceType { get; set; }
         /// <summary>The second component of the current time reference.</summary>
         public int? Second { get; set; }

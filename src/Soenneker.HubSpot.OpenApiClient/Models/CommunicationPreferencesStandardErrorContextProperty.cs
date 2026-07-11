@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     /// <summary>
-    /// Additional context-specific information related to the error.
+    /// An object containing additional context about the error condition, with keys as context names and values as arrays of strings.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CommunicationPreferencesStandardErrorContextProperty : IAdditionalDataHolder, IParsable

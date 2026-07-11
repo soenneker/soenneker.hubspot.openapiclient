@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>Type of event to listen for. Can be one of `create`, `delete`, `deletedForPrivacy`, or `propertyChange`.</summary>
+    /// <summary>A string representing the type of event to subscribe to. Valid values include various property changes, creations, deletions, merges, restorations, association changes, and event completions.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum SubscriptionCreateRequestEventType
     {

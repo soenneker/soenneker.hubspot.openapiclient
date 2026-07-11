@@ -14,23 +14,23 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The number of days to offset in the index.</summary>
+        /// <summary>The number of days to offset.</summary>
         public int? Days { get; set; }
-        /// <summary>The number of hours to offset in the index.</summary>
+        /// <summary>The number of hours to offset.</summary>
         public int? Hours { get; set; }
-        /// <summary>The number of milliseconds to offset in the index.</summary>
+        /// <summary>The number of milliseconds to offset.</summary>
         public int? Milliseconds { get; set; }
-        /// <summary>The number of minutes to offset in the index.</summary>
+        /// <summary>The number of minutes to offset.</summary>
         public int? Minutes { get; set; }
-        /// <summary>The number of months to offset in the index.</summary>
+        /// <summary>The number of months to offset.</summary>
         public int? Months { get; set; }
-        /// <summary>The number of quarters to offset in the index.</summary>
+        /// <summary>The number of quarters to offset.</summary>
         public int? Quarters { get; set; }
-        /// <summary>The number of seconds to offset in the index.</summary>
+        /// <summary>The number of seconds to offset.</summary>
         public int? Seconds { get; set; }
-        /// <summary>The number of weeks to offset in the index.</summary>
+        /// <summary>The number of weeks to offset.</summary>
         public int? Weeks { get; set; }
-        /// <summary>The number of years to offset in the index.</summary>
+        /// <summary>The number of years to offset.</summary>
         public int? Years { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicIndexOffset"/> and sets the default values.

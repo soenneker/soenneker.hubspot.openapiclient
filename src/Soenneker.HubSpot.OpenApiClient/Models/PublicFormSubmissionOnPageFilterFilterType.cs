@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>Indicates the type of filter, which defaults to FORM_SUBMISSION_ON_PAGE.</summary>
+    /// <summary>Indicates the type of filter (FORM_SUBMISSION_ON_PAGE).</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PublicFormSubmissionOnPageFilterFilterType
     {

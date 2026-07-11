@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>Indicates the type of filter, which defaults to SURVEY_MONKEY_VALUE.</summary>
+    /// <summary>Defines the type of filter (SURVEY_MONKEY_VALUE).</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PublicSurveyMonkeyValueFilterFilterType
     {

@@ -7,15 +7,14 @@ using System.IO;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>
-    /// Configuration details for webhook throttling.
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+    #pragma warning disable CS1591
     public partial class ThrottlingSettings : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The maximum number of HTTP requests HubSpot will attempt to make to your app in a given time frame determined by `period`. This is an integer value.</summary>
+        /// <summary>The maximum number of concurrent requests allowed. This is an integer value.</summary>
         public int? MaxConcurrentRequests { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ThrottlingSettings"/> and sets the default values.

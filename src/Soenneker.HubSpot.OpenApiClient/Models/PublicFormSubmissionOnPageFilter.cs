@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Defines the criteria for refining form submissions, using one of several possible schemas such as PublicNumOccurrencesRefineBy or PublicRelativeComparativeTimestampRefineBy.</summary>
+        /// <summary>Defines the criteria for refining the filter by coalescing.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicFormSubmissionOnPageFilterCoalescingRefineBy? CoalescingRefineBy { get; set; }
@@ -22,9 +22,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicFormSubmissionOnPageFilterCoalescingRefineBy CoalescingRefineBy { get; set; }
 #endif
-        /// <summary>Indicates the type of filter, which defaults to FORM_SUBMISSION_ON_PAGE.</summary>
+        /// <summary>Indicates the type of filter (FORM_SUBMISSION_ON_PAGE).</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicFormSubmissionOnPageFilterFilterType? FilterType { get; set; }
-        /// <summary>The unique identifier of the form used in the form submission on page filter.</summary>
+        /// <summary>The ID of the form associated with the submission filter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FormId { get; set; }
@@ -32,9 +32,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string FormId { get; set; }
 #endif
-        /// <summary>Specifies the operator used in the form submission on page filter, with accepted values being FILLED_OUT or NOT_FILLED_OUT.</summary>
+        /// <summary>Specifies the operation to be applied (FILLED_OUT, NOT_FILLED_OUT).</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicFormSubmissionOnPageFilterOperator? Operator { get; set; }
-        /// <summary>The identifier for the page used in the form submission on page filter.</summary>
+        /// <summary>The ID of the page where the form submission occurred.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PageId { get; set; }
@@ -42,7 +42,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string PageId { get; set; }
 #endif
-        /// <summary>Specifies the criteria for pruning form submissions, using one of several possible schemas such as PublicNumOccurrencesRefineBy or PublicRelativeRangedTimestampRefineBy.</summary>
+        /// <summary>Specifies the criteria for refining the filter by pruning.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicFormSubmissionOnPageFilterPruningRefineBy? PruningRefineBy { get; set; }

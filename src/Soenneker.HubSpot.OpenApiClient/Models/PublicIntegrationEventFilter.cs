@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The identifier for the type of event associated with the integration event filter.</summary>
+        /// <summary>The ID representing the type of event for the integration event filter.</summary>
         public int? EventTypeId { get; set; }
         /// <summary>The filterLines property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -24,7 +24,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEventFilterMetadata> FilterLines { get; set; }
 #endif
-        /// <summary>Indicates the type of filter, which defaults to INTEGRATION_EVENT.</summary>
+        /// <summary>Indicates the type of filter (INTEGRATION_EVENT).</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicIntegrationEventFilterFilterType? FilterType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicIntegrationEventFilter"/> and sets the default values.

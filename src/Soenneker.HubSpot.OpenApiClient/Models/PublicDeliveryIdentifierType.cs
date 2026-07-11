@@ -3,9 +3,10 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>The type of identifier. HS_EMAIL_ADDRESS for email addresses; HS_PHONE_NUMBER for a phone number; CHANNEL_SPECIFIC_OPAQUE_ID for channels that use their own proprietary identifiers, like Facebook Messenger or LiveChat.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+    #pragma warning disable CS1591
     public enum PublicDeliveryIdentifierType
+    #pragma warning restore CS1591
     {
         [EnumMember(Value = "CHANNEL_SPECIFIC_OPAQUE_ID")]
         #pragma warning disable CS1591

@@ -15,9 +15,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The category of the association, such as &quot;HUBSPOT_DEFINED&quot;.</summary>
+        /// <summary>For [labeled associations](https://developers.hubspot.com/docs/guides/api/crm/associations/associations-v4#associate-records-with-a-label), the category of the association.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec8AssociationCategory? AssociationCategory { get; set; }
-        /// <summary>The ID representing the specific type of association.</summary>
+        /// <summary>The [association type ID](https://developers.hubspot.com/docs/guides/api/crm/associations/associations-v4#association-type-id-values) (e.g., `4` for contact-to-company associations).</summary>
         public int? AssociationTypeId { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec8"/> and sets the default values.

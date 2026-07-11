@@ -14,9 +14,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Indicates the type of filter, which defaults to SURVEY_MONKEY_VALUE.</summary>
+        /// <summary>Defines the type of filter (SURVEY_MONKEY_VALUE).</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSurveyMonkeyValueFilterFilterType? FilterType { get; set; }
-        /// <summary>Specifies the operator used in the filter.</summary>
+        /// <summary>Defines the operation to be applied within the filter (HAS_ANSWERED_SURVEY_QUESTION_WITH_VALUE).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Operator { get; set; }
@@ -24,7 +24,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Operator { get; set; }
 #endif
-        /// <summary>The identifier for the column of the survey answer.</summary>
+        /// <summary>The column ID of the survey answer used in the filter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SurveyAnswerColId { get; set; }
@@ -32,7 +32,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string SurveyAnswerColId { get; set; }
 #endif
-        /// <summary>The identifier for the row of the survey answer.</summary>
+        /// <summary>The row ID of the survey answer used in the filter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SurveyAnswerRowId { get; set; }
@@ -40,7 +40,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string SurveyAnswerRowId { get; set; }
 #endif
-        /// <summary>The identifier for the survey.</summary>
+        /// <summary>The ID of the survey used in the filter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SurveyId { get; set; }
@@ -48,7 +48,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string SurveyId { get; set; }
 #endif
-        /// <summary>The text of the survey question.</summary>
+        /// <summary>The question from the survey used in the filter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SurveyQuestion { get; set; }
@@ -56,7 +56,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string SurveyQuestion { get; set; }
 #endif
-        /// <summary>Defines the criteria for comparing the survey answer value.</summary>
+        /// <summary>Specifies the operation used to compare the survey answer value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSurveyMonkeyValueFilterValueComparison? ValueComparison { get; set; }

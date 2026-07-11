@@ -2,8 +2,8 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.HubSpot.OpenApiClient.Settings.Currencies;
 using Soenneker.HubSpot.OpenApiClient.Settings.Users;
-using Soenneker.HubSpot.OpenApiClient.Settings.V3;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -16,15 +16,15 @@ namespace Soenneker.HubSpot.OpenApiClient.Settings
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SettingsRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The currencies property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Settings.Currencies.CurrenciesRequestBuilder Currencies
+        {
+            get => new global::Soenneker.HubSpot.OpenApiClient.Settings.Currencies.CurrenciesRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The users property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Settings.Users.UsersRequestBuilder Users
         {
             get => new global::Soenneker.HubSpot.OpenApiClient.Settings.Users.UsersRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The v3 property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Settings.V3.V3RequestBuilder V3
-        {
-            get => new global::Soenneker.HubSpot.OpenApiClient.Settings.V3.V3RequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Settings.SettingsRequestBuilder"/> and sets the default values.
