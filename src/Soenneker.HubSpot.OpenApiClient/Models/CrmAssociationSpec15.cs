@@ -11,30 +11,30 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     /// Defines the type, direction, and details of the relationship between two CRM objects.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class CrmAssociationSpec26 : IAdditionalDataHolder, IParsable
+    public partial class CrmAssociationSpec15 : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The category of the association, such as &quot;HUBSPOT_DEFINED&quot;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec26AssociationCategory? AssociationCategory { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec15AssociationCategory? AssociationCategory { get; set; }
         /// <summary>The ID representing the specific type of association.</summary>
         public int? AssociationTypeId { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec26"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec15"/> and sets the default values.
         /// </summary>
-        public CrmAssociationSpec26()
+        public CrmAssociationSpec15()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec26"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec15"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec26 CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec15 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec26();
+            return new global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec15();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -44,7 +44,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "associationCategory", n => { AssociationCategory = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec26AssociationCategory>(); } },
+                { "associationCategory", n => { AssociationCategory = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec15AssociationCategory>(); } },
                 { "associationTypeId", n => { AssociationTypeId = n.GetIntValue(); } },
             };
         }
@@ -55,7 +55,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec26AssociationCategory>("associationCategory", AssociationCategory);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec15AssociationCategory>("associationCategory", AssociationCategory);
             writer.WriteIntValue("associationTypeId", AssociationTypeId);
             writer.WriteAdditionalData(AdditionalData);
         }

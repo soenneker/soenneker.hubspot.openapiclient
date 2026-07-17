@@ -176456,34 +176456,6 @@
         "description": "Contains the id and type of an association",
         "example": null
       },
-      "______________crm_AssociationSpec": {
-        "required": [
-          "associationCategory",
-          "associationTypeId"
-        ],
-        "type": "object",
-        "properties": {
-          "associationCategory": {
-            "enum": [
-              "HUBSPOT_DEFINED",
-              "INTEGRATOR_DEFINED",
-              "USER_DEFINED",
-              "WORK"
-            ],
-            "type": "string",
-            "description": "The category of the association, such as \"HUBSPOT_DEFINED\".",
-            "example": null
-          },
-          "associationTypeId": {
-            "type": "integer",
-            "description": "The ID representing the specific type of association.",
-            "format": "int32",
-            "example": null
-          }
-        },
-        "description": "Defines the type, direction, and details of the relationship between two CRM objects.",
-        "example": null
-      },
       "_____________crm_BatchReadInputSimplePublicObjectId": {
         "required": [
           "inputs",
@@ -176524,77 +176496,6 @@
           }
         },
         "description": "Specifies the input for reading a batch of CRM objects, including arrays of object IDs, requested property names (with optional history), and an optional unique identifying property.",
-        "example": null
-      },
-      "_____________crm_BatchResponsePublicDefaultAssociation": {
-        "required": [
-          "completedAt",
-          "results",
-          "startedAt",
-          "status"
-        ],
-        "type": "object",
-        "properties": {
-          "completedAt": {
-            "type": "string",
-            "description": "The timestamp when the batch process was completed, in ISO 8601 format.",
-            "format": "date-time",
-            "example": null
-          },
-          "errors": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/_________________crm_StandardError"
-            },
-            "example": null
-          },
-          "links": {
-            "type": "object",
-            "additionalProperties": {
-              "type": "string",
-              "example": null
-            },
-            "description": "An object containing relevant links related to the batch request.",
-            "example": null
-          },
-          "numErrors": {
-            "type": "integer",
-            "description": "The total number of errors that occurred during the operation.",
-            "format": "int32",
-            "example": null
-          },
-          "requestedAt": {
-            "type": "string",
-            "description": "The timestamp when the batch process was initiated, in ISO 8601 format.",
-            "format": "date-time",
-            "example": null
-          },
-          "results": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/_____________crm_PublicDefaultAssociation"
-            },
-            "example": null
-          },
-          "startedAt": {
-            "type": "string",
-            "description": "The timestamp when the batch process began execution, in ISO 8601 format.",
-            "format": "date-time",
-            "example": null
-          },
-          "status": {
-            "enum": [
-              "CANCELED",
-              "COMPLETE",
-              "PENDING",
-              "PROCESSING"
-            ],
-            "type": "string",
-            "description": "The status of the batch processing request. Can be: \"PENDING\", \"PROCESSING\", \"CANCELED\", or \"COMPLETE\".",
-            "example": null
-          }
-        },
-        "description": "The response returned after performing a batch operation on associations.",
         "example": null
       },
       "_____________crm_BatchResponseSimplePublicObject": {
@@ -176982,48 +176883,6 @@
         },
         "example": null
       },
-      "_____________crm_LabelsBetweenObjectPair": {
-        "required": [
-          "fromObjectId",
-          "fromObjectTypeId",
-          "labels",
-          "toObjectId",
-          "toObjectTypeId"
-        ],
-        "type": "object",
-        "properties": {
-          "fromObjectId": {
-            "type": "string",
-            "description": "Source unique ID of the object.",
-            "example": null
-          },
-          "fromObjectTypeId": {
-            "type": "string",
-            "description": "Source object type.",
-            "example": null
-          },
-          "labels": {
-            "type": "array",
-            "items": {
-              "type": "string",
-              "example": null
-            },
-            "example": null
-          },
-          "toObjectId": {
-            "type": "string",
-            "description": "Target unique ID of the object.",
-            "example": null
-          },
-          "toObjectTypeId": {
-            "type": "string",
-            "description": "Target object type.",
-            "example": null
-          }
-        },
-        "description": "The relationship descriptors applicable between two object types.",
-        "example": null
-      },
       "________________crm_NextPage": {
         "required": [
           "after"
@@ -177074,41 +176933,6 @@
           }
         },
         "description": "specifies the paging information needed to retrieve the previous set of results in a paginated API response",
-        "example": null
-      },
-      "_____________crm_PublicDefaultAssociation": {
-        "required": [
-          "associationSpec",
-          "from",
-          "to"
-        ],
-        "type": "object",
-        "properties": {
-          "associationSpec": {
-            "$ref": "#/components/schemas/______________crm_AssociationSpec"
-          },
-          "from": {
-            "$ref": "#/components/schemas/_____________crm_PublicObjectId"
-          },
-          "to": {
-            "$ref": "#/components/schemas/_____________crm_PublicObjectId"
-          }
-        },
-        "example": null
-      },
-      "_____________crm_PublicObjectId": {
-        "required": [
-          "id"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "description": "The unique ID of the object.",
-            "example": null
-          }
-        },
-        "description": "Contains the Id of a Public Object",
         "example": null
       },
       "_____________crm_PublicObjectSearchRequest": {
@@ -177512,7 +177336,7 @@
         "description": "Contains the id and type of an association",
         "example": null
       },
-      "_______________crm_AssociationSpec": {
+      "______________crm_AssociationSpec": {
         "required": [
           "associationCategory",
           "associationTypeId"
@@ -177646,7 +177470,7 @@
         "description": "Specifies the input for reading a batch of CRM objects, including arrays of object IDs, requested property names (with optional history), and an optional unique identifying property.",
         "example": null
       },
-      "______________crm_BatchResponsePublicDefaultAssociation": {
+      "_____________crm_BatchResponsePublicDefaultAssociation": {
         "required": [
           "completedAt",
           "results",
@@ -177692,7 +177516,7 @@
           "results": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/______________crm_PublicDefaultAssociation"
+              "$ref": "#/components/schemas/_____________crm_PublicDefaultAssociation"
             },
             "example": null
           },
@@ -178231,7 +178055,7 @@
         },
         "example": null
       },
-      "______________crm_LabelsBetweenObjectPair": {
+      "_____________crm_LabelsBetweenObjectPair": {
         "required": [
           "fromObjectId",
           "fromObjectTypeId",
@@ -178333,19 +178157,19 @@
         "type": "object",
         "properties": {
           "to": {
-            "$ref": "#/components/schemas/______________crm_PublicObjectId"
+            "$ref": "#/components/schemas/_____________crm_PublicObjectId"
           },
           "types": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/_______________crm_AssociationSpec"
+              "$ref": "#/components/schemas/______________crm_AssociationSpec"
             },
             "example": null
           }
         },
         "example": null
       },
-      "______________crm_PublicDefaultAssociation": {
+      "_____________crm_PublicDefaultAssociation": {
         "required": [
           "associationSpec",
           "from",
@@ -178354,18 +178178,18 @@
         "type": "object",
         "properties": {
           "associationSpec": {
-            "$ref": "#/components/schemas/_______________crm_AssociationSpec"
+            "$ref": "#/components/schemas/______________crm_AssociationSpec"
           },
           "from": {
-            "$ref": "#/components/schemas/______________crm_PublicObjectId"
+            "$ref": "#/components/schemas/_____________crm_PublicObjectId"
           },
           "to": {
-            "$ref": "#/components/schemas/______________crm_PublicObjectId"
+            "$ref": "#/components/schemas/_____________crm_PublicObjectId"
           }
         },
         "example": null
       },
-      "______________crm_PublicObjectId": {
+      "_____________crm_PublicObjectId": {
         "required": [
           "id"
         ],
@@ -178994,7 +178818,7 @@
         "description": "Property model that includes timestamp.",
         "example": null
       },
-      "_______________crm_BatchResponsePublicDefaultAssociation": {
+      "______________crm_BatchResponsePublicDefaultAssociation": {
         "required": [
           "completedAt",
           "results",
@@ -179040,7 +178864,7 @@
           "results": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/_______________crm_PublicDefaultAssociation"
+              "$ref": "#/components/schemas/______________crm_PublicDefaultAssociation"
             },
             "example": null
           },
@@ -179107,7 +178931,7 @@
         },
         "example": null
       },
-      "_______________crm_PublicObjectId": {
+      "______________crm_PublicObjectId": {
         "required": [
           "id"
         ],
@@ -179192,7 +179016,7 @@
         "description": "Represents a standard error response in the HubSpot API, providing detailed information about an error that occurred during an API request.",
         "example": null
       },
-      "________________crm_AssociationSpec": {
+      "_______________crm_AssociationSpec": {
         "required": [
           "associationCategory",
           "associationTypeId"
@@ -179220,7 +179044,7 @@
         "description": "Defines the type, direction, and details of the relationship between two CRM objects.",
         "example": null
       },
-      "_______________crm_LabelsBetweenObjectPair": {
+      "______________crm_LabelsBetweenObjectPair": {
         "required": [
           "fromObjectId",
           "fromObjectTypeId",
@@ -179262,7 +179086,7 @@
         "description": "The relationship descriptors applicable between two object types.",
         "example": null
       },
-      "_______________crm_PublicDefaultAssociation": {
+      "______________crm_PublicDefaultAssociation": {
         "required": [
           "associationSpec",
           "from",
@@ -179271,13 +179095,13 @@
         "type": "object",
         "properties": {
           "associationSpec": {
-            "$ref": "#/components/schemas/________________crm_AssociationSpec"
+            "$ref": "#/components/schemas/_______________crm_AssociationSpec"
           },
           "from": {
-            "$ref": "#/components/schemas/_______________crm_PublicObjectId"
+            "$ref": "#/components/schemas/______________crm_PublicObjectId"
           },
           "to": {
-            "$ref": "#/components/schemas/_______________crm_PublicObjectId"
+            "$ref": "#/components/schemas/______________crm_PublicObjectId"
           }
         },
         "example": null
@@ -179372,7 +179196,7 @@
         "description": "Contains the id and type of an association",
         "example": null
       },
-      "_________________crm_AssociationSpec": {
+      "________________crm_AssociationSpec": {
         "required": [
           "associationCategory",
           "associationTypeId"
@@ -179506,7 +179330,7 @@
         "description": "Specifies the input for reading a batch of CRM objects, including arrays of object IDs, requested property names (with optional history), and an optional unique identifying property.",
         "example": null
       },
-      "________________crm_BatchResponsePublicDefaultAssociation": {
+      "_______________crm_BatchResponsePublicDefaultAssociation": {
         "required": [
           "completedAt",
           "results",
@@ -179552,7 +179376,7 @@
           "results": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/________________crm_PublicDefaultAssociation"
+              "$ref": "#/components/schemas/_______________crm_PublicDefaultAssociation"
             },
             "example": null
           },
@@ -180091,7 +179915,7 @@
         },
         "example": null
       },
-      "________________crm_LabelsBetweenObjectPair": {
+      "_______________crm_LabelsBetweenObjectPair": {
         "required": [
           "fromObjectId",
           "fromObjectTypeId",
@@ -180193,19 +180017,19 @@
         "type": "object",
         "properties": {
           "to": {
-            "$ref": "#/components/schemas/________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/_______________crm_PublicObjectId"
           },
           "types": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/_________________crm_AssociationSpec"
+              "$ref": "#/components/schemas/________________crm_AssociationSpec"
             },
             "example": null
           }
         },
         "example": null
       },
-      "________________crm_PublicDefaultAssociation": {
+      "_______________crm_PublicDefaultAssociation": {
         "required": [
           "associationSpec",
           "from",
@@ -180214,18 +180038,18 @@
         "type": "object",
         "properties": {
           "associationSpec": {
-            "$ref": "#/components/schemas/_________________crm_AssociationSpec"
+            "$ref": "#/components/schemas/________________crm_AssociationSpec"
           },
           "from": {
-            "$ref": "#/components/schemas/________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/_______________crm_PublicObjectId"
           },
           "to": {
-            "$ref": "#/components/schemas/________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/_______________crm_PublicObjectId"
           }
         },
         "example": null
       },
-      "________________crm_PublicObjectId": {
+      "_______________crm_PublicObjectId": {
         "required": [
           "id"
         ],
@@ -181885,7 +181709,7 @@
         "description": "Contains the id and type of an association",
         "example": null
       },
-      "__________________crm_AssociationSpec": {
+      "_________________crm_AssociationSpec": {
         "required": [
           "associationCategory",
           "associationTypeId"
@@ -182019,7 +181843,7 @@
         "description": "Specifies the input for reading a batch of CRM objects, including arrays of object IDs, requested property names (with optional history), and an optional unique identifying property.",
         "example": null
       },
-      "_________________crm_BatchResponsePublicDefaultAssociation": {
+      "________________crm_BatchResponsePublicDefaultAssociation": {
         "required": [
           "completedAt",
           "results",
@@ -182065,7 +181889,7 @@
           "results": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/_________________crm_PublicDefaultAssociation"
+              "$ref": "#/components/schemas/________________crm_PublicDefaultAssociation"
             },
             "example": null
           },
@@ -182604,7 +182428,7 @@
         },
         "example": null
       },
-      "_________________crm_LabelsBetweenObjectPair": {
+      "________________crm_LabelsBetweenObjectPair": {
         "required": [
           "fromObjectId",
           "fromObjectTypeId",
@@ -182706,19 +182530,19 @@
         "type": "object",
         "properties": {
           "to": {
-            "$ref": "#/components/schemas/_________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/________________crm_PublicObjectId"
           },
           "types": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/__________________crm_AssociationSpec"
+              "$ref": "#/components/schemas/_________________crm_AssociationSpec"
             },
             "example": null
           }
         },
         "example": null
       },
-      "_________________crm_PublicDefaultAssociation": {
+      "________________crm_PublicDefaultAssociation": {
         "required": [
           "associationSpec",
           "from",
@@ -182727,18 +182551,18 @@
         "type": "object",
         "properties": {
           "associationSpec": {
-            "$ref": "#/components/schemas/__________________crm_AssociationSpec"
+            "$ref": "#/components/schemas/_________________crm_AssociationSpec"
           },
           "from": {
-            "$ref": "#/components/schemas/_________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/________________crm_PublicObjectId"
           },
           "to": {
-            "$ref": "#/components/schemas/_________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/________________crm_PublicObjectId"
           }
         },
         "example": null
       },
-      "_________________crm_PublicObjectId": {
+      "________________crm_PublicObjectId": {
         "required": [
           "id"
         ],
@@ -183388,7 +183212,7 @@
         "description": "Contains the id and type of an association",
         "example": null
       },
-      "___________________crm_AssociationSpec": {
+      "__________________crm_AssociationSpec": {
         "required": [
           "associationCategory",
           "associationTypeId"
@@ -183522,7 +183346,7 @@
         "description": "Specifies the input for reading a batch of CRM objects, including arrays of object IDs, requested property names (with optional history), and an optional unique identifying property.",
         "example": null
       },
-      "__________________crm_BatchResponsePublicDefaultAssociation": {
+      "_________________crm_BatchResponsePublicDefaultAssociation": {
         "required": [
           "completedAt",
           "results",
@@ -183568,7 +183392,7 @@
           "results": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/__________________crm_PublicDefaultAssociation"
+              "$ref": "#/components/schemas/_________________crm_PublicDefaultAssociation"
             },
             "example": null
           },
@@ -184107,7 +183931,7 @@
         },
         "example": null
       },
-      "__________________crm_LabelsBetweenObjectPair": {
+      "_________________crm_LabelsBetweenObjectPair": {
         "required": [
           "fromObjectId",
           "fromObjectTypeId",
@@ -184209,19 +184033,19 @@
         "type": "object",
         "properties": {
           "to": {
-            "$ref": "#/components/schemas/__________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/_________________crm_PublicObjectId"
           },
           "types": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/___________________crm_AssociationSpec"
+              "$ref": "#/components/schemas/__________________crm_AssociationSpec"
             },
             "example": null
           }
         },
         "example": null
       },
-      "__________________crm_PublicDefaultAssociation": {
+      "_________________crm_PublicDefaultAssociation": {
         "required": [
           "associationSpec",
           "from",
@@ -184230,18 +184054,18 @@
         "type": "object",
         "properties": {
           "associationSpec": {
-            "$ref": "#/components/schemas/___________________crm_AssociationSpec"
+            "$ref": "#/components/schemas/__________________crm_AssociationSpec"
           },
           "from": {
-            "$ref": "#/components/schemas/__________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/_________________crm_PublicObjectId"
           },
           "to": {
-            "$ref": "#/components/schemas/__________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/_________________crm_PublicObjectId"
           }
         },
         "example": null
       },
-      "__________________crm_PublicObjectId": {
+      "_________________crm_PublicObjectId": {
         "required": [
           "id"
         ],
@@ -185499,7 +185323,7 @@
         "description": "Contains the id and type of an association",
         "example": null
       },
-      "____________________crm_AssociationSpec": {
+      "___________________crm_AssociationSpec": {
         "required": [
           "associationCategory",
           "associationTypeId"
@@ -185633,7 +185457,7 @@
         "description": "Specifies the input for reading a batch of CRM objects, including arrays of object IDs, requested property names (with optional history), and an optional unique identifying property.",
         "example": null
       },
-      "___________________crm_BatchResponsePublicDefaultAssociation": {
+      "__________________crm_BatchResponsePublicDefaultAssociation": {
         "required": [
           "completedAt",
           "results",
@@ -185679,7 +185503,7 @@
           "results": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/___________________crm_PublicDefaultAssociation"
+              "$ref": "#/components/schemas/__________________crm_PublicDefaultAssociation"
             },
             "example": null
           },
@@ -186218,7 +186042,7 @@
         },
         "example": null
       },
-      "___________________crm_LabelsBetweenObjectPair": {
+      "__________________crm_LabelsBetweenObjectPair": {
         "required": [
           "fromObjectId",
           "fromObjectTypeId",
@@ -186320,19 +186144,19 @@
         "type": "object",
         "properties": {
           "to": {
-            "$ref": "#/components/schemas/___________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/__________________crm_PublicObjectId"
           },
           "types": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/____________________crm_AssociationSpec"
+              "$ref": "#/components/schemas/___________________crm_AssociationSpec"
             },
             "example": null
           }
         },
         "example": null
       },
-      "___________________crm_PublicDefaultAssociation": {
+      "__________________crm_PublicDefaultAssociation": {
         "required": [
           "associationSpec",
           "from",
@@ -186341,18 +186165,18 @@
         "type": "object",
         "properties": {
           "associationSpec": {
-            "$ref": "#/components/schemas/____________________crm_AssociationSpec"
+            "$ref": "#/components/schemas/___________________crm_AssociationSpec"
           },
           "from": {
-            "$ref": "#/components/schemas/___________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/__________________crm_PublicObjectId"
           },
           "to": {
-            "$ref": "#/components/schemas/___________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/__________________crm_PublicObjectId"
           }
         },
         "example": null
       },
-      "___________________crm_PublicObjectId": {
+      "__________________crm_PublicObjectId": {
         "required": [
           "id"
         ],
@@ -187002,7 +186826,7 @@
         "description": "Contains the id and type of an association",
         "example": null
       },
-      "_____________________crm_AssociationSpec": {
+      "____________________crm_AssociationSpec": {
         "required": [
           "associationCategory",
           "associationTypeId"
@@ -187136,7 +186960,7 @@
         "description": "Specifies the input for reading a batch of CRM objects, including arrays of object IDs, requested property names (with optional history), and an optional unique identifying property.",
         "example": null
       },
-      "____________________crm_BatchResponsePublicDefaultAssociation": {
+      "___________________crm_BatchResponsePublicDefaultAssociation": {
         "required": [
           "completedAt",
           "results",
@@ -187182,7 +187006,7 @@
           "results": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/____________________crm_PublicDefaultAssociation"
+              "$ref": "#/components/schemas/___________________crm_PublicDefaultAssociation"
             },
             "example": null
           },
@@ -187721,7 +187545,7 @@
         },
         "example": null
       },
-      "____________________crm_LabelsBetweenObjectPair": {
+      "___________________crm_LabelsBetweenObjectPair": {
         "required": [
           "fromObjectId",
           "fromObjectTypeId",
@@ -187824,19 +187648,19 @@
         "type": "object",
         "properties": {
           "to": {
-            "$ref": "#/components/schemas/____________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/___________________crm_PublicObjectId"
           },
           "types": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/_____________________crm_AssociationSpec"
+              "$ref": "#/components/schemas/____________________crm_AssociationSpec"
             },
             "example": null
           }
         },
         "example": null
       },
-      "____________________crm_PublicDefaultAssociation": {
+      "___________________crm_PublicDefaultAssociation": {
         "required": [
           "associationSpec",
           "from",
@@ -187845,18 +187669,18 @@
         "type": "object",
         "properties": {
           "associationSpec": {
-            "$ref": "#/components/schemas/_____________________crm_AssociationSpec"
+            "$ref": "#/components/schemas/____________________crm_AssociationSpec"
           },
           "from": {
-            "$ref": "#/components/schemas/____________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/___________________crm_PublicObjectId"
           },
           "to": {
-            "$ref": "#/components/schemas/____________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/___________________crm_PublicObjectId"
           }
         },
         "example": null
       },
-      "____________________crm_PublicObjectId": {
+      "___________________crm_PublicObjectId": {
         "required": [
           "id"
         ],
@@ -194141,7 +193965,7 @@
         "description": "Contains the id and type of an association",
         "example": null
       },
-      "______________________crm_AssociationSpec": {
+      "_____________________crm_AssociationSpec": {
         "required": [
           "associationCategory",
           "associationTypeId"
@@ -194275,7 +194099,7 @@
         "description": "Specifies the input for reading a batch of CRM objects, including arrays of object IDs, requested property names (with optional history), and an optional unique identifying property.",
         "example": null
       },
-      "_____________________crm_BatchResponsePublicDefaultAssociation": {
+      "____________________crm_BatchResponsePublicDefaultAssociation": {
         "required": [
           "completedAt",
           "results",
@@ -194321,7 +194145,7 @@
           "results": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/_____________________crm_PublicDefaultAssociation"
+              "$ref": "#/components/schemas/____________________crm_PublicDefaultAssociation"
             },
             "example": null
           },
@@ -194860,7 +194684,7 @@
         },
         "example": null
       },
-      "_____________________crm_LabelsBetweenObjectPair": {
+      "____________________crm_LabelsBetweenObjectPair": {
         "required": [
           "fromObjectId",
           "fromObjectTypeId",
@@ -194962,19 +194786,19 @@
         "type": "object",
         "properties": {
           "to": {
-            "$ref": "#/components/schemas/_____________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/____________________crm_PublicObjectId"
           },
           "types": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/______________________crm_AssociationSpec"
+              "$ref": "#/components/schemas/_____________________crm_AssociationSpec"
             },
             "example": null
           }
         },
         "example": null
       },
-      "_____________________crm_PublicDefaultAssociation": {
+      "____________________crm_PublicDefaultAssociation": {
         "required": [
           "associationSpec",
           "from",
@@ -194983,18 +194807,18 @@
         "type": "object",
         "properties": {
           "associationSpec": {
-            "$ref": "#/components/schemas/______________________crm_AssociationSpec"
+            "$ref": "#/components/schemas/_____________________crm_AssociationSpec"
           },
           "from": {
-            "$ref": "#/components/schemas/_____________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/____________________crm_PublicObjectId"
           },
           "to": {
-            "$ref": "#/components/schemas/_____________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/____________________crm_PublicObjectId"
           }
         },
         "example": null
       },
-      "_____________________crm_PublicObjectId": {
+      "____________________crm_PublicObjectId": {
         "required": [
           "id"
         ],
@@ -195644,7 +195468,7 @@
         "description": "Contains the id and type of an association",
         "example": null
       },
-      "_______________________crm_AssociationSpec": {
+      "______________________crm_AssociationSpec": {
         "required": [
           "associationCategory",
           "associationTypeId"
@@ -195778,7 +195602,7 @@
         "description": "Specifies the input for reading a batch of CRM objects, including arrays of object IDs, requested property names (with optional history), and an optional unique identifying property.",
         "example": null
       },
-      "______________________crm_BatchResponsePublicDefaultAssociation": {
+      "_____________________crm_BatchResponsePublicDefaultAssociation": {
         "required": [
           "completedAt",
           "results",
@@ -195824,7 +195648,7 @@
           "results": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/______________________crm_PublicDefaultAssociation"
+              "$ref": "#/components/schemas/_____________________crm_PublicDefaultAssociation"
             },
             "example": null
           },
@@ -196363,7 +196187,7 @@
         },
         "example": null
       },
-      "______________________crm_LabelsBetweenObjectPair": {
+      "_____________________crm_LabelsBetweenObjectPair": {
         "required": [
           "fromObjectId",
           "fromObjectTypeId",
@@ -196465,19 +196289,19 @@
         "type": "object",
         "properties": {
           "to": {
-            "$ref": "#/components/schemas/______________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/_____________________crm_PublicObjectId"
           },
           "types": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/_______________________crm_AssociationSpec"
+              "$ref": "#/components/schemas/______________________crm_AssociationSpec"
             },
             "example": null
           }
         },
         "example": null
       },
-      "______________________crm_PublicDefaultAssociation": {
+      "_____________________crm_PublicDefaultAssociation": {
         "required": [
           "associationSpec",
           "from",
@@ -196486,18 +196310,18 @@
         "type": "object",
         "properties": {
           "associationSpec": {
-            "$ref": "#/components/schemas/_______________________crm_AssociationSpec"
+            "$ref": "#/components/schemas/______________________crm_AssociationSpec"
           },
           "from": {
-            "$ref": "#/components/schemas/______________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/_____________________crm_PublicObjectId"
           },
           "to": {
-            "$ref": "#/components/schemas/______________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/_____________________crm_PublicObjectId"
           }
         },
         "example": null
       },
-      "______________________crm_PublicObjectId": {
+      "_____________________crm_PublicObjectId": {
         "required": [
           "id"
         ],
@@ -197290,7 +197114,7 @@
         "description": "Contains the id and type of an association",
         "example": null
       },
-      "________________________crm_AssociationSpec": {
+      "_______________________crm_AssociationSpec": {
         "required": [
           "associationCategory",
           "associationTypeId"
@@ -197998,19 +197822,19 @@
         "type": "object",
         "properties": {
           "to": {
-            "$ref": "#/components/schemas/_______________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/______________________crm_PublicObjectId"
           },
           "types": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/________________________crm_AssociationSpec"
+              "$ref": "#/components/schemas/_______________________crm_AssociationSpec"
             },
             "example": null
           }
         },
         "example": null
       },
-      "_______________________crm_PublicObjectId": {
+      "______________________crm_PublicObjectId": {
         "required": [
           "id"
         ],
@@ -198660,7 +198484,7 @@
         "description": "Contains the id and type of an association",
         "example": null
       },
-      "_________________________crm_AssociationSpec": {
+      "________________________crm_AssociationSpec": {
         "required": [
           "associationCategory",
           "associationTypeId"
@@ -198794,7 +198618,7 @@
         "description": "Specifies the input for reading a batch of CRM objects, including arrays of object IDs, requested property names (with optional history), and an optional unique identifying property.",
         "example": null
       },
-      "_______________________crm_BatchResponsePublicDefaultAssociation": {
+      "______________________crm_BatchResponsePublicDefaultAssociation": {
         "required": [
           "completedAt",
           "results",
@@ -198840,7 +198664,7 @@
           "results": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/_______________________crm_PublicDefaultAssociation"
+              "$ref": "#/components/schemas/______________________crm_PublicDefaultAssociation"
             },
             "example": null
           },
@@ -199379,7 +199203,7 @@
         },
         "example": null
       },
-      "_______________________crm_LabelsBetweenObjectPair": {
+      "______________________crm_LabelsBetweenObjectPair": {
         "required": [
           "fromObjectId",
           "fromObjectTypeId",
@@ -199481,19 +199305,19 @@
         "type": "object",
         "properties": {
           "to": {
-            "$ref": "#/components/schemas/________________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/_______________________crm_PublicObjectId"
           },
           "types": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/_________________________crm_AssociationSpec"
+              "$ref": "#/components/schemas/________________________crm_AssociationSpec"
             },
             "example": null
           }
         },
         "example": null
       },
-      "_______________________crm_PublicDefaultAssociation": {
+      "______________________crm_PublicDefaultAssociation": {
         "required": [
           "associationSpec",
           "from",
@@ -199502,18 +199326,18 @@
         "type": "object",
         "properties": {
           "associationSpec": {
-            "$ref": "#/components/schemas/_________________________crm_AssociationSpec"
+            "$ref": "#/components/schemas/________________________crm_AssociationSpec"
           },
           "from": {
-            "$ref": "#/components/schemas/________________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/_______________________crm_PublicObjectId"
           },
           "to": {
-            "$ref": "#/components/schemas/________________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/_______________________crm_PublicObjectId"
           }
         },
         "example": null
       },
-      "________________________crm_PublicObjectId": {
+      "_______________________crm_PublicObjectId": {
         "required": [
           "id"
         ],
@@ -200163,7 +199987,7 @@
         "description": "Contains the id and type of an association",
         "example": null
       },
-      "__________________________crm_AssociationSpec": {
+      "_________________________crm_AssociationSpec": {
         "required": [
           "associationCategory",
           "associationTypeId"
@@ -200282,7 +200106,7 @@
         "description": "Specifies the input for reading a batch of CRM objects, including arrays of object IDs, requested property names (with optional history), and an optional unique identifying property.",
         "example": null
       },
-      "________________________crm_BatchResponsePublicDefaultAssociation": {
+      "_______________________crm_BatchResponsePublicDefaultAssociation": {
         "required": [
           "completedAt",
           "results",
@@ -200328,7 +200152,7 @@
           "results": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/________________________crm_PublicDefaultAssociation"
+              "$ref": "#/components/schemas/_______________________crm_PublicDefaultAssociation"
             },
             "example": null
           },
@@ -200757,7 +200581,7 @@
         },
         "example": null
       },
-      "________________________crm_LabelsBetweenObjectPair": {
+      "_______________________crm_LabelsBetweenObjectPair": {
         "required": [
           "fromObjectId",
           "fromObjectTypeId",
@@ -200874,7 +200698,7 @@
         "description": "specifies the paging information needed to retrieve the previous set of results in a paginated API response",
         "example": null
       },
-      "________________________crm_PublicDefaultAssociation": {
+      "_______________________crm_PublicDefaultAssociation": {
         "required": [
           "associationSpec",
           "from",
@@ -200883,18 +200707,18 @@
         "type": "object",
         "properties": {
           "associationSpec": {
-            "$ref": "#/components/schemas/__________________________crm_AssociationSpec"
+            "$ref": "#/components/schemas/_________________________crm_AssociationSpec"
           },
           "from": {
-            "$ref": "#/components/schemas/_________________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/________________________crm_PublicObjectId"
           },
           "to": {
-            "$ref": "#/components/schemas/_________________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/________________________crm_PublicObjectId"
           }
         },
         "example": null
       },
-      "_________________________crm_PublicObjectId": {
+      "________________________crm_PublicObjectId": {
         "required": [
           "id"
         ],
@@ -201364,7 +201188,7 @@
         "description": "Contains the id and type of an association",
         "example": null
       },
-      "___________________________crm_AssociationSpec": {
+      "__________________________crm_AssociationSpec": {
         "required": [
           "associationCategory",
           "associationTypeId"
@@ -201483,7 +201307,7 @@
         "description": "Specifies the input for reading a batch of CRM objects, including arrays of object IDs, requested property names (with optional history), and an optional unique identifying property.",
         "example": null
       },
-      "_________________________crm_BatchResponsePublicDefaultAssociation": {
+      "________________________crm_BatchResponsePublicDefaultAssociation": {
         "required": [
           "completedAt",
           "results",
@@ -201529,7 +201353,7 @@
           "results": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/_________________________crm_PublicDefaultAssociation"
+              "$ref": "#/components/schemas/________________________crm_PublicDefaultAssociation"
             },
             "example": null
           },
@@ -201958,7 +201782,7 @@
         },
         "example": null
       },
-      "_________________________crm_LabelsBetweenObjectPair": {
+      "________________________crm_LabelsBetweenObjectPair": {
         "required": [
           "fromObjectId",
           "fromObjectTypeId",
@@ -202075,7 +201899,7 @@
         "description": "specifies the paging information needed to retrieve the previous set of results in a paginated API response",
         "example": null
       },
-      "_________________________crm_PublicDefaultAssociation": {
+      "________________________crm_PublicDefaultAssociation": {
         "required": [
           "associationSpec",
           "from",
@@ -202084,18 +201908,18 @@
         "type": "object",
         "properties": {
           "associationSpec": {
-            "$ref": "#/components/schemas/___________________________crm_AssociationSpec"
+            "$ref": "#/components/schemas/__________________________crm_AssociationSpec"
           },
           "from": {
-            "$ref": "#/components/schemas/__________________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/_________________________crm_PublicObjectId"
           },
           "to": {
-            "$ref": "#/components/schemas/__________________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/_________________________crm_PublicObjectId"
           }
         },
         "example": null
       },
-      "__________________________crm_PublicObjectId": {
+      "_________________________crm_PublicObjectId": {
         "required": [
           "id"
         ],
@@ -203095,7 +202919,7 @@
         "description": "Contains the id and type of an association",
         "example": null
       },
-      "____________________________crm_AssociationSpec": {
+      "___________________________crm_AssociationSpec": {
         "required": [
           "associationCategory",
           "associationTypeId"
@@ -203228,7 +203052,7 @@
         "description": "Specifies the input for reading a batch of CRM objects, including arrays of object IDs, requested property names (with optional history), and an optional unique identifying property.",
         "example": null
       },
-      "__________________________crm_BatchResponsePublicDefaultAssociation": {
+      "_________________________crm_BatchResponsePublicDefaultAssociation": {
         "required": [
           "completedAt",
           "results",
@@ -203274,7 +203098,7 @@
           "results": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/__________________________crm_PublicDefaultAssociation"
+              "$ref": "#/components/schemas/_________________________crm_PublicDefaultAssociation"
             },
             "example": null
           },
@@ -203813,7 +203637,7 @@
         },
         "example": null
       },
-      "__________________________crm_LabelsBetweenObjectPair": {
+      "_________________________crm_LabelsBetweenObjectPair": {
         "required": [
           "fromObjectId",
           "fromObjectTypeId",
@@ -203915,19 +203739,19 @@
         "type": "object",
         "properties": {
           "to": {
-            "$ref": "#/components/schemas/___________________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/__________________________crm_PublicObjectId"
           },
           "types": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/____________________________crm_AssociationSpec"
+              "$ref": "#/components/schemas/___________________________crm_AssociationSpec"
             },
             "example": null
           }
         },
         "example": null
       },
-      "__________________________crm_PublicDefaultAssociation": {
+      "_________________________crm_PublicDefaultAssociation": {
         "required": [
           "associationSpec",
           "from",
@@ -203936,18 +203760,18 @@
         "type": "object",
         "properties": {
           "associationSpec": {
-            "$ref": "#/components/schemas/____________________________crm_AssociationSpec"
+            "$ref": "#/components/schemas/___________________________crm_AssociationSpec"
           },
           "from": {
-            "$ref": "#/components/schemas/___________________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/__________________________crm_PublicObjectId"
           },
           "to": {
-            "$ref": "#/components/schemas/___________________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/__________________________crm_PublicObjectId"
           }
         },
         "example": null
       },
-      "___________________________crm_PublicObjectId": {
+      "__________________________crm_PublicObjectId": {
         "required": [
           "id"
         ],
@@ -204597,7 +204421,7 @@
         "description": "Contains the id and type of an association",
         "example": null
       },
-      "_____________________________crm_AssociationSpec": {
+      "____________________________crm_AssociationSpec": {
         "required": [
           "associationCategory",
           "associationTypeId"
@@ -204731,7 +204555,7 @@
         "description": "Specifies the input for reading a batch of CRM objects, including arrays of object IDs, requested property names (with optional history), and an optional unique identifying property.",
         "example": null
       },
-      "___________________________crm_BatchResponsePublicDefaultAssociation": {
+      "__________________________crm_BatchResponsePublicDefaultAssociation": {
         "required": [
           "completedAt",
           "results",
@@ -204777,7 +204601,7 @@
           "results": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/___________________________crm_PublicDefaultAssociation"
+              "$ref": "#/components/schemas/__________________________crm_PublicDefaultAssociation"
             },
             "example": null
           },
@@ -205316,7 +205140,7 @@
         },
         "example": null
       },
-      "___________________________crm_LabelsBetweenObjectPair": {
+      "__________________________crm_LabelsBetweenObjectPair": {
         "required": [
           "fromObjectId",
           "fromObjectTypeId",
@@ -205418,19 +205242,19 @@
         "type": "object",
         "properties": {
           "to": {
-            "$ref": "#/components/schemas/____________________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/___________________________crm_PublicObjectId"
           },
           "types": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/_____________________________crm_AssociationSpec"
+              "$ref": "#/components/schemas/____________________________crm_AssociationSpec"
             },
             "example": null
           }
         },
         "example": null
       },
-      "___________________________crm_PublicDefaultAssociation": {
+      "__________________________crm_PublicDefaultAssociation": {
         "required": [
           "associationSpec",
           "from",
@@ -205439,18 +205263,18 @@
         "type": "object",
         "properties": {
           "associationSpec": {
-            "$ref": "#/components/schemas/_____________________________crm_AssociationSpec"
+            "$ref": "#/components/schemas/____________________________crm_AssociationSpec"
           },
           "from": {
-            "$ref": "#/components/schemas/____________________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/___________________________crm_PublicObjectId"
           },
           "to": {
-            "$ref": "#/components/schemas/____________________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/___________________________crm_PublicObjectId"
           }
         },
         "example": null
       },
-      "____________________________crm_PublicObjectId": {
+      "___________________________crm_PublicObjectId": {
         "required": [
           "id"
         ],
@@ -206100,7 +205924,7 @@
         "description": "Contains the id and type of an association",
         "example": null
       },
-      "______________________________crm_AssociationSpec": {
+      "_____________________________crm_AssociationSpec": {
         "required": [
           "associationCategory",
           "associationTypeId"
@@ -206233,7 +206057,7 @@
         "description": "Specifies the input for reading a batch of CRM objects, including arrays of object IDs, requested property names (with optional history), and an optional unique identifying property.",
         "example": null
       },
-      "____________________________crm_BatchResponsePublicDefaultAssociation": {
+      "___________________________crm_BatchResponsePublicDefaultAssociation": {
         "required": [
           "completedAt",
           "results",
@@ -206279,7 +206103,7 @@
           "results": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/____________________________crm_PublicDefaultAssociation"
+              "$ref": "#/components/schemas/___________________________crm_PublicDefaultAssociation"
             },
             "example": null
           },
@@ -206818,7 +206642,7 @@
         },
         "example": null
       },
-      "____________________________crm_LabelsBetweenObjectPair": {
+      "___________________________crm_LabelsBetweenObjectPair": {
         "required": [
           "fromObjectId",
           "fromObjectTypeId",
@@ -206920,19 +206744,19 @@
         "type": "object",
         "properties": {
           "to": {
-            "$ref": "#/components/schemas/_____________________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/____________________________crm_PublicObjectId"
           },
           "types": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/______________________________crm_AssociationSpec"
+              "$ref": "#/components/schemas/_____________________________crm_AssociationSpec"
             },
             "example": null
           }
         },
         "example": null
       },
-      "____________________________crm_PublicDefaultAssociation": {
+      "___________________________crm_PublicDefaultAssociation": {
         "required": [
           "associationSpec",
           "from",
@@ -206941,13 +206765,13 @@
         "type": "object",
         "properties": {
           "associationSpec": {
-            "$ref": "#/components/schemas/______________________________crm_AssociationSpec"
+            "$ref": "#/components/schemas/_____________________________crm_AssociationSpec"
           },
           "from": {
-            "$ref": "#/components/schemas/_____________________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/____________________________crm_PublicObjectId"
           },
           "to": {
-            "$ref": "#/components/schemas/_____________________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/____________________________crm_PublicObjectId"
           }
         },
         "example": null
@@ -206973,7 +206797,7 @@
         "description": "Input data for merging two records.",
         "example": null
       },
-      "_____________________________crm_PublicObjectId": {
+      "____________________________crm_PublicObjectId": {
         "required": [
           "id"
         ],
@@ -210188,7 +210012,7 @@
         "description": "Contains the id and type of an association",
         "example": null
       },
-      "_______________________________crm_AssociationSpec": {
+      "______________________________crm_AssociationSpec": {
         "required": [
           "associationCategory",
           "associationTypeId"
@@ -210322,7 +210146,7 @@
         "description": "Specifies the input for reading a batch of CRM objects, including arrays of object IDs, requested property names (with optional history), and an optional unique identifying property.",
         "example": null
       },
-      "_____________________________crm_BatchResponsePublicDefaultAssociation": {
+      "____________________________crm_BatchResponsePublicDefaultAssociation": {
         "required": [
           "completedAt",
           "results",
@@ -210368,7 +210192,7 @@
           "results": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/_____________________________crm_PublicDefaultAssociation"
+              "$ref": "#/components/schemas/____________________________crm_PublicDefaultAssociation"
             },
             "example": null
           },
@@ -210907,7 +210731,7 @@
         },
         "example": null
       },
-      "_____________________________crm_LabelsBetweenObjectPair": {
+      "____________________________crm_LabelsBetweenObjectPair": {
         "required": [
           "fromObjectId",
           "fromObjectTypeId",
@@ -211009,19 +210833,19 @@
         "type": "object",
         "properties": {
           "to": {
-            "$ref": "#/components/schemas/______________________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/_____________________________crm_PublicObjectId"
           },
           "types": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/_______________________________crm_AssociationSpec"
+              "$ref": "#/components/schemas/______________________________crm_AssociationSpec"
             },
             "example": null
           }
         },
         "example": null
       },
-      "_____________________________crm_PublicDefaultAssociation": {
+      "____________________________crm_PublicDefaultAssociation": {
         "required": [
           "associationSpec",
           "from",
@@ -211030,18 +210854,18 @@
         "type": "object",
         "properties": {
           "associationSpec": {
-            "$ref": "#/components/schemas/_______________________________crm_AssociationSpec"
+            "$ref": "#/components/schemas/______________________________crm_AssociationSpec"
           },
           "from": {
-            "$ref": "#/components/schemas/______________________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/_____________________________crm_PublicObjectId"
           },
           "to": {
-            "$ref": "#/components/schemas/______________________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/_____________________________crm_PublicObjectId"
           }
         },
         "example": null
       },
-      "______________________________crm_PublicObjectId": {
+      "_____________________________crm_PublicObjectId": {
         "required": [
           "id"
         ],
@@ -212768,7 +212592,7 @@
         "description": "Contains the id and type of an association",
         "example": null
       },
-      "________________________________crm_AssociationSpec": {
+      "_______________________________crm_AssociationSpec": {
         "required": [
           "associationCategory",
           "associationTypeId"
@@ -212902,7 +212726,7 @@
         "description": "Specifies the input for reading a batch of CRM objects, including arrays of object IDs, requested property names (with optional history), and an optional unique identifying property.",
         "example": null
       },
-      "______________________________crm_BatchResponsePublicDefaultAssociation": {
+      "_____________________________crm_BatchResponsePublicDefaultAssociation": {
         "required": [
           "completedAt",
           "results",
@@ -212948,7 +212772,7 @@
           "results": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/______________________________crm_PublicDefaultAssociation"
+              "$ref": "#/components/schemas/_____________________________crm_PublicDefaultAssociation"
             },
             "example": null
           },
@@ -213487,7 +213311,7 @@
         },
         "example": null
       },
-      "______________________________crm_LabelsBetweenObjectPair": {
+      "_____________________________crm_LabelsBetweenObjectPair": {
         "required": [
           "fromObjectId",
           "fromObjectTypeId",
@@ -213590,19 +213414,19 @@
         "type": "object",
         "properties": {
           "to": {
-            "$ref": "#/components/schemas/_______________________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/______________________________crm_PublicObjectId"
           },
           "types": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/________________________________crm_AssociationSpec"
+              "$ref": "#/components/schemas/_______________________________crm_AssociationSpec"
             },
             "example": null
           }
         },
         "example": null
       },
-      "______________________________crm_PublicDefaultAssociation": {
+      "_____________________________crm_PublicDefaultAssociation": {
         "required": [
           "associationSpec",
           "from",
@@ -213611,18 +213435,18 @@
         "type": "object",
         "properties": {
           "associationSpec": {
-            "$ref": "#/components/schemas/________________________________crm_AssociationSpec"
+            "$ref": "#/components/schemas/_______________________________crm_AssociationSpec"
           },
           "from": {
-            "$ref": "#/components/schemas/_______________________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/______________________________crm_PublicObjectId"
           },
           "to": {
-            "$ref": "#/components/schemas/_______________________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/______________________________crm_PublicObjectId"
           }
         },
         "example": null
       },
-      "_______________________________crm_PublicObjectId": {
+      "______________________________crm_PublicObjectId": {
         "required": [
           "id"
         ],
@@ -214272,7 +214096,7 @@
         "description": "Contains the id and type of an association",
         "example": null
       },
-      "_________________________________crm_AssociationSpec": {
+      "________________________________crm_AssociationSpec": {
         "required": [
           "associationCategory",
           "associationTypeId"
@@ -214406,7 +214230,7 @@
         "description": "Specifies the input for reading a batch of CRM objects, including arrays of object IDs, requested property names (with optional history), and an optional unique identifying property.",
         "example": null
       },
-      "_______________________________crm_BatchResponsePublicDefaultAssociation": {
+      "______________________________crm_BatchResponsePublicDefaultAssociation": {
         "required": [
           "completedAt",
           "results",
@@ -214452,7 +214276,7 @@
           "results": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/_______________________________crm_PublicDefaultAssociation"
+              "$ref": "#/components/schemas/______________________________crm_PublicDefaultAssociation"
             },
             "example": null
           },
@@ -214991,7 +214815,7 @@
         },
         "example": null
       },
-      "_______________________________crm_LabelsBetweenObjectPair": {
+      "______________________________crm_LabelsBetweenObjectPair": {
         "required": [
           "fromObjectId",
           "fromObjectTypeId",
@@ -215093,19 +214917,19 @@
         "type": "object",
         "properties": {
           "to": {
-            "$ref": "#/components/schemas/________________________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/_______________________________crm_PublicObjectId"
           },
           "types": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/_________________________________crm_AssociationSpec"
+              "$ref": "#/components/schemas/________________________________crm_AssociationSpec"
             },
             "example": null
           }
         },
         "example": null
       },
-      "_______________________________crm_PublicDefaultAssociation": {
+      "______________________________crm_PublicDefaultAssociation": {
         "required": [
           "associationSpec",
           "from",
@@ -215114,18 +214938,18 @@
         "type": "object",
         "properties": {
           "associationSpec": {
-            "$ref": "#/components/schemas/_________________________________crm_AssociationSpec"
+            "$ref": "#/components/schemas/________________________________crm_AssociationSpec"
           },
           "from": {
-            "$ref": "#/components/schemas/________________________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/_______________________________crm_PublicObjectId"
           },
           "to": {
-            "$ref": "#/components/schemas/________________________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/_______________________________crm_PublicObjectId"
           }
         },
         "example": null
       },
-      "________________________________crm_PublicObjectId": {
+      "_______________________________crm_PublicObjectId": {
         "required": [
           "id"
         ],
@@ -215775,7 +215599,7 @@
         "description": "Contains the id and type of an association",
         "example": null
       },
-      "__________________________________crm_AssociationSpec": {
+      "_________________________________crm_AssociationSpec": {
         "required": [
           "associationCategory",
           "associationTypeId"
@@ -215909,7 +215733,7 @@
         "description": "Specifies the input for reading a batch of CRM objects, including arrays of object IDs, requested property names (with optional history), and an optional unique identifying property.",
         "example": null
       },
-      "________________________________crm_BatchResponsePublicDefaultAssociation": {
+      "_______________________________crm_BatchResponsePublicDefaultAssociation": {
         "required": [
           "completedAt",
           "results",
@@ -215955,7 +215779,7 @@
           "results": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/________________________________crm_PublicDefaultAssociation"
+              "$ref": "#/components/schemas/_______________________________crm_PublicDefaultAssociation"
             },
             "example": null
           },
@@ -216494,7 +216318,7 @@
         },
         "example": null
       },
-      "________________________________crm_LabelsBetweenObjectPair": {
+      "_______________________________crm_LabelsBetweenObjectPair": {
         "required": [
           "fromObjectId",
           "fromObjectTypeId",
@@ -216596,19 +216420,19 @@
         "type": "object",
         "properties": {
           "to": {
-            "$ref": "#/components/schemas/_________________________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/________________________________crm_PublicObjectId"
           },
           "types": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/__________________________________crm_AssociationSpec"
+              "$ref": "#/components/schemas/_________________________________crm_AssociationSpec"
             },
             "example": null
           }
         },
         "example": null
       },
-      "________________________________crm_PublicDefaultAssociation": {
+      "_______________________________crm_PublicDefaultAssociation": {
         "required": [
           "associationSpec",
           "from",
@@ -216617,18 +216441,18 @@
         "type": "object",
         "properties": {
           "associationSpec": {
-            "$ref": "#/components/schemas/__________________________________crm_AssociationSpec"
+            "$ref": "#/components/schemas/_________________________________crm_AssociationSpec"
           },
           "from": {
-            "$ref": "#/components/schemas/_________________________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/________________________________crm_PublicObjectId"
           },
           "to": {
-            "$ref": "#/components/schemas/_________________________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/________________________________crm_PublicObjectId"
           }
         },
         "example": null
       },
-      "_________________________________crm_PublicObjectId": {
+      "________________________________crm_PublicObjectId": {
         "required": [
           "id"
         ],
@@ -217278,7 +217102,7 @@
         "description": "Contains the id and type of an association",
         "example": null
       },
-      "___________________________________crm_AssociationSpec": {
+      "__________________________________crm_AssociationSpec": {
         "required": [
           "associationCategory",
           "associationTypeId"
@@ -217412,7 +217236,7 @@
         "description": "Specifies the input for reading a batch of CRM objects, including arrays of object IDs, requested property names (with optional history), and an optional unique identifying property.",
         "example": null
       },
-      "_________________________________crm_BatchResponsePublicDefaultAssociation": {
+      "________________________________crm_BatchResponsePublicDefaultAssociation": {
         "required": [
           "completedAt",
           "results",
@@ -217458,7 +217282,7 @@
           "results": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/_________________________________crm_PublicDefaultAssociation"
+              "$ref": "#/components/schemas/________________________________crm_PublicDefaultAssociation"
             },
             "example": null
           },
@@ -217997,7 +217821,7 @@
         },
         "example": null
       },
-      "_________________________________crm_LabelsBetweenObjectPair": {
+      "________________________________crm_LabelsBetweenObjectPair": {
         "required": [
           "fromObjectId",
           "fromObjectTypeId",
@@ -218099,19 +217923,19 @@
         "type": "object",
         "properties": {
           "to": {
-            "$ref": "#/components/schemas/__________________________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/_________________________________crm_PublicObjectId"
           },
           "types": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/___________________________________crm_AssociationSpec"
+              "$ref": "#/components/schemas/__________________________________crm_AssociationSpec"
             },
             "example": null
           }
         },
         "example": null
       },
-      "_________________________________crm_PublicDefaultAssociation": {
+      "________________________________crm_PublicDefaultAssociation": {
         "required": [
           "associationSpec",
           "from",
@@ -218120,13 +217944,13 @@
         "type": "object",
         "properties": {
           "associationSpec": {
-            "$ref": "#/components/schemas/___________________________________crm_AssociationSpec"
+            "$ref": "#/components/schemas/__________________________________crm_AssociationSpec"
           },
           "from": {
-            "$ref": "#/components/schemas/__________________________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/_________________________________crm_PublicObjectId"
           },
           "to": {
-            "$ref": "#/components/schemas/__________________________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/_________________________________crm_PublicObjectId"
           }
         },
         "example": null
@@ -218152,7 +217976,7 @@
         "description": "Input data for merging two records.",
         "example": null
       },
-      "__________________________________crm_PublicObjectId": {
+      "_________________________________crm_PublicObjectId": {
         "required": [
           "id"
         ],
@@ -219728,7 +219552,7 @@
         "description": "Contains the id and type of an association",
         "example": null
       },
-      "____________________________________crm_AssociationSpec": {
+      "___________________________________crm_AssociationSpec": {
         "required": [
           "associationCategory",
           "associationTypeId"
@@ -219862,7 +219686,7 @@
         "description": "Specifies the input for reading a batch of CRM objects, including arrays of object IDs, requested property names (with optional history), and an optional unique identifying property.",
         "example": null
       },
-      "__________________________________crm_BatchResponsePublicDefaultAssociation": {
+      "_________________________________crm_BatchResponsePublicDefaultAssociation": {
         "required": [
           "completedAt",
           "results",
@@ -219908,7 +219732,7 @@
           "results": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/__________________________________crm_PublicDefaultAssociation"
+              "$ref": "#/components/schemas/_________________________________crm_PublicDefaultAssociation"
             },
             "example": null
           },
@@ -220447,7 +220271,7 @@
         },
         "example": null
       },
-      "__________________________________crm_LabelsBetweenObjectPair": {
+      "_________________________________crm_LabelsBetweenObjectPair": {
         "required": [
           "fromObjectId",
           "fromObjectTypeId",
@@ -220549,19 +220373,19 @@
         "type": "object",
         "properties": {
           "to": {
-            "$ref": "#/components/schemas/___________________________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/__________________________________crm_PublicObjectId"
           },
           "types": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/____________________________________crm_AssociationSpec"
+              "$ref": "#/components/schemas/___________________________________crm_AssociationSpec"
             },
             "example": null
           }
         },
         "example": null
       },
-      "__________________________________crm_PublicDefaultAssociation": {
+      "_________________________________crm_PublicDefaultAssociation": {
         "required": [
           "associationSpec",
           "from",
@@ -220570,18 +220394,18 @@
         "type": "object",
         "properties": {
           "associationSpec": {
-            "$ref": "#/components/schemas/____________________________________crm_AssociationSpec"
+            "$ref": "#/components/schemas/___________________________________crm_AssociationSpec"
           },
           "from": {
-            "$ref": "#/components/schemas/___________________________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/__________________________________crm_PublicObjectId"
           },
           "to": {
-            "$ref": "#/components/schemas/___________________________________crm_PublicObjectId"
+            "$ref": "#/components/schemas/__________________________________crm_PublicObjectId"
           }
         },
         "example": null
       },
-      "___________________________________crm_PublicObjectId": {
+      "__________________________________crm_PublicObjectId": {
         "required": [
           "id"
         ],
@@ -247323,84 +247147,10 @@
             "authorizationUrl": "https://app.hubspot.com/oauth/authorize",
             "tokenUrl": "https://api.hubapi.com/oauth/v1/token",
             "scopes": {
-              "crm.objects.appointments.read": "",
-              "crm.objects.appointments.sensitive.read.v2": "",
-              "crm.objects.appointments.sensitive.write.v2": "",
-              "crm.objects.appointments.write": "",
-              "crm.objects.calls.read": "",
-              "crm.objects.carts.read": "",
-              "crm.objects.carts.write": "",
               "crm.objects.commercepayments.read": "",
-              "crm.objects.commercepayments.write": "",
-              "crm.objects.companies.highly_sensitive.read.v2": "",
-              "crm.objects.companies.highly_sensitive.write.v2": "",
-              "crm.objects.companies.read": "",
-              "crm.objects.companies.sensitive.read.v2": "",
-              "crm.objects.companies.sensitive.write.v2": "",
-              "crm.objects.companies.write": "",
-              "crm.objects.contacts.highly_sensitive.read.v2": "",
-              "crm.objects.contacts.highly_sensitive.write.v2": "",
               "crm.objects.contacts.read": "",
-              "crm.objects.contacts.sensitive.read.v2": "",
-              "crm.objects.contacts.sensitive.write.v2": "",
-              "crm.objects.contacts.write": "",
-              "crm.objects.courses.read": "",
-              "crm.objects.courses.write": "",
-              "crm.objects.custom.highly_sensitive.read.v2": "",
-              "crm.objects.custom.highly_sensitive.write.v2": "",
-              "crm.objects.custom.read": "",
-              "crm.objects.custom.sensitive.read.v2": "",
-              "crm.objects.custom.sensitive.write.v2": "",
-              "crm.objects.custom.write": "",
-              "crm.objects.deals.highly_sensitive.read.v2": "",
-              "crm.objects.deals.highly_sensitive.write.v2": "",
-              "crm.objects.deals.read": "",
-              "crm.objects.deals.sensitive.read.v2": "",
-              "crm.objects.deals.sensitive.write.v2": "",
-              "crm.objects.deals.write": "",
-              "crm.objects.emails.read": "",
               "crm.objects.feedback_submissions.read": "",
-              "crm.objects.goals.read": "",
-              "crm.objects.goals.write": "",
-              "crm.objects.invoices.read": "",
-              "crm.objects.invoices.write": "",
-              "crm.objects.leads.read": "",
-              "crm.objects.leads.write": "",
-              "crm.objects.line_items.read": "",
-              "crm.objects.line_items.write": "",
-              "crm.objects.listings.read": "",
-              "crm.objects.listings.write": "",
-              "crm.objects.meetings.read": "",
-              "crm.objects.notes.read": "",
-              "crm.objects.orders.read": "",
-              "crm.objects.orders.write": "",
-              "crm.objects.partner-clients.read": "",
-              "crm.objects.partner-clients.write": "",
-              "crm.objects.partner-services.read": "",
-              "crm.objects.partner-services.write": "",
-              "crm.objects.products.read": "",
-              "crm.objects.products.write": "",
-              "crm.objects.projects.highly_sensitive.read": "",
-              "crm.objects.projects.highly_sensitive.write": "",
-              "crm.objects.projects.read": "",
-              "crm.objects.projects.sensitive.read": "",
-              "crm.objects.projects.sensitive.write": "",
-              "crm.objects.projects.write": "",
-              "crm.objects.quotes.read": "",
-              "crm.objects.quotes.write": "",
-              "crm.objects.services.read": "",
-              "crm.objects.services.write": "",
-              "crm.objects.subscriptions.read": "",
-              "crm.objects.subscriptions.write": "",
-              "crm.objects.tasks.read": "",
-              "crm.objects.users.read": "",
-              "crm.objects.users.write": "",
-              "e-commerce": "",
-              "media_bridge.read": "",
-              "oauth": "",
-              "tickets": "",
-              "tickets.highly_sensitive.v2": "",
-              "tickets.sensitive.v2": ""
+              "oauth": ""
             }
           }
         }

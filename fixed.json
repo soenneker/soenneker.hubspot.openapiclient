@@ -124592,26 +124592,6 @@
         "description": "Contains the id and type of an association",
         "example": null
       },
-      "CrmAssociationSpec15": {
-        "required": [
-          "associationCategory",
-          "associationTypeId"
-        ],
-        "type": "object",
-        "properties": {
-          "associationCategory": {
-            "$ref": "#/components/schemas/CrmAssociationSpec15AssociationCategory"
-          },
-          "associationTypeId": {
-            "type": "integer",
-            "description": "The ID representing the specific type of association.",
-            "format": "int32",
-            "example": null
-          }
-        },
-        "description": "Defines the type, direction, and details of the relationship between two CRM objects.",
-        "example": null
-      },
       "CrmBatchReadInputSimplePublicObjectId14": {
         "required": [
           "inputs",
@@ -124652,63 +124632,6 @@
           }
         },
         "description": "Specifies the input for reading a batch of CRM objects, including arrays of object IDs, requested property names (with optional history), and an optional unique identifying property.",
-        "example": null
-      },
-      "CrmBatchResponsePublicDefaultAssociation14": {
-        "required": [
-          "completedAt",
-          "results",
-          "startedAt",
-          "status"
-        ],
-        "type": "object",
-        "properties": {
-          "completedAt": {
-            "type": "string",
-            "description": "The timestamp when the batch process was completed, in ISO 8601 format.",
-            "format": "date-time",
-            "example": null
-          },
-          "errors": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/CrmStandardError18"
-            },
-            "example": null
-          },
-          "links": {
-            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation14LinksProperty"
-          },
-          "numErrors": {
-            "type": "integer",
-            "description": "The total number of errors that occurred during the operation.",
-            "format": "int32",
-            "example": null
-          },
-          "requestedAt": {
-            "type": "string",
-            "description": "The timestamp when the batch process was initiated, in ISO 8601 format.",
-            "format": "date-time",
-            "example": null
-          },
-          "results": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/CrmPublicDefaultAssociation14"
-            },
-            "example": null
-          },
-          "startedAt": {
-            "type": "string",
-            "description": "The timestamp when the batch process began execution, in ISO 8601 format.",
-            "format": "date-time",
-            "example": null
-          },
-          "status": {
-            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation14Status"
-          }
-        },
-        "description": "The response returned after performing a batch operation on associations.",
         "example": null
       },
       "CrmBatchResponseSimplePublicObject14": {
@@ -125025,48 +124948,6 @@
         },
         "example": null
       },
-      "CrmLabelsBetweenObjectPair14": {
-        "required": [
-          "fromObjectId",
-          "fromObjectTypeId",
-          "labels",
-          "toObjectId",
-          "toObjectTypeId"
-        ],
-        "type": "object",
-        "properties": {
-          "fromObjectId": {
-            "type": "string",
-            "description": "Source unique ID of the object.",
-            "example": null
-          },
-          "fromObjectTypeId": {
-            "type": "string",
-            "description": "Source object type.",
-            "example": null
-          },
-          "labels": {
-            "type": "array",
-            "items": {
-              "type": "string",
-              "example": null
-            },
-            "example": null
-          },
-          "toObjectId": {
-            "type": "string",
-            "description": "Target unique ID of the object.",
-            "example": null
-          },
-          "toObjectTypeId": {
-            "type": "string",
-            "description": "Target object type.",
-            "example": null
-          }
-        },
-        "description": "The relationship descriptors applicable between two object types.",
-        "example": null
-      },
       "CrmNextPage17": {
         "required": [
           "after"
@@ -125117,41 +124998,6 @@
           }
         },
         "description": "specifies the paging information needed to retrieve the previous set of results in a paginated API response",
-        "example": null
-      },
-      "CrmPublicDefaultAssociation14": {
-        "required": [
-          "associationSpec",
-          "from",
-          "to"
-        ],
-        "type": "object",
-        "properties": {
-          "associationSpec": {
-            "$ref": "#/components/schemas/CrmAssociationSpec15"
-          },
-          "from": {
-            "$ref": "#/components/schemas/CrmPublicObjectId14"
-          },
-          "to": {
-            "$ref": "#/components/schemas/CrmPublicObjectId14"
-          }
-        },
-        "example": null
-      },
-      "CrmPublicObjectId14": {
-        "required": [
-          "id"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "description": "The unique ID of the object.",
-            "example": null
-          }
-        },
-        "description": "Contains the Id of a Public Object",
         "example": null
       },
       "CrmPublicObjectSearchRequest14": {
@@ -125497,7 +125343,7 @@
         "description": "Contains the id and type of an association",
         "example": null
       },
-      "CrmAssociationSpec16": {
+      "CrmAssociationSpec15": {
         "required": [
           "associationCategory",
           "associationTypeId"
@@ -125505,7 +125351,7 @@
         "type": "object",
         "properties": {
           "associationCategory": {
-            "$ref": "#/components/schemas/CrmAssociationSpec16AssociationCategory"
+            "$ref": "#/components/schemas/CrmAssociationSpec15AssociationCategory"
           },
           "associationTypeId": {
             "type": "integer",
@@ -125623,7 +125469,7 @@
         "description": "Specifies the input for reading a batch of CRM objects, including arrays of object IDs, requested property names (with optional history), and an optional unique identifying property.",
         "example": null
       },
-      "CrmBatchResponsePublicDefaultAssociation15": {
+      "CrmBatchResponsePublicDefaultAssociation14": {
         "required": [
           "completedAt",
           "results",
@@ -125646,7 +125492,7 @@
             "example": null
           },
           "links": {
-            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation15LinksProperty"
+            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation14LinksProperty"
           },
           "numErrors": {
             "type": "integer",
@@ -125663,7 +125509,7 @@
           "results": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CrmPublicDefaultAssociation15"
+              "$ref": "#/components/schemas/CrmPublicDefaultAssociation14"
             },
             "example": null
           },
@@ -125674,7 +125520,7 @@
             "example": null
           },
           "status": {
-            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation15Status"
+            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation14Status"
           }
         },
         "description": "The response returned after performing a batch operation on associations.",
@@ -126095,7 +125941,7 @@
         },
         "example": null
       },
-      "CrmLabelsBetweenObjectPair15": {
+      "CrmLabelsBetweenObjectPair14": {
         "required": [
           "fromObjectId",
           "fromObjectTypeId",
@@ -126197,19 +126043,19 @@
         "type": "object",
         "properties": {
           "to": {
-            "$ref": "#/components/schemas/CrmPublicObjectId15"
+            "$ref": "#/components/schemas/CrmPublicObjectId14"
           },
           "types": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CrmAssociationSpec16"
+              "$ref": "#/components/schemas/CrmAssociationSpec15"
             },
             "example": null
           }
         },
         "example": null
       },
-      "CrmPublicDefaultAssociation15": {
+      "CrmPublicDefaultAssociation14": {
         "required": [
           "associationSpec",
           "from",
@@ -126218,18 +126064,18 @@
         "type": "object",
         "properties": {
           "associationSpec": {
-            "$ref": "#/components/schemas/CrmAssociationSpec16"
+            "$ref": "#/components/schemas/CrmAssociationSpec15"
           },
           "from": {
-            "$ref": "#/components/schemas/CrmPublicObjectId15"
+            "$ref": "#/components/schemas/CrmPublicObjectId14"
           },
           "to": {
-            "$ref": "#/components/schemas/CrmPublicObjectId15"
+            "$ref": "#/components/schemas/CrmPublicObjectId14"
           }
         },
         "example": null
       },
-      "CrmPublicObjectId15": {
+      "CrmPublicObjectId14": {
         "required": [
           "id"
         ],
@@ -126755,7 +126601,7 @@
         "description": "Property model that includes timestamp.",
         "example": null
       },
-      "CrmBatchResponsePublicDefaultAssociation16": {
+      "CrmBatchResponsePublicDefaultAssociation15": {
         "required": [
           "completedAt",
           "results",
@@ -126778,7 +126624,7 @@
             "example": null
           },
           "links": {
-            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation16LinksProperty"
+            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation15LinksProperty"
           },
           "numErrors": {
             "type": "integer",
@@ -126795,7 +126641,7 @@
           "results": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CrmPublicDefaultAssociation16"
+              "$ref": "#/components/schemas/CrmPublicDefaultAssociation15"
             },
             "example": null
           },
@@ -126806,7 +126652,7 @@
             "example": null
           },
           "status": {
-            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation16Status"
+            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation15Status"
           }
         },
         "description": "The response returned after performing a batch operation on associations.",
@@ -126844,7 +126690,7 @@
         },
         "example": null
       },
-      "CrmPublicObjectId16": {
+      "CrmPublicObjectId15": {
         "required": [
           "id"
         ],
@@ -126911,7 +126757,7 @@
         "description": "Represents a standard error response in the HubSpot API, providing detailed information about an error that occurred during an API request.",
         "example": null
       },
-      "CrmAssociationSpec17": {
+      "CrmAssociationSpec16": {
         "required": [
           "associationCategory",
           "associationTypeId"
@@ -126919,7 +126765,7 @@
         "type": "object",
         "properties": {
           "associationCategory": {
-            "$ref": "#/components/schemas/CrmAssociationSpec17AssociationCategory"
+            "$ref": "#/components/schemas/CrmAssociationSpec16AssociationCategory"
           },
           "associationTypeId": {
             "type": "integer",
@@ -126931,7 +126777,7 @@
         "description": "Defines the type, direction, and details of the relationship between two CRM objects.",
         "example": null
       },
-      "CrmLabelsBetweenObjectPair16": {
+      "CrmLabelsBetweenObjectPair15": {
         "required": [
           "fromObjectId",
           "fromObjectTypeId",
@@ -126973,7 +126819,7 @@
         "description": "The relationship descriptors applicable between two object types.",
         "example": null
       },
-      "CrmPublicDefaultAssociation16": {
+      "CrmPublicDefaultAssociation15": {
         "required": [
           "associationSpec",
           "from",
@@ -126982,13 +126828,13 @@
         "type": "object",
         "properties": {
           "associationSpec": {
-            "$ref": "#/components/schemas/CrmAssociationSpec17"
+            "$ref": "#/components/schemas/CrmAssociationSpec16"
           },
           "from": {
-            "$ref": "#/components/schemas/CrmPublicObjectId16"
+            "$ref": "#/components/schemas/CrmPublicObjectId15"
           },
           "to": {
-            "$ref": "#/components/schemas/CrmPublicObjectId16"
+            "$ref": "#/components/schemas/CrmPublicObjectId15"
           }
         },
         "example": null
@@ -127067,7 +126913,7 @@
         "description": "Contains the id and type of an association",
         "example": null
       },
-      "CrmAssociationSpec18": {
+      "CrmAssociationSpec17": {
         "required": [
           "associationCategory",
           "associationTypeId"
@@ -127075,7 +126921,7 @@
         "type": "object",
         "properties": {
           "associationCategory": {
-            "$ref": "#/components/schemas/CrmAssociationSpec18AssociationCategory"
+            "$ref": "#/components/schemas/CrmAssociationSpec17AssociationCategory"
           },
           "associationTypeId": {
             "type": "integer",
@@ -127193,7 +127039,7 @@
         "description": "Specifies the input for reading a batch of CRM objects, including arrays of object IDs, requested property names (with optional history), and an optional unique identifying property.",
         "example": null
       },
-      "CrmBatchResponsePublicDefaultAssociation17": {
+      "CrmBatchResponsePublicDefaultAssociation16": {
         "required": [
           "completedAt",
           "results",
@@ -127216,7 +127062,7 @@
             "example": null
           },
           "links": {
-            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation17LinksProperty"
+            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation16LinksProperty"
           },
           "numErrors": {
             "type": "integer",
@@ -127233,7 +127079,7 @@
           "results": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CrmPublicDefaultAssociation17"
+              "$ref": "#/components/schemas/CrmPublicDefaultAssociation16"
             },
             "example": null
           },
@@ -127244,7 +127090,7 @@
             "example": null
           },
           "status": {
-            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation17Status"
+            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation16Status"
           }
         },
         "description": "The response returned after performing a batch operation on associations.",
@@ -127665,7 +127511,7 @@
         },
         "example": null
       },
-      "CrmLabelsBetweenObjectPair17": {
+      "CrmLabelsBetweenObjectPair16": {
         "required": [
           "fromObjectId",
           "fromObjectTypeId",
@@ -127767,19 +127613,19 @@
         "type": "object",
         "properties": {
           "to": {
-            "$ref": "#/components/schemas/CrmPublicObjectId17"
+            "$ref": "#/components/schemas/CrmPublicObjectId16"
           },
           "types": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CrmAssociationSpec18"
+              "$ref": "#/components/schemas/CrmAssociationSpec17"
             },
             "example": null
           }
         },
         "example": null
       },
-      "CrmPublicDefaultAssociation17": {
+      "CrmPublicDefaultAssociation16": {
         "required": [
           "associationSpec",
           "from",
@@ -127788,18 +127634,18 @@
         "type": "object",
         "properties": {
           "associationSpec": {
-            "$ref": "#/components/schemas/CrmAssociationSpec18"
+            "$ref": "#/components/schemas/CrmAssociationSpec17"
           },
           "from": {
-            "$ref": "#/components/schemas/CrmPublicObjectId17"
+            "$ref": "#/components/schemas/CrmPublicObjectId16"
           },
           "to": {
-            "$ref": "#/components/schemas/CrmPublicObjectId17"
+            "$ref": "#/components/schemas/CrmPublicObjectId16"
           }
         },
         "example": null
       },
-      "CrmPublicObjectId17": {
+      "CrmPublicObjectId16": {
         "required": [
           "id"
         ],
@@ -128912,7 +128758,7 @@
         "description": "Contains the id and type of an association",
         "example": null
       },
-      "CrmAssociationSpec19": {
+      "CrmAssociationSpec18": {
         "required": [
           "associationCategory",
           "associationTypeId"
@@ -128920,7 +128766,7 @@
         "type": "object",
         "properties": {
           "associationCategory": {
-            "$ref": "#/components/schemas/CrmAssociationSpec19AssociationCategory"
+            "$ref": "#/components/schemas/CrmAssociationSpec18AssociationCategory"
           },
           "associationTypeId": {
             "type": "integer",
@@ -129038,7 +128884,7 @@
         "description": "Specifies the input for reading a batch of CRM objects, including arrays of object IDs, requested property names (with optional history), and an optional unique identifying property.",
         "example": null
       },
-      "CrmBatchResponsePublicDefaultAssociation18": {
+      "CrmBatchResponsePublicDefaultAssociation17": {
         "required": [
           "completedAt",
           "results",
@@ -129061,7 +128907,7 @@
             "example": null
           },
           "links": {
-            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation18LinksProperty"
+            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation17LinksProperty"
           },
           "numErrors": {
             "type": "integer",
@@ -129078,7 +128924,7 @@
           "results": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CrmPublicDefaultAssociation18"
+              "$ref": "#/components/schemas/CrmPublicDefaultAssociation17"
             },
             "example": null
           },
@@ -129089,7 +128935,7 @@
             "example": null
           },
           "status": {
-            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation18Status"
+            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation17Status"
           }
         },
         "description": "The response returned after performing a batch operation on associations.",
@@ -129510,7 +129356,7 @@
         },
         "example": null
       },
-      "CrmLabelsBetweenObjectPair18": {
+      "CrmLabelsBetweenObjectPair17": {
         "required": [
           "fromObjectId",
           "fromObjectTypeId",
@@ -129612,19 +129458,19 @@
         "type": "object",
         "properties": {
           "to": {
-            "$ref": "#/components/schemas/CrmPublicObjectId18"
+            "$ref": "#/components/schemas/CrmPublicObjectId17"
           },
           "types": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CrmAssociationSpec19"
+              "$ref": "#/components/schemas/CrmAssociationSpec18"
             },
             "example": null
           }
         },
         "example": null
       },
-      "CrmPublicDefaultAssociation18": {
+      "CrmPublicDefaultAssociation17": {
         "required": [
           "associationSpec",
           "from",
@@ -129633,18 +129479,18 @@
         "type": "object",
         "properties": {
           "associationSpec": {
-            "$ref": "#/components/schemas/CrmAssociationSpec19"
+            "$ref": "#/components/schemas/CrmAssociationSpec18"
           },
           "from": {
-            "$ref": "#/components/schemas/CrmPublicObjectId18"
+            "$ref": "#/components/schemas/CrmPublicObjectId17"
           },
           "to": {
-            "$ref": "#/components/schemas/CrmPublicObjectId18"
+            "$ref": "#/components/schemas/CrmPublicObjectId17"
           }
         },
         "example": null
       },
-      "CrmPublicObjectId18": {
+      "CrmPublicObjectId17": {
         "required": [
           "id"
         ],
@@ -130191,7 +130037,7 @@
         "description": "Contains the id and type of an association",
         "example": null
       },
-      "CrmAssociationSpec20": {
+      "CrmAssociationSpec19": {
         "required": [
           "associationCategory",
           "associationTypeId"
@@ -130199,7 +130045,7 @@
         "type": "object",
         "properties": {
           "associationCategory": {
-            "$ref": "#/components/schemas/CrmAssociationSpec20AssociationCategory"
+            "$ref": "#/components/schemas/CrmAssociationSpec19AssociationCategory"
           },
           "associationTypeId": {
             "type": "integer",
@@ -130317,7 +130163,7 @@
         "description": "Specifies the input for reading a batch of CRM objects, including arrays of object IDs, requested property names (with optional history), and an optional unique identifying property.",
         "example": null
       },
-      "CrmBatchResponsePublicDefaultAssociation19": {
+      "CrmBatchResponsePublicDefaultAssociation18": {
         "required": [
           "completedAt",
           "results",
@@ -130340,7 +130186,7 @@
             "example": null
           },
           "links": {
-            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation19LinksProperty"
+            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation18LinksProperty"
           },
           "numErrors": {
             "type": "integer",
@@ -130357,7 +130203,7 @@
           "results": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CrmPublicDefaultAssociation19"
+              "$ref": "#/components/schemas/CrmPublicDefaultAssociation18"
             },
             "example": null
           },
@@ -130368,7 +130214,7 @@
             "example": null
           },
           "status": {
-            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation19Status"
+            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation18Status"
           }
         },
         "description": "The response returned after performing a batch operation on associations.",
@@ -130789,7 +130635,7 @@
         },
         "example": null
       },
-      "CrmLabelsBetweenObjectPair19": {
+      "CrmLabelsBetweenObjectPair18": {
         "required": [
           "fromObjectId",
           "fromObjectTypeId",
@@ -130891,19 +130737,19 @@
         "type": "object",
         "properties": {
           "to": {
-            "$ref": "#/components/schemas/CrmPublicObjectId19"
+            "$ref": "#/components/schemas/CrmPublicObjectId18"
           },
           "types": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CrmAssociationSpec20"
+              "$ref": "#/components/schemas/CrmAssociationSpec19"
             },
             "example": null
           }
         },
         "example": null
       },
-      "CrmPublicDefaultAssociation19": {
+      "CrmPublicDefaultAssociation18": {
         "required": [
           "associationSpec",
           "from",
@@ -130912,18 +130758,18 @@
         "type": "object",
         "properties": {
           "associationSpec": {
-            "$ref": "#/components/schemas/CrmAssociationSpec20"
+            "$ref": "#/components/schemas/CrmAssociationSpec19"
           },
           "from": {
-            "$ref": "#/components/schemas/CrmPublicObjectId19"
+            "$ref": "#/components/schemas/CrmPublicObjectId18"
           },
           "to": {
-            "$ref": "#/components/schemas/CrmPublicObjectId19"
+            "$ref": "#/components/schemas/CrmPublicObjectId18"
           }
         },
         "example": null
       },
-      "CrmPublicObjectId19": {
+      "CrmPublicObjectId18": {
         "required": [
           "id"
         ],
@@ -132052,7 +131898,7 @@
         "description": "Contains the id and type of an association",
         "example": null
       },
-      "CrmAssociationSpec21": {
+      "CrmAssociationSpec20": {
         "required": [
           "associationCategory",
           "associationTypeId"
@@ -132060,7 +131906,7 @@
         "type": "object",
         "properties": {
           "associationCategory": {
-            "$ref": "#/components/schemas/CrmAssociationSpec21AssociationCategory"
+            "$ref": "#/components/schemas/CrmAssociationSpec20AssociationCategory"
           },
           "associationTypeId": {
             "type": "integer",
@@ -132178,7 +132024,7 @@
         "description": "Specifies the input for reading a batch of CRM objects, including arrays of object IDs, requested property names (with optional history), and an optional unique identifying property.",
         "example": null
       },
-      "CrmBatchResponsePublicDefaultAssociation20": {
+      "CrmBatchResponsePublicDefaultAssociation19": {
         "required": [
           "completedAt",
           "results",
@@ -132201,7 +132047,7 @@
             "example": null
           },
           "links": {
-            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation20LinksProperty"
+            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation19LinksProperty"
           },
           "numErrors": {
             "type": "integer",
@@ -132218,7 +132064,7 @@
           "results": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CrmPublicDefaultAssociation20"
+              "$ref": "#/components/schemas/CrmPublicDefaultAssociation19"
             },
             "example": null
           },
@@ -132229,7 +132075,7 @@
             "example": null
           },
           "status": {
-            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation20Status"
+            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation19Status"
           }
         },
         "description": "The response returned after performing a batch operation on associations.",
@@ -132650,7 +132496,7 @@
         },
         "example": null
       },
-      "CrmLabelsBetweenObjectPair20": {
+      "CrmLabelsBetweenObjectPair19": {
         "required": [
           "fromObjectId",
           "fromObjectTypeId",
@@ -132752,19 +132598,19 @@
         "type": "object",
         "properties": {
           "to": {
-            "$ref": "#/components/schemas/CrmPublicObjectId20"
+            "$ref": "#/components/schemas/CrmPublicObjectId19"
           },
           "types": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CrmAssociationSpec21"
+              "$ref": "#/components/schemas/CrmAssociationSpec20"
             },
             "example": null
           }
         },
         "example": null
       },
-      "CrmPublicDefaultAssociation20": {
+      "CrmPublicDefaultAssociation19": {
         "required": [
           "associationSpec",
           "from",
@@ -132773,18 +132619,18 @@
         "type": "object",
         "properties": {
           "associationSpec": {
-            "$ref": "#/components/schemas/CrmAssociationSpec21"
+            "$ref": "#/components/schemas/CrmAssociationSpec20"
           },
           "from": {
-            "$ref": "#/components/schemas/CrmPublicObjectId20"
+            "$ref": "#/components/schemas/CrmPublicObjectId19"
           },
           "to": {
-            "$ref": "#/components/schemas/CrmPublicObjectId20"
+            "$ref": "#/components/schemas/CrmPublicObjectId19"
           }
         },
         "example": null
       },
-      "CrmPublicObjectId20": {
+      "CrmPublicObjectId19": {
         "required": [
           "id"
         ],
@@ -133331,7 +133177,7 @@
         "description": "Contains the id and type of an association",
         "example": null
       },
-      "CrmAssociationSpec22": {
+      "CrmAssociationSpec21": {
         "required": [
           "associationCategory",
           "associationTypeId"
@@ -133339,7 +133185,7 @@
         "type": "object",
         "properties": {
           "associationCategory": {
-            "$ref": "#/components/schemas/CrmAssociationSpec22AssociationCategory"
+            "$ref": "#/components/schemas/CrmAssociationSpec21AssociationCategory"
           },
           "associationTypeId": {
             "type": "integer",
@@ -133457,7 +133303,7 @@
         "description": "Specifies the input for reading a batch of CRM objects, including arrays of object IDs, requested property names (with optional history), and an optional unique identifying property.",
         "example": null
       },
-      "CrmBatchResponsePublicDefaultAssociation21": {
+      "CrmBatchResponsePublicDefaultAssociation20": {
         "required": [
           "completedAt",
           "results",
@@ -133480,7 +133326,7 @@
             "example": null
           },
           "links": {
-            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation21LinksProperty"
+            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation20LinksProperty"
           },
           "numErrors": {
             "type": "integer",
@@ -133497,7 +133343,7 @@
           "results": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CrmPublicDefaultAssociation21"
+              "$ref": "#/components/schemas/CrmPublicDefaultAssociation20"
             },
             "example": null
           },
@@ -133508,7 +133354,7 @@
             "example": null
           },
           "status": {
-            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation21Status"
+            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation20Status"
           }
         },
         "description": "The response returned after performing a batch operation on associations.",
@@ -133929,7 +133775,7 @@
         },
         "example": null
       },
-      "CrmLabelsBetweenObjectPair21": {
+      "CrmLabelsBetweenObjectPair20": {
         "required": [
           "fromObjectId",
           "fromObjectTypeId",
@@ -134032,19 +133878,19 @@
         "type": "object",
         "properties": {
           "to": {
-            "$ref": "#/components/schemas/CrmPublicObjectId21"
+            "$ref": "#/components/schemas/CrmPublicObjectId20"
           },
           "types": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CrmAssociationSpec22"
+              "$ref": "#/components/schemas/CrmAssociationSpec21"
             },
             "example": null
           }
         },
         "example": null
       },
-      "CrmPublicDefaultAssociation21": {
+      "CrmPublicDefaultAssociation20": {
         "required": [
           "associationSpec",
           "from",
@@ -134053,18 +133899,18 @@
         "type": "object",
         "properties": {
           "associationSpec": {
-            "$ref": "#/components/schemas/CrmAssociationSpec22"
+            "$ref": "#/components/schemas/CrmAssociationSpec21"
           },
           "from": {
-            "$ref": "#/components/schemas/CrmPublicObjectId21"
+            "$ref": "#/components/schemas/CrmPublicObjectId20"
           },
           "to": {
-            "$ref": "#/components/schemas/CrmPublicObjectId21"
+            "$ref": "#/components/schemas/CrmPublicObjectId20"
           }
         },
         "example": null
       },
-      "CrmPublicObjectId21": {
+      "CrmPublicObjectId20": {
         "required": [
           "id"
         ],
@@ -138320,7 +138166,7 @@
         "description": "Contains the id and type of an association",
         "example": null
       },
-      "CrmAssociationSpec23": {
+      "CrmAssociationSpec22": {
         "required": [
           "associationCategory",
           "associationTypeId"
@@ -138328,7 +138174,7 @@
         "type": "object",
         "properties": {
           "associationCategory": {
-            "$ref": "#/components/schemas/CrmAssociationSpec23AssociationCategory"
+            "$ref": "#/components/schemas/CrmAssociationSpec22AssociationCategory"
           },
           "associationTypeId": {
             "type": "integer",
@@ -138446,7 +138292,7 @@
         "description": "Specifies the input for reading a batch of CRM objects, including arrays of object IDs, requested property names (with optional history), and an optional unique identifying property.",
         "example": null
       },
-      "CrmBatchResponsePublicDefaultAssociation22": {
+      "CrmBatchResponsePublicDefaultAssociation21": {
         "required": [
           "completedAt",
           "results",
@@ -138469,7 +138315,7 @@
             "example": null
           },
           "links": {
-            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation22LinksProperty"
+            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation21LinksProperty"
           },
           "numErrors": {
             "type": "integer",
@@ -138486,7 +138332,7 @@
           "results": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CrmPublicDefaultAssociation22"
+              "$ref": "#/components/schemas/CrmPublicDefaultAssociation21"
             },
             "example": null
           },
@@ -138497,7 +138343,7 @@
             "example": null
           },
           "status": {
-            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation22Status"
+            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation21Status"
           }
         },
         "description": "The response returned after performing a batch operation on associations.",
@@ -138918,7 +138764,7 @@
         },
         "example": null
       },
-      "CrmLabelsBetweenObjectPair22": {
+      "CrmLabelsBetweenObjectPair21": {
         "required": [
           "fromObjectId",
           "fromObjectTypeId",
@@ -139020,19 +138866,19 @@
         "type": "object",
         "properties": {
           "to": {
-            "$ref": "#/components/schemas/CrmPublicObjectId22"
+            "$ref": "#/components/schemas/CrmPublicObjectId21"
           },
           "types": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CrmAssociationSpec23"
+              "$ref": "#/components/schemas/CrmAssociationSpec22"
             },
             "example": null
           }
         },
         "example": null
       },
-      "CrmPublicDefaultAssociation22": {
+      "CrmPublicDefaultAssociation21": {
         "required": [
           "associationSpec",
           "from",
@@ -139041,18 +138887,18 @@
         "type": "object",
         "properties": {
           "associationSpec": {
-            "$ref": "#/components/schemas/CrmAssociationSpec23"
+            "$ref": "#/components/schemas/CrmAssociationSpec22"
           },
           "from": {
-            "$ref": "#/components/schemas/CrmPublicObjectId22"
+            "$ref": "#/components/schemas/CrmPublicObjectId21"
           },
           "to": {
-            "$ref": "#/components/schemas/CrmPublicObjectId22"
+            "$ref": "#/components/schemas/CrmPublicObjectId21"
           }
         },
         "example": null
       },
-      "CrmPublicObjectId22": {
+      "CrmPublicObjectId21": {
         "required": [
           "id"
         ],
@@ -139599,7 +139445,7 @@
         "description": "Contains the id and type of an association",
         "example": null
       },
-      "CrmAssociationSpec24": {
+      "CrmAssociationSpec23": {
         "required": [
           "associationCategory",
           "associationTypeId"
@@ -139607,7 +139453,7 @@
         "type": "object",
         "properties": {
           "associationCategory": {
-            "$ref": "#/components/schemas/CrmAssociationSpec24AssociationCategory"
+            "$ref": "#/components/schemas/CrmAssociationSpec23AssociationCategory"
           },
           "associationTypeId": {
             "type": "integer",
@@ -139725,7 +139571,7 @@
         "description": "Specifies the input for reading a batch of CRM objects, including arrays of object IDs, requested property names (with optional history), and an optional unique identifying property.",
         "example": null
       },
-      "CrmBatchResponsePublicDefaultAssociation23": {
+      "CrmBatchResponsePublicDefaultAssociation22": {
         "required": [
           "completedAt",
           "results",
@@ -139748,7 +139594,7 @@
             "example": null
           },
           "links": {
-            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation23LinksProperty"
+            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation22LinksProperty"
           },
           "numErrors": {
             "type": "integer",
@@ -139765,7 +139611,7 @@
           "results": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CrmPublicDefaultAssociation23"
+              "$ref": "#/components/schemas/CrmPublicDefaultAssociation22"
             },
             "example": null
           },
@@ -139776,7 +139622,7 @@
             "example": null
           },
           "status": {
-            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation23Status"
+            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation22Status"
           }
         },
         "description": "The response returned after performing a batch operation on associations.",
@@ -140197,7 +140043,7 @@
         },
         "example": null
       },
-      "CrmLabelsBetweenObjectPair23": {
+      "CrmLabelsBetweenObjectPair22": {
         "required": [
           "fromObjectId",
           "fromObjectTypeId",
@@ -140299,19 +140145,19 @@
         "type": "object",
         "properties": {
           "to": {
-            "$ref": "#/components/schemas/CrmPublicObjectId23"
+            "$ref": "#/components/schemas/CrmPublicObjectId22"
           },
           "types": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CrmAssociationSpec24"
+              "$ref": "#/components/schemas/CrmAssociationSpec23"
             },
             "example": null
           }
         },
         "example": null
       },
-      "CrmPublicDefaultAssociation23": {
+      "CrmPublicDefaultAssociation22": {
         "required": [
           "associationSpec",
           "from",
@@ -140320,18 +140166,18 @@
         "type": "object",
         "properties": {
           "associationSpec": {
-            "$ref": "#/components/schemas/CrmAssociationSpec24"
+            "$ref": "#/components/schemas/CrmAssociationSpec23"
           },
           "from": {
-            "$ref": "#/components/schemas/CrmPublicObjectId23"
+            "$ref": "#/components/schemas/CrmPublicObjectId22"
           },
           "to": {
-            "$ref": "#/components/schemas/CrmPublicObjectId23"
+            "$ref": "#/components/schemas/CrmPublicObjectId22"
           }
         },
         "example": null
       },
-      "CrmPublicObjectId23": {
+      "CrmPublicObjectId22": {
         "required": [
           "id"
         ],
@@ -140989,7 +140835,7 @@
         "description": "Contains the id and type of an association",
         "example": null
       },
-      "CrmAssociationSpec25": {
+      "CrmAssociationSpec24": {
         "required": [
           "associationCategory",
           "associationTypeId"
@@ -140997,7 +140843,7 @@
         "type": "object",
         "properties": {
           "associationCategory": {
-            "$ref": "#/components/schemas/CrmAssociationSpec25AssociationCategory"
+            "$ref": "#/components/schemas/CrmAssociationSpec24AssociationCategory"
           },
           "associationTypeId": {
             "type": "integer",
@@ -141590,19 +141436,19 @@
         "type": "object",
         "properties": {
           "to": {
-            "$ref": "#/components/schemas/CrmPublicObjectId24"
+            "$ref": "#/components/schemas/CrmPublicObjectId23"
           },
           "types": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CrmAssociationSpec25"
+              "$ref": "#/components/schemas/CrmAssociationSpec24"
             },
             "example": null
           }
         },
         "example": null
       },
-      "CrmPublicObjectId24": {
+      "CrmPublicObjectId23": {
         "required": [
           "id"
         ],
@@ -142149,7 +141995,7 @@
         "description": "Contains the id and type of an association",
         "example": null
       },
-      "CrmAssociationSpec26": {
+      "CrmAssociationSpec25": {
         "required": [
           "associationCategory",
           "associationTypeId"
@@ -142157,7 +142003,7 @@
         "type": "object",
         "properties": {
           "associationCategory": {
-            "$ref": "#/components/schemas/CrmAssociationSpec26AssociationCategory"
+            "$ref": "#/components/schemas/CrmAssociationSpec25AssociationCategory"
           },
           "associationTypeId": {
             "type": "integer",
@@ -142275,7 +142121,7 @@
         "description": "Specifies the input for reading a batch of CRM objects, including arrays of object IDs, requested property names (with optional history), and an optional unique identifying property.",
         "example": null
       },
-      "CrmBatchResponsePublicDefaultAssociation24": {
+      "CrmBatchResponsePublicDefaultAssociation23": {
         "required": [
           "completedAt",
           "results",
@@ -142298,7 +142144,7 @@
             "example": null
           },
           "links": {
-            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation24LinksProperty"
+            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation23LinksProperty"
           },
           "numErrors": {
             "type": "integer",
@@ -142315,7 +142161,7 @@
           "results": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CrmPublicDefaultAssociation24"
+              "$ref": "#/components/schemas/CrmPublicDefaultAssociation23"
             },
             "example": null
           },
@@ -142326,7 +142172,7 @@
             "example": null
           },
           "status": {
-            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation24Status"
+            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation23Status"
           }
         },
         "description": "The response returned after performing a batch operation on associations.",
@@ -142747,7 +142593,7 @@
         },
         "example": null
       },
-      "CrmLabelsBetweenObjectPair24": {
+      "CrmLabelsBetweenObjectPair23": {
         "required": [
           "fromObjectId",
           "fromObjectTypeId",
@@ -142849,19 +142695,19 @@
         "type": "object",
         "properties": {
           "to": {
-            "$ref": "#/components/schemas/CrmPublicObjectId25"
+            "$ref": "#/components/schemas/CrmPublicObjectId24"
           },
           "types": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CrmAssociationSpec26"
+              "$ref": "#/components/schemas/CrmAssociationSpec25"
             },
             "example": null
           }
         },
         "example": null
       },
-      "CrmPublicDefaultAssociation24": {
+      "CrmPublicDefaultAssociation23": {
         "required": [
           "associationSpec",
           "from",
@@ -142870,18 +142716,18 @@
         "type": "object",
         "properties": {
           "associationSpec": {
-            "$ref": "#/components/schemas/CrmAssociationSpec26"
+            "$ref": "#/components/schemas/CrmAssociationSpec25"
           },
           "from": {
-            "$ref": "#/components/schemas/CrmPublicObjectId25"
+            "$ref": "#/components/schemas/CrmPublicObjectId24"
           },
           "to": {
-            "$ref": "#/components/schemas/CrmPublicObjectId25"
+            "$ref": "#/components/schemas/CrmPublicObjectId24"
           }
         },
         "example": null
       },
-      "CrmPublicObjectId25": {
+      "CrmPublicObjectId24": {
         "required": [
           "id"
         ],
@@ -143428,7 +143274,7 @@
         "description": "Contains the id and type of an association",
         "example": null
       },
-      "CrmAssociationSpec27": {
+      "CrmAssociationSpec26": {
         "required": [
           "associationCategory",
           "associationTypeId"
@@ -143436,7 +143282,7 @@
         "type": "object",
         "properties": {
           "associationCategory": {
-            "$ref": "#/components/schemas/CrmAssociationSpec27AssociationCategory"
+            "$ref": "#/components/schemas/CrmAssociationSpec26AssociationCategory"
           },
           "associationTypeId": {
             "type": "integer",
@@ -143531,7 +143377,7 @@
         "description": "Specifies the input for reading a batch of CRM objects, including arrays of object IDs, requested property names (with optional history), and an optional unique identifying property.",
         "example": null
       },
-      "CrmBatchResponsePublicDefaultAssociation25": {
+      "CrmBatchResponsePublicDefaultAssociation24": {
         "required": [
           "completedAt",
           "results",
@@ -143554,7 +143400,7 @@
             "example": null
           },
           "links": {
-            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation25LinksProperty"
+            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation24LinksProperty"
           },
           "numErrors": {
             "type": "integer",
@@ -143571,7 +143417,7 @@
           "results": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CrmPublicDefaultAssociation25"
+              "$ref": "#/components/schemas/CrmPublicDefaultAssociation24"
             },
             "example": null
           },
@@ -143582,7 +143428,7 @@
             "example": null
           },
           "status": {
-            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation25Status"
+            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation24Status"
           }
         },
         "description": "The response returned after performing a batch operation on associations.",
@@ -143921,7 +143767,7 @@
         },
         "example": null
       },
-      "CrmLabelsBetweenObjectPair25": {
+      "CrmLabelsBetweenObjectPair24": {
         "required": [
           "fromObjectId",
           "fromObjectTypeId",
@@ -144038,7 +143884,7 @@
         "description": "specifies the paging information needed to retrieve the previous set of results in a paginated API response",
         "example": null
       },
-      "CrmPublicDefaultAssociation25": {
+      "CrmPublicDefaultAssociation24": {
         "required": [
           "associationSpec",
           "from",
@@ -144047,18 +143893,18 @@
         "type": "object",
         "properties": {
           "associationSpec": {
-            "$ref": "#/components/schemas/CrmAssociationSpec27"
+            "$ref": "#/components/schemas/CrmAssociationSpec26"
           },
           "from": {
-            "$ref": "#/components/schemas/CrmPublicObjectId26"
+            "$ref": "#/components/schemas/CrmPublicObjectId25"
           },
           "to": {
-            "$ref": "#/components/schemas/CrmPublicObjectId26"
+            "$ref": "#/components/schemas/CrmPublicObjectId25"
           }
         },
         "example": null
       },
-      "CrmPublicObjectId26": {
+      "CrmPublicObjectId25": {
         "required": [
           "id"
         ],
@@ -144458,7 +144304,7 @@
         "description": "Contains the id and type of an association",
         "example": null
       },
-      "CrmAssociationSpec28": {
+      "CrmAssociationSpec27": {
         "required": [
           "associationCategory",
           "associationTypeId"
@@ -144466,7 +144312,7 @@
         "type": "object",
         "properties": {
           "associationCategory": {
-            "$ref": "#/components/schemas/CrmAssociationSpec28AssociationCategory"
+            "$ref": "#/components/schemas/CrmAssociationSpec27AssociationCategory"
           },
           "associationTypeId": {
             "type": "integer",
@@ -144561,7 +144407,7 @@
         "description": "Specifies the input for reading a batch of CRM objects, including arrays of object IDs, requested property names (with optional history), and an optional unique identifying property.",
         "example": null
       },
-      "CrmBatchResponsePublicDefaultAssociation26": {
+      "CrmBatchResponsePublicDefaultAssociation25": {
         "required": [
           "completedAt",
           "results",
@@ -144584,7 +144430,7 @@
             "example": null
           },
           "links": {
-            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation26LinksProperty"
+            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation25LinksProperty"
           },
           "numErrors": {
             "type": "integer",
@@ -144601,7 +144447,7 @@
           "results": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CrmPublicDefaultAssociation26"
+              "$ref": "#/components/schemas/CrmPublicDefaultAssociation25"
             },
             "example": null
           },
@@ -144612,7 +144458,7 @@
             "example": null
           },
           "status": {
-            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation26Status"
+            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation25Status"
           }
         },
         "description": "The response returned after performing a batch operation on associations.",
@@ -144951,7 +144797,7 @@
         },
         "example": null
       },
-      "CrmLabelsBetweenObjectPair26": {
+      "CrmLabelsBetweenObjectPair25": {
         "required": [
           "fromObjectId",
           "fromObjectTypeId",
@@ -145068,7 +144914,7 @@
         "description": "specifies the paging information needed to retrieve the previous set of results in a paginated API response",
         "example": null
       },
-      "CrmPublicDefaultAssociation26": {
+      "CrmPublicDefaultAssociation25": {
         "required": [
           "associationSpec",
           "from",
@@ -145077,18 +144923,18 @@
         "type": "object",
         "properties": {
           "associationSpec": {
-            "$ref": "#/components/schemas/CrmAssociationSpec28"
+            "$ref": "#/components/schemas/CrmAssociationSpec27"
           },
           "from": {
-            "$ref": "#/components/schemas/CrmPublicObjectId27"
+            "$ref": "#/components/schemas/CrmPublicObjectId26"
           },
           "to": {
-            "$ref": "#/components/schemas/CrmPublicObjectId27"
+            "$ref": "#/components/schemas/CrmPublicObjectId26"
           }
         },
         "example": null
       },
-      "CrmPublicObjectId27": {
+      "CrmPublicObjectId26": {
         "required": [
           "id"
         ],
@@ -145959,7 +145805,7 @@
         "description": "Contains the id and type of an association",
         "example": null
       },
-      "CrmAssociationSpec29": {
+      "CrmAssociationSpec28": {
         "required": [
           "associationCategory",
           "associationTypeId"
@@ -145967,7 +145813,7 @@
         "type": "object",
         "properties": {
           "associationCategory": {
-            "$ref": "#/components/schemas/CrmAssociationSpec29AssociationCategory"
+            "$ref": "#/components/schemas/CrmAssociationSpec28AssociationCategory"
           },
           "associationTypeId": {
             "type": "integer",
@@ -146084,7 +145930,7 @@
         "description": "Specifies the input for reading a batch of CRM objects, including arrays of object IDs, requested property names (with optional history), and an optional unique identifying property.",
         "example": null
       },
-      "CrmBatchResponsePublicDefaultAssociation27": {
+      "CrmBatchResponsePublicDefaultAssociation26": {
         "required": [
           "completedAt",
           "results",
@@ -146107,7 +145953,7 @@
             "example": null
           },
           "links": {
-            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation27LinksProperty"
+            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation26LinksProperty"
           },
           "numErrors": {
             "type": "integer",
@@ -146124,7 +145970,7 @@
           "results": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CrmPublicDefaultAssociation27"
+              "$ref": "#/components/schemas/CrmPublicDefaultAssociation26"
             },
             "example": null
           },
@@ -146135,7 +145981,7 @@
             "example": null
           },
           "status": {
-            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation27Status"
+            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation26Status"
           }
         },
         "description": "The response returned after performing a batch operation on associations.",
@@ -146556,7 +146402,7 @@
         },
         "example": null
       },
-      "CrmLabelsBetweenObjectPair27": {
+      "CrmLabelsBetweenObjectPair26": {
         "required": [
           "fromObjectId",
           "fromObjectTypeId",
@@ -146658,19 +146504,19 @@
         "type": "object",
         "properties": {
           "to": {
-            "$ref": "#/components/schemas/CrmPublicObjectId28"
+            "$ref": "#/components/schemas/CrmPublicObjectId27"
           },
           "types": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CrmAssociationSpec29"
+              "$ref": "#/components/schemas/CrmAssociationSpec28"
             },
             "example": null
           }
         },
         "example": null
       },
-      "CrmPublicDefaultAssociation27": {
+      "CrmPublicDefaultAssociation26": {
         "required": [
           "associationSpec",
           "from",
@@ -146679,18 +146525,18 @@
         "type": "object",
         "properties": {
           "associationSpec": {
-            "$ref": "#/components/schemas/CrmAssociationSpec29"
+            "$ref": "#/components/schemas/CrmAssociationSpec28"
           },
           "from": {
-            "$ref": "#/components/schemas/CrmPublicObjectId28"
+            "$ref": "#/components/schemas/CrmPublicObjectId27"
           },
           "to": {
-            "$ref": "#/components/schemas/CrmPublicObjectId28"
+            "$ref": "#/components/schemas/CrmPublicObjectId27"
           }
         },
         "example": null
       },
-      "CrmPublicObjectId28": {
+      "CrmPublicObjectId27": {
         "required": [
           "id"
         ],
@@ -147237,7 +147083,7 @@
         "description": "Contains the id and type of an association",
         "example": null
       },
-      "CrmAssociationSpec30": {
+      "CrmAssociationSpec29": {
         "required": [
           "associationCategory",
           "associationTypeId"
@@ -147245,7 +147091,7 @@
         "type": "object",
         "properties": {
           "associationCategory": {
-            "$ref": "#/components/schemas/CrmAssociationSpec30AssociationCategory"
+            "$ref": "#/components/schemas/CrmAssociationSpec29AssociationCategory"
           },
           "associationTypeId": {
             "type": "integer",
@@ -147363,7 +147209,7 @@
         "description": "Specifies the input for reading a batch of CRM objects, including arrays of object IDs, requested property names (with optional history), and an optional unique identifying property.",
         "example": null
       },
-      "CrmBatchResponsePublicDefaultAssociation28": {
+      "CrmBatchResponsePublicDefaultAssociation27": {
         "required": [
           "completedAt",
           "results",
@@ -147386,7 +147232,7 @@
             "example": null
           },
           "links": {
-            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation28LinksProperty"
+            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation27LinksProperty"
           },
           "numErrors": {
             "type": "integer",
@@ -147403,7 +147249,7 @@
           "results": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CrmPublicDefaultAssociation28"
+              "$ref": "#/components/schemas/CrmPublicDefaultAssociation27"
             },
             "example": null
           },
@@ -147414,7 +147260,7 @@
             "example": null
           },
           "status": {
-            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation28Status"
+            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation27Status"
           }
         },
         "description": "The response returned after performing a batch operation on associations.",
@@ -147835,7 +147681,7 @@
         },
         "example": null
       },
-      "CrmLabelsBetweenObjectPair28": {
+      "CrmLabelsBetweenObjectPair27": {
         "required": [
           "fromObjectId",
           "fromObjectTypeId",
@@ -147937,19 +147783,19 @@
         "type": "object",
         "properties": {
           "to": {
-            "$ref": "#/components/schemas/CrmPublicObjectId29"
+            "$ref": "#/components/schemas/CrmPublicObjectId28"
           },
           "types": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CrmAssociationSpec30"
+              "$ref": "#/components/schemas/CrmAssociationSpec29"
             },
             "example": null
           }
         },
         "example": null
       },
-      "CrmPublicDefaultAssociation28": {
+      "CrmPublicDefaultAssociation27": {
         "required": [
           "associationSpec",
           "from",
@@ -147958,18 +147804,18 @@
         "type": "object",
         "properties": {
           "associationSpec": {
-            "$ref": "#/components/schemas/CrmAssociationSpec30"
+            "$ref": "#/components/schemas/CrmAssociationSpec29"
           },
           "from": {
-            "$ref": "#/components/schemas/CrmPublicObjectId29"
+            "$ref": "#/components/schemas/CrmPublicObjectId28"
           },
           "to": {
-            "$ref": "#/components/schemas/CrmPublicObjectId29"
+            "$ref": "#/components/schemas/CrmPublicObjectId28"
           }
         },
         "example": null
       },
-      "CrmPublicObjectId29": {
+      "CrmPublicObjectId28": {
         "required": [
           "id"
         ],
@@ -148516,7 +148362,7 @@
         "description": "Contains the id and type of an association",
         "example": null
       },
-      "CrmAssociationSpec31": {
+      "CrmAssociationSpec30": {
         "required": [
           "associationCategory",
           "associationTypeId"
@@ -148524,7 +148370,7 @@
         "type": "object",
         "properties": {
           "associationCategory": {
-            "$ref": "#/components/schemas/CrmAssociationSpec31AssociationCategory"
+            "$ref": "#/components/schemas/CrmAssociationSpec30AssociationCategory"
           },
           "associationTypeId": {
             "type": "integer",
@@ -148641,7 +148487,7 @@
         "description": "Specifies the input for reading a batch of CRM objects, including arrays of object IDs, requested property names (with optional history), and an optional unique identifying property.",
         "example": null
       },
-      "CrmBatchResponsePublicDefaultAssociation29": {
+      "CrmBatchResponsePublicDefaultAssociation28": {
         "required": [
           "completedAt",
           "results",
@@ -148664,7 +148510,7 @@
             "example": null
           },
           "links": {
-            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation29LinksProperty"
+            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation28LinksProperty"
           },
           "numErrors": {
             "type": "integer",
@@ -148681,7 +148527,7 @@
           "results": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CrmPublicDefaultAssociation29"
+              "$ref": "#/components/schemas/CrmPublicDefaultAssociation28"
             },
             "example": null
           },
@@ -148692,7 +148538,7 @@
             "example": null
           },
           "status": {
-            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation29Status"
+            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation28Status"
           }
         },
         "description": "The response returned after performing a batch operation on associations.",
@@ -149113,7 +148959,7 @@
         },
         "example": null
       },
-      "CrmLabelsBetweenObjectPair29": {
+      "CrmLabelsBetweenObjectPair28": {
         "required": [
           "fromObjectId",
           "fromObjectTypeId",
@@ -149215,19 +149061,19 @@
         "type": "object",
         "properties": {
           "to": {
-            "$ref": "#/components/schemas/CrmPublicObjectId30"
+            "$ref": "#/components/schemas/CrmPublicObjectId29"
           },
           "types": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CrmAssociationSpec31"
+              "$ref": "#/components/schemas/CrmAssociationSpec30"
             },
             "example": null
           }
         },
         "example": null
       },
-      "CrmPublicDefaultAssociation29": {
+      "CrmPublicDefaultAssociation28": {
         "required": [
           "associationSpec",
           "from",
@@ -149236,13 +149082,13 @@
         "type": "object",
         "properties": {
           "associationSpec": {
-            "$ref": "#/components/schemas/CrmAssociationSpec31"
+            "$ref": "#/components/schemas/CrmAssociationSpec30"
           },
           "from": {
-            "$ref": "#/components/schemas/CrmPublicObjectId30"
+            "$ref": "#/components/schemas/CrmPublicObjectId29"
           },
           "to": {
-            "$ref": "#/components/schemas/CrmPublicObjectId30"
+            "$ref": "#/components/schemas/CrmPublicObjectId29"
           }
         },
         "example": null
@@ -149268,7 +149114,7 @@
         "description": "Input data for merging two records.",
         "example": null
       },
-      "CrmPublicObjectId30": {
+      "CrmPublicObjectId29": {
         "required": [
           "id"
         ],
@@ -151881,7 +151727,7 @@
         "description": "Contains the id and type of an association",
         "example": null
       },
-      "CrmAssociationSpec32": {
+      "CrmAssociationSpec31": {
         "required": [
           "associationCategory",
           "associationTypeId"
@@ -151889,7 +151735,7 @@
         "type": "object",
         "properties": {
           "associationCategory": {
-            "$ref": "#/components/schemas/CrmAssociationSpec32AssociationCategory"
+            "$ref": "#/components/schemas/CrmAssociationSpec31AssociationCategory"
           },
           "associationTypeId": {
             "type": "integer",
@@ -152007,7 +151853,7 @@
         "description": "Specifies the input for reading a batch of CRM objects, including arrays of object IDs, requested property names (with optional history), and an optional unique identifying property.",
         "example": null
       },
-      "CrmBatchResponsePublicDefaultAssociation30": {
+      "CrmBatchResponsePublicDefaultAssociation29": {
         "required": [
           "completedAt",
           "results",
@@ -152030,7 +151876,7 @@
             "example": null
           },
           "links": {
-            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation30LinksProperty"
+            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation29LinksProperty"
           },
           "numErrors": {
             "type": "integer",
@@ -152047,7 +151893,7 @@
           "results": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CrmPublicDefaultAssociation30"
+              "$ref": "#/components/schemas/CrmPublicDefaultAssociation29"
             },
             "example": null
           },
@@ -152058,7 +151904,7 @@
             "example": null
           },
           "status": {
-            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation30Status"
+            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation29Status"
           }
         },
         "description": "The response returned after performing a batch operation on associations.",
@@ -152479,7 +152325,7 @@
         },
         "example": null
       },
-      "CrmLabelsBetweenObjectPair30": {
+      "CrmLabelsBetweenObjectPair29": {
         "required": [
           "fromObjectId",
           "fromObjectTypeId",
@@ -152581,19 +152427,19 @@
         "type": "object",
         "properties": {
           "to": {
-            "$ref": "#/components/schemas/CrmPublicObjectId31"
+            "$ref": "#/components/schemas/CrmPublicObjectId30"
           },
           "types": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CrmAssociationSpec32"
+              "$ref": "#/components/schemas/CrmAssociationSpec31"
             },
             "example": null
           }
         },
         "example": null
       },
-      "CrmPublicDefaultAssociation30": {
+      "CrmPublicDefaultAssociation29": {
         "required": [
           "associationSpec",
           "from",
@@ -152602,18 +152448,18 @@
         "type": "object",
         "properties": {
           "associationSpec": {
-            "$ref": "#/components/schemas/CrmAssociationSpec32"
+            "$ref": "#/components/schemas/CrmAssociationSpec31"
           },
           "from": {
-            "$ref": "#/components/schemas/CrmPublicObjectId31"
+            "$ref": "#/components/schemas/CrmPublicObjectId30"
           },
           "to": {
-            "$ref": "#/components/schemas/CrmPublicObjectId31"
+            "$ref": "#/components/schemas/CrmPublicObjectId30"
           }
         },
         "example": null
       },
-      "CrmPublicObjectId31": {
+      "CrmPublicObjectId30": {
         "required": [
           "id"
         ],
@@ -154135,7 +153981,7 @@
         "description": "Contains the id and type of an association",
         "example": null
       },
-      "CrmAssociationSpec33": {
+      "CrmAssociationSpec32": {
         "required": [
           "associationCategory",
           "associationTypeId"
@@ -154143,7 +153989,7 @@
         "type": "object",
         "properties": {
           "associationCategory": {
-            "$ref": "#/components/schemas/CrmAssociationSpec33AssociationCategory"
+            "$ref": "#/components/schemas/CrmAssociationSpec32AssociationCategory"
           },
           "associationTypeId": {
             "type": "integer",
@@ -154261,7 +154107,7 @@
         "description": "Specifies the input for reading a batch of CRM objects, including arrays of object IDs, requested property names (with optional history), and an optional unique identifying property.",
         "example": null
       },
-      "CrmBatchResponsePublicDefaultAssociation31": {
+      "CrmBatchResponsePublicDefaultAssociation30": {
         "required": [
           "completedAt",
           "results",
@@ -154284,7 +154130,7 @@
             "example": null
           },
           "links": {
-            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation31LinksProperty"
+            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation30LinksProperty"
           },
           "numErrors": {
             "type": "integer",
@@ -154301,7 +154147,7 @@
           "results": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CrmPublicDefaultAssociation31"
+              "$ref": "#/components/schemas/CrmPublicDefaultAssociation30"
             },
             "example": null
           },
@@ -154312,7 +154158,7 @@
             "example": null
           },
           "status": {
-            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation31Status"
+            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation30Status"
           }
         },
         "description": "The response returned after performing a batch operation on associations.",
@@ -154733,7 +154579,7 @@
         },
         "example": null
       },
-      "CrmLabelsBetweenObjectPair31": {
+      "CrmLabelsBetweenObjectPair30": {
         "required": [
           "fromObjectId",
           "fromObjectTypeId",
@@ -154836,19 +154682,19 @@
         "type": "object",
         "properties": {
           "to": {
-            "$ref": "#/components/schemas/CrmPublicObjectId32"
+            "$ref": "#/components/schemas/CrmPublicObjectId31"
           },
           "types": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CrmAssociationSpec33"
+              "$ref": "#/components/schemas/CrmAssociationSpec32"
             },
             "example": null
           }
         },
         "example": null
       },
-      "CrmPublicDefaultAssociation31": {
+      "CrmPublicDefaultAssociation30": {
         "required": [
           "associationSpec",
           "from",
@@ -154857,18 +154703,18 @@
         "type": "object",
         "properties": {
           "associationSpec": {
-            "$ref": "#/components/schemas/CrmAssociationSpec33"
+            "$ref": "#/components/schemas/CrmAssociationSpec32"
           },
           "from": {
-            "$ref": "#/components/schemas/CrmPublicObjectId32"
+            "$ref": "#/components/schemas/CrmPublicObjectId31"
           },
           "to": {
-            "$ref": "#/components/schemas/CrmPublicObjectId32"
+            "$ref": "#/components/schemas/CrmPublicObjectId31"
           }
         },
         "example": null
       },
-      "CrmPublicObjectId32": {
+      "CrmPublicObjectId31": {
         "required": [
           "id"
         ],
@@ -155415,7 +155261,7 @@
         "description": "Contains the id and type of an association",
         "example": null
       },
-      "CrmAssociationSpec34": {
+      "CrmAssociationSpec33": {
         "required": [
           "associationCategory",
           "associationTypeId"
@@ -155423,7 +155269,7 @@
         "type": "object",
         "properties": {
           "associationCategory": {
-            "$ref": "#/components/schemas/CrmAssociationSpec34AssociationCategory"
+            "$ref": "#/components/schemas/CrmAssociationSpec33AssociationCategory"
           },
           "associationTypeId": {
             "type": "integer",
@@ -155541,7 +155387,7 @@
         "description": "Specifies the input for reading a batch of CRM objects, including arrays of object IDs, requested property names (with optional history), and an optional unique identifying property.",
         "example": null
       },
-      "CrmBatchResponsePublicDefaultAssociation32": {
+      "CrmBatchResponsePublicDefaultAssociation31": {
         "required": [
           "completedAt",
           "results",
@@ -155564,7 +155410,7 @@
             "example": null
           },
           "links": {
-            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation32LinksProperty"
+            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation31LinksProperty"
           },
           "numErrors": {
             "type": "integer",
@@ -155581,7 +155427,7 @@
           "results": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CrmPublicDefaultAssociation32"
+              "$ref": "#/components/schemas/CrmPublicDefaultAssociation31"
             },
             "example": null
           },
@@ -155592,7 +155438,7 @@
             "example": null
           },
           "status": {
-            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation32Status"
+            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation31Status"
           }
         },
         "description": "The response returned after performing a batch operation on associations.",
@@ -156013,7 +155859,7 @@
         },
         "example": null
       },
-      "CrmLabelsBetweenObjectPair32": {
+      "CrmLabelsBetweenObjectPair31": {
         "required": [
           "fromObjectId",
           "fromObjectTypeId",
@@ -156115,19 +155961,19 @@
         "type": "object",
         "properties": {
           "to": {
-            "$ref": "#/components/schemas/CrmPublicObjectId33"
+            "$ref": "#/components/schemas/CrmPublicObjectId32"
           },
           "types": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CrmAssociationSpec34"
+              "$ref": "#/components/schemas/CrmAssociationSpec33"
             },
             "example": null
           }
         },
         "example": null
       },
-      "CrmPublicDefaultAssociation32": {
+      "CrmPublicDefaultAssociation31": {
         "required": [
           "associationSpec",
           "from",
@@ -156136,18 +155982,18 @@
         "type": "object",
         "properties": {
           "associationSpec": {
-            "$ref": "#/components/schemas/CrmAssociationSpec34"
+            "$ref": "#/components/schemas/CrmAssociationSpec33"
           },
           "from": {
-            "$ref": "#/components/schemas/CrmPublicObjectId33"
+            "$ref": "#/components/schemas/CrmPublicObjectId32"
           },
           "to": {
-            "$ref": "#/components/schemas/CrmPublicObjectId33"
+            "$ref": "#/components/schemas/CrmPublicObjectId32"
           }
         },
         "example": null
       },
-      "CrmPublicObjectId33": {
+      "CrmPublicObjectId32": {
         "required": [
           "id"
         ],
@@ -156694,7 +156540,7 @@
         "description": "Contains the id and type of an association",
         "example": null
       },
-      "CrmAssociationSpec35": {
+      "CrmAssociationSpec34": {
         "required": [
           "associationCategory",
           "associationTypeId"
@@ -156702,7 +156548,7 @@
         "type": "object",
         "properties": {
           "associationCategory": {
-            "$ref": "#/components/schemas/CrmAssociationSpec35AssociationCategory"
+            "$ref": "#/components/schemas/CrmAssociationSpec34AssociationCategory"
           },
           "associationTypeId": {
             "type": "integer",
@@ -156820,7 +156666,7 @@
         "description": "Specifies the input for reading a batch of CRM objects, including arrays of object IDs, requested property names (with optional history), and an optional unique identifying property.",
         "example": null
       },
-      "CrmBatchResponsePublicDefaultAssociation33": {
+      "CrmBatchResponsePublicDefaultAssociation32": {
         "required": [
           "completedAt",
           "results",
@@ -156843,7 +156689,7 @@
             "example": null
           },
           "links": {
-            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation33LinksProperty"
+            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation32LinksProperty"
           },
           "numErrors": {
             "type": "integer",
@@ -156860,7 +156706,7 @@
           "results": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CrmPublicDefaultAssociation33"
+              "$ref": "#/components/schemas/CrmPublicDefaultAssociation32"
             },
             "example": null
           },
@@ -156871,7 +156717,7 @@
             "example": null
           },
           "status": {
-            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation33Status"
+            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation32Status"
           }
         },
         "description": "The response returned after performing a batch operation on associations.",
@@ -157292,7 +157138,7 @@
         },
         "example": null
       },
-      "CrmLabelsBetweenObjectPair33": {
+      "CrmLabelsBetweenObjectPair32": {
         "required": [
           "fromObjectId",
           "fromObjectTypeId",
@@ -157394,19 +157240,19 @@
         "type": "object",
         "properties": {
           "to": {
-            "$ref": "#/components/schemas/CrmPublicObjectId34"
+            "$ref": "#/components/schemas/CrmPublicObjectId33"
           },
           "types": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CrmAssociationSpec35"
+              "$ref": "#/components/schemas/CrmAssociationSpec34"
             },
             "example": null
           }
         },
         "example": null
       },
-      "CrmPublicDefaultAssociation33": {
+      "CrmPublicDefaultAssociation32": {
         "required": [
           "associationSpec",
           "from",
@@ -157415,18 +157261,18 @@
         "type": "object",
         "properties": {
           "associationSpec": {
-            "$ref": "#/components/schemas/CrmAssociationSpec35"
+            "$ref": "#/components/schemas/CrmAssociationSpec34"
           },
           "from": {
-            "$ref": "#/components/schemas/CrmPublicObjectId34"
+            "$ref": "#/components/schemas/CrmPublicObjectId33"
           },
           "to": {
-            "$ref": "#/components/schemas/CrmPublicObjectId34"
+            "$ref": "#/components/schemas/CrmPublicObjectId33"
           }
         },
         "example": null
       },
-      "CrmPublicObjectId34": {
+      "CrmPublicObjectId33": {
         "required": [
           "id"
         ],
@@ -157973,7 +157819,7 @@
         "description": "Contains the id and type of an association",
         "example": null
       },
-      "CrmAssociationSpec36": {
+      "CrmAssociationSpec35": {
         "required": [
           "associationCategory",
           "associationTypeId"
@@ -157981,7 +157827,7 @@
         "type": "object",
         "properties": {
           "associationCategory": {
-            "$ref": "#/components/schemas/CrmAssociationSpec36AssociationCategory"
+            "$ref": "#/components/schemas/CrmAssociationSpec35AssociationCategory"
           },
           "associationTypeId": {
             "type": "integer",
@@ -158099,7 +157945,7 @@
         "description": "Specifies the input for reading a batch of CRM objects, including arrays of object IDs, requested property names (with optional history), and an optional unique identifying property.",
         "example": null
       },
-      "CrmBatchResponsePublicDefaultAssociation34": {
+      "CrmBatchResponsePublicDefaultAssociation33": {
         "required": [
           "completedAt",
           "results",
@@ -158122,7 +157968,7 @@
             "example": null
           },
           "links": {
-            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation34LinksProperty"
+            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation33LinksProperty"
           },
           "numErrors": {
             "type": "integer",
@@ -158139,7 +157985,7 @@
           "results": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CrmPublicDefaultAssociation34"
+              "$ref": "#/components/schemas/CrmPublicDefaultAssociation33"
             },
             "example": null
           },
@@ -158150,7 +157996,7 @@
             "example": null
           },
           "status": {
-            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation34Status"
+            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation33Status"
           }
         },
         "description": "The response returned after performing a batch operation on associations.",
@@ -158571,7 +158417,7 @@
         },
         "example": null
       },
-      "CrmLabelsBetweenObjectPair34": {
+      "CrmLabelsBetweenObjectPair33": {
         "required": [
           "fromObjectId",
           "fromObjectTypeId",
@@ -158673,19 +158519,19 @@
         "type": "object",
         "properties": {
           "to": {
-            "$ref": "#/components/schemas/CrmPublicObjectId35"
+            "$ref": "#/components/schemas/CrmPublicObjectId34"
           },
           "types": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CrmAssociationSpec36"
+              "$ref": "#/components/schemas/CrmAssociationSpec35"
             },
             "example": null
           }
         },
         "example": null
       },
-      "CrmPublicDefaultAssociation34": {
+      "CrmPublicDefaultAssociation33": {
         "required": [
           "associationSpec",
           "from",
@@ -158694,13 +158540,13 @@
         "type": "object",
         "properties": {
           "associationSpec": {
-            "$ref": "#/components/schemas/CrmAssociationSpec36"
+            "$ref": "#/components/schemas/CrmAssociationSpec35"
           },
           "from": {
-            "$ref": "#/components/schemas/CrmPublicObjectId35"
+            "$ref": "#/components/schemas/CrmPublicObjectId34"
           },
           "to": {
-            "$ref": "#/components/schemas/CrmPublicObjectId35"
+            "$ref": "#/components/schemas/CrmPublicObjectId34"
           }
         },
         "example": null
@@ -158726,7 +158572,7 @@
         "description": "Input data for merging two records.",
         "example": null
       },
-      "CrmPublicObjectId35": {
+      "CrmPublicObjectId34": {
         "required": [
           "id"
         ],
@@ -160052,7 +159898,7 @@
         "description": "Contains the id and type of an association",
         "example": null
       },
-      "CrmAssociationSpec37": {
+      "CrmAssociationSpec36": {
         "required": [
           "associationCategory",
           "associationTypeId"
@@ -160060,7 +159906,7 @@
         "type": "object",
         "properties": {
           "associationCategory": {
-            "$ref": "#/components/schemas/CrmAssociationSpec37AssociationCategory"
+            "$ref": "#/components/schemas/CrmAssociationSpec36AssociationCategory"
           },
           "associationTypeId": {
             "type": "integer",
@@ -160178,7 +160024,7 @@
         "description": "Specifies the input for reading a batch of CRM objects, including arrays of object IDs, requested property names (with optional history), and an optional unique identifying property.",
         "example": null
       },
-      "CrmBatchResponsePublicDefaultAssociation35": {
+      "CrmBatchResponsePublicDefaultAssociation34": {
         "required": [
           "completedAt",
           "results",
@@ -160201,7 +160047,7 @@
             "example": null
           },
           "links": {
-            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation35LinksProperty"
+            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation34LinksProperty"
           },
           "numErrors": {
             "type": "integer",
@@ -160218,7 +160064,7 @@
           "results": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CrmPublicDefaultAssociation35"
+              "$ref": "#/components/schemas/CrmPublicDefaultAssociation34"
             },
             "example": null
           },
@@ -160229,7 +160075,7 @@
             "example": null
           },
           "status": {
-            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation35Status"
+            "$ref": "#/components/schemas/CrmBatchResponsePublicDefaultAssociation34Status"
           }
         },
         "description": "The response returned after performing a batch operation on associations.",
@@ -160650,7 +160496,7 @@
         },
         "example": null
       },
-      "CrmLabelsBetweenObjectPair35": {
+      "CrmLabelsBetweenObjectPair34": {
         "required": [
           "fromObjectId",
           "fromObjectTypeId",
@@ -160752,19 +160598,19 @@
         "type": "object",
         "properties": {
           "to": {
-            "$ref": "#/components/schemas/CrmPublicObjectId36"
+            "$ref": "#/components/schemas/CrmPublicObjectId35"
           },
           "types": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CrmAssociationSpec37"
+              "$ref": "#/components/schemas/CrmAssociationSpec36"
             },
             "example": null
           }
         },
         "example": null
       },
-      "CrmPublicDefaultAssociation35": {
+      "CrmPublicDefaultAssociation34": {
         "required": [
           "associationSpec",
           "from",
@@ -160773,18 +160619,18 @@
         "type": "object",
         "properties": {
           "associationSpec": {
-            "$ref": "#/components/schemas/CrmAssociationSpec37"
+            "$ref": "#/components/schemas/CrmAssociationSpec36"
           },
           "from": {
-            "$ref": "#/components/schemas/CrmPublicObjectId36"
+            "$ref": "#/components/schemas/CrmPublicObjectId35"
           },
           "to": {
-            "$ref": "#/components/schemas/CrmPublicObjectId36"
+            "$ref": "#/components/schemas/CrmPublicObjectId35"
           }
         },
         "example": null
       },
-      "CrmPublicObjectId36": {
+      "CrmPublicObjectId35": {
         "required": [
           "id"
         ],
@@ -217774,15 +217620,6 @@
         "description": "An object containing relevant links related to the export process.",
         "example": null
       },
-      "CrmBatchResponsePublicDefaultAssociation14Links": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string",
-          "example": null
-        },
-        "description": "An object containing relevant links related to the batch request.",
-        "example": null
-      },
       "CrmBatchResponseSimplePublicObject14Links": {
         "type": "object",
         "additionalProperties": {
@@ -217921,7 +217758,7 @@
         "description": "A more specific error category within each main category.",
         "example": null
       },
-      "CrmBatchResponsePublicDefaultAssociation15Links": {
+      "CrmBatchResponsePublicDefaultAssociation14Links": {
         "type": "object",
         "additionalProperties": {
           "type": "string",
@@ -218152,7 +217989,7 @@
         "description": "A more specific error category within each main category.",
         "example": null
       },
-      "CrmBatchResponsePublicDefaultAssociation16Links": {
+      "CrmBatchResponsePublicDefaultAssociation15Links": {
         "type": "object",
         "additionalProperties": {
           "type": "string",
@@ -218223,7 +218060,7 @@
         "description": "A map of link names to associated URIs containing documentation about the error or recommended remediation steps",
         "example": null
       },
-      "CrmBatchResponsePublicDefaultAssociation17Links": {
+      "CrmBatchResponsePublicDefaultAssociation16Links": {
         "type": "object",
         "additionalProperties": {
           "type": "string",
@@ -218513,7 +218350,7 @@
         "description": "The complete import request configuration as a JSON object.",
         "example": null
       },
-      "CrmBatchResponsePublicDefaultAssociation18Links": {
+      "CrmBatchResponsePublicDefaultAssociation17Links": {
         "type": "object",
         "additionalProperties": {
           "type": "string",
@@ -218744,7 +218581,7 @@
         "description": "A more specific error category within each main category.",
         "example": null
       },
-      "CrmBatchResponsePublicDefaultAssociation19Links": {
+      "CrmBatchResponsePublicDefaultAssociation18Links": {
         "type": "object",
         "additionalProperties": {
           "type": "string",
@@ -219010,7 +218847,7 @@
         "description": "Context about the error condition",
         "example": "{missingScopes=[scope1, scope2]}"
       },
-      "CrmBatchResponsePublicDefaultAssociation20Links": {
+      "CrmBatchResponsePublicDefaultAssociation19Links": {
         "type": "object",
         "additionalProperties": {
           "type": "string",
@@ -219241,7 +219078,7 @@
         "description": "A more specific error category within each main category.",
         "example": null
       },
-      "CrmBatchResponsePublicDefaultAssociation21Links": {
+      "CrmBatchResponsePublicDefaultAssociation20Links": {
         "type": "object",
         "additionalProperties": {
           "type": "string",
@@ -219568,7 +219405,7 @@
         "description": "A more specific error category within each main category.",
         "example": null
       },
-      "CrmBatchResponsePublicDefaultAssociation22Links": {
+      "CrmBatchResponsePublicDefaultAssociation21Links": {
         "type": "object",
         "additionalProperties": {
           "type": "string",
@@ -219799,7 +219636,7 @@
         "description": "A more specific error category within each main category.",
         "example": null
       },
-      "CrmBatchResponsePublicDefaultAssociation23Links": {
+      "CrmBatchResponsePublicDefaultAssociation22Links": {
         "type": "object",
         "additionalProperties": {
           "type": "string",
@@ -220296,7 +220133,7 @@
         "description": "A more specific error category within each main category.",
         "example": null
       },
-      "CrmBatchResponsePublicDefaultAssociation24Links": {
+      "CrmBatchResponsePublicDefaultAssociation23Links": {
         "type": "object",
         "additionalProperties": {
           "type": "string",
@@ -220527,7 +220364,7 @@
         "description": "A more specific error category within each main category.",
         "example": null
       },
-      "CrmBatchResponsePublicDefaultAssociation25Links": {
+      "CrmBatchResponsePublicDefaultAssociation24Links": {
         "type": "object",
         "additionalProperties": {
           "type": "string",
@@ -220692,7 +220529,7 @@
         "description": "A more specific error category within each main category.",
         "example": null
       },
-      "CrmBatchResponsePublicDefaultAssociation26Links": {
+      "CrmBatchResponsePublicDefaultAssociation25Links": {
         "type": "object",
         "additionalProperties": {
           "type": "string",
@@ -220933,7 +220770,7 @@
         "description": "An object containing the raw data associated with the audit event.",
         "example": null
       },
-      "CrmBatchResponsePublicDefaultAssociation27Links": {
+      "CrmBatchResponsePublicDefaultAssociation26Links": {
         "type": "object",
         "additionalProperties": {
           "type": "string",
@@ -221164,7 +221001,7 @@
         "description": "A more specific error category within each main category.",
         "example": null
       },
-      "CrmBatchResponsePublicDefaultAssociation28Links": {
+      "CrmBatchResponsePublicDefaultAssociation27Links": {
         "type": "object",
         "additionalProperties": {
           "type": "string",
@@ -221395,7 +221232,7 @@
         "description": "A more specific error category within each main category.",
         "example": null
       },
-      "CrmBatchResponsePublicDefaultAssociation29Links": {
+      "CrmBatchResponsePublicDefaultAssociation28Links": {
         "type": "object",
         "additionalProperties": {
           "type": "string",
@@ -221810,7 +221647,7 @@
         "description": "Context about the error condition",
         "example": "{missingScopes=[scope1, scope2]}"
       },
-      "CrmBatchResponsePublicDefaultAssociation30Links": {
+      "CrmBatchResponsePublicDefaultAssociation29Links": {
         "type": "object",
         "additionalProperties": {
           "type": "string",
@@ -222076,7 +221913,7 @@
         "description": "Context about the error condition",
         "example": "{missingScopes=[scope1, scope2]}"
       },
-      "CrmBatchResponsePublicDefaultAssociation31Links": {
+      "CrmBatchResponsePublicDefaultAssociation30Links": {
         "type": "object",
         "additionalProperties": {
           "type": "string",
@@ -222307,7 +222144,7 @@
         "description": "A more specific error category within each main category.",
         "example": null
       },
-      "CrmBatchResponsePublicDefaultAssociation32Links": {
+      "CrmBatchResponsePublicDefaultAssociation31Links": {
         "type": "object",
         "additionalProperties": {
           "type": "string",
@@ -222538,7 +222375,7 @@
         "description": "A more specific error category within each main category.",
         "example": null
       },
-      "CrmBatchResponsePublicDefaultAssociation33Links": {
+      "CrmBatchResponsePublicDefaultAssociation32Links": {
         "type": "object",
         "additionalProperties": {
           "type": "string",
@@ -222769,7 +222606,7 @@
         "description": "A more specific error category within each main category.",
         "example": null
       },
-      "CrmBatchResponsePublicDefaultAssociation34Links": {
+      "CrmBatchResponsePublicDefaultAssociation33Links": {
         "type": "object",
         "additionalProperties": {
           "type": "string",
@@ -223125,7 +222962,7 @@
         "description": "Context about the error condition",
         "example": "{missingScopes=[scope1, scope2]}"
       },
-      "CrmBatchResponsePublicDefaultAssociation35Links": {
+      "CrmBatchResponsePublicDefaultAssociation34Links": {
         "type": "object",
         "additionalProperties": {
           "type": "string",
@@ -230103,14 +229940,6 @@
         },
         "description": "An object containing relevant links related to the export process."
       },
-      "CrmBatchResponsePublicDefaultAssociation14LinksProperty": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string",
-          "example": null
-        },
-        "description": "An object containing relevant links related to the batch request."
-      },
       "CrmBatchResponseSimplePublicObject14LinksProperty": {
         "type": "object",
         "additionalProperties": {
@@ -230235,7 +230064,7 @@
         "type": "object",
         "description": "A more specific error category within each main category."
       },
-      "CrmBatchResponsePublicDefaultAssociation15LinksProperty": {
+      "CrmBatchResponsePublicDefaultAssociation14LinksProperty": {
         "type": "object",
         "additionalProperties": {
           "type": "string",
@@ -230442,7 +230271,7 @@
         "type": "object",
         "description": "A more specific error category within each main category."
       },
-      "CrmBatchResponsePublicDefaultAssociation16LinksProperty": {
+      "CrmBatchResponsePublicDefaultAssociation15LinksProperty": {
         "type": "object",
         "additionalProperties": {
           "type": "string",
@@ -230506,7 +230335,7 @@
         },
         "description": "A map of link names to associated URIs containing documentation about the error or recommended remediation steps"
       },
-      "CrmBatchResponsePublicDefaultAssociation17LinksProperty": {
+      "CrmBatchResponsePublicDefaultAssociation16LinksProperty": {
         "type": "object",
         "additionalProperties": {
           "type": "string",
@@ -230766,7 +230595,7 @@
         "type": "object",
         "description": "The complete import request configuration as a JSON object."
       },
-      "CrmBatchResponsePublicDefaultAssociation18LinksProperty": {
+      "CrmBatchResponsePublicDefaultAssociation17LinksProperty": {
         "type": "object",
         "additionalProperties": {
           "type": "string",
@@ -230973,7 +230802,7 @@
         "type": "object",
         "description": "A more specific error category within each main category."
       },
-      "CrmBatchResponsePublicDefaultAssociation19LinksProperty": {
+      "CrmBatchResponsePublicDefaultAssociation18LinksProperty": {
         "type": "object",
         "additionalProperties": {
           "type": "string",
@@ -231212,7 +231041,7 @@
         },
         "description": "Context about the error condition"
       },
-      "CrmBatchResponsePublicDefaultAssociation20LinksProperty": {
+      "CrmBatchResponsePublicDefaultAssociation19LinksProperty": {
         "type": "object",
         "additionalProperties": {
           "type": "string",
@@ -231419,7 +231248,7 @@
         "type": "object",
         "description": "A more specific error category within each main category."
       },
-      "CrmBatchResponsePublicDefaultAssociation21LinksProperty": {
+      "CrmBatchResponsePublicDefaultAssociation20LinksProperty": {
         "type": "object",
         "additionalProperties": {
           "type": "string",
@@ -231712,7 +231541,7 @@
         "type": "object",
         "description": "A more specific error category within each main category."
       },
-      "CrmBatchResponsePublicDefaultAssociation22LinksProperty": {
+      "CrmBatchResponsePublicDefaultAssociation21LinksProperty": {
         "type": "object",
         "additionalProperties": {
           "type": "string",
@@ -231919,7 +231748,7 @@
         "type": "object",
         "description": "A more specific error category within each main category."
       },
-      "CrmBatchResponsePublicDefaultAssociation23LinksProperty": {
+      "CrmBatchResponsePublicDefaultAssociation22LinksProperty": {
         "type": "object",
         "additionalProperties": {
           "type": "string",
@@ -232365,7 +232194,7 @@
         "type": "object",
         "description": "A more specific error category within each main category."
       },
-      "CrmBatchResponsePublicDefaultAssociation24LinksProperty": {
+      "CrmBatchResponsePublicDefaultAssociation23LinksProperty": {
         "type": "object",
         "additionalProperties": {
           "type": "string",
@@ -232572,7 +232401,7 @@
         "type": "object",
         "description": "A more specific error category within each main category."
       },
-      "CrmBatchResponsePublicDefaultAssociation25LinksProperty": {
+      "CrmBatchResponsePublicDefaultAssociation24LinksProperty": {
         "type": "object",
         "additionalProperties": {
           "type": "string",
@@ -232720,7 +232549,7 @@
         "type": "object",
         "description": "A more specific error category within each main category."
       },
-      "CrmBatchResponsePublicDefaultAssociation26LinksProperty": {
+      "CrmBatchResponsePublicDefaultAssociation25LinksProperty": {
         "type": "object",
         "additionalProperties": {
           "type": "string",
@@ -232936,7 +232765,7 @@
         "type": "object",
         "description": "An object containing the raw data associated with the audit event."
       },
-      "CrmBatchResponsePublicDefaultAssociation27LinksProperty": {
+      "CrmBatchResponsePublicDefaultAssociation26LinksProperty": {
         "type": "object",
         "additionalProperties": {
           "type": "string",
@@ -233143,7 +232972,7 @@
         "type": "object",
         "description": "A more specific error category within each main category."
       },
-      "CrmBatchResponsePublicDefaultAssociation28LinksProperty": {
+      "CrmBatchResponsePublicDefaultAssociation27LinksProperty": {
         "type": "object",
         "additionalProperties": {
           "type": "string",
@@ -233350,7 +233179,7 @@
         "type": "object",
         "description": "A more specific error category within each main category."
       },
-      "CrmBatchResponsePublicDefaultAssociation29LinksProperty": {
+      "CrmBatchResponsePublicDefaultAssociation28LinksProperty": {
         "type": "object",
         "additionalProperties": {
           "type": "string",
@@ -233724,7 +233553,7 @@
         },
         "description": "Context about the error condition"
       },
-      "CrmBatchResponsePublicDefaultAssociation30LinksProperty": {
+      "CrmBatchResponsePublicDefaultAssociation29LinksProperty": {
         "type": "object",
         "additionalProperties": {
           "type": "string",
@@ -233963,7 +233792,7 @@
         },
         "description": "Context about the error condition"
       },
-      "CrmBatchResponsePublicDefaultAssociation31LinksProperty": {
+      "CrmBatchResponsePublicDefaultAssociation30LinksProperty": {
         "type": "object",
         "additionalProperties": {
           "type": "string",
@@ -234170,7 +233999,7 @@
         "type": "object",
         "description": "A more specific error category within each main category."
       },
-      "CrmBatchResponsePublicDefaultAssociation32LinksProperty": {
+      "CrmBatchResponsePublicDefaultAssociation31LinksProperty": {
         "type": "object",
         "additionalProperties": {
           "type": "string",
@@ -234377,7 +234206,7 @@
         "type": "object",
         "description": "A more specific error category within each main category."
       },
-      "CrmBatchResponsePublicDefaultAssociation33LinksProperty": {
+      "CrmBatchResponsePublicDefaultAssociation32LinksProperty": {
         "type": "object",
         "additionalProperties": {
           "type": "string",
@@ -234584,7 +234413,7 @@
         "type": "object",
         "description": "A more specific error category within each main category."
       },
-      "CrmBatchResponsePublicDefaultAssociation34LinksProperty": {
+      "CrmBatchResponsePublicDefaultAssociation33LinksProperty": {
         "type": "object",
         "additionalProperties": {
           "type": "string",
@@ -234903,7 +234732,7 @@
         },
         "description": "Context about the error condition"
       },
-      "CrmBatchResponsePublicDefaultAssociation35LinksProperty": {
+      "CrmBatchResponsePublicDefaultAssociation34LinksProperty": {
         "type": "object",
         "additionalProperties": {
           "type": "string",
@@ -322417,74 +322246,6 @@
           ]
         }
       },
-      "CrmAssociationSpec15AssociationCategory": {
-        "enum": [
-          "HUBSPOT_DEFINED",
-          "INTEGRATOR_DEFINED",
-          "USER_DEFINED",
-          "WORK"
-        ],
-        "type": "string",
-        "additionalProperties": false,
-        "description": "The category of the association, such as \u0022HUBSPOT_DEFINED\u0022.",
-        "example": null,
-        "x-ms-enum": {
-          "name": "CrmAssociationSpec15AssociationCategory",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "HUBSPOT_DEFINED",
-              "name": "HubspotDefined"
-            },
-            {
-              "value": "INTEGRATOR_DEFINED",
-              "name": "IntegratorDefined"
-            },
-            {
-              "value": "USER_DEFINED",
-              "name": "UserDefined"
-            },
-            {
-              "value": "WORK",
-              "name": "Work"
-            }
-          ]
-        }
-      },
-      "CrmBatchResponsePublicDefaultAssociation14Status": {
-        "enum": [
-          "CANCELED",
-          "COMPLETE",
-          "PENDING",
-          "PROCESSING"
-        ],
-        "type": "string",
-        "additionalProperties": false,
-        "description": "\u0022The status of the batch processing request. Can be: \\\u0022PENDING\\\u0022, \\\u0022PROCESSING\\\u0022, \\\u0022CANCELED\\\u0022, or \\\u0022COMPLETE\\\u0022.\u0022",
-        "example": null,
-        "x-ms-enum": {
-          "name": "CrmBatchResponsePublicDefaultAssociation14Status",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "CANCELED",
-              "name": "Canceled"
-            },
-            {
-              "value": "COMPLETE",
-              "name": "Complete"
-            },
-            {
-              "value": "PENDING",
-              "name": "Pending"
-            },
-            {
-              "value": "PROCESSING",
-              "name": "Processing"
-            }
-          ]
-        }
-      },
       "CrmBatchResponseSimplePublicObject14Status": {
         "enum": [
           "CANCELED",
@@ -322632,7 +322393,7 @@
           ]
         }
       },
-      "CrmAssociationSpec16AssociationCategory": {
+      "CrmAssociationSpec15AssociationCategory": {
         "enum": [
           "HUBSPOT_DEFINED",
           "INTEGRATOR_DEFINED",
@@ -322644,7 +322405,7 @@
         "description": "The category of the association, such as \u0022HUBSPOT_DEFINED\u0022.",
         "example": null,
         "x-ms-enum": {
-          "name": "CrmAssociationSpec16AssociationCategory",
+          "name": "CrmAssociationSpec15AssociationCategory",
           "modelAsString": false,
           "values": [
             {
@@ -322666,7 +322427,7 @@
           ]
         }
       },
-      "CrmBatchResponsePublicDefaultAssociation15Status": {
+      "CrmBatchResponsePublicDefaultAssociation14Status": {
         "enum": [
           "CANCELED",
           "COMPLETE",
@@ -322678,7 +322439,7 @@
         "description": "\u0022The status of the batch processing request. Can be: \\\u0022PENDING\\\u0022, \\\u0022PROCESSING\\\u0022, \\\u0022CANCELED\\\u0022, or \\\u0022COMPLETE\\\u0022.\u0022",
         "example": null,
         "x-ms-enum": {
-          "name": "CrmBatchResponsePublicDefaultAssociation15Status",
+          "name": "CrmBatchResponsePublicDefaultAssociation14Status",
           "modelAsString": false,
           "values": [
             {
@@ -322915,7 +322676,7 @@
           ]
         }
       },
-      "CrmBatchResponsePublicDefaultAssociation16Status": {
+      "CrmBatchResponsePublicDefaultAssociation15Status": {
         "enum": [
           "CANCELED",
           "COMPLETE",
@@ -322927,7 +322688,7 @@
         "description": "\u0022The status of the batch processing request. Can be: \\\u0022PENDING\\\u0022, \\\u0022PROCESSING\\\u0022, \\\u0022CANCELED\\\u0022, or \\\u0022COMPLETE\\\u0022.\u0022",
         "example": null,
         "x-ms-enum": {
-          "name": "CrmBatchResponsePublicDefaultAssociation16Status",
+          "name": "CrmBatchResponsePublicDefaultAssociation15Status",
           "modelAsString": false,
           "values": [
             {
@@ -322945,6 +322706,40 @@
             {
               "value": "PROCESSING",
               "name": "Processing"
+            }
+          ]
+        }
+      },
+      "CrmAssociationSpec16AssociationCategory": {
+        "enum": [
+          "HUBSPOT_DEFINED",
+          "INTEGRATOR_DEFINED",
+          "USER_DEFINED",
+          "WORK"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "The category of the association, such as \u0022HUBSPOT_DEFINED\u0022.",
+        "example": null,
+        "x-ms-enum": {
+          "name": "CrmAssociationSpec16AssociationCategory",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "HUBSPOT_DEFINED",
+              "name": "HubspotDefined"
+            },
+            {
+              "value": "INTEGRATOR_DEFINED",
+              "name": "IntegratorDefined"
+            },
+            {
+              "value": "USER_DEFINED",
+              "name": "UserDefined"
+            },
+            {
+              "value": "WORK",
+              "name": "Work"
             }
           ]
         }
@@ -322983,41 +322778,7 @@
           ]
         }
       },
-      "CrmAssociationSpec18AssociationCategory": {
-        "enum": [
-          "HUBSPOT_DEFINED",
-          "INTEGRATOR_DEFINED",
-          "USER_DEFINED",
-          "WORK"
-        ],
-        "type": "string",
-        "additionalProperties": false,
-        "description": "The category of the association, such as \u0022HUBSPOT_DEFINED\u0022.",
-        "example": null,
-        "x-ms-enum": {
-          "name": "CrmAssociationSpec18AssociationCategory",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "HUBSPOT_DEFINED",
-              "name": "HubspotDefined"
-            },
-            {
-              "value": "INTEGRATOR_DEFINED",
-              "name": "IntegratorDefined"
-            },
-            {
-              "value": "USER_DEFINED",
-              "name": "UserDefined"
-            },
-            {
-              "value": "WORK",
-              "name": "Work"
-            }
-          ]
-        }
-      },
-      "CrmBatchResponsePublicDefaultAssociation17Status": {
+      "CrmBatchResponsePublicDefaultAssociation16Status": {
         "enum": [
           "CANCELED",
           "COMPLETE",
@@ -323029,7 +322790,7 @@
         "description": "\u0022The status of the batch processing request. Can be: \\\u0022PENDING\\\u0022, \\\u0022PROCESSING\\\u0022, \\\u0022CANCELED\\\u0022, or \\\u0022COMPLETE\\\u0022.\u0022",
         "example": null,
         "x-ms-enum": {
-          "name": "CrmBatchResponsePublicDefaultAssociation17Status",
+          "name": "CrmBatchResponsePublicDefaultAssociation16Status",
           "modelAsString": false,
           "values": [
             {
@@ -325233,7 +324994,7 @@
           ]
         }
       },
-      "CrmAssociationSpec19AssociationCategory": {
+      "CrmAssociationSpec18AssociationCategory": {
         "enum": [
           "HUBSPOT_DEFINED",
           "INTEGRATOR_DEFINED",
@@ -325245,7 +325006,7 @@
         "description": "The category of the association, such as \u0022HUBSPOT_DEFINED\u0022.",
         "example": null,
         "x-ms-enum": {
-          "name": "CrmAssociationSpec19AssociationCategory",
+          "name": "CrmAssociationSpec18AssociationCategory",
           "modelAsString": false,
           "values": [
             {
@@ -325267,7 +325028,7 @@
           ]
         }
       },
-      "CrmBatchResponsePublicDefaultAssociation18Status": {
+      "CrmBatchResponsePublicDefaultAssociation17Status": {
         "enum": [
           "CANCELED",
           "COMPLETE",
@@ -325279,7 +325040,7 @@
         "description": "\u0022The status of the batch processing request. Can be: \\\u0022PENDING\\\u0022, \\\u0022PROCESSING\\\u0022, \\\u0022CANCELED\\\u0022, or \\\u0022COMPLETE\\\u0022.\u0022",
         "example": null,
         "x-ms-enum": {
-          "name": "CrmBatchResponsePublicDefaultAssociation18Status",
+          "name": "CrmBatchResponsePublicDefaultAssociation17Status",
           "modelAsString": false,
           "values": [
             {
@@ -325516,7 +325277,7 @@
           ]
         }
       },
-      "CrmAssociationSpec20AssociationCategory": {
+      "CrmAssociationSpec19AssociationCategory": {
         "enum": [
           "HUBSPOT_DEFINED",
           "INTEGRATOR_DEFINED",
@@ -325528,7 +325289,7 @@
         "description": "The category of the association, such as \u0022HUBSPOT_DEFINED\u0022.",
         "example": null,
         "x-ms-enum": {
-          "name": "CrmAssociationSpec20AssociationCategory",
+          "name": "CrmAssociationSpec19AssociationCategory",
           "modelAsString": false,
           "values": [
             {
@@ -325550,7 +325311,7 @@
           ]
         }
       },
-      "CrmBatchResponsePublicDefaultAssociation19Status": {
+      "CrmBatchResponsePublicDefaultAssociation18Status": {
         "enum": [
           "CANCELED",
           "COMPLETE",
@@ -325562,7 +325323,7 @@
         "description": "\u0022The status of the batch processing request. Can be: \\\u0022PENDING\\\u0022, \\\u0022PROCESSING\\\u0022, \\\u0022CANCELED\\\u0022, or \\\u0022COMPLETE\\\u0022.\u0022",
         "example": null,
         "x-ms-enum": {
-          "name": "CrmBatchResponsePublicDefaultAssociation19Status",
+          "name": "CrmBatchResponsePublicDefaultAssociation18Status",
           "modelAsString": false,
           "values": [
             {
@@ -325799,7 +325560,7 @@
           ]
         }
       },
-      "CrmAssociationSpec21AssociationCategory": {
+      "CrmAssociationSpec20AssociationCategory": {
         "enum": [
           "HUBSPOT_DEFINED",
           "INTEGRATOR_DEFINED",
@@ -325811,7 +325572,7 @@
         "description": "The category of the association, such as \u0022HUBSPOT_DEFINED\u0022.",
         "example": null,
         "x-ms-enum": {
-          "name": "CrmAssociationSpec21AssociationCategory",
+          "name": "CrmAssociationSpec20AssociationCategory",
           "modelAsString": false,
           "values": [
             {
@@ -325833,7 +325594,7 @@
           ]
         }
       },
-      "CrmBatchResponsePublicDefaultAssociation20Status": {
+      "CrmBatchResponsePublicDefaultAssociation19Status": {
         "enum": [
           "CANCELED",
           "COMPLETE",
@@ -325845,7 +325606,7 @@
         "description": "\u0022The status of the batch processing request. Can be: \\\u0022PENDING\\\u0022, \\\u0022PROCESSING\\\u0022, \\\u0022CANCELED\\\u0022, or \\\u0022COMPLETE\\\u0022.\u0022",
         "example": null,
         "x-ms-enum": {
-          "name": "CrmBatchResponsePublicDefaultAssociation20Status",
+          "name": "CrmBatchResponsePublicDefaultAssociation19Status",
           "modelAsString": false,
           "values": [
             {
@@ -326082,7 +325843,7 @@
           ]
         }
       },
-      "CrmAssociationSpec22AssociationCategory": {
+      "CrmAssociationSpec21AssociationCategory": {
         "enum": [
           "HUBSPOT_DEFINED",
           "INTEGRATOR_DEFINED",
@@ -326094,7 +325855,7 @@
         "description": "The category of the association, such as \u0022HUBSPOT_DEFINED\u0022.",
         "example": null,
         "x-ms-enum": {
-          "name": "CrmAssociationSpec22AssociationCategory",
+          "name": "CrmAssociationSpec21AssociationCategory",
           "modelAsString": false,
           "values": [
             {
@@ -326116,7 +325877,7 @@
           ]
         }
       },
-      "CrmBatchResponsePublicDefaultAssociation21Status": {
+      "CrmBatchResponsePublicDefaultAssociation20Status": {
         "enum": [
           "CANCELED",
           "COMPLETE",
@@ -326128,7 +325889,7 @@
         "description": "The status of the batch processing request, which can be \u0022PENDING\u0022, \u0022PROCESSING\u0022, \u0022CANCELED\u0022, or \u0022COMPLETE\u0022.",
         "example": null,
         "x-ms-enum": {
-          "name": "CrmBatchResponsePublicDefaultAssociation21Status",
+          "name": "CrmBatchResponsePublicDefaultAssociation20Status",
           "modelAsString": false,
           "values": [
             {
@@ -327950,7 +327711,7 @@
           ]
         }
       },
-      "CrmAssociationSpec23AssociationCategory": {
+      "CrmAssociationSpec22AssociationCategory": {
         "enum": [
           "HUBSPOT_DEFINED",
           "INTEGRATOR_DEFINED",
@@ -327962,7 +327723,7 @@
         "description": "The category of the association, such as \u0022HUBSPOT_DEFINED\u0022.",
         "example": null,
         "x-ms-enum": {
-          "name": "CrmAssociationSpec23AssociationCategory",
+          "name": "CrmAssociationSpec22AssociationCategory",
           "modelAsString": false,
           "values": [
             {
@@ -327984,7 +327745,7 @@
           ]
         }
       },
-      "CrmBatchResponsePublicDefaultAssociation22Status": {
+      "CrmBatchResponsePublicDefaultAssociation21Status": {
         "enum": [
           "CANCELED",
           "COMPLETE",
@@ -327996,7 +327757,7 @@
         "description": "\u0022The status of the batch processing request. Can be: \\\u0022PENDING\\\u0022, \\\u0022PROCESSING\\\u0022, \\\u0022CANCELED\\\u0022, or \\\u0022COMPLETE\\\u0022.\u0022",
         "example": null,
         "x-ms-enum": {
-          "name": "CrmBatchResponsePublicDefaultAssociation22Status",
+          "name": "CrmBatchResponsePublicDefaultAssociation21Status",
           "modelAsString": false,
           "values": [
             {
@@ -328233,7 +327994,7 @@
           ]
         }
       },
-      "CrmAssociationSpec24AssociationCategory": {
+      "CrmAssociationSpec23AssociationCategory": {
         "enum": [
           "HUBSPOT_DEFINED",
           "INTEGRATOR_DEFINED",
@@ -328245,7 +328006,7 @@
         "description": "The category of the association, such as \u0022HUBSPOT_DEFINED\u0022.",
         "example": null,
         "x-ms-enum": {
-          "name": "CrmAssociationSpec24AssociationCategory",
+          "name": "CrmAssociationSpec23AssociationCategory",
           "modelAsString": false,
           "values": [
             {
@@ -328267,7 +328028,7 @@
           ]
         }
       },
-      "CrmBatchResponsePublicDefaultAssociation23Status": {
+      "CrmBatchResponsePublicDefaultAssociation22Status": {
         "enum": [
           "CANCELED",
           "COMPLETE",
@@ -328279,7 +328040,7 @@
         "description": "\u0022The status of the batch processing request. Can be: \\\u0022PENDING\\\u0022, \\\u0022PROCESSING\\\u0022, \\\u0022CANCELED\\\u0022, or \\\u0022COMPLETE\\\u0022.\u0022",
         "example": null,
         "x-ms-enum": {
-          "name": "CrmBatchResponsePublicDefaultAssociation23Status",
+          "name": "CrmBatchResponsePublicDefaultAssociation22Status",
           "modelAsString": false,
           "values": [
             {
@@ -328516,7 +328277,7 @@
           ]
         }
       },
-      "CrmAssociationSpec25AssociationCategory": {
+      "CrmAssociationSpec24AssociationCategory": {
         "enum": [
           "HUBSPOT_DEFINED",
           "INTEGRATOR_DEFINED",
@@ -328528,7 +328289,7 @@
         "description": "The category of the association, such as \u0022HUBSPOT_DEFINED\u0022.",
         "example": null,
         "x-ms-enum": {
-          "name": "CrmAssociationSpec25AssociationCategory",
+          "name": "CrmAssociationSpec24AssociationCategory",
           "modelAsString": false,
           "values": [
             {
@@ -328765,7 +328526,7 @@
           ]
         }
       },
-      "CrmAssociationSpec26AssociationCategory": {
+      "CrmAssociationSpec25AssociationCategory": {
         "enum": [
           "HUBSPOT_DEFINED",
           "INTEGRATOR_DEFINED",
@@ -328777,7 +328538,7 @@
         "description": "The category of the association, such as \u0022HUBSPOT_DEFINED\u0022.",
         "example": null,
         "x-ms-enum": {
-          "name": "CrmAssociationSpec26AssociationCategory",
+          "name": "CrmAssociationSpec25AssociationCategory",
           "modelAsString": false,
           "values": [
             {
@@ -328799,7 +328560,7 @@
           ]
         }
       },
-      "CrmBatchResponsePublicDefaultAssociation24Status": {
+      "CrmBatchResponsePublicDefaultAssociation23Status": {
         "enum": [
           "CANCELED",
           "COMPLETE",
@@ -328811,7 +328572,7 @@
         "description": "\u0022The status of the batch processing request. Can be: \\\u0022PENDING\\\u0022, \\\u0022PROCESSING\\\u0022, \\\u0022CANCELED\\\u0022, or \\\u0022COMPLETE\\\u0022.\u0022",
         "example": null,
         "x-ms-enum": {
-          "name": "CrmBatchResponsePublicDefaultAssociation24Status",
+          "name": "CrmBatchResponsePublicDefaultAssociation23Status",
           "modelAsString": false,
           "values": [
             {
@@ -329048,7 +328809,7 @@
           ]
         }
       },
-      "CrmAssociationSpec27AssociationCategory": {
+      "CrmAssociationSpec26AssociationCategory": {
         "enum": [
           "HUBSPOT_DEFINED",
           "INTEGRATOR_DEFINED",
@@ -329060,7 +328821,7 @@
         "description": "The category of the association, such as \u0022HUBSPOT_DEFINED\u0022.",
         "example": null,
         "x-ms-enum": {
-          "name": "CrmAssociationSpec27AssociationCategory",
+          "name": "CrmAssociationSpec26AssociationCategory",
           "modelAsString": false,
           "values": [
             {
@@ -329116,7 +328877,7 @@
           ]
         }
       },
-      "CrmBatchResponsePublicDefaultAssociation25Status": {
+      "CrmBatchResponsePublicDefaultAssociation24Status": {
         "enum": [
           "CANCELED",
           "COMPLETE",
@@ -329128,7 +328889,7 @@
         "description": "\u0022The status of the batch processing request. Can be: \\\u0022PENDING\\\u0022, \\\u0022PROCESSING\\\u0022, \\\u0022CANCELED\\\u0022, or \\\u0022COMPLETE\\\u0022.\u0022",
         "example": null,
         "x-ms-enum": {
-          "name": "CrmBatchResponsePublicDefaultAssociation25Status",
+          "name": "CrmBatchResponsePublicDefaultAssociation24Status",
           "modelAsString": false,
           "values": [
             {
@@ -329297,7 +329058,7 @@
           ]
         }
       },
-      "CrmAssociationSpec28AssociationCategory": {
+      "CrmAssociationSpec27AssociationCategory": {
         "enum": [
           "HUBSPOT_DEFINED",
           "INTEGRATOR_DEFINED",
@@ -329309,7 +329070,7 @@
         "description": "The category of the association, such as \u0022HUBSPOT_DEFINED\u0022.",
         "example": null,
         "x-ms-enum": {
-          "name": "CrmAssociationSpec28AssociationCategory",
+          "name": "CrmAssociationSpec27AssociationCategory",
           "modelAsString": false,
           "values": [
             {
@@ -329365,7 +329126,7 @@
           ]
         }
       },
-      "CrmBatchResponsePublicDefaultAssociation26Status": {
+      "CrmBatchResponsePublicDefaultAssociation25Status": {
         "enum": [
           "CANCELED",
           "COMPLETE",
@@ -329377,7 +329138,7 @@
         "description": "\u0022The status of the batch processing request. Can be: \\\u0022PENDING\\\u0022, \\\u0022PROCESSING\\\u0022, \\\u0022CANCELED\\\u0022, or \\\u0022COMPLETE\\\u0022.\u0022",
         "example": null,
         "x-ms-enum": {
-          "name": "CrmBatchResponsePublicDefaultAssociation26Status",
+          "name": "CrmBatchResponsePublicDefaultAssociation25Status",
           "modelAsString": false,
           "values": [
             {
@@ -329575,7 +329336,7 @@
           ]
         }
       },
-      "CrmAssociationSpec29AssociationCategory": {
+      "CrmAssociationSpec28AssociationCategory": {
         "enum": [
           "HUBSPOT_DEFINED",
           "INTEGRATOR_DEFINED",
@@ -329587,7 +329348,7 @@
         "description": "The category of the association, such as \u0022HUBSPOT_DEFINED\u0022.",
         "example": null,
         "x-ms-enum": {
-          "name": "CrmAssociationSpec29AssociationCategory",
+          "name": "CrmAssociationSpec28AssociationCategory",
           "modelAsString": false,
           "values": [
             {
@@ -329609,7 +329370,7 @@
           ]
         }
       },
-      "CrmBatchResponsePublicDefaultAssociation27Status": {
+      "CrmBatchResponsePublicDefaultAssociation26Status": {
         "enum": [
           "CANCELED",
           "COMPLETE",
@@ -329621,7 +329382,7 @@
         "description": "\u0022The status of the batch processing request. Can be: \\\u0022PENDING\\\u0022, \\\u0022PROCESSING\\\u0022, \\\u0022CANCELED\\\u0022, or \\\u0022COMPLETE\\\u0022.\u0022",
         "example": null,
         "x-ms-enum": {
-          "name": "CrmBatchResponsePublicDefaultAssociation27Status",
+          "name": "CrmBatchResponsePublicDefaultAssociation26Status",
           "modelAsString": false,
           "values": [
             {
@@ -329858,7 +329619,7 @@
           ]
         }
       },
-      "CrmAssociationSpec30AssociationCategory": {
+      "CrmAssociationSpec29AssociationCategory": {
         "enum": [
           "HUBSPOT_DEFINED",
           "INTEGRATOR_DEFINED",
@@ -329870,7 +329631,7 @@
         "description": "The category of the association, such as \u0022HUBSPOT_DEFINED\u0022.",
         "example": null,
         "x-ms-enum": {
-          "name": "CrmAssociationSpec30AssociationCategory",
+          "name": "CrmAssociationSpec29AssociationCategory",
           "modelAsString": false,
           "values": [
             {
@@ -329892,7 +329653,7 @@
           ]
         }
       },
-      "CrmBatchResponsePublicDefaultAssociation28Status": {
+      "CrmBatchResponsePublicDefaultAssociation27Status": {
         "enum": [
           "CANCELED",
           "COMPLETE",
@@ -329904,7 +329665,7 @@
         "description": "\u0022The status of the batch processing request. Can be: \\\u0022PENDING\\\u0022, \\\u0022PROCESSING\\\u0022, \\\u0022CANCELED\\\u0022, or \\\u0022COMPLETE\\\u0022.\u0022",
         "example": null,
         "x-ms-enum": {
-          "name": "CrmBatchResponsePublicDefaultAssociation28Status",
+          "name": "CrmBatchResponsePublicDefaultAssociation27Status",
           "modelAsString": false,
           "values": [
             {
@@ -330141,7 +329902,7 @@
           ]
         }
       },
-      "CrmAssociationSpec31AssociationCategory": {
+      "CrmAssociationSpec30AssociationCategory": {
         "enum": [
           "HUBSPOT_DEFINED",
           "INTEGRATOR_DEFINED",
@@ -330153,7 +329914,7 @@
         "description": "The category of the association, such as \u0022HUBSPOT_DEFINED\u0022.",
         "example": null,
         "x-ms-enum": {
-          "name": "CrmAssociationSpec31AssociationCategory",
+          "name": "CrmAssociationSpec30AssociationCategory",
           "modelAsString": false,
           "values": [
             {
@@ -330175,7 +329936,7 @@
           ]
         }
       },
-      "CrmBatchResponsePublicDefaultAssociation29Status": {
+      "CrmBatchResponsePublicDefaultAssociation28Status": {
         "enum": [
           "CANCELED",
           "COMPLETE",
@@ -330187,7 +329948,7 @@
         "description": "\u0022The status of the batch processing request. Can be: \\\u0022PENDING\\\u0022, \\\u0022PROCESSING\\\u0022, \\\u0022CANCELED\\\u0022, or \\\u0022COMPLETE\\\u0022.\u0022",
         "example": null,
         "x-ms-enum": {
-          "name": "CrmBatchResponsePublicDefaultAssociation29Status",
+          "name": "CrmBatchResponsePublicDefaultAssociation28Status",
           "modelAsString": false,
           "values": [
             {
@@ -331923,7 +331684,7 @@
           ]
         }
       },
-      "CrmAssociationSpec32AssociationCategory": {
+      "CrmAssociationSpec31AssociationCategory": {
         "enum": [
           "HUBSPOT_DEFINED",
           "INTEGRATOR_DEFINED",
@@ -331935,7 +331696,7 @@
         "description": "The category of the association, such as \u0022HUBSPOT_DEFINED\u0022.",
         "example": null,
         "x-ms-enum": {
-          "name": "CrmAssociationSpec32AssociationCategory",
+          "name": "CrmAssociationSpec31AssociationCategory",
           "modelAsString": false,
           "values": [
             {
@@ -331957,7 +331718,7 @@
           ]
         }
       },
-      "CrmBatchResponsePublicDefaultAssociation30Status": {
+      "CrmBatchResponsePublicDefaultAssociation29Status": {
         "enum": [
           "CANCELED",
           "COMPLETE",
@@ -331969,7 +331730,7 @@
         "description": "\u0022The status of the batch processing request. Can be: \\\u0022PENDING\\\u0022, \\\u0022PROCESSING\\\u0022, \\\u0022CANCELED\\\u0022, or \\\u0022COMPLETE\\\u0022.\u0022",
         "example": null,
         "x-ms-enum": {
-          "name": "CrmBatchResponsePublicDefaultAssociation30Status",
+          "name": "CrmBatchResponsePublicDefaultAssociation29Status",
           "modelAsString": false,
           "values": [
             {
@@ -332538,7 +332299,7 @@
           ]
         }
       },
-      "CrmAssociationSpec33AssociationCategory": {
+      "CrmAssociationSpec32AssociationCategory": {
         "enum": [
           "HUBSPOT_DEFINED",
           "INTEGRATOR_DEFINED",
@@ -332550,7 +332311,7 @@
         "description": "The category of the association, such as \u0022HUBSPOT_DEFINED\u0022.",
         "example": null,
         "x-ms-enum": {
-          "name": "CrmAssociationSpec33AssociationCategory",
+          "name": "CrmAssociationSpec32AssociationCategory",
           "modelAsString": false,
           "values": [
             {
@@ -332572,7 +332333,7 @@
           ]
         }
       },
-      "CrmBatchResponsePublicDefaultAssociation31Status": {
+      "CrmBatchResponsePublicDefaultAssociation30Status": {
         "enum": [
           "CANCELED",
           "COMPLETE",
@@ -332584,7 +332345,7 @@
         "description": "\u0022The status of the batch processing request: \\\u0022PENDING\\\u0022, \\\u0022PROCESSING\\\u0022, \\\u0022CANCELLED\\\u0022, or \\\u0022COMPLETE\\\u0022.\u0022",
         "example": null,
         "x-ms-enum": {
-          "name": "CrmBatchResponsePublicDefaultAssociation31Status",
+          "name": "CrmBatchResponsePublicDefaultAssociation30Status",
           "modelAsString": false,
           "values": [
             {
@@ -332821,7 +332582,7 @@
           ]
         }
       },
-      "CrmAssociationSpec34AssociationCategory": {
+      "CrmAssociationSpec33AssociationCategory": {
         "enum": [
           "HUBSPOT_DEFINED",
           "INTEGRATOR_DEFINED",
@@ -332833,7 +332594,7 @@
         "description": "The category of the association, such as \u0022HUBSPOT_DEFINED\u0022.",
         "example": null,
         "x-ms-enum": {
-          "name": "CrmAssociationSpec34AssociationCategory",
+          "name": "CrmAssociationSpec33AssociationCategory",
           "modelAsString": false,
           "values": [
             {
@@ -332855,7 +332616,7 @@
           ]
         }
       },
-      "CrmBatchResponsePublicDefaultAssociation32Status": {
+      "CrmBatchResponsePublicDefaultAssociation31Status": {
         "enum": [
           "CANCELED",
           "COMPLETE",
@@ -332867,7 +332628,7 @@
         "description": "\u0022The status of the batch processing request. Can be: \\\u0022PENDING\\\u0022, \\\u0022PROCESSING\\\u0022, \\\u0022CANCELED\\\u0022, or \\\u0022COMPLETE\\\u0022.\u0022",
         "example": null,
         "x-ms-enum": {
-          "name": "CrmBatchResponsePublicDefaultAssociation32Status",
+          "name": "CrmBatchResponsePublicDefaultAssociation31Status",
           "modelAsString": false,
           "values": [
             {
@@ -333104,7 +332865,7 @@
           ]
         }
       },
-      "CrmAssociationSpec35AssociationCategory": {
+      "CrmAssociationSpec34AssociationCategory": {
         "enum": [
           "HUBSPOT_DEFINED",
           "INTEGRATOR_DEFINED",
@@ -333116,7 +332877,7 @@
         "description": "The category of the association, such as \u0022HUBSPOT_DEFINED\u0022.",
         "example": null,
         "x-ms-enum": {
-          "name": "CrmAssociationSpec35AssociationCategory",
+          "name": "CrmAssociationSpec34AssociationCategory",
           "modelAsString": false,
           "values": [
             {
@@ -333138,7 +332899,7 @@
           ]
         }
       },
-      "CrmBatchResponsePublicDefaultAssociation33Status": {
+      "CrmBatchResponsePublicDefaultAssociation32Status": {
         "enum": [
           "CANCELED",
           "COMPLETE",
@@ -333150,7 +332911,7 @@
         "description": "\u0022The status of the batch processing request. Can be: \\\u0022PENDING\\\u0022, \\\u0022PROCESSING\\\u0022, \\\u0022CANCELED\\\u0022, or \\\u0022COMPLETE\\\u0022.\u0022",
         "example": null,
         "x-ms-enum": {
-          "name": "CrmBatchResponsePublicDefaultAssociation33Status",
+          "name": "CrmBatchResponsePublicDefaultAssociation32Status",
           "modelAsString": false,
           "values": [
             {
@@ -333387,7 +333148,7 @@
           ]
         }
       },
-      "CrmAssociationSpec36AssociationCategory": {
+      "CrmAssociationSpec35AssociationCategory": {
         "enum": [
           "HUBSPOT_DEFINED",
           "INTEGRATOR_DEFINED",
@@ -333399,7 +333160,7 @@
         "description": "The category of the association, such as \u0022HUBSPOT_DEFINED\u0022.",
         "example": null,
         "x-ms-enum": {
-          "name": "CrmAssociationSpec36AssociationCategory",
+          "name": "CrmAssociationSpec35AssociationCategory",
           "modelAsString": false,
           "values": [
             {
@@ -333421,7 +333182,7 @@
           ]
         }
       },
-      "CrmBatchResponsePublicDefaultAssociation34Status": {
+      "CrmBatchResponsePublicDefaultAssociation33Status": {
         "enum": [
           "CANCELED",
           "COMPLETE",
@@ -333433,7 +333194,7 @@
         "description": "\u0022The status of the batch processing request. Can be: \\\u0022PENDING\\\u0022, \\\u0022PROCESSING\\\u0022, \\\u0022CANCELED\\\u0022, or \\\u0022COMPLETE\\\u0022.\u0022",
         "example": null,
         "x-ms-enum": {
-          "name": "CrmBatchResponsePublicDefaultAssociation34Status",
+          "name": "CrmBatchResponsePublicDefaultAssociation33Status",
           "modelAsString": false,
           "values": [
             {
@@ -333913,7 +333674,7 @@
           ]
         }
       },
-      "CrmAssociationSpec37AssociationCategory": {
+      "CrmAssociationSpec36AssociationCategory": {
         "enum": [
           "HUBSPOT_DEFINED",
           "INTEGRATOR_DEFINED",
@@ -333925,7 +333686,7 @@
         "description": "The category of the association, such as \u0022HUBSPOT_DEFINED\u0022.",
         "example": null,
         "x-ms-enum": {
-          "name": "CrmAssociationSpec37AssociationCategory",
+          "name": "CrmAssociationSpec36AssociationCategory",
           "modelAsString": false,
           "values": [
             {
@@ -333947,7 +333708,7 @@
           ]
         }
       },
-      "CrmBatchResponsePublicDefaultAssociation35Status": {
+      "CrmBatchResponsePublicDefaultAssociation34Status": {
         "enum": [
           "CANCELED",
           "COMPLETE",
@@ -333959,7 +333720,7 @@
         "description": "\u0022The status of the batch processing request. Can be: \\\u0022PENDING\\\u0022, \\\u0022PROCESSING\\\u0022, \\\u0022CANCELED\\\u0022, or \\\u0022COMPLETE\\\u0022.\u0022",
         "example": null,
         "x-ms-enum": {
-          "name": "CrmBatchResponsePublicDefaultAssociation35Status",
+          "name": "CrmBatchResponsePublicDefaultAssociation34Status",
           "modelAsString": false,
           "values": [
             {
@@ -395515,84 +395276,10 @@
             "authorizationUrl": "https://app.hubspot.com/oauth/authorize",
             "tokenUrl": "https://api.hubapi.com/oauth/v1/token",
             "scopes": {
-              "crm.objects.appointments.read": "",
-              "crm.objects.appointments.sensitive.read.v2": "",
-              "crm.objects.appointments.sensitive.write.v2": "",
-              "crm.objects.appointments.write": "",
-              "crm.objects.calls.read": "",
-              "crm.objects.carts.read": "",
-              "crm.objects.carts.write": "",
               "crm.objects.commercepayments.read": "",
-              "crm.objects.commercepayments.write": "",
-              "crm.objects.companies.highly_sensitive.read.v2": "",
-              "crm.objects.companies.highly_sensitive.write.v2": "",
-              "crm.objects.companies.read": "",
-              "crm.objects.companies.sensitive.read.v2": "",
-              "crm.objects.companies.sensitive.write.v2": "",
-              "crm.objects.companies.write": "",
-              "crm.objects.contacts.highly_sensitive.read.v2": "",
-              "crm.objects.contacts.highly_sensitive.write.v2": "",
               "crm.objects.contacts.read": "",
-              "crm.objects.contacts.sensitive.read.v2": "",
-              "crm.objects.contacts.sensitive.write.v2": "",
-              "crm.objects.contacts.write": "",
-              "crm.objects.courses.read": "",
-              "crm.objects.courses.write": "",
-              "crm.objects.custom.highly_sensitive.read.v2": "",
-              "crm.objects.custom.highly_sensitive.write.v2": "",
-              "crm.objects.custom.read": "",
-              "crm.objects.custom.sensitive.read.v2": "",
-              "crm.objects.custom.sensitive.write.v2": "",
-              "crm.objects.custom.write": "",
-              "crm.objects.deals.highly_sensitive.read.v2": "",
-              "crm.objects.deals.highly_sensitive.write.v2": "",
-              "crm.objects.deals.read": "",
-              "crm.objects.deals.sensitive.read.v2": "",
-              "crm.objects.deals.sensitive.write.v2": "",
-              "crm.objects.deals.write": "",
-              "crm.objects.emails.read": "",
               "crm.objects.feedback_submissions.read": "",
-              "crm.objects.goals.read": "",
-              "crm.objects.goals.write": "",
-              "crm.objects.invoices.read": "",
-              "crm.objects.invoices.write": "",
-              "crm.objects.leads.read": "",
-              "crm.objects.leads.write": "",
-              "crm.objects.line_items.read": "",
-              "crm.objects.line_items.write": "",
-              "crm.objects.listings.read": "",
-              "crm.objects.listings.write": "",
-              "crm.objects.meetings.read": "",
-              "crm.objects.notes.read": "",
-              "crm.objects.orders.read": "",
-              "crm.objects.orders.write": "",
-              "crm.objects.partner-clients.read": "",
-              "crm.objects.partner-clients.write": "",
-              "crm.objects.partner-services.read": "",
-              "crm.objects.partner-services.write": "",
-              "crm.objects.products.read": "",
-              "crm.objects.products.write": "",
-              "crm.objects.projects.highly_sensitive.read": "",
-              "crm.objects.projects.highly_sensitive.write": "",
-              "crm.objects.projects.read": "",
-              "crm.objects.projects.sensitive.read": "",
-              "crm.objects.projects.sensitive.write": "",
-              "crm.objects.projects.write": "",
-              "crm.objects.quotes.read": "",
-              "crm.objects.quotes.write": "",
-              "crm.objects.services.read": "",
-              "crm.objects.services.write": "",
-              "crm.objects.subscriptions.read": "",
-              "crm.objects.subscriptions.write": "",
-              "crm.objects.tasks.read": "",
-              "crm.objects.users.read": "",
-              "crm.objects.users.write": "",
-              "e-commerce": "",
-              "media_bridge.read": "",
-              "oauth": "",
-              "tickets": "",
-              "tickets.highly_sensitive.v2": "",
-              "tickets.sensitive.v2": ""
+              "oauth": ""
             }
           }
         }

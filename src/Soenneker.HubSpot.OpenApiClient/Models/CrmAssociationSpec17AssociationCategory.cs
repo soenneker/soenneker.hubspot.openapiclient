@@ -5,7 +5,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     /// <summary>The category of the association, such as &quot;HUBSPOT_DEFINED&quot;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum CrmAssociationSpec26AssociationCategory
+    public enum CrmAssociationSpec17AssociationCategory
     {
         [EnumMember(Value = "HUBSPOT_DEFINED")]
         #pragma warning disable CS1591
