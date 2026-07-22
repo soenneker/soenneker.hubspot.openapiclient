@@ -19,7 +19,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.ObjectLibrary.TwoZeroTwoSixZeroThr
     public partial class EnablementRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.crm.objectLibrary.TwoZeroTwoSixZeroThree.enablement.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">objectTypeId</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Crm.ObjectLibrary.TwoZeroTwoSixZeroThree.Enablement.Item.WithObjectTypeItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Crm.ObjectLibrary.TwoZeroTwoSixZeroThree.Enablement.Item.WithObjectTypeItemRequestBuilder this[string position]
         {

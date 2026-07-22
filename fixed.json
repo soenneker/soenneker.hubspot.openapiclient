@@ -52626,6 +52626,11 @@
           },
           {
             "________________________________crm_oauth2": [
+              "crm.objects.tickets.sensitive.read"
+            ]
+          },
+          {
+            "________________________________crm_oauth2": [
               "crm.objects.orders.read"
             ]
           },
@@ -52676,7 +52681,17 @@
           },
           {
             "________________________________crm_oauth2": [
+              "crm.objects.tickets.highly_sensitive.read"
+            ]
+          },
+          {
+            "________________________________crm_oauth2": [
               "crm.objects.companies.sensitive.read.v2"
+            ]
+          },
+          {
+            "________________________________crm_oauth2": [
+              "crm.objects.tickets.sensitive.write"
             ]
           },
           {
@@ -52767,6 +52782,11 @@
           {
             "________________________________crm_oauth2": [
               "crm.objects.carts.write"
+            ]
+          },
+          {
+            "________________________________crm_oauth2": [
+              "crm.objects.tickets.highly_sensitive.write"
             ]
           },
           {
@@ -53004,7 +53024,7 @@
           {
             "name": "objectTypeId",
             "in": "path",
-            "description": "",
+            "description": "objectTypeId",
             "required": true,
             "schema": {
               "type": "string",
@@ -53042,6 +53062,11 @@
           {
             "________________________________crm_oauth2": [
               "crm.objects.services.read"
+            ]
+          },
+          {
+            "________________________________crm_oauth2": [
+              "crm.objects.tickets.sensitive.read"
             ]
           },
           {
@@ -53096,7 +53121,17 @@
           },
           {
             "________________________________crm_oauth2": [
+              "crm.objects.tickets.highly_sensitive.read"
+            ]
+          },
+          {
+            "________________________________crm_oauth2": [
               "crm.objects.companies.sensitive.read.v2"
+            ]
+          },
+          {
+            "________________________________crm_oauth2": [
+              "crm.objects.tickets.sensitive.write"
             ]
           },
           {
@@ -53187,6 +53222,11 @@
           {
             "________________________________crm_oauth2": [
               "crm.objects.carts.write"
+            ]
+          },
+          {
+            "________________________________crm_oauth2": [
+              "crm.objects.tickets.highly_sensitive.write"
             ]
           },
           {
@@ -396457,6 +396497,10 @@
               "crm.objects.subscriptions.read": "",
               "crm.objects.subscriptions.write": "",
               "crm.objects.tasks.read": "",
+              "crm.objects.tickets.highly_sensitive.read": "",
+              "crm.objects.tickets.highly_sensitive.write": "",
+              "crm.objects.tickets.sensitive.read": "",
+              "crm.objects.tickets.sensitive.write": "",
               "crm.objects.users.read": "",
               "crm.objects.users.write": "",
               "e-commerce": "",
