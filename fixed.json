@@ -4089,13 +4089,13 @@
             "content": {
               "application/vnd.ms-excel": {
                 "schema": {
-                  "$ref": "#/components/schemas/CmsGetCmsHubdb202603TablesTableIdOrNameDraftExportExportDraftTable200ResponseResponseMsExcel"
+                  "$ref": "#/components/schemas/CmsGetCmsHubdb202603TablesTableIdOrNameDraftExportExportDraftTable200MsExcelResponseSchema"
                 },
                 "example": null
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/CmsGetCmsHubdb202603TablesTableIdOrNameDraftExportExportDraftTable200ResponseResponseCsv2"
+                  "$ref": "#/components/schemas/CmsGetCmsHubdb202603TablesTableIdOrNameDraftExportExportDraftTable200CsvResponseSchema"
                 },
                 "example": null
               }
@@ -4312,13 +4312,13 @@
             "content": {
               "application/vnd.ms-excel": {
                 "schema": {
-                  "$ref": "#/components/schemas/CmsGetCmsHubdb202603TablesTableIdOrNameExportExportTable200ResponseResponseMsExcel"
+                  "$ref": "#/components/schemas/CmsGetCmsHubdb202603TablesTableIdOrNameExportExportTable200MsExcelResponseSchema"
                 },
                 "example": null
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/CmsGetCmsHubdb202603TablesTableIdOrNameExportExportTable200ResponseResponseCsv2"
+                  "$ref": "#/components/schemas/CmsGetCmsHubdb202603TablesTableIdOrNameExportExportTable200CsvResponseSchema"
                 },
                 "example": null
               }
@@ -14171,7 +14171,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UrlMappingsGetUrlMappings202603UrlMappingsUrlMappingsV3UrlMappings200ResponseResponseJson"
+                  "$ref": "#/components/schemas/UrlMappingsGetUrlMappings202603UrlMappingsUrlMappingsV3UrlMappings200Response"
                 },
                 "example": null
               }
@@ -14481,7 +14481,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CmsGetCmsUrlRedirects202603UrlMappingsCmsUrlRedirects202603UrlMappings200ResponseResponseJson"
+                  "$ref": "#/components/schemas/CmsGetCmsUrlRedirects202603UrlMappingsCmsUrlRedirects202603UrlMappings200Response"
                 },
                 "example": null
               }
@@ -80986,7 +80986,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/MetaGetMetaNetworkOrigins202603IpRangesSimpleMetaNetworkOrigins202509IpRangesSimple200ResponseResponsePlain"
+                  "$ref": "#/components/schemas/MetaGetMetaNetworkOrigins202603IpRangesSimpleMetaNetworkOrigins202509IpRangesSimple200PlainResponseSchema"
                 },
                 "example": null
               }
@@ -83829,7 +83829,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/WebhooksJournalGetWebhooksJournalSubscriptions202603FiltersSubscriptionSubscriptionId200ResponseResponseJson"
+                  "$ref": "#/components/schemas/WebhooksJournalGetWebhooksJournalSubscriptions202603FiltersSubscriptionSubscriptionId200ResponseSchema"
                 },
                 "example": null
               }
@@ -224907,12 +224907,12 @@
           }
         }
       },
-      "CmsGetCmsHubdb202603TablesTableIdOrNameDraftExportExportDraftTable200Response": {
+      "CmsGetCmsHubdb202603TablesTableIdOrNameDraftExportExportDraftTable200MsExcelResponse": {
         "type": "string",
         "format": "binary",
         "example": null
       },
-      "CmsGetCmsHubdb202603TablesTableIdOrNameDraftExportExportDraftTable200ResponseResponseCsv": {
+      "CmsGetCmsHubdb202603TablesTableIdOrNameDraftExportExportDraftTable200CsvResponse": {
         "type": "string",
         "format": "binary",
         "example": null
@@ -224932,12 +224932,12 @@
         },
         "example": null
       },
-      "CmsGetCmsHubdb202603TablesTableIdOrNameExportExportTable200Response": {
+      "CmsGetCmsHubdb202603TablesTableIdOrNameExportExportTable200MsExcelResponse": {
         "type": "string",
         "format": "binary",
         "example": null
       },
-      "CmsGetCmsHubdb202603TablesTableIdOrNameExportExportTable200ResponseResponseCsv": {
+      "CmsGetCmsHubdb202603TablesTableIdOrNameExportExportTable200CsvResponse": {
         "type": "string",
         "format": "binary",
         "example": null
@@ -224964,14 +224964,14 @@
         },
         "example": null
       },
-      "UrlMappingsGetUrlMappings202603UrlMappingsUrlMappingsV3UrlMappings200Response": {
+      "UrlMappingsGetUrlMappings202603UrlMappingsUrlMappingsV3UrlMappings200MediaResponse": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/UrlMapping"
         },
         "example": null
       },
-      "CmsGetCmsUrlRedirects202603UrlMappingsCmsUrlRedirects202603UrlMappings200Response": {
+      "CmsGetCmsUrlRedirects202603UrlMappingsCmsUrlRedirects202603UrlMappings200MediaResponse": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/CmsUrlMapping"
@@ -225074,7 +225074,7 @@
         },
         "example": null
       },
-      "MetaGetMetaNetworkOrigins202603IpRangesSimpleMetaNetworkOrigins202509IpRangesSimple200Response": {
+      "MetaGetMetaNetworkOrigins202603IpRangesSimpleMetaNetworkOrigins202509IpRangesSimple200PlainResponse": {
         "type": "string",
         "example": null
       },
@@ -225089,19 +225089,19 @@
         "type": "object",
         "description": "Placeholder schema for path example refs"
       },
-      "CmsGetCmsHubdb202603TablesTableIdOrNameDraftExportExportDraftTable200ResponseResponseMsExcel": {
+      "CmsGetCmsHubdb202603TablesTableIdOrNameDraftExportExportDraftTable200MsExcelResponseSchema": {
         "type": "string",
         "format": "binary"
       },
-      "CmsGetCmsHubdb202603TablesTableIdOrNameDraftExportExportDraftTable200ResponseResponseCsv2": {
+      "CmsGetCmsHubdb202603TablesTableIdOrNameDraftExportExportDraftTable200CsvResponseSchema": {
         "type": "string",
         "format": "binary"
       },
-      "CmsGetCmsHubdb202603TablesTableIdOrNameExportExportTable200ResponseResponseMsExcel": {
+      "CmsGetCmsHubdb202603TablesTableIdOrNameExportExportTable200MsExcelResponseSchema": {
         "type": "string",
         "format": "binary"
       },
-      "CmsGetCmsHubdb202603TablesTableIdOrNameExportExportTable200ResponseResponseCsv2": {
+      "CmsGetCmsHubdb202603TablesTableIdOrNameExportExportTable200CsvResponseSchema": {
         "type": "string",
         "format": "binary"
       },
@@ -225123,13 +225123,13 @@
       "CmsGetCmsBlogs202603TagsCursorQueryCmsBlogsV3TagsCursorQuery200Response": {
         "type": "object"
       },
-      "UrlMappingsGetUrlMappings202603UrlMappingsUrlMappingsV3UrlMappings200ResponseResponseJson": {
+      "UrlMappingsGetUrlMappings202603UrlMappingsUrlMappingsV3UrlMappings200Response": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/UrlMapping"
         }
       },
-      "CmsGetCmsUrlRedirects202603UrlMappingsCmsUrlRedirects202603UrlMappings200ResponseResponseJson": {
+      "CmsGetCmsUrlRedirects202603UrlMappingsCmsUrlRedirects202603UrlMappings200Response": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/CmsUrlMapping"
@@ -225162,10 +225162,10 @@
           "example": null
         }
       },
-      "MetaGetMetaNetworkOrigins202603IpRangesSimpleMetaNetworkOrigins202509IpRangesSimple200ResponseResponsePlain": {
+      "MetaGetMetaNetworkOrigins202603IpRangesSimpleMetaNetworkOrigins202509IpRangesSimple200PlainResponseSchema": {
         "type": "string"
       },
-      "WebhooksJournalGetWebhooksJournalSubscriptions202603FiltersSubscriptionSubscriptionId200ResponseResponseJson": {
+      "WebhooksJournalGetWebhooksJournalSubscriptions202603FiltersSubscriptionSubscriptionId200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/FilterResponse"
