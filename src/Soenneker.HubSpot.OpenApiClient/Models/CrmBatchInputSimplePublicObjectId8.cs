@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The inputs property</summary>
+        /// <summary>An array of SimplePublicObjectId objects. Each object in the array contains the ID of a CRM object to be processed in the batch operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectId9>? Inputs { get; set; }

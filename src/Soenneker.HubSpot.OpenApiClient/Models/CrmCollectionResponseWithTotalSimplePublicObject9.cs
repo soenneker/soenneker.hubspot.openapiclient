@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPaging11 Paging { get; set; }
 #endif
-        /// <summary>The results property</summary>
+        /// <summary>An array containing the simple public objects that are part of the collection.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject10>? Results { get; set; }
@@ -31,7 +31,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject10> Results { get; set; }
 #endif
-        /// <summary>The number of available results</summary>
+        /// <summary>An integer representing the total number of simple public objects in the collection.</summary>
         public int? Total { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmCollectionResponseWithTotalSimplePublicObject9"/> and sets the default values.

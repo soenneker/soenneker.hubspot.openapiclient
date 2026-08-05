@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteValue"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.AddNumbers"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.AddTime"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.And"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.BeginsWith"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.BooleanPropertyVariable"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.BooleanTargetPropertyVariable"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ConcatStrings"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ConstantBoolean"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ConstantNumber"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ConstantString"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Contains"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.DatedExchangeRate"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.DateObject"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.DivideNumbers"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Euler"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExtractMostRecentEmailReplyHtml"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExtractMostRecentEmailReplyText"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExtractMostRecentPlainTextEmailReply"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.FetchCurrencyDecimalPlaces"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.FetchExchangeRate"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.FetchPortalHomeCurrency"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.FetchSingleCurrencyPortalCurrency"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.FormatFullName"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.FormatPhoneNumber"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.FormatSearchablePhoneNumber"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.HasEmailReply"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.HasPlainTextEmailReply"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IfBoolean"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IfChainBoolean"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IfChainNumber"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IfChainString"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IfNumber"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IfString"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IsBlank"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IsDayBasedIsoPeriod"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IsEngagementType"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IsMonthBasedIsoPeriod"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IsMultipleOf"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IsPipelineStageClosed"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IsPortalEnabledCurrency"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IsPortalMulticurrencyEnabled"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IsPresent"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IsValidIsoPeriod"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.LessThan"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.LessThanOrEqual"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.LowerCase"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.MaxNumbers"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.MinNumbers"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Month"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.MoreThan"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.MoreThanOrEqual"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.MultiplyNumbers"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Not"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Now"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.NumberEquals"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.NumberPropertyVariable"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.NumberTargetPropertyVariable"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.NumberToString"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Or"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ParseNumber"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PeriodToMonths"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PeriodToWeeks"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PipelineProbability"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Power"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.RegexMatches"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.RoundDownNumbers"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.RoundNearestNumbers"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.RoundUpNumbers"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.SetContainsString"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.SquareRoot"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.StringEquals"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.StringLength"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.StringPropertyVariable"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.StringTargetPropertyVariable"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Substring"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.SubtractNumbers"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.SubtractTime"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.TimeBetween"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.TimeBetweenSkipWeekends"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.TimestampOfPropertyVariable"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.TimestampOfTargetPropertyVariable"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.UpperCase"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Xor"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Year"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteValue"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.AddNumbers"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.AddTime"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.And"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.BeginsWith"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.BooleanPropertyVariable"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.BooleanTargetPropertyVariable"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CoalesceBoolean"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CoalesceNumber"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CoalesceString"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ConcatStrings"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ConstantBoolean"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ConstantNumber"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ConstantString"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Contains"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.DatedExchangeRate"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.DateObject"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.DivideNumbers"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Euler"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExtractMostRecentEmailReplyHtml"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExtractMostRecentEmailReplyText"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExtractMostRecentPlainTextEmailReply"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.FetchCurrencyDecimalPlaces"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.FetchExchangeRate"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.FetchPortalHomeCurrency"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.FetchSingleCurrencyPortalCurrency"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.FormatFullName"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.FormatPhoneNumber"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.FormatSearchablePhoneNumber"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.HasEmailReply"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.HasPlainTextEmailReply"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IfBoolean"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IfChainBoolean"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IfChainNumber"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IfChainString"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IfNumber"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IfString"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IsBlank"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IsDayBasedIsoPeriod"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IsEngagementType"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IsMonthBasedIsoPeriod"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IsMultipleOf"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IsPipelineStageClosed"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IsPortalEnabledCurrency"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IsPortalMulticurrencyEnabled"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IsPresent"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IsValidIsoPeriod"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.LessThan"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.LessThanOrEqual"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.LowerCase"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.MaxNumbers"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.MinNumbers"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Month"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.MoreThan"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.MoreThanOrEqual"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.MultiplyNumbers"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Not"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Now"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.NumberEquals"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.NumberPropertyVariable"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.NumberTargetPropertyVariable"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.NumberToString"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Or"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ParseNumber"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PeriodToMonths"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PeriodToWeeks"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PipelineProbability"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Power"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.RegexMatches"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.RoundDownNumbers"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.RoundNearestNumbers"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.RoundUpNumbers"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.SetContainsString"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.SquareRoot"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.StringEquals"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.StringLength"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.StringPropertyVariable"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.StringTargetPropertyVariable"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Substring"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.SubtractNumbers"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.SubtractTime"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.TimeBetween"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.TimeBetweenSkipWeekends"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.TimestampOfPropertyVariable"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.TimestampOfTargetPropertyVariable"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.UpperCase"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ValidateWhen"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Xor"/>, <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Year"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class HasEmailReplyInputsItem : IComposedTypeWrapper, IParsable
@@ -68,6 +68,30 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.BooleanTargetPropertyVariable BooleanTargetPropertyVariable { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CoalesceBoolean"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CoalesceBoolean? CoalesceBoolean { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CoalesceBoolean CoalesceBoolean { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CoalesceNumber"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CoalesceNumber? CoalesceNumber { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CoalesceNumber CoalesceNumber { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CoalesceString"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CoalesceString? CoalesceString { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CoalesceString CoalesceString { get; set; }
 #endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ConcatStrings"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -677,6 +701,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.UpperCase UpperCase { get; set; }
 #endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ValidateWhen"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ValidateWhen? ValidateWhen { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ValidateWhen ValidateWhen { get; set; }
+#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Xor"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -730,6 +762,18 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             else if("BooleanTargetPropertyVariable".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.BooleanTargetPropertyVariable = new global::Soenneker.HubSpot.OpenApiClient.Models.BooleanTargetPropertyVariable();
+            }
+            else if("CoalesceBoolean".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.CoalesceBoolean = new global::Soenneker.HubSpot.OpenApiClient.Models.CoalesceBoolean();
+            }
+            else if("CoalesceNumber".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.CoalesceNumber = new global::Soenneker.HubSpot.OpenApiClient.Models.CoalesceNumber();
+            }
+            else if("CoalesceString".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.CoalesceString = new global::Soenneker.HubSpot.OpenApiClient.Models.CoalesceString();
             }
             else if("ConcatStrings".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
@@ -1035,6 +1079,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 result.UpperCase = new global::Soenneker.HubSpot.OpenApiClient.Models.UpperCase();
             }
+            else if("ValidateWhen".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.ValidateWhen = new global::Soenneker.HubSpot.OpenApiClient.Models.ValidateWhen();
+            }
             else if("Xor".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.Xor = new global::Soenneker.HubSpot.OpenApiClient.Models.Xor();
@@ -1078,6 +1126,18 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             else if(BooleanTargetPropertyVariable != null)
             {
                 return BooleanTargetPropertyVariable.GetFieldDeserializers();
+            }
+            else if(CoalesceBoolean != null)
+            {
+                return CoalesceBoolean.GetFieldDeserializers();
+            }
+            else if(CoalesceNumber != null)
+            {
+                return CoalesceNumber.GetFieldDeserializers();
+            }
+            else if(CoalesceString != null)
+            {
+                return CoalesceString.GetFieldDeserializers();
             }
             else if(ConcatStrings != null)
             {
@@ -1383,6 +1443,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 return UpperCase.GetFieldDeserializers();
             }
+            else if(ValidateWhen != null)
+            {
+                return ValidateWhen.GetFieldDeserializers();
+            }
             else if(Xor != null)
             {
                 return Xor.GetFieldDeserializers();
@@ -1427,6 +1491,18 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             else if(BooleanTargetPropertyVariable != null)
             {
                 writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.BooleanTargetPropertyVariable>(null, BooleanTargetPropertyVariable);
+            }
+            else if(CoalesceBoolean != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CoalesceBoolean>(null, CoalesceBoolean);
+            }
+            else if(CoalesceNumber != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CoalesceNumber>(null, CoalesceNumber);
+            }
+            else if(CoalesceString != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CoalesceString>(null, CoalesceString);
             }
             else if(ConcatStrings != null)
             {
@@ -1731,6 +1807,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             else if(UpperCase != null)
             {
                 writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.UpperCase>(null, UpperCase);
+            }
+            else if(ValidateWhen != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ValidateWhen>(null, ValidateWhen);
             }
             else if(Xor != null)
             {

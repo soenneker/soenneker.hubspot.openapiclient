@@ -5,6 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree.Orders.Batch;
 using Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree.Orders.Item;
+using Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree.Orders.Merge;
 using Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree.Orders.Search;
 using Soenneker.HubSpot.OpenApiClient.Models;
 using System.Collections.Generic;
@@ -24,6 +25,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree.Ord
         public global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree.Orders.Batch.BatchRequestBuilder Batch
         {
             get => new global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree.Orders.Batch.BatchRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The merge property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree.Orders.Merge.MergeRequestBuilder Merge
+        {
+            get => new global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree.Orders.Merge.MergeRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The search property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree.Orders.Search.SearchRequestBuilder Search

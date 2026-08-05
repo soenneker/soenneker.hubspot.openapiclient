@@ -30,6 +30,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.IfChainBooleanDefaultExpression DefaultExpression { get; set; }
 #endif
+        /// <summary>The enclosedInParentheses property</summary>
+        public bool? EnclosedInParentheses { get; set; }
         /// <summary>The inputs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -85,6 +87,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "conditions", n => { Conditions = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.IfChainBooleanConditionsItem>(global::Soenneker.HubSpot.OpenApiClient.Models.IfChainBooleanConditionsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "defaultExpression", n => { DefaultExpression = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.IfChainBooleanDefaultExpression>(global::Soenneker.HubSpot.OpenApiClient.Models.IfChainBooleanDefaultExpression.CreateFromDiscriminatorValue); } },
+                { "enclosedInParentheses", n => { EnclosedInParentheses = n.GetBoolValue(); } },
                 { "inputs", n => { Inputs = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.IfChainBooleanInputsItem>(global::Soenneker.HubSpot.OpenApiClient.Models.IfChainBooleanInputsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.IfChainBooleanOperator>(); } },
                 { "outputs", n => { Outputs = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.IfChainBooleanOutputsItem>(global::Soenneker.HubSpot.OpenApiClient.Models.IfChainBooleanOutputsItem.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -101,6 +104,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.IfChainBooleanConditionsItem>("conditions", Conditions);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.IfChainBooleanDefaultExpression>("defaultExpression", DefaultExpression);
+            writer.WriteBoolValue("enclosedInParentheses", EnclosedInParentheses);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.IfChainBooleanInputsItem>("inputs", Inputs);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.IfChainBooleanOperator>("operator", Operator);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.IfChainBooleanOutputsItem>("outputs", Outputs);

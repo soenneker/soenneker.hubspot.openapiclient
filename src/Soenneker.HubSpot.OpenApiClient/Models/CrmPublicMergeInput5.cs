@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ObjectIdToMerge { get; set; }
 #endif
-        /// <summary>The ID of the primary object into which another object will be merged.</summary>
+        /// <summary>The ID of the object that will remain after the merge.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PrimaryObjectId { get; set; }

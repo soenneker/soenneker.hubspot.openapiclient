@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The associations property</summary>
+        /// <summary>An array of objects representing the associations between the new CRM object and other existing objects. Each association specifies the related object and the type of association.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationsForObject8>? Associations { get; set; }
@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationsForObject8> Associations { get; set; }
 #endif
-        /// <summary>Key-value pairs for setting properties for the new object.</summary>
+        /// <summary>An object containing key-value pairs where each key is a property name and each value is the property&apos;s value. These properties define the attributes of the CRM object being created.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectInputForCreate8PropertiesProperty? Properties { get; set; }

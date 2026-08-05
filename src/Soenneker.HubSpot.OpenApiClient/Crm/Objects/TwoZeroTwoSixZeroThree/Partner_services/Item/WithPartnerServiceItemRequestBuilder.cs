@@ -3,7 +3,6 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
-using Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree.Partner_services.Item.Associations;
 using Soenneker.HubSpot.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
@@ -18,11 +17,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree.Par
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithPartnerServiceItemRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The associations property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree.Partner_services.Item.Associations.AssociationsRequestBuilder Associations
-        {
-            get => new global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree.Partner_services.Item.Associations.AssociationsRequestBuilder(PathParameters, RequestAdapter);
-        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree.Partner_services.Item.WithPartnerServiceItemRequestBuilder"/> and sets the default values.
         /// </summary>

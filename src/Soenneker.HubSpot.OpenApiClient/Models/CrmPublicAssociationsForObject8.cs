@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId9 To { get; set; }
 #endif
-        /// <summary>The types property</summary>
+        /// <summary>An array of association specifications, each detailing the type of association between the objects. Each item in the array is a reference to the &apos;AssociationSpec&apos; schema.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec10>? Types { get; set; }

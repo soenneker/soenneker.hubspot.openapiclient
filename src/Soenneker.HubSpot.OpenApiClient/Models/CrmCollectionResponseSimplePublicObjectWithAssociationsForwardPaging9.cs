@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging11 Paging { get; set; }
 #endif
-        /// <summary>The results property</summary>
+        /// <summary>An array of SimplePublicObjectWithAssociations, each containing the properties and associations of a CRM object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectWithAssociations9>? Results { get; set; }

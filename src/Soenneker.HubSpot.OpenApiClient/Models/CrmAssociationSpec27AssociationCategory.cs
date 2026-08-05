@@ -3,9 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>Association category. Can be HUBSPOT_DEFINED, USER_DEFINED, INTEGRATOR_DEFINED or WORK</summary>
+    /// <summary>The category of the association, such as &quot;HUBSPOT_DEFINED&quot;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum CrmAssociationSpecWithLabel4Category
+    public enum CrmAssociationSpec27AssociationCategory
     {
         [EnumMember(Value = "HUBSPOT_DEFINED")]
         #pragma warning disable CS1591

@@ -9,6 +9,7 @@ using Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree.Communi
 using Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree.Companies;
 using Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree.Contacts;
 using Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree.Contracts;
+using Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree.Courses;
 using Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree.Discounts;
 using Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree.Emails;
 using Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree.Feedback_submissions;
@@ -82,6 +83,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree
         public global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree.Contracts.ContractsRequestBuilder Contracts
         {
             get => new global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree.Contracts.ContractsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The courses property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree.Courses.CoursesRequestBuilder Courses
+        {
+            get => new global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree.Courses.CoursesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The discounts property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree.Discounts.DiscountsRequestBuilder Discounts

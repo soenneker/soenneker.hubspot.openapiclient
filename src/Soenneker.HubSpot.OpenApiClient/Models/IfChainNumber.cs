@@ -30,6 +30,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.IfChainNumberDefaultExpression DefaultExpression { get; set; }
 #endif
+        /// <summary>The enclosedInParentheses property</summary>
+        public bool? EnclosedInParentheses { get; set; }
         /// <summary>The inputs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -85,6 +87,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "conditions", n => { Conditions = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.IfChainNumberConditionsItem>(global::Soenneker.HubSpot.OpenApiClient.Models.IfChainNumberConditionsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "defaultExpression", n => { DefaultExpression = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.IfChainNumberDefaultExpression>(global::Soenneker.HubSpot.OpenApiClient.Models.IfChainNumberDefaultExpression.CreateFromDiscriminatorValue); } },
+                { "enclosedInParentheses", n => { EnclosedInParentheses = n.GetBoolValue(); } },
                 { "inputs", n => { Inputs = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.IfChainNumberInputsItem>(global::Soenneker.HubSpot.OpenApiClient.Models.IfChainNumberInputsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.IfChainNumberOperator>(); } },
                 { "outputs", n => { Outputs = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.IfChainNumberOutputsItem>(global::Soenneker.HubSpot.OpenApiClient.Models.IfChainNumberOutputsItem.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -101,6 +104,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.IfChainNumberConditionsItem>("conditions", Conditions);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.IfChainNumberDefaultExpression>("defaultExpression", DefaultExpression);
+            writer.WriteBoolValue("enclosedInParentheses", EnclosedInParentheses);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.IfChainNumberInputsItem>("inputs", Inputs);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.IfChainNumberOperator>("operator", Operator);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.IfChainNumberOutputsItem>("outputs", Outputs);

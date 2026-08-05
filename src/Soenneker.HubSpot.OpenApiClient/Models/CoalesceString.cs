@@ -7,46 +7,29 @@ using System.IO;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>
-    /// Input data for merging two records.
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class CrmPublicMergeInput4 : IAdditionalDataHolder, IParsable
+    #pragma warning disable CS1591
+    public partial class CoalesceString : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The ID of the object that will be merged into the primary object.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ObjectIdToMerge { get; set; }
-#nullable restore
-#else
-        public string ObjectIdToMerge { get; set; }
-#endif
-        /// <summary>The ID of the object that will remain after the merge.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? PrimaryObjectId { get; set; }
-#nullable restore
-#else
-        public string PrimaryObjectId { get; set; }
-#endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicMergeInput4"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CoalesceString"/> and sets the default values.
         /// </summary>
-        public CrmPublicMergeInput4()
+        public CoalesceString()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicMergeInput4"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CoalesceString"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicMergeInput4 CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HubSpot.OpenApiClient.Models.CoalesceString CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicMergeInput4();
+            return new global::Soenneker.HubSpot.OpenApiClient.Models.CoalesceString();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -56,8 +39,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "objectIdToMerge", n => { ObjectIdToMerge = n.GetStringValue(); } },
-                { "primaryObjectId", n => { PrimaryObjectId = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -67,8 +48,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("objectIdToMerge", ObjectIdToMerge);
-            writer.WriteStringValue("primaryObjectId", PrimaryObjectId);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

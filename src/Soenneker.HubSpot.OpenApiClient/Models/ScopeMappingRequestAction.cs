@@ -16,6 +16,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         #pragma warning disable CS1591
         Delete,
         #pragma warning restore CS1591
+        [EnumMember(Value = "DELETE_SCHEMA")]
+        #pragma warning disable CS1591
+        DeleteSchema,
+        #pragma warning restore CS1591
         [EnumMember(Value = "EDIT")]
         #pragma warning disable CS1591
         Edit,
@@ -24,6 +28,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         #pragma warning disable CS1591
         EditAssociation,
         #pragma warning restore CS1591
+        [EnumMember(Value = "EDIT_SCHEMA")]
+        #pragma warning disable CS1591
+        EditSchema,
+        #pragma warning restore CS1591
         [EnumMember(Value = "MERGE")]
         #pragma warning disable CS1591
         Merge,
@@ -31,6 +39,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         [EnumMember(Value = "VIEW")]
         #pragma warning disable CS1591
         View,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "VIEW_SCHEMA")]
+        #pragma warning disable CS1591
+        ViewSchema,
         #pragma warning restore CS1591
     }
 }
