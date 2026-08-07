@@ -69829,7 +69829,7 @@
         "tags": [
           "Basic"
         ],
-        "summary": "List",
+        "summary": "Retrieve services",
         "description": "Read a page of services. Control what is returned via the \u0060properties\u0060 query param.",
         "operationId": "CrmGetCrmObjects2026030162",
         "parameters": [
@@ -69931,7 +69931,7 @@
         "tags": [
           "Basic"
         ],
-        "summary": "Create",
+        "summary": "Create a service",
         "description": "Create a service with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard services is provided.",
         "operationId": "CrmPostCrmObjects2026030162",
         "requestBody": {
@@ -69974,7 +69974,7 @@
         "tags": [
           "Batch"
         ],
-        "summary": "Archive a batch of services by ID",
+        "summary": "Batch archive services",
         "description": "Archive a batch of objects",
         "operationId": "CrmPostCrmObjects2026030162BatchArchive",
         "requestBody": {
@@ -70180,7 +70180,7 @@
         "tags": [
           "Batch"
         ],
-        "summary": "Create or update a batch of services by unique property values",
+        "summary": "Upsert services",
         "description": "Create or update records identified by a unique property value as specified by the \u0060idProperty\u0060 query param. \u0060idProperty\u0060 query param refers to a property whose values are unique for the object.",
         "operationId": "CrmPostCrmObjects2026030162BatchUpsert",
         "requestBody": {
@@ -70234,7 +70234,7 @@
         "tags": [
           "Search"
         ],
-        "summary": "Search across objects",
+        "summary": "Search for services",
         "description": "Fetch objects via a search query",
         "operationId": "CrmPostCrmObjects2026030162Search",
         "requestBody": {
@@ -70277,7 +70277,7 @@
         "tags": [
           "Basic"
         ],
-        "summary": "Read",
+        "summary": "Retrieve a service",
         "description": "Read an Object identified by \u0060{serviceId}\u0060. \u0060{serviceId}\u0060 refers to the internal object ID by default, or optionally any unique property value as specified by the \u0060idProperty\u0060 query param.  Control what is returned via the \u0060properties\u0060 query param.",
         "operationId": "CrmGetCrmObjects2026030162ServiceId",
         "parameters": [
@@ -70378,7 +70378,7 @@
         "tags": [
           "Basic"
         ],
-        "summary": "Archive",
+        "summary": "Archive a service",
         "description": "Move an Object identified by \u0060{serviceId}\u0060 to the recycling bin.",
         "operationId": "CrmDeleteCrmObjects2026030162ServiceId",
         "parameters": [
@@ -70410,7 +70410,7 @@
         "tags": [
           "Basic"
         ],
-        "summary": "Update",
+        "summary": "Update  a service",
         "description": "Perform a partial update of an Object identified by \u0060{serviceId}\u0060or optionally a unique property value as specified by the \u0060idProperty\u0060 query param. \u0060{serviceId}\u0060 refers to the internal object ID by default, and the \u0060idProperty\u0060 query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.",
         "operationId": "CrmPatchCrmObjects2026030162ServiceId",
         "parameters": [
@@ -70439,6 +70439,49 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/CrmSimplePublicObjectInput29"
+              },
+              "example": null
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CrmSimplePublicObject32"
+                },
+                "example": null
+              }
+            }
+          },
+          "default": {
+            "$ref": "#/components/responses/_____________________________________________crm_Error"
+          }
+        },
+        "security": [
+          {
+            "_____________________________________________crm_oauth2": [
+              "crm.objects.services.write"
+            ]
+          }
+        ]
+      }
+    },
+    "/crm/objects/2026-03/services/merge": {
+      "post": {
+        "tags": [
+          "Advanced"
+        ],
+        "summary": "Merge services",
+        "description": "Merge two services",
+        "operationId": "CrmPostCrmObjects202603ServicesMerge",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CrmPublicMergeInput8"
               },
               "example": null
             }
@@ -72176,7 +72219,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CrmPublicMergeInput8"
+                "$ref": "#/components/schemas/CrmPublicMergeInput9"
               },
               "example": null
             }
@@ -154271,6 +154314,27 @@
         },
         "example": null
       },
+      "CrmPublicMergeInput8": {
+        "required": [
+          "objectIdToMerge",
+          "primaryObjectId"
+        ],
+        "type": "object",
+        "properties": {
+          "objectIdToMerge": {
+            "type": "string",
+            "description": "The ID of the object that will be merged into the primary object.",
+            "example": null
+          },
+          "primaryObjectId": {
+            "type": "string",
+            "description": "The ID of the object that will remain as the primary object after the merge.",
+            "example": null
+          }
+        },
+        "description": "Input data for merging two records.",
+        "example": null
+      },
       "CrmPublicObjectId30": {
         "required": [
           "id"
@@ -158108,7 +158172,7 @@
         },
         "example": null
       },
-      "CrmPublicMergeInput8": {
+      "CrmPublicMergeInput9": {
         "required": [
           "objectIdToMerge",
           "primaryObjectId"
