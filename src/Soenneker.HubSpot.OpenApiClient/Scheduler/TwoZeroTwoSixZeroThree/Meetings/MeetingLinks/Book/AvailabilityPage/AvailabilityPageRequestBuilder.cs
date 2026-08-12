@@ -16,7 +16,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Scheduler.TwoZeroTwoSixZeroThree.Meeti
     public partial class AvailabilityPageRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.scheduler.TwoZeroTwoSixZeroThree.meetings.meetingLinks.book.availabilityPage.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The unique identifier for the meeting link whose availability is being retrieved.</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Scheduler.TwoZeroTwoSixZeroThree.Meetings.MeetingLinks.Book.AvailabilityPage.Item.WithSlugItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Scheduler.TwoZeroTwoSixZeroThree.Meetings.MeetingLinks.Book.AvailabilityPage.Item.WithSlugItemRequestBuilder this[string position]
         {

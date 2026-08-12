@@ -14,9 +14,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;The calendar provider associated with the user. Accepted values are: GOOGLE, OFFICE365, EXCHANGE, UNKNOWN.&quot;</summary>
+        /// <summary>The calendar service provider associated with the user. Valid values include &apos;GOOGLE&apos;, &apos;OFFICE365&apos;, &apos;EXCHANGE&apos;, and &apos;UNKNOWN&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsUserCalendarProvider? CalendarProvider { get; set; }
-        /// <summary>The ID for the meetings user. This value is different than the userId.</summary>
+        /// <summary>The unique identifier for this user object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }
@@ -24,9 +24,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>Whether the user has a sales starter seat.</summary>
+        /// <summary>A boolean indicating whether the user is a sales starter.</summary>
         public bool? IsSalesStarter { get; set; }
-        /// <summary>The ID of the user.</summary>
+        /// <summary>The unique user identifier within the HubSpot system.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UserId { get; set; }

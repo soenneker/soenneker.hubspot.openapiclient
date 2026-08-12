@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The ID of the communication consent form being recorded.</summary>
+        /// <summary>A string representing the unique identifier for the type of communication consent being requested.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CommunicationTypeId { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string CommunicationTypeId { get; set; }
 #endif
-        /// <summary>The text label describing the consent being given.</summary>
+        /// <summary>A string that provides the display label for the consent checkbox.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Label { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Label { get; set; }
 #endif
-        /// <summary>Whether the consent checkbox is required.</summary>
+        /// <summary>A boolean indicating whether the consent checkbox is mandatory for the user to check.</summary>
         public bool? Required { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCommunicationConsentCheckbox"/> and sets the default values.

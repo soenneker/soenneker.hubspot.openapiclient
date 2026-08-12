@@ -14,9 +14,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The Unix time in milliseconds when the meeting link was created.</summary>
+        /// <summary>The date and time when the meeting link was created, in ISO 8601 format.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
-        /// <summary>Whether the meeting link is the user&apos;s default link.</summary>
+        /// <summary>A boolean indicating whether this is the default meeting link.</summary>
         public bool? DefaultLink { get; set; }
         /// <summary>The unique identifier for the meeting link.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -42,7 +42,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>The user ID of the meeting link&apos;s organizer.</summary>
+        /// <summary>The unique identifier of the user who organizes the meeting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OrganizerUserId { get; set; }
@@ -50,7 +50,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string OrganizerUserId { get; set; }
 #endif
-        /// <summary>The slug of the meeting link, located directly after the domain in the URL.</summary>
+        /// <summary>An integer representing the identifier for the payment link associated with the meeting, if any.</summary>
+        public long? PaymentLinkId { get; set; }
+        /// <summary>A string used to uniquely identify the meeting link in URLs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Slug { get; set; }
@@ -58,11 +60,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Slug { get; set; }
 #endif
-        /// <summary>&quot;The type of the external meeting link. Accepted values are: PERSONAL_LINK, GROUP_CALENDAR, ROUND_ROBIN_CALENDAR.&quot;</summary>
+        /// <summary>The type of meeting link. Valid values include &apos;PERSONAL_LINK&apos;, &apos;GROUP_CALENDAR&apos;, and &apos;ROUND_ROBIN_CALENDAR&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkMetadataType? Type { get; set; }
-        /// <summary>The Unix time in milliseconds when the meeting link was last updated.</summary>
+        /// <summary>The date and time when the meeting link was last updated, in ISO 8601 format.</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
-        /// <summary>The userIdsOfLinkMembers property</summary>
+        /// <summary>An array of user IDs representing the members associated with the meeting link.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? UserIdsOfLinkMembers { get; set; }
@@ -101,6 +103,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "link", n => { Link = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "organizerUserId", n => { OrganizerUserId = n.GetStringValue(); } },
+                { "paymentLinkId", n => { PaymentLinkId = n.GetLongValue(); } },
                 { "slug", n => { Slug = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkMetadataType>(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
@@ -120,6 +123,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("link", Link);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("organizerUserId", OrganizerUserId);
+            writer.WriteLongValue("paymentLinkId", PaymentLinkId);
             writer.WriteStringValue("slug", Slug);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkMetadataType>("type", Type);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);

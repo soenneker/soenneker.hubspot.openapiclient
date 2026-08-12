@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The activity type of the meeting. Acceptable values are based on portal defined call and meeting types.</summary>
+        /// <summary>A string representing the type of activity associated with the meeting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? HsActivityType { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string HsActivityType { get; set; }
 #endif
-        /// <summary>The hs_attachment_ids property</summary>
+        /// <summary>An array of strings, each representing an attachment ID associated with the meeting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? HsAttachmentIds { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<string> HsAttachmentIds { get; set; }
 #endif
-        /// <summary>The hs_attendee_owner_ids property</summary>
+        /// <summary>An array of strings, each representing an ID of an attendee owner associated with the meeting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? HsAttendeeOwnerIds { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<string> HsAttendeeOwnerIds { get; set; }
 #endif
-        /// <summary>Internal notes related to the meeting.</summary>
+        /// <summary>Internal notes for the meeting, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? HsInternalMeetingNotes { get; set; }
@@ -46,7 +46,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string HsInternalMeetingNotes { get; set; }
 #endif
-        /// <summary>The description of the meeting and calendar event.</summary>
+        /// <summary>A string containing the body or description of the meeting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? HsMeetingBody { get; set; }
@@ -54,9 +54,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string HsMeetingBody { get; set; }
 #endif
-        /// <summary>The time that the meeting should end in ISO 8601 format.</summary>
+        /// <summary>The end time of the meeting, represented as a string in date-time format.</summary>
         public DateTimeOffset? HsMeetingEndTime { get; set; }
-        /// <summary>The physical address, virtual location, or phone number where the meeting will take place.</summary>
+        /// <summary>The location of the meeting, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? HsMeetingLocation { get; set; }
@@ -64,9 +64,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string HsMeetingLocation { get; set; }
 #endif
-        /// <summary>&quot;The type of location for the meeting. Acceptable values are: ADDRESS, CUSTOM, PHONE.&quot;</summary>
+        /// <summary>A string indicating the type of location for the meeting. Valid values include &apos;PHONE&apos;, &apos;ADDRESS&apos;, and &apos;CUSTOM&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCalendarMeetingEventCreatePropertiesHsMeetingLocationType? HsMeetingLocationType { get; set; }
-        /// <summary>&quot;The outcome of the meeting. Acceptable default values are: SCHEDULED, COMPLETED, RESCHEDULED, NO_SHOW, CANCELED. This property can be changed to include additional custom values.&quot;</summary>
+        /// <summary>A string indicating the outcome of the meeting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? HsMeetingOutcome { get; set; }
@@ -74,9 +74,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string HsMeetingOutcome { get; set; }
 #endif
-        /// <summary>The time that the meeting should start in ISO 8601 format.</summary>
+        /// <summary>The start time of the meeting, represented as a string in date-time format.</summary>
         public DateTimeOffset? HsMeetingStartTime { get; set; }
-        /// <summary>The title of the meeting and calendar event.</summary>
+        /// <summary>The title of the meeting. It is a string that provides a brief description of the meeting&apos;s purpose.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? HsMeetingTitle { get; set; }
@@ -84,9 +84,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string HsMeetingTitle { get; set; }
 #endif
-        /// <summary>The time that the meeting should start in ISO 8601 format. This value should be the same as `hs_meeting_start_time`.</summary>
+        /// <summary>A string representing the timestamp of the meeting creation in date-time format.</summary>
         public DateTimeOffset? HsTimestamp { get; set; }
-        /// <summary>The ownerId of the HubSpot user who will host the meeting.</summary>
+        /// <summary>The unique identifier of the HubSpot owner associated with the meeting, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? HubspotOwnerId { get; set; }

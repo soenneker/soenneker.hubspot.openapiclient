@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     /// <summary>
-    /// An array containing the closed range availability for a meeting link. Closed range times are provided as minute offsets from midnight (e.g., 540 corresponds to 9am).
+    /// An object representing the availability settings for the meeting link, with additional properties defining closed ranges.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ExternalMeetingsLinkSettingsAvailabilityProperty : IAdditionalDataHolder, IParsable

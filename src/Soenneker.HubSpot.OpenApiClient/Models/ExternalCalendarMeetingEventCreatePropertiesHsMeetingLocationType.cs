@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>&quot;The type of location for the meeting. Acceptable values are: ADDRESS, CUSTOM, PHONE.&quot;</summary>
+    /// <summary>A string indicating the type of location for the meeting. Valid values include &apos;PHONE&apos;, &apos;ADDRESS&apos;, and &apos;CUSTOM&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum ExternalCalendarMeetingEventCreatePropertiesHsMeetingLocationType
     {

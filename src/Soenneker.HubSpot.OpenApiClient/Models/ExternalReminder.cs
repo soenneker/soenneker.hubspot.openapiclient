@@ -14,9 +14,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The number of timeUnits prior to the meeting start when the reminder will be sent.</summary>
+        /// <summary>The number of time units before the meeting when the reminder should be sent. This is an integer value.</summary>
         public int? NumberOfTimeUnits { get; set; }
-        /// <summary>&quot;Accepted values are: WEEKS, DAYS, HOURS, MINUTES.&quot;</summary>
+        /// <summary>The unit of time for the reminder. Valid values include &apos;WEEKS&apos;, &apos;DAYS&apos;, &apos;HOURS&apos;, and &apos;MINUTES&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalReminderTimeUnit? TimeUnit { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExternalReminder"/> and sets the default values.

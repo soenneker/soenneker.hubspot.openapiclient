@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The URL of the user&apos;s custom uploaded avatar image.</summary>
+        /// <summary>A string representing the URL of the avatar image to be displayed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Avatar { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Avatar { get; set; }
 #endif
-        /// <summary>The URL of the company&apos;s avatar image.</summary>
+        /// <summary>A string representing the URL of the company&apos;s avatar image.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CompanyAvatar { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string CompanyAvatar { get; set; }
 #endif
-        /// <summary>Deprecated field with no impact of link display info.</summary>
+        /// <summary>A string representing the headline or title associated with the external link.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Headline { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Headline { get; set; }
 #endif
-        /// <summary>&quot;Option for determining which avatar to display on scheduling page. Accepted values are: PROFILE_IMAGE, COMPANY_LOGO, CUSTOM_AVATAR,&quot;</summary>
+        /// <summary>A string indicating the avatar display option. Valid values include &apos;PROFILE_IMAGE&apos;, &apos;COMPANY_LOGO&apos;, and &apos;CUSTOM_AVATAR&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkDisplayInfoPublicDisplayAvatarOption? PublicDisplayAvatarOption { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkDisplayInfo"/> and sets the default values.

@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>&quot;The calendar provider associated with the user. Accepted values are: GOOGLE, OFFICE365, EXCHANGE, UNKNOWN.&quot;</summary>
+    /// <summary>The calendar service provider associated with the user. Valid values include &apos;GOOGLE&apos;, &apos;OFFICE365&apos;, &apos;EXCHANGE&apos;, and &apos;UNKNOWN&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum ExternalMeetingsUserCalendarProvider
     {

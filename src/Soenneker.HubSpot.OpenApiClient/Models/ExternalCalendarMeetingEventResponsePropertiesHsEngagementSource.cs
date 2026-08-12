@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>The source of the engagement, will always be `MEETINGS`.</summary>
+    /// <summary>The source of the engagement, with a wide range of valid values including &apos;UNKNOWN&apos;, &apos;IMPORT&apos;, &apos;API&apos;, and many others.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum ExternalCalendarMeetingEventResponsePropertiesHsEngagementSource
     {

@@ -40,7 +40,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Scheduler.TwoZeroTwoSixZeroThree.Meeti
         {
         }
         /// <summary>
-        /// Get a paged list meeting scheduling pages
+        /// Retrieve a list of meeting links available in your HubSpot account. This endpoint allows you to filter meeting links by various criteria such as name, organizer, and type. It supports pagination for large result sets.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalExternalLinkMetadata"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -58,7 +58,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Scheduler.TwoZeroTwoSixZeroThree.Meeti
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalExternalLinkMetadata>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalExternalLinkMetadata.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get a paged list meeting scheduling pages
+        /// Retrieve a list of meeting links available in your HubSpot account. This endpoint allows you to filter meeting links by various criteria such as name, organizer, and type. It supports pagination for large result sets.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -86,12 +86,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Scheduler.TwoZeroTwoSixZeroThree.Meeti
             return new global::Soenneker.HubSpot.OpenApiClient.Scheduler.TwoZeroTwoSixZeroThree.Meetings.MeetingLinks.MeetingLinksRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Get a paged list meeting scheduling pages
+        /// Retrieve a list of meeting links available in your HubSpot account. This endpoint allows you to filter meeting links by various criteria such as name, organizer, and type. It supports pagination for large result sets.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class MeetingLinksRequestBuilderGetQueryParameters 
         {
-            /// <summary>The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.</summary>
+            /// <summary>The paging cursor token of the last successfully read resource, used for pagination.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("after")]
@@ -104,6 +104,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Scheduler.TwoZeroTwoSixZeroThree.Meeti
             /// <summary>The maximum number of results to display per page.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
+            /// <summary>Filter meeting links by name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("name")]
@@ -113,6 +114,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Scheduler.TwoZeroTwoSixZeroThree.Meeti
             [QueryParameter("name")]
             public string Name { get; set; }
 #endif
+            /// <summary>Filter meeting links by the organizer&apos;s user ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("organizerUserId")]
@@ -122,6 +124,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Scheduler.TwoZeroTwoSixZeroThree.Meeti
             [QueryParameter("organizerUserId")]
             public string OrganizerUserId { get; set; }
 #endif
+            /// <summary>Filter meeting links by type. Valid values are PERSONAL_LINK, GROUP_CALENDAR, and ROUND_ROBIN_CALENDAR.</summary>
             [QueryParameter("type")]
             public global::Soenneker.HubSpot.OpenApiClient.Models.SchedulerGetScheduler202603MeetingsMeetingLinksTypeParameter? Type { get; set; }
         }

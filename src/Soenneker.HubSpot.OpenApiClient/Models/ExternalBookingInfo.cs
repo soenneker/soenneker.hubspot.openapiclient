@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The allUsersBusyTimes property</summary>
+        /// <summary>An array of busy times for all users associated with the meeting link, each defined by the ExternalUserBusyTimes schema.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalUserBusyTimes>? AllUsersBusyTimes { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettings CustomParams { get; set; }
 #endif
-        /// <summary>Whether the meeting was booked offline, meaning no associated calendar event was created.</summary>
+        /// <summary>A boolean indicating whether the meeting link is offline.</summary>
         public bool? IsOffline { get; set; }
         /// <summary>The linkAvailability property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -56,7 +56,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string LinkId { get; set; }
 #endif
-        /// <summary>&quot;The type of the meeting link. Accepted values are: GROUP_CALENDAR, PERSONAL_LINK, ROUND_ROBIN_CALENDAR.&quot;</summary>
+        /// <summary>The type of meeting link, with valid values including &apos;PERSONAL_LINK&apos;, &apos;GROUP_CALENDAR&apos;, and &apos;ROUND_ROBIN_CALENDAR&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBookingInfoLinkType? LinkType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBookingInfo"/> and sets the default values.

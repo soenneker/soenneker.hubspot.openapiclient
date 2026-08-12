@@ -12,7 +12,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     public partial class ExternalBrandingMetadata : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The secondary accent color used in branding.</summary>
+        /// <summary>An additional accent color used in branding, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Accent2Color { get; set; }
@@ -20,7 +20,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Accent2Color { get; set; }
 #endif
-        /// <summary>The primary accent color used in branding.</summary>
+        /// <summary>The accent color used in branding, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AccentColor { get; set; }
@@ -70,7 +70,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string CompanyCountry { get; set; }
 #endif
-        /// <summary>The domain of the company&apos;s website.</summary>
+        /// <summary>The domain of the company.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CompanyDomain { get; set; }
@@ -94,7 +94,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string CompanyState { get; set; }
 #endif
-        /// <summary>The ZIP code of the company&apos;s location.</summary>
+        /// <summary>The postal code of the company&apos;s location.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CompanyZip { get; set; }
@@ -102,7 +102,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string CompanyZip { get; set; }
 #endif
-        /// <summary>The alternative text for the current logo.</summary>
+        /// <summary>The alternative text for the logo image, used for accessibility.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? LogoAltText { get; set; }
@@ -112,7 +112,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>The height of the logo in pixels.</summary>
         public int? LogoHeight { get; set; }
-        /// <summary>The URL of a custom logo image.</summary>
+        /// <summary>The URL of the logo image.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? LogoUrl { get; set; }
@@ -122,7 +122,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>The width of the logo in pixels.</summary>
         public int? LogoWidth { get; set; }
-        /// <summary>The primary color used in branding.</summary>
+        /// <summary>The primary color used in branding, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PrimaryColor { get; set; }
@@ -130,7 +130,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string PrimaryColor { get; set; }
 #endif
-        /// <summary>The secondary color used in branding.</summary>
+        /// <summary>The secondary color used in branding, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SecondaryColor { get; set; }
@@ -138,9 +138,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string SecondaryColor { get; set; }
 #endif
-        /// <summary>Whether Hubspot Marketing ads are shown.</summary>
+        /// <summary>A boolean indicating whether a marketing advertisement should be displayed.</summary>
         public bool? ShowMarketingAd { get; set; }
-        /// <summary>Whether Hubspot Sales ads are shown.</summary>
+        /// <summary>A boolean indicating whether a sales advertisement should be displayed.</summary>
         public bool? ShowSalesAd { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBrandingMetadata"/> and sets the default values.

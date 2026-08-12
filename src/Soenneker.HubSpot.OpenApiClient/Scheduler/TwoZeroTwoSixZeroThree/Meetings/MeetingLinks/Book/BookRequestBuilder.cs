@@ -25,7 +25,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Scheduler.TwoZeroTwoSixZeroThree.Meeti
             get => new global::Soenneker.HubSpot.OpenApiClient.Scheduler.TwoZeroTwoSixZeroThree.Meetings.MeetingLinks.Book.AvailabilityPage.AvailabilityPageRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.scheduler.TwoZeroTwoSixZeroThree.meetings.meetingLinks.book.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The unique identifier for the meeting link to retrieve booking information for.</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Scheduler.TwoZeroTwoSixZeroThree.Meetings.MeetingLinks.Book.Item.WithSlugItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Scheduler.TwoZeroTwoSixZeroThree.Meetings.MeetingLinks.Book.Item.WithSlugItemRequestBuilder this[string position]
         {
@@ -53,7 +53,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Scheduler.TwoZeroTwoSixZeroThree.Meeti
         {
         }
         /// <summary>
-        /// Book a meeting for a specified meeting page.
+        /// Book a meeting using a specific meeting link. This endpoint allows you to schedule a meeting by providing necessary details such as the meeting duration, start time, and participant information. It is useful for automating the booking process and ensuring that all required information is collected for the meeting.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingBookingResponse"/></returns>
         /// <param name="body">The request body</param>
@@ -73,7 +73,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Scheduler.TwoZeroTwoSixZeroThree.Meeti
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingBookingResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingBookingResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Book a meeting for a specified meeting page.
+        /// Book a meeting using a specific meeting link. This endpoint allows you to schedule a meeting by providing necessary details such as the meeting duration, start time, and participant information. It is useful for automating the booking process and ensuring that all required information is collected for the meeting.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
