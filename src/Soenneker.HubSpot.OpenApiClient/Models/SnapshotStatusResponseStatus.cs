@@ -7,10 +7,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum SnapshotStatusResponseStatus
     {
-        [EnumMember(Value = "COMPLETED")]
-        #pragma warning disable CS1591
-        Completed,
-        #pragma warning restore CS1591
         [EnumMember(Value = "EXPIRED")]
         #pragma warning disable CS1591
         Expired,
@@ -26,6 +22,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         [EnumMember(Value = "PENDING")]
         #pragma warning disable CS1591
         Pending,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "SUCCESS")]
+        #pragma warning disable CS1591
+        Success,
         #pragma warning restore CS1591
     }
 }

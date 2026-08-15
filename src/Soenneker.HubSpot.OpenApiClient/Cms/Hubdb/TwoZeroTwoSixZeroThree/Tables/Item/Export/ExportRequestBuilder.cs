@@ -66,7 +66,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.Hubdb.TwoZeroTwoSixZeroThree.Table
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
-            requestInfo.Headers.TryAdd("Accept", "application/vnd.ms-excel, text/csv");
             return requestInfo;
         }
         /// <summary>

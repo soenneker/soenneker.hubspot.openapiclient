@@ -3544,6 +3544,11 @@
             "____cms_oauth2": [
               "hubdb"
             ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.tables.read"
+            ]
           }
         ]
       },
@@ -3584,6 +3589,11 @@
           {
             "____cms_oauth2": [
               "hubdb"
+            ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.tables.write"
             ]
           }
         ]
@@ -3739,6 +3749,11 @@
             "____cms_oauth2": [
               "hubdb"
             ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.tables.read"
+            ]
           }
         ]
       }
@@ -3811,6 +3826,11 @@
             "____cms_oauth2": [
               "hubdb"
             ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.tables.read"
+            ]
           }
         ]
       },
@@ -3842,6 +3862,11 @@
           {
             "____cms_oauth2": [
               "hubdb"
+            ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.tables.write"
             ]
           }
         ]
@@ -3914,6 +3939,11 @@
           {
             "____cms_oauth2": [
               "hubdb"
+            ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.tables.read"
             ]
           }
         ]
@@ -3995,6 +4025,11 @@
             "____cms_oauth2": [
               "hubdb"
             ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.tables.write"
+            ]
           }
         ]
       }
@@ -4050,6 +4085,11 @@
             "____cms_oauth2": [
               "hubdb"
             ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.tables.write"
+            ]
           }
         ]
       }
@@ -4084,23 +4124,6 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "successful operation",
-            "content": {
-              "application/vnd.ms-excel": {
-                "schema": {
-                  "$ref": "#/components/schemas/CmsGetCmsHubdb202603TablesTableIdOrNameDraftExportExportDraftTable200MsExcelResponseSchema"
-                },
-                "example": null
-              },
-              "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/CmsGetCmsHubdb202603TablesTableIdOrNameDraftExportExportDraftTable200CsvResponseSchema"
-                },
-                "example": null
-              }
-            }
-          },
           "default": {
             "$ref": "#/components/responses/____cms_Error"
           }
@@ -4109,6 +4132,11 @@
           {
             "____cms_oauth2": [
               "hubdb"
+            ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.rows.read"
             ]
           }
         ]
@@ -4165,6 +4193,11 @@
             "____cms_oauth2": [
               "hubdb"
             ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.rows.write"
+            ]
           }
         ]
       }
@@ -4218,6 +4251,11 @@
           {
             "____cms_oauth2": [
               "hubdb"
+            ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.tables.publish"
             ]
           }
         ]
@@ -4273,6 +4311,11 @@
             "____cms_oauth2": [
               "hubdb"
             ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.rows.write"
+            ]
           }
         ]
       }
@@ -4307,23 +4350,6 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "successful operation",
-            "content": {
-              "application/vnd.ms-excel": {
-                "schema": {
-                  "$ref": "#/components/schemas/CmsGetCmsHubdb202603TablesTableIdOrNameExportExportTable200MsExcelResponseSchema"
-                },
-                "example": null
-              },
-              "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/CmsGetCmsHubdb202603TablesTableIdOrNameExportExportTable200CsvResponseSchema"
-                },
-                "example": null
-              }
-            }
-          },
           "default": {
             "$ref": "#/components/responses/____cms_Error"
           }
@@ -4332,6 +4358,11 @@
           {
             "____cms_oauth2": [
               "hubdb"
+            ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.rows.read"
             ]
           }
         ]
@@ -4442,6 +4473,11 @@
             "____cms_oauth2": [
               "hubdb"
             ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.rows.read"
+            ]
           }
         ]
       },
@@ -4494,6 +4530,11 @@
           {
             "____cms_oauth2": [
               "hubdb"
+            ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.rows.write"
             ]
           }
         ]
@@ -4560,6 +4601,11 @@
           {
             "____cms_oauth2": [
               "hubdb"
+            ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.rows.read"
             ]
           }
         ]
@@ -4670,6 +4716,11 @@
             "____cms_oauth2": [
               "hubdb"
             ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.rows.read"
+            ]
           }
         ]
       }
@@ -4724,6 +4775,11 @@
           {
             "____cms_oauth2": [
               "hubdb"
+            ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.rows.write"
             ]
           }
         ]
@@ -4791,6 +4847,11 @@
             "____cms_oauth2": [
               "hubdb"
             ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.rows.write"
+            ]
           }
         ]
       }
@@ -4834,6 +4895,11 @@
           {
             "____cms_oauth2": [
               "hubdb"
+            ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.rows.write"
             ]
           }
         ]
@@ -4901,6 +4967,11 @@
             "____cms_oauth2": [
               "hubdb"
             ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.rows.read"
+            ]
           }
         ]
       }
@@ -4966,6 +5037,11 @@
           {
             "____cms_oauth2": [
               "hubdb"
+            ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.rows.write"
             ]
           }
         ]
@@ -5033,6 +5109,11 @@
             "____cms_oauth2": [
               "hubdb"
             ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.rows.write"
+            ]
           }
         ]
       }
@@ -5097,6 +5178,11 @@
           {
             "____cms_oauth2": [
               "hubdb"
+            ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.rows.read"
             ]
           }
         ]
@@ -5163,6 +5249,11 @@
             "____cms_oauth2": [
               "hubdb"
             ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.rows.read"
+            ]
           }
         ]
       },
@@ -5227,6 +5318,11 @@
             "____cms_oauth2": [
               "hubdb"
             ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.rows.write"
+            ]
           }
         ]
       },
@@ -5269,6 +5365,11 @@
           {
             "____cms_oauth2": [
               "hubdb"
+            ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.rows.write"
             ]
           }
         ]
@@ -5333,6 +5434,11 @@
           {
             "____cms_oauth2": [
               "hubdb"
+            ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.rows.write"
             ]
           }
         ]
@@ -5399,6 +5505,11 @@
             "____cms_oauth2": [
               "hubdb"
             ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.rows.write"
+            ]
           }
         ]
       }
@@ -5453,6 +5564,11 @@
             "____cms_oauth2": [
               "hubdb"
             ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.tables.publish"
+            ]
           }
         ]
       }
@@ -5498,6 +5614,11 @@
           {
             "____cms_oauth2": [
               "hubdb"
+            ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.tables.write"
             ]
           }
         ]
@@ -164524,7 +164645,7 @@
           },
           "uuid": {
             "type": "string",
-            "description": "Include a universally unique identifier to assign a unique ID to the event occurrence. Can be useful for matching data between HubSpot and other external systems.",
+            "description": "A unique identifier for the event occurrence. Must be unique within the event type. If not provided, HubSpot will generate a random UUID. When multiple events have the same ID within a year, the first will be accepted and all others will be rejected. Can be useful for matching data between HubSpot and other external systems.",
             "example": null
           }
         },
@@ -175168,7 +175289,7 @@
               "format": "int64",
               "example": null
             },
-            "description": "An array of integers representing the IDs of the objects involved in the subscription.",
+            "description": "An array of integers representing the IDs of the objects involved in the subscription. Empty means listen to all objectIds.",
             "example": null
           },
           "objectTypeId": {
@@ -175188,7 +175309,7 @@
               "type": "string",
               "example": null
             },
-            "description": "An array of strings listing the properties of the objects that are relevant to the subscription.",
+            "description": "An array of strings listing the properties of the objects that are relevant to the subscription. Empty means listen to all properties.",
             "example": null
           },
           "subscriptionType": {
@@ -227811,16 +227932,6 @@
           }
         }
       },
-      "CmsGetCmsHubdb202603TablesTableIdOrNameDraftExportExportDraftTable200MsExcelResponse": {
-        "type": "string",
-        "format": "binary",
-        "example": null
-      },
-      "CmsGetCmsHubdb202603TablesTableIdOrNameDraftExportExportDraftTable200CsvResponse": {
-        "type": "string",
-        "format": "binary",
-        "example": null
-      },
       "CmsPostCmsHubdb202603TablesTableIdOrNameDraftImportImportDraftTableFormDataRequest": {
         "type": "object",
         "properties": {
@@ -227834,16 +227945,6 @@
             "example": null
           }
         },
-        "example": null
-      },
-      "CmsGetCmsHubdb202603TablesTableIdOrNameExportExportTable200MsExcelResponse": {
-        "type": "string",
-        "format": "binary",
-        "example": null
-      },
-      "CmsGetCmsHubdb202603TablesTableIdOrNameExportExportTable200CsvResponse": {
-        "type": "string",
-        "format": "binary",
         "example": null
       },
       "CmsPutCmsSourceCode202603EnvironmentContentPathCreateOrUpdateFormDataRequest": {
@@ -227992,22 +228093,6 @@
       "ExamplePayload": {
         "type": "object",
         "description": "Placeholder schema for path example refs"
-      },
-      "CmsGetCmsHubdb202603TablesTableIdOrNameDraftExportExportDraftTable200MsExcelResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "CmsGetCmsHubdb202603TablesTableIdOrNameDraftExportExportDraftTable200CsvResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "CmsGetCmsHubdb202603TablesTableIdOrNameExportExportTable200MsExcelResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "CmsGetCmsHubdb202603TablesTableIdOrNameExportExportTable200CsvResponseSchema": {
-        "type": "string",
-        "format": "binary"
       },
       "CmsGetCmsBlogs202603AuthorsCursorCmsBlogsV3AuthorsCursor200Response": {
         "type": "object"
@@ -241754,6 +241839,7 @@
         "enum": [
           "DATE",
           "DATE_TIME",
+          "MONTH_AND_DAY",
           "OBJECT_COORDINATE",
           "TIME",
           "URI"
@@ -241773,6 +241859,10 @@
             {
               "value": "DATE_TIME",
               "name": "DateTime"
+            },
+            {
+              "value": "MONTH_AND_DAY",
+              "name": "MonthAndDay"
             },
             {
               "value": "OBJECT_COORDINATE",
@@ -241919,6 +242009,7 @@
       },
       "PublicSequenceStepDependencyResponseDependencyType": {
         "enum": [
+          "ADAPTIVE_COMPLETION",
           "MANUAL_PAUSE",
           "TASK_COMPLETION"
         ],
@@ -241930,6 +242021,10 @@
           "name": "PublicSequenceStepDependencyResponseDependencyType",
           "modelAsString": false,
           "values": [
+            {
+              "value": "ADAPTIVE_COMPLETION",
+              "name": "AdaptiveCompletion"
+            },
             {
               "value": "MANUAL_PAUSE",
               "name": "ManualPause"
@@ -241943,6 +242038,7 @@
       },
       "PublicSequenceStepResponseActionType": {
         "enum": [
+          "ADAPTIVE_CONTAINER",
           "EMAIL",
           "FINISH_ENROLLMENT",
           "TASK"
@@ -241955,6 +242051,10 @@
           "name": "PublicSequenceStepResponseActionType",
           "modelAsString": false,
           "values": [
+            {
+              "value": "ADAPTIVE_CONTAINER",
+              "name": "AdaptiveContainer"
+            },
             {
               "value": "EMAIL",
               "name": "Email"
@@ -317299,6 +317399,7 @@
           "hs_email_customer_quarantined_reason",
           "hs_email_delivered",
           "hs_email_domain",
+          "hs_email_engagement_likelihood_category",
           "hs_email_first_click_date",
           "hs_email_first_open_date",
           "hs_email_first_reply_date",
@@ -318053,6 +318154,10 @@
             {
               "value": "hs_email_domain",
               "name": "HsEmailDomain"
+            },
+            {
+              "value": "hs_email_engagement_likelihood_category",
+              "name": "HsEmailEngagementLikelihoodCategory"
             },
             {
               "value": "hs_email_first_click_date",
@@ -338755,6 +338860,7 @@
       "CalendarDatePropertyOperationOperator": {
         "enum": [
           "IN_LAST_TIME_UNIT",
+          "IN_LAST_TIME_UNIT_SO_FAR",
           "IN_NEXT_TIME_UNIT",
           "IN_THIS_TIME_UNIT",
           "IN_THIS_TIME_UNIT_SO_FAR"
@@ -338769,6 +338875,10 @@
             {
               "value": "IN_LAST_TIME_UNIT",
               "name": "InLastTimeUnit"
+            },
+            {
+              "value": "IN_LAST_TIME_UNIT_SO_FAR",
+              "name": "InLastTimeUnitSoFar"
             },
             {
               "value": "IN_NEXT_TIME_UNIT",
@@ -339431,6 +339541,7 @@
           "CUSTOM_SIGNAL",
           "IMPORT",
           "MANUAL",
+          "POLLING",
           "PROPERTY_CHANGE",
           "VISITED_URL",
           "WEBHOOK"
@@ -339473,6 +339584,10 @@
             {
               "value": "MANUAL",
               "name": "Manual"
+            },
+            {
+              "value": "POLLING",
+              "name": "Polling"
             },
             {
               "value": "PROPERTY_CHANGE",
@@ -367695,11 +367810,11 @@
       },
       "SnapshotStatusResponseStatus": {
         "enum": [
-          "COMPLETED",
           "EXPIRED",
           "FAILED",
           "IN_PROGRESS",
-          "PENDING"
+          "PENDING",
+          "SUCCESS"
         ],
         "type": "string",
         "additionalProperties": false,
@@ -367709,10 +367824,6 @@
           "name": "SnapshotStatusResponseStatus",
           "modelAsString": false,
           "values": [
-            {
-              "value": "COMPLETED",
-              "name": "Completed"
-            },
             {
               "value": "EXPIRED",
               "name": "Expired"
@@ -367728,6 +367839,10 @@
             {
               "value": "PENDING",
               "name": "Pending"
+            },
+            {
+              "value": "SUCCESS",
+              "name": "Success"
             }
           ]
         }
@@ -368531,11 +368646,11 @@
       },
       "WebhooksJournalSnapshotStatusResponseStatus": {
         "enum": [
-          "COMPLETED",
           "EXPIRED",
           "FAILED",
           "IN_PROGRESS",
-          "PENDING"
+          "PENDING",
+          "SUCCESS"
         ],
         "type": "string",
         "additionalProperties": false,
@@ -368545,10 +368660,6 @@
           "name": "WebhooksJournalSnapshotStatusResponseStatus",
           "modelAsString": false,
           "values": [
-            {
-              "value": "COMPLETED",
-              "name": "Completed"
-            },
             {
               "value": "EXPIRED",
               "name": "Expired"
@@ -368564,6 +368675,10 @@
             {
               "value": "PENDING",
               "name": "Pending"
+            },
+            {
+              "value": "SUCCESS",
+              "name": "Success"
             }
           ]
         }

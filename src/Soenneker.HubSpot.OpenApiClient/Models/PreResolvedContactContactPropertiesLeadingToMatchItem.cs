@@ -464,6 +464,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         #pragma warning disable CS1591
         HsEmailDomain,
         #pragma warning restore CS1591
+        [EnumMember(Value = "hs_email_engagement_likelihood_category")]
+        #pragma warning disable CS1591
+        HsEmailEngagementLikelihoodCategory,
+        #pragma warning restore CS1591
         [EnumMember(Value = "hs_email_first_click_date")]
         #pragma warning disable CS1591
         HsEmailFirstClickDate,

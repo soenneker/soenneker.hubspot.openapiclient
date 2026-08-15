@@ -15,6 +15,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         #pragma warning disable CS1591
         DateTime,
         #pragma warning restore CS1591
+        [EnumMember(Value = "MONTH_AND_DAY")]
+        #pragma warning disable CS1591
+        MonthAndDay,
+        #pragma warning restore CS1591
         [EnumMember(Value = "OBJECT_COORDINATE")]
         #pragma warning disable CS1591
         ObjectCoordinate,

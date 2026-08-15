@@ -617,6 +617,16 @@
         "responses": {
           "201": {
             "description": "successful operation",
+            "headers": {
+              "Location": {
+                "description": "URL of the newly created resource",
+                "style": "simple",
+                "schema": {
+                  "type": "string",
+                  "example": null
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -3734,6 +3744,11 @@
             "____cms_oauth2": [
               "hubdb"
             ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.tables.read"
+            ]
           }
         ]
       },
@@ -3758,6 +3773,16 @@
         "responses": {
           "201": {
             "description": "successful operation",
+            "headers": {
+              "Location": {
+                "description": "URL of the newly created resource",
+                "style": "simple",
+                "schema": {
+                  "type": "string",
+                  "example": null
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -3775,6 +3800,11 @@
           {
             "____cms_oauth2": [
               "hubdb"
+            ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.tables.write"
             ]
           }
         ]
@@ -3930,6 +3960,11 @@
             "____cms_oauth2": [
               "hubdb"
             ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.tables.read"
+            ]
           }
         ]
       }
@@ -4002,6 +4037,11 @@
             "____cms_oauth2": [
               "hubdb"
             ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.tables.read"
+            ]
           }
         ]
       },
@@ -4036,6 +4076,11 @@
           {
             "____cms_oauth2": [
               "hubdb"
+            ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.tables.write"
             ]
           }
         ]
@@ -4108,6 +4153,11 @@
           {
             "____cms_oauth2": [
               "hubdb"
+            ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.tables.read"
             ]
           }
         ]
@@ -4190,6 +4240,11 @@
             "____cms_oauth2": [
               "hubdb"
             ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.tables.write"
+            ]
           }
         ]
       }
@@ -4246,6 +4301,11 @@
             "____cms_oauth2": [
               "hubdb"
             ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.tables.write"
+            ]
           }
         ]
       }
@@ -4280,27 +4340,6 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "successful operation",
-            "content": {
-              "application/vnd.ms-excel": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary",
-                  "example": null
-                },
-                "example": null
-              },
-              "text/csv": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary",
-                  "example": null
-                },
-                "example": null
-              }
-            }
-          },
           "default": {
             "$ref": "#/components/responses/____cms_Error"
           }
@@ -4309,6 +4348,11 @@
           {
             "____cms_oauth2": [
               "hubdb"
+            ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.rows.read"
             ]
           }
         ]
@@ -4377,6 +4421,11 @@
             "____cms_oauth2": [
               "hubdb"
             ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.rows.write"
+            ]
           }
         ]
       }
@@ -4430,6 +4479,11 @@
           {
             "____cms_oauth2": [
               "hubdb"
+            ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.tables.publish"
             ]
           }
         ]
@@ -4485,6 +4539,11 @@
             "____cms_oauth2": [
               "hubdb"
             ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.rows.write"
+            ]
           }
         ]
       }
@@ -4519,27 +4578,6 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "successful operation",
-            "content": {
-              "application/vnd.ms-excel": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary",
-                  "example": null
-                },
-                "example": null
-              },
-              "text/csv": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary",
-                  "example": null
-                },
-                "example": null
-              }
-            }
-          },
           "default": {
             "$ref": "#/components/responses/____cms_Error"
           }
@@ -4548,6 +4586,11 @@
           {
             "____cms_oauth2": [
               "hubdb"
+            ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.rows.read"
             ]
           }
         ]
@@ -4658,6 +4701,11 @@
             "____cms_oauth2": [
               "hubdb"
             ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.rows.read"
+            ]
           }
         ]
       },
@@ -4694,6 +4742,16 @@
         "responses": {
           "201": {
             "description": "successful operation",
+            "headers": {
+              "Location": {
+                "description": "URL of the newly created resource",
+                "style": "simple",
+                "schema": {
+                  "type": "string",
+                  "example": null
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -4711,6 +4769,11 @@
           {
             "____cms_oauth2": [
               "hubdb"
+            ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.rows.write"
             ]
           }
         ]
@@ -4778,6 +4841,11 @@
           {
             "____cms_oauth2": [
               "hubdb"
+            ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.rows.read"
             ]
           }
         ]
@@ -4888,6 +4956,11 @@
             "____cms_oauth2": [
               "hubdb"
             ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.rows.read"
+            ]
           }
         ]
       }
@@ -4943,6 +5016,11 @@
           {
             "____cms_oauth2": [
               "hubdb"
+            ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.rows.write"
             ]
           }
         ]
@@ -5011,6 +5089,11 @@
             "____cms_oauth2": [
               "hubdb"
             ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.rows.write"
+            ]
           }
         ]
       }
@@ -5058,6 +5141,11 @@
           {
             "____cms_oauth2": [
               "hubdb"
+            ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.rows.write"
             ]
           }
         ]
@@ -5126,6 +5214,11 @@
             "____cms_oauth2": [
               "hubdb"
             ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.rows.read"
+            ]
           }
         ]
       }
@@ -5192,6 +5285,11 @@
           {
             "____cms_oauth2": [
               "hubdb"
+            ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.rows.write"
             ]
           }
         ]
@@ -5260,6 +5358,11 @@
             "____cms_oauth2": [
               "hubdb"
             ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.rows.write"
+            ]
           }
         ]
       }
@@ -5324,6 +5427,11 @@
           {
             "____cms_oauth2": [
               "hubdb"
+            ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.rows.read"
             ]
           }
         ]
@@ -5390,6 +5498,11 @@
             "____cms_oauth2": [
               "hubdb"
             ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.rows.read"
+            ]
           }
         ]
       },
@@ -5455,6 +5568,11 @@
             "____cms_oauth2": [
               "hubdb"
             ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.rows.write"
+            ]
           }
         ]
       },
@@ -5500,6 +5618,11 @@
           {
             "____cms_oauth2": [
               "hubdb"
+            ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.rows.write"
             ]
           }
         ]
@@ -5566,6 +5689,11 @@
             "____cms_oauth2": [
               "hubdb"
             ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.rows.write"
+            ]
           }
         ]
       }
@@ -5631,6 +5759,11 @@
             "____cms_oauth2": [
               "hubdb"
             ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.rows.write"
+            ]
           }
         ]
       }
@@ -5685,6 +5818,11 @@
             "____cms_oauth2": [
               "hubdb"
             ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.tables.publish"
+            ]
           }
         ]
       }
@@ -5733,6 +5871,11 @@
           {
             "____cms_oauth2": [
               "hubdb"
+            ]
+          },
+          {
+            "____cms_oauth2": [
+              "hubdb.tables.write"
             ]
           }
         ]
@@ -16246,6 +16389,16 @@
         "responses": {
           "201": {
             "description": "successful operation",
+            "headers": {
+              "Location": {
+                "description": "URL of the newly created resource",
+                "style": "simple",
+                "schema": {
+                  "type": "string",
+                  "example": null
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -16620,6 +16773,16 @@
         "responses": {
           "201": {
             "description": "successful operation",
+            "headers": {
+              "Location": {
+                "description": "URL of the newly created resource",
+                "style": "simple",
+                "schema": {
+                  "type": "string",
+                  "example": null
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -16825,6 +16988,16 @@
         "responses": {
           "201": {
             "description": "successful operation",
+            "headers": {
+              "Location": {
+                "description": "URL of the newly created resource",
+                "style": "simple",
+                "schema": {
+                  "type": "string",
+                  "example": null
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -90584,6 +90757,7 @@
             "enum": [
               "DATE",
               "DATE_TIME",
+              "MONTH_AND_DAY",
               "OBJECT_COORDINATE",
               "TIME",
               "URI"
@@ -91241,6 +91415,7 @@
           },
           "dependencyType": {
             "enum": [
+              "ADAPTIVE_COMPLETION",
               "MANUAL_PAUSE",
               "TASK_COMPLETION"
             ],
@@ -91297,6 +91472,7 @@
         "properties": {
           "actionType": {
             "enum": [
+              "ADAPTIVE_CONTAINER",
               "EMAIL",
               "FINISH_ENROLLMENT",
               "TASK"
@@ -153011,6 +153187,7 @@
                 "hs_email_customer_quarantined_reason",
                 "hs_email_delivered",
                 "hs_email_domain",
+                "hs_email_engagement_likelihood_category",
                 "hs_email_first_click_date",
                 "hs_email_first_open_date",
                 "hs_email_first_reply_date",
@@ -225265,6 +225442,7 @@
           "operator": {
             "enum": [
               "IN_LAST_TIME_UNIT",
+              "IN_LAST_TIME_UNIT_SO_FAR",
               "IN_NEXT_TIME_UNIT",
               "IN_THIS_TIME_UNIT",
               "IN_THIS_TIME_UNIT_SO_FAR"
@@ -226257,6 +226435,7 @@
               "CUSTOM_SIGNAL",
               "IMPORT",
               "MANUAL",
+              "POLLING",
               "PROPERTY_CHANGE",
               "VISITED_URL",
               "WEBHOOK"
@@ -228377,7 +228556,7 @@
           },
           "uuid": {
             "type": "string",
-            "description": "Include a universally unique identifier to assign a unique ID to the event occurrence. Can be useful for matching data between HubSpot and other external systems.",
+            "description": "A unique identifier for the event occurrence. Must be unique within the event type. If not provided, HubSpot will generate a random UUID. When multiple events have the same ID within a year, the first will be accepted and all others will be rejected. Can be useful for matching data between HubSpot and other external systems.",
             "example": null
           }
         },
@@ -244111,11 +244290,11 @@
           },
           "status": {
             "enum": [
-              "COMPLETED",
               "EXPIRED",
               "FAILED",
               "IN_PROGRESS",
-              "PENDING"
+              "PENDING",
+              "SUCCESS"
             ],
             "type": "string",
             "description": "The current status of the snapshot. Valid values include 'PENDING', 'IN_PROGRESS', 'COMPLETED', 'FAILED', and 'EXPIRED'.",
@@ -245382,7 +245561,7 @@
               "format": "int64",
               "example": null
             },
-            "description": "An array of integers representing the IDs of the objects involved in the subscription.",
+            "description": "An array of integers representing the IDs of the objects involved in the subscription. Empty means listen to all objectIds.",
             "example": null
           },
           "objectTypeId": {
@@ -245402,7 +245581,7 @@
               "type": "string",
               "example": null
             },
-            "description": "An array of strings listing the properties of the objects that are relevant to the subscription.",
+            "description": "An array of strings listing the properties of the objects that are relevant to the subscription. Empty means listen to all properties.",
             "example": null
           },
           "subscriptionType": {
@@ -245511,11 +245690,11 @@
           },
           "status": {
             "enum": [
-              "COMPLETED",
               "EXPIRED",
               "FAILED",
               "IN_PROGRESS",
-              "PENDING"
+              "PENDING",
+              "SUCCESS"
             ],
             "type": "string",
             "description": "The current status of the snapshot. Valid values include 'PENDING', 'IN_PROGRESS', 'COMPLETED', 'FAILED', and 'EXPIRED'.",

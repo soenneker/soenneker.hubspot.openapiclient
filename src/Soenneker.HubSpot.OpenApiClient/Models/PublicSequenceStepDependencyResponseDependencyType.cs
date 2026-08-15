@@ -7,6 +7,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PublicSequenceStepDependencyResponseDependencyType
     {
+        [EnumMember(Value = "ADAPTIVE_COMPLETION")]
+        #pragma warning disable CS1591
+        AdaptiveCompletion,
+        #pragma warning restore CS1591
         [EnumMember(Value = "MANUAL_PAUSE")]
         #pragma warning disable CS1591
         ManualPause,
