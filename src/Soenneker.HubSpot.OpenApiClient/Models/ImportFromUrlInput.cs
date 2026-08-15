@@ -12,13 +12,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     public partial class ImportFromUrlInput : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>&quot;PUBLIC_INDEXABLE: File is publicly accessible by anyone who has the URL. Search engines can index the file. PUBLIC_NOT_INDEXABLE: File is publicly accessible by anyone who has the URL. Search engines *can&apos;t* index the file. PRIVATE: File is NOT publicly accessible. Requires a signed URL to see content. Search engines *can&apos;t* index the file.&quot;</summary>
+        /// <summary>PUBLIC_INDEXABLE: File is publicly accessible by anyone who has the URL. Search engines can index the file. PUBLIC_NOT_INDEXABLE: File is publicly accessible by anyone who has the URL. Search engines *can&apos;t* index the file. PRIVATE: File is NOT publicly accessible. Requires a signed URL to see content. Search engines *can&apos;t* index the file.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlInputAccess? Access { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;ENTIRE_PORTAL: Look for a duplicate file in the entire account. EXACT_FOLDER: Look for a duplicate file in the provided folder.&quot;</summary>
+        /// <summary>ENTIRE_PORTAL: Look for a duplicate file in the entire account. EXACT_FOLDER: Look for a duplicate file in the provided folder.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlInputDuplicateValidationScope? DuplicateValidationScope { get; set; }
-        /// <summary>&quot;NONE: Do not run any duplicate validation. REJECT: Reject the upload if a duplicate is found. RETURN_EXISTING: If a duplicate file is found, do not upload a new file and return the found duplicate instead.&quot;</summary>
+        /// <summary>NONE: Do not run any duplicate validation. REJECT: Reject the upload if a duplicate is found. RETURN_EXISTING: If a duplicate file is found, do not upload a new file and return the found duplicate instead.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlInputDuplicateValidationStrategy? DuplicateValidationStrategy { get; set; }
         /// <summary>Specifies the date and time when the file will expire.</summary>
         public DateTimeOffset? ExpiresAt { get; set; }

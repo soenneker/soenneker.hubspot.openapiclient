@@ -47,7 +47,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>The timestamp when the batch processing began, in ISO 8601 format.</summary>
         public DateTimeOffset? StartedAt { get; set; }
-        /// <summary>&quot;The status of the batch processing request: \&quot;PENDING\&quot;, \&quot;PROCESSING\&quot;, \&quot;CANCELLED\&quot;, or \&quot;COMPLETE\&quot;.&quot;</summary>
+        /// <summary>The status of the batch processing request: &quot;PENDING&quot;, &quot;PROCESSING&quot;, &quot;CANCELLED&quot;, or &quot;COMPLETE&quot;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicDefaultAssociationStatus? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicDefaultAssociation"/> and sets the default values.

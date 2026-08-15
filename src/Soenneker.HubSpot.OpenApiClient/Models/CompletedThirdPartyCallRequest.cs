@@ -36,7 +36,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ExternalCallId { get; set; }
 #endif
-        /// <summary>&quot;The final status of the call, with accepted values including: BUSY, CALLING_CRM_USER, CANCELED, COMPLETED, CONNECTING, FAILED, HOLD, IN_PROGRESS, MISSED, NO_ANSWER, QUEUED, RINGING, UNKNOWN.&quot;</summary>
+        /// <summary>The final status of the call, with accepted values including: BUSY, CALLING_CRM_USER, CANCELED, COMPLETED, CONNECTING, FAILED, HOLD, IN_PROGRESS, MISSED, NO_ANSWER, QUEUED, RINGING, UNKNOWN.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequestFinalCallStatus? FinalCallStatus { get; set; }
         /// <summary>The fromNumber property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

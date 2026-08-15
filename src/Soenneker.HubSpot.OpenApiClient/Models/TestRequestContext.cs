@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Indicates the source of the test request, with the only accepted value being &apos;TEST&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.TestRequestContextSource? Source { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.TestSource? Source { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.TestRequestContext"/> and sets the default values.
         /// </summary>
@@ -41,7 +41,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "source", n => { Source = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TestRequestContextSource>(); } },
+                { "source", n => { Source = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TestSource>(); } },
             };
         }
         /// <summary>
@@ -51,7 +51,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TestRequestContextSource>("source", Source);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TestSource>("source", Source);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

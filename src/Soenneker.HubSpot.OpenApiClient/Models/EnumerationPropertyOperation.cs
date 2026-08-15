@@ -43,7 +43,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string OperatorName { get; set; }
 #endif
         /// <summary>The propertyType property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EnumerationPropertyOperationPropertyType? PropertyType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EnumerationPropertyType? PropertyType { get; set; }
         /// <summary>The renderSpec property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -90,7 +90,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "operationType", n => { OperationType = n.GetStringValue(); } },
                 { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EnumerationPropertyOperationOperator>(); } },
                 { "operatorName", n => { OperatorName = n.GetStringValue(); } },
-                { "propertyType", n => { PropertyType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EnumerationPropertyOperationPropertyType>(); } },
+                { "propertyType", n => { PropertyType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EnumerationPropertyType>(); } },
                 { "renderSpec", n => { RenderSpec = n.GetStringValue(); } },
                 { "values", n => { Values = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
@@ -107,7 +107,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("operationType", OperationType);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EnumerationPropertyOperationOperator>("operator", Operator);
             writer.WriteStringValue("operatorName", OperatorName);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EnumerationPropertyOperationPropertyType>("propertyType", PropertyType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EnumerationPropertyType>("propertyType", PropertyType);
             writer.WriteStringValue("renderSpec", RenderSpec);
             writer.WriteCollectionOfPrimitiveValues<string>("values", Values);
             writer.WriteAdditionalData(AdditionalData);

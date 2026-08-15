@@ -52,7 +52,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string EventOrganizer { get; set; }
 #endif
-        /// <summary>&quot;Describes what type of event this is.  For example: `WEBINAR`, `CONFERENCE`, `WORKSHOP`&quot;</summary>
+        /// <summary>Describes what type of event this is.  For example: `WEBINAR`, `CONFERENCE`, `WORKSHOP`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EventType { get; set; }

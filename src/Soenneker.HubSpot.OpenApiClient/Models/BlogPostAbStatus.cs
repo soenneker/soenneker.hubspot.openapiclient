@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>&quot;The status of the AB test associated with this blog post, if applicableAvailable options: automated_loser_variant, automated_master, automated_variant, loser_variant, mab_master, mab_variant, master, variant&quot;</summary>
+    /// <summary>The status of the AB test associated with this blog post, if applicableAvailable options: automated_loser_variant, automated_master, automated_variant, loser_variant, mab_master, mab_variant, master, variant</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum BlogPostAbStatus
     {

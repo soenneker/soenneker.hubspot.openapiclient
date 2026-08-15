@@ -21,7 +21,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The minute component of the current day reference.</summary>
         public int? Minute { get; set; }
         /// <summary>Indicates the type of reference (TODAY).</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicTodayReferenceReferenceType? ReferenceType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.TodayReferenceType? ReferenceType { get; set; }
         /// <summary>The second component of the current day reference.</summary>
         public int? Second { get; set; }
         /// <summary>
@@ -52,7 +52,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "hour", n => { Hour = n.GetIntValue(); } },
                 { "millisecond", n => { Millisecond = n.GetIntValue(); } },
                 { "minute", n => { Minute = n.GetIntValue(); } },
-                { "referenceType", n => { ReferenceType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTodayReferenceReferenceType>(); } },
+                { "referenceType", n => { ReferenceType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TodayReferenceType>(); } },
                 { "second", n => { Second = n.GetIntValue(); } },
             };
         }
@@ -66,7 +66,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteIntValue("hour", Hour);
             writer.WriteIntValue("millisecond", Millisecond);
             writer.WriteIntValue("minute", Minute);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTodayReferenceReferenceType>("referenceType", ReferenceType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TodayReferenceType>("referenceType", ReferenceType);
             writer.WriteIntValue("second", Second);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;Supplementary metadata associated with the audit log entry. It provides additional context about the audited event (ex: rows deleted/updated for a HubDB event, the specific fields that were changed for a Content Settings event).&quot;
+    /// Supplementary metadata associated with the audit log entry. It provides additional context about the audited event (ex: rows deleted/updated for a HubDB event, the specific fields that were changed for a Content Settings event).
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PublicAuditLogMetaProperty : IAdditionalDataHolder, IParsable

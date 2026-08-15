@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>&quot;Indicates the current status of the operation, with possible values: PENDING, PROCESSING, CANCELED, COMPLETE.&quot;</summary>
+    /// <summary>Indicates the current status of the operation, with possible values: PENDING, PROCESSING, CANCELED, COMPLETE.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum ActionResponseWithResultsPublicStatusStatus
     {

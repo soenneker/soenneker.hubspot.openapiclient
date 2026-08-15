@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string FunctionSource { get; set; }
 #endif
-        /// <summary>&quot;The type of function, with accepted values: POST_ACTION_EXECUTION, POST_FETCH_OPTIONS, PRE_ACTION_EXECUTION, PRE_FETCH_OPTIONS.&quot;</summary>
+        /// <summary>The type of function, with accepted values: POST_ACTION_EXECUTION, POST_FETCH_OPTIONS, PRE_ACTION_EXECUTION, PRE_FETCH_OPTIONS.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionFunctionFunctionType? FunctionType { get; set; }
         /// <summary>The unique identifier for the action function.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

@@ -111,7 +111,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>&quot;Hint for how a number property is displayed and validated in HubSpot&apos;s UI. Can be: \&quot;unformatted\&quot;, \&quot;formatted\&quot;, \&quot;currency\&quot;, \&quot;percentage\&quot;, \&quot;duration\&quot;, or \&quot;probability\&quot;.&quot;</summary>
+        /// <summary>Hint for how a number property is displayed and validated in HubSpot&apos;s UI. Can be: &quot;unformatted&quot;, &quot;formatted&quot;, &quot;currency&quot;, &quot;percentage&quot;, &quot;duration&quot;, or &quot;probability&quot;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.EventsPropertyNumberDisplayHint? NumberDisplayHint { get; set; }
         /// <summary>A list of valid options for the property. This field is required for enumerated properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -139,7 +139,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>Whether to show the currency symbol in HubSpot&apos;s UI.</summary>
         public bool? ShowCurrencySymbol { get; set; }
-        /// <summary>&quot;Hint for how the text is displayed and validated in HubSpot&apos;s UI. Can be: \&quot;unformatted_single_line\&quot;, \&quot;multi_line\&quot;, \&quot;email\&quot;, \&quot;phone_number\&quot;, \&quot;domain_name\&quot;, \&quot;ip_address\&quot;, \&quot;physical_address\&quot;, or \&quot;postal_code\&quot;.&quot;</summary>
+        /// <summary>Hint for how the text is displayed and validated in HubSpot&apos;s UI. Can be: &quot;unformatted_single_line&quot;, &quot;multi_line&quot;, &quot;email&quot;, &quot;phone_number&quot;, &quot;domain_name&quot;, &quot;ip_address&quot;, &quot;physical_address&quot;, or &quot;postal_code&quot;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.EventsPropertyTextDisplayHint? TextDisplayHint { get; set; }
         /// <summary>The data type of the property, such as string or number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

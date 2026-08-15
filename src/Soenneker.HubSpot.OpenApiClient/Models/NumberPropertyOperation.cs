@@ -43,7 +43,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string OperatorName { get; set; }
 #endif
         /// <summary>The propertyType property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.NumberPropertyOperationPropertyType? PropertyType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.NumberPropertyType? PropertyType { get; set; }
         /// <summary>The renderSpec property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -84,7 +84,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "operationType", n => { OperationType = n.GetStringValue(); } },
                 { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.NumberPropertyOperationOperator>(); } },
                 { "operatorName", n => { OperatorName = n.GetStringValue(); } },
-                { "propertyType", n => { PropertyType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.NumberPropertyOperationPropertyType>(); } },
+                { "propertyType", n => { PropertyType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.NumberPropertyType>(); } },
                 { "renderSpec", n => { RenderSpec = n.GetStringValue(); } },
                 { "value", n => { Value = n.GetDoubleValue(); } },
             };
@@ -101,7 +101,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("operationType", OperationType);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.NumberPropertyOperationOperator>("operator", Operator);
             writer.WriteStringValue("operatorName", OperatorName);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.NumberPropertyOperationPropertyType>("propertyType", PropertyType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.NumberPropertyType>("propertyType", PropertyType);
             writer.WriteStringValue("renderSpec", RenderSpec);
             writer.WriteDoubleValue("value", Value);
             writer.WriteAdditionalData(AdditionalData);

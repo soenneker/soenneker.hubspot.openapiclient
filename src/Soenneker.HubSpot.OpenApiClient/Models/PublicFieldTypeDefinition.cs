@@ -65,7 +65,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string OptionsUrl { get; set; }
 #endif
         /// <summary>The type of object that the field references, with accepted values including OWNER.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicFieldTypeDefinitionReferencedObjectType? ReferencedObjectType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.OwnerReferencedObjectType? ReferencedObjectType { get; set; }
         /// <summary>The data type of the field, with accepted values including bool, date, datetime, enumeration, json, number, object_coordinates, phone_number, and string.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicFieldTypeDefinitionType? Type { get; set; }
         /// <summary>
@@ -100,7 +100,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicOption>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicOption.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "optionsUrl", n => { OptionsUrl = n.GetStringValue(); } },
-                { "referencedObjectType", n => { ReferencedObjectType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicFieldTypeDefinitionReferencedObjectType>(); } },
+                { "referencedObjectType", n => { ReferencedObjectType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.OwnerReferencedObjectType>(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicFieldTypeDefinitionType>(); } },
             };
         }
@@ -118,7 +118,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicOption>("options", Options);
             writer.WriteStringValue("optionsUrl", OptionsUrl);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicFieldTypeDefinitionReferencedObjectType>("referencedObjectType", ReferencedObjectType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.OwnerReferencedObjectType>("referencedObjectType", ReferencedObjectType);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicFieldTypeDefinitionType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

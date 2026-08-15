@@ -17,7 +17,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The ID of the business unit associated with the status.</summary>
         public long? BusinessUnitId { get; set; }
         /// <summary>The type of communication channel, with &apos;EMAIL&apos; as the only supported option.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWideStatusChannel? Channel { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailChannel? Channel { get; set; }
         /// <summary>The subscription status of the contact, which can be &apos;SUBSCRIBED&apos;, &apos;UNSUBSCRIBED&apos;, or &apos;NOT_SPECIFIED&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWideStatusStatus? Status { get; set; }
         /// <summary>The email address of the contact.</summary>
@@ -58,7 +58,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "businessUnitId", n => { BusinessUnitId = n.GetLongValue(); } },
-                { "channel", n => { Channel = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWideStatusChannel>(); } },
+                { "channel", n => { Channel = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailChannel>(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWideStatusStatus>(); } },
                 { "subscriberIdString", n => { SubscriberIdString = n.GetStringValue(); } },
                 { "timestamp", n => { Timestamp = n.GetDateTimeOffsetValue(); } },
@@ -73,7 +73,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteLongValue("businessUnitId", BusinessUnitId);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWideStatusChannel>("channel", Channel);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailChannel>("channel", Channel);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWideStatusStatus>("status", Status);
             writer.WriteStringValue("subscriberIdString", SubscriberIdString);
             writer.WriteDateTimeOffsetValue("timestamp", Timestamp);

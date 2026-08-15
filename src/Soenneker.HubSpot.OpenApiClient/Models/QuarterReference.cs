@@ -24,8 +24,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public int? Minute { get; set; }
         /// <summary>The month property</summary>
         public int? Month { get; set; }
-        /// <summary>The referenceType property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.QuarterReferenceReferenceType? ReferenceType { get; set; }
+        /// <summary>Indicates the type of reference (QUARTER).</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.QuarterReferenceType? ReferenceType { get; set; }
         /// <summary>The second property</summary>
         public int? Second { get; set; }
         /// <summary>
@@ -58,7 +58,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "millisecond", n => { Millisecond = n.GetIntValue(); } },
                 { "minute", n => { Minute = n.GetIntValue(); } },
                 { "month", n => { Month = n.GetIntValue(); } },
-                { "referenceType", n => { ReferenceType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.QuarterReferenceReferenceType>(); } },
+                { "referenceType", n => { ReferenceType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.QuarterReferenceType>(); } },
                 { "second", n => { Second = n.GetIntValue(); } },
             };
         }
@@ -74,7 +74,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteIntValue("millisecond", Millisecond);
             writer.WriteIntValue("minute", Minute);
             writer.WriteIntValue("month", Month);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.QuarterReferenceReferenceType>("referenceType", ReferenceType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.QuarterReferenceType>("referenceType", ReferenceType);
             writer.WriteIntValue("second", Second);
             writer.WriteAdditionalData(AdditionalData);
         }

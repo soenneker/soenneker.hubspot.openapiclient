@@ -47,7 +47,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The propertyParser property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.TimePointOperationPropertyParser? PropertyParser { get; set; }
         /// <summary>The propertyType property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.TimePointOperationPropertyType? PropertyType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.TimepointPropertyType? PropertyType { get; set; }
         /// <summary>The renderSpec property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -104,7 +104,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TimePointOperationOperator>(); } },
                 { "operatorName", n => { OperatorName = n.GetStringValue(); } },
                 { "propertyParser", n => { PropertyParser = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TimePointOperationPropertyParser>(); } },
-                { "propertyType", n => { PropertyType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TimePointOperationPropertyType>(); } },
+                { "propertyType", n => { PropertyType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TimepointPropertyType>(); } },
                 { "renderSpec", n => { RenderSpec = n.GetStringValue(); } },
                 { "timePoint", n => { TimePoint = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.TimePointOperationTimePoint>(global::Soenneker.HubSpot.OpenApiClient.Models.TimePointOperationTimePoint.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
@@ -124,7 +124,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TimePointOperationOperator>("operator", Operator);
             writer.WriteStringValue("operatorName", OperatorName);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TimePointOperationPropertyParser>("propertyParser", PropertyParser);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TimePointOperationPropertyType>("propertyType", PropertyType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TimepointPropertyType>("propertyType", PropertyType);
             writer.WriteStringValue("renderSpec", RenderSpec);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.TimePointOperationTimePoint>("timePoint", TimePoint);
             writer.WriteStringValue("type", Type);

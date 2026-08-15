@@ -37,7 +37,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>The timestamp when the batch process began execution, in ISO 8601 format.</summary>
         public DateTimeOffset? StartedAt { get; set; }
-        /// <summary>&quot;The status of the batch processing request. Can be: \&quot;PENDING\&quot;, \&quot;PROCESSING\&quot;, \&quot;CANCELED\&quot;, or \&quot;COMPLETE\&quot;.&quot;</summary>
+        /// <summary>The status of the batch processing request. Can be: &quot;PENDING&quot;, &quot;PROCESSING&quot;, &quot;CANCELED&quot;, or &quot;COMPLETE&quot;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponseSimplePublicUpsertObject11Status? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponseSimplePublicUpsertObject11"/> and sets the default values.

@@ -45,7 +45,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string OperatorName { get; set; }
 #endif
         /// <summary>The propertyType property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CalendarDatePropertyOperationPropertyType? PropertyType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CalendarDatePropertyType? PropertyType { get; set; }
         /// <summary>The renderSpec property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -91,7 +91,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "operationType", n => { OperationType = n.GetStringValue(); } },
                 { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CalendarDatePropertyOperationOperator>(); } },
                 { "operatorName", n => { OperatorName = n.GetStringValue(); } },
-                { "propertyType", n => { PropertyType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CalendarDatePropertyOperationPropertyType>(); } },
+                { "propertyType", n => { PropertyType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CalendarDatePropertyType>(); } },
                 { "renderSpec", n => { RenderSpec = n.GetStringValue(); } },
                 { "timeUnit", n => { TimeUnit = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CalendarDatePropertyOperationTimeUnit>(); } },
                 { "timeUnitCount", n => { TimeUnitCount = n.GetIntValue(); } },
@@ -111,7 +111,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("operationType", OperationType);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CalendarDatePropertyOperationOperator>("operator", Operator);
             writer.WriteStringValue("operatorName", OperatorName);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CalendarDatePropertyOperationPropertyType>("propertyType", PropertyType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CalendarDatePropertyType>("propertyType", PropertyType);
             writer.WriteStringValue("renderSpec", RenderSpec);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CalendarDatePropertyOperationTimeUnit>("timeUnit", TimeUnit);
             writer.WriteIntValue("timeUnitCount", TimeUnitCount);

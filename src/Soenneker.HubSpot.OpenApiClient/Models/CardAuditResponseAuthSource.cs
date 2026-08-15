@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>&quot;The source of authentication for the action, with possible values: APP, EXTERNAL, INTERNAL.&quot;</summary>
+    /// <summary>The source of authentication for the action, with possible values: APP, EXTERNAL, INTERNAL.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum CardAuditResponseAuthSource
     {

@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.MarketingEvents.TwoZeroTwoSi
         {
         }
         /// <summary>
-        /// &quot;Deletes multiple Marketing Events from the portal based on their objectId, if they exist.Responses:204: Returned if all specified Marketing Events were successfully deleted.207: Returned if some objectIds did not correspond to any existing Marketing Events.&quot;
+        /// Deletes multiple Marketing Events from the portal based on their objectId, if they exist.Responses:204: Returned if all specified Marketing Events were successfully deleted.207: Returned if some objectIds did not correspond to any existing Marketing Events.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.MarketingEvents.TwoZeroTwoSi
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Deletes multiple Marketing Events from the portal based on their objectId, if they exist.Responses:204: Returned if all specified Marketing Events were successfully deleted.207: Returned if some objectIds did not correspond to any existing Marketing Events.&quot;
+        /// Deletes multiple Marketing Events from the portal based on their objectId, if they exist.Responses:204: Returned if all specified Marketing Events were successfully deleted.207: Returned if some objectIds did not correspond to any existing Marketing Events.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

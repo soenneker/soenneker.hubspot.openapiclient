@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>&quot;Indicates the sensitivity level of the property, with options: highly_sensitive, non_sensitive, or sensitive.&quot;</summary>
+    /// <summary>Indicates the sensitivity level of the property, with options: highly_sensitive, non_sensitive, or sensitive.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum CrmPropertyCreateDataSensitivity
     {

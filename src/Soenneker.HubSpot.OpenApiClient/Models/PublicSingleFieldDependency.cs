@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string ControllingFieldName { get; set; }
 #endif
         /// <summary>The type of dependency, with the default value being &apos;SINGLE_FIELD&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleFieldDependencyDependencyType? DependencyType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.SingleFieldDependencyType? DependencyType { get; set; }
         /// <summary>The dependentFieldNames property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -58,7 +58,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "controllingFieldName", n => { ControllingFieldName = n.GetStringValue(); } },
-                { "dependencyType", n => { DependencyType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleFieldDependencyDependencyType>(); } },
+                { "dependencyType", n => { DependencyType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SingleFieldDependencyType>(); } },
                 { "dependentFieldNames", n => { DependentFieldNames = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }
@@ -70,7 +70,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("controllingFieldName", ControllingFieldName);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleFieldDependencyDependencyType>("dependencyType", DependencyType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SingleFieldDependencyType>("dependencyType", DependencyType);
             writer.WriteCollectionOfPrimitiveValues<string>("dependentFieldNames", DependentFieldNames);
             writer.WriteAdditionalData(AdditionalData);
         }

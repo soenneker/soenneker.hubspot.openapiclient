@@ -49,7 +49,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public List<string> Properties { get; set; }
 #endif
         /// <summary>The subscriptionType property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ObjectSubscriptionUpsertRequestSubscriptionType? SubscriptionType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ObjectValueSubscriptionType? SubscriptionType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ObjectSubscriptionUpsertRequest"/> and sets the default values.
         /// </summary>
@@ -80,7 +80,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "objectTypeId", n => { ObjectTypeId = n.GetStringValue(); } },
                 { "portalId", n => { PortalId = n.GetLongValue(); } },
                 { "properties", n => { Properties = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "subscriptionType", n => { SubscriptionType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ObjectSubscriptionUpsertRequestSubscriptionType>(); } },
+                { "subscriptionType", n => { SubscriptionType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ObjectValueSubscriptionType>(); } },
             };
         }
         /// <summary>
@@ -95,7 +95,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("objectTypeId", ObjectTypeId);
             writer.WriteLongValue("portalId", PortalId);
             writer.WriteCollectionOfPrimitiveValues<string>("properties", Properties);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ObjectSubscriptionUpsertRequestSubscriptionType>("subscriptionType", SubscriptionType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ObjectValueSubscriptionType>("subscriptionType", SubscriptionType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

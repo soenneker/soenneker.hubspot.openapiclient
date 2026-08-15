@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.MarketingEvents.TwoZeroTwoSi
         {
         }
         /// <summary>
-        /// &quot;This endpoint searches the portal for all Marketing Events whose externalEventId matches the value provided in the request.It retrieves the objectId and additional event details for each matching Marketing Event.Since multiple Marketing Events can have the same externalEventId, the endpoint returns all matching results.Note: Marketing Events become searchable by externalEventId a few minutes after creation.&quot;
+        /// This endpoint searches the portal for all Marketing Events whose externalEventId matches the value provided in the request.It retrieves the objectId and additional event details for each matching Marketing Event.Since multiple Marketing Events can have the same externalEventId, the endpoint returns all matching results.Note: Marketing Events become searchable by externalEventId a few minutes after creation.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalMarketingEventIdentifiersResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.MarketingEvents.TwoZeroTwoSi
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalMarketingEventIdentifiersResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalMarketingEventIdentifiersResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;This endpoint searches the portal for all Marketing Events whose externalEventId matches the value provided in the request.It retrieves the objectId and additional event details for each matching Marketing Event.Since multiple Marketing Events can have the same externalEventId, the endpoint returns all matching results.Note: Marketing Events become searchable by externalEventId a few minutes after creation.&quot;
+        /// This endpoint searches the portal for all Marketing Events whose externalEventId matches the value provided in the request.It retrieves the objectId and additional event details for each matching Marketing Event.Since multiple Marketing Events can have the same externalEventId, the endpoint returns all matching results.Note: Marketing Events become searchable by externalEventId a few minutes after creation.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

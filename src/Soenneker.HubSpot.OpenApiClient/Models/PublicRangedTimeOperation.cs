@@ -57,7 +57,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string PropertyParser { get; set; }
 #endif
         /// <summary>Specifies the type of operation (TIME_RANGED).</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRangedTimeOperationType? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.TimeRangedType? Type { get; set; }
         /// <summary>Describes the behavior at the upper bound endpoint of the time range.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -105,7 +105,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "operationType", n => { OperationType = n.GetStringValue(); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
                 { "propertyParser", n => { PropertyParser = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRangedTimeOperationType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TimeRangedType>(); } },
                 { "upperBoundEndpointBehavior", n => { UpperBoundEndpointBehavior = n.GetStringValue(); } },
                 { "upperBoundTimePoint", n => { UpperBoundTimePoint = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRangedTimeOperationUpperBoundTimePoint>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicRangedTimeOperationUpperBoundTimePoint.CreateFromDiscriminatorValue); } },
             };
@@ -123,7 +123,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("operationType", OperationType);
             writer.WriteStringValue("operator", Operator);
             writer.WriteStringValue("propertyParser", PropertyParser);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRangedTimeOperationType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TimeRangedType>("type", Type);
             writer.WriteStringValue("upperBoundEndpointBehavior", UpperBoundEndpointBehavior);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRangedTimeOperationUpperBoundTimePoint>("upperBoundTimePoint", UpperBoundTimePoint);
             writer.WriteAdditionalData(AdditionalData);

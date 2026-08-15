@@ -25,7 +25,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.Campaigns.TwoZeroTwoSixZeroT
             get => new global::Soenneker.HubSpot.OpenApiClient.Marketing.Campaigns.TwoZeroTwoSixZeroThree.Item.Budget.Totals.TotalsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.marketing.campaigns.TwoZeroTwoSixZeroThree.item.budget.item collection</summary>
-        /// <param name="position">&quot;The ID of the budget item, required. Example: 352                   &quot;</param>
+        /// <param name="position">The ID of the budget item, required. Example: 352                   </param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Marketing.Campaigns.TwoZeroTwoSixZeroThree.Item.Budget.Item.WithBudgetItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Marketing.Campaigns.TwoZeroTwoSixZeroThree.Item.Budget.Item.WithBudgetItemRequestBuilder this[long position]
         {

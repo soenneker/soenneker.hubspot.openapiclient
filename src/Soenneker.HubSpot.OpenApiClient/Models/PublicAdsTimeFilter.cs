@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Filter type (ADS_TIME)</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAdsTimeFilterFilterType? FilterType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AdsTimeFilterType? FilterType { get; set; }
         /// <summary>Refinement criteria</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -49,7 +49,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAdsTimeFilterFilterType>(); } },
+                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AdsTimeFilterType>(); } },
                 { "pruningRefineBy", n => { PruningRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAdsTimeFilterPruningRefineBy>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicAdsTimeFilterPruningRefineBy.CreateFromDiscriminatorValue); } },
             };
         }
@@ -60,7 +60,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAdsTimeFilterFilterType>("filterType", FilterType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AdsTimeFilterType>("filterType", FilterType);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAdsTimeFilterPruningRefineBy>("pruningRefineBy", PruningRefineBy);
             writer.WriteAdditionalData(AdditionalData);
         }

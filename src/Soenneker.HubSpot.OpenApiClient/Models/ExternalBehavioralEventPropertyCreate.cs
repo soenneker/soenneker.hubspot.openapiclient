@@ -38,7 +38,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>&quot;A list of available options for the property if it is an enumeration. NOTE: This field is only applicable for enumerated properties.&quot;</summary>
+        /// <summary>A list of available options for the property if it is an enumeration. NOTE: This field is only applicable for enumerated properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.EventsOptionInput>? Options { get; set; }
@@ -46,7 +46,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.EventsOptionInput> Options { get; set; }
 #endif
-        /// <summary>&quot;The data type of the property. Can be one of the following: [string, number, enumeration, datetime]&quot;</summary>
+        /// <summary>The data type of the property. Can be one of the following: [string, number, enumeration, datetime]</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Type { get; set; }

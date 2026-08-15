@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string SetType { get; set; }
 #endif
         /// <summary>Specifies the type of refinement (SET_OCCURRENCES).</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSetOccurrencesRefineByType? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.SetOccurrencesType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicSetOccurrencesRefineBy"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "setType", n => { SetType = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSetOccurrencesRefineByType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SetOccurrencesType>(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("setType", SetType);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSetOccurrencesRefineByType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SetOccurrencesType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

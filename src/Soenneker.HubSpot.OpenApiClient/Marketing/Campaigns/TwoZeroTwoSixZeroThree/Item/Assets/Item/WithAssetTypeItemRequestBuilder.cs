@@ -19,7 +19,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.Campaigns.TwoZeroTwoSixZeroT
     public partial class WithAssetTypeItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.marketing.campaigns.TwoZeroTwoSixZeroThree.item.assets.item.item collection</summary>
-        /// <param name="position">&quot;The id of asset to disassociate, requiredExample: 154543&quot;</param>
+        /// <param name="position">The id of asset to disassociate, requiredExample: 154543</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Marketing.Campaigns.TwoZeroTwoSixZeroThree.Item.Assets.Item.Item.WithAssetItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Marketing.Campaigns.TwoZeroTwoSixZeroThree.Item.Assets.Item.Item.WithAssetItemRequestBuilder this[string position]
         {
@@ -108,7 +108,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.Campaigns.TwoZeroTwoSixZeroT
             [QueryParameter("after")]
             public string After { get; set; }
 #endif
-            /// <summary>&quot;End date to fetch asset metrics, formatted as YYYY-MM-DD. This date is used to fetch the metrics associated with the assets for a specified period.  If not provided, no asset metrics will be fetched.Example: 2024-01-27&quot;</summary>
+            /// <summary>End date to fetch asset metrics, formatted as YYYY-MM-DD. This date is used to fetch the metrics associated with the assets for a specified period.  If not provided, no asset metrics will be fetched.Example: 2024-01-27</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("endDate")]
@@ -128,7 +128,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.Campaigns.TwoZeroTwoSixZeroT
             [QueryParameter("limit")]
             public string Limit { get; set; }
 #endif
-            /// <summary>&quot;Start date to fetch asset metrics, formatted as YYYY-MM-DD. This date is used to fetch the metrics associated with the assets for a specified period.  If not provided, no asset metrics will be fetched.Example: 2023-01-20&quot;</summary>
+            /// <summary>Start date to fetch asset metrics, formatted as YYYY-MM-DD. This date is used to fetch the metrics associated with the assets for a specified period.  If not provided, no asset metrics will be fetched.Example: 2023-01-20</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("startDate")]

@@ -55,7 +55,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The propertyParser property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.RangedTimeOperationPropertyParser? PropertyParser { get; set; }
         /// <summary>The propertyType property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.RangedTimeOperationPropertyType? PropertyType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.RangedtimePropertyType? PropertyType { get; set; }
         /// <summary>The renderSpec property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -115,7 +115,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RangedTimeOperationOperator>(); } },
                 { "operatorName", n => { OperatorName = n.GetStringValue(); } },
                 { "propertyParser", n => { PropertyParser = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RangedTimeOperationPropertyParser>(); } },
-                { "propertyType", n => { PropertyType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RangedTimeOperationPropertyType>(); } },
+                { "propertyType", n => { PropertyType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RangedtimePropertyType>(); } },
                 { "renderSpec", n => { RenderSpec = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
                 { "upperBoundEndpointBehavior", n => { UpperBoundEndpointBehavior = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RangedTimeOperationUpperBoundEndpointBehavior>(); } },
@@ -137,7 +137,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RangedTimeOperationOperator>("operator", Operator);
             writer.WriteStringValue("operatorName", OperatorName);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RangedTimeOperationPropertyParser>("propertyParser", PropertyParser);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RangedTimeOperationPropertyType>("propertyType", PropertyType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RangedtimePropertyType>("propertyType", PropertyType);
             writer.WriteStringValue("renderSpec", RenderSpec);
             writer.WriteStringValue("type", Type);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RangedTimeOperationUpperBoundEndpointBehavior>("upperBoundEndpointBehavior", UpperBoundEndpointBehavior);

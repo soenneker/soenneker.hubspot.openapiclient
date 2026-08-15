@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The type property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.UnknownFieldSchemaType? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.UnknownType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.UnknownFieldSchema"/> and sets the default values.
         /// </summary>
@@ -41,7 +41,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.UnknownFieldSchemaType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.UnknownType>(); } },
             };
         }
         /// <summary>
@@ -51,7 +51,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.UnknownFieldSchemaType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.UnknownType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

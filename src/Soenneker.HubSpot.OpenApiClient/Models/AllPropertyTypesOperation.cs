@@ -51,7 +51,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string OperatorName { get; set; }
 #endif
         /// <summary>The propertyType property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AllPropertyTypesOperationPropertyType? PropertyType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AlltypesPropertyType? PropertyType { get; set; }
         /// <summary>The pruningRefineBy property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -99,7 +99,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "operationType", n => { OperationType = n.GetStringValue(); } },
                 { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AllPropertyTypesOperationOperator>(); } },
                 { "operatorName", n => { OperatorName = n.GetStringValue(); } },
-                { "propertyType", n => { PropertyType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AllPropertyTypesOperationPropertyType>(); } },
+                { "propertyType", n => { PropertyType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AlltypesPropertyType>(); } },
                 { "pruningRefineBy", n => { PruningRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.AllPropertyTypesOperationPruningRefineBy>(global::Soenneker.HubSpot.OpenApiClient.Models.AllPropertyTypesOperationPruningRefineBy.CreateFromDiscriminatorValue); } },
                 { "renderSpec", n => { RenderSpec = n.GetStringValue(); } },
             };
@@ -117,7 +117,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("operationType", OperationType);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AllPropertyTypesOperationOperator>("operator", Operator);
             writer.WriteStringValue("operatorName", OperatorName);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AllPropertyTypesOperationPropertyType>("propertyType", PropertyType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AlltypesPropertyType>("propertyType", PropertyType);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.AllPropertyTypesOperationPruningRefineBy>("pruningRefineBy", PruningRefineBy);
             writer.WriteStringValue("renderSpec", RenderSpec);
             writer.WriteAdditionalData(AdditionalData);

@@ -19,7 +19,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The minimum value allowed for the long field.</summary>
         public long? Minimum { get; set; }
         /// <summary>The type of the field, which is LONG by default.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LongFieldSchemaType? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LongValueType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.LongFieldSchema"/> and sets the default values.
         /// </summary>
@@ -47,7 +47,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "maximum", n => { Maximum = n.GetLongValue(); } },
                 { "minimum", n => { Minimum = n.GetLongValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.LongFieldSchemaType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.LongValueType>(); } },
             };
         }
         /// <summary>
@@ -59,7 +59,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteLongValue("maximum", Maximum);
             writer.WriteLongValue("minimum", Minimum);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.LongFieldSchemaType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.LongValueType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -33,7 +33,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Name { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicFileType? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.FileType? Type { get; set; }
         /// <summary>The url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -70,7 +70,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "fileId", n => { FileId = n.GetStringValue(); } },
                 { "fileUsageType", n => { FileUsageType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicFileFileUsageType>(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicFileType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FileType>(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
         }
@@ -84,7 +84,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("fileId", FileId);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicFileFileUsageType>("fileUsageType", FileUsageType);
             writer.WriteStringValue("name", Name);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicFileType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FileType>("type", Type);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);
         }

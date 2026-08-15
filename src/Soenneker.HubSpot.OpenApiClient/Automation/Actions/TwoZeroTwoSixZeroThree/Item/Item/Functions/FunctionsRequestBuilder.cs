@@ -19,7 +19,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Automation.Actions.TwoZeroTwoSixZeroTh
     public partial class FunctionsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.automation.actions.TwoZeroTwoSixZeroThree.item.item.functions.item collection</summary>
-        /// <param name="position">&quot;The type of function to retrieve, with accepted values: POST_ACTION_EXECUTION, POST_FETCH_OPTIONS, PRE_ACTION_EXECUTION, PRE_FETCH_OPTIONS.&quot;</param>
+        /// <param name="position">The type of function to retrieve, with accepted values: POST_ACTION_EXECUTION, POST_FETCH_OPTIONS, PRE_ACTION_EXECUTION, PRE_FETCH_OPTIONS.</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Automation.Actions.TwoZeroTwoSixZeroThree.Item.Item.Functions.Item.WithFunctionTypeItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Automation.Actions.TwoZeroTwoSixZeroThree.Item.Item.Functions.Item.WithFunctionTypeItemRequestBuilder this[string position]
         {

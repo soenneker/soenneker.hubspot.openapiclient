@@ -33,7 +33,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationInListFilterCoalescingRefineBy CoalescingRefineBy { get; set; }
 #endif
         /// <summary>Indicates the type of filter being applied, which is &apos;ASSOCIATION&apos; by default.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationInListFilterFilterType? FilterType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AssociationFilterType? FilterType { get; set; }
         /// <summary>The ID of the list used in the association filter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -94,7 +94,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "associationCategory", n => { AssociationCategory = n.GetStringValue(); } },
                 { "associationTypeId", n => { AssociationTypeId = n.GetIntValue(); } },
                 { "coalescingRefineBy", n => { CoalescingRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationInListFilterCoalescingRefineBy>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationInListFilterCoalescingRefineBy.CreateFromDiscriminatorValue); } },
-                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationInListFilterFilterType>(); } },
+                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AssociationFilterType>(); } },
                 { "listId", n => { ListId = n.GetStringValue(); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
                 { "toObjectType", n => { ToObjectType = n.GetStringValue(); } },
@@ -111,7 +111,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("associationCategory", AssociationCategory);
             writer.WriteIntValue("associationTypeId", AssociationTypeId);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationInListFilterCoalescingRefineBy>("coalescingRefineBy", CoalescingRefineBy);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationInListFilterFilterType>("filterType", FilterType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AssociationFilterType>("filterType", FilterType);
             writer.WriteStringValue("listId", ListId);
             writer.WriteStringValue("operator", Operator);
             writer.WriteStringValue("toObjectType", ToObjectType);

@@ -25,7 +25,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Indicates whether tracking is enabled for the page view.</summary>
         public bool? EnableTracking { get; set; }
         /// <summary>Indicates the type of filter being applied (PAGE_VIEW).</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPageViewAnalyticsFilterFilterType? FilterType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PageViewFilterType? FilterType { get; set; }
         /// <summary>Defines the operation to be applied within the filter (HAS_PAGEVIEW_EQ, HAS_PAGEVIEW_CONTAINS, HAS_PAGEVIEW_MATCHES_REGEX, NOT_HAS_PAGEVIEW_EQ, NOT_HAS_PAGEVIEW_CONTAINS).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -77,7 +77,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "coalescingRefineBy", n => { CoalescingRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicPageViewAnalyticsFilterCoalescingRefineBy>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicPageViewAnalyticsFilterCoalescingRefineBy.CreateFromDiscriminatorValue); } },
                 { "enableTracking", n => { EnableTracking = n.GetBoolValue(); } },
-                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicPageViewAnalyticsFilterFilterType>(); } },
+                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PageViewFilterType>(); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
                 { "pageUrl", n => { PageUrl = n.GetStringValue(); } },
                 { "pruningRefineBy", n => { PruningRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicPageViewAnalyticsFilterPruningRefineBy>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicPageViewAnalyticsFilterPruningRefineBy.CreateFromDiscriminatorValue); } },
@@ -92,7 +92,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicPageViewAnalyticsFilterCoalescingRefineBy>("coalescingRefineBy", CoalescingRefineBy);
             writer.WriteBoolValue("enableTracking", EnableTracking);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicPageViewAnalyticsFilterFilterType>("filterType", FilterType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PageViewFilterType>("filterType", FilterType);
             writer.WriteStringValue("operator", Operator);
             writer.WriteStringValue("pageUrl", PageUrl);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicPageViewAnalyticsFilterPruningRefineBy>("pruningRefineBy", PruningRefineBy);

@@ -36,7 +36,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>The date and time when the batch operation started, formatted as a date-time string.</summary>
         public DateTimeOffset? StartedAt { get; set; }
-        /// <summary>&quot;The current status of the batch operation, with possible values: CANCELED, COMPLETE, PENDING, PROCESSING.&quot;</summary>
+        /// <summary>The current status of the batch operation, with possible values: CANCELED, COMPLETE, PENDING, PROCESSING.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicCampaignStatus? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicCampaign"/> and sets the default values.

@@ -28,7 +28,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public DateTimeOffset? RequestedAt { get; set; }
         /// <summary>The timestamp indicating when the action was started.</summary>
         public DateTimeOffset? StartedAt { get; set; }
-        /// <summary>&quot;The current status of the action, with possible values: CANCELED, COMPLETE, PENDING, PROCESSING.&quot;</summary>
+        /// <summary>The current status of the action, with possible values: CANCELED, COMPLETE, PENDING, PROCESSING.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseStatus? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponse"/> and sets the default values.

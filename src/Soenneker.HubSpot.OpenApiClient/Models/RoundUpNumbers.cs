@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.RoundUpNumbersInputsItem> Inputs { get; set; }
 #endif
         /// <summary>The operator property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.RoundUpNumbersOperator? Operator { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.RoundUpOperator? Operator { get; set; }
         /// <summary>The propertyName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -60,7 +60,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "inputs", n => { Inputs = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.RoundUpNumbersInputsItem>(global::Soenneker.HubSpot.OpenApiClient.Models.RoundUpNumbersInputsItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RoundUpNumbersOperator>(); } },
+                { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RoundUpOperator>(); } },
                 { "propertyName", n => { PropertyName = n.GetStringValue(); } },
                 { "value", n => { Value = n.GetDoubleValue(); } },
             };
@@ -73,7 +73,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.RoundUpNumbersInputsItem>("inputs", Inputs);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RoundUpNumbersOperator>("operator", Operator);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RoundUpOperator>("operator", Operator);
             writer.WriteStringValue("propertyName", PropertyName);
             writer.WriteDoubleValue("value", Value);
             writer.WriteAdditionalData(AdditionalData);

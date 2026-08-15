@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public global::Soenneker.HubSpot.OpenApiClient.Models.ObjectFieldSchemaPropertiesProperty Properties { get; set; }
 #endif
         /// <summary>Specifies the type of the field, which is &apos;OBJECT&apos; by default.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ObjectFieldSchemaType? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ObjectValueType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ObjectFieldSchema"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ObjectFieldSchemaPropertiesProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.ObjectFieldSchemaPropertiesProperty.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ObjectFieldSchemaType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ObjectValueType>(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ObjectFieldSchemaPropertiesProperty>("properties", Properties);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ObjectFieldSchemaType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ObjectValueType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

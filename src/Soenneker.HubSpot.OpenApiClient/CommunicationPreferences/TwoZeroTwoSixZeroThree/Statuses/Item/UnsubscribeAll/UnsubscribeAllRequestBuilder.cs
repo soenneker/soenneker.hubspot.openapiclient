@@ -127,7 +127,7 @@ namespace Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.TwoZeroTwoSix
             public long? BusinessUnitId { get; set; }
             /// <summary>The communication channel from which to unsubscribe the subscriber. This is a required parameter and must be &apos;EMAIL&apos;.</summary>
             [QueryParameter("channel")]
-            public global::Soenneker.HubSpot.OpenApiClient.Models.CommunicationPreferencesGetCommunicationPreferences202603StatusesSubscriberIdStringUnsubscribeAllChannelParameter? Channel { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.EmailChannel? Channel { get; set; }
             /// <summary>A boolean indicating whether to include detailed information in the response. Defaults to false.</summary>
             [QueryParameter("verbose")]
             public bool? Verbose { get; set; }
@@ -143,7 +143,7 @@ namespace Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.TwoZeroTwoSix
             public long? BusinessUnitId { get; set; }
             /// <summary>The communication channel to unsubscribe from. Must be &apos;EMAIL&apos;.</summary>
             [QueryParameter("channel")]
-            public global::Soenneker.HubSpot.OpenApiClient.Models.CommunicationPreferencesPostCommunicationPreferences202603StatusesSubscriberIdStringUnsubscribeAllChannelParameter? Channel { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.EmailChannel? Channel { get; set; }
             /// <summary>A boolean indicating whether to include detailed information in the response. Defaults to false.</summary>
             [QueryParameter("verbose")]
             public bool? Verbose { get; set; }

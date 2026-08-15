@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObject ChirpAiContextObject { get; set; }
 #endif
         /// <summary>Indicates the source of the request, with the default value being &apos;STANDALONE&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.StandaloneRequestContextSource? Source { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.StandaloneSource? Source { get; set; }
         /// <summary>A unique identifier for tracking the trajectory of the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -58,7 +58,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "chirpAiContextObject", n => { ChirpAiContextObject = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObject>(global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObject.CreateFromDiscriminatorValue); } },
-                { "source", n => { Source = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.StandaloneRequestContextSource>(); } },
+                { "source", n => { Source = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.StandaloneSource>(); } },
                 { "trajectoryId", n => { TrajectoryId = n.GetStringValue(); } },
             };
         }
@@ -70,7 +70,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObject>("chirpAiContextObject", ChirpAiContextObject);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.StandaloneRequestContextSource>("source", Source);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.StandaloneSource>("source", Source);
             writer.WriteStringValue("trajectoryId", TrajectoryId);
             writer.WriteAdditionalData(AdditionalData);
         }

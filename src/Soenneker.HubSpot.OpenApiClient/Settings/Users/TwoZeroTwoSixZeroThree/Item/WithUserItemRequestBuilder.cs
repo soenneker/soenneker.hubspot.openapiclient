@@ -36,20 +36,19 @@ namespace Soenneker.HubSpot.OpenApiClient.Settings.Users.TwoZeroTwoSixZeroThree.
         /// <summary>
         /// Removes a user identified by `userId`. `userId` refers to the user&apos;s ID by default, or optionally email as specified by the `IdProperty` query param.
         /// </summary>
-        /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<Stream?> DeleteAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Settings.Users.TwoZeroTwoSixZeroThree.Item.WithUserItemRequestBuilder.WithUserItemRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task DeleteAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Settings.Users.TwoZeroTwoSixZeroThree.Item.WithUserItemRequestBuilder.WithUserItemRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<Stream> DeleteAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Settings.Users.TwoZeroTwoSixZeroThree.Item.WithUserItemRequestBuilder.WithUserItemRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task DeleteAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Settings.Users.TwoZeroTwoSixZeroThree.Item.WithUserItemRequestBuilder.WithUserItemRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, default, cancellationToken).ConfigureAwait(false);
+            await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieves a user identified by `userId`. `userId` refers to the user&apos;s ID by default, or optionally email as specified by the `IdProperty` query param.

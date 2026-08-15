@@ -82,7 +82,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.Hubdb.TwoZeroTwoSixZeroThree.Table
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Update an existing HubDB table. You can use this endpoint to add or remove columns to the table as well as restore an archived table. Tables updated using the endpoint will only modify the draft verion of the table. Use the `/publish` endpoint to push all the changes to the published version. To restore a table, include the query parameter `archived=true` and `\&quot;archived\&quot;: false` in the json body.**Note:** You need to include all the columns in the input when you are adding/removing/updating a column. If you do not include an already existing column in the request, it will be deleted.&quot;
+        /// Update an existing HubDB table. You can use this endpoint to add or remove columns to the table as well as restore an archived table. Tables updated using the endpoint will only modify the draft verion of the table. Use the `/publish` endpoint to push all the changes to the published version. To restore a table, include the query parameter `archived=true` and `&quot;archived&quot;: false` in the json body.**Note:** You need to include all the columns in the input when you are adding/removing/updating a column. If you do not include an already existing column in the request, it will be deleted.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3"/></returns>
         /// <param name="body">The request body</param>
@@ -121,7 +121,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.Hubdb.TwoZeroTwoSixZeroThree.Table
             return requestInfo;
         }
         /// <summary>
-        /// &quot;Update an existing HubDB table. You can use this endpoint to add or remove columns to the table as well as restore an archived table. Tables updated using the endpoint will only modify the draft verion of the table. Use the `/publish` endpoint to push all the changes to the published version. To restore a table, include the query parameter `archived=true` and `\&quot;archived\&quot;: false` in the json body.**Note:** You need to include all the columns in the input when you are adding/removing/updating a column. If you do not include an already existing column in the request, it will be deleted.&quot;
+        /// Update an existing HubDB table. You can use this endpoint to add or remove columns to the table as well as restore an archived table. Tables updated using the endpoint will only modify the draft verion of the table. Use the `/publish` endpoint to push all the changes to the published version. To restore a table, include the query parameter `archived=true` and `&quot;archived&quot;: false` in the json body.**Note:** You need to include all the columns in the input when you are adding/removing/updating a column. If you do not include an already existing column in the request, it will be deleted.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -168,7 +168,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.Hubdb.TwoZeroTwoSixZeroThree.Table
             public bool? IsGetLocalizedSchema { get; set; }
         }
         /// <summary>
-        /// &quot;Update an existing HubDB table. You can use this endpoint to add or remove columns to the table as well as restore an archived table. Tables updated using the endpoint will only modify the draft verion of the table. Use the `/publish` endpoint to push all the changes to the published version. To restore a table, include the query parameter `archived=true` and `\&quot;archived\&quot;: false` in the json body.**Note:** You need to include all the columns in the input when you are adding/removing/updating a column. If you do not include an already existing column in the request, it will be deleted.&quot;
+        /// Update an existing HubDB table. You can use this endpoint to add or remove columns to the table as well as restore an archived table. Tables updated using the endpoint will only modify the draft verion of the table. Use the `/publish` endpoint to push all the changes to the published version. To restore a table, include the query parameter `archived=true` and `&quot;archived&quot;: false` in the json body.**Note:** You need to include all the columns in the input when you are adding/removing/updating a column. If you do not include an already existing column in the request, it will be deleted.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class DraftRequestBuilderPatchQueryParameters 

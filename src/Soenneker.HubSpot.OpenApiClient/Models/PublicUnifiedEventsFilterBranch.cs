@@ -47,7 +47,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string FilterBranchOperator { get; set; }
 #endif
         /// <summary>The type of the filter branch (UNIFIED_EVENTS).</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilterBranchFilterBranchType? FilterBranchType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.UnifiedEventsFilterBranchType? FilterBranchType { get; set; }
         /// <summary>The filters property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -94,7 +94,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "coalescingRefineBy", n => { CoalescingRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilterBranchCoalescingRefineBy>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilterBranchCoalescingRefineBy.CreateFromDiscriminatorValue); } },
                 { "eventTypeId", n => { EventTypeId = n.GetStringValue(); } },
                 { "filterBranchOperator", n => { FilterBranchOperator = n.GetStringValue(); } },
-                { "filterBranchType", n => { FilterBranchType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilterBranchFilterBranchType>(); } },
+                { "filterBranchType", n => { FilterBranchType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.UnifiedEventsFilterBranchType>(); } },
                 { "filterBranches", n => { FilterBranches = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilterBranchFilterBranchesItem>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilterBranchFilterBranchesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "filters", n => { Filters = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilterBranchFiltersItem>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilterBranchFiltersItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilterBranchOperator>(); } },
@@ -112,7 +112,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("eventTypeId", EventTypeId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilterBranchFilterBranchesItem>("filterBranches", FilterBranches);
             writer.WriteStringValue("filterBranchOperator", FilterBranchOperator);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilterBranchFilterBranchType>("filterBranchType", FilterBranchType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.UnifiedEventsFilterBranchType>("filterBranchType", FilterBranchType);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilterBranchFiltersItem>("filters", Filters);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilterBranchOperator>("operator", Operator);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilterBranchPruningRefineBy>("pruningRefineBy", PruningRefineBy);

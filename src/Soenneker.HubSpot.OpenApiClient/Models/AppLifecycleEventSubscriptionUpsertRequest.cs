@@ -31,7 +31,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public List<string> Properties { get; set; }
 #endif
         /// <summary>The subscriptionType property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AppLifecycleEventSubscriptionUpsertRequestSubscriptionType? SubscriptionType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AppLifecycleEventSubscriptionType? SubscriptionType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.AppLifecycleEventSubscriptionUpsertRequest"/> and sets the default values.
         /// </summary>
@@ -59,7 +59,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "eventTypeId", n => { EventTypeId = n.GetStringValue(); } },
                 { "properties", n => { Properties = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "subscriptionType", n => { SubscriptionType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AppLifecycleEventSubscriptionUpsertRequestSubscriptionType>(); } },
+                { "subscriptionType", n => { SubscriptionType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AppLifecycleEventSubscriptionType>(); } },
             };
         }
         /// <summary>
@@ -71,7 +71,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("eventTypeId", EventTypeId);
             writer.WriteCollectionOfPrimitiveValues<string>("properties", Properties);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AppLifecycleEventSubscriptionUpsertRequestSubscriptionType>("subscriptionType", SubscriptionType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AppLifecycleEventSubscriptionType>("subscriptionType", SubscriptionType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

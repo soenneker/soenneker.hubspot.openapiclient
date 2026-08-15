@@ -733,7 +733,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.MoreThanInputsItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
+            var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.HubSpot.OpenApiClient.Models.MoreThanInputsItem();
             if("AbsoluteValue".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {

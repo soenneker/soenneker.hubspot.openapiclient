@@ -64,7 +64,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ObjectTypeId { get; set; }
 #endif
-        /// <summary>&quot;The processing type of the list. One of: `SNAPSHOT`, `MANUAL`, or `DYNAMIC`.&quot;</summary>
+        /// <summary>The processing type of the list. One of: `SNAPSHOT`, `MANUAL`, or `DYNAMIC`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ProcessingType { get; set; }

@@ -95,7 +95,7 @@ namespace Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.TwoZeroTwoSix
             public long? BusinessUnitId { get; set; }
             /// <summary>The communication channel to filter the subscription statuses. Must be &apos;EMAIL&apos;.</summary>
             [QueryParameter("channel")]
-            public global::Soenneker.HubSpot.OpenApiClient.Models.CommunicationPreferencesPostCommunicationPreferences202603StatusesBatchReadChannelParameter? Channel { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.EmailChannel? Channel { get; set; }
         }
     }
 }

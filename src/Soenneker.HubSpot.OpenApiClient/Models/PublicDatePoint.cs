@@ -27,7 +27,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The second component of the time.</summary>
         public int? Second { get; set; }
         /// <summary>Specifies the type of time (DATE).</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicDatePointTimeType? TimeType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.DateTimeType? TimeType { get; set; }
         /// <summary>The source of the time zone information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -77,7 +77,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "minute", n => { Minute = n.GetIntValue(); } },
                 { "month", n => { Month = n.GetIntValue(); } },
                 { "second", n => { Second = n.GetIntValue(); } },
-                { "timeType", n => { TimeType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicDatePointTimeType>(); } },
+                { "timeType", n => { TimeType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DateTimeType>(); } },
                 { "timezoneSource", n => { TimezoneSource = n.GetStringValue(); } },
                 { "year", n => { Year = n.GetIntValue(); } },
                 { "zoneId", n => { ZoneId = n.GetStringValue(); } },
@@ -96,7 +96,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteIntValue("minute", Minute);
             writer.WriteIntValue("month", Month);
             writer.WriteIntValue("second", Second);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicDatePointTimeType>("timeType", TimeType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DateTimeType>("timeType", TimeType);
             writer.WriteStringValue("timezoneSource", TimezoneSource);
             writer.WriteIntValue("year", Year);
             writer.WriteStringValue("zoneId", ZoneId);

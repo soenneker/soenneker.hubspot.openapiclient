@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public global::Soenneker.HubSpot.OpenApiClient.Models.ArrayFieldSchemaItems Items { get; set; }
 #endif
         /// <summary>Specifies that the field is of type &apos;ARRAY&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ArrayFieldSchemaType? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ArrayType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ArrayFieldSchema"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "items", n => { Items = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ArrayFieldSchemaItems>(global::Soenneker.HubSpot.OpenApiClient.Models.ArrayFieldSchemaItems.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ArrayFieldSchemaType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ArrayType>(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ArrayFieldSchemaItems>("items", Items);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ArrayFieldSchemaType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ArrayType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

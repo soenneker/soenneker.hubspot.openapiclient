@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Defines the type of filter (SURVEY_MONKEY_VALUE).</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSurveyMonkeyValueFilterFilterType? FilterType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.SurveyMonkeyValueFilterType? FilterType { get; set; }
         /// <summary>Defines the operation to be applied within the filter (HAS_ANSWERED_SURVEY_QUESTION_WITH_VALUE).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -89,7 +89,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSurveyMonkeyValueFilterFilterType>(); } },
+                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SurveyMonkeyValueFilterType>(); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
                 { "surveyAnswerColId", n => { SurveyAnswerColId = n.GetStringValue(); } },
                 { "surveyAnswerRowId", n => { SurveyAnswerRowId = n.GetStringValue(); } },
@@ -105,7 +105,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSurveyMonkeyValueFilterFilterType>("filterType", FilterType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SurveyMonkeyValueFilterType>("filterType", FilterType);
             writer.WriteStringValue("operator", Operator);
             writer.WriteStringValue("surveyAnswerColId", SurveyAnswerColId);
             writer.WriteStringValue("surveyAnswerRowId", SurveyAnswerRowId);

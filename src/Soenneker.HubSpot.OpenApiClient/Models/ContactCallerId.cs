@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Specifies the type of caller ID, with the default value being CONTACT.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ContactCallerIdCallerIdType? CallerIdType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ContactCallerIdType? CallerIdType { get; set; }
         /// <summary>The email address of the contact.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -73,7 +73,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "callerIdType", n => { CallerIdType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ContactCallerIdCallerIdType>(); } },
+                { "callerIdType", n => { CallerIdType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ContactCallerIdType>(); } },
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "firstName", n => { FirstName = n.GetStringValue(); } },
                 { "lastName", n => { LastName = n.GetStringValue(); } },
@@ -87,7 +87,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ContactCallerIdCallerIdType>("callerIdType", CallerIdType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ContactCallerIdType>("callerIdType", CallerIdType);
             writer.WriteStringValue("email", Email);
             writer.WriteStringValue("firstName", FirstName);
             writer.WriteStringValue("lastName", LastName);

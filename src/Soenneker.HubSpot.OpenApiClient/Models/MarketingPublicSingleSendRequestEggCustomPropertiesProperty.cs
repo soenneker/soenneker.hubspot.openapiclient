@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;The customProperties field is a map of property values. Each property value contains a name and value property. Each property will be visible in the template under {{ custom.NAME }}.Note: Custom properties do not currently support arrays. To provide a listing in an email, one workaround is to build an HTML list (either with tables or ul) and specify it as a custom property.&quot;
+    /// The customProperties field is a map of property values. Each property value contains a name and value property. Each property will be visible in the template under {{ custom.NAME }}.Note: Custom properties do not currently support arrays. To provide a listing in an email, one workaround is to build an HTML list (either with tables or ul) and specify it as a custom property.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class MarketingPublicSingleSendRequestEggCustomPropertiesProperty : IAdditionalDataHolder, IParsable

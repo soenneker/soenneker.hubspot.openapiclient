@@ -30,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Label { get; set; }
 #endif
-        /// <summary>&quot;A list of available options for the property if it is an enumeration. NOTE: This field is only applicable for enumerated properties.&quot;</summary>
+        /// <summary>A list of available options for the property if it is an enumeration. NOTE: This field is only applicable for enumerated properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.EventsOptionInput>? Options { get; set; }

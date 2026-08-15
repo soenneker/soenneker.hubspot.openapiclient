@@ -25,7 +25,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.Campaigns.TwoZeroTwoSixZeroT
             get => new global::Soenneker.HubSpot.OpenApiClient.Marketing.Campaigns.TwoZeroTwoSixZeroThree.Batch.BatchRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.marketing.campaigns.TwoZeroTwoSixZeroThree.item collection</summary>
-        /// <param name="position">&quot;The UUID of the campaign, requiredExample: 9dbec438-53e2-4b28-8c0f-38f56574a6e8&quot;</param>
+        /// <param name="position">The UUID of the campaign, requiredExample: 9dbec438-53e2-4b28-8c0f-38f56574a6e8</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Marketing.Campaigns.TwoZeroTwoSixZeroThree.Item.WithCampaignGuItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Marketing.Campaigns.TwoZeroTwoSixZeroThree.Item.WithCampaignGuItemRequestBuilder this[string position]
         {

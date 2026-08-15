@@ -42,20 +42,19 @@ namespace Soenneker.HubSpot.OpenApiClient.CrmObjectSchemas.TwoZeroTwoSixZeroThre
         /// <summary>
         /// Remove a custom object schema from the account using its object type ID or fully qualified name.
         /// </summary>
-        /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<Stream?> DeleteAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.CrmObjectSchemas.TwoZeroTwoSixZeroThree.Schemas.Item.WithObjectTypeItemRequestBuilder.WithObjectTypeItemRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task DeleteAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.CrmObjectSchemas.TwoZeroTwoSixZeroThree.Schemas.Item.WithObjectTypeItemRequestBuilder.WithObjectTypeItemRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<Stream> DeleteAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.CrmObjectSchemas.TwoZeroTwoSixZeroThree.Schemas.Item.WithObjectTypeItemRequestBuilder.WithObjectTypeItemRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task DeleteAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.CrmObjectSchemas.TwoZeroTwoSixZeroThree.Schemas.Item.WithObjectTypeItemRequestBuilder.WithObjectTypeItemRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, default, cancellationToken).ConfigureAwait(false);
+            await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve details of a custom object schema, including its properties and associations, using the object type ID or fully qualified name.

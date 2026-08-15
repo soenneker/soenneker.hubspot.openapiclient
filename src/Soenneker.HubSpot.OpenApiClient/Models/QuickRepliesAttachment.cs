@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.QuickReply> QuickReplies { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.QuickRepliesAttachmentType? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.QuickRepliesType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.QuickRepliesAttachment"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "quickReplies", n => { QuickReplies = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.QuickReply>(global::Soenneker.HubSpot.OpenApiClient.Models.QuickReply.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.QuickRepliesAttachmentType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.QuickRepliesType>(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.QuickReply>("quickReplies", QuickReplies);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.QuickRepliesAttachmentType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.QuickRepliesType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

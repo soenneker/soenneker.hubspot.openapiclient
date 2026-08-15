@@ -40,7 +40,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>The expiresAt property</summary>
         public long? ExpiresAt { get; set; }
-        /// <summary>&quot;Extension of the file. ex: .jpg, .png, .gif, .pdf, etc.&quot;</summary>
+        /// <summary>Extension of the file. ex: .jpg, .png, .gif, .pdf, etc.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Extension { get; set; }

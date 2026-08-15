@@ -30,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string CurrencyPropertyName { get; set; }
 #endif
-        /// <summary>&quot;Indicates the sensitivity level of the property, with options: highly_sensitive, non_sensitive, or sensitive.&quot;</summary>
+        /// <summary>Indicates the sensitivity level of the property, with options: highly_sensitive, non_sensitive, or sensitive.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreateDataSensitivity? DataSensitivity { get; set; }
         /// <summary>A description of the property that will be shown as help text in HubSpot.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

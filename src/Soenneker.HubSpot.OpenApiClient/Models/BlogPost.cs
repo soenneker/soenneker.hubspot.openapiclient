@@ -12,7 +12,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     public partial class BlogPost : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>&quot;The status of the AB test associated with this blog post, if applicableAvailable options: automated_loser_variant, automated_master, automated_variant, loser_variant, mab_master, mab_variant, master, variant&quot;</summary>
+        /// <summary>The status of the AB test associated with this blog post, if applicableAvailable options: automated_loser_variant, automated_master, automated_variant, loser_variant, mab_master, mab_variant, master, variant</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.BlogPostAbStatus? AbStatus { get; set; }
         /// <summary>The ID of the AB test associated with this page, if applicable</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

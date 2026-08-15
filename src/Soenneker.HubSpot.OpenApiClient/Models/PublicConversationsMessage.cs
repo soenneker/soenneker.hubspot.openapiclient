@@ -135,7 +135,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The truncationStatus property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessageTruncationStatus? TruncationStatus { get; set; }
         /// <summary>The type property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessageType? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.MessageType? Type { get; set; }
         /// <summary>The updatedAt property</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>
@@ -181,7 +181,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "subject", n => { Subject = n.GetStringValue(); } },
                 { "text", n => { Text = n.GetStringValue(); } },
                 { "truncationStatus", n => { TruncationStatus = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessageTruncationStatus>(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessageType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MessageType>(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
             };
         }
@@ -210,7 +210,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("subject", Subject);
             writer.WriteStringValue("text", Text);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessageTruncationStatus>("truncationStatus", TruncationStatus);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessageType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MessageType>("type", Type);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             writer.WriteAdditionalData(AdditionalData);
         }

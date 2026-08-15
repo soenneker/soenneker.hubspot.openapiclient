@@ -6,6 +6,7 @@ using Microsoft.Kiota.Abstractions;
 using Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Item.Settings.EventVisibility;
 using Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Item.Settings.ObjectDefinitions;
 using Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Item.Settings.OembedDomains;
+using Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Item.Settings.Register;
 using Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Item.Settings.VideoAssociationDefinition;
 using Soenneker.HubSpot.OpenApiClient.Models;
 using System.Collections.Generic;
@@ -35,6 +36,11 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Ite
         public global::Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Item.Settings.OembedDomains.OembedDomainsRequestBuilder OembedDomains
         {
             get => new global::Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Item.Settings.OembedDomains.OembedDomainsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The register property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Item.Settings.Register.RegisterRequestBuilder Register
+        {
+            get => new global::Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Item.Settings.Register.RegisterRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The videoAssociationDefinition property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Item.Settings.VideoAssociationDefinition.VideoAssociationDefinitionRequestBuilder VideoAssociationDefinition

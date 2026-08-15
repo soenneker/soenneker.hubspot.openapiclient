@@ -110,7 +110,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string SessionId { get; set; }
 #endif
-        /// <summary>&quot;The percent of the media that the user consumed. Providers may calculate this differently depending on how they consider repeated views of the same portion of media. For this reason, the API will not attempt to validate totalPercentWatched against the attention span information for the event. If it is missing, HubSpot will calculate this from the attention span map as follows: (number of spans with a value of 1 or more)/(Total number of spans).&quot;</summary>
+        /// <summary>The percent of the media that the user consumed. Providers may calculate this differently depending on how they consider repeated views of the same portion of media. For this reason, the API will not attempt to validate totalPercentWatched against the attention span information for the event. If it is missing, HubSpot will calculate this from the attention span map as follows: (number of spans with a value of 1 or more)/(Total number of spans).</summary>
         public double? TotalPercentPlayed { get; set; }
         /// <summary>The seconds that a user spent consuming the media. The media bridge calculates this as `totalPercentPlayed`*`mediaDuration`. If a provider would like this to be calculated differently, they can provide the pre-calculated value when they create the event.</summary>
         public int? TotalSecondsPlayed { get; set; }

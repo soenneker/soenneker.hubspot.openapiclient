@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicFormSubmissionFilterCoalescingRefineBy CoalescingRefineBy { get; set; }
 #endif
         /// <summary>Indicates the type of filter (FORM_SUBMISSION).</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicFormSubmissionFilterFilterType? FilterType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.FormSubmissionFilterType? FilterType { get; set; }
         /// <summary>The ID of the form used in the filter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -68,7 +68,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "coalescingRefineBy", n => { CoalescingRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicFormSubmissionFilterCoalescingRefineBy>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicFormSubmissionFilterCoalescingRefineBy.CreateFromDiscriminatorValue); } },
-                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicFormSubmissionFilterFilterType>(); } },
+                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FormSubmissionFilterType>(); } },
                 { "formId", n => { FormId = n.GetStringValue(); } },
                 { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicFormSubmissionFilterOperator>(); } },
                 { "pruningRefineBy", n => { PruningRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicFormSubmissionFilterPruningRefineBy>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicFormSubmissionFilterPruningRefineBy.CreateFromDiscriminatorValue); } },
@@ -82,7 +82,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicFormSubmissionFilterCoalescingRefineBy>("coalescingRefineBy", CoalescingRefineBy);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicFormSubmissionFilterFilterType>("filterType", FilterType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FormSubmissionFilterType>("filterType", FilterType);
             writer.WriteStringValue("formId", FormId);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicFormSubmissionFilterOperator>("operator", Operator);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicFormSubmissionFilterPruningRefineBy>("pruningRefineBy", PruningRefineBy);

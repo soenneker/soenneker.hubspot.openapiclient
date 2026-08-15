@@ -25,7 +25,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObject ChirpAiContextObject { get; set; }
 #endif
         /// <summary>Indicates the source of the request, with the default value being &apos;AGENTS&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AgentRequestContextSource? Source { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AgentsSource? Source { get; set; }
         /// <summary>The unique identifier for the trajectory associated with the agent request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -61,7 +61,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "agentId", n => { AgentId = n.GetLongValue(); } },
                 { "chirpAiContextObject", n => { ChirpAiContextObject = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObject>(global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObject.CreateFromDiscriminatorValue); } },
-                { "source", n => { Source = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AgentRequestContextSource>(); } },
+                { "source", n => { Source = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AgentsSource>(); } },
                 { "trajectoryId", n => { TrajectoryId = n.GetStringValue(); } },
             };
         }
@@ -74,7 +74,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteLongValue("agentId", AgentId);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObject>("chirpAiContextObject", ChirpAiContextObject);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AgentRequestContextSource>("source", Source);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AgentsSource>("source", Source);
             writer.WriteStringValue("trajectoryId", TrajectoryId);
             writer.WriteAdditionalData(AdditionalData);
         }

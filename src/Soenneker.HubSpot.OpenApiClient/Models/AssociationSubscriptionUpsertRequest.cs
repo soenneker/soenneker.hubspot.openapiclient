@@ -49,7 +49,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The portalId property</summary>
         public long? PortalId { get; set; }
         /// <summary>The subscriptionType property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AssociationSubscriptionUpsertRequestSubscriptionType? SubscriptionType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AssociationSubscriptionType? SubscriptionType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.AssociationSubscriptionUpsertRequest"/> and sets the default values.
         /// </summary>
@@ -80,7 +80,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "objectIds", n => { ObjectIds = n.GetCollectionOfPrimitiveValues<long?>()?.AsList(); } },
                 { "objectTypeId", n => { ObjectTypeId = n.GetStringValue(); } },
                 { "portalId", n => { PortalId = n.GetLongValue(); } },
-                { "subscriptionType", n => { SubscriptionType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AssociationSubscriptionUpsertRequestSubscriptionType>(); } },
+                { "subscriptionType", n => { SubscriptionType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AssociationSubscriptionType>(); } },
             };
         }
         /// <summary>
@@ -95,7 +95,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<long?>("objectIds", ObjectIds);
             writer.WriteStringValue("objectTypeId", ObjectTypeId);
             writer.WriteLongValue("portalId", PortalId);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AssociationSubscriptionUpsertRequestSubscriptionType>("subscriptionType", SubscriptionType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AssociationSubscriptionType>("subscriptionType", SubscriptionType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

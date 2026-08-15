@@ -36,7 +36,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public bool? IsTrailingSlashOptional { get; set; }
         /// <summary>Used to prioritize URL redirection. If a given URL matches more than one redirect, the one with the **lower** precedence will be used.</summary>
         public int? Precedence { get; set; }
-        /// <summary>&quot;The type of redirect to create. Options include: 301 (permanent), 302 (temporary), or 305 (proxy). Find more details [here](https://knowledge.hubspot.com/cos-general/how-to-redirect-a-hubspot-page).&quot;</summary>
+        /// <summary>The type of redirect to create. Options include: 301 (permanent), 302 (temporary), or 305 (proxy). Find more details [here](https://knowledge.hubspot.com/cos-general/how-to-redirect-a-hubspot-page).</summary>
         public int? RedirectStyle { get; set; }
         /// <summary>The target incoming URL, path, or pattern to match for redirection.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

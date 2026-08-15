@@ -36,7 +36,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>The timestamp indicating when the batch operation started, in date-time format.</summary>
         public DateTimeOffset? StartedAt { get; set; }
-        /// <summary>&quot;The current status of the batch operation, with possible values: CANCELED, COMPLETE, PENDING, PROCESSING.&quot;</summary>
+        /// <summary>The current status of the batch operation, with possible values: CANCELED, COMPLETE, PENDING, PROCESSING.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseDealToDealSplitsStatus? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseDealToDealSplits"/> and sets the default values.

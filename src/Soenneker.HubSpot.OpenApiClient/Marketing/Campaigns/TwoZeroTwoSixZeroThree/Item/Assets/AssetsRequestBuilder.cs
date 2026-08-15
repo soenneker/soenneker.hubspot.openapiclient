@@ -16,7 +16,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.Campaigns.TwoZeroTwoSixZeroT
     public partial class AssetsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.marketing.campaigns.TwoZeroTwoSixZeroThree.item.assets.item collection</summary>
-        /// <param name="position">&quot;The type of asset to fetch, requiredExample: MARKETING_EVENT&quot;</param>
+        /// <param name="position">The type of asset to fetch, requiredExample: MARKETING_EVENT</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Marketing.Campaigns.TwoZeroTwoSixZeroThree.Item.Assets.Item.WithAssetTypeItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Marketing.Campaigns.TwoZeroTwoSixZeroThree.Item.Assets.Item.WithAssetTypeItemRequestBuilder this[string position]
         {

@@ -45,7 +45,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.RangedTimeOperationUpperBoundTimePoint CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
+            var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.HubSpot.OpenApiClient.Models.RangedTimeOperationUpperBoundTimePoint();
             if("DatePoint".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {

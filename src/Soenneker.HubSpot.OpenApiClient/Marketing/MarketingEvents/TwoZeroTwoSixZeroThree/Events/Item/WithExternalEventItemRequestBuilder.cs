@@ -31,7 +31,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.MarketingEvents.TwoZeroTwoSi
             get => new global::Soenneker.HubSpot.OpenApiClient.Marketing.MarketingEvents.TwoZeroTwoSixZeroThree.Events.Item.Complete.CompleteRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.marketing.marketingEvents.TwoZeroTwoSixZeroThree.events.item.item collection</summary>
-        /// <param name="position">&quot;The new subscriber state for the HubSpot contacts and the specified marketing event. For example: &apos;register&apos;, &apos;attend&apos; or &apos;cancel&apos;.&quot;</param>
+        /// <param name="position">The new subscriber state for the HubSpot contacts and the specified marketing event. For example: &apos;register&apos;, &apos;attend&apos; or &apos;cancel&apos;.</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Marketing.MarketingEvents.TwoZeroTwoSixZeroThree.Events.Item.Item.WithSubscriberStateItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Marketing.MarketingEvents.TwoZeroTwoSixZeroThree.Events.Item.Item.WithSubscriberStateItemRequestBuilder this[string position]
         {
@@ -61,20 +61,19 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.MarketingEvents.TwoZeroTwoSi
         /// <summary>
         /// Deletes the existing Marketing Event with the specified externalAccountId, externalEventId, if it exists.Only Marketing Events created by the same app can be deleted.
         /// </summary>
-        /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<Stream?> DeleteAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.MarketingEvents.TwoZeroTwoSixZeroThree.Events.Item.WithExternalEventItemRequestBuilder.WithExternalEventItemRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task DeleteAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.MarketingEvents.TwoZeroTwoSixZeroThree.Events.Item.WithExternalEventItemRequestBuilder.WithExternalEventItemRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<Stream> DeleteAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.MarketingEvents.TwoZeroTwoSixZeroThree.Events.Item.WithExternalEventItemRequestBuilder.WithExternalEventItemRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task DeleteAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Marketing.MarketingEvents.TwoZeroTwoSixZeroThree.Events.Item.WithExternalEventItemRequestBuilder.WithExternalEventItemRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, default, cancellationToken).ConfigureAwait(false);
+            await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Returns the details of a Marketing Event with the specified externalAccountId, externalEventId, if it exists.Only Marketing Events created by the same app making the request can be retrieved.

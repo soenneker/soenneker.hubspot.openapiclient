@@ -17,7 +17,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The ID of the business unit associated with the subscription.</summary>
         public long? BusinessUnitId { get; set; }
         /// <summary>The type of communication channel, with &apos;EMAIL&apos; as the only supported option.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusChannel? Channel { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailChannel? Channel { get; set; }
         /// <summary>The legal basis for communication, with options including &apos;LEGITIMATE_INTEREST_PQL&apos;, &apos;LEGITIMATE_INTEREST_CLIENT&apos;, &apos;PERFORMANCE_OF_CONTRACT&apos;, &apos;CONSENT_WITH_NOTICE&apos;, &apos;NON_GDPR&apos;, &apos;PROCESS_AND_STORE&apos;, and &apos;LEGITIMATE_INTEREST_OTHER&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusLegalBasis? LegalBasis { get; set; }
         /// <summary>An explanation for the legal basis used for communication.</summary>
@@ -86,7 +86,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "businessUnitId", n => { BusinessUnitId = n.GetLongValue(); } },
-                { "channel", n => { Channel = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusChannel>(); } },
+                { "channel", n => { Channel = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailChannel>(); } },
                 { "legalBasis", n => { LegalBasis = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusLegalBasis>(); } },
                 { "legalBasisExplanation", n => { LegalBasisExplanation = n.GetStringValue(); } },
                 { "setStatusSuccessReason", n => { SetStatusSuccessReason = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusSetStatusSuccessReason>(); } },
@@ -106,7 +106,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteLongValue("businessUnitId", BusinessUnitId);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusChannel>("channel", Channel);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailChannel>("channel", Channel);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusLegalBasis>("legalBasis", LegalBasis);
             writer.WriteStringValue("legalBasisExplanation", LegalBasisExplanation);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusSetStatusSuccessReason>("setStatusSuccessReason", SetStatusSuccessReason);

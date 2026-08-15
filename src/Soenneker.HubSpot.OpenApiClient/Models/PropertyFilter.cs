@@ -24,8 +24,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>The filterInsightsId property</summary>
         public int? FilterInsightsId { get; set; }
-        /// <summary>The filterType property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyFilterFilterType? FilterType { get; set; }
+        /// <summary>Indicates that the filter (PROPERTY).</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyFilterType? FilterType { get; set; }
         /// <summary>The frameworkFilterId property</summary>
         public long? FrameworkFilterId { get; set; }
         /// <summary>The operation property</summary>
@@ -71,7 +71,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "context", n => { Context = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyFilterContext>(global::Soenneker.HubSpot.OpenApiClient.Models.PropertyFilterContext.CreateFromDiscriminatorValue); } },
                 { "filterInsightsId", n => { FilterInsightsId = n.GetIntValue(); } },
-                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyFilterFilterType>(); } },
+                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyFilterType>(); } },
                 { "frameworkFilterId", n => { FrameworkFilterId = n.GetLongValue(); } },
                 { "operation", n => { Operation = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyFilterOperation>(global::Soenneker.HubSpot.OpenApiClient.Models.PropertyFilterOperation.CreateFromDiscriminatorValue); } },
                 { "property", n => { Property = n.GetStringValue(); } },
@@ -86,7 +86,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyFilterContext>("context", Context);
             writer.WriteIntValue("filterInsightsId", FilterInsightsId);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyFilterFilterType>("filterType", FilterType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyFilterType>("filterType", FilterType);
             writer.WriteLongValue("frameworkFilterId", FrameworkFilterId);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyFilterOperation>("operation", Operation);
             writer.WriteStringValue("property", Property);

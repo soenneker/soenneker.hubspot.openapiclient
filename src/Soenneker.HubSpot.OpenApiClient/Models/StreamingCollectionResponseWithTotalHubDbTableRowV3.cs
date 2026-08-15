@@ -33,7 +33,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The total number of rows available in the collection.</summary>
         public int? Total { get; set; }
         /// <summary>Indicates the type of response, which is &apos;STREAMING&apos; by default.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.StreamingCollectionResponseWithTotalHubDbTableRowV3Type? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.StreamingType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.StreamingCollectionResponseWithTotalHubDbTableRowV3"/> and sets the default values.
         /// </summary>
@@ -62,7 +62,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "paging", n => { Paging = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CmsPaging4>(global::Soenneker.HubSpot.OpenApiClient.Models.CmsPaging4.CreateFromDiscriminatorValue); } },
                 { "results", n => { Results = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "total", n => { Total = n.GetIntValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.StreamingCollectionResponseWithTotalHubDbTableRowV3Type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.StreamingType>(); } },
             };
         }
         /// <summary>
@@ -75,7 +75,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CmsPaging4>("paging", Paging);
             writer.WriteCollectionOfPrimitiveValues<string>("results", Results);
             writer.WriteIntValue("total", Total);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.StreamingCollectionResponseWithTotalHubDbTableRowV3Type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.StreamingType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

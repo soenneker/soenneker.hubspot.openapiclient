@@ -24,7 +24,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public int? Minute { get; set; }
         /// <summary>The month property</summary>
         public int? Month { get; set; }
-        /// <summary>The referenceType property</summary>
+        /// <summary>Indicates the type of reference (FISCAL_QUARTER).</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.FiscalQuarterReferenceType? ReferenceType { get; set; }
         /// <summary>The second property</summary>
         public int? Second { get; set; }

@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public global::Soenneker.HubSpot.OpenApiClient.Models.SocialMetadata SocialMetadata { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.SocialMetadataIntegrationAttachmentType? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.SocialMediaMetadataType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.SocialMetadataIntegrationAttachment"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "socialMetadata", n => { SocialMetadata = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.SocialMetadata>(global::Soenneker.HubSpot.OpenApiClient.Models.SocialMetadata.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SocialMetadataIntegrationAttachmentType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SocialMediaMetadataType>(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.SocialMetadata>("socialMetadata", SocialMetadata);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SocialMetadataIntegrationAttachmentType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SocialMediaMetadataType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

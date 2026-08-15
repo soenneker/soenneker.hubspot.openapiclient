@@ -24,7 +24,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Label { get; set; }
 #endif
-        /// <summary>&quot;A JSON object containing properties that are not present on all object pipelines.For `deals` pipelines, the `probability` field is required (`{ \&quot;probability\&quot;: 0.5 }`), and represents the likelihood a deal will close. Possible values are between 0.0 and 1.0 in increments of 0.1.For `tickets` pipelines, the `ticketState` field is optional (`{ \&quot;ticketState\&quot;: \&quot;OPEN\&quot; }`), and represents whether the ticket remains open or has been closed by a member of your Support team. Possible values are `OPEN` or `CLOSED`.&quot;</summary>
+        /// <summary>A JSON object containing properties that are not present on all object pipelines.For `deals` pipelines, the `probability` field is required (`{ &quot;probability&quot;: 0.5 }`), and represents the likelihood a deal will close. Possible values are between 0.0 and 1.0 in increments of 0.1.For `tickets` pipelines, the `ticketState` field is optional (`{ &quot;ticketState&quot;: &quot;OPEN&quot; }`), and represents whether the ticket remains open or has been closed by a member of your Support team. Possible values are `OPEN` or `CLOSED`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageInputMetadataProperty? Metadata { get; set; }

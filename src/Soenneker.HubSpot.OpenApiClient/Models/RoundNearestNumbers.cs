@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.RoundNearestNumbersInputsItem> Inputs { get; set; }
 #endif
         /// <summary>The operator property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.RoundNearestNumbersOperator? Operator { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.RoundNearestOperator? Operator { get; set; }
         /// <summary>The propertyName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -60,7 +60,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "inputs", n => { Inputs = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.RoundNearestNumbersInputsItem>(global::Soenneker.HubSpot.OpenApiClient.Models.RoundNearestNumbersInputsItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RoundNearestNumbersOperator>(); } },
+                { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RoundNearestOperator>(); } },
                 { "propertyName", n => { PropertyName = n.GetStringValue(); } },
                 { "value", n => { Value = n.GetDoubleValue(); } },
             };
@@ -73,7 +73,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.RoundNearestNumbersInputsItem>("inputs", Inputs);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RoundNearestNumbersOperator>("operator", Operator);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RoundNearestOperator>("operator", Operator);
             writer.WriteStringValue("propertyName", PropertyName);
             writer.WriteDoubleValue("value", Value);
             writer.WriteAdditionalData(AdditionalData);

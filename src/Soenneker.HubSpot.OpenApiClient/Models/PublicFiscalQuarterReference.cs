@@ -25,7 +25,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The month component of the fiscal quarter reference.</summary>
         public int? Month { get; set; }
         /// <summary>Indicates the type of reference (FISCAL_QUARTER).</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicFiscalQuarterReferenceReferenceType? ReferenceType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.FiscalQuarterReferenceType? ReferenceType { get; set; }
         /// <summary>The second component of the fiscal quarter reference.</summary>
         public int? Second { get; set; }
         /// <summary>
@@ -58,7 +58,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "millisecond", n => { Millisecond = n.GetIntValue(); } },
                 { "minute", n => { Minute = n.GetIntValue(); } },
                 { "month", n => { Month = n.GetIntValue(); } },
-                { "referenceType", n => { ReferenceType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicFiscalQuarterReferenceReferenceType>(); } },
+                { "referenceType", n => { ReferenceType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FiscalQuarterReferenceType>(); } },
                 { "second", n => { Second = n.GetIntValue(); } },
             };
         }
@@ -74,7 +74,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteIntValue("millisecond", Millisecond);
             writer.WriteIntValue("minute", Minute);
             writer.WriteIntValue("month", Month);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicFiscalQuarterReferenceReferenceType>("referenceType", ReferenceType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FiscalQuarterReferenceType>("referenceType", ReferenceType);
             writer.WriteIntValue("second", Second);
             writer.WriteAdditionalData(AdditionalData);
         }

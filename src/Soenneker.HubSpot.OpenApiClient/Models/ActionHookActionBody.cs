@@ -41,7 +41,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public List<string> PropertyNamesIncluded { get; set; }
 #endif
         /// <summary>The type of status.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ActionHookActionBodyType? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ActionHookType? Type { get; set; }
         /// <summary>The URL endpoint that will be called when the action is triggered.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -79,7 +79,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "httpMethod", n => { HttpMethod = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionHookActionBodyHttpMethod>(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "propertyNamesIncluded", n => { PropertyNamesIncluded = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionHookActionBodyType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionHookType>(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
         }
@@ -94,7 +94,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionHookActionBodyHttpMethod>("httpMethod", HttpMethod);
             writer.WriteStringValue("label", Label);
             writer.WriteCollectionOfPrimitiveValues<string>("propertyNamesIncluded", PropertyNamesIncluded);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionHookActionBodyType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionHookType>("type", Type);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);
         }

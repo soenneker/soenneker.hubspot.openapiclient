@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEggContactPropertiesProperty ContactProperties { get; set; }
 #endif
-        /// <summary>&quot;The customProperties field is a map of property values. Each property value contains a name and value property. Each property will be visible in the template under {{ custom.NAME }}.Note: Custom properties do not currently support arrays. To provide a listing in an email, one workaround is to build an HTML list (either with tables or ul) and specify it as a custom property.&quot;</summary>
+        /// <summary>The customProperties field is a map of property values. Each property value contains a name and value property. Each property will be visible in the template under {{ custom.NAME }}.Note: Custom properties do not currently support arrays. To provide a listing in an email, one workaround is to build an HTML list (either with tables or ul) and specify it as a custom property.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEggCustomPropertiesProperty? CustomProperties { get; set; }

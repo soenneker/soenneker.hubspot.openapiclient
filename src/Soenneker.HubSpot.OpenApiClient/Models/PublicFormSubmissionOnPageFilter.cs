@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicFormSubmissionOnPageFilterCoalescingRefineBy CoalescingRefineBy { get; set; }
 #endif
         /// <summary>Indicates the type of filter (FORM_SUBMISSION_ON_PAGE).</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicFormSubmissionOnPageFilterFilterType? FilterType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.FormSubmissionOnPageFilterType? FilterType { get; set; }
         /// <summary>The ID of the form associated with the submission filter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -76,7 +76,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "coalescingRefineBy", n => { CoalescingRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicFormSubmissionOnPageFilterCoalescingRefineBy>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicFormSubmissionOnPageFilterCoalescingRefineBy.CreateFromDiscriminatorValue); } },
-                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicFormSubmissionOnPageFilterFilterType>(); } },
+                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FormSubmissionOnPageFilterType>(); } },
                 { "formId", n => { FormId = n.GetStringValue(); } },
                 { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicFormSubmissionOnPageFilterOperator>(); } },
                 { "pageId", n => { PageId = n.GetStringValue(); } },
@@ -91,7 +91,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicFormSubmissionOnPageFilterCoalescingRefineBy>("coalescingRefineBy", CoalescingRefineBy);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicFormSubmissionOnPageFilterFilterType>("filterType", FilterType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FormSubmissionOnPageFilterType>("filterType", FilterType);
             writer.WriteStringValue("formId", FormId);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicFormSubmissionOnPageFilterOperator>("operator", Operator);
             writer.WriteStringValue("pageId", PageId);

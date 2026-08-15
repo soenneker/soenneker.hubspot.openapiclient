@@ -77,7 +77,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranchFilterBranchesItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
+            var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranchFilterBranchesItem();
             if("PublicAndFilterBranch".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {

@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>&quot;The mode in which the property is displayed. Can be: \&quot;current_value\&quot; or \&quot;all_unique_versions\&quot;.&quot;</summary>
+    /// <summary>The mode in which the property is displayed. Can be: &quot;current_value&quot; or &quot;all_unique_versions&quot;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PropertyDisplayMode
     {

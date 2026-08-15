@@ -59,7 +59,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string TokenType { get; set; }
 #endif
         /// <summary>The token_use property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AccessTokenResponseTokenUse? TokenUse { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AccessTokenTokenUse? TokenUse { get; set; }
         /// <summary>The user_id property</summary>
         public int? UserId { get; set; }
         /// <summary>
@@ -94,7 +94,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "refresh_token", n => { RefreshToken = n.GetStringValue(); } },
                 { "scopes", n => { Scopes = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "token_type", n => { TokenType = n.GetStringValue(); } },
-                { "token_use", n => { TokenUse = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AccessTokenResponseTokenUse>(); } },
+                { "token_use", n => { TokenUse = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AccessTokenTokenUse>(); } },
                 { "user_id", n => { UserId = n.GetIntValue(); } },
             };
         }
@@ -112,7 +112,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("refresh_token", RefreshToken);
             writer.WriteCollectionOfPrimitiveValues<string>("scopes", Scopes);
             writer.WriteStringValue("token_type", TokenType);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AccessTokenResponseTokenUse>("token_use", TokenUse);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AccessTokenTokenUse>("token_use", TokenUse);
             writer.WriteIntValue("user_id", UserId);
             writer.WriteAdditionalData(AdditionalData);
         }

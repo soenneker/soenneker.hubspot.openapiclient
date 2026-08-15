@@ -25,7 +25,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Timestamp to be used in refine by criteria</summary>
         public long? Timestamp { get; set; }
         /// <summary>type of refine by criteria (ABSOLUTE_COMPARATIVE)</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAbsoluteComparativeTimestampRefineByType? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteComparativeType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicAbsoluteComparativeTimestampRefineBy"/> and sets the default values.
         /// </summary>
@@ -53,7 +53,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "comparison", n => { Comparison = n.GetStringValue(); } },
                 { "timestamp", n => { Timestamp = n.GetLongValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAbsoluteComparativeTimestampRefineByType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteComparativeType>(); } },
             };
         }
         /// <summary>
@@ -65,7 +65,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("comparison", Comparison);
             writer.WriteLongValue("timestamp", Timestamp);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAbsoluteComparativeTimestampRefineByType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteComparativeType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

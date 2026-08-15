@@ -95,7 +95,7 @@ namespace Soenneker.HubSpot.OpenApiClient.CommunicationPreferences.TwoZeroTwoSix
             public long? BusinessUnitId { get; set; }
             /// <summary>The communication channel to filter the unsubscribe statuses. This parameter is required and currently supports &apos;EMAIL&apos; as a valid value.</summary>
             [QueryParameter("channel")]
-            public global::Soenneker.HubSpot.OpenApiClient.Models.CommunicationPreferencesPostCommunicationPreferences202603StatusesBatchUnsubscribeAllReadChannelParameter? Channel { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.EmailChannel? Channel { get; set; }
         }
     }
 }

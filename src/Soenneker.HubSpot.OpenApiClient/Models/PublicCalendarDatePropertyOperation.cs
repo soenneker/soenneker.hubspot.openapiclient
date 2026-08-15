@@ -19,7 +19,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Indicates whether objects with no value set for the property should be included.</summary>
         public bool? IncludeObjectsWithNoValueSet { get; set; }
         /// <summary>The type of operation, which is (CALENDAR_DATE).</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCalendarDatePropertyOperationOperationType? OperationType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CalendarDateOperationType? OperationType { get; set; }
         /// <summary>Defines the operation to be applied to the calendar date property (IN_THIS_TIME_UNIT, IN_THIS_TIME_UNIT_SO_FAR, IN_NEXT_TIME_UNIT, IN_LAST_TIME_UNIT).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -67,7 +67,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "fiscalYearStart", n => { FiscalYearStart = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCalendarDatePropertyOperationFiscalYearStart>(); } },
                 { "includeObjectsWithNoValueSet", n => { IncludeObjectsWithNoValueSet = n.GetBoolValue(); } },
-                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCalendarDatePropertyOperationOperationType>(); } },
+                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CalendarDateOperationType>(); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
                 { "timeUnit", n => { TimeUnit = n.GetStringValue(); } },
                 { "timeUnitCount", n => { TimeUnitCount = n.GetIntValue(); } },
@@ -83,7 +83,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCalendarDatePropertyOperationFiscalYearStart>("fiscalYearStart", FiscalYearStart);
             writer.WriteBoolValue("includeObjectsWithNoValueSet", IncludeObjectsWithNoValueSet);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCalendarDatePropertyOperationOperationType>("operationType", OperationType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CalendarDateOperationType>("operationType", OperationType);
             writer.WriteStringValue("operator", Operator);
             writer.WriteStringValue("timeUnit", TimeUnit);
             writer.WriteIntValue("timeUnitCount", TimeUnitCount);

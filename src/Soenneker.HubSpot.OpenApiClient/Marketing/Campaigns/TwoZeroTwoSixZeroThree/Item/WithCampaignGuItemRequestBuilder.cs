@@ -60,20 +60,19 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.Campaigns.TwoZeroTwoSixZeroT
         /// <summary>
         /// Delete a specified campaign from the system.This call will return a 204 No Content response regardless of whether the campaignGuid provided corresponds to an existing campaign or not.
         /// </summary>
-        /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<Stream?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<Stream> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, default, cancellationToken).ConfigureAwait(false);
+            await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get a campaign identified by a specific campaignGuid with the given properties. Along with the campaign information, it also returns information about assets. Depending on the query parameters used, this can also be used to return information about the corresponding assets&apos; metrics. Metrics are available only if startDate and endDate are provided.
@@ -187,7 +186,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.Campaigns.TwoZeroTwoSixZeroT
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithCampaignGuItemRequestBuilderGetQueryParameters 
         {
-            /// <summary>&quot;The end date for fetching asset metrics, in YYYY-MM-DD format.Optional. Example: 2000-01-27&quot;</summary>
+            /// <summary>The end date for fetching asset metrics, in YYYY-MM-DD format.Optional. Example: 2000-01-27</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("endDate")]
@@ -197,7 +196,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.Campaigns.TwoZeroTwoSixZeroT
             [QueryParameter("endDate")]
             public string EndDate { get; set; }
 #endif
-            /// <summary>&quot;A comma-separated list of properties to include in the response.    Unrecognized properties are ignored. Optional. Example: hs_name,hs_budget, hs_notes&quot;</summary>
+            /// <summary>A comma-separated list of properties to include in the response.    Unrecognized properties are ignored. Optional. Example: hs_name,hs_budget, hs_notes</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("properties")]
@@ -207,7 +206,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.Campaigns.TwoZeroTwoSixZeroT
             [QueryParameter("properties")]
             public string[] Properties { get; set; }
 #endif
-            /// <summary>&quot;The start date for fetching asset metrics, in YYYY-MM-DD format.   Optional. Example: 2000-01-20         &quot;</summary>
+            /// <summary>The start date for fetching asset metrics, in YYYY-MM-DD format.   Optional. Example: 2000-01-20         </summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("startDate")]

@@ -46,7 +46,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>The date and time when the operation started.</summary>
         public DateTimeOffset? StartedAt { get; set; }
-        /// <summary>&quot;Indicates the current status of the operation, with possible values: PENDING, PROCESSING, CANCELED, COMPLETE.&quot;</summary>
+        /// <summary>Indicates the current status of the operation, with possible values: PENDING, PROCESSING, CANCELED, COMPLETE.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsPublicStatusStatus? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsPublicStatus"/> and sets the default values.

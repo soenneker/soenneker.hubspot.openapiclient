@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>&quot;The current status of the batch operation, with possible values: CANCELED, COMPLETE, PENDING, PROCESSING.&quot;</summary>
+    /// <summary>The current status of the batch operation, with possible values: CANCELED, COMPLETE, PENDING, PROCESSING.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum BatchResponsePublicCampaignStatus
     {

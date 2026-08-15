@@ -31,7 +31,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string FilterBranchOperator { get; set; }
 #endif
         /// <summary>Type of filter branch (AND)</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranchFilterBranchType? FilterBranchType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AndFilterBranchType? FilterBranchType { get; set; }
         /// <summary>The filters property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -66,7 +66,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "filterBranchOperator", n => { FilterBranchOperator = n.GetStringValue(); } },
-                { "filterBranchType", n => { FilterBranchType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranchFilterBranchType>(); } },
+                { "filterBranchType", n => { FilterBranchType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AndFilterBranchType>(); } },
                 { "filterBranches", n => { FilterBranches = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranchFilterBranchesItem>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranchFilterBranchesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "filters", n => { Filters = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranchFiltersItem>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranchFiltersItem.CreateFromDiscriminatorValue)?.AsList(); } },
             };
@@ -80,7 +80,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranchFilterBranchesItem>("filterBranches", FilterBranches);
             writer.WriteStringValue("filterBranchOperator", FilterBranchOperator);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranchFilterBranchType>("filterBranchType", FilterBranchType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AndFilterBranchType>("filterBranchType", FilterBranchType);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranchFiltersItem>("filters", Filters);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Specifies the type of conversion (CONVERSION_DATE).</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionDateConversionType? ConversionType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversionDateConversionType? ConversionType { get; set; }
         /// <summary>The day component of the conversion date.</summary>
         public int? Day { get; set; }
         /// <summary>The month component of the conversion date.</summary>
@@ -47,7 +47,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "conversionType", n => { ConversionType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionDateConversionType>(); } },
+                { "conversionType", n => { ConversionType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversionDateConversionType>(); } },
                 { "day", n => { Day = n.GetIntValue(); } },
                 { "month", n => { Month = n.GetIntValue(); } },
                 { "year", n => { Year = n.GetIntValue(); } },
@@ -60,7 +60,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionDateConversionType>("conversionType", ConversionType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversionDateConversionType>("conversionType", ConversionType);
             writer.WriteIntValue("day", Day);
             writer.WriteIntValue("month", Month);
             writer.WriteIntValue("year", Year);

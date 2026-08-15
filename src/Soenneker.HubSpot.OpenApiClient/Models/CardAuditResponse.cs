@@ -12,13 +12,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     public partial class CardAuditResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>&quot;The type of action performed, with possible values: CREATE, DELETE, UPDATE.&quot;</summary>
+        /// <summary>The type of action performed, with possible values: CREATE, DELETE, UPDATE.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.CardAuditResponseActionType? ActionType { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The ID of the application associated with the card.</summary>
         public int? ApplicationId { get; set; }
-        /// <summary>&quot;The source of authentication for the action, with possible values: APP, EXTERNAL, INTERNAL.&quot;</summary>
+        /// <summary>The source of authentication for the action, with possible values: APP, EXTERNAL, INTERNAL.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.CardAuditResponseAuthSource? AuthSource { get; set; }
         /// <summary>The timestamp indicating when the change occurred.</summary>
         public long? ChangedAt { get; set; }

@@ -33,43 +33,41 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.Campaigns.TwoZeroTwoSixZeroT
         {
         }
         /// <summary>
-        /// &quot;Disassociate a specified asset from a campaign. Using the API, you can remove associations for the following asset types: ads, blog posts, calls, case studies, CTAs, CTAs (legacy), external website pages, feedback surveys, forms, files, knowledge base articles, landing pages, marketing email, marketing events, meetings, playbooks, podcast episodes, sales documents, sales emails, sequences, SMS, social posts, static lists, videos, website pages, and workflows.For other asset types, it is recommended to manage your associations directly in the campaign tool in HubSpot.&quot;
+        /// Disassociate a specified asset from a campaign. Using the API, you can remove associations for the following asset types: ads, blog posts, calls, case studies, CTAs, CTAs (legacy), external website pages, feedback surveys, forms, files, knowledge base articles, landing pages, marketing email, marketing events, meetings, playbooks, podcast episodes, sales documents, sales emails, sequences, SMS, social posts, static lists, videos, website pages, and workflows.For other asset types, it is recommended to manage your associations directly in the campaign tool in HubSpot.
         /// </summary>
-        /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<Stream?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<Stream> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, default, cancellationToken).ConfigureAwait(false);
+            await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Associate a specified asset with a campaign. Using the API, you can create associations for the following asset types: ads, blog posts, calls, case studies, CTAs, CTAs (legacy), external website pages, feedback surveys, forms, files, knowledge base articles, landing pages, marketing email, marketing events, meetings, playbooks, podcast episodes, sales documents, sales emails, sequences, SMS, social posts, static lists, videos, website pages, and workflows.For other asset types, it is recommended to manage your associations directly in the campaign tool in HubSpot.&quot;
+        /// Associate a specified asset with a campaign. Using the API, you can create associations for the following asset types: ads, blog posts, calls, case studies, CTAs, CTAs (legacy), external website pages, feedback surveys, forms, files, knowledge base articles, landing pages, marketing email, marketing events, meetings, playbooks, podcast episodes, sales documents, sales emails, sequences, SMS, social posts, static lists, videos, website pages, and workflows.For other asset types, it is recommended to manage your associations directly in the campaign tool in HubSpot.
         /// </summary>
-        /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<Stream?> PutAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task PutAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<Stream> PutAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task PutAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToPutRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, default, cancellationToken).ConfigureAwait(false);
+            await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Disassociate a specified asset from a campaign. Using the API, you can remove associations for the following asset types: ads, blog posts, calls, case studies, CTAs, CTAs (legacy), external website pages, feedback surveys, forms, files, knowledge base articles, landing pages, marketing email, marketing events, meetings, playbooks, podcast episodes, sales documents, sales emails, sequences, SMS, social posts, static lists, videos, website pages, and workflows.For other asset types, it is recommended to manage your associations directly in the campaign tool in HubSpot.&quot;
+        /// Disassociate a specified asset from a campaign. Using the API, you can remove associations for the following asset types: ads, blog posts, calls, case studies, CTAs, CTAs (legacy), external website pages, feedback surveys, forms, files, knowledge base articles, landing pages, marketing email, marketing events, meetings, playbooks, podcast episodes, sales documents, sales emails, sequences, SMS, social posts, static lists, videos, website pages, and workflows.For other asset types, it is recommended to manage your associations directly in the campaign tool in HubSpot.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -87,7 +85,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.Campaigns.TwoZeroTwoSixZeroT
             return requestInfo;
         }
         /// <summary>
-        /// &quot;Associate a specified asset with a campaign. Using the API, you can create associations for the following asset types: ads, blog posts, calls, case studies, CTAs, CTAs (legacy), external website pages, feedback surveys, forms, files, knowledge base articles, landing pages, marketing email, marketing events, meetings, playbooks, podcast episodes, sales documents, sales emails, sequences, SMS, social posts, static lists, videos, website pages, and workflows.For other asset types, it is recommended to manage your associations directly in the campaign tool in HubSpot.&quot;
+        /// Associate a specified asset with a campaign. Using the API, you can create associations for the following asset types: ads, blog posts, calls, case studies, CTAs, CTAs (legacy), external website pages, feedback surveys, forms, files, knowledge base articles, landing pages, marketing email, marketing events, meetings, playbooks, podcast episodes, sales documents, sales emails, sequences, SMS, social posts, static lists, videos, website pages, and workflows.For other asset types, it is recommended to manage your associations directly in the campaign tool in HubSpot.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

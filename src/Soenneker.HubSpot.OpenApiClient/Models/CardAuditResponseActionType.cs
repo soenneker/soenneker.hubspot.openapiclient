@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>&quot;The type of action performed, with possible values: CREATE, DELETE, UPDATE.&quot;</summary>
+    /// <summary>The type of action performed, with possible values: CREATE, DELETE, UPDATE.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum CardAuditResponseActionType
     {

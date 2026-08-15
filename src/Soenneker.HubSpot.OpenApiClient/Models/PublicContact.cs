@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public global::Soenneker.HubSpot.OpenApiClient.Models.ContactProfile ContactProfile { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicContactType? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ContactType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicContact"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "contactProfile", n => { ContactProfile = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ContactProfile>(global::Soenneker.HubSpot.OpenApiClient.Models.ContactProfile.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicContactType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ContactType>(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ContactProfile>("contactProfile", ContactProfile);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicContactType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ContactType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

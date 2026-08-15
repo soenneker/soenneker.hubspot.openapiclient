@@ -12,7 +12,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     public partial class FileUpdateInput : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>&quot;NONE: Do not run any duplicate validation. REJECT: Reject the upload if a duplicate is found. RETURN_EXISTING: If a duplicate file is found, do not upload a new file and return the found duplicate instead.&quot;</summary>
+        /// <summary>NONE: Do not run any duplicate validation. REJECT: Reject the upload if a duplicate is found. RETURN_EXISTING: If a duplicate file is found, do not upload a new file and return the found duplicate instead.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.FileUpdateInputAccess? Access { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }

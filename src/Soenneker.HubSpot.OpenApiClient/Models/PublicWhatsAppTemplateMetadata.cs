@@ -37,7 +37,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The rootMicId property</summary>
         public long? RootMicId { get; set; }
         /// <summary>The type property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadataType? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.WhatsappTemplateMetadataType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadata"/> and sets the default values.
         /// </summary>
@@ -68,7 +68,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "mappedTemplateId", n => { MappedTemplateId = n.GetLongValue(); } },
                 { "parameters", n => { Parameters = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadataParametersProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadataParametersProperty.CreateFromDiscriminatorValue); } },
                 { "rootMicId", n => { RootMicId = n.GetLongValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadataType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.WhatsappTemplateMetadataType>(); } },
             };
         }
         /// <summary>
@@ -83,7 +83,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteLongValue("mappedTemplateId", MappedTemplateId);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadataParametersProperty>("parameters", Parameters);
             writer.WriteLongValue("rootMicId", RootMicId);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadataType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.WhatsappTemplateMetadataType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

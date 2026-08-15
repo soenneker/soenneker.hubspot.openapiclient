@@ -41,7 +41,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string DatasourceName { get; set; }
 #endif
         /// <summary>The type of the data source, which is a string with a valid value of &apos;FILE&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.DataSourceGetResponseDatasourceType? DatasourceType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.FileDatasourceType? DatasourceType { get; set; }
         /// <summary>The status of the last data ingestion process, represented as a string. Valid values include &apos;SUCCESSFUL&apos;, &apos;IN_PROGRESS&apos;, and &apos;FAILED&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.DataSourceGetResponseLastIngestionStatus? LastIngestionStatus { get; set; }
         /// <summary>
@@ -73,7 +73,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "createdAt", n => { CreatedAt = n.GetStringValue(); } },
                 { "datasourceId", n => { DatasourceId = n.GetLongValue(); } },
                 { "datasourceName", n => { DatasourceName = n.GetStringValue(); } },
-                { "datasourceType", n => { DatasourceType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DataSourceGetResponseDatasourceType>(); } },
+                { "datasourceType", n => { DatasourceType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FileDatasourceType>(); } },
                 { "lastIngestionStatus", n => { LastIngestionStatus = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DataSourceGetResponseLastIngestionStatus>(); } },
             };
         }
@@ -88,7 +88,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("createdAt", CreatedAt);
             writer.WriteLongValue("datasourceId", DatasourceId);
             writer.WriteStringValue("datasourceName", DatasourceName);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DataSourceGetResponseDatasourceType>("datasourceType", DatasourceType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FileDatasourceType>("datasourceType", DatasourceType);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DataSourceGetResponseLastIngestionStatus>("lastIngestionStatus", LastIngestionStatus);
             writer.WriteAdditionalData(AdditionalData);
         }

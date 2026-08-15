@@ -25,7 +25,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The month component of the year reference.</summary>
         public int? Month { get; set; }
         /// <summary>Indicates the type of reference (YEAR).</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicYearReferenceReferenceType? ReferenceType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.YearReferenceType? ReferenceType { get; set; }
         /// <summary>The second component of the year reference.</summary>
         public int? Second { get; set; }
         /// <summary>
@@ -58,7 +58,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "millisecond", n => { Millisecond = n.GetIntValue(); } },
                 { "minute", n => { Minute = n.GetIntValue(); } },
                 { "month", n => { Month = n.GetIntValue(); } },
-                { "referenceType", n => { ReferenceType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicYearReferenceReferenceType>(); } },
+                { "referenceType", n => { ReferenceType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.YearReferenceType>(); } },
                 { "second", n => { Second = n.GetIntValue(); } },
             };
         }
@@ -74,7 +74,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteIntValue("millisecond", Millisecond);
             writer.WriteIntValue("minute", Minute);
             writer.WriteIntValue("month", Month);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicYearReferenceReferenceType>("referenceType", ReferenceType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.YearReferenceType>("referenceType", ReferenceType);
             writer.WriteIntValue("second", Second);
             writer.WriteAdditionalData(AdditionalData);
         }

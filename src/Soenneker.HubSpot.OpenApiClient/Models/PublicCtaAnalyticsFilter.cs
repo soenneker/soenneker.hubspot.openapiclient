@@ -31,7 +31,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string CtaName { get; set; }
 #endif
         /// <summary>Indicates the type of filter being applied, which is (CTA).</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCtaAnalyticsFilterFilterType? FilterType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CtaFilterType? FilterType { get; set; }
         /// <summary>Defines the operation to be applied within the filter (HAS_CLICKED_CTA, HAS_NOT_CLICKED_CTA, HAS_OPENED_CTA, HAS_NOT_OPENED_CTA, HAS_CLICKED_CTA_PLACEMENT, HAS_NOT_CLICKED_CTA_PLACEMENT, HAS_OPENED_CTA_PLACEMENT, HAS_NOT_OPENED_CTA_PLACEMENT).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -75,7 +75,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "coalescingRefineBy", n => { CoalescingRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCtaAnalyticsFilterCoalescingRefineBy>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicCtaAnalyticsFilterCoalescingRefineBy.CreateFromDiscriminatorValue); } },
                 { "ctaName", n => { CtaName = n.GetStringValue(); } },
-                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCtaAnalyticsFilterFilterType>(); } },
+                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CtaFilterType>(); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
                 { "pruningRefineBy", n => { PruningRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCtaAnalyticsFilterPruningRefineBy>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicCtaAnalyticsFilterPruningRefineBy.CreateFromDiscriminatorValue); } },
             };
@@ -89,7 +89,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCtaAnalyticsFilterCoalescingRefineBy>("coalescingRefineBy", CoalescingRefineBy);
             writer.WriteStringValue("ctaName", CtaName);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCtaAnalyticsFilterFilterType>("filterType", FilterType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CtaFilterType>("filterType", FilterType);
             writer.WriteStringValue("operator", Operator);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCtaAnalyticsFilterPruningRefineBy>("pruningRefineBy", PruningRefineBy);
             writer.WriteAdditionalData(AdditionalData);

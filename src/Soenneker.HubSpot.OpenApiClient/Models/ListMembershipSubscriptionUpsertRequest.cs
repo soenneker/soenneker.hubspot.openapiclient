@@ -41,7 +41,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The portalId property</summary>
         public long? PortalId { get; set; }
         /// <summary>The subscriptionType property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ListMembershipSubscriptionUpsertRequestSubscriptionType? SubscriptionType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ListMembershipSubscriptionType? SubscriptionType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ListMembershipSubscriptionUpsertRequest"/> and sets the default values.
         /// </summary>
@@ -71,7 +71,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "listIds", n => { ListIds = n.GetCollectionOfPrimitiveValues<long?>()?.AsList(); } },
                 { "objectIds", n => { ObjectIds = n.GetCollectionOfPrimitiveValues<long?>()?.AsList(); } },
                 { "portalId", n => { PortalId = n.GetLongValue(); } },
-                { "subscriptionType", n => { SubscriptionType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ListMembershipSubscriptionUpsertRequestSubscriptionType>(); } },
+                { "subscriptionType", n => { SubscriptionType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ListMembershipSubscriptionType>(); } },
             };
         }
         /// <summary>
@@ -85,7 +85,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<long?>("listIds", ListIds);
             writer.WriteCollectionOfPrimitiveValues<long?>("objectIds", ObjectIds);
             writer.WriteLongValue("portalId", PortalId);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ListMembershipSubscriptionUpsertRequestSubscriptionType>("subscriptionType", SubscriptionType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ListMembershipSubscriptionType>("subscriptionType", SubscriptionType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Associations.TwoZeroTwoSixZeroThre
         {
         }
         /// <summary>
-        /// &quot;Batch read associations for objects to specific object type. The &apos;after&apos; field in a returned paging object  can be added alongside the &apos;id&apos; to retrieve the next page of associations from that objectId. The &apos;link&apos; field is deprecated and should be ignored. Note: The &apos;paging&apos; field will only be present if there are more pages and absent otherwise.&quot;
+        /// Batch read associations for objects to specific object type. The &apos;after&apos; field in a returned paging object  can be added alongside the &apos;id&apos; to retrieve the next page of associations from that objectId. The &apos;link&apos; field is deprecated and should be ignored. Note: The &apos;paging&apos; field will only be present if there are more pages and absent otherwise.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicAssociationMultiWithLabel"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Associations.TwoZeroTwoSixZeroThre
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicAssociationMultiWithLabel>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicAssociationMultiWithLabel.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Batch read associations for objects to specific object type. The &apos;after&apos; field in a returned paging object  can be added alongside the &apos;id&apos; to retrieve the next page of associations from that objectId. The &apos;link&apos; field is deprecated and should be ignored. Note: The &apos;paging&apos; field will only be present if there are more pages and absent otherwise.&quot;
+        /// Batch read associations for objects to specific object type. The &apos;after&apos; field in a returned paging object  can be added alongside the &apos;id&apos; to retrieve the next page of associations from that objectId. The &apos;link&apos; field is deprecated and should be ignored. Note: The &apos;paging&apos; field will only be present if there are more pages and absent otherwise.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

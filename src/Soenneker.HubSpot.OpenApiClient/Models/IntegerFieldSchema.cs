@@ -19,7 +19,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The minimum value allowed for the integer field.</summary>
         public int? Minimum { get; set; }
         /// <summary>The type of the field, which is set to INTEGER.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.IntegerFieldSchemaType? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.IntegerType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IntegerFieldSchema"/> and sets the default values.
         /// </summary>
@@ -47,7 +47,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "maximum", n => { Maximum = n.GetIntValue(); } },
                 { "minimum", n => { Minimum = n.GetIntValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.IntegerFieldSchemaType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.IntegerType>(); } },
             };
         }
         /// <summary>
@@ -59,7 +59,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("maximum", Maximum);
             writer.WriteIntValue("minimum", Minimum);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.IntegerFieldSchemaType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.IntegerType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

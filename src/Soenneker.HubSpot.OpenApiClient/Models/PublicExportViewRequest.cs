@@ -39,7 +39,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string ExportName { get; set; }
 #endif
         /// <summary>The exportType property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportViewRequestExportType? ExportType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ViewExportType? ExportType { get; set; }
         /// <summary>The format property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportViewRequestFormat? Format { get; set; }
         /// <summary>The includeLabeledAssociations property</summary>
@@ -102,7 +102,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "associatedObjectType", n => { AssociatedObjectType = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "exportInternalValuesOptions", n => { ExportInternalValuesOptions = n.GetCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportViewRequestExportInternalValuesOptionsItem>()?.AsList(); } },
                 { "exportName", n => { ExportName = n.GetStringValue(); } },
-                { "exportType", n => { ExportType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportViewRequestExportType>(); } },
+                { "exportType", n => { ExportType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ViewExportType>(); } },
                 { "format", n => { Format = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportViewRequestFormat>(); } },
                 { "includeLabeledAssociations", n => { IncludeLabeledAssociations = n.GetBoolValue(); } },
                 { "includePrimaryDisplayPropertyForAssociatedObjects", n => { IncludePrimaryDisplayPropertyForAssociatedObjects = n.GetBoolValue(); } },
@@ -123,7 +123,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("associatedObjectType", AssociatedObjectType);
             writer.WriteCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportViewRequestExportInternalValuesOptionsItem>("exportInternalValuesOptions", ExportInternalValuesOptions);
             writer.WriteStringValue("exportName", ExportName);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportViewRequestExportType>("exportType", ExportType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ViewExportType>("exportType", ExportType);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportViewRequestFormat>("format", Format);
             writer.WriteBoolValue("includeLabeledAssociations", IncludeLabeledAssociations);
             writer.WriteBoolValue("includePrimaryDisplayPropertyForAssociatedObjects", IncludePrimaryDisplayPropertyForAssociatedObjects);

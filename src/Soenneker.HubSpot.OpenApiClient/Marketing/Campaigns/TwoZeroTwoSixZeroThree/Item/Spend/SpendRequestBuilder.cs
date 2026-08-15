@@ -19,7 +19,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.Campaigns.TwoZeroTwoSixZeroT
     public partial class SpendRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.marketing.campaigns.TwoZeroTwoSixZeroThree.item.spend.item collection</summary>
-        /// <param name="position">&quot;The ID of the spend item, required. Example: 491    &quot;</param>
+        /// <param name="position">The ID of the spend item, required. Example: 491    </param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Marketing.Campaigns.TwoZeroTwoSixZeroThree.Item.Spend.Item.WithSpendItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Marketing.Campaigns.TwoZeroTwoSixZeroThree.Item.Spend.Item.WithSpendItemRequestBuilder this[long position]
         {

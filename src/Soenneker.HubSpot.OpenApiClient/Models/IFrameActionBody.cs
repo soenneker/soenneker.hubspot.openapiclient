@@ -33,7 +33,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public List<string> PropertyNamesIncluded { get; set; }
 #endif
         /// <summary>The type of status.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.IFrameActionBodyType? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.IframeType? Type { get; set; }
         /// <summary>The URL endpoint that will be loaded in the iframe when triggered.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -72,7 +72,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "height", n => { Height = n.GetIntValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "propertyNamesIncluded", n => { PropertyNamesIncluded = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.IFrameActionBodyType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.IframeType>(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
                 { "width", n => { Width = n.GetIntValue(); } },
             };
@@ -87,7 +87,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteIntValue("height", Height);
             writer.WriteStringValue("label", Label);
             writer.WriteCollectionOfPrimitiveValues<string>("propertyNamesIncluded", PropertyNamesIncluded);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.IFrameActionBodyType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.IframeType>("type", Type);
             writer.WriteStringValue("url", Url);
             writer.WriteIntValue("width", Width);
             writer.WriteAdditionalData(AdditionalData);

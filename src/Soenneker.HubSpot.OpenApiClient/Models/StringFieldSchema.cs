@@ -14,10 +14,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Specifies the format of the string, with accepted values: DATE, DATE_TIME, OBJECT_COORDINATE, TIME, URI.&quot;</summary>
+        /// <summary>Specifies the format of the string, with accepted values: DATE, DATE_TIME, OBJECT_COORDINATE, TIME, URI.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.StringFieldSchemaFormat? Format { get; set; }
         /// <summary>Indicates that the type is a string, with the default value being STRING.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.StringFieldSchemaType? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.StringValueType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.StringFieldSchema"/> and sets the default values.
         /// </summary>
@@ -44,7 +44,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "format", n => { Format = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.StringFieldSchemaFormat>(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.StringFieldSchemaType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.StringValueType>(); } },
             };
         }
         /// <summary>
@@ -55,7 +55,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.StringFieldSchemaFormat>("format", Format);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.StringFieldSchemaType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.StringValueType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

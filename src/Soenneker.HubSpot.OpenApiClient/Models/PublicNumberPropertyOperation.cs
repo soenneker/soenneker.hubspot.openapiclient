@@ -17,7 +17,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Indicates whether objects with no value set for the property should be included in the operation.</summary>
         public bool? IncludeObjectsWithNoValueSet { get; set; }
         /// <summary>Specifies the type of operation (NUMBER).</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicNumberPropertyOperationOperationType? OperationType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.NumberOperationType? OperationType { get; set; }
         /// <summary>Defines the operation to be applied in the number property operation (IS_EQUAL_TO, IS_NOT_EQUAL_TO, IS_GREATER_THAN, IS_GREATER_THAN_OR_EQUAL_TO, IS_LESS_THAN, IS_LESS_THAN_OR_EQUAL_TO, HAS_EVER_BEEN_EQUAL_TO, HAS_NEVER_BEEN_EQUAL_TO).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -54,7 +54,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "includeObjectsWithNoValueSet", n => { IncludeObjectsWithNoValueSet = n.GetBoolValue(); } },
-                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicNumberPropertyOperationOperationType>(); } },
+                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.NumberOperationType>(); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
                 { "value", n => { Value = n.GetDoubleValue(); } },
             };
@@ -67,7 +67,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("includeObjectsWithNoValueSet", IncludeObjectsWithNoValueSet);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicNumberPropertyOperationOperationType>("operationType", OperationType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.NumberOperationType>("operationType", OperationType);
             writer.WriteStringValue("operator", Operator);
             writer.WriteDoubleValue("value", Value);
             writer.WriteAdditionalData(AdditionalData);

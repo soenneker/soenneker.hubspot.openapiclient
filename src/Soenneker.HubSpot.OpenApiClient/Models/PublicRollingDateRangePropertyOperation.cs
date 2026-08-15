@@ -19,7 +19,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The number of days to be considered in the rolling date range operation.</summary>
         public int? NumberOfDays { get; set; }
         /// <summary>Specifies the type of operation (ROLLING_DATE_RANGE).</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRollingDateRangePropertyOperationOperationType? OperationType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.RollingDateRangeOperationType? OperationType { get; set; }
         /// <summary>Defines the operation to be applied within the rolling date range property operation (IS_LESS_THAN_X_DAYS_AGO, IS_MORE_THAN_X_DAYS_AGO, IS_LESS_THAN_X_DAYS_FROM_NOW, IS_MORE_THAN_X_DAYS_FROM_NOW).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -57,7 +57,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "includeObjectsWithNoValueSet", n => { IncludeObjectsWithNoValueSet = n.GetBoolValue(); } },
                 { "numberOfDays", n => { NumberOfDays = n.GetIntValue(); } },
-                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRollingDateRangePropertyOperationOperationType>(); } },
+                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RollingDateRangeOperationType>(); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
                 { "requiresTimeZoneConversion", n => { RequiresTimeZoneConversion = n.GetBoolValue(); } },
             };
@@ -71,7 +71,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("includeObjectsWithNoValueSet", IncludeObjectsWithNoValueSet);
             writer.WriteIntValue("numberOfDays", NumberOfDays);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRollingDateRangePropertyOperationOperationType>("operationType", OperationType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RollingDateRangeOperationType>("operationType", OperationType);
             writer.WriteStringValue("operator", Operator);
             writer.WriteBoolValue("requiresTimeZoneConversion", RequiresTimeZoneConversion);
             writer.WriteAdditionalData(AdditionalData);
