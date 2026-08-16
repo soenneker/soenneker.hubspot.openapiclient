@@ -56821,6 +56821,11 @@
           },
           {
             "_____________________________________crm_oauth2": [
+              "crm.objects.tickets.sensitive.read"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
               "crm.objects.listings.write"
             ]
           },
@@ -56831,12 +56836,17 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.custom.sensitive.write.v2"
+              "crm.schemas.tickets.read"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
               "crm.objects.tasks.read"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.objects.custom.sensitive.write.v2"
             ]
           },
           {
@@ -56852,6 +56862,11 @@
           {
             "_____________________________________crm_oauth2": [
               "crm.objects.companies.read"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.objects.tickets.highly_sensitive.read"
             ]
           },
           {
@@ -56916,12 +56931,12 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.feedback_submissions.read"
+              "crm.objects.products.write"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.products.write"
+              "crm.objects.feedback_submissions.read"
             ]
           },
           {
@@ -56986,12 +57001,12 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.projects.read"
+              "crm.objects.companies.sensitive.write.v2"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.companies.sensitive.write.v2"
+              "crm.objects.projects.read"
             ]
           },
           {
@@ -57096,12 +57111,12 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.pipelines.orders.read"
+              "crm.objects.marketing_events.read"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.marketing_events.read"
+              "crm.pipelines.orders.read"
             ]
           },
           {
@@ -57121,12 +57136,12 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "automation"
+              "crm.objects.companies.write"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.companies.write"
+              "automation"
             ]
           },
           {
@@ -57251,12 +57266,12 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.projects.write"
+              "crm.objects.marketing_events.write"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.marketing_events.write"
+              "crm.objects.projects.write"
             ]
           },
           {
@@ -57319,6 +57334,16 @@
         "responses": {
           "201": {
             "description": "successful operation",
+            "headers": {
+              "Location": {
+                "description": "URL of the newly created resource",
+                "style": "simple",
+                "schema": {
+                  "type": "string",
+                  "example": null
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -57345,6 +57370,61 @@
           },
           {
             "_____________________________________crm_oauth2": [
+              "crm.schemas.invoices.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.orders.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.commercepayments.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.courses.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "tickets.sensitive.v2"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "e-commerce"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.appointments.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.contacts.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.carts.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.objects.tickets.sensitive.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.companies.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
               "crm.schemas.subscriptions.write"
             ]
           },
@@ -57360,22 +57440,7 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.schemas.invoices.write"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
-              "crm.schemas.orders.write"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
               "crm.pipelines.orders.write"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
-              "crm.schemas.commercepayments.write"
             ]
           },
           {
@@ -57400,11 +57465,6 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.schemas.courses.write"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
               "crm.schemas.projects.write"
             ]
           },
@@ -57415,37 +57475,17 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "tickets.sensitive.v2"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
-              "e-commerce"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
               "crm.objects.carts.write"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.schemas.appointments.write"
+              "crm.schemas.tickets.write"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.schemas.contacts.write"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
-              "crm.schemas.carts.write"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
-              "crm.schemas.companies.write"
+              "crm.objects.tickets.highly_sensitive.write"
             ]
           }
         ]
@@ -57520,6 +57560,11 @@
           },
           {
             "_____________________________________crm_oauth2": [
+              "crm.objects.tickets.sensitive.read"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
               "crm.objects.listings.write"
             ]
           },
@@ -57530,12 +57575,17 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.custom.sensitive.write.v2"
+              "crm.schemas.tickets.read"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
               "crm.objects.tasks.read"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.objects.custom.sensitive.write.v2"
             ]
           },
           {
@@ -57551,6 +57601,11 @@
           {
             "_____________________________________crm_oauth2": [
               "crm.objects.companies.read"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.objects.tickets.highly_sensitive.read"
             ]
           },
           {
@@ -57615,12 +57670,12 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.feedback_submissions.read"
+              "crm.objects.products.write"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.products.write"
+              "crm.objects.feedback_submissions.read"
             ]
           },
           {
@@ -57685,12 +57740,12 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.projects.read"
+              "crm.objects.companies.sensitive.write.v2"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.companies.sensitive.write.v2"
+              "crm.objects.projects.read"
             ]
           },
           {
@@ -57795,12 +57850,12 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.pipelines.orders.read"
+              "crm.objects.marketing_events.read"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.marketing_events.read"
+              "crm.pipelines.orders.read"
             ]
           },
           {
@@ -57820,12 +57875,12 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "automation"
+              "crm.objects.companies.write"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.companies.write"
+              "automation"
             ]
           },
           {
@@ -57950,12 +58005,12 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.projects.write"
+              "crm.objects.marketing_events.write"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.marketing_events.write"
+              "crm.objects.projects.write"
             ]
           },
           {
@@ -58074,6 +58129,61 @@
           },
           {
             "_____________________________________crm_oauth2": [
+              "crm.schemas.invoices.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.orders.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.commercepayments.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.courses.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "tickets.sensitive.v2"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "e-commerce"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.appointments.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.contacts.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.carts.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.objects.tickets.sensitive.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.companies.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
               "crm.schemas.subscriptions.write"
             ]
           },
@@ -58089,22 +58199,7 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.schemas.invoices.write"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
-              "crm.schemas.orders.write"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
               "crm.pipelines.orders.write"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
-              "crm.schemas.commercepayments.write"
             ]
           },
           {
@@ -58129,11 +58224,6 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.schemas.courses.write"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
               "crm.schemas.projects.write"
             ]
           },
@@ -58144,37 +58234,17 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "tickets.sensitive.v2"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
-              "e-commerce"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
               "crm.objects.carts.write"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.schemas.appointments.write"
+              "crm.schemas.tickets.write"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.schemas.contacts.write"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
-              "crm.schemas.carts.write"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
-              "crm.schemas.companies.write"
+              "crm.objects.tickets.highly_sensitive.write"
             ]
           }
         ]
@@ -58249,6 +58319,61 @@
           },
           {
             "_____________________________________crm_oauth2": [
+              "crm.schemas.invoices.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.orders.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.commercepayments.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.courses.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "tickets.sensitive.v2"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "e-commerce"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.appointments.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.contacts.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.carts.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.objects.tickets.sensitive.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.companies.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
               "crm.schemas.subscriptions.write"
             ]
           },
@@ -58264,22 +58389,7 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.schemas.invoices.write"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
-              "crm.schemas.orders.write"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
               "crm.pipelines.orders.write"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
-              "crm.schemas.commercepayments.write"
             ]
           },
           {
@@ -58304,11 +58414,6 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.schemas.courses.write"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
               "crm.schemas.projects.write"
             ]
           },
@@ -58319,37 +58424,17 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "tickets.sensitive.v2"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
-              "e-commerce"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
               "crm.objects.carts.write"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.schemas.appointments.write"
+              "crm.schemas.tickets.write"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.schemas.contacts.write"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
-              "crm.schemas.carts.write"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
-              "crm.schemas.companies.write"
+              "crm.objects.tickets.highly_sensitive.write"
             ]
           }
         ]
@@ -58443,6 +58528,61 @@
           },
           {
             "_____________________________________crm_oauth2": [
+              "crm.schemas.invoices.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.orders.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.commercepayments.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.courses.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "tickets.sensitive.v2"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "e-commerce"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.appointments.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.contacts.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.carts.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.objects.tickets.sensitive.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.companies.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
               "crm.schemas.subscriptions.write"
             ]
           },
@@ -58458,22 +58598,7 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.schemas.invoices.write"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
-              "crm.schemas.orders.write"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
               "crm.pipelines.orders.write"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
-              "crm.schemas.commercepayments.write"
             ]
           },
           {
@@ -58498,11 +58623,6 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.schemas.courses.write"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
               "crm.schemas.projects.write"
             ]
           },
@@ -58513,37 +58633,17 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "tickets.sensitive.v2"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
-              "e-commerce"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
               "crm.objects.carts.write"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.schemas.appointments.write"
+              "crm.schemas.tickets.write"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.schemas.contacts.write"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
-              "crm.schemas.carts.write"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
-              "crm.schemas.companies.write"
+              "crm.objects.tickets.highly_sensitive.write"
             ]
           }
         ]
@@ -58618,6 +58718,11 @@
           },
           {
             "_____________________________________crm_oauth2": [
+              "crm.objects.tickets.sensitive.read"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
               "crm.objects.listings.write"
             ]
           },
@@ -58628,12 +58733,17 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.custom.sensitive.write.v2"
+              "crm.schemas.tickets.read"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
               "crm.objects.tasks.read"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.objects.custom.sensitive.write.v2"
             ]
           },
           {
@@ -58649,6 +58759,11 @@
           {
             "_____________________________________crm_oauth2": [
               "crm.objects.companies.read"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.objects.tickets.highly_sensitive.read"
             ]
           },
           {
@@ -58713,12 +58828,12 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.feedback_submissions.read"
+              "crm.objects.products.write"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.products.write"
+              "crm.objects.feedback_submissions.read"
             ]
           },
           {
@@ -58783,12 +58898,12 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.projects.read"
+              "crm.objects.companies.sensitive.write.v2"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.companies.sensitive.write.v2"
+              "crm.objects.projects.read"
             ]
           },
           {
@@ -58893,12 +59008,12 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.pipelines.orders.read"
+              "crm.objects.marketing_events.read"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.marketing_events.read"
+              "crm.pipelines.orders.read"
             ]
           },
           {
@@ -58918,12 +59033,12 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "automation"
+              "crm.objects.companies.write"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.companies.write"
+              "automation"
             ]
           },
           {
@@ -59048,12 +59163,12 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.projects.write"
+              "crm.objects.marketing_events.write"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.marketing_events.write"
+              "crm.objects.projects.write"
             ]
           },
           {
@@ -59153,6 +59268,11 @@
           },
           {
             "_____________________________________crm_oauth2": [
+              "crm.objects.tickets.sensitive.read"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
               "crm.objects.listings.write"
             ]
           },
@@ -59163,12 +59283,17 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.custom.sensitive.write.v2"
+              "crm.schemas.tickets.read"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
               "crm.objects.tasks.read"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.objects.custom.sensitive.write.v2"
             ]
           },
           {
@@ -59184,6 +59309,11 @@
           {
             "_____________________________________crm_oauth2": [
               "crm.objects.companies.read"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.objects.tickets.highly_sensitive.read"
             ]
           },
           {
@@ -59248,12 +59378,12 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.feedback_submissions.read"
+              "crm.objects.products.write"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.products.write"
+              "crm.objects.feedback_submissions.read"
             ]
           },
           {
@@ -59318,12 +59448,12 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.projects.read"
+              "crm.objects.companies.sensitive.write.v2"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.companies.sensitive.write.v2"
+              "crm.objects.projects.read"
             ]
           },
           {
@@ -59428,12 +59558,12 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.pipelines.orders.read"
+              "crm.objects.marketing_events.read"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.marketing_events.read"
+              "crm.pipelines.orders.read"
             ]
           },
           {
@@ -59453,12 +59583,12 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "automation"
+              "crm.objects.companies.write"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.companies.write"
+              "automation"
             ]
           },
           {
@@ -59583,12 +59713,12 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.projects.write"
+              "crm.objects.marketing_events.write"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.marketing_events.write"
+              "crm.objects.projects.write"
             ]
           },
           {
@@ -59661,6 +59791,16 @@
         "responses": {
           "201": {
             "description": "successful operation",
+            "headers": {
+              "Location": {
+                "description": "URL of the newly created resource",
+                "style": "simple",
+                "schema": {
+                  "type": "string",
+                  "example": null
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -59687,6 +59827,61 @@
           },
           {
             "_____________________________________crm_oauth2": [
+              "crm.schemas.invoices.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.orders.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.commercepayments.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.courses.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "tickets.sensitive.v2"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "e-commerce"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.appointments.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.contacts.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.carts.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.objects.tickets.sensitive.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.companies.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
               "crm.schemas.subscriptions.write"
             ]
           },
@@ -59702,22 +59897,7 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.schemas.invoices.write"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
-              "crm.schemas.orders.write"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
               "crm.pipelines.orders.write"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
-              "crm.schemas.commercepayments.write"
             ]
           },
           {
@@ -59742,11 +59922,6 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.schemas.courses.write"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
               "crm.schemas.projects.write"
             ]
           },
@@ -59757,37 +59932,17 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "tickets.sensitive.v2"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
-              "e-commerce"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
               "crm.objects.carts.write"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.schemas.appointments.write"
+              "crm.schemas.tickets.write"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.schemas.contacts.write"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
-              "crm.schemas.carts.write"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
-              "crm.schemas.companies.write"
+              "crm.objects.tickets.highly_sensitive.write"
             ]
           }
         ]
@@ -59872,6 +60027,11 @@
           },
           {
             "_____________________________________crm_oauth2": [
+              "crm.objects.tickets.sensitive.read"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
               "crm.objects.listings.write"
             ]
           },
@@ -59882,12 +60042,17 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.custom.sensitive.write.v2"
+              "crm.schemas.tickets.read"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
               "crm.objects.tasks.read"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.objects.custom.sensitive.write.v2"
             ]
           },
           {
@@ -59903,6 +60068,11 @@
           {
             "_____________________________________crm_oauth2": [
               "crm.objects.companies.read"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.objects.tickets.highly_sensitive.read"
             ]
           },
           {
@@ -59967,12 +60137,12 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.feedback_submissions.read"
+              "crm.objects.products.write"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.products.write"
+              "crm.objects.feedback_submissions.read"
             ]
           },
           {
@@ -60037,12 +60207,12 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.projects.read"
+              "crm.objects.companies.sensitive.write.v2"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.companies.sensitive.write.v2"
+              "crm.objects.projects.read"
             ]
           },
           {
@@ -60147,12 +60317,12 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.pipelines.orders.read"
+              "crm.objects.marketing_events.read"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.marketing_events.read"
+              "crm.pipelines.orders.read"
             ]
           },
           {
@@ -60172,12 +60342,12 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "automation"
+              "crm.objects.companies.write"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.companies.write"
+              "automation"
             ]
           },
           {
@@ -60302,12 +60472,12 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.projects.write"
+              "crm.objects.marketing_events.write"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.marketing_events.write"
+              "crm.objects.projects.write"
             ]
           },
           {
@@ -60416,6 +60586,61 @@
           },
           {
             "_____________________________________crm_oauth2": [
+              "crm.schemas.invoices.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.orders.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.commercepayments.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.courses.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "tickets.sensitive.v2"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "e-commerce"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.appointments.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.contacts.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.carts.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.objects.tickets.sensitive.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.companies.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
               "crm.schemas.subscriptions.write"
             ]
           },
@@ -60431,22 +60656,7 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.schemas.invoices.write"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
-              "crm.schemas.orders.write"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
               "crm.pipelines.orders.write"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
-              "crm.schemas.commercepayments.write"
             ]
           },
           {
@@ -60471,11 +60681,6 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.schemas.courses.write"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
               "crm.schemas.projects.write"
             ]
           },
@@ -60486,37 +60691,17 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "tickets.sensitive.v2"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
-              "e-commerce"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
               "crm.objects.carts.write"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.schemas.appointments.write"
+              "crm.schemas.tickets.write"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.schemas.contacts.write"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
-              "crm.schemas.carts.write"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
-              "crm.schemas.companies.write"
+              "crm.objects.tickets.highly_sensitive.write"
             ]
           }
         ]
@@ -60591,6 +60776,61 @@
           },
           {
             "_____________________________________crm_oauth2": [
+              "crm.schemas.invoices.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.orders.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.commercepayments.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.courses.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "tickets.sensitive.v2"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "e-commerce"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.appointments.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.contacts.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.carts.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.objects.tickets.sensitive.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.companies.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
               "crm.schemas.subscriptions.write"
             ]
           },
@@ -60606,22 +60846,7 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.schemas.invoices.write"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
-              "crm.schemas.orders.write"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
               "crm.pipelines.orders.write"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
-              "crm.schemas.commercepayments.write"
             ]
           },
           {
@@ -60646,11 +60871,6 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.schemas.courses.write"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
               "crm.schemas.projects.write"
             ]
           },
@@ -60661,37 +60881,17 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "tickets.sensitive.v2"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
-              "e-commerce"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
               "crm.objects.carts.write"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.schemas.appointments.write"
+              "crm.schemas.tickets.write"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.schemas.contacts.write"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
-              "crm.schemas.carts.write"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
-              "crm.schemas.companies.write"
+              "crm.objects.tickets.highly_sensitive.write"
             ]
           }
         ]
@@ -60775,6 +60975,61 @@
           },
           {
             "_____________________________________crm_oauth2": [
+              "crm.schemas.invoices.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.orders.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.commercepayments.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.courses.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "tickets.sensitive.v2"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "e-commerce"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.appointments.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.contacts.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.carts.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.objects.tickets.sensitive.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.schemas.companies.write"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
               "crm.schemas.subscriptions.write"
             ]
           },
@@ -60790,22 +61045,7 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.schemas.invoices.write"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
-              "crm.schemas.orders.write"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
               "crm.pipelines.orders.write"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
-              "crm.schemas.commercepayments.write"
             ]
           },
           {
@@ -60830,11 +61070,6 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.schemas.courses.write"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
               "crm.schemas.projects.write"
             ]
           },
@@ -60845,37 +61080,17 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "tickets.sensitive.v2"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
-              "e-commerce"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
               "crm.objects.carts.write"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.schemas.appointments.write"
+              "crm.schemas.tickets.write"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.schemas.contacts.write"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
-              "crm.schemas.carts.write"
-            ]
-          },
-          {
-            "_____________________________________crm_oauth2": [
-              "crm.schemas.companies.write"
+              "crm.objects.tickets.highly_sensitive.write"
             ]
           }
         ]
@@ -60960,6 +61175,11 @@
           },
           {
             "_____________________________________crm_oauth2": [
+              "crm.objects.tickets.sensitive.read"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
               "crm.objects.listings.write"
             ]
           },
@@ -60970,12 +61190,17 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.custom.sensitive.write.v2"
+              "crm.schemas.tickets.read"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
               "crm.objects.tasks.read"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.objects.custom.sensitive.write.v2"
             ]
           },
           {
@@ -60991,6 +61216,11 @@
           {
             "_____________________________________crm_oauth2": [
               "crm.objects.companies.read"
+            ]
+          },
+          {
+            "_____________________________________crm_oauth2": [
+              "crm.objects.tickets.highly_sensitive.read"
             ]
           },
           {
@@ -61055,12 +61285,12 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.feedback_submissions.read"
+              "crm.objects.products.write"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.products.write"
+              "crm.objects.feedback_submissions.read"
             ]
           },
           {
@@ -61125,12 +61355,12 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.projects.read"
+              "crm.objects.companies.sensitive.write.v2"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.companies.sensitive.write.v2"
+              "crm.objects.projects.read"
             ]
           },
           {
@@ -61235,12 +61465,12 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.pipelines.orders.read"
+              "crm.objects.marketing_events.read"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.marketing_events.read"
+              "crm.pipelines.orders.read"
             ]
           },
           {
@@ -61260,12 +61490,12 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "automation"
+              "crm.objects.companies.write"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.companies.write"
+              "automation"
             ]
           },
           {
@@ -61390,12 +61620,12 @@
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.projects.write"
+              "crm.objects.marketing_events.write"
             ]
           },
           {
             "_____________________________________crm_oauth2": [
-              "crm.objects.marketing_events.write"
+              "crm.objects.projects.write"
             ]
           },
           {
@@ -83029,7 +83259,12 @@
         "security": [
           {
             "___marketing_oauth2": [
-              "content"
+              "transactional-email"
+            ]
+          },
+          {
+            "___marketing_oauth2": [
+              "marketing-email"
             ]
           }
         ],
@@ -250996,6 +251231,10 @@
               "crm.objects.subscriptions.read": "",
               "crm.objects.subscriptions.write": "",
               "crm.objects.tasks.read": "",
+              "crm.objects.tickets.highly_sensitive.read": "",
+              "crm.objects.tickets.highly_sensitive.write": "",
+              "crm.objects.tickets.sensitive.read": "",
+              "crm.objects.tickets.sensitive.write": "",
               "crm.objects.users.read": "",
               "crm.objects.users.write": "",
               "crm.pipelines.orders.read": "",
@@ -251036,6 +251275,8 @@
               "crm.schemas.subscriptions.read": "",
               "crm.schemas.subscriptions.write": "",
               "crm.schemas.tasks.read": "",
+              "crm.schemas.tickets.read": "",
+              "crm.schemas.tickets.write": "",
               "e-commerce": "",
               "media_bridge.read": "",
               "tickets": "",
@@ -252619,7 +252860,7 @@
             "authorizationUrl": "https://app.hubspot.com/oauth/authorize",
             "tokenUrl": "https://api.hubapi.com/oauth/v1/token",
             "scopes": {
-              "content": ""
+              "transactional-email": ""
             }
           }
         }
