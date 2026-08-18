@@ -19,7 +19,7 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Ite
     public partial class OembedDomainsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.mediaBridge.TwoZeroTwoSixZeroThree.item.settings.oembedDomains.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The unique identifier of the oEmbed domain to retrieve.</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Item.Settings.OembedDomains.Item.WithOEmbedDomainItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Item.Settings.OembedDomains.Item.WithOEmbedDomainItemRequestBuilder this[string position]
         {
@@ -47,7 +47,7 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Ite
         {
         }
         /// <summary>
-        /// Delete an existing oEmbed domain.
+        /// Delete oEmbed domains associated with a specific app in HubSpot. This operation allows you to manage and remove domains that are no longer needed for embedding media content within the app&apos;s settings.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -64,7 +64,7 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Ite
             await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get the details for existing oEmbed domains for your app
+        /// Retrieve the list of OEmbed domains associated with a specific app in your HubSpot account. This endpoint is useful for managing and verifying the domains that are allowed to embed media content. It provides a way to ensure that only trusted domains are used for embedding media.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.OEmbedDomainsCollectionResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -82,7 +82,7 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Ite
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.OEmbedDomainsCollectionResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.OEmbedDomainsCollectionResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Set up a new oEmbed domain for your media bridge app.
+        /// Create a new oEmbed domain setting for a specific app in your HubSpot account. This endpoint allows you to define domains that can be used for oEmbed purposes, facilitating the integration of media content from external sources.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorOEmbedDomainModel"/></returns>
         /// <param name="body">The request body</param>
@@ -102,7 +102,7 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Ite
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorOEmbedDomainModel>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorOEmbedDomainModel.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Delete an existing oEmbed domain.
+        /// Delete oEmbed domains associated with a specific app in HubSpot. This operation allows you to manage and remove domains that are no longer needed for embedding media content within the app&apos;s settings.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -120,7 +120,7 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Ite
             return requestInfo;
         }
         /// <summary>
-        /// Get the details for existing oEmbed domains for your app
+        /// Retrieve the list of OEmbed domains associated with a specific app in your HubSpot account. This endpoint is useful for managing and verifying the domains that are allowed to embed media content. It provides a way to ensure that only trusted domains are used for embedding media.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -139,7 +139,7 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Ite
             return requestInfo;
         }
         /// <summary>
-        /// Set up a new oEmbed domain for your media bridge app.
+        /// Create a new oEmbed domain setting for a specific app in your HubSpot account. This endpoint allows you to define domains that can be used for oEmbed purposes, facilitating the integration of media content from external sources.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -170,22 +170,25 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Ite
             return new global::Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Item.Settings.OembedDomains.OembedDomainsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Delete an existing oEmbed domain.
+        /// Delete oEmbed domains associated with a specific app in HubSpot. This operation allows you to manage and remove domains that are no longer needed for embedding media content within the app&apos;s settings.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class OembedDomainsRequestBuilderDeleteQueryParameters 
         {
+            /// <summary>The portal ID associated with the domain. Defaults to -1.</summary>
             [QueryParameter("domainPortalId")]
             public int? DomainPortalId { get; set; }
+            /// <summary>The unique identifier of the oEmbed domain to delete.</summary>
             [QueryParameter("id")]
             public long? Id { get; set; }
         }
         /// <summary>
-        /// Get the details for existing oEmbed domains for your app
+        /// Retrieve the list of OEmbed domains associated with a specific app in your HubSpot account. This endpoint is useful for managing and verifying the domains that are allowed to embed media content. It provides a way to ensure that only trusted domains are used for embedding media.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class OembedDomainsRequestBuilderGetQueryParameters 
         {
+            /// <summary>The ID of the portal domain to filter the results. Defaults to -1.</summary>
             [QueryParameter("domainPortalId")]
             public int? DomainPortalId { get; set; }
         }

@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>The status of the object type.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum InboundDbObjectTypeStatus
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "Deprecated")]
         #pragma warning disable CS1591

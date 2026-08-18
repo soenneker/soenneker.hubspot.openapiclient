@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>A string indicating the type of media involved in the event, such as &apos;VIDEO&apos;, &apos;AUDIO&apos;, etc.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum AttentionSpanEventMediaType
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "AUDIO")]
         #pragma warning disable CS1591

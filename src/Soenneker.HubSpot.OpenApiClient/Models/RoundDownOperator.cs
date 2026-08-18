@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>A string that specifies the operation type, which is &apos;ROUND_DOWN_NUMBERS&apos; by default.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum RoundDownOperator
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "ROUND_DOWN")]
         #pragma warning disable CS1591

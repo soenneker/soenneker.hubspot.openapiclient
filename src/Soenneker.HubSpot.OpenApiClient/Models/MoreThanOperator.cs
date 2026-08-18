@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>A string representing the operation type, which is &apos;MORE_THAN&apos; by default.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum MoreThanOperator
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "MORE_THAN")]
         #pragma warning disable CS1591

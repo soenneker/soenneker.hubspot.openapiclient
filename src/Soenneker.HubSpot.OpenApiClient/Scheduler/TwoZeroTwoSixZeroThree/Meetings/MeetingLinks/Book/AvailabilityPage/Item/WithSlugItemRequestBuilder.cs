@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Scheduler.TwoZeroTwoSixZeroThree.Meeti
         {
         }
         /// <summary>
-        /// Retrieve the availability and busy times for a specific meeting link. This endpoint provides detailed information about when users are available or busy, which can be useful for scheduling meetings. The availability is determined based on the specified timezone and can be adjusted by a month offset.
+        /// Retrieve the availability and busy times for a specific meeting link. This endpoint is useful for checking available slots for booking meetings based on the provided slug. It requires specifying the timezone and optionally allows adjusting the month view with an offset.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailabilityAndBusyTimes"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Scheduler.TwoZeroTwoSixZeroThree.Meeti
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailabilityAndBusyTimes>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailabilityAndBusyTimes.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieve the availability and busy times for a specific meeting link. This endpoint provides detailed information about when users are available or busy, which can be useful for scheduling meetings. The availability is determined based on the specified timezone and can be adjusted by a month offset.
+        /// Retrieve the availability and busy times for a specific meeting link. This endpoint is useful for checking available slots for booking meetings based on the provided slug. It requires specifying the timezone and optionally allows adjusting the month view with an offset.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -80,15 +80,15 @@ namespace Soenneker.HubSpot.OpenApiClient.Scheduler.TwoZeroTwoSixZeroThree.Meeti
             return new global::Soenneker.HubSpot.OpenApiClient.Scheduler.TwoZeroTwoSixZeroThree.Meetings.MeetingLinks.Book.AvailabilityPage.Item.WithSlugItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Retrieve the availability and busy times for a specific meeting link. This endpoint provides detailed information about when users are available or busy, which can be useful for scheduling meetings. The availability is determined based on the specified timezone and can be adjusted by a month offset.
+        /// Retrieve the availability and busy times for a specific meeting link. This endpoint is useful for checking available slots for booking meetings based on the provided slug. It requires specifying the timezone and optionally allows adjusting the month view with an offset.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithSlugItemRequestBuilderGetQueryParameters 
         {
-            /// <summary>An integer representing the number of months to offset from the current month when retrieving availability.</summary>
+            /// <summary>An optional integer to adjust the month view. It allows you to view availability for future or past months.</summary>
             [QueryParameter("monthOffset")]
             public int? MonthOffset { get; set; }
-            /// <summary>The timezone for which the availability is being requested. This parameter is required.</summary>
+            /// <summary>The timezone in which the availability should be checked. This parameter is required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("timezone")]

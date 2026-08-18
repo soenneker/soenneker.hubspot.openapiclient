@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>A string indicating the type of definition source. Valid values include &apos;GLOBAL&apos;, &apos;OBJECT_TYPE&apos;, &apos;HAVEN_BRANCH&apos;, and &apos;PORTAL&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum DefinitionSourceType
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "GLOBAL")]
         #pragma warning disable CS1591

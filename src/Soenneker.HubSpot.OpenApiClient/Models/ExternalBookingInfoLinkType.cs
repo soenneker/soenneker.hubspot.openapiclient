@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>The type of meeting link, with valid values including &apos;PERSONAL_LINK&apos;, &apos;GROUP_CALENDAR&apos;, and &apos;ROUND_ROBIN_CALENDAR&apos;.</summary>
+    /// <summary>The type of meeting link. Valid values include &apos;PERSONAL_LINK&apos;, &apos;GROUP_CALENDAR&apos;, and &apos;ROUND_ROBIN_CALENDAR&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum ExternalBookingInfoLinkType
     {

@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The inputs property</summary>
+        /// <summary>An array of inputs that the NOT operation will be applied to. Each input can be a boolean, number, string, or a more complex expression.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.NotInputsItem>? Inputs { get; set; }
@@ -22,9 +22,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.NotInputsItem> Inputs { get; set; }
 #endif
-        /// <summary>The operator property</summary>
+        /// <summary>A string that specifies the type of operation, which is &apos;NOT&apos; for this component.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.NotOperator? Operator { get; set; }
-        /// <summary>The propertyName property</summary>
+        /// <summary>A string representing the name of the property associated with this NOT operation, if applicable.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PropertyName { get; set; }
@@ -32,7 +32,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string PropertyName { get; set; }
 #endif
-        /// <summary>The value property</summary>
+        /// <summary>A boolean value representing the result of the NOT operation on the inputs.</summary>
         public bool? Value { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Not"/> and sets the default values.

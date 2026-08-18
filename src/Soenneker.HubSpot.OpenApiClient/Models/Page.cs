@@ -54,7 +54,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>ID of the type of object this is. Should always .</summary>
         public int? CategoryId { get; set; }
-        /// <summary>The unique identifier for the content group associated with the page.</summary>
+        /// <summary>Required when creating or cloning blog posts. The unique identifier for the content group associated with the blog. </summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ContentGroupId { get; set; }

@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>Specifies the nature of the association in terms of its cardinality, such as one-to-one or one-to-many.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum LookupAssociationSpecCardinality
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "ONE_TO_MANY")]
         #pragma warning disable CS1591

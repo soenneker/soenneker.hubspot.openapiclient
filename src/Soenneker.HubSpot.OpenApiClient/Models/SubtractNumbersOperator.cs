@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>A string representing the operation type, which is &apos;SUBTRACT&apos; for this component. It is a required property.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum SubtractNumbersOperator
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "SUBTRACT_NUMBERS")]
         #pragma warning disable CS1591

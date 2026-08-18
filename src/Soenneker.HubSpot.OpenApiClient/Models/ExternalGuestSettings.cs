@@ -16,7 +16,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A boolean indicating whether guests can be added to the meeting.</summary>
         public bool? CanAddGuests { get; set; }
-        /// <summary>An integer representing the maximum number of guests that can be added to the meeting.</summary>
+        /// <summary>An integer specifying the maximum number of guests that can be added to the meeting.</summary>
         public int? MaxGuestCount { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExternalGuestSettings"/> and sets the default values.

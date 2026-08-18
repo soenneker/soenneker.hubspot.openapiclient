@@ -22,9 +22,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.FilteringMetaData Filter { get; set; }
 #endif
-        /// <summary>The fromObjectId property</summary>
+        /// <summary>A string representing the identifier of the object from which the external options are derived or related.</summary>
         public long? FromObjectId { get; set; }
-        /// <summary>The propertyName property</summary>
+        /// <summary>A string indicating the name of the property for which the external options metadata is being defined.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PropertyName { get; set; }
@@ -32,7 +32,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string PropertyName { get; set; }
 #endif
-        /// <summary>The relatedObjectTypeId property</summary>
+        /// <summary>A string representing the identifier of the related object type. This is used to specify which type of object the external options are associated with.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RelatedObjectTypeId { get; set; }

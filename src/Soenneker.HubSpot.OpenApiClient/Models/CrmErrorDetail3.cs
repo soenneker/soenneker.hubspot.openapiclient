@@ -9,67 +9,67 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class PublicUserUpdate : IAdditionalDataHolder, IParsable
+    public partial class CrmErrorDetail3 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The first name of the user.</summary>
+        /// <summary>The status code associated with the error detail</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FirstName { get; set; }
+        public string? Code { get; set; }
 #nullable restore
 #else
-        public string FirstName { get; set; }
+        public string Code { get; set; }
 #endif
-        /// <summary>The last name of the user.</summary>
+        /// <summary>Context about the error condition</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LastName { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmErrorDetail3ContextProperty? Context { get; set; }
 #nullable restore
 #else
-        public string LastName { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmErrorDetail3ContextProperty Context { get; set; }
 #endif
-        /// <summary>The user&apos;s primary team.</summary>
+        /// <summary>The name of the field or parameter in which the error was found.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrimaryTeamId { get; set; }
+        public string? In { get; set; }
 #nullable restore
 #else
-        public string PrimaryTeamId { get; set; }
+        public string In { get; set; }
 #endif
-        /// <summary>The user&apos;s role.</summary>
+        /// <summary>A human readable message describing the error along with remediation steps where appropriate</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RoleId { get; set; }
+        public string? Message { get; set; }
 #nullable restore
 #else
-        public string RoleId { get; set; }
+        public string Message { get; set; }
 #endif
-        /// <summary>The user&apos;s additional teams.</summary>
+        /// <summary>A specific category that contains more specific detail about the error</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? SecondaryTeamIds { get; set; }
+        public string? SubCategory { get; set; }
 #nullable restore
 #else
-        public List<string> SecondaryTeamIds { get; set; }
+        public string SubCategory { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicUserUpdate"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmErrorDetail3"/> and sets the default values.
         /// </summary>
-        public PublicUserUpdate()
+        public CrmErrorDetail3()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicUserUpdate"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmErrorDetail3"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicUserUpdate CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HubSpot.OpenApiClient.Models.CrmErrorDetail3 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicUserUpdate();
+            return new global::Soenneker.HubSpot.OpenApiClient.Models.CrmErrorDetail3();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,11 +79,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "firstName", n => { FirstName = n.GetStringValue(); } },
-                { "lastName", n => { LastName = n.GetStringValue(); } },
-                { "primaryTeamId", n => { PrimaryTeamId = n.GetStringValue(); } },
-                { "roleId", n => { RoleId = n.GetStringValue(); } },
-                { "secondaryTeamIds", n => { SecondaryTeamIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "code", n => { Code = n.GetStringValue(); } },
+                { "context", n => { Context = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmErrorDetail3ContextProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmErrorDetail3ContextProperty.CreateFromDiscriminatorValue); } },
+                { "in", n => { In = n.GetStringValue(); } },
+                { "message", n => { Message = n.GetStringValue(); } },
+                { "subCategory", n => { SubCategory = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -93,11 +93,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("firstName", FirstName);
-            writer.WriteStringValue("lastName", LastName);
-            writer.WriteStringValue("primaryTeamId", PrimaryTeamId);
-            writer.WriteStringValue("roleId", RoleId);
-            writer.WriteCollectionOfPrimitiveValues<string>("secondaryTeamIds", SecondaryTeamIds);
+            writer.WriteStringValue("code", Code);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmErrorDetail3ContextProperty>("context", Context);
+            writer.WriteStringValue("in", In);
+            writer.WriteStringValue("message", Message);
+            writer.WriteStringValue("subCategory", SubCategory);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

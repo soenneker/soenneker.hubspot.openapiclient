@@ -19,7 +19,7 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Ite
     public partial class ObjectDefinitionsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.mediaBridge.TwoZeroTwoSixZeroThree.item.settings.objectDefinitions.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The type of media for which the object definitions are being retrieved. Valid values are VIDEO, AUDIO, DOCUMENT, OTHER, and IMAGE.</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Item.Settings.ObjectDefinitions.Item.WithMediaTypeItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Item.Settings.ObjectDefinitions.Item.WithMediaTypeItemRequestBuilder this[string position]
         {
@@ -47,7 +47,7 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Ite
         {
         }
         /// <summary>
-        /// Create a new media object type
+        /// Create new object definitions for a specific app in the HubSpot Media Bridge. This endpoint is used to define new objects that can be utilized within the app, allowing for customization and integration of media-related functionalities.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.BulkIntegratorObjectCreationResponse"/></returns>
         /// <param name="body">The request body</param>
@@ -67,7 +67,7 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Ite
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.BulkIntegratorObjectCreationResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.BulkIntegratorObjectCreationResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Create a new media object type
+        /// Create new object definitions for a specific app in the HubSpot Media Bridge. This endpoint is used to define new objects that can be utilized within the app, allowing for customization and integration of media-related functionalities.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

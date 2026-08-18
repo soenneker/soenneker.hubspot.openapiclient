@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>A string that specifies the operation type, with a default value of &apos;YEAR&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum YearOperator
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "YEAR")]
         #pragma warning disable CS1591

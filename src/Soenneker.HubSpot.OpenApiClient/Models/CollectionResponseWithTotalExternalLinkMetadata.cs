@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.SchedulerPaging Paging { get; set; }
 #endif
-        /// <summary>An array of external link metadata objects, each containing details about a specific link.</summary>
+        /// <summary>An array of external link metadata objects. Each object contains details about an external meeting link.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkMetadata>? Results { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkMetadata> Results { get; set; }
 #endif
-        /// <summary>The total number of external links available. It is an integer value.</summary>
+        /// <summary>The total number of external link metadata entries available. This is an integer value.</summary>
         public int? Total { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalExternalLinkMetadata"/> and sets the default values.

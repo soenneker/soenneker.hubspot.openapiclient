@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The expressionToEvaluate property</summary>
+        /// <summary>An expression that is evaluated to determine the presence of the specified property. This can involve various logical or arithmetic operations.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.IsPresentExpressionToEvaluate? ExpressionToEvaluate { get; set; }
@@ -22,9 +22,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.IsPresentExpressionToEvaluate ExpressionToEvaluate { get; set; }
 #endif
-        /// <summary>The operator property</summary>
+        /// <summary>A string that specifies the operation being performed. For the IsPresent component, this is typically a predefined value indicating presence checking.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.IsPresentOperator? Operator { get; set; }
-        /// <summary>The propertyName property</summary>
+        /// <summary>A string that represents the name of the property being evaluated for presence.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PropertyName { get; set; }
@@ -32,7 +32,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string PropertyName { get; set; }
 #endif
-        /// <summary>The value property</summary>
+        /// <summary>A boolean value indicating the result of the presence check. True if the property is present, otherwise false.</summary>
         public bool? Value { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IsPresent"/> and sets the default values.

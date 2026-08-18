@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>A string representing the operation to be performed. The default value is &apos;IF_NUMBER&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum IfNumberOperator
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "IF_NUMBER")]
         #pragma warning disable CS1591

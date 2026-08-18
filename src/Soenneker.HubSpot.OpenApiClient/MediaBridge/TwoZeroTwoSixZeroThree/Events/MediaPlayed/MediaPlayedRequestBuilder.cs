@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Eve
         {
         }
         /// <summary>
-        /// Create an event for when a user begins playing a piece of media.
+        /// Create a media played event in the HubSpot account. This endpoint is used to log when media content has been played, which can be useful for tracking user engagement with media resources.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.MediaPlayedEvent"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Eve
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.MediaPlayedEvent>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.MediaPlayedEvent.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Create an event for when a user begins playing a piece of media.
+        /// Create a media played event in the HubSpot account. This endpoint is used to log when media content has been played, which can be useful for tracking user engagement with media resources.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

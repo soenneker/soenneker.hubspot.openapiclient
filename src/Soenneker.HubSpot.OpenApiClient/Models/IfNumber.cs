@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The elseExpression property</summary>
+        /// <summary>An expression that is evaluated if the condition is false.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.IfNumberElseExpression? ElseExpression { get; set; }
@@ -22,9 +22,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.IfNumberElseExpression ElseExpression { get; set; }
 #endif
-        /// <summary>The enclosedInParentheses property</summary>
+        /// <summary>A boolean indicating whether the expression is enclosed in parentheses, affecting the order of operations.</summary>
         public bool? EnclosedInParentheses { get; set; }
-        /// <summary>The ifExpression property</summary>
+        /// <summary>An expression that is evaluated if the condition is true.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.IfNumberIfExpression? IfExpression { get; set; }
@@ -32,7 +32,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.IfNumberIfExpression IfExpression { get; set; }
 #endif
-        /// <summary>The inputs property</summary>
+        /// <summary>An array of inputs that the conditional expression will evaluate. Each input can be a constant, a variable, or another expression.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.IfNumberInputsItem>? Inputs { get; set; }
@@ -40,9 +40,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.IfNumberInputsItem> Inputs { get; set; }
 #endif
-        /// <summary>The operator property</summary>
+        /// <summary>A string representing the operation to be performed. The default value is &apos;IF_NUMBER&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.IfNumberOperator? Operator { get; set; }
-        /// <summary>The propertyName property</summary>
+        /// <summary>A string representing the name of the property involved in the conditional expression.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PropertyName { get; set; }
@@ -50,7 +50,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string PropertyName { get; set; }
 #endif
-        /// <summary>The value property</summary>
+        /// <summary>A number that is the result of the conditional expression.</summary>
         public double? Value { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IfNumber"/> and sets the default values.

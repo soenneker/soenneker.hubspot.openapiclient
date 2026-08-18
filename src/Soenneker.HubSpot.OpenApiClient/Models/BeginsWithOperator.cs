@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>A string representing the operation being performed. The default value is &apos;BEGINS_WITH&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum BeginsWithOperator
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "BEGINS_WITH")]
         #pragma warning disable CS1591

@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string FieldType { get; set; }
 #endif
-        /// <summary>A boolean indicating whether the form field is a custom field.</summary>
+        /// <summary>A boolean indicating whether the form field is custom-defined.</summary>
         public bool? IsCustom { get; set; }
         /// <summary>The display label for the form field, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -40,7 +40,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>The translated version of the form field&apos;s label, represented as a string.</summary>
+        /// <summary>The translated label for the form field, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TranslatedLabel { get; set; }
@@ -48,7 +48,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string TranslatedLabel { get; set; }
 #endif
-        /// <summary>The value entered or selected for the form field, represented as a string.</summary>
+        /// <summary>The value assigned to the form field, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Value { get; set; }
@@ -56,7 +56,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Value { get; set; }
 #endif
-        /// <summary>A label for the value of the form field, represented as a string.</summary>
+        /// <summary>A label for the field&apos;s value, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ValueLabel { get; set; }

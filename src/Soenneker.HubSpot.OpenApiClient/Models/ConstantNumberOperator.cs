@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>A string that specifies the operation type. It defaults to &apos;CONSTANT_NUMBER&apos; and is used to identify the component as a constant number.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum ConstantNumberOperator
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "CONSTANT_NUMBER")]
         #pragma warning disable CS1591

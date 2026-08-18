@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>A string that specifies the operation type, which is &apos;PARSE_NUMBER&apos; for this component.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum ParseNumberOperator
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "PARSE_NUMBER")]
         #pragma warning disable CS1591

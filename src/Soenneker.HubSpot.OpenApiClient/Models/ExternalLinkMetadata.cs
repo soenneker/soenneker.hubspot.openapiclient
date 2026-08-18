@@ -26,7 +26,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>The URL of the meeting link.</summary>
+        /// <summary>The full URL of the meeting link.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Link { get; set; }
@@ -42,7 +42,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>The unique identifier of the user who organizes the meeting.</summary>
+        /// <summary>The unique identifier of the user who organized the meeting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OrganizerUserId { get; set; }
@@ -50,9 +50,15 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string OrganizerUserId { get; set; }
 #endif
-        /// <summary>An integer representing the identifier for the payment link associated with the meeting, if any.</summary>
-        public long? PaymentLinkId { get; set; }
-        /// <summary>A string used to uniquely identify the meeting link in URLs.</summary>
+        /// <summary>An integer representing the identifier for the payment link associated with the meeting.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? PaymentLinkId { get; set; }
+#nullable restore
+#else
+        public string PaymentLinkId { get; set; }
+#endif
+        /// <summary>A string representing the unique part of the URL for the meeting link.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Slug { get; set; }
@@ -103,7 +109,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "link", n => { Link = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "organizerUserId", n => { OrganizerUserId = n.GetStringValue(); } },
-                { "paymentLinkId", n => { PaymentLinkId = n.GetLongValue(); } },
+                { "paymentLinkId", n => { PaymentLinkId = n.GetStringValue(); } },
                 { "slug", n => { Slug = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkMetadataType>(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
@@ -123,7 +129,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("link", Link);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("organizerUserId", OrganizerUserId);
-            writer.WriteLongValue("paymentLinkId", PaymentLinkId);
+            writer.WriteStringValue("paymentLinkId", PaymentLinkId);
             writer.WriteStringValue("slug", Slug);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkMetadataType>("type", Type);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);

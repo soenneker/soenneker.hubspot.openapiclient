@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>The type of media that was played, such as &apos;VIDEO&apos;, &apos;AUDIO&apos;, &apos;DOCUMENT&apos;, &apos;OTHER&apos;, or &apos;IMAGE&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum MediaPlayedEventRequestMediaType
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "AUDIO")]
         #pragma warning disable CS1591

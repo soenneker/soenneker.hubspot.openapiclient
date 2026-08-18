@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>A string that specifies the operation to be performed. It defaults to &apos;DATE&apos; and is part of the enumeration for date operations.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum DateOperator
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "DATE")]
         #pragma warning disable CS1591

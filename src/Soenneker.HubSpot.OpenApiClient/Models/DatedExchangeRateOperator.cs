@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>A string representing the operator used in the exchange rate logic. The default value is &apos;OR&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum DatedExchangeRateOperator
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "DATED_EXCHANGE_RATE")]
         #pragma warning disable CS1591

@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>A string indicating the type of operation, which is &apos;MONTH&apos; by default.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum MonthOperator
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "MONTH")]
         #pragma warning disable CS1591

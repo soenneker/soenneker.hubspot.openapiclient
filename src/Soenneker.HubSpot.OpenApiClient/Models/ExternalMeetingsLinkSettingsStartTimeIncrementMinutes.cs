@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>A string indicating the increment in minutes for the start time of meetings. Valid values include &apos;MEETING_DURATION&apos;, &apos;FIVE&apos;, &apos;TEN&apos;, &apos;FIFTEEN&apos;, &apos;TWENTY&apos;, &apos;THIRTY&apos;, &apos;FORTY_FIVE&apos;, &apos;SIXTY&apos;, &apos;NINETY&apos;, &apos;ONE_HUNDRED_TWENTY&apos;.</summary>
+    /// <summary>A string indicating the increment for start times, with valid values including &apos;MEETING_DURATION&apos;, &apos;FIVE&apos;, &apos;TEN&apos;, &apos;FIFTEEN&apos;, &apos;TWENTY&apos;, &apos;THIRTY&apos;, &apos;FORTY_FIVE&apos;, &apos;SIXTY&apos;, &apos;NINETY&apos;, and &apos;ONE_HUNDRED_TWENTY&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum ExternalMeetingsLinkSettingsStartTimeIncrementMinutes
     {

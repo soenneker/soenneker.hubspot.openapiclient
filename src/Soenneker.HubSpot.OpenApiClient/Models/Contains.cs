@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The inputs property</summary>
+        /// <summary>An array of inputs that are evaluated by the &apos;contains&apos; operation. These inputs can include various types of variables and operations.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ContainsInputsItem>? Inputs { get; set; }
@@ -22,9 +22,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ContainsInputsItem> Inputs { get; set; }
 #endif
-        /// <summary>The operator property</summary>
+        /// <summary>A string that specifies the operation type, which is &apos;CONTAINS&apos; in this context.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.ContainsOperator? Operator { get; set; }
-        /// <summary>The propertyName property</summary>
+        /// <summary>A string representing the name of the property being evaluated in the &apos;contains&apos; operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PropertyName { get; set; }
@@ -32,7 +32,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string PropertyName { get; set; }
 #endif
-        /// <summary>The stringToCheck property</summary>
+        /// <summary>The string within which the presence of another string is being checked.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.ContainsStringToCheck? StringToCheck { get; set; }
@@ -40,7 +40,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.ContainsStringToCheck StringToCheck { get; set; }
 #endif
-        /// <summary>The value property</summary>
+        /// <summary>A boolean indicating the result of the &apos;contains&apos; operation, where true means the string is found and false means it is not.</summary>
         public bool? Value { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Contains"/> and sets the default values.

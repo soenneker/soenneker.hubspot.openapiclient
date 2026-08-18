@@ -9,12 +9,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class UserProvisionRequest : IAdditionalDataHolder, IParsable
+    public partial class UserProvisionRequestMarch2026 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The user&apos;s email.</summary>
+        /// <summary>The email property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Email { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Email { get; set; }
 #endif
-        /// <summary>The user&apos;s first name.</summary>
+        /// <summary>The firstName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FirstName { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string FirstName { get; set; }
 #endif
-        /// <summary>The user&apos;s last name.</summary>
+        /// <summary>The lastName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? LastName { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string LastName { get; set; }
 #endif
-        /// <summary>The user&apos;s primary team.</summary>
+        /// <summary>The primaryTeamId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PrimaryTeamId { get; set; }
@@ -46,7 +46,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string PrimaryTeamId { get; set; }
 #endif
-        /// <summary>The user&apos;s role.</summary>
+        /// <summary>The roleId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RoleId { get; set; }
@@ -54,7 +54,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string RoleId { get; set; }
 #endif
-        /// <summary>The user&apos;s additional teams.</summary>
+        /// <summary>The secondaryTeamIds property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? SecondaryTeamIds { get; set; }
@@ -62,24 +62,24 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<string> SecondaryTeamIds { get; set; }
 #endif
-        /// <summary>Whether to send a welcome email.</summary>
+        /// <summary>The sendWelcomeEmail property</summary>
         public bool? SendWelcomeEmail { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.UserProvisionRequest"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.UserProvisionRequestMarch2026"/> and sets the default values.
         /// </summary>
-        public UserProvisionRequest()
+        public UserProvisionRequestMarch2026()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.UserProvisionRequest"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.UserProvisionRequestMarch2026"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.HubSpot.OpenApiClient.Models.UserProvisionRequest CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HubSpot.OpenApiClient.Models.UserProvisionRequestMarch2026 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.UserProvisionRequest();
+            return new global::Soenneker.HubSpot.OpenApiClient.Models.UserProvisionRequestMarch2026();
         }
         /// <summary>
         /// The deserialization information for the current model

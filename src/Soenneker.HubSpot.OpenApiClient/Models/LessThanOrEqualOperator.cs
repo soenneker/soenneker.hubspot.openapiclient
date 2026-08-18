@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>A string representing the operation type, which is &apos;LESS_THAN_OR_EQUAL&apos; by default.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum LessThanOrEqualOperator
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "LESS_THAN_OR_EQUAL")]
         #pragma warning disable CS1591

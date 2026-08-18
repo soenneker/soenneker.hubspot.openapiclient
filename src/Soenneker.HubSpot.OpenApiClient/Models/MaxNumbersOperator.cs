@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>A string that specifies the operation to be performed. The default value is &apos;MAX_NUMBERS&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum MaxNumbersOperator
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "MAX_NUMBERS")]
         #pragma warning disable CS1591

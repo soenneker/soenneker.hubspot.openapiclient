@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Scheduler.TwoZeroTwoSixZeroThree.Meeti
         {
         }
         /// <summary>
-        /// Retrieve detailed booking information for a specific meeting link identified by the slug. This endpoint provides information about the booking settings and availability for the meeting link. It is useful for obtaining the necessary details to schedule or manage meetings effectively.
+        /// Retrieve detailed booking information for a specific meeting link using its slug. This endpoint provides insights into the availability and settings associated with the meeting link. It is useful for understanding the booking context and ensuring that the correct timezone is applied.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBookingInfo"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Scheduler.TwoZeroTwoSixZeroThree.Meeti
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBookingInfo>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBookingInfo.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieve detailed booking information for a specific meeting link identified by the slug. This endpoint provides information about the booking settings and availability for the meeting link. It is useful for obtaining the necessary details to schedule or manage meetings effectively.
+        /// Retrieve detailed booking information for a specific meeting link using its slug. This endpoint provides insights into the availability and settings associated with the meeting link. It is useful for understanding the booking context and ensuring that the correct timezone is applied.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -80,12 +80,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Scheduler.TwoZeroTwoSixZeroThree.Meeti
             return new global::Soenneker.HubSpot.OpenApiClient.Scheduler.TwoZeroTwoSixZeroThree.Meetings.MeetingLinks.Book.Item.WithSlugItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Retrieve detailed booking information for a specific meeting link identified by the slug. This endpoint provides information about the booking settings and availability for the meeting link. It is useful for obtaining the necessary details to schedule or manage meetings effectively.
+        /// Retrieve detailed booking information for a specific meeting link using its slug. This endpoint provides insights into the availability and settings associated with the meeting link. It is useful for understanding the booking context and ensuring that the correct timezone is applied.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithSlugItemRequestBuilderGetQueryParameters 
         {
-            /// <summary>The timezone in which the meeting times should be displayed. This is required to ensure the correct local time is used for the meeting.</summary>
+            /// <summary>The timezone to be used for the meeting link. This is required to ensure the correct scheduling context.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("timezone")]

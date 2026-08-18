@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The calculationExpression property</summary>
+        /// <summary>An expression used to calculate the property&apos;s value based on other properties or constants.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyDefinitionCalculationExpression? CalculationExpression { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyDefinitionCalculationExpression CalculationExpression { get; set; }
 #endif
-        /// <summary>The calculationFormula property</summary>
+        /// <summary>A formula that defines how the property&apos;s value is computed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CalculationFormula { get; set; }
@@ -54,11 +54,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalOptionsMetaData ExternalOptionsMetaData { get; set; }
 #endif
-        /// <summary>The fulcrumPortalId property</summary>
+        /// <summary>An identifier for the portal or account within which this property is used.</summary>
         public int? FulcrumPortalId { get; set; }
-        /// <summary>The fulcrumTimestamp property</summary>
+        /// <summary>A timestamp indicating when the property was last updated or synchronized.</summary>
         public long? FulcrumTimestamp { get; set; }
-        /// <summary>The janusGroup property</summary>
+        /// <summary>The group or category to which this property belongs, potentially used for organizing properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? JanusGroup { get; set; }
@@ -74,7 +74,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.LookupAssociationSpec LookupAssociationSpec { get; set; }
 #endif
-        /// <summary>The objectTypeId property</summary>
+        /// <summary>The identifier for the type of object to which this property belongs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ObjectTypeId { get; set; }

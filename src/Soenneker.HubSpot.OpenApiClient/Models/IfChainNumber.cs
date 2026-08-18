@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The conditions property</summary>
+        /// <summary>An array of conditions that are evaluated in the logic chain to determine the final numeric value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.IfChainNumberConditionsItem>? Conditions { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.IfChainNumberConditionsItem> Conditions { get; set; }
 #endif
-        /// <summary>The defaultExpression property</summary>
+        /// <summary>The default expression to be used if none of the conditions are met.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.IfChainNumberDefaultExpression? DefaultExpression { get; set; }
@@ -30,9 +30,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.IfChainNumberDefaultExpression DefaultExpression { get; set; }
 #endif
-        /// <summary>The enclosedInParentheses property</summary>
+        /// <summary>A boolean indicating whether the expression is enclosed in parentheses.</summary>
         public bool? EnclosedInParentheses { get; set; }
-        /// <summary>The inputs property</summary>
+        /// <summary>An array of inputs that can include various types of variables and operations, such as constants, property variables, or mathematical operations.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.IfChainNumberInputsItem>? Inputs { get; set; }
@@ -40,9 +40,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.IfChainNumberInputsItem> Inputs { get; set; }
 #endif
-        /// <summary>The operator property</summary>
+        /// <summary>A string representing the operation to be performed. The default value is &apos;IF_CHAIN_NUMBER&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.IfChainNumberOperator? Operator { get; set; }
-        /// <summary>The outputs property</summary>
+        /// <summary>An array of possible outputs based on the evaluation of the conditions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.IfChainNumberOutputsItem>? Outputs { get; set; }
@@ -50,7 +50,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.IfChainNumberOutputsItem> Outputs { get; set; }
 #endif
-        /// <summary>The propertyName property</summary>
+        /// <summary>A string representing the name of the property involved in the conditional logic.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PropertyName { get; set; }
@@ -58,7 +58,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string PropertyName { get; set; }
 #endif
-        /// <summary>The value property</summary>
+        /// <summary>The numeric result of the conditional logic chain evaluation.</summary>
         public double? Value { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IfChainNumber"/> and sets the default values.

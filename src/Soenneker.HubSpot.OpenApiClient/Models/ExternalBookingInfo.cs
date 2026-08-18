@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>An array of busy times for all users associated with the meeting link, each defined by the ExternalUserBusyTimes schema.</summary>
+        /// <summary>An array of objects representing the busy times for all users associated with the meeting link.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalUserBusyTimes>? AllUsersBusyTimes { get; set; }
@@ -56,7 +56,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string LinkId { get; set; }
 #endif
-        /// <summary>The type of meeting link, with valid values including &apos;PERSONAL_LINK&apos;, &apos;GROUP_CALENDAR&apos;, and &apos;ROUND_ROBIN_CALENDAR&apos;.</summary>
+        /// <summary>The type of meeting link. Valid values include &apos;PERSONAL_LINK&apos;, &apos;GROUP_CALENDAR&apos;, and &apos;ROUND_ROBIN_CALENDAR&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBookingInfoLinkType? LinkType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBookingInfo"/> and sets the default values.

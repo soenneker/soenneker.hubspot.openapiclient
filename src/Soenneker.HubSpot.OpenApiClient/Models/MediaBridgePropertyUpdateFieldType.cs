@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>A string specifying the field type of the property. Valid values include &apos;booleancheckbox&apos;, &apos;calculation_equation&apos;, &apos;checkbox&apos;, &apos;date&apos;, &apos;file&apos;, &apos;html&apos;, &apos;number&apos;, &apos;phonenumber&apos;, &apos;radio&apos;, &apos;select&apos;, &apos;text&apos;, and &apos;textarea&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum MediaBridgePropertyUpdateFieldType
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "booleancheckbox")]
         #pragma warning disable CS1591

@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>A string representing the operation type, defaulting to &apos;HAS_EMAIL_REPLY&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum HasEmailReplyOperator
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "HAS_EMAIL_REPLY")]
         #pragma warning disable CS1591

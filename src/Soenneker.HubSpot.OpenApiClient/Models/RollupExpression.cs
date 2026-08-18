@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The associationTypes property</summary>
+        /// <summary>An array of association types that define the relationships between the source object and the target object for the rollup operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.AssociationSpec>? AssociationTypes { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.AssociationSpec> AssociationTypes { get; set; }
 #endif
-        /// <summary>The conditionalExpression property</summary>
+        /// <summary>An expression that specifies conditions under which the rollup operation should be performed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.RollupExpressionConditionalExpression? ConditionalExpression { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.RollupExpressionConditionalExpression ConditionalExpression { get; set; }
 #endif
-        /// <summary>The conditionalFormula property</summary>
+        /// <summary>A formula that defines additional conditions or calculations to be applied during the rollup operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ConditionalFormula { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ConditionalFormula { get; set; }
 #endif
-        /// <summary>The emptyRollupValue property</summary>
+        /// <summary>The value to be used when the rollup operation results in no data, often a default or placeholder value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EmptyRollupValue { get; set; }
@@ -46,9 +46,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string EmptyRollupValue { get; set; }
 #endif
-        /// <summary>The rollupOperator property</summary>
+        /// <summary>The operator used to perform the rollup operation, such as sum, average, or count.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.RollupExpressionRollupOperator? RollupOperator { get; set; }
-        /// <summary>The sourceCompareByPropertyName property</summary>
+        /// <summary>The name of the property on the source object used for comparison during the rollup operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SourceCompareByPropertyName { get; set; }
@@ -56,7 +56,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string SourceCompareByPropertyName { get; set; }
 #endif
-        /// <summary>The sourceObjectTypeId property</summary>
+        /// <summary>The unique identifier for the type of object from which data is being sourced.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SourceObjectTypeId { get; set; }
@@ -64,7 +64,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string SourceObjectTypeId { get; set; }
 #endif
-        /// <summary>The sourcePropertyName property</summary>
+        /// <summary>The name of the property on the source object that is being used in the rollup operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SourcePropertyName { get; set; }

@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>An array of communication consent checkboxes, each specifying a communication type and whether it is required.</summary>
+        /// <summary>An array of communication consent checkboxes, each defined by an ExternalCommunicationConsentCheckbox object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCommunicationConsentCheckbox>? CommunicationConsentCheckboxes { get; set; }
@@ -42,7 +42,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<long?> LegitimateInterestSubscriptionTypes { get; set; }
 #endif
-        /// <summary>A string containing the text of the privacy policy.</summary>
+        /// <summary>A string containing the text for the privacy policy.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PrivacyPolicyText { get; set; }
@@ -58,7 +58,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ProcessingConsentCheckboxLabel { get; set; }
 #endif
-        /// <summary>A string containing the footer text related to processing consent.</summary>
+        /// <summary>A string containing the footer text for processing consent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ProcessingConsentFooterText { get; set; }

@@ -40,7 +40,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Scheduler.TwoZeroTwoSixZeroThree.Meeti
         {
         }
         /// <summary>
-        /// Retrieve a list of meeting links available in your HubSpot account. This endpoint allows you to filter meeting links by various criteria such as name, organizer, and type. It supports pagination for large result sets.
+        /// Retrieve a list of meeting links available in the HubSpot account. This endpoint allows filtering by various criteria such as meeting name, organizer user ID, and meeting type. It supports pagination to navigate through large sets of results.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalExternalLinkMetadata"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -58,7 +58,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Scheduler.TwoZeroTwoSixZeroThree.Meeti
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalExternalLinkMetadata>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalExternalLinkMetadata.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieve a list of meeting links available in your HubSpot account. This endpoint allows you to filter meeting links by various criteria such as name, organizer, and type. It supports pagination for large result sets.
+        /// Retrieve a list of meeting links available in the HubSpot account. This endpoint allows filtering by various criteria such as meeting name, organizer user ID, and meeting type. It supports pagination to navigate through large sets of results.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -86,7 +86,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Scheduler.TwoZeroTwoSixZeroThree.Meeti
             return new global::Soenneker.HubSpot.OpenApiClient.Scheduler.TwoZeroTwoSixZeroThree.Meetings.MeetingLinks.MeetingLinksRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Retrieve a list of meeting links available in your HubSpot account. This endpoint allows you to filter meeting links by various criteria such as name, organizer, and type. It supports pagination for large result sets.
+        /// Retrieve a list of meeting links available in the HubSpot account. This endpoint allows filtering by various criteria such as meeting name, organizer user ID, and meeting type. It supports pagination to navigate through large sets of results.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class MeetingLinksRequestBuilderGetQueryParameters 

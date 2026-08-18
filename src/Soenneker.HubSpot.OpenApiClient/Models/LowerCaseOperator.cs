@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>A string indicating the operation to be performed, which is &apos;LOWER_CASE&apos; by default.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum LowerCaseOperator
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "LOWER_CASE")]
         #pragma warning disable CS1591

@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     /// <summary>
-    /// An object mapping meeting durations to their respective availability details. Each key is a duration, and the value is an object containing availability information for that duration.
+    /// An object where each key is a duration and the value is an availability object for that duration. This provides detailed availability information for each specified meeting duration.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ExternalLinkAvailabilityLinkAvailabilityByDurationProperty : IAdditionalDataHolder, IParsable

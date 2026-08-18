@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>A string representing the operation type, which is &apos;EQUALS&apos; for this component.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum NumberEqualsOperator
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "NUMBER_EQUALS")]
         #pragma warning disable CS1591

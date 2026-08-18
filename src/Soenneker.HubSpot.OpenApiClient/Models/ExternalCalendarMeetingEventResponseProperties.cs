@@ -38,7 +38,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<string> HsAttendeeOwnerIds { get; set; }
 #endif
-        /// <summary>The source of the engagement, with a wide range of valid values including &apos;UNKNOWN&apos;, &apos;IMPORT&apos;, &apos;API&apos;, and many others.</summary>
+        /// <summary>The source of the engagement. Valid values include a wide range of sources such as &apos;UNKNOWN&apos;, &apos;IMPORT&apos;, &apos;API&apos;, &apos;FORM&apos;, and many others.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCalendarMeetingEventResponsePropertiesHsEngagementSource? HsEngagementSource { get; set; }
         /// <summary>The unique identifier for the source of the engagement.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -64,7 +64,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string HsInternalMeetingNotes { get; set; }
 #endif
-        /// <summary>The body or description of the meeting event.</summary>
+        /// <summary>The body or description of the meeting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? HsMeetingBody { get; set; }
@@ -72,9 +72,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string HsMeetingBody { get; set; }
 #endif
-        /// <summary>The end time of the meeting, in ISO 8601 date-time format.</summary>
+        /// <summary>The end time of the meeting, in ISO 8601 format.</summary>
         public DateTimeOffset? HsMeetingEndTime { get; set; }
-        /// <summary>The external URL for the meeting.</summary>
+        /// <summary>The external URL associated with the meeting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? HsMeetingExternalUrl { get; set; }
@@ -90,9 +90,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string HsMeetingLocation { get; set; }
 #endif
-        /// <summary>The type of location for the meeting, with valid values including &apos;PHONE&apos;, &apos;ADDRESS&apos;, and &apos;CUSTOM&apos;.</summary>
+        /// <summary>The type of location for the meeting. Valid values include &apos;PHONE&apos;, &apos;ADDRESS&apos;, and &apos;CUSTOM&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCalendarMeetingEventResponsePropertiesHsMeetingLocationType? HsMeetingLocationType { get; set; }
-        /// <summary>The outcome of the meeting event.</summary>
+        /// <summary>The outcome of the meeting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? HsMeetingOutcome { get; set; }
@@ -100,9 +100,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string HsMeetingOutcome { get; set; }
 #endif
-        /// <summary>The start time of the meeting, in ISO 8601 date-time format.</summary>
+        /// <summary>The start time of the meeting, in ISO 8601 format.</summary>
         public DateTimeOffset? HsMeetingStartTime { get; set; }
-        /// <summary>The title of the meeting event.</summary>
+        /// <summary>The title of the meeting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? HsMeetingTitle { get; set; }
@@ -110,7 +110,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string HsMeetingTitle { get; set; }
 #endif
-        /// <summary>The timestamp of the meeting event, in ISO 8601 date-time format.</summary>
+        /// <summary>A timestamp indicating when the meeting event was recorded, in ISO 8601 format.</summary>
         public DateTimeOffset? HsTimestamp { get; set; }
         /// <summary>A unique identifier for the meeting event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

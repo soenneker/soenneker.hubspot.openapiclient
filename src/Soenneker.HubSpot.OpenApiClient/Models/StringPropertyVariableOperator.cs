@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>A string representing the operation to be performed on the string property. It is a required field.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum StringPropertyVariableOperator
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "STRING_PROPERTY_VARIABLE")]
         #pragma warning disable CS1591

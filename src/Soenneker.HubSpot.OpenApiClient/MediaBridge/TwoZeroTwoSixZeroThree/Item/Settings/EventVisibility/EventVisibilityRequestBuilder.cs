@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Ite
         {
         }
         /// <summary>
-        /// Get the visibility settings for media bridge events for your apps.
+        /// Retrieve the event visibility settings for a specific app in the MediaBridge service. This endpoint provides information on how events are visible within the specified application context.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.EventVisibilityResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Ite
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.EventVisibilityResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.EventVisibilityResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Set the visibility settings for media bridge events created by your app.
+        /// Update the event visibility settings for a specific app in the MediaBridgeService. This operation allows you to modify how events are displayed or managed for the specified app. It is useful for configuring event visibility preferences based on your application&apos;s requirements.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.EventVisibilityChange"/></returns>
         /// <param name="body">The request body</param>
@@ -72,7 +72,7 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Ite
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.EventVisibilityChange>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.EventVisibilityChange.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get the visibility settings for media bridge events for your apps.
+        /// Retrieve the event visibility settings for a specific app in the MediaBridge service. This endpoint provides information on how events are visible within the specified application context.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -91,7 +91,7 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Ite
             return requestInfo;
         }
         /// <summary>
-        /// Set the visibility settings for media bridge events created by your app.
+        /// Update the event visibility settings for a specific app in the MediaBridgeService. This operation allows you to modify how events are displayed or managed for the specified app. It is useful for configuring event visibility preferences based on your application&apos;s requirements.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

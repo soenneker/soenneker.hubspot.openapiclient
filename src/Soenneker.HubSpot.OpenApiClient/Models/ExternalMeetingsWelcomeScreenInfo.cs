@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>The URL of the logo image to be displayed on the welcome screen. It is a string value.</summary>
+        /// <summary>The URL of the logo image displayed on the welcome screen. It is a string value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? LogoUrl { get; set; }
@@ -40,7 +40,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Title { get; set; }
 #endif
-        /// <summary>A boolean indicating whether to use the company&apos;s logo on the welcome screen.</summary>
+        /// <summary>A boolean indicating whether the company&apos;s logo should be used on the welcome screen.</summary>
         public bool? UseCompanyLogo { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsWelcomeScreenInfo"/> and sets the default values.

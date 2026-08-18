@@ -14,9 +14,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The operator property</summary>
+        /// <summary>A string representing the operation type, with a default value of &apos;NOW&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.NowOperator? Operator { get; set; }
-        /// <summary>The propertyName property</summary>
+        /// <summary>A string indicating the name of the property associated with the current date and time.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PropertyName { get; set; }
@@ -24,7 +24,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string PropertyName { get; set; }
 #endif
-        /// <summary>The value property</summary>
+        /// <summary>A string that holds the current date and time value.</summary>
         public double? Value { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Now"/> and sets the default values.

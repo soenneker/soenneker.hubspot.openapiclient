@@ -32,7 +32,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string FirstName { get; set; }
 #endif
-        /// <summary>An array of form fields filled out by the person booking the meeting.</summary>
+        /// <summary>An array of form fields filled out by the participant, each containing a name and value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBookingFormField>? FormFields { get; set; }
@@ -48,7 +48,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string LastName { get; set; }
 #endif
-        /// <summary>An array of legal consent responses provided by the person booking the meeting.</summary>
+        /// <summary>An array of legal consent responses, each detailing the consent given by the participant.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentResponse>? LegalConsentResponses { get; set; }
@@ -56,7 +56,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentResponse> LegalConsentResponses { get; set; }
 #endif
-        /// <summary>An array of user IDs representing users who are likely available for the meeting.</summary>
+        /// <summary>An array of strings representing the user IDs of those likely available for the meeting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? LikelyAvailableUserIds { get; set; }
@@ -72,7 +72,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Locale { get; set; }
 #endif
-        /// <summary>A string that uniquely identifies the meeting link being booked.</summary>
+        /// <summary>A string representing the unique identifier for the meeting link.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Slug { get; set; }
@@ -80,9 +80,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Slug { get; set; }
 #endif
-        /// <summary>The start time of the meeting, represented in ISO 8601 date-time format.</summary>
+        /// <summary>The start time of the meeting in ISO 8601 date-time format.</summary>
         public DateTimeOffset? StartTime { get; set; }
-        /// <summary>The time zone in which the meeting will occur, represented as a string.</summary>
+        /// <summary>A string representing the timezone of the person booking the meeting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Timezone { get; set; }

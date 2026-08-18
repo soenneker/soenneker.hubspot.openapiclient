@@ -40,7 +40,7 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Ite
         {
         }
         /// <summary>
-        /// Get the schema for a specified object type.
+        /// Retrieve the schema for a specific object type within a given app in your HubSpot account. This endpoint is useful for understanding the structure and properties of a particular object type, which can assist in data integration and management tasks.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ObjectSchema"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -58,7 +58,7 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Ite
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ObjectSchema>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ObjectSchema.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Update the schema for an existing object type
+        /// Update the schema for a specific object type within a given app. This operation allows you to modify the existing schema details, which can be useful for adapting to changes in data structure requirements or business logic.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ObjectTypeDefinition"/></returns>
         /// <param name="body">The request body</param>
@@ -78,7 +78,7 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Ite
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ObjectTypeDefinition>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ObjectTypeDefinition.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get the schema for a specified object type.
+        /// Retrieve the schema for a specific object type within a given app in your HubSpot account. This endpoint is useful for understanding the structure and properties of a particular object type, which can assist in data integration and management tasks.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -97,7 +97,7 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Ite
             return requestInfo;
         }
         /// <summary>
-        /// Update the schema for an existing object type
+        /// Update the schema for a specific object type within a given app. This operation allows you to modify the existing schema details, which can be useful for adapting to changes in data structure requirements or business logic.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

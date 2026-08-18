@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Ite
         {
         }
         /// <summary>
-        /// Delete an existing property for an object type.
+        /// Delete a specific property from a given object type within an app. This operation is useful for removing properties that are no longer needed or were created in error. The endpoint requires specifying the app ID, object type, and property name to identify the property to be deleted.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -51,7 +51,7 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Ite
             await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get the details for an existing property by name.
+        /// Retrieve a specific property for a given object type within a specified app. This endpoint allows you to access details about a property, including its configuration and settings, for a particular object type identified by the property name. This can be useful for understanding property configurations or for integration purposes.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Property"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -69,7 +69,7 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Ite
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Property>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Property.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Update an existing property for an object type.
+        /// Update an existing property for a specified object type within a given app. This operation allows you to modify the details of a property, such as its label, type, or description, to better fit your application&apos;s requirements.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Property"/></returns>
         /// <param name="body">The request body</param>
@@ -89,7 +89,7 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Ite
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Property>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Property.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Delete an existing property for an object type.
+        /// Delete a specific property from a given object type within an app. This operation is useful for removing properties that are no longer needed or were created in error. The endpoint requires specifying the app ID, object type, and property name to identify the property to be deleted.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -107,7 +107,7 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Ite
             return requestInfo;
         }
         /// <summary>
-        /// Get the details for an existing property by name.
+        /// Retrieve a specific property for a given object type within a specified app. This endpoint allows you to access details about a property, including its configuration and settings, for a particular object type identified by the property name. This can be useful for understanding property configurations or for integration purposes.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -126,7 +126,7 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Ite
             return requestInfo;
         }
         /// <summary>
-        /// Update an existing property for an object type.
+        /// Update an existing property for a specified object type within a given app. This operation allows you to modify the details of a property, such as its label, type, or description, to better fit your application&apos;s requirements.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -157,14 +157,15 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Ite
             return new global::Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Item.Properties.Item.Item.WithPropertyNameItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Get the details for an existing property by name.
+        /// Retrieve a specific property for a given object type within a specified app. This endpoint allows you to access details about a property, including its configuration and settings, for a particular object type identified by the property name. This can be useful for understanding property configurations or for integration purposes.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithPropertyNameItemRequestBuilderGetQueryParameters 
         {
-            /// <summary>Whether to return only results that have been archived.</summary>
+            /// <summary>Whether to return only results that have been archived. Defaults to false.</summary>
             [QueryParameter("archived")]
             public bool? Archived { get; set; }
+            /// <summary>A comma-separated list of property names to include in the response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("properties")]

@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>A string representing the type of operation, which is &apos;DIVIDE&apos; for this component.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum DivideNumbersOperator
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "DIVIDE_NUMBERS")]
         #pragma warning disable CS1591

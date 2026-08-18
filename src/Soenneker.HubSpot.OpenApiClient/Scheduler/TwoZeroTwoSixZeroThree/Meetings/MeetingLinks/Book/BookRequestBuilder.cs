@@ -53,7 +53,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Scheduler.TwoZeroTwoSixZeroThree.Meeti
         {
         }
         /// <summary>
-        /// Book a meeting using a specific meeting link. This endpoint allows you to schedule a meeting by providing necessary details such as the meeting duration, start time, and participant information. It is useful for automating the booking process and ensuring that all required information is collected for the meeting.
+        /// Book a meeting using a specified meeting link. This endpoint allows you to create a meeting by providing necessary details such as duration, email, and start time. It is useful for scheduling meetings programmatically through HubSpot&apos;s API.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingBookingResponse"/></returns>
         /// <param name="body">The request body</param>
@@ -73,7 +73,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Scheduler.TwoZeroTwoSixZeroThree.Meeti
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingBookingResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingBookingResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Book a meeting using a specific meeting link. This endpoint allows you to schedule a meeting by providing necessary details such as the meeting duration, start time, and participant information. It is useful for automating the booking process and ensuring that all required information is collected for the meeting.
+        /// Book a meeting using a specified meeting link. This endpoint allows you to create a meeting by providing necessary details such as duration, email, and start time. It is useful for scheduling meetings programmatically through HubSpot&apos;s API.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

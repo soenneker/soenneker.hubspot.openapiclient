@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.Endpoints Endpoints { get; set; }
 #endif
-        /// <summary>The portalId property</summary>
+        /// <summary>An integer representing the unique identifier of the HubSpot portal where the oEmbed domain is being configured.</summary>
         public int? PortalId { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorOEmbedDomainRequest"/> and sets the default values.

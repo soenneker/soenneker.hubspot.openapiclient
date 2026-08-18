@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>An array of reminder objects, each specifying the number of time units and the unit type (e.g., weeks, days, hours, minutes) before the meeting when the reminder should be sent.</summary>
+        /// <summary>An array of ExternalReminder objects that specify the timing and frequency of the email reminders.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalReminder>? Reminders { get; set; }

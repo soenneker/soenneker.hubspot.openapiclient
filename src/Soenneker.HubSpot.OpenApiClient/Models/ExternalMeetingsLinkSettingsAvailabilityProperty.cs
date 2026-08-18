@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     /// <summary>
-    /// An object representing the availability settings for the meeting link, with additional properties defining closed ranges.
+    /// An object representing the availability settings for the meeting link, with additional properties for closed ranges.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ExternalMeetingsLinkSettingsAvailabilityProperty : IAdditionalDataHolder, IParsable

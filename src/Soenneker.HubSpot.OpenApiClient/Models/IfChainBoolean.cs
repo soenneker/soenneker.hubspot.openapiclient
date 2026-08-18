@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The conditions property</summary>
+        /// <summary>An array of conditions that make up the boolean chain. Each condition is evaluated in sequence to determine the final boolean result.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.IfChainBooleanConditionsItem>? Conditions { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.IfChainBooleanConditionsItem> Conditions { get; set; }
 #endif
-        /// <summary>The defaultExpression property</summary>
+        /// <summary>A default expression that is evaluated if none of the conditions in the chain are met. It provides a fallback boolean value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.IfChainBooleanDefaultExpression? DefaultExpression { get; set; }
@@ -30,9 +30,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.IfChainBooleanDefaultExpression DefaultExpression { get; set; }
 #endif
-        /// <summary>The enclosedInParentheses property</summary>
+        /// <summary>A boolean indicating whether the entire chain is enclosed in parentheses, affecting the order of operations.</summary>
         public bool? EnclosedInParentheses { get; set; }
-        /// <summary>The inputs property</summary>
+        /// <summary>An array of inputs that are evaluated within the chain. Each input can be a constant, a property variable, or a result of another operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.IfChainBooleanInputsItem>? Inputs { get; set; }
@@ -40,9 +40,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.IfChainBooleanInputsItem> Inputs { get; set; }
 #endif
-        /// <summary>The operator property</summary>
+        /// <summary>A string representing the logical operator used in the boolean chain. It is required and typically set to &apos;IF_CHAIN_BOOLEAN&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.IfChainBooleanOperator? Operator { get; set; }
-        /// <summary>The outputs property</summary>
+        /// <summary>An array of outputs that result from the evaluation of the chain. These outputs can be used in further processing or decision-making.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.IfChainBooleanOutputsItem>? Outputs { get; set; }
@@ -50,7 +50,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.IfChainBooleanOutputsItem> Outputs { get; set; }
 #endif
-        /// <summary>The propertyName property</summary>
+        /// <summary>A string representing the name of the property associated with this boolean chain.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PropertyName { get; set; }
@@ -58,7 +58,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string PropertyName { get; set; }
 #endif
-        /// <summary>The value property</summary>
+        /// <summary>A boolean value that represents the result of the evaluated chain of conditions.</summary>
         public bool? Value { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IfChainBoolean"/> and sets the default values.

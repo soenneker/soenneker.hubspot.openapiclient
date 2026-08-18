@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>A string representing the operation type. It is required and has a default value of &apos;TIMESTAMP_OF_TARGET_PROPERTY&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum TimestampOfTargetPropertyVariableOperator
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "TIMESTAMP_OF_TARGET_PROPERTY_VARIABLE")]
         #pragma warning disable CS1591

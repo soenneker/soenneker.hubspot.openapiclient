@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>A string representing the operation to be performed. The default value is &apos;LOWER_CASE&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum StringTargetPropertyVariableOperator
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "STRING_TARGET_PROPERTY_VARIABLE")]
         #pragma warning disable CS1591

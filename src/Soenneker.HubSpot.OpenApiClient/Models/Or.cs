@@ -14,9 +14,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The enclosedInParentheses property</summary>
+        /// <summary>A boolean indicating whether the &apos;OR&apos; operation is enclosed in parentheses, affecting its precedence in logical expressions.</summary>
         public bool? EnclosedInParentheses { get; set; }
-        /// <summary>The inputs property</summary>
+        /// <summary>An array of various input types that can be used in the &apos;OR&apos; operation. Each input can be a constant, a property variable, or another operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.OrInputsItem>? Inputs { get; set; }
@@ -24,9 +24,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.OrInputsItem> Inputs { get; set; }
 #endif
-        /// <summary>The operator property</summary>
+        /// <summary>A string that specifies the type of logical operation. The default and only valid value is &apos;OR&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.OrOperator? Operator { get; set; }
-        /// <summary>The propertyName property</summary>
+        /// <summary>A string representing the name of the property involved in the &apos;OR&apos; operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PropertyName { get; set; }
@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string PropertyName { get; set; }
 #endif
-        /// <summary>The value property</summary>
+        /// <summary>A boolean indicating the result of the &apos;OR&apos; operation.</summary>
         public bool? Value { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Or"/> and sets the default values.

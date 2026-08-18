@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>A string indicating the type of operation, with a default value of &apos;IF_CHAIN_STRING&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum IfChainStringOperator
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "IF_CHAIN_STRING")]
         #pragma warning disable CS1591

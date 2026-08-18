@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Ite
         {
         }
         /// <summary>
-        /// Register the name that your app will display when a user is selecting media bridge items.
+        /// Register settings for a specific app in the MediaBridge service. This endpoint is deprecated and should be used with caution. It allows for the registration of settings associated with the specified app ID.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.MediaBridgeProviderRegistrationResponse"/></returns>
         /// <param name="body">The request body</param>
@@ -55,7 +55,7 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Ite
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.MediaBridgeProviderRegistrationResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.MediaBridgeProviderRegistrationResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Register the name that your app will display when a user is selecting media bridge items.
+        /// Register settings for a specific app in the MediaBridge service. This endpoint is deprecated and should be used with caution. It allows for the registration of settings associated with the specified app ID.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

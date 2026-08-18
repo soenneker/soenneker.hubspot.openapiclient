@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>A string indicating the operation type. It defaults to &apos;IF_STRING&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum IfStringOperator
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "IF_STRING")]
         #pragma warning disable CS1591

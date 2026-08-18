@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Scheduler.TwoZeroTwoSixZeroThree.Meeti
         {
         }
         /// <summary>
-        /// Create a new calendar meeting event in HubSpot. This endpoint requires specifying the organizer&apos;s user ID and a request body with meeting details such as title, start and end times, and other properties. It is useful for scheduling meetings and managing calendar events programmatically.
+        /// Create a new calendar meeting event in your HubSpot account. This endpoint allows you to specify details such as the meeting title, start and end times, and associated users. The organizerUserId is required to identify the meeting organizer.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCalenderMeetingEventResponse"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Scheduler.TwoZeroTwoSixZeroThree.Meeti
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCalenderMeetingEventResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCalenderMeetingEventResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Create a new calendar meeting event in HubSpot. This endpoint requires specifying the organizer&apos;s user ID and a request body with meeting details such as title, start and end times, and other properties. It is useful for scheduling meetings and managing calendar events programmatically.
+        /// Create a new calendar meeting event in your HubSpot account. This endpoint allows you to specify details such as the meeting title, start and end times, and associated users. The organizerUserId is required to identify the meeting organizer.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -85,7 +85,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Scheduler.TwoZeroTwoSixZeroThree.Meeti
             return new global::Soenneker.HubSpot.OpenApiClient.Scheduler.TwoZeroTwoSixZeroThree.Meetings.Calendar.CalendarRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Create a new calendar meeting event in HubSpot. This endpoint requires specifying the organizer&apos;s user ID and a request body with meeting details such as title, start and end times, and other properties. It is useful for scheduling meetings and managing calendar events programmatically.
+        /// Create a new calendar meeting event in your HubSpot account. This endpoint allows you to specify details such as the meeting title, start and end times, and associated users. The organizerUserId is required to identify the meeting organizer.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class CalendarRequestBuilderPostQueryParameters 

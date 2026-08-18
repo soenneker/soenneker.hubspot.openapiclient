@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>A string representing the logical operator, which is &apos;AND&apos; by default.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum AndOperator
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "AND")]
         #pragma warning disable CS1591

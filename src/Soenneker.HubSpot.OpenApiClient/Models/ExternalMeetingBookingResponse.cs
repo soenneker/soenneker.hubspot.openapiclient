@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string BookingTimezone { get; set; }
 #endif
-        /// <summary>The unique identifier for the calendar event associated with the booked meeting.</summary>
+        /// <summary>The unique identifier for the calendar event associated with this meeting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CalendarEventId { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string CalendarEventId { get; set; }
 #endif
-        /// <summary>The unique identifier for the contact associated with the meeting.</summary>
+        /// <summary>The unique identifier for the contact associated with this meeting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ContactId { get; set; }
@@ -42,7 +42,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public long? Duration { get; set; }
         /// <summary>The end date and time of the meeting, in ISO 8601 format.</summary>
         public DateTimeOffset? End { get; set; }
-        /// <summary>An array of form fields filled out during the meeting booking, each represented by an ExternalValidatedFormField object.</summary>
+        /// <summary>An array of validated form fields submitted during the booking process, each represented by an ExternalValidatedFormField object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalValidatedFormField>? FormFields { get; set; }
@@ -50,7 +50,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalValidatedFormField> FormFields { get; set; }
 #endif
-        /// <summary>An array of email addresses for guests invited to the meeting.</summary>
+        /// <summary>An array of email addresses for the guests invited to the meeting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? GuestEmails { get; set; }
@@ -76,7 +76,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Locale { get; set; }
 #endif
-        /// <summary>The location where the meeting will take place, represented as a string.</summary>
+        /// <summary>The location of the meeting, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Location { get; set; }
@@ -86,7 +86,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>The start date and time of the meeting, in ISO 8601 format.</summary>
         public DateTimeOffset? Start { get; set; }
-        /// <summary>The subject or title of the meeting.</summary>
+        /// <summary>The subject or title of the meeting, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Subject { get; set; }
@@ -102,7 +102,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string WebConferenceMeetingId { get; set; }
 #endif
-        /// <summary>The URL for the web conference meeting, if applicable.</summary>
+        /// <summary>The URL for the web conference associated with the meeting, if applicable.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? WebConferenceUrl { get; set; }

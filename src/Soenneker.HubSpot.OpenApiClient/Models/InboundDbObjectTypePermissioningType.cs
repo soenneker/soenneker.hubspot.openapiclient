@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>The type of permissioning applied to the object type.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum InboundDbObjectTypePermissioningType
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "ALL_OR_NONE")]
         #pragma warning disable CS1591

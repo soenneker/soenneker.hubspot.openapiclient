@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Ite
         {
         }
         /// <summary>
-        /// Get the details for a batch of properties for a specified object type.
+        /// Retrieve a batch of properties for a specified object type within a given app. This endpoint is useful for fetching multiple properties efficiently in a single request, especially when dealing with large datasets or when specific properties are needed for processing.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseProperty"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Ite
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseProperty>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseProperty.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get the details for a batch of properties for a specified object type.
+        /// Retrieve a batch of properties for a specified object type within a given app. This endpoint is useful for fetching multiple properties efficiently in a single request, especially when dealing with large datasets or when specific properties are needed for processing.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

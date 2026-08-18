@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>A string indicating the avatar display option. Valid values include &apos;PROFILE_IMAGE&apos;, &apos;COMPANY_LOGO&apos;, and &apos;CUSTOM_AVATAR&apos;.</summary>
+    /// <summary>A string indicating the avatar display option, with valid values including &apos;PROFILE_IMAGE&apos;, &apos;COMPANY_LOGO&apos;, and &apos;CUSTOM_AVATAR&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum ExternalLinkDisplayInfoPublicDisplayAvatarOption
     {

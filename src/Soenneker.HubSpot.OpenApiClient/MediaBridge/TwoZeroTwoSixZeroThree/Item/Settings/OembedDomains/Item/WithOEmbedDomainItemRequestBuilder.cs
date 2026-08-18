@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Ite
         {
         }
         /// <summary>
-        /// Get the details for an existing oEmbed domain.
+        /// Retrieve details of a specific oEmbed domain for a given app. This endpoint is useful for fetching configuration or settings related to oEmbed domains associated with a particular application.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorOEmbedDomainModel"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Ite
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorOEmbedDomainModel>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorOEmbedDomainModel.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Update an existing oEmbed domain.
+        /// Update the settings for a specific oEmbed domain associated with a given app. This endpoint allows you to modify the configuration of an oEmbed domain, which can be useful for managing how media content is embedded across different domains.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorOEmbedDomainModel"/></returns>
         /// <param name="body">The request body</param>
@@ -72,7 +72,7 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Ite
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorOEmbedDomainModel>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorOEmbedDomainModel.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get the details for an existing oEmbed domain.
+        /// Retrieve details of a specific oEmbed domain for a given app. This endpoint is useful for fetching configuration or settings related to oEmbed domains associated with a particular application.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -91,7 +91,7 @@ namespace Soenneker.HubSpot.OpenApiClient.MediaBridge.TwoZeroTwoSixZeroThree.Ite
             return requestInfo;
         }
         /// <summary>
-        /// Update an existing oEmbed domain.
+        /// Update the settings for a specific oEmbed domain associated with a given app. This endpoint allows you to modify the configuration of an oEmbed domain, which can be useful for managing how media content is embedded across different domains.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

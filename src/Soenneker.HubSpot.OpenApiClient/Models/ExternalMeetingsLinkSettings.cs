@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>An object representing the availability settings for the meeting link, with additional properties defining closed ranges.</summary>
+        /// <summary>An object representing the availability settings for the meeting link, with additional properties for closed ranges.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettingsAvailabilityProperty? Availability { get; set; }
@@ -42,7 +42,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<long?> Durations { get; set; }
 #endif
-        /// <summary>An array of form fields that are included in the meeting link.</summary>
+        /// <summary>An array of form fields that are included in the meeting link form.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkFormField>? FormFields { get; set; }
@@ -94,9 +94,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>An integer representing the buffer time between meetings in milliseconds.</summary>
         public long? MeetingBufferTime { get; set; }
-        /// <summary>A boolean indicating if the meeting owner is prioritized in scheduling.</summary>
+        /// <summary>A boolean indicating whether the meeting owner is prioritized in scheduling.</summary>
         public bool? OwnerPrioritized { get; set; }
-        /// <summary>A string representing the URL to redirect to after a meeting is booked.</summary>
+        /// <summary>A string representing the URL to which users are redirected after booking a meeting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RedirectUrl { get; set; }
@@ -104,9 +104,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string RedirectUrl { get; set; }
 #endif
-        /// <summary>A string indicating the increment in minutes for the start time of meetings. Valid values include &apos;MEETING_DURATION&apos;, &apos;FIVE&apos;, &apos;TEN&apos;, &apos;FIFTEEN&apos;, &apos;TWENTY&apos;, &apos;THIRTY&apos;, &apos;FORTY_FIVE&apos;, &apos;SIXTY&apos;, &apos;NINETY&apos;, &apos;ONE_HUNDRED_TWENTY&apos;.</summary>
+        /// <summary>A string indicating the increment for start times, with valid values including &apos;MEETING_DURATION&apos;, &apos;FIVE&apos;, &apos;TEN&apos;, &apos;FIFTEEN&apos;, &apos;TWENTY&apos;, &apos;THIRTY&apos;, &apos;FORTY_FIVE&apos;, &apos;SIXTY&apos;, &apos;NINETY&apos;, and &apos;ONE_HUNDRED_TWENTY&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettingsStartTimeIncrementMinutes? StartTimeIncrementMinutes { get; set; }
-        /// <summary>An integer indicating the number of weeks to advertise the meeting link.</summary>
+        /// <summary>An integer representing the number of weeks to advertise the meeting link.</summary>
         public int? WeeksToAdvertise { get; set; }
         /// <summary>The welcomeScreenInfo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

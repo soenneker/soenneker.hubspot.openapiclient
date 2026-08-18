@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string CommunicationTypeId { get; set; }
 #endif
-        /// <summary>A boolean indicating whether the user has given consent for the specified communication type.</summary>
+        /// <summary>A boolean indicating whether the user has given consent for the communication type. It is true if consent is given, otherwise false.</summary>
         public bool? Consented { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentResponse"/> and sets the default values.

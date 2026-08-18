@@ -21,6 +21,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public bool? IsEncrypted { get; set; }
         /// <summary>Indicates if the value exceeds normal size limits.</summary>
         public bool? IsLargeValue { get; set; }
+        /// <summary>The maskedSubstrings property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.HubSpot.OpenApiClient.Models.MaskedSubstrings? MaskedSubstrings { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.HubSpot.OpenApiClient.Models.MaskedSubstrings MaskedSubstrings { get; set; }
+#endif
         /// <summary>The unique property name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -135,6 +143,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "dataSensitivity", n => { DataSensitivity = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyValueDataSensitivity>(); } },
                 { "isEncrypted", n => { IsEncrypted = n.GetBoolValue(); } },
                 { "isLargeValue", n => { IsLargeValue = n.GetBoolValue(); } },
+                { "maskedSubstrings", n => { MaskedSubstrings = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MaskedSubstrings>(global::Soenneker.HubSpot.OpenApiClient.Models.MaskedSubstrings.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "persistenceTimestamp", n => { PersistenceTimestamp = n.GetLongValue(); } },
                 { "requestId", n => { RequestId = n.GetStringValue(); } },
@@ -163,6 +172,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyValueDataSensitivity>("dataSensitivity", DataSensitivity);
             writer.WriteBoolValue("isEncrypted", IsEncrypted);
             writer.WriteBoolValue("isLargeValue", IsLargeValue);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MaskedSubstrings>("maskedSubstrings", MaskedSubstrings);
             writer.WriteStringValue("name", Name);
             writer.WriteLongValue("persistenceTimestamp", PersistenceTimestamp);
             writer.WriteStringValue("requestId", RequestId);
