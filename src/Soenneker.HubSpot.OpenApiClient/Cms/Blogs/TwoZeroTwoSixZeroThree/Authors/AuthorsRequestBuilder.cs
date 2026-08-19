@@ -193,7 +193,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.Blogs.TwoZeroTwoSixZeroThree.Autho
             [QueryParameter("property")]
             public string Property { get; set; }
 #endif
-            /// <summary>Specifies which fields to use for sorting results. Valid fields are `name`, `createdAt`, `updatedAt`, `createdBy`, `updatedBy`. `createdAt` will be used by default.</summary>
+            /// <summary>Specifies which fields to use for sorting results. Valid fields are `name`, `created`, `updated`, `createdBy`, `updatedBy`. `created` will be used by default.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("sort")]

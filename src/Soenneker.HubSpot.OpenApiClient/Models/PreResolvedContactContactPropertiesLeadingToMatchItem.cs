@@ -120,6 +120,18 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         #pragma warning disable CS1591
         GraduationDate,
         #pragma warning restore CS1591
+        [EnumMember(Value = "hs_active_contracts_arr")]
+        #pragma warning disable CS1591
+        HsActiveContractsArr,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "hs_active_contracts_mrr")]
+        #pragma warning disable CS1591
+        HsActiveContractsMrr,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "hs_active_contracts_tcv")]
+        #pragma warning disable CS1591
+        HsActiveContractsTcv,
+        #pragma warning restore CS1591
         [EnumMember(Value = "hs_additional_emails")]
         #pragma warning disable CS1591
         HsAdditionalEmails,

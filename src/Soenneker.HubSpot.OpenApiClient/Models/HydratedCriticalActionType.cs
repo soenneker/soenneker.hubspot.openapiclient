@@ -107,6 +107,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         #pragma warning disable CS1591
         ContactDataExport,
         #pragma warning restore CS1591
+        [EnumMember(Value = "CONTACT_OWNER_AUTO_ASSIGN_DISABLED")]
+        #pragma warning disable CS1591
+        ContactOwnerAutoAssignDisabled,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "CONTACT_OWNER_AUTO_ASSIGN_ENABLED")]
+        #pragma warning disable CS1591
+        ContactOwnerAutoAssignEnabled,
+        #pragma warning restore CS1591
         [EnumMember(Value = "DATA_ACCESS_REQUEST_SUBMITTED")]
         #pragma warning disable CS1591
         DataAccessRequestSubmitted,
@@ -166,6 +174,18 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         [EnumMember(Value = "DOMAIN_BASED_INVITES_ENABLED")]
         #pragma warning disable CS1591
         DomainBasedInvitesEnabled,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "EMAIL_LOGGING_SYNC_SET_ALL")]
+        #pragma warning disable CS1591
+        EmailLoggingSyncSetAll,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "EMAIL_LOGGING_SYNC_SET_CONTACTS")]
+        #pragma warning disable CS1591
+        EmailLoggingSyncSetContacts,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "EMAIL_LOGGING_SYNC_SET_REPLIES")]
+        #pragma warning disable CS1591
+        EmailLoggingSyncSetReplies,
         #pragma warning restore CS1591
         [EnumMember(Value = "EMAIL_TRACKING_DISABLED")]
         #pragma warning disable CS1591
@@ -479,6 +499,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         #pragma warning disable CS1591
         SequenceModified,
         #pragma warning restore CS1591
+        [EnumMember(Value = "SERVICE_KEY_AUTO_ROTATE")]
+        #pragma warning disable CS1591
+        ServiceKeyAutoRotate,
+        #pragma warning restore CS1591
         [EnumMember(Value = "SERVICE_KEY_CREATE")]
         #pragma warning disable CS1591
         ServiceKeyCreate,
@@ -498,6 +522,18 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         [EnumMember(Value = "SERVICE_KEY_ROTATE")]
         #pragma warning disable CS1591
         ServiceKeyRotate,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "SERVICE_KEY_ROTATION_SCHEDULE_REMOVED")]
+        #pragma warning disable CS1591
+        ServiceKeyRotationScheduleRemoved,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "SERVICE_KEY_ROTATION_SCHEDULE_SET")]
+        #pragma warning disable CS1591
+        ServiceKeyRotationScheduleSet,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "SERVICE_KEY_ROTATION_SCHEDULE_UPDATED")]
+        #pragma warning disable CS1591
+        ServiceKeyRotationScheduleUpdated,
         #pragma warning restore CS1591
         [EnumMember(Value = "SMTP_TOKEN_CREATED")]
         #pragma warning disable CS1591
@@ -542,6 +578,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         [EnumMember(Value = "TOUCHLESS_PURCHASE")]
         #pragma warning disable CS1591
         TouchlessPurchase,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "TWO_FACTOR_PROTECTED_ENDPOINT_BLOCKED")]
+        #pragma warning disable CS1591
+        TwoFactorProtectedEndpointBlocked,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "TWO_FACTOR_PROTECTED_ENDPOINT_SUCCEEDED")]
+        #pragma warning disable CS1591
+        TwoFactorProtectedEndpointSucceeded,
         #pragma warning restore CS1591
         [EnumMember(Value = "UNIFIED_RESTORE_UNDO_EXECUTION")]
         #pragma warning disable CS1591

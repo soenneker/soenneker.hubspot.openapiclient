@@ -37,6 +37,11 @@
         "security": [
           {
             "oauth2": [
+              "ACCEPTANCE_TEST.visibility.legacyOnly.41205153.105861"
+            ]
+          },
+          {
+            "oauth2": [
               "oauth"
             ]
           }
@@ -70,10 +75,18 @@
         "security": [
           {
             "oauth2": [
+              "ACCEPTANCE_TEST.visibility.legacyOnly.41205153.105861"
+            ]
+          },
+          {
+            "oauth2": [
               "oauth"
             ]
           }
-        ]
+        ],
+        "x-hubspot-user-level-auth": {
+          "internalOnly": false
+        }
       }
     },
     "/account-info/2026-03/activity/audit-logs": {
@@ -2055,7 +2068,7 @@
           {
             "name": "sort",
             "in": "query",
-            "description": "Specifies which fields to use for sorting results. Valid fields are `name`, `createdAt`, `updatedAt`, `createdBy`, `updatedBy`. `createdAt` will be used by default.",
+            "description": "Specifies which fields to use for sorting results. Valid fields are `name`, `created`, `updated`, `createdBy`, `updatedBy`. `created` will be used by default.",
             "schema": {
               "type": "array",
               "items": {
@@ -13868,1145 +13881,6 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/IndexedData"
-                },
-                "example": null
-              }
-            }
-          },
-          "default": {
-            "$ref": "#/components/responses/_______cms_Error"
-          }
-        },
-        "security": [
-          {
-            "_______cms_oauth2": [
-              "content"
-            ]
-          }
-        ]
-      }
-    },
-    "/cms/site-search/2026-03/search": {
-      "get": {
-        "tags": [
-          "Search"
-        ],
-        "summary": "Search your site",
-        "description": "Returns any website content matching the given search criteria for a given HubSpot account. Searches can be filtered by content type, domain, or URL path. Includes options for weighing results by recency and popularity, along with language support.",
-        "operationId": "cms_get_cms_site_search_2026_03_search_cms_site_search_2026_03_search",
-        "parameters": [
-          {
-            "name": "analytics",
-            "in": "query",
-            "description": "",
-            "schema": {
-              "type": "boolean",
-              "example": null
-            }
-          },
-          {
-            "name": "autocomplete",
-            "in": "query",
-            "description": "",
-            "schema": {
-              "type": "boolean",
-              "example": null
-            }
-          },
-          {
-            "name": "boostLimit",
-            "in": "query",
-            "description": "",
-            "schema": {
-              "type": "number",
-              "example": null
-            }
-          },
-          {
-            "name": "boostRecent",
-            "in": "query",
-            "description": "",
-            "schema": {
-              "type": "string",
-              "example": null
-            }
-          },
-          {
-            "name": "domain",
-            "in": "query",
-            "description": "",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string",
-                "example": null
-              },
-              "example": null
-            }
-          },
-          {
-            "name": "groupId",
-            "in": "query",
-            "description": "",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "integer",
-                "format": "int64",
-                "example": null
-              },
-              "example": null
-            }
-          },
-          {
-            "name": "hubdbQuery",
-            "in": "query",
-            "description": "",
-            "schema": {
-              "type": "string",
-              "example": null
-            }
-          },
-          {
-            "name": "language",
-            "in": "query",
-            "description": "",
-            "schema": {
-              "enum": [
-                "aa",
-                "ab",
-                "ae",
-                "af",
-                "af-na",
-                "af-za",
-                "agq",
-                "agq-cm",
-                "ak",
-                "ak-gh",
-                "am",
-                "am-et",
-                "an",
-                "ann",
-                "ann-ng",
-                "ar",
-                "ar-001",
-                "ar-ae",
-                "ar-bh",
-                "ar-dj",
-                "ar-dz",
-                "ar-eg",
-                "ar-eh",
-                "ar-er",
-                "ar-il",
-                "ar-iq",
-                "ar-jo",
-                "ar-km",
-                "ar-kw",
-                "ar-lb",
-                "ar-ly",
-                "ar-ma",
-                "ar-mr",
-                "ar-om",
-                "ar-ps",
-                "ar-qa",
-                "ar-sa",
-                "ar-sd",
-                "ar-so",
-                "ar-ss",
-                "ar-sy",
-                "ar-td",
-                "ar-tn",
-                "ar-ye",
-                "as",
-                "as-in",
-                "asa",
-                "asa-tz",
-                "ast",
-                "ast-es",
-                "av",
-                "ay",
-                "az",
-                "az-az",
-                "ba",
-                "bal",
-                "bal-pk",
-                "bas",
-                "bas-cm",
-                "be",
-                "be-by",
-                "bem",
-                "bem-zm",
-                "bez",
-                "bez-tz",
-                "bg",
-                "bg-bg",
-                "bgc",
-                "bgc-in",
-                "bho",
-                "bho-in",
-                "bi",
-                "blo",
-                "blo-bj",
-                "bm",
-                "bm-ml",
-                "bn",
-                "bn-bd",
-                "bn-in",
-                "bo",
-                "bo-cn",
-                "bo-in",
-                "br",
-                "br-fr",
-                "brx",
-                "brx-in",
-                "bs",
-                "bs-ba",
-                "ca",
-                "ca-ad",
-                "ca-es",
-                "ca-fr",
-                "ca-it",
-                "ccp",
-                "ccp-bd",
-                "ccp-in",
-                "ce",
-                "ce-ru",
-                "ceb",
-                "ceb-ph",
-                "cgg",
-                "cgg-ug",
-                "ch",
-                "chr",
-                "chr-us",
-                "ckb",
-                "ckb-iq",
-                "ckb-ir",
-                "co",
-                "cr",
-                "cs",
-                "cs-cz",
-                "csw",
-                "csw-ca",
-                "cu",
-                "cu-ru",
-                "cv",
-                "cv-ru",
-                "cy",
-                "cy-gb",
-                "da",
-                "da-dk",
-                "da-gl",
-                "dav",
-                "dav-ke",
-                "de",
-                "de-at",
-                "de-be",
-                "de-ch",
-                "de-de",
-                "de-gr",
-                "de-it",
-                "de-li",
-                "de-lu",
-                "dje",
-                "dje-ne",
-                "doi",
-                "doi-in",
-                "dsb",
-                "dsb-de",
-                "dua",
-                "dua-cm",
-                "dv",
-                "dyo",
-                "dyo-sn",
-                "dz",
-                "dz-bt",
-                "ebu",
-                "ebu-ke",
-                "ee",
-                "ee-gh",
-                "ee-tg",
-                "el",
-                "el-cy",
-                "el-gr",
-                "en",
-                "en-001",
-                "en-150",
-                "en-ae",
-                "en-ag",
-                "en-ai",
-                "en-as",
-                "en-at",
-                "en-au",
-                "en-bb",
-                "en-be",
-                "en-bi",
-                "en-bm",
-                "en-bs",
-                "en-bw",
-                "en-bz",
-                "en-ca",
-                "en-cc",
-                "en-ch",
-                "en-ck",
-                "en-cm",
-                "en-cn",
-                "en-cx",
-                "en-cy",
-                "en-cz",
-                "en-de",
-                "en-dg",
-                "en-dk",
-                "en-dm",
-                "en-ee",
-                "en-eg",
-                "en-er",
-                "en-es",
-                "en-fi",
-                "en-fj",
-                "en-fk",
-                "en-fm",
-                "en-fr",
-                "en-gb",
-                "en-gd",
-                "en-gg",
-                "en-gh",
-                "en-gi",
-                "en-gm",
-                "en-gs",
-                "en-gu",
-                "en-gy",
-                "en-hk",
-                "en-hu",
-                "en-id",
-                "en-ie",
-                "en-il",
-                "en-im",
-                "en-in",
-                "en-io",
-                "en-it",
-                "en-je",
-                "en-jm",
-                "en-ke",
-                "en-ki",
-                "en-kn",
-                "en-ky",
-                "en-lc",
-                "en-lr",
-                "en-ls",
-                "en-lu",
-                "en-mg",
-                "en-mh",
-                "en-mo",
-                "en-mp",
-                "en-ms",
-                "en-mt",
-                "en-mu",
-                "en-mv",
-                "en-mw",
-                "en-mx",
-                "en-my",
-                "en-na",
-                "en-nf",
-                "en-ng",
-                "en-nl",
-                "en-no",
-                "en-nr",
-                "en-nu",
-                "en-nz",
-                "en-pg",
-                "en-ph",
-                "en-pk",
-                "en-pl",
-                "en-pn",
-                "en-pr",
-                "en-pt",
-                "en-pw",
-                "en-ro",
-                "en-rw",
-                "en-sb",
-                "en-sc",
-                "en-sd",
-                "en-se",
-                "en-sg",
-                "en-sh",
-                "en-si",
-                "en-sk",
-                "en-sl",
-                "en-ss",
-                "en-sx",
-                "en-sz",
-                "en-tc",
-                "en-th",
-                "en-tk",
-                "en-tn",
-                "en-to",
-                "en-tt",
-                "en-tv",
-                "en-tz",
-                "en-ug",
-                "en-um",
-                "en-us",
-                "en-vc",
-                "en-vg",
-                "en-vi",
-                "en-vn",
-                "en-vu",
-                "en-ws",
-                "en-za",
-                "en-zm",
-                "en-zw",
-                "eo",
-                "eo-001",
-                "es",
-                "es-419",
-                "es-ar",
-                "es-bo",
-                "es-br",
-                "es-bz",
-                "es-cl",
-                "es-co",
-                "es-cr",
-                "es-cu",
-                "es-do",
-                "es-ea",
-                "es-ec",
-                "es-es",
-                "es-gq",
-                "es-gt",
-                "es-hn",
-                "es-ic",
-                "es-mx",
-                "es-ni",
-                "es-pa",
-                "es-pe",
-                "es-ph",
-                "es-pr",
-                "es-py",
-                "es-sv",
-                "es-us",
-                "es-uy",
-                "es-ve",
-                "et",
-                "et-ee",
-                "eu",
-                "eu-es",
-                "ewo",
-                "ewo-cm",
-                "fa",
-                "fa-af",
-                "fa-ir",
-                "ff",
-                "ff-bf",
-                "ff-cm",
-                "ff-gh",
-                "ff-gm",
-                "ff-gn",
-                "ff-gw",
-                "ff-lr",
-                "ff-mr",
-                "ff-ne",
-                "ff-ng",
-                "ff-sl",
-                "ff-sn",
-                "fi",
-                "fi-fi",
-                "fil",
-                "fil-ph",
-                "fj",
-                "fo",
-                "fo-dk",
-                "fo-fo",
-                "fr",
-                "fr-be",
-                "fr-bf",
-                "fr-bi",
-                "fr-bj",
-                "fr-bl",
-                "fr-ca",
-                "fr-cd",
-                "fr-cf",
-                "fr-cg",
-                "fr-ch",
-                "fr-ci",
-                "fr-cm",
-                "fr-dj",
-                "fr-dz",
-                "fr-fr",
-                "fr-ga",
-                "fr-gf",
-                "fr-gn",
-                "fr-gp",
-                "fr-gq",
-                "fr-ht",
-                "fr-km",
-                "fr-lu",
-                "fr-ma",
-                "fr-mc",
-                "fr-mf",
-                "fr-mg",
-                "fr-ml",
-                "fr-mq",
-                "fr-mr",
-                "fr-mu",
-                "fr-nc",
-                "fr-ne",
-                "fr-pf",
-                "fr-pm",
-                "fr-re",
-                "fr-rw",
-                "fr-sc",
-                "fr-sn",
-                "fr-sy",
-                "fr-td",
-                "fr-tg",
-                "fr-tn",
-                "fr-vu",
-                "fr-wf",
-                "fr-yt",
-                "frr",
-                "frr-de",
-                "fur",
-                "fur-it",
-                "fy",
-                "fy-nl",
-                "ga",
-                "ga-gb",
-                "ga-ie",
-                "gaa",
-                "gaa-gh",
-                "gd",
-                "gd-gb",
-                "gl",
-                "gl-es",
-                "gn",
-                "gsw",
-                "gsw-ch",
-                "gsw-fr",
-                "gsw-li",
-                "gu",
-                "gu-in",
-                "guz",
-                "guz-ke",
-                "gv",
-                "gv-im",
-                "ha",
-                "ha-gh",
-                "ha-ne",
-                "ha-ng",
-                "haw",
-                "haw-us",
-                "he",
-                "he-il",
-                "hi",
-                "hi-in",
-                "hmn",
-                "ho",
-                "hr",
-                "hr-ba",
-                "hr-hr",
-                "hsb",
-                "hsb-de",
-                "ht",
-                "ht-ht",
-                "hu",
-                "hu-hu",
-                "hy",
-                "hy-am",
-                "hz",
-                "ia",
-                "ia-001",
-                "id",
-                "id-id",
-                "ie",
-                "ie-ee",
-                "ig",
-                "ig-ng",
-                "ii",
-                "ii-cn",
-                "ik",
-                "io",
-                "is",
-                "is-is",
-                "it",
-                "it-ch",
-                "it-it",
-                "it-sm",
-                "it-va",
-                "iu",
-                "ja",
-                "ja-jp",
-                "jgo",
-                "jgo-cm",
-                "jmc",
-                "jmc-tz",
-                "jv",
-                "jv-id",
-                "ka",
-                "ka-ge",
-                "kab",
-                "kab-dz",
-                "kam",
-                "kam-ke",
-                "kar",
-                "kde",
-                "kde-tz",
-                "kea",
-                "kea-cv",
-                "kg",
-                "kgp",
-                "kgp-br",
-                "kh",
-                "khq",
-                "khq-ml",
-                "ki",
-                "ki-ke",
-                "kj",
-                "kk",
-                "kk-kz",
-                "kkj",
-                "kkj-cm",
-                "kl",
-                "kl-gl",
-                "kln",
-                "kln-ke",
-                "km",
-                "km-kh",
-                "kn",
-                "kn-in",
-                "ko",
-                "ko-cn",
-                "ko-kp",
-                "ko-kr",
-                "kok",
-                "kok-in",
-                "kr",
-                "ks",
-                "ks-in",
-                "ksb",
-                "ksb-tz",
-                "ksf",
-                "ksf-cm",
-                "ksh",
-                "ksh-de",
-                "ku",
-                "ku-tr",
-                "kv",
-                "kw",
-                "kw-gb",
-                "kxv",
-                "kxv-in",
-                "ky",
-                "ky-kg",
-                "la",
-                "lag",
-                "lag-tz",
-                "lb",
-                "lb-lu",
-                "lg",
-                "lg-ug",
-                "li",
-                "lij",
-                "lij-it",
-                "lkt",
-                "lkt-us",
-                "lmo",
-                "lmo-it",
-                "ln",
-                "ln-ao",
-                "ln-cd",
-                "ln-cf",
-                "ln-cg",
-                "lo",
-                "lo-la",
-                "lrc",
-                "lrc-iq",
-                "lrc-ir",
-                "lt",
-                "lt-lt",
-                "lu",
-                "lu-cd",
-                "luo",
-                "luo-ke",
-                "luy",
-                "luy-ke",
-                "lv",
-                "lv-lv",
-                "mai",
-                "mai-in",
-                "mas",
-                "mas-ke",
-                "mas-tz",
-                "mdf",
-                "mdf-ru",
-                "mer",
-                "mer-ke",
-                "mfe",
-                "mfe-mu",
-                "mg",
-                "mg-mg",
-                "mgh",
-                "mgh-mz",
-                "mgo",
-                "mgo-cm",
-                "mh",
-                "mi",
-                "mi-nz",
-                "mk",
-                "mk-mk",
-                "ml",
-                "ml-in",
-                "mn",
-                "mn-mn",
-                "mni",
-                "mni-in",
-                "mr",
-                "mr-in",
-                "ms",
-                "ms-bn",
-                "ms-id",
-                "ms-my",
-                "ms-sg",
-                "mt",
-                "mt-mt",
-                "mua",
-                "mua-cm",
-                "my",
-                "my-mm",
-                "mzn",
-                "mzn-ir",
-                "na",
-                "naq",
-                "naq-na",
-                "nb",
-                "nb-no",
-                "nb-sj",
-                "nd",
-                "nd-zw",
-                "nds",
-                "nds-de",
-                "nds-nl",
-                "ne",
-                "ne-in",
-                "ne-np",
-                "ng",
-                "nl",
-                "nl-aw",
-                "nl-be",
-                "nl-bq",
-                "nl-ch",
-                "nl-cw",
-                "nl-lu",
-                "nl-nl",
-                "nl-sr",
-                "nl-sx",
-                "nmg",
-                "nmg-cm",
-                "nn",
-                "nn-no",
-                "nnh",
-                "nnh-cm",
-                "no",
-                "no-no",
-                "nqo",
-                "nqo-gn",
-                "nr",
-                "nso",
-                "nso-za",
-                "nus",
-                "nus-ss",
-                "nv",
-                "ny",
-                "nyn",
-                "nyn-ug",
-                "oc",
-                "oc-es",
-                "oc-fr",
-                "oj",
-                "om",
-                "om-et",
-                "om-ke",
-                "or",
-                "or-in",
-                "os",
-                "os-ge",
-                "os-ru",
-                "pa",
-                "pa-in",
-                "pa-pk",
-                "pcm",
-                "pcm-ng",
-                "pi",
-                "pis",
-                "pis-sb",
-                "pl",
-                "pl-pl",
-                "prg",
-                "prg-001",
-                "ps",
-                "ps-af",
-                "ps-pk",
-                "pt",
-                "pt-ao",
-                "pt-br",
-                "pt-ch",
-                "pt-cv",
-                "pt-gq",
-                "pt-gw",
-                "pt-lu",
-                "pt-mo",
-                "pt-mz",
-                "pt-pt",
-                "pt-st",
-                "pt-tl",
-                "qu",
-                "qu-bo",
-                "qu-ec",
-                "qu-pe",
-                "raj",
-                "raj-in",
-                "rm",
-                "rm-ch",
-                "rn",
-                "rn-bi",
-                "ro",
-                "ro-md",
-                "ro-ro",
-                "rof",
-                "rof-tz",
-                "ru",
-                "ru-by",
-                "ru-kg",
-                "ru-kz",
-                "ru-md",
-                "ru-ru",
-                "ru-ua",
-                "rw",
-                "rw-rw",
-                "rwk",
-                "rwk-tz",
-                "sa",
-                "sa-in",
-                "sah",
-                "sah-ru",
-                "saq",
-                "saq-ke",
-                "sat",
-                "sat-in",
-                "sbp",
-                "sbp-tz",
-                "sc",
-                "sc-it",
-                "sd",
-                "sd-in",
-                "sd-pk",
-                "se",
-                "se-fi",
-                "se-no",
-                "se-se",
-                "seh",
-                "seh-mz",
-                "ses",
-                "ses-ml",
-                "sg",
-                "sg-cf",
-                "shi",
-                "shi-ma",
-                "si",
-                "si-lk",
-                "sk",
-                "sk-sk",
-                "sl",
-                "sl-si",
-                "sm",
-                "smn",
-                "smn-fi",
-                "sms",
-                "sms-fi",
-                "sn",
-                "sn-zw",
-                "so",
-                "so-dj",
-                "so-et",
-                "so-ke",
-                "so-so",
-                "sq",
-                "sq-al",
-                "sq-mk",
-                "sq-xk",
-                "sr",
-                "sr-ba",
-                "sr-cs",
-                "sr-me",
-                "sr-rs",
-                "sr-xk",
-                "ss",
-                "st",
-                "st-ls",
-                "st-za",
-                "su",
-                "su-id",
-                "sv",
-                "sv-ax",
-                "sv-fi",
-                "sv-se",
-                "sw",
-                "sw-cd",
-                "sw-ke",
-                "sw-tz",
-                "sw-ug",
-                "sy",
-                "syr",
-                "syr-iq",
-                "syr-sy",
-                "szl",
-                "szl-pl",
-                "ta",
-                "ta-in",
-                "ta-lk",
-                "ta-my",
-                "ta-sg",
-                "te",
-                "te-in",
-                "teo",
-                "teo-ke",
-                "teo-ug",
-                "tg",
-                "tg-tj",
-                "th",
-                "th-th",
-                "ti",
-                "ti-er",
-                "ti-et",
-                "tk",
-                "tk-tm",
-                "tl",
-                "tn",
-                "tn-bw",
-                "tn-za",
-                "to",
-                "to-to",
-                "tok",
-                "tok-001",
-                "tr",
-                "tr-cy",
-                "tr-tr",
-                "ts",
-                "tt",
-                "tt-ru",
-                "tw",
-                "twq",
-                "twq-ne",
-                "ty",
-                "tzm",
-                "tzm-ma",
-                "ug",
-                "ug-cn",
-                "uk",
-                "uk-ua",
-                "ur",
-                "ur-in",
-                "ur-pk",
-                "uz",
-                "uz-af",
-                "uz-uz",
-                "vai",
-                "vai-lr",
-                "ve",
-                "vec",
-                "vec-it",
-                "vi",
-                "vi-vn",
-                "vmw",
-                "vmw-mz",
-                "vo",
-                "vo-001",
-                "vun",
-                "vun-tz",
-                "wa",
-                "wae",
-                "wae-ch",
-                "wo",
-                "wo-sn",
-                "xh",
-                "xh-za",
-                "xnr",
-                "xnr-in",
-                "xog",
-                "xog-ug",
-                "yav",
-                "yav-cm",
-                "yi",
-                "yi-001",
-                "yi-ua",
-                "yo",
-                "yo-bj",
-                "yo-ng",
-                "yrl",
-                "yrl-br",
-                "yrl-co",
-                "yrl-ve",
-                "yue",
-                "yue-cn",
-                "yue-hk",
-                "yue-mo",
-                "za",
-                "za-cn",
-                "zgh",
-                "zgh-ma",
-                "zh",
-                "zh-cn",
-                "zh-hans",
-                "zh-hant",
-                "zh-hk",
-                "zh-mo",
-                "zh-my",
-                "zh-sg",
-                "zh-tw",
-                "zu",
-                "zu-za"
-              ],
-              "type": "string",
-              "example": null
-            }
-          },
-          {
-            "name": "length",
-            "in": "query",
-            "description": "",
-            "schema": {
-              "enum": [
-                "LONG",
-                "SHORT"
-              ],
-              "type": "string",
-              "example": null
-            }
-          },
-          {
-            "name": "limit",
-            "in": "query",
-            "description": "The maximum number of results to display per page.",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "example": null
-            }
-          },
-          {
-            "name": "matchPrefix",
-            "in": "query",
-            "description": "",
-            "schema": {
-              "type": "boolean",
-              "example": null
-            }
-          },
-          {
-            "name": "offset",
-            "in": "query",
-            "description": "",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "example": null
-            }
-          },
-          {
-            "name": "pathPrefix",
-            "in": "query",
-            "description": "",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string",
-                "example": null
-              },
-              "example": null
-            }
-          },
-          {
-            "name": "popularityBoost",
-            "in": "query",
-            "description": "",
-            "schema": {
-              "type": "number",
-              "example": null
-            }
-          },
-          {
-            "name": "property",
-            "in": "query",
-            "description": "",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string",
-                "example": null
-              },
-              "example": null
-            }
-          },
-          {
-            "name": "q",
-            "in": "query",
-            "description": "",
-            "schema": {
-              "type": "string",
-              "example": null
-            }
-          },
-          {
-            "name": "tableId",
-            "in": "query",
-            "description": "",
-            "schema": {
-              "type": "integer",
-              "format": "int64",
-              "example": null
-            }
-          },
-          {
-            "name": "type",
-            "in": "query",
-            "description": "",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string",
-                "example": null
-              },
-              "example": null
-            }
-          },
-          {
-            "name": "types",
-            "in": "query",
-            "description": "",
-            "schema": {
-              "type": "array",
-              "items": {
-                "enum": [
-                  "LANDING_PAGE",
-                  "BLOG_POST",
-                  "SITE_PAGE",
-                  "KNOWLEDGE_ARTICLE",
-                  "LISTING_PAGE",
-                  "STRUCTURED_CONTENT"
-                ],
-                "type": "string",
-                "example": null
-              },
-              "example": null
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/PublicSearchResults"
                 },
                 "example": null
               }
@@ -61511,7 +60385,10 @@
               "crm.objects.listings.read"
             ]
           }
-        ]
+        ],
+        "x-hubspot-user-level-auth": {
+          "internalOnly": false
+        }
       },
       "post": {
         "tags": [
@@ -62270,7 +61147,10 @@
               "crm.objects.listings.read"
             ]
           }
-        ]
+        ],
+        "x-hubspot-user-level-auth": {
+          "internalOnly": false
+        }
       },
       "put": {
         "tags": [
@@ -69911,6 +68791,11 @@
           },
           {
             "__________________________________________crm_oauth2": [
+              "crm.objects.tickets.sensitive.read"
+            ]
+          },
+          {
+            "__________________________________________crm_oauth2": [
               "crm.objects.listings.write"
             ]
           },
@@ -69921,12 +68806,17 @@
           },
           {
             "__________________________________________crm_oauth2": [
-              "crm.objects.custom.sensitive.write.v2"
+              "crm.schemas.tickets.read"
             ]
           },
           {
             "__________________________________________crm_oauth2": [
               "crm.objects.tasks.read"
+            ]
+          },
+          {
+            "__________________________________________crm_oauth2": [
+              "crm.objects.custom.sensitive.write.v2"
             ]
           },
           {
@@ -69942,6 +68832,11 @@
           {
             "__________________________________________crm_oauth2": [
               "crm.objects.companies.read"
+            ]
+          },
+          {
+            "__________________________________________crm_oauth2": [
+              "crm.objects.tickets.highly_sensitive.read"
             ]
           },
           {
@@ -70006,12 +68901,12 @@
           },
           {
             "__________________________________________crm_oauth2": [
-              "crm.objects.feedback_submissions.read"
+              "crm.objects.products.write"
             ]
           },
           {
             "__________________________________________crm_oauth2": [
-              "crm.objects.products.write"
+              "crm.objects.feedback_submissions.read"
             ]
           },
           {
@@ -70076,12 +68971,12 @@
           },
           {
             "__________________________________________crm_oauth2": [
-              "crm.objects.projects.read"
+              "crm.objects.companies.sensitive.write.v2"
             ]
           },
           {
             "__________________________________________crm_oauth2": [
-              "crm.objects.companies.sensitive.write.v2"
+              "crm.objects.projects.read"
             ]
           },
           {
@@ -70186,12 +69081,12 @@
           },
           {
             "__________________________________________crm_oauth2": [
-              "crm.pipelines.orders.read"
+              "crm.objects.marketing_events.read"
             ]
           },
           {
             "__________________________________________crm_oauth2": [
-              "crm.objects.marketing_events.read"
+              "crm.pipelines.orders.read"
             ]
           },
           {
@@ -70211,12 +69106,12 @@
           },
           {
             "__________________________________________crm_oauth2": [
-              "automation"
+              "crm.objects.companies.write"
             ]
           },
           {
             "__________________________________________crm_oauth2": [
-              "crm.objects.companies.write"
+              "automation"
             ]
           },
           {
@@ -70341,12 +69236,12 @@
           },
           {
             "__________________________________________crm_oauth2": [
-              "crm.objects.projects.write"
+              "crm.objects.marketing_events.write"
             ]
           },
           {
             "__________________________________________crm_oauth2": [
-              "crm.objects.marketing_events.write"
+              "crm.objects.projects.write"
             ]
           },
           {
@@ -70446,6 +69341,11 @@
           },
           {
             "__________________________________________crm_oauth2": [
+              "crm.objects.tickets.sensitive.read"
+            ]
+          },
+          {
+            "__________________________________________crm_oauth2": [
               "crm.objects.listings.write"
             ]
           },
@@ -70456,12 +69356,17 @@
           },
           {
             "__________________________________________crm_oauth2": [
-              "crm.objects.custom.sensitive.write.v2"
+              "crm.schemas.tickets.read"
             ]
           },
           {
             "__________________________________________crm_oauth2": [
               "crm.objects.tasks.read"
+            ]
+          },
+          {
+            "__________________________________________crm_oauth2": [
+              "crm.objects.custom.sensitive.write.v2"
             ]
           },
           {
@@ -70477,6 +69382,11 @@
           {
             "__________________________________________crm_oauth2": [
               "crm.objects.companies.read"
+            ]
+          },
+          {
+            "__________________________________________crm_oauth2": [
+              "crm.objects.tickets.highly_sensitive.read"
             ]
           },
           {
@@ -70541,12 +69451,12 @@
           },
           {
             "__________________________________________crm_oauth2": [
-              "crm.objects.feedback_submissions.read"
+              "crm.objects.products.write"
             ]
           },
           {
             "__________________________________________crm_oauth2": [
-              "crm.objects.products.write"
+              "crm.objects.feedback_submissions.read"
             ]
           },
           {
@@ -70611,12 +69521,12 @@
           },
           {
             "__________________________________________crm_oauth2": [
-              "crm.objects.projects.read"
+              "crm.objects.companies.sensitive.write.v2"
             ]
           },
           {
             "__________________________________________crm_oauth2": [
-              "crm.objects.companies.sensitive.write.v2"
+              "crm.objects.projects.read"
             ]
           },
           {
@@ -70721,12 +69631,12 @@
           },
           {
             "__________________________________________crm_oauth2": [
-              "crm.pipelines.orders.read"
+              "crm.objects.marketing_events.read"
             ]
           },
           {
             "__________________________________________crm_oauth2": [
-              "crm.objects.marketing_events.read"
+              "crm.pipelines.orders.read"
             ]
           },
           {
@@ -70746,12 +69656,12 @@
           },
           {
             "__________________________________________crm_oauth2": [
-              "automation"
+              "crm.objects.companies.write"
             ]
           },
           {
             "__________________________________________crm_oauth2": [
-              "crm.objects.companies.write"
+              "automation"
             ]
           },
           {
@@ -70876,12 +69786,12 @@
           },
           {
             "__________________________________________crm_oauth2": [
-              "crm.objects.projects.write"
+              "crm.objects.marketing_events.write"
             ]
           },
           {
             "__________________________________________crm_oauth2": [
-              "crm.objects.marketing_events.write"
+              "crm.objects.projects.write"
             ]
           },
           {
@@ -71020,6 +69930,11 @@
           },
           {
             "__________________________________________crm_oauth2": [
+              "crm.objects.tickets.sensitive.read"
+            ]
+          },
+          {
+            "__________________________________________crm_oauth2": [
               "crm.objects.listings.write"
             ]
           },
@@ -71030,12 +69945,17 @@
           },
           {
             "__________________________________________crm_oauth2": [
-              "crm.objects.custom.sensitive.write.v2"
+              "crm.schemas.tickets.read"
             ]
           },
           {
             "__________________________________________crm_oauth2": [
               "crm.objects.tasks.read"
+            ]
+          },
+          {
+            "__________________________________________crm_oauth2": [
+              "crm.objects.custom.sensitive.write.v2"
             ]
           },
           {
@@ -71051,6 +69971,11 @@
           {
             "__________________________________________crm_oauth2": [
               "crm.objects.companies.read"
+            ]
+          },
+          {
+            "__________________________________________crm_oauth2": [
+              "crm.objects.tickets.highly_sensitive.read"
             ]
           },
           {
@@ -71115,12 +70040,12 @@
           },
           {
             "__________________________________________crm_oauth2": [
-              "crm.objects.feedback_submissions.read"
+              "crm.objects.products.write"
             ]
           },
           {
             "__________________________________________crm_oauth2": [
-              "crm.objects.products.write"
+              "crm.objects.feedback_submissions.read"
             ]
           },
           {
@@ -71185,12 +70110,12 @@
           },
           {
             "__________________________________________crm_oauth2": [
-              "crm.objects.projects.read"
+              "crm.objects.companies.sensitive.write.v2"
             ]
           },
           {
             "__________________________________________crm_oauth2": [
-              "crm.objects.companies.sensitive.write.v2"
+              "crm.objects.projects.read"
             ]
           },
           {
@@ -71295,12 +70220,12 @@
           },
           {
             "__________________________________________crm_oauth2": [
-              "crm.pipelines.orders.read"
+              "crm.objects.marketing_events.read"
             ]
           },
           {
             "__________________________________________crm_oauth2": [
-              "crm.objects.marketing_events.read"
+              "crm.pipelines.orders.read"
             ]
           },
           {
@@ -71320,12 +70245,12 @@
           },
           {
             "__________________________________________crm_oauth2": [
-              "automation"
+              "crm.objects.companies.write"
             ]
           },
           {
             "__________________________________________crm_oauth2": [
-              "crm.objects.companies.write"
+              "automation"
             ]
           },
           {
@@ -71450,12 +70375,12 @@
           },
           {
             "__________________________________________crm_oauth2": [
-              "crm.objects.projects.write"
+              "crm.objects.marketing_events.write"
             ]
           },
           {
             "__________________________________________crm_oauth2": [
-              "crm.objects.marketing_events.write"
+              "crm.objects.projects.write"
             ]
           },
           {
@@ -71585,6 +70510,61 @@
           },
           {
             "__________________________________________crm_oauth2": [
+              "crm.schemas.invoices.write"
+            ]
+          },
+          {
+            "__________________________________________crm_oauth2": [
+              "crm.schemas.orders.write"
+            ]
+          },
+          {
+            "__________________________________________crm_oauth2": [
+              "crm.schemas.commercepayments.write"
+            ]
+          },
+          {
+            "__________________________________________crm_oauth2": [
+              "crm.schemas.courses.write"
+            ]
+          },
+          {
+            "__________________________________________crm_oauth2": [
+              "tickets.sensitive.v2"
+            ]
+          },
+          {
+            "__________________________________________crm_oauth2": [
+              "e-commerce"
+            ]
+          },
+          {
+            "__________________________________________crm_oauth2": [
+              "crm.schemas.appointments.write"
+            ]
+          },
+          {
+            "__________________________________________crm_oauth2": [
+              "crm.schemas.contacts.write"
+            ]
+          },
+          {
+            "__________________________________________crm_oauth2": [
+              "crm.schemas.carts.write"
+            ]
+          },
+          {
+            "__________________________________________crm_oauth2": [
+              "crm.objects.tickets.sensitive.write"
+            ]
+          },
+          {
+            "__________________________________________crm_oauth2": [
+              "crm.schemas.companies.write"
+            ]
+          },
+          {
+            "__________________________________________crm_oauth2": [
               "crm.schemas.subscriptions.write"
             ]
           },
@@ -71600,22 +70580,7 @@
           },
           {
             "__________________________________________crm_oauth2": [
-              "crm.schemas.invoices.write"
-            ]
-          },
-          {
-            "__________________________________________crm_oauth2": [
-              "crm.schemas.orders.write"
-            ]
-          },
-          {
-            "__________________________________________crm_oauth2": [
               "crm.pipelines.orders.write"
-            ]
-          },
-          {
-            "__________________________________________crm_oauth2": [
-              "crm.schemas.commercepayments.write"
             ]
           },
           {
@@ -71640,11 +70605,6 @@
           },
           {
             "__________________________________________crm_oauth2": [
-              "crm.schemas.courses.write"
-            ]
-          },
-          {
-            "__________________________________________crm_oauth2": [
               "crm.schemas.projects.write"
             ]
           },
@@ -71655,37 +70615,17 @@
           },
           {
             "__________________________________________crm_oauth2": [
-              "tickets.sensitive.v2"
-            ]
-          },
-          {
-            "__________________________________________crm_oauth2": [
-              "e-commerce"
-            ]
-          },
-          {
-            "__________________________________________crm_oauth2": [
               "crm.objects.carts.write"
             ]
           },
           {
             "__________________________________________crm_oauth2": [
-              "crm.schemas.appointments.write"
+              "crm.schemas.tickets.write"
             ]
           },
           {
             "__________________________________________crm_oauth2": [
-              "crm.schemas.contacts.write"
-            ]
-          },
-          {
-            "__________________________________________crm_oauth2": [
-              "crm.schemas.carts.write"
-            ]
-          },
-          {
-            "__________________________________________crm_oauth2": [
-              "crm.schemas.companies.write"
+              "crm.objects.tickets.highly_sensitive.write"
             ]
           }
         ]
@@ -82328,6 +81268,16 @@
         "security": [
           {
             "_marketing_oauth2": [
+              "marketing.email.read"
+            ]
+          },
+          {
+            "_marketing_oauth2": [
+              "marketing.email.write"
+            ]
+          },
+          {
+            "_marketing_oauth2": [
               "content"
             ]
           }
@@ -82352,6 +81302,16 @@
         "responses": {
           "201": {
             "description": "successful operation",
+            "headers": {
+              "Location": {
+                "description": "URL of the newly created resource",
+                "style": "simple",
+                "schema": {
+                  "type": "string",
+                  "example": null
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -82366,6 +81326,16 @@
           }
         },
         "security": [
+          {
+            "_marketing_oauth2": [
+              "marketing.email.read"
+            ]
+          },
+          {
+            "_marketing_oauth2": [
+              "marketing.email.write"
+            ]
+          },
           {
             "_marketing_oauth2": [
               "content"
@@ -82396,6 +81366,16 @@
         "responses": {
           "201": {
             "description": "successful operation",
+            "headers": {
+              "Location": {
+                "description": "URL of the newly created resource",
+                "style": "simple",
+                "schema": {
+                  "type": "string",
+                  "example": null
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -82410,6 +81390,16 @@
           }
         },
         "security": [
+          {
+            "_marketing_oauth2": [
+              "marketing.email.read"
+            ]
+          },
+          {
+            "_marketing_oauth2": [
+              "marketing.email.write"
+            ]
+          },
           {
             "_marketing_oauth2": [
               "content"
@@ -82454,6 +81444,16 @@
           }
         },
         "security": [
+          {
+            "_marketing_oauth2": [
+              "marketing.email.read"
+            ]
+          },
+          {
+            "_marketing_oauth2": [
+              "marketing.email.write"
+            ]
+          },
           {
             "_marketing_oauth2": [
               "content"
@@ -82545,6 +81545,16 @@
         "security": [
           {
             "_marketing_oauth2": [
+              "marketing.email.read"
+            ]
+          },
+          {
+            "_marketing_oauth2": [
+              "marketing.email.write"
+            ]
+          },
+          {
+            "_marketing_oauth2": [
               "content"
             ]
           }
@@ -82621,6 +81631,16 @@
           }
         },
         "security": [
+          {
+            "_marketing_oauth2": [
+              "marketing.email.read"
+            ]
+          },
+          {
+            "_marketing_oauth2": [
+              "marketing.email.write"
+            ]
+          },
           {
             "_marketing_oauth2": [
               "content"
@@ -82726,6 +81746,16 @@
         "security": [
           {
             "_marketing_oauth2": [
+              "marketing.email.read"
+            ]
+          },
+          {
+            "_marketing_oauth2": [
+              "marketing.email.write"
+            ]
+          },
+          {
+            "_marketing_oauth2": [
               "content"
             ]
           }
@@ -82768,6 +81798,16 @@
           }
         },
         "security": [
+          {
+            "_marketing_oauth2": [
+              "marketing.email.read"
+            ]
+          },
+          {
+            "_marketing_oauth2": [
+              "marketing.email.write"
+            ]
+          },
           {
             "_marketing_oauth2": [
               "content"
@@ -82831,6 +81871,16 @@
           }
         },
         "security": [
+          {
+            "_marketing_oauth2": [
+              "marketing.email.read"
+            ]
+          },
+          {
+            "_marketing_oauth2": [
+              "marketing.email.write"
+            ]
+          },
           {
             "_marketing_oauth2": [
               "content"
@@ -82936,6 +81986,16 @@
         "security": [
           {
             "_marketing_oauth2": [
+              "marketing.email.read"
+            ]
+          },
+          {
+            "_marketing_oauth2": [
+              "marketing.email.write"
+            ]
+          },
+          {
+            "_marketing_oauth2": [
               "content"
             ]
           }
@@ -82979,6 +82039,16 @@
           }
         },
         "security": [
+          {
+            "_marketing_oauth2": [
+              "marketing.email.read"
+            ]
+          },
+          {
+            "_marketing_oauth2": [
+              "marketing.email.write"
+            ]
+          },
           {
             "_marketing_oauth2": [
               "content"
@@ -83035,6 +82105,16 @@
         "security": [
           {
             "_marketing_oauth2": [
+              "marketing.email.read"
+            ]
+          },
+          {
+            "_marketing_oauth2": [
+              "marketing.email.write"
+            ]
+          },
+          {
+            "_marketing_oauth2": [
               "content"
             ]
           }
@@ -83070,6 +82150,16 @@
           }
         },
         "security": [
+          {
+            "_marketing_oauth2": [
+              "marketing.email.read"
+            ]
+          },
+          {
+            "_marketing_oauth2": [
+              "marketing.email.write"
+            ]
+          },
           {
             "_marketing_oauth2": [
               "content"
@@ -83190,6 +82280,16 @@
         "security": [
           {
             "_marketing_oauth2": [
+              "marketing.email.read"
+            ]
+          },
+          {
+            "_marketing_oauth2": [
+              "marketing.email.write"
+            ]
+          },
+          {
+            "_marketing_oauth2": [
               "content"
             ]
           }
@@ -83245,6 +82345,16 @@
         "security": [
           {
             "_marketing_oauth2": [
+              "marketing.email.read"
+            ]
+          },
+          {
+            "_marketing_oauth2": [
+              "marketing.email.write"
+            ]
+          },
+          {
+            "_marketing_oauth2": [
               "content"
             ]
           }
@@ -83290,6 +82400,16 @@
           }
         },
         "security": [
+          {
+            "_marketing_oauth2": [
+              "marketing.email.read"
+            ]
+          },
+          {
+            "_marketing_oauth2": [
+              "marketing.email.write"
+            ]
+          },
           {
             "_marketing_oauth2": [
               "content"
@@ -83346,6 +82466,16 @@
           }
         },
         "security": [
+          {
+            "_marketing_oauth2": [
+              "marketing.email.read"
+            ]
+          },
+          {
+            "_marketing_oauth2": [
+              "marketing.email.write"
+            ]
+          },
           {
             "_marketing_oauth2": [
               "content"
@@ -90526,6 +89656,8 @@
               "CHANGE_AD_EVENT_DATA_SHARING_SETTING",
               "CHANGE_PASSWORD",
               "CONTACT_DATA_EXPORT",
+              "CONTACT_OWNER_AUTO_ASSIGN_DISABLED",
+              "CONTACT_OWNER_AUTO_ASSIGN_ENABLED",
               "DATA_ACCESS_REQUEST_SUBMITTED",
               "DATA_BACKUP_CREATED",
               "DATA_BACKUP_DOWNLOADED",
@@ -90541,6 +89673,9 @@
               "DOMAIN_BASED_INVITE_REMOVED",
               "DOMAIN_BASED_INVITES_DISABLED",
               "DOMAIN_BASED_INVITES_ENABLED",
+              "EMAIL_LOGGING_SYNC_SET_ALL",
+              "EMAIL_LOGGING_SYNC_SET_CONTACTS",
+              "EMAIL_LOGGING_SYNC_SET_REPLIES",
               "EMAIL_TRACKING_DISABLED",
               "EMAIL_TRACKING_ENABLED",
               "EXPORT",
@@ -90619,11 +89754,15 @@
               "SEQUENCE_ENROLLMENT_INITIATED",
               "SEQUENCE_ENROLLMENT_STATE_CHANGED",
               "SEQUENCE_MODIFIED",
+              "SERVICE_KEY_AUTO_ROTATE",
               "SERVICE_KEY_CREATE",
               "SERVICE_KEY_DEACTIVATE",
               "SERVICE_KEY_PERMISSIONS_UPDATE",
               "SERVICE_KEY_REVEAL",
               "SERVICE_KEY_ROTATE",
+              "SERVICE_KEY_ROTATION_SCHEDULE_REMOVED",
+              "SERVICE_KEY_ROTATION_SCHEDULE_SET",
+              "SERVICE_KEY_ROTATION_SCHEDULE_UPDATED",
               "SMTP_TOKEN_CREATED",
               "SMTP_TOKEN_DELETED",
               "SMTP_TOKEN_PASSWORD_RESET",
@@ -90635,6 +89774,8 @@
               "TEMPLATE_DELETED",
               "TEMPLATE_MODIFIED",
               "TOUCHLESS_PURCHASE",
+              "TWO_FACTOR_PROTECTED_ENDPOINT_BLOCKED",
+              "TWO_FACTOR_PROTECTED_ENDPOINT_SUCCEEDED",
               "UNIFIED_RESTORE_UNDO_EXECUTION",
               "UNINSTALL_INTEGRATION",
               "UNREQUIRE_SINGLE_SIGN_ON",
@@ -145716,6 +144857,7 @@
           "publicAccessRulesEnabled",
           "publishDate",
           "publishImmediately",
+          "publishedAt",
           "rssBody",
           "rssSummary",
           "slug",
@@ -146949,6 +146091,11 @@
           "publishImmediately": {
             "type": "boolean",
             "description": "Set this to true if you want to be published immediately when the schedule publish endpoint is called, and to ignore the publish_date setting.",
+            "example": null
+          },
+          "publishedAt": {
+            "type": "string",
+            "format": "date-time",
             "example": null
           },
           "rssBody": {
@@ -148939,1025 +148086,6 @@
         },
         "example": null
       },
-      "ContentSearchResult": {
-        "required": [
-          "domain",
-          "id",
-          "score",
-          "type",
-          "url"
-        ],
-        "type": "object",
-        "properties": {
-          "authorFullName": {
-            "type": "string",
-            "description": "Name of the author.",
-            "example": null
-          },
-          "category": {
-            "type": "string",
-            "description": "The error category",
-            "example": null
-          },
-          "combinedId": {
-            "type": "string",
-            "description": "The ID of the document in HubSpot.",
-            "example": null
-          },
-          "contentType": {
-            "type": "string",
-            "example": null
-          },
-          "description": {
-            "type": "string",
-            "description": "The result's description. The content will be determined by the value of `length` in the request.",
-            "example": null
-          },
-          "domain": {
-            "type": "string",
-            "description": "The domain the document is hosted on.",
-            "example": null
-          },
-          "featuredImageUrl": {
-            "type": "string",
-            "description": "URL of the featured image.",
-            "example": null
-          },
-          "id": {
-            "type": "integer",
-            "description": "The ID of the content.",
-            "format": "int64",
-            "example": null
-          },
-          "inBeta": {
-            "type": "boolean",
-            "example": null
-          },
-          "isPrivate": {
-            "type": "boolean",
-            "example": null
-          },
-          "language": {
-            "enum": [
-              "aa",
-              "ab",
-              "ae",
-              "af",
-              "af-na",
-              "af-za",
-              "agq",
-              "agq-cm",
-              "ak",
-              "ak-gh",
-              "am",
-              "am-et",
-              "an",
-              "ann",
-              "ann-ng",
-              "ar",
-              "ar-001",
-              "ar-ae",
-              "ar-bh",
-              "ar-dj",
-              "ar-dz",
-              "ar-eg",
-              "ar-eh",
-              "ar-er",
-              "ar-il",
-              "ar-iq",
-              "ar-jo",
-              "ar-km",
-              "ar-kw",
-              "ar-lb",
-              "ar-ly",
-              "ar-ma",
-              "ar-mr",
-              "ar-om",
-              "ar-ps",
-              "ar-qa",
-              "ar-sa",
-              "ar-sd",
-              "ar-so",
-              "ar-ss",
-              "ar-sy",
-              "ar-td",
-              "ar-tn",
-              "ar-ye",
-              "as",
-              "as-in",
-              "asa",
-              "asa-tz",
-              "ast",
-              "ast-es",
-              "av",
-              "ay",
-              "az",
-              "az-az",
-              "ba",
-              "bal",
-              "bal-pk",
-              "bas",
-              "bas-cm",
-              "be",
-              "be-by",
-              "bem",
-              "bem-zm",
-              "bez",
-              "bez-tz",
-              "bg",
-              "bg-bg",
-              "bgc",
-              "bgc-in",
-              "bho",
-              "bho-in",
-              "bi",
-              "blo",
-              "blo-bj",
-              "bm",
-              "bm-ml",
-              "bn",
-              "bn-bd",
-              "bn-in",
-              "bo",
-              "bo-cn",
-              "bo-in",
-              "br",
-              "br-fr",
-              "brx",
-              "brx-in",
-              "bs",
-              "bs-ba",
-              "ca",
-              "ca-ad",
-              "ca-es",
-              "ca-fr",
-              "ca-it",
-              "ccp",
-              "ccp-bd",
-              "ccp-in",
-              "ce",
-              "ce-ru",
-              "ceb",
-              "ceb-ph",
-              "cgg",
-              "cgg-ug",
-              "ch",
-              "chr",
-              "chr-us",
-              "ckb",
-              "ckb-iq",
-              "ckb-ir",
-              "co",
-              "cr",
-              "cs",
-              "cs-cz",
-              "csw",
-              "csw-ca",
-              "cu",
-              "cu-ru",
-              "cv",
-              "cv-ru",
-              "cy",
-              "cy-gb",
-              "da",
-              "da-dk",
-              "da-gl",
-              "dav",
-              "dav-ke",
-              "de",
-              "de-at",
-              "de-be",
-              "de-ch",
-              "de-de",
-              "de-gr",
-              "de-it",
-              "de-li",
-              "de-lu",
-              "dje",
-              "dje-ne",
-              "doi",
-              "doi-in",
-              "dsb",
-              "dsb-de",
-              "dua",
-              "dua-cm",
-              "dv",
-              "dyo",
-              "dyo-sn",
-              "dz",
-              "dz-bt",
-              "ebu",
-              "ebu-ke",
-              "ee",
-              "ee-gh",
-              "ee-tg",
-              "el",
-              "el-cy",
-              "el-gr",
-              "en",
-              "en-001",
-              "en-150",
-              "en-ae",
-              "en-ag",
-              "en-ai",
-              "en-as",
-              "en-at",
-              "en-au",
-              "en-bb",
-              "en-be",
-              "en-bi",
-              "en-bm",
-              "en-bs",
-              "en-bw",
-              "en-bz",
-              "en-ca",
-              "en-cc",
-              "en-ch",
-              "en-ck",
-              "en-cm",
-              "en-cn",
-              "en-cx",
-              "en-cy",
-              "en-cz",
-              "en-de",
-              "en-dg",
-              "en-dk",
-              "en-dm",
-              "en-ee",
-              "en-eg",
-              "en-er",
-              "en-es",
-              "en-fi",
-              "en-fj",
-              "en-fk",
-              "en-fm",
-              "en-fr",
-              "en-gb",
-              "en-gd",
-              "en-gg",
-              "en-gh",
-              "en-gi",
-              "en-gm",
-              "en-gs",
-              "en-gu",
-              "en-gy",
-              "en-hk",
-              "en-hu",
-              "en-id",
-              "en-ie",
-              "en-il",
-              "en-im",
-              "en-in",
-              "en-io",
-              "en-it",
-              "en-je",
-              "en-jm",
-              "en-ke",
-              "en-ki",
-              "en-kn",
-              "en-ky",
-              "en-lc",
-              "en-lr",
-              "en-ls",
-              "en-lu",
-              "en-mg",
-              "en-mh",
-              "en-mo",
-              "en-mp",
-              "en-ms",
-              "en-mt",
-              "en-mu",
-              "en-mv",
-              "en-mw",
-              "en-mx",
-              "en-my",
-              "en-na",
-              "en-nf",
-              "en-ng",
-              "en-nl",
-              "en-no",
-              "en-nr",
-              "en-nu",
-              "en-nz",
-              "en-pg",
-              "en-ph",
-              "en-pk",
-              "en-pl",
-              "en-pn",
-              "en-pr",
-              "en-pt",
-              "en-pw",
-              "en-ro",
-              "en-rw",
-              "en-sb",
-              "en-sc",
-              "en-sd",
-              "en-se",
-              "en-sg",
-              "en-sh",
-              "en-si",
-              "en-sk",
-              "en-sl",
-              "en-ss",
-              "en-sx",
-              "en-sz",
-              "en-tc",
-              "en-th",
-              "en-tk",
-              "en-tn",
-              "en-to",
-              "en-tt",
-              "en-tv",
-              "en-tz",
-              "en-ug",
-              "en-um",
-              "en-us",
-              "en-vc",
-              "en-vg",
-              "en-vi",
-              "en-vn",
-              "en-vu",
-              "en-ws",
-              "en-za",
-              "en-zm",
-              "en-zw",
-              "eo",
-              "eo-001",
-              "es",
-              "es-419",
-              "es-ar",
-              "es-bo",
-              "es-br",
-              "es-bz",
-              "es-cl",
-              "es-co",
-              "es-cr",
-              "es-cu",
-              "es-do",
-              "es-ea",
-              "es-ec",
-              "es-es",
-              "es-gq",
-              "es-gt",
-              "es-hn",
-              "es-ic",
-              "es-mx",
-              "es-ni",
-              "es-pa",
-              "es-pe",
-              "es-ph",
-              "es-pr",
-              "es-py",
-              "es-sv",
-              "es-us",
-              "es-uy",
-              "es-ve",
-              "et",
-              "et-ee",
-              "eu",
-              "eu-es",
-              "ewo",
-              "ewo-cm",
-              "fa",
-              "fa-af",
-              "fa-ir",
-              "ff",
-              "ff-bf",
-              "ff-cm",
-              "ff-gh",
-              "ff-gm",
-              "ff-gn",
-              "ff-gw",
-              "ff-lr",
-              "ff-mr",
-              "ff-ne",
-              "ff-ng",
-              "ff-sl",
-              "ff-sn",
-              "fi",
-              "fi-fi",
-              "fil",
-              "fil-ph",
-              "fj",
-              "fo",
-              "fo-dk",
-              "fo-fo",
-              "fr",
-              "fr-be",
-              "fr-bf",
-              "fr-bi",
-              "fr-bj",
-              "fr-bl",
-              "fr-ca",
-              "fr-cd",
-              "fr-cf",
-              "fr-cg",
-              "fr-ch",
-              "fr-ci",
-              "fr-cm",
-              "fr-dj",
-              "fr-dz",
-              "fr-fr",
-              "fr-ga",
-              "fr-gf",
-              "fr-gn",
-              "fr-gp",
-              "fr-gq",
-              "fr-ht",
-              "fr-km",
-              "fr-lu",
-              "fr-ma",
-              "fr-mc",
-              "fr-mf",
-              "fr-mg",
-              "fr-ml",
-              "fr-mq",
-              "fr-mr",
-              "fr-mu",
-              "fr-nc",
-              "fr-ne",
-              "fr-pf",
-              "fr-pm",
-              "fr-re",
-              "fr-rw",
-              "fr-sc",
-              "fr-sn",
-              "fr-sy",
-              "fr-td",
-              "fr-tg",
-              "fr-tn",
-              "fr-vu",
-              "fr-wf",
-              "fr-yt",
-              "frr",
-              "frr-de",
-              "fur",
-              "fur-it",
-              "fy",
-              "fy-nl",
-              "ga",
-              "ga-gb",
-              "ga-ie",
-              "gaa",
-              "gaa-gh",
-              "gd",
-              "gd-gb",
-              "gl",
-              "gl-es",
-              "gn",
-              "gsw",
-              "gsw-ch",
-              "gsw-fr",
-              "gsw-li",
-              "gu",
-              "gu-in",
-              "guz",
-              "guz-ke",
-              "gv",
-              "gv-im",
-              "ha",
-              "ha-gh",
-              "ha-ne",
-              "ha-ng",
-              "haw",
-              "haw-us",
-              "he",
-              "he-il",
-              "hi",
-              "hi-in",
-              "hmn",
-              "ho",
-              "hr",
-              "hr-ba",
-              "hr-hr",
-              "hsb",
-              "hsb-de",
-              "ht",
-              "ht-ht",
-              "hu",
-              "hu-hu",
-              "hy",
-              "hy-am",
-              "hz",
-              "ia",
-              "ia-001",
-              "id",
-              "id-id",
-              "ie",
-              "ie-ee",
-              "ig",
-              "ig-ng",
-              "ii",
-              "ii-cn",
-              "ik",
-              "io",
-              "is",
-              "is-is",
-              "it",
-              "it-ch",
-              "it-it",
-              "it-sm",
-              "it-va",
-              "iu",
-              "ja",
-              "ja-jp",
-              "jgo",
-              "jgo-cm",
-              "jmc",
-              "jmc-tz",
-              "jv",
-              "jv-id",
-              "ka",
-              "ka-ge",
-              "kab",
-              "kab-dz",
-              "kam",
-              "kam-ke",
-              "kar",
-              "kde",
-              "kde-tz",
-              "kea",
-              "kea-cv",
-              "kg",
-              "kgp",
-              "kgp-br",
-              "kh",
-              "khq",
-              "khq-ml",
-              "ki",
-              "ki-ke",
-              "kj",
-              "kk",
-              "kk-kz",
-              "kkj",
-              "kkj-cm",
-              "kl",
-              "kl-gl",
-              "kln",
-              "kln-ke",
-              "km",
-              "km-kh",
-              "kn",
-              "kn-in",
-              "ko",
-              "ko-cn",
-              "ko-kp",
-              "ko-kr",
-              "kok",
-              "kok-in",
-              "kr",
-              "ks",
-              "ks-in",
-              "ksb",
-              "ksb-tz",
-              "ksf",
-              "ksf-cm",
-              "ksh",
-              "ksh-de",
-              "ku",
-              "ku-tr",
-              "kv",
-              "kw",
-              "kw-gb",
-              "kxv",
-              "kxv-in",
-              "ky",
-              "ky-kg",
-              "la",
-              "lag",
-              "lag-tz",
-              "lb",
-              "lb-lu",
-              "lg",
-              "lg-ug",
-              "li",
-              "lij",
-              "lij-it",
-              "lkt",
-              "lkt-us",
-              "lmo",
-              "lmo-it",
-              "ln",
-              "ln-ao",
-              "ln-cd",
-              "ln-cf",
-              "ln-cg",
-              "lo",
-              "lo-la",
-              "lrc",
-              "lrc-iq",
-              "lrc-ir",
-              "lt",
-              "lt-lt",
-              "lu",
-              "lu-cd",
-              "luo",
-              "luo-ke",
-              "luy",
-              "luy-ke",
-              "lv",
-              "lv-lv",
-              "mai",
-              "mai-in",
-              "mas",
-              "mas-ke",
-              "mas-tz",
-              "mdf",
-              "mdf-ru",
-              "mer",
-              "mer-ke",
-              "mfe",
-              "mfe-mu",
-              "mg",
-              "mg-mg",
-              "mgh",
-              "mgh-mz",
-              "mgo",
-              "mgo-cm",
-              "mh",
-              "mi",
-              "mi-nz",
-              "mk",
-              "mk-mk",
-              "ml",
-              "ml-in",
-              "mn",
-              "mn-mn",
-              "mni",
-              "mni-in",
-              "mr",
-              "mr-in",
-              "ms",
-              "ms-bn",
-              "ms-id",
-              "ms-my",
-              "ms-sg",
-              "mt",
-              "mt-mt",
-              "mua",
-              "mua-cm",
-              "my",
-              "my-mm",
-              "mzn",
-              "mzn-ir",
-              "na",
-              "naq",
-              "naq-na",
-              "nb",
-              "nb-no",
-              "nb-sj",
-              "nd",
-              "nd-zw",
-              "nds",
-              "nds-de",
-              "nds-nl",
-              "ne",
-              "ne-in",
-              "ne-np",
-              "ng",
-              "nl",
-              "nl-aw",
-              "nl-be",
-              "nl-bq",
-              "nl-ch",
-              "nl-cw",
-              "nl-lu",
-              "nl-nl",
-              "nl-sr",
-              "nl-sx",
-              "nmg",
-              "nmg-cm",
-              "nn",
-              "nn-no",
-              "nnh",
-              "nnh-cm",
-              "no",
-              "no-no",
-              "nqo",
-              "nqo-gn",
-              "nr",
-              "nso",
-              "nso-za",
-              "nus",
-              "nus-ss",
-              "nv",
-              "ny",
-              "nyn",
-              "nyn-ug",
-              "oc",
-              "oc-es",
-              "oc-fr",
-              "oj",
-              "om",
-              "om-et",
-              "om-ke",
-              "or",
-              "or-in",
-              "os",
-              "os-ge",
-              "os-ru",
-              "pa",
-              "pa-in",
-              "pa-pk",
-              "pcm",
-              "pcm-ng",
-              "pi",
-              "pis",
-              "pis-sb",
-              "pl",
-              "pl-pl",
-              "prg",
-              "prg-001",
-              "ps",
-              "ps-af",
-              "ps-pk",
-              "pt",
-              "pt-ao",
-              "pt-br",
-              "pt-ch",
-              "pt-cv",
-              "pt-gq",
-              "pt-gw",
-              "pt-lu",
-              "pt-mo",
-              "pt-mz",
-              "pt-pt",
-              "pt-st",
-              "pt-tl",
-              "qu",
-              "qu-bo",
-              "qu-ec",
-              "qu-pe",
-              "raj",
-              "raj-in",
-              "rm",
-              "rm-ch",
-              "rn",
-              "rn-bi",
-              "ro",
-              "ro-md",
-              "ro-ro",
-              "rof",
-              "rof-tz",
-              "ru",
-              "ru-by",
-              "ru-kg",
-              "ru-kz",
-              "ru-md",
-              "ru-ru",
-              "ru-ua",
-              "rw",
-              "rw-rw",
-              "rwk",
-              "rwk-tz",
-              "sa",
-              "sa-in",
-              "sah",
-              "sah-ru",
-              "saq",
-              "saq-ke",
-              "sat",
-              "sat-in",
-              "sbp",
-              "sbp-tz",
-              "sc",
-              "sc-it",
-              "sd",
-              "sd-in",
-              "sd-pk",
-              "se",
-              "se-fi",
-              "se-no",
-              "se-se",
-              "seh",
-              "seh-mz",
-              "ses",
-              "ses-ml",
-              "sg",
-              "sg-cf",
-              "shi",
-              "shi-ma",
-              "si",
-              "si-lk",
-              "sk",
-              "sk-sk",
-              "sl",
-              "sl-si",
-              "sm",
-              "smn",
-              "smn-fi",
-              "sms",
-              "sms-fi",
-              "sn",
-              "sn-zw",
-              "so",
-              "so-dj",
-              "so-et",
-              "so-ke",
-              "so-so",
-              "sq",
-              "sq-al",
-              "sq-mk",
-              "sq-xk",
-              "sr",
-              "sr-ba",
-              "sr-cs",
-              "sr-me",
-              "sr-rs",
-              "sr-xk",
-              "ss",
-              "st",
-              "st-ls",
-              "st-za",
-              "su",
-              "su-id",
-              "sv",
-              "sv-ax",
-              "sv-fi",
-              "sv-se",
-              "sw",
-              "sw-cd",
-              "sw-ke",
-              "sw-tz",
-              "sw-ug",
-              "sy",
-              "syr",
-              "syr-iq",
-              "syr-sy",
-              "szl",
-              "szl-pl",
-              "ta",
-              "ta-in",
-              "ta-lk",
-              "ta-my",
-              "ta-sg",
-              "te",
-              "te-in",
-              "teo",
-              "teo-ke",
-              "teo-ug",
-              "tg",
-              "tg-tj",
-              "th",
-              "th-th",
-              "ti",
-              "ti-er",
-              "ti-et",
-              "tk",
-              "tk-tm",
-              "tl",
-              "tn",
-              "tn-bw",
-              "tn-za",
-              "to",
-              "to-to",
-              "tok",
-              "tok-001",
-              "tr",
-              "tr-cy",
-              "tr-tr",
-              "ts",
-              "tt",
-              "tt-ru",
-              "tw",
-              "twq",
-              "twq-ne",
-              "ty",
-              "tzm",
-              "tzm-ma",
-              "ug",
-              "ug-cn",
-              "uk",
-              "uk-ua",
-              "ur",
-              "ur-in",
-              "ur-pk",
-              "uz",
-              "uz-af",
-              "uz-uz",
-              "vai",
-              "vai-lr",
-              "ve",
-              "vec",
-              "vec-it",
-              "vi",
-              "vi-vn",
-              "vmw",
-              "vmw-mz",
-              "vo",
-              "vo-001",
-              "vun",
-              "vun-tz",
-              "wa",
-              "wae",
-              "wae-ch",
-              "wo",
-              "wo-sn",
-              "xh",
-              "xh-za",
-              "xnr",
-              "xnr-in",
-              "xog",
-              "xog-ug",
-              "yav",
-              "yav-cm",
-              "yi",
-              "yi-001",
-              "yi-ua",
-              "yo",
-              "yo-bj",
-              "yo-ng",
-              "yrl",
-              "yrl-br",
-              "yrl-co",
-              "yrl-ve",
-              "yue",
-              "yue-cn",
-              "yue-hk",
-              "yue-mo",
-              "za",
-              "za-cn",
-              "zgh",
-              "zgh-ma",
-              "zh",
-              "zh-cn",
-              "zh-hans",
-              "zh-hant",
-              "zh-hk",
-              "zh-mo",
-              "zh-my",
-              "zh-sg",
-              "zh-tw",
-              "zu",
-              "zu-za"
-            ],
-            "type": "string",
-            "description": "The document's language.",
-            "example": null
-          },
-          "publishedDate": {
-            "type": "integer",
-            "description": "The date the content was published.",
-            "format": "int64",
-            "example": null
-          },
-          "rowId": {
-            "type": "integer",
-            "description": "If a dynamic page, the row ID in the HubDB table.",
-            "format": "int64",
-            "example": null
-          },
-          "score": {
-            "type": "number",
-            "description": "The matching score of the document.",
-            "example": null
-          },
-          "subcategory": {
-            "type": "string",
-            "description": "For knowledge articles, the subcategory of the article.",
-            "example": null
-          },
-          "tableId": {
-            "type": "integer",
-            "description": "If a dynamic page, the ID of the HubDB table.",
-            "format": "int64",
-            "example": null
-          },
-          "tags": {
-            "type": "array",
-            "items": {
-              "type": "string",
-              "example": null
-            },
-            "description": "If a blog post, the tags associated with it.",
-            "example": null
-          },
-          "title": {
-            "type": "string",
-            "description": "The title of the returned document.",
-            "example": null
-          },
-          "type": {
-            "enum": [
-              "BLOG_POST",
-              "KNOWLEDGE_ARTICLE",
-              "LANDING_PAGE",
-              "LISTING_PAGE",
-              "SITE_PAGE",
-              "STRUCTURED_CONTENT"
-            ],
-            "type": "string",
-            "description": "The type of document. Can be `SITE_PAGE`, `LANDING_PAGE`, `BLOG_POST`, `LISTING_PAGE`, or `KNOWLEDGE_ARTICLE`.",
-            "example": null
-          },
-          "url": {
-            "type": "string",
-            "description": "The url of the document.",
-            "example": null
-          }
-        },
-        "example": null
-      },
       "_______cms_Error": {
         "required": [
           "category",
@@ -150136,55 +148264,6 @@
               "type": "object",
               "example": null
             },
-            "example": null
-          }
-        },
-        "example": null
-      },
-      "PublicSearchResults": {
-        "required": [
-          "limit",
-          "offset",
-          "page",
-          "results",
-          "total"
-        ],
-        "type": "object",
-        "properties": {
-          "limit": {
-            "type": "integer",
-            "description": "The number of results returned in a single response.",
-            "format": "int32",
-            "example": null
-          },
-          "offset": {
-            "type": "integer",
-            "description": "The starting point for the next set of results in pagination.",
-            "format": "int32",
-            "example": null
-          },
-          "page": {
-            "type": "integer",
-            "description": "The current page number in the paginated results.",
-            "format": "int32",
-            "example": null
-          },
-          "results": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ContentSearchResult"
-            },
-            "example": null
-          },
-          "searchTerm": {
-            "type": "string",
-            "description": "The term used in the search query.",
-            "example": null
-          },
-          "total": {
-            "type": "integer",
-            "description": "The total number of results found for the search term.",
-            "format": "int64",
             "example": null
           }
         },
@@ -157336,6 +155415,9 @@
                 "followercount",
                 "gender",
                 "graduation_date",
+                "hs_active_contracts_arr",
+                "hs_active_contracts_mrr",
+                "hs_active_contracts_tcv",
                 "hs_additional_emails",
                 "hs_all_contact_vids",
                 "hs_analytics_average_page_views",
@@ -256179,6 +254261,10 @@
               "crm.objects.subscriptions.read": "",
               "crm.objects.subscriptions.write": "",
               "crm.objects.tasks.read": "",
+              "crm.objects.tickets.highly_sensitive.read": "",
+              "crm.objects.tickets.highly_sensitive.write": "",
+              "crm.objects.tickets.sensitive.read": "",
+              "crm.objects.tickets.sensitive.write": "",
               "crm.objects.users.read": "",
               "crm.objects.users.write": "",
               "crm.pipelines.orders.read": "",
@@ -256219,6 +254305,8 @@
               "crm.schemas.subscriptions.read": "",
               "crm.schemas.subscriptions.write": "",
               "crm.schemas.tasks.read": "",
+              "crm.schemas.tickets.read": "",
+              "crm.schemas.tickets.write": "",
               "e-commerce": "",
               "media_bridge.read": "",
               "tickets": "",
@@ -257498,9 +255586,6 @@
       "name": "Website pages"
     },
     {
-      "name": "Search"
-    },
-    {
       "name": "Status"
     },
     {
@@ -257511,6 +255596,9 @@
     },
     {
       "name": "Messages"
+    },
+    {
+      "name": "Search"
     },
     {
       "name": "Labels"
