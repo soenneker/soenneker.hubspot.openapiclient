@@ -229685,6 +229685,14 @@
       "OAuthPostOAuth202603TokenOAuthV3TokenXWwwFormUrlencodedRequest": {
         "type": "object",
         "properties": {
+          "client_assertion": {
+            "type": "string",
+            "example": null
+          },
+          "client_assertion_type": {
+            "type": "string",
+            "example": null
+          },
           "client_id": {
             "type": "string",
             "example": null
