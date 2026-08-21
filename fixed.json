@@ -37,11 +37,6 @@
         "security": [
           {
             "oauth2": [
-              "ACCEPTANCE_TEST.visibility.legacyOnly.41205153.105861"
-            ]
-          },
-          {
-            "oauth2": [
               "oauth"
             ]
           }
@@ -73,11 +68,6 @@
           }
         },
         "security": [
-          {
-            "oauth2": [
-              "ACCEPTANCE_TEST.visibility.legacyOnly.41205153.105861"
-            ]
-          },
           {
             "oauth2": [
               "oauth"
