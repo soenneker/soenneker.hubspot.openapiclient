@@ -58,6 +58,9 @@ namespace Soenneker.HubSpot.OpenApiClient.WebhooksJournal.Subscriptions.TwoZeroT
         public TwoZeroTwoSixZeroThreeRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/webhooks-journal/subscriptions/2026-03", rawUrl)
         {
         }
+        /// <summary>
+        /// Retrieve a list of webhook journal subscriptions. This endpoint provides access to subscription details without pagination, allowing you to view all current subscriptions in a single request. It is useful for managing and reviewing webhook subscriptions for your app.
+        /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseSubscriptionResponseNoPaging"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -73,6 +76,9 @@ namespace Soenneker.HubSpot.OpenApiClient.WebhooksJournal.Subscriptions.TwoZeroT
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseSubscriptionResponseNoPaging>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseSubscriptionResponseNoPaging.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
+        /// <summary>
+        /// Create a new webhook journal subscription for the specified portal. This endpoint allows you to define the actions and object types that the subscription will monitor. It requires a request body with the subscription details.
+        /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -90,6 +96,9 @@ namespace Soenneker.HubSpot.OpenApiClient.WebhooksJournal.Subscriptions.TwoZeroT
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
+        /// <summary>
+        /// Retrieve a list of webhook journal subscriptions. This endpoint provides access to subscription details without pagination, allowing you to view all current subscriptions in a single request. It is useful for managing and reviewing webhook subscriptions for your app.
+        /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -106,6 +115,9 @@ namespace Soenneker.HubSpot.OpenApiClient.WebhooksJournal.Subscriptions.TwoZeroT
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
         }
+        /// <summary>
+        /// Create a new webhook journal subscription for the specified portal. This endpoint allows you to define the actions and object types that the subscription will monitor. It requires a request body with the subscription details.
+        /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
