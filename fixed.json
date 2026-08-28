@@ -7917,7 +7917,7 @@
           },
           {
             "_____cms_oauth2": [
-              "landingpages-read"
+              "content.landing_pages.read"
             ]
           }
         ]
@@ -7967,6 +7967,11 @@
           }
         },
         "security": [
+          {
+            "_____cms_oauth2": [
+              "content.landing_pages.write"
+            ]
+          },
           {
             "_____cms_oauth2": [
               "content"
@@ -8023,6 +8028,11 @@
         "security": [
           {
             "_____cms_oauth2": [
+              "content.landing_pages.write"
+            ]
+          },
+          {
+            "_____cms_oauth2": [
               "content"
             ]
           }
@@ -8057,6 +8067,11 @@
           }
         },
         "security": [
+          {
+            "_____cms_oauth2": [
+              "content.landing_pages.write"
+            ]
+          },
           {
             "_____cms_oauth2": [
               "content"
@@ -8095,6 +8110,11 @@
         "security": [
           {
             "_____cms_oauth2": [
+              "content.landing_pages.write"
+            ]
+          },
+          {
+            "_____cms_oauth2": [
               "content"
             ]
           }
@@ -8129,6 +8149,11 @@
           }
         },
         "security": [
+          {
+            "_____cms_oauth2": [
+              "content.landing_pages.write"
+            ]
+          },
           {
             "_____cms_oauth2": [
               "content"
@@ -8184,6 +8209,11 @@
           }
         },
         "security": [
+          {
+            "_____cms_oauth2": [
+              "content.landing_pages.write"
+            ]
+          },
           {
             "_____cms_oauth2": [
               "content"
@@ -8257,7 +8287,7 @@
           },
           {
             "_____cms_oauth2": [
-              "landingpages-read"
+              "content.landing_pages.read"
             ]
           }
         ]
@@ -8323,6 +8353,11 @@
         "security": [
           {
             "_____cms_oauth2": [
+              "content.landing_pages.write"
+            ]
+          },
+          {
+            "_____cms_oauth2": [
               "content"
             ]
           }
@@ -8365,6 +8400,11 @@
           }
         },
         "security": [
+          {
+            "_____cms_oauth2": [
+              "content.landing_pages.write"
+            ]
+          },
           {
             "_____cms_oauth2": [
               "content"
@@ -8517,7 +8557,7 @@
           },
           {
             "_____cms_oauth2": [
-              "landingpages-read"
+              "content.landing_pages.read"
             ]
           }
         ]
@@ -8569,6 +8609,11 @@
         "security": [
           {
             "_____cms_oauth2": [
+              "content.landing_pages.write"
+            ]
+          },
+          {
+            "_____cms_oauth2": [
               "content"
             ]
           }
@@ -8603,6 +8648,11 @@
           }
         },
         "security": [
+          {
+            "_____cms_oauth2": [
+              "content.landing_pages.write"
+            ]
+          },
           {
             "_____cms_oauth2": [
               "content"
@@ -8658,6 +8708,11 @@
           }
         },
         "security": [
+          {
+            "_____cms_oauth2": [
+              "content.landing_pages.write"
+            ]
+          },
           {
             "_____cms_oauth2": [
               "content"
@@ -8731,7 +8786,7 @@
           },
           {
             "_____cms_oauth2": [
-              "landingpages-read"
+              "content.landing_pages.read"
             ]
           }
         ]
@@ -8795,6 +8850,11 @@
           }
         },
         "security": [
+          {
+            "_____cms_oauth2": [
+              "content.landing_pages.write"
+            ]
+          },
           {
             "_____cms_oauth2": [
               "content"
@@ -8865,7 +8925,7 @@
           },
           {
             "_____cms_oauth2": [
-              "landingpages-read"
+              "content.landing_pages.read"
             ]
           }
         ]
@@ -8907,6 +8967,11 @@
           }
         },
         "security": [
+          {
+            "_____cms_oauth2": [
+              "content.landing_pages.write"
+            ]
+          },
           {
             "_____cms_oauth2": [
               "content"
@@ -8970,6 +9035,11 @@
           }
         },
         "security": [
+          {
+            "_____cms_oauth2": [
+              "content.landing_pages.write"
+            ]
+          },
           {
             "_____cms_oauth2": [
               "content"
@@ -9050,7 +9120,7 @@
           },
           {
             "_____cms_oauth2": [
-              "landingpages-read"
+              "content.landing_pages.read"
             ]
           }
         ]
@@ -9110,7 +9180,7 @@
           },
           {
             "_____cms_oauth2": [
-              "landingpages-read"
+              "content.landing_pages.read"
             ]
           }
         ]
@@ -9165,6 +9235,11 @@
         "security": [
           {
             "_____cms_oauth2": [
+              "content.landing_pages.write"
+            ]
+          },
+          {
+            "_____cms_oauth2": [
               "content"
             ]
           }
@@ -9196,6 +9271,11 @@
           }
         },
         "security": [
+          {
+            "_____cms_oauth2": [
+              "content.landing_pages.write"
+            ]
+          },
           {
             "_____cms_oauth2": [
               "content"
@@ -9242,6 +9322,11 @@
         "security": [
           {
             "_____cms_oauth2": [
+              "content.landing_pages.write"
+            ]
+          },
+          {
+            "_____cms_oauth2": [
               "content"
             ]
           }
@@ -9273,6 +9358,11 @@
           }
         },
         "security": [
+          {
+            "_____cms_oauth2": [
+              "content.landing_pages.write"
+            ]
+          },
           {
             "_____cms_oauth2": [
               "content"
@@ -9311,6 +9401,11 @@
         "security": [
           {
             "_____cms_oauth2": [
+              "content.landing_pages.write"
+            ]
+          },
+          {
+            "_____cms_oauth2": [
               "content"
             ]
           }
@@ -9342,6 +9437,11 @@
           }
         },
         "security": [
+          {
+            "_____cms_oauth2": [
+              "content.landing_pages.write"
+            ]
+          },
           {
             "_____cms_oauth2": [
               "content"
@@ -9378,6 +9478,11 @@
           }
         },
         "security": [
+          {
+            "_____cms_oauth2": [
+              "content.landing_pages.write"
+            ]
+          },
           {
             "_____cms_oauth2": [
               "content"
@@ -9448,7 +9553,7 @@
           },
           {
             "_____cms_oauth2": [
-              "landingpages-read"
+              "content.landing_pages.read"
             ]
           }
         ]
@@ -9490,6 +9595,11 @@
           }
         },
         "security": [
+          {
+            "_____cms_oauth2": [
+              "content.landing_pages.write"
+            ]
+          },
           {
             "_____cms_oauth2": [
               "content"
@@ -9555,6 +9665,11 @@
         "security": [
           {
             "_____cms_oauth2": [
+              "content.landing_pages.write"
+            ]
+          },
+          {
+            "_____cms_oauth2": [
               "content"
             ]
           }
@@ -9605,7 +9720,7 @@
           },
           {
             "_____cms_oauth2": [
-              "landingpages-read"
+              "content.landing_pages.read"
             ]
           }
         ]
@@ -9659,6 +9774,11 @@
         "security": [
           {
             "_____cms_oauth2": [
+              "content.landing_pages.write"
+            ]
+          },
+          {
+            "_____cms_oauth2": [
               "content"
             ]
           }
@@ -9696,6 +9816,11 @@
         "security": [
           {
             "_____cms_oauth2": [
+              "content.landing_pages.write"
+            ]
+          },
+          {
+            "_____cms_oauth2": [
               "content"
             ]
           }
@@ -9731,6 +9856,11 @@
           }
         },
         "security": [
+          {
+            "_____cms_oauth2": [
+              "content.landing_pages.write"
+            ]
+          },
           {
             "_____cms_oauth2": [
               "content"
@@ -9811,7 +9941,7 @@
           },
           {
             "_____cms_oauth2": [
-              "landingpages-read"
+              "content.landing_pages.read"
             ]
           }
         ]
@@ -9871,7 +10001,7 @@
           },
           {
             "_____cms_oauth2": [
-              "landingpages-read"
+              "content.landing_pages.read"
             ]
           }
         ]
@@ -9924,6 +10054,11 @@
           }
         },
         "security": [
+          {
+            "_____cms_oauth2": [
+              "content.landing_pages.write"
+            ]
+          },
           {
             "_____cms_oauth2": [
               "content"
@@ -9980,6 +10115,11 @@
           }
         },
         "security": [
+          {
+            "_____cms_oauth2": [
+              "content.landing_pages.write"
+            ]
+          },
           {
             "_____cms_oauth2": [
               "content"
@@ -10132,7 +10272,7 @@
           },
           {
             "_____cms_oauth2": [
-              "content.site_pages.read"
+              "sitepages-read"
             ]
           }
         ]
@@ -10472,7 +10612,7 @@
           },
           {
             "_____cms_oauth2": [
-              "content.site_pages.read"
+              "sitepages-read"
             ]
           }
         ]
@@ -10615,11 +10755,6 @@
         "security": [
           {
             "_____cms_oauth2": [
-              "content.site_pages.write"
-            ]
-          },
-          {
-            "_____cms_oauth2": [
               "content"
             ]
           }
@@ -10664,11 +10799,6 @@
         "security": [
           {
             "_____cms_oauth2": [
-              "content.site_pages.write"
-            ]
-          },
-          {
-            "_____cms_oauth2": [
               "content"
             ]
           }
@@ -10700,11 +10830,6 @@
           }
         },
         "security": [
-          {
-            "_____cms_oauth2": [
-              "content.site_pages.write"
-            ]
-          },
           {
             "_____cms_oauth2": [
               "content"
@@ -10743,11 +10868,6 @@
         "security": [
           {
             "_____cms_oauth2": [
-              "content.site_pages.write"
-            ]
-          },
-          {
-            "_____cms_oauth2": [
               "content"
             ]
           }
@@ -10779,11 +10899,6 @@
           }
         },
         "security": [
-          {
-            "_____cms_oauth2": [
-              "content.site_pages.write"
-            ]
-          },
           {
             "_____cms_oauth2": [
               "content"
@@ -10890,7 +11005,7 @@
           },
           {
             "_____cms_oauth2": [
-              "content.site_pages.read"
+              "sitepages-read"
             ]
           }
         ]
@@ -11047,7 +11162,7 @@
           },
           {
             "_____cms_oauth2": [
-              "content.site_pages.read"
+              "sitepages-read"
             ]
           }
         ]
@@ -11253,7 +11368,7 @@
           },
           {
             "_____cms_oauth2": [
-              "content.site_pages.read"
+              "sitepages-read"
             ]
           }
         ]
@@ -11313,7 +11428,7 @@
           },
           {
             "_____cms_oauth2": [
-              "content.site_pages.read"
+              "sitepages-read"
             ]
           }
         ]
@@ -16972,11 +17087,6 @@
           }
         },
         "security": [
-          {
-            "appinstalls_oauth2": [
-              "ACCEPTANCE_TEST.visibility.legacyOnly.42393924.893208"
-            ]
-          },
           {
             "appinstalls_oauth2": [
               "oauth"
@@ -51317,6 +51427,11 @@
         "security": [
           {
             "_____________________________crm_oauth2": [
+              "crm.segments.read"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
               "crm.lists.read"
             ]
           }
@@ -51364,6 +51479,11 @@
             "_____________________________crm_oauth2": [
               "cms.membership.access_groups.write"
             ]
+          },
+          {
+            "_____________________________crm_oauth2": [
+              "crm.segments.write"
+            ]
           }
         ]
       }
@@ -51405,6 +51525,11 @@
           }
         },
         "security": [
+          {
+            "_____________________________crm_oauth2": [
+              "crm.segments.read"
+            ]
+          },
           {
             "_____________________________crm_oauth2": [
               "crm.lists.read"
@@ -51449,14 +51574,38 @@
         "security": [
           {
             "_____________________________crm_oauth2": [
+              "crm.lists.write",
+              "crm.segments.read"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
               "cms.membership.access_groups.write",
               "crm.lists.read"
             ]
           },
           {
             "_____________________________crm_oauth2": [
+              "crm.segments.read",
+              "crm.segments.write"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
+              "crm.lists.read",
+              "crm.segments.write"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
               "crm.lists.read",
               "crm.lists.write"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
+              "cms.membership.access_groups.write",
+              "crm.segments.read"
             ]
           }
         ]
@@ -51492,14 +51641,38 @@
         "security": [
           {
             "_____________________________crm_oauth2": [
+              "crm.lists.write",
+              "crm.segments.read"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
               "cms.membership.access_groups.write",
               "crm.lists.read"
             ]
           },
           {
             "_____________________________crm_oauth2": [
+              "crm.segments.read",
+              "crm.segments.write"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
+              "crm.lists.read",
+              "crm.segments.write"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
               "crm.lists.read",
               "crm.lists.write"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
+              "cms.membership.access_groups.write",
+              "crm.segments.read"
             ]
           }
         ]
@@ -51536,14 +51709,38 @@
         "security": [
           {
             "_____________________________crm_oauth2": [
+              "crm.lists.write",
+              "crm.segments.read"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
               "cms.membership.access_groups.write",
               "crm.lists.read"
             ]
           },
           {
             "_____________________________crm_oauth2": [
+              "crm.segments.read",
+              "crm.segments.write"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
+              "crm.lists.read",
+              "crm.segments.write"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
               "crm.lists.read",
               "crm.lists.write"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
+              "cms.membership.access_groups.write",
+              "crm.segments.read"
             ]
           }
         ]
@@ -51598,14 +51795,38 @@
         "security": [
           {
             "_____________________________crm_oauth2": [
+              "crm.lists.write",
+              "crm.segments.read"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
               "cms.membership.access_groups.write",
               "crm.lists.read"
             ]
           },
           {
             "_____________________________crm_oauth2": [
+              "crm.segments.read",
+              "crm.segments.write"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
+              "crm.lists.read",
+              "crm.segments.write"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
               "crm.lists.read",
               "crm.lists.write"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
+              "cms.membership.access_groups.write",
+              "crm.segments.read"
             ]
           }
         ]
@@ -51659,14 +51880,38 @@
         "security": [
           {
             "_____________________________crm_oauth2": [
+              "crm.lists.write",
+              "crm.segments.read"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
               "cms.membership.access_groups.write",
               "crm.lists.read"
             ]
           },
           {
             "_____________________________crm_oauth2": [
+              "crm.segments.read",
+              "crm.segments.write"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
+              "crm.lists.read",
+              "crm.segments.write"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
               "crm.lists.read",
               "crm.lists.write"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
+              "cms.membership.access_groups.write",
+              "crm.segments.read"
             ]
           }
         ]
@@ -51710,6 +51955,11 @@
         "security": [
           {
             "_____________________________crm_oauth2": [
+              "crm.segments.read"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
               "crm.lists.read"
             ]
           }
@@ -51750,6 +52000,11 @@
           }
         },
         "security": [
+          {
+            "_____________________________crm_oauth2": [
+              "crm.segments.read"
+            ]
+          },
           {
             "_____________________________crm_oauth2": [
               "crm.lists.read"
@@ -51817,6 +52072,11 @@
         "security": [
           {
             "_____________________________crm_oauth2": [
+              "crm.segments.read"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
               "crm.lists.read"
             ]
           }
@@ -51868,6 +52128,11 @@
           }
         },
         "security": [
+          {
+            "_____________________________crm_oauth2": [
+              "crm.segments.read"
+            ]
+          },
           {
             "_____________________________crm_oauth2": [
               "crm.lists.read"
@@ -51925,6 +52190,11 @@
         "security": [
           {
             "_____________________________crm_oauth2": [
+              "crm.segments.read"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
               "crm.lists.read"
             ]
           }
@@ -51967,6 +52237,11 @@
           }
         },
         "security": [
+          {
+            "_____________________________crm_oauth2": [
+              "crm.segments.read"
+            ]
+          },
           {
             "_____________________________crm_oauth2": [
               "crm.lists.read"
@@ -52024,6 +52299,11 @@
         "security": [
           {
             "_____________________________crm_oauth2": [
+              "crm.segments.read"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
               "crm.lists.read"
             ]
           }
@@ -52059,14 +52339,38 @@
         "security": [
           {
             "_____________________________crm_oauth2": [
+              "crm.lists.write",
+              "crm.segments.read"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
               "cms.membership.access_groups.write",
               "crm.lists.read"
             ]
           },
           {
             "_____________________________crm_oauth2": [
+              "crm.segments.read",
+              "crm.segments.write"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
+              "crm.lists.read",
+              "crm.segments.write"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
               "crm.lists.read",
               "crm.lists.write"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
+              "cms.membership.access_groups.write",
+              "crm.segments.read"
             ]
           }
         ]
@@ -52140,6 +52444,11 @@
         "security": [
           {
             "_____________________________crm_oauth2": [
+              "crm.segments.read"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
               "crm.lists.read"
             ]
           }
@@ -52175,14 +52484,38 @@
         "security": [
           {
             "_____________________________crm_oauth2": [
+              "crm.lists.write",
+              "crm.segments.read"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
               "cms.membership.access_groups.write",
               "crm.lists.read"
             ]
           },
           {
             "_____________________________crm_oauth2": [
+              "crm.segments.read",
+              "crm.segments.write"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
+              "crm.lists.read",
+              "crm.segments.write"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
               "crm.lists.read",
               "crm.lists.write"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
+              "cms.membership.access_groups.write",
+              "crm.segments.read"
             ]
           }
         ]
@@ -52238,14 +52571,38 @@
         "security": [
           {
             "_____________________________crm_oauth2": [
+              "crm.lists.write",
+              "crm.segments.read"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
               "cms.membership.access_groups.write",
               "crm.lists.read"
             ]
           },
           {
             "_____________________________crm_oauth2": [
+              "crm.segments.read",
+              "crm.segments.write"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
+              "crm.lists.read",
+              "crm.segments.write"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
               "crm.lists.read",
               "crm.lists.write"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
+              "cms.membership.access_groups.write",
+              "crm.segments.read"
             ]
           }
         ]
@@ -52301,14 +52658,38 @@
         "security": [
           {
             "_____________________________crm_oauth2": [
+              "crm.lists.write",
+              "crm.segments.read"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
               "cms.membership.access_groups.write",
               "crm.lists.read"
             ]
           },
           {
             "_____________________________crm_oauth2": [
+              "crm.segments.read",
+              "crm.segments.write"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
+              "crm.lists.read",
+              "crm.segments.write"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
               "crm.lists.read",
               "crm.lists.write"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
+              "cms.membership.access_groups.write",
+              "crm.segments.read"
             ]
           }
         ]
@@ -52355,14 +52736,38 @@
         "security": [
           {
             "_____________________________crm_oauth2": [
+              "crm.lists.write",
+              "crm.segments.read"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
               "cms.membership.access_groups.write",
               "crm.lists.read"
             ]
           },
           {
             "_____________________________crm_oauth2": [
+              "crm.segments.read",
+              "crm.segments.write"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
+              "crm.lists.read",
+              "crm.segments.write"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
               "crm.lists.read",
               "crm.lists.write"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
+              "cms.membership.access_groups.write",
+              "crm.segments.read"
             ]
           }
         ]
@@ -52436,6 +52841,11 @@
         "security": [
           {
             "_____________________________crm_oauth2": [
+              "crm.segments.read"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
               "crm.lists.read"
             ]
           }
@@ -52492,14 +52902,38 @@
         "security": [
           {
             "_____________________________crm_oauth2": [
+              "crm.lists.write",
+              "crm.segments.read"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
               "cms.membership.access_groups.write",
               "crm.lists.read"
             ]
           },
           {
             "_____________________________crm_oauth2": [
+              "crm.segments.read",
+              "crm.segments.write"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
+              "crm.lists.read",
+              "crm.segments.write"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
               "crm.lists.read",
               "crm.lists.write"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
+              "cms.membership.access_groups.write",
+              "crm.segments.read"
             ]
           }
         ]
@@ -52536,14 +52970,38 @@
         "security": [
           {
             "_____________________________crm_oauth2": [
+              "crm.lists.write",
+              "crm.segments.read"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
               "cms.membership.access_groups.write",
               "crm.lists.read"
             ]
           },
           {
             "_____________________________crm_oauth2": [
+              "crm.segments.read",
+              "crm.segments.write"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
+              "crm.lists.read",
+              "crm.segments.write"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
               "crm.lists.read",
               "crm.lists.write"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
+              "cms.membership.access_groups.write",
+              "crm.segments.read"
             ]
           }
         ]
@@ -52586,6 +53044,11 @@
           }
         },
         "security": [
+          {
+            "_____________________________crm_oauth2": [
+              "crm.segments.read"
+            ]
+          },
           {
             "_____________________________crm_oauth2": [
               "crm.lists.read"
@@ -52642,14 +53105,38 @@
         "security": [
           {
             "_____________________________crm_oauth2": [
+              "crm.lists.write",
+              "crm.segments.read"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
               "cms.membership.access_groups.write",
               "crm.lists.read"
             ]
           },
           {
             "_____________________________crm_oauth2": [
+              "crm.segments.read",
+              "crm.segments.write"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
+              "crm.lists.read",
+              "crm.segments.write"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
               "crm.lists.read",
               "crm.lists.write"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
+              "cms.membership.access_groups.write",
+              "crm.segments.read"
             ]
           }
         ]
@@ -52684,14 +53171,38 @@
         "security": [
           {
             "_____________________________crm_oauth2": [
+              "crm.lists.write",
+              "crm.segments.read"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
               "cms.membership.access_groups.write",
               "crm.lists.read"
             ]
           },
           {
             "_____________________________crm_oauth2": [
+              "crm.segments.read",
+              "crm.segments.write"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
+              "crm.lists.read",
+              "crm.segments.write"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
               "crm.lists.read",
               "crm.lists.write"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
+              "cms.membership.access_groups.write",
+              "crm.segments.read"
             ]
           }
         ]
@@ -52752,6 +53263,11 @@
           }
         },
         "security": [
+          {
+            "_____________________________crm_oauth2": [
+              "crm.segments.read"
+            ]
+          },
           {
             "_____________________________crm_oauth2": [
               "crm.lists.read"
@@ -52820,14 +53336,38 @@
         "security": [
           {
             "_____________________________crm_oauth2": [
+              "crm.lists.write",
+              "crm.segments.read"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
               "cms.membership.access_groups.write",
               "crm.lists.read"
             ]
           },
           {
             "_____________________________crm_oauth2": [
+              "crm.segments.read",
+              "crm.segments.write"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
+              "crm.lists.read",
+              "crm.segments.write"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
               "crm.lists.read",
               "crm.lists.write"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
+              "cms.membership.access_groups.write",
+              "crm.segments.read"
             ]
           }
         ]
@@ -52891,14 +53431,38 @@
         "security": [
           {
             "_____________________________crm_oauth2": [
+              "crm.lists.write",
+              "crm.segments.read"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
               "cms.membership.access_groups.write",
               "crm.lists.read"
             ]
           },
           {
             "_____________________________crm_oauth2": [
+              "crm.segments.read",
+              "crm.segments.write"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
+              "crm.lists.read",
+              "crm.segments.write"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
               "crm.lists.read",
               "crm.lists.write"
+            ]
+          },
+          {
+            "_____________________________crm_oauth2": [
+              "cms.membership.access_groups.write",
+              "crm.segments.read"
             ]
           }
         ]
@@ -99442,6 +100006,39 @@
           }
         },
         "example": null
+      },
+      "SetContainsAnyString": {
+        "title": "SET_CONTAINS_ANY_STRING",
+        "required": [
+          "operator",
+          "stringToCheck"
+        ],
+        "type": "object",
+        "properties": {
+          "inputs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SetContainsAnyStringInputsItem"
+            },
+            "example": null
+          },
+          "operator": {
+            "$ref": "#/components/schemas/SetContainsAnyStringOperator"
+          },
+          "propertyName": {
+            "type": "string",
+            "example": null
+          },
+          "stringToCheck": {
+            "$ref": "#/components/schemas/SetContainsAnyStringStringToCheck"
+          },
+          "value": {
+            "type": "boolean",
+            "example": null
+          }
+        },
+        "example": null,
+        "x-hubspot-sub-type-impl": true
       },
       "SetContainsString": {
         "title": "SET_CONTAINS_STRING",
@@ -180149,6 +180746,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -180462,6 +181062,9 @@
           },
           {
             "$ref": "#/components/schemas/SetContainsString"
+          },
+          {
+            "$ref": "#/components/schemas/SetContainsAnyString"
           },
           {
             "$ref": "#/components/schemas/IsEngagementType"
@@ -180779,6 +181382,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -181092,6 +181698,9 @@
           },
           {
             "$ref": "#/components/schemas/SetContainsString"
+          },
+          {
+            "$ref": "#/components/schemas/SetContainsAnyString"
           },
           {
             "$ref": "#/components/schemas/IsEngagementType"
@@ -181410,6 +182019,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -181725,6 +182337,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -182038,6 +182653,9 @@
           },
           {
             "$ref": "#/components/schemas/SetContainsString"
+          },
+          {
+            "$ref": "#/components/schemas/SetContainsAnyString"
           },
           {
             "$ref": "#/components/schemas/IsEngagementType"
@@ -182356,6 +182974,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -182669,6 +183290,9 @@
           },
           {
             "$ref": "#/components/schemas/SetContainsString"
+          },
+          {
+            "$ref": "#/components/schemas/SetContainsAnyString"
           },
           {
             "$ref": "#/components/schemas/IsEngagementType"
@@ -182986,6 +183610,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -183299,6 +183926,9 @@
           },
           {
             "$ref": "#/components/schemas/SetContainsString"
+          },
+          {
+            "$ref": "#/components/schemas/SetContainsAnyString"
           },
           {
             "$ref": "#/components/schemas/IsEngagementType"
@@ -183616,6 +184246,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -183929,6 +184562,9 @@
           },
           {
             "$ref": "#/components/schemas/SetContainsString"
+          },
+          {
+            "$ref": "#/components/schemas/SetContainsAnyString"
           },
           {
             "$ref": "#/components/schemas/IsEngagementType"
@@ -184247,6 +184883,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -184560,6 +185199,9 @@
           },
           {
             "$ref": "#/components/schemas/SetContainsString"
+          },
+          {
+            "$ref": "#/components/schemas/SetContainsAnyString"
           },
           {
             "$ref": "#/components/schemas/IsEngagementType"
@@ -184877,6 +185519,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -185190,6 +185835,9 @@
           },
           {
             "$ref": "#/components/schemas/SetContainsString"
+          },
+          {
+            "$ref": "#/components/schemas/SetContainsAnyString"
           },
           {
             "$ref": "#/components/schemas/IsEngagementType"
@@ -185507,6 +186155,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -185820,6 +186471,9 @@
           },
           {
             "$ref": "#/components/schemas/SetContainsString"
+          },
+          {
+            "$ref": "#/components/schemas/SetContainsAnyString"
           },
           {
             "$ref": "#/components/schemas/IsEngagementType"
@@ -186137,6 +186791,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -186450,6 +187107,9 @@
           },
           {
             "$ref": "#/components/schemas/SetContainsString"
+          },
+          {
+            "$ref": "#/components/schemas/SetContainsAnyString"
           },
           {
             "$ref": "#/components/schemas/IsEngagementType"
@@ -186767,6 +187427,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -187080,6 +187743,9 @@
           },
           {
             "$ref": "#/components/schemas/SetContainsString"
+          },
+          {
+            "$ref": "#/components/schemas/SetContainsAnyString"
           },
           {
             "$ref": "#/components/schemas/IsEngagementType"
@@ -187397,6 +188063,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -187710,6 +188379,9 @@
           },
           {
             "$ref": "#/components/schemas/SetContainsString"
+          },
+          {
+            "$ref": "#/components/schemas/SetContainsAnyString"
           },
           {
             "$ref": "#/components/schemas/IsEngagementType"
@@ -188027,6 +188699,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -188340,6 +189015,9 @@
           },
           {
             "$ref": "#/components/schemas/SetContainsString"
+          },
+          {
+            "$ref": "#/components/schemas/SetContainsAnyString"
           },
           {
             "$ref": "#/components/schemas/IsEngagementType"
@@ -188658,6 +189336,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -188972,6 +189653,9 @@
           },
           {
             "$ref": "#/components/schemas/SetContainsString"
+          },
+          {
+            "$ref": "#/components/schemas/SetContainsAnyString"
           },
           {
             "$ref": "#/components/schemas/IsEngagementType"
@@ -189289,6 +189973,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -189602,6 +190289,9 @@
           },
           {
             "$ref": "#/components/schemas/SetContainsString"
+          },
+          {
+            "$ref": "#/components/schemas/SetContainsAnyString"
           },
           {
             "$ref": "#/components/schemas/IsEngagementType"
@@ -189920,6 +190610,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -190233,6 +190926,9 @@
           },
           {
             "$ref": "#/components/schemas/SetContainsString"
+          },
+          {
+            "$ref": "#/components/schemas/SetContainsAnyString"
           },
           {
             "$ref": "#/components/schemas/IsEngagementType"
@@ -190550,6 +191246,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -190863,6 +191562,9 @@
           },
           {
             "$ref": "#/components/schemas/SetContainsString"
+          },
+          {
+            "$ref": "#/components/schemas/SetContainsAnyString"
           },
           {
             "$ref": "#/components/schemas/IsEngagementType"
@@ -191181,6 +191883,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -191494,6 +192199,9 @@
           },
           {
             "$ref": "#/components/schemas/SetContainsString"
+          },
+          {
+            "$ref": "#/components/schemas/SetContainsAnyString"
           },
           {
             "$ref": "#/components/schemas/IsEngagementType"
@@ -191811,6 +192519,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -192124,6 +192835,9 @@
           },
           {
             "$ref": "#/components/schemas/SetContainsString"
+          },
+          {
+            "$ref": "#/components/schemas/SetContainsAnyString"
           },
           {
             "$ref": "#/components/schemas/IsEngagementType"
@@ -192442,6 +193156,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -192757,6 +193474,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -193070,6 +193790,9 @@
           },
           {
             "$ref": "#/components/schemas/SetContainsString"
+          },
+          {
+            "$ref": "#/components/schemas/SetContainsAnyString"
           },
           {
             "$ref": "#/components/schemas/IsEngagementType"
@@ -193388,6 +194111,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -193704,6 +194430,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -194017,6 +194746,9 @@
           },
           {
             "$ref": "#/components/schemas/SetContainsString"
+          },
+          {
+            "$ref": "#/components/schemas/SetContainsAnyString"
           },
           {
             "$ref": "#/components/schemas/IsEngagementType"
@@ -194335,6 +195067,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -194649,6 +195384,9 @@
           },
           {
             "$ref": "#/components/schemas/SetContainsString"
+          },
+          {
+            "$ref": "#/components/schemas/SetContainsAnyString"
           },
           {
             "$ref": "#/components/schemas/IsEngagementType"
@@ -194966,6 +195704,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -195279,6 +196020,9 @@
           },
           {
             "$ref": "#/components/schemas/SetContainsString"
+          },
+          {
+            "$ref": "#/components/schemas/SetContainsAnyString"
           },
           {
             "$ref": "#/components/schemas/IsEngagementType"
@@ -195596,6 +196340,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -195909,6 +196656,9 @@
           },
           {
             "$ref": "#/components/schemas/SetContainsString"
+          },
+          {
+            "$ref": "#/components/schemas/SetContainsAnyString"
           },
           {
             "$ref": "#/components/schemas/IsEngagementType"
@@ -196226,6 +196976,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -196541,6 +197294,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -196854,6 +197610,9 @@
           },
           {
             "$ref": "#/components/schemas/SetContainsString"
+          },
+          {
+            "$ref": "#/components/schemas/SetContainsAnyString"
           },
           {
             "$ref": "#/components/schemas/IsEngagementType"
@@ -197172,6 +197931,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -197485,6 +198247,9 @@
           },
           {
             "$ref": "#/components/schemas/SetContainsString"
+          },
+          {
+            "$ref": "#/components/schemas/SetContainsAnyString"
           },
           {
             "$ref": "#/components/schemas/IsEngagementType"
@@ -197802,6 +198567,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -198115,6 +198883,9 @@
           },
           {
             "$ref": "#/components/schemas/SetContainsString"
+          },
+          {
+            "$ref": "#/components/schemas/SetContainsAnyString"
           },
           {
             "$ref": "#/components/schemas/IsEngagementType"
@@ -198432,6 +199203,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -198745,6 +199519,9 @@
           },
           {
             "$ref": "#/components/schemas/SetContainsString"
+          },
+          {
+            "$ref": "#/components/schemas/SetContainsAnyString"
           },
           {
             "$ref": "#/components/schemas/IsEngagementType"
@@ -199062,6 +199839,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -199375,6 +200155,9 @@
           },
           {
             "$ref": "#/components/schemas/SetContainsString"
+          },
+          {
+            "$ref": "#/components/schemas/SetContainsAnyString"
           },
           {
             "$ref": "#/components/schemas/IsEngagementType"
@@ -199692,6 +200475,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -200005,6 +200791,9 @@
           },
           {
             "$ref": "#/components/schemas/SetContainsString"
+          },
+          {
+            "$ref": "#/components/schemas/SetContainsAnyString"
           },
           {
             "$ref": "#/components/schemas/IsEngagementType"
@@ -200322,6 +201111,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -200635,6 +201427,9 @@
           },
           {
             "$ref": "#/components/schemas/SetContainsString"
+          },
+          {
+            "$ref": "#/components/schemas/SetContainsAnyString"
           },
           {
             "$ref": "#/components/schemas/IsEngagementType"
@@ -200952,6 +201747,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -201265,6 +202063,9 @@
           },
           {
             "$ref": "#/components/schemas/SetContainsString"
+          },
+          {
+            "$ref": "#/components/schemas/SetContainsAnyString"
           },
           {
             "$ref": "#/components/schemas/IsEngagementType"
@@ -201582,6 +202383,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -201895,6 +202699,9 @@
           },
           {
             "$ref": "#/components/schemas/SetContainsString"
+          },
+          {
+            "$ref": "#/components/schemas/SetContainsAnyString"
           },
           {
             "$ref": "#/components/schemas/IsEngagementType"
@@ -202212,6 +203019,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -202525,6 +203335,9 @@
           },
           {
             "$ref": "#/components/schemas/SetContainsString"
+          },
+          {
+            "$ref": "#/components/schemas/SetContainsAnyString"
           },
           {
             "$ref": "#/components/schemas/IsEngagementType"
@@ -202842,6 +203655,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -203155,6 +203971,9 @@
           },
           {
             "$ref": "#/components/schemas/SetContainsString"
+          },
+          {
+            "$ref": "#/components/schemas/SetContainsAnyString"
           },
           {
             "$ref": "#/components/schemas/IsEngagementType"
@@ -203473,6 +204292,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -203786,6 +204608,9 @@
           },
           {
             "$ref": "#/components/schemas/SetContainsString"
+          },
+          {
+            "$ref": "#/components/schemas/SetContainsAnyString"
           },
           {
             "$ref": "#/components/schemas/IsEngagementType"
@@ -204104,6 +204929,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -204417,6 +205245,9 @@
           },
           {
             "$ref": "#/components/schemas/SetContainsString"
+          },
+          {
+            "$ref": "#/components/schemas/SetContainsAnyString"
           },
           {
             "$ref": "#/components/schemas/IsEngagementType"
@@ -204734,6 +205565,645 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
+            "$ref": "#/components/schemas/IsEngagementType"
+          },
+          {
+            "$ref": "#/components/schemas/FormatFullName"
+          },
+          {
+            "$ref": "#/components/schemas/FormatPhoneNumber"
+          },
+          {
+            "$ref": "#/components/schemas/FormatSearchablePhoneNumber"
+          },
+          {
+            "$ref": "#/components/schemas/AbsoluteValue"
+          },
+          {
+            "$ref": "#/components/schemas/SquareRoot"
+          },
+          {
+            "$ref": "#/components/schemas/Power"
+          },
+          {
+            "$ref": "#/components/schemas/Substring"
+          },
+          {
+            "$ref": "#/components/schemas/Euler"
+          },
+          {
+            "$ref": "#/components/schemas/StringLength"
+          },
+          {
+            "$ref": "#/components/schemas/IsBlank"
+          },
+          {
+            "$ref": "#/components/schemas/AddTime"
+          },
+          {
+            "$ref": "#/components/schemas/SubtractTime"
+          },
+          {
+            "$ref": "#/components/schemas/RegexMatches"
+          },
+          {
+            "$ref": "#/components/schemas/IsValidIsoPeriod"
+          },
+          {
+            "$ref": "#/components/schemas/IsMonthBasedIsoPeriod"
+          },
+          {
+            "$ref": "#/components/schemas/IsDayBasedIsoPeriod"
+          },
+          {
+            "$ref": "#/components/schemas/IsMultipleOf"
+          },
+          {
+            "$ref": "#/components/schemas/ValidateWhen"
+          },
+          {
+            "$ref": "#/components/schemas/CoalesceString"
+          },
+          {
+            "$ref": "#/components/schemas/CoalesceNumber"
+          },
+          {
+            "$ref": "#/components/schemas/CoalesceBoolean"
+          }
+        ],
+        "properties": {
+          "propertyName": {
+            "type": "string",
+            "description": "A string indicating the name of the property associated with this constant boolean value.",
+            "example": null
+          },
+          "enclosedInParentheses": {
+            "type": "boolean",
+            "description": "A boolean indicating whether the operation is enclosed in parentheses, affecting the order of operations.",
+            "example": null
+          },
+          "inputs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AddNumbersInputsItem"
+            },
+            "description": "An array of inputs for the addition operation. Each input can be a constant, a variable, or another operation.",
+            "example": null
+          },
+          "expressionToEvaluate": {
+            "$ref": "#/components/schemas/IsPresentExpressionToEvaluate"
+          },
+          "conditions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IfChainStringConditionsItem"
+            },
+            "description": "An array of conditions that are evaluated in sequence to determine which value to return.",
+            "example": null
+          },
+          "outputs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IfChainStringOutputsItem"
+            },
+            "description": "An array of possible output values corresponding to the conditions.",
+            "example": null
+          },
+          "checkExpression": {
+            "$ref": "#/components/schemas/ValidateWhenCheckExpression"
+          }
+        },
+        "example": null
+      },
+      "SetContainsAnyStringInputsItem": {
+        "type": "object",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/ConstantBoolean"
+          },
+          {
+            "$ref": "#/components/schemas/ConstantNumber"
+          },
+          {
+            "$ref": "#/components/schemas/ConstantString"
+          },
+          {
+            "$ref": "#/components/schemas/BooleanPropertyVariable"
+          },
+          {
+            "$ref": "#/components/schemas/StringPropertyVariable"
+          },
+          {
+            "$ref": "#/components/schemas/NumberPropertyVariable"
+          },
+          {
+            "$ref": "#/components/schemas/TimestampOfPropertyVariable"
+          },
+          {
+            "$ref": "#/components/schemas/BooleanTargetPropertyVariable"
+          },
+          {
+            "$ref": "#/components/schemas/StringTargetPropertyVariable"
+          },
+          {
+            "$ref": "#/components/schemas/NumberTargetPropertyVariable"
+          },
+          {
+            "$ref": "#/components/schemas/TimestampOfTargetPropertyVariable"
+          },
+          {
+            "$ref": "#/components/schemas/AddNumbers"
+          },
+          {
+            "$ref": "#/components/schemas/SubtractNumbers"
+          },
+          {
+            "$ref": "#/components/schemas/MultiplyNumbers"
+          },
+          {
+            "$ref": "#/components/schemas/DivideNumbers"
+          },
+          {
+            "$ref": "#/components/schemas/RoundDownNumbers"
+          },
+          {
+            "$ref": "#/components/schemas/RoundUpNumbers"
+          },
+          {
+            "$ref": "#/components/schemas/RoundNearestNumbers"
+          },
+          {
+            "$ref": "#/components/schemas/UpperCase"
+          },
+          {
+            "$ref": "#/components/schemas/LowerCase"
+          },
+          {
+            "$ref": "#/components/schemas/ConcatStrings"
+          },
+          {
+            "$ref": "#/components/schemas/Contains"
+          },
+          {
+            "$ref": "#/components/schemas/BeginsWith"
+          },
+          {
+            "$ref": "#/components/schemas/NumberToString"
+          },
+          {
+            "$ref": "#/components/schemas/ParseNumber"
+          },
+          {
+            "$ref": "#/components/schemas/FetchExchangeRate"
+          },
+          {
+            "$ref": "#/components/schemas/FetchCurrencyDecimalPlaces"
+          },
+          {
+            "$ref": "#/components/schemas/FetchSingleCurrencyPortalCurrency"
+          },
+          {
+            "$ref": "#/components/schemas/FetchPortalHomeCurrency"
+          },
+          {
+            "$ref": "#/components/schemas/IsPortalEnabledCurrency"
+          },
+          {
+            "$ref": "#/components/schemas/IsPortalMulticurrencyEnabled"
+          },
+          {
+            "$ref": "#/components/schemas/DatedExchangeRate"
+          },
+          {
+            "$ref": "#/components/schemas/PipelineProbability"
+          },
+          {
+            "$ref": "#/components/schemas/MaxNumbers"
+          },
+          {
+            "$ref": "#/components/schemas/MinNumbers"
+          },
+          {
+            "$ref": "#/components/schemas/LessThan"
+          },
+          {
+            "$ref": "#/components/schemas/LessThanOrEqual"
+          },
+          {
+            "$ref": "#/components/schemas/MoreThan"
+          },
+          {
+            "$ref": "#/components/schemas/MoreThanOrEqual"
+          },
+          {
+            "$ref": "#/components/schemas/NumberEquals"
+          },
+          {
+            "$ref": "#/components/schemas/StringEquals"
+          },
+          {
+            "$ref": "#/components/schemas/IsPipelineStageClosed"
+          },
+          {
+            "$ref": "#/components/schemas/Not"
+          },
+          {
+            "$ref": "#/components/schemas/Date"
+          },
+          {
+            "$ref": "#/components/schemas/Month"
+          },
+          {
+            "$ref": "#/components/schemas/Year"
+          },
+          {
+            "$ref": "#/components/schemas/Now"
+          },
+          {
+            "$ref": "#/components/schemas/TimeBetween"
+          },
+          {
+            "$ref": "#/components/schemas/TimeBetweenSkipWeekends"
+          },
+          {
+            "$ref": "#/components/schemas/PeriodToMonths"
+          },
+          {
+            "$ref": "#/components/schemas/PeriodToWeeks"
+          },
+          {
+            "$ref": "#/components/schemas/And"
+          },
+          {
+            "$ref": "#/components/schemas/Or"
+          },
+          {
+            "$ref": "#/components/schemas/Xor"
+          },
+          {
+            "$ref": "#/components/schemas/IfString"
+          },
+          {
+            "$ref": "#/components/schemas/IfNumber"
+          },
+          {
+            "$ref": "#/components/schemas/IfBoolean"
+          },
+          {
+            "$ref": "#/components/schemas/IsPresent"
+          },
+          {
+            "$ref": "#/components/schemas/IfChainString"
+          },
+          {
+            "$ref": "#/components/schemas/IfChainNumber"
+          },
+          {
+            "$ref": "#/components/schemas/IfChainBoolean"
+          },
+          {
+            "$ref": "#/components/schemas/HasEmailReply"
+          },
+          {
+            "$ref": "#/components/schemas/HasPlainTextEmailReply"
+          },
+          {
+            "$ref": "#/components/schemas/ExtractMostRecentEmailReplyHtml"
+          },
+          {
+            "$ref": "#/components/schemas/ExtractMostRecentEmailReplyText"
+          },
+          {
+            "$ref": "#/components/schemas/ExtractMostRecentPlainTextEmailReply"
+          },
+          {
+            "$ref": "#/components/schemas/SetContainsString"
+          },
+          {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
+            "$ref": "#/components/schemas/IsEngagementType"
+          },
+          {
+            "$ref": "#/components/schemas/FormatFullName"
+          },
+          {
+            "$ref": "#/components/schemas/FormatPhoneNumber"
+          },
+          {
+            "$ref": "#/components/schemas/FormatSearchablePhoneNumber"
+          },
+          {
+            "$ref": "#/components/schemas/AbsoluteValue"
+          },
+          {
+            "$ref": "#/components/schemas/SquareRoot"
+          },
+          {
+            "$ref": "#/components/schemas/Power"
+          },
+          {
+            "$ref": "#/components/schemas/Substring"
+          },
+          {
+            "$ref": "#/components/schemas/Euler"
+          },
+          {
+            "$ref": "#/components/schemas/StringLength"
+          },
+          {
+            "$ref": "#/components/schemas/IsBlank"
+          },
+          {
+            "$ref": "#/components/schemas/AddTime"
+          },
+          {
+            "$ref": "#/components/schemas/SubtractTime"
+          },
+          {
+            "$ref": "#/components/schemas/RegexMatches"
+          },
+          {
+            "$ref": "#/components/schemas/IsValidIsoPeriod"
+          },
+          {
+            "$ref": "#/components/schemas/IsMonthBasedIsoPeriod"
+          },
+          {
+            "$ref": "#/components/schemas/IsDayBasedIsoPeriod"
+          },
+          {
+            "$ref": "#/components/schemas/IsMultipleOf"
+          },
+          {
+            "$ref": "#/components/schemas/ValidateWhen"
+          },
+          {
+            "$ref": "#/components/schemas/CoalesceString"
+          },
+          {
+            "$ref": "#/components/schemas/CoalesceNumber"
+          },
+          {
+            "$ref": "#/components/schemas/CoalesceBoolean"
+          }
+        ],
+        "properties": {
+          "propertyName": {
+            "type": "string",
+            "description": "A string indicating the name of the property associated with this constant boolean value.",
+            "example": null
+          },
+          "enclosedInParentheses": {
+            "type": "boolean",
+            "description": "A boolean indicating whether the operation is enclosed in parentheses, affecting the order of operations.",
+            "example": null
+          },
+          "inputs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AddNumbersInputsItem"
+            },
+            "description": "An array of inputs for the addition operation. Each input can be a constant, a variable, or another operation.",
+            "example": null
+          },
+          "expressionToEvaluate": {
+            "$ref": "#/components/schemas/IsPresentExpressionToEvaluate"
+          },
+          "conditions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IfChainStringConditionsItem"
+            },
+            "description": "An array of conditions that are evaluated in sequence to determine which value to return.",
+            "example": null
+          },
+          "outputs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IfChainStringOutputsItem"
+            },
+            "description": "An array of possible output values corresponding to the conditions.",
+            "example": null
+          },
+          "checkExpression": {
+            "$ref": "#/components/schemas/ValidateWhenCheckExpression"
+          }
+        },
+        "example": null
+      },
+      "SetContainsAnyStringStringToCheck": {
+        "type": "object",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/ConstantBoolean"
+          },
+          {
+            "$ref": "#/components/schemas/ConstantNumber"
+          },
+          {
+            "$ref": "#/components/schemas/ConstantString"
+          },
+          {
+            "$ref": "#/components/schemas/BooleanPropertyVariable"
+          },
+          {
+            "$ref": "#/components/schemas/StringPropertyVariable"
+          },
+          {
+            "$ref": "#/components/schemas/NumberPropertyVariable"
+          },
+          {
+            "$ref": "#/components/schemas/TimestampOfPropertyVariable"
+          },
+          {
+            "$ref": "#/components/schemas/BooleanTargetPropertyVariable"
+          },
+          {
+            "$ref": "#/components/schemas/StringTargetPropertyVariable"
+          },
+          {
+            "$ref": "#/components/schemas/NumberTargetPropertyVariable"
+          },
+          {
+            "$ref": "#/components/schemas/TimestampOfTargetPropertyVariable"
+          },
+          {
+            "$ref": "#/components/schemas/AddNumbers"
+          },
+          {
+            "$ref": "#/components/schemas/SubtractNumbers"
+          },
+          {
+            "$ref": "#/components/schemas/MultiplyNumbers"
+          },
+          {
+            "$ref": "#/components/schemas/DivideNumbers"
+          },
+          {
+            "$ref": "#/components/schemas/RoundDownNumbers"
+          },
+          {
+            "$ref": "#/components/schemas/RoundUpNumbers"
+          },
+          {
+            "$ref": "#/components/schemas/RoundNearestNumbers"
+          },
+          {
+            "$ref": "#/components/schemas/UpperCase"
+          },
+          {
+            "$ref": "#/components/schemas/LowerCase"
+          },
+          {
+            "$ref": "#/components/schemas/ConcatStrings"
+          },
+          {
+            "$ref": "#/components/schemas/Contains"
+          },
+          {
+            "$ref": "#/components/schemas/BeginsWith"
+          },
+          {
+            "$ref": "#/components/schemas/NumberToString"
+          },
+          {
+            "$ref": "#/components/schemas/ParseNumber"
+          },
+          {
+            "$ref": "#/components/schemas/FetchExchangeRate"
+          },
+          {
+            "$ref": "#/components/schemas/FetchCurrencyDecimalPlaces"
+          },
+          {
+            "$ref": "#/components/schemas/FetchSingleCurrencyPortalCurrency"
+          },
+          {
+            "$ref": "#/components/schemas/FetchPortalHomeCurrency"
+          },
+          {
+            "$ref": "#/components/schemas/IsPortalEnabledCurrency"
+          },
+          {
+            "$ref": "#/components/schemas/IsPortalMulticurrencyEnabled"
+          },
+          {
+            "$ref": "#/components/schemas/DatedExchangeRate"
+          },
+          {
+            "$ref": "#/components/schemas/PipelineProbability"
+          },
+          {
+            "$ref": "#/components/schemas/MaxNumbers"
+          },
+          {
+            "$ref": "#/components/schemas/MinNumbers"
+          },
+          {
+            "$ref": "#/components/schemas/LessThan"
+          },
+          {
+            "$ref": "#/components/schemas/LessThanOrEqual"
+          },
+          {
+            "$ref": "#/components/schemas/MoreThan"
+          },
+          {
+            "$ref": "#/components/schemas/MoreThanOrEqual"
+          },
+          {
+            "$ref": "#/components/schemas/NumberEquals"
+          },
+          {
+            "$ref": "#/components/schemas/StringEquals"
+          },
+          {
+            "$ref": "#/components/schemas/IsPipelineStageClosed"
+          },
+          {
+            "$ref": "#/components/schemas/Not"
+          },
+          {
+            "$ref": "#/components/schemas/Date"
+          },
+          {
+            "$ref": "#/components/schemas/Month"
+          },
+          {
+            "$ref": "#/components/schemas/Year"
+          },
+          {
+            "$ref": "#/components/schemas/Now"
+          },
+          {
+            "$ref": "#/components/schemas/TimeBetween"
+          },
+          {
+            "$ref": "#/components/schemas/TimeBetweenSkipWeekends"
+          },
+          {
+            "$ref": "#/components/schemas/PeriodToMonths"
+          },
+          {
+            "$ref": "#/components/schemas/PeriodToWeeks"
+          },
+          {
+            "$ref": "#/components/schemas/And"
+          },
+          {
+            "$ref": "#/components/schemas/Or"
+          },
+          {
+            "$ref": "#/components/schemas/Xor"
+          },
+          {
+            "$ref": "#/components/schemas/IfString"
+          },
+          {
+            "$ref": "#/components/schemas/IfNumber"
+          },
+          {
+            "$ref": "#/components/schemas/IfBoolean"
+          },
+          {
+            "$ref": "#/components/schemas/IsPresent"
+          },
+          {
+            "$ref": "#/components/schemas/IfChainString"
+          },
+          {
+            "$ref": "#/components/schemas/IfChainNumber"
+          },
+          {
+            "$ref": "#/components/schemas/IfChainBoolean"
+          },
+          {
+            "$ref": "#/components/schemas/HasEmailReply"
+          },
+          {
+            "$ref": "#/components/schemas/HasPlainTextEmailReply"
+          },
+          {
+            "$ref": "#/components/schemas/ExtractMostRecentEmailReplyHtml"
+          },
+          {
+            "$ref": "#/components/schemas/ExtractMostRecentEmailReplyText"
+          },
+          {
+            "$ref": "#/components/schemas/ExtractMostRecentPlainTextEmailReply"
+          },
+          {
+            "$ref": "#/components/schemas/SetContainsString"
+          },
+          {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -205049,6 +206519,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -205362,6 +206835,9 @@
           },
           {
             "$ref": "#/components/schemas/SetContainsString"
+          },
+          {
+            "$ref": "#/components/schemas/SetContainsAnyString"
           },
           {
             "$ref": "#/components/schemas/IsEngagementType"
@@ -205680,6 +207156,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -205993,6 +207472,9 @@
           },
           {
             "$ref": "#/components/schemas/SetContainsString"
+          },
+          {
+            "$ref": "#/components/schemas/SetContainsAnyString"
           },
           {
             "$ref": "#/components/schemas/IsEngagementType"
@@ -206310,6 +207792,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -206625,6 +208110,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -206938,6 +208426,9 @@
           },
           {
             "$ref": "#/components/schemas/SetContainsString"
+          },
+          {
+            "$ref": "#/components/schemas/SetContainsAnyString"
           },
           {
             "$ref": "#/components/schemas/IsEngagementType"
@@ -207256,6 +208747,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -207571,6 +209065,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -207884,6 +209381,9 @@
           },
           {
             "$ref": "#/components/schemas/SetContainsString"
+          },
+          {
+            "$ref": "#/components/schemas/SetContainsAnyString"
           },
           {
             "$ref": "#/components/schemas/IsEngagementType"
@@ -208202,6 +209702,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -208515,6 +210018,9 @@
           },
           {
             "$ref": "#/components/schemas/SetContainsString"
+          },
+          {
+            "$ref": "#/components/schemas/SetContainsAnyString"
           },
           {
             "$ref": "#/components/schemas/IsEngagementType"
@@ -208832,6 +210338,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -209145,6 +210654,9 @@
           },
           {
             "$ref": "#/components/schemas/SetContainsString"
+          },
+          {
+            "$ref": "#/components/schemas/SetContainsAnyString"
           },
           {
             "$ref": "#/components/schemas/IsEngagementType"
@@ -209462,6 +210974,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -209777,6 +211292,9 @@
             "$ref": "#/components/schemas/SetContainsString"
           },
           {
+            "$ref": "#/components/schemas/SetContainsAnyString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -210090,6 +211608,9 @@
           },
           {
             "$ref": "#/components/schemas/SetContainsString"
+          },
+          {
+            "$ref": "#/components/schemas/SetContainsAnyString"
           },
           {
             "$ref": "#/components/schemas/IsEngagementType"
@@ -275769,6 +277290,24 @@
             {
               "value": "VIEW_SCHEMA",
               "name": "ViewSchema"
+            }
+          ]
+        }
+      },
+      "SetContainsAnyStringOperator": {
+        "enum": [
+          "SET_CONTAINS_ANY_STRING"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "example": null,
+        "x-ms-enum": {
+          "name": "SetContainsAnyStringOperator",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "SET_CONTAINS_ANY_STRING",
+              "name": "SetContainsAnyString"
             }
           ]
         }
@@ -397490,8 +399029,8 @@
             "tokenUrl": "https://api.hubapi.com/oauth/v1/token",
             "scopes": {
               "content": "",
-              "content.site_pages.read": "",
-              "landingpages-read": ""
+              "content.landing_pages.read": "",
+              "sitepages-read": ""
             }
           }
         }
@@ -397766,7 +399305,6 @@
             "authorizationUrl": "https://app.hubspot.com/oauth/authorize",
             "tokenUrl": "https://api.hubapi.com/oauth/v1/token",
             "scopes": {
-              "ACCEPTANCE_TEST.visibility.legacyOnly.42393924.893208": "",
               "oauth": ""
             }
           }
@@ -400230,7 +401768,9 @@
             "scopes": {
               "cms.membership.access_groups.write": "",
               "crm.lists.read": "",
-              "crm.lists.write": ""
+              "crm.lists.write": "",
+              "crm.segments.read": "",
+              "crm.segments.write": ""
             }
           }
         }
