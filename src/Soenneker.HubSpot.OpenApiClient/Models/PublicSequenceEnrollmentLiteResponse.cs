@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The date and time when the contact was enrolled in the sequence.</summary>
+        /// <summary>The date and time when the contact was enrolled in the sequence, in ISO 8601 format.</summary>
         public DateTimeOffset? EnrolledAt { get; set; }
         /// <summary>The unique identifier for the sequence enrollment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -24,7 +24,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>The email address of the contact enrolled in the sequence.</summary>
+        /// <summary>The email address of the contact who is enrolled in the sequence.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ToEmail { get; set; }
@@ -32,7 +32,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ToEmail { get; set; }
 #endif
-        /// <summary>The date and time when the sequence enrollment was last updated.</summary>
+        /// <summary>The date and time when the sequence enrollment was last updated, in ISO 8601 format.</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceEnrollmentLiteResponse"/> and sets the default values.

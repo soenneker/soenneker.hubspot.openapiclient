@@ -288,6 +288,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         #pragma warning disable CS1591
         HsClickedLinkedinAd,
         #pragma warning restore CS1591
+        [EnumMember(Value = "hs_consent_to_email_tracking")]
+        #pragma warning disable CS1591
+        HsConsentToEmailTracking,
+        #pragma warning restore CS1591
         [EnumMember(Value = "hs_contact_creation_legal_basis_source_instance_id")]
         #pragma warning disable CS1591
         HsContactCreationLegalBasisSourceInstanceId,

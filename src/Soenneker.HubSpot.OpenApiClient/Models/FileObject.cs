@@ -12,17 +12,17 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     public partial class FileObject : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>File access. Can be PUBLIC_INDEXABLE, PUBLIC_NOT_INDEXABLE, PRIVATE.</summary>
+        /// <summary>The access level of the file, represented as a string. Valid values include &apos;PUBLIC_INDEXABLE&apos;, &apos;PUBLIC_NOT_INDEXABLE&apos;, &apos;HIDDEN_INDEXABLE&apos;, &apos;HIDDEN_NOT_INDEXABLE&apos;, &apos;HIDDEN_PRIVATE&apos;, &apos;PRIVATE&apos;, &apos;HIDDEN_SENSITIVE&apos;, and &apos;SENSITIVE&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.FileAccess? Access { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>If the file is deleted.</summary>
+        /// <summary>A boolean indicating whether the file is archived.</summary>
         public bool? Archived { get; set; }
-        /// <summary>Deletion time of the file object.</summary>
+        /// <summary>The date and time when the file was deleted, in ISO 8601 format.</summary>
         public DateTimeOffset? ArchivedAt { get; set; }
-        /// <summary>Creation time of the file object.</summary>
+        /// <summary>The date and time when the file was created, in ISO 8601 format.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
-        /// <summary>Default hosting URL of the file. This will use one of HubSpot&apos;s provided URLs to serve the file.</summary>
+        /// <summary>The static cdn URL where the file is hosted.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DefaultHostingUrl { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string DefaultHostingUrl { get; set; }
 #endif
-        /// <summary>Encoding of the file.</summary>
+        /// <summary>The encoding of the file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Encoding { get; set; }
@@ -38,9 +38,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Encoding { get; set; }
 #endif
-        /// <summary>The expiresAt property</summary>
+        /// <summary>The expiration epoch timestamp, if set.</summary>
         public long? ExpiresAt { get; set; }
-        /// <summary>Extension of the file. ex: .jpg, .png, .gif, .pdf, etc.</summary>
+        /// <summary>The file extension.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Extension { get; set; }
@@ -56,9 +56,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string FileMd5 { get; set; }
 #endif
-        /// <summary>For image and video files, the height of the content.</summary>
+        /// <summary>The height of the file in pixels, applicable if the file is an image or video.</summary>
         public int? Height { get; set; }
-        /// <summary>File ID.</summary>
+        /// <summary>The ID of the file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }
@@ -66,9 +66,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>Previously &quot;archied&quot;. Indicates if the file should be used when creating new content like web pages.</summary>
+        /// <summary>A boolean indicating whether the file can be used in content.</summary>
         public bool? IsUsableInContent { get; set; }
-        /// <summary>Name of the file.</summary>
+        /// <summary>The name of the file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -76,7 +76,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>ID of the folder the file is in.</summary>
+        /// <summary>The unique identifier of the parent folder containing the file, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ParentFolderId { get; set; }
@@ -84,7 +84,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ParentFolderId { get; set; }
 #endif
-        /// <summary>Path of the file in the file manager.</summary>
+        /// <summary>The path of the file within the file manager.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Path { get; set; }
@@ -92,11 +92,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Path { get; set; }
 #endif
-        /// <summary>Size of the file in bytes.</summary>
+        /// <summary>The size of the file in bytes.</summary>
         public long? Size { get; set; }
-        /// <summary>The sourceGroup property</summary>
+        /// <summary>The source group of the file, with possible values including &apos;UNKNOWN&apos;, &apos;CONTENT&apos;, &apos;FORMS&apos;, &apos;CONVERSATIONS&apos;, and &apos;UI_EXTENSIONS&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.FileSourceGroup? SourceGroup { get; set; }
-        /// <summary>Type of the file. Can be IMG, DOCUMENT, AUDIO, MOVIE, or OTHER.</summary>
+        /// <summary>The type of the file. Values include: IMG, DOCUMENT, AUDIO, MOVIE, OTHER.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Type { get; set; }
@@ -104,9 +104,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Type { get; set; }
 #endif
-        /// <summary>Timestamp of the latest update to the file.</summary>
+        /// <summary>The date and time when the file was last updated, in ISO 8601 format.</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
-        /// <summary>URL of the given file. This URL can change depending on the domain settings of the account. Will use the select file hosting domain.</summary>
+        /// <summary>The URL where the file can be accessed, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Url { get; set; }
@@ -114,7 +114,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Url { get; set; }
 #endif
-        /// <summary>For image and video files, the width of the content.</summary>
+        /// <summary>The width of the file in pixels, applicable if the file is an image or video.</summary>
         public int? Width { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.FileObject"/> and sets the default values.

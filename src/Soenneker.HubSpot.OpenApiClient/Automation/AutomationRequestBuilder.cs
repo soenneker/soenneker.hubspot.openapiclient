@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.HubSpot.OpenApiClient.Automation.Actions;
+using Soenneker.HubSpot.OpenApiClient.Automation.EmailTemplates;
 using Soenneker.HubSpot.OpenApiClient.Automation.Sequences;
 using System.Collections.Generic;
 using System.IO;
@@ -20,6 +21,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Automation
         public global::Soenneker.HubSpot.OpenApiClient.Automation.Actions.ActionsRequestBuilder Actions
         {
             get => new global::Soenneker.HubSpot.OpenApiClient.Automation.Actions.ActionsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The emailTemplates property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Automation.EmailTemplates.EmailTemplatesRequestBuilder EmailTemplates
+        {
+            get => new global::Soenneker.HubSpot.OpenApiClient.Automation.EmailTemplates.EmailTemplatesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The sequences property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Automation.Sequences.SequencesRequestBuilder Sequences

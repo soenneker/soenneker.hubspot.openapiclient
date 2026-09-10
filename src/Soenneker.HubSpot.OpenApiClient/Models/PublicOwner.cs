@@ -50,7 +50,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string LastName { get; set; }
 #endif
-        /// <summary>The teams property</summary>
+        /// <summary>An array of teams associated with the owner, where each team is represented by a PublicTeam object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTeam>? Teams { get; set; }

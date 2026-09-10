@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The type of the form field, represented as a string, indicating the kind of input expected.</summary>
+        /// <summary>The specific field type of the form field. Corresponds to property types (e.g., `select`, `radio`, `date`, etc)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FieldType { get; set; }
@@ -22,11 +22,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string FieldType { get; set; }
 #endif
-        /// <summary>A boolean indicating whether the form field is a custom field defined by the user.</summary>
+        /// <summary>Whether the form field is a custom field.</summary>
         public bool? IsCustom { get; set; }
-        /// <summary>A boolean indicating whether the form field is mandatory for the user to fill out.</summary>
+        /// <summary>Whether the form field is mandatory.</summary>
         public bool? IsRequired { get; set; }
-        /// <summary>The display label for the form field, shown to users, represented as a string.</summary>
+        /// <summary>The text label for the form field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Label { get; set; }
@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Label { get; set; }
 #endif
-        /// <summary>The unique name identifier for the form field, represented as a string.</summary>
+        /// <summary>The name identifier for the form field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -42,7 +42,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>An array of options available for the form field, applicable if the field type supports multiple choices.</summary>
+        /// <summary>The options property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalOption>? Options { get; set; }
@@ -50,7 +50,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalOption> Options { get; set; }
 #endif
-        /// <summary>The specific data type of the form field, represented as a string.</summary>
+        /// <summary>The data type of the form field accepts (e.g. `date`, `enumeration`,  etc)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Type { get; set; }

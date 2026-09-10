@@ -22,6 +22,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
+        /// <summary>An integer indicating the order in which the property should be displayed.</summary>
+        public int? DisplayOrder { get; set; }
+        /// <summary>A boolean indicating whether the property is hidden from view.</summary>
+        public bool? Hidden { get; set; }
         /// <summary>Human readable label for the property. Used in HubSpot UI</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -64,6 +68,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "description", n => { Description = n.GetStringValue(); } },
+                { "displayOrder", n => { DisplayOrder = n.GetIntValue(); } },
+                { "hidden", n => { Hidden = n.GetBoolValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.EventsOptionInput>(global::Soenneker.HubSpot.OpenApiClient.Models.EventsOptionInput.CreateFromDiscriminatorValue)?.AsList(); } },
             };
@@ -76,6 +82,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("description", Description);
+            writer.WriteIntValue("displayOrder", DisplayOrder);
+            writer.WriteBoolValue("hidden", Hidden);
             writer.WriteStringValue("label", Label);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.EventsOptionInput>("options", Options);
             writer.WriteAdditionalData(AdditionalData);

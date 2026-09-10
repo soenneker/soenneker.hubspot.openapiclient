@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>Type of filter branch (AND)</summary>
+    /// <summary>A string indicating the type of filter branch. Defaults to &apos;AND&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum AndFilterBranchType
     {

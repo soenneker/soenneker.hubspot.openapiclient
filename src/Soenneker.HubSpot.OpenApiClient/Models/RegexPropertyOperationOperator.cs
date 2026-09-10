@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>A string specifying the regex operation to perform, such as &apos;MATCHES_REGEX&apos; or &apos;DOES_NOT_MATCH_REGEX&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum RegexPropertyOperationOperator
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "DOES_NOT_MATCH_REGEX")]
         #pragma warning disable CS1591

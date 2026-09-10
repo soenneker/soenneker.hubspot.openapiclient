@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>The type of media represented, such as &apos;PHOTO&apos;, &apos;VIDEO&apos;, &apos;CAROUSEL&apos;, etc. This is a required field.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum SocialMetadataMediaType
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "ARTICLE")]
         #pragma warning disable CS1591

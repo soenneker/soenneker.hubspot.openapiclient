@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>A string representing the type of property operation, with a default value of &apos;number-comparative&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum NumberComparativePropertyType
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "number-comparative")]
         #pragma warning disable CS1591

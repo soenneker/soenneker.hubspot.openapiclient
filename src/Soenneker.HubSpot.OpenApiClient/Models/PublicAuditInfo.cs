@@ -12,7 +12,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     public partial class PublicAuditInfo : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The action performed that triggered the audit event.</summary>
+        /// <summary>A string describing the action that was performed, such as &apos;create&apos;, &apos;update&apos;, or &apos;delete&apos;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Action { get; set; }
@@ -22,9 +22,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The ID of the user who initiated the audit event.</summary>
+        /// <summary>The unique identifier of the user who performed the action, represented as an integer.</summary>
         public int? FromUserId { get; set; }
-        /// <summary>A unique string identifier for the audit event.</summary>
+        /// <summary>A string that uniquely identifies the specific audit entry.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Identifier { get; set; }
@@ -32,7 +32,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Identifier { get; set; }
 #endif
-        /// <summary>A descriptive message related to the audit event.</summary>
+        /// <summary>A string providing additional information or context about the action taken.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Message { get; set; }
@@ -40,9 +40,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Message { get; set; }
 #endif
-        /// <summary>The unique identifier for the HubSpot portal where the audit event occurred.</summary>
+        /// <summary>The unique identifier for the HubSpot account (portal) where the action took place. It is an integer.</summary>
         public int? PortalId { get; set; }
-        /// <summary>An object containing the raw data associated with the audit event.</summary>
+        /// <summary>An object containing the raw data associated with the action. This can include detailed information about the state before and after the action.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditInfoRawObjectProperty? RawObject { get; set; }
@@ -50,7 +50,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditInfoRawObjectProperty RawObject { get; set; }
 #endif
-        /// <summary>The date and time when the audit event took place.</summary>
+        /// <summary>The date and time when the action occurred, in ISO 8601 format.</summary>
         public DateTimeOffset? Timestamp { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditInfo"/> and sets the default values.

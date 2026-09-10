@@ -14,11 +14,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The allowMultiSelect property</summary>
+        /// <summary>A boolean indicating whether the user can select multiple quick replies at once.</summary>
         public bool? AllowMultiSelect { get; set; }
-        /// <summary>The allowUserInput property</summary>
+        /// <summary>A boolean indicating whether the user is allowed to input their own response in addition to selecting from the quick replies.</summary>
         public bool? AllowUserInput { get; set; }
-        /// <summary>The quickReplies property</summary>
+        /// <summary>An array of QuickReply objects, each representing a single quick reply option available to the user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.QuickReply>? QuickReplies { get; set; }
@@ -26,7 +26,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.QuickReply> QuickReplies { get; set; }
 #endif
-        /// <summary>The type property</summary>
+        /// <summary>A string indicating the type of the component, with a default value of &apos;QUICK_REPLIES&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.QuickRepliesType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicQuickReplies"/> and sets the default values.

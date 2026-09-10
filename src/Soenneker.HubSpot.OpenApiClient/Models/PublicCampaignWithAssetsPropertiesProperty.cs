@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     /// <summary>
-    /// A map of key-value pairs representing the properties of the campaign.
+    /// A map of custom property names to their values, where each value is a string.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PublicCampaignWithAssetsPropertiesProperty : IAdditionalDataHolder, IParsable

@@ -14,9 +14,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The completedAt property</summary>
+        /// <summary>The date and time when the batch operation was completed, in ISO 8601 format.</summary>
         public DateTimeOffset? CompletedAt { get; set; }
-        /// <summary>The errors property</summary>
+        /// <summary>An array of errors encountered during the batch operation. Each item is a StandardError object detailing the error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError2>? Errors { get; set; }
@@ -24,7 +24,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError2> Errors { get; set; }
 #endif
-        /// <summary>The links property</summary>
+        /// <summary>An object containing additional links related to the batch operation, where each key is a link name and the value is a URL.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseLinksProperty? Links { get; set; }
@@ -32,11 +32,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseLinksProperty Links { get; set; }
 #endif
-        /// <summary>The numErrors property</summary>
+        /// <summary>The number of errors encountered during the batch operation.</summary>
         public int? NumErrors { get; set; }
-        /// <summary>The requestedAt property</summary>
+        /// <summary>The date and time when the batch operation was requested, in ISO 8601 format.</summary>
         public DateTimeOffset? RequestedAt { get; set; }
-        /// <summary>The results property</summary>
+        /// <summary>An array containing the results of the batch operation. Each item is an object representing the outcome of an individual operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseResultsItemProperty>? Results { get; set; }
@@ -44,9 +44,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseResultsItemProperty> Results { get; set; }
 #endif
-        /// <summary>The startedAt property</summary>
+        /// <summary>The date and time when the batch operation started, in ISO 8601 format.</summary>
         public DateTimeOffset? StartedAt { get; set; }
-        /// <summary>The status property</summary>
+        /// <summary>The current status of the batch operation. Valid values include &apos;PENDING&apos;, &apos;PROCESSING&apos;, &apos;CANCELED&apos;, and &apos;COMPLETE&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseStatus? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponse"/> and sets the default values.

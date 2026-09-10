@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The unique ID of the object.</summary>
+        /// <summary>A string representing the unique identifier for the object, used to specify which object to update.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }
@@ -31,7 +31,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string IdProperty { get; set; }
 #endif
-        /// <summary>An identifier for tracing the creation request.</summary>
+        /// <summary>A string used to trace the write operation for debugging or logging purposes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ObjectWriteTraceId { get; set; }
@@ -39,7 +39,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ObjectWriteTraceId { get; set; }
 #endif
-        /// <summary>Key value pairs representing the properties of the object.</summary>
+        /// <summary>A map of property names to their values, representing the data fields of the object. Each property is a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectBatchInputUpsert15PropertiesProperty? Properties { get; set; }

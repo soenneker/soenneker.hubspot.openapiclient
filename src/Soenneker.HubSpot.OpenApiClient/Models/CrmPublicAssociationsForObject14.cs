@@ -7,28 +7,29 @@ using System.IO;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>
+    /// Represents the associations for a specific object in HubSpot, detailing the types of associations and the related objects involved.
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public partial class CrmPublicAssociationsForObject14 : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Contains the Id of a Public Object</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId16? To { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId14? To { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId16 To { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId14 To { get; set; }
 #endif
-        /// <summary>The types property</summary>
+        /// <summary>An array of association specifications, each detailing the type of association between the objects.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec17>? Types { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec15>? Types { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec17> Types { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec15> Types { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationsForObject14"/> and sets the default values.
@@ -55,8 +56,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "to", n => { To = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId16>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId16.CreateFromDiscriminatorValue); } },
-                { "types", n => { Types = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec17>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec17.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "to", n => { To = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId14>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId14.CreateFromDiscriminatorValue); } },
+                { "types", n => { Types = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec15>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec15.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -66,8 +67,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId16>("to", To);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec17>("types", Types);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId14>("to", To);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec15>("types", Types);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

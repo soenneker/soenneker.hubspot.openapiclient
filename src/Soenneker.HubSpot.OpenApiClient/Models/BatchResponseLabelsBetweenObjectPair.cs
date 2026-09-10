@@ -26,7 +26,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>The timestamp when the batch request was initially made, in ISO 8601 format.</summary>
         public DateTimeOffset? RequestedAt { get; set; }
-        /// <summary>The results property</summary>
+        /// <summary>An array of results for the batch operation, each representing a set of labels between an object pair.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmLabelsBetweenObjectPair>? Results { get; set; }

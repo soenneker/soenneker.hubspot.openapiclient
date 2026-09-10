@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>The type of phone, which can be &apos;CELL&apos;, &apos;MAIN&apos;, &apos;HOME&apos;, or &apos;WORK&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum ContactPhoneType
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "CELL")]
         #pragma warning disable CS1591

@@ -12,7 +12,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     public partial class AccessTokenResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The access_token property</summary>
+        /// <summary>A string representing the access token that allows access to the API.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AccessToken { get; set; }
@@ -22,11 +22,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The expires_in property</summary>
+        /// <summary>An integer in int64 format indicating the duration in seconds until the access token expires.</summary>
         public long? ExpiresIn { get; set; }
-        /// <summary>The hub_id property</summary>
+        /// <summary>An integer representing the unique identifier of the HubSpot account (hub) associated with the token.</summary>
         public int? HubId { get; set; }
-        /// <summary>The id_token property</summary>
+        /// <summary>A string representing the ID token, which is an optional part of the response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? IdToken { get; set; }
@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string IdToken { get; set; }
 #endif
-        /// <summary>The refresh_token property</summary>
+        /// <summary>A string representing the refresh token, which can be used to obtain a new access token.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RefreshToken { get; set; }
@@ -42,7 +42,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string RefreshToken { get; set; }
 #endif
-        /// <summary>The scopes property</summary>
+        /// <summary>An array of strings specifying the scopes that are granted with the access token.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Scopes { get; set; }
@@ -50,7 +50,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<string> Scopes { get; set; }
 #endif
-        /// <summary>The token_type property</summary>
+        /// <summary>A string indicating the type of token issued.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TokenType { get; set; }
@@ -58,9 +58,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string TokenType { get; set; }
 #endif
-        /// <summary>The token_use property</summary>
+        /// <summary>Indicates the usage of the token, which is &apos;access_token&apos; by default. It is a string with a fixed value of &apos;access_token&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.AccessTokenTokenUse? TokenUse { get; set; }
-        /// <summary>The user_id property</summary>
+        /// <summary>An integer representing the unique identifier of the user associated with the token.</summary>
         public int? UserId { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.AccessTokenResponse"/> and sets the default values.

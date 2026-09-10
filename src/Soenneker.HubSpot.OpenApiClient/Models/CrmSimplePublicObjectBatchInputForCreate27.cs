@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The associations property</summary>
+        /// <summary>An array of associations that define relationships between the CRM objects being created and other objects. Each association is represented by a &apos;PublicAssociationsForObject&apos; object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationsForObject27>? Associations { get; set; }
@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationsForObject27> Associations { get; set; }
 #endif
-        /// <summary>An identifier for tracing the creation request.</summary>
+        /// <summary>A string identifier used to trace the write operation for debugging or logging purposes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ObjectWriteTraceId { get; set; }
@@ -31,7 +31,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ObjectWriteTraceId { get; set; }
 #endif
-        /// <summary>Key-value pairs representing the properties of the object.</summary>
+        /// <summary>An object containing key-value pairs where keys are property names and values are the corresponding property values for the CRM objects to be created.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectBatchInputForCreate27PropertiesProperty? Properties { get; set; }

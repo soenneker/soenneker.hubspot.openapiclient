@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The legacyListIdsToIdsMapping property</summary>
+        /// <summary>An array of PublicMigrationMapping objects that map legacy list IDs to their corresponding new IDs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicMigrationMapping>? LegacyListIdsToIdsMapping { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicMigrationMapping> LegacyListIdsToIdsMapping { get; set; }
 #endif
-        /// <summary>A list of legacy list ids that were passed in but not found. It will be empty if no id&apos;s are missing</summary>
+        /// <summary>An array of strings representing legacy list IDs that could not be found or migrated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? MissingLegacyListIds { get; set; }

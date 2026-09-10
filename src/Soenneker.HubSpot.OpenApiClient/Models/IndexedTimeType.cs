@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>Defines the type of time (INDEXED).</summary>
+    /// <summary>A string indicating the type of time point, with a default value of &apos;INDEXED&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum IndexedTimeType
     {

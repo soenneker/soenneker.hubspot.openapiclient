@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>A string representing the type of the metadata, which is always &apos;WHATSAPP_TEMPLATE_METADATA&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum WhatsappTemplateMetadataType
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "WHATSAPP_TEMPLATE_METADATA")]
         #pragma warning disable CS1591

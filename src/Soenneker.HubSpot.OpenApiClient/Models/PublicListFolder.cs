@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>An array of list Id&apos;s contained in this folder.</summary>
+        /// <summary>An array of strings, each representing the unique identifier of a list that is a direct child of this folder.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<int?>? ChildLists { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<int?> ChildLists { get; set; }
 #endif
-        /// <summary>The childNodes property</summary>
+        /// <summary>An array of strings, each representing the unique identifier of a child node, which could be either a folder or a list.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicListFolder>? ChildNodes { get; set; }
@@ -30,9 +30,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicListFolder> ChildNodes { get; set; }
 #endif
-        /// <summary>The time the folder was created at.</summary>
+        /// <summary>The date and time when the folder was created, in ISO 8601 format.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
-        /// <summary>The Id of the folder.</summary>
+        /// <summary>The unique identifier for the folder, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }
@@ -40,7 +40,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>The name of the folder.</summary>
+        /// <summary>The name of the folder, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -48,7 +48,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>The Id of the folder this folder is in, the root folder is represented as 0.</summary>
+        /// <summary>The unique identifier of the parent folder, represented as a string. This indicates the hierarchical structure of folders.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ParentFolderId { get; set; }
@@ -56,11 +56,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ParentFolderId { get; set; }
 #endif
-        /// <summary>The time the folder was last updated at.</summary>
+        /// <summary>The date and time when the folder was last updated, in ISO 8601 format.</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
-        /// <summary>The time that the contents of the folder was last updated at.</summary>
+        /// <summary>The date and time when the contents of the folder were last updated, in ISO 8601 format.</summary>
         public DateTimeOffset? UpdatedContentsAt { get; set; }
-        /// <summary>The user Id of the owner of the folder.</summary>
+        /// <summary>The unique identifier of the user who created or last updated the folder, represented as a string.</summary>
         public int? UserId { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicListFolder"/> and sets the default values.

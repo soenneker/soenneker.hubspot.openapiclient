@@ -14,15 +14,15 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The number of contacts attributed to the campaign.</summary>
+        /// <summary>An integer representing the number of contacts associated with the campaign.</summary>
         public int? ContactsNumber { get; set; }
-        /// <summary>The currency code used for the revenue attribution, with accepted values including AED, AFN, ALL, and others.</summary>
+        /// <summary>A string representing the currency code for the financial amounts, following ISO 4217 standards. Valid values include currency codes like &apos;USD&apos;, &apos;EUR&apos;, &apos;JPY&apos;, etc.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.RevenueAttributionAggregateCurrencyCode? CurrencyCode { get; set; }
-        /// <summary>The total amount of deals attributed to the campaign.</summary>
+        /// <summary>A number representing the total amount from deals associated with the campaign.</summary>
         public double? DealAmount { get; set; }
-        /// <summary>The number of deals attributed to the campaign.</summary>
+        /// <summary>An integer indicating the number of deals associated with the campaign.</summary>
         public int? DealsNumber { get; set; }
-        /// <summary>The total revenue amount attributed to the campaign.</summary>
+        /// <summary>A number indicating the total revenue amount attributed to the campaign.</summary>
         public double? RevenueAmount { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.RevenueAttributionAggregate"/> and sets the default values.

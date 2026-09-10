@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The eventTypeId property</summary>
+        /// <summary>A string representing the unique identifier for the event type that the subscription is related to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EventTypeId { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string EventTypeId { get; set; }
 #endif
-        /// <summary>The properties property</summary>
+        /// <summary>An array of strings specifying the properties associated with the event type that should be included in the subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Properties { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<string> Properties { get; set; }
 #endif
-        /// <summary>The subscriptionType property</summary>
+        /// <summary>A string indicating the type of subscription, which is &apos;APP_LIFECYCLE_EVENT&apos; by default.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.AppLifecycleEventSubscriptionType? SubscriptionType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.AppLifecycleEventSubscriptionUpsertRequest"/> and sets the default values.

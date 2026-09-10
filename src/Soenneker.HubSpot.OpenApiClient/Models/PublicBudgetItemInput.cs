@@ -14,9 +14,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The monetary value assigned to the budget item.</summary>
+        /// <summary>The monetary value of the budget item, represented as a number.</summary>
         public double? Amount { get; set; }
-        /// <summary>A detailed explanation or notes about the budget item.</summary>
+        /// <summary>A string providing additional details about the budget item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Description { get; set; }
@@ -24,7 +24,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>The name of the budget item.</summary>
+        /// <summary>The name of the budget item. It is a string that identifies the budget item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -32,7 +32,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>The sequence number indicating the order of the budget item.</summary>
+        /// <summary>An integer indicating the order or sequence of the budget item.</summary>
         public int? Order { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicBudgetItemInput"/> and sets the default values.

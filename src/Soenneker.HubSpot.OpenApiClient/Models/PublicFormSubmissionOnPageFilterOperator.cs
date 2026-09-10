@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>Specifies the operation to be applied (FILLED_OUT, NOT_FILLED_OUT).</summary>
+    /// <summary>The operation to be performed by the filter. It is a string and can have values such as &apos;FILLED_OUT&apos; or &apos;NOT_FILLED_OUT&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PublicFormSubmissionOnPageFilterOperator
     {

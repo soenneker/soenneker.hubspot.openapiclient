@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>A string indicating the type of operation. Defaults to &apos;COMPARATIVE_STRING&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum ComparativeStringOperationType
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "COMPARATIVE_STRING")]
         #pragma warning disable CS1591

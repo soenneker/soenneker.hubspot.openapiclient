@@ -12,7 +12,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     public partial class GdprPrivacyDeletionSubscriptionUpsertRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The actions property</summary>
+        /// <summary>An array of actions that can trigger the subscription, such as &apos;CREATE&apos;, &apos;UPDATE&apos;, &apos;DELETE&apos;, and &apos;GDPR_DELETE&apos;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.GdprPrivacyDeletionSubscriptionUpsertRequestActionsItem?>? Actions { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The objectTypeId property</summary>
+        /// <summary>A string representing the unique identifier for the object type associated with the subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ObjectTypeId { get; set; }
@@ -30,9 +30,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ObjectTypeId { get; set; }
 #endif
-        /// <summary>The portalId property</summary>
+        /// <summary>The unique identifier for the HubSpot portal, represented as a 64-bit integer.</summary>
         public long? PortalId { get; set; }
-        /// <summary>The subscriptionType property</summary>
+        /// <summary>The type of subscription, which is fixed as &apos;GDPR_PRIVACY_DELETION&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.GdprPrivacyDeletionSubscriptionType? SubscriptionType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.GdprPrivacyDeletionSubscriptionUpsertRequest"/> and sets the default values.

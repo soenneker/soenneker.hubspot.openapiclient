@@ -12,13 +12,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     public partial class PublicRefreshTokenInfoResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The active property</summary>
+        /// <summary>A boolean indicating whether the token is currently active.</summary>
         public bool? Active { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The app_id property</summary>
+        /// <summary>An integer representing the unique identifier of the application associated with the token.</summary>
         public int? AppId { get; set; }
-        /// <summary>The client_id property</summary>
+        /// <summary>A string representing the unique identifier of the client that requested the token.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ClientId { get; set; }
@@ -26,7 +26,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ClientId { get; set; }
 #endif
-        /// <summary>The hub_domain property</summary>
+        /// <summary>A string representing the domain of the HubSpot account associated with the token.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? HubDomain { get; set; }
@@ -34,9 +34,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string HubDomain { get; set; }
 #endif
-        /// <summary>The hub_id property</summary>
+        /// <summary>An integer representing the unique identifier of the HubSpot account associated with the token.</summary>
         public int? HubId { get; set; }
-        /// <summary>The scopes property</summary>
+        /// <summary>An array of strings representing the scopes associated with the token.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Scopes { get; set; }
@@ -44,7 +44,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<string> Scopes { get; set; }
 #endif
-        /// <summary>The token property</summary>
+        /// <summary>The string representation of the refresh token.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Token { get; set; }
@@ -52,7 +52,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Token { get; set; }
 #endif
-        /// <summary>The token_type property</summary>
+        /// <summary>A string indicating the type of the token.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TokenType { get; set; }
@@ -60,9 +60,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string TokenType { get; set; }
 #endif
-        /// <summary>The token_use property</summary>
+        /// <summary>Indicates the use of the token, which is &apos;refresh_token&apos; by default.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.RefreshTokenTokenUse? TokenUse { get; set; }
-        /// <summary>The user property</summary>
+        /// <summary>A string representing the user associated with the token.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? User { get; set; }
@@ -70,7 +70,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string User { get; set; }
 #endif
-        /// <summary>The user_id property</summary>
+        /// <summary>An integer representing the unique identifier of the user associated with the token.</summary>
         public int? UserId { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicRefreshTokenInfoResponse"/> and sets the default values.

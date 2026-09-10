@@ -12,7 +12,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     public partial class PublicEmailSubscriptionFilter : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The acceptedStatuses property</summary>
+        /// <summary>An array of strings indicating the statuses that are accepted for the filter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? AcceptedStatuses { get; set; }
@@ -22,9 +22,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Indicates the type of filter (EMAIL_SUBSCRIPTION).</summary>
+        /// <summary>A string indicating the type of filter. The default value is &apos;EMAIL_SUBSCRIPTION&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.EmailSubscriptionFilterType? FilterType { get; set; }
-        /// <summary>The subscriptionIds property</summary>
+        /// <summary>An array of strings representing the IDs of the subscriptions to filter by.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? SubscriptionIds { get; set; }
@@ -32,7 +32,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<string> SubscriptionIds { get; set; }
 #endif
-        /// <summary>The type of subscription related to the filter (PORTAL, BRAND, SUBSCRIPTION, HARDBOUNCE, SPAMREPORT).</summary>
+        /// <summary>A string representing the type of subscription to filter by.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SubscriptionType { get; set; }

@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The property names of any additional list properties to include in the response. Properties that do not exist or that are empty for a particular list are not included in the response.By default, all requests will fetch the following properties for each list: `hs_list_size`, `hs_last_record_added_at`, `hs_last_record_removed_at`, `hs_folder_name`, and `hs_list_reference_count`.</summary>
+        /// <summary>An array of strings representing additional properties to include in the search.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? AdditionalProperties { get; set; }
@@ -22,9 +22,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<string> AdditionalProperties { get; set; }
 #endif
-        /// <summary>The number of lists to include in the response. Defaults to `20` if no value is provided. The max `count` is `500`.</summary>
+        /// <summary>An integer specifying the number of results to return.</summary>
         public int? Count { get; set; }
-        /// <summary>ILS list ids to be included in search results. If not specified, all lists matching other criteria will be included</summary>
+        /// <summary>An array of strings specifying the IDs of the lists to search.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? ListIds { get; set; }
@@ -32,7 +32,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<string> ListIds { get; set; }
 #endif
-        /// <summary>The objectTypeId property</summary>
+        /// <summary>A string representing the object type ID to filter the lists.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ObjectTypeId { get; set; }
@@ -40,9 +40,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ObjectTypeId { get; set; }
 #endif
-        /// <summary>Value used to paginate through lists. The `offset` provided in the response can be used in the next request to fetch the next page of results. Defaults to `0` if no offset is provided.</summary>
+        /// <summary>An integer used for pagination, indicating the starting point for the search results.</summary>
         public int? Offset { get; set; }
-        /// <summary>List processing types to be included in search results. If not specified, all lists with all processing types will be included.</summary>
+        /// <summary>An array of strings indicating the types of processing to apply to the search results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? ProcessingTypes { get; set; }
@@ -50,7 +50,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<string> ProcessingTypes { get; set; }
 #endif
-        /// <summary>The `query` that will be used to search for lists by list name. If no `query` is provided, then the results will include all lists.</summary>
+        /// <summary>A string representing the search query to filter the lists.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Query { get; set; }
@@ -58,7 +58,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Query { get; set; }
 #endif
-        /// <summary>Sort field and order</summary>
+        /// <summary>A string specifying the sorting criteria for the search results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Sort { get; set; }

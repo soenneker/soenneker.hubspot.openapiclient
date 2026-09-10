@@ -14,13 +14,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Specifies whether objects without a set value should be included in the operation.</summary>
+        /// <summary>A boolean indicating whether to include objects that do not have a value set for the property.</summary>
         public bool? IncludeObjectsWithNoValueSet { get; set; }
-        /// <summary>The lower limit of the date range for the operation.</summary>
+        /// <summary>An integer representing the lower bound of the date range, formatted as an int64.</summary>
         public long? LowerBound { get; set; }
-        /// <summary>Specifies the type of operation (RANGED_DATE).</summary>
+        /// <summary>A string that indicates the type of operation, which is &apos;RANGED_DATE&apos; by default.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.RangedDateOperationType? OperationType { get; set; }
-        /// <summary>Defines the operation to be applied in the ranged date property operation (IS_BETWEEN, IS_NOT_BETWEEN).</summary>
+        /// <summary>A string representing the operator used in the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Operator { get; set; }
@@ -28,9 +28,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Operator { get; set; }
 #endif
-        /// <summary>Indicates whether the operation requires conversion to a different time zone.</summary>
+        /// <summary>A boolean indicating whether the operation requires time zone conversion.</summary>
         public bool? RequiresTimeZoneConversion { get; set; }
-        /// <summary>The upper limit of the date range for the operation.</summary>
+        /// <summary>An integer representing the upper bound of the date range, formatted as an int64.</summary>
         public long? UpperBound { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicRangedDatePropertyOperation"/> and sets the default values.

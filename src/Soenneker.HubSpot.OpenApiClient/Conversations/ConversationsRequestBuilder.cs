@@ -15,6 +15,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ConversationsRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The conversations property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Conversations.Conversations.ConversationsRequestBuilder Conversations
+        {
+            get => new global::Soenneker.HubSpot.OpenApiClient.Conversations.Conversations.ConversationsRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The customChannels property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Conversations.CustomChannels.CustomChannelsRequestBuilder CustomChannels
         {

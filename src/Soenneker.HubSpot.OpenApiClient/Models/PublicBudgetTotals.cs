@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>An array of budget items associated with the campaign. Each item is represented by a PublicBudgetItem object.</summary>
+        /// <summary>An array of budget items associated with the campaign, each represented by a PublicBudgetItem object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicBudgetItem>? BudgetItems { get; set; }
@@ -22,13 +22,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicBudgetItem> BudgetItems { get; set; }
 #endif
-        /// <summary>The total budget allocated for the campaign.</summary>
+        /// <summary>The total amount of the budget allocated for the campaign, expressed as a number.</summary>
         public double? BudgetTotal { get; set; }
-        /// <summary>The currency code used for the budget and spend amounts, following ISO 4217 standards.</summary>
+        /// <summary>The currency code used for the budget and spending amounts, represented as a string. Valid values include standard currency codes such as &apos;USD&apos;, &apos;EUR&apos;, &apos;JPY&apos;, etc.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicBudgetTotalsCurrencyCode? CurrencyCode { get; set; }
-        /// <summary>The remaining budget available for the campaign after accounting for all spend items.</summary>
+        /// <summary>The remaining budget available for the campaign, calculated as the difference between the budgetTotal and spendTotal, expressed as a number.</summary>
         public double? RemainingBudget { get; set; }
-        /// <summary>An array of spend items associated with the campaign. Each item is represented by a PublicSpendItem object.</summary>
+        /// <summary>An array of spend items associated with the campaign, each represented by a PublicSpendItem object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSpendItem>? SpendItems { get; set; }
@@ -36,7 +36,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSpendItem> SpendItems { get; set; }
 #endif
-        /// <summary>The total amount spent across all spend items in the campaign.</summary>
+        /// <summary>The total amount spent in the campaign, expressed as a number.</summary>
         public double? SpendTotal { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicBudgetTotals"/> and sets the default values.

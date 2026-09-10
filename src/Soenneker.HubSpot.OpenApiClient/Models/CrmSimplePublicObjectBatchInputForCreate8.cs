@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>An array of associations that define relationships between the objects being created and other existing objects in the CRM.</summary>
+        /// <summary>An array of associations for the CRM objects, where each association specifies the related object IDs and types.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationsForObject8>? Associations { get; set; }
@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationsForObject8> Associations { get; set; }
 #endif
-        /// <summary>A string used to trace the write operation for debugging or logging purposes.</summary>
+        /// <summary>A string used to trace the write operation for the objects being created.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ObjectWriteTraceId { get; set; }
@@ -31,7 +31,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ObjectWriteTraceId { get; set; }
 #endif
-        /// <summary>An object containing key-value pairs where keys are property names and values are the corresponding property values for the CRM objects to be created.</summary>
+        /// <summary>An object containing key-value pairs representing the properties of the CRM objects to be created. Each property is a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectBatchInputForCreate8PropertiesProperty? Properties { get; set; }

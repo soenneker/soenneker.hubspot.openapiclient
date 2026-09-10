@@ -47,26 +47,23 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree.Ite
         {
         }
         /// <summary>
-        /// Retrieve associated object IDs for a given object type.
+        /// List associations of an object by type
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseMultiAssociatedObjectWithLabelForwardPaging"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmCollectionResponseMultiAssociatedObjectWithLabelForwardPaging35"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseMultiAssociatedObjectWithLabelForwardPaging?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree.Item.Item.Associations.Item.WithToObjectTypeItemRequestBuilder.WithToObjectTypeItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CrmCollectionResponseMultiAssociatedObjectWithLabelForwardPaging35?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree.Item.Item.Associations.Item.WithToObjectTypeItemRequestBuilder.WithToObjectTypeItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseMultiAssociatedObjectWithLabelForwardPaging> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree.Item.Item.Associations.Item.WithToObjectTypeItemRequestBuilder.WithToObjectTypeItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CrmCollectionResponseMultiAssociatedObjectWithLabelForwardPaging35> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree.Item.Item.Associations.Item.WithToObjectTypeItemRequestBuilder.WithToObjectTypeItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseMultiAssociatedObjectWithLabelForwardPaging>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseMultiAssociatedObjectWithLabelForwardPaging.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CrmCollectionResponseMultiAssociatedObjectWithLabelForwardPaging35>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CrmCollectionResponseMultiAssociatedObjectWithLabelForwardPaging35.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
-        /// <summary>
-        /// Retrieve associated object IDs for a given object type.
-        /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -93,7 +90,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree.Ite
             return new global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree.Item.Item.Associations.Item.WithToObjectTypeItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Retrieve associated object IDs for a given object type.
+        /// List associations of an object by type
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithToObjectTypeItemRequestBuilderGetQueryParameters 

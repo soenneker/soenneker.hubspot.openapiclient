@@ -12,17 +12,17 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     public partial class ImportFromUrlInput : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>PUBLIC_INDEXABLE: File is publicly accessible by anyone who has the URL. Search engines can index the file. PUBLIC_NOT_INDEXABLE: File is publicly accessible by anyone who has the URL. Search engines *can&apos;t* index the file. PRIVATE: File is NOT publicly accessible. Requires a signed URL to see content. Search engines *can&apos;t* index the file.</summary>
+        /// <summary>Specifies the access level of the file. Valid values include &apos;PUBLIC_INDEXABLE&apos;, &apos;PUBLIC_NOT_INDEXABLE&apos;, &apos;HIDDEN_INDEXABLE&apos;, &apos;HIDDEN_NOT_INDEXABLE&apos;, &apos;HIDDEN_PRIVATE&apos;, &apos;PRIVATE&apos;, &apos;HIDDEN_SENSITIVE&apos;, and &apos;SENSITIVE&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlInputAccess? Access { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>ENTIRE_PORTAL: Look for a duplicate file in the entire account. EXACT_FOLDER: Look for a duplicate file in the provided folder.</summary>
+        /// <summary>Optional: Specifies the scope for duplicate validation. Valid values include &apos;ENTIRE_PORTAL&apos; and &apos;EXACT_FOLDER&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlInputDuplicateValidationScope? DuplicateValidationScope { get; set; }
-        /// <summary>NONE: Do not run any duplicate validation. REJECT: Reject the upload if a duplicate is found. RETURN_EXISTING: If a duplicate file is found, do not upload a new file and return the found duplicate instead.</summary>
+        /// <summary>Defines the strategy for handling duplicate files. Valid values are &apos;NONE&apos;, &apos;REJECT&apos;, and &apos;RETURN_EXISTING&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlInputDuplicateValidationStrategy? DuplicateValidationStrategy { get; set; }
-        /// <summary>Specifies the date and time when the file will expire.</summary>
+        /// <summary>Optional: Epoch time when the file will expire, in ISO 8601 format. Do not set if the file should live indefinitely</summary>
         public DateTimeOffset? ExpiresAt { get; set; }
-        /// <summary>One of folderId or folderPath is required. Destination folderId for the uploaded file.</summary>
+        /// <summary>The ID of the folder where the file will be stored. This or folderPath must be set</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FolderId { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string FolderId { get; set; }
 #endif
-        /// <summary>One of folderPath or folderId is required. Destination folder path for the uploaded file. If the folder path does not exist, there will be an attempt to create the folder path.</summary>
+        /// <summary>The path of the folder where the file will be stored. This or FolderId must be set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FolderPath { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string FolderPath { get; set; }
 #endif
-        /// <summary>Name to give the resulting file in the file manager.</summary>
+        /// <summary>The name of the file to be imported.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -46,9 +46,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>If true, will overwrite existing file if one with the same name and extension exists in the given folder. The overwritten file will be deleted and the uploaded file will take its place with a new ID. If unset or set as false, the new file&apos;s name will be updated to prevent colliding with existing file if one exists with the same path, name, and extension</summary>
+        /// <summary>Optional  boolean indicating whether to overwrite an existing file at the same location.</summary>
         public bool? Overwrite { get; set; }
-        /// <summary>Time to live. If specified the file will be deleted after the given time frame. If left unset, the file will exist indefinitely</summary>
+        /// <summary>Deprecated Do Not use. Optional: String representing the time-to-live for the file, same a expiresAt but takes a Period String.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Ttl { get; set; }
@@ -56,7 +56,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Ttl { get; set; }
 #endif
-        /// <summary>URL to download the new file from.</summary>
+        /// <summary>The URL from which the file will be imported.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Url { get; set; }

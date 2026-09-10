@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>The type of task, such as an email or call.</summary>
+    /// <summary>The type of task, with valid values including &apos;CALL&apos;, &apos;MEETING&apos;, &apos;EMAIL&apos;, &apos;TODO&apos;, &apos;LINKED_IN_CONNECT&apos;, and &apos;LINKED_IN_MESSAGE&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PublicTaskPatternResponseTaskType
     {

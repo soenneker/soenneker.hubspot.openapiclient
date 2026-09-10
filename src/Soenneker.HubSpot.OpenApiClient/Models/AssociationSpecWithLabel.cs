@@ -17,6 +17,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The category of the association, such as &apos;HUBSPOT_DEFINED&apos;, &apos;USER_DEFINED&apos;, or &apos;INTEGRATOR_DEFINED&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.AssociationSpecWithLabelCategory? Category { get; set; }
+        /// <summary>A string representing the type ID of the source object in the association.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? FromObjectTypeId { get; set; }
+#nullable restore
+#else
+        public string FromObjectTypeId { get; set; }
+#endif
         /// <summary>The label associated with the type of association.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -24,6 +32,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #nullable restore
 #else
         public string Label { get; set; }
+#endif
+        /// <summary>A string representing the type ID of the target object in the association.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ToObjectTypeId { get; set; }
+#nullable restore
+#else
+        public string ToObjectTypeId { get; set; }
 #endif
         /// <summary>The ID representing the specific type of association.</summary>
         public int? TypeId { get; set; }
@@ -53,7 +69,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "category", n => { Category = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AssociationSpecWithLabelCategory>(); } },
+                { "fromObjectTypeId", n => { FromObjectTypeId = n.GetStringValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
+                { "toObjectTypeId", n => { ToObjectTypeId = n.GetStringValue(); } },
                 { "typeId", n => { TypeId = n.GetIntValue(); } },
             };
         }
@@ -65,7 +83,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AssociationSpecWithLabelCategory>("category", Category);
+            writer.WriteStringValue("fromObjectTypeId", FromObjectTypeId);
             writer.WriteStringValue("label", Label);
+            writer.WriteStringValue("toObjectTypeId", ToObjectTypeId);
             writer.WriteIntValue("typeId", TypeId);
             writer.WriteAdditionalData(AdditionalData);
         }

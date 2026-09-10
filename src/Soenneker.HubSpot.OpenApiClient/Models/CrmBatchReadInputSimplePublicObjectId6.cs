@@ -23,15 +23,15 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string IdProperty { get; set; }
 #endif
-        /// <summary>The inputs property</summary>
+        /// <summary>An array of SimplePublicObjectId objects, each containing an ID of an object to be read.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectId6>? Inputs { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectId7>? Inputs { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectId6> Inputs { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectId7> Inputs { get; set; }
 #endif
-        /// <summary>Key-value pairs for setting properties for the new object.</summary>
+        /// <summary>An array of strings representing the properties to be returned in the response for each object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Properties { get; set; }
@@ -39,7 +39,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<string> Properties { get; set; }
 #endif
-        /// <summary>Key-value pairs for setting properties for the new object and their histories.</summary>
+        /// <summary>An array of strings indicating the properties to be returned along with their history of previous values for each object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? PropertiesWithHistory { get; set; }
@@ -73,7 +73,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "idProperty", n => { IdProperty = n.GetStringValue(); } },
-                { "inputs", n => { Inputs = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectId6>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectId6.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "inputs", n => { Inputs = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectId7>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectId7.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "properties", n => { Properties = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "propertiesWithHistory", n => { PropertiesWithHistory = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
@@ -86,7 +86,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("idProperty", IdProperty);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectId6>("inputs", Inputs);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectId7>("inputs", Inputs);
             writer.WriteCollectionOfPrimitiveValues<string>("properties", Properties);
             writer.WriteCollectionOfPrimitiveValues<string>("propertiesWithHistory", PropertiesWithHistory);
             writer.WriteAdditionalData(AdditionalData);

@@ -14,9 +14,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The date and time when the task pattern was created.</summary>
+        /// <summary>The date and time when this task pattern was created, in ISO 8601 format.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
-        /// <summary>The unique identifier for the task pattern.</summary>
+        /// <summary>The unique identifier for this task pattern.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }
@@ -24,7 +24,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>Additional notes or comments associated with the task.</summary>
+        /// <summary>Additional notes related to the task, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Notes { get; set; }
@@ -32,9 +32,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Notes { get; set; }
 #endif
-        /// <summary>The identifier for the queue associated with the task.</summary>
+        /// <summary>An integer representing the ID of the queue to which this task belongs.</summary>
         public int? QueueId { get; set; }
-        /// <summary>The subject line of the task.</summary>
+        /// <summary>The subject of the task, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Subject { get; set; }
@@ -42,15 +42,15 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Subject { get; set; }
 #endif
-        /// <summary>The priority level assigned to the task.</summary>
+        /// <summary>The priority level of the task, with valid values including &apos;NONE&apos;, &apos;HIGH&apos;, &apos;MEDIUM&apos;, and &apos;LOW&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicTaskPatternResponseTaskPriority? TaskPriority { get; set; }
-        /// <summary>The type of task, such as an email or call.</summary>
+        /// <summary>The type of task, with valid values including &apos;CALL&apos;, &apos;MEETING&apos;, &apos;EMAIL&apos;, &apos;TODO&apos;, &apos;LINKED_IN_CONNECT&apos;, and &apos;LINKED_IN_MESSAGE&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicTaskPatternResponseTaskType? TaskType { get; set; }
-        /// <summary>The identifier for the template used in the task.</summary>
+        /// <summary>An integer representing the ID of the template associated with this task.</summary>
         public long? TemplateId { get; set; }
-        /// <summary>The order of the step to which the email thread is related.</summary>
+        /// <summary>An integer indicating the step order to which this email task is threaded.</summary>
         public int? ThreadEmailToStepOrder { get; set; }
-        /// <summary>The date and time when the task pattern was last updated.</summary>
+        /// <summary>The date and time when this task pattern was last updated, in ISO 8601 format.</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicTaskPatternResponse"/> and sets the default values.

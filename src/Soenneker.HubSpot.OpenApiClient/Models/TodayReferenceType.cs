@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>Indicates the type of reference (TODAY).</summary>
+    /// <summary>A string indicating the type of reference, which is &apos;TODAY&apos; by default.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum TodayReferenceType
     {

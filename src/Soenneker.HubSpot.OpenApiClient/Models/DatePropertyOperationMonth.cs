@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>An integer specifying the month component of the date.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum DatePropertyOperationMonth
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "APR")]
         #pragma warning disable CS1591

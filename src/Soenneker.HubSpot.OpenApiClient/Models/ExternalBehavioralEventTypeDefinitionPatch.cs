@@ -22,6 +22,22 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
+        /// <summary>A string used as a template for the details of the event type.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DetailTemplate { get; set; }
+#nullable restore
+#else
+        public string DetailTemplate { get; set; }
+#endif
+        /// <summary>A string used as a template for the header of the event type.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? HeaderTemplate { get; set; }
+#nullable restore
+#else
+        public string HeaderTemplate { get; set; }
+#endif
         /// <summary>Human readable label for the event. Used in HubSpot UI</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -29,6 +45,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #nullable restore
 #else
         public string Label { get; set; }
+#endif
+        /// <summary>An array of PropertyPatch objects that define the order of properties for the event type.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyPatch>? PropertyOrder { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyPatch> PropertyOrder { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventTypeDefinitionPatch"/> and sets the default values.
@@ -56,7 +80,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "description", n => { Description = n.GetStringValue(); } },
+                { "detailTemplate", n => { DetailTemplate = n.GetStringValue(); } },
+                { "headerTemplate", n => { HeaderTemplate = n.GetStringValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
+                { "propertyOrder", n => { PropertyOrder = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyPatch>(global::Soenneker.HubSpot.OpenApiClient.Models.PropertyPatch.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -67,7 +94,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("description", Description);
+            writer.WriteStringValue("detailTemplate", DetailTemplate);
+            writer.WriteStringValue("headerTemplate", HeaderTemplate);
             writer.WriteStringValue("label", Label);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyPatch>("propertyOrder", PropertyOrder);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

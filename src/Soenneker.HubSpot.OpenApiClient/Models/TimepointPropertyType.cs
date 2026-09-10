@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>A string indicating the type of property. Defaults to &apos;timepoint&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum TimepointPropertyType
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "timepoint")]
         #pragma warning disable CS1591

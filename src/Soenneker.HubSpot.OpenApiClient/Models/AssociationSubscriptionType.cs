@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>A string indicating the type of subscription, which is &apos;ASSOCIATION&apos; for this component.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum AssociationSubscriptionType
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "ASSOCIATION")]
         #pragma warning disable CS1591

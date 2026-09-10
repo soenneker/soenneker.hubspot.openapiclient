@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>The type of subscription, which is fixed as &apos;GDPR_PRIVACY_DELETION&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum GdprPrivacyDeletionSubscriptionType
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "GDPR_PRIVACY_DELETION")]
         #pragma warning disable CS1591

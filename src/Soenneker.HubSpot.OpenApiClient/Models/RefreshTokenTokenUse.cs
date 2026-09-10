@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>Indicates the use of the token, which is &apos;refresh_token&apos; by default.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum RefreshTokenTokenUse
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "refresh_token")]
         #pragma warning disable CS1591

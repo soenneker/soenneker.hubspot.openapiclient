@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>The type of operation (DATETIME).</summary>
+    /// <summary>A string representing the type of operation being performed. The default value is &apos;DATE_TIME&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum DatetimeOperationType
     {

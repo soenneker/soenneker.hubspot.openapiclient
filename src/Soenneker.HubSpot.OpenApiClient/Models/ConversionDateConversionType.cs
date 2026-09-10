@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>Specifies the type of conversion (CONVERSION_DATE).</summary>
+    /// <summary>A string that indicates the type of conversion event. It specifies what kind of conversion has taken place.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum ConversionDateConversionType
     {

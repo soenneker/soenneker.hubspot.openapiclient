@@ -14,9 +14,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The fileId property</summary>
+        /// <summary>An integer representing the ID of a file associated with the message header, formatted as an int64.</summary>
         public long? FileId { get; set; }
-        /// <summary>The text property</summary>
+        /// <summary>A string containing the text content of the message header.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Text { get; set; }
@@ -24,7 +24,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Text { get; set; }
 #endif
-        /// <summary>The type property</summary>
+        /// <summary>A string indicating the type of the message header. The default and only valid value is &apos;MESSAGE_HEADER&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.MessageHeaderType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessageHeader"/> and sets the default values.

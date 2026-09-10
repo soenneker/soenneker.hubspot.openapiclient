@@ -14,17 +14,17 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The authorized property</summary>
+        /// <summary>A boolean indicating whether the channel account is authorized.</summary>
         public bool? Authorized { get; set; }
         /// <summary>The deliveryIdentifier property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicDeliveryIdentifier? DeliveryIdentifier { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicDeliveryIdentifier? DeliveryIdentifier { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicDeliveryIdentifier DeliveryIdentifier { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicDeliveryIdentifier DeliveryIdentifier { get; set; }
 #endif
-        /// <summary>The inboxId property</summary>
+        /// <summary>The unique identifier for the inbox associated with this channel account. It is a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? InboxId { get; set; }
@@ -32,7 +32,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string InboxId { get; set; }
 #endif
-        /// <summary>The name property</summary>
+        /// <summary>The name of the channel account. It is a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -66,7 +66,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "authorized", n => { Authorized = n.GetBoolValue(); } },
-                { "deliveryIdentifier", n => { DeliveryIdentifier = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicDeliveryIdentifier>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicDeliveryIdentifier.CreateFromDiscriminatorValue); } },
+                { "deliveryIdentifier", n => { DeliveryIdentifier = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicDeliveryIdentifier>(global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicDeliveryIdentifier.CreateFromDiscriminatorValue); } },
                 { "inboxId", n => { InboxId = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
             };
@@ -79,7 +79,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("authorized", Authorized);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicDeliveryIdentifier>("deliveryIdentifier", DeliveryIdentifier);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicDeliveryIdentifier>("deliveryIdentifier", DeliveryIdentifier);
             writer.WriteStringValue("inboxId", InboxId);
             writer.WriteStringValue("name", Name);
             writer.WriteAdditionalData(AdditionalData);

@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The type property</summary>
+        /// <summary>A string indicating the type of content. The default value is &apos;UNSUPPORTED_CONTENT&apos;, and it must be &apos;UNSUPPORTED_CONTENT&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.UnsupportedContentType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnsupportedContent"/> and sets the default values.

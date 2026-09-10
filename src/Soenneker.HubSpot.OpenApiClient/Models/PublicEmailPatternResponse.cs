@@ -14,9 +14,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The date and time when the email pattern was created.</summary>
+        /// <summary>The date and time when this email pattern was created, in ISO 8601 format.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
-        /// <summary>The unique identifier of the email pattern.</summary>
+        /// <summary>The unique identifier for this email pattern. It is a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }
@@ -24,7 +24,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>The unique identifier of the email template associated with the pattern.</summary>
+        /// <summary>The identifier of the email template associated with this pattern. It is a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TemplateId { get; set; }
@@ -32,9 +32,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string TemplateId { get; set; }
 #endif
-        /// <summary>The order identifying the previous step to which the email thread is linked.</summary>
+        /// <summary>An integer representing the order of the step to which this email pattern is threaded.</summary>
         public int? ThreadEmailToStepOrder { get; set; }
-        /// <summary>The date and time when the email pattern was last updated.</summary>
+        /// <summary>The date and time when this email pattern was last updated, in ISO 8601 format.</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailPatternResponse"/> and sets the default values.

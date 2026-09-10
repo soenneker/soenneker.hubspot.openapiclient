@@ -16,7 +16,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Timestamp that represents when the request finished processing</summary>
         public DateTimeOffset? CompletedAt { get; set; }
-        /// <summary>The errors property</summary>
+        /// <summary>An array of errors encountered during the batch operation, each providing details about the error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingStandardError2>? Errors { get; set; }
@@ -36,7 +36,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public int? NumErrors { get; set; }
         /// <summary>Timestamp that represents when the request was made</summary>
         public DateTimeOffset? RequestedAt { get; set; }
-        /// <summary>The results property</summary>
+        /// <summary>An array of results from the batch operation, each containing details about a subscriber email response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.SubscriberEmailResponse>? Results { get; set; }

@@ -17,7 +17,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The date and time when the batch operation was completed, in ISO 8601 format.</summary>
         public DateTimeOffset? CompletedAt { get; set; }
-        /// <summary>A map of link names to associated URIs, providing additional information about the batch operation.</summary>
+        /// <summary>A map of link names to associated URIs, providing additional information or actions related to the batch operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponseSimplePublicUpsertObject8LinksProperty? Links { get; set; }
@@ -27,7 +27,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>The date and time when the batch operation was requested, in ISO 8601 format.</summary>
         public DateTimeOffset? RequestedAt { get; set; }
-        /// <summary>An array of SimplePublicUpsertObject items representing the results of the batch upsert operation.</summary>
+        /// <summary>An array of objects representing the results of the upsert operation. Each object is a SimplePublicUpsertObject.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicUpsertObject8>? Results { get; set; }

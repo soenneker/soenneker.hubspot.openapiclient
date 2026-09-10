@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Specifies the criteria for refining the filter by coalescing.</summary>
+        /// <summary>An optional refinement criterion used to coalesce form submissions based on specific conditions. It can be one of several types, similar to pruningRefineBy.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicFormSubmissionFilterCoalescingRefineBy? CoalescingRefineBy { get; set; }
@@ -22,9 +22,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicFormSubmissionFilterCoalescingRefineBy CoalescingRefineBy { get; set; }
 #endif
-        /// <summary>Indicates the type of filter (FORM_SUBMISSION).</summary>
+        /// <summary>A string that specifies the type of filter being applied. The default value is &apos;FORM_SUBMISSION&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.FormSubmissionFilterType? FilterType { get; set; }
-        /// <summary>The ID of the form used in the filter.</summary>
+        /// <summary>A string representing the unique identifier of the form to which the filter applies.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FormId { get; set; }
@@ -32,9 +32,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string FormId { get; set; }
 #endif
-        /// <summary>Specifies the operation to be performed (FILLED_OUT, NOT_FILLED_OUT).</summary>
+        /// <summary>A string that defines the operation to be performed by the filter. Valid values include &apos;FILLED_OUT&apos; and &apos;NOT_FILLED_OUT&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicFormSubmissionFilterOperator? Operator { get; set; }
-        /// <summary>Specifies the criteria for refining the filter by pruning.</summary>
+        /// <summary>An optional refinement criterion that further specifies the conditions for pruning form submissions. It can be one of several types, such as number of occurrences or timestamp comparisons.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicFormSubmissionFilterPruningRefineBy? PruningRefineBy { get; set; }

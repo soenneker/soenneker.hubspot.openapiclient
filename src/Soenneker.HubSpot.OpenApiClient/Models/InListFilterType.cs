@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>Indicates the type of filter being applied (IN_LIST).</summary>
+    /// <summary>A string indicating the type of filter. Defaults to &apos;IN_LIST&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum InListFilterType
     {

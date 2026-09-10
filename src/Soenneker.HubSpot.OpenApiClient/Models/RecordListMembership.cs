@@ -14,13 +14,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The timestamp when the record was first added to the list.</summary>
+        /// <summary>The date and time when the record was first added to the list, in ISO 8601 format.</summary>
         public DateTimeOffset? FirstAddedTimestamp { get; set; }
-        /// <summary>Indicates whether the list is public.</summary>
+        /// <summary>A boolean indicating whether the list is public.</summary>
         public bool? IsPublicList { get; set; }
-        /// <summary>The timestamp when the record was last added to the list.</summary>
+        /// <summary>The date and time when the record was last added to the list, in ISO 8601 format.</summary>
         public DateTimeOffset? LastAddedTimestamp { get; set; }
-        /// <summary>The unique identifier of the list.</summary>
+        /// <summary>The unique identifier of the list. It is a string value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ListId { get; set; }
@@ -28,7 +28,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ListId { get; set; }
 #endif
-        /// <summary>The version number of the list.</summary>
+        /// <summary>The version number of the list, represented as an integer.</summary>
         public int? ListVersion { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.RecordListMembership"/> and sets the default values.

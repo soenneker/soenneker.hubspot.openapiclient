@@ -14,11 +14,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The comparison property</summary>
+        /// <summary>A string that indicates the type of comparison to be made, with valid values including &apos;BEFORE&apos; and &apos;AFTER&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteComparativeTimestampRefineByComparison? Comparison { get; set; }
-        /// <summary>The timestamp property</summary>
+        /// <summary>An integer representing the specific timestamp to be used in the comparison, formatted as an int64.</summary>
         public long? Timestamp { get; set; }
-        /// <summary>The type property</summary>
+        /// <summary>A string that specifies the type of refinement, with a default value of &apos;AbsoluteComparativeTimestampRefineBy&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteComparativeTimestampRefineByType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteComparativeTimestampRefineBy"/> and sets the default values.

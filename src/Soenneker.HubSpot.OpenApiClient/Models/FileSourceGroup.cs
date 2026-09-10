@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>The source group of the file, with possible values including &apos;UNKNOWN&apos;, &apos;CONTENT&apos;, &apos;FORMS&apos;, &apos;CONVERSATIONS&apos;, and &apos;UI_EXTENSIONS&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum FileSourceGroup
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "CONTENT")]
         #pragma warning disable CS1591

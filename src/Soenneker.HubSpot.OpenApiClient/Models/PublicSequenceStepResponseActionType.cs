@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>The type of action to be performed in the sequence step.</summary>
+    /// <summary>The type of action to be performed in this step. Valid values include &apos;EMAIL&apos;, &apos;TASK&apos;, and &apos;FINISH_ENROLLMENT&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PublicSequenceStepResponseActionType
     {

@@ -17,6 +17,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The timestamp when the batch process was completed, in ISO 8601 format.</summary>
         public DateTimeOffset? CompletedAt { get; set; }
+        /// <summary>The errors property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError28>? Errors { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError28> Errors { get; set; }
+#endif
         /// <summary>An object containing relevant links related to the batch request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -25,6 +33,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponseSimplePublicUpsertObject24LinksProperty Links { get; set; }
 #endif
+        /// <summary>The total number of errors that occurred during the operation.</summary>
+        public int? NumErrors { get; set; }
         /// <summary>The timestamp when the batch process was initiated, in ISO 8601 format.</summary>
         public DateTimeOffset? RequestedAt { get; set; }
         /// <summary>The results property</summary>
@@ -37,7 +47,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>The timestamp when the batch process began execution, in ISO 8601 format.</summary>
         public DateTimeOffset? StartedAt { get; set; }
-        /// <summary>The status of the batch processing request. Can be: &quot;PENDING&quot;, &quot;PROCESSING&quot;, &quot;CANCELED&quot;, or &quot;COMPLETE&quot;.</summary>
+        /// <summary>The status of the batch processing request. Expected value is &quot;COMPLETE&quot;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponseSimplePublicUpsertObject24Status? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponseSimplePublicUpsertObject24"/> and sets the default values.
@@ -65,7 +75,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "completedAt", n => { CompletedAt = n.GetDateTimeOffsetValue(); } },
+                { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError28>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError28.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "links", n => { Links = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponseSimplePublicUpsertObject24LinksProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponseSimplePublicUpsertObject24LinksProperty.CreateFromDiscriminatorValue); } },
+                { "numErrors", n => { NumErrors = n.GetIntValue(); } },
                 { "requestedAt", n => { RequestedAt = n.GetDateTimeOffsetValue(); } },
                 { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicUpsertObject24>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicUpsertObject24.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "startedAt", n => { StartedAt = n.GetDateTimeOffsetValue(); } },
@@ -80,7 +92,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDateTimeOffsetValue("completedAt", CompletedAt);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError28>("errors", Errors);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponseSimplePublicUpsertObject24LinksProperty>("links", Links);
+            writer.WriteIntValue("numErrors", NumErrors);
             writer.WriteDateTimeOffsetValue("requestedAt", RequestedAt);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicUpsertObject24>("results", Results);
             writer.WriteDateTimeOffsetValue("startedAt", StartedAt);

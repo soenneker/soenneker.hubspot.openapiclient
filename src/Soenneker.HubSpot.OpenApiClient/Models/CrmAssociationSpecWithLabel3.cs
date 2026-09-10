@@ -15,9 +15,17 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Association category. Can be HUBSPOT_DEFINED, USER_DEFINED, INTEGRATOR_DEFINED or WORK</summary>
+        /// <summary>The category of the association, which can be one of the following: &apos;HUBSPOT_DEFINED&apos;, &apos;USER_DEFINED&apos;, &apos;INTEGRATOR_DEFINED&apos;, or &apos;WORK&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecWithLabel3Category? Category { get; set; }
-        /// <summary>An optional descriptor that provides additional context about the relationship between associated records, such as &quot;Mentor&quot; and &quot;Mentee&quot;.</summary>
+        /// <summary>A string representing the object type ID from which the association originates.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? FromObjectTypeId { get; set; }
+#nullable restore
+#else
+        public string FromObjectTypeId { get; set; }
+#endif
+        /// <summary>A string representing the label for the association, providing a descriptive name for the relationship.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Label { get; set; }
@@ -25,7 +33,15 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Label { get; set; }
 #endif
-        /// <summary>An integer value used to uniquely identify a specific association type within its Association Category.</summary>
+        /// <summary>A string representing the object type ID to which the association is directed.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ToObjectTypeId { get; set; }
+#nullable restore
+#else
+        public string ToObjectTypeId { get; set; }
+#endif
+        /// <summary>An integer representing the unique identifier for the type of association.</summary>
         public int? TypeId { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecWithLabel3"/> and sets the default values.
@@ -53,7 +69,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "category", n => { Category = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecWithLabel3Category>(); } },
+                { "fromObjectTypeId", n => { FromObjectTypeId = n.GetStringValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
+                { "toObjectTypeId", n => { ToObjectTypeId = n.GetStringValue(); } },
                 { "typeId", n => { TypeId = n.GetIntValue(); } },
             };
         }
@@ -65,7 +83,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecWithLabel3Category>("category", Category);
+            writer.WriteStringValue("fromObjectTypeId", FromObjectTypeId);
             writer.WriteStringValue("label", Label);
+            writer.WriteStringValue("toObjectTypeId", ToObjectTypeId);
             writer.WriteIntValue("typeId", TypeId);
             writer.WriteAdditionalData(AdditionalData);
         }

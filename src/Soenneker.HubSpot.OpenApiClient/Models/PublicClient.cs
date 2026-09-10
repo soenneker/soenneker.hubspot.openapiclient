@@ -14,9 +14,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The clientType property</summary>
+        /// <summary>The type of client interacting with the API. Valid values include &apos;HUBSPOT&apos;, &apos;SYSTEM&apos;, &apos;INTEGRATION&apos;, and &apos;UNKNOWN&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicClientClientType? ClientType { get; set; }
-        /// <summary>The integrationAppId property</summary>
+        /// <summary>An optional identifier for the integration application associated with the client. It is an integer value.</summary>
         public int? IntegrationAppId { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicClient"/> and sets the default values.

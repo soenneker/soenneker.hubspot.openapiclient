@@ -31,7 +31,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingStandardError2ContextProperty Context { get; set; }
 #endif
-        /// <summary>The detailed error objects.</summary>
+        /// <summary>An array of ErrorDetail objects providing further information about the error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingErrorDetail3>? Errors { get; set; }

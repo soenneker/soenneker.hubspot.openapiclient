@@ -3,7 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.HubSpot.OpenApiClient.Events.EventOccurrences;
-using Soenneker.HubSpot.OpenApiClient.Events.TwoZeroTwoSixZeroThree;
+using Soenneker.HubSpot.OpenApiClient.Events.TwoZeroTwoSixZeroNine;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -21,10 +21,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Events
         {
             get => new global::Soenneker.HubSpot.OpenApiClient.Events.EventOccurrences.EventOccurrencesRequestBuilder(PathParameters, RequestAdapter);
         }
-        /// <summary>The TwoZeroTwoSixZeroThree property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Events.TwoZeroTwoSixZeroThree.TwoZeroTwoSixZeroThreeRequestBuilder TwoZeroTwoSixZeroThree
+        /// <summary>The TwoZeroTwoSixZeroNine property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Events.TwoZeroTwoSixZeroNine.TwoZeroTwoSixZeroNineRequestBuilder TwoZeroTwoSixZeroNine
         {
-            get => new global::Soenneker.HubSpot.OpenApiClient.Events.TwoZeroTwoSixZeroThree.TwoZeroTwoSixZeroThreeRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.HubSpot.OpenApiClient.Events.TwoZeroTwoSixZeroNine.TwoZeroTwoSixZeroNineRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Events.EventsRequestBuilder"/> and sets the default values.

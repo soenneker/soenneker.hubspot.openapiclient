@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     /// <summary>
-    /// A more specific error category within each main category.
+    /// An object providing more specific details about the error category.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CrmStandardError3SubCategoryProperty : IAdditionalDataHolder, IParsable

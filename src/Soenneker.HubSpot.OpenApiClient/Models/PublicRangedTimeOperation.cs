@@ -14,9 +14,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Indicates whether objects with no value set for the property should be included in the operation.</summary>
+        /// <summary>A boolean indicating whether objects with no value set should be included in the operation.</summary>
         public bool? IncludeObjectsWithNoValueSet { get; set; }
-        /// <summary>Describes the behavior at the lower bound endpoint of the time range.</summary>
+        /// <summary>A string specifying the behavior of the lower bound endpoint in the time range.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? LowerBoundEndpointBehavior { get; set; }
@@ -24,7 +24,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string LowerBoundEndpointBehavior { get; set; }
 #endif
-        /// <summary>Defines the lower bound time point for the operation.</summary>
+        /// <summary>An object representing the lower bound time point of the range, which can be a date point, indexed time point, or property-referenced time.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRangedTimeOperationLowerBoundTimePoint? LowerBoundTimePoint { get; set; }
@@ -32,7 +32,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRangedTimeOperationLowerBoundTimePoint LowerBoundTimePoint { get; set; }
 #endif
-        /// <summary>Specifies the type of operation (TIME_RANGED).</summary>
+        /// <summary>A string indicating the operation type, which is related to time range operations.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OperationType { get; set; }
@@ -40,7 +40,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string OperationType { get; set; }
 #endif
-        /// <summary>Defines the operation to be applied within the time range (IS_BETWEEN, IS_NOT_BETWEEN).</summary>
+        /// <summary>A string representing the operator used in the time range operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Operator { get; set; }
@@ -48,7 +48,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Operator { get; set; }
 #endif
-        /// <summary>Specifies the parser used for the property in the operation.</summary>
+        /// <summary>A string that defines the property parser used in the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PropertyParser { get; set; }
@@ -56,9 +56,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string PropertyParser { get; set; }
 #endif
-        /// <summary>Specifies the type of operation (TIME_RANGED).</summary>
+        /// <summary>A string indicating the type of operation, which is &apos;TIME_RANGED&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.TimeRangedType? Type { get; set; }
-        /// <summary>Describes the behavior at the upper bound endpoint of the time range.</summary>
+        /// <summary>A string specifying the behavior of the upper bound endpoint in the time range.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UpperBoundEndpointBehavior { get; set; }
@@ -66,7 +66,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string UpperBoundEndpointBehavior { get; set; }
 #endif
-        /// <summary>Defines the upper bound time point for the operation.</summary>
+        /// <summary>An object representing the upper bound time point of the range, which can be a date point, indexed time point, or property-referenced time.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRangedTimeOperationUpperBoundTimePoint? UpperBoundTimePoint { get; set; }

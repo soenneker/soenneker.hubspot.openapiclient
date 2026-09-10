@@ -14,15 +14,15 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The paging property</summary>
+        /// <summary>Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.SettingsForwardPaging2? Paging { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.SettingsForwardPaging3? Paging { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.SettingsForwardPaging2 Paging { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.SettingsForwardPaging3 Paging { get; set; }
 #endif
-        /// <summary>The results property</summary>
+        /// <summary>An array of PublicUser objects representing the users returned in the current page.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicUser>? Results { get; set; }
@@ -55,7 +55,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "paging", n => { Paging = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.SettingsForwardPaging2>(global::Soenneker.HubSpot.OpenApiClient.Models.SettingsForwardPaging2.CreateFromDiscriminatorValue); } },
+                { "paging", n => { Paging = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.SettingsForwardPaging3>(global::Soenneker.HubSpot.OpenApiClient.Models.SettingsForwardPaging3.CreateFromDiscriminatorValue); } },
                 { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicUser>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicUser.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -66,7 +66,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.SettingsForwardPaging2>("paging", Paging);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.SettingsForwardPaging3>("paging", Paging);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicUser>("results", Results);
             writer.WriteAdditionalData(AdditionalData);
         }

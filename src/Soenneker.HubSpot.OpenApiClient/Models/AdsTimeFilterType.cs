@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>Filter type (ADS_TIME)</summary>
+    /// <summary>A string representing the type of filter being applied. The default value is &apos;ADS_TIME&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum AdsTimeFilterType
     {

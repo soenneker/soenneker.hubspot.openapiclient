@@ -14,9 +14,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Whether or not there are more results to page through.</summary>
+        /// <summary>A boolean indicating whether there are more results available beyond the current page.</summary>
         public bool? HasMore { get; set; }
-        /// <summary>The lists that matched the search criteria.</summary>
+        /// <summary>An array of objects representing the lists found in the search, each conforming to the PublicObjectListSearchResult schema.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectListSearchResult>? Lists { get; set; }
@@ -24,9 +24,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectListSearchResult> Lists { get; set; }
 #endif
-        /// <summary>Value to be passed in a future request to paginate through list search results.</summary>
+        /// <summary>An integer indicating the position in the list of results where the current page starts.</summary>
         public int? Offset { get; set; }
-        /// <summary>The total number of lists that match the search criteria.</summary>
+        /// <summary>An integer indicating the total number of lists found by the search.</summary>
         public int? Total { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ListSearchResponse"/> and sets the default values.

@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>A string indicating the direction of the time offset. Valid values are &apos;PAST&apos; and &apos;FUTURE&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum TimeOffsetOffsetDirection
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "FUTURE")]
         #pragma warning disable CS1591

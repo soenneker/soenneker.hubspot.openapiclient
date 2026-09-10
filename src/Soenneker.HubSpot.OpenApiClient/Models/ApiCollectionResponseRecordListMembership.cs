@@ -14,15 +14,15 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The paging property</summary>
+        /// <summary>Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPaging23? Paging { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPaging24? Paging { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPaging23 Paging { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPaging24 Paging { get; set; }
 #endif
-        /// <summary>The results property</summary>
+        /// <summary>An array of record list memberships, each detailing the membership of a record in a list.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.RecordListMembership>? Results { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.RecordListMembership> Results { get; set; }
 #endif
-        /// <summary>The total property</summary>
+        /// <summary>An integer representing the total number of record list memberships available.</summary>
         public long? Total { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiCollectionResponseRecordListMembership"/> and sets the default values.
@@ -57,7 +57,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "paging", n => { Paging = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPaging23>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPaging23.CreateFromDiscriminatorValue); } },
+                { "paging", n => { Paging = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPaging24>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPaging24.CreateFromDiscriminatorValue); } },
                 { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.RecordListMembership>(global::Soenneker.HubSpot.OpenApiClient.Models.RecordListMembership.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "total", n => { Total = n.GetLongValue(); } },
             };
@@ -69,7 +69,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPaging23>("paging", Paging);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPaging24>("paging", Paging);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.RecordListMembership>("results", Results);
             writer.WriteLongValue("total", Total);
             writer.WriteAdditionalData(AdditionalData);

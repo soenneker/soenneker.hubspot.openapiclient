@@ -12,13 +12,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     public partial class PublicAccessTokenInfoResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The active property</summary>
+        /// <summary>A boolean indicating whether the token is currently active.</summary>
         public bool? Active { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The app_id property</summary>
+        /// <summary>An integer representing the unique identifier of the application associated with the token.</summary>
         public int? AppId { get; set; }
-        /// <summary>The client_id property</summary>
+        /// <summary>A string representing the client ID associated with the token.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ClientId { get; set; }
@@ -26,9 +26,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ClientId { get; set; }
 #endif
-        /// <summary>The expires_in property</summary>
+        /// <summary>An integer in int64 format representing the time in seconds until the token expires.</summary>
         public long? ExpiresIn { get; set; }
-        /// <summary>The hub_domain property</summary>
+        /// <summary>A string representing the domain of the HubSpot account associated with the token.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? HubDomain { get; set; }
@@ -36,11 +36,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string HubDomain { get; set; }
 #endif
-        /// <summary>The hub_id property</summary>
+        /// <summary>An integer representing the unique identifier of the HubSpot account (hub) associated with the token.</summary>
         public int? HubId { get; set; }
-        /// <summary>The is_private_distribution property</summary>
+        /// <summary>A boolean indicating whether the token is for private distribution.</summary>
         public bool? IsPrivateDistribution { get; set; }
-        /// <summary>The scopes property</summary>
+        /// <summary>An array of strings representing the scopes (permissions) granted to the token.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Scopes { get; set; }
@@ -56,7 +56,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.SignedAccessToken SignedAccessToken { get; set; }
 #endif
-        /// <summary>The token property</summary>
+        /// <summary>A string representing the token itself.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Token { get; set; }
@@ -64,7 +64,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Token { get; set; }
 #endif
-        /// <summary>The token_type property</summary>
+        /// <summary>A string representing the type of the token.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TokenType { get; set; }
@@ -72,9 +72,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string TokenType { get; set; }
 #endif
-        /// <summary>The token_use property</summary>
+        /// <summary>Indicates the usage of the token, which is &apos;access_token&apos; by default. It is a string with a fixed value of &apos;access_token&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.AccessTokenTokenUse? TokenUse { get; set; }
-        /// <summary>The user property</summary>
+        /// <summary>A string representing the username associated with the token.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? User { get; set; }
@@ -82,7 +82,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string User { get; set; }
 #endif
-        /// <summary>The user_id property</summary>
+        /// <summary>An integer representing the unique identifier of the user associated with the token.</summary>
         public int? UserId { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicAccessTokenInfoResponse"/> and sets the default values.

@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>Specifies the type of operation (ROLLING_DATE_RANGE).</summary>
+    /// <summary>A string indicating the type of operation, which is &apos;ROLLING_DATE_RANGE&apos; by default.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum RollingDateRangeOperationType
     {

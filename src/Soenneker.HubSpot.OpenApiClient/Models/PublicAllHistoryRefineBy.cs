@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Type of refine by (ALL_HISTORY)</summary>
+        /// <summary>A string that specifies the type of refinement, with a default value of &apos;ALL_HISTORY&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.AllHistoryType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicAllHistoryRefineBy"/> and sets the default values.

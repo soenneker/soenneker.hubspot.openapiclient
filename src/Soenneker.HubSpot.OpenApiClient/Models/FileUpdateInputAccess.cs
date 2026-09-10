@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>NONE: Do not run any duplicate validation. REJECT: Reject the upload if a duplicate is found. RETURN_EXISTING: If a duplicate file is found, do not upload a new file and return the found duplicate instead.</summary>
+    /// <summary>The access level to update the file to. Valid values include &apos;PUBLIC_INDEXABLE&apos;, &apos;PUBLIC_NOT_INDEXABLE&apos;, &apos;HIDDEN_INDEXABLE&apos;, &apos;HIDDEN_NOT_INDEXABLE&apos;, &apos;HIDDEN_PRIVATE&apos;, &apos;PRIVATE&apos;, &apos;HIDDEN_SENSITIVE&apos;, and &apos;SENSITIVE&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum FileUpdateInputAccess
     {

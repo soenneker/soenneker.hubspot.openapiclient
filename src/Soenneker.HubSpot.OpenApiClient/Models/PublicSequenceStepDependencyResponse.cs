@@ -14,11 +14,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The date and time when the step dependency was created.</summary>
+        /// <summary>The date and time when this dependency was created, in ISO 8601 format.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
-        /// <summary>The type of dependency between sequence steps with accepted values being TASK_COMPLETION or MANUAL_PAUSE.</summary>
+        /// <summary>The type of dependency, which can be either &apos;TASK_COMPLETION&apos; or &apos;MANUAL_PAUSE&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepDependencyResponseDependencyType? DependencyType { get; set; }
-        /// <summary>The unique identifier of the step dependency.</summary>
+        /// <summary>The unique identifier for this dependency.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }
@@ -26,7 +26,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>The unique identifier of the sequence step that is responsible for creating and resolving this dependency.</summary>
+        /// <summary>The unique identifier of the sequence step that this dependency relies on.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ReliesOnSequenceStepId { get; set; }
@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ReliesOnSequenceStepId { get; set; }
 #endif
-        /// <summary>The order number of the step that is responsible for creating and resolving this dependency.</summary>
+        /// <summary>The order number of the step that this dependency relies on.</summary>
         public int? ReliesOnStepOrder { get; set; }
         /// <summary>The unique identifier of the sequence step that requires this dependency.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -46,7 +46,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>The order number of the step that requires this dependency.</summary>
         public int? RequiredByStepOrder { get; set; }
-        /// <summary>The date and time when the step dependency was last updated.</summary>
+        /// <summary>The date and time when this dependency was last updated, in ISO 8601 format.</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepDependencyResponse"/> and sets the default values.

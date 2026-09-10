@@ -14,21 +14,21 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The day component of the date.</summary>
+        /// <summary>An integer representing the day component of the date.</summary>
         public int? Day { get; set; }
-        /// <summary>The hour component of the time.</summary>
+        /// <summary>An integer representing the hour component of the time.</summary>
         public int? Hour { get; set; }
-        /// <summary>The millisecond component of the time.</summary>
+        /// <summary>An integer representing the millisecond component of the time.</summary>
         public int? Millisecond { get; set; }
-        /// <summary>The minute component of the time.</summary>
+        /// <summary>An integer representing the minute component of the time.</summary>
         public int? Minute { get; set; }
-        /// <summary>The month component of the date.</summary>
+        /// <summary>An integer representing the month component of the date.</summary>
         public int? Month { get; set; }
-        /// <summary>The second component of the time.</summary>
+        /// <summary>An integer representing the second component of the time.</summary>
         public int? Second { get; set; }
-        /// <summary>Specifies the type of time (DATE).</summary>
+        /// <summary>A string indicating the type of time reference, typically set to &apos;DATE&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.DateTimeType? TimeType { get; set; }
-        /// <summary>The source of the time zone information.</summary>
+        /// <summary>A string representing the source of the timezone information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TimezoneSource { get; set; }
@@ -36,9 +36,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string TimezoneSource { get; set; }
 #endif
-        /// <summary>The year component of the date.</summary>
+        /// <summary>An integer representing the year component of the date.</summary>
         public int? Year { get; set; }
-        /// <summary>The identifier for the time zone.</summary>
+        /// <summary>A string specifying the identifier for the timezone.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ZoneId { get; set; }

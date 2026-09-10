@@ -14,9 +14,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Filter type (ADS_TIME)</summary>
+        /// <summary>A string representing the type of filter being applied. The default value is &apos;ADS_TIME&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.AdsTimeFilterType? FilterType { get; set; }
-        /// <summary>Refinement criteria</summary>
+        /// <summary>An optional property that allows further refinement of the filter criteria based on time. It can be one of several types, such as relative or absolute time comparisons.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAdsTimeFilterPruningRefineBy? PruningRefineBy { get; set; }

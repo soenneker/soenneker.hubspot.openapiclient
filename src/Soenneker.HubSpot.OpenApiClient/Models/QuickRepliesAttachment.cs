@@ -14,15 +14,15 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The quickReplies property</summary>
+        /// <summary>An array of QuickReply objects, each representing a predefined option that a user can select.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.QuickReply>? QuickReplies { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsQuickReply>? QuickReplies { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.QuickReply> QuickReplies { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsQuickReply> QuickReplies { get; set; }
 #endif
-        /// <summary>The type property</summary>
+        /// <summary>A string indicating the type of the component, with a default value of &apos;QUICK_REPLIES&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.QuickRepliesType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.QuickRepliesAttachment"/> and sets the default values.
@@ -49,7 +49,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "quickReplies", n => { QuickReplies = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.QuickReply>(global::Soenneker.HubSpot.OpenApiClient.Models.QuickReply.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "quickReplies", n => { QuickReplies = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsQuickReply>(global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsQuickReply.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.QuickRepliesType>(); } },
             };
         }
@@ -60,7 +60,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.QuickReply>("quickReplies", QuickReplies);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsQuickReply>("quickReplies", QuickReplies);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.QuickRepliesType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

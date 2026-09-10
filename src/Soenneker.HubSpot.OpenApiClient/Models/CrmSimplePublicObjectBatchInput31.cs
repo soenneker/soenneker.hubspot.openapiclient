@@ -31,7 +31,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string IdProperty { get; set; }
 #endif
-        /// <summary>A unique identifier for tracing the request.</summary>
+        /// <summary>A string used to trace the write operations for the object. This is optional and can be used for debugging or tracking purposes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ObjectWriteTraceId { get; set; }
@@ -39,7 +39,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ObjectWriteTraceId { get; set; }
 #endif
-        /// <summary>Key-value pairs representing the properties of the object.</summary>
+        /// <summary>An object containing key-value pairs where the key is the property name and the value is the property value. This is used to define the properties of the CRM objects.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectBatchInput31PropertiesProperty? Properties { get; set; }

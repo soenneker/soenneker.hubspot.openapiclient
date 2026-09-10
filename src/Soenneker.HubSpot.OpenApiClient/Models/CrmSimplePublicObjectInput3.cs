@@ -8,14 +8,14 @@ using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     /// <summary>
-    /// Represents the input required to create or update a CRM object, containing an object with property names and their corresponding values.
+    /// Represents the input required to update a CRM object, containing an object with property names and their corresponding values.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CrmSimplePublicObjectInput3 : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Key value pairs representing the properties of the object.</summary>
+        /// <summary>An object containing key-value pairs representing the properties of the CRM object to be updated. Each key is a property name, and each value is the new value for that property. All properties are strings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectInput3PropertiesProperty? Properties { get; set; }

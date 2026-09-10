@@ -12,7 +12,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     public partial class PublicRecipient : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The actorId property</summary>
+        /// <summary>The unique identifier for the actor, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ActorId { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicDeliveryIdentifier DeliveryIdentifier { get; set; }
 #endif
-        /// <summary>The name property</summary>
+        /// <summary>The name of the recipient, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>The recipientField property</summary>
+        /// <summary>A string representing a specific field related to the recipient.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RecipientField { get; set; }

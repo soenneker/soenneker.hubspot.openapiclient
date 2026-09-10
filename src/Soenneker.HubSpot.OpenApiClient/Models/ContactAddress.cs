@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The city property</summary>
+        /// <summary>The city where the contact is located. It is a string representing the city name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? City { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string City { get; set; }
 #endif
-        /// <summary>The country property</summary>
+        /// <summary>The country where the contact is located. It is a string representing the country name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Country { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Country { get; set; }
 #endif
-        /// <summary>The countryCode property</summary>
+        /// <summary>The code representing the country of the contact. It is a string, typically an ISO 3166-1 alpha-2 country code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CountryCode { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string CountryCode { get; set; }
 #endif
-        /// <summary>The state property</summary>
+        /// <summary>The state or region where the contact is located. It is a string representing the state or region name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? State { get; set; }
@@ -46,7 +46,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string State { get; set; }
 #endif
-        /// <summary>The street property</summary>
+        /// <summary>The street address of the contact. It is a string representing the street name and number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Street { get; set; }
@@ -54,9 +54,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Street { get; set; }
 #endif
-        /// <summary>The type property</summary>
+        /// <summary>The type of address, indicating whether it is a &apos;HOME&apos; or &apos;WORK&apos; address.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.ContactAddressType? Type { get; set; }
-        /// <summary>The zip property</summary>
+        /// <summary>The postal code for the contact&apos;s address. It is a string representing the ZIP or postal code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Zip { get; set; }

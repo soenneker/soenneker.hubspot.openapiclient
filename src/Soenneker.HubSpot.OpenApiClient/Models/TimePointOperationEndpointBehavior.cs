@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>A string indicating the endpoint behavior. Valid values are &apos;INCLUSIVE&apos; and &apos;EXCLUSIVE&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum TimePointOperationEndpointBehavior
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "EXCLUSIVE")]
         #pragma warning disable CS1591

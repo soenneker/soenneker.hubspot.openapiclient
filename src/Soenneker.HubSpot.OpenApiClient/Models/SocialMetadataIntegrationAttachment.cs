@@ -17,12 +17,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The socialMetadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.SocialMetadata? SocialMetadata { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsSocialMetadata? SocialMetadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.SocialMetadata SocialMetadata { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsSocialMetadata SocialMetadata { get; set; }
 #endif
-        /// <summary>The type property</summary>
+        /// <summary>A string that specifies the type of the component. The default value is &apos;SOCIAL_MEDIA_METADATA&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.SocialMediaMetadataType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.SocialMetadataIntegrationAttachment"/> and sets the default values.
@@ -49,7 +49,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "socialMetadata", n => { SocialMetadata = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.SocialMetadata>(global::Soenneker.HubSpot.OpenApiClient.Models.SocialMetadata.CreateFromDiscriminatorValue); } },
+                { "socialMetadata", n => { SocialMetadata = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsSocialMetadata>(global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsSocialMetadata.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SocialMediaMetadataType>(); } },
             };
         }
@@ -60,7 +60,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.SocialMetadata>("socialMetadata", SocialMetadata);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsSocialMetadata>("socialMetadata", SocialMetadata);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SocialMediaMetadataType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

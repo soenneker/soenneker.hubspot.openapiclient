@@ -12,7 +12,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     public partial class PublicCommunicationSubscriptionFilter : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The acceptedOptStates property</summary>
+        /// <summary>An array of strings representing the opt-in states that are accepted for the subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? AcceptedOptStates { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The ID of the business unit associated with the subscription filter.</summary>
+        /// <summary>A string representing the ID of the business unit associated with the subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? BusinessUnitId { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string BusinessUnitId { get; set; }
 #endif
-        /// <summary>Specifies the communication channel associated with the subscription filter (EMAIL, WHATSAPP, SMS).</summary>
+        /// <summary>A string indicating the communication channel for the subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Channel { get; set; }
@@ -38,9 +38,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Channel { get; set; }
 #endif
-        /// <summary>Indicates the type of filter, which is (COMMUNICATION_SUBSCRIPTION)</summary>
+        /// <summary>A string representing the type of filter. Defaults to &apos;COMMUNICATION_SUBSCRIPTION&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.CommunicationSubscriptionFilterType? FilterType { get; set; }
-        /// <summary>The subscriptionIds property</summary>
+        /// <summary>An array of strings representing the IDs of the subscriptions to be filtered.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? SubscriptionIds { get; set; }
@@ -48,7 +48,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<string> SubscriptionIds { get; set; }
 #endif
-        /// <summary>Defines the type of subscription related to the filter (PORTAL_WIDE, BUSINESS_UNIT_WIDE, INDIVIDUAL_SUBSCRIPTION)</summary>
+        /// <summary>A string indicating the type of subscription being filtered.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SubscriptionType { get; set; }

@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>The file format for the export. Valid options are &apos;XLS&apos;, &apos;XLSX&apos;, and &apos;CSV&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum PublicExportViewRequestFormat
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "CSV")]
         #pragma warning disable CS1591

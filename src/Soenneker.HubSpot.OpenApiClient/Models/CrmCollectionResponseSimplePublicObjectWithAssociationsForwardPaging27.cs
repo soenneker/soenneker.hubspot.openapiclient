@@ -7,22 +7,23 @@ using System.IO;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>
+    /// Represents a paginated collection response that includes simple public objects with their associations. This component is used to handle the results and pagination details when retrieving a list of objects from the API.
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public partial class CrmCollectionResponseSimplePublicObjectWithAssociationsForwardPaging27 : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The paging property</summary>
+        /// <summary>Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging31? Paging { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging30? Paging { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging31 Paging { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging30 Paging { get; set; }
 #endif
-        /// <summary>The results property</summary>
+        /// <summary>An array of SimplePublicObjectWithAssociations, each representing a CRM object along with its associated data.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectWithAssociations27>? Results { get; set; }
@@ -55,7 +56,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "paging", n => { Paging = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging31>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging31.CreateFromDiscriminatorValue); } },
+                { "paging", n => { Paging = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging30>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging30.CreateFromDiscriminatorValue); } },
                 { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectWithAssociations27>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectWithAssociations27.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -66,7 +67,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging31>("paging", Paging);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging30>("paging", Paging);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectWithAssociations27>("results", Results);
             writer.WriteAdditionalData(AdditionalData);
         }

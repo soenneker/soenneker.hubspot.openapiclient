@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>type of refine by criteria (ABSOLUTE_COMPARATIVE)</summary>
+    /// <summary>A string representing the type of refinement, which is &apos;ABSOLUTE_COMPARATIVE&apos; by default.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum AbsoluteComparativeType
     {

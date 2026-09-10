@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The user&apos;s email.</summary>
+        /// <summary>The email address of the user. This is a required field and must be unique.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Email { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Email { get; set; }
 #endif
-        /// <summary>The user&apos;s first name.</summary>
+        /// <summary>The first name of the user, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FirstName { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string FirstName { get; set; }
 #endif
-        /// <summary>The user&apos;s unique ID.</summary>
+        /// <summary>The unique identifier for the user, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>The user&apos;s last name.</summary>
+        /// <summary>The last name of the user, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? LastName { get; set; }
@@ -46,7 +46,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string LastName { get; set; }
 #endif
-        /// <summary>The user&apos;s primary team</summary>
+        /// <summary>The ID of the primary team to which the user belongs, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PrimaryTeamId { get; set; }
@@ -54,7 +54,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string PrimaryTeamId { get; set; }
 #endif
-        /// <summary>The user&apos;s role.</summary>
+        /// <summary>A string representing a single role ID assigned to the user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RoleId { get; set; }
@@ -62,7 +62,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string RoleId { get; set; }
 #endif
-        /// <summary>A list of role IDs assigned to the user.</summary>
+        /// <summary>An array of strings representing the IDs of the roles assigned to the user. This is a required field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? RoleIds { get; set; }
@@ -70,7 +70,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<string> RoleIds { get; set; }
 #endif
-        /// <summary>The seatNames property</summary>
+        /// <summary>An array of strings representing the names of seats assigned to the user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? SeatNames { get; set; }
@@ -78,7 +78,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<string> SeatNames { get; set; }
 #endif
-        /// <summary>The user&apos;s additional teams.</summary>
+        /// <summary>An array of strings representing the IDs of secondary teams to which the user is associated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? SecondaryTeamIds { get; set; }
@@ -86,9 +86,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<string> SecondaryTeamIds { get; set; }
 #endif
-        /// <summary>Whether a welcome email was sent to the user. This value will only be populated in response to a provisioning request. Subsequent queries will be false.</summary>
+        /// <summary>A boolean indicating whether a welcome email should be sent to the user.</summary>
         public bool? SendWelcomeEmail { get; set; }
-        /// <summary>Whether the user has super admin privileges.</summary>
+        /// <summary>A boolean indicating whether the user has super admin privileges. This is a required field.</summary>
         public bool? SuperAdmin { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicUser"/> and sets the default values.

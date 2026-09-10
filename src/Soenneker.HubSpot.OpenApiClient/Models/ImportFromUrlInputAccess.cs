@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>PUBLIC_INDEXABLE: File is publicly accessible by anyone who has the URL. Search engines can index the file. PUBLIC_NOT_INDEXABLE: File is publicly accessible by anyone who has the URL. Search engines *can&apos;t* index the file. PRIVATE: File is NOT publicly accessible. Requires a signed URL to see content. Search engines *can&apos;t* index the file.</summary>
+    /// <summary>Specifies the access level of the file. Valid values include &apos;PUBLIC_INDEXABLE&apos;, &apos;PUBLIC_NOT_INDEXABLE&apos;, &apos;HIDDEN_INDEXABLE&apos;, &apos;HIDDEN_NOT_INDEXABLE&apos;, &apos;HIDDEN_PRIVATE&apos;, &apos;PRIVATE&apos;, &apos;HIDDEN_SENSITIVE&apos;, and &apos;SENSITIVE&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum ImportFromUrlInputAccess
     {

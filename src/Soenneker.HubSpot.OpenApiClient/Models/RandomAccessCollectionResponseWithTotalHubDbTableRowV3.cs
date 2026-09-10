@@ -22,13 +22,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.BoundedPaging Paging { get; set; }
 #endif
-        /// <summary>The results property</summary>
+        /// <summary>An array containing the HubDb table rows wrapped in a HubDbTableRowV3Wrapper object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Results { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.RandomAccessCollectionResponseWithTotalHubDbTableRowV3ResultsItemProperty>? Results { get; set; }
 #nullable restore
 #else
-        public List<string> Results { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.RandomAccessCollectionResponseWithTotalHubDbTableRowV3ResultsItemProperty> Results { get; set; }
 #endif
         /// <summary>The total number of rows available in the collection.</summary>
         public int? Total { get; set; }
@@ -60,7 +60,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "paging", n => { Paging = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.BoundedPaging>(global::Soenneker.HubSpot.OpenApiClient.Models.BoundedPaging.CreateFromDiscriminatorValue); } },
-                { "results", n => { Results = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.RandomAccessCollectionResponseWithTotalHubDbTableRowV3ResultsItemProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.RandomAccessCollectionResponseWithTotalHubDbTableRowV3ResultsItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "total", n => { Total = n.GetIntValue(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RandomAccessType>(); } },
             };
@@ -73,7 +73,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.BoundedPaging>("paging", Paging);
-            writer.WriteCollectionOfPrimitiveValues<string>("results", Results);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.RandomAccessCollectionResponseWithTotalHubDbTableRowV3ResultsItemProperty>("results", Results);
             writer.WriteIntValue("total", Total);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RandomAccessType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);

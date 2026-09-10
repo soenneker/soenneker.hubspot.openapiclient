@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The main category of the error.</summary>
+        /// <summary>A string indicating the general category of the error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Category { get; set; }
@@ -31,7 +31,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError17ContextProperty Context { get; set; }
 #endif
-        /// <summary>The detailed error objects.</summary>
+        /// <summary>An array of ErrorDetail objects providing further information about the error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmErrorDetail19>? Errors { get; set; }
@@ -39,7 +39,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmErrorDetail19> Errors { get; set; }
 #endif
-        /// <summary>A unique ID for the error instance.</summary>
+        /// <summary>A string that uniquely identifies this error instance.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }
@@ -47,7 +47,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>URLs linking to documentation or resources associated with the error.</summary>
+        /// <summary>An object mapping link names to associated URIs that contain documentation about the error or recommended remediation steps.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError17LinksProperty? Links { get; set; }
@@ -63,7 +63,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Message { get; set; }
 #endif
-        /// <summary>The HTTP status code associated with the error.</summary>
+        /// <summary>A string representing the status of the error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Status { get; set; }

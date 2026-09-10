@@ -14,9 +14,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The end property</summary>
+        /// <summary>An integer indicating the ending position of the substring.</summary>
         public int? End { get; set; }
-        /// <summary>The start property</summary>
+        /// <summary>An integer indicating the starting position of the substring.</summary>
         public int? Start { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.MaskedSubstring"/> and sets the default values.

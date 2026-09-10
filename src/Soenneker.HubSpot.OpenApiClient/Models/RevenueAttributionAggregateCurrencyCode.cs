@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>The currency code used for the revenue attribution, with accepted values including AED, AFN, ALL, and others.</summary>
+    /// <summary>A string representing the currency code for the financial amounts, following ISO 4217 standards. Valid values include currency codes like &apos;USD&apos;, &apos;EUR&apos;, &apos;JPY&apos;, etc.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum RevenueAttributionAggregateCurrencyCode
     {

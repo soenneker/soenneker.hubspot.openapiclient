@@ -14,9 +14,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Indicates whether unassigned memberships should be included.</summary>
+        /// <summary>A boolean indicating whether to include unassigned records in the membership settings.</summary>
         public bool? IncludeUnassigned { get; set; }
-        /// <summary>The ID of the team associated with the membership.</summary>
+        /// <summary>A string representing the unique identifier of the team associated with the membership settings.</summary>
         public int? MembershipTeamId { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicMembershipSettings"/> and sets the default values.

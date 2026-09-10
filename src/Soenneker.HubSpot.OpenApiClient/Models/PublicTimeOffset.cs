@@ -14,9 +14,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The numerical value representing the quantity of the time offset.</summary>
+        /// <summary>An integer specifying the amount of time units to offset.</summary>
         public long? Amount { get; set; }
-        /// <summary>Indicates the direction of the time offset, such as forward or backward.</summary>
+        /// <summary>A string indicating the direction of the time offset. Valid values are &apos;BEFORE&apos; and &apos;AFTER&apos;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OffsetDirection { get; set; }
@@ -24,7 +24,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string OffsetDirection { get; set; }
 #endif
-        /// <summary>Specifies the unit of time for the offset, such as days, hours, or minutes.</summary>
+        /// <summary>A string representing the unit of time for the offset. Valid values include &apos;MINUTE&apos;, &apos;HOUR&apos;, &apos;DAY&apos;, &apos;WEEK&apos;, &apos;MONTH&apos;, &apos;QUARTER&apos;, and &apos;YEAR&apos;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TimeUnit { get; set; }

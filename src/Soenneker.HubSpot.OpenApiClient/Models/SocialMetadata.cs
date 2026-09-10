@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The description property</summary>
+        /// <summary>A description of the media content.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Description { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>The id property</summary>
+        /// <summary>A unique identifier for the media.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>The mediaTitle property</summary>
+        /// <summary>The title of the media content.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? MediaTitle { get; set; }
@@ -38,9 +38,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string MediaTitle { get; set; }
 #endif
-        /// <summary>The mediaType property</summary>
+        /// <summary>The type of media represented, such as &apos;PHOTO&apos;, &apos;VIDEO&apos;, &apos;CAROUSEL&apos;, etc. This is a required field.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.SocialMetadataMediaType? MediaType { get; set; }
-        /// <summary>The mediaUrl property</summary>
+        /// <summary>The URL where the media can be accessed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? MediaUrl { get; set; }
@@ -48,7 +48,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string MediaUrl { get; set; }
 #endif
-        /// <summary>The mediaUrlString property</summary>
+        /// <summary>A string representing the URL of the media.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? MediaUrlString { get; set; }
@@ -56,7 +56,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string MediaUrlString { get; set; }
 #endif
-        /// <summary>The thumbnailUrl property</summary>
+        /// <summary>The URL of the thumbnail image for the media.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ThumbnailUrl { get; set; }

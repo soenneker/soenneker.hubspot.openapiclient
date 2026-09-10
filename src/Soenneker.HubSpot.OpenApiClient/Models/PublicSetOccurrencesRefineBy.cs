@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Indicates the specific set type used in the refinement (ALL, ALL_INCLUDE_EMPTY, ANY, NONE, NONE_EXCLUDE_EMPTY, ANY_INCLUDE_EMPTY).</summary>
+        /// <summary>A string specifying the set type used for the refinement.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SetType { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string SetType { get; set; }
 #endif
-        /// <summary>Specifies the type of refinement (SET_OCCURRENCES).</summary>
+        /// <summary>A string indicating the type of refinement, which is &apos;SET_OCCURRENCES&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.SetOccurrencesType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicSetOccurrencesRefineBy"/> and sets the default values.

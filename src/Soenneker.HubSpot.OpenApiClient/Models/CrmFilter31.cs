@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The upper boundary value when using ranged-based filters.</summary>
+        /// <summary>An optional string representing the upper bound value for range-based filters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? HighValue { get; set; }
@@ -23,9 +23,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string HighValue { get; set; }
 #endif
-        /// <summary>The comparison operator used in the filter, such as &quot;EQ&quot; or &quot;GT&quot;.</summary>
+        /// <summary>The operator used for the filter condition. It is a string and valid values include &apos;EQ&apos;, &apos;NEQ&apos;, &apos;LT&apos;, &apos;LTE&apos;, &apos;GT&apos;, &apos;GTE&apos;, &apos;BETWEEN&apos;, &apos;IN&apos;, &apos;NOT_IN&apos;, &apos;HAS_PROPERTY&apos;, &apos;NOT_HAS_PROPERTY&apos;, &apos;CONTAINS_TOKEN&apos;, and &apos;NOT_CONTAINS_TOKEN&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilter31Operator? Operator { get; set; }
-        /// <summary>The name of the property to apply the filter to.</summary>
+        /// <summary>The name of the property to filter by. It is a string that identifies which property of the object the filter applies to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PropertyName { get; set; }
@@ -33,7 +33,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string PropertyName { get; set; }
 #endif
-        /// <summary>The value to match against the property.</summary>
+        /// <summary>The specific value to filter for. This is a string that represents the target value for the specified property.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Value { get; set; }
@@ -41,7 +41,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Value { get; set; }
 #endif
-        /// <summary>The values to match against the property.</summary>
+        /// <summary>An array of strings representing multiple values for the filter. This is used when the filter operator supports multiple values, such as &apos;IN&apos; or &apos;NOT_IN&apos;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Values { get; set; }

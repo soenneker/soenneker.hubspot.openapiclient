@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>A string that specifies the usage type of the file. Valid values include &apos;STICKER&apos;, &apos;VOICE_RECORDING&apos;, &apos;IMAGE&apos;, &apos;AUDIO&apos;, and &apos;OTHER&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum FileAttachmentFileUsageType
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "AUDIO")]
         #pragma warning disable CS1591

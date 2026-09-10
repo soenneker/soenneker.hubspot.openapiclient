@@ -14,19 +14,19 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The day property</summary>
+        /// <summary>An integer representing the day of the month.</summary>
         public int? Day { get; set; }
-        /// <summary>The hour property</summary>
+        /// <summary>An integer representing the hour of the day.</summary>
         public int? Hour { get; set; }
-        /// <summary>The millisecond property</summary>
+        /// <summary>An integer representing the millisecond within the second.</summary>
         public int? Millisecond { get; set; }
-        /// <summary>The minute property</summary>
+        /// <summary>An integer representing the minute within the hour.</summary>
         public int? Minute { get; set; }
-        /// <summary>The month property</summary>
+        /// <summary>An integer representing the month of the year.</summary>
         public int? Month { get; set; }
-        /// <summary>Indicates the type of reference (YEAR).</summary>
+        /// <summary>A string that specifies the type of reference, which is &apos;YEAR&apos; by default.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.YearReferenceType? ReferenceType { get; set; }
-        /// <summary>The second property</summary>
+        /// <summary>An integer representing the second within the minute.</summary>
         public int? Second { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.YearReference"/> and sets the default values.

@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Specifies the criteria for refining the filter by coalescing.</summary>
+        /// <summary>An optional refinement condition used to coalesce events based on specific criteria, such as number of occurrences or time range.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilterCoalescingRefineBy? CoalescingRefineBy { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilterCoalescingRefineBy CoalescingRefineBy { get; set; }
 #endif
-        /// <summary>The identifier for the type of event in the unified events filter.</summary>
+        /// <summary>A string representing the unique identifier for the event type being filtered.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EventTypeId { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string EventTypeId { get; set; }
 #endif
-        /// <summary>The filterLines property</summary>
+        /// <summary>An array of filters that are applied to the events. Each filter specifies additional criteria for refining the event data.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEventFilterMetadata>? FilterLines { get; set; }
@@ -38,9 +38,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEventFilterMetadata> FilterLines { get; set; }
 #endif
-        /// <summary>Indicates the type of filter being applied (UNIFIED_EVENTS).</summary>
+        /// <summary>A string that specifies the type of filter, defaulting to &apos;UNIFIED_EVENTS&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.UnifiedEventsFilterType? FilterType { get; set; }
-        /// <summary>Specifies the criteria for refining the filter by pruning.</summary>
+        /// <summary>An optional refinement condition used to prune the events based on specific criteria, such as number of occurrences or time range.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilterPruningRefineBy? PruningRefineBy { get; set; }

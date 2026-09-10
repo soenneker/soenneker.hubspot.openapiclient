@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>The type of the filter branch (OR).</summary>
+    /// <summary>A string indicating the type of filter branch, which is &apos;OR&apos; for this component.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum OrFilterBranchType
     {

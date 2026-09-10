@@ -22,13 +22,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyFilterContext Context { get; set; }
 #endif
-        /// <summary>The filterInsightsId property</summary>
+        /// <summary>An integer that serves as the identifier for the filter insights.</summary>
         public int? FilterInsightsId { get; set; }
-        /// <summary>Indicates that the filter (PROPERTY).</summary>
+        /// <summary>The type of filter being applied. This is a string value that specifies the kind of filter operation.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyFilterType? FilterType { get; set; }
-        /// <summary>The frameworkFilterId property</summary>
+        /// <summary>An integer representing the unique identifier for the framework filter. It is formatted as an int64.</summary>
         public long? FrameworkFilterId { get; set; }
-        /// <summary>The operation property</summary>
+        /// <summary>An object defining the operation to be performed on the property. This can be one of several types of operations, such as BoolPropertyOperation, NumberPropertyOperation, StringPropertyOperation, etc.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyFilterOperation? Operation { get; set; }
@@ -36,7 +36,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyFilterOperation Operation { get; set; }
 #endif
-        /// <summary>The property property</summary>
+        /// <summary>A string representing the name of the property on which the filter is applied.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Property { get; set; }

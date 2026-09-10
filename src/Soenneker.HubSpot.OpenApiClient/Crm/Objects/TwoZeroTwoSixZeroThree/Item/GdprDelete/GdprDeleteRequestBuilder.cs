@@ -34,18 +34,18 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree.Ite
         {
         }
         /// <summary>
-        /// Fully purge an object type and any GDPR related data
+        /// Permanently delete a contact and all associated content to follow GDPR. Use optional property &apos;idProperty&apos; set to &apos;email&apos; to identify contact by email address. If email address is not found, the email address will be added to a blocklist and prevent it from being used in the future.
         /// </summary>
         /// <param name="body">An input that contains the information required to process a public GDPR data deletion request.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.PublicGdprDeleteInput body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicGdprDeleteInput36 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.PublicGdprDeleteInput body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicGdprDeleteInput36 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -53,18 +53,18 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree.Ite
             await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Fully purge an object type and any GDPR related data
+        /// Permanently delete a contact and all associated content to follow GDPR. Use optional property &apos;idProperty&apos; set to &apos;email&apos; to identify contact by email address. If email address is not found, the email address will be added to a blocklist and prevent it from being used in the future.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">An input that contains the information required to process a public GDPR data deletion request.</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.PublicGdprDeleteInput body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicGdprDeleteInput36 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.PublicGdprDeleteInput body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicGdprDeleteInput36 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

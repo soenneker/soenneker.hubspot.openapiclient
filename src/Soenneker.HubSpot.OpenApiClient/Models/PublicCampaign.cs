@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>An array of business units associated with the campaign, each represented by a PublicBusinessUnit object.</summary>
+        /// <summary>An array of business units associated with the campaign, where each business unit is represented by its unique identifier.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPublicBusinessUnit>? BusinessUnits { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPublicBusinessUnit> BusinessUnits { get; set; }
 #endif
-        /// <summary>The date and time when the campaign was created, formatted as a date-time string.</summary>
+        /// <summary>The date and time when the campaign was created, in ISO 8601 format.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
         /// <summary>The unique identifier for the campaign.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -32,7 +32,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>A collection of key-value pairs representing additional properties of the campaign.</summary>
+        /// <summary>A map of custom property names to their values, representing specific attributes of the campaign.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignPropertiesProperty? Properties { get; set; }
@@ -40,7 +40,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignPropertiesProperty Properties { get; set; }
 #endif
-        /// <summary>The date and time when the campaign was last updated, formatted as a date-time string.</summary>
+        /// <summary>The date and time when the campaign was last updated, in ISO 8601 format.</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaign"/> and sets the default values.

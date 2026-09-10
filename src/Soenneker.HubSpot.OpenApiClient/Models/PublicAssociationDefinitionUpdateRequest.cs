@@ -14,9 +14,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The unique identifier for the association type.</summary>
+        /// <summary>An integer representing the unique identifier for the association type.</summary>
         public int? AssociationTypeId { get; set; }
-        /// <summary>An optional descriptor for the inverse relationship between associated records.</summary>
+        /// <summary>A string representing the inverse label for the association.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? InverseLabel { get; set; }
@@ -24,7 +24,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string InverseLabel { get; set; }
 #endif
-        /// <summary>A descriptor that provides context about the relationship between associated records.</summary>
+        /// <summary>A string representing the label for the association.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Label { get; set; }

@@ -17,7 +17,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The timestamp when the batch process was completed, in ISO 8601 format.</summary>
         public DateTimeOffset? CompletedAt { get; set; }
-        /// <summary>The errors property</summary>
+        /// <summary>An array of errors that occurred during the batch operation, if any.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError2>? Errors { get; set; }
@@ -37,13 +37,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public int? NumErrors { get; set; }
         /// <summary>The timestamp when the batch process was initiated, in ISO 8601 format.</summary>
         public DateTimeOffset? RequestedAt { get; set; }
-        /// <summary>The results property</summary>
+        /// <summary>An array of results from the batch operation, each representing a default association created between objects.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicDefaultAssociation>? Results { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicDefaultAssociation1>? Results { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicDefaultAssociation> Results { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicDefaultAssociation1> Results { get; set; }
 #endif
         /// <summary>The timestamp when the batch process began execution, in ISO 8601 format.</summary>
         public DateTimeOffset? StartedAt { get; set; }
@@ -79,7 +79,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "links", n => { Links = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponsePublicDefaultAssociationLinksProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponsePublicDefaultAssociationLinksProperty.CreateFromDiscriminatorValue); } },
                 { "numErrors", n => { NumErrors = n.GetIntValue(); } },
                 { "requestedAt", n => { RequestedAt = n.GetDateTimeOffsetValue(); } },
-                { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicDefaultAssociation>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicDefaultAssociation.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicDefaultAssociation1>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicDefaultAssociation1.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "startedAt", n => { StartedAt = n.GetDateTimeOffsetValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponsePublicDefaultAssociationStatus>(); } },
             };
@@ -96,7 +96,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponsePublicDefaultAssociationLinksProperty>("links", Links);
             writer.WriteIntValue("numErrors", NumErrors);
             writer.WriteDateTimeOffsetValue("requestedAt", RequestedAt);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicDefaultAssociation>("results", Results);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicDefaultAssociation1>("results", Results);
             writer.WriteDateTimeOffsetValue("startedAt", StartedAt);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponsePublicDefaultAssociationStatus>("status", Status);
             writer.WriteAdditionalData(AdditionalData);

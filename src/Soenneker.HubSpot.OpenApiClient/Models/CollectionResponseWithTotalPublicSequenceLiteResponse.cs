@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The paging property</summary>
+        /// <summary>Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.Paging? Paging { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.Paging Paging { get; set; }
 #endif
-        /// <summary>An array of PublicSequenceLiteResponse objects, each representing a lightweight version of a sequence.</summary>
+        /// <summary>An array of sequence objects, each represented by a PublicSequenceLiteResponse.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceLiteResponse>? Results { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceLiteResponse> Results { get; set; }
 #endif
-        /// <summary>An integer representing the total number of sequence items available.</summary>
+        /// <summary>The total number of sequences available. It is an integer value.</summary>
         public int? Total { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalPublicSequenceLiteResponse"/> and sets the default values.

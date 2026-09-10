@@ -26,7 +26,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>The datetime the of the request.</summary>
         public DateTimeOffset? RequestedAt { get; set; }
-        /// <summary>The results property</summary>
+        /// <summary>An array of exchange rate objects that represent the results of the batch operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExchangeRate>? Results { get; set; }

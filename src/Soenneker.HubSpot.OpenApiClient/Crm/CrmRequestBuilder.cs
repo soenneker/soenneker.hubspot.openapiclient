@@ -9,11 +9,14 @@ using Soenneker.HubSpot.OpenApiClient.Crm.Imports;
 using Soenneker.HubSpot.OpenApiClient.Crm.Limits;
 using Soenneker.HubSpot.OpenApiClient.Crm.Lists;
 using Soenneker.HubSpot.OpenApiClient.Crm.ObjectLibrary;
+using Soenneker.HubSpot.OpenApiClient.Crm.ObjectTags;
 using Soenneker.HubSpot.OpenApiClient.Crm.Objects;
 using Soenneker.HubSpot.OpenApiClient.Crm.Owners;
 using Soenneker.HubSpot.OpenApiClient.Crm.Pipelines;
+using Soenneker.HubSpot.OpenApiClient.Crm.PipelinesRules;
 using Soenneker.HubSpot.OpenApiClient.Crm.Properties;
 using Soenneker.HubSpot.OpenApiClient.Crm.PropertyValidations;
+using Soenneker.HubSpot.OpenApiClient.Crm.TaskSeries;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -66,6 +69,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm
         {
             get => new global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.ObjectsRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The objectTags property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Crm.ObjectTags.ObjectTagsRequestBuilder ObjectTags
+        {
+            get => new global::Soenneker.HubSpot.OpenApiClient.Crm.ObjectTags.ObjectTagsRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The owners property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Crm.Owners.OwnersRequestBuilder Owners
         {
@@ -76,6 +84,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm
         {
             get => new global::Soenneker.HubSpot.OpenApiClient.Crm.Pipelines.PipelinesRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The pipelinesRules property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Crm.PipelinesRules.PipelinesRulesRequestBuilder PipelinesRules
+        {
+            get => new global::Soenneker.HubSpot.OpenApiClient.Crm.PipelinesRules.PipelinesRulesRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The properties property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Crm.Properties.PropertiesRequestBuilder Properties
         {
@@ -85,6 +98,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm
         public global::Soenneker.HubSpot.OpenApiClient.Crm.PropertyValidations.PropertyValidationsRequestBuilder PropertyValidations
         {
             get => new global::Soenneker.HubSpot.OpenApiClient.Crm.PropertyValidations.PropertyValidationsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The taskSeries property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Crm.TaskSeries.TaskSeriesRequestBuilder TaskSeries
+        {
+            get => new global::Soenneker.HubSpot.OpenApiClient.Crm.TaskSeries.TaskSeriesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Crm.CrmRequestBuilder"/> and sets the default values.

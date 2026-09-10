@@ -14,11 +14,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Specifies whether objects without a set value should be included in the operation.</summary>
+        /// <summary>A boolean indicating whether objects with no value set for the property should be included in the operation.</summary>
         public bool? IncludeObjectsWithNoValueSet { get; set; }
-        /// <summary>The type of operation (DATETIME).</summary>
+        /// <summary>A string representing the type of operation being performed. The default value is &apos;DATE_TIME&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.DatetimeOperationType? OperationType { get; set; }
-        /// <summary>Defines the operation to be applied, such as comparison operators (IS_BEFORE, IS_AFTER).</summary>
+        /// <summary>A string specifying the operator used in the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Operator { get; set; }
@@ -26,9 +26,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Operator { get; set; }
 #endif
-        /// <summary>Indicates whether the timestamp requires conversion to a different time zone.</summary>
+        /// <summary>A boolean indicating whether the operation requires conversion based on time zones.</summary>
         public bool? RequiresTimeZoneConversion { get; set; }
-        /// <summary>The specific point in time used in the operation.</summary>
+        /// <summary>An integer representing a Unix timestamp in milliseconds, used as a reference point for the operation.</summary>
         public long? Timestamp { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicDateTimePropertyOperation"/> and sets the default values.

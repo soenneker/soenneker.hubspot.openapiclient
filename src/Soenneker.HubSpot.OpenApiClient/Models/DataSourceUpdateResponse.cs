@@ -14,8 +14,22 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Timestamp when the datasource was created.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CreatedAt { get; set; }
+#nullable restore
+#else
+        public string CreatedAt { get; set; }
+#endif
         /// <summary>The unique identifier for the data source. It is an integer formatted as int64.</summary>
-        public long? DatasourceId { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DatasourceId { get; set; }
+#nullable restore
+#else
+        public string DatasourceId { get; set; }
+#endif
         /// <summary>The name of the data source. It is a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -31,6 +45,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #nullable restore
 #else
         public string PreviewLink { get; set; }
+#endif
+        /// <summary>Timestamp when the datasource was updated.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? UpdatedAt { get; set; }
+#nullable restore
+#else
+        public string UpdatedAt { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.DataSourceUpdateResponse"/> and sets the default values.
@@ -57,9 +79,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "datasourceId", n => { DatasourceId = n.GetLongValue(); } },
+                { "createdAt", n => { CreatedAt = n.GetStringValue(); } },
+                { "datasourceId", n => { DatasourceId = n.GetStringValue(); } },
                 { "datasourceName", n => { DatasourceName = n.GetStringValue(); } },
                 { "previewLink", n => { PreviewLink = n.GetStringValue(); } },
+                { "updatedAt", n => { UpdatedAt = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -69,9 +93,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteLongValue("datasourceId", DatasourceId);
+            writer.WriteStringValue("createdAt", CreatedAt);
+            writer.WriteStringValue("datasourceId", DatasourceId);
             writer.WriteStringValue("datasourceName", DatasourceName);
             writer.WriteStringValue("previewLink", PreviewLink);
+            writer.WriteStringValue("updatedAt", UpdatedAt);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Specifies the criteria for refining the filter by coalescing.</summary>
+        /// <summary>An optional refinement criterion that can be applied to coalesce event data. It can be one of several predefined refinement types.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilterBranchCoalescingRefineBy? CoalescingRefineBy { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilterBranchCoalescingRefineBy CoalescingRefineBy { get; set; }
 #endif
-        /// <summary>The identifier for the type of event associated with the filter branch.</summary>
+        /// <summary>A string that specifies the ID of the event type being filtered.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EventTypeId { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string EventTypeId { get; set; }
 #endif
-        /// <summary>The filterBranches property</summary>
+        /// <summary>An array of nested filter branches, allowing for complex filter logic. Each item can be one of several filter branch types.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilterBranchFilterBranchesItem>? FilterBranches { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilterBranchFilterBranchesItem> FilterBranches { get; set; }
 #endif
-        /// <summary>The logical operator used to combine filters within the branch (AND).</summary>
+        /// <summary>A string that specifies the logical operator used to combine the filters and filter branches within this branch.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FilterBranchOperator { get; set; }
@@ -46,9 +46,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string FilterBranchOperator { get; set; }
 #endif
-        /// <summary>The type of the filter branch (UNIFIED_EVENTS).</summary>
+        /// <summary>A string indicating the type of filter branch. Default value is &apos;UNIFIED_EVENTS&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.UnifiedEventsFilterBranchType? FilterBranchType { get; set; }
-        /// <summary>The filters property</summary>
+        /// <summary>An array of filters applied to the events. Each filter can be one of several predefined filter types.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilterBranchFiltersItem>? Filters { get; set; }
@@ -56,9 +56,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilterBranchFiltersItem> Filters { get; set; }
 #endif
-        /// <summary>Defines the operation to be applied within the filter branch (HAS_COMPLETED, HAS_NOT_COMPLETED).</summary>
+        /// <summary>A string representing the operation to be performed on the events. Valid values are &apos;HAS_COMPLETED&apos; and &apos;HAS_NOT_COMPLETED&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilterBranchOperator? Operator { get; set; }
-        /// <summary>The pruningRefineBy property</summary>
+        /// <summary>An optional refinement criterion used to prune event data. It can be one of several predefined refinement types.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilterBranchPruningRefineBy? PruningRefineBy { get; set; }

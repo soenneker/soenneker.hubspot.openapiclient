@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The defaultValue property</summary>
+        /// <summary>A string representing the default value for the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DefaultValue { get; set; }
@@ -22,9 +22,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string DefaultValue { get; set; }
 #endif
-        /// <summary>The includeObjectsWithNoValueSet property</summary>
+        /// <summary>A boolean indicating whether to include objects that have no value set for the property.</summary>
         public bool? IncludeObjectsWithNoValueSet { get; set; }
-        /// <summary>The operationType property</summary>
+        /// <summary>A string indicating the type of operation being performed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OperationType { get; set; }
@@ -32,9 +32,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string OperationType { get; set; }
 #endif
-        /// <summary>The operator property</summary>
+        /// <summary>A string representing the operation to be performed. Valid values include &apos;IS_EQUAL_TO&apos;, &apos;IS_NOT_EQUAL_TO&apos;, &apos;HAS_EVER_BEEN_EQUAL_TO&apos;, and &apos;HAS_NEVER_BEEN_EQUAL_TO&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.BoolPropertyOperationOperator? Operator { get; set; }
-        /// <summary>The operatorName property</summary>
+        /// <summary>A string representing the name of the operator used in the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OperatorName { get; set; }
@@ -42,9 +42,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string OperatorName { get; set; }
 #endif
-        /// <summary>The propertyType property</summary>
+        /// <summary>A string indicating the type of property, which is &apos;bool&apos; for this operation.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.BoolValuePropertyType? PropertyType { get; set; }
-        /// <summary>The renderSpec property</summary>
+        /// <summary>A string specifying the rendering specification for the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RenderSpec { get; set; }
@@ -52,7 +52,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string RenderSpec { get; set; }
 #endif
-        /// <summary>The value property</summary>
+        /// <summary>A boolean indicating the value to be used in the operation.</summary>
         public bool? Value { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.BoolPropertyOperation"/> and sets the default values.

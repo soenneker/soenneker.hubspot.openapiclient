@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>Specifies the type of filter (PRIVACY).</summary>
+    /// <summary>A string representing the type of filter. The default value is &apos;PRIVACY_ANALYTICS&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PrivacyFilterType
     {

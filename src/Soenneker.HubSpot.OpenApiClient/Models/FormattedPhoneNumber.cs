@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The phone number formatted in E.164 standard.</summary>
+        /// <summary>The e164Number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? E164Number { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string E164Number { get; set; }
 #endif
-        /// <summary>The extension number associated with the phone number.</summary>
+        /// <summary>The extension property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Extension { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Extension { get; set; }
 #endif
-        /// <summary>The type of phone number, with accepted values including FIXED_LINE, MOBILE, VOIP, and others.</summary>
+        /// <summary>The phoneNumberType property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.FormattedPhoneNumberPhoneNumberType? PhoneNumberType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.FormattedPhoneNumber"/> and sets the default values.

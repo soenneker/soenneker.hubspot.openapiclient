@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The contactPropertiesLeadingToMatch property</summary>
+        /// <summary>An array of strings indicating the properties that were used to match and identify the contact. Valid values include various contact attributes such as &apos;email&apos;, &apos;firstname&apos;, &apos;lastname&apos;, and many more.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PreResolvedContactContactPropertiesLeadingToMatchItem?>? ContactPropertiesLeadingToMatch { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PreResolvedContactContactPropertiesLeadingToMatchItem?> ContactPropertiesLeadingToMatch { get; set; }
 #endif
-        /// <summary>The contactVid property</summary>
+        /// <summary>The unique identifier for the contact, represented as an integer in int64 format.</summary>
         public long? ContactVid { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PreResolvedContact"/> and sets the default values.

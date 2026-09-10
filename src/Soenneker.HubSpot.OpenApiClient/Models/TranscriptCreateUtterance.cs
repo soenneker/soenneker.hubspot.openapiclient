@@ -14,9 +14,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The endTimeMillis property</summary>
+        /// <summary>The end time of the utterance in milliseconds, represented as an integer.</summary>
         public long? EndTimeMillis { get; set; }
-        /// <summary>The languageCode property</summary>
+        /// <summary>The language code of the utterance, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? LanguageCode { get; set; }
@@ -32,9 +32,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.Speaker Speaker { get; set; }
 #endif
-        /// <summary>The startTimeMillis property</summary>
+        /// <summary>The start time of the utterance in milliseconds, represented as an integer.</summary>
         public long? StartTimeMillis { get; set; }
-        /// <summary>The text property</summary>
+        /// <summary>The content of the utterance as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Text { get; set; }

@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The IDs of the records that were `missing` (e.g. did not exist in the portal) and so were not `added` or `removed`.</summary>
+        /// <summary>An array of strings representing the IDs of records that were not found or could not be processed during the update.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? RecordIdsMissing { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<string> RecordIdsMissing { get; set; }
 #endif
-        /// <summary>The IDs of the records that were `removed` from the list.</summary>
+        /// <summary>An array of strings representing the IDs of records that were successfully removed from the list.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? RecordIdsRemoved { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<string> RecordIdsRemoved { get; set; }
 #endif
-        /// <summary>The recordsIdsAdded property</summary>
+        /// <summary>An array of strings representing the IDs of records that were successfully added to the list.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? RecordsIdsAdded { get; set; }

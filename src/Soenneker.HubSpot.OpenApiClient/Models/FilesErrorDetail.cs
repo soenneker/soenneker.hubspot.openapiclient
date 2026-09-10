@@ -7,14 +7,15 @@ using System.IO;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>
+    /// Represents detailed information about an error that occurred in the API. This component is used to provide additional context and specifics about errors, typically as part of an error response.
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public partial class FilesErrorDetail : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The status code associated with the error detail</summary>
+        /// <summary>The status code associated with the error detail.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Code { get; set; }
@@ -22,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Code { get; set; }
 #endif
-        /// <summary>Context about the error condition</summary>
+        /// <summary>Context about the error condition, represented as an object with additional properties that are arrays of strings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.FilesErrorDetailContextProperty? Context { get; set; }
@@ -38,7 +39,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string In { get; set; }
 #endif
-        /// <summary>A human readable message describing the error along with remediation steps where appropriate</summary>
+        /// <summary>A human readable message describing the error along with remediation steps where appropriate. It is a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Message { get; set; }
@@ -46,7 +47,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Message { get; set; }
 #endif
-        /// <summary>A specific category that contains more specific detail about the error</summary>
+        /// <summary>A specific category that contains more specific detail about the error. This is a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SubCategory { get; set; }

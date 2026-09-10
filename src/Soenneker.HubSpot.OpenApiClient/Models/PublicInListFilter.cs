@@ -14,9 +14,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Indicates the type of filter being applied (IN_LIST).</summary>
+        /// <summary>A string indicating the type of filter. Defaults to &apos;IN_LIST&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.InListFilterType? FilterType { get; set; }
-        /// <summary>The ID of the list used in the association filter.</summary>
+        /// <summary>The unique identifier of the list to check for membership, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ListId { get; set; }
@@ -32,7 +32,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicInListFilterMetadata Metadata { get; set; }
 #endif
-        /// <summary>Specifies the operation to be performed by the filter (IN_LIST, NOT_IN_LIST).</summary>
+        /// <summary>A string representing the operator used in the filter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Operator { get; set; }

@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>A string that defines the type of range operation. Valid values include &apos;BETWEEN&apos; and &apos;NOT_BETWEEN&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum AbsoluteRangedTimestampRefineByRangeType
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "BETWEEN")]
         #pragma warning disable CS1591

@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.SchedulerPublicObjectId To { get; set; }
 #endif
-        /// <summary>An array of association specifications, detailing the types of associations to be created. Each item in the array is an object that defines the association type.</summary>
+        /// <summary>The types property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.SchedulerAssociationSpec>? Types { get; set; }

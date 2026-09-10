@@ -14,9 +14,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The contentId property</summary>
+        /// <summary>An integer representing the ID of the content associated with the template. This is a 64-bit integer.</summary>
         public long? ContentId { get; set; }
-        /// <summary>The crmObjectIds property</summary>
+        /// <summary>An object that maps CRM object names to their respective IDs, where each ID is a 64-bit integer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadataCrmObjectIdsProperty? CrmObjectIds { get; set; }
@@ -24,9 +24,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadataCrmObjectIdsProperty CrmObjectIds { get; set; }
 #endif
-        /// <summary>The mappedTemplateId property</summary>
+        /// <summary>An integer representing the ID of the mapped template. This is a 64-bit integer.</summary>
         public long? MappedTemplateId { get; set; }
-        /// <summary>The parameters property</summary>
+        /// <summary>An object containing key-value pairs where each key is a parameter name and each value is a string representing the parameter value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadataParametersProperty? Parameters { get; set; }
@@ -34,9 +34,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadataParametersProperty Parameters { get; set; }
 #endif
-        /// <summary>The rootMicId property</summary>
+        /// <summary>An integer representing the root MIC ID associated with the template. This is a 64-bit integer.</summary>
         public long? RootMicId { get; set; }
-        /// <summary>The type property</summary>
+        /// <summary>A string representing the type of the metadata, which is always &apos;WHATSAPP_TEMPLATE_METADATA&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.WhatsappTemplateMetadataType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadata"/> and sets the default values.

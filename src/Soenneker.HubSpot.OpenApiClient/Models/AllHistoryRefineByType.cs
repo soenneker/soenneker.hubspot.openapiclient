@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>A string that indicates the type of refinement. The default and only valid value is &apos;AllHistoryRefineBy&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum AllHistoryRefineByType
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "AllHistoryRefineBy")]
         #pragma warning disable CS1591

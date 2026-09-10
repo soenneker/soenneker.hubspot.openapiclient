@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The ID of the object that will be merged into the primary object.</summary>
+        /// <summary>The object ID of the record that the merge will not set as the current value after the merge.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ObjectIdToMerge { get; set; }
@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ObjectIdToMerge { get; set; }
 #endif
-        /// <summary>The ID of the object that will remain as the primary object after the merge.</summary>
+        /// <summary>The object ID of the record that the merge will generally set as the current value after the merge.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PrimaryObjectId { get; set; }

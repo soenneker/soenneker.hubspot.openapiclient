@@ -26,10 +26,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The inputs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectId24>? Inputs { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectId25>? Inputs { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectId24> Inputs { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectId25> Inputs { get; set; }
 #endif
         /// <summary>Key-value pairs for setting properties for the new object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -73,7 +73,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "idProperty", n => { IdProperty = n.GetStringValue(); } },
-                { "inputs", n => { Inputs = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectId24>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectId24.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "inputs", n => { Inputs = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectId25>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectId25.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "properties", n => { Properties = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "propertiesWithHistory", n => { PropertiesWithHistory = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
@@ -86,7 +86,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("idProperty", IdProperty);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectId24>("inputs", Inputs);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectId25>("inputs", Inputs);
             writer.WriteCollectionOfPrimitiveValues<string>("properties", Properties);
             writer.WriteCollectionOfPrimitiveValues<string>("propertiesWithHistory", PropertiesWithHistory);
             writer.WriteAdditionalData(AdditionalData);

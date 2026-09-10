@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>The layout of the blog in the email. Valid values include &apos;SUMMARY_NO_FEATURED_IMAGE&apos;, &apos;SUMMARY_WITH_FEATURED_IMAGE&apos;, and &apos;FULL_POST&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum PublicRssEmailDetailsBlogLayout
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "FULL_POST")]
         #pragma warning disable CS1591

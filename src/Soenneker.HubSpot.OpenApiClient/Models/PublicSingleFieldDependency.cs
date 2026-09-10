@@ -24,7 +24,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>The type of dependency, with the default value being &apos;SINGLE_FIELD&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.SingleFieldDependencyType? DependencyType { get; set; }
-        /// <summary>The dependentFieldNames property</summary>
+        /// <summary>An array of strings representing the names of fields that are dependent on the controlling field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? DependentFieldNames { get; set; }

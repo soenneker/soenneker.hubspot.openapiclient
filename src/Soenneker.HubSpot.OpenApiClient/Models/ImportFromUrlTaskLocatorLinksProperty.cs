@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     /// <summary>
-    /// Links for where to check information related to the task. The `status` link gives the URL for where to check the status of the task.
+    /// A map of link names to associated URIs related to the import task. Each entry in the map is a string.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ImportFromUrlTaskLocatorLinksProperty : IAdditionalDataHolder, IParsable

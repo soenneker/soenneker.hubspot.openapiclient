@@ -14,9 +14,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The date and time when the record was added to the list.</summary>
+        /// <summary>The timestamp indicating when the record was added to the list. It is represented as a string in date-time format.</summary>
         public DateTimeOffset? MembershipTimestamp { get; set; }
-        /// <summary>The unique identifier of the record.</summary>
+        /// <summary>The unique identifier for the record within the list. It is represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RecordId { get; set; }

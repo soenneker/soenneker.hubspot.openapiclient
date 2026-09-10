@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>A string that specifies the type of the component. The default value is &apos;AbsoluteRangedTimestampRefineBy&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum AbsoluteRangedTimestampRefineByType
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "AbsoluteRangedTimestampRefineBy")]
         #pragma warning disable CS1591

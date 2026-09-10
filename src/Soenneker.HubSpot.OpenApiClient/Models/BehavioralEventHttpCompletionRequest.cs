@@ -56,7 +56,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Utk { get; set; }
 #endif
-        /// <summary>The uuid property</summary>
+        /// <summary>A string representing the universally unique identifier for the event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Uuid { get; set; }

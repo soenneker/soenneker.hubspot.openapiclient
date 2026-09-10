@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     /// <summary>
-    /// An object containing relevant links related to the batch request.
+    /// A map of link names to associated URIs, providing additional resources or documentation related to the operation.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CrmBatchResponseSimplePublicUpsertObject5LinksProperty : IAdditionalDataHolder, IParsable

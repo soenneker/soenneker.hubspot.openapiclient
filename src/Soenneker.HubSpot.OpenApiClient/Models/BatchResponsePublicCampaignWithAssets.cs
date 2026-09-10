@@ -14,9 +14,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The timestamp when the batch request processing was completed.</summary>
+        /// <summary>The date and time when the batch operation was completed, in ISO 8601 format.</summary>
         public DateTimeOffset? CompletedAt { get; set; }
-        /// <summary>A collection of URLs linking to related resources or documentation.</summary>
+        /// <summary>A map of link names to associated URIs, providing additional resources or documentation related to the batch operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicCampaignWithAssetsLinksProperty? Links { get; set; }
@@ -24,9 +24,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicCampaignWithAssetsLinksProperty Links { get; set; }
 #endif
-        /// <summary>The timestamp when the batch request was initially made.</summary>
+        /// <summary>The date and time when the batch operation was requested, in ISO 8601 format.</summary>
         public DateTimeOffset? RequestedAt { get; set; }
-        /// <summary>An array of results from the batch operation, each representing a public campaign with assets.</summary>
+        /// <summary>An array of PublicCampaignWithAssets objects, representing the campaigns involved in the batch operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignWithAssets>? Results { get; set; }
@@ -34,9 +34,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignWithAssets> Results { get; set; }
 #endif
-        /// <summary>The timestamp when the processing of the batch request began.</summary>
+        /// <summary>The date and time when the batch operation started, in ISO 8601 format.</summary>
         public DateTimeOffset? StartedAt { get; set; }
-        /// <summary>The current processing status of the batch operation, with possible values: CANCELED, COMPLETE, PENDING, PROCESSING.</summary>
+        /// <summary>The current status of the batch operation. Valid values include &apos;PENDING&apos;, &apos;PROCESSING&apos;, &apos;CANCELED&apos;, and &apos;COMPLETE&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicCampaignWithAssetsStatus? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicCampaignWithAssets"/> and sets the default values.

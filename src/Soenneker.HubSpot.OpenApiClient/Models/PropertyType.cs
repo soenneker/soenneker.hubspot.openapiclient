@@ -47,5 +47,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         #pragma warning disable CS1591
         StringValue,
         #pragma warning restore CS1591
+        [EnumMember(Value = "time_range")]
+        #pragma warning disable CS1591
+        TimeRange,
+        #pragma warning restore CS1591
     }
 }

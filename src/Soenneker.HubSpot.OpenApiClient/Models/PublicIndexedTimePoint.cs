@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Specifies the reference point in time for the indexed time point.</summary>
+        /// <summary>An object that defines the reference point for the indexed time, which can be one of several predefined references like &apos;now&apos;, &apos;today&apos;, or a specific fiscal period.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicIndexedTimePointIndexReference? IndexReference { get; set; }
@@ -30,9 +30,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicIndexOffset Offset { get; set; }
 #endif
-        /// <summary>Defines the type of time (INDEXED).</summary>
+        /// <summary>A string indicating the type of time point, with a default value of &apos;INDEXED&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.IndexedTimeType? TimeType { get; set; }
-        /// <summary>Specifies the source of the time zone information for the indexed time point (CUSTOM, USER, PORTAL).</summary>
+        /// <summary>A string representing the source of the timezone information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TimezoneSource { get; set; }
@@ -40,7 +40,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string TimezoneSource { get; set; }
 #endif
-        /// <summary>Indicates the identifier for the time zone associated with the indexed time point.</summary>
+        /// <summary>A string specifying the ID of the timezone.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ZoneId { get; set; }

@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>ENTIRE_PORTAL: Look for a duplicate file in the entire account. EXACT_FOLDER: Look for a duplicate file in the provided folder.</summary>
+    /// <summary>Optional: Specifies the scope for duplicate validation. Valid values include &apos;ENTIRE_PORTAL&apos; and &apos;EXACT_FOLDER&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum ImportFromUrlInputDuplicateValidationScope
     {

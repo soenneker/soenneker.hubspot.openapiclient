@@ -14,21 +14,21 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The filterGroups property</summary>
+        /// <summary>An array of filter groups, where each group contains multiple filters. This allows for complex filtering logic by combining multiple filters together.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup14>? FilterGroups { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup15>? FilterGroups { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup14> FilterGroups { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup15> FilterGroups { get; set; }
 #endif
-        /// <summary>The filters property</summary>
+        /// <summary>An array of filter objects used to specify the criteria for the search. Each filter defines a property, an operator, and a value to filter by.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilter14>? Filters { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilter15>? Filters { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilter14> Filters { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilter15> Filters { get; set; }
 #endif
         /// <summary>The search query string, to filter CRM records.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -71,8 +71,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "filterGroups", n => { FilterGroups = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup14>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup14.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "filters", n => { Filters = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilter14>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilter14.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "filterGroups", n => { FilterGroups = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup15>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup15.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "filters", n => { Filters = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilter15>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilter15.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "query", n => { Query = n.GetStringValue(); } },
                 { "sorts", n => { Sorts = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
@@ -84,8 +84,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup14>("filterGroups", FilterGroups);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilter14>("filters", Filters);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup15>("filterGroups", FilterGroups);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilter15>("filters", Filters);
             writer.WriteStringValue("query", Query);
             writer.WriteCollectionOfPrimitiveValues<string>("sorts", Sorts);
             writer.WriteAdditionalData(AdditionalData);

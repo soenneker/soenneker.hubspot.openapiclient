@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>The type of status for the message. Valid values include &apos;SENT&apos;, &apos;FAILED&apos;, &apos;RECEIVED&apos;, and &apos;READ&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum PublicMessageStatusStatusType
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "FAILED")]
         #pragma warning disable CS1591

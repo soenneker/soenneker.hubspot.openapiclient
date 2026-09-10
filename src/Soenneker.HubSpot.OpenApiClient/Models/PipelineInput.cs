@@ -14,9 +14,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The order for displaying this pipeline. If two pipelines have a matching `displayOrder`, they will be sorted alphabetically by label.</summary>
+        /// <summary>An integer indicating the order in which the pipeline appears relative to other pipelines.</summary>
         public int? DisplayOrder { get; set; }
-        /// <summary>A unique label used to organize pipelines in HubSpot&apos;s UI</summary>
+        /// <summary>A string representing the name or title of the pipeline.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Label { get; set; }
@@ -24,7 +24,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Label { get; set; }
 #endif
-        /// <summary>The pipelineId property</summary>
+        /// <summary>A string that uniquely identifies the pipeline. This property is optional when creating a new pipeline.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PipelineId { get; set; }
@@ -32,7 +32,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string PipelineId { get; set; }
 #endif
-        /// <summary>Pipeline stage inputs used to create the new or replacement pipeline.</summary>
+        /// <summary>An array of PipelineStageInput objects, each representing a stage within the pipeline.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageInput>? Stages { get; set; }

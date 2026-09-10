@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.HubSpot.OpenApiClient.Settings.Currencies;
+using Soenneker.HubSpot.OpenApiClient.Settings.Teams;
 using Soenneker.HubSpot.OpenApiClient.Settings.Users;
 using System.Collections.Generic;
 using System.IO;
@@ -20,6 +21,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Settings
         public global::Soenneker.HubSpot.OpenApiClient.Settings.Currencies.CurrenciesRequestBuilder Currencies
         {
             get => new global::Soenneker.HubSpot.OpenApiClient.Settings.Currencies.CurrenciesRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The teams property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Settings.Teams.TeamsRequestBuilder Teams
+        {
+            get => new global::Soenneker.HubSpot.OpenApiClient.Settings.Teams.TeamsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The users property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Settings.Users.UsersRequestBuilder Users

@@ -14,11 +14,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The monetary amount allocated for the budget item.</summary>
+        /// <summary>The financial amount allocated to this budget item, represented as a number.</summary>
         public double? Amount { get; set; }
-        /// <summary>The timestamp when the budget item was created.</summary>
+        /// <summary>A Unix timestamp in milliseconds indicating when this budget item was created.</summary>
         public long? CreatedAt { get; set; }
-        /// <summary>A description of the budget item.</summary>
+        /// <summary>A description of the budget item, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Description { get; set; }
@@ -26,7 +26,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>The unique identifier for the budget item.</summary>
+        /// <summary>The unique identifier for this budget item, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }
@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>The name of the budget item.</summary>
+        /// <summary>The name of the budget item, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -42,9 +42,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>The order of the budget item, indicating its sequence based on creation date.</summary>
+        /// <summary>An integer representing the order or sequence of this budget item within the campaign.</summary>
         public int? Order { get; set; }
-        /// <summary>The timestamp when the budget item was last updated.</summary>
+        /// <summary>A Unix timestamp in milliseconds indicating when this budget item was last updated.</summary>
         public long? UpdatedAt { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicBudgetItem"/> and sets the default values.

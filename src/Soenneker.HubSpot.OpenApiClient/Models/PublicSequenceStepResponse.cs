@@ -12,13 +12,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     public partial class PublicSequenceStepResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The type of action to be performed in the sequence step.</summary>
+        /// <summary>The type of action to be performed in this step. Valid values include &apos;EMAIL&apos;, &apos;TASK&apos;, and &apos;FINISH_ENROLLMENT&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepResponseActionType? ActionType { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The date and time when the sequence step was created.</summary>
+        /// <summary>The date and time when this step was created, in ISO 8601 format.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
-        /// <summary>The delay in milliseconds before the sequence step is executed.</summary>
+        /// <summary>The delay before executing this step, specified in milliseconds as a 64-bit integer.</summary>
         public long? DelayMillis { get; set; }
         /// <summary>The emailPattern property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -28,7 +28,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailPatternResponse EmailPattern { get; set; }
 #endif
-        /// <summary>The unique identifier of the sequence step.</summary>
+        /// <summary>The unique identifier for this sequence step, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }
@@ -36,7 +36,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>The order of the step within the sequence.</summary>
+        /// <summary>An integer indicating the order of this step within the sequence.</summary>
         public int? StepOrder { get; set; }
         /// <summary>The taskPattern property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -46,7 +46,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicTaskPatternResponse TaskPattern { get; set; }
 #endif
-        /// <summary>The date and time when the sequence step was last updated.</summary>
+        /// <summary>The date and time when this step was last updated, in ISO 8601 format.</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepResponse"/> and sets the default values.

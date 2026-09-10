@@ -14,9 +14,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The bold property</summary>
+        /// <summary>A boolean indicating whether the text should be bold.</summary>
         public bool? Bold { get; set; }
-        /// <summary>The color property</summary>
+        /// <summary>The color of the font, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Color { get; set; }
@@ -24,7 +24,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Color { get; set; }
 #endif
-        /// <summary>The font property</summary>
+        /// <summary>The type of font to be used, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Font { get; set; }
@@ -32,11 +32,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Font { get; set; }
 #endif
-        /// <summary>The italic property</summary>
+        /// <summary>A boolean indicating whether the text should be italicized.</summary>
         public bool? Italic { get; set; }
-        /// <summary>The size property</summary>
+        /// <summary>The size of the font, represented as an integer.</summary>
         public int? Size { get; set; }
-        /// <summary>The underline property</summary>
+        /// <summary>A boolean indicating whether the text should be underlined.</summary>
         public bool? Underline { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicFontStyle"/> and sets the default values.

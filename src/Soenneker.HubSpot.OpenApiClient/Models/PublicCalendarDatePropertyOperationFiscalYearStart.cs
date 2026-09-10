@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>The month in which the fiscal year starts.</summary>
+    /// <summary>A string indicating the start of the fiscal year, used if the operation involves fiscal year calculations.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PublicCalendarDatePropertyOperationFiscalYearStart
     {

@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The filterBranches property</summary>
+        /// <summary>An array of filter branches that can include various types such as &apos;PublicOrFilterBranch&apos;, &apos;PublicAndFilterBranch&apos;, &apos;PublicNotAllFilterBranch&apos;, &apos;PublicNotAnyFilterBranch&apos;, &apos;PublicRestrictedFilterBranch&apos;, &apos;PublicUnifiedEventsFilterBranch&apos;, and &apos;PublicAssociationFilterBranch&apos;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAnyFilterBranchFilterBranchesItem>? FilterBranches { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAnyFilterBranchFilterBranchesItem> FilterBranches { get; set; }
 #endif
-        /// <summary>Specifies the logical operator used to combine filters within the branch (NOT_ANY).</summary>
+        /// <summary>A string representing the operator used in the filter branch.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FilterBranchOperator { get; set; }
@@ -30,9 +30,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string FilterBranchOperator { get; set; }
 #endif
-        /// <summary>Indicates the type of filter branch (NOT_ANY).</summary>
+        /// <summary>A string that specifies the type of filter branch. Default value is &apos;NOT_ANY&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.NotAnyFilterBranchType? FilterBranchType { get; set; }
-        /// <summary>The filters property</summary>
+        /// <summary>An array of filters that can include types like &apos;PublicPropertyFilter&apos;, &apos;PublicAssociationInListFilter&apos;, &apos;PublicPageViewAnalyticsFilter&apos;, &apos;PublicCtaAnalyticsFilter&apos;, &apos;PublicEventAnalyticsFilter&apos;, &apos;PublicFormSubmissionFilter&apos;, &apos;PublicFormSubmissionOnPageFilter&apos;, &apos;PublicIntegrationEventFilter&apos;, &apos;PublicEmailSubscriptionFilter&apos;, &apos;PublicCommunicationSubscriptionFilter&apos;, &apos;PublicSurveyMonkeyFilter&apos;, &apos;PublicSurveyMonkeyValueFilter&apos;, &apos;PublicWebinarFilter&apos;, &apos;PublicEmailEventFilter&apos;, &apos;PublicPrivacyAnalyticsFilter&apos;, &apos;PublicAdsSearchFilter&apos;, &apos;PublicAdsTimeFilter&apos;, &apos;PublicInListFilter&apos;, &apos;PublicUnifiedEventsFilter&apos;, and &apos;PublicConstantFilter&apos;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAnyFilterBranchFiltersItem>? Filters { get; set; }

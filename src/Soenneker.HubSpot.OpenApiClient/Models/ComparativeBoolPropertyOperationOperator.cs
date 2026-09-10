@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>A string representing the comparison operator. Valid values are &apos;IS_EQUAL_TO&apos; and &apos;IS_NOT_EQUAL_TO&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum ComparativeBoolPropertyOperationOperator
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "IS_EQUAL_TO")]
         #pragma warning disable CS1591

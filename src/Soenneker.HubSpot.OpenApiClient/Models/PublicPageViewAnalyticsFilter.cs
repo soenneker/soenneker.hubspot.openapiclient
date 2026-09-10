@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Specifies the criteria for refining the filter by coalescing.</summary>
+        /// <summary>An optional property that defines the method for refining the filter by coalescing multiple conditions. It can be one of several predefined refine types.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPageViewAnalyticsFilterCoalescingRefineBy? CoalescingRefineBy { get; set; }
@@ -22,11 +22,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPageViewAnalyticsFilterCoalescingRefineBy CoalescingRefineBy { get; set; }
 #endif
-        /// <summary>Indicates whether tracking is enabled for the page view.</summary>
+        /// <summary>A boolean value that indicates whether tracking is enabled for the page view analytics filter.</summary>
         public bool? EnableTracking { get; set; }
-        /// <summary>Indicates the type of filter being applied (PAGE_VIEW).</summary>
+        /// <summary>A string representing the type of filter being applied. This property determines the category of the filter used in the analytics.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PageViewFilterType? FilterType { get; set; }
-        /// <summary>Defines the operation to be applied within the filter (HAS_PAGEVIEW_EQ, HAS_PAGEVIEW_CONTAINS, HAS_PAGEVIEW_MATCHES_REGEX, NOT_HAS_PAGEVIEW_EQ, NOT_HAS_PAGEVIEW_CONTAINS).</summary>
+        /// <summary>A string indicating the operator used in the filter, which defines how the filter criteria are applied.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Operator { get; set; }
@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Operator { get; set; }
 #endif
-        /// <summary>The URL of the page to be used in the filter.</summary>
+        /// <summary>A string representing the specific URL of the page to be tracked or analyzed. This property is used to filter analytics data based on page URL.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PageUrl { get; set; }
@@ -42,7 +42,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string PageUrl { get; set; }
 #endif
-        /// <summary>Specifies the criteria for refining the filter by pruning.</summary>
+        /// <summary>An optional property that specifies the method for refining the filter by pruning conditions. It can be one of several predefined refine types.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPageViewAnalyticsFilterPruningRefineBy? PruningRefineBy { get; set; }

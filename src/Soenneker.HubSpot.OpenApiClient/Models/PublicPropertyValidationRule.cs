@@ -24,7 +24,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>The category of validation applied to the property, such as FORMAT, ALPHANUMERIC, or MAX_LENGTH.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPropertyValidationRuleRuleType? RuleType { get; set; }
-        /// <summary>The shouldApplyNormalization property</summary>
+        /// <summary>A boolean indicating whether normalization should be applied to the property value before validation.</summary>
         public bool? ShouldApplyNormalization { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicPropertyValidationRule"/> and sets the default values.

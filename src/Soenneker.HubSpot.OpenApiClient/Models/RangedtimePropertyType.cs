@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>A string indicating the type of property, defaulting to &apos;rangedtime&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum RangedtimePropertyType
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "rangedtime")]
         #pragma warning disable CS1591

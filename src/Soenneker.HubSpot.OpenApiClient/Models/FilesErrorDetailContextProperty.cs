@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     /// <summary>
-    /// Context about the error condition
+    /// Context about the error condition, represented as an object with additional properties that are arrays of strings.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FilesErrorDetailContextProperty : IAdditionalDataHolder, IParsable

@@ -12,7 +12,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     public partial class ClientCredentialsTokenResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The access_token property</summary>
+        /// <summary>A string representing the access token issued.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AccessToken { get; set; }
@@ -22,11 +22,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The expires_in property</summary>
+        /// <summary>An integer indicating the number of seconds until the token expires, in int64 format.</summary>
         public long? ExpiresIn { get; set; }
-        /// <summary>The hub_id property</summary>
+        /// <summary>An integer representing the HubSpot account ID associated with the token.</summary>
         public int? HubId { get; set; }
-        /// <summary>The id_token property</summary>
+        /// <summary>A string representing the ID token, if applicable.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? IdToken { get; set; }
@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string IdToken { get; set; }
 #endif
-        /// <summary>The scopes property</summary>
+        /// <summary>An array of strings representing the scopes granted by the token.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Scopes { get; set; }
@@ -42,7 +42,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<string> Scopes { get; set; }
 #endif
-        /// <summary>The token_type property</summary>
+        /// <summary>A string indicating the type of the token.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TokenType { get; set; }
@@ -50,9 +50,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string TokenType { get; set; }
 #endif
-        /// <summary>The token_use property</summary>
+        /// <summary>Indicates the usage of the token, which is &apos;client_credentials&apos; by default.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.ClientCredentialsTokenUse? TokenUse { get; set; }
-        /// <summary>The user_id property</summary>
+        /// <summary>An integer representing the user ID associated with the token.</summary>
         public int? UserId { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ClientCredentialsTokenResponse"/> and sets the default values.

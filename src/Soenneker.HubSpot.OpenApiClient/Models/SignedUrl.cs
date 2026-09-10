@@ -14,9 +14,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Timestamp of when the URL will no longer grant access to the file.</summary>
+        /// <summary>The date and time when the URL expires, in ISO 8601 format.</summary>
         public DateTimeOffset? ExpiresAt { get; set; }
-        /// <summary>Extension of the requested file.</summary>
+        /// <summary>The file extension of the file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Extension { get; set; }
@@ -24,9 +24,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Extension { get; set; }
 #endif
-        /// <summary>For image and video files. The height of the file.</summary>
+        /// <summary>The height of the file in pixels.</summary>
         public int? Height { get; set; }
-        /// <summary>Name of the requested file.</summary>
+        /// <summary>The name of the file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -34,9 +34,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>Size in bytes of the requested file.</summary>
+        /// <summary>The size of the file in bytes.</summary>
         public long? Size { get; set; }
-        /// <summary>Type of the file. Can be IMG, DOCUMENT, AUDIO, MOVIE, or OTHER.</summary>
+        /// <summary>The type of the file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Type { get; set; }
@@ -44,7 +44,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Type { get; set; }
 #endif
-        /// <summary>Signed URL with access to the specified file. Anyone with this URL will be able to access the file until it expires.</summary>
+        /// <summary>The signed URL string that provides access to the file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Url { get; set; }
@@ -52,7 +52,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Url { get; set; }
 #endif
-        /// <summary>For image and video files. The width of the file.</summary>
+        /// <summary>The width of the file in pixels.</summary>
         public int? Width { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.SignedUrl"/> and sets the default values.

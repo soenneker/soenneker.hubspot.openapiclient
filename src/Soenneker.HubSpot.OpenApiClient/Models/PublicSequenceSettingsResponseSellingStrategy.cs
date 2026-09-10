@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>(deprecated) Defines the unenrollment strategy, with accepted values being ACCOUNT_BASED or LEAD_BASED. If ACCOUNT_BASED is used, all contacts associated with the same company will be unenrolled if one contact meets any of the unenrollment criteria.</summary>
+    /// <summary>The strategy used for selling, which can be either &apos;LEAD_BASED&apos; or &apos;ACCOUNT_BASED&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PublicSequenceSettingsResponseSellingStrategy
     {

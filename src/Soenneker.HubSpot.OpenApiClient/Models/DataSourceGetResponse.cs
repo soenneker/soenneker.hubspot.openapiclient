@@ -31,7 +31,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string CreatedAt { get; set; }
 #endif
         /// <summary>The unique identifier for the data source, represented as a 64-bit integer.</summary>
-        public long? DatasourceId { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DatasourceId { get; set; }
+#nullable restore
+#else
+        public string DatasourceId { get; set; }
+#endif
         /// <summary>The name of the data source, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -41,7 +47,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string DatasourceName { get; set; }
 #endif
         /// <summary>The type of the data source, which is a string with a valid value of &apos;FILE&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.FileDatasourceType? DatasourceType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.DataSourceGetResponseDatasourceType? DatasourceType { get; set; }
         /// <summary>The status of the last data ingestion process, represented as a string. Valid values include &apos;SUCCESSFUL&apos;, &apos;IN_PROGRESS&apos;, and &apos;FAILED&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.DataSourceGetResponseLastIngestionStatus? LastIngestionStatus { get; set; }
         /// <summary>
@@ -71,9 +77,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "columns", n => { Columns = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.FileColumn>(global::Soenneker.HubSpot.OpenApiClient.Models.FileColumn.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "createdAt", n => { CreatedAt = n.GetStringValue(); } },
-                { "datasourceId", n => { DatasourceId = n.GetLongValue(); } },
+                { "datasourceId", n => { DatasourceId = n.GetStringValue(); } },
                 { "datasourceName", n => { DatasourceName = n.GetStringValue(); } },
-                { "datasourceType", n => { DatasourceType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FileDatasourceType>(); } },
+                { "datasourceType", n => { DatasourceType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DataSourceGetResponseDatasourceType>(); } },
                 { "lastIngestionStatus", n => { LastIngestionStatus = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DataSourceGetResponseLastIngestionStatus>(); } },
             };
         }
@@ -86,9 +92,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.FileColumn>("columns", Columns);
             writer.WriteStringValue("createdAt", CreatedAt);
-            writer.WriteLongValue("datasourceId", DatasourceId);
+            writer.WriteStringValue("datasourceId", DatasourceId);
             writer.WriteStringValue("datasourceName", DatasourceName);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FileDatasourceType>("datasourceType", DatasourceType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DataSourceGetResponseDatasourceType>("datasourceType", DatasourceType);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DataSourceGetResponseLastIngestionStatus>("lastIngestionStatus", LastIngestionStatus);
             writer.WriteAdditionalData(AdditionalData);
         }

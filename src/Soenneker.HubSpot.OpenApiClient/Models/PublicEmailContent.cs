@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The flexAreas property</summary>
+        /// <summary>An object containing flexible area configurations, where each key is an area identifier and the value is an object with area properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentFlexAreasProperty? FlexAreas { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentFlexAreasProperty FlexAreas { get; set; }
 #endif
-        /// <summary>The plainTextVersion property</summary>
+        /// <summary>A string containing the plain text version of the email content.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PlainTextVersion { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string PlainTextVersion { get; set; }
 #endif
-        /// <summary>The smartFields property</summary>
+        /// <summary>An object containing smart field configurations, where each key is a field identifier and the value is a SmartEmailField object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentSmartFieldsProperty? SmartFields { get; set; }
@@ -46,7 +46,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailStyleSettings StyleSettings { get; set; }
 #endif
-        /// <summary>The templatePath property</summary>
+        /// <summary>A string representing the path to the email template used for this email.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TemplatePath { get; set; }
@@ -54,7 +54,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string TemplatePath { get; set; }
 #endif
-        /// <summary>The themeSettingsValues property</summary>
+        /// <summary>An object containing theme settings values, where each key is a setting identifier and the value is an object with setting properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentThemeSettingsValuesProperty? ThemeSettingsValues { get; set; }
@@ -62,7 +62,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentThemeSettingsValuesProperty ThemeSettingsValues { get; set; }
 #endif
-        /// <summary>The widgetContainers property</summary>
+        /// <summary>An object containing widget container configurations, where each key is a container identifier and the value is an object with container properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgetContainersProperty? WidgetContainers { get; set; }
@@ -70,7 +70,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgetContainersProperty WidgetContainers { get; set; }
 #endif
-        /// <summary>The widgets property</summary>
+        /// <summary>An object containing widget configurations, where each key is a widget identifier and the value is an object with widget properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgetsProperty? Widgets { get; set; }

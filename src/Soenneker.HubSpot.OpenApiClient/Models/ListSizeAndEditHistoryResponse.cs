@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The editHistory property</summary>
+        /// <summary>An array of date-time strings indicating the timestamps of edits made to the list.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<DateTimeOffset?>? EditHistory { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<DateTimeOffset?> EditHistory { get; set; }
 #endif
-        /// <summary>The sizeHistory property</summary>
+        /// <summary>An array of ListSizeDataPoint objects representing the historical size data of the list.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ListSizeDataPoint>? SizeHistory { get; set; }

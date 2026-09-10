@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>A string specifying the tracking type of the event. Valid values include &apos;VISITED_URL&apos;, &apos;CLICKED_ELEMENT&apos;, &apos;CUSTOM_SCRIPT&apos;, and others.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum ExternalBehavioralEventTypeDefinitionTrackingType
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "APP_EVENT")]
         #pragma warning disable CS1591

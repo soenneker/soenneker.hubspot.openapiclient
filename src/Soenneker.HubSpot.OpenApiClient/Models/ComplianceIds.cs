@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The contactIds property</summary>
+        /// <summary>An array of ContactId objects representing the IDs of the contacts involved.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ContactId>? ContactIds { get; set; }
@@ -46,7 +46,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string NoUserIdReason { get; set; }
 #endif
-        /// <summary>The portalIds property</summary>
+        /// <summary>An array of integers representing the IDs of the portals involved.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<int?>? PortalIds { get; set; }
@@ -54,7 +54,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<int?> PortalIds { get; set; }
 #endif
-        /// <summary>The userIds property</summary>
+        /// <summary>An array of integers representing the IDs of the users involved.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<int?>? UserIds { get; set; }

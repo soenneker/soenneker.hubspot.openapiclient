@@ -39,7 +39,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string CreatedUserId { get; set; }
 #endif
-        /// <summary>The name of the related currency property.</summary>
+        /// <summary>The name of the currency property associated with this property, if applicable.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CurrencyPropertyName { get; set; }
@@ -47,7 +47,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string CurrencyPropertyName { get; set; }
 #endif
-        /// <summary>Indicates the sensitivity level of the property, such as &quot;non_sensitive&quot;, &quot;sensitive&quot;, or &quot;highly_sensitive&quot;.</summary>
+        /// <summary>The sensitivity level of the data. Valid values include &apos;non_sensitive&apos;, &apos;sensitive&apos;, and &apos;highly_sensitive&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyDataSensitivity? DataSensitivity { get; set; }
         /// <summary>Indicates how date values should be displayed, with options such as &apos;absolute&apos;, &apos;absolute_with_relative&apos;, &apos;time_since&apos;, or &apos;time_until&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyDateDisplayHint? DateDisplayHint { get; set; }
@@ -111,7 +111,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>Hint for how a number property is displayed and validated in HubSpot&apos;s UI. Can be: &quot;unformatted&quot;, &quot;formatted&quot;, &quot;currency&quot;, &quot;percentage&quot;, &quot;duration&quot;, or &quot;probability&quot;.</summary>
+        /// <summary>A hint for displaying number properties. Valid values include &apos;unformatted&apos;, &apos;formatted&apos;, &apos;currency&apos;, &apos;percentage&apos;, &apos;duration&apos;, and &apos;probability&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyNumberDisplayHint? NumberDisplayHint { get; set; }
         /// <summary>A list of valid options for the property. This field is required for enumerated properties, but will be empty for other property types.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -129,7 +129,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ReferencedObjectType { get; set; }
 #endif
-        /// <summary>When sensitiveData is true, lists the type of sensitive data contained in the property (e.g., &quot;HIPAA&quot;).</summary>
+        /// <summary>An array of categories indicating the sensitivity of the data contained in the property.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? SensitiveDataCategories { get; set; }
@@ -139,7 +139,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>Whether or not the property will display the currency symbol set in the account settings.</summary>
         public bool? ShowCurrencySymbol { get; set; }
-        /// <summary>Hint for how the text is displayed and validated in HubSpot&apos;s UI. Can be: &quot;unformatted_single_line&quot;, &quot;multi_line&quot;, &quot;email&quot;, &quot;phone_number&quot;, &quot;domain_name&quot;, &quot;ip_address&quot;, &quot;physical_address&quot;, or &quot;postal_code&quot;.</summary>
+        /// <summary>A hint for displaying text properties. Valid values include &apos;unformatted_single_line&apos;, &apos;multi_line&apos;, &apos;email&apos;, &apos;phone_number&apos;, &apos;domain_name&apos;, &apos;ip_address&apos;, &apos;physical_address&apos;, and &apos;postal_code&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyTextDisplayHint? TextDisplayHint { get; set; }
         /// <summary>The property data type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

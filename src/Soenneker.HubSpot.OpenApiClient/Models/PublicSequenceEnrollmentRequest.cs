@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The unique identifier of the contact to be enrolled in the sequence.</summary>
+        /// <summary>The unique identifier of the contact to be enrolled in the sequence. It is a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ContactId { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ContactId { get; set; }
 #endif
-        /// <summary>The alias email address used by the sender when enrolling the contact.</summary>
+        /// <summary>An optional alias email address that can be used as the sender&apos;s address. It is a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SenderAliasAddress { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string SenderAliasAddress { get; set; }
 #endif
-        /// <summary>The email address of the sender enrolling the contact in the sequence.</summary>
+        /// <summary>The email address of the sender responsible for the sequence enrollment. It is a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SenderEmail { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string SenderEmail { get; set; }
 #endif
-        /// <summary>The unique identifier of the sequence in which the contact will be enrolled.</summary>
+        /// <summary>The unique identifier of the sequence in which the contact is to be enrolled. It is a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SequenceId { get; set; }

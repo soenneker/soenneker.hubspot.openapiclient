@@ -17,7 +17,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The category of the association, such as HUBSPOT_DEFINED, USER_DEFINED, or INTEGRATOR_DEFINED.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecWithLabelCategory? Category { get; set; }
-        /// <summary>The fromObjectTypeId property</summary>
+        /// <summary>A string representing the object type ID from which the association originates.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FromObjectTypeId { get; set; }
@@ -33,7 +33,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Label { get; set; }
 #endif
-        /// <summary>The toObjectTypeId property</summary>
+        /// <summary>A string representing the object type ID to which the association is directed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ToObjectTypeId { get; set; }

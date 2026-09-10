@@ -14,15 +14,15 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The hour property</summary>
+        /// <summary>An integer representing the hour of the current time.</summary>
         public int? Hour { get; set; }
-        /// <summary>The millisecond property</summary>
+        /// <summary>An integer representing the millisecond of the current time.</summary>
         public int? Millisecond { get; set; }
-        /// <summary>The minute property</summary>
+        /// <summary>An integer representing the minute of the current time.</summary>
         public int? Minute { get; set; }
-        /// <summary>Indicates the type of reference (NOW).</summary>
+        /// <summary>A string that indicates the type of reference. The default value is &apos;NOW&apos;, and it is used to specify that the reference is to the current time.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.NowReferenceType? ReferenceType { get; set; }
-        /// <summary>The second property</summary>
+        /// <summary>An integer representing the second of the current time.</summary>
         public int? Second { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.NowReference"/> and sets the default values.

@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The associatedObjectType property</summary>
+        /// <summary>An array of strings specifying the types of associated objects to include in the export.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? AssociatedObjectType { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<string> AssociatedObjectType { get; set; }
 #endif
-        /// <summary>The exportInternalValuesOptions property</summary>
+        /// <summary>An array of strings indicating options for exporting internal values. Valid values are &apos;NAMES&apos; and &apos;VALUES&apos;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportListRequestExportInternalValuesOptionsItem?>? ExportInternalValuesOptions { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportListRequestExportInternalValuesOptionsItem?> ExportInternalValuesOptions { get; set; }
 #endif
-        /// <summary>The exportName property</summary>
+        /// <summary>A string representing the name of the export.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ExportName { get; set; }
@@ -38,17 +38,17 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ExportName { get; set; }
 #endif
-        /// <summary>The exportType property</summary>
+        /// <summary>A string indicating the type of export, which is &apos;LIST&apos; by default.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.ListExportType? ExportType { get; set; }
-        /// <summary>The format property</summary>
+        /// <summary>A string specifying the format of the export file. Valid values are &apos;XLS&apos;, &apos;XLSX&apos;, and &apos;CSV&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportListRequestFormat? Format { get; set; }
-        /// <summary>The includeLabeledAssociations property</summary>
+        /// <summary>A boolean indicating whether to include labeled associations in the export.</summary>
         public bool? IncludeLabeledAssociations { get; set; }
-        /// <summary>The includePrimaryDisplayPropertyForAssociatedObjects property</summary>
+        /// <summary>A boolean indicating whether to include the primary display property for associated objects.</summary>
         public bool? IncludePrimaryDisplayPropertyForAssociatedObjects { get; set; }
-        /// <summary>The language property</summary>
+        /// <summary>A string specifying the language for the export. Valid values include language codes such as &apos;EN&apos;, &apos;FR&apos;, &apos;DE&apos;, etc.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportListRequestLanguage? Language { get; set; }
-        /// <summary>The listId property</summary>
+        /// <summary>A string representing the ID of the list to be exported.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ListId { get; set; }
@@ -56,7 +56,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ListId { get; set; }
 #endif
-        /// <summary>The objectProperties property</summary>
+        /// <summary>An array of strings listing the properties of the objects to be included in the export.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? ObjectProperties { get; set; }
@@ -64,7 +64,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<string> ObjectProperties { get; set; }
 #endif
-        /// <summary>The objectType property</summary>
+        /// <summary>A string representing the type of objects being exported.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ObjectType { get; set; }
@@ -72,7 +72,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ObjectType { get; set; }
 #endif
-        /// <summary>The overrideAssociatedObjectsPerDefinitionPerRowLimit property</summary>
+        /// <summary>A boolean indicating whether to override the limit on associated objects per definition per row.</summary>
         public bool? OverrideAssociatedObjectsPerDefinitionPerRowLimit { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportListRequest"/> and sets the default values.

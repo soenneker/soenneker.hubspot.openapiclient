@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>The type of export being requested. The only valid value is &apos;VIEW&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum ViewExportType
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "VIEW")]
         #pragma warning disable CS1591

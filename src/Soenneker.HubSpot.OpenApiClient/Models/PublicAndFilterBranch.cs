@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The filterBranches property</summary>
+        /// <summary>An array of nested filter branches. Each item can be a branch of various types, such as &apos;OR&apos;, &apos;AND&apos;, &apos;NOT_ALL&apos;, etc.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranchFilterBranchesItem>? FilterBranches { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranchFilterBranchesItem> FilterBranches { get; set; }
 #endif
-        /// <summary>Filter branch operator (AND)</summary>
+        /// <summary>A string representing the operator used within this filter branch.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FilterBranchOperator { get; set; }
@@ -30,9 +30,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string FilterBranchOperator { get; set; }
 #endif
-        /// <summary>Type of filter branch (AND)</summary>
+        /// <summary>A string indicating the type of filter branch. Defaults to &apos;AND&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.AndFilterBranchType? FilterBranchType { get; set; }
-        /// <summary>The filters property</summary>
+        /// <summary>An array of filters that apply to this branch. Each filter can be of various types, such as property filters, event filters, or subscription filters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranchFiltersItem>? Filters { get; set; }

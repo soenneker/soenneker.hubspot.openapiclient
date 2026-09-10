@@ -14,9 +14,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The date and time when the list was converted.</summary>
+        /// <summary>A string in date-time format indicating when the conversion was completed.</summary>
         public DateTimeOffset? ConvertedAt { get; set; }
-        /// <summary>The unique identifier of the list for which the conversion details are provided.</summary>
+        /// <summary>A string representing the unique identifier of the list that is being converted.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ListId { get; set; }
@@ -24,7 +24,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ListId { get; set; }
 #endif
-        /// <summary>The scheduled time for the list conversion, which can be based on a specific date or inactivity period.</summary>
+        /// <summary>A string in date-time format indicating when the conversion was requested.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionResponseRequestedConversionTime? RequestedConversionTime { get; set; }

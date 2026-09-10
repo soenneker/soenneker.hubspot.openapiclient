@@ -16,7 +16,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Indicates whether the input field is mandatory.</summary>
         public bool? IsRequired { get; set; }
-        /// <summary>The supportedValueTypes property</summary>
+        /// <summary>An array indicating the types of values that the input field can support. Valid values include &apos;STATIC_VALUE&apos; and &apos;OBJECT_PROPERTY&apos;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicInputFieldDefinitionSupportedValueTypesItem?>? SupportedValueTypes { get; set; }

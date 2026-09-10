@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>A string indicating the type of content. The default value is &apos;UNSUPPORTED_CONTENT&apos;, and it must be &apos;UNSUPPORTED_CONTENT&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum UnsupportedContentType
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "UNSUPPORTED_CONTENT")]
         #pragma warning disable CS1591

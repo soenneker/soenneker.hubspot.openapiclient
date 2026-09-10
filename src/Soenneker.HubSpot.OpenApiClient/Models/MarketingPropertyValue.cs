@@ -85,7 +85,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string SourceUpstreamDeployable { get; set; }
 #endif
-        /// <summary>The unique identifier associated with the source.</summary>
+        /// <summary>An array of integers representing IDs associated with the source of the property value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<long?>? SourceVid { get; set; }

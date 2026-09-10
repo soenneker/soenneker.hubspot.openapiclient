@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>Specifies the type of refinement (SET_OCCURRENCES).</summary>
+    /// <summary>A string indicating the type of refinement, which is &apos;SET_OCCURRENCES&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum SetOccurrencesType
     {

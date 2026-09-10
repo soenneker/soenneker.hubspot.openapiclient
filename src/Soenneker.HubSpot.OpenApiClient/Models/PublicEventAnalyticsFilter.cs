@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Specifies the criteria for refining the event filter by coalescing.</summary>
+        /// <summary>An optional property that allows for additional refinement of the filter criteria using a coalescing method. It can be one of several predefined refinement types.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEventAnalyticsFilterCoalescingRefineBy? CoalescingRefineBy { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEventAnalyticsFilterCoalescingRefineBy CoalescingRefineBy { get; set; }
 #endif
-        /// <summary>The ID of the event to be used in the filter.</summary>
+        /// <summary>A string representing the unique identifier of the event to be filtered. This property is required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EventId { get; set; }
@@ -30,9 +30,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string EventId { get; set; }
 #endif
-        /// <summary>Indicates the type of filter being applied (EVENT).</summary>
+        /// <summary>A string representing the type of filter being applied. This property is required.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.EventValueFilterType? FilterType { get; set; }
-        /// <summary>Defines the operation to be applied within the event filter (HAS_EVENT, NOT_HAS_EVENT).</summary>
+        /// <summary>A string that specifies the operator used in the filter. This property is required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Operator { get; set; }
@@ -40,7 +40,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Operator { get; set; }
 #endif
-        /// <summary>Specifies the criteria for refining the event filter by pruning.</summary>
+        /// <summary>An optional property that allows for additional refinement of the filter criteria using a pruning method. It can be one of several predefined refinement types.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEventAnalyticsFilterPruningRefineBy? PruningRefineBy { get; set; }

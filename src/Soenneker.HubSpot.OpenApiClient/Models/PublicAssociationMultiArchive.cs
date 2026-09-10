@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId From { get; set; }
 #endif
-        /// <summary>The to property</summary>
+        /// <summary>An array of target objects to which the associations from the source object will be archived. Each target object is represented by a PublicObjectId.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId>? To { get; set; }

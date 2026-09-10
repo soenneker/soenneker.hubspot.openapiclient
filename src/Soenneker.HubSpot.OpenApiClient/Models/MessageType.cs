@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>The type of the message, which is always &apos;MESSAGE&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum MessageType
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "MESSAGE")]
         #pragma warning disable CS1591

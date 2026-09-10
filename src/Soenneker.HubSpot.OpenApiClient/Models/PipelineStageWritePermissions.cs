@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>Defines the level of write access for the pipeline stage, with possible values being CRM_PERMISSIONS_ENFORCEMENT, READ_ONLY, or INTERNAL_ONLY.</summary>
+    /// <summary>A string indicating the write permissions for the stage. Valid values include &apos;CRM_PERMISSIONS_ENFORCEMENT&apos;, &apos;READ_ONLY&apos;, and &apos;INTERNAL_ONLY&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PipelineStageWritePermissions
     {

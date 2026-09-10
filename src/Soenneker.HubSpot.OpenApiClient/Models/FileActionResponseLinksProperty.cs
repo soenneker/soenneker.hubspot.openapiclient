@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     /// <summary>
-    /// Link to check the status of the requested task.
+    /// A map of link names to associated URIs, providing additional information about the file action.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FileActionResponseLinksProperty : IAdditionalDataHolder, IParsable

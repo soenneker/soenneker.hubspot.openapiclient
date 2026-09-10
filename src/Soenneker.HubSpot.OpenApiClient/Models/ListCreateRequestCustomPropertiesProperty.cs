@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     /// <summary>
-    /// The list of custom properties to tie to the list. Custom property name is the key, the value is the value.
+    /// An object containing custom properties for the list. These properties allow for additional customization of the list.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ListCreateRequestCustomPropertiesProperty : IAdditionalDataHolder, IParsable

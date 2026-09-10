@@ -14,13 +14,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Indicates whether objects with no value set for the property should be included in the operation.</summary>
+        /// <summary>A boolean indicating whether to include objects that do not have a value set for the property being filtered.</summary>
         public bool? IncludeObjectsWithNoValueSet { get; set; }
-        /// <summary>The number of days to be considered in the rolling date range operation.</summary>
+        /// <summary>An integer specifying the number of days for the rolling date range.</summary>
         public int? NumberOfDays { get; set; }
-        /// <summary>Specifies the type of operation (ROLLING_DATE_RANGE).</summary>
+        /// <summary>A string indicating the type of operation, which is &apos;ROLLING_DATE_RANGE&apos; by default.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.RollingDateRangeOperationType? OperationType { get; set; }
-        /// <summary>Defines the operation to be applied within the rolling date range property operation (IS_LESS_THAN_X_DAYS_AGO, IS_MORE_THAN_X_DAYS_AGO, IS_LESS_THAN_X_DAYS_FROM_NOW, IS_MORE_THAN_X_DAYS_FROM_NOW).</summary>
+        /// <summary>A string representing the operator used in the filter operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Operator { get; set; }
@@ -28,7 +28,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Operator { get; set; }
 #endif
-        /// <summary>Specifies whether the operation requires conversion to a different time zone.</summary>
+        /// <summary>A boolean indicating whether the operation requires time zone conversion.</summary>
         public bool? RequiresTimeZoneConversion { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicRollingDateRangePropertyOperation"/> and sets the default values.

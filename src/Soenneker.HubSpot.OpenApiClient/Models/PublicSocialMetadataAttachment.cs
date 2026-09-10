@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.SocialMetadata SocialMetadata { get; set; }
 #endif
-        /// <summary>The type property</summary>
+        /// <summary>A string that specifies the type of the component. The default value is &apos;SOCIAL_MEDIA_METADATA&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.SocialMediaMetadataType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicSocialMetadataAttachment"/> and sets the default values.

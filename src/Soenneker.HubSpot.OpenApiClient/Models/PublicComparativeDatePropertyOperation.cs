@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The name of the property to compare against in the operation.</summary>
+        /// <summary>A string specifying the name of the property to be used for comparison.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ComparisonPropertyName { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ComparisonPropertyName { get; set; }
 #endif
-        /// <summary>The default value used for comparison if the actual comparison property value is not set.</summary>
+        /// <summary>A string representing the default value to be used in the comparison if no specific value is set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DefaultComparisonValue { get; set; }
@@ -30,11 +30,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string DefaultComparisonValue { get; set; }
 #endif
-        /// <summary>Indicates whether objects with no value set for the property should be included in the operation.</summary>
+        /// <summary>A boolean indicating whether to include objects that do not have a value set for the property being compared.</summary>
         public bool? IncludeObjectsWithNoValueSet { get; set; }
-        /// <summary>The type of operation (COMPARATIVE_DATE).</summary>
+        /// <summary>A string indicating the type of operation, with a default value of &apos;COMPARATIVE_DATE&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.ComparativeDateOperationType? OperationType { get; set; }
-        /// <summary>Defines the operation to be applied in the comparative date property operation (IS_BEFORE, IS_AFTER).</summary>
+        /// <summary>A string representing the operator used in the comparison.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Operator { get; set; }

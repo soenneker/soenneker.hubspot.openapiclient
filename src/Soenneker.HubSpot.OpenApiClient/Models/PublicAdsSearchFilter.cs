@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Ad network  (ADWORDS, FACEBOOK, LINKEDIN, ALL)</summary>
+        /// <summary>The advertising network being targeted by the filter. This is a string value indicating the ad network.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AdNetwork { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string AdNetwork { get; set; }
 #endif
-        /// <summary>Type of ad entity (KEYWORD, ADGROUP, AD, CAMPAIGN)</summary>
+        /// <summary>The type of entity to which the filter is applied. This is a string value representing the entity type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EntityType { get; set; }
@@ -30,9 +30,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string EntityType { get; set; }
 #endif
-        /// <summary>Type of the filter (ADS_SEARCH)</summary>
+        /// <summary>The type of filter being applied. This is a string value that defines the category or nature of the filter.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.AdsSearchFilterType? FilterType { get; set; }
-        /// <summary>Operator to be applied (CONTAINS, IS_EQUAL_TO, ENDS_WITH, STARTS_WITH, IS_KNOWN)</summary>
+        /// <summary>The operator used to apply the filter. This is a string value that specifies the logical operation for the filter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Operator { get; set; }
@@ -40,7 +40,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Operator { get; set; }
 #endif
-        /// <summary>The searchTerms property</summary>
+        /// <summary>An array of strings representing the search terms used in the filter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? SearchTerms { get; set; }
@@ -48,7 +48,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<string> SearchTerms { get; set; }
 #endif
-        /// <summary>Search term to match an ad</summary>
+        /// <summary>The type of search term used in the filter. This is a string value that specifies how the search term is interpreted.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SearchTermType { get; set; }

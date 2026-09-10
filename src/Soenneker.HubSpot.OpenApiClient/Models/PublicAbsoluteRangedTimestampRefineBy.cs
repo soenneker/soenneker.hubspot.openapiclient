@@ -14,9 +14,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Lower range timestamp of refinement criteria</summary>
+        /// <summary>An integer representing the lower bound of the timestamp range, in Unix time format (milliseconds).</summary>
         public long? LowerTimestamp { get; set; }
-        /// <summary>Type of range of refinement critaria (BETWEEN, NOT_BETWEEN)</summary>
+        /// <summary>A string that specifies the type of range being used in the filter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RangeType { get; set; }
@@ -24,9 +24,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string RangeType { get; set; }
 #endif
-        /// <summary>type of refine by criteria (ABSOLUTE_RANGED)</summary>
+        /// <summary>A string that indicates the type of refine by operation, which is &apos;ABSOLUTE_RANGED&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteRangedType? Type { get; set; }
-        /// <summary>Upper range timestamp of refinement criteria</summary>
+        /// <summary>An integer representing the upper bound of the timestamp range, in Unix time format (milliseconds).</summary>
         public long? UpperTimestamp { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicAbsoluteRangedTimestampRefineBy"/> and sets the default values.

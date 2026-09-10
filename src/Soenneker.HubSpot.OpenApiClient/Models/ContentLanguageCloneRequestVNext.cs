@@ -38,7 +38,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string PrimaryLanguage { get; set; }
 #endif
-        /// <summary>The usePublished property</summary>
+        /// <summary>A boolean indicating whether the published version of the page should be used for creating the language variation. If true, the published version is used; otherwise, the draft version is used.</summary>
         public bool? UsePublished { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ContentLanguageCloneRequestVNext"/> and sets the default values.

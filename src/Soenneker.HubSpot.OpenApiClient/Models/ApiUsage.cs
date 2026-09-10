@@ -14,13 +14,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Indicates when the cache was last updated.</summary>
+        /// <summary>The collectedAt property</summary>
         public DateTimeOffset? CollectedAt { get; set; }
-        /// <summary>How many API calls an account has made for the current day.</summary>
+        /// <summary>The currentUsage property</summary>
         public int? CurrentUsage { get; set; }
-        /// <summary>Status of fetching the information, including if the data came from the cache.</summary>
+        /// <summary>The fetchStatus property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.ApiUsageFetchStatus? FetchStatus { get; set; }
-        /// <summary>Name of the limit type.</summary>
+        /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -28,9 +28,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>Time that the limit will reset.</summary>
+        /// <summary>The resetsAt property</summary>
         public DateTimeOffset? ResetsAt { get; set; }
-        /// <summary>Limits by which a single integration can consume the HubSpot public APIs.</summary>
+        /// <summary>The usageLimit property</summary>
         public int? UsageLimit { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiUsage"/> and sets the default values.

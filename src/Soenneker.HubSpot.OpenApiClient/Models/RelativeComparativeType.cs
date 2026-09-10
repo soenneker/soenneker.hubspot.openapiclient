@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>Specifies the type of refinement, (RELATIVE_COMPARATIVE).</summary>
+    /// <summary>A string that specifies the type of refinement, with the default value &apos;RELATIVE_COMPARATIVE&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum RelativeComparativeType
     {

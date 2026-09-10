@@ -14,13 +14,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The timestamp indicating when the call started, formatted as a date-time string.</summary>
+        /// <summary>The callStartedTimestamp property</summary>
         public DateTimeOffset? CallStartedTimestamp { get; set; }
-        /// <summary>Indicates whether an engagement should be created for the call.</summary>
+        /// <summary>The createEngagement property</summary>
         public bool? CreateEngagement { get; set; }
-        /// <summary>The duration of the call in seconds.</summary>
+        /// <summary>The durationSeconds property</summary>
         public int? DurationSeconds { get; set; }
-        /// <summary>Contains additional properties related to the engagement.</summary>
+        /// <summary>The engagementProperties property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequestEngagementPropertiesProperty? EngagementProperties { get; set; }
@@ -28,7 +28,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequestEngagementPropertiesProperty EngagementProperties { get; set; }
 #endif
-        /// <summary>The unique identifier for the call from an external system.</summary>
+        /// <summary>The externalCallId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ExternalCallId { get; set; }
@@ -36,7 +36,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ExternalCallId { get; set; }
 #endif
-        /// <summary>The final status of the call, with accepted values including: BUSY, CALLING_CRM_USER, CANCELED, COMPLETED, CONNECTING, FAILED, HOLD, IN_PROGRESS, MISSED, NO_ANSWER, QUEUED, RINGING, UNKNOWN.</summary>
+        /// <summary>The finalCallStatus property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequestFinalCallStatus? FinalCallStatus { get; set; }
         /// <summary>The fromNumber property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -62,7 +62,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.FormattedPhoneNumber ToNumber { get; set; }
 #endif
-        /// <summary>The ID of the user associated with the call.</summary>
+        /// <summary>The userId property</summary>
         public int? UserId { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequest"/> and sets the default values.

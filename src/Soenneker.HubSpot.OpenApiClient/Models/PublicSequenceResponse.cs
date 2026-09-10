@@ -14,9 +14,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The date and time when the sequence was created.</summary>
+        /// <summary>The date and time when the sequence was created, in ISO 8601 format.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
-        /// <summary>An array of dependencies for the sequence steps, each represented as a PublicSequenceStepDependencyResponse object.</summary>
+        /// <summary>An array of dependencies between sequence steps, each represented by a PublicSequenceStepDependencyResponse object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepDependencyResponse>? Dependencies { get; set; }
@@ -24,7 +24,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepDependencyResponse> Dependencies { get; set; }
 #endif
-        /// <summary>The identifier of the folder containing the sequence.</summary>
+        /// <summary>The unique identifier for the folder containing the sequence.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FolderId { get; set; }
@@ -64,9 +64,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepResponse> Steps { get; set; }
 #endif
-        /// <summary>The date and time when the sequence was last updated.</summary>
+        /// <summary>The date and time when the sequence was last updated, in ISO 8601 format.</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
-        /// <summary>The ID of the user associated with the sequence.</summary>
+        /// <summary>The unique identifier of the user who owns the sequence.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UserId { get; set; }

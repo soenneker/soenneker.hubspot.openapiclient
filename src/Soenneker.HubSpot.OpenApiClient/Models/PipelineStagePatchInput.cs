@@ -14,11 +14,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Whether the pipeline is archived.</summary>
+        /// <summary>A boolean indicating whether the pipeline stage is archived.</summary>
         public bool? Archived { get; set; }
-        /// <summary>The order for displaying this pipeline stage. If two pipeline stages have a matching `displayOrder`, they will be sorted alphabetically by label.</summary>
+        /// <summary>An integer specifying the order in which the stage appears relative to other stages.</summary>
         public int? DisplayOrder { get; set; }
-        /// <summary>A label used to organize pipeline stages in HubSpot&apos;s UI. Each pipeline stage&apos;s label must be unique within that pipeline.</summary>
+        /// <summary>A string representing the name or title of the pipeline stage.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Label { get; set; }
@@ -26,7 +26,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Label { get; set; }
 #endif
-        /// <summary>A JSON object containing properties that are not present on all object pipelines.For `deals` pipelines, the `probability` field is required (`{ &quot;probability&quot;: 0.5 }`), and represents the likelihood a deal will close. Possible values are between 0.0 and 1.0 in increments of 0.1.For `tickets` pipelines, the `ticketState` field is optional (`{ &quot;ticketState&quot;: &quot;OPEN&quot; }`), and represents whether the ticket remains open or has been closed by a member of your Support team. Possible values are `OPEN` or `CLOSED`.</summary>
+        /// <summary>An object containing additional properties related to the pipeline stage, where each property is a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStagePatchInputMetadataProperty? Metadata { get; set; }

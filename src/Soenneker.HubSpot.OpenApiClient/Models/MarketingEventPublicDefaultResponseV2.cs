@@ -24,7 +24,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>The creation date and time of the marketing event</summary>
         public DateTimeOffset? CreatedAt { get; set; }
-        /// <summary>The customProperties property</summary>
+        /// <summary>An array of custom properties associated with the marketing event, each represented by a CrmPropertyWrapper object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyWrapper>? CustomProperties { get; set; }

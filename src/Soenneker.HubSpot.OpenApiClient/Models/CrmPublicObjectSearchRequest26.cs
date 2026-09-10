@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A paging cursor token for retrieving subsequent pages.</summary>
+        /// <summary>A string representing the paging cursor token of the last successfully read resource. This token is used for pagination to retrieve the next set of results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? After { get; set; }
@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string After { get; set; }
 #endif
-        /// <summary>Up to 6 groups of filters defining additional query criteria.</summary>
+        /// <summary>An array of filter groups used to specify the search criteria. Each filter group contains multiple filters that define the conditions for the search.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup27>? FilterGroups { get; set; }
@@ -31,9 +31,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup27> FilterGroups { get; set; }
 #endif
-        /// <summary>The maximum results to return, up to 200 objects.</summary>
+        /// <summary>An integer specifying the maximum number of results to return. This value controls the page size of the search results.</summary>
         public int? Limit { get; set; }
-        /// <summary>A list of property names to include in the response.</summary>
+        /// <summary>An array of strings specifying the properties to be returned in the search results. If a specified property is not present on the requested object(s), it will be ignored.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Properties { get; set; }
@@ -41,7 +41,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<string> Properties { get; set; }
 #endif
-        /// <summary>The search query string, up to 3000 characters.</summary>
+        /// <summary>A string used to perform a full-text search across the specified properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Query { get; set; }
@@ -49,7 +49,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Query { get; set; }
 #endif
-        /// <summary>Specifies sorting order based on object properties.</summary>
+        /// <summary>An array of strings that define the sorting order of the search results. Each string specifies a property to sort by, optionally followed by a direction (e.g., &apos;propertyName ASC&apos;).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Sorts { get; set; }

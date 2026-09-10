@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>An array of time ranges during which the user is busy. Each time range is represented by an object with start and end times.</summary>
+        /// <summary>The busyTimes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalTimeRange>? BusyTimes { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalTimeRange> BusyTimes { get; set; }
 #endif
-        /// <summary>A boolean indicating whether the user is currently offline.</summary>
+        /// <summary>Whether the user is offline.</summary>
         public bool? IsOffline { get; set; }
         /// <summary>The meetingsUser property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

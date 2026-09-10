@@ -14,9 +14,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Time of completion of task.</summary>
+        /// <summary>The date and time when the file action was completed, in ISO 8601 format.</summary>
         public DateTimeOffset? CompletedAt { get; set; }
-        /// <summary>Descriptive error messages.</summary>
+        /// <summary>An array of StandardError objects detailing any errors that occurred during the file action.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.FilesStandardError>? Errors { get; set; }
@@ -24,7 +24,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.FilesStandardError> Errors { get; set; }
 #endif
-        /// <summary>Link to check the status of the requested task.</summary>
+        /// <summary>A map of link names to associated URIs, providing additional information about the file action.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.FileActionResponseLinksProperty? Links { get; set; }
@@ -32,9 +32,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.FileActionResponseLinksProperty Links { get; set; }
 #endif
-        /// <summary>Number of errors resulting from the task.</summary>
+        /// <summary>The number of errors encountered during the file action, represented as an integer.</summary>
         public int? NumErrors { get; set; }
-        /// <summary>Timestamp of when the task was requested.</summary>
+        /// <summary>The date and time when the file action was requested, in ISO 8601 format.</summary>
         public DateTimeOffset? RequestedAt { get; set; }
         /// <summary>The result property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -44,11 +44,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.FileObject Result { get; set; }
 #endif
-        /// <summary>Timestamp of when the task was started.</summary>
+        /// <summary>The date and time when the file action started, in ISO 8601 format.</summary>
         public DateTimeOffset? StartedAt { get; set; }
-        /// <summary>Current status of the task.</summary>
+        /// <summary>The current status of the file action. Valid values include &apos;PENDING&apos;, &apos;PROCESSING&apos;, &apos;CANCELED&apos;, and &apos;COMPLETE&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.FileActionResponseStatus? Status { get; set; }
-        /// <summary>ID of the requested task.</summary>
+        /// <summary>The unique identifier for the task associated with the file action.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TaskId { get; set; }

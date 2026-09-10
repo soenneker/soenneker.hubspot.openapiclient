@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>The comparison operator used in the filter, such as &quot;EQ&quot; or &quot;GT&quot;.</summary>
+    /// <summary>null</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum CrmFilter26Operator
     {

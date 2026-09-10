@@ -14,9 +14,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The timestamp of when the sequence settings were created.</summary>
+        /// <summary>The date and time when the sequence settings were created, in ISO 8601 format.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
-        /// <summary>Specifies the days on which follow-up actions are allowed.</summary>
+        /// <summary>Specifies the days eligible for follow-ups. Valid values include &apos;EVERYDAY&apos;, &apos;BUSINESS_DAYS&apos;, and &apos;WEEKDAYS_ONLY&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceSettingsResponseEligibleFollowUpDays? EligibleFollowUpDays { get; set; }
         /// <summary>The unique identifier for the sequence settings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -26,17 +26,17 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>Indicates whether individual task reminders are enabled.</summary>
+        /// <summary>A boolean indicating whether individual task reminders are enabled.</summary>
         public bool? IndividualTaskRemindersEnabled { get; set; }
-        /// <summary>(deprecated) Defines the unenrollment strategy, with accepted values being ACCOUNT_BASED or LEAD_BASED. If ACCOUNT_BASED is used, all contacts associated with the same company will be unenrolled if one contact meets any of the unenrollment criteria.</summary>
+        /// <summary>The strategy used for selling, which can be either &apos;LEAD_BASED&apos; or &apos;ACCOUNT_BASED&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceSettingsResponseSellingStrategy? SellingStrategy { get; set; }
-        /// <summary>Indicates the end minute of the time window during which automated emails can be sent.</summary>
+        /// <summary>The ending minute of the window during which emails can be sent, represented as an integer.</summary>
         public int? SendWindowEndMinute { get; set; }
-        /// <summary>Indicates the start minute of the time window during which automated emails can be sent.</summary>
+        /// <summary>The starting minute of the window during which emails can be sent, represented as an integer.</summary>
         public int? SendWindowStartMinute { get; set; }
-        /// <summary>Specifies the minute of day at which task reminders are triggered.</summary>
+        /// <summary>The minute at which task reminders are sent, represented as an integer.</summary>
         public int? TaskReminderMinute { get; set; }
-        /// <summary>The timestamp of when the sequence settings were last updated.</summary>
+        /// <summary>The date and time when the sequence settings were last updated, in ISO 8601 format.</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceSettingsResponse"/> and sets the default values.

@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Updated filtering criteria for the list</summary>
+        /// <summary>A complex object that defines the structure and logic of the filters to be applied to the list. It can include various types of filter branches and filters, allowing for detailed and specific filtering criteria.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.ListFilterUpdateRequestFilterBranch? FilterBranch { get; set; }

@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     /// <summary>
-    /// A set of key-value pairs representing the properties to be updated for the campaign.
+    /// An object containing key-value pairs of the campaign properties to be updated. Each key is a property name, and each value is the new value for that property, represented as a string.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PublicCampaignBatchUpdateItemPropertiesProperty : IAdditionalDataHolder, IParsable

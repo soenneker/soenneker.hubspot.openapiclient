@@ -14,17 +14,17 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The day property</summary>
+        /// <summary>An integer representing the day of the month.</summary>
         public int? Day { get; set; }
-        /// <summary>The hour property</summary>
+        /// <summary>An integer representing the hour of the day.</summary>
         public int? Hour { get; set; }
-        /// <summary>The millisecond property</summary>
+        /// <summary>An integer representing the millisecond of the second.</summary>
         public int? Millisecond { get; set; }
-        /// <summary>The minute property</summary>
+        /// <summary>An integer representing the minute of the hour.</summary>
         public int? Minute { get; set; }
-        /// <summary>Indicates the type of reference, (MONTH).</summary>
+        /// <summary>A string indicating the type of reference, with a default value of &apos;MONTH&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.MonthReferenceType? ReferenceType { get; set; }
-        /// <summary>The second property</summary>
+        /// <summary>An integer representing the second of the minute.</summary>
         public int? Second { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.MonthReference"/> and sets the default values.

@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>Indicates the usage of the token, which is &apos;access_token&apos; by default. It is a string with a fixed value of &apos;access_token&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum AccessTokenTokenUse
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "access_token")]
         #pragma warning disable CS1591

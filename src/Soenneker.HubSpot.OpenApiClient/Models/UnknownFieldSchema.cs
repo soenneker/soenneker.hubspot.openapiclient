@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The type property</summary>
+        /// <summary>A string that indicates the type of the field. In this schema, it is always set to &apos;UNKNOWN&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.UnknownType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.UnknownFieldSchema"/> and sets the default values.

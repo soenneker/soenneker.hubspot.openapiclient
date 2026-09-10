@@ -3,9 +3,10 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>Status of fetching the information, including if the data came from the cache.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+    #pragma warning disable CS1591
     public enum ApiUsageFetchStatus
+    #pragma warning restore CS1591
     {
         [EnumMember(Value = "CACHED")]
         #pragma warning disable CS1591

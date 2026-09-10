@@ -14,9 +14,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The day property</summary>
+        /// <summary>An integer specifying the day component of the date.</summary>
         public int? Day { get; set; }
-        /// <summary>The defaultValue property</summary>
+        /// <summary>A string representing the default value to be used if no other value is set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DefaultValue { get; set; }
@@ -24,11 +24,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string DefaultValue { get; set; }
 #endif
-        /// <summary>The includeObjectsWithNoValueSet property</summary>
+        /// <summary>A boolean indicating whether to include objects that have no value set for the property.</summary>
         public bool? IncludeObjectsWithNoValueSet { get; set; }
-        /// <summary>The month property</summary>
+        /// <summary>An integer specifying the month component of the date.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.DatePropertyOperationMonth? Month { get; set; }
-        /// <summary>The operationType property</summary>
+        /// <summary>A string indicating the type of operation being performed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OperationType { get; set; }
@@ -36,9 +36,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string OperationType { get; set; }
 #endif
-        /// <summary>The operator property</summary>
+        /// <summary>A string representing the operation to be performed on the date property, such as comparison operations.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.DatePropertyOperationOperator? Operator { get; set; }
-        /// <summary>The operatorName property</summary>
+        /// <summary>A string representing the name of the operator used in the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OperatorName { get; set; }
@@ -46,9 +46,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string OperatorName { get; set; }
 #endif
-        /// <summary>The propertyType property</summary>
+        /// <summary>A string indicating the type of property operation, with a default value of &apos;date&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.DatePropertyType? PropertyType { get; set; }
-        /// <summary>The renderSpec property</summary>
+        /// <summary>A string that provides specifications for rendering the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RenderSpec { get; set; }
@@ -56,7 +56,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string RenderSpec { get; set; }
 #endif
-        /// <summary>The year property</summary>
+        /// <summary>An integer specifying the year component of the date.</summary>
         public int? Year { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.DatePropertyOperation"/> and sets the default values.

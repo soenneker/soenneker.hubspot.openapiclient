@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The timezone in which the meeting was booked, represented as a string.</summary>
+        /// <summary>The timezone the meeting was booked from.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? BookingTimezone { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string BookingTimezone { get; set; }
 #endif
-        /// <summary>The unique identifier for the calendar event associated with this meeting.</summary>
+        /// <summary>The unique identifier for the meeting&apos;s calendar event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CalendarEventId { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string CalendarEventId { get; set; }
 #endif
-        /// <summary>The unique identifier for the contact associated with this meeting.</summary>
+        /// <summary>The ID of the contact associated to the meeting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ContactId { get; set; }
@@ -38,11 +38,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ContactId { get; set; }
 #endif
-        /// <summary>The duration of the meeting in minutes, represented as an integer.</summary>
+        /// <summary>The duration of the meeting in milliseconds.</summary>
         public long? Duration { get; set; }
-        /// <summary>The end date and time of the meeting, in ISO 8601 format.</summary>
+        /// <summary>The date and time when the meeting is scheduled to end, in ISO 8601 format.</summary>
         public DateTimeOffset? End { get; set; }
-        /// <summary>An array of validated form fields submitted during the booking process, each represented by an ExternalValidatedFormField object.</summary>
+        /// <summary>The formFields property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalValidatedFormField>? FormFields { get; set; }
@@ -50,7 +50,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalValidatedFormField> FormFields { get; set; }
 #endif
-        /// <summary>An array of email addresses for the guests invited to the meeting.</summary>
+        /// <summary>The guestEmails property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? GuestEmails { get; set; }
@@ -58,9 +58,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<string> GuestEmails { get; set; }
 #endif
-        /// <summary>A boolean indicating whether the meeting is offline (true) or online (false).</summary>
+        /// <summary>Whether the meeting was booked offline and no associated calendar event was created.</summary>
         public bool? IsOffline { get; set; }
-        /// <summary>An array of legal consent responses associated with the meeting, each represented by an ExternalLegalConsentResponse object.</summary>
+        /// <summary>The legalConsentResponses property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentResponse>? LegalConsentResponses { get; set; }
@@ -68,7 +68,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentResponse> LegalConsentResponses { get; set; }
 #endif
-        /// <summary>The locale setting for the meeting, represented as a string.</summary>
+        /// <summary>The locale the meeting was booked with, used to determine date formatting in calendar event description.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Locale { get; set; }
@@ -76,7 +76,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Locale { get; set; }
 #endif
-        /// <summary>The location of the meeting, represented as a string.</summary>
+        /// <summary>The physical or virtual location where the meeting will take place.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Location { get; set; }
@@ -84,9 +84,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Location { get; set; }
 #endif
-        /// <summary>The start date and time of the meeting, in ISO 8601 format.</summary>
+        /// <summary>The date and time when the meeting is scheduled to start, in ISO 8601 format.</summary>
         public DateTimeOffset? Start { get; set; }
-        /// <summary>The subject or title of the meeting, represented as a string.</summary>
+        /// <summary>The title of the meeting and calendar event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Subject { get; set; }
@@ -94,7 +94,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Subject { get; set; }
 #endif
-        /// <summary>The unique identifier for the web conference meeting, if applicable.</summary>
+        /// <summary>The unique identifier for the web conference meeting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? WebConferenceMeetingId { get; set; }
@@ -102,7 +102,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string WebConferenceMeetingId { get; set; }
 #endif
-        /// <summary>The URL for the web conference associated with the meeting, if applicable.</summary>
+        /// <summary>The URL for accessing the meeting&apos;s web conference.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? WebConferenceUrl { get; set; }

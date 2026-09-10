@@ -22,9 +22,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffset LowerBoundOffset { get; set; }
 #endif
-        /// <summary>The rangeType property</summary>
+        /// <summary>A string that indicates the type of range operation. Valid values are &apos;BETWEEN&apos; and &apos;NOT_BETWEEN&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.RelativeRangedTimestampRefineByRangeType? RangeType { get; set; }
-        /// <summary>The type property</summary>
+        /// <summary>A string that specifies the type of the refinement operation. Default value is &apos;RelativeRangedTimestampRefineBy&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.RelativeRangedTimestampRefineByType? Type { get; set; }
         /// <summary>The upperBoundOffset property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

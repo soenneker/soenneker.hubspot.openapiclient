@@ -14,11 +14,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Specifies the type of conversion (INACTIVITY).</summary>
+        /// <summary>A string that specifies the type of conversion, with a default value of &apos;INACTIVITY&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.InactivityConversionType? ConversionType { get; set; }
-        /// <summary>Value used to paginate through lists. The `offset` provided in the response can be used in the next request to fetch the next page of results. Defaults to `0` if no offset is provided.</summary>
+        /// <summary>An integer indicating the offset value used in conjunction with the time unit to determine inactivity.</summary>
         public int? Offset { get; set; }
-        /// <summary>The unit of time for the inactivity period, such as (DAY, MONTH, WEEK).</summary>
+        /// <summary>A string representing the unit of time for measuring inactivity. Valid values include &apos;DAY&apos;, &apos;WEEK&apos;, and &apos;MONTH&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionInactivityTimeUnit? TimeUnit { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionInactivity"/> and sets the default values.

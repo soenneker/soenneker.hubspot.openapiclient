@@ -14,13 +14,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Specifies the type of conversion (CONVERSION_DATE).</summary>
+        /// <summary>A string that indicates the type of conversion event. It specifies what kind of conversion has taken place.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.ConversionDateConversionType? ConversionType { get; set; }
-        /// <summary>The day component of the conversion date.</summary>
+        /// <summary>An integer representing the day of the month when the conversion event occurred.</summary>
         public int? Day { get; set; }
-        /// <summary>The month component of the conversion date.</summary>
+        /// <summary>An integer representing the month of the year when the conversion event occurred.</summary>
         public int? Month { get; set; }
-        /// <summary>The year component of the conversion date.</summary>
+        /// <summary>An integer representing the year when the conversion event occurred.</summary>
         public int? Year { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionDate"/> and sets the default values.

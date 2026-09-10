@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>The type of address, indicating whether it is a &apos;HOME&apos; or &apos;WORK&apos; address.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum ContactAddressType
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "HOME")]
         #pragma warning disable CS1591

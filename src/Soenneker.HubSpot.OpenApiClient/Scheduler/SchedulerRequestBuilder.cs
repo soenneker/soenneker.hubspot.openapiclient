@@ -2,7 +2,7 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
-using Soenneker.HubSpot.OpenApiClient.Scheduler.TwoZeroTwoSixZeroThree;
+using Soenneker.HubSpot.OpenApiClient.Scheduler.TwoZeroTwoSixZeroNine;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -15,10 +15,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Scheduler
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SchedulerRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The TwoZeroTwoSixZeroThree property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Scheduler.TwoZeroTwoSixZeroThree.TwoZeroTwoSixZeroThreeRequestBuilder TwoZeroTwoSixZeroThree
+        /// <summary>The TwoZeroTwoSixZeroNine property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Scheduler.TwoZeroTwoSixZeroNine.TwoZeroTwoSixZeroNineRequestBuilder TwoZeroTwoSixZeroNine
         {
-            get => new global::Soenneker.HubSpot.OpenApiClient.Scheduler.TwoZeroTwoSixZeroThree.TwoZeroTwoSixZeroThreeRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.HubSpot.OpenApiClient.Scheduler.TwoZeroTwoSixZeroNine.TwoZeroTwoSixZeroNineRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Scheduler.SchedulerRequestBuilder"/> and sets the default values.

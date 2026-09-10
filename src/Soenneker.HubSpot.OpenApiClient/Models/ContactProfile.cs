@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The addresses property</summary>
+        /// <summary>An array of addresses associated with the contact, where each address includes type (e.g., HOME, WORK), street, city, state, zip, country, and country code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ContactAddress>? Addresses { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ContactAddress> Addresses { get; set; }
 #endif
-        /// <summary>The emails property</summary>
+        /// <summary>An array of email addresses associated with the contact, where each email includes type (e.g., HOME, WORK) and the email address itself.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ContactEmail>? Emails { get; set; }
@@ -46,7 +46,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.ContactOrg Org { get; set; }
 #endif
-        /// <summary>The phones property</summary>
+        /// <summary>An array of phone numbers associated with the contact, where each phone number includes type (e.g., CELL, MAIN, HOME, WORK) and the phone number itself.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ContactPhone>? Phones { get; set; }
@@ -54,7 +54,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ContactPhone> Phones { get; set; }
 #endif
-        /// <summary>The urls property</summary>
+        /// <summary>An array of URLs associated with the contact, where each URL includes type (e.g., HOME, WORK) and the URL itself.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ContactUrl>? Urls { get; set; }

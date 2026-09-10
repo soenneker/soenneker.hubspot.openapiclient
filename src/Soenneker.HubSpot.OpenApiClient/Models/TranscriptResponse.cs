@@ -14,11 +14,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The createdAt property</summary>
+        /// <summary>The date and time when this transcript was created, in ISO 8601 date-time format.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
-        /// <summary>The engagementId property</summary>
+        /// <summary>The unique identifier for the engagement associated with this transcript. It is an integer in int64 format.</summary>
         public long? EngagementId { get; set; }
-        /// <summary>The id property</summary>
+        /// <summary>The unique identifier for this transcript, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }
@@ -26,9 +26,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>The transcriptSource property</summary>
+        /// <summary>Indicates the origin of the transcript, which can be either &apos;HUBSPOT_GENERATED&apos; or &apos;INTEGRATOR_GENERATED&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.TranscriptResponseTranscriptSource? TranscriptSource { get; set; }
-        /// <summary>The transcriptUtterances property</summary>
+        /// <summary>An array of utterances that make up the transcript. Each utterance contains details such as text, timing, and speaker information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.TranscriptUtterance>? TranscriptUtterances { get; set; }
@@ -36,7 +36,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.TranscriptUtterance> TranscriptUtterances { get; set; }
 #endif
-        /// <summary>The updatedAt property</summary>
+        /// <summary>The date and time when this transcript was last updated, in ISO 8601 date-time format.</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.TranscriptResponse"/> and sets the default values.

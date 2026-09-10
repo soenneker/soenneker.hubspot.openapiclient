@@ -29,7 +29,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>A string identifier used for tracing the write operations on this object.</summary>
+        /// <summary>An identifier used for tracing the creation or update request of the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ObjectWriteTraceId { get; set; }
@@ -45,7 +45,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject10PropertiesProperty Properties { get; set; }
 #endif
-        /// <summary>A map of property names to their historical values, where each value is an array of objects containing the value and timestamp.</summary>
+        /// <summary>A map of property names to arrays of historical values, each containing a value and a timestamp.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject10PropertiesWithHistoryProperty? PropertiesWithHistory { get; set; }
@@ -55,7 +55,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>The date and time when this object was last updated, in ISO 8601 format.</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
-        /// <summary>A string representing the URL associated with this object.</summary>
+        /// <summary>A string representing the URL of this object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Url { get; set; }
@@ -63,7 +63,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Url { get; set; }
 #endif
-        /// <summary>An array of warnings related to this object, where each warning contains a category, message, and context.</summary>
+        /// <summary>An array of warnings related to this object, each containing a category, message, and context.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectWarning10>? Warnings { get; set; }

@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The filterBranches property</summary>
+        /// <summary>An array of filter branches that can include various types such as PublicOrFilterBranch, PublicAndFilterBranch, and others, allowing for nested filtering logic.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAllFilterBranchFilterBranchesItem>? FilterBranches { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAllFilterBranchFilterBranchesItem> FilterBranches { get; set; }
 #endif
-        /// <summary>The operator used to combine filters within the branch (NOT_ALL).</summary>
+        /// <summary>A string representing the operator used within the filter branch.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FilterBranchOperator { get; set; }
@@ -30,9 +30,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string FilterBranchOperator { get; set; }
 #endif
-        /// <summary>The type of the filter branch (NOT_ALL).</summary>
+        /// <summary>A string that specifies the type of filter branch. The default value is &apos;NOT_ALL&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.NotAllFilterBranchType? FilterBranchType { get; set; }
-        /// <summary>The filters property</summary>
+        /// <summary>An array of filters that can include various types such as PublicPropertyFilter, PublicAssociationInListFilter, and others, used to apply specific conditions to the data.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAllFilterBranchFiltersItem>? Filters { get; set; }

@@ -14,11 +14,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Indication of whether objects with no value should be included</summary>
+        /// <summary>A boolean indicating whether objects with no value set for the property should be included in the operation. This property is required.</summary>
         public bool? IncludeObjectsWithNoValueSet { get; set; }
-        /// <summary>Type of operation (ALL_PROPERTY)</summary>
+        /// <summary>A string indicating the type of operation being performed. This property is required.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.AllPropertyOperationType? OperationType { get; set; }
-        /// <summary>Operator to be applied (IS_KNOWN, IS_UNKNOWN)</summary>
+        /// <summary>A string representing the operator used in the filter operation. This property is required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Operator { get; set; }

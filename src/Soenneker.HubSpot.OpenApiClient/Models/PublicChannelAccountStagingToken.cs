@@ -12,7 +12,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     public partial class PublicChannelAccountStagingToken : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The accountName property</summary>
+        /// <summary>A string representing the name of the account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AccountName { get; set; }
@@ -20,7 +20,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string AccountName { get; set; }
 #endif
-        /// <summary>The accountToken property</summary>
+        /// <summary>A string representing the unique token for the account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AccountToken { get; set; }
@@ -30,21 +30,21 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The createdAt property</summary>
+        /// <summary>The date and time when the token was created, in ISO 8601 format.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
         /// <summary>The deliveryIdentifier property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicDeliveryIdentifier? DeliveryIdentifier { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicDeliveryIdentifier? DeliveryIdentifier { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicDeliveryIdentifier DeliveryIdentifier { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicDeliveryIdentifier DeliveryIdentifier { get; set; }
 #endif
-        /// <summary>The genericChannelId property</summary>
+        /// <summary>An integer representing the unique identifier of the generic channel.</summary>
         public int? GenericChannelId { get; set; }
-        /// <summary>The inboxId property</summary>
+        /// <summary>An integer representing the unique identifier of the inbox associated with the account.</summary>
         public int? InboxId { get; set; }
-        /// <summary>The userId property</summary>
+        /// <summary>An integer representing the unique identifier of the user associated with the account.</summary>
         public int? UserId { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelAccountStagingToken"/> and sets the default values.
@@ -74,7 +74,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "accountName", n => { AccountName = n.GetStringValue(); } },
                 { "accountToken", n => { AccountToken = n.GetStringValue(); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
-                { "deliveryIdentifier", n => { DeliveryIdentifier = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicDeliveryIdentifier>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicDeliveryIdentifier.CreateFromDiscriminatorValue); } },
+                { "deliveryIdentifier", n => { DeliveryIdentifier = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicDeliveryIdentifier>(global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicDeliveryIdentifier.CreateFromDiscriminatorValue); } },
                 { "genericChannelId", n => { GenericChannelId = n.GetIntValue(); } },
                 { "inboxId", n => { InboxId = n.GetIntValue(); } },
                 { "userId", n => { UserId = n.GetIntValue(); } },
@@ -90,7 +90,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("accountName", AccountName);
             writer.WriteStringValue("accountToken", AccountToken);
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicDeliveryIdentifier>("deliveryIdentifier", DeliveryIdentifier);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicDeliveryIdentifier>("deliveryIdentifier", DeliveryIdentifier);
             writer.WriteIntValue("genericChannelId", GenericChannelId);
             writer.WriteIntValue("inboxId", InboxId);
             writer.WriteIntValue("userId", UserId);

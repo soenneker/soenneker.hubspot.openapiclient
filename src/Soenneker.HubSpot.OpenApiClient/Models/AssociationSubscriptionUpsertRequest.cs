@@ -12,7 +12,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     public partial class AssociationSubscriptionUpsertRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The actions property</summary>
+        /// <summary>An array of strings specifying the actions that trigger the subscription. Valid actions include &apos;CREATE&apos;, &apos;UPDATE&apos;, &apos;DELETE&apos;, &apos;MERGE&apos;, &apos;RESTORE&apos;, &apos;ASSOCIATION_ADDED&apos;, &apos;ASSOCIATION_REMOVED&apos;, &apos;SNAPSHOT&apos;, &apos;APP_INSTALL&apos;, &apos;APP_UNINSTALL&apos;, &apos;ADDED_TO_LIST&apos;, &apos;REMOVED_FROM_LIST&apos;, and &apos;GDPR_DELETE&apos;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.AssociationSubscriptionUpsertRequestActionsItem?>? Actions { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The associatedObjectTypeIds property</summary>
+        /// <summary>An array of strings representing the type identifiers of the associated objects in the subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? AssociatedObjectTypeIds { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<string> AssociatedObjectTypeIds { get; set; }
 #endif
-        /// <summary>The objectIds property</summary>
+        /// <summary>An array of integers representing the unique identifiers of the objects involved in the subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<long?>? ObjectIds { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<long?> ObjectIds { get; set; }
 #endif
-        /// <summary>The objectTypeId property</summary>
+        /// <summary>A string representing the type identifier of the object involved in the subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ObjectTypeId { get; set; }
@@ -46,9 +46,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ObjectTypeId { get; set; }
 #endif
-        /// <summary>The portalId property</summary>
+        /// <summary>An integer representing the unique identifier of the HubSpot portal.</summary>
         public long? PortalId { get; set; }
-        /// <summary>The subscriptionType property</summary>
+        /// <summary>A string indicating the type of subscription, which is &apos;ASSOCIATION&apos; for this component.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.AssociationSubscriptionType? SubscriptionType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.AssociationSubscriptionUpsertRequest"/> and sets the default values.

@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>Specifies the type of the filter branch (RESTRICTED).</summary>
+    /// <summary>A string indicating the type of filter branch. The default value is &apos;RESTRICTED&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum RestrictedFilterBranchType
     {

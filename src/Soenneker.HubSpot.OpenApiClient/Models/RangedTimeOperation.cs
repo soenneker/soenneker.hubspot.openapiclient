@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The defaultValue property</summary>
+        /// <summary>A string representing the default value to use if no other value is set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DefaultValue { get; set; }
@@ -22,11 +22,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string DefaultValue { get; set; }
 #endif
-        /// <summary>The includeObjectsWithNoValueSet property</summary>
+        /// <summary>A boolean indicating whether to include objects that have no value set for the specified property.</summary>
         public bool? IncludeObjectsWithNoValueSet { get; set; }
-        /// <summary>The lowerBoundEndpointBehavior property</summary>
+        /// <summary>A string indicating the behavior of the lower bound endpoint, with valid values &apos;INCLUSIVE&apos; and &apos;EXCLUSIVE&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.RangedTimeOperationLowerBoundEndpointBehavior? LowerBoundEndpointBehavior { get; set; }
-        /// <summary>The lowerBoundTimePoint property</summary>
+        /// <summary>Defines the lower bound of the time range, which can be a DatePoint, IndexedTimePoint, or PropertyReferencedTime.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.RangedTimeOperationLowerBoundTimePoint? LowerBoundTimePoint { get; set; }
@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.RangedTimeOperationLowerBoundTimePoint LowerBoundTimePoint { get; set; }
 #endif
-        /// <summary>The operationType property</summary>
+        /// <summary>A string representing the type of operation being performed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OperationType { get; set; }
@@ -42,9 +42,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string OperationType { get; set; }
 #endif
-        /// <summary>The operator property</summary>
+        /// <summary>A string representing the operation to be performed, with valid values &apos;IS_BETWEEN&apos; and &apos;IS_NOT_BETWEEN&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.RangedTimeOperationOperator? Operator { get; set; }
-        /// <summary>The operatorName property</summary>
+        /// <summary>A string indicating the name of the operator used in the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OperatorName { get; set; }
@@ -52,11 +52,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string OperatorName { get; set; }
 #endif
-        /// <summary>The propertyParser property</summary>
+        /// <summary>A string specifying the parser to use for the property, with options including &apos;VALUE&apos;, &apos;UPDATED_AT&apos;, &apos;ANNIVERSARY&apos;, &apos;VALUE_WITH_ZONE_SAME_LOCAL_CONVERSION&apos;, and &apos;ANNIVERSARY_WITH_ZONE_SAME_LOCAL_CONVERSION&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.RangedTimeOperationPropertyParser? PropertyParser { get; set; }
-        /// <summary>The propertyType property</summary>
+        /// <summary>A string indicating the type of property, defaulting to &apos;rangedtime&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.RangedtimePropertyType? PropertyType { get; set; }
-        /// <summary>The renderSpec property</summary>
+        /// <summary>A string that specifies the rendering specification, if applicable.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RenderSpec { get; set; }
@@ -64,7 +64,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string RenderSpec { get; set; }
 #endif
-        /// <summary>The type property</summary>
+        /// <summary>A string representing the type of the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Type { get; set; }
@@ -72,9 +72,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Type { get; set; }
 #endif
-        /// <summary>The upperBoundEndpointBehavior property</summary>
+        /// <summary>A string indicating the behavior of the upper bound endpoint, with valid values &apos;INCLUSIVE&apos; and &apos;EXCLUSIVE&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.RangedTimeOperationUpperBoundEndpointBehavior? UpperBoundEndpointBehavior { get; set; }
-        /// <summary>The upperBoundTimePoint property</summary>
+        /// <summary>Defines the upper bound of the time range, which can be a DatePoint, IndexedTimePoint, or PropertyReferencedTime.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.RangedTimeOperationUpperBoundTimePoint? UpperBoundTimePoint { get; set; }

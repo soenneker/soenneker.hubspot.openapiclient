@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>The type of dependency between sequence steps with accepted values being TASK_COMPLETION or MANUAL_PAUSE.</summary>
+    /// <summary>The type of dependency, which can be either &apos;TASK_COMPLETION&apos; or &apos;MANUAL_PAUSE&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PublicSequenceStepDependencyResponseDependencyType
     {

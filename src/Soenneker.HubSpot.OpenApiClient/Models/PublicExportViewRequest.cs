@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The associatedObjectType property</summary>
+        /// <summary>An array of strings indicating the types of associated objects to include in the export.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? AssociatedObjectType { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<string> AssociatedObjectType { get; set; }
 #endif
-        /// <summary>The exportInternalValuesOptions property</summary>
+        /// <summary>An array of strings specifying options for internal values in the export. Valid values are &apos;NAMES&apos; and &apos;VALUES&apos;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportViewRequestExportInternalValuesOptionsItem?>? ExportInternalValuesOptions { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportViewRequestExportInternalValuesOptionsItem?> ExportInternalValuesOptions { get; set; }
 #endif
-        /// <summary>The exportName property</summary>
+        /// <summary>The name assigned to the export, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ExportName { get; set; }
@@ -38,17 +38,17 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ExportName { get; set; }
 #endif
-        /// <summary>The exportType property</summary>
+        /// <summary>The type of export being requested. The only valid value is &apos;VIEW&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.ViewExportType? ExportType { get; set; }
-        /// <summary>The format property</summary>
+        /// <summary>The file format for the export. Valid options are &apos;XLS&apos;, &apos;XLSX&apos;, and &apos;CSV&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportViewRequestFormat? Format { get; set; }
-        /// <summary>The includeLabeledAssociations property</summary>
+        /// <summary>A boolean indicating whether labeled associations should be included in the export.</summary>
         public bool? IncludeLabeledAssociations { get; set; }
-        /// <summary>The includePrimaryDisplayPropertyForAssociatedObjects property</summary>
+        /// <summary>A boolean indicating whether the primary display property for associated objects should be included.</summary>
         public bool? IncludePrimaryDisplayPropertyForAssociatedObjects { get; set; }
-        /// <summary>The language property</summary>
+        /// <summary>The language code for the export. Valid values include &apos;EN&apos;, &apos;FR&apos;, &apos;DE&apos;, &apos;JA&apos;, &apos;ES&apos;, &apos;PT_BR&apos;, &apos;NL&apos;, &apos;BN&apos;, &apos;CS&apos;, &apos;DA_DK&apos;, &apos;EL_GR&apos;, &apos;ES_MX&apos;, &apos;FI&apos;, &apos;HR&apos;, &apos;HU&apos;, &apos;ID&apos;, &apos;IT&apos;, &apos;KO_KR&apos;, &apos;NO&apos;, &apos;PL&apos;, &apos;RO&apos;, &apos;RU&apos;, &apos;SV&apos;, &apos;TH&apos;, &apos;VI_VN&apos;, &apos;ZH_CN&apos;, &apos;ZH_HK&apos;, &apos;AF_ZA&apos;, &apos;AR_EG&apos;, &apos;BG&apos;, &apos;CA_ES&apos;, &apos;SL&apos;, &apos;TR&apos;, &apos;UK&apos;, &apos;EN_GB&apos;, &apos;FR_CA&apos;, &apos;HE_IL&apos;, &apos;LT_LT&apos;, &apos;PT_PT&apos;, &apos;SK_SK&apos;, &apos;MS&apos;, &apos;TL&apos;, &apos;ZH_TW&apos;, &apos;HI_IN&apos;, &apos;ET_EE&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportViewRequestLanguage? Language { get; set; }
-        /// <summary>The objectProperties property</summary>
+        /// <summary>An array of strings specifying the properties of the object to be included in the export.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? ObjectProperties { get; set; }
@@ -56,7 +56,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<string> ObjectProperties { get; set; }
 #endif
-        /// <summary>The objectType property</summary>
+        /// <summary>A string representing the type of object being exported.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ObjectType { get; set; }
@@ -64,7 +64,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ObjectType { get; set; }
 #endif
-        /// <summary>The overrideAssociatedObjectsPerDefinitionPerRowLimit property</summary>
+        /// <summary>A boolean indicating whether to override the limit of associated objects per definition per row.</summary>
         public bool? OverrideAssociatedObjectsPerDefinitionPerRowLimit { get; set; }
         /// <summary>The publicCrmSearchRequest property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

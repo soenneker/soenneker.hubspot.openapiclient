@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Describes the behavior at the endpoint of the time point operation.</summary>
+        /// <summary>A string describing the behavior of the endpoint in the context of the time point operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EndpointBehavior { get; set; }
@@ -22,11 +22,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string EndpointBehavior { get; set; }
 #endif
-        /// <summary>Indicates whether objects with no value set for the property should be included in the operation.</summary>
+        /// <summary>A boolean indicating whether to include objects that have no value set for the time point.</summary>
         public bool? IncludeObjectsWithNoValueSet { get; set; }
-        /// <summary>Specifies the type of operation (TIME_POINT).</summary>
+        /// <summary>A string indicating the type of operation, which is &apos;TIME_POINT&apos; by default.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.TimePointOperationType? OperationType { get; set; }
-        /// <summary>Specifies the operation to be applied within the time point operation (IS_BEFORE, IS_AFTER).</summary>
+        /// <summary>A string representing the operator used in the time point operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Operator { get; set; }
@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Operator { get; set; }
 #endif
-        /// <summary>Specifies the parser used for interpreting the property in the operation.</summary>
+        /// <summary>A string representing the parser used for the property in the time point operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PropertyParser { get; set; }
@@ -42,7 +42,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string PropertyParser { get; set; }
 #endif
-        /// <summary>Defines the specific point in time for the operation, which can be a date, indexed time, or property-referenced time.</summary>
+        /// <summary>An object representing the specific time point used in the operation. It can be one of several types, such as a date point, indexed time point, or property-referenced time.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicTimePointOperationTimePoint? TimePoint { get; set; }
@@ -50,7 +50,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicTimePointOperationTimePoint TimePoint { get; set; }
 #endif
-        /// <summary>Defines the type of operation being performed.</summary>
+        /// <summary>A string indicating the specific type of the time point operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Type { get; set; }

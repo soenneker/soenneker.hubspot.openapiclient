@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The defaultValue property</summary>
+        /// <summary>A string representing the default value for the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DefaultValue { get; set; }
@@ -22,11 +22,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string DefaultValue { get; set; }
 #endif
-        /// <summary>The fiscalYearStart property</summary>
+        /// <summary>A string indicating the starting month of the fiscal year, with options like &apos;JANUARY&apos;, &apos;FEBRUARY&apos;, &apos;MARCH&apos;, etc.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.CalendarDatePropertyOperationFiscalYearStart? FiscalYearStart { get; set; }
-        /// <summary>The includeObjectsWithNoValueSet property</summary>
+        /// <summary>A boolean that determines whether objects with no value set should be included in the operation.</summary>
         public bool? IncludeObjectsWithNoValueSet { get; set; }
-        /// <summary>The operationType property</summary>
+        /// <summary>A string indicating the type of operation being performed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OperationType { get; set; }
@@ -34,9 +34,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string OperationType { get; set; }
 #endif
-        /// <summary>The operator property</summary>
+        /// <summary>A string that specifies the operation to perform, with valid values including &apos;IN_THIS_TIME_UNIT&apos;, &apos;IN_THIS_TIME_UNIT_SO_FAR&apos;, &apos;IN_NEXT_TIME_UNIT&apos;, &apos;IN_LAST_TIME_UNIT&apos;, and &apos;IN_LAST_TIME_UNIT_SO_FAR&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.CalendarDatePropertyOperationOperator? Operator { get; set; }
-        /// <summary>The operatorName property</summary>
+        /// <summary>A string representing the name of the operator used in the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OperatorName { get; set; }
@@ -44,9 +44,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string OperatorName { get; set; }
 #endif
-        /// <summary>The propertyType property</summary>
+        /// <summary>A string indicating the type of property, defaulting to &apos;calendar-date&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.CalendarDatePropertyType? PropertyType { get; set; }
-        /// <summary>The renderSpec property</summary>
+        /// <summary>A string used to define the rendering specifications for the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RenderSpec { get; set; }
@@ -54,11 +54,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string RenderSpec { get; set; }
 #endif
-        /// <summary>The timeUnit property</summary>
+        /// <summary>A string representing the unit of time for the operation, such as &apos;DAY&apos;, &apos;WEEK&apos;, &apos;MONTH&apos;, &apos;QUARTER&apos;, or &apos;YEAR&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.CalendarDatePropertyOperationTimeUnit? TimeUnit { get; set; }
-        /// <summary>The timeUnitCount property</summary>
+        /// <summary>An integer specifying the number of time units to consider in the operation.</summary>
         public int? TimeUnitCount { get; set; }
-        /// <summary>The useFiscalYear property</summary>
+        /// <summary>A boolean indicating whether the fiscal year should be used in the operation.</summary>
         public bool? UseFiscalYear { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CalendarDatePropertyOperation"/> and sets the default values.

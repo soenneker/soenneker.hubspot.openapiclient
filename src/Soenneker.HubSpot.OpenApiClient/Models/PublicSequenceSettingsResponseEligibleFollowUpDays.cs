@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>Specifies the days on which follow-up actions are allowed.</summary>
+    /// <summary>Specifies the days eligible for follow-ups. Valid values include &apos;EVERYDAY&apos;, &apos;BUSINESS_DAYS&apos;, and &apos;WEEKDAYS_ONLY&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PublicSequenceSettingsResponseEligibleFollowUpDays
     {

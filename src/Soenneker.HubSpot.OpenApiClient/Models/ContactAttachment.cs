@@ -17,12 +17,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The contactProfile property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ContactProfile? ContactProfile { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsContactProfile? ContactProfile { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ContactProfile ContactProfile { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsContactProfile ContactProfile { get; set; }
 #endif
-        /// <summary>The type property</summary>
+        /// <summary>A string indicating the type of the object, which is &apos;CONTACT&apos; by default.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.ContactType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ContactAttachment"/> and sets the default values.
@@ -49,7 +49,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "contactProfile", n => { ContactProfile = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ContactProfile>(global::Soenneker.HubSpot.OpenApiClient.Models.ContactProfile.CreateFromDiscriminatorValue); } },
+                { "contactProfile", n => { ContactProfile = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsContactProfile>(global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsContactProfile.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ContactType>(); } },
             };
         }
@@ -60,7 +60,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ContactProfile>("contactProfile", ContactProfile);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsContactProfile>("contactProfile", ContactProfile);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ContactType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

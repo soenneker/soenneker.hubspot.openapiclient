@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The filterBranches property</summary>
+        /// <summary>An array of nested filter branches, allowing for the combination of multiple logical conditions within the &apos;OR&apos; branch.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicOrFilterBranchFilterBranchesItem>? FilterBranches { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicOrFilterBranchFilterBranchesItem> FilterBranches { get; set; }
 #endif
-        /// <summary>The logical operator used to combine the filters within the branch (OR).</summary>
+        /// <summary>A string representing the operator used to combine the filters within the branch.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FilterBranchOperator { get; set; }
@@ -30,9 +30,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string FilterBranchOperator { get; set; }
 #endif
-        /// <summary>The type of the filter branch (OR).</summary>
+        /// <summary>A string indicating the type of filter branch, which is &apos;OR&apos; for this component.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.OrFilterBranchType? FilterBranchType { get; set; }
-        /// <summary>The filters property</summary>
+        /// <summary>An array of individual filters that are part of the &apos;OR&apos; branch. Each filter represents a specific condition that can be evaluated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicOrFilterBranchFiltersItem>? Filters { get; set; }

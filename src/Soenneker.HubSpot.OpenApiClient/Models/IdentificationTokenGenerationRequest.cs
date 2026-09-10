@@ -30,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string FirstName { get; set; }
 #endif
-        /// <summary>The hsCustomerAgentContext property</summary>
+        /// <summary>An object containing additional context about the customer agent. This field is required and can include various string properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.IdentificationTokenGenerationRequestHsCustomerAgentContextProperty? HsCustomerAgentContext { get; set; }

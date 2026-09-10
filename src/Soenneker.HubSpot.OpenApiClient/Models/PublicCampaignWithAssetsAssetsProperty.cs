@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     /// <summary>
-    /// Contains the assets associated with the campaign, each represented as a collection of campaign assets.
+    /// A map of asset types to their respective collections of campaign assets, represented by CollectionResponsePublicCampaignAsset objects.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PublicCampaignWithAssetsAssetsProperty : IAdditionalDataHolder, IParsable

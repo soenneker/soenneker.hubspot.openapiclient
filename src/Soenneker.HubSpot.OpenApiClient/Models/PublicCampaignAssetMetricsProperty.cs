@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     /// <summary>
-    /// A collection of metrics associated with the campaign asset, represented as key-value pairs.
+    /// A collection of performance metrics for the campaign asset, represented as a map where each key is a metric name and each value is a number.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PublicCampaignAssetMetricsProperty : IAdditionalDataHolder, IParsable

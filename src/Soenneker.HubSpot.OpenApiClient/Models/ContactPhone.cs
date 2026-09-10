@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The phone property</summary>
+        /// <summary>The phone number associated with the contact. This is a required field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Phone { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Phone { get; set; }
 #endif
-        /// <summary>The type property</summary>
+        /// <summary>The type of phone, which can be &apos;CELL&apos;, &apos;MAIN&apos;, &apos;HOME&apos;, or &apos;WORK&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.ContactPhoneType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ContactPhone"/> and sets the default values.

@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>A string representing the source of the timezone. Valid values include &apos;CUSTOM&apos;, &apos;USER&apos;, and &apos;PORTAL&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum IndexedTimePointTimezoneSource
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "CUSTOM")]
         #pragma warning disable CS1591

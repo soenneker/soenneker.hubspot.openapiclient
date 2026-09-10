@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>Indicates that the filter (PROPERTY).</summary>
+    /// <summary>The type of filter being applied. This is a string value that specifies the kind of filter operation.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PropertyFilterType
     {

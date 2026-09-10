@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The label property</summary>
+        /// <summary>A human-readable label for the quick reply, displayed to the user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Label { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Label { get; set; }
 #endif
-        /// <summary>The value property</summary>
+        /// <summary>The actual content or data of the quick reply, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Value { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Value { get; set; }
 #endif
-        /// <summary>The valueType property</summary>
+        /// <summary>Indicates the type of the value, which can be either &apos;TEXT&apos; or &apos;URL&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.QuickReplyValueType? ValueType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.QuickReply"/> and sets the default values.

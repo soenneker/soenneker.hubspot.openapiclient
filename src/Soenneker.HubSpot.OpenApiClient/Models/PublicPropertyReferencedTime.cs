@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Specifies the name of the property that the time reference is applied to.</summary>
+        /// <summary>A string representing the property that is used to reference the time.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Property { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Property { get; set; }
 #endif
-        /// <summary>Specifies the type of reference for the property (VALUE, UPDATED_AT, ANNIVERSARY, VALUE_WITH_ZONE_SAME_LOCAL_CONVERSION, ANNIVERSARY_WITH_ZONE_SAME_LOCAL_CONVERSION).</summary>
+        /// <summary>A string indicating the type of reference, with a default value of &apos;PROPERTY_REFERENCE&apos;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ReferenceType { get; set; }
@@ -30,9 +30,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ReferenceType { get; set; }
 #endif
-        /// <summary>Defines the type of time (PROPERTY_REFERENCED).</summary>
+        /// <summary>A string indicating the type of time reference. It defaults to &apos;PROPERTY_REFERENCE&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyReferencedTimeType? TimeType { get; set; }
-        /// <summary>Specifies the source of the time zone information for the property (CUSTOM, USER, PORTAL).</summary>
+        /// <summary>A string representing the source of the timezone information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TimezoneSource { get; set; }
@@ -40,7 +40,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string TimezoneSource { get; set; }
 #endif
-        /// <summary>Indicates the identifier for the time zone associated with the property.</summary>
+        /// <summary>A string specifying the ID of the timezone.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ZoneId { get; set; }

@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>The priority level assigned to the task.</summary>
+    /// <summary>The priority level of the task, with valid values including &apos;NONE&apos;, &apos;HIGH&apos;, &apos;MEDIUM&apos;, and &apos;LOW&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PublicTaskPatternResponseTaskPriority
     {

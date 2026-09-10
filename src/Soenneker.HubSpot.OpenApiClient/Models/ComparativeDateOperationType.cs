@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>The type of operation (COMPARATIVE_DATE).</summary>
+    /// <summary>A string indicating the type of operation, with a default value of &apos;COMPARATIVE_DATE&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum ComparativeDateOperationType
     {

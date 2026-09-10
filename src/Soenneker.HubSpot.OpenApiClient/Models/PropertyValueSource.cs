@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>The origin of the property value, such as &quot;IMPORT&quot; or &quot;API&quot;.</summary>
+    /// <summary>A string indicating the origin of the property value. Valid values include various sources such as &apos;API&apos;, &apos;FORM&apos;, &apos;SALESFORCE&apos;, and others.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PropertyValueSource
     {

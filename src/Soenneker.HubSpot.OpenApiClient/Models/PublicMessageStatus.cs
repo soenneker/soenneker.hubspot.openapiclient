@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessageFailureDetails FailureDetails { get; set; }
 #endif
-        /// <summary>The statusType property</summary>
+        /// <summary>The type of status for the message. Valid values include &apos;SENT&apos;, &apos;FAILED&apos;, &apos;RECEIVED&apos;, and &apos;READ&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessageStatusStatusType? StatusType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessageStatus"/> and sets the default values.

@@ -14,11 +14,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Specifies the type of filter, which is (CONSTANT).</summary>
+        /// <summary>A string that specifies the type of filter. For this component, it is a constant value indicating the filter&apos;s nature.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.ConstantFilterType? FilterType { get; set; }
-        /// <summary>Indicates whether the filter should accept the condition.</summary>
+        /// <summary>A boolean indicating whether the filter condition should be accepted or not.</summary>
         public bool? ShouldAccept { get; set; }
-        /// <summary>Defines the source of the constant filter.</summary>
+        /// <summary>A string that represents the origin or context of the filter, providing additional information about where or how the filter is applied.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Source { get; set; }

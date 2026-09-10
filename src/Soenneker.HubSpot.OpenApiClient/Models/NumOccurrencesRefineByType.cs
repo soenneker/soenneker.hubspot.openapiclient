@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>A string that specifies the type of refinement, which is &apos;NumOccurrencesRefineBy&apos; by default.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum NumOccurrencesRefineByType
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "NumOccurrencesRefineBy")]
         #pragma warning disable CS1591

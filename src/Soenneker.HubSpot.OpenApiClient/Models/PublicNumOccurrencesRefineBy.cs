@@ -14,11 +14,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The maximum number of occurrences allowed.</summary>
+        /// <summary>An integer specifying the maximum number of occurrences allowed.</summary>
         public int? MaxOccurrences { get; set; }
-        /// <summary>The minimum number of occurrences required.</summary>
+        /// <summary>An integer specifying the minimum number of occurrences required.</summary>
         public int? MinOccurrences { get; set; }
-        /// <summary>The type of refinement (NUM_OCCURRENCES).</summary>
+        /// <summary>A string indicating the type of refinement, which is &apos;NUM_OCCURRENCES&apos; by default.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.NumOccurrencesType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicNumOccurrencesRefineBy"/> and sets the default values.

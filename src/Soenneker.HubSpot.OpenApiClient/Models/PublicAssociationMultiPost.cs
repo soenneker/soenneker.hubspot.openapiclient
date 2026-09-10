@@ -30,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId To { get; set; }
 #endif
-        /// <summary>The types property</summary>
+        /// <summary>An array of AssociationSpec objects that define the types of associations to be created between the source and target objects.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec2>? Types { get; set; }

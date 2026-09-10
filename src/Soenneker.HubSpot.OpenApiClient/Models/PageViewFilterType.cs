@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>Indicates the type of filter being applied (PAGE_VIEW).</summary>
+    /// <summary>A string representing the type of filter being applied. This property determines the category of the filter used in the analytics.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PageViewFilterType
     {

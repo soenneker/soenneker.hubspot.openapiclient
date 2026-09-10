@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.ContactProfile ContactProfile { get; set; }
 #endif
-        /// <summary>The type property</summary>
+        /// <summary>A string indicating the type of the object, which is &apos;CONTACT&apos; by default.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.ContactType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicContact"/> and sets the default values.

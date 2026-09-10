@@ -14,9 +14,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Specifies the type of caller ID, which is set to &apos;COMPANY&apos; by default.</summary>
+        /// <summary>The callerIdType property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.CompanyCallerIdType? CallerIdType { get; set; }
-        /// <summary>The name associated with the company caller ID.</summary>
+        /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }

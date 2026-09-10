@@ -14,11 +14,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The monetary value associated with the spend item.</summary>
+        /// <summary>The financial amount associated with the spend item, represented as a number.</summary>
         public double? Amount { get; set; }
-        /// <summary>The timestamp indicating when the spend item was created.</summary>
+        /// <summary>A Unix timestamp in milliseconds indicating when the spend item was created.</summary>
         public long? CreatedAt { get; set; }
-        /// <summary>A detailed explanation or notes about the spend item.</summary>
+        /// <summary>A string providing additional details about the spend item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Description { get; set; }
@@ -26,7 +26,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>Unique identifier for the spend item.</summary>
+        /// <summary>The unique identifier for the spend item, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }
@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>The name assigned to the spend item.</summary>
+        /// <summary>The name of the spend item, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -42,9 +42,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>The sequence order of the spend item, where 0 is the oldest.</summary>
+        /// <summary>An integer indicating the order or sequence of the spend item.</summary>
         public int? Order { get; set; }
-        /// <summary>The timestamp indicating when the spend item was last updated.</summary>
+        /// <summary>A Unix timestamp in milliseconds indicating when the spend item was last updated.</summary>
         public long? UpdatedAt { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicSpendItem"/> and sets the default values.

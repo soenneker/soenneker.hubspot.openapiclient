@@ -62,7 +62,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Label { get; set; }
 #endif
-        /// <summary>The lastUsedAt property</summary>
+        /// <summary>A Unix timestamp in milliseconds indicating the last time the URL mapping was used.</summary>
         public long? LastUsedAt { get; set; }
         /// <summary>The name of the URL mapping.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

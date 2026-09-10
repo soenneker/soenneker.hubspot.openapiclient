@@ -14,13 +14,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The month in which the fiscal year starts.</summary>
+        /// <summary>A string indicating the start of the fiscal year, used if the operation involves fiscal year calculations.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCalendarDatePropertyOperationFiscalYearStart? FiscalYearStart { get; set; }
-        /// <summary>Indicates whether objects with no value set for the property should be included.</summary>
+        /// <summary>A boolean indicating whether to include objects that have no value set for the calendar date property.</summary>
         public bool? IncludeObjectsWithNoValueSet { get; set; }
-        /// <summary>The type of operation, which is (CALENDAR_DATE).</summary>
+        /// <summary>A string indicating the type of operation. The default value is &apos;CALENDAR_DATE&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.CalendarDateOperationType? OperationType { get; set; }
-        /// <summary>Defines the operation to be applied to the calendar date property (IN_THIS_TIME_UNIT, IN_THIS_TIME_UNIT_SO_FAR, IN_NEXT_TIME_UNIT, IN_LAST_TIME_UNIT).</summary>
+        /// <summary>A string representing the operator used in the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Operator { get; set; }
@@ -28,7 +28,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Operator { get; set; }
 #endif
-        /// <summary>The unit of time to be used in the operation (DAY, WEEK, MONTH, QUARTER, YEAR).</summary>
+        /// <summary>A string representing the unit of time used in the operation, such as &apos;DAY&apos;, &apos;WEEK&apos;, &apos;MONTH&apos;, or &apos;YEAR&apos;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TimeUnit { get; set; }
@@ -36,9 +36,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string TimeUnit { get; set; }
 #endif
-        /// <summary>The count of time units to be applied in the operation (1).</summary>
+        /// <summary>An integer representing the count of the time units involved in the operation.</summary>
         public int? TimeUnitCount { get; set; }
-        /// <summary>Specifies whether the fiscal year should be used in the operation.</summary>
+        /// <summary>A boolean indicating whether to use the fiscal year in the operation.</summary>
         public bool? UseFiscalYear { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicCalendarDatePropertyOperation"/> and sets the default values.

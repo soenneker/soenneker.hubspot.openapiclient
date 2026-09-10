@@ -17,7 +17,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The timestamp when the batch processing was completed, in ISO 8601 format.</summary>
         public DateTimeOffset? CompletedAt { get; set; }
-        /// <summary>The errors property</summary>
+        /// <summary>An array of errors encountered during the batch operation, each providing details about the issue.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError>? Errors { get; set; }
@@ -37,7 +37,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public int? NumErrors { get; set; }
         /// <summary>The timestamp when the batch request was initially made, in ISO 8601 format.</summary>
         public DateTimeOffset? RequestedAt { get; set; }
-        /// <summary>The results property</summary>
+        /// <summary>An array of results from the batch operation, each representing a default association between CRM objects.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicDefaultAssociation>? Results { get; set; }

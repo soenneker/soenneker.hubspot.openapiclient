@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>File access. Can be PUBLIC_INDEXABLE, PUBLIC_NOT_INDEXABLE, PRIVATE.</summary>
+    /// <summary>The access level of the file, represented as a string. Valid values include &apos;PUBLIC_INDEXABLE&apos;, &apos;PUBLIC_NOT_INDEXABLE&apos;, &apos;HIDDEN_INDEXABLE&apos;, &apos;HIDDEN_NOT_INDEXABLE&apos;, &apos;HIDDEN_PRIVATE&apos;, &apos;PRIVATE&apos;, &apos;HIDDEN_SENSITIVE&apos;, and &apos;SENSITIVE&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum FileAccess
     {

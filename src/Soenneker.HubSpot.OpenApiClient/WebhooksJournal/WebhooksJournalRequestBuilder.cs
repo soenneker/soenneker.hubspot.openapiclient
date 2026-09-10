@@ -6,7 +6,6 @@ using Soenneker.HubSpot.OpenApiClient.WebhooksJournal.Journal;
 using Soenneker.HubSpot.OpenApiClient.WebhooksJournal.JournalLocal;
 using Soenneker.HubSpot.OpenApiClient.WebhooksJournal.Snapshots;
 using Soenneker.HubSpot.OpenApiClient.WebhooksJournal.Subscriptions;
-using Soenneker.HubSpot.OpenApiClient.WebhooksJournal.Webhooks;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -38,11 +37,6 @@ namespace Soenneker.HubSpot.OpenApiClient.WebhooksJournal
         public global::Soenneker.HubSpot.OpenApiClient.WebhooksJournal.Subscriptions.SubscriptionsRequestBuilder Subscriptions
         {
             get => new global::Soenneker.HubSpot.OpenApiClient.WebhooksJournal.Subscriptions.SubscriptionsRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The webhooks property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.WebhooksJournal.Webhooks.WebhooksRequestBuilder Webhooks
-        {
-            get => new global::Soenneker.HubSpot.OpenApiClient.WebhooksJournal.Webhooks.WebhooksRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.WebhooksJournal.WebhooksJournalRequestBuilder"/> and sets the default values.

@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>A string indicating the type of subscription, which is always &apos;OBJECT&apos; for this request.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum ObjectValueSubscriptionType
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "OBJECT")]
         #pragma warning disable CS1591

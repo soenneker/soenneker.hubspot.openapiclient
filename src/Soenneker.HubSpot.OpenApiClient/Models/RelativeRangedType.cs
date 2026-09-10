@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>Indicates the type of refinement (RELATIVE_RANGED).</summary>
+    /// <summary>A string indicating the type of refinement, with a default value of &apos;RELATIVE_RANGED&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum RelativeRangedType
     {

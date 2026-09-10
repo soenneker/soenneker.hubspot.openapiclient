@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>The source of the engagement. Valid values include a wide range of sources such as &apos;UNKNOWN&apos;, &apos;IMPORT&apos;, &apos;API&apos;, &apos;FORM&apos;, and many others.</summary>
+    /// <summary>The source of the engagement, will always be `MEETINGS`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum ExternalCalendarMeetingEventResponsePropertiesHsEngagementSource
     {
@@ -99,10 +99,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         #pragma warning disable CS1591
         Bot,
         #pragma warning restore CS1591
-        [EnumMember(Value = "BREEZE_AGENT")]
-        #pragma warning disable CS1591
-        BreezeAgent,
-        #pragma warning restore CS1591
         [EnumMember(Value = "CALCULATED")]
         #pragma warning disable CS1591
         Calculated,
@@ -134,10 +130,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         [EnumMember(Value = "COMPANY_INSIGHTS")]
         #pragma warning disable CS1591
         CompanyInsights,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "CONNECTED_ACCOUNT")]
-        #pragma warning disable CS1591
-        ConnectedAccount,
         #pragma warning restore CS1591
         [EnumMember(Value = "CONTACTS")]
         #pragma warning disable CS1591
@@ -175,10 +167,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         #pragma warning disable CS1591
         CustomerAgent,
         #pragma warning restore CS1591
-        [EnumMember(Value = "CUSTOMER_PORTAL")]
-        #pragma warning disable CS1591
-        CustomerPortal,
-        #pragma warning restore CS1591
         [EnumMember(Value = "DATA_ENRICHMENT")]
         #pragma warning disable CS1591
         DataEnrichment,
@@ -202,10 +190,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         [EnumMember(Value = "DELETE_OBJECTS")]
         #pragma warning disable CS1591
         DeleteObjects,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "DI_WRITE_TO_CRM")]
-        #pragma warning disable CS1591
-        DiWriteToCrm,
         #pragma warning restore CS1591
         [EnumMember(Value = "EMAIL")]
         #pragma warning disable CS1591
@@ -307,10 +291,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         #pragma warning disable CS1591
         Marketplace,
         #pragma warning restore CS1591
-        [EnumMember(Value = "MARKETS")]
-        #pragma warning disable CS1591
-        Markets,
-        #pragma warning restore CS1591
         [EnumMember(Value = "MEETINGS")]
         #pragma warning disable CS1591
         Meetings,
@@ -406,10 +386,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         [EnumMember(Value = "RESTORE_OBJECTS")]
         #pragma warning disable CS1591
         RestoreObjects,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "REVENUE_PLATFORM")]
-        #pragma warning disable CS1591
-        RevenuePlatform,
         #pragma warning restore CS1591
         [EnumMember(Value = "SALES")]
         #pragma warning disable CS1591

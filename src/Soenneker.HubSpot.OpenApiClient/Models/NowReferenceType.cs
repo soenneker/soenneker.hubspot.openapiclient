@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>Indicates the type of reference (NOW).</summary>
+    /// <summary>A string that indicates the type of reference. The default value is &apos;NOW&apos;, and it is used to specify that the reference is to the current time.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum NowReferenceType
     {

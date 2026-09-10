@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     /// <summary>
-    /// The name and value of any additional properties that exist for this list and that were included in the search request.
+    /// An object containing additional properties of the list, with each property represented as a string.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PublicObjectListSearchResultAdditionalPropertiesProperty : IAdditionalDataHolder, IParsable

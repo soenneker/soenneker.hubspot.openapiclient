@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>Specifies the type of conversion (INACTIVITY).</summary>
+    /// <summary>A string that specifies the type of conversion, with a default value of &apos;INACTIVITY&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum InactivityConversionType
     {

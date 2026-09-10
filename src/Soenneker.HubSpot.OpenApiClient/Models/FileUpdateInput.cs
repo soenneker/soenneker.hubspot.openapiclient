@@ -12,17 +12,17 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     public partial class FileUpdateInput : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>NONE: Do not run any duplicate validation. REJECT: Reject the upload if a duplicate is found. RETURN_EXISTING: If a duplicate file is found, do not upload a new file and return the found duplicate instead.</summary>
+        /// <summary>The access level to update the file to. Valid values include &apos;PUBLIC_INDEXABLE&apos;, &apos;PUBLIC_NOT_INDEXABLE&apos;, &apos;HIDDEN_INDEXABLE&apos;, &apos;HIDDEN_NOT_INDEXABLE&apos;, &apos;HIDDEN_PRIVATE&apos;, &apos;PRIVATE&apos;, &apos;HIDDEN_SENSITIVE&apos;, and &apos;SENSITIVE&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.FileUpdateInputAccess? Access { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The clearExpires property</summary>
+        /// <summary>A boolean indicating whether to clear the expires TTL on the file.</summary>
         public bool? ClearExpires { get; set; }
-        /// <summary>The expiresAt property</summary>
+        /// <summary>The date and time when the file will expire, represented in ISO 8601 format.</summary>
         public DateTimeOffset? ExpiresAt { get; set; }
-        /// <summary>Mark whether the file should be used in new content or not.</summary>
+        /// <summary>A boolean indicating whether the file can be used in content.</summary>
         public bool? IsUsableInContent { get; set; }
-        /// <summary>New name for the file.</summary>
+        /// <summary>New Name to rename the file to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>FolderId where the file should be moved to. folderId and folderPath parameters cannot be set at the same time.</summary>
+        /// <summary>The ID of the parent folder where the file should be moved. This cannot be set in tandem with parentFolderPath.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ParentFolderId { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ParentFolderId { get; set; }
 #endif
-        /// <summary>Folder path where the file should be moved to. folderId and folderPath parameters cannot be set at the same time.</summary>
+        /// <summary>The new parentFolder path to move the file to. This cannot be set in tandem with parentFolderId.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ParentFolderPath { get; set; }

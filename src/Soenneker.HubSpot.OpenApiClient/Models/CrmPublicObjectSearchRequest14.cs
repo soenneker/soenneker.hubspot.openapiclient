@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A paging cursor token for retrieving subsequent pages.</summary>
+        /// <summary>A string representing the paging cursor token for retrieving the next set of results. This is used for pagination in search results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? After { get; set; }
@@ -23,17 +23,17 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string After { get; set; }
 #endif
-        /// <summary>Up to 6 groups of filters defining additional query criteria.</summary>
+        /// <summary>An array of filter groups used to specify the criteria for filtering the search results. Each filter group contains multiple filters that are applied together.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup15>? FilterGroups { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup14>? FilterGroups { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup15> FilterGroups { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup14> FilterGroups { get; set; }
 #endif
-        /// <summary>The maximum results to return, up to 200 objects.</summary>
+        /// <summary>An integer indicating the maximum number of results to return. This helps to control the size of the result set.</summary>
         public int? Limit { get; set; }
-        /// <summary>A list of property names to include in the response.</summary>
+        /// <summary>An array of strings specifying the properties of the CRM objects to be returned in the search results. If a specified property is not present on the objects, it will be ignored.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Properties { get; set; }
@@ -41,7 +41,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<string> Properties { get; set; }
 #endif
-        /// <summary>The search query string, up to 3000 characters.</summary>
+        /// <summary>A string representing a search query to match against the CRM objects. This is used to perform a text-based search.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Query { get; set; }
@@ -49,7 +49,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Query { get; set; }
 #endif
-        /// <summary>Specifies sorting order based on object properties.</summary>
+        /// <summary>An array of strings indicating the sorting order of the search results. Each string specifies a property to sort by, optionally prefixed with a &apos;-&apos; to indicate descending order.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Sorts { get; set; }
@@ -83,7 +83,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "after", n => { After = n.GetStringValue(); } },
-                { "filterGroups", n => { FilterGroups = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup15>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup15.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "filterGroups", n => { FilterGroups = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup14>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup14.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "limit", n => { Limit = n.GetIntValue(); } },
                 { "properties", n => { Properties = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "query", n => { Query = n.GetStringValue(); } },
@@ -98,7 +98,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("after", After);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup15>("filterGroups", FilterGroups);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup14>("filterGroups", FilterGroups);
             writer.WriteIntValue("limit", Limit);
             writer.WriteCollectionOfPrimitiveValues<string>("properties", Properties);
             writer.WriteStringValue("query", Query);

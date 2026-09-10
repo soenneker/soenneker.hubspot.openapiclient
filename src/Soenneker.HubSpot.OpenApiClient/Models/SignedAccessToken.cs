@@ -14,9 +14,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The appId property</summary>
+        /// <summary>An integer identifying the application that issued the token.</summary>
         public int? AppId { get; set; }
-        /// <summary>The appInstallId property</summary>
+        /// <summary>A string identifying the installation instance of the application associated with the token.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AppInstallId { get; set; }
@@ -24,7 +24,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string AppInstallId { get; set; }
 #endif
-        /// <summary>The audience property</summary>
+        /// <summary>A string representing the intended audience for the token.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Audience { get; set; }
@@ -32,11 +32,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Audience { get; set; }
 #endif
-        /// <summary>The expiresAt property</summary>
+        /// <summary>An integer representing the expiration time of the token, in Unix timestamp format.</summary>
         public long? ExpiresAt { get; set; }
-        /// <summary>The hubId property</summary>
+        /// <summary>An integer identifying the HubSpot account associated with the token.</summary>
         public int? HubId { get; set; }
-        /// <summary>The hublet property</summary>
+        /// <summary>A string indicating the specific HubSpot region or cluster.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Hublet { get; set; }
@@ -44,15 +44,15 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Hublet { get; set; }
 #endif
-        /// <summary>The installingUserId property</summary>
+        /// <summary>An integer identifying the user who installed the application associated with the token.</summary>
         public int? InstallingUserId { get; set; }
-        /// <summary>The isPrivateDistribution property</summary>
+        /// <summary>A boolean indicating whether the token is for a private distribution of the application.</summary>
         public bool? IsPrivateDistribution { get; set; }
-        /// <summary>The isServiceAccount property</summary>
+        /// <summary>A boolean indicating whether the token is for a service account.</summary>
         public bool? IsServiceAccount { get; set; }
-        /// <summary>The isUserLevel property</summary>
+        /// <summary>A boolean indicating whether the token is associated with a user-level scope.</summary>
         public bool? IsUserLevel { get; set; }
-        /// <summary>The newSignature property</summary>
+        /// <summary>A string representing a new cryptographic signature for the token.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? NewSignature { get; set; }
@@ -60,7 +60,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string NewSignature { get; set; }
 #endif
-        /// <summary>The scopes property</summary>
+        /// <summary>A string detailing the permissions granted by the token.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Scopes { get; set; }
@@ -68,7 +68,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Scopes { get; set; }
 #endif
-        /// <summary>The scopeToScopeGroupPks property</summary>
+        /// <summary>A string mapping scopes to their respective scope group primary keys.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ScopeToScopeGroupPks { get; set; }
@@ -76,7 +76,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ScopeToScopeGroupPks { get; set; }
 #endif
-        /// <summary>The signature property</summary>
+        /// <summary>A string representing the cryptographic signature of the token.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Signature { get; set; }
@@ -84,7 +84,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Signature { get; set; }
 #endif
-        /// <summary>The trialScopes property</summary>
+        /// <summary>A string detailing the trial permissions granted by the token.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TrialScopes { get; set; }
@@ -92,7 +92,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string TrialScopes { get; set; }
 #endif
-        /// <summary>The trialScopeToScopeGroupPks property</summary>
+        /// <summary>A string mapping trial scopes to their respective scope group primary keys.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TrialScopeToScopeGroupPks { get; set; }
@@ -100,7 +100,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string TrialScopeToScopeGroupPks { get; set; }
 #endif
-        /// <summary>The userId property</summary>
+        /// <summary>An integer identifying the user associated with the token.</summary>
         public int? UserId { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.SignedAccessToken"/> and sets the default values.

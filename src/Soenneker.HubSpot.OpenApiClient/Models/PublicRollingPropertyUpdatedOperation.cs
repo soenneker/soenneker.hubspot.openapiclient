@@ -14,13 +14,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Indicates whether objects with no value set for the property should be included in the operation.</summary>
+        /// <summary>A boolean indicating whether objects with no value set should be included in the operation.</summary>
         public bool? IncludeObjectsWithNoValueSet { get; set; }
-        /// <summary>The number of days to be considered in the rolling property updated operation.</summary>
+        /// <summary>An integer specifying the number of days over which the rolling operation is applied.</summary>
         public int? NumberOfDays { get; set; }
-        /// <summary>Specifies the type of operation (ROLLING_PROPERTY_UPDATED).</summary>
+        /// <summary>A string indicating the type of operation, defaulting to &apos;ROLLING_PROPERTY_UPDATED&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.RollingPropertyUpdatedOperationType? OperationType { get; set; }
-        /// <summary>Defines the operation to be applied within the rolling property updated operation (UPDATED_IN_LAST_X_DAYS, NOT_UPDATED_IN_LAST_X_DAYS).</summary>
+        /// <summary>A string representing the operator used in the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Operator { get; set; }

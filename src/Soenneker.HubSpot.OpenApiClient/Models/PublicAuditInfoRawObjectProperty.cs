@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     /// <summary>
-    /// An object containing the raw data associated with the audit event.
+    /// An object containing the raw data associated with the action. This can include detailed information about the state before and after the action.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PublicAuditInfoRawObjectProperty : IAdditionalDataHolder, IParsable

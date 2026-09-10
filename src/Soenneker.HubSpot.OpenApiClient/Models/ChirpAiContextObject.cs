@@ -38,7 +38,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.ComplianceIds ComplianceIds { get; set; }
 #endif
-        /// <summary>The conversationId property</summary>
+        /// <summary>A string identifier for the conversation associated with the context.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ConversationId { get; set; }
@@ -62,7 +62,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string InferenceId { get; set; }
 #endif
-        /// <summary>The isPrivate property</summary>
+        /// <summary>A boolean indicating whether the context is private.</summary>
         public bool? IsPrivate { get; set; }
         /// <summary>Additional metadata related to the context, represented as key-value pairs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -80,9 +80,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObjectOtelContextHolderProperty OtelContextHolder { get; set; }
 #endif
+        /// <summary>The sensitivity property</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObjectSensitivity? Sensitivity { get; set; }
         /// <summary>The identifier for the trajectory, formatted as a UUID.</summary>
         public Guid? TrajectoryId { get; set; }
-        /// <summary>The unstructuredSources property</summary>
+        /// <summary>An array of strings indicating the sources of unstructured data. Valid values include &apos;NONE&apos;, &apos;USER_INPUT&apos;, &apos;LOGGED_EMAIL&apos;, &apos;VIDEO_CALL&apos;, &apos;AUDIO_CALL&apos;, &apos;CALL_TRANSCRIPT&apos;, &apos;MEETING_TRANSCRIPT&apos;, &apos;FORMS&apos;, &apos;FEEDBACK_SURVEY&apos;, &apos;PDF&apos;, &apos;QUOTE&apos;, &apos;INVOICE&apos;, &apos;OTHER_ATTACHMENT_DOC&apos;, &apos;WHATSAPP&apos;, &apos;SMS&apos;, &apos;CHAT&apos;, &apos;FACEBOOK_MESSENGER&apos;, &apos;CUSTOM_CHANNEL_OR_API&apos;, &apos;MANY&apos;, &apos;NOTE&apos;, and &apos;DERIVED&apos;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObjectUnstructuredSourcesItem?>? UnstructuredSources { get; set; }
@@ -124,6 +126,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "isPrivate", n => { IsPrivate = n.GetBoolValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObjectMetadataProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObjectMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "otelContextHolder", n => { OtelContextHolder = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObjectOtelContextHolderProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObjectOtelContextHolderProperty.CreateFromDiscriminatorValue); } },
+                { "sensitivity", n => { Sensitivity = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObjectSensitivity>(); } },
                 { "trajectoryId", n => { TrajectoryId = n.GetGuidValue(); } },
                 { "unstructuredSources", n => { UnstructuredSources = n.GetCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObjectUnstructuredSourcesItem>()?.AsList(); } },
             };
@@ -144,6 +147,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteBoolValue("isPrivate", IsPrivate);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObjectMetadataProperty>("metadata", Metadata);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObjectOtelContextHolderProperty>("otelContextHolder", OtelContextHolder);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObjectSensitivity>("sensitivity", Sensitivity);
             writer.WriteGuidValue("trajectoryId", TrajectoryId);
             writer.WriteCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.ChirpAiContextObjectUnstructuredSourcesItem>("unstructuredSources", UnstructuredSources);
             writer.WriteAdditionalData(AdditionalData);

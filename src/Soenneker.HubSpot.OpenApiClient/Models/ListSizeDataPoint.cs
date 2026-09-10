@@ -14,9 +14,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The size property</summary>
+        /// <summary>An integer representing the size of the list at the given timestamp.</summary>
         public long? Size { get; set; }
-        /// <summary>The timestamp property</summary>
+        /// <summary>A Unix timestamp in milliseconds indicating the specific point in time when the list size was recorded.</summary>
         public DateTimeOffset? Timestamp { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ListSizeDataPoint"/> and sets the default values.

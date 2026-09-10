@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The list of custom properties to tie to the list. Custom property name is the key, the value is the value.</summary>
+        /// <summary>An object containing custom properties for the list. These properties allow for additional customization of the list.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequestCustomPropertiesProperty? CustomProperties { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequestCustomPropertiesProperty CustomProperties { get; set; }
 #endif
-        /// <summary>Filter branch object containing filtering criteria for the list</summary>
+        /// <summary>An object that defines the filter criteria for the list. It determines which records are included in the list based on specified conditions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequestFilterBranch? FilterBranch { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequestFilterBranch FilterBranch { get; set; }
 #endif
-        /// <summary>The ID of the folder that the list should be created in. If left blank, then the list will be created in the root of the list folder structure.</summary>
+        /// <summary>A string representing the ID of the folder where the list will be stored. This helps in organizing lists into folders.</summary>
         public int? ListFolderId { get; set; }
         /// <summary>The listPermissions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -48,7 +48,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicMembershipSettings MembershipSettings { get; set; }
 #endif
-        /// <summary>The name of the list, which must be globally unique across all public lists in the portal.</summary>
+        /// <summary>A string representing the name of the list. This is used to identify the list within the system.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -56,7 +56,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>The object type ID of the type of objects that the list will store.</summary>
+        /// <summary>A string indicating the type of objects that the list will contain. This helps in categorizing the list based on the object type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ObjectTypeId { get; set; }
@@ -64,7 +64,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ObjectTypeId { get; set; }
 #endif
-        /// <summary>The processing type of the list. One of: `SNAPSHOT`, `MANUAL`, or `DYNAMIC`.</summary>
+        /// <summary>A string that specifies the processing type of the list. It defines how the list is processed within the system.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ProcessingType { get; set; }

@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>Indicates the type of reference (FISCAL_QUARTER).</summary>
+    /// <summary>A string indicating the type of reference, which is &apos;FISCAL_QUARTER&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum FiscalQuarterReferenceType
     {

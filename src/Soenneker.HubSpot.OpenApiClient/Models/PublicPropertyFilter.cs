@@ -14,9 +14,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Indicates that the filter (PROPERTY).</summary>
+        /// <summary>The type of filter being applied. This is a string value that specifies the kind of filter operation.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyFilterType? FilterType { get; set; }
-        /// <summary>Defines the operation to be performed on the property, such as comparison or value matching.</summary>
+        /// <summary>The specific operation or condition used in the filter. This is a string value that defines how the filter should be applied to the property.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPropertyFilterOperation? Operation { get; set; }
@@ -24,7 +24,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPropertyFilterOperation Operation { get; set; }
 #endif
-        /// <summary>Specifies the name of the property that the filter is applied to.</summary>
+        /// <summary>The name of the property to which the filter is applied. This is a string value representing the property name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Property { get; set; }

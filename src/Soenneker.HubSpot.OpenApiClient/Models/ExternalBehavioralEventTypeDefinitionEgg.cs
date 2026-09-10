@@ -30,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>The includeDefaultProperties property</summary>
+        /// <summary>A boolean indicating whether to include default properties in the event type definition.</summary>
         public bool? IncludeDefaultProperties { get; set; }
         /// <summary>Human readable label for the event. Used in HubSpot UI</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

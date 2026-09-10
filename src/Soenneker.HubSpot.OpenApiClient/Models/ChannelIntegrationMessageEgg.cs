@@ -14,9 +14,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The associateWithContactId property</summary>
+        /// <summary>The ID of the contact with which this message should be associated.</summary>
         public long? AssociateWithContactId { get; set; }
-        /// <summary>The attachments property</summary>
+        /// <summary>An array of attachments included with the message, which can be files, locations, contacts, or other supported types.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ChannelIntegrationMessageEggAttachmentsItem>? Attachments { get; set; }
@@ -24,7 +24,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ChannelIntegrationMessageEggAttachmentsItem> Attachments { get; set; }
 #endif
-        /// <summary>The channelAccountId property</summary>
+        /// <summary>The ID of the channel account through which the message is sent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ChannelAccountId { get; set; }
@@ -32,7 +32,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ChannelAccountId { get; set; }
 #endif
-        /// <summary>The inReplyToId property</summary>
+        /// <summary>The ID of the message this message is replying to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? InReplyToId { get; set; }
@@ -40,7 +40,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string InReplyToId { get; set; }
 #endif
-        /// <summary>The integrationIdempotencyId property</summary>
+        /// <summary>A unique identifier to ensure idempotency of the message within the integration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? IntegrationIdempotencyId { get; set; }
@@ -48,7 +48,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string IntegrationIdempotencyId { get; set; }
 #endif
-        /// <summary>The integrationThreadId property</summary>
+        /// <summary>A unique identifier for the thread within the integration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? IntegrationThreadId { get; set; }
@@ -56,7 +56,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string IntegrationThreadId { get; set; }
 #endif
-        /// <summary>The messageDirection property</summary>
+        /// <summary>The direction of the message, indicating whether it is &apos;INCOMING&apos; or &apos;OUTGOING&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.ChannelIntegrationMessageEggMessageDirection? MessageDirection { get; set; }
         /// <summary>The preResolvedContacts property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -66,7 +66,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.PreResolvedContacts PreResolvedContacts { get; set; }
 #endif
-        /// <summary>The recipients property</summary>
+        /// <summary>An array of participants representing the recipients of the message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ChannelIntegrationParticipant>? Recipients { get; set; }
@@ -74,7 +74,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ChannelIntegrationParticipant> Recipients { get; set; }
 #endif
-        /// <summary>The richText property</summary>
+        /// <summary>The rich text content of the message, allowing for formatting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RichText { get; set; }
@@ -82,7 +82,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string RichText { get; set; }
 #endif
-        /// <summary>The senders property</summary>
+        /// <summary>An array of participants representing the senders of the message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ChannelIntegrationParticipant>? Senders { get; set; }
@@ -90,7 +90,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ChannelIntegrationParticipant> Senders { get; set; }
 #endif
-        /// <summary>The text property</summary>
+        /// <summary>The plain text content of the message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Text { get; set; }
@@ -98,7 +98,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Text { get; set; }
 #endif
-        /// <summary>The timestamp property</summary>
+        /// <summary>The date and time when the message was created, in ISO 8601 format.</summary>
         public DateTimeOffset? Timestamp { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ChannelIntegrationMessageEgg"/> and sets the default values.

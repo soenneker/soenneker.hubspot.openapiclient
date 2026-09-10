@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>The language code for the export. Valid values include &apos;EN&apos;, &apos;FR&apos;, &apos;DE&apos;, &apos;JA&apos;, &apos;ES&apos;, &apos;PT_BR&apos;, &apos;NL&apos;, &apos;BN&apos;, &apos;CS&apos;, &apos;DA_DK&apos;, &apos;EL_GR&apos;, &apos;ES_MX&apos;, &apos;FI&apos;, &apos;HR&apos;, &apos;HU&apos;, &apos;ID&apos;, &apos;IT&apos;, &apos;KO_KR&apos;, &apos;NO&apos;, &apos;PL&apos;, &apos;RO&apos;, &apos;RU&apos;, &apos;SV&apos;, &apos;TH&apos;, &apos;VI_VN&apos;, &apos;ZH_CN&apos;, &apos;ZH_HK&apos;, &apos;AF_ZA&apos;, &apos;AR_EG&apos;, &apos;BG&apos;, &apos;CA_ES&apos;, &apos;SL&apos;, &apos;TR&apos;, &apos;UK&apos;, &apos;EN_GB&apos;, &apos;FR_CA&apos;, &apos;HE_IL&apos;, &apos;LT_LT&apos;, &apos;PT_PT&apos;, &apos;SK_SK&apos;, &apos;MS&apos;, &apos;TL&apos;, &apos;ZH_TW&apos;, &apos;HI_IN&apos;, &apos;ET_EE&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum PublicExportViewRequestLanguage
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "AF_ZA")]
         #pragma warning disable CS1591

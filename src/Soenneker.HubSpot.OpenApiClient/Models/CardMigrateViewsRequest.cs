@@ -14,13 +14,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The allowDuplicateAppCardIds property</summary>
+        /// <summary>A boolean flag indicating whether duplicate app card IDs are allowed during the migration process.</summary>
         public bool? AllowDuplicateAppCardIds { get; set; }
-        /// <summary>The appCardId property</summary>
+        /// <summary>The unique identifier for the new app card to which views will be migrated. This is an integer in int64 format.</summary>
         public long? AppCardId { get; set; }
-        /// <summary>The helpdeskAppCardId property</summary>
+        /// <summary>The unique identifier for the helpdesk app card, if applicable. This is an integer in int64 format.</summary>
         public long? HelpdeskAppCardId { get; set; }
-        /// <summary>The legacyCrmCardId property</summary>
+        /// <summary>The unique identifier for the legacy CRM card. This is an integer in int64 format.</summary>
         public long? LegacyCrmCardId { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CardMigrateViewsRequest"/> and sets the default values.

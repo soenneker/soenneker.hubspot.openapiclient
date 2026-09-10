@@ -38,7 +38,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailRecipients ContactLists { get; set; }
 #endif
-        /// <summary>The limitSendFrequency property</summary>
+        /// <summary>A boolean indicating whether the frequency of sending emails to the recipients should be limited.</summary>
         public bool? LimitSendFrequency { get; set; }
         /// <summary>Whether to send to unengaged contacts (false) or not (true).</summary>
         public bool? SuppressGraymail { get; set; }

@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>The currency code used for the budget and spend amounts, following ISO 4217 standards.</summary>
+    /// <summary>The currency code used for the budget and spending amounts, represented as a string. Valid values include standard currency codes such as &apos;USD&apos;, &apos;EUR&apos;, &apos;JPY&apos;, etc.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PublicBudgetTotalsCurrencyCode
     {

@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>A string indicating the type of property operation, which is &apos;datetime-comparative&apos; for this component.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum DatetimeComparativePropertyType
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "datetime-comparative")]
         #pragma warning disable CS1591

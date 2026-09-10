@@ -14,9 +14,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The archived property</summary>
+        /// <summary>A boolean indicating whether this message is archived.</summary>
         public bool? Archived { get; set; }
-        /// <summary>The attachments property</summary>
+        /// <summary>An array of attachments included with this message, which can be of various types such as files, locations, or social media metadata.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessageAttachmentsItem>? Attachments { get; set; }
@@ -24,7 +24,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessageAttachmentsItem> Attachments { get; set; }
 #endif
-        /// <summary>The channelAccountId property</summary>
+        /// <summary>The identifier of the channel account associated with this message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ChannelAccountId { get; set; }
@@ -32,7 +32,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ChannelAccountId { get; set; }
 #endif
-        /// <summary>The channelId property</summary>
+        /// <summary>The identifier of the channel through which this message was sent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ChannelId { get; set; }
@@ -48,7 +48,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicClient Client { get; set; }
 #endif
-        /// <summary>The conversationsThreadId property</summary>
+        /// <summary>The identifier of the conversation thread to which this message belongs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ConversationsThreadId { get; set; }
@@ -56,9 +56,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ConversationsThreadId { get; set; }
 #endif
-        /// <summary>The createdAt property</summary>
+        /// <summary>The date and time when this message was created, in ISO 8601 format.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
-        /// <summary>The createdBy property</summary>
+        /// <summary>The identifier of the actor who created this message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CreatedBy { get; set; }
@@ -66,9 +66,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string CreatedBy { get; set; }
 #endif
-        /// <summary>The direction property</summary>
+        /// <summary>The direction of the message, indicating whether it is &apos;INCOMING&apos; or &apos;OUTGOING&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessageDirection? Direction { get; set; }
-        /// <summary>The id property</summary>
+        /// <summary>The unique identifier for this message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }
@@ -76,7 +76,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>The inReplyToId property</summary>
+        /// <summary>The identifier of the message to which this message is a reply, if applicable.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? InReplyToId { get; set; }
@@ -84,7 +84,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string InReplyToId { get; set; }
 #endif
-        /// <summary>The recipients property</summary>
+        /// <summary>An array of recipients of this message, each represented as a PublicRecipient object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRecipient>? Recipients { get; set; }
@@ -92,7 +92,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRecipient> Recipients { get; set; }
 #endif
-        /// <summary>The richText property</summary>
+        /// <summary>The rich text content of the message, which may include formatting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RichText { get; set; }
@@ -100,7 +100,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string RichText { get; set; }
 #endif
-        /// <summary>The senders property</summary>
+        /// <summary>An array of senders involved in this message, each represented as a PublicSender object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSender>? Senders { get; set; }
@@ -116,7 +116,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessageStatus Status { get; set; }
 #endif
-        /// <summary>The subject property</summary>
+        /// <summary>The subject of the message, if applicable.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Subject { get; set; }
@@ -124,7 +124,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Subject { get; set; }
 #endif
-        /// <summary>The text property</summary>
+        /// <summary>The plain text content of the message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Text { get; set; }
@@ -132,11 +132,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Text { get; set; }
 #endif
-        /// <summary>The truncationStatus property</summary>
+        /// <summary>Indicates the truncation status of the message content, with possible values being &apos;NOT_TRUNCATED&apos;, &apos;TRUNCATED_TO_MOST_RECENT_REPLY&apos;, or &apos;TRUNCATED&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessageTruncationStatus? TruncationStatus { get; set; }
-        /// <summary>The type property</summary>
+        /// <summary>The type of the message, which is always &apos;MESSAGE&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.MessageType? Type { get; set; }
-        /// <summary>The updatedAt property</summary>
+        /// <summary>The date and time when this message was last updated, in ISO 8601 format.</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessage"/> and sets the default values.

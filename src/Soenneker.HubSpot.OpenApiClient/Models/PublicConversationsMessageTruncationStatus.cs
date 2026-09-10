@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>Indicates the truncation status of the message content, with possible values being &apos;NOT_TRUNCATED&apos;, &apos;TRUNCATED_TO_MOST_RECENT_REPLY&apos;, or &apos;TRUNCATED&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum PublicConversationsMessageTruncationStatus
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "NOT_TRUNCATED")]
         #pragma warning disable CS1591

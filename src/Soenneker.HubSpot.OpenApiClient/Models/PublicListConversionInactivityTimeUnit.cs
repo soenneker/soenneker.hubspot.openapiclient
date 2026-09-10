@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>The unit of time for the inactivity period, such as (DAY, MONTH, WEEK).</summary>
+    /// <summary>A string representing the unit of time for measuring inactivity. Valid values include &apos;DAY&apos;, &apos;WEEK&apos;, and &apos;MONTH&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PublicListConversionInactivityTimeUnit
     {

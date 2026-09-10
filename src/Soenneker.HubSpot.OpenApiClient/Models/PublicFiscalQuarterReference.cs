@@ -14,19 +14,19 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The day component of the fiscal quarter reference.</summary>
+        /// <summary>An integer representing the day of the month.</summary>
         public int? Day { get; set; }
-        /// <summary>The hour component of the fiscal quarter reference.</summary>
+        /// <summary>An integer representing the hour of the day.</summary>
         public int? Hour { get; set; }
-        /// <summary>The millisecond component of the fiscal quarter reference.</summary>
+        /// <summary>An integer representing the millisecond within the second.</summary>
         public int? Millisecond { get; set; }
-        /// <summary>The minute component of the fiscal quarter reference.</summary>
+        /// <summary>An integer representing the minute within the hour.</summary>
         public int? Minute { get; set; }
-        /// <summary>The month component of the fiscal quarter reference.</summary>
+        /// <summary>An integer representing the month of the year.</summary>
         public int? Month { get; set; }
-        /// <summary>Indicates the type of reference (FISCAL_QUARTER).</summary>
+        /// <summary>A string indicating the type of reference, which is &apos;FISCAL_QUARTER&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.FiscalQuarterReferenceType? ReferenceType { get; set; }
-        /// <summary>The second component of the fiscal quarter reference.</summary>
+        /// <summary>An integer representing the second within the minute.</summary>
         public int? Second { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicFiscalQuarterReference"/> and sets the default values.

@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The main category of the error.</summary>
+        /// <summary>A string that categorizes the type of error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Category { get; set; }
@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Category { get; set; }
 #endif
-        /// <summary>Additional context-specific information related to the error.</summary>
+        /// <summary>An object containing additional context about the error condition, with properties as arrays of strings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.FilesStandardErrorContextProperty? Context { get; set; }
@@ -31,7 +31,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.FilesStandardErrorContextProperty Context { get; set; }
 #endif
-        /// <summary>The detailed error objects.</summary>
+        /// <summary>An array of ErrorDetail objects that provide further information about the error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.FilesErrorDetail>? Errors { get; set; }
@@ -39,7 +39,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.FilesErrorDetail> Errors { get; set; }
 #endif
-        /// <summary>A unique ID for the error instance.</summary>
+        /// <summary>A string representing a unique identifier for the error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }
@@ -47,7 +47,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>URLs linking to documentation or resources associated with the error.</summary>
+        /// <summary>An object mapping link names to associated URIs with documentation or remediation steps for the error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.FilesStandardErrorLinksProperty? Links { get; set; }
@@ -55,7 +55,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.FilesStandardErrorLinksProperty Links { get; set; }
 #endif
-        /// <summary>A human-readable string describing the error and possible remediation steps.</summary>
+        /// <summary>A string containing a human-readable message describing the error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Message { get; set; }
@@ -63,7 +63,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Message { get; set; }
 #endif
-        /// <summary>The HTTP status code associated with the error.</summary>
+        /// <summary>A string indicating the status of the error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Status { get; set; }
@@ -71,7 +71,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Status { get; set; }
 #endif
-        /// <summary>A more specific error category within each main category.</summary>
+        /// <summary>An object providing more specific details about the error category.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.FilesStandardErrorSubCategoryProperty? SubCategory { get; set; }

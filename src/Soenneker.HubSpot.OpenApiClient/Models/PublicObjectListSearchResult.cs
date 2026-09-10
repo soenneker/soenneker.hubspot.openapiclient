@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The name and value of any additional properties that exist for this list and that were included in the search request.</summary>
+        /// <summary>An object containing additional properties of the list, with each property represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectListSearchResultAdditionalPropertiesProperty? AdditionalProperties { get; set; }
@@ -22,9 +22,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectListSearchResultAdditionalPropertiesProperty AdditionalProperties { get; set; }
 #endif
-        /// <summary>The time when the list was created.</summary>
+        /// <summary>The date and time when the list was created, in ISO 8601 format.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
-        /// <summary>The ID of the user that created the list.</summary>
+        /// <summary>The unique identifier of the user who created the list, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CreatedById { get; set; }
@@ -32,11 +32,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string CreatedById { get; set; }
 #endif
-        /// <summary>The time when the list was deleted.</summary>
+        /// <summary>The date and time when the list was deleted, in ISO 8601 format.</summary>
         public DateTimeOffset? DeletedAt { get; set; }
-        /// <summary>The time when the filters for this list were last updated.</summary>
+        /// <summary>The date and time when the list&apos;s filters were last updated, in ISO 8601 format.</summary>
         public DateTimeOffset? FiltersUpdatedAt { get; set; }
-        /// <summary>The **ILS ID** of the list.</summary>
+        /// <summary>The unique identifier for the list, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ListId { get; set; }
@@ -44,9 +44,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ListId { get; set; }
 #endif
-        /// <summary>The version of the list.</summary>
+        /// <summary>An integer indicating the version of the list.</summary>
         public int? ListVersion { get; set; }
-        /// <summary>The name of the list.</summary>
+        /// <summary>The name of the list, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -54,7 +54,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>The object type of the list.</summary>
+        /// <summary>The unique identifier for the type of object associated with the list, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ObjectTypeId { get; set; }
@@ -62,7 +62,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ObjectTypeId { get; set; }
 #endif
-        /// <summary>The processing status of the list.</summary>
+        /// <summary>A string representing the current processing status of the list.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ProcessingStatus { get; set; }
@@ -70,7 +70,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ProcessingStatus { get; set; }
 #endif
-        /// <summary>The processing type of the list.</summary>
+        /// <summary>A string indicating the type of processing applied to the list.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ProcessingType { get; set; }
@@ -78,9 +78,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ProcessingType { get; set; }
 #endif
-        /// <summary>The time the list was last updated.</summary>
+        /// <summary>The date and time when the list was last updated, in ISO 8601 format.</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
-        /// <summary>The ID of the user that last updated the list.</summary>
+        /// <summary>The unique identifier of the user who last updated the list, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UpdatedById { get; set; }

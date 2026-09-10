@@ -27,7 +27,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>The timestamp when the batch process was initiated, in ISO 8601 format.</summary>
         public DateTimeOffset? RequestedAt { get; set; }
-        /// <summary>The results property</summary>
+        /// <summary>An array of objects representing the results of the batch upsert operation. Each object includes details about the created or updated CRM object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicUpsertObject12>? Results { get; set; }
@@ -37,7 +37,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>The timestamp when the batch process began execution, in ISO 8601 format.</summary>
         public DateTimeOffset? StartedAt { get; set; }
-        /// <summary>The status of the batch processing request. Can be: &quot;PENDING&quot;, &quot;PROCESSING&quot;, &quot;CANCELED&quot;, or &quot;COMPLETE&quot;.</summary>
+        /// <summary>The status of the batch processing request. The expected value is &quot;COMPLETE&quot;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponseSimplePublicUpsertObject12Status? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponseSimplePublicUpsertObject12"/> and sets the default values.

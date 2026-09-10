@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string CalculationFormula { get; set; }
 #endif
-        /// <summary>The currencyPropertyName property</summary>
+        /// <summary>A string representing the name of the currency property.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CurrencyPropertyName { get; set; }
@@ -76,7 +76,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>The numberDisplayHint property</summary>
+        /// <summary>A string providing a hint on how to display numbers. Valid values include &apos;unformatted&apos;, &apos;formatted&apos;, &apos;currency&apos;, &apos;percentage&apos;, &apos;duration&apos;, &apos;probability&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreateNumberDisplayHint? NumberDisplayHint { get; set; }
         /// <summary>A list of valid options for the property. This field is required for enumerated properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -94,9 +94,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ReferencedObjectType { get; set; }
 #endif
-        /// <summary>The showCurrencySymbol property</summary>
+        /// <summary>A boolean indicating whether to show the currency symbol for currency fields.</summary>
         public bool? ShowCurrencySymbol { get; set; }
-        /// <summary>The textDisplayHint property</summary>
+        /// <summary>A string providing a hint on how to display text. Valid values include &apos;unformatted_single_line&apos;, &apos;multi_line&apos;, &apos;email&apos;, &apos;phone_number&apos;, &apos;domain_name&apos;, &apos;ip_address&apos;, &apos;physical_address&apos;, &apos;postal_code&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreateTextDisplayHint? TextDisplayHint { get; set; }
         /// <summary>The data type of the property.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreateType? Type { get; set; }
