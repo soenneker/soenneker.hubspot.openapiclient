@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>A string indicating the comparison operator to use, with valid values being &apos;IS_BEFORE&apos; and &apos;IS_AFTER&apos;.</summary>
+    /// <summary>A string that defines the comparison operator to use, with valid values being &apos;IS_BEFORE&apos; and &apos;IS_AFTER&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum ComparativePropertyUpdatedOperationOperator
     {

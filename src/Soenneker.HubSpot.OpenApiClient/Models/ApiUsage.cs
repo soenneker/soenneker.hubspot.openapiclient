@@ -14,13 +14,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The collectedAt property</summary>
+        /// <summary>The date and time when the usage data was collected, in ISO 8601 format.</summary>
         public DateTimeOffset? CollectedAt { get; set; }
-        /// <summary>The currentUsage property</summary>
+        /// <summary>An integer indicating the current usage count of the API resource.</summary>
         public int? CurrentUsage { get; set; }
-        /// <summary>The fetchStatus property</summary>
+        /// <summary>The status of the data fetch operation. Valid values include &apos;SUCCESS&apos;, &apos;TIMEOUT&apos;, &apos;FAILURE&apos;, &apos;CACHED&apos;, and &apos;NOTFOUND&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.ApiUsageFetchStatus? FetchStatus { get; set; }
-        /// <summary>The name property</summary>
+        /// <summary>The name of the API resource being tracked.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -28,9 +28,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>The resetsAt property</summary>
+        /// <summary>The date and time when the usage limit will reset, in ISO 8601 format.</summary>
         public DateTimeOffset? ResetsAt { get; set; }
-        /// <summary>The usageLimit property</summary>
+        /// <summary>An integer representing the maximum allowable usage for the API resource.</summary>
         public int? UsageLimit { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiUsage"/> and sets the default values.

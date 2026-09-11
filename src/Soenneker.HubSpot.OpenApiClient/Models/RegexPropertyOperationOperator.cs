@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>A string specifying the regex operation to perform, such as &apos;MATCHES_REGEX&apos; or &apos;DOES_NOT_MATCH_REGEX&apos;.</summary>
+    /// <summary>A string specifying the operation to perform, with valid values being &apos;MATCHES_REGEX&apos; and &apos;DOES_NOT_MATCH_REGEX&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum RegexPropertyOperationOperator
     {

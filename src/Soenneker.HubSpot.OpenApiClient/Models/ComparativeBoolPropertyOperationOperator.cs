@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>A string representing the comparison operator. Valid values are &apos;IS_EQUAL_TO&apos; and &apos;IS_NOT_EQUAL_TO&apos;.</summary>
+    /// <summary>A string representing the comparison operator to be used. Valid values are &apos;IS_EQUAL_TO&apos; and &apos;IS_NOT_EQUAL_TO&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum ComparativeBoolPropertyOperationOperator
     {

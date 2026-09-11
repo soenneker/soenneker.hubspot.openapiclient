@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A string specifying the name of the property to be compared.</summary>
+        /// <summary>A string specifying the name of the property to compare against.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ComparisonPropertyName { get; set; }
@@ -30,9 +30,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string DefaultValue { get; set; }
 #endif
-        /// <summary>A boolean indicating whether objects with no value set should be included in the operation.</summary>
+        /// <summary>A boolean indicating whether objects with no value set for the property should be included in the operation.</summary>
         public bool? IncludeObjectsWithNoValueSet { get; set; }
-        /// <summary>A string that specifies the type of operation being performed.</summary>
+        /// <summary>A string specifying the type of operation being performed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OperationType { get; set; }
@@ -40,7 +40,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string OperationType { get; set; }
 #endif
-        /// <summary>A string representing the comparison operator. Valid values are &apos;IS_EQUAL_TO&apos; and &apos;IS_NOT_EQUAL_TO&apos;.</summary>
+        /// <summary>A string representing the comparison operator to be used. Valid values are &apos;IS_EQUAL_TO&apos; and &apos;IS_NOT_EQUAL_TO&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.ComparativeBoolPropertyOperationOperator? Operator { get; set; }
         /// <summary>A string representing the name of the operator used in the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -50,9 +50,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string OperatorName { get; set; }
 #endif
-        /// <summary>A string indicating the type of property operation, which is &apos;bool-comparative&apos; for this component.</summary>
+        /// <summary>A string indicating the type of property operation, defaulting to &apos;bool-comparative&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.BoolComparativePropertyType? PropertyType { get; set; }
-        /// <summary>A string that defines the rendering specification for the operation.</summary>
+        /// <summary>A string that may define how the operation should be rendered, though specifics are not detailed in the spec.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RenderSpec { get; set; }

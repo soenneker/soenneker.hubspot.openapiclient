@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A description of the property that will be shown as help text in HubSpot.</summary>
+        /// <summary>A string providing additional information about the event property.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Description { get; set; }
@@ -22,11 +22,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>An integer indicating the order in which the property should be displayed.</summary>
+        /// <summary>The displayOrder property</summary>
         public int? DisplayOrder { get; set; }
-        /// <summary>A boolean indicating whether the property is hidden from view.</summary>
+        /// <summary>The hidden property</summary>
         public bool? Hidden { get; set; }
-        /// <summary>Human readable label for the property. Used in HubSpot UI</summary>
+        /// <summary>A string representing the display name of the event property.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Label { get; set; }
@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Label { get; set; }
 #endif
-        /// <summary>A list of available options for the property if it is an enumeration. NOTE: This field is only applicable for enumerated properties.</summary>
+        /// <summary>An array of OptionInput objects, each defining a selectable option for the event property.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.EventsOptionInput>? Options { get; set; }

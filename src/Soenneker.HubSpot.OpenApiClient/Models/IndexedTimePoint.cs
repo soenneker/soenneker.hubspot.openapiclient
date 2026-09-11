@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>An object that references a specific point in time, which can be one of several types such as NowReference, TodayReference, or YearReference.</summary>
+        /// <summary>An object that serves as the reference point for the indexed time, which can be one of several types such as NowReference, TodayReference, WeekReference, MonthReference, QuarterReference, FiscalQuarter, YearReference, or FiscalYear.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.IndexedTimePointIndexReference? IndexReference { get; set; }
@@ -30,13 +30,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.IndexOffset Offset { get; set; }
 #endif
-        /// <summary>A boolean indicating whether the refresh time should be generated.</summary>
+        /// <summary>A boolean indicating whether a refresh time should be generated.</summary>
         public bool? ShouldGenerateRefreshTime { get; set; }
         /// <summary>A string indicating the type of time point, with a default value of &apos;INDEXED&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.IndexedTimeType? TimeType { get; set; }
-        /// <summary>A string representing the source of the timezone. Valid values include &apos;CUSTOM&apos;, &apos;USER&apos;, and &apos;PORTAL&apos;.</summary>
+        /// <summary>A string specifying the source of the timezone, with possible values including &apos;CUSTOM&apos;, &apos;USER&apos;, and &apos;PORTAL&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.IndexedTimePointTimezoneSource? TimezoneSource { get; set; }
-        /// <summary>A string specifying the identifier for the timezone.</summary>
+        /// <summary>A string representing the identifier of the timezone.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ZoneId { get; set; }

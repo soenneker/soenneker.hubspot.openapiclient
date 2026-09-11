@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The country code corresponding to the location of the login attempt.</summary>
+        /// <summary>The approximate country code of the login</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CountryCode { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string CountryCode { get; set; }
 #endif
-        /// <summary>The email address associated with the user who attempted to log in.</summary>
+        /// <summary>Email address of the user associated with the login.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Email { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Email { get; set; }
 #endif
-        /// <summary>The unique identifier for this login audit record.</summary>
+        /// <summary>The login activity&apos;s unique ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>The IP address from which the login attempt was made.</summary>
+        /// <summary>IP address where the activity originated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? IpAddress { get; set; }
@@ -46,7 +46,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string IpAddress { get; set; }
 #endif
-        /// <summary>The geographical location associated with the IP address of the login attempt.</summary>
+        /// <summary>The approximate location where the login activity originated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Location { get; set; }
@@ -54,11 +54,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Location { get; set; }
 #endif
-        /// <summary>The date and time when the login attempt occurred, in ISO 8601 format.</summary>
+        /// <summary>The time the login took place.</summary>
         public DateTimeOffset? LoginAt { get; set; }
-        /// <summary>A boolean indicating whether the login attempt was successful.</summary>
+        /// <summary>Whether the login was successful or not.</summary>
         public bool? LoginSucceeded { get; set; }
-        /// <summary>The region code corresponding to the location of the login attempt.</summary>
+        /// <summary>The approximate region code of the login</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RegionCode { get; set; }
@@ -66,7 +66,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string RegionCode { get; set; }
 #endif
-        /// <summary>The user agent string of the browser or device used for the login attempt.</summary>
+        /// <summary>Information about the device used for logging in.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UserAgent { get; set; }
@@ -74,7 +74,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string UserAgent { get; set; }
 #endif
-        /// <summary>The unique identifier of the user who attempted to log in.</summary>
+        /// <summary>The user&apos;s unique ID.</summary>
         public int? UserId { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicLoginAudit"/> and sets the default values.

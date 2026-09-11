@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>A string representing the operation to be performed on the date property, such as comparison operations.</summary>
+    /// <summary>A string representing the operation to be performed, with valid values including &apos;IS_BEFORE&apos;, &apos;IS_AFTER&apos;, and &apos;IS_EQUAL_TO&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum DatePropertyOperationOperator
     {

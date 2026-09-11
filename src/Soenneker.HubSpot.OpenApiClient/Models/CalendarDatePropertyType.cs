@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>A string indicating the type of property, defaulting to &apos;calendar-date&apos;.</summary>
+    /// <summary>A string that specifies the type of property operation, defaulting to &apos;calendar-date&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum CalendarDatePropertyType
     {

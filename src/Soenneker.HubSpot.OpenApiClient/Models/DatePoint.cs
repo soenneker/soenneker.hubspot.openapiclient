@@ -28,7 +28,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public int? Second { get; set; }
         /// <summary>A string indicating the type of time reference, typically set to &apos;DATE&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.DateTimeType? TimeType { get; set; }
-        /// <summary>A string specifying the source of the timezone, with valid values including &apos;CUSTOM&apos;, &apos;USER&apos;, and &apos;PORTAL&apos;.</summary>
+        /// <summary>A string specifying the source of the timezone information. Valid values include &apos;CUSTOM&apos;, &apos;USER&apos;, and &apos;PORTAL&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.DatePointTimezoneSource? TimezoneSource { get; set; }
         /// <summary>An integer representing the year component of the date.</summary>
         public int? Year { get; set; }

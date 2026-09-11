@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>A string indicating the type of property, which is &apos;enumeration&apos; by default.</summary>
+    /// <summary>A string indicating the type of property, which is &apos;enumeration&apos; for this operation.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum EnumerationPropertyType
     {

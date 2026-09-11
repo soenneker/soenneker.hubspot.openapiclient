@@ -19,7 +19,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Events.TwoZeroTwoSixZeroNine.EventDefi
     public partial class PropertyRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.events.TwoZeroTwoSixZeroNine.eventDefinitions.item.property.item collection</summary>
-        /// <param name="position">The unique identifier of the property to delete from the specified event.</param>
+        /// <param name="position">The unique name of the property to be deleted from the event definition.</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Events.TwoZeroTwoSixZeroNine.EventDefinitions.Item.Property.Item.WithPropertyNameItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Events.TwoZeroTwoSixZeroNine.EventDefinitions.Item.Property.Item.WithPropertyNameItemRequestBuilder this[string position]
         {
@@ -47,7 +47,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Events.TwoZeroTwoSixZeroNine.EventDefi
         {
         }
         /// <summary>
-        /// Create a new property for an existing event definition.
+        /// Create a new property for a specified event definition in your HubSpot account. This endpoint allows you to define custom properties associated with a particular event, enhancing the tracking and analysis of behavioral events. The request must include a JSON body with the necessary property details.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.EventsProperty"/></returns>
         /// <param name="body">The request body</param>
@@ -67,7 +67,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Events.TwoZeroTwoSixZeroNine.EventDefi
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.EventsProperty>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.EventsProperty.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Create a new property for an existing event definition.
+        /// Create a new property for a specified event definition in your HubSpot account. This endpoint allows you to define custom properties associated with a particular event, enhancing the tracking and analysis of behavioral events. The request must include a JSON body with the necessary property details.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

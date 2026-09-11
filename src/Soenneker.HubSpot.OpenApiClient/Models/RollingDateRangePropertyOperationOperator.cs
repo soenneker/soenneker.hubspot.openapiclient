@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>A string specifying the operation to be performed, such as &apos;IS_LESS_THAN_X_DAYS_AGO&apos; or &apos;IS_MORE_THAN_X_DAYS_FROM_NOW&apos;.</summary>
+    /// <summary>A string specifying the operation to perform, with valid values including &apos;IS_LESS_THAN_X_DAYS_AGO&apos;, &apos;IS_MORE_THAN_X_DAYS_AGO&apos;, &apos;IS_LESS_THAN_X_DAYS_FROM_NOW&apos;, and &apos;IS_MORE_THAN_X_DAYS_FROM_NOW&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum RollingDateRangePropertyOperationOperator
     {

@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>A string representing the operator used in the operation. Valid values are &apos;IS_BEFORE&apos; and &apos;IS_AFTER&apos;.</summary>
+    /// <summary>A string specifying the operator used in the operation, with possible values &apos;IS_BEFORE&apos; and &apos;IS_AFTER&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum TimePointOperationOperator
     {

@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>A string indicating the type of property operation, with a default value of &apos;regex&apos;.</summary>
+    /// <summary>A string indicating the type of property operation, which is &apos;regex&apos; for this component.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum RegexPropertyType
     {

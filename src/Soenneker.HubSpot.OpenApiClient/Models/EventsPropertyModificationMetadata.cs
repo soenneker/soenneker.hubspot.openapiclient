@@ -16,11 +16,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A boolean indicating whether the property can be archived.</summary>
         public bool? Archivable { get; set; }
-        /// <summary>A boolean indicating if the property&apos;s definition is read-only.</summary>
+        /// <summary>A boolean indicating whether the definition of the property is read-only.</summary>
         public bool? ReadOnlyDefinition { get; set; }
-        /// <summary>A boolean indicating if the options for the property are read-only.</summary>
+        /// <summary>A boolean indicating whether the options of the property are read-only.</summary>
         public bool? ReadOnlyOptions { get; set; }
-        /// <summary>A boolean indicating if the property&apos;s value is read-only.</summary>
+        /// <summary>A boolean indicating whether the value of the property is read-only.</summary>
         public bool? ReadOnlyValue { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.EventsPropertyModificationMetadata"/> and sets the default values.

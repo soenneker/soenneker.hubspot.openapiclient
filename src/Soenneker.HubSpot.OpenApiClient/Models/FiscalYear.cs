@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>An integer representing the day component of the fiscal year.</summary>
+        /// <summary>An integer representing the day of the fiscal year.</summary>
         public int? Day { get; set; }
         /// <summary>An integer representing the hour component of the time.</summary>
         public int? Hour { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public int? Millisecond { get; set; }
         /// <summary>An integer representing the minute component of the time.</summary>
         public int? Minute { get; set; }
-        /// <summary>An integer representing the month component of the fiscal year.</summary>
+        /// <summary>An integer representing the month of the fiscal year.</summary>
         public int? Month { get; set; }
         /// <summary>A string that indicates the type of reference, which is &apos;FISCAL_YEAR&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.FiscalYearReferenceType? ReferenceType { get; set; }

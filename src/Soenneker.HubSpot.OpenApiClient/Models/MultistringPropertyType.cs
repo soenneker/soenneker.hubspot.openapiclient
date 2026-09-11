@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>A string that specifies the type of property operation, which is &apos;multistring&apos; by default.</summary>
+    /// <summary>The type of property being operated on, which is &apos;multistring&apos; for this operation.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum MultistringPropertyType
     {

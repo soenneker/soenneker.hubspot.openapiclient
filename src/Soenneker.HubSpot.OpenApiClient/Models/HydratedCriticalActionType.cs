@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>The type of critical action performed. Valid values include a wide range of actions such as &apos;EXPORT&apos;, &apos;TOUCHLESS_PURCHASE&apos;, &apos;ADD_TWO_FACTOR_AUTHENTICATION&apos;, and many others.</summary>
+    /// <summary>The type of activity.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum HydratedCriticalActionType
     {

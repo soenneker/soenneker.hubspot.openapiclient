@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>A string that indicates the set type used for refinement. Valid values include &apos;ALL&apos;, &apos;ALL_INCLUDE_EMPTY&apos;, &apos;ANY&apos;, &apos;NONE&apos;, &apos;NONE_EXCLUDE_EMPTY&apos;, and &apos;ANY_INCLUDE_EMPTY&apos;.</summary>
+    /// <summary>A string that indicates the set type for the refinement operation. Valid values include &apos;ALL&apos;, &apos;ALL_INCLUDE_EMPTY&apos;, &apos;ANY&apos;, &apos;NONE&apos;, &apos;NONE_EXCLUDE_EMPTY&apos;, and &apos;ANY_INCLUDE_EMPTY&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum SetOccurrencesRefineBySetType
     {

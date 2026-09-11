@@ -32,7 +32,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string OperationType { get; set; }
 #endif
-        /// <summary>A string representing the operation to be performed. Valid values include &apos;IS_EQUAL_TO&apos;, &apos;IS_NOT_EQUAL_TO&apos;, &apos;HAS_EVER_BEEN_EQUAL_TO&apos;, and &apos;HAS_NEVER_BEEN_EQUAL_TO&apos;.</summary>
+        /// <summary>A string representing the operation to be performed, with valid values including &apos;IS_EQUAL_TO&apos;, &apos;IS_NOT_EQUAL_TO&apos;, &apos;HAS_EVER_BEEN_EQUAL_TO&apos;, and &apos;HAS_NEVER_BEEN_EQUAL_TO&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.BoolPropertyOperationOperator? Operator { get; set; }
         /// <summary>A string representing the name of the operator used in the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -42,7 +42,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string OperatorName { get; set; }
 #endif
-        /// <summary>A string indicating the type of property, which is &apos;bool&apos; for this operation.</summary>
+        /// <summary>A string indicating the type of property, with a default value of &apos;bool&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.BoolValuePropertyType? PropertyType { get; set; }
         /// <summary>A string specifying the rendering specification for the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

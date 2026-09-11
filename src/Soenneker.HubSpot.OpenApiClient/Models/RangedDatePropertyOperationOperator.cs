@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>A string specifying the operation to perform, with valid values &apos;IS_BETWEEN&apos; and &apos;IS_NOT_BETWEEN&apos;.</summary>
+    /// <summary>A string representing the operation to be performed, with valid values including &apos;IS_BETWEEN&apos; and &apos;IS_NOT_BETWEEN&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum RangedDatePropertyOperationOperator
     {

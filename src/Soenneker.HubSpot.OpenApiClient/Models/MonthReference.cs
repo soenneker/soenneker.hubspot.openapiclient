@@ -18,13 +18,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public int? Day { get; set; }
         /// <summary>An integer representing the hour of the day.</summary>
         public int? Hour { get; set; }
-        /// <summary>An integer representing the millisecond of the second.</summary>
+        /// <summary>An integer representing the millisecond within the second.</summary>
         public int? Millisecond { get; set; }
-        /// <summary>An integer representing the minute of the hour.</summary>
+        /// <summary>An integer representing the minute within the hour.</summary>
         public int? Minute { get; set; }
         /// <summary>A string indicating the type of reference, with a default value of &apos;MONTH&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.MonthReferenceType? ReferenceType { get; set; }
-        /// <summary>An integer representing the second of the minute.</summary>
+        /// <summary>An integer representing the second within the minute.</summary>
         public int? Second { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.MonthReference"/> and sets the default values.

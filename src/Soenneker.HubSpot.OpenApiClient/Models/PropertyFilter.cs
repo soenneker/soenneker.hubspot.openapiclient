@@ -22,13 +22,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyFilterContext Context { get; set; }
 #endif
-        /// <summary>An integer that serves as the identifier for the filter insights.</summary>
+        /// <summary>An integer representing the ID for insights related to the filter.</summary>
         public int? FilterInsightsId { get; set; }
         /// <summary>The type of filter being applied. This is a string value that specifies the kind of filter operation.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyFilterType? FilterType { get; set; }
-        /// <summary>An integer representing the unique identifier for the framework filter. It is formatted as an int64.</summary>
+        /// <summary>An integer that uniquely identifies the framework filter.</summary>
         public long? FrameworkFilterId { get; set; }
-        /// <summary>An object defining the operation to be performed on the property. This can be one of several types of operations, such as BoolPropertyOperation, NumberPropertyOperation, StringPropertyOperation, etc.</summary>
+        /// <summary>Defines the operation to be performed on the property. It can be one of several types, such as BoolPropertyOperation, NumberPropertyOperation, StringPropertyOperation, etc.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyFilterOperation? Operation { get; set; }
@@ -36,7 +36,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyFilterOperation Operation { get; set; }
 #endif
-        /// <summary>A string representing the name of the property on which the filter is applied.</summary>
+        /// <summary>A string representing the name of the property to which the filter is applied.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Property { get; set; }

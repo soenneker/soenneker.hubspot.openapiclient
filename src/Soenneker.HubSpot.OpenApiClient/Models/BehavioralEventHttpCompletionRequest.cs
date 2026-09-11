@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Email of visitor</summary>
+        /// <summary>A string representing the email address associated with the event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Email { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Email { get; set; }
 #endif
-        /// <summary>Internal name of the event-type to trigger</summary>
+        /// <summary>A string representing the name of the event. This is a required property.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EventName { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string EventName { get; set; }
 #endif
-        /// <summary>The object id that this event occurred on. Could be a contact id or a visitor id.</summary>
+        /// <summary>A string representing the unique identifier of the object associated with the event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ObjectId { get; set; }
@@ -38,9 +38,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ObjectId { get; set; }
 #endif
-        /// <summary>The time when this event occurred (if any). If this isn&apos;t set, the current time will be used</summary>
+        /// <summary>A string representing the date and time when the event occurred, in ISO 8601 format.</summary>
         public DateTimeOffset? OccurredAt { get; set; }
-        /// <summary>Map of properties for the event in the format property internal name - property value</summary>
+        /// <summary>An object containing key-value pairs of additional properties related to the event. This is a required property.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.BehavioralEventHttpCompletionRequestPropertiesProperty? Properties { get; set; }
@@ -48,7 +48,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.BehavioralEventHttpCompletionRequestPropertiesProperty Properties { get; set; }
 #endif
-        /// <summary>User token</summary>
+        /// <summary>A string representing the unique tracking key associated with the event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Utk { get; set; }

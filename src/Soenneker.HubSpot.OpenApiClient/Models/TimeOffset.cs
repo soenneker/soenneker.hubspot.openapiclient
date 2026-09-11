@@ -14,11 +14,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>An integer representing the amount of time units for the offset.</summary>
+        /// <summary>An integer specifying the amount of time to offset, measured in the unit defined by the timeUnit property.</summary>
         public long? Amount { get; set; }
         /// <summary>A string indicating the direction of the time offset. Valid values are &apos;PAST&apos; and &apos;FUTURE&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffsetOffsetDirection? OffsetDirection { get; set; }
-        /// <summary>A string specifying the unit of time for the offset. Valid values include &apos;WEEKS&apos;, &apos;DAYS&apos;, &apos;HOURS&apos;, and &apos;MINUTES&apos;.</summary>
+        /// <summary>A string representing the unit of time for the offset. Valid values include &apos;WEEKS&apos;, &apos;DAYS&apos;, &apos;HOURS&apos;, and &apos;MINUTES&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffsetTimeUnit? TimeUnit { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffset"/> and sets the default values.

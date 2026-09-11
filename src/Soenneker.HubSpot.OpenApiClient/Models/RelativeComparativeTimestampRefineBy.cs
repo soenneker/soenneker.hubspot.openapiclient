@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A string that indicates the comparison direction, either &apos;BEFORE&apos; or &apos;AFTER&apos;.</summary>
+        /// <summary>A string indicating the type of comparison to be made, with valid values being &apos;BEFORE&apos; or &apos;AFTER&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.RelativeComparativeTimestampRefineByComparison? Comparison { get; set; }
         /// <summary>The timeOffset property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -24,7 +24,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffset TimeOffset { get; set; }
 #endif
-        /// <summary>A string that specifies the type of the refinement, which is &apos;RelativeComparativeTimestampRefineBy&apos;.</summary>
+        /// <summary>A string indicating the type of refinement operation, which is &apos;RelativeComparativeTimestampRefineBy&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.RelativeComparativeTimestampRefineByType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.RelativeComparativeTimestampRefineBy"/> and sets the default values.

@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A string providing a description of the option.</summary>
+        /// <summary>A detailed description of the option, providing additional context.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Description { get; set; }
@@ -23,11 +23,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>An integer indicating the order in which the option should be displayed relative to other options.</summary>
+        /// <summary>An integer that determines the order in which the option appears relative to other options.</summary>
         public int? DisplayOrder { get; set; }
-        /// <summary>A boolean indicating whether the option is hidden from the user interface.</summary>
+        /// <summary>A boolean indicating whether the option is hidden from users.</summary>
         public bool? Hidden { get; set; }
-        /// <summary>A string representing the display label of the option.</summary>
+        /// <summary>The display name of the option, shown to users.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Label { get; set; }
@@ -35,7 +35,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Label { get; set; }
 #endif
-        /// <summary>A string representing the internal value of the option.</summary>
+        /// <summary>The internal value associated with the option, used in data processing.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Value { get; set; }

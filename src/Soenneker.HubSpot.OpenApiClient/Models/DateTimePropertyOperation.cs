@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A string that specifies the default value to be used if no other value is set.</summary>
+        /// <summary>A string representing the default value for the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DefaultValue { get; set; }
@@ -22,9 +22,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string DefaultValue { get; set; }
 #endif
-        /// <summary>A boolean indicating whether objects with no value set for this property should be included in the operation.</summary>
+        /// <summary>A boolean indicating whether to include objects that have no value set for the property.</summary>
         public bool? IncludeObjectsWithNoValueSet { get; set; }
-        /// <summary>A string that specifies the type of operation being performed.</summary>
+        /// <summary>A string indicating the type of operation being performed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OperationType { get; set; }
@@ -32,7 +32,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string OperationType { get; set; }
 #endif
-        /// <summary>A string representing the operation to be performed, with valid values including &apos;IS_BEFORE&apos;, &apos;IS_AFTER&apos;, &apos;IS_EQUAL_TO&apos;, &apos;IS_BEFORE_DATE&apos;, and &apos;IS_AFTER_DATE&apos;.</summary>
+        /// <summary>A string representing the operation to be performed, such as &apos;IS_BEFORE&apos;, &apos;IS_AFTER&apos;, &apos;IS_EQUAL_TO&apos;, &apos;IS_BEFORE_DATE&apos;, or &apos;IS_AFTER_DATE&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.DateTimePropertyOperationOperator? Operator { get; set; }
         /// <summary>A string representing the name of the operator used in the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -42,9 +42,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string OperatorName { get; set; }
 #endif
-        /// <summary>A string indicating the type of property, defaulting to &apos;datetime&apos;.</summary>
+        /// <summary>A string indicating the type of property, with a default value of &apos;datetime&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.DatetimePropertyType? PropertyType { get; set; }
-        /// <summary>A string that defines how the operation should be rendered or displayed.</summary>
+        /// <summary>A string specifying the rendering specification for the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RenderSpec { get; set; }
@@ -52,9 +52,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string RenderSpec { get; set; }
 #endif
-        /// <summary>A boolean indicating whether the operation requires conversion based on time zones.</summary>
+        /// <summary>A boolean indicating whether the operation requires time zone conversion.</summary>
         public bool? RequiresTimeZoneConversion { get; set; }
-        /// <summary>An integer representing a Unix timestamp in milliseconds, used for datetime comparisons.</summary>
+        /// <summary>An integer representing the timestamp for the operation, in int64 format.</summary>
         public long? Timestamp { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.DateTimePropertyOperation"/> and sets the default values.

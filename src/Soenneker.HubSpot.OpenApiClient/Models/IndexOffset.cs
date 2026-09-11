@@ -14,23 +14,23 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>An integer representing the number of days to offset.</summary>
+        /// <summary>An integer representing the number of days for the time offset.</summary>
         public int? Days { get; set; }
-        /// <summary>An integer representing the number of hours to offset.</summary>
+        /// <summary>An integer representing the number of hours for the time offset.</summary>
         public int? Hours { get; set; }
-        /// <summary>An integer representing the number of milliseconds to offset.</summary>
+        /// <summary>An integer representing the number of milliseconds for the time offset.</summary>
         public int? Milliseconds { get; set; }
-        /// <summary>An integer representing the number of minutes to offset.</summary>
+        /// <summary>An integer representing the number of minutes for the time offset.</summary>
         public int? Minutes { get; set; }
-        /// <summary>An integer representing the number of months to offset.</summary>
+        /// <summary>An integer representing the number of months for the time offset.</summary>
         public int? Months { get; set; }
-        /// <summary>An integer representing the number of quarters to offset.</summary>
+        /// <summary>An integer representing the number of quarters for the time offset.</summary>
         public int? Quarters { get; set; }
-        /// <summary>An integer representing the number of seconds to offset.</summary>
+        /// <summary>An integer representing the number of seconds for the time offset.</summary>
         public int? Seconds { get; set; }
-        /// <summary>An integer representing the number of weeks to offset.</summary>
+        /// <summary>An integer representing the number of weeks for the time offset.</summary>
         public int? Weeks { get; set; }
-        /// <summary>An integer representing the number of years to offset.</summary>
+        /// <summary>An integer representing the number of years for the time offset.</summary>
         public int? Years { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IndexOffset"/> and sets the default values.

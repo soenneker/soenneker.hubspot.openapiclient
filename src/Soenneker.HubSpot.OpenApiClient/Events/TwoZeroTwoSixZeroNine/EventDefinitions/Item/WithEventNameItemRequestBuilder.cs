@@ -40,7 +40,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Events.TwoZeroTwoSixZeroNine.EventDefi
         {
         }
         /// <summary>
-        /// Delete a custom event definition by name.
+        /// Delete a specific event definition in your HubSpot account using the event&apos;s unique name. This operation is useful for removing outdated or incorrect event definitions that are no longer needed.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -57,7 +57,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Events.TwoZeroTwoSixZeroNine.EventDefi
             await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Fetch a single custom event definition by name.
+        /// Retrieve the definition of a specific behavioral event in your HubSpot account by providing the event name. This endpoint returns detailed information about the event type, including its properties and associations.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventTypeDefinition"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -75,7 +75,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Events.TwoZeroTwoSixZeroNine.EventDefi
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventTypeDefinition>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventTypeDefinition.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Update a specific custom event definition by name.
+        /// Update the definition of a specific behavioral event in your HubSpot account. This operation allows you to modify the properties and templates associated with the event. The eventName path parameter identifies the event to be updated.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventTypeDefinition"/></returns>
         /// <param name="body">The request body</param>
@@ -95,7 +95,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Events.TwoZeroTwoSixZeroNine.EventDefi
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventTypeDefinition>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventTypeDefinition.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Delete a custom event definition by name.
+        /// Delete a specific event definition in your HubSpot account using the event&apos;s unique name. This operation is useful for removing outdated or incorrect event definitions that are no longer needed.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -113,7 +113,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Events.TwoZeroTwoSixZeroNine.EventDefi
             return requestInfo;
         }
         /// <summary>
-        /// Fetch a single custom event definition by name.
+        /// Retrieve the definition of a specific behavioral event in your HubSpot account by providing the event name. This endpoint returns detailed information about the event type, including its properties and associations.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -132,7 +132,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Events.TwoZeroTwoSixZeroNine.EventDefi
             return requestInfo;
         }
         /// <summary>
-        /// Update a specific custom event definition by name.
+        /// Update the definition of a specific behavioral event in your HubSpot account. This operation allows you to modify the properties and templates associated with the event. The eventName path parameter identifies the event to be updated.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

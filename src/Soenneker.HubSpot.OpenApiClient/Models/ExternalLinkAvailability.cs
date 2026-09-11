@@ -14,9 +14,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Whether there are more available meeting times beyond the returned set.</summary>
+        /// <summary>A boolean indicating whether there are more available meeting times beyond those currently provided.</summary>
         public bool? HasMore { get; set; }
-        /// <summary>Available booking slots for the meeting, grouped by the duration.</summary>
+        /// <summary>An object where each key is a duration and the value is an availability object for that duration. This provides detailed availability information for each specified meeting duration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailabilityLinkAvailabilityByDurationProperty? LinkAvailabilityByDuration { get; set; }

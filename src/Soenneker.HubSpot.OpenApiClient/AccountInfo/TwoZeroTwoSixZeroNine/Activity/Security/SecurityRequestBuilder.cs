@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.AccountInfo.TwoZeroTwoSixZeroNine.Acti
         {
         }
         /// <summary>
-        /// Retrieve critical security-related activities for your account. This endpoint allows you to filter activities by user and time range, helping you monitor and audit important security events.
+        /// Retrieve logs of user actions related to [security activity](https://knowledge.hubspot.com/account-management/view-and-export-account-activity-history#security-activity-history).
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseHydratedCriticalActionForwardPaging"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.HubSpot.OpenApiClient.AccountInfo.TwoZeroTwoSixZeroNine.Acti
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseHydratedCriticalActionForwardPaging>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseHydratedCriticalActionForwardPaging.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieve critical security-related activities for your account. This endpoint allows you to filter activities by user and time range, helping you monitor and audit important security events.
+        /// Retrieve logs of user actions related to [security activity](https://knowledge.hubspot.com/account-management/view-and-export-account-activity-history#security-activity-history).
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -80,7 +80,7 @@ namespace Soenneker.HubSpot.OpenApiClient.AccountInfo.TwoZeroTwoSixZeroNine.Acti
             return new global::Soenneker.HubSpot.OpenApiClient.AccountInfo.TwoZeroTwoSixZeroNine.Activity.Security.SecurityRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Retrieve critical security-related activities for your account. This endpoint allows you to filter activities by user and time range, helping you monitor and audit important security events.
+        /// Retrieve logs of user actions related to [security activity](https://knowledge.hubspot.com/account-management/view-and-export-account-activity-history#security-activity-history).
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class SecurityRequestBuilderGetQueryParameters 
@@ -95,18 +95,21 @@ namespace Soenneker.HubSpot.OpenApiClient.AccountInfo.TwoZeroTwoSixZeroNine.Acti
             [QueryParameter("after")]
             public string After { get; set; }
 #endif
-            /// <summary>The start of the time range for the activities to be retrieved, specified as a Unix timestamp.</summary>
+            #pragma warning disable CS1591
             [QueryParameter("fromTimestamp")]
             public long? FromTimestamp { get; set; }
+            #pragma warning restore CS1591
             /// <summary>The maximum number of results to display per page.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
-            /// <summary>The end of the time range for the activities to be retrieved, specified as a Unix timestamp.</summary>
+            #pragma warning disable CS1591
             [QueryParameter("toTimestamp")]
             public long? ToTimestamp { get; set; }
-            /// <summary>The unique identifier of the user whose activities you want to retrieve.</summary>
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("userId")]
             public int? UserId { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

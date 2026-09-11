@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>A string indicating the endpoint behavior. Valid values are &apos;INCLUSIVE&apos; and &apos;EXCLUSIVE&apos;.</summary>
+    /// <summary>A string indicating the endpoint behavior, with possible values &apos;INCLUSIVE&apos; and &apos;EXCLUSIVE&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum TimePointOperationEndpointBehavior
     {

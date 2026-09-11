@@ -16,7 +16,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An integer specifying the day component of the date.</summary>
         public int? Day { get; set; }
-        /// <summary>A string representing the default value to be used if no other value is set.</summary>
+        /// <summary>A string representing the default value to use if no specific value is set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DefaultValue { get; set; }
@@ -36,9 +36,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string OperationType { get; set; }
 #endif
-        /// <summary>A string representing the operation to be performed on the date property, such as comparison operations.</summary>
+        /// <summary>A string representing the operation to be performed, with valid values including &apos;IS_BEFORE&apos;, &apos;IS_AFTER&apos;, and &apos;IS_EQUAL_TO&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.DatePropertyOperationOperator? Operator { get; set; }
-        /// <summary>A string representing the name of the operator used in the operation.</summary>
+        /// <summary>A string that provides a human-readable name for the operator.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OperatorName { get; set; }
@@ -46,9 +46,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string OperatorName { get; set; }
 #endif
-        /// <summary>A string indicating the type of property operation, with a default value of &apos;date&apos;.</summary>
+        /// <summary>A string indicating the type of property, which defaults to &apos;date&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.DatePropertyType? PropertyType { get; set; }
-        /// <summary>A string that provides specifications for rendering the operation.</summary>
+        /// <summary>A string that specifies how the operation should be rendered or displayed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RenderSpec { get; set; }

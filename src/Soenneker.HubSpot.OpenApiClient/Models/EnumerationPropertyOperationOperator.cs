@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>A string representing the operation to be performed, with valid values including &apos;IS_ANY_OF&apos;, &apos;IS_NONE_OF&apos;, &apos;IS_EXACTLY&apos;, &apos;IS_NOT_EXACTLY&apos;, &apos;CONTAINS_ALL&apos;, &apos;DOES_NOT_CONTAIN_ALL&apos;, &apos;HAS_EVER_BEEN_ANY_OF&apos;, &apos;HAS_NEVER_BEEN_ANY_OF&apos;, &apos;HAS_EVER_BEEN_EXACTLY&apos;, &apos;HAS_NEVER_BEEN_EXACTLY&apos;, &apos;HAS_EVER_CONTAINED_ALL&apos;, and &apos;HAS_NEVER_CONTAINED_ALL&apos;.</summary>
+    /// <summary>A string specifying the operation to perform, with valid values including &apos;IS_ANY_OF&apos;, &apos;IS_NONE_OF&apos;, &apos;IS_EXACTLY&apos;, &apos;IS_NOT_EXACTLY&apos;, &apos;CONTAINS_ALL&apos;, &apos;DOES_NOT_CONTAIN_ALL&apos;, &apos;HAS_EVER_BEEN_ANY_OF&apos;, &apos;HAS_NEVER_BEEN_ANY_OF&apos;, &apos;HAS_EVER_BEEN_EXACTLY&apos;, &apos;HAS_NEVER_BEEN_EXACTLY&apos;, &apos;HAS_EVER_CONTAINED_ALL&apos;, and &apos;HAS_NEVER_CONTAINED_ALL&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum EnumerationPropertyOperationOperator
     {

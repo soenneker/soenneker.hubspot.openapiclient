@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>A string specifying the tracking type of the event. Valid values include &apos;VISITED_URL&apos;, &apos;CLICKED_ELEMENT&apos;, &apos;CUSTOM_SCRIPT&apos;, and others.</summary>
+    /// <summary>A string indicating the tracking type of the event. Valid values include &apos;VISITED_URL&apos;, &apos;CLICKED_ELEMENT&apos;, &apos;CUSTOM_SCRIPT&apos;, &apos;MANUAL&apos;, &apos;IMPORT&apos;, &apos;PROPERTY_CHANGE&apos;, &apos;COMBO_EVENT&apos;, &apos;WEBHOOK&apos;, &apos;APP_EVENT&apos;, &apos;AUTOCAPTURE_EVENT&apos;, &apos;CUSTOM_SIGNAL&apos;, and &apos;POLLING&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum ExternalBehavioralEventTypeDefinitionTrackingType
     {

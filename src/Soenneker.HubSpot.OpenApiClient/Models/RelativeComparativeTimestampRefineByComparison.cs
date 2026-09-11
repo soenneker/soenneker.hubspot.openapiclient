@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>A string that indicates the comparison direction, either &apos;BEFORE&apos; or &apos;AFTER&apos;.</summary>
+    /// <summary>A string indicating the type of comparison to be made, with valid values being &apos;BEFORE&apos; or &apos;AFTER&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum RelativeComparativeTimestampRefineByComparison
     {

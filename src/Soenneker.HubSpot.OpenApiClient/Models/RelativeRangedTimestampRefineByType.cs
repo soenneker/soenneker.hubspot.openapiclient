@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>A string that specifies the type of the refinement operation. Default value is &apos;RelativeRangedTimestampRefineBy&apos;.</summary>
+    /// <summary>A string indicating the type of refinement, with a default value of &apos;RelativeRangedTimestampRefineBy&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum RelativeRangedTimestampRefineByType
     {

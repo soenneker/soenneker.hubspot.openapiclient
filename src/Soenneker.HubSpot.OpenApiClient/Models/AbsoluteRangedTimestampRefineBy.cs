@@ -14,13 +14,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>An integer representing the lower boundary of the timestamp range, in milliseconds since the Unix epoch.</summary>
+        /// <summary>An integer representing the lower bound of the timestamp range, in milliseconds since the Unix epoch.</summary>
         public long? LowerTimestamp { get; set; }
-        /// <summary>A string that defines the type of range operation. Valid values include &apos;BETWEEN&apos; and &apos;NOT_BETWEEN&apos;.</summary>
+        /// <summary>A string that indicates the type of range comparison. Valid values are &apos;BETWEEN&apos; and &apos;NOT_BETWEEN&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteRangedTimestampRefineByRangeType? RangeType { get; set; }
-        /// <summary>A string that specifies the type of the component. The default value is &apos;AbsoluteRangedTimestampRefineBy&apos;.</summary>
+        /// <summary>A string that specifies the type of the component, which is &apos;AbsoluteRangedTimestampRefineBy&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteRangedTimestampRefineByType? Type { get; set; }
-        /// <summary>An integer representing the upper boundary of the timestamp range, in milliseconds since the Unix epoch.</summary>
+        /// <summary>An integer representing the upper bound of the timestamp range, in milliseconds since the Unix epoch.</summary>
         public long? UpperTimestamp { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteRangedTimestampRefineBy"/> and sets the default values.

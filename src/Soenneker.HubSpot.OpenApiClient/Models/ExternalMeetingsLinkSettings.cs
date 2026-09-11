@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>An array containing the closed range availability for a meeting link. Closed range times are provided as minute offsets from midnight (e.g., 540 corresponds to 9am).</summary>
+        /// <summary>An object representing the availability settings for the meeting link, with additional properties for closed ranges.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettingsAvailabilityProperty? Availability { get; set; }
@@ -22,9 +22,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettingsAvailabilityProperty Availability { get; set; }
 #endif
-        /// <summary>The end date for a meeting link&apos;s custom availability window, represented as Unix time in milliseconds.</summary>
+        /// <summary>An integer representing the custom availability end date as a Unix timestamp in milliseconds.</summary>
         public long? CustomAvailabilityEndDate { get; set; }
-        /// <summary>The start date for a meeting link&apos;s custom availability window, represented as Unix time in milliseconds.</summary>
+        /// <summary>An integer representing the custom availability start date as a Unix timestamp in milliseconds.</summary>
         public long? CustomAvailabilityStartDate { get; set; }
         /// <summary>The displayInfo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkDisplayInfo DisplayInfo { get; set; }
 #endif
-        /// <summary>The durations property</summary>
+        /// <summary>An array of integers representing the possible durations for meetings in milliseconds.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<long?>? Durations { get; set; }
@@ -42,7 +42,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<long?> Durations { get; set; }
 #endif
-        /// <summary>The formFields property</summary>
+        /// <summary>An array of form fields that are included in the meeting link form.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkFormField>? FormFields { get; set; }
@@ -58,7 +58,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalGuestSettings GuestSettings { get; set; }
 #endif
-        /// <summary>The language setting used for the meeting link.</summary>
+        /// <summary>A string representing the language setting for the meeting link.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Language { get; set; }
@@ -66,7 +66,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Language { get; set; }
 #endif
-        /// <summary>Whether the legal consent checkbox is displayed during meeting booking.</summary>
+        /// <summary>A boolean indicating whether legal consent is required for the meeting link.</summary>
         public bool? LegalConsentEnabled { get; set; }
         /// <summary>The legalConsentOptions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -76,7 +76,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentOptions LegalConsentOptions { get; set; }
 #endif
-        /// <summary>The locale setting used for formatting dates and times in the meeting link.</summary>
+        /// <summary>A string representing the locale setting for the meeting link.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Locale { get; set; }
@@ -84,7 +84,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Locale { get; set; }
 #endif
-        /// <summary>The physical or virtual location where the meeting will take place.</summary>
+        /// <summary>A string representing the location information for the meeting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Location { get; set; }
@@ -92,11 +92,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Location { get; set; }
 #endif
-        /// <summary>The minimum buffer time in milliseconds between consecutive meetings.</summary>
-        public int? MeetingBufferTime { get; set; }
-        /// <summary>Indicates whether the meeting owner is prioritized during booking. Only applies to link types of ROUND_ROBIN.</summary>
+        /// <summary>An integer representing the buffer time between meetings in milliseconds.</summary>
+        public long? MeetingBufferTime { get; set; }
+        /// <summary>A boolean indicating whether the meeting owner is prioritized in scheduling.</summary>
         public bool? OwnerPrioritized { get; set; }
-        /// <summary>The URL to redirect to after a meeting is booked.</summary>
+        /// <summary>A string representing the URL to which users are redirected after booking a meeting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RedirectUrl { get; set; }
@@ -104,9 +104,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string RedirectUrl { get; set; }
 #endif
-        /// <summary>The increment for available start times of meetings, spelt out as a word (e.g. 15 minute increment corresponds to `FIFTEEN`). `MEETING_DURATION` is also a valid value.</summary>
+        /// <summary>A string indicating the increment for start times, with valid values including &apos;MEETING_DURATION&apos;, &apos;FIVE&apos;, &apos;TEN&apos;, &apos;FIFTEEN&apos;, &apos;TWENTY&apos;, &apos;THIRTY&apos;, &apos;FORTY_FIVE&apos;, &apos;SIXTY&apos;, &apos;NINETY&apos;, and &apos;ONE_HUNDRED_TWENTY&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettingsStartTimeIncrementMinutes? StartTimeIncrementMinutes { get; set; }
-        /// <summary>Legacy property that indicates the number of weeks in advance that availability is advertised. May be outdated or superseded by other properties.</summary>
+        /// <summary>An integer representing the number of weeks to advertise the meeting link.</summary>
         public int? WeeksToAdvertise { get; set; }
         /// <summary>The welcomeScreenInfo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -153,7 +153,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "legalConsentOptions", n => { LegalConsentOptions = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentOptions>(global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentOptions.CreateFromDiscriminatorValue); } },
                 { "locale", n => { Locale = n.GetStringValue(); } },
                 { "location", n => { Location = n.GetStringValue(); } },
-                { "meetingBufferTime", n => { MeetingBufferTime = n.GetIntValue(); } },
+                { "meetingBufferTime", n => { MeetingBufferTime = n.GetLongValue(); } },
                 { "ownerPrioritized", n => { OwnerPrioritized = n.GetBoolValue(); } },
                 { "redirectUrl", n => { RedirectUrl = n.GetStringValue(); } },
                 { "startTimeIncrementMinutes", n => { StartTimeIncrementMinutes = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettingsStartTimeIncrementMinutes>(); } },
@@ -180,7 +180,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentOptions>("legalConsentOptions", LegalConsentOptions);
             writer.WriteStringValue("locale", Locale);
             writer.WriteStringValue("location", Location);
-            writer.WriteIntValue("meetingBufferTime", MeetingBufferTime);
+            writer.WriteLongValue("meetingBufferTime", MeetingBufferTime);
             writer.WriteBoolValue("ownerPrioritized", OwnerPrioritized);
             writer.WriteStringValue("redirectUrl", RedirectUrl);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettingsStartTimeIncrementMinutes>("startTimeIncrementMinutes", StartTimeIncrementMinutes);

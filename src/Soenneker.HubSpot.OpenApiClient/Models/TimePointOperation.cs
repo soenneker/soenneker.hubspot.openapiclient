@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A string indicating the default value for the operation.</summary>
+        /// <summary>A string indicating the default value used in the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DefaultValue { get; set; }
@@ -22,9 +22,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string DefaultValue { get; set; }
 #endif
-        /// <summary>A string indicating the endpoint behavior. Valid values are &apos;INCLUSIVE&apos; and &apos;EXCLUSIVE&apos;.</summary>
+        /// <summary>A string indicating the endpoint behavior, with possible values &apos;INCLUSIVE&apos; and &apos;EXCLUSIVE&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.TimePointOperationEndpointBehavior? EndpointBehavior { get; set; }
-        /// <summary>A boolean indicating whether to include objects that have no value set.</summary>
+        /// <summary>A boolean indicating whether to include objects with no value set.</summary>
         public bool? IncludeObjectsWithNoValueSet { get; set; }
         /// <summary>A string indicating the type of operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string OperationType { get; set; }
 #endif
-        /// <summary>A string representing the operator used in the operation. Valid values are &apos;IS_BEFORE&apos; and &apos;IS_AFTER&apos;.</summary>
+        /// <summary>A string specifying the operator used in the operation, with possible values &apos;IS_BEFORE&apos; and &apos;IS_AFTER&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.TimePointOperationOperator? Operator { get; set; }
         /// <summary>A string representing the name of the operator.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -44,11 +44,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string OperatorName { get; set; }
 #endif
-        /// <summary>A string specifying the property parser. Valid values include &apos;VALUE&apos;, &apos;UPDATED_AT&apos;, &apos;ANNIVERSARY&apos;, &apos;VALUE_WITH_ZONE_SAME_LOCAL_CONVERSION&apos;, and &apos;ANNIVERSARY_WITH_ZONE_SAME_LOCAL_CONVERSION&apos;.</summary>
+        /// <summary>A string specifying the property parser, with possible values &apos;VALUE&apos;, &apos;UPDATED_AT&apos;, &apos;ANNIVERSARY&apos;, &apos;VALUE_WITH_ZONE_SAME_LOCAL_CONVERSION&apos;, and &apos;ANNIVERSARY_WITH_ZONE_SAME_LOCAL_CONVERSION&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.TimePointOperationPropertyParser? PropertyParser { get; set; }
-        /// <summary>A string indicating the type of property. Defaults to &apos;timepoint&apos;.</summary>
+        /// <summary>A string indicating the type of property, defaulting to &apos;timepoint&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.TimepointPropertyType? PropertyType { get; set; }
-        /// <summary>A string that specifies the rendering specification.</summary>
+        /// <summary>A string representing the rendering specification.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RenderSpec { get; set; }
@@ -56,7 +56,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string RenderSpec { get; set; }
 #endif
-        /// <summary>An object that specifies the time point. It can be a DatePoint, IndexedTimePoint, or PropertyReferencedTime.</summary>
+        /// <summary>A reference to a time point, which can be a DatePoint, IndexedTimePoint, or PropertyReferencedTime.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.TimePointOperationTimePoint? TimePoint { get; set; }

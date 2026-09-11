@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>Specifies the type of caller ID, with the default value being CONTACT.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum ContactCallerIdType
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "CONTACT")]
         #pragma warning disable CS1591

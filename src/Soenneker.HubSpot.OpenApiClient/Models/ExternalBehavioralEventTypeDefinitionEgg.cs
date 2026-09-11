@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalObjectResolutionMappingRequest CustomMatchingId { get; set; }
 #endif
-        /// <summary>A description of the event that will be shown as help text in HubSpot.</summary>
+        /// <summary>A string providing a description of the event type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Description { get; set; }
@@ -30,9 +30,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>A boolean indicating whether to include default properties in the event type definition.</summary>
+        /// <summary>A boolean indicating whether default properties should be included.</summary>
         public bool? IncludeDefaultProperties { get; set; }
-        /// <summary>Human readable label for the event. Used in HubSpot UI</summary>
+        /// <summary>A string representing the label of the event type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Label { get; set; }
@@ -40,7 +40,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Label { get; set; }
 #endif
-        /// <summary>Internal event name, which must be used when referencing the event from this event definitions API. If a name is not supplied, one will be generated based on the label. The `name` value will also be used to automatically generate a `fullyQualifiedName` for the event definition, which you&apos;ll use when sending event completions to this event. </summary>
+        /// <summary>A string representing the name of the event type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -48,7 +48,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>The object type to associate this event to. Can be one of CONTACT, COMPANY, DEAL, TICKET. If no primaryObject is supplied, we will default to associating the event to CONTACT objects.</summary>
+        /// <summary>A string indicating the primary object associated with the event type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PrimaryObject { get; set; }
@@ -56,7 +56,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string PrimaryObject { get; set; }
 #endif
-        /// <summary>List of custom properties on event</summary>
+        /// <summary>An array of property definitions, each represented by an ExternalBehavioralEventPropertyCreate object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventPropertyCreate>? PropertyDefinitions { get; set; }

@@ -14,19 +14,19 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>An integer representing the day within the month.</summary>
+        /// <summary>An integer representing the day of the month.</summary>
         public int? Day { get; set; }
         /// <summary>An integer representing the hour of the day.</summary>
         public int? Hour { get; set; }
-        /// <summary>An integer representing the millisecond within the second.</summary>
+        /// <summary>An integer representing the millisecond of the second.</summary>
         public int? Millisecond { get; set; }
-        /// <summary>An integer representing the minute within the hour.</summary>
+        /// <summary>An integer representing the minute of the hour.</summary>
         public int? Minute { get; set; }
-        /// <summary>An integer representing the month within the quarter.</summary>
+        /// <summary>An integer representing the month of the quarter.</summary>
         public int? Month { get; set; }
         /// <summary>A string indicating the type of reference, which is &apos;QUARTER&apos; for this component.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.QuarterReferenceType? ReferenceType { get; set; }
-        /// <summary>An integer representing the second within the minute.</summary>
+        /// <summary>An integer representing the second of the minute.</summary>
         public int? Second { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.QuarterReference"/> and sets the default values.

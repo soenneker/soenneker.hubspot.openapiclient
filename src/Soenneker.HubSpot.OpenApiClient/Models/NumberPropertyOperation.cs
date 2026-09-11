@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A string representing the default value for the operation if no specific value is set.</summary>
+        /// <summary>A string representing the default value for the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DefaultValue { get; set; }
@@ -22,9 +22,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string DefaultValue { get; set; }
 #endif
-        /// <summary>A boolean indicating whether objects with no value set for the property should be included in the operation.</summary>
+        /// <summary>A boolean indicating whether objects with no value set should be included in the operation.</summary>
         public bool? IncludeObjectsWithNoValueSet { get; set; }
-        /// <summary>A string indicating the type of operation being performed.</summary>
+        /// <summary>A string that specifies the type of operation being performed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OperationType { get; set; }
@@ -32,7 +32,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string OperationType { get; set; }
 #endif
-        /// <summary>A string representing the comparison operator used in the operation. Valid values include &apos;IS_EQUAL_TO&apos;, &apos;IS_NOT_EQUAL_TO&apos;, &apos;IS_GREATER_THAN&apos;, &apos;IS_GREATER_THAN_OR_EQUAL_TO&apos;, &apos;IS_LESS_THAN&apos;, &apos;IS_LESS_THAN_OR_EQUAL_TO&apos;, &apos;HAS_EVER_BEEN_EQUAL_TO&apos;, and &apos;HAS_NEVER_BEEN_EQUAL_TO&apos;.</summary>
+        /// <summary>A string representing the operation to be performed on the number property. Valid values include &apos;IS_EQUAL_TO&apos;, &apos;IS_NOT_EQUAL_TO&apos;, &apos;IS_GREATER_THAN&apos;, &apos;IS_GREATER_THAN_OR_EQUAL_TO&apos;, &apos;IS_LESS_THAN&apos;, &apos;IS_LESS_THAN_OR_EQUAL_TO&apos;, &apos;HAS_EVER_BEEN_EQUAL_TO&apos;, and &apos;HAS_NEVER_BEEN_EQUAL_TO&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.NumberPropertyOperationOperator? Operator { get; set; }
         /// <summary>A string representing the name of the operator used in the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -42,9 +42,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string OperatorName { get; set; }
 #endif
-        /// <summary>A string indicating the type of property operation, which is &apos;number&apos; in this case.</summary>
+        /// <summary>A string that specifies the type of property operation, with a default value of &apos;number&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.NumberPropertyType? PropertyType { get; set; }
-        /// <summary>A string that specifies how the operation should be rendered or displayed.</summary>
+        /// <summary>A string that provides specifications for rendering the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RenderSpec { get; set; }
@@ -52,7 +52,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string RenderSpec { get; set; }
 #endif
-        /// <summary>A numeric value used in the operation for comparison.</summary>
+        /// <summary>A number that represents the value to be used in the operation.</summary>
         public double? Value { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.NumberPropertyOperation"/> and sets the default values.

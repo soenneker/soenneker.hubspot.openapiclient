@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A string representing the default value to use if no other value is set.</summary>
+        /// <summary>A string representing the default value for the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DefaultValue { get; set; }
@@ -24,7 +24,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>A boolean indicating whether to include objects that have no value set for the property.</summary>
         public bool? IncludeObjectsWithNoValueSet { get; set; }
-        /// <summary>An integer representing the number of days used in the rolling date range calculation.</summary>
+        /// <summary>An integer specifying the number of days for the rolling date range operation.</summary>
         public int? NumberOfDays { get; set; }
         /// <summary>A string indicating the type of operation being performed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string OperationType { get; set; }
 #endif
-        /// <summary>A string specifying the operation to be performed, such as &apos;IS_LESS_THAN_X_DAYS_AGO&apos; or &apos;IS_MORE_THAN_X_DAYS_FROM_NOW&apos;.</summary>
+        /// <summary>A string specifying the operation to perform, with valid values including &apos;IS_LESS_THAN_X_DAYS_AGO&apos;, &apos;IS_MORE_THAN_X_DAYS_AGO&apos;, &apos;IS_LESS_THAN_X_DAYS_FROM_NOW&apos;, and &apos;IS_MORE_THAN_X_DAYS_FROM_NOW&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.RollingDateRangePropertyOperationOperator? Operator { get; set; }
         /// <summary>A string representing the name of the operator used in the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -44,9 +44,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string OperatorName { get; set; }
 #endif
-        /// <summary>A string indicating the type of property operation, with a default value of &apos;datetime-rolling&apos;.</summary>
+        /// <summary>A string indicating the type of property, with a default value of &apos;datetime-rolling&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.DatetimeRollingPropertyType? PropertyType { get; set; }
-        /// <summary>A string used for rendering specifications, though its specific use is not detailed.</summary>
+        /// <summary>A string that specifies the rendering specification for the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RenderSpec { get; set; }
@@ -54,7 +54,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string RenderSpec { get; set; }
 #endif
-        /// <summary>A boolean indicating whether the operation requires conversion based on time zones.</summary>
+        /// <summary>A boolean indicating whether the operation requires time zone conversion.</summary>
         public bool? RequiresTimeZoneConversion { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.RollingDateRangePropertyOperation"/> and sets the default values.

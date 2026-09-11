@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A string representing the default value to use if no specific value is set.</summary>
+        /// <summary>A string representing the default value for the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DefaultValue { get; set; }
@@ -22,9 +22,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string DefaultValue { get; set; }
 #endif
-        /// <summary>A boolean indicating whether to include objects that do not have a value set for the property.</summary>
+        /// <summary>A boolean indicating whether to include objects that have no value set for the property.</summary>
         public bool? IncludeObjectsWithNoValueSet { get; set; }
-        /// <summary>An integer representing the lower bound of the date range, specified as a Unix timestamp in milliseconds.</summary>
+        /// <summary>An integer representing the lower bound of the date range as a Unix timestamp in milliseconds.</summary>
         public long? LowerBoundTimestamp { get; set; }
         /// <summary>A string representing the type of operation being performed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string OperationType { get; set; }
 #endif
-        /// <summary>A string specifying the operation to perform, with valid values &apos;IS_BETWEEN&apos; and &apos;IS_NOT_BETWEEN&apos;.</summary>
+        /// <summary>A string representing the operation to be performed, with valid values including &apos;IS_BETWEEN&apos; and &apos;IS_NOT_BETWEEN&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.RangedDatePropertyOperationOperator? Operator { get; set; }
         /// <summary>A string representing the name of the operator used in the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -44,9 +44,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string OperatorName { get; set; }
 #endif
-        /// <summary>A string indicating the type of property operation, which is &apos;datetime-ranged&apos; for this component.</summary>
+        /// <summary>A string indicating the type of property, defaulting to &apos;datetime-ranged&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.DatetimeRangedPropertyType? PropertyType { get; set; }
-        /// <summary>A string that specifies how the operation should be rendered.</summary>
+        /// <summary>A string specifying the rendering specification for the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RenderSpec { get; set; }
@@ -54,9 +54,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string RenderSpec { get; set; }
 #endif
-        /// <summary>A boolean indicating whether timezone conversion is required for the date range.</summary>
+        /// <summary>A boolean indicating whether time zone conversion is required for this operation.</summary>
         public bool? RequiresTimeZoneConversion { get; set; }
-        /// <summary>An integer representing the upper bound of the date range, specified as a Unix timestamp in milliseconds.</summary>
+        /// <summary>An integer representing the upper bound of the date range as a Unix timestamp in milliseconds.</summary>
         public long? UpperBoundTimestamp { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.RangedDatePropertyOperation"/> and sets the default values.

@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.EventsPaging2 Paging { get; set; }
 #endif
-        /// <summary>An array containing the external behavioral event type definitions returned in the current page of results.</summary>
+        /// <summary>An array containing the external behavioral event type definitions returned in the current page.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventTypeDefinition>? Results { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventTypeDefinition> Results { get; set; }
 #endif
-        /// <summary>An integer representing the total number of external behavioral event type definitions available.</summary>
+        /// <summary>The total number of external behavioral event type definitions available.</summary>
         public int? Total { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalExternalBehavioralEventTypeDefinition"/> and sets the default values.

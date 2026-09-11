@@ -14,9 +14,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>An integer specifying the number of occurrences required for the event rule to be satisfied.</summary>
+        /// <summary>An integer specifying the number of times the event must occur for the rule to be satisfied.</summary>
         public int? Count { get; set; }
-        /// <summary>The unique identifier for the type of event. It is a string.</summary>
+        /// <summary>The unique identifier for the type of event this rule applies to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EventTypeId { get; set; }
@@ -24,9 +24,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string EventTypeId { get; set; }
 #endif
-        /// <summary>An integer representing the number of days to look back when evaluating the event rule.</summary>
+        /// <summary>An integer representing the number of days to look back when evaluating the rule.</summary>
         public int? LookbackWindowDays { get; set; }
-        /// <summary>An array of property filters that define additional criteria for the event. Each filter specifies a property and the operation to apply.</summary>
+        /// <summary>An array of property filters that must be satisfied for the rule to apply. Each filter specifies conditions on event properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyFilter>? PropertyFilters { get; set; }

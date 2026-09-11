@@ -85,15 +85,18 @@ namespace Soenneker.HubSpot.OpenApiClient.AccountInfo.TwoZeroTwoSixZeroNine.Acti
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class AuditLogsRequestBuilderGetQueryParameters 
         {
-            /// <summary>An array of user IDs to filter the audit logs by the acting user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("actingUserId")]
             public int?[]? ActingUserId { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("actingUserId")]
             public int?[] ActingUserId { get; set; }
+            #pragma warning restore CS1591
 #endif
             /// <summary>The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -105,27 +108,33 @@ namespace Soenneker.HubSpot.OpenApiClient.AccountInfo.TwoZeroTwoSixZeroNine.Acti
             [QueryParameter("after")]
             public string After { get; set; }
 #endif
-            /// <summary>A boolean indicating whether to fill the final timestamp in the response.</summary>
+            #pragma warning disable CS1591
             [QueryParameter("fillFinalTimestamp")]
             public bool? FillFinalTimestamp { get; set; }
+            #pragma warning restore CS1591
             /// <summary>The maximum number of results to display per page.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
-            /// <summary>Filter logs to include only those that occurred after this date-time.</summary>
+            #pragma warning disable CS1591
             [QueryParameter("occurredAfter")]
             public DateTimeOffset? OccurredAfter { get; set; }
-            /// <summary>Filter logs to include only those that occurred before this date-time.</summary>
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("occurredBefore")]
             public DateTimeOffset? OccurredBefore { get; set; }
-            /// <summary>An array specifying the sort order of the results.</summary>
+            #pragma warning restore CS1591
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("sort")]
             public string[]? Sort { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("sort")]
             public string[] Sort { get; set; }
+            #pragma warning restore CS1591
 #endif
         }
     }

@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>A string indicating the type of property operation, which is &apos;datetime-ranged&apos; for this component.</summary>
+    /// <summary>A string indicating the type of property, defaulting to &apos;datetime-ranged&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum DatetimeRangedPropertyType
     {

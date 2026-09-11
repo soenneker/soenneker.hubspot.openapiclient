@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>A string indicating the type of property, defaulting to &apos;datetime&apos;.</summary>
+    /// <summary>A string indicating the type of property, with a default value of &apos;datetime&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum DatetimePropertyType
     {

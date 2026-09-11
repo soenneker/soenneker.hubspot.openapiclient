@@ -19,7 +19,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Events.TwoZeroTwoSixZeroNine.EventDefi
     public partial class EventDefinitionsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.events.TwoZeroTwoSixZeroNine.eventDefinitions.item collection</summary>
-        /// <param name="position">The unique name of the event whose definition you want to retrieve.</param>
+        /// <param name="position">The unique name of the event definition to retrieve.</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Events.TwoZeroTwoSixZeroNine.EventDefinitions.Item.WithEventNameItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Events.TwoZeroTwoSixZeroNine.EventDefinitions.Item.WithEventNameItemRequestBuilder this[string position]
         {
@@ -47,7 +47,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Events.TwoZeroTwoSixZeroNine.EventDefi
         {
         }
         /// <summary>
-        /// Retrieve existing custom event definitions.
+        /// Retrieve a list of event definitions available in your HubSpot account. This endpoint allows you to search and filter event definitions based on various criteria, such as search strings and pagination options. It is useful for managing and understanding the different event types that are tracked within your account.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalExternalBehavioralEventTypeDefinition"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Events.TwoZeroTwoSixZeroNine.EventDefi
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalExternalBehavioralEventTypeDefinition>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalExternalBehavioralEventTypeDefinition.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Create a custom event definition.
+        /// Create a new behavioral event definition in your HubSpot account. This endpoint allows you to define the structure and properties of a new behavioral event, which can then be used to track specific user actions or behaviors. The request body must include the necessary event details and property definitions.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventTypeDefinition"/></returns>
         /// <param name="body">The request body</param>
@@ -85,7 +85,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Events.TwoZeroTwoSixZeroNine.EventDefi
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventTypeDefinition>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventTypeDefinition.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieve existing custom event definitions.
+        /// Retrieve a list of event definitions available in your HubSpot account. This endpoint allows you to search and filter event definitions based on various criteria, such as search strings and pagination options. It is useful for managing and understanding the different event types that are tracked within your account.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -104,7 +104,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Events.TwoZeroTwoSixZeroNine.EventDefi
             return requestInfo;
         }
         /// <summary>
-        /// Create a custom event definition.
+        /// Create a new behavioral event definition in your HubSpot account. This endpoint allows you to define the structure and properties of a new behavioral event, which can then be used to track specific user actions or behaviors. The request body must include the necessary event details and property definitions.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -135,12 +135,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Events.TwoZeroTwoSixZeroNine.EventDefi
             return new global::Soenneker.HubSpot.OpenApiClient.Events.TwoZeroTwoSixZeroNine.EventDefinitions.EventDefinitionsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Retrieve existing custom event definitions.
+        /// Retrieve a list of event definitions available in your HubSpot account. This endpoint allows you to search and filter event definitions based on various criteria, such as search strings and pagination options. It is useful for managing and understanding the different event types that are tracked within your account.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class EventDefinitionsRequestBuilderGetQueryParameters 
         {
-            /// <summary>The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.</summary>
+            /// <summary>A cursor token for pagination. Use the value from the previous response&apos;s paging.next.after field to retrieve the next set of results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("after")]
@@ -150,13 +150,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Events.TwoZeroTwoSixZeroNine.EventDefi
             [QueryParameter("after")]
             public string After { get; set; }
 #endif
-            /// <summary>A boolean indicating whether to include properties of the event definitions in the response.</summary>
+            /// <summary>A boolean indicating whether to include event properties in the response.</summary>
             [QueryParameter("includeProperties")]
             public bool? IncludeProperties { get; set; }
-            /// <summary>The maximum number of results to display per page.</summary>
+            /// <summary>The maximum number of results to return per page.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
-            /// <summary>A string used to search for event definitions by name or other attributes.</summary>
+            /// <summary>A string to filter event definitions by name or description.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("searchString")]
@@ -166,7 +166,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Events.TwoZeroTwoSixZeroNine.EventDefi
             [QueryParameter("searchString")]
             public string SearchString { get; set; }
 #endif
-            /// <summary>A string specifying the order in which results should be sorted.</summary>
+            /// <summary>The order in which to sort the results. Accepts values like &apos;asc&apos; or &apos;desc&apos;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("sortOrder")]

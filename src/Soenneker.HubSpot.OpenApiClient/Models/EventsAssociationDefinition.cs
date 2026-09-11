@@ -15,11 +15,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Indicates whether custom labels are allowed for this association.</summary>
+        /// <summary>A boolean indicating if custom labels are allowed for this association.</summary>
         public bool? AllowsCustomLabels { get; set; }
-        /// <summary>Defines the nature of the association in terms of quantity. Valid values are &apos;ONE_TO_ONE&apos; and &apos;ONE_TO_MANY&apos;.</summary>
+        /// <summary>The nature of the association in terms of cardinality, which can be &apos;ONE_TO_ONE&apos; or &apos;ONE_TO_MANY&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.EventsAssociationDefinitionCardinality? Cardinality { get; set; }
-        /// <summary>The error category</summary>
+        /// <summary>The category of the association, indicating whether it is defined by HubSpot, the user, an integrator, or for work purposes. Valid values include &apos;HUBSPOT_DEFINED&apos;, &apos;USER_DEFINED&apos;, &apos;INTEGRATOR_DEFINED&apos;, and &apos;WORK&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.EventsAssociationDefinitionCategory? Category { get; set; }
         /// <summary>The type of object from which the association originates. Valid values include various HubSpot object types such as &apos;CONTACT&apos;, &apos;COMPANY&apos;, &apos;DEAL&apos;, etc.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.EventsAssociationDefinitionFromObjectType? FromObjectType { get; set; }
@@ -31,27 +31,27 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string FromObjectTypeId { get; set; }
 #endif
-        /// <summary>Indicates whether all associated objects are included in the association.</summary>
+        /// <summary>A boolean indicating if all associated objects are included in the association.</summary>
         public bool? HasAllAssociatedObjects { get; set; }
-        /// <summary>Indicates if the association supports cascading deletes.</summary>
+        /// <summary>A boolean indicating if cascading deletes are enabled for this association.</summary>
         public bool? HasCascadingDeletes { get; set; }
-        /// <summary>Indicates if there is a user-enforced maximum number of object IDs for the source object type.</summary>
+        /// <summary>A boolean indicating if there is a user-enforced maximum on the number of &apos;from&apos; object IDs.</summary>
         public bool? HasUserEnforcedMaxFromObjectIds { get; set; }
-        /// <summary>Indicates if there is a user-enforced maximum number of object IDs for the target object type.</summary>
+        /// <summary>A boolean indicating if there is a user-enforced maximum on the number of &apos;to&apos; object IDs.</summary>
         public bool? HasUserEnforcedMaxToObjectIds { get; set; }
-        /// <summary>Indicates if the association is hidden.</summary>
+        /// <summary>A boolean indicating if the association is hidden.</summary>
         public bool? Hidden { get; set; }
-        /// <summary>The reason why the association is hidden. Valid values include &apos;DEFAULT&apos;, &apos;INTERNAL&apos;, and &apos;USER_CONFIGURED&apos;.</summary>
+        /// <summary>The reason why the association is hidden, if applicable. Valid values include &apos;DEFAULT&apos;, &apos;INTERNAL&apos;, and &apos;USER_CONFIGURED&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.EventsAssociationDefinitionHiddenReason? HiddenReason { get; set; }
-        /// <summary>The unique identifier for the association definition.</summary>
+        /// <summary>The unique identifier for this association definition.</summary>
         public int? Id { get; set; }
-        /// <summary>Indicates whether custom labels are allowed for the inverse association.</summary>
+        /// <summary>A boolean indicating if custom labels are allowed for the inverse association.</summary>
         public bool? InverseAllowsCustomLabels { get; set; }
-        /// <summary>Defines the inverse nature of the association in terms of quantity. Valid values are &apos;ONE_TO_ONE&apos; and &apos;ONE_TO_MANY&apos;.</summary>
+        /// <summary>The cardinality of the inverse association, which can also be &apos;ONE_TO_ONE&apos; or &apos;ONE_TO_MANY&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.EventsAssociationDefinitionInverseCardinality? InverseCardinality { get; set; }
-        /// <summary>Indicates whether all associated objects are included in the inverse association.</summary>
+        /// <summary>A boolean indicating if all associated objects are included in the inverse association.</summary>
         public bool? InverseHasAllAssociatedObjects { get; set; }
-        /// <summary>The unique identifier for the inverse association definition.</summary>
+        /// <summary>The unique identifier for the inverse of this association definition.</summary>
         public int? InverseId { get; set; }
         /// <summary>A human-readable label for the inverse association.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -69,11 +69,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string InverseName { get; set; }
 #endif
-        /// <summary>Indicates if this association is the default association.</summary>
+        /// <summary>A boolean indicating if this association is the default association.</summary>
         public bool? IsDefault { get; set; }
-        /// <summary>Indicates if the inverse association is the primary association.</summary>
+        /// <summary>A boolean indicating if the inverse association is the primary association.</summary>
         public bool? IsInversePrimary { get; set; }
-        /// <summary>Indicates if this association is the primary association.</summary>
+        /// <summary>A boolean indicating if this association is the primary association.</summary>
         public bool? IsPrimary { get; set; }
         /// <summary>A human-readable label for the association.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -83,9 +83,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Label { get; set; }
 #endif
-        /// <summary>The maximum number of object IDs that can be associated from the source object type.</summary>
+        /// <summary>The maximum number of object IDs that can be associated in the &apos;from&apos; direction.</summary>
         public int? MaxFromObjectIds { get; set; }
-        /// <summary>The maximum number of object IDs that can be associated to the target object type.</summary>
+        /// <summary>The maximum number of object IDs that can be associated in the &apos;to&apos; direction.</summary>
         public int? MaxToObjectIds { get; set; }
         /// <summary>The name of the association.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -103,7 +103,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string PortalUniqueIdentifier { get; set; }
 #endif
-        /// <summary>Indicates if the association is read-only.</summary>
+        /// <summary>A boolean indicating if the association is read-only.</summary>
         public bool? ReadOnly { get; set; }
         /// <summary>The type of object to which the association points. Valid values include various HubSpot object types such as &apos;CONTACT&apos;, &apos;COMPANY&apos;, &apos;DEAL&apos;, etc.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.EventsAssociationDefinitionToObjectType? ToObjectType { get; set; }

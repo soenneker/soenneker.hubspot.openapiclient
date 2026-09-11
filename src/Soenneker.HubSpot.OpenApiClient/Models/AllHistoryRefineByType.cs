@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>A string that indicates the type of refinement. The default and only valid value is &apos;AllHistoryRefineBy&apos;.</summary>
+    /// <summary>A string that specifies the type of refinement. The default value is &apos;AllHistoryRefineBy&apos;, and it is the only valid value for this property.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum AllHistoryRefineByType
     {

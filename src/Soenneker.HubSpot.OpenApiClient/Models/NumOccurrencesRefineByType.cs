@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>A string that specifies the type of refinement, which is &apos;NumOccurrencesRefineBy&apos; by default.</summary>
+    /// <summary>A string that specifies the type of refinement, which is &apos;NumOccurrencesRefineBy&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum NumOccurrencesRefineByType
     {

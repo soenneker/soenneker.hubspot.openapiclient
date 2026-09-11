@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>A string representing the unit of time for the operation, such as &apos;DAY&apos;, &apos;WEEK&apos;, &apos;MONTH&apos;, &apos;QUARTER&apos;, or &apos;YEAR&apos;.</summary>
+    /// <summary>A string representing the unit of time for the operation, which can be &apos;DAY&apos;, &apos;WEEK&apos;, &apos;MONTH&apos;, &apos;QUARTER&apos;, or &apos;YEAR&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum CalendarDatePropertyOperationTimeUnit
     {

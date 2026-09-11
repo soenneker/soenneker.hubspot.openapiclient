@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The default string value to use if no specific value is set.</summary>
+        /// <summary>A string representing the default value to be used if no other value is set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DefaultValue { get; set; }
@@ -22,9 +22,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string DefaultValue { get; set; }
 #endif
-        /// <summary>A boolean indicating whether to include objects that have no value set for the property.</summary>
+        /// <summary>A boolean indicating whether objects with no value set should be included in the operation.</summary>
         public bool? IncludeObjectsWithNoValueSet { get; set; }
-        /// <summary>The type of operation being performed, represented as a string.</summary>
+        /// <summary>A string indicating the type of operation being performed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OperationType { get; set; }
@@ -32,9 +32,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string OperationType { get; set; }
 #endif
-        /// <summary>The operation to perform on the string property. Valid values include &apos;IS_EQUAL_TO&apos;, &apos;IS_NOT_EQUAL_TO&apos;, &apos;CONTAINS&apos;, &apos;DOES_NOT_CONTAIN&apos;, &apos;STARTS_WITH&apos;, &apos;ENDS_WITH&apos;, &apos;HAS_EVER_BEEN_EQUAL_TO&apos;, &apos;HAS_NEVER_BEEN_EQUAL_TO&apos;, &apos;HAS_EVER_CONTAINED&apos;, and &apos;HAS_NEVER_CONTAINED&apos;.</summary>
+        /// <summary>A string representing the operation to be performed, with valid values including &apos;IS_EQUAL_TO&apos;, &apos;IS_NOT_EQUAL_TO&apos;, &apos;CONTAINS&apos;, &apos;DOES_NOT_CONTAIN&apos;, &apos;STARTS_WITH&apos;, &apos;ENDS_WITH&apos;, &apos;HAS_EVER_BEEN_EQUAL_TO&apos;, &apos;HAS_NEVER_BEEN_EQUAL_TO&apos;, &apos;HAS_EVER_CONTAINED&apos;, and &apos;HAS_NEVER_CONTAINED&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.StringPropertyOperationOperator? Operator { get; set; }
-        /// <summary>The name of the operator used in the operation, represented as a string.</summary>
+        /// <summary>A string representing the name of the operator.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OperatorName { get; set; }
@@ -42,9 +42,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string OperatorName { get; set; }
 #endif
-        /// <summary>The type of property, which is always &apos;string&apos; for this operation.</summary>
+        /// <summary>A string indicating the type of property, defaulting to &apos;string&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.StringValuePropertyType? PropertyType { get; set; }
-        /// <summary>A string specifying how the operation should be rendered, though the exact format is not detailed.</summary>
+        /// <summary>A string that provides specifications for rendering the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RenderSpec { get; set; }
@@ -52,7 +52,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string RenderSpec { get; set; }
 #endif
-        /// <summary>The string value to be used in the operation.</summary>
+        /// <summary>A string that specifies the value to be used in the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Value { get; set; }

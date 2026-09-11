@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>A string indicating the comparison operator to be used. Valid values include &apos;IS_EQUAL_TO&apos;, &apos;IS_NOT_EQUAL_TO&apos;, &apos;IS_GREATER_THAN&apos;, &apos;IS_GREATER_THAN_OR_EQUAL_TO&apos;, &apos;IS_LESS_THAN&apos;, and &apos;IS_LESS_THAN_OR_EQUAL_TO&apos;.</summary>
+    /// <summary>A string representing the comparison operator. Valid values include &apos;IS_EQUAL_TO&apos;, &apos;IS_NOT_EQUAL_TO&apos;, &apos;IS_GREATER_THAN&apos;, &apos;IS_GREATER_THAN_OR_EQUAL_TO&apos;, &apos;IS_LESS_THAN&apos;, and &apos;IS_LESS_THAN_OR_EQUAL_TO&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum ComparativeNumberPropertyOperationOperator
     {

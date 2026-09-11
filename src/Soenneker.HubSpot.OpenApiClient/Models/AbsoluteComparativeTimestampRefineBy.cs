@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A string that indicates the type of comparison to be made, with valid values including &apos;BEFORE&apos; and &apos;AFTER&apos;.</summary>
+        /// <summary>A string indicating the type of comparison to be made with the timestamp. Valid values are &apos;BEFORE&apos; and &apos;AFTER&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteComparativeTimestampRefineByComparison? Comparison { get; set; }
         /// <summary>An integer representing the specific timestamp to be used in the comparison, formatted as an int64.</summary>
         public long? Timestamp { get; set; }

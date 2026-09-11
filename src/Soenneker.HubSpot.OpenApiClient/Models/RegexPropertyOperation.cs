@@ -16,7 +16,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A boolean indicating whether the regex matching should be case-sensitive.</summary>
         public bool? CaseSensitive { get; set; }
-        /// <summary>A string representing the default value to use if no match is found.</summary>
+        /// <summary>A string specifying the default value to be used if no value is set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DefaultValue { get; set; }
@@ -24,7 +24,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string DefaultValue { get; set; }
 #endif
-        /// <summary>A boolean indicating whether to include objects that have no value set for the property.</summary>
+        /// <summary>A boolean that determines whether objects with no value set should be included in the operation.</summary>
         public bool? IncludeObjectsWithNoValueSet { get; set; }
         /// <summary>A string indicating the type of operation being performed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string OperationType { get; set; }
 #endif
-        /// <summary>A string specifying the regex operation to perform, such as &apos;MATCHES_REGEX&apos; or &apos;DOES_NOT_MATCH_REGEX&apos;.</summary>
+        /// <summary>A string specifying the operation to perform, with valid values being &apos;MATCHES_REGEX&apos; and &apos;DOES_NOT_MATCH_REGEX&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.RegexPropertyOperationOperator? Operator { get; set; }
         /// <summary>A string representing the name of the operator used in the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -44,7 +44,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string OperatorName { get; set; }
 #endif
-        /// <summary>A string representing the regular expression pattern used for matching.</summary>
+        /// <summary>A string representing the regex pattern to be used in the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Pattern { get; set; }
@@ -52,9 +52,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Pattern { get; set; }
 #endif
-        /// <summary>A string indicating the type of property operation, with a default value of &apos;regex&apos;.</summary>
+        /// <summary>A string indicating the type of property operation, which is &apos;regex&apos; for this component.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.RegexPropertyType? PropertyType { get; set; }
-        /// <summary>A string that specifies how the operation should be rendered or displayed.</summary>
+        /// <summary>A string that may define how the operation is rendered, though its specific use is not detailed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RenderSpec { get; set; }

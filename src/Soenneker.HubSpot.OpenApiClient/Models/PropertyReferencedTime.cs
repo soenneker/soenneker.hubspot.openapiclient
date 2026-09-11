@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A string indicating the property from which the time reference is derived.</summary>
+        /// <summary>A string that indicates the property name used for referencing the time.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Property { get; set; }
@@ -22,13 +22,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Property { get; set; }
 #endif
-        /// <summary>A string that defines the type of reference, with possible values including &apos;VALUE&apos;, &apos;UPDATED_AT&apos;, &apos;ANNIVERSARY&apos;, &apos;VALUE_WITH_ZONE_SAME_LOCAL_CONVERSION&apos;, and &apos;ANNIVERSARY_WITH_ZONE_SAME_LOCAL_CONVERSION&apos;.</summary>
+        /// <summary>A string that defines the type of reference, with valid values including &apos;VALUE&apos;, &apos;UPDATED_AT&apos;, &apos;ANNIVERSARY&apos;, &apos;VALUE_WITH_ZONE_SAME_LOCAL_CONVERSION&apos;, and &apos;ANNIVERSARY_WITH_ZONE_SAME_LOCAL_CONVERSION&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyReferencedTimeReferenceType? ReferenceType { get; set; }
         /// <summary>A string indicating the type of time reference. It defaults to &apos;PROPERTY_REFERENCE&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyReferencedTimeType? TimeType { get; set; }
         /// <summary>A string specifying the source of the timezone, which can be &apos;CUSTOM&apos;, &apos;USER&apos;, or &apos;PORTAL&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyReferencedTimeTimezoneSource? TimezoneSource { get; set; }
-        /// <summary>A string representing the identifier for the timezone.</summary>
+        /// <summary>A string representing the identifier of the timezone.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ZoneId { get; set; }

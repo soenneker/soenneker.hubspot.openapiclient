@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Events.TwoZeroTwoSixZeroNine.EventDefi
         {
         }
         /// <summary>
-        /// Delete an existing property from a custom event definition.
+        /// Delete a specific property from an event definition in your HubSpot account. This operation is useful when you need to remove obsolete or incorrect properties from an event definition. Ensure that the event and property names are accurately specified to avoid unintended deletions.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -51,7 +51,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Events.TwoZeroTwoSixZeroNine.EventDefi
             await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Update an existing property in a custom event definition.
+        /// Update a specific property of a behavioral event definition in your HubSpot account. This operation allows you to modify the details of an existing property associated with a given event. Use this endpoint to keep your event properties up-to-date with the latest information.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.EventsProperty"/></returns>
         /// <param name="body">The request body</param>
@@ -71,7 +71,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Events.TwoZeroTwoSixZeroNine.EventDefi
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.EventsProperty>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.EventsProperty.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Delete an existing property from a custom event definition.
+        /// Delete a specific property from an event definition in your HubSpot account. This operation is useful when you need to remove obsolete or incorrect properties from an event definition. Ensure that the event and property names are accurately specified to avoid unintended deletions.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -89,7 +89,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Events.TwoZeroTwoSixZeroNine.EventDefi
             return requestInfo;
         }
         /// <summary>
-        /// Update an existing property in a custom event definition.
+        /// Update a specific property of a behavioral event definition in your HubSpot account. This operation allows you to modify the details of an existing property associated with a given event. Use this endpoint to keep your event properties up-to-date with the latest information.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

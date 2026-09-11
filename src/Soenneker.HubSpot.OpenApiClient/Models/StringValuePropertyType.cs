@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>The type of property, which is always &apos;string&apos; for this operation.</summary>
+    /// <summary>A string indicating the type of property, defaulting to &apos;string&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum StringValuePropertyType
     {

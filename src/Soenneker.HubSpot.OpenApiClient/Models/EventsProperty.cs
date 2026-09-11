@@ -21,7 +21,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public DateTimeOffset? ArchivedAt { get; set; }
         /// <summary>Indicates whether the property is calculated.</summary>
         public bool? Calculated { get; set; }
-        /// <summary>The formula used to calculate the property, if applicable.</summary>
+        /// <summary>The formula used to calculate the property&apos;s value, if applicable.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CalculationFormula { get; set; }
@@ -47,9 +47,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string CurrencyPropertyName { get; set; }
 #endif
-        /// <summary>The sensitivity level of the data. Valid values include &apos;non_sensitive&apos;, &apos;sensitive&apos;, and &apos;highly_sensitive&apos;.</summary>
+        /// <summary>The sensitivity level of the data, with valid values including &apos;non_sensitive&apos;, &apos;sensitive&apos;, and &apos;highly_sensitive&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.EventsPropertyDataSensitivity? DataSensitivity { get; set; }
-        /// <summary>A hint for how date values should be displayed. Valid values include &apos;absolute&apos;, &apos;absolute_with_relative&apos;, &apos;time_since&apos;, and &apos;time_until&apos;.</summary>
+        /// <summary>A hint for displaying date properties, with valid values including &apos;absolute&apos;, &apos;absolute_with_relative&apos;, &apos;time_since&apos;, and &apos;time_until&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.EventsPropertyDateDisplayHint? DateDisplayHint { get; set; }
         /// <summary>A description of the property.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -59,7 +59,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>The order in which this property is displayed.</summary>
+        /// <summary>The order in which this property is displayed relative to other properties.</summary>
         public int? DisplayOrder { get; set; }
         /// <summary>Indicates whether the property options are external.</summary>
         public bool? ExternalOptions { get; set; }
@@ -111,9 +111,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>A hint for how number values should be displayed. Valid values include &apos;unformatted&apos;, &apos;formatted&apos;, &apos;currency&apos;, &apos;percentage&apos;, &apos;duration&apos;, and &apos;probability&apos;.</summary>
+        /// <summary>A hint for displaying number properties, with valid values including &apos;unformatted&apos;, &apos;formatted&apos;, &apos;currency&apos;, &apos;percentage&apos;, &apos;duration&apos;, and &apos;probability&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.EventsPropertyNumberDisplayHint? NumberDisplayHint { get; set; }
-        /// <summary>An array of options available for this property, each defined by a label, value, and other attributes.</summary>
+        /// <summary>An array of options available for this property, applicable if the property supports multiple values.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.EventsOption>? Options { get; set; }
@@ -129,7 +129,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ReferencedObjectType { get; set; }
 #endif
-        /// <summary>An array of categories indicating the sensitivity of the data contained in the property.</summary>
+        /// <summary>An array of categories indicating the sensitivity of the data.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? SensitiveDataCategories { get; set; }
@@ -139,7 +139,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>Indicates whether a currency symbol is shown for the property.</summary>
         public bool? ShowCurrencySymbol { get; set; }
-        /// <summary>A hint for how text values should be displayed. Valid values include &apos;unformatted_single_line&apos;, &apos;multi_line&apos;, &apos;email&apos;, &apos;phone_number&apos;, &apos;domain_name&apos;, &apos;ip_address&apos;, &apos;physical_address&apos;, and &apos;postal_code&apos;.</summary>
+        /// <summary>A hint for displaying text properties, with valid values including &apos;unformatted_single_line&apos;, &apos;multi_line&apos;, &apos;email&apos;, &apos;phone_number&apos;, &apos;domain_name&apos;, &apos;ip_address&apos;, &apos;physical_address&apos;, and &apos;postal_code&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.EventsPropertyTextDisplayHint? TextDisplayHint { get; set; }
         /// <summary>The data type of the property.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

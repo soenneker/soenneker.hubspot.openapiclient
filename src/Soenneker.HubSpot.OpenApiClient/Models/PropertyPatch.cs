@@ -24,9 +24,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>An integer indicating the order in which the property should be displayed.</summary>
         public int? DisplayOrder { get; set; }
-        /// <summary>A boolean indicating whether the property should be hidden from view.</summary>
+        /// <summary>A boolean indicating whether the property is hidden from view.</summary>
         public bool? Hidden { get; set; }
-        /// <summary>The display label for the property. This is a string field.</summary>
+        /// <summary>A human-readable label for the property, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Label { get; set; }
@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Label { get; set; }
 #endif
-        /// <summary>The unique name of the property to be updated. It is a required string field.</summary>
+        /// <summary>The unique name of the property being modified. It is a required string field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -42,7 +42,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>An array of OptionInput objects representing the available options for the property.</summary>
+        /// <summary>An array of OptionInput objects, each representing possible options for the property.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.EventsOptionInput>? Options { get; set; }

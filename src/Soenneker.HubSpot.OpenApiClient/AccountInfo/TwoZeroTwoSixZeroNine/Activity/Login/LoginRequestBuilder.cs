@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.AccountInfo.TwoZeroTwoSixZeroNine.Acti
         {
         }
         /// <summary>
-        /// Retrieve login activity for users in your HubSpot account. This endpoint provides access to login audit logs, allowing you to track user login events. It supports pagination and filtering by user ID.
+        /// Retrieve logs of user actions related to [login activity](https://knowledge.hubspot.com/account-management/view-and-export-account-activity-history#account-login-history).
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponsePublicLoginAuditForwardPaging"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.HubSpot.OpenApiClient.AccountInfo.TwoZeroTwoSixZeroNine.Acti
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponsePublicLoginAuditForwardPaging>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponsePublicLoginAuditForwardPaging.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieve login activity for users in your HubSpot account. This endpoint provides access to login audit logs, allowing you to track user login events. It supports pagination and filtering by user ID.
+        /// Retrieve logs of user actions related to [login activity](https://knowledge.hubspot.com/account-management/view-and-export-account-activity-history#account-login-history).
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -80,7 +80,7 @@ namespace Soenneker.HubSpot.OpenApiClient.AccountInfo.TwoZeroTwoSixZeroNine.Acti
             return new global::Soenneker.HubSpot.OpenApiClient.AccountInfo.TwoZeroTwoSixZeroNine.Activity.Login.LoginRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Retrieve login activity for users in your HubSpot account. This endpoint provides access to login audit logs, allowing you to track user login events. It supports pagination and filtering by user ID.
+        /// Retrieve logs of user actions related to [login activity](https://knowledge.hubspot.com/account-management/view-and-export-account-activity-history#account-login-history).
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class LoginRequestBuilderGetQueryParameters 
@@ -98,9 +98,10 @@ namespace Soenneker.HubSpot.OpenApiClient.AccountInfo.TwoZeroTwoSixZeroNine.Acti
             /// <summary>The maximum number of results to display per page.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
-            /// <summary>The unique identifier of the user whose login activity is being retrieved.</summary>
+            #pragma warning disable CS1591
             [QueryParameter("userId")]
             public int? UserId { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>The sensitivity level of the data. Valid values include &apos;non_sensitive&apos;, &apos;sensitive&apos;, and &apos;highly_sensitive&apos;.</summary>
+    /// <summary>The sensitivity level of the data, with valid values including &apos;non_sensitive&apos;, &apos;sensitive&apos;, and &apos;highly_sensitive&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum EventsPropertyDataSensitivity
     {

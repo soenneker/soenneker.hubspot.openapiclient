@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>A string representing the operation to be performed. Valid values include &apos;IS_EQUAL_TO&apos;, &apos;IS_NOT_EQUAL_TO&apos;, &apos;HAS_EVER_BEEN_EQUAL_TO&apos;, and &apos;HAS_NEVER_BEEN_EQUAL_TO&apos;.</summary>
+    /// <summary>A string representing the operation to be performed, with valid values including &apos;IS_EQUAL_TO&apos;, &apos;IS_NOT_EQUAL_TO&apos;, &apos;HAS_EVER_BEEN_EQUAL_TO&apos;, and &apos;HAS_NEVER_BEEN_EQUAL_TO&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum BoolPropertyOperationOperator
     {

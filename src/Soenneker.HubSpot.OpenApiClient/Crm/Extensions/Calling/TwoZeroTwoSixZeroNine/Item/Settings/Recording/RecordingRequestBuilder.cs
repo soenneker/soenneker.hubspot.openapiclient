@@ -33,6 +33,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Extensions.Calling.TwoZeroTwoSixZe
         public RecordingRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/crm/extensions/calling/2026-09/{appId}/settings/recording", rawUrl)
         {
         }
+        /// <summary>
+        /// Retrieve the current recording settings for a specific app using the provided app ID.
+        /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.RecordingSettingsResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -48,6 +51,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Extensions.Calling.TwoZeroTwoSixZe
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.RecordingSettingsResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.RecordingSettingsResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
+        /// <summary>
+        /// Update the recording settings for a specific app using the provided app ID.
+        /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.RecordingSettingsResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,6 +71,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Extensions.Calling.TwoZeroTwoSixZe
             var requestInfo = ToPatchRequestInformation(body, requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.RecordingSettingsResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.RecordingSettingsResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
+        /// <summary>
+        /// Create new recording settings for a specific app using the provided app ID.
+        /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.RecordingSettingsResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -82,6 +91,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Extensions.Calling.TwoZeroTwoSixZe
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.RecordingSettingsResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.RecordingSettingsResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
+        /// <summary>
+        /// Retrieve the current recording settings for a specific app using the provided app ID.
+        /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -98,6 +110,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Extensions.Calling.TwoZeroTwoSixZe
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
         }
+        /// <summary>
+        /// Update the recording settings for a specific app using the provided app ID.
+        /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -117,6 +132,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Extensions.Calling.TwoZeroTwoSixZe
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
             return requestInfo;
         }
+        /// <summary>
+        /// Create new recording settings for a specific app using the provided app ID.
+        /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

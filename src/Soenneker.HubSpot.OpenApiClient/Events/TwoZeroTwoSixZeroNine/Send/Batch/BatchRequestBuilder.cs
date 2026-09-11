@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Events.TwoZeroTwoSixZeroNine.Send.Batc
         {
         }
         /// <summary>
-        /// Send a batch of behavioral events to the HubSpot API. This endpoint allows you to submit multiple events in a single request, optimizing the process of event tracking and reducing the number of API calls needed. It is particularly useful for applications that need to log numerous events simultaneously. The endpoint does not return any content upon successful completion.
+        /// Send a batch of behavioral events to the HubSpot API. This endpoint is useful for efficiently processing multiple events in a single request, reducing the number of API calls needed. It is particularly beneficial for applications that need to send a high volume of events quickly. Note that this endpoint is exempt from daily and ten-secondly rate limits.
         /// </summary>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -53,7 +53,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Events.TwoZeroTwoSixZeroNine.Send.Batc
             await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Send a batch of behavioral events to the HubSpot API. This endpoint allows you to submit multiple events in a single request, optimizing the process of event tracking and reducing the number of API calls needed. It is particularly useful for applications that need to log numerous events simultaneously. The endpoint does not return any content upon successful completion.
+        /// Send a batch of behavioral events to the HubSpot API. This endpoint is useful for efficiently processing multiple events in a single request, reducing the number of API calls needed. It is particularly beneficial for applications that need to send a high volume of events quickly. Note that this endpoint is exempt from daily and ten-secondly rate limits.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

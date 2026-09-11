@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>An array of ComboEventRule objects that define the individual rules composing this branch of the combo event.</summary>
+        /// <summary>An array of ComboEventRule objects that define the individual rules composing this branch.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRule>? ComposingRules { get; set; }
@@ -22,9 +22,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRule> ComposingRules { get; set; }
 #endif
-        /// <summary>A string indicating the type of logical operation to be applied between the rules in this branch. Valid values are &apos;AND&apos; and &apos;OR&apos;.</summary>
+        /// <summary>The type of logical operation applied to the rule branches and composing rules. Valid values are &apos;AND&apos; and &apos;OR&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRuleBranchOperationType? OperationType { get; set; }
-        /// <summary>An array of ComboEventRuleBranch objects, allowing for nested branching logic within the combo event rules.</summary>
+        /// <summary>An array of nested ComboEventRuleBranch objects, allowing for hierarchical rule definitions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRuleBranch>? RuleBranches { get; set; }

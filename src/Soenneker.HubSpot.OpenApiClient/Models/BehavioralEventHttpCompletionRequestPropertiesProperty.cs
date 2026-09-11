@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     /// <summary>
-    /// Map of properties for the event in the format property internal name - property value
+    /// An object containing key-value pairs of additional properties related to the event. This is a required property.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BehavioralEventHttpCompletionRequestPropertiesProperty : IAdditionalDataHolder, IParsable

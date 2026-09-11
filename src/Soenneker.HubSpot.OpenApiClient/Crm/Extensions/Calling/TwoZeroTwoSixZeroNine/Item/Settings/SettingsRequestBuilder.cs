@@ -45,6 +45,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Extensions.Calling.TwoZeroTwoSixZe
         public SettingsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/crm/extensions/calling/2026-09/{appId}/settings", rawUrl)
         {
         }
+        /// <summary>
+        /// Remove the calling extension settings associated with the specified appId. This action cannot be undone.
+        /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -59,6 +62,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Extensions.Calling.TwoZeroTwoSixZe
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
             await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
+        /// <summary>
+        /// Retrieve the current settings of the calling extension for the specified appId. 
+        /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.SettingsResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -74,6 +80,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Extensions.Calling.TwoZeroTwoSixZe
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.SettingsResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.SettingsResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
+        /// <summary>
+        /// Modify existing calling extension settings for the specified appId. Only the fields provided in the request will be updated.
+        /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.SettingsResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -91,6 +100,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Extensions.Calling.TwoZeroTwoSixZe
             var requestInfo = ToPatchRequestInformation(body, requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.SettingsResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.SettingsResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
+        /// <summary>
+        /// Create new settings for the calling extension associated with the specified appId.
+        /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.SettingsResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -108,6 +120,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Extensions.Calling.TwoZeroTwoSixZe
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.SettingsResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.SettingsResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
+        /// <summary>
+        /// Remove the calling extension settings associated with the specified appId. This action cannot be undone.
+        /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -123,6 +138,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Extensions.Calling.TwoZeroTwoSixZe
             requestInfo.Configure(requestConfiguration);
             return requestInfo;
         }
+        /// <summary>
+        /// Retrieve the current settings of the calling extension for the specified appId. 
+        /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -139,6 +157,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Extensions.Calling.TwoZeroTwoSixZe
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
         }
+        /// <summary>
+        /// Modify existing calling extension settings for the specified appId. Only the fields provided in the request will be updated.
+        /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -158,6 +179,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Extensions.Calling.TwoZeroTwoSixZe
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
             return requestInfo;
         }
+        /// <summary>
+        /// Create new settings for the calling extension associated with the specified appId.
+        /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>A string representing the operation to be performed, with valid values including &apos;IS_BEFORE&apos;, &apos;IS_AFTER&apos;, &apos;IS_EQUAL_TO&apos;, &apos;IS_BEFORE_DATE&apos;, and &apos;IS_AFTER_DATE&apos;.</summary>
+    /// <summary>A string representing the operation to be performed, such as &apos;IS_BEFORE&apos;, &apos;IS_AFTER&apos;, &apos;IS_EQUAL_TO&apos;, &apos;IS_BEFORE_DATE&apos;, or &apos;IS_AFTER_DATE&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum DateTimePropertyOperationOperator
     {

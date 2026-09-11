@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>An integer representing the day within the month.</summary>
+        /// <summary>An integer representing the day of the fiscal quarter.</summary>
         public int? Day { get; set; }
         /// <summary>An integer representing the hour of the day.</summary>
         public int? Hour { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public int? Millisecond { get; set; }
         /// <summary>An integer representing the minute within the hour.</summary>
         public int? Minute { get; set; }
-        /// <summary>An integer representing the month within the fiscal quarter.</summary>
+        /// <summary>An integer representing the month of the fiscal quarter.</summary>
         public int? Month { get; set; }
         /// <summary>A string indicating the type of reference, which is &apos;FISCAL_QUARTER&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.FiscalQuarterReferenceType? ReferenceType { get; set; }

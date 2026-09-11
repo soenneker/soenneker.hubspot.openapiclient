@@ -12,7 +12,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     public partial class HydratedCriticalAction : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The identifier of the user who is acting on behalf of another user, if applicable.</summary>
+        /// <summary>Email address of the user associated with the activity.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ActingUser { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The country code representing the location of the user who performed the critical action.</summary>
+        /// <summary>The approximate country code</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CountryCode { get; set; }
@@ -30,9 +30,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string CountryCode { get; set; }
 #endif
-        /// <summary>The date and time when this critical action was created, in ISO 8601 format.</summary>
+        /// <summary>The time the activity took place.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
-        /// <summary>The unique identifier for this critical action.</summary>
+        /// <summary>The activity&apos;s unique ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }
@@ -40,7 +40,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>A URL providing more information about the critical action.</summary>
+        /// <summary>A link to the URL where the action was taken in the account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? InfoUrl { get; set; }
@@ -48,7 +48,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string InfoUrl { get; set; }
 #endif
-        /// <summary>The IP address from which the critical action was performed.</summary>
+        /// <summary>IP address where the activity originated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? IpAddress { get; set; }
@@ -56,7 +56,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string IpAddress { get; set; }
 #endif
-        /// <summary>The physical location where the critical action was performed.</summary>
+        /// <summary>The approximate location where the activity took place.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Location { get; set; }
@@ -64,7 +64,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Location { get; set; }
 #endif
-        /// <summary>The identifier of the object related to the critical action, if applicable.</summary>
+        /// <summary>The ID of the affected object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ObjectId { get; set; }
@@ -72,7 +72,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ObjectId { get; set; }
 #endif
-        /// <summary>The region code representing the location of the user who performed the critical action.</summary>
+        /// <summary>The approximate region code</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RegionCode { get; set; }
@@ -80,9 +80,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string RegionCode { get; set; }
 #endif
-        /// <summary>The type of critical action performed. Valid values include a wide range of actions such as &apos;EXPORT&apos;, &apos;TOUCHLESS_PURCHASE&apos;, &apos;ADD_TWO_FACTOR_AUTHENTICATION&apos;, and many others.</summary>
+        /// <summary>The type of activity.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.HydratedCriticalActionType? Type { get; set; }
-        /// <summary>The unique identifier of the user who performed the critical action.</summary>
+        /// <summary>The user&apos;s unique ID.</summary>
         public int? UserId { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.HydratedCriticalAction"/> and sets the default values.

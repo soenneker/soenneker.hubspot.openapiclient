@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>A string indicating the type of logical operation to be applied between the rules in this branch. Valid values are &apos;AND&apos; and &apos;OR&apos;.</summary>
+    /// <summary>The type of logical operation applied to the rule branches and composing rules. Valid values are &apos;AND&apos; and &apos;OR&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum ComboEventRuleBranchOperationType
     {

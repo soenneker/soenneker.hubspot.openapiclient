@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>A string indicating the type of property operation, which is &apos;string-comparative&apos; for this component.</summary>
+    /// <summary>A string indicating the type of property operation, defaulting to &apos;string-comparative&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum StringComparativePropertyType
     {

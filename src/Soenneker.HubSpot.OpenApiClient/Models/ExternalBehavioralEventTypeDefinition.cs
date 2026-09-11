@@ -16,7 +16,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A boolean indicating whether the event type is archived.</summary>
         public bool? Archived { get; set; }
-        /// <summary>An array of association definitions that define the associations related to the event type.</summary>
+        /// <summary>An array of association definitions related to the event type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.EventsAssociationDefinition>? Associations { get; set; }
@@ -52,7 +52,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>A string used as a template for the details of the event type.</summary>
+        /// <summary>A string template used for the details of the event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DetailTemplate { get; set; }
@@ -68,7 +68,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string FullyQualifiedName { get; set; }
 #endif
-        /// <summary>A string used as a template for the header of the event type.</summary>
+        /// <summary>A string template used for the header of the event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? HeaderTemplate { get; set; }
@@ -100,7 +100,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>A string representing the object type ID of the event type.</summary>
+        /// <summary>A string representing the object type ID associated with the event type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ObjectTypeId { get; set; }
@@ -124,7 +124,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string PrimaryObjectId { get; set; }
 #endif
-        /// <summary>An array of property objects that define the properties of the event type.</summary>
+        /// <summary>An array of property objects associated with the event type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.EventsProperty>? Properties { get; set; }
@@ -132,7 +132,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.EventsProperty> Properties { get; set; }
 #endif
-        /// <summary>A string specifying the tracking type of the event. Valid values include &apos;VISITED_URL&apos;, &apos;CLICKED_ELEMENT&apos;, &apos;CUSTOM_SCRIPT&apos;, and others.</summary>
+        /// <summary>A string indicating the tracking type of the event. Valid values include &apos;VISITED_URL&apos;, &apos;CLICKED_ELEMENT&apos;, &apos;CUSTOM_SCRIPT&apos;, &apos;MANUAL&apos;, &apos;IMPORT&apos;, &apos;PROPERTY_CHANGE&apos;, &apos;COMBO_EVENT&apos;, &apos;WEBHOOK&apos;, &apos;APP_EVENT&apos;, &apos;AUTOCAPTURE_EVENT&apos;, &apos;CUSTOM_SIGNAL&apos;, and &apos;POLLING&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventTypeDefinitionTrackingType? TrackingType { get; set; }
         /// <summary>A string representing the date and time when the event type was last updated, in ISO 8601 format.</summary>
         public DateTimeOffset? UpdatedAt { get; set; }

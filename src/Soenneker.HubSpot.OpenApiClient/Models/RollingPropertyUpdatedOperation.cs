@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A string that holds the default value for the property if no other value is set.</summary>
+        /// <summary>A string that provides a default value for the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DefaultValue { get; set; }
@@ -22,9 +22,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string DefaultValue { get; set; }
 #endif
-        /// <summary>A boolean indicating whether objects with no value set for the property should be included in the operation.</summary>
+        /// <summary>A boolean indicating whether objects with no value set should be included in the operation.</summary>
         public bool? IncludeObjectsWithNoValueSet { get; set; }
-        /// <summary>An integer representing the number of days within which the property update operation is evaluated.</summary>
+        /// <summary>An integer representing the number of days to consider for the operation.</summary>
         public int? NumberOfDays { get; set; }
         /// <summary>A string that specifies the type of operation being performed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -46,7 +46,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>A string indicating the type of property operation, which is &apos;rolling-property-updated&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.RollingPropertyUpdatedPropertyType? PropertyType { get; set; }
-        /// <summary>A string that specifies how the operation should be rendered or displayed.</summary>
+        /// <summary>A string that specifies the rendering specification for the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RenderSpec { get; set; }

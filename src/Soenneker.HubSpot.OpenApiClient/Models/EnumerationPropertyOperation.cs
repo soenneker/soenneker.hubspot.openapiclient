@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string DefaultValue { get; set; }
 #endif
-        /// <summary>A boolean indicating whether to include objects that have no value set for this property.</summary>
+        /// <summary>A boolean indicating whether to include objects that have no value set for the property.</summary>
         public bool? IncludeObjectsWithNoValueSet { get; set; }
         /// <summary>A string indicating the type of operation being performed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -32,7 +32,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string OperationType { get; set; }
 #endif
-        /// <summary>A string representing the operation to be performed, with valid values including &apos;IS_ANY_OF&apos;, &apos;IS_NONE_OF&apos;, &apos;IS_EXACTLY&apos;, &apos;IS_NOT_EXACTLY&apos;, &apos;CONTAINS_ALL&apos;, &apos;DOES_NOT_CONTAIN_ALL&apos;, &apos;HAS_EVER_BEEN_ANY_OF&apos;, &apos;HAS_NEVER_BEEN_ANY_OF&apos;, &apos;HAS_EVER_BEEN_EXACTLY&apos;, &apos;HAS_NEVER_BEEN_EXACTLY&apos;, &apos;HAS_EVER_CONTAINED_ALL&apos;, and &apos;HAS_NEVER_CONTAINED_ALL&apos;.</summary>
+        /// <summary>A string specifying the operation to perform, with valid values including &apos;IS_ANY_OF&apos;, &apos;IS_NONE_OF&apos;, &apos;IS_EXACTLY&apos;, &apos;IS_NOT_EXACTLY&apos;, &apos;CONTAINS_ALL&apos;, &apos;DOES_NOT_CONTAIN_ALL&apos;, &apos;HAS_EVER_BEEN_ANY_OF&apos;, &apos;HAS_NEVER_BEEN_ANY_OF&apos;, &apos;HAS_EVER_BEEN_EXACTLY&apos;, &apos;HAS_NEVER_BEEN_EXACTLY&apos;, &apos;HAS_EVER_CONTAINED_ALL&apos;, and &apos;HAS_NEVER_CONTAINED_ALL&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.EnumerationPropertyOperationOperator? Operator { get; set; }
         /// <summary>A string representing the name of the operator used in the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -42,9 +42,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string OperatorName { get; set; }
 #endif
-        /// <summary>A string indicating the type of property, which is &apos;enumeration&apos; by default.</summary>
+        /// <summary>A string indicating the type of property, which is &apos;enumeration&apos; for this operation.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.EnumerationPropertyType? PropertyType { get; set; }
-        /// <summary>A string specifying how the operation should be rendered.</summary>
+        /// <summary>A string that specifies the rendering specifications for the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RenderSpec { get; set; }
