@@ -88,7 +88,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<string> SecondaryDisplayProperties { get; set; }
 #endif
-        /// <summary>The shouldCreateSameObjectAssociation property</summary>
+        /// <summary>A boolean indicating whether associations should be created between objects of the same type.</summary>
         public bool? ShouldCreateSameObjectAssociation { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ObjectSchemaEgg"/> and sets the default values.

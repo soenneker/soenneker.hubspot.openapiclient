@@ -25,7 +25,7 @@ namespace Soenneker.HubSpot.OpenApiClient.CrmObjectSchemas.TwoZeroTwoSixZeroNine
             get => new global::Soenneker.HubSpot.OpenApiClient.CrmObjectSchemas.TwoZeroTwoSixZeroNine.Schemas.Batch.BatchRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.crmObjectSchemas.TwoZeroTwoSixZeroNine.schemas.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The unique identifier for the CRM object type whose schema is being retrieved.</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.CrmObjectSchemas.TwoZeroTwoSixZeroNine.Schemas.Item.WithObjectTypeItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.CrmObjectSchemas.TwoZeroTwoSixZeroNine.Schemas.Item.WithObjectTypeItemRequestBuilder this[string position]
         {
@@ -149,18 +149,15 @@ namespace Soenneker.HubSpot.OpenApiClient.CrmObjectSchemas.TwoZeroTwoSixZeroNine
             /// <summary>Whether to return only results that have been archived.</summary>
             [QueryParameter("archived")]
             public bool? Archived { get; set; }
-            #pragma warning disable CS1591
+            /// <summary>Whether to include association definitions in the response. Defaults to true.</summary>
             [QueryParameter("includeAssociationDefinitions")]
             public bool? IncludeAssociationDefinitions { get; set; }
-            #pragma warning restore CS1591
-            #pragma warning disable CS1591
+            /// <summary>Whether to include audit metadata in the response. Defaults to true.</summary>
             [QueryParameter("includeAuditMetadata")]
             public bool? IncludeAuditMetadata { get; set; }
-            #pragma warning restore CS1591
-            #pragma warning disable CS1591
+            /// <summary>Whether to include property definitions in the response. Defaults to true.</summary>
             [QueryParameter("includePropertyDefinitions")]
             public bool? IncludePropertyDefinitions { get; set; }
-            #pragma warning restore CS1591
         }
     }
 }

@@ -178,18 +178,15 @@ namespace Soenneker.HubSpot.OpenApiClient.CrmObjectSchemas.TwoZeroTwoSixZeroNine
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithObjectTypeItemRequestBuilderGetQueryParameters 
         {
-            #pragma warning disable CS1591
+            /// <summary>A boolean indicating whether to include association definitions in the response. Defaults to true.</summary>
             [QueryParameter("includeAssociationDefinitions")]
             public bool? IncludeAssociationDefinitions { get; set; }
-            #pragma warning restore CS1591
-            #pragma warning disable CS1591
+            /// <summary>A boolean indicating whether to include audit metadata in the response. Defaults to true.</summary>
             [QueryParameter("includeAuditMetadata")]
             public bool? IncludeAuditMetadata { get; set; }
-            #pragma warning restore CS1591
-            #pragma warning disable CS1591
+            /// <summary>A boolean indicating whether to include property definitions in the response. Defaults to true.</summary>
             [QueryParameter("includePropertyDefinitions")]
             public bool? IncludePropertyDefinitions { get; set; }
-            #pragma warning restore CS1591
         }
     }
 }

@@ -21,7 +21,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public DateTimeOffset? ArchivedAt { get; set; }
         /// <summary>For default properties, true indicates that the property is calculated by a HubSpot process. It has no effect for custom properties.</summary>
         public bool? Calculated { get; set; }
-        /// <summary>The formula used for calculated properties.</summary>
+        /// <summary>The formula used to calculate the value of this property, if it is a calculated property.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CalculationFormula { get; set; }
@@ -39,7 +39,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string CreatedUserId { get; set; }
 #endif
-        /// <summary>The name of the related currency property.</summary>
+        /// <summary>The name of the property that defines the currency for this property, if applicable.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CurrencyPropertyName { get; set; }
@@ -47,7 +47,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string CurrencyPropertyName { get; set; }
 #endif
-        /// <summary>Indicates the sensitivity level of the property, such as &quot;non_sensitive&quot;, &quot;sensitive&quot;, or &quot;highly_sensitive&quot;.</summary>
+        /// <summary>The sensitivity level of the data stored in this property, such as &apos;sensitive&apos; or &apos;highly_sensitive&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectSchemasPropertyDataSensitivity? DataSensitivity { get; set; }
         /// <summary>Controls how date properties are displayed in the HubSpot UI, with options such as &apos;absolute&apos;, &apos;absolute_with_relative&apos;, &apos;time_since&apos;, and &apos;time_until&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectSchemasPropertyDateDisplayHint? DateDisplayHint { get; set; }
@@ -111,7 +111,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>Hint for how a number property is displayed and validated in HubSpot&apos;s UI. Can be: &quot;unformatted&quot;, &quot;formatted&quot;, &quot;currency&quot;, &quot;percentage&quot;, &quot;duration&quot;, or &quot;probability&quot;.</summary>
+        /// <summary>A hint for how number values should be displayed, with options like &apos;formatted&apos; or &apos;currency&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectSchemasPropertyNumberDisplayHint? NumberDisplayHint { get; set; }
         /// <summary>A list of valid options for the property. This field is required for enumerated properties, but will be empty for other property types.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -129,7 +129,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ReferencedObjectType { get; set; }
 #endif
-        /// <summary>When sensitiveData is true, lists the type of sensitive data contained in the property (e.g., &quot;HIPAA&quot;).</summary>
+        /// <summary>An array of categories that describe the types of sensitive data contained in this property.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? SensitiveDataCategories { get; set; }
@@ -139,7 +139,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>Whether the property will display the currency symbol set in the account settings.</summary>
         public bool? ShowCurrencySymbol { get; set; }
-        /// <summary>Hint for how the text is displayed and validated in HubSpot&apos;s UI. Can be: &quot;unformatted_single_line&quot;, &quot;multi_line&quot;, &quot;email&quot;, &quot;phone_number&quot;, &quot;domain_name&quot;, &quot;ip_address&quot;, &quot;physical_address&quot;, or &quot;postal_code&quot;.</summary>
+        /// <summary>A hint for how text values should be displayed, with options like &apos;email&apos; or &apos;phone_number&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectSchemasPropertyTextDisplayHint? TextDisplayHint { get; set; }
         /// <summary>The property data type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

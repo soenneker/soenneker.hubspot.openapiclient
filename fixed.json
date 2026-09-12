@@ -502,9 +502,7 @@
         },
         "security": [
           {
-            "automation_oauth2": [
-              "developers-read"
-            ]
+            "automation_developer_hapikey": []
           }
         ]
       },
@@ -567,9 +565,7 @@
         },
         "security": [
           {
-            "automation_oauth2": [
-              "developers-write"
-            ]
+            "automation_developer_hapikey": []
           }
         ]
       }
@@ -633,9 +629,7 @@
         },
         "security": [
           {
-            "automation_oauth2": [
-              "developers-read"
-            ]
+            "automation_developer_hapikey": []
           }
         ]
       },
@@ -679,9 +673,7 @@
         },
         "security": [
           {
-            "automation_oauth2": [
-              "developers-write"
-            ]
+            "automation_developer_hapikey": []
           }
         ]
       },
@@ -744,9 +736,7 @@
         },
         "security": [
           {
-            "automation_oauth2": [
-              "developers-write"
-            ]
+            "automation_developer_hapikey": []
           }
         ]
       }
@@ -800,9 +790,7 @@
         },
         "security": [
           {
-            "automation_oauth2": [
-              "developers-read"
-            ]
+            "automation_developer_hapikey": []
           }
         ]
       }
@@ -865,9 +853,7 @@
         },
         "security": [
           {
-            "automation_oauth2": [
-              "developers-read"
-            ]
+            "automation_developer_hapikey": []
           }
         ]
       },
@@ -939,9 +925,7 @@
         },
         "security": [
           {
-            "automation_oauth2": [
-              "developers-write"
-            ]
+            "automation_developer_hapikey": []
           }
         ]
       },
@@ -994,9 +978,7 @@
         },
         "security": [
           {
-            "automation_oauth2": [
-              "developers-write"
-            ]
+            "automation_developer_hapikey": []
           }
         ]
       }
@@ -1069,9 +1051,7 @@
         },
         "security": [
           {
-            "automation_oauth2": [
-              "developers-read"
-            ]
+            "automation_developer_hapikey": []
           }
         ]
       },
@@ -1153,9 +1133,7 @@
         },
         "security": [
           {
-            "automation_oauth2": [
-              "developers-write"
-            ]
+            "automation_developer_hapikey": []
           }
         ]
       },
@@ -1218,9 +1196,7 @@
         },
         "security": [
           {
-            "automation_oauth2": [
-              "developers-write"
-            ]
+            "automation_developer_hapikey": []
           }
         ]
       }
@@ -1274,9 +1250,7 @@
         },
         "security": [
           {
-            "automation_oauth2": [
-              "developers-read"
-            ]
+            "automation_developer_hapikey": []
           }
         ]
       },
@@ -1331,9 +1305,7 @@
         },
         "security": [
           {
-            "automation_oauth2": [
-              "developers-write"
-            ]
+            "automation_developer_hapikey": []
           }
         ]
       }
@@ -1406,9 +1378,7 @@
         },
         "security": [
           {
-            "automation_oauth2": [
-              "developers-read"
-            ]
+            "automation_developer_hapikey": []
           }
         ]
       }
@@ -1472,9 +1442,7 @@
         },
         "security": [
           {
-            "automation_oauth2": [
-              "developers-read"
-            ]
+            "automation_developer_hapikey": []
           }
         ]
       }
@@ -239958,7 +239926,7 @@
           {
             "name": "includeAssociationDefinitions",
             "in": "query",
-            "description": "",
+            "description": "Whether to include association definitions in the response. Defaults to true.",
             "schema": {
               "type": "boolean",
               "default": true,
@@ -239968,7 +239936,7 @@
           {
             "name": "includeAuditMetadata",
             "in": "query",
-            "description": "",
+            "description": "Whether to include audit metadata in the response. Defaults to true.",
             "schema": {
               "type": "boolean",
               "default": true,
@@ -239978,7 +239946,7 @@
           {
             "name": "includePropertyDefinitions",
             "in": "query",
-            "description": "",
+            "description": "Whether to include property definitions in the response. Defaults to true.",
             "schema": {
               "type": "boolean",
               "default": true,
@@ -240133,11 +240101,6 @@
             "crm_object_schemas_oauth2": [
               "crm.objects.custom.read"
             ]
-          },
-          {
-            "crm_object_schemas_oauth2": [
-              "oauth-access"
-            ]
           }
         ]
       }
@@ -240154,7 +240117,7 @@
           {
             "name": "objectType",
             "in": "path",
-            "description": "",
+            "description": "The unique identifier for the CRM object type whose schema is being retrieved.",
             "required": true,
             "schema": {
               "type": "string",
@@ -240164,7 +240127,7 @@
           {
             "name": "includeAssociationDefinitions",
             "in": "query",
-            "description": "",
+            "description": "A boolean indicating whether to include association definitions in the response. Defaults to true.",
             "schema": {
               "type": "boolean",
               "default": true,
@@ -240174,7 +240137,7 @@
           {
             "name": "includeAuditMetadata",
             "in": "query",
-            "description": "",
+            "description": "A boolean indicating whether to include audit metadata in the response. Defaults to true.",
             "schema": {
               "type": "boolean",
               "default": true,
@@ -240184,7 +240147,7 @@
           {
             "name": "includePropertyDefinitions",
             "in": "query",
-            "description": "",
+            "description": "A boolean indicating whether to include property definitions in the response. Defaults to true.",
             "schema": {
               "type": "boolean",
               "default": true,
@@ -240228,11 +240191,6 @@
             "crm_object_schemas_oauth2": [
               "crm.objects.custom.read"
             ]
-          },
-          {
-            "crm_object_schemas_oauth2": [
-              "oauth-access"
-            ]
           }
         ]
       },
@@ -240247,7 +240205,7 @@
           {
             "name": "objectType",
             "in": "path",
-            "description": "",
+            "description": "The unique identifier of the object schema to delete.",
             "required": true,
             "schema": {
               "type": "string",
@@ -240292,7 +240250,7 @@
           {
             "name": "objectType",
             "in": "path",
-            "description": "",
+            "description": "The unique identifier of the CRM object type whose schema is to be updated.",
             "required": true,
             "schema": {
               "type": "string",
@@ -240348,7 +240306,7 @@
           {
             "name": "objectType",
             "in": "path",
-            "description": "",
+            "description": "The unique identifier of the object type for which the association is being created.",
             "required": true,
             "schema": {
               "type": "string",
@@ -240414,7 +240372,7 @@
           {
             "name": "associationIdentifier",
             "in": "path",
-            "description": "",
+            "description": "The unique identifier of the association definition to delete.",
             "required": true,
             "schema": {
               "type": "string",
@@ -240424,7 +240382,7 @@
           {
             "name": "objectType",
             "in": "path",
-            "description": "",
+            "description": "The type of the custom object from which the association is being deleted.",
             "required": true,
             "schema": {
               "type": "string",
@@ -388216,6 +388174,7 @@
             "items": {
               "$ref": "#/components/schemas/CrmObjectSchemasObjectSchema"
             },
+            "description": "An array of object schemas, each represented by an ObjectSchema. This property contains the list of schemas returned by the API call.",
             "example": null
           }
         },
@@ -388327,10 +388286,12 @@
         "properties": {
           "allowsSensitiveProperties": {
             "type": "boolean",
+            "description": "A boolean indicating whether the object schema allows sensitive properties.",
             "example": null
           },
           "archived": {
             "type": "boolean",
+            "description": "A boolean indicating whether the object schema is archived.",
             "example": null
           },
           "associations": {
@@ -388349,11 +388310,13 @@
           },
           "createdByUserId": {
             "type": "integer",
+            "description": "An integer representing the ID of the user who created the object schema.",
             "format": "int32",
             "example": null
           },
           "description": {
             "type": "string",
+            "description": "A string providing a description of the object schema.",
             "example": null
           },
           "fullyQualifiedName": {
@@ -388376,6 +388339,7 @@
           },
           "objectTypeId": {
             "type": "string",
+            "description": "A string representing the type ID of the object.",
             "example": null
           },
           "primaryDisplayProperty": {
@@ -388426,6 +388390,7 @@
           },
           "updatedByUserId": {
             "type": "integer",
+            "description": "An integer representing the ID of the user who last updated the object schema.",
             "format": "int32",
             "example": null
           }
@@ -388462,6 +388427,7 @@
               "type": "string",
               "example": null
             },
+            "description": "An array of strings representing the identifiers of the object schemas to be read.",
             "example": null
           }
         },
@@ -388550,6 +388516,7 @@
           },
           "shouldCreateSameObjectAssociation": {
             "type": "boolean",
+            "description": "A boolean indicating whether associations should be created between objects of the same type.",
             "example": null
           }
         },
@@ -388945,7 +388912,7 @@
           },
           "calculationFormula": {
             "type": "string",
-            "description": "The formula used for calculated properties.",
+            "description": "The formula used to calculate the value of this property, if it is a calculated property.",
             "example": null
           },
           "createdAt": {
@@ -388961,7 +388928,7 @@
           },
           "currencyPropertyName": {
             "type": "string",
-            "description": "The name of the related currency property.",
+            "description": "The name of the property that defines the currency for this property, if applicable.",
             "example": null
           },
           "dataSensitivity": {
@@ -389051,7 +389018,7 @@
               "type": "string",
               "example": null
             },
-            "description": "When sensitiveData is true, lists the type of sensitive data contained in the property (e.g., \u0022HIPAA\u0022).",
+            "description": "An array of categories that describe the types of sensitive data contained in this property.",
             "example": null
           },
           "showCurrencySymbol": {
@@ -599894,7 +599861,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "description": "Indicates the sensitivity level of the property, such as \u0022non_sensitive\u0022, \u0022sensitive\u0022, or \u0022highly_sensitive\u0022.",
+        "description": "The sensitivity level of the data stored in this property, such as \u0027sensitive\u0027 or \u0027highly_sensitive\u0027.",
         "example": null,
         "x-ms-enum": {
           "name": "CrmObjectSchemasPropertyDataSensitivity",
@@ -599960,7 +599927,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "description": "Hint for how a number property is displayed and validated in HubSpot\u0027s UI. Can be: \u0022unformatted\u0022, \u0022formatted\u0022, \u0022currency\u0022, \u0022percentage\u0022, \u0022duration\u0022, or \u0022probability\u0022.",
+        "description": "A hint for how number values should be displayed, with options like \u0027formatted\u0027 or \u0027currency\u0027.",
         "example": null,
         "x-ms-enum": {
           "name": "CrmObjectSchemasPropertyNumberDisplayHint",
@@ -600006,7 +599973,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "description": "Hint for how the text is displayed and validated in HubSpot\u0027s UI. Can be: \u0022unformatted_single_line\u0022, \u0022multi_line\u0022, \u0022email\u0022, \u0022phone_number\u0022, \u0022domain_name\u0022, \u0022ip_address\u0022, \u0022physical_address\u0022, or \u0022postal_code\u0022.",
+        "description": "A hint for how text values should be displayed, with options like \u0027email\u0027 or \u0027phone_number\u0027.",
         "example": null,
         "x-ms-enum": {
           "name": "CrmObjectSchemasPropertyTextDisplayHint",
@@ -665733,9 +665700,7 @@
             "authorizationUrl": "https://app.hubspot.com/oauth/authorize",
             "tokenUrl": "https://api.hubapi.com/oauth/v1/token",
             "scopes": {
-              "automation": "",
-              "developers-read": "",
-              "developers-write": ""
+              "automation": ""
             }
           }
         }
@@ -671306,12 +671271,13 @@
             "tokenUrl": "https://api.hubapi.com/oauth/v1/token",
             "scopes": {
               "crm.objects.custom.highly_sensitive.read.v2": "",
+              "crm.objects.custom.highly_sensitive.write.v2": "",
               "crm.objects.custom.read": "",
               "crm.objects.custom.sensitive.read.v2": "",
               "crm.objects.custom.sensitive.write.v2": "",
+              "crm.objects.custom.write": "",
               "crm.schemas.custom.read": "",
-              "crm.schemas.custom.write": "",
-              "oauth-access": ""
+              "crm.schemas.custom.write": ""
             }
           }
         }
