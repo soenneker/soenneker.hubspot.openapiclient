@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.CustomObjectRecordLimitResponse CustomObjectTypes { get; set; }
 #endif
-        /// <summary>The hubspotDefinedObjectTypes property</summary>
+        /// <summary>An array of objects detailing the limits and usage for HubSpot-defined object types.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.LimitAndUsageForObjectType>? HubspotDefinedObjectTypes { get; set; }

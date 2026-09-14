@@ -85,31 +85,25 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Limits.TwoZeroTwoSixZeroNine.Assoc
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class LabelsRequestBuilderGetQueryParameters 
         {
+            /// <summary>The ID of the object type from which the association starts.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            #pragma warning disable CS1591
             [QueryParameter("fromObjectTypeId")]
             public string? FromObjectTypeId { get; set; }
-            #pragma warning restore CS1591
 #nullable restore
 #else
-            #pragma warning disable CS1591
             [QueryParameter("fromObjectTypeId")]
             public string FromObjectTypeId { get; set; }
-            #pragma warning restore CS1591
 #endif
+            /// <summary>The ID of the object type to which the association points.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            #pragma warning disable CS1591
             [QueryParameter("toObjectTypeId")]
             public string? ToObjectTypeId { get; set; }
-            #pragma warning restore CS1591
 #nullable restore
 #else
-            #pragma warning disable CS1591
             [QueryParameter("toObjectTypeId")]
             public string ToObjectTypeId { get; set; }
-            #pragma warning restore CS1591
 #endif
         }
     }

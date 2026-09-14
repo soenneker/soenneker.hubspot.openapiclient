@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Limits.TwoZeroTwoSixZeroNine.Assoc
             get => new global::Soenneker.HubSpot.OpenApiClient.Crm.Limits.TwoZeroTwoSixZeroNine.Associations.Records.From.FromRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.crm.limits.TwoZeroTwoSixZeroNine.associations.records.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The unique identifier of the object type from which the associations are being retrieved.</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Crm.Limits.TwoZeroTwoSixZeroNine.Associations.Records.Item.WithFromObjectTypeItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Crm.Limits.TwoZeroTwoSixZeroNine.Associations.Records.Item.WithFromObjectTypeItemRequestBuilder this[string position]
         {

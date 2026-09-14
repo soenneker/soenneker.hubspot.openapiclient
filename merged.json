@@ -142520,7 +142520,7 @@
           {
             "name": "fromObjectTypeId",
             "in": "query",
-            "description": "",
+            "description": "The ID of the object type from which the association starts.",
             "schema": {
               "type": "string",
               "example": null
@@ -142529,7 +142529,7 @@
           {
             "name": "toObjectTypeId",
             "in": "query",
-            "description": "",
+            "description": "The ID of the object type to which the association points.",
             "schema": {
               "type": "string",
               "example": null
@@ -143386,7 +143386,7 @@
           {
             "name": "fromObjectTypeId",
             "in": "path",
-            "description": "",
+            "description": "The unique identifier of the object type from which the associations are being retrieved.",
             "required": true,
             "schema": {
               "type": "string",
@@ -143821,7 +143821,7 @@
           {
             "name": "fromObjectTypeId",
             "in": "path",
-            "description": "",
+            "description": "The unique identifier of the source object type for which to retrieve association limits.",
             "required": true,
             "schema": {
               "type": "string",
@@ -143831,7 +143831,7 @@
           {
             "name": "toObjectTypeId",
             "in": "path",
-            "description": "",
+            "description": "The unique identifier of the target object type for which to retrieve association limits.",
             "required": true,
             "schema": {
               "type": "string",
@@ -174546,7 +174546,7 @@
           {
             "name": "objectTypeId",
             "in": "path",
-            "description": "",
+            "description": "The unique identifier of the object type to retrieve the enablement status for.",
             "required": true,
             "schema": {
               "type": "string",
@@ -276449,7 +276449,7 @@
           {
             "name": "appId",
             "in": "path",
-            "description": "",
+            "description": "The unique identifier of the app whose video conferencing settings you want to retrieve. It should be an integer.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -276476,19 +276476,7 @@
         },
         "security": [
           {
-            "________________________________________________________crm_oauth2": [
-              "portal-developers-access"
-            ]
-          },
-          {
-            "________________________________________________________crm_oauth2": [
-              "developers-read"
-            ]
-          },
-          {
-            "________________________________________________________crm_oauth2": [
-              "developers-write"
-            ]
+            "_______________________________________________________crm_developer_hapikey": [ ]
           }
         ]
       },
@@ -276503,7 +276491,7 @@
           {
             "name": "appId",
             "in": "path",
-            "description": "",
+            "description": "The unique identifier of the app whose video conferencing settings are to be updated.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -276541,19 +276529,7 @@
         },
         "security": [
           {
-            "________________________________________________________crm_oauth2": [
-              "portal-developers-access"
-            ]
-          },
-          {
-            "________________________________________________________crm_oauth2": [
-              "developers-read"
-            ]
-          },
-          {
-            "________________________________________________________crm_oauth2": [
-              "developers-write"
-            ]
+            "_______________________________________________________crm_developer_hapikey": [ ]
           }
         ]
       },
@@ -276568,7 +276544,7 @@
           {
             "name": "appId",
             "in": "path",
-            "description": "",
+            "description": "The unique identifier of the app whose video conferencing settings are to be deleted. It must be an integer.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -276587,19 +276563,7 @@
         },
         "security": [
           {
-            "________________________________________________________crm_oauth2": [
-              "portal-developers-access"
-            ]
-          },
-          {
-            "________________________________________________________crm_oauth2": [
-              "developers-read"
-            ]
-          },
-          {
-            "________________________________________________________crm_oauth2": [
-              "developers-write"
-            ]
+            "_______________________________________________________crm_developer_hapikey": [ ]
           }
         ]
       }
@@ -284077,9 +284041,7 @@
         },
         "security": [
           {
-            "__marketing_oauth2": [
-              "developers-read"
-            ]
+            "__marketing_developer_hapikey": [ ]
           }
         ]
       },
@@ -284132,9 +284094,7 @@
         },
         "security": [
           {
-            "__marketing_oauth2": [
-              "developers-write"
-            ]
+            "__marketing_developer_hapikey": [ ]
           }
         ]
       }
@@ -417907,6 +417867,7 @@
             "items": {
               "$ref": "#/components/schemas/AtLimitRecordSample"
             },
+            "description": "An array of AtLimitRecordSample objects, each representing a sample record that is at the association limit.",
             "example": null
           },
           "limit": {
@@ -417920,6 +417881,7 @@
             "items": {
               "$ref": "#/components/schemas/NearLimitRecordSample"
             },
+            "description": "An array of NearLimitRecordSample objects, each representing a sample record that is near the association limit.",
             "example": null
           },
           "totalRecordsAtLimit": {
@@ -417972,6 +417934,7 @@
             "items": {
               "$ref": "#/components/schemas/UsageForObjectType"
             },
+            "description": "An array detailing the usage of calculated properties by object type, with each entry providing specific usage information for an object type.",
             "example": null
           },
           "overallLimit": {
@@ -418005,6 +417968,7 @@
             "items": {
               "$ref": "#/components/schemas/AssociationLabelLimitResponse"
             },
+            "description": "An array of AssociationLabelLimitResponse objects, each detailing the limits and usage of association labels between object types.",
             "example": null
           }
         },
@@ -418021,6 +417985,7 @@
             "items": {
               "$ref": "#/components/schemas/ObjectTypeNearOrAtAssociationLimit"
             },
+            "description": "An array containing details of object types that are near or at their association limits. Each item in the array is an ObjectTypeNearOrAtAssociationLimit object.",
             "example": null
           }
         },
@@ -418068,6 +418033,7 @@
             "items": {
               "$ref": "#/components/schemas/UsageForObjectType"
             },
+            "description": "An array containing usage details for each object type, with each entry providing specific usage information for a particular object type.",
             "example": null
           },
           "overallLimit": {
@@ -418104,6 +418070,7 @@
             "items": {
               "$ref": "#/components/schemas/LimitAndUsageForObjectType"
             },
+            "description": "An array detailing the limit and usage of custom properties for each specific object type.",
             "example": null
           },
           "overallLimit": {
@@ -418398,6 +418365,7 @@
             "items": {
               "$ref": "#/components/schemas/LimitAndUsageForObjectType"
             },
+            "description": "An array of objects representing the limits and usage for HubSpot-defined object types. Each object includes details such as the object type ID, singular and plural labels, limit, usage, and percentage of usage.",
             "example": null
           }
         },
@@ -418418,6 +418386,7 @@
             "items": {
               "$ref": "#/components/schemas/LimitAndUsageForObjectType"
             },
+            "description": "An array of objects detailing the limits and usage for HubSpot-defined object types.",
             "example": null
           }
         },
@@ -469740,22 +469709,27 @@
         "properties": {
           "createMeetingUrl": {
             "type": "string",
+            "description": "A string representing the URL used to create a new meeting. This property is required.",
             "example": null
           },
           "deleteMeetingUrl": {
             "type": "string",
+            "description": "A string representing the URL used to delete a meeting.",
             "example": null
           },
           "fetchAccountsUri": {
             "type": "string",
+            "description": "A string representing the URI used to fetch account information.",
             "example": null
           },
           "updateMeetingUrl": {
             "type": "string",
+            "description": "A string representing the URL used to update an existing meeting.",
             "example": null
           },
           "userVerifyUrl": {
             "type": "string",
+            "description": "A string representing the URL used to verify a user's identity.",
             "example": null
           }
         },
@@ -502757,11 +502731,7 @@
           "authorizationCode": {
             "authorizationUrl": "https://app.hubspot.com/oauth/authorize",
             "tokenUrl": "https://api.hubapi.com/oauth/v1/token",
-            "scopes": {
-              "developers-read": "",
-              "developers-write": "",
-              "portal-developers-access": ""
-            }
+            "scopes": { }
           }
         }
       },
@@ -502929,6 +502899,8 @@
             "tokenUrl": "https://api.hubapi.com/oauth/v1/token",
             "scopes": {
               "marketing.campaigns.read": "",
+              "marketing.campaigns.revenue.full.read": "",
+              "marketing.campaigns.revenue.lite.read": "",
               "marketing.campaigns.revenue.read": "",
               "marketing.campaigns.write": ""
             }
@@ -502986,9 +502958,7 @@
             "tokenUrl": "https://api.hubapi.com/oauth/v1/token",
             "scopes": {
               "crm.objects.marketing_events.read": "",
-              "crm.objects.marketing_events.write": "",
-              "developers-read": "",
-              "developers-write": ""
+              "crm.objects.marketing_events.write": ""
             }
           }
         }
