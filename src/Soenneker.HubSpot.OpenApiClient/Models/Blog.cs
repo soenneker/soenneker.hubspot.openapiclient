@@ -54,7 +54,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>The explicitly defined language of the Blog. If null, the Blog will default to the language of the Domain.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.BlogLanguage? Language { get; set; }
-        /// <summary>The listingPageId property</summary>
+        /// <summary>The ID of the listing page associated with the blog.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ListingPageId { get; set; }

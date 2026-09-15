@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.CmsPaging6 Paging { get; set; }
 #endif
-        /// <summary>The results property</summary>
+        /// <summary>An array containing the individual blog post versions. Each item in the array represents a specific version of a blog post.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.VersionBlogPost>? Results { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.VersionBlogPost> Results { get; set; }
 #endif
-        /// <summary>The total property</summary>
+        /// <summary>The total number of blog post versions available. This is an integer value.</summary>
         public int? Total { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalBlogPostVersion"/> and sets the default values.

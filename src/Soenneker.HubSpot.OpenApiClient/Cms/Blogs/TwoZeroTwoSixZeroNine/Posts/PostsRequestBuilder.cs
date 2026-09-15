@@ -49,7 +49,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.Blogs.TwoZeroTwoSixZeroNine.Posts
             get => new global::Soenneker.HubSpot.OpenApiClient.Cms.Blogs.TwoZeroTwoSixZeroNine.Posts.Schedule.ScheduleRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.cms.blogs.TwoZeroTwoSixZeroNine.posts.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The unique identifier of the blog post to retrieve.</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Cms.Blogs.TwoZeroTwoSixZeroNine.Posts.Item.WithObjectItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Cms.Blogs.TwoZeroTwoSixZeroNine.Posts.Item.WithObjectItemRequestBuilder this[string position]
         {
@@ -183,59 +183,47 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.Blogs.TwoZeroTwoSixZeroNine.Posts
             /// <summary>Whether to return only results that have been archived.</summary>
             [QueryParameter("archived")]
             public bool? Archived { get; set; }
-            #pragma warning disable CS1591
+            /// <summary>Filter posts created after the specified date and time.</summary>
             [QueryParameter("createdAfter")]
             public DateTimeOffset? CreatedAfter { get; set; }
-            #pragma warning restore CS1591
-            #pragma warning disable CS1591
+            /// <summary>Filter posts by their creation date and time.</summary>
             [QueryParameter("createdAt")]
             public DateTimeOffset? CreatedAt { get; set; }
-            #pragma warning restore CS1591
-            #pragma warning disable CS1591
+            /// <summary>Filter posts created before the specified date and time.</summary>
             [QueryParameter("createdBefore")]
             public DateTimeOffset? CreatedBefore { get; set; }
-            #pragma warning restore CS1591
             /// <summary>The maximum number of results to display per page.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
+            /// <summary>Specify which properties to include in the response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            #pragma warning disable CS1591
             [QueryParameter("property")]
             public string? Property { get; set; }
-            #pragma warning restore CS1591
 #nullable restore
 #else
-            #pragma warning disable CS1591
             [QueryParameter("property")]
             public string Property { get; set; }
-            #pragma warning restore CS1591
 #endif
+            /// <summary>Specify the order in which to sort the results. Accepts an array of field names.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            #pragma warning disable CS1591
             [QueryParameter("sort")]
             public string[]? Sort { get; set; }
-            #pragma warning restore CS1591
 #nullable restore
 #else
-            #pragma warning disable CS1591
             [QueryParameter("sort")]
             public string[] Sort { get; set; }
-            #pragma warning restore CS1591
 #endif
-            #pragma warning disable CS1591
+            /// <summary>Filter posts updated after the specified date and time.</summary>
             [QueryParameter("updatedAfter")]
             public DateTimeOffset? UpdatedAfter { get; set; }
-            #pragma warning restore CS1591
-            #pragma warning disable CS1591
+            /// <summary>Filter posts by their last update date and time.</summary>
             [QueryParameter("updatedAt")]
             public DateTimeOffset? UpdatedAt { get; set; }
-            #pragma warning restore CS1591
-            #pragma warning disable CS1591
+            /// <summary>Filter posts updated before the specified date and time.</summary>
             [QueryParameter("updatedBefore")]
             public DateTimeOffset? UpdatedBefore { get; set; }
-            #pragma warning restore CS1591
         }
     }
 }

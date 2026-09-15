@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A string representing the email address associated with the event.</summary>
+        /// <summary>The visitor&apos;s email address. Used for associating the event data with a CRM record.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Email { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Email { get; set; }
 #endif
-        /// <summary>A string representing the name of the event. This is a required property.</summary>
+        /// <summary>The event&apos;s fully qualified name. This value (formatted as `pe{HubID}_{name}`) can be retrieved through the [event definitions API](https://developers.hubspot.com/docs/reference/api/analytics-and-events/custom-events/custom-event-definitions#get-%2Fevents%2Fv3%2Fevent-definitions) or in [HubSpot&apos;s UI](https://knowledge.hubspot.com/reports/create-custom-behavioral-events-with-the-code-wizard#find-internal-name).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EventName { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string EventName { get; set; }
 #endif
-        /// <summary>A string representing the unique identifier of the object associated with the event.</summary>
+        /// <summary>The ID of the record for which the event occurred (e.g., contact ID or visitor ID).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ObjectId { get; set; }
@@ -38,9 +38,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ObjectId { get; set; }
 #endif
-        /// <summary>A string representing the date and time when the event occurred, in ISO 8601 format.</summary>
+        /// <summary>The time when this event occurred. If this isn&apos;t set, the current time will be used.</summary>
         public DateTimeOffset? OccurredAt { get; set; }
-        /// <summary>An object containing key-value pairs of additional properties related to the event. This is a required property.</summary>
+        /// <summary>The event properties to update. Takes the format of key-value pairs (property internal name and property value). Learn more about [HubSpot&apos;s default event properties](https://developers.hubspot.com/docs/guides/api/analytics-and-events/custom-events/custom-event-definitions#hubspot-s-default-event-properties).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.BehavioralEventHttpCompletionRequestPropertiesProperty? Properties { get; set; }
@@ -48,7 +48,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.BehavioralEventHttpCompletionRequestPropertiesProperty Properties { get; set; }
 #endif
-        /// <summary>A string representing the unique tracking key associated with the event.</summary>
+        /// <summary>The visitor&apos;s usertoken. Used for associating the event data with a CRM record.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Utk { get; set; }
@@ -56,7 +56,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Utk { get; set; }
 #endif
-        /// <summary>A string representing the universally unique identifier for the event.</summary>
+        /// <summary>A unique identifier for the event occurrence. Must be unique within the event type. If not provided, HubSpot will generate a random UUID. When multiple events have the same ID within a year, the first will be accepted and all others will be rejected. Can be useful for matching data between HubSpot and other external systems.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Uuid { get; set; }

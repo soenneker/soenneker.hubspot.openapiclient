@@ -30,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Language { get; set; }
 #endif
-        /// <summary>The usePublished property</summary>
+        /// <summary>A boolean indicating whether the published version of the blog post should be used for cloning. If true, the published version is used; otherwise, the draft version is used.</summary>
         public bool? UsePublished { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.BlogPostLanguageCloneRequestVNext"/> and sets the default values.

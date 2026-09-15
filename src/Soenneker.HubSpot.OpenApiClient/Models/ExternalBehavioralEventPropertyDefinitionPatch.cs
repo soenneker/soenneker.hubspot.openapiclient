@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A string providing additional information about the event property.</summary>
+        /// <summary>A description of the property that will be shown as help text in HubSpot.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Description { get; set; }
@@ -22,11 +22,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>The displayOrder property</summary>
+        /// <summary>For not hidden properties, indicates the order to display the property on the record&apos;s activity timeline (ex: displayOrder: 0 is at the top).</summary>
         public int? DisplayOrder { get; set; }
-        /// <summary>The hidden property</summary>
+        /// <summary>Controls whether or not this property is displayed on the record&apos;s activity timeline.</summary>
         public bool? Hidden { get; set; }
-        /// <summary>A string representing the display name of the event property.</summary>
+        /// <summary>Human readable label for the property. Used in HubSpot UI.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Label { get; set; }
@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Label { get; set; }
 #endif
-        /// <summary>An array of OptionInput objects, each defining a selectable option for the event property.</summary>
+        /// <summary>A list of available options for the property if it is an enumeration. NOTE: This field is only applicable for enumerated properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.EventsOptionInput>? Options { get; set; }

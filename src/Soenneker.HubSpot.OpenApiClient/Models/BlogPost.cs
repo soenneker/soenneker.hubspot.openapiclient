@@ -268,7 +268,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public bool? PublicAccessRulesEnabled { get; set; }
         /// <summary>The date (ISO8601 format) the blog post is to be published at.</summary>
         public DateTimeOffset? PublishDate { get; set; }
-        /// <summary>The publishedAt property</summary>
+        /// <summary>The date and time when the blog post was published, in ISO 8601 format.</summary>
         public DateTimeOffset? PublishedAt { get; set; }
         /// <summary>Set this to true if you want to be published immediately when the schedule publish endpoint is called, and to ignore the publish_date setting.</summary>
         public bool? PublishImmediately { get; set; }

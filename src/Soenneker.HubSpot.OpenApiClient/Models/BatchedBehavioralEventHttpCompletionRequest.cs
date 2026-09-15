@@ -14,7 +14,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>An array of BehavioralEventHttpCompletionRequest objects, each representing an individual behavioral event completion request to be processed in the batch. This property is required.</summary>
+        /// <summary>An array of BehavioralEventHttpCompletionRequest objects, each representing a single behavioral event to be completed. This property is required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.BehavioralEventHttpCompletionRequest>? Inputs { get; set; }

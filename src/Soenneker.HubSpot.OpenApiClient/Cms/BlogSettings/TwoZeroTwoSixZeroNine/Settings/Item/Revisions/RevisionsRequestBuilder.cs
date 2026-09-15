@@ -19,7 +19,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.BlogSettings.TwoZeroTwoSixZeroNine
     public partial class RevisionsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.cms.blogSettings.TwoZeroTwoSixZeroNine.settings.item.revisions.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The unique identifier of the specific revision of the blog settings to retrieve.</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Cms.BlogSettings.TwoZeroTwoSixZeroNine.Settings.Item.Revisions.Item.WithRevisionItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Cms.BlogSettings.TwoZeroTwoSixZeroNine.Settings.Item.Revisions.Item.WithRevisionItemRequestBuilder this[string position]
         {
@@ -108,18 +108,15 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.BlogSettings.TwoZeroTwoSixZeroNine
             [QueryParameter("after")]
             public string After { get; set; }
 #endif
+            /// <summary>A cursor token to retrieve results before a specific point in time.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            #pragma warning disable CS1591
             [QueryParameter("before")]
             public string? Before { get; set; }
-            #pragma warning restore CS1591
 #nullable restore
 #else
-            #pragma warning disable CS1591
             [QueryParameter("before")]
             public string Before { get; set; }
-            #pragma warning restore CS1591
 #endif
             /// <summary>The maximum number of results to display per page.</summary>
             [QueryParameter("limit")]

@@ -46,7 +46,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Slug { get; set; }
 #endif
-        /// <summary>The usePublished property</summary>
+        /// <summary>A boolean indicating whether to use the published version of the blog post for cloning.</summary>
         public bool? UsePublished { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.BlogLanguageCloneRequestVNext"/> and sets the default values.

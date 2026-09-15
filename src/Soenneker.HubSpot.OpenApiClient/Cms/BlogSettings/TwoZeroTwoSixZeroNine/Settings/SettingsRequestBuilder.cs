@@ -25,7 +25,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.BlogSettings.TwoZeroTwoSixZeroNine
             get => new global::Soenneker.HubSpot.OpenApiClient.Cms.BlogSettings.TwoZeroTwoSixZeroNine.Settings.MultiLanguage.MultiLanguageRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.cms.blogSettings.TwoZeroTwoSixZeroNine.settings.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The unique identifier of the blog whose settings you want to retrieve.</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Cms.BlogSettings.TwoZeroTwoSixZeroNine.Settings.Item.WithBlogItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Cms.BlogSettings.TwoZeroTwoSixZeroNine.Settings.Item.WithBlogItemRequestBuilder this[string position]
         {
@@ -117,46 +117,37 @@ namespace Soenneker.HubSpot.OpenApiClient.Cms.BlogSettings.TwoZeroTwoSixZeroNine
             /// <summary>Whether to return only results that have been archived.</summary>
             [QueryParameter("archived")]
             public bool? Archived { get; set; }
-            #pragma warning disable CS1591
+            /// <summary>Filter results to include only those created after the specified date and time.</summary>
             [QueryParameter("createdAfter")]
             public DateTimeOffset? CreatedAfter { get; set; }
-            #pragma warning restore CS1591
-            #pragma warning disable CS1591
+            /// <summary>Filter results by the exact creation date and time.</summary>
             [QueryParameter("createdAt")]
             public DateTimeOffset? CreatedAt { get; set; }
-            #pragma warning restore CS1591
-            #pragma warning disable CS1591
+            /// <summary>Filter results to include only those created before the specified date and time.</summary>
             [QueryParameter("createdBefore")]
             public DateTimeOffset? CreatedBefore { get; set; }
-            #pragma warning restore CS1591
             /// <summary>The maximum number of results to display per page.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
+            /// <summary>Specify the order in which results are returned. Accepts an array of fields to sort by.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            #pragma warning disable CS1591
             [QueryParameter("sort")]
             public string[]? Sort { get; set; }
-            #pragma warning restore CS1591
 #nullable restore
 #else
-            #pragma warning disable CS1591
             [QueryParameter("sort")]
             public string[] Sort { get; set; }
-            #pragma warning restore CS1591
 #endif
-            #pragma warning disable CS1591
+            /// <summary>Filter results to include only those updated after the specified date and time.</summary>
             [QueryParameter("updatedAfter")]
             public DateTimeOffset? UpdatedAfter { get; set; }
-            #pragma warning restore CS1591
-            #pragma warning disable CS1591
+            /// <summary>Filter results by the exact update date and time.</summary>
             [QueryParameter("updatedAt")]
             public DateTimeOffset? UpdatedAt { get; set; }
-            #pragma warning restore CS1591
-            #pragma warning disable CS1591
+            /// <summary>Filter results to include only those updated before the specified date and time.</summary>
             [QueryParameter("updatedBefore")]
             public DateTimeOffset? UpdatedBefore { get; set; }
-            #pragma warning restore CS1591
         }
     }
 }

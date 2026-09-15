@@ -2471,7 +2471,7 @@
           {
             "name": "createdAfter",
             "in": "query",
-            "description": "",
+            "description": "Filter authors created after the specified date and time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -2481,7 +2481,7 @@
           {
             "name": "createdAt",
             "in": "query",
-            "description": "",
+            "description": "Filter authors by the exact creation date and time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -2491,7 +2491,7 @@
           {
             "name": "createdBefore",
             "in": "query",
-            "description": "",
+            "description": "Filter authors created before the specified date and time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -2511,7 +2511,7 @@
           {
             "name": "property",
             "in": "query",
-            "description": "",
+            "description": "Specify which properties of the authors to include in the response.",
             "schema": {
               "type": "string",
               "example": null
@@ -2520,7 +2520,7 @@
           {
             "name": "sort",
             "in": "query",
-            "description": "",
+            "description": "An array of fields to sort the results by.",
             "schema": {
               "type": "array",
               "items": {
@@ -2533,7 +2533,7 @@
           {
             "name": "updatedAfter",
             "in": "query",
-            "description": "",
+            "description": "Filter authors updated after the specified date and time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -2543,7 +2543,7 @@
           {
             "name": "updatedAt",
             "in": "query",
-            "description": "",
+            "description": "Filter authors by the exact update date and time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -2553,7 +2553,7 @@
           {
             "name": "updatedBefore",
             "in": "query",
-            "description": "",
+            "description": "Filter authors updated before the specified date and time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -3052,7 +3052,7 @@
           {
             "name": "objectId",
             "in": "path",
-            "description": "",
+            "description": "The unique identifier of the blog author to retrieve.",
             "required": true,
             "schema": {
               "type": "string",
@@ -3071,7 +3071,7 @@
           {
             "name": "property",
             "in": "query",
-            "description": "",
+            "description": "A specific property of the blog author to include in the response.",
             "schema": {
               "type": "string",
               "example": null
@@ -3113,7 +3113,7 @@
           {
             "name": "objectId",
             "in": "path",
-            "description": "",
+            "description": "The unique identifier of the blog author to delete.",
             "required": true,
             "schema": {
               "type": "string",
@@ -3157,7 +3157,7 @@
           {
             "name": "objectId",
             "in": "path",
-            "description": "",
+            "description": "The unique identifier of the blog author to update.",
             "required": true,
             "schema": {
               "type": "string",
@@ -3240,7 +3240,7 @@
           {
             "name": "createdAfter",
             "in": "query",
-            "description": "",
+            "description": "Filter results to include only those created after the specified date and time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -3250,7 +3250,7 @@
           {
             "name": "createdAt",
             "in": "query",
-            "description": "",
+            "description": "Filter results by the exact creation date and time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -3260,7 +3260,7 @@
           {
             "name": "createdBefore",
             "in": "query",
-            "description": "",
+            "description": "Filter results to include only those created before the specified date and time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -3280,7 +3280,7 @@
           {
             "name": "sort",
             "in": "query",
-            "description": "",
+            "description": "Specify the order in which results are returned. Accepts an array of fields to sort by.",
             "schema": {
               "type": "array",
               "items": {
@@ -3293,7 +3293,7 @@
           {
             "name": "updatedAfter",
             "in": "query",
-            "description": "",
+            "description": "Filter results to include only those updated after the specified date and time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -3303,7 +3303,7 @@
           {
             "name": "updatedAt",
             "in": "query",
-            "description": "",
+            "description": "Filter results by the exact update date and time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -3313,7 +3313,7 @@
           {
             "name": "updatedBefore",
             "in": "query",
-            "description": "",
+            "description": "Filter results to include only those updated before the specified date and time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -3537,7 +3537,7 @@
           {
             "name": "blogId",
             "in": "path",
-            "description": "",
+            "description": "The unique identifier of the blog whose settings you want to retrieve.",
             "required": true,
             "schema": {
               "type": "string",
@@ -3582,7 +3582,7 @@
           {
             "name": "blogId",
             "in": "path",
-            "description": "",
+            "description": "The unique identifier of the blog for which to retrieve revisions.",
             "required": true,
             "schema": {
               "type": "string",
@@ -3601,7 +3601,7 @@
           {
             "name": "before",
             "in": "query",
-            "description": "",
+            "description": "A cursor token to retrieve results before a specific point in time.",
             "schema": {
               "type": "string",
               "example": null
@@ -3655,7 +3655,7 @@
           {
             "name": "blogId",
             "in": "path",
-            "description": "",
+            "description": "The unique identifier of the blog whose settings revision is to be retrieved.",
             "required": true,
             "schema": {
               "type": "string",
@@ -3665,7 +3665,7 @@
           {
             "name": "revisionId",
             "in": "path",
-            "description": "",
+            "description": "The unique identifier of the specific revision of the blog settings to retrieve.",
             "required": true,
             "schema": {
               "type": "string",
@@ -11864,6 +11864,8 @@
         "tags": [
           "Basic"
         ],
+        "summary": "List Authors",
+        "description": "Retrieve a list of blog authors using cursor-based pagination. This endpoint allows filtering by creation and update timestamps, sorting, and limiting the number of results per page. It is useful for managing and displaying blog authors in a paginated format.",
         "operationId": "CmsGetCmsBlogs202609AuthorsCursorCmsBlogsV3AuthorsCursor",
         "parameters": [
           {
@@ -11887,7 +11889,7 @@
           {
             "name": "createdAfter",
             "in": "query",
-            "description": "",
+            "description": "Filter authors created after the specified timestamp. Format must be date-time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -11897,7 +11899,7 @@
           {
             "name": "createdAt",
             "in": "query",
-            "description": "",
+            "description": "Filter authors by the exact creation timestamp. Format must be date-time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -11907,7 +11909,7 @@
           {
             "name": "createdBefore",
             "in": "query",
-            "description": "",
+            "description": "Filter authors created before the specified timestamp. Format must be date-time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -11927,7 +11929,7 @@
           {
             "name": "property",
             "in": "query",
-            "description": "",
+            "description": "Specify a property to include in the response.",
             "schema": {
               "type": "string",
               "example": null
@@ -11936,7 +11938,7 @@
           {
             "name": "sort",
             "in": "query",
-            "description": "",
+            "description": "Specify the order in which to sort the results. Accepts an array of fields.",
             "schema": {
               "type": "array",
               "items": {
@@ -11949,7 +11951,7 @@
           {
             "name": "updatedAfter",
             "in": "query",
-            "description": "",
+            "description": "Filter authors updated after the specified timestamp. Format must be date-time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -11959,7 +11961,7 @@
           {
             "name": "updatedAt",
             "in": "query",
-            "description": "",
+            "description": "Filter authors by the exact update timestamp. Format must be date-time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -11969,7 +11971,7 @@
           {
             "name": "updatedBefore",
             "in": "query",
-            "description": "",
+            "description": "Filter authors updated before the specified timestamp. Format must be date-time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -12007,6 +12009,8 @@
         "tags": [
           "Basic"
         ],
+        "summary": "Query authors",
+        "description": "Retrieve a list of blog authors using various filters and sorting options. This endpoint supports pagination and allows filtering by creation and update timestamps. It is useful for fetching specific authors based on their creation or update dates, or for retrieving archived authors.",
         "operationId": "CmsGetCmsBlogs202609AuthorsCursorQueryCmsBlogsV3AuthorsCursorQuery",
         "parameters": [
           {
@@ -12030,7 +12034,7 @@
           {
             "name": "createdAfter",
             "in": "query",
-            "description": "",
+            "description": "Filter authors created after the specified date and time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -12040,7 +12044,7 @@
           {
             "name": "createdAt",
             "in": "query",
-            "description": "",
+            "description": "Filter authors by their exact creation date and time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -12050,7 +12054,7 @@
           {
             "name": "createdBefore",
             "in": "query",
-            "description": "",
+            "description": "Filter authors created before the specified date and time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -12070,7 +12074,7 @@
           {
             "name": "property",
             "in": "query",
-            "description": "",
+            "description": "Specify which properties of the authors to include in the response.",
             "schema": {
               "type": "string",
               "example": null
@@ -12079,7 +12083,7 @@
           {
             "name": "sort",
             "in": "query",
-            "description": "",
+            "description": "Specify the sorting order for the results. Accepts an array of strings.",
             "schema": {
               "type": "array",
               "items": {
@@ -12092,7 +12096,7 @@
           {
             "name": "updatedAfter",
             "in": "query",
-            "description": "",
+            "description": "Filter authors updated after the specified date and time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -12102,7 +12106,7 @@
           {
             "name": "updatedAt",
             "in": "query",
-            "description": "",
+            "description": "Filter authors by the exact last update date and time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -12112,7 +12116,7 @@
           {
             "name": "updatedBefore",
             "in": "query",
-            "description": "",
+            "description": "Filter authors updated before the specified date and time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -12175,7 +12179,7 @@
           {
             "name": "createdAfter",
             "in": "query",
-            "description": "",
+            "description": "Filter posts created after the specified date and time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -12185,7 +12189,7 @@
           {
             "name": "createdAt",
             "in": "query",
-            "description": "",
+            "description": "Filter posts by their creation date and time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -12195,7 +12199,7 @@
           {
             "name": "createdBefore",
             "in": "query",
-            "description": "",
+            "description": "Filter posts created before the specified date and time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -12215,7 +12219,7 @@
           {
             "name": "property",
             "in": "query",
-            "description": "",
+            "description": "Specify which properties to include in the response.",
             "schema": {
               "type": "string",
               "example": null
@@ -12224,7 +12228,7 @@
           {
             "name": "sort",
             "in": "query",
-            "description": "",
+            "description": "Specify the order in which to sort the results. Accepts an array of field names.",
             "schema": {
               "type": "array",
               "items": {
@@ -12237,7 +12241,7 @@
           {
             "name": "updatedAfter",
             "in": "query",
-            "description": "",
+            "description": "Filter posts updated after the specified date and time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -12247,7 +12251,7 @@
           {
             "name": "updatedAt",
             "in": "query",
-            "description": "",
+            "description": "Filter posts by their last update date and time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -12257,7 +12261,7 @@
           {
             "name": "updatedBefore",
             "in": "query",
-            "description": "",
+            "description": "Filter posts updated before the specified date and time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -12614,6 +12618,8 @@
         "tags": [
           "Basic"
         ],
+        "summary": "List posts",
+        "description": "Retrieve a list of blog posts with optional filtering and sorting capabilities. This endpoint supports pagination and allows you to specify date ranges for creation and update times, as well as sorting preferences. It is useful for obtaining an overview of blog posts, including archived ones if desired.",
         "operationId": "CmsGetCmsBlogs202609PostsCursorCmsBlogsV3PostsCursor",
         "parameters": [
           {
@@ -12637,7 +12643,7 @@
           {
             "name": "createdAfter",
             "in": "query",
-            "description": "",
+            "description": "Filter posts created after the specified date and time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -12647,7 +12653,7 @@
           {
             "name": "createdAt",
             "in": "query",
-            "description": "",
+            "description": "Filter posts by the exact creation date and time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -12657,7 +12663,7 @@
           {
             "name": "createdBefore",
             "in": "query",
-            "description": "",
+            "description": "Filter posts created before the specified date and time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -12677,7 +12683,7 @@
           {
             "name": "property",
             "in": "query",
-            "description": "",
+            "description": "A specific property to include in the response.",
             "schema": {
               "type": "string",
               "example": null
@@ -12686,7 +12692,7 @@
           {
             "name": "sort",
             "in": "query",
-            "description": "",
+            "description": "Specify the sorting order of the results. Accepts an array of field names.",
             "schema": {
               "type": "array",
               "items": {
@@ -12699,7 +12705,7 @@
           {
             "name": "updatedAfter",
             "in": "query",
-            "description": "",
+            "description": "Filter posts updated after the specified date and time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -12709,7 +12715,7 @@
           {
             "name": "updatedAt",
             "in": "query",
-            "description": "",
+            "description": "Filter posts by their last update date and time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -12719,7 +12725,7 @@
           {
             "name": "updatedBefore",
             "in": "query",
-            "description": "",
+            "description": "Filter posts updated before the specified date and time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -12757,6 +12763,8 @@
         "tags": [
           "Basic"
         ],
+        "summary": "Query Posts",
+        "description": "Retrieve blog posts from the HubSpot CMS using various query parameters to filter and sort the results. This endpoint supports pagination and allows you to specify date ranges for creation and updates, as well as sorting options. It is useful for fetching a list of posts with specific criteria, such as posts created after a certain date or posts that have been archived.",
         "operationId": "CmsGetCmsBlogs202609PostsCursorQueryCmsBlogsV3PostsCursorQuery",
         "parameters": [
           {
@@ -12780,7 +12788,7 @@
           {
             "name": "createdAfter",
             "in": "query",
-            "description": "",
+            "description": "Filter posts created after the specified date and time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -12790,7 +12798,7 @@
           {
             "name": "createdAt",
             "in": "query",
-            "description": "",
+            "description": "Filter posts by their exact creation date. The format is date-time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -12800,7 +12808,7 @@
           {
             "name": "createdBefore",
             "in": "query",
-            "description": "",
+            "description": "Filter posts created before the specified date and time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -12820,7 +12828,7 @@
           {
             "name": "property",
             "in": "query",
-            "description": "",
+            "description": "Specify properties to include in the response.",
             "schema": {
               "type": "string",
               "example": null
@@ -12829,7 +12837,7 @@
           {
             "name": "sort",
             "in": "query",
-            "description": "",
+            "description": "Specify the sorting order of the results. Accepts an array of strings.",
             "schema": {
               "type": "array",
               "items": {
@@ -12842,7 +12850,7 @@
           {
             "name": "updatedAfter",
             "in": "query",
-            "description": "",
+            "description": "Filter posts updated after the specified date and time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -12852,7 +12860,7 @@
           {
             "name": "updatedAt",
             "in": "query",
-            "description": "",
+            "description": "Filter posts by their exact update date. The format is date-time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -12862,7 +12870,7 @@
           {
             "name": "updatedBefore",
             "in": "query",
-            "description": "",
+            "description": "Filter posts updated before the specified date and time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -13122,7 +13130,7 @@
           {
             "name": "objectId",
             "in": "path",
-            "description": "",
+            "description": "The unique identifier of the blog post to retrieve.",
             "required": true,
             "schema": {
               "type": "string",
@@ -13141,7 +13149,7 @@
           {
             "name": "property",
             "in": "query",
-            "description": "",
+            "description": "A specific property of the blog post to include in the response.",
             "schema": {
               "type": "string",
               "example": null
@@ -13183,7 +13191,7 @@
           {
             "name": "objectId",
             "in": "path",
-            "description": "",
+            "description": "The unique identifier of the blog post to delete.",
             "required": true,
             "schema": {
               "type": "string",
@@ -13227,7 +13235,7 @@
           {
             "name": "objectId",
             "in": "path",
-            "description": "",
+            "description": "The unique identifier of the blog post to update.",
             "required": true,
             "schema": {
               "type": "string",
@@ -13292,7 +13300,7 @@
           {
             "name": "objectId",
             "in": "path",
-            "description": "",
+            "description": "The unique identifier of the blog post whose draft version is to be retrieved.",
             "required": true,
             "schema": {
               "type": "string",
@@ -13335,7 +13343,7 @@
           {
             "name": "objectId",
             "in": "path",
-            "description": "",
+            "description": "The unique identifier of the blog post draft to update.",
             "required": true,
             "schema": {
               "type": "string",
@@ -13391,7 +13399,7 @@
           {
             "name": "objectId",
             "in": "path",
-            "description": "",
+            "description": "The unique identifier of the blog post draft to be published.",
             "required": true,
             "schema": {
               "type": "string",
@@ -13428,7 +13436,7 @@
           {
             "name": "objectId",
             "in": "path",
-            "description": "",
+            "description": "The unique identifier of the blog post whose draft is to be reset.",
             "required": true,
             "schema": {
               "type": "string",
@@ -13465,7 +13473,7 @@
           {
             "name": "objectId",
             "in": "path",
-            "description": "",
+            "description": "The unique identifier of the blog post for which revisions are being retrieved.",
             "required": true,
             "schema": {
               "type": "string",
@@ -13484,7 +13492,7 @@
           {
             "name": "before",
             "in": "query",
-            "description": "",
+            "description": "A cursor token to retrieve results before a specific point in the list.",
             "schema": {
               "type": "string",
               "example": null
@@ -13538,7 +13546,7 @@
           {
             "name": "objectId",
             "in": "path",
-            "description": "",
+            "description": "The unique identifier of the blog post.",
             "required": true,
             "schema": {
               "type": "string",
@@ -13548,7 +13556,7 @@
           {
             "name": "revisionId",
             "in": "path",
-            "description": "",
+            "description": "The unique identifier of the revision to retrieve.",
             "required": true,
             "schema": {
               "type": "string",
@@ -13593,7 +13601,7 @@
           {
             "name": "objectId",
             "in": "path",
-            "description": "",
+            "description": "The unique identifier of the blog post for which the revision is to be restored.",
             "required": true,
             "schema": {
               "type": "string",
@@ -13603,7 +13611,7 @@
           {
             "name": "revisionId",
             "in": "path",
-            "description": "",
+            "description": "The unique identifier of the revision to restore.",
             "required": true,
             "schema": {
               "type": "string",
@@ -13648,7 +13656,7 @@
           {
             "name": "objectId",
             "in": "path",
-            "description": "",
+            "description": "The unique identifier of the blog post whose revision is being restored.",
             "required": true,
             "schema": {
               "type": "string",
@@ -13658,7 +13666,7 @@
           {
             "name": "revisionId",
             "in": "path",
-            "description": "",
+            "description": "The unique identifier of the revision to restore to draft. It is an integer value.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -13697,6 +13705,8 @@
         "tags": [
           "Basic"
         ],
+        "summary": "List tags",
+        "description": "Retrieve a list of blog tags from your HubSpot account. This endpoint supports filtering by creation and update timestamps, sorting, and pagination. It is useful for managing and organizing tags associated with blog posts.",
         "operationId": "CmsGetCmsBlogs202609TagsCursorCmsBlogsV3TagsCursor",
         "parameters": [
           {
@@ -13720,7 +13730,7 @@
           {
             "name": "createdAfter",
             "in": "query",
-            "description": "",
+            "description": "Filter results to include only those created after the specified date and time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -13730,7 +13740,7 @@
           {
             "name": "createdAt",
             "in": "query",
-            "description": "",
+            "description": "Filter tags by their exact creation timestamp. Format should be date-time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -13740,7 +13750,7 @@
           {
             "name": "createdBefore",
             "in": "query",
-            "description": "",
+            "description": "Filter results to include only those created before the specified date and time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -13760,7 +13770,7 @@
           {
             "name": "property",
             "in": "query",
-            "description": "",
+            "description": "Specify additional properties to include in the response.",
             "schema": {
               "type": "string",
               "example": null
@@ -13769,7 +13779,7 @@
           {
             "name": "sort",
             "in": "query",
-            "description": "",
+            "description": "Specify the order in which to sort the results. Accepts an array of strings.",
             "schema": {
               "type": "array",
               "items": {
@@ -13782,7 +13792,7 @@
           {
             "name": "updatedAfter",
             "in": "query",
-            "description": "",
+            "description": "Filter results to include only those updated after the specified date and time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -13792,7 +13802,7 @@
           {
             "name": "updatedAt",
             "in": "query",
-            "description": "",
+            "description": "Filter tags by their exact update timestamp. Format should be date-time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -13802,7 +13812,7 @@
           {
             "name": "updatedBefore",
             "in": "query",
-            "description": "",
+            "description": "Filter results to include only those updated before the specified date and time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -13840,6 +13850,8 @@
         "tags": [
           "Basic"
         ],
+        "summary": "Query Tags",
+        "description": "Retrieve a list of blog tags using various filters and sorting options. This endpoint supports pagination and allows you to filter tags based on creation and update timestamps. It is useful for managing and organizing blog content by tags.",
         "operationId": "CmsGetCmsBlogs202609TagsCursorQueryCmsBlogsV3TagsCursorQuery",
         "parameters": [
           {
@@ -13863,7 +13875,7 @@
           {
             "name": "createdAfter",
             "in": "query",
-            "description": "",
+            "description": "Filter tags created after a specific date. The value should be in date-time format.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -13873,7 +13885,7 @@
           {
             "name": "createdAt",
             "in": "query",
-            "description": "",
+            "description": "Filter tags by their creation date. The value should be in date-time format.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -13883,7 +13895,7 @@
           {
             "name": "createdBefore",
             "in": "query",
-            "description": "",
+            "description": "Filter tags created before a specific date. The value should be in date-time format.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -13903,7 +13915,7 @@
           {
             "name": "property",
             "in": "query",
-            "description": "",
+            "description": "Specify which properties of the tags to include in the response.",
             "schema": {
               "type": "string",
               "example": null
@@ -13912,7 +13924,7 @@
           {
             "name": "sort",
             "in": "query",
-            "description": "",
+            "description": "Specify the sort order of the results. Accepts an array of fields to sort by.",
             "schema": {
               "type": "array",
               "items": {
@@ -13925,7 +13937,7 @@
           {
             "name": "updatedAfter",
             "in": "query",
-            "description": "",
+            "description": "Filter tags updated after a specific date. The value should be in date-time format.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -13935,7 +13947,7 @@
           {
             "name": "updatedAt",
             "in": "query",
-            "description": "",
+            "description": "Filter tags by their last updated date. The value should be in date-time format.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -13945,7 +13957,7 @@
           {
             "name": "updatedBefore",
             "in": "query",
-            "description": "",
+            "description": "Filter tags updated before a specific date. The value should be in date-time format.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -14724,7 +14736,7 @@
           {
             "name": "createdAfter",
             "in": "query",
-            "description": "",
+            "description": "Filter tags created after the specified date and time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -14734,7 +14746,7 @@
           {
             "name": "createdAt",
             "in": "query",
-            "description": "",
+            "description": "Filter tags by their creation date and time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -14744,7 +14756,7 @@
           {
             "name": "createdBefore",
             "in": "query",
-            "description": "",
+            "description": "Filter tags created before the specified date and time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -14764,7 +14776,7 @@
           {
             "name": "property",
             "in": "query",
-            "description": "",
+            "description": "Specify properties to include in the response.",
             "schema": {
               "type": "string",
               "example": null
@@ -14773,7 +14785,7 @@
           {
             "name": "sort",
             "in": "query",
-            "description": "",
+            "description": "Specify the order in which to sort the tags. Accepts an array of field names.",
             "schema": {
               "type": "array",
               "items": {
@@ -14786,7 +14798,7 @@
           {
             "name": "updatedAfter",
             "in": "query",
-            "description": "",
+            "description": "Filter tags updated after the specified date and time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -14796,7 +14808,7 @@
           {
             "name": "updatedAt",
             "in": "query",
-            "description": "",
+            "description": "Filter tags by their last update date and time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -14806,7 +14818,7 @@
           {
             "name": "updatedBefore",
             "in": "query",
-            "description": "",
+            "description": "Filter tags updated before the specified date and time.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -15305,7 +15317,7 @@
           {
             "name": "objectId",
             "in": "path",
-            "description": "",
+            "description": "The unique identifier of the tag to retrieve.",
             "required": true,
             "schema": {
               "type": "string",
@@ -15324,7 +15336,7 @@
           {
             "name": "property",
             "in": "query",
-            "description": "",
+            "description": "A specific property of the tag to include in the response.",
             "schema": {
               "type": "string",
               "example": null
@@ -15366,7 +15378,7 @@
           {
             "name": "objectId",
             "in": "path",
-            "description": "",
+            "description": "The unique identifier of the tag to delete.",
             "required": true,
             "schema": {
               "type": "string",
@@ -15410,7 +15422,7 @@
           {
             "name": "objectId",
             "in": "path",
-            "description": "",
+            "description": "The unique identifier of the tag to update.",
             "required": true,
             "schema": {
               "type": "string",
@@ -274803,42 +274815,6 @@
         ]
       }
     },
-    "/events/2026-09/send/batch": {
-      "post": {
-        "tags": [
-          "Batch"
-        ],
-        "summary": "Send a batch of event occurrences",
-        "description": "Send a batch of behavioral events to the HubSpot API. This endpoint is useful for efficiently processing multiple events in a single request, reducing the number of API calls needed. It is particularly beneficial for applications that need to send a high volume of events quickly. Note that this endpoint is exempt from daily and ten-secondly rate limits.",
-        "operationId": "EventsPostEvents202609SendBatchEventsV3SendBatch",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/BatchedBehavioralEventHttpCompletionRequest"
-              },
-              "example": null
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "204": {
-            "description": "No content"
-          },
-          "default": {
-            "$ref": "#/components/responses/_events_Error"
-          }
-        },
-        "security": [
-          {
-            "_events_oauth2": [
-              "analytics.behavioral_events.send"
-            ]
-          }
-        ]
-      }
-    },
     "/events/2026-09/send": {
       "post": {
         "tags": [
@@ -274851,7 +274827,43 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/EventsBehavioralEventHttpCompletionRequest"
+                "$ref": "#/components/schemas/BehavioralEventHttpCompletionRequest"
+              },
+              "example": null
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "204": {
+            "description": "No content"
+          },
+          "default": {
+            "$ref": "#/components/responses/__events_Error"
+          }
+        },
+        "security": [
+          {
+            "__events_oauth2": [
+              "analytics.behavioral_events.send"
+            ]
+          }
+        ]
+      }
+    },
+    "/events/2026-09/send/batch": {
+      "post": {
+        "tags": [
+          "Batch"
+        ],
+        "summary": "Send a batch of event occurrences",
+        "description": "Send multiple event occurrences at once.",
+        "operationId": "EventsPostEvents202609SendBatchSend",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BatchedBehavioralEventHttpCompletionRequest"
               },
               "example": null
             }
@@ -300615,6 +300627,7 @@
           },
           "usePublished": {
             "type": "boolean",
+            "description": "Specifies whether to use the published version of the blog author for cloning. This is a boolean.",
             "example": null
           }
         },
@@ -300766,12 +300779,12 @@
         "properties": {
           "after": {
             "type": "string",
-            "description": "A paging cursor token for retrieving subsequent pages.",
+            "description": "A string token representing the paging cursor of the last successfully read resource. This token is used to fetch the next page of results.",
             "example": null
           },
           "link": {
             "type": "string",
-            "description": "A URL that can be used to retrieve the next page results.",
+            "description": "A URL string that provides the link to the next page of results.",
             "example": null
           }
         },
@@ -300952,6 +300965,7 @@
           },
           "listingPageId": {
             "type": "string",
+            "description": "The ID of the listing page associated with the blog.",
             "example": null
           },
           "name": {
@@ -301024,6 +301038,7 @@
           },
           "usePublished": {
             "type": "boolean",
+            "description": "A boolean indicating whether to use the published version of the blog post for cloning.",
             "example": null
           }
         },
@@ -301040,6 +301055,7 @@
         "properties": {
           "id": {
             "type": "string",
+            "description": "The unique identifier for this blog version.",
             "example": null
           },
           "object": {
@@ -301047,6 +301063,7 @@
           },
           "updatedAt": {
             "type": "string",
+            "description": "The date and time when this version was last updated, in ISO 8601 format.",
             "format": "date-time",
             "example": null
           },
@@ -301071,10 +301088,12 @@
             "items": {
               "$ref": "#/components/schemas/Blog"
             },
+            "description": "An array of blog objects, each represented by the Blog schema.",
             "example": null
           },
           "total": {
             "type": "integer",
+            "description": "The total number of blog objects in the collection. It is an integer value.",
             "format": "int32",
             "example": null
           }
@@ -301096,10 +301115,12 @@
             "items": {
               "$ref": "#/components/schemas/VersionBlog"
             },
+            "description": "An array of VersionBlog objects, each representing a specific version of a blog.",
             "example": null
           },
           "total": {
             "type": "integer",
+            "description": "An integer representing the total number of blog versions available.",
             "format": "int32",
             "example": null
           }
@@ -301215,12 +301236,12 @@
         "properties": {
           "after": {
             "type": "string",
-            "description": "A paging cursor token for retrieving subsequent pages.",
+            "description": "A string token used as a cursor to fetch the next set of results in a paginated response.",
             "example": null
           },
           "link": {
             "type": "string",
-            "description": "A URL that can be used to retrieve the next page results.",
+            "description": "A string URL that provides the link to access the next page of results.",
             "example": null
           }
         },
@@ -301248,12 +301269,12 @@
         "properties": {
           "before": {
             "type": "string",
-            "description": "A paging cursor token for retrieving previous pages.",
+            "description": "A string token used to identify the cursor position for the previous page of results.",
             "example": null
           },
           "link": {
             "type": "string",
-            "description": "A URL that can be used to retrieve the previous pages\u0027 results.",
+            "description": "A string URL that links to the previous page of results.",
             "example": null
           }
         },
@@ -311854,6 +311875,7 @@
           },
           "publishedAt": {
             "type": "string",
+            "description": "The date and time when the blog post was published, in ISO 8601 format.",
             "format": "date-time",
             "example": null
           },
@@ -311947,6 +311969,7 @@
           },
           "usePublished": {
             "type": "boolean",
+            "description": "A boolean indicating whether the published version of the blog post should be used for cloning. If true, the published version is used; otherwise, the draft version is used.",
             "example": null
           }
         },
@@ -311963,6 +311986,7 @@
         "properties": {
           "id": {
             "type": "string",
+            "description": "The unique identifier for this specific version of the blog post.",
             "example": null
           },
           "object": {
@@ -311970,6 +311994,7 @@
           },
           "updatedAt": {
             "type": "string",
+            "description": "The date and time when this version of the blog post was last updated, in ISO 8601 format.",
             "format": "date-time",
             "example": null
           },
@@ -312043,10 +312068,12 @@
             "items": {
               "$ref": "#/components/schemas/VersionBlogPost"
             },
+            "description": "An array containing the individual blog post versions. Each item in the array represents a specific version of a blog post.",
             "example": null
           },
           "total": {
             "type": "integer",
+            "description": "The total number of blog post versions available. This is an integer value.",
             "format": "int32",
             "example": null
           }
@@ -312150,6 +312177,7 @@
             "items": {
               "$ref": "#/components/schemas/CmsContentLanguageVariationPublicAccessRulesItem"
             },
+            "description": "The set of rules governing public access to this language variation.",
             "example": null
           },
           "publicAccessRulesEnabled": {
@@ -312180,6 +312208,7 @@
               "format": "int64",
               "example": null
             },
+            "description": "An array of tag identifiers associated with this language variation.",
             "example": null
           },
           "updated": {
@@ -312351,6 +312380,7 @@
             "items": {
               "$ref": "#/components/schemas/CmsColorStop"
             },
+            "description": "An array of colors used in the gradient. Each color is represented as an RGBA value, defining the color stops in the gradient effect.",
             "example": null
           },
           "sideOrCorner": {
@@ -312382,6 +312412,7 @@
             "items": {
               "$ref": "#/components/schemas/CmsLayoutSection"
             },
+            "description": "The cells contained within the layout section, defining its structure.",
             "example": null
           },
           "cssClass": {
@@ -312417,6 +312448,7 @@
             "items": {
               "$ref": "#/components/schemas/CmsRowMetaData"
             },
+            "description": "Metadata associated with the rows in the layout section.",
             "example": null
           },
           "rows": {
@@ -312424,6 +312456,7 @@
             "items": {
               "$ref": "#/components/schemas/CmsLayoutSectionRowsItemProperty"
             },
+            "description": "The number of rows in the layout section.",
             "example": null
           },
           "styles": {
@@ -312473,12 +312506,12 @@
         "properties": {
           "after": {
             "type": "string",
-            "description": "A paging cursor token for retrieving subsequent pages.",
+            "description": "A string token representing the paging cursor of the last successfully read resource. This token is used to fetch the next set of results in a paged response.",
             "example": null
           },
           "link": {
             "type": "string",
-            "description": "A URL that can be used to retrieve the next page results.",
+            "description": "A string URL that provides the link to the next page of results in a paged response.",
             "example": null
           }
         },
@@ -312530,12 +312563,12 @@
         "properties": {
           "before": {
             "type": "string",
-            "description": "A paging cursor token for retrieving previous pages.",
+            "description": "A string token that represents the cursor for the previous page of results.",
             "example": null
           },
           "link": {
             "type": "string",
-            "description": "A URL that can be used to retrieve the previous pages\u0027 results.",
+            "description": "A URL string that provides the link to access the previous page of results.",
             "example": null
           }
         },
@@ -312641,6 +312674,7 @@
           },
           "value": {
             "type": "number",
+            "description": "A numeric value representing the magnitude of the size.",
             "example": null
           }
         },
@@ -313676,12 +313710,12 @@
         "properties": {
           "after": {
             "type": "string",
-            "description": "A paging cursor token for retrieving subsequent pages.",
+            "description": "A string token used as a cursor to retrieve the next set of results in a paginated response.",
             "example": null
           },
           "link": {
             "type": "string",
-            "description": "A URL that can be used to retrieve the next page results.",
+            "description": "A URL string that provides a direct link to the next page of results.",
             "example": null
           }
         },
@@ -313794,6 +313828,7 @@
           },
           "slug": {
             "type": "string",
+            "description": "A URL-friendly version of the tag name, typically used in web addresses.",
             "example": null
           },
           "translatedFromId": {
@@ -313840,6 +313875,7 @@
           },
           "usePublished": {
             "type": "boolean",
+            "description": "A boolean indicating whether the published version of the tag should be used for cloning.",
             "example": null
           }
         },
@@ -398250,67 +398286,6 @@
         "description": "The definition of an association",
         "example": null
       },
-      "BatchedBehavioralEventHttpCompletionRequest": {
-        "required": [
-          "inputs"
-        ],
-        "type": "object",
-        "properties": {
-          "inputs": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/BehavioralEventHttpCompletionRequest"
-            },
-            "description": "An array of BehavioralEventHttpCompletionRequest objects, each representing an individual behavioral event completion request to be processed in the batch. This property is required.",
-            "example": null
-          }
-        },
-        "example": null
-      },
-      "BehavioralEventHttpCompletionRequest": {
-        "required": [
-          "eventName",
-          "properties"
-        ],
-        "type": "object",
-        "properties": {
-          "email": {
-            "type": "string",
-            "description": "A string representing the email address associated with the event.",
-            "example": null
-          },
-          "eventName": {
-            "type": "string",
-            "description": "A string representing the name of the event. This is a required property.",
-            "example": null
-          },
-          "objectId": {
-            "type": "string",
-            "description": "A string representing the unique identifier of the object associated with the event.",
-            "example": null
-          },
-          "occurredAt": {
-            "type": "string",
-            "description": "A string representing the date and time when the event occurred, in ISO 8601 format.",
-            "format": "date-time",
-            "example": null
-          },
-          "properties": {
-            "$ref": "#/components/schemas/BehavioralEventHttpCompletionRequestPropertiesProperty"
-          },
-          "utk": {
-            "type": "string",
-            "description": "A string representing the unique tracking key associated with the event.",
-            "example": null
-          },
-          "uuid": {
-            "type": "string",
-            "description": "A string representing the universally unique identifier for the event.",
-            "example": null
-          }
-        },
-        "example": null
-      },
       "BehavioralEventTypeDefinitionLabels": {
         "required": [
           "singular"
@@ -399189,21 +399164,23 @@
         "properties": {
           "description": {
             "type": "string",
-            "description": "A string providing additional information about the event property.",
+            "description": "A description of the property that will be shown as help text in HubSpot.",
             "example": null
           },
           "displayOrder": {
             "type": "integer",
+            "description": "For not hidden properties, indicates the order to display the property on the record\u0027s activity timeline (ex: displayOrder: 0 is at the top).",
             "format": "int32",
             "example": null
           },
           "hidden": {
             "type": "boolean",
+            "description": "Controls whether or not this property is displayed on the record\u0027s activity timeline.",
             "example": null
           },
           "label": {
             "type": "string",
-            "description": "A string representing the display name of the event property.",
+            "description": "Human readable label for the property. Used in HubSpot UI.",
             "example": null
           },
           "options": {
@@ -399211,7 +399188,7 @@
             "items": {
               "$ref": "#/components/schemas/EventsOptionInput"
             },
-            "description": "An array of OptionInput objects, each defining a selectable option for the event property.",
+            "description": "A list of available options for the property if it is an enumeration. NOTE: This field is only applicable for enumerated properties.",
             "example": null
           }
         },
@@ -399268,7 +399245,7 @@
           },
           "detailTemplate": {
             "type": "string",
-            "description": "A string template used for the details of the event.",
+            "description": "The rendering template for the body of the CRM timeline activity card.",
             "example": null
           },
           "fullyQualifiedName": {
@@ -399278,7 +399255,7 @@
           },
           "headerTemplate": {
             "type": "string",
-            "description": "A string template used for the header of the event.",
+            "description": "The rendering template for the header of the CRM timeline activity card.",
             "example": null
           },
           "id": {
@@ -399390,22 +399367,22 @@
         "properties": {
           "description": {
             "type": "string",
-            "description": "A string providing a description of the event type.",
+            "description": "A description of the event that will be shown as help text in HubSpot.",
             "example": null
           },
           "detailTemplate": {
             "type": "string",
-            "description": "A string specifying the template for the details of the event type.",
+            "description": "The rendering template for the body of the CRM timeline activity card.",
             "example": null
           },
           "headerTemplate": {
             "type": "string",
-            "description": "A string defining the template for the header of the event type.",
+            "description": "The rendering template for the header of the CRM timeline activity card.",
             "example": null
           },
           "label": {
             "type": "string",
-            "description": "A string representing the label of the event type.",
+            "description": "Human readable label for the event. Used in HubSpot UI.",
             "example": null
           },
           "propertyOrder": {
@@ -399413,7 +399390,7 @@
             "items": {
               "$ref": "#/components/schemas/PropertyPatch"
             },
-            "description": "An array of PropertyPatch objects that specifies the order of properties for the event type.",
+            "description": "Specifies the ordering and visibility of event properties when rendered on the CRM timeline activity card.",
             "example": null
           }
         },
@@ -401099,7 +401076,7 @@
         "example": null,
         "x-hubspot-sub-type-impl": true
       },
-      "EventsBatchedBehavioralEventHttpCompletionRequest": {
+      "BatchedBehavioralEventHttpCompletionRequest": {
         "required": [
           "inputs"
         ],
@@ -401108,7 +401085,7 @@
           "inputs": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/EventsBehavioralEventHttpCompletionRequest"
+              "$ref": "#/components/schemas/BehavioralEventHttpCompletionRequest"
             },
             "description": "An array of BehavioralEventHttpCompletionRequest objects, each representing a single behavioral event to be completed. This property is required.",
             "example": null
@@ -401116,7 +401093,7 @@
         },
         "example": null
       },
-      "EventsBehavioralEventHttpCompletionRequest": {
+      "BehavioralEventHttpCompletionRequest": {
         "required": [
           "eventName",
           "properties"
@@ -401145,7 +401122,7 @@
             "example": "2026-01-20T21:14:16.512Z"
           },
           "properties": {
-            "$ref": "#/components/schemas/EventsBehavioralEventHttpCompletionRequestPropertiesProperty"
+            "$ref": "#/components/schemas/BehavioralEventHttpCompletionRequestPropertiesProperty"
           },
           "utk": {
             "type": "string",
@@ -467215,6 +467192,7 @@
         "additionalProperties": {
           "$ref": "#/components/schemas/CmsLayoutSectionParamsAdditionalPropertiesProperty"
         },
+        "description": "Additional parameters for the layout section, typically used for configuration.",
         "example": null
       },
       "CmsLayoutSectionRowsItem": {
@@ -479007,15 +478985,6 @@
         "description": "A key-value map of event-specific properties. The available properties depend on the event type definition.",
         "example": null
       },
-      "BehavioralEventHttpCompletionRequestProperties": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string",
-          "example": null
-        },
-        "description": "An object containing key-value pairs of additional properties related to the event. This is a required property.",
-        "example": null
-      },
       "EventsError2Context": {
         "type": "object",
         "additionalProperties": {
@@ -479051,7 +479020,7 @@
         "description": "Context about the error condition, represented as an object where each key is a context name and each value is an array of strings providing additional details.",
         "example": "{missingScopes=[scope1, scope2]}"
       },
-      "EventsBehavioralEventHttpCompletionRequestProperties": {
+      "BehavioralEventHttpCompletionRequestProperties": {
         "type": "object",
         "additionalProperties": {
           "type": "string",
@@ -482089,7 +482058,8 @@
         "type": "object",
         "additionalProperties": {
           "$ref": "#/components/schemas/CmsLayoutSectionParamsPropertyAdditionalProperties"
-        }
+        },
+        "description": "Additional parameters for the layout section, typically used for configuration."
       },
       "CmsLayoutSectionRowsItemProperty": {
         "type": "object",
@@ -492633,14 +492603,6 @@
         },
         "description": "A key-value map of event-specific properties. The available properties depend on the event type definition."
       },
-      "BehavioralEventHttpCompletionRequestPropertiesProperty": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string",
-          "example": null
-        },
-        "description": "An object containing key-value pairs of additional properties related to the event. This is a required property."
-      },
       "EventsError2ContextProperty": {
         "type": "object",
         "additionalProperties": {
@@ -492673,7 +492635,7 @@
         },
         "description": "Context about the error condition, represented as an object where each key is a context name and each value is an array of strings providing additional details."
       },
-      "EventsBehavioralEventHttpCompletionRequestPropertiesProperty": {
+      "BehavioralEventHttpCompletionRequestPropertiesProperty": {
         "type": "object",
         "additionalProperties": {
           "type": "string",
@@ -557707,6 +557669,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
+        "description": "A string indicating the unit of measurement for the size. Valid values include \u0027CM\u0027, \u0027MM\u0027, \u0027Q\u0027, \u0027IN\u0027, \u0027PC\u0027, \u0027PT\u0027, \u0027PX\u0027, \u0027EM\u0027, \u0027EX\u0027, \u0027CH\u0027, \u0027REM\u0027, \u0027LH\u0027, \u0027VW\u0027, \u0027VH\u0027, \u0027VMIN\u0027, \u0027VMAX\u0027, and \u0027PERCENTAGE\u0027.",
         "example": null,
         "x-ms-enum": {
           "name": "CmsSizeUnits",
@@ -604536,7 +604499,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "description": "A string indicating the tracking type of the event. Valid values include \u0027VISITED_URL\u0027, \u0027CLICKED_ELEMENT\u0027, \u0027CUSTOM_SCRIPT\u0027, \u0027MANUAL\u0027, \u0027IMPORT\u0027, \u0027PROPERTY_CHANGE\u0027, \u0027COMBO_EVENT\u0027, \u0027WEBHOOK\u0027, \u0027APP_EVENT\u0027, \u0027AUTOCAPTURE_EVENT\u0027, \u0027CUSTOM_SIGNAL\u0027, and \u0027POLLING\u0027.",
+        "description": "A string indicating the tracking type of the event. Valid values include \u0027VISITED_URL\u0027, \u0027CLICKED_ELEMENT\u0027, \u0027CUSTOM_SCRIPT\u0027, \u0027MANUAL\u0027, \u0027IMPORT\u0027, \u0027PROPERTY_CHANGE\u0027, \u0027COMBO_EVENT\u0027.",
         "example": null,
         "x-ms-enum": {
           "name": "ExternalBehavioralEventTypeDefinitionTrackingType",
@@ -672217,6 +672180,7 @@
             "authorizationUrl": "https://app.hubspot.com/oauth/authorize",
             "tokenUrl": "https://api.hubapi.com/oauth/v1/token",
             "scopes": {
+              "marketing-email": "",
               "transactional-email": ""
             }
           }
@@ -672328,7 +672292,11 @@
             "authorizationUrl": "https://app.hubspot.com/oauth/authorize",
             "tokenUrl": "https://api.hubapi.com/oauth/v1/token",
             "scopes": {
+              "cpq.quotes.read": "",
               "cpq.quotes.write": "",
+              "crm.objects.quotes.read": "",
+              "crm.objects.quotes.write": "",
+              "settings.currencies.read": "",
               "settings.currencies.write": ""
             }
           }
