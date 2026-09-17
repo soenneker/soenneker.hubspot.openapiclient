@@ -2565,7 +2565,7 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/CollectionResponseWithTotalBlogAuthorForwardPaging"
                 },
@@ -2594,7 +2594,7 @@
         "operationId": "CmsPostCmsBlogs202609AuthorsCreate",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/BlogAuthor"
               },
@@ -2617,7 +2617,7 @@
               }
             },
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/BlogAuthor"
                 },
@@ -2648,7 +2648,7 @@
         "operationId": "CmsPostCmsBlogs202609AuthorsBatchArchiveArchiveBatch",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/BatchInputString"
               },
@@ -2684,7 +2684,7 @@
         "operationId": "CmsPostCmsBlogs202609AuthorsBatchCreateCreateBatch",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/BatchInputBlogAuthor"
               },
@@ -2697,7 +2697,7 @@
           "201": {
             "description": "successful operation",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/BatchResponseBlogAuthor"
                 },
@@ -2708,7 +2708,7 @@
           "207": {
             "description": "multiple statuses",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/BatchResponseBlogAuthorWithErrors"
                 },
@@ -2750,7 +2750,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/BatchInputString"
               },
@@ -2763,7 +2763,7 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/BatchResponseBlogAuthor"
                 },
@@ -2774,7 +2774,7 @@
           "207": {
             "description": "multiple statuses",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/BatchResponseBlogAuthorWithErrors"
                 },
@@ -2816,7 +2816,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/BatchInputJsonNode"
               },
@@ -2829,7 +2829,7 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/BatchResponseBlogAuthor"
                 },
@@ -2840,7 +2840,7 @@
           "207": {
             "description": "multiple statuses",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/BatchResponseBlogAuthorWithErrors"
                 },
@@ -2871,7 +2871,7 @@
         "operationId": "CmsPostCmsBlogs202609AuthorsMultiLanguageAttachToLangGroupAttachToLangGroup",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/AttachToLangPrimaryRequestVNext"
               },
@@ -2904,7 +2904,7 @@
         "operationId": "CmsPostCmsBlogs202609AuthorsMultiLanguageCreateLanguageVariationCreateLangVariation",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/BlogAuthorCloneRequestVNext"
               },
@@ -2917,7 +2917,7 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/BlogAuthor"
                 },
@@ -2948,7 +2948,7 @@
         "operationId": "CmsPostCmsBlogs202609AuthorsMultiLanguageDetachFromLangGroupDetachFromLangGroup",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/DetachFromLangGroupRequestVNext"
               },
@@ -2981,7 +2981,7 @@
         "operationId": "CmsPutCmsBlogs202609AuthorsMultiLanguageSetNewLangPrimarySetLangPrimary",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/SetNewLanguagePrimaryRequestVNext"
               },
@@ -3017,7 +3017,7 @@
         "operationId": "CmsPostCmsBlogs202609AuthorsMultiLanguageUpdateLanguagesUpdateLangs",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/UpdateLanguagesRequestVNext"
               },
@@ -3082,7 +3082,7 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/BlogAuthor"
                 },
@@ -3176,7 +3176,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/BlogAuthor"
               },
@@ -3189,7 +3189,7 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/BlogAuthor"
                 },
@@ -8385,7 +8385,7 @@
         "operationId": "CmsPostCmsPages202609LandingPagesCreate",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/Page"
               },
@@ -8439,7 +8439,7 @@
         "operationId": "CmsPostCmsPages202609LandingPagesAbTestCreateVariationCreateAbTestVariation",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/AbTestCreateRequestVNext"
               },
@@ -8493,7 +8493,7 @@
         "operationId": "CmsPostCmsPages202609LandingPagesAbTestEndEndActiveAbTest",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/AbTestEndRequestVNext"
               },
@@ -8529,7 +8529,7 @@
         "operationId": "CmsPostCmsPages202609LandingPagesAbTestRerunRerunPreviousAbTest",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/AbTestRerunRequestVNext"
               },
@@ -8565,7 +8565,7 @@
         "operationId": "CmsPostCmsPages202609LandingPagesBatchArchiveArchiveBatch",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/CmsBatchInputString2"
               },
@@ -8601,7 +8601,7 @@
         "operationId": "CmsPostCmsPages202609LandingPagesBatchCreateCreateBatch",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/BatchInputPage"
               },
@@ -8667,7 +8667,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/CmsBatchInputString2"
               },
@@ -8738,7 +8738,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/CmsBatchInputJsonNode"
               },
@@ -8793,7 +8793,7 @@
         "operationId": "CmsPostCmsPages202609LandingPagesCloneClone",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/ContentCloneRequestVNext"
               },
@@ -8985,7 +8985,7 @@
         "operationId": "CmsPostCmsPages202609LandingPagesFoldersCreateFolder",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/ContentFolder"
               },
@@ -9039,7 +9039,7 @@
         "operationId": "CmsPostCmsPages202609LandingPagesFoldersBatchArchiveArchiveFolders",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/CmsBatchInputString2"
               },
@@ -9075,7 +9075,7 @@
         "operationId": "CmsPostCmsPages202609LandingPagesFoldersBatchCreateCreateFolders",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/BatchInputContentFolder"
               },
@@ -9141,7 +9141,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/CmsBatchInputString2"
               },
@@ -9212,7 +9212,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/CmsBatchInputJsonNode"
               },
@@ -9398,7 +9398,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/ContentFolder"
               },
@@ -9635,7 +9635,7 @@
         "operationId": "CmsPostCmsPages202609LandingPagesMultiLanguageAttachToLangGroupAttachToLangGroup",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/CmsAttachToLangPrimaryRequestVNext2"
               },
@@ -9668,7 +9668,7 @@
         "operationId": "CmsPostCmsPages202609LandingPagesMultiLanguageCreateLanguageVariationCreateLangVariation",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/ContentLanguageCloneRequestVNext"
               },
@@ -9712,7 +9712,7 @@
         "operationId": "CmsPostCmsPages202609LandingPagesMultiLanguageDetachFromLangGroupDetachFromLangGroup",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/CmsDetachFromLangGroupRequestVNext2"
               },
@@ -9745,7 +9745,7 @@
         "operationId": "CmsPutCmsPages202609LandingPagesMultiLanguageSetNewLangPrimarySetLangPrimary",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/CmsSetNewLanguagePrimaryRequestVNext2"
               },
@@ -9781,7 +9781,7 @@
         "operationId": "CmsPostCmsPages202609LandingPagesMultiLanguageUpdateLanguagesUpdateLangs",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/CmsUpdateLanguagesRequestVNext2"
               },
@@ -9814,7 +9814,7 @@
         "operationId": "CmsPostCmsPages202609LandingPagesScheduleSchedule",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/ContentScheduleRequestVNext"
               },
@@ -9981,7 +9981,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/Page"
               },
@@ -10085,7 +10085,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/Page"
               },
@@ -10600,7 +10600,7 @@
         "operationId": "CmsPostCmsPages202609SitePagesCreate",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/Page"
               },
@@ -10654,7 +10654,7 @@
         "operationId": "CmsPostCmsPages202609SitePagesAbTestCreateVariationCreateAbTestVariation",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/AbTestCreateRequestVNext"
               },
@@ -10708,7 +10708,7 @@
         "operationId": "CmsPostCmsPages202609SitePagesAbTestEndEndActiveAbTest",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/AbTestEndRequestVNext"
               },
@@ -10744,7 +10744,7 @@
         "operationId": "CmsPostCmsPages202609SitePagesAbTestRerunRerunPreviousAbTest",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/AbTestRerunRequestVNext"
               },
@@ -10780,7 +10780,7 @@
         "operationId": "CmsPostCmsPages202609SitePagesBatchArchiveArchiveBatch",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/CmsBatchInputString2"
               },
@@ -10816,7 +10816,7 @@
         "operationId": "CmsPostCmsPages202609SitePagesBatchCreateCreateBatch",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/BatchInputPage"
               },
@@ -10882,7 +10882,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/CmsBatchInputString2"
               },
@@ -10953,7 +10953,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/CmsBatchInputJsonNode"
               },
@@ -11008,7 +11008,7 @@
         "operationId": "CmsPostCmsPages202609SitePagesCloneClone",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/ContentCloneRequestVNext"
               },
@@ -11052,7 +11052,7 @@
         "operationId": "CmsPostCmsPages202609SitePagesMultiLanguageAttachToLangGroupAttachToLangGroup",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/CmsAttachToLangPrimaryRequestVNext2"
               },
@@ -11085,7 +11085,7 @@
         "operationId": "CmsPostCmsPages202609SitePagesMultiLanguageCreateLanguageVariationCreateLangVariation",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/ContentLanguageCloneRequestVNext"
               },
@@ -11129,7 +11129,7 @@
         "operationId": "CmsPostCmsPages202609SitePagesMultiLanguageDetachFromLangGroupDetachFromLangGroup",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/CmsDetachFromLangGroupRequestVNext2"
               },
@@ -11162,7 +11162,7 @@
         "operationId": "CmsPutCmsPages202609SitePagesMultiLanguageSetNewLangPrimarySetLangPrimary",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/CmsSetNewLanguagePrimaryRequestVNext2"
               },
@@ -11198,7 +11198,7 @@
         "operationId": "CmsPostCmsPages202609SitePagesMultiLanguageUpdateLanguagesUpdateLangs",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/CmsUpdateLanguagesRequestVNext2"
               },
@@ -11231,7 +11231,7 @@
         "operationId": "CmsPostCmsPages202609SitePagesScheduleSchedule",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/ContentScheduleRequestVNext"
               },
@@ -11398,7 +11398,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/Page"
               },
@@ -11502,7 +11502,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/Page"
               },
@@ -11983,9 +11983,9 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/CmsGetCmsBlogs202609AuthorsCursorCmsBlogsV3AuthorsCursor200Response"
+                  "$ref": "#/components/schemas/CmsGetCmsBlogs202609AuthorsCursorCmsBlogsV3AuthorsCursor200MediaResponse"
                 },
                 "example": null
               }
@@ -12128,9 +12128,9 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/CmsGetCmsBlogs202609AuthorsCursorQueryCmsBlogsV3AuthorsCursorQuery200Response"
+                  "$ref": "#/components/schemas/CmsGetCmsBlogs202609AuthorsCursorQueryCmsBlogsV3AuthorsCursorQuery200MediaResponse"
                 },
                 "example": null
               }
@@ -12273,7 +12273,7 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/CollectionResponseWithTotalBlogPostForwardPaging"
                 },
@@ -12302,7 +12302,7 @@
         "operationId": "CmsPostCmsBlogs202609PostsCreate",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/BlogPost"
               },
@@ -12325,7 +12325,7 @@
               }
             },
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/BlogPost"
                 },
@@ -12356,7 +12356,7 @@
         "operationId": "CmsPostCmsBlogs202609PostsBatchArchiveArchive",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/CmsBatchInputString3"
               },
@@ -12392,7 +12392,7 @@
         "operationId": "CmsPostCmsBlogs202609PostsBatchCreateCreate",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/BatchInputBlogPost"
               },
@@ -12405,7 +12405,7 @@
           "201": {
             "description": "successful operation",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/BatchResponseBlogPost"
                 },
@@ -12416,7 +12416,7 @@
           "207": {
             "description": "multiple statuses",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/BatchResponseBlogPostWithErrors"
                 },
@@ -12458,7 +12458,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/CmsBatchInputString3"
               },
@@ -12471,7 +12471,7 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/BatchResponseBlogPost"
                 },
@@ -12482,7 +12482,7 @@
           "207": {
             "description": "multiple statuses",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/BatchResponseBlogPostWithErrors"
                 },
@@ -12524,7 +12524,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/CmsBatchInputJsonNode2"
               },
@@ -12537,7 +12537,7 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/BatchResponseBlogPost"
                 },
@@ -12548,7 +12548,7 @@
           "207": {
             "description": "multiple statuses",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/BatchResponseBlogPostWithErrors"
                 },
@@ -12579,7 +12579,7 @@
         "operationId": "CmsPostCmsBlogs202609PostsCloneClone",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/CmsContentCloneRequestVNext"
               },
@@ -12592,7 +12592,7 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/BlogPost"
                 },
@@ -12737,9 +12737,9 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/CmsGetCmsBlogs202609PostsCursorCmsBlogsV3PostsCursor200Response"
+                  "$ref": "#/components/schemas/CmsGetCmsBlogs202609PostsCursorCmsBlogsV3PostsCursor200MediaResponse"
                 },
                 "example": null
               }
@@ -12882,9 +12882,9 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/CmsGetCmsBlogs202609PostsCursorQueryCmsBlogsV3PostsCursorQuery200Response"
+                  "$ref": "#/components/schemas/CmsGetCmsBlogs202609PostsCursorQueryCmsBlogsV3PostsCursorQuery200MediaResponse"
                 },
                 "example": null
               }
@@ -12913,7 +12913,7 @@
         "operationId": "CmsPostCmsBlogs202609PostsMultiLanguageAttachToLangGroupAttachToLangGroup",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/CmsAttachToLangPrimaryRequestVNext3"
               },
@@ -12946,7 +12946,7 @@
         "operationId": "CmsPostCmsBlogs202609PostsMultiLanguageCreateLanguageVariationCreateLangVariation",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/BlogPostLanguageCloneRequestVNext"
               },
@@ -12959,7 +12959,7 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/BlogPost"
                 },
@@ -12990,7 +12990,7 @@
         "operationId": "CmsPostCmsBlogs202609PostsMultiLanguageDetachFromLangGroupDetachFromLangGroup",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/CmsDetachFromLangGroupRequestVNext3"
               },
@@ -13023,7 +13023,7 @@
         "operationId": "CmsPutCmsBlogs202609PostsMultiLanguageSetNewLangPrimarySetLangPrimary",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/CmsSetNewLanguagePrimaryRequestVNext3"
               },
@@ -13059,7 +13059,7 @@
         "operationId": "CmsPostCmsBlogs202609PostsMultiLanguageUpdateLanguagesUpdateLangs",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/CmsUpdateLanguagesRequestVNext3"
               },
@@ -13092,7 +13092,7 @@
         "operationId": "CmsPostCmsBlogs202609PostsScheduleSchedule",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/CmsContentScheduleRequestVNext"
               },
@@ -13160,7 +13160,7 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/BlogPost"
                 },
@@ -13254,7 +13254,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/BlogPost"
               },
@@ -13267,7 +13267,7 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/BlogPost"
                 },
@@ -13312,7 +13312,7 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/BlogPost"
                 },
@@ -13353,7 +13353,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/BlogPost"
               },
@@ -13366,7 +13366,7 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/BlogPost"
                 },
@@ -13513,7 +13513,7 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/CollectionResponseWithTotalBlogPostVersion"
                 },
@@ -13568,7 +13568,7 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/BlogPostVersion"
                 },
@@ -13623,7 +13623,7 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/BlogPost"
                 },
@@ -13679,7 +13679,7 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/BlogPost"
                 },
@@ -13824,9 +13824,9 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/CmsGetCmsBlogs202609TagsCursorCmsBlogsV3TagsCursor200Response"
+                  "$ref": "#/components/schemas/CmsGetCmsBlogs202609TagsCursorCmsBlogsV3TagsCursor200MediaResponse"
                 },
                 "example": null
               }
@@ -13969,9 +13969,9 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/CmsGetCmsBlogs202609TagsCursorQueryCmsBlogsV3TagsCursorQuery200Response"
+                  "$ref": "#/components/schemas/CmsGetCmsBlogs202609TagsCursorQueryCmsBlogsV3TagsCursorQuery200MediaResponse"
                 },
                 "example": null
               }
@@ -14830,7 +14830,7 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/CollectionResponseWithTotalTagForwardPaging"
                 },
@@ -14859,7 +14859,7 @@
         "operationId": "CmsPostCmsBlogs202609TagsCreate",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/Tag"
               },
@@ -14882,7 +14882,7 @@
               }
             },
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/Tag"
                 },
@@ -14913,7 +14913,7 @@
         "operationId": "CmsPostCmsBlogs202609TagsBatchArchiveArchiveBatch",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/CmsBatchInputString4"
               },
@@ -14949,7 +14949,7 @@
         "operationId": "CmsPostCmsBlogs202609TagsBatchCreateCreateBatch",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/BatchInputTag"
               },
@@ -14962,7 +14962,7 @@
           "201": {
             "description": "successful operation",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/BatchResponseTag"
                 },
@@ -14973,7 +14973,7 @@
           "207": {
             "description": "multiple statuses",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/BatchResponseTagWithErrors"
                 },
@@ -15015,7 +15015,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/CmsBatchInputString4"
               },
@@ -15028,7 +15028,7 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/BatchResponseTag"
                 },
@@ -15039,7 +15039,7 @@
           "207": {
             "description": "multiple statuses",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/BatchResponseTagWithErrors"
                 },
@@ -15081,7 +15081,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/CmsBatchInputJsonNode3"
               },
@@ -15094,7 +15094,7 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/BatchResponseTag"
                 },
@@ -15105,7 +15105,7 @@
           "207": {
             "description": "multiple statuses",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/BatchResponseTagWithErrors"
                 },
@@ -15136,7 +15136,7 @@
         "operationId": "CmsPostCmsBlogs202609TagsMultiLanguageAttachToLangGroupAttachToLangGroup",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/CmsAttachToLangPrimaryRequestVNext4"
               },
@@ -15169,7 +15169,7 @@
         "operationId": "CmsPostCmsBlogs202609TagsMultiLanguageCreateLanguageVariationCreateLangVariation",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/TagCloneRequestVNext"
               },
@@ -15182,7 +15182,7 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/Tag"
                 },
@@ -15213,7 +15213,7 @@
         "operationId": "CmsPostCmsBlogs202609TagsMultiLanguageDetachFromLangGroupDetachFromLangGroup",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/CmsDetachFromLangGroupRequestVNext4"
               },
@@ -15246,7 +15246,7 @@
         "operationId": "CmsPutCmsBlogs202609TagsMultiLanguageSetNewLangPrimarySetLangPrimary",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/CmsSetNewLanguagePrimaryRequestVNext4"
               },
@@ -15282,7 +15282,7 @@
         "operationId": "CmsPostCmsBlogs202609TagsMultiLanguageUpdateLanguagesUpdateLangs",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/CmsUpdateLanguagesRequestVNext4"
               },
@@ -15347,7 +15347,7 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/Tag"
                 },
@@ -15441,7 +15441,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/Tag"
               },
@@ -15454,7 +15454,7 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/Tag"
                 },
@@ -15487,9 +15487,9 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/UrlMappingsGetUrlMappings202609UrlMappingsUrlMappingsV3UrlMappings200Response"
+                  "$ref": "#/components/schemas/UrlMappingsGetUrlMappings202609UrlMappingsUrlMappingsV3UrlMappings200MediaResponseSchema"
                 },
                 "example": null
               }
@@ -15516,7 +15516,7 @@
         "operationId": "UrlMappingsPostUrlMappings202609UrlMappingsUrlMappingsV3UrlMappings",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/UrlMapping"
               },
@@ -15565,7 +15565,7 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/UrlMapping"
                 },
@@ -15818,9 +15818,9 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/CmsGetCmsUrlRedirects202609UrlMappingsCmsUrlRedirects202603UrlMappings200Response"
+                  "$ref": "#/components/schemas/CmsGetCmsUrlRedirects202609UrlMappingsCmsUrlRedirects202603UrlMappings200MediaResponseSchema"
                 },
                 "example": null
               }
@@ -15847,7 +15847,7 @@
         "operationId": "CmsPostCmsUrlRedirects202609UrlMappingsCmsUrlRedirects202603UrlMappings",
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/CmsUrlMapping"
               },
@@ -15896,7 +15896,7 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/CmsUrlMapping"
                 },
@@ -480892,31 +480892,31 @@
       "AutomationPutAutomationActions202609AppIdDefinitionIdFunctionsFunctionTypeFunctionIdCreateOrReplacePlainRequestRequestBody": {
         "type": "string"
       },
-      "CmsGetCmsBlogs202609AuthorsCursorCmsBlogsV3AuthorsCursor200Response": {
+      "CmsGetCmsBlogs202609AuthorsCursorCmsBlogsV3AuthorsCursor200MediaResponse": {
         "type": "object"
       },
-      "CmsGetCmsBlogs202609AuthorsCursorQueryCmsBlogsV3AuthorsCursorQuery200Response": {
+      "CmsGetCmsBlogs202609AuthorsCursorQueryCmsBlogsV3AuthorsCursorQuery200MediaResponse": {
         "type": "object"
       },
-      "CmsGetCmsBlogs202609PostsCursorCmsBlogsV3PostsCursor200Response": {
+      "CmsGetCmsBlogs202609PostsCursorCmsBlogsV3PostsCursor200MediaResponse": {
         "type": "object"
       },
-      "CmsGetCmsBlogs202609PostsCursorQueryCmsBlogsV3PostsCursorQuery200Response": {
+      "CmsGetCmsBlogs202609PostsCursorQueryCmsBlogsV3PostsCursorQuery200MediaResponse": {
         "type": "object"
       },
-      "CmsGetCmsBlogs202609TagsCursorCmsBlogsV3TagsCursor200Response": {
+      "CmsGetCmsBlogs202609TagsCursorCmsBlogsV3TagsCursor200MediaResponse": {
         "type": "object"
       },
-      "CmsGetCmsBlogs202609TagsCursorQueryCmsBlogsV3TagsCursorQuery200Response": {
+      "CmsGetCmsBlogs202609TagsCursorQueryCmsBlogsV3TagsCursorQuery200MediaResponse": {
         "type": "object"
       },
-      "UrlMappingsGetUrlMappings202609UrlMappingsUrlMappingsV3UrlMappings200Response": {
+      "UrlMappingsGetUrlMappings202609UrlMappingsUrlMappingsV3UrlMappings200MediaResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/UrlMapping"
         }
       },
-      "CmsGetCmsUrlRedirects202609UrlMappingsCmsUrlRedirects202603UrlMappings200Response": {
+      "CmsGetCmsUrlRedirects202609UrlMappingsCmsUrlRedirects202603UrlMappings200MediaResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/CmsUrlMapping"
