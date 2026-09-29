@@ -17,10 +17,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Map of object IDs to associated languages of object in the multi-language group.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CmsUpdateLanguagesRequestVNextLanguagesProperty? Languages { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CmsUpdateLanguagesRequestVNextLanguagesProperty5? Languages { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CmsUpdateLanguagesRequestVNextLanguagesProperty Languages { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CmsUpdateLanguagesRequestVNextLanguagesProperty5 Languages { get; set; }
 #endif
         /// <summary>ID of the primary object in the multi-language group.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,7 +55,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "languages", n => { Languages = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CmsUpdateLanguagesRequestVNextLanguagesProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.CmsUpdateLanguagesRequestVNextLanguagesProperty.CreateFromDiscriminatorValue); } },
+                { "languages", n => { Languages = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CmsUpdateLanguagesRequestVNextLanguagesProperty5>(global::Soenneker.HubSpot.OpenApiClient.Models.CmsUpdateLanguagesRequestVNextLanguagesProperty5.CreateFromDiscriminatorValue); } },
                 { "primaryId", n => { PrimaryId = n.GetStringValue(); } },
             };
         }
@@ -66,7 +66,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CmsUpdateLanguagesRequestVNextLanguagesProperty>("languages", Languages);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CmsUpdateLanguagesRequestVNextLanguagesProperty5>("languages", Languages);
             writer.WriteStringValue("primaryId", PrimaryId);
             writer.WriteAdditionalData(AdditionalData);
         }

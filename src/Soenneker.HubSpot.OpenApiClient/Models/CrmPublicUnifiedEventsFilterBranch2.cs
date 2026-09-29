@@ -17,10 +17,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An optional refinement criterion that allows for additional filtering based on coalescing logic. This can be one of several predefined refinement schemas.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranch2CoalescingRefineBy? CoalescingRefineBy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchCoalescingRefineBy2? CoalescingRefineBy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranch2CoalescingRefineBy CoalescingRefineBy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchCoalescingRefineBy2 CoalescingRefineBy { get; set; }
 #endif
         /// <summary>A string representing the unique identifier for the event type that this filter branch is targeting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -33,10 +33,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An array of nested filter branches, each of which can be a complex filter structure involving various logical operators.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranch2FilterBranchesItem>? FilterBranches { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchFilterBranchesItem2>? FilterBranches { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranch2FilterBranchesItem> FilterBranches { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchFilterBranchesItem2> FilterBranches { get; set; }
 #endif
         /// <summary>A string that specifies the operator used to combine multiple filter branches within this component.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -46,25 +46,25 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string FilterBranchOperator { get; set; }
 #endif
-        /// <summary>A string indicating the type of filter branch. Default value is &apos;UNIFIED_EVENTS&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.UnifiedEventsFilterBranchType? FilterBranchType { get; set; }
+        /// <summary>A string indicating the type of filter branch, which is &apos;UNIFIED_EVENTS&apos; for this component.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmUnifiedEventsFilterBranchType2? FilterBranchType { get; set; }
         /// <summary>An array of filters that apply specific conditions to the unified events. Each filter can be one of several types, such as property filters or event analytics filters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranch2FiltersItem>? Filters { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchFiltersItem2>? Filters { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranch2FiltersItem> Filters { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchFiltersItem2> Filters { get; set; }
 #endif
         /// <summary>A string that specifies the logical operator for the filter branch, with valid values including &apos;HAS_COMPLETED&apos; and &apos;HAS_NOT_COMPLETED&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranch2Operator? Operator { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchOperator2? Operator { get; set; }
         /// <summary>An optional refinement criterion that allows for additional filtering based on pruning logic. This can be one of several predefined refinement schemas.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranch2PruningRefineBy? PruningRefineBy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchPruningRefineBy2? PruningRefineBy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranch2PruningRefineBy PruningRefineBy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchPruningRefineBy2 PruningRefineBy { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranch2"/> and sets the default values.
@@ -91,14 +91,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "coalescingRefineBy", n => { CoalescingRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranch2CoalescingRefineBy>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranch2CoalescingRefineBy.CreateFromDiscriminatorValue); } },
+                { "coalescingRefineBy", n => { CoalescingRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchCoalescingRefineBy2>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchCoalescingRefineBy2.CreateFromDiscriminatorValue); } },
                 { "eventTypeId", n => { EventTypeId = n.GetStringValue(); } },
                 { "filterBranchOperator", n => { FilterBranchOperator = n.GetStringValue(); } },
-                { "filterBranchType", n => { FilterBranchType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.UnifiedEventsFilterBranchType>(); } },
-                { "filterBranches", n => { FilterBranches = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranch2FilterBranchesItem>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranch2FilterBranchesItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "filters", n => { Filters = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranch2FiltersItem>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranch2FiltersItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranch2Operator>(); } },
-                { "pruningRefineBy", n => { PruningRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranch2PruningRefineBy>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranch2PruningRefineBy.CreateFromDiscriminatorValue); } },
+                { "filterBranchType", n => { FilterBranchType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmUnifiedEventsFilterBranchType2>(); } },
+                { "filterBranches", n => { FilterBranches = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchFilterBranchesItem2>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchFilterBranchesItem2.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "filters", n => { Filters = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchFiltersItem2>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchFiltersItem2.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchOperator2>(); } },
+                { "pruningRefineBy", n => { PruningRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchPruningRefineBy2>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchPruningRefineBy2.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -108,14 +108,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranch2CoalescingRefineBy>("coalescingRefineBy", CoalescingRefineBy);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchCoalescingRefineBy2>("coalescingRefineBy", CoalescingRefineBy);
             writer.WriteStringValue("eventTypeId", EventTypeId);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranch2FilterBranchesItem>("filterBranches", FilterBranches);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchFilterBranchesItem2>("filterBranches", FilterBranches);
             writer.WriteStringValue("filterBranchOperator", FilterBranchOperator);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.UnifiedEventsFilterBranchType>("filterBranchType", FilterBranchType);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranch2FiltersItem>("filters", Filters);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranch2Operator>("operator", Operator);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranch2PruningRefineBy>("pruningRefineBy", PruningRefineBy);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmUnifiedEventsFilterBranchType2>("filterBranchType", FilterBranchType);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchFiltersItem2>("filters", Filters);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchOperator2>("operator", Operator);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchPruningRefineBy2>("pruningRefineBy", PruningRefineBy);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

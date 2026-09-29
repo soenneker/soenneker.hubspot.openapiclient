@@ -25,10 +25,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An array containing the HubDB table rows returned in the current response. Each item is a HubDbTableRowV3Wrapper object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.StreamingCollectionResponseWithTotalHubDbTableRowV3ResultsItemProperty>? Results { get; set; }
+        public List<string>? Results { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.StreamingCollectionResponseWithTotalHubDbTableRowV3ResultsItemProperty> Results { get; set; }
+        public List<string> Results { get; set; }
 #endif
         /// <summary>The total number of rows available in the collection.</summary>
         public int? Total { get; set; }
@@ -60,7 +60,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "paging", n => { Paging = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CmsPaging4>(global::Soenneker.HubSpot.OpenApiClient.Models.CmsPaging4.CreateFromDiscriminatorValue); } },
-                { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.StreamingCollectionResponseWithTotalHubDbTableRowV3ResultsItemProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.StreamingCollectionResponseWithTotalHubDbTableRowV3ResultsItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "results", n => { Results = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "total", n => { Total = n.GetIntValue(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.StreamingType>(); } },
             };
@@ -73,7 +73,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CmsPaging4>("paging", Paging);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.StreamingCollectionResponseWithTotalHubDbTableRowV3ResultsItemProperty>("results", Results);
+            writer.WriteCollectionOfPrimitiveValues<string>("results", Results);
             writer.WriteIntValue("total", Total);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.StreamingType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);

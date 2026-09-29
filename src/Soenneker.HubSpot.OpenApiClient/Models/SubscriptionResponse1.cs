@@ -15,10 +15,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object containing action overrides, where each key is an action and the value is an ActionOverrideRequest object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponse1ActionOverridesProperty? ActionOverrides { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponse1ActionOverridesProperty2? ActionOverrides { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponse1ActionOverridesProperty ActionOverrides { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponse1ActionOverridesProperty2 ActionOverrides { get; set; }
 #endif
         /// <summary>A list of actions that trigger the subscription. Possible values include &apos;CREATE&apos;, &apos;UPDATE&apos;, &apos;DELETE&apos;, &apos;MERGE&apos;, &apos;RESTORE&apos;, &apos;ASSOCIATION_ADDED&apos;, &apos;ASSOCIATION_REMOVED&apos;, &apos;SNAPSHOT&apos;, &apos;APP_INSTALL&apos;, &apos;APP_UNINSTALL&apos;, &apos;ADDED_TO_LIST&apos;, &apos;REMOVED_FROM_LIST&apos;, and &apos;GDPR_DELETE&apos;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -111,7 +111,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "actionOverrides", n => { ActionOverrides = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponse1ActionOverridesProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponse1ActionOverridesProperty.CreateFromDiscriminatorValue); } },
+                { "actionOverrides", n => { ActionOverrides = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponse1ActionOverridesProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponse1ActionOverridesProperty2.CreateFromDiscriminatorValue); } },
                 { "actions", n => { Actions = n.GetCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponse1ActionsItem>()?.AsList(); } },
                 { "appId", n => { AppId = n.GetLongValue(); } },
                 { "associatedObjectTypeIds", n => { AssociatedObjectTypeIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -135,7 +135,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponse1ActionOverridesProperty>("actionOverrides", ActionOverrides);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponse1ActionOverridesProperty2>("actionOverrides", ActionOverrides);
             writer.WriteCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponse1ActionsItem>("actions", Actions);
             writer.WriteLongValue("appId", AppId);
             writer.WriteCollectionOfPrimitiveValues<string>("associatedObjectTypeIds", AssociatedObjectTypeIds);

@@ -167,7 +167,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Properties.TwoZeroTwoSixZeroNine.I
             public bool? Archived { get; set; }
             /// <summary>The level of data sensitivity to filter properties by. Valid values are &apos;non_sensitive&apos;, &apos;sensitive&apos;, and &apos;highly_sensitive&apos;. Defaults to &apos;non_sensitive&apos;.</summary>
             [QueryParameter("dataSensitivity")]
-            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmGetCrmProperties202609ObjectTypePropertyNameCrmProperties202509ObjectTypePropertyNameDataSensitivityParameter? DataSensitivity { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.GetCrmProperties202609ObjectTypePropertyNameCrmProperties202509ObjectTypePropertyNameDataSensitivityParameter? DataSensitivity { get; set; }
             /// <summary>The locale to use for property labels and descriptions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

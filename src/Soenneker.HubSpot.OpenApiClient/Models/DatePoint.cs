@@ -26,8 +26,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public int? Month { get; set; }
         /// <summary>An integer representing the second component of the time.</summary>
         public int? Second { get; set; }
-        /// <summary>A string indicating the type of time reference, typically set to &apos;DATE&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.DateTimeType? TimeType { get; set; }
+        /// <summary>A string indicating the type of time representation, with a default value of &apos;DATE&apos;.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EventsDateTimeType? TimeType { get; set; }
         /// <summary>A string specifying the source of the timezone information. Valid values include &apos;CUSTOM&apos;, &apos;USER&apos;, and &apos;PORTAL&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.DatePointTimezoneSource? TimezoneSource { get; set; }
         /// <summary>An integer representing the year component of the date.</summary>
@@ -71,7 +71,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "minute", n => { Minute = n.GetIntValue(); } },
                 { "month", n => { Month = n.GetIntValue(); } },
                 { "second", n => { Second = n.GetIntValue(); } },
-                { "timeType", n => { TimeType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DateTimeType>(); } },
+                { "timeType", n => { TimeType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsDateTimeType>(); } },
                 { "timezoneSource", n => { TimezoneSource = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DatePointTimezoneSource>(); } },
                 { "year", n => { Year = n.GetIntValue(); } },
                 { "zoneId", n => { ZoneId = n.GetStringValue(); } },
@@ -90,7 +90,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteIntValue("minute", Minute);
             writer.WriteIntValue("month", Month);
             writer.WriteIntValue("second", Second);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DateTimeType>("timeType", TimeType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsDateTimeType>("timeType", TimeType);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DatePointTimezoneSource>("timezoneSource", TimezoneSource);
             writer.WriteIntValue("year", Year);
             writer.WriteStringValue("zoneId", ZoneId);

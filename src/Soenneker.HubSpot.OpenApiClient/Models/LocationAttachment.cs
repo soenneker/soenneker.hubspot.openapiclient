@@ -34,8 +34,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>A string representing the type of the component, which is &apos;LOCATION&apos; by default.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LocationType? Type { get; set; }
+        /// <summary>A string indicating the type of attachment, which is always &apos;LOCATION&apos;.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsLocationType? Type { get; set; }
         /// <summary>A string representing a URL associated with the location.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -73,7 +73,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "latitude", n => { Latitude = n.GetDoubleValue(); } },
                 { "longitude", n => { Longitude = n.GetDoubleValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.LocationType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsLocationType>(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
         }
@@ -88,7 +88,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteDoubleValue("latitude", Latitude);
             writer.WriteDoubleValue("longitude", Longitude);
             writer.WriteStringValue("name", Name);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.LocationType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsLocationType>("type", Type);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);
         }

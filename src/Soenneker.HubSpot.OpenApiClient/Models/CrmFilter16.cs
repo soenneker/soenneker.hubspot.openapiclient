@@ -24,7 +24,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string HighValue { get; set; }
 #endif
         /// <summary>The operator used to compare the property value with the specified value(s). It is a string and can be one of several predefined operators such as &apos;EQ&apos;, &apos;NEQ&apos;, &apos;LT&apos;, &apos;LTE&apos;, &apos;GT&apos;, &apos;GTE&apos;, &apos;BETWEEN&apos;, &apos;IN&apos;, &apos;NOT_IN&apos;, &apos;HAS_PROPERTY&apos;, &apos;NOT_HAS_PROPERTY&apos;, &apos;CONTAINS_TOKEN&apos;, or &apos;NOT_CONTAINS_TOKEN&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilter16Operator? Operator { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterOperator16? Operator { get; set; }
         /// <summary>The name of the property to which the filter is applied. It is a string that identifies the specific property of the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -75,7 +75,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "highValue", n => { HighValue = n.GetStringValue(); } },
-                { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilter16Operator>(); } },
+                { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterOperator16>(); } },
                 { "propertyName", n => { PropertyName = n.GetStringValue(); } },
                 { "value", n => { Value = n.GetStringValue(); } },
                 { "values", n => { Values = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -89,7 +89,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("highValue", HighValue);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilter16Operator>("operator", Operator);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterOperator16>("operator", Operator);
             writer.WriteStringValue("propertyName", PropertyName);
             writer.WriteStringValue("value", Value);
             writer.WriteCollectionOfPrimitiveValues<string>("values", Values);

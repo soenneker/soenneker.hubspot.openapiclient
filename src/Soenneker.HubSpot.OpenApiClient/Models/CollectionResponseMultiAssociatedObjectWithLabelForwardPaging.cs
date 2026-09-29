@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging Paging { get; set; }
 #endif
-        /// <summary>An array of objects, each representing an association with multiple labels. Each object includes details about the associated object and the types of associations.</summary>
+        /// <summary>An array of objects, each representing an association with multiple labels. Each object contains details about the association, including the associated object ID and the types of associations.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.MultiAssociatedObjectWithLabel>? Results { get; set; }

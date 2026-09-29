@@ -25,7 +25,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>A boolean indicating whether to include objects that have no value set.</summary>
         public bool? IncludeObjectsWithNoValueSet { get; set; }
         /// <summary>A string indicating the type of operation, which is &apos;TIME_POINT&apos; by default.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.TimePointOperationType? OperationType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmTimePointOperationType? OperationType { get; set; }
         /// <summary>A string representing the operator used in the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -85,7 +85,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "endpointBehavior", n => { EndpointBehavior = n.GetStringValue(); } },
                 { "includeObjectsWithNoValueSet", n => { IncludeObjectsWithNoValueSet = n.GetBoolValue(); } },
-                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TimePointOperationType>(); } },
+                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmTimePointOperationType>(); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
                 { "propertyParser", n => { PropertyParser = n.GetStringValue(); } },
                 { "timePoint", n => { TimePoint = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimePointOperationTimePoint>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimePointOperationTimePoint.CreateFromDiscriminatorValue); } },
@@ -101,7 +101,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("endpointBehavior", EndpointBehavior);
             writer.WriteBoolValue("includeObjectsWithNoValueSet", IncludeObjectsWithNoValueSet);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TimePointOperationType>("operationType", OperationType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmTimePointOperationType>("operationType", OperationType);
             writer.WriteStringValue("operator", Operator);
             writer.WriteStringValue("propertyParser", PropertyParser);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimePointOperationTimePoint>("timePoint", TimePoint);

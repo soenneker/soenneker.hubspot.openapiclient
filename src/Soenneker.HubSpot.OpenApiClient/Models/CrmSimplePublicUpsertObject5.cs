@@ -42,18 +42,18 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>A map of property names to their current values, represented as strings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicUpsertObject5PropertiesProperty? Properties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicUpsertObject5Properties? Properties { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicUpsertObject5PropertiesProperty Properties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicUpsertObject5Properties Properties { get; set; }
 #endif
         /// <summary>A map of property names to their values, including historical data. Each value is an array of objects containing the value and its timestamp.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicUpsertObject5PropertiesWithHistoryProperty? PropertiesWithHistory { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicUpsertObject5PropertiesWithHistory? PropertiesWithHistory { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicUpsertObject5PropertiesWithHistoryProperty PropertiesWithHistory { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicUpsertObject5PropertiesWithHistory PropertiesWithHistory { get; set; }
 #endif
         /// <summary>The date and time when this object was last updated, in ISO 8601 format.</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
@@ -104,8 +104,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "new", n => { New = n.GetBoolValue(); } },
                 { "objectWriteTraceId", n => { ObjectWriteTraceId = n.GetStringValue(); } },
-                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicUpsertObject5PropertiesProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicUpsertObject5PropertiesProperty.CreateFromDiscriminatorValue); } },
-                { "propertiesWithHistory", n => { PropertiesWithHistory = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicUpsertObject5PropertiesWithHistoryProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicUpsertObject5PropertiesWithHistoryProperty.CreateFromDiscriminatorValue); } },
+                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicUpsertObject5Properties>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicUpsertObject5Properties.CreateFromDiscriminatorValue); } },
+                { "propertiesWithHistory", n => { PropertiesWithHistory = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicUpsertObject5PropertiesWithHistory>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicUpsertObject5PropertiesWithHistory.CreateFromDiscriminatorValue); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
                 { "warnings", n => { Warnings = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectWarning5>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectWarning5.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -124,8 +124,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("new", New);
             writer.WriteStringValue("objectWriteTraceId", ObjectWriteTraceId);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicUpsertObject5PropertiesProperty>("properties", Properties);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicUpsertObject5PropertiesWithHistoryProperty>("propertiesWithHistory", PropertiesWithHistory);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicUpsertObject5Properties>("properties", Properties);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicUpsertObject5PropertiesWithHistory>("propertiesWithHistory", PropertiesWithHistory);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             writer.WriteStringValue("url", Url);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectWarning5>("warnings", Warnings);

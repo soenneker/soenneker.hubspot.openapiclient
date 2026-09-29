@@ -17,15 +17,15 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An optional refinement criterion that can be one of several predefined schemas, used to further refine the filter results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPageViewAnalyticsFilter2CoalescingRefineBy? CoalescingRefineBy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPageViewAnalyticsFilterCoalescingRefineBy2? CoalescingRefineBy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPageViewAnalyticsFilter2CoalescingRefineBy CoalescingRefineBy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPageViewAnalyticsFilterCoalescingRefineBy2 CoalescingRefineBy { get; set; }
 #endif
         /// <summary>A boolean indicating whether tracking is enabled for this filter.</summary>
         public bool? EnableTracking { get; set; }
-        /// <summary>A string representing the type of filter being applied. This property determines the category of the filter used in the analytics.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PageViewFilterType? FilterType { get; set; }
+        /// <summary>A string representing the type of filter. Default value is &apos;PAGE_VIEW&apos;.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPageViewFilterType2? FilterType { get; set; }
         /// <summary>A string representing the operator used in the filter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -45,10 +45,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An optional refinement criterion that can be one of several predefined schemas, used to prune the filter results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPageViewAnalyticsFilter2PruningRefineBy? PruningRefineBy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPageViewAnalyticsFilterPruningRefineBy2? PruningRefineBy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPageViewAnalyticsFilter2PruningRefineBy PruningRefineBy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPageViewAnalyticsFilterPruningRefineBy2 PruningRefineBy { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPageViewAnalyticsFilter2"/> and sets the default values.
@@ -75,12 +75,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "coalescingRefineBy", n => { CoalescingRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPageViewAnalyticsFilter2CoalescingRefineBy>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPageViewAnalyticsFilter2CoalescingRefineBy.CreateFromDiscriminatorValue); } },
+                { "coalescingRefineBy", n => { CoalescingRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPageViewAnalyticsFilterCoalescingRefineBy2>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPageViewAnalyticsFilterCoalescingRefineBy2.CreateFromDiscriminatorValue); } },
                 { "enableTracking", n => { EnableTracking = n.GetBoolValue(); } },
-                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PageViewFilterType>(); } },
+                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPageViewFilterType2>(); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
                 { "pageUrl", n => { PageUrl = n.GetStringValue(); } },
-                { "pruningRefineBy", n => { PruningRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPageViewAnalyticsFilter2PruningRefineBy>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPageViewAnalyticsFilter2PruningRefineBy.CreateFromDiscriminatorValue); } },
+                { "pruningRefineBy", n => { PruningRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPageViewAnalyticsFilterPruningRefineBy2>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPageViewAnalyticsFilterPruningRefineBy2.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -90,12 +90,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPageViewAnalyticsFilter2CoalescingRefineBy>("coalescingRefineBy", CoalescingRefineBy);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPageViewAnalyticsFilterCoalescingRefineBy2>("coalescingRefineBy", CoalescingRefineBy);
             writer.WriteBoolValue("enableTracking", EnableTracking);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PageViewFilterType>("filterType", FilterType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPageViewFilterType2>("filterType", FilterType);
             writer.WriteStringValue("operator", Operator);
             writer.WriteStringValue("pageUrl", PageUrl);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPageViewAnalyticsFilter2PruningRefineBy>("pruningRefineBy", PruningRefineBy);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPageViewAnalyticsFilterPruningRefineBy2>("pruningRefineBy", PruningRefineBy);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

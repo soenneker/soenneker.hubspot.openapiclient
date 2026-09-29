@@ -17,10 +17,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object containing custom properties for the list. These properties allow for additional customization of the list.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequestCustomPropertiesProperty? CustomProperties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequestCustomPropertiesProperty2? CustomProperties { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequestCustomPropertiesProperty CustomProperties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequestCustomPropertiesProperty2 CustomProperties { get; set; }
 #endif
         /// <summary>An object that defines the filter criteria for the list. It determines which records are included in the list based on specified conditions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -97,7 +97,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "customProperties", n => { CustomProperties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequestCustomPropertiesProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequestCustomPropertiesProperty.CreateFromDiscriminatorValue); } },
+                { "customProperties", n => { CustomProperties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequestCustomPropertiesProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequestCustomPropertiesProperty2.CreateFromDiscriminatorValue); } },
                 { "filterBranch", n => { FilterBranch = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequestFilterBranch>(global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequestFilterBranch.CreateFromDiscriminatorValue); } },
                 { "listFolderId", n => { ListFolderId = n.GetIntValue(); } },
                 { "listPermissions", n => { ListPermissions = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicListPermissions>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicListPermissions.CreateFromDiscriminatorValue); } },
@@ -114,7 +114,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequestCustomPropertiesProperty>("customProperties", CustomProperties);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequestCustomPropertiesProperty2>("customProperties", CustomProperties);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequestFilterBranch>("filterBranch", FilterBranch);
             writer.WriteIntValue("listFolderId", ListFolderId);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicListPermissions>("listPermissions", ListPermissions);

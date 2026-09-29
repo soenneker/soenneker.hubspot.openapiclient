@@ -17,10 +17,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object representing the availability settings for the meeting link, with additional properties for closed ranges.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettingsAvailabilityProperty? Availability { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettingsAvailabilityProperty2? Availability { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettingsAvailabilityProperty Availability { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettingsAvailabilityProperty2 Availability { get; set; }
 #endif
         /// <summary>An integer representing the custom availability end date as a Unix timestamp in milliseconds.</summary>
         public long? CustomAvailabilityEndDate { get; set; }
@@ -141,7 +141,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "availability", n => { Availability = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettingsAvailabilityProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettingsAvailabilityProperty.CreateFromDiscriminatorValue); } },
+                { "availability", n => { Availability = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettingsAvailabilityProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettingsAvailabilityProperty2.CreateFromDiscriminatorValue); } },
                 { "customAvailabilityEndDate", n => { CustomAvailabilityEndDate = n.GetLongValue(); } },
                 { "customAvailabilityStartDate", n => { CustomAvailabilityStartDate = n.GetLongValue(); } },
                 { "displayInfo", n => { DisplayInfo = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkDisplayInfo>(global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkDisplayInfo.CreateFromDiscriminatorValue); } },
@@ -168,7 +168,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettingsAvailabilityProperty>("availability", Availability);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettingsAvailabilityProperty2>("availability", Availability);
             writer.WriteLongValue("customAvailabilityEndDate", CustomAvailabilityEndDate);
             writer.WriteLongValue("customAvailabilityStartDate", CustomAvailabilityStartDate);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkDisplayInfo>("displayInfo", DisplayInfo);

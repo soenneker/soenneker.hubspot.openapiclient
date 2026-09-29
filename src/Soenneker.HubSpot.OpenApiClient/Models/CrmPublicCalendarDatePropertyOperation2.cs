@@ -15,11 +15,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A string indicating the start month of the fiscal year. Valid values include &apos;JANUARY&apos;, &apos;FEBRUARY&apos;, &apos;MARCH&apos;, &apos;APRIL&apos;, &apos;MAY&apos;, &apos;JUNE&apos;, &apos;JULY&apos;, &apos;AUGUST&apos;, &apos;SEPTEMBER&apos;, &apos;OCTOBER&apos;, &apos;NOVEMBER&apos;, and &apos;DECEMBER&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCalendarDatePropertyOperation2FiscalYearStart? FiscalYearStart { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCalendarDatePropertyOperationFiscalYearStart2? FiscalYearStart { get; set; }
         /// <summary>A boolean indicating whether to include objects that have no value set for the property.</summary>
         public bool? IncludeObjectsWithNoValueSet { get; set; }
-        /// <summary>A string indicating the type of operation. The default value is &apos;CALENDAR_DATE&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CalendarDateOperationType? OperationType { get; set; }
+        /// <summary>A string indicating the type of operation, which is always &apos;CALENDAR_DATE&apos;.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmCalendarDateOperationType2? OperationType { get; set; }
         /// <summary>A string representing the operator used in the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -65,9 +65,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "fiscalYearStart", n => { FiscalYearStart = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCalendarDatePropertyOperation2FiscalYearStart>(); } },
+                { "fiscalYearStart", n => { FiscalYearStart = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCalendarDatePropertyOperationFiscalYearStart2>(); } },
                 { "includeObjectsWithNoValueSet", n => { IncludeObjectsWithNoValueSet = n.GetBoolValue(); } },
-                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CalendarDateOperationType>(); } },
+                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmCalendarDateOperationType2>(); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
                 { "timeUnit", n => { TimeUnit = n.GetStringValue(); } },
                 { "timeUnitCount", n => { TimeUnitCount = n.GetIntValue(); } },
@@ -81,9 +81,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCalendarDatePropertyOperation2FiscalYearStart>("fiscalYearStart", FiscalYearStart);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCalendarDatePropertyOperationFiscalYearStart2>("fiscalYearStart", FiscalYearStart);
             writer.WriteBoolValue("includeObjectsWithNoValueSet", IncludeObjectsWithNoValueSet);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CalendarDateOperationType>("operationType", OperationType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmCalendarDateOperationType2>("operationType", OperationType);
             writer.WriteStringValue("operator", Operator);
             writer.WriteStringValue("timeUnit", TimeUnit);
             writer.WriteIntValue("timeUnitCount", TimeUnitCount);

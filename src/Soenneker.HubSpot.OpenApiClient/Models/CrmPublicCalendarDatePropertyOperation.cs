@@ -18,8 +18,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCalendarDatePropertyOperationFiscalYearStart? FiscalYearStart { get; set; }
         /// <summary>A boolean indicating whether objects without a set value should be included in the operation.</summary>
         public bool? IncludeObjectsWithNoValueSet { get; set; }
-        /// <summary>A string indicating the type of operation. The default value is &apos;CALENDAR_DATE&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CalendarDateOperationType? OperationType { get; set; }
+        /// <summary>A string that specifies the type of operation. The default and only valid value is &apos;CALENDAR_DATE&apos;.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmCalendarDateOperationType? OperationType { get; set; }
         /// <summary>A string representing the operator used in the operation. The specific operators available are not detailed in the specification.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -67,7 +67,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "fiscalYearStart", n => { FiscalYearStart = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCalendarDatePropertyOperationFiscalYearStart>(); } },
                 { "includeObjectsWithNoValueSet", n => { IncludeObjectsWithNoValueSet = n.GetBoolValue(); } },
-                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CalendarDateOperationType>(); } },
+                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmCalendarDateOperationType>(); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
                 { "timeUnit", n => { TimeUnit = n.GetStringValue(); } },
                 { "timeUnitCount", n => { TimeUnitCount = n.GetIntValue(); } },
@@ -83,7 +83,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCalendarDatePropertyOperationFiscalYearStart>("fiscalYearStart", FiscalYearStart);
             writer.WriteBoolValue("includeObjectsWithNoValueSet", IncludeObjectsWithNoValueSet);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CalendarDateOperationType>("operationType", OperationType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmCalendarDateOperationType>("operationType", OperationType);
             writer.WriteStringValue("operator", Operator);
             writer.WriteStringValue("timeUnit", TimeUnit);
             writer.WriteIntValue("timeUnitCount", TimeUnitCount);

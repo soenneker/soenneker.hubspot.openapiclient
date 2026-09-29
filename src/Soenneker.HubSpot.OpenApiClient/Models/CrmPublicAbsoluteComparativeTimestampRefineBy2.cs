@@ -24,8 +24,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>An integer representing the specific point in time to be used for the comparison, formatted as a Unix timestamp in milliseconds.</summary>
         public long? Timestamp { get; set; }
-        /// <summary>A string representing the type of refinement, which is &apos;ABSOLUTE_COMPARATIVE&apos; by default.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteComparativeType? Type { get; set; }
+        /// <summary>A string indicating the type of refinement, which is &apos;ABSOLUTE_COMPARATIVE&apos;.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmAbsoluteComparativeType2? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAbsoluteComparativeTimestampRefineBy2"/> and sets the default values.
         /// </summary>
@@ -53,7 +53,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "comparison", n => { Comparison = n.GetStringValue(); } },
                 { "timestamp", n => { Timestamp = n.GetLongValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteComparativeType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAbsoluteComparativeType2>(); } },
             };
         }
         /// <summary>
@@ -65,7 +65,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("comparison", Comparison);
             writer.WriteLongValue("timestamp", Timestamp);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteComparativeType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAbsoluteComparativeType2>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

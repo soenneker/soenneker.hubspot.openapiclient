@@ -165,7 +165,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.Conversations.TwoZeroTwo
 #endif
             /// <summary>The status of the thread to filter by. Valid values are &apos;OPEN&apos; and &apos;CLOSED&apos;.</summary>
             [QueryParameter("threadStatus")]
-            public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsGetConversationsConversations202609ThreadsConversationsConversations202609BetaThreadsThreadStatusParameter? ThreadStatus { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.GetConversationsConversations202609ThreadsConversationsConversations202609BetaThreadsThreadStatusParameter? ThreadStatus { get; set; }
         }
     }
 }

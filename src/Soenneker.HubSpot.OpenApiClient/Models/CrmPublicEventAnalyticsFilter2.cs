@@ -17,10 +17,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An optional refinement criterion that can be one of several types, such as occurrences or timestamp comparisons, to further refine the filter results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEventAnalyticsFilter2CoalescingRefineBy? CoalescingRefineBy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEventAnalyticsFilterCoalescingRefineBy2? CoalescingRefineBy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEventAnalyticsFilter2CoalescingRefineBy CoalescingRefineBy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEventAnalyticsFilterCoalescingRefineBy2 CoalescingRefineBy { get; set; }
 #endif
         /// <summary>A string that uniquely identifies the event to be filtered.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -30,8 +30,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string EventId { get; set; }
 #endif
-        /// <summary>A string representing the type of filter being applied. This property is required.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EventValueFilterType? FilterType { get; set; }
+        /// <summary>A string indicating the type of filter, which is always &apos;EVENT&apos; for this component.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmEventValueFilterType2? FilterType { get; set; }
         /// <summary>A string representing the operation or condition applied in the filter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -43,10 +43,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An optional refinement criterion similar to coalescingRefineBy, used to prune the filter results based on specific conditions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEventAnalyticsFilter2PruningRefineBy? PruningRefineBy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEventAnalyticsFilterPruningRefineBy2? PruningRefineBy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEventAnalyticsFilter2PruningRefineBy PruningRefineBy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEventAnalyticsFilterPruningRefineBy2 PruningRefineBy { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEventAnalyticsFilter2"/> and sets the default values.
@@ -73,11 +73,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "coalescingRefineBy", n => { CoalescingRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEventAnalyticsFilter2CoalescingRefineBy>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEventAnalyticsFilter2CoalescingRefineBy.CreateFromDiscriminatorValue); } },
+                { "coalescingRefineBy", n => { CoalescingRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEventAnalyticsFilterCoalescingRefineBy2>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEventAnalyticsFilterCoalescingRefineBy2.CreateFromDiscriminatorValue); } },
                 { "eventId", n => { EventId = n.GetStringValue(); } },
-                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventValueFilterType>(); } },
+                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmEventValueFilterType2>(); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
-                { "pruningRefineBy", n => { PruningRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEventAnalyticsFilter2PruningRefineBy>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEventAnalyticsFilter2PruningRefineBy.CreateFromDiscriminatorValue); } },
+                { "pruningRefineBy", n => { PruningRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEventAnalyticsFilterPruningRefineBy2>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEventAnalyticsFilterPruningRefineBy2.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -87,11 +87,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEventAnalyticsFilter2CoalescingRefineBy>("coalescingRefineBy", CoalescingRefineBy);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEventAnalyticsFilterCoalescingRefineBy2>("coalescingRefineBy", CoalescingRefineBy);
             writer.WriteStringValue("eventId", EventId);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventValueFilterType>("filterType", FilterType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmEventValueFilterType2>("filterType", FilterType);
             writer.WriteStringValue("operator", Operator);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEventAnalyticsFilter2PruningRefineBy>("pruningRefineBy", PruningRefineBy);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEventAnalyticsFilterPruningRefineBy2>("pruningRefineBy", PruningRefineBy);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

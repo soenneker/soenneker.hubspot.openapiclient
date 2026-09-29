@@ -30,8 +30,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string EventId { get; set; }
 #endif
-        /// <summary>A string representing the type of filter being applied. This property is required.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EventValueFilterType? FilterType { get; set; }
+        /// <summary>A string indicating the type of filter. The default value is &apos;EVENT&apos;.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmEventValueFilterType? FilterType { get; set; }
         /// <summary>A string representing the operator used in the filter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -75,7 +75,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "coalescingRefineBy", n => { CoalescingRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEventAnalyticsFilterCoalescingRefineBy>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEventAnalyticsFilterCoalescingRefineBy.CreateFromDiscriminatorValue); } },
                 { "eventId", n => { EventId = n.GetStringValue(); } },
-                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventValueFilterType>(); } },
+                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmEventValueFilterType>(); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
                 { "pruningRefineBy", n => { PruningRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEventAnalyticsFilterPruningRefineBy>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEventAnalyticsFilterPruningRefineBy.CreateFromDiscriminatorValue); } },
             };
@@ -89,7 +89,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEventAnalyticsFilterCoalescingRefineBy>("coalescingRefineBy", CoalescingRefineBy);
             writer.WriteStringValue("eventId", EventId);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventValueFilterType>("filterType", FilterType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmEventValueFilterType>("filterType", FilterType);
             writer.WriteStringValue("operator", Operator);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEventAnalyticsFilterPruningRefineBy>("pruningRefineBy", PruningRefineBy);
             writer.WriteAdditionalData(AdditionalData);

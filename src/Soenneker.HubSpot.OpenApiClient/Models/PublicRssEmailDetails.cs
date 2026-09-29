@@ -47,10 +47,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object representing the timing configuration for the RSS email. The specific properties of this object are not detailed in the specification.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetailsTimingProperty? Timing { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetailsTimingProperty2? Timing { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetailsTimingProperty Timing { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetailsTimingProperty2 Timing { get; set; }
 #endif
         /// <summary>The URL of the RSS feed to be used in the email. It is a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -93,7 +93,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "hubspotBlogId", n => { HubspotBlogId = n.GetStringValue(); } },
                 { "maxEntries", n => { MaxEntries = n.GetIntValue(); } },
                 { "rssEntryTemplate", n => { RssEntryTemplate = n.GetStringValue(); } },
-                { "timing", n => { Timing = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetailsTimingProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetailsTimingProperty.CreateFromDiscriminatorValue); } },
+                { "timing", n => { Timing = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetailsTimingProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetailsTimingProperty2.CreateFromDiscriminatorValue); } },
                 { "url", n => { Url = n.GetStringValue(); } },
                 { "useHeadlineAsSubject", n => { UseHeadlineAsSubject = n.GetBoolValue(); } },
             };
@@ -111,7 +111,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("hubspotBlogId", HubspotBlogId);
             writer.WriteIntValue("maxEntries", MaxEntries);
             writer.WriteStringValue("rssEntryTemplate", RssEntryTemplate);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetailsTimingProperty>("timing", Timing);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetailsTimingProperty2>("timing", Timing);
             writer.WriteStringValue("url", Url);
             writer.WriteBoolValue("useHeadlineAsSubject", UseHeadlineAsSubject);
             writer.WriteAdditionalData(AdditionalData);

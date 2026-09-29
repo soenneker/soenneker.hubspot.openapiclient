@@ -17,10 +17,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object that specifies refinement criteria for coalescing events. It can be one of several predefined schemas such as PublicNumOccurrencesRefineBy or PublicTimePointOperation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilter2CoalescingRefineBy? CoalescingRefineBy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterCoalescingRefineBy2? CoalescingRefineBy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilter2CoalescingRefineBy CoalescingRefineBy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterCoalescingRefineBy2 CoalescingRefineBy { get; set; }
 #endif
         /// <summary>A string representing the unique identifier for the event type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -38,15 +38,15 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEventFilterMetadata2> FilterLines { get; set; }
 #endif
-        /// <summary>A string that specifies the type of filter, defaulting to &apos;UNIFIED_EVENTS&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.UnifiedEventsFilterType? FilterType { get; set; }
+        /// <summary>A string indicating the type of filter. The default value is &apos;UNIFIED_EVENTS&apos;.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmUnifiedEventsFilterType2? FilterType { get; set; }
         /// <summary>An object that specifies refinement criteria for pruning events. It can be one of several predefined schemas such as PublicNumOccurrencesRefineBy or PublicTimePointOperation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilter2PruningRefineBy? PruningRefineBy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterPruningRefineBy2? PruningRefineBy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilter2PruningRefineBy PruningRefineBy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterPruningRefineBy2 PruningRefineBy { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilter2"/> and sets the default values.
@@ -73,11 +73,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "coalescingRefineBy", n => { CoalescingRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilter2CoalescingRefineBy>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilter2CoalescingRefineBy.CreateFromDiscriminatorValue); } },
+                { "coalescingRefineBy", n => { CoalescingRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterCoalescingRefineBy2>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterCoalescingRefineBy2.CreateFromDiscriminatorValue); } },
                 { "eventTypeId", n => { EventTypeId = n.GetStringValue(); } },
                 { "filterLines", n => { FilterLines = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEventFilterMetadata2>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEventFilterMetadata2.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.UnifiedEventsFilterType>(); } },
-                { "pruningRefineBy", n => { PruningRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilter2PruningRefineBy>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilter2PruningRefineBy.CreateFromDiscriminatorValue); } },
+                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmUnifiedEventsFilterType2>(); } },
+                { "pruningRefineBy", n => { PruningRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterPruningRefineBy2>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterPruningRefineBy2.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -87,11 +87,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilter2CoalescingRefineBy>("coalescingRefineBy", CoalescingRefineBy);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterCoalescingRefineBy2>("coalescingRefineBy", CoalescingRefineBy);
             writer.WriteStringValue("eventTypeId", EventTypeId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEventFilterMetadata2>("filterLines", FilterLines);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.UnifiedEventsFilterType>("filterType", FilterType);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilter2PruningRefineBy>("pruningRefineBy", PruningRefineBy);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmUnifiedEventsFilterType2>("filterType", FilterType);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterPruningRefineBy2>("pruningRefineBy", PruningRefineBy);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

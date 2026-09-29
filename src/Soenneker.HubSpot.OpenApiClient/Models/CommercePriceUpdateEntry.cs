@@ -27,10 +27,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object representing the price details for the entry. The specific structure of this object is not detailed in the specification.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CommercePriceUpdateEntryPriceProperty? Price { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CommercePriceUpdateEntryPriceProperty2? Price { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CommercePriceUpdateEntryPriceProperty Price { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CommercePriceUpdateEntryPriceProperty2 Price { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CommercePriceUpdateEntry"/> and sets the default values.
@@ -59,7 +59,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "currencyCode", n => { CurrencyCode = n.GetStringValue(); } },
                 { "maxQuantity", n => { MaxQuantity = n.GetIntValue(); } },
-                { "price", n => { Price = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CommercePriceUpdateEntryPriceProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.CommercePriceUpdateEntryPriceProperty.CreateFromDiscriminatorValue); } },
+                { "price", n => { Price = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CommercePriceUpdateEntryPriceProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.CommercePriceUpdateEntryPriceProperty2.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -71,7 +71,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("currencyCode", CurrencyCode);
             writer.WriteIntValue("maxQuantity", MaxQuantity);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CommercePriceUpdateEntryPriceProperty>("price", Price);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CommercePriceUpdateEntryPriceProperty2>("price", Price);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

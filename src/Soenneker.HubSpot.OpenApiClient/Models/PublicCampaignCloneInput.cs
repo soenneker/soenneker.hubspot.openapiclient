@@ -17,10 +17,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>A map of asset types to be cloned, where each key is an asset type and the value is an array of asset identifiers. It is an object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignCloneInputAssetsToCloneProperty? AssetsToClone { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignCloneInputAssetsToCloneProperty2? AssetsToClone { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignCloneInputAssetsToCloneProperty AssetsToClone { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignCloneInputAssetsToCloneProperty2 AssetsToClone { get; set; }
 #endif
         /// <summary>The target audience for the cloned campaign. It is a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -113,7 +113,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "assetsToClone", n => { AssetsToClone = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignCloneInputAssetsToCloneProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignCloneInputAssetsToCloneProperty.CreateFromDiscriminatorValue); } },
+                { "assetsToClone", n => { AssetsToClone = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignCloneInputAssetsToCloneProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignCloneInputAssetsToCloneProperty2.CreateFromDiscriminatorValue); } },
                 { "audience", n => { Audience = n.GetStringValue(); } },
                 { "currencyCode", n => { CurrencyCode = n.GetStringValue(); } },
                 { "endDate", n => { EndDate = n.GetStringValue(); } },
@@ -135,7 +135,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignCloneInputAssetsToCloneProperty>("assetsToClone", AssetsToClone);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignCloneInputAssetsToCloneProperty2>("assetsToClone", AssetsToClone);
             writer.WriteStringValue("audience", Audience);
             writer.WriteStringValue("currencyCode", CurrencyCode);
             writer.WriteStringValue("endDate", EndDate);

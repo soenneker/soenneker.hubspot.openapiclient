@@ -55,10 +55,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>List of key value pairs with the column name and column value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableRowV3ValuesProperty? Values { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableRowV3ValuesProperty2? Values { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableRowV3ValuesProperty Values { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableRowV3ValuesProperty2 Values { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableRowV3"/> and sets the default values.
@@ -92,7 +92,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "path", n => { Path = n.GetStringValue(); } },
                 { "publishedAt", n => { PublishedAt = n.GetDateTimeOffsetValue(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
-                { "values", n => { Values = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableRowV3ValuesProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableRowV3ValuesProperty.CreateFromDiscriminatorValue); } },
+                { "values", n => { Values = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableRowV3ValuesProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableRowV3ValuesProperty2.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -109,7 +109,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("path", Path);
             writer.WriteDateTimeOffsetValue("publishedAt", PublishedAt);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableRowV3ValuesProperty>("values", Values);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableRowV3ValuesProperty2>("values", Values);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

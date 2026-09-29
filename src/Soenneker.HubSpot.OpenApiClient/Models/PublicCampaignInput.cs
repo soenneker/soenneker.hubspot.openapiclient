@@ -17,10 +17,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object containing key-value pairs where each key is a property name and each value is a string representing the property&apos;s value. This object holds the various attributes of the campaign.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignInputPropertiesProperty? Properties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignInputPropertiesProperty2? Properties { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignInputPropertiesProperty Properties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignInputPropertiesProperty2 Properties { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignInput"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignInputPropertiesProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignInputPropertiesProperty.CreateFromDiscriminatorValue); } },
+                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignInputPropertiesProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignInputPropertiesProperty2.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignInputPropertiesProperty>("properties", Properties);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignInputPropertiesProperty2>("properties", Properties);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

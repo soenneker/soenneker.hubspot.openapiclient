@@ -38,8 +38,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string EmailId { get; set; }
 #endif
-        /// <summary>A string representing the type of filter being applied. This property is required.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailEventFilterType? FilterType { get; set; }
+        /// <summary>A string that specifies the type of filter. The default value is &apos;EMAIL_EVENT&apos;.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmEmailEventFilterType2? FilterType { get; set; }
         /// <summary>A string representing the level of the email event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -49,14 +49,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Level { get; set; }
 #endif
         /// <summary>A string that defines the operation or event type for filtering. Valid values include &apos;LINK_CLICKED&apos;, &apos;MARKED_SPAM&apos;, &apos;OPENED&apos;, &apos;OPENED_BUT_LINK_NOT_CLICKED&apos;, &apos;OPENED_BUT_NOT_REPLIED&apos;, &apos;REPLIED&apos;, &apos;UNSUBSCRIBED&apos;, &apos;BOUNCED&apos;, &apos;RECEIVED&apos;, &apos;RECEIVED_BUT_NOT_OPENED&apos;, &apos;SENT&apos;, &apos;SENT_BUT_LINK_NOT_CLICKED&apos;, and &apos;SENT_BUT_NOT_RECEIVED&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEmailEventFilter2Operator? Operator { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEmailEventFilterOperator2? Operator { get; set; }
         /// <summary>An object that specifies additional criteria for refining the filter, which can be one of several types such as &apos;PublicNumOccurrencesRefineBy&apos;, &apos;PublicSetOccurrencesRefineBy&apos;, &apos;PublicRelativeComparativeTimestampRefineBy&apos;, &apos;PublicRelativeRangedTimestampRefineBy&apos;, &apos;PublicAbsoluteComparativeTimestampRefineBy&apos;, &apos;PublicAbsoluteRangedTimestampRefineBy&apos;, &apos;PublicAllHistoryRefineBy&apos;, &apos;PublicTimePointOperation&apos;, or &apos;PublicRangedTimeOperation&apos;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEmailEventFilter2PruningRefineBy? PruningRefineBy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEmailEventFilterPruningRefineBy2? PruningRefineBy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEmailEventFilter2PruningRefineBy PruningRefineBy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEmailEventFilterPruningRefineBy2 PruningRefineBy { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEmailEventFilter2"/> and sets the default values.
@@ -86,10 +86,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "appId", n => { AppId = n.GetStringValue(); } },
                 { "clickUrl", n => { ClickUrl = n.GetStringValue(); } },
                 { "emailId", n => { EmailId = n.GetStringValue(); } },
-                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailEventFilterType>(); } },
+                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmEmailEventFilterType2>(); } },
                 { "level", n => { Level = n.GetStringValue(); } },
-                { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEmailEventFilter2Operator>(); } },
-                { "pruningRefineBy", n => { PruningRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEmailEventFilter2PruningRefineBy>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEmailEventFilter2PruningRefineBy.CreateFromDiscriminatorValue); } },
+                { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEmailEventFilterOperator2>(); } },
+                { "pruningRefineBy", n => { PruningRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEmailEventFilterPruningRefineBy2>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEmailEventFilterPruningRefineBy2.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -102,10 +102,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("appId", AppId);
             writer.WriteStringValue("clickUrl", ClickUrl);
             writer.WriteStringValue("emailId", EmailId);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailEventFilterType>("filterType", FilterType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmEmailEventFilterType2>("filterType", FilterType);
             writer.WriteStringValue("level", Level);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEmailEventFilter2Operator>("operator", Operator);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEmailEventFilter2PruningRefineBy>("pruningRefineBy", PruningRefineBy);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEmailEventFilterOperator2>("operator", Operator);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEmailEventFilterPruningRefineBy2>("pruningRefineBy", PruningRefineBy);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -18,8 +18,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public bool? IncludeObjectsWithNoValueSet { get; set; }
         /// <summary>An integer specifying the number of days over which the rolling update operation is applied.</summary>
         public int? NumberOfDays { get; set; }
-        /// <summary>A string indicating the type of operation, defaulting to &apos;ROLLING_PROPERTY_UPDATED&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.RollingPropertyUpdatedOperationType? OperationType { get; set; }
+        /// <summary>A string indicating the type of operation. The default value is &apos;ROLLING_PROPERTY_UPDATED&apos;.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmRollingPropertyUpdatedOperationType2? OperationType { get; set; }
         /// <summary>A string representing the operator used in the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -55,7 +55,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "includeObjectsWithNoValueSet", n => { IncludeObjectsWithNoValueSet = n.GetBoolValue(); } },
                 { "numberOfDays", n => { NumberOfDays = n.GetIntValue(); } },
-                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RollingPropertyUpdatedOperationType>(); } },
+                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmRollingPropertyUpdatedOperationType2>(); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
             };
         }
@@ -68,7 +68,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("includeObjectsWithNoValueSet", IncludeObjectsWithNoValueSet);
             writer.WriteIntValue("numberOfDays", NumberOfDays);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RollingPropertyUpdatedOperationType>("operationType", OperationType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmRollingPropertyUpdatedOperationType2>("operationType", OperationType);
             writer.WriteStringValue("operator", Operator);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -14,8 +14,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A string that specifies the type of filter being applied. Default value is &apos;SURVEY_MONKEY_VALUE&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.SurveyMonkeyValueFilterType? FilterType { get; set; }
+        /// <summary>A string indicating the type of filter. Defaults to &apos;SURVEY_MONKEY_VALUE&apos;.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmSurveyMonkeyValueFilterType2? FilterType { get; set; }
         /// <summary>A string that specifies the operator used in the filter, determining how the survey data is evaluated against the filter criteria.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -59,10 +59,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object that defines the operation for comparing survey answer values. It can be one of several types, such as number, string, or date operations.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicSurveyMonkeyValueFilter2ValueComparison? ValueComparison { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicSurveyMonkeyValueFilterValueComparison2? ValueComparison { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicSurveyMonkeyValueFilter2ValueComparison ValueComparison { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicSurveyMonkeyValueFilterValueComparison2 ValueComparison { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicSurveyMonkeyValueFilter2"/> and sets the default values.
@@ -89,13 +89,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SurveyMonkeyValueFilterType>(); } },
+                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSurveyMonkeyValueFilterType2>(); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
                 { "surveyAnswerColId", n => { SurveyAnswerColId = n.GetStringValue(); } },
                 { "surveyAnswerRowId", n => { SurveyAnswerRowId = n.GetStringValue(); } },
                 { "surveyId", n => { SurveyId = n.GetStringValue(); } },
                 { "surveyQuestion", n => { SurveyQuestion = n.GetStringValue(); } },
-                { "valueComparison", n => { ValueComparison = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicSurveyMonkeyValueFilter2ValueComparison>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicSurveyMonkeyValueFilter2ValueComparison.CreateFromDiscriminatorValue); } },
+                { "valueComparison", n => { ValueComparison = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicSurveyMonkeyValueFilterValueComparison2>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicSurveyMonkeyValueFilterValueComparison2.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -105,13 +105,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SurveyMonkeyValueFilterType>("filterType", FilterType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSurveyMonkeyValueFilterType2>("filterType", FilterType);
             writer.WriteStringValue("operator", Operator);
             writer.WriteStringValue("surveyAnswerColId", SurveyAnswerColId);
             writer.WriteStringValue("surveyAnswerRowId", SurveyAnswerRowId);
             writer.WriteStringValue("surveyId", SurveyId);
             writer.WriteStringValue("surveyQuestion", SurveyQuestion);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicSurveyMonkeyValueFilter2ValueComparison>("valueComparison", ValueComparison);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicSurveyMonkeyValueFilterValueComparison2>("valueComparison", ValueComparison);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

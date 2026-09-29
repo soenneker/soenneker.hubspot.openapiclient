@@ -49,18 +49,18 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Foreign ids</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByIdProperty? ForeignIdsById { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByIdProperty2? ForeignIdsById { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByIdProperty ForeignIdsById { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByIdProperty2 ForeignIdsById { get; set; }
 #endif
         /// <summary>Foreign ids by name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByNameProperty? ForeignIdsByName { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByNameProperty2? ForeignIdsByName { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByNameProperty ForeignIdsByName { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByNameProperty2 ForeignIdsByName { get; set; }
 #endif
         /// <summary>Foreign table id referenced</summary>
         public long? ForeignTableId { get; set; }
@@ -146,8 +146,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "foreignColumnId", n => { ForeignColumnId = n.GetIntValue(); } },
                 { "foreignIds", n => { ForeignIds = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ForeignId>(global::Soenneker.HubSpot.OpenApiClient.Models.ForeignId.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "foreignIdsById", n => { ForeignIdsById = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByIdProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByIdProperty.CreateFromDiscriminatorValue); } },
-                { "foreignIdsByName", n => { ForeignIdsByName = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByNameProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByNameProperty.CreateFromDiscriminatorValue); } },
+                { "foreignIdsById", n => { ForeignIdsById = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByIdProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByIdProperty2.CreateFromDiscriminatorValue); } },
+                { "foreignIdsByName", n => { ForeignIdsByName = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByNameProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByNameProperty2.CreateFromDiscriminatorValue); } },
                 { "foreignTableId", n => { ForeignTableId = n.GetLongValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
@@ -175,8 +175,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteIntValue("foreignColumnId", ForeignColumnId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ForeignId>("foreignIds", ForeignIds);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByIdProperty>("foreignIdsById", ForeignIdsById);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByNameProperty>("foreignIdsByName", ForeignIdsByName);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByIdProperty2>("foreignIdsById", ForeignIdsById);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByNameProperty2>("foreignIdsByName", ForeignIdsByName);
             writer.WriteLongValue("foreignTableId", ForeignTableId);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("label", Label);

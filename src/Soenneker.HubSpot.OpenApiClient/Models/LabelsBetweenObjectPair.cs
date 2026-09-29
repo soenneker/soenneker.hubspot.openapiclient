@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The ID of the originating object in the label association.</summary>
+        /// <summary>The unique identifier of the source object in the association. It is a string that identifies the specific object instance initiating the association.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FromObjectId { get; set; }
@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string FromObjectId { get; set; }
 #endif
-        /// <summary>The type ID of the originating object in the label association.</summary>
+        /// <summary>The type identifier of the source object in the association. It is a string that specifies what kind of object is initiating the association.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FromObjectTypeId { get; set; }
@@ -31,7 +31,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string FromObjectTypeId { get; set; }
 #endif
-        /// <summary>An array of labels associated with the object pair.</summary>
+        /// <summary>An array of strings representing the labels that describe the relationship between the two objects. These labels help categorize or specify the nature of the association.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Labels { get; set; }
@@ -39,7 +39,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<string> Labels { get; set; }
 #endif
-        /// <summary>The ID of the target object in the label association.</summary>
+        /// <summary>The unique identifier of the target object in the association. It is a string that identifies the specific object instance that is the target of the association.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ToObjectId { get; set; }
@@ -47,7 +47,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ToObjectId { get; set; }
 #endif
-        /// <summary>The type ID of the target object in the label association.</summary>
+        /// <summary>The type identifier of the target object in the association. It is a string that specifies what kind of object is the target of the association.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ToObjectTypeId { get; set; }

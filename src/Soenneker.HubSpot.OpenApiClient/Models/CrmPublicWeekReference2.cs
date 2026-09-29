@@ -15,15 +15,15 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A string representing the day of the week. Valid values include &apos;MONDAY&apos;, &apos;TUESDAY&apos;, &apos;WEDNESDAY&apos;, &apos;THURSDAY&apos;, &apos;FRIDAY&apos;, &apos;SATURDAY&apos;, &apos;SUNDAY&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicWeekReference2DayOfWeek? DayOfWeek { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicWeekReferenceDayOfWeek2? DayOfWeek { get; set; }
         /// <summary>An integer representing the hour of the day.</summary>
         public int? Hour { get; set; }
         /// <summary>An integer representing the millisecond within the second.</summary>
         public int? Millisecond { get; set; }
         /// <summary>An integer representing the minute within the hour.</summary>
         public int? Minute { get; set; }
-        /// <summary>A string indicating the type of reference, which is &apos;WEEK&apos; for this component.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.WeekReferenceType? ReferenceType { get; set; }
+        /// <summary>A string indicating the type of reference, which is &apos;WEEK&apos; by default.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmWeekReferenceType2? ReferenceType { get; set; }
         /// <summary>An integer representing the second within the minute.</summary>
         public int? Second { get; set; }
         /// <summary>
@@ -51,11 +51,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "dayOfWeek", n => { DayOfWeek = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicWeekReference2DayOfWeek>(); } },
+                { "dayOfWeek", n => { DayOfWeek = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicWeekReferenceDayOfWeek2>(); } },
                 { "hour", n => { Hour = n.GetIntValue(); } },
                 { "millisecond", n => { Millisecond = n.GetIntValue(); } },
                 { "minute", n => { Minute = n.GetIntValue(); } },
-                { "referenceType", n => { ReferenceType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.WeekReferenceType>(); } },
+                { "referenceType", n => { ReferenceType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmWeekReferenceType2>(); } },
                 { "second", n => { Second = n.GetIntValue(); } },
             };
         }
@@ -66,11 +66,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicWeekReference2DayOfWeek>("dayOfWeek", DayOfWeek);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicWeekReferenceDayOfWeek2>("dayOfWeek", DayOfWeek);
             writer.WriteIntValue("hour", Hour);
             writer.WriteIntValue("millisecond", Millisecond);
             writer.WriteIntValue("minute", Minute);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.WeekReferenceType>("referenceType", ReferenceType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmWeekReferenceType2>("referenceType", ReferenceType);
             writer.WriteIntValue("second", Second);
             writer.WriteAdditionalData(AdditionalData);
         }

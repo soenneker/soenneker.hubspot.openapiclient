@@ -17,26 +17,26 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object containing custom properties for the price book, where each key is a property name and the value is a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookUpdateRequestCustomPropertiesProperty? CustomProperties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookUpdateRequestCustomPropertiesProperty2? CustomProperties { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookUpdateRequestCustomPropertiesProperty CustomProperties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookUpdateRequestCustomPropertiesProperty2 CustomProperties { get; set; }
 #endif
         /// <summary>An object representing the description of the price book to be updated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookUpdateRequestDescriptionProperty? Description { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookUpdateRequestDescriptionProperty2? Description { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookUpdateRequestDescriptionProperty Description { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookUpdateRequestDescriptionProperty2 Description { get; set; }
 #endif
         /// <summary>An object representing the name of the price book to be updated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookUpdateRequestNameProperty? Name { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookUpdateRequestNameProperty2? Name { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookUpdateRequestNameProperty Name { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookUpdateRequestNameProperty2 Name { get; set; }
 #endif
         /// <summary>An array of strings representing the currencies supported by the price book.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -71,9 +71,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "customProperties", n => { CustomProperties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookUpdateRequestCustomPropertiesProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookUpdateRequestCustomPropertiesProperty.CreateFromDiscriminatorValue); } },
-                { "description", n => { Description = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookUpdateRequestDescriptionProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookUpdateRequestDescriptionProperty.CreateFromDiscriminatorValue); } },
-                { "name", n => { Name = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookUpdateRequestNameProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookUpdateRequestNameProperty.CreateFromDiscriminatorValue); } },
+                { "customProperties", n => { CustomProperties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookUpdateRequestCustomPropertiesProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookUpdateRequestCustomPropertiesProperty2.CreateFromDiscriminatorValue); } },
+                { "description", n => { Description = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookUpdateRequestDescriptionProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookUpdateRequestDescriptionProperty2.CreateFromDiscriminatorValue); } },
+                { "name", n => { Name = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookUpdateRequestNameProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookUpdateRequestNameProperty2.CreateFromDiscriminatorValue); } },
                 { "supportedCurrencies", n => { SupportedCurrencies = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }
@@ -84,9 +84,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookUpdateRequestCustomPropertiesProperty>("customProperties", CustomProperties);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookUpdateRequestDescriptionProperty>("description", Description);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookUpdateRequestNameProperty>("name", Name);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookUpdateRequestCustomPropertiesProperty2>("customProperties", CustomProperties);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookUpdateRequestDescriptionProperty2>("description", Description);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookUpdateRequestNameProperty2>("name", Name);
             writer.WriteCollectionOfPrimitiveValues<string>("supportedCurrencies", SupportedCurrencies);
             writer.WriteAdditionalData(AdditionalData);
         }

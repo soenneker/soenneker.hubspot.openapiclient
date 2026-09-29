@@ -17,10 +17,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An array containing the option decorators. Each decorator provides additional configuration or styling options for media elements.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionDataOptionDecoratorsProperty? OptionDecorators { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionDataOptionDecoratorsProperty2? OptionDecorators { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionDataOptionDecoratorsProperty OptionDecorators { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionDataOptionDecoratorsProperty2 OptionDecorators { get; set; }
 #endif
         /// <summary>A string representing the style applied to the option decorators. This property defines how the decorators should be visually presented.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionDataOptionDecoratorStyle? OptionDecoratorStyle { get; set; }
@@ -50,7 +50,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "optionDecoratorStyle", n => { OptionDecoratorStyle = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionDataOptionDecoratorStyle>(); } },
-                { "optionDecorators", n => { OptionDecorators = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionDataOptionDecoratorsProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionDataOptionDecoratorsProperty.CreateFromDiscriminatorValue); } },
+                { "optionDecorators", n => { OptionDecorators = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionDataOptionDecoratorsProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionDataOptionDecoratorsProperty2.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -60,7 +60,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionDataOptionDecoratorsProperty>("optionDecorators", OptionDecorators);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionDataOptionDecoratorsProperty2>("optionDecorators", OptionDecorators);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionDataOptionDecoratorStyle>("optionDecoratorStyle", OptionDecoratorStyle);
             writer.WriteAdditionalData(AdditionalData);
         }

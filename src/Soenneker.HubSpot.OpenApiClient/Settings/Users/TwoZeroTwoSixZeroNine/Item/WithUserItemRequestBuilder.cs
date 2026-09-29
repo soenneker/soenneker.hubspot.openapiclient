@@ -164,7 +164,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Settings.Users.TwoZeroTwoSixZeroNine.I
         {
             /// <summary>Specifies the property to identify the user. Valid values are &apos;USER_ID&apos; or &apos;EMAIL&apos;.</summary>
             [QueryParameter("idProperty")]
-            public global::Soenneker.HubSpot.OpenApiClient.Models.SettingsDeleteSettingsUsers202609UserIdIdPropertyParameter? IdProperty { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.DeleteSettingsUsers202609UserIdIdPropertyParameter? IdProperty { get; set; }
         }
         /// <summary>
         /// Retrieves a user identified by `userId`. `userId` refers to the user&apos;s ID by default, or optionally email as specified by the `IdProperty` query param.
@@ -174,7 +174,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Settings.Users.TwoZeroTwoSixZeroNine.I
         {
             /// <summary>Specifies the property used to identify the user. Valid values are &apos;USER_ID&apos; and &apos;EMAIL&apos;.</summary>
             [QueryParameter("idProperty")]
-            public global::Soenneker.HubSpot.OpenApiClient.Models.SettingsGetSettingsUsers202609UserIdIdPropertyParameter? IdProperty { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.GetSettingsUsers202609UserIdIdPropertyParameter? IdProperty { get; set; }
         }
         /// <summary>
         /// Modifies a user identified by `userId`. `userId` refers to the user&apos;s ID by default, or optionally email as specified by the `IdProperty` query param.
@@ -184,7 +184,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Settings.Users.TwoZeroTwoSixZeroNine.I
         {
             /// <summary>Specifies the property to use for identifying the user. Valid values are &apos;USER_ID&apos; or &apos;EMAIL&apos;.</summary>
             [QueryParameter("idProperty")]
-            public global::Soenneker.HubSpot.OpenApiClient.Models.SettingsPutSettingsUsers202609UserIdIdPropertyParameter? IdProperty { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.PutSettingsUsers202609UserIdIdPropertyParameter? IdProperty { get; set; }
         }
     }
 }

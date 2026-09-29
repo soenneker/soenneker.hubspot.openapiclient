@@ -25,10 +25,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Contains the output fields associated with the callback, with each field represented as a key-value pair.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionRequestOutputFieldsProperty? OutputFields { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionRequestOutputFieldsProperty2? OutputFields { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionRequestOutputFieldsProperty OutputFields { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionRequestOutputFieldsProperty2 OutputFields { get; set; }
 #endif
         /// <summary>Specifies the context in which the request is made, which can be one of several predefined contexts.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -41,10 +41,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Holds the typed outputs related to the callback, structured as an object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionRequestTypedOutputsProperty? TypedOutputs { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionRequestTypedOutputsProperty2? TypedOutputs { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionRequestTypedOutputsProperty TypedOutputs { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionRequestTypedOutputsProperty2 TypedOutputs { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionRequest"/> and sets the default values.
@@ -72,9 +72,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "failureReasonType", n => { FailureReasonType = n.GetStringValue(); } },
-                { "outputFields", n => { OutputFields = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionRequestOutputFieldsProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionRequestOutputFieldsProperty.CreateFromDiscriminatorValue); } },
+                { "outputFields", n => { OutputFields = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionRequestOutputFieldsProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionRequestOutputFieldsProperty2.CreateFromDiscriminatorValue); } },
                 { "requestContext", n => { RequestContext = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionRequestRequestContext>(global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionRequestRequestContext.CreateFromDiscriminatorValue); } },
-                { "typedOutputs", n => { TypedOutputs = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionRequestTypedOutputsProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionRequestTypedOutputsProperty.CreateFromDiscriminatorValue); } },
+                { "typedOutputs", n => { TypedOutputs = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionRequestTypedOutputsProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionRequestTypedOutputsProperty2.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -85,9 +85,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("failureReasonType", FailureReasonType);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionRequestOutputFieldsProperty>("outputFields", OutputFields);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionRequestOutputFieldsProperty2>("outputFields", OutputFields);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionRequestRequestContext>("requestContext", RequestContext);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionRequestTypedOutputsProperty>("typedOutputs", TypedOutputs);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionRequestTypedOutputsProperty2>("typedOutputs", TypedOutputs);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -18,8 +18,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public int? MaxOccurrences { get; set; }
         /// <summary>An integer specifying the minimum number of occurrences required.</summary>
         public int? MinOccurrences { get; set; }
-        /// <summary>A string indicating the type of refinement, which is &apos;NUM_OCCURRENCES&apos; by default.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.NumOccurrencesType? Type { get; set; }
+        /// <summary>A string indicating the type of refinement, which is &apos;NUM_OCCURRENCES&apos;.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmNumOccurrencesType2? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicNumOccurrencesRefineBy2"/> and sets the default values.
         /// </summary>
@@ -47,7 +47,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "maxOccurrences", n => { MaxOccurrences = n.GetIntValue(); } },
                 { "minOccurrences", n => { MinOccurrences = n.GetIntValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.NumOccurrencesType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmNumOccurrencesType2>(); } },
             };
         }
         /// <summary>
@@ -59,7 +59,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("maxOccurrences", MaxOccurrences);
             writer.WriteIntValue("minOccurrences", MinOccurrences);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.NumOccurrencesType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmNumOccurrencesType2>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

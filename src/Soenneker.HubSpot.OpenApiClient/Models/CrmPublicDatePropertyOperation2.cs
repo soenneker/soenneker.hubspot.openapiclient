@@ -26,8 +26,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Month { get; set; }
 #endif
-        /// <summary>A string indicating the type of operation, specifically for date properties.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.DateOperationType? OperationType { get; set; }
+        /// <summary>A string indicating the type of operation, which is always &apos;DATE&apos;.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmDateOperationType2? OperationType { get; set; }
         /// <summary>A string representing the operator used in the date operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -66,7 +66,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "day", n => { Day = n.GetIntValue(); } },
                 { "includeObjectsWithNoValueSet", n => { IncludeObjectsWithNoValueSet = n.GetBoolValue(); } },
                 { "month", n => { Month = n.GetStringValue(); } },
-                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DateOperationType>(); } },
+                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmDateOperationType2>(); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
                 { "year", n => { Year = n.GetIntValue(); } },
             };
@@ -81,7 +81,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteIntValue("day", Day);
             writer.WriteBoolValue("includeObjectsWithNoValueSet", IncludeObjectsWithNoValueSet);
             writer.WriteStringValue("month", Month);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DateOperationType>("operationType", OperationType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmDateOperationType2>("operationType", OperationType);
             writer.WriteStringValue("operator", Operator);
             writer.WriteIntValue("year", Year);
             writer.WriteAdditionalData(AdditionalData);

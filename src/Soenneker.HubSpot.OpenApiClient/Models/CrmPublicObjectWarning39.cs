@@ -26,10 +26,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Additional information or metadata about the warning, providing context for understanding the issue.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectWarning39ContextProperty? Context { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectWarning39Context? Context { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectWarning39ContextProperty Context { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectWarning39Context Context { get; set; }
 #endif
         /// <summary>The text of the warning message, providing information about the issue or alert.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -65,7 +65,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "category", n => { Category = n.GetStringValue(); } },
-                { "context", n => { Context = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectWarning39ContextProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectWarning39ContextProperty.CreateFromDiscriminatorValue); } },
+                { "context", n => { Context = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectWarning39Context>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectWarning39Context.CreateFromDiscriminatorValue); } },
                 { "message", n => { Message = n.GetStringValue(); } },
             };
         }
@@ -77,7 +77,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("category", Category);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectWarning39ContextProperty>("context", Context);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectWarning39Context>("context", Context);
             writer.WriteStringValue("message", Message);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -31,7 +31,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public List<string> Properties { get; set; }
 #endif
         /// <summary>A string indicating the type of subscription, which is &apos;APP_LIFECYCLE_EVENT&apos; by default.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AppLifecycleEventSubscriptionType? SubscriptionType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksAppLifecycleEventSubscriptionType? SubscriptionType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksAppLifecycleEventSubscriptionUpsertRequest"/> and sets the default values.
         /// </summary>
@@ -59,7 +59,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "eventTypeId", n => { EventTypeId = n.GetStringValue(); } },
                 { "properties", n => { Properties = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "subscriptionType", n => { SubscriptionType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AppLifecycleEventSubscriptionType>(); } },
+                { "subscriptionType", n => { SubscriptionType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksAppLifecycleEventSubscriptionType>(); } },
             };
         }
         /// <summary>
@@ -71,7 +71,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("eventTypeId", EventTypeId);
             writer.WriteCollectionOfPrimitiveValues<string>("properties", Properties);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AppLifecycleEventSubscriptionType>("subscriptionType", SubscriptionType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksAppLifecycleEventSubscriptionType>("subscriptionType", SubscriptionType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

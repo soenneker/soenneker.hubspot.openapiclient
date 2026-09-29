@@ -22,8 +22,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsContactProfile ContactProfile { get; set; }
 #endif
-        /// <summary>A string indicating the type of the object, which is &apos;CONTACT&apos; by default.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ContactType? Type { get; set; }
+        /// <summary>A string indicating the type of attachment. The default value is &apos;CONTACT&apos;.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsContactType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ContactAttachment"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "contactProfile", n => { ContactProfile = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsContactProfile>(global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsContactProfile.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ContactType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsContactType>(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsContactProfile>("contactProfile", ContactProfile);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ContactType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsContactType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

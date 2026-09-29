@@ -14,8 +14,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A string indicating the type of filter. Defaults to &apos;IN_LIST&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.InListFilterType? FilterType { get; set; }
+        /// <summary>A string that specifies the type of filter being applied. The default value is &apos;IN_LIST&apos;.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmInListFilterType2? FilterType { get; set; }
         /// <summary>A string representing the unique identifier of the list to be used in the filter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -65,7 +65,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.InListFilterType>(); } },
+                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmInListFilterType2>(); } },
                 { "listId", n => { ListId = n.GetStringValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicInListFilterMetadata2>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicInListFilterMetadata2.CreateFromDiscriminatorValue); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
@@ -78,7 +78,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.InListFilterType>("filterType", FilterType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmInListFilterType2>("filterType", FilterType);
             writer.WriteStringValue("listId", ListId);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicInListFilterMetadata2>("metadata", Metadata);
             writer.WriteStringValue("operator", Operator);

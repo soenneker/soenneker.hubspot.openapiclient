@@ -27,10 +27,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>A collection of related links associated with the export.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithSingleResultUriLinksProperty? Links { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithSingleResultUriLinksProperty2? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithSingleResultUriLinksProperty Links { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithSingleResultUriLinksProperty2 Links { get; set; }
 #endif
         /// <summary>The number of errors encountered during the export process.</summary>
         public int? NumErrors { get; set; }
@@ -75,7 +75,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "completedAt", n => { CompletedAt = n.GetDateTimeOffsetValue(); } },
                 { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError17>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError17.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithSingleResultUriLinksProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithSingleResultUriLinksProperty.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithSingleResultUriLinksProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithSingleResultUriLinksProperty2.CreateFromDiscriminatorValue); } },
                 { "numErrors", n => { NumErrors = n.GetIntValue(); } },
                 { "requestedAt", n => { RequestedAt = n.GetDateTimeOffsetValue(); } },
                 { "result", n => { Result = n.GetStringValue(); } },
@@ -92,7 +92,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDateTimeOffsetValue("completedAt", CompletedAt);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError17>("errors", Errors);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithSingleResultUriLinksProperty>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithSingleResultUriLinksProperty2>("links", Links);
             writer.WriteIntValue("numErrors", NumErrors);
             writer.WriteDateTimeOffsetValue("requestedAt", RequestedAt);
             writer.WriteStringValue("result", Result);

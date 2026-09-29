@@ -24,8 +24,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>A string that defines the type of reference, with valid values including &apos;VALUE&apos;, &apos;UPDATED_AT&apos;, &apos;ANNIVERSARY&apos;, &apos;VALUE_WITH_ZONE_SAME_LOCAL_CONVERSION&apos;, and &apos;ANNIVERSARY_WITH_ZONE_SAME_LOCAL_CONVERSION&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyReferencedTimeReferenceType? ReferenceType { get; set; }
-        /// <summary>A string indicating the type of time reference. It defaults to &apos;PROPERTY_REFERENCE&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyReferencedTimeType? TimeType { get; set; }
+        /// <summary>A string indicating the type of time reference, with a default value of &apos;PROPERTY_REFERENCED&apos;.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EventsPropertyReferencedTimeType? TimeType { get; set; }
         /// <summary>A string specifying the source of the timezone, which can be &apos;CUSTOM&apos;, &apos;USER&apos;, or &apos;PORTAL&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyReferencedTimeTimezoneSource? TimezoneSource { get; set; }
         /// <summary>A string representing the identifier of the timezone.</summary>
@@ -63,7 +63,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "property", n => { Property = n.GetStringValue(); } },
                 { "referenceType", n => { ReferenceType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyReferencedTimeReferenceType>(); } },
-                { "timeType", n => { TimeType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyReferencedTimeType>(); } },
+                { "timeType", n => { TimeType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsPropertyReferencedTimeType>(); } },
                 { "timezoneSource", n => { TimezoneSource = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyReferencedTimeTimezoneSource>(); } },
                 { "zoneId", n => { ZoneId = n.GetStringValue(); } },
             };
@@ -77,7 +77,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("property", Property);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyReferencedTimeReferenceType>("referenceType", ReferenceType);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyReferencedTimeType>("timeType", TimeType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsPropertyReferencedTimeType>("timeType", TimeType);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyReferencedTimeTimezoneSource>("timezoneSource", TimezoneSource);
             writer.WriteStringValue("zoneId", ZoneId);
             writer.WriteAdditionalData(AdditionalData);

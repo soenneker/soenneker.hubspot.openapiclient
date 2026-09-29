@@ -17,10 +17,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An optional refinement criterion that can be one of several types, including occurrences and timestamp comparisons.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilter2CoalescingRefineBy? CoalescingRefineBy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilterCoalescingRefineBy2? CoalescingRefineBy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilter2CoalescingRefineBy CoalescingRefineBy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilterCoalescingRefineBy2 CoalescingRefineBy { get; set; }
 #endif
         /// <summary>A string representing the name of the Call-To-Action being filtered.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -30,8 +30,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string CtaName { get; set; }
 #endif
-        /// <summary>A string indicating the type of filter being applied. Defaults to &apos;CTA&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CtaFilterType? FilterType { get; set; }
+        /// <summary>A string that specifies the type of filter, defaulting to &apos;CTA&apos;.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmCtaFilterType2? FilterType { get; set; }
         /// <summary>A string that defines the operation to be applied in the filter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -43,10 +43,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An optional refinement criterion used to narrow down data, similar to coalescingRefineBy, with options like occurrences and timestamp comparisons.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilter2PruningRefineBy? PruningRefineBy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilterPruningRefineBy2? PruningRefineBy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilter2PruningRefineBy PruningRefineBy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilterPruningRefineBy2 PruningRefineBy { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilter2"/> and sets the default values.
@@ -73,11 +73,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "coalescingRefineBy", n => { CoalescingRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilter2CoalescingRefineBy>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilter2CoalescingRefineBy.CreateFromDiscriminatorValue); } },
+                { "coalescingRefineBy", n => { CoalescingRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilterCoalescingRefineBy2>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilterCoalescingRefineBy2.CreateFromDiscriminatorValue); } },
                 { "ctaName", n => { CtaName = n.GetStringValue(); } },
-                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CtaFilterType>(); } },
+                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmCtaFilterType2>(); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
-                { "pruningRefineBy", n => { PruningRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilter2PruningRefineBy>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilter2PruningRefineBy.CreateFromDiscriminatorValue); } },
+                { "pruningRefineBy", n => { PruningRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilterPruningRefineBy2>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilterPruningRefineBy2.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -87,11 +87,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilter2CoalescingRefineBy>("coalescingRefineBy", CoalescingRefineBy);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilterCoalescingRefineBy2>("coalescingRefineBy", CoalescingRefineBy);
             writer.WriteStringValue("ctaName", CtaName);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CtaFilterType>("filterType", FilterType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmCtaFilterType2>("filterType", FilterType);
             writer.WriteStringValue("operator", Operator);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilter2PruningRefineBy>("pruningRefineBy", PruningRefineBy);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCtaAnalyticsFilterPruningRefineBy2>("pruningRefineBy", PruningRefineBy);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

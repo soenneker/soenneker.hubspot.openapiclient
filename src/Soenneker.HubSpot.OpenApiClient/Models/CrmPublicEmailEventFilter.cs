@@ -38,8 +38,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string EmailId { get; set; }
 #endif
-        /// <summary>A string representing the type of filter being applied. This property is required.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailEventFilterType? FilterType { get; set; }
+        /// <summary>A string indicating the type of filter. The default value is &apos;EMAIL_EVENT&apos;.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmEmailEventFilterType? FilterType { get; set; }
         /// <summary>A string representing the level of the email event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -86,7 +86,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "appId", n => { AppId = n.GetStringValue(); } },
                 { "clickUrl", n => { ClickUrl = n.GetStringValue(); } },
                 { "emailId", n => { EmailId = n.GetStringValue(); } },
-                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailEventFilterType>(); } },
+                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmEmailEventFilterType>(); } },
                 { "level", n => { Level = n.GetStringValue(); } },
                 { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEmailEventFilterOperator>(); } },
                 { "pruningRefineBy", n => { PruningRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEmailEventFilterPruningRefineBy>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEmailEventFilterPruningRefineBy.CreateFromDiscriminatorValue); } },
@@ -102,7 +102,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("appId", AppId);
             writer.WriteStringValue("clickUrl", ClickUrl);
             writer.WriteStringValue("emailId", EmailId);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailEventFilterType>("filterType", FilterType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmEmailEventFilterType>("filterType", FilterType);
             writer.WriteStringValue("level", Level);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEmailEventFilterOperator>("operator", Operator);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEmailEventFilterPruningRefineBy>("pruningRefineBy", PruningRefineBy);

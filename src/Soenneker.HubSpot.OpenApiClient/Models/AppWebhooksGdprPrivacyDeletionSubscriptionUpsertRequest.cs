@@ -32,8 +32,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>An integer representing the unique identifier for the HubSpot portal that is being listened to for changes. </summary>
         public long? PortalId { get; set; }
-        /// <summary>The type of subscription, which is fixed as &apos;GDPR_PRIVACY_DELETION&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.GdprPrivacyDeletionSubscriptionType? SubscriptionType { get; set; }
+        /// <summary>A string indicating the type of subscription. GDPR_PRIVACY_DELETION is the only valid option for GdprPrivacyDeletionSubscriptionUpsertRequest. </summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksGdprPrivacyDeletionSubscriptionType? SubscriptionType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksGdprPrivacyDeletionSubscriptionUpsertRequest"/> and sets the default values.
         /// </summary>
@@ -62,7 +62,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "actions", n => { Actions = n.GetCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksGdprPrivacyDeletionSubscriptionUpsertRequestActionsItem>()?.AsList(); } },
                 { "objectTypeId", n => { ObjectTypeId = n.GetStringValue(); } },
                 { "portalId", n => { PortalId = n.GetLongValue(); } },
-                { "subscriptionType", n => { SubscriptionType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.GdprPrivacyDeletionSubscriptionType>(); } },
+                { "subscriptionType", n => { SubscriptionType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksGdprPrivacyDeletionSubscriptionType>(); } },
             };
         }
         /// <summary>
@@ -75,7 +75,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksGdprPrivacyDeletionSubscriptionUpsertRequestActionsItem>("actions", Actions);
             writer.WriteStringValue("objectTypeId", ObjectTypeId);
             writer.WriteLongValue("portalId", PortalId);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.GdprPrivacyDeletionSubscriptionType>("subscriptionType", SubscriptionType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksGdprPrivacyDeletionSubscriptionType>("subscriptionType", SubscriptionType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

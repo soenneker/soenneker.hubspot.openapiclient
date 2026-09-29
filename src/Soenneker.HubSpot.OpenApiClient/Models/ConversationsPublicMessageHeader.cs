@@ -24,8 +24,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Text { get; set; }
 #endif
-        /// <summary>A string indicating the type of the message header. The default and only valid value is &apos;MESSAGE_HEADER&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.MessageHeaderType? Type { get; set; }
+        /// <summary>A string representing the type of attachment, which is always &apos;MESSAGE_HEADER&apos;.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsMessageHeaderType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicMessageHeader"/> and sets the default values.
         /// </summary>
@@ -53,7 +53,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "fileId", n => { FileId = n.GetLongValue(); } },
                 { "text", n => { Text = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MessageHeaderType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsMessageHeaderType>(); } },
             };
         }
         /// <summary>
@@ -65,7 +65,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteLongValue("fileId", FileId);
             writer.WriteStringValue("text", Text);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MessageHeaderType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsMessageHeaderType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

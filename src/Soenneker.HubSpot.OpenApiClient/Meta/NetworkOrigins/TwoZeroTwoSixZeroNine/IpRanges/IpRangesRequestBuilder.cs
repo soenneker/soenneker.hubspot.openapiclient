@@ -101,21 +101,21 @@ namespace Soenneker.HubSpot.OpenApiClient.Meta.NetworkOrigins.TwoZeroTwoSixZeroN
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("direction")]
-            public global::Soenneker.HubSpot.OpenApiClient.Models.MetaGetMetaNetworkOrigins202609IpRangesMetaNetworkOrigins202609BetaIpRangesDirectionParameterItem[]? Direction { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.GetMetaNetworkOrigins202609IpRangesMetaNetworkOrigins202609BetaIpRangesDirectionParameterItem[]? Direction { get; set; }
 #nullable restore
 #else
             [QueryParameter("direction")]
-            public global::Soenneker.HubSpot.OpenApiClient.Models.MetaGetMetaNetworkOrigins202609IpRangesMetaNetworkOrigins202609BetaIpRangesDirectionParameterItem[] Direction { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.GetMetaNetworkOrigins202609IpRangesMetaNetworkOrigins202609BetaIpRangesDirectionParameterItem[] Direction { get; set; }
 #endif
             /// <summary>An array of services to filter the IP ranges. Valid values are EMAIL, API, DNS, WEB_SCRAPING, and TEST_SERVICE.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("service")]
-            public global::Soenneker.HubSpot.OpenApiClient.Models.MetaGetMetaNetworkOrigins202609IpRangesMetaNetworkOrigins202609BetaIpRangesServiceParameterItem[]? Service { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.GetMetaNetworkOrigins202609IpRangesMetaNetworkOrigins202609BetaIpRangesServiceParameterItem[]? Service { get; set; }
 #nullable restore
 #else
             [QueryParameter("service")]
-            public global::Soenneker.HubSpot.OpenApiClient.Models.MetaGetMetaNetworkOrigins202609IpRangesMetaNetworkOrigins202609BetaIpRangesServiceParameterItem[] Service { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.GetMetaNetworkOrigins202609IpRangesMetaNetworkOrigins202609BetaIpRangesServiceParameterItem[] Service { get; set; }
 #endif
         }
     }

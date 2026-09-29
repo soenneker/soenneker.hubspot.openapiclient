@@ -26,8 +26,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsQuickReply> QuickReplies { get; set; }
 #endif
-        /// <summary>A string indicating the type of the component, with a default value of &apos;QUICK_REPLIES&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.QuickRepliesType? Type { get; set; }
+        /// <summary>A string indicating the type of the component, which is &apos;QUICK_REPLIES&apos;.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsQuickRepliesType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicQuickReplies"/> and sets the default values.
         /// </summary>
@@ -56,7 +56,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "allowMultiSelect", n => { AllowMultiSelect = n.GetBoolValue(); } },
                 { "allowUserInput", n => { AllowUserInput = n.GetBoolValue(); } },
                 { "quickReplies", n => { QuickReplies = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsQuickReply>(global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsQuickReply.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.QuickRepliesType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsQuickRepliesType>(); } },
             };
         }
         /// <summary>
@@ -69,7 +69,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteBoolValue("allowMultiSelect", AllowMultiSelect);
             writer.WriteBoolValue("allowUserInput", AllowUserInput);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsQuickReply>("quickReplies", QuickReplies);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.QuickRepliesType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsQuickRepliesType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

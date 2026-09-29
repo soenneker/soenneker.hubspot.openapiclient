@@ -17,148 +17,148 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object indicating whether the buyer can select the quantity of the product.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestAllowBuyerSelectedQuantityProperty? AllowBuyerSelectedQuantity { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestAllowBuyerSelectedQuantityProperty2? AllowBuyerSelectedQuantity { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestAllowBuyerSelectedQuantityProperty AllowBuyerSelectedQuantity { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestAllowBuyerSelectedQuantityProperty2 AllowBuyerSelectedQuantity { get; set; }
 #endif
         /// <summary>An object representing the anchor date for the billing cycle.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBillingCycleAnchorDateProperty? BillingCycleAnchorDate { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBillingCycleAnchorDateProperty2? BillingCycleAnchorDate { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBillingCycleAnchorDateProperty BillingCycleAnchorDate { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBillingCycleAnchorDateProperty2 BillingCycleAnchorDate { get; set; }
 #endif
         /// <summary>An object representing the number of days to delay the start of billing.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBillingStartDelayDaysProperty? BillingStartDelayDays { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBillingStartDelayDaysProperty2? BillingStartDelayDays { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBillingStartDelayDaysProperty BillingStartDelayDays { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBillingStartDelayDaysProperty2 BillingStartDelayDays { get; set; }
 #endif
         /// <summary>An object representing the number of months to delay the start of billing.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBillingStartDelayMonthsProperty? BillingStartDelayMonths { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBillingStartDelayMonthsProperty2? BillingStartDelayMonths { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBillingStartDelayMonthsProperty BillingStartDelayMonths { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBillingStartDelayMonthsProperty2 BillingStartDelayMonths { get; set; }
 #endif
         /// <summary>An object representing the maximum quantity the buyer can select.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBuyerSelectedQuantityMaxProperty? BuyerSelectedQuantityMax { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBuyerSelectedQuantityMaxProperty2? BuyerSelectedQuantityMax { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBuyerSelectedQuantityMaxProperty BuyerSelectedQuantityMax { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBuyerSelectedQuantityMaxProperty2 BuyerSelectedQuantityMax { get; set; }
 #endif
         /// <summary>An object representing the minimum quantity the buyer can select.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBuyerSelectedQuantityMinProperty? BuyerSelectedQuantityMin { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBuyerSelectedQuantityMinProperty2? BuyerSelectedQuantityMin { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBuyerSelectedQuantityMinProperty BuyerSelectedQuantityMin { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBuyerSelectedQuantityMinProperty2 BuyerSelectedQuantityMin { get; set; }
 #endif
         /// <summary>An object representing the description of the product associated with the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestDescriptionProperty? Description { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestDescriptionProperty2? Description { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestDescriptionProperty Description { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestDescriptionProperty2 Description { get; set; }
 #endif
         /// <summary>An object representing any discount applied to the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestDiscountProperty? Discount { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestDiscountProperty2? Discount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestDiscountProperty Discount { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestDiscountProperty2 Discount { get; set; }
 #endif
         /// <summary>An object representing the percentage discount applied to the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestDiscountPercentageProperty? DiscountPercentage { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestDiscountPercentageProperty2? DiscountPercentage { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestDiscountPercentageProperty DiscountPercentage { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestDiscountPercentageProperty2 DiscountPercentage { get; set; }
 #endif
         /// <summary>An object representing an external identifier for the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestExternalIdProperty? ExternalId { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestExternalIdProperty2? ExternalId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestExternalIdProperty ExternalId { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestExternalIdProperty2 ExternalId { get; set; }
 #endif
         /// <summary>An object representing images associated with the product.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestImagesProperty? Images { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestImagesProperty2? Images { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestImagesProperty Images { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestImagesProperty2 Images { get; set; }
 #endif
         /// <summary>An object indicating whether the price of the line item is editable.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestIsEditablePriceProperty? IsEditablePrice { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestIsEditablePriceProperty2? IsEditablePrice { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestIsEditablePriceProperty IsEditablePrice { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestIsEditablePriceProperty2 IsEditablePrice { get; set; }
 #endif
         /// <summary>An object indicating whether the line item is optional.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestIsOptionalProperty? IsOptional { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestIsOptionalProperty2? IsOptional { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestIsOptionalProperty IsOptional { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestIsOptionalProperty2 IsOptional { get; set; }
 #endif
         /// <summary>An object representing the currency code for the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestLineItemCurrencyCodeProperty? LineItemCurrencyCode { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestLineItemCurrencyCodeProperty2? LineItemCurrencyCode { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestLineItemCurrencyCodeProperty LineItemCurrencyCode { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestLineItemCurrencyCodeProperty2 LineItemCurrencyCode { get; set; }
 #endif
         /// <summary>A string indicating the mode of the line item creation. The default and only valid value is &apos;FROM_PRODUCT&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.FromProductMode? Mode { get; set; }
         /// <summary>An object representing the name of the product associated with the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestNameProperty? Name { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestNameProperty2? Name { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestNameProperty Name { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestNameProperty2 Name { get; set; }
 #endif
         /// <summary>An object representing the position of the line item on a quote.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestPositionOnQuoteProperty? PositionOnQuote { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestPositionOnQuoteProperty2? PositionOnQuote { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestPositionOnQuoteProperty PositionOnQuote { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestPositionOnQuoteProperty2 PositionOnQuote { get; set; }
 #endif
         /// <summary>An object representing the ID of the price book associated with the product.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestPriceBookIdProperty? PriceBookId { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestPriceBookIdProperty2? PriceBookId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestPriceBookIdProperty PriceBookId { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestPriceBookIdProperty2 PriceBookId { get; set; }
 #endif
         /// <summary>An object representing the pricing details of the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestPricingProperty? Pricing { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestPricingProperty2? Pricing { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestPricingProperty Pricing { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestPricingProperty2 Pricing { get; set; }
 #endif
         /// <summary>A string representing the unique identifier of the product.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -171,90 +171,90 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object representing the type of product.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestProductTypeProperty? ProductType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestProductTypeProperty2? ProductType { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestProductTypeProperty ProductType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestProductTypeProperty2 ProductType { get; set; }
 #endif
         /// <summary>An object representing the quantity of the product to be included in the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestQuantityProperty? Quantity { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestQuantityProperty2? Quantity { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestQuantityProperty Quantity { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestQuantityProperty2 Quantity { get; set; }
 #endif
         /// <summary>An object representing the end date of the recurring billing cycle.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRecurringBillingEndDateProperty? RecurringBillingEndDate { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRecurringBillingEndDateProperty2? RecurringBillingEndDate { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRecurringBillingEndDateProperty RecurringBillingEndDate { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRecurringBillingEndDateProperty2 RecurringBillingEndDate { get; set; }
 #endif
         /// <summary>An object representing the frequency of recurring billing for the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRecurringBillingFrequencyProperty? RecurringBillingFrequency { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRecurringBillingFrequencyProperty2? RecurringBillingFrequency { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRecurringBillingFrequencyProperty RecurringBillingFrequency { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRecurringBillingFrequencyProperty2 RecurringBillingFrequency { get; set; }
 #endif
         /// <summary>An object representing the period of the recurring billing cycle.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRecurringBillingPeriodProperty? RecurringBillingPeriod { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRecurringBillingPeriodProperty2? RecurringBillingPeriod { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRecurringBillingPeriodProperty RecurringBillingPeriod { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRecurringBillingPeriodProperty2 RecurringBillingPeriod { get; set; }
 #endif
         /// <summary>An object representing the start date of the recurring billing cycle.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRecurringBillingStartDateProperty? RecurringBillingStartDate { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRecurringBillingStartDateProperty2? RecurringBillingStartDate { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRecurringBillingStartDateProperty RecurringBillingStartDate { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRecurringBillingStartDateProperty2 RecurringBillingStartDate { get; set; }
 #endif
         /// <summary>An object representing a rich text description of the product associated with the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRichTextDescriptionProperty? RichTextDescription { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRichTextDescriptionProperty2? RichTextDescription { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRichTextDescriptionProperty RichTextDescription { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRichTextDescriptionProperty2 RichTextDescription { get; set; }
 #endif
         /// <summary>An object representing the stock keeping unit (SKU) of the product.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestSkuProperty? Sku { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestSkuProperty2? Sku { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestSkuProperty Sku { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestSkuProperty2 Sku { get; set; }
 #endif
         /// <summary>An object representing the tax category of the product.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestTaxCategoryProperty? TaxCategory { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestTaxCategoryProperty2? TaxCategory { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestTaxCategoryProperty TaxCategory { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestTaxCategoryProperty2 TaxCategory { get; set; }
 #endif
         /// <summary>An object representing the tax rate group ID for the product.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestTaxRateGroupIdProperty? TaxRateGroupId { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestTaxRateGroupIdProperty2? TaxRateGroupId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestTaxRateGroupIdProperty TaxRateGroupId { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestTaxRateGroupIdProperty2 TaxRateGroupId { get; set; }
 #endif
         /// <summary>An object representing the variant ID of the product.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestVariantIdProperty? VariantId { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestVariantIdProperty2? VariantId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestVariantIdProperty VariantId { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestVariantIdProperty2 VariantId { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequest"/> and sets the default values.
@@ -281,37 +281,37 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "allowBuyerSelectedQuantity", n => { AllowBuyerSelectedQuantity = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestAllowBuyerSelectedQuantityProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestAllowBuyerSelectedQuantityProperty.CreateFromDiscriminatorValue); } },
-                { "billingCycleAnchorDate", n => { BillingCycleAnchorDate = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBillingCycleAnchorDateProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBillingCycleAnchorDateProperty.CreateFromDiscriminatorValue); } },
-                { "billingStartDelayDays", n => { BillingStartDelayDays = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBillingStartDelayDaysProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBillingStartDelayDaysProperty.CreateFromDiscriminatorValue); } },
-                { "billingStartDelayMonths", n => { BillingStartDelayMonths = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBillingStartDelayMonthsProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBillingStartDelayMonthsProperty.CreateFromDiscriminatorValue); } },
-                { "buyerSelectedQuantityMax", n => { BuyerSelectedQuantityMax = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBuyerSelectedQuantityMaxProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBuyerSelectedQuantityMaxProperty.CreateFromDiscriminatorValue); } },
-                { "buyerSelectedQuantityMin", n => { BuyerSelectedQuantityMin = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBuyerSelectedQuantityMinProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBuyerSelectedQuantityMinProperty.CreateFromDiscriminatorValue); } },
-                { "description", n => { Description = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestDescriptionProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestDescriptionProperty.CreateFromDiscriminatorValue); } },
-                { "discount", n => { Discount = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestDiscountProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestDiscountProperty.CreateFromDiscriminatorValue); } },
-                { "discountPercentage", n => { DiscountPercentage = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestDiscountPercentageProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestDiscountPercentageProperty.CreateFromDiscriminatorValue); } },
-                { "externalId", n => { ExternalId = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestExternalIdProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestExternalIdProperty.CreateFromDiscriminatorValue); } },
-                { "images", n => { Images = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestImagesProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestImagesProperty.CreateFromDiscriminatorValue); } },
-                { "isEditablePrice", n => { IsEditablePrice = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestIsEditablePriceProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestIsEditablePriceProperty.CreateFromDiscriminatorValue); } },
-                { "isOptional", n => { IsOptional = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestIsOptionalProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestIsOptionalProperty.CreateFromDiscriminatorValue); } },
-                { "lineItemCurrencyCode", n => { LineItemCurrencyCode = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestLineItemCurrencyCodeProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestLineItemCurrencyCodeProperty.CreateFromDiscriminatorValue); } },
+                { "allowBuyerSelectedQuantity", n => { AllowBuyerSelectedQuantity = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestAllowBuyerSelectedQuantityProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestAllowBuyerSelectedQuantityProperty2.CreateFromDiscriminatorValue); } },
+                { "billingCycleAnchorDate", n => { BillingCycleAnchorDate = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBillingCycleAnchorDateProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBillingCycleAnchorDateProperty2.CreateFromDiscriminatorValue); } },
+                { "billingStartDelayDays", n => { BillingStartDelayDays = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBillingStartDelayDaysProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBillingStartDelayDaysProperty2.CreateFromDiscriminatorValue); } },
+                { "billingStartDelayMonths", n => { BillingStartDelayMonths = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBillingStartDelayMonthsProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBillingStartDelayMonthsProperty2.CreateFromDiscriminatorValue); } },
+                { "buyerSelectedQuantityMax", n => { BuyerSelectedQuantityMax = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBuyerSelectedQuantityMaxProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBuyerSelectedQuantityMaxProperty2.CreateFromDiscriminatorValue); } },
+                { "buyerSelectedQuantityMin", n => { BuyerSelectedQuantityMin = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBuyerSelectedQuantityMinProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBuyerSelectedQuantityMinProperty2.CreateFromDiscriminatorValue); } },
+                { "description", n => { Description = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestDescriptionProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestDescriptionProperty2.CreateFromDiscriminatorValue); } },
+                { "discount", n => { Discount = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestDiscountProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestDiscountProperty2.CreateFromDiscriminatorValue); } },
+                { "discountPercentage", n => { DiscountPercentage = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestDiscountPercentageProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestDiscountPercentageProperty2.CreateFromDiscriminatorValue); } },
+                { "externalId", n => { ExternalId = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestExternalIdProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestExternalIdProperty2.CreateFromDiscriminatorValue); } },
+                { "images", n => { Images = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestImagesProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestImagesProperty2.CreateFromDiscriminatorValue); } },
+                { "isEditablePrice", n => { IsEditablePrice = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestIsEditablePriceProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestIsEditablePriceProperty2.CreateFromDiscriminatorValue); } },
+                { "isOptional", n => { IsOptional = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestIsOptionalProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestIsOptionalProperty2.CreateFromDiscriminatorValue); } },
+                { "lineItemCurrencyCode", n => { LineItemCurrencyCode = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestLineItemCurrencyCodeProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestLineItemCurrencyCodeProperty2.CreateFromDiscriminatorValue); } },
                 { "mode", n => { Mode = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FromProductMode>(); } },
-                { "name", n => { Name = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestNameProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestNameProperty.CreateFromDiscriminatorValue); } },
-                { "positionOnQuote", n => { PositionOnQuote = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestPositionOnQuoteProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestPositionOnQuoteProperty.CreateFromDiscriminatorValue); } },
-                { "priceBookId", n => { PriceBookId = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestPriceBookIdProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestPriceBookIdProperty.CreateFromDiscriminatorValue); } },
-                { "pricing", n => { Pricing = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestPricingProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestPricingProperty.CreateFromDiscriminatorValue); } },
+                { "name", n => { Name = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestNameProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestNameProperty2.CreateFromDiscriminatorValue); } },
+                { "positionOnQuote", n => { PositionOnQuote = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestPositionOnQuoteProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestPositionOnQuoteProperty2.CreateFromDiscriminatorValue); } },
+                { "priceBookId", n => { PriceBookId = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestPriceBookIdProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestPriceBookIdProperty2.CreateFromDiscriminatorValue); } },
+                { "pricing", n => { Pricing = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestPricingProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestPricingProperty2.CreateFromDiscriminatorValue); } },
                 { "productId", n => { ProductId = n.GetStringValue(); } },
-                { "productType", n => { ProductType = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestProductTypeProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestProductTypeProperty.CreateFromDiscriminatorValue); } },
-                { "quantity", n => { Quantity = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestQuantityProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestQuantityProperty.CreateFromDiscriminatorValue); } },
-                { "recurringBillingEndDate", n => { RecurringBillingEndDate = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRecurringBillingEndDateProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRecurringBillingEndDateProperty.CreateFromDiscriminatorValue); } },
-                { "recurringBillingFrequency", n => { RecurringBillingFrequency = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRecurringBillingFrequencyProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRecurringBillingFrequencyProperty.CreateFromDiscriminatorValue); } },
-                { "recurringBillingPeriod", n => { RecurringBillingPeriod = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRecurringBillingPeriodProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRecurringBillingPeriodProperty.CreateFromDiscriminatorValue); } },
-                { "recurringBillingStartDate", n => { RecurringBillingStartDate = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRecurringBillingStartDateProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRecurringBillingStartDateProperty.CreateFromDiscriminatorValue); } },
-                { "richTextDescription", n => { RichTextDescription = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRichTextDescriptionProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRichTextDescriptionProperty.CreateFromDiscriminatorValue); } },
-                { "sku", n => { Sku = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestSkuProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestSkuProperty.CreateFromDiscriminatorValue); } },
-                { "taxCategory", n => { TaxCategory = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestTaxCategoryProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestTaxCategoryProperty.CreateFromDiscriminatorValue); } },
-                { "taxRateGroupId", n => { TaxRateGroupId = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestTaxRateGroupIdProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestTaxRateGroupIdProperty.CreateFromDiscriminatorValue); } },
-                { "variantId", n => { VariantId = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestVariantIdProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestVariantIdProperty.CreateFromDiscriminatorValue); } },
+                { "productType", n => { ProductType = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestProductTypeProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestProductTypeProperty2.CreateFromDiscriminatorValue); } },
+                { "quantity", n => { Quantity = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestQuantityProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestQuantityProperty2.CreateFromDiscriminatorValue); } },
+                { "recurringBillingEndDate", n => { RecurringBillingEndDate = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRecurringBillingEndDateProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRecurringBillingEndDateProperty2.CreateFromDiscriminatorValue); } },
+                { "recurringBillingFrequency", n => { RecurringBillingFrequency = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRecurringBillingFrequencyProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRecurringBillingFrequencyProperty2.CreateFromDiscriminatorValue); } },
+                { "recurringBillingPeriod", n => { RecurringBillingPeriod = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRecurringBillingPeriodProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRecurringBillingPeriodProperty2.CreateFromDiscriminatorValue); } },
+                { "recurringBillingStartDate", n => { RecurringBillingStartDate = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRecurringBillingStartDateProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRecurringBillingStartDateProperty2.CreateFromDiscriminatorValue); } },
+                { "richTextDescription", n => { RichTextDescription = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRichTextDescriptionProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRichTextDescriptionProperty2.CreateFromDiscriminatorValue); } },
+                { "sku", n => { Sku = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestSkuProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestSkuProperty2.CreateFromDiscriminatorValue); } },
+                { "taxCategory", n => { TaxCategory = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestTaxCategoryProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestTaxCategoryProperty2.CreateFromDiscriminatorValue); } },
+                { "taxRateGroupId", n => { TaxRateGroupId = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestTaxRateGroupIdProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestTaxRateGroupIdProperty2.CreateFromDiscriminatorValue); } },
+                { "variantId", n => { VariantId = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestVariantIdProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestVariantIdProperty2.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -321,37 +321,37 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestAllowBuyerSelectedQuantityProperty>("allowBuyerSelectedQuantity", AllowBuyerSelectedQuantity);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBillingCycleAnchorDateProperty>("billingCycleAnchorDate", BillingCycleAnchorDate);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBillingStartDelayDaysProperty>("billingStartDelayDays", BillingStartDelayDays);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBillingStartDelayMonthsProperty>("billingStartDelayMonths", BillingStartDelayMonths);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBuyerSelectedQuantityMaxProperty>("buyerSelectedQuantityMax", BuyerSelectedQuantityMax);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBuyerSelectedQuantityMinProperty>("buyerSelectedQuantityMin", BuyerSelectedQuantityMin);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestDescriptionProperty>("description", Description);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestDiscountProperty>("discount", Discount);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestDiscountPercentageProperty>("discountPercentage", DiscountPercentage);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestExternalIdProperty>("externalId", ExternalId);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestImagesProperty>("images", Images);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestIsEditablePriceProperty>("isEditablePrice", IsEditablePrice);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestIsOptionalProperty>("isOptional", IsOptional);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestLineItemCurrencyCodeProperty>("lineItemCurrencyCode", LineItemCurrencyCode);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestAllowBuyerSelectedQuantityProperty2>("allowBuyerSelectedQuantity", AllowBuyerSelectedQuantity);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBillingCycleAnchorDateProperty2>("billingCycleAnchorDate", BillingCycleAnchorDate);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBillingStartDelayDaysProperty2>("billingStartDelayDays", BillingStartDelayDays);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBillingStartDelayMonthsProperty2>("billingStartDelayMonths", BillingStartDelayMonths);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBuyerSelectedQuantityMaxProperty2>("buyerSelectedQuantityMax", BuyerSelectedQuantityMax);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBuyerSelectedQuantityMinProperty2>("buyerSelectedQuantityMin", BuyerSelectedQuantityMin);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestDescriptionProperty2>("description", Description);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestDiscountProperty2>("discount", Discount);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestDiscountPercentageProperty2>("discountPercentage", DiscountPercentage);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestExternalIdProperty2>("externalId", ExternalId);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestImagesProperty2>("images", Images);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestIsEditablePriceProperty2>("isEditablePrice", IsEditablePrice);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestIsOptionalProperty2>("isOptional", IsOptional);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestLineItemCurrencyCodeProperty2>("lineItemCurrencyCode", LineItemCurrencyCode);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FromProductMode>("mode", Mode);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestNameProperty>("name", Name);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestPositionOnQuoteProperty>("positionOnQuote", PositionOnQuote);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestPriceBookIdProperty>("priceBookId", PriceBookId);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestPricingProperty>("pricing", Pricing);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestNameProperty2>("name", Name);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestPositionOnQuoteProperty2>("positionOnQuote", PositionOnQuote);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestPriceBookIdProperty2>("priceBookId", PriceBookId);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestPricingProperty2>("pricing", Pricing);
             writer.WriteStringValue("productId", ProductId);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestProductTypeProperty>("productType", ProductType);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestQuantityProperty>("quantity", Quantity);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRecurringBillingEndDateProperty>("recurringBillingEndDate", RecurringBillingEndDate);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRecurringBillingFrequencyProperty>("recurringBillingFrequency", RecurringBillingFrequency);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRecurringBillingPeriodProperty>("recurringBillingPeriod", RecurringBillingPeriod);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRecurringBillingStartDateProperty>("recurringBillingStartDate", RecurringBillingStartDate);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRichTextDescriptionProperty>("richTextDescription", RichTextDescription);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestSkuProperty>("sku", Sku);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestTaxCategoryProperty>("taxCategory", TaxCategory);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestTaxRateGroupIdProperty>("taxRateGroupId", TaxRateGroupId);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestVariantIdProperty>("variantId", VariantId);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestProductTypeProperty2>("productType", ProductType);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestQuantityProperty2>("quantity", Quantity);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRecurringBillingEndDateProperty2>("recurringBillingEndDate", RecurringBillingEndDate);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRecurringBillingFrequencyProperty2>("recurringBillingFrequency", RecurringBillingFrequency);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRecurringBillingPeriodProperty2>("recurringBillingPeriod", RecurringBillingPeriod);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRecurringBillingStartDateProperty2>("recurringBillingStartDate", RecurringBillingStartDate);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestRichTextDescriptionProperty2>("richTextDescription", RichTextDescription);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestSkuProperty2>("sku", Sku);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestTaxCategoryProperty2>("taxCategory", TaxCategory);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestTaxRateGroupIdProperty2>("taxRateGroupId", TaxRateGroupId);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestVariantIdProperty2>("variantId", VariantId);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

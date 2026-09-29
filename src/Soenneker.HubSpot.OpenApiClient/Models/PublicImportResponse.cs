@@ -35,10 +35,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The complete import request configuration as a JSON object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportRequestJsonProperty? ImportRequestJson { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportRequestJsonProperty2? ImportRequestJson { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportRequestJsonProperty ImportRequestJson { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportRequestJsonProperty2 ImportRequestJson { get; set; }
 #endif
         /// <summary>Indicates where/how the import was initiated.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportSource? ImportSource { get; set; }
@@ -100,7 +100,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "importName", n => { ImportName = n.GetStringValue(); } },
-                { "importRequestJson", n => { ImportRequestJson = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportRequestJsonProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportRequestJsonProperty.CreateFromDiscriminatorValue); } },
+                { "importRequestJson", n => { ImportRequestJson = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportRequestJsonProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportRequestJsonProperty2.CreateFromDiscriminatorValue); } },
                 { "importSource", n => { ImportSource = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportSource>(); } },
                 { "importTemplate", n => { ImportTemplate = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ImportTemplate>(global::Soenneker.HubSpot.OpenApiClient.Models.ImportTemplate.CreateFromDiscriminatorValue); } },
                 { "mappedObjectTypeIds", n => { MappedObjectTypeIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -120,7 +120,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("importName", ImportName);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportRequestJsonProperty>("importRequestJson", ImportRequestJson);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportRequestJsonProperty2>("importRequestJson", ImportRequestJson);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportSource>("importSource", ImportSource);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ImportTemplate>("importTemplate", ImportTemplate);
             writer.WriteCollectionOfPrimitiveValues<string>("mappedObjectTypeIds", MappedObjectTypeIds);

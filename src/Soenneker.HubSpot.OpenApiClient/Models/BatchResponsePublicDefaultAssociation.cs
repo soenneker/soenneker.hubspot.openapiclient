@@ -15,9 +15,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The timestamp when the batch processing was completed, in ISO 8601 format.</summary>
+        /// <summary>The date and time when the batch operation was completed, in ISO 8601 format.</summary>
         public DateTimeOffset? CompletedAt { get; set; }
-        /// <summary>An array of errors encountered during the batch operation, each providing details about the issue.</summary>
+        /// <summary>An array of errors encountered during the batch operation, each represented by a standard error object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError>? Errors { get; set; }
@@ -25,19 +25,19 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError> Errors { get; set; }
 #endif
-        /// <summary>An object containing relevant links related to the batch request.</summary>
+        /// <summary>A map of link names to associated URIs, providing additional resources or documentation related to the batch operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicDefaultAssociationLinksProperty? Links { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicDefaultAssociationLinksProperty2? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicDefaultAssociationLinksProperty Links { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicDefaultAssociationLinksProperty2 Links { get; set; }
 #endif
-        /// <summary>The number of errors that occurred during the batch operation.</summary>
+        /// <summary>The total number of errors encountered during the batch operation.</summary>
         public int? NumErrors { get; set; }
-        /// <summary>The timestamp when the batch request was initially made, in ISO 8601 format.</summary>
+        /// <summary>The date and time when the batch operation was requested, in ISO 8601 format.</summary>
         public DateTimeOffset? RequestedAt { get; set; }
-        /// <summary>An array of results from the batch operation, each representing a default association between CRM objects.</summary>
+        /// <summary>An array of PublicDefaultAssociation objects representing the successful associations created during the batch operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicDefaultAssociation>? Results { get; set; }
@@ -45,9 +45,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicDefaultAssociation> Results { get; set; }
 #endif
-        /// <summary>The timestamp when the batch processing began, in ISO 8601 format.</summary>
+        /// <summary>The date and time when the batch operation was started, in ISO 8601 format.</summary>
         public DateTimeOffset? StartedAt { get; set; }
-        /// <summary>The status of the batch processing request: &quot;PENDING&quot;, &quot;PROCESSING&quot;, &quot;CANCELLED&quot;, or &quot;COMPLETE&quot;.</summary>
+        /// <summary>The current status of the batch operation. Valid values include &apos;PENDING&apos;, &apos;PROCESSING&apos;, &apos;CANCELED&apos;, and &apos;COMPLETE&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicDefaultAssociationStatus? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicDefaultAssociation"/> and sets the default values.
@@ -76,7 +76,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "completedAt", n => { CompletedAt = n.GetDateTimeOffsetValue(); } },
                 { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicDefaultAssociationLinksProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicDefaultAssociationLinksProperty.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicDefaultAssociationLinksProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicDefaultAssociationLinksProperty2.CreateFromDiscriminatorValue); } },
                 { "numErrors", n => { NumErrors = n.GetIntValue(); } },
                 { "requestedAt", n => { RequestedAt = n.GetDateTimeOffsetValue(); } },
                 { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicDefaultAssociation>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicDefaultAssociation.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -93,7 +93,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDateTimeOffsetValue("completedAt", CompletedAt);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError>("errors", Errors);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicDefaultAssociationLinksProperty>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicDefaultAssociationLinksProperty2>("links", Links);
             writer.WriteIntValue("numErrors", NumErrors);
             writer.WriteDateTimeOffsetValue("requestedAt", RequestedAt);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicDefaultAssociation>("results", Results);

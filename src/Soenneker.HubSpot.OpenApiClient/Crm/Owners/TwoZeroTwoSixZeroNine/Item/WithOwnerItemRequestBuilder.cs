@@ -90,7 +90,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Owners.TwoZeroTwoSixZeroNine.Item
             public bool? Archived { get; set; }
             /// <summary>Specifies which property to use for identifying the owner. Valid values are &apos;id&apos; or &apos;userId&apos;. Defaults to &apos;id&apos;.</summary>
             [QueryParameter("idProperty")]
-            public global::Soenneker.HubSpot.OpenApiClient.Models.CrmGetCrmOwners202609OwnerIdGetByIdIdPropertyParameter? IdProperty { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.GetCrmOwners202609OwnerIdGetByIdIdPropertyParameter? IdProperty { get; set; }
         }
     }
 }

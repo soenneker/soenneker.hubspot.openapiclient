@@ -17,10 +17,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object containing additional properties of the list, with each property represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectListSearchResultAdditionalPropertiesProperty? AdditionalProperties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectListSearchResultAdditionalPropertiesProperty2? AdditionalProperties { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectListSearchResultAdditionalPropertiesProperty AdditionalProperties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectListSearchResultAdditionalPropertiesProperty2 AdditionalProperties { get; set; }
 #endif
         /// <summary>The date and time when the list was created, in ISO 8601 format.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
@@ -113,7 +113,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "additionalProperties", n => { AdditionalProperties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectListSearchResultAdditionalPropertiesProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectListSearchResultAdditionalPropertiesProperty.CreateFromDiscriminatorValue); } },
+                { "additionalProperties", n => { AdditionalProperties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectListSearchResultAdditionalPropertiesProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectListSearchResultAdditionalPropertiesProperty2.CreateFromDiscriminatorValue); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "createdById", n => { CreatedById = n.GetStringValue(); } },
                 { "deletedAt", n => { DeletedAt = n.GetDateTimeOffsetValue(); } },
@@ -135,7 +135,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectListSearchResultAdditionalPropertiesProperty>("additionalProperties", AdditionalProperties);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectListSearchResultAdditionalPropertiesProperty2>("additionalProperties", AdditionalProperties);
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
             writer.WriteStringValue("createdById", CreatedById);
             writer.WriteDateTimeOffsetValue("deletedAt", DeletedAt);

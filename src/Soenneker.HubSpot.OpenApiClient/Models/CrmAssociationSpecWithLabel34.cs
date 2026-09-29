@@ -16,7 +16,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The category of the association, indicating its origin or purpose. Valid values include &apos;HUBSPOT_DEFINED&apos;, &apos;USER_DEFINED&apos;, &apos;INTEGRATOR_DEFINED&apos;, and &apos;WORK&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecWithLabel34Category? Category { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecWithLabelCategory34? Category { get; set; }
         /// <summary>The string identifier for the object type from which the association originates.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -68,7 +68,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "category", n => { Category = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecWithLabel34Category>(); } },
+                { "category", n => { Category = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecWithLabelCategory34>(); } },
                 { "fromObjectTypeId", n => { FromObjectTypeId = n.GetStringValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "toObjectTypeId", n => { ToObjectTypeId = n.GetStringValue(); } },
@@ -82,7 +82,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecWithLabel34Category>("category", Category);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecWithLabelCategory34>("category", Category);
             writer.WriteStringValue("fromObjectTypeId", FromObjectTypeId);
             writer.WriteStringValue("label", Label);
             writer.WriteStringValue("toObjectTypeId", ToObjectTypeId);

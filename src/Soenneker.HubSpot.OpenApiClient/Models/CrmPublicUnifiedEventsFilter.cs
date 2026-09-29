@@ -38,8 +38,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEventFilterMetadata> FilterLines { get; set; }
 #endif
-        /// <summary>A string that specifies the type of filter, defaulting to &apos;UNIFIED_EVENTS&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.UnifiedEventsFilterType? FilterType { get; set; }
+        /// <summary>A string that specifies the type of filter being applied. The default value is &apos;UNIFIED_EVENTS&apos;.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmUnifiedEventsFilterType? FilterType { get; set; }
         /// <summary>An optional refinement criterion that can be one of several predefined schemas, used to narrow down the events based on specific conditions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -76,7 +76,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "coalescingRefineBy", n => { CoalescingRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterCoalescingRefineBy>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterCoalescingRefineBy.CreateFromDiscriminatorValue); } },
                 { "eventTypeId", n => { EventTypeId = n.GetStringValue(); } },
                 { "filterLines", n => { FilterLines = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEventFilterMetadata>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEventFilterMetadata.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.UnifiedEventsFilterType>(); } },
+                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmUnifiedEventsFilterType>(); } },
                 { "pruningRefineBy", n => { PruningRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterPruningRefineBy>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterPruningRefineBy.CreateFromDiscriminatorValue); } },
             };
         }
@@ -90,7 +90,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterCoalescingRefineBy>("coalescingRefineBy", CoalescingRefineBy);
             writer.WriteStringValue("eventTypeId", EventTypeId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEventFilterMetadata>("filterLines", FilterLines);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.UnifiedEventsFilterType>("filterType", FilterType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmUnifiedEventsFilterType>("filterType", FilterType);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterPruningRefineBy>("pruningRefineBy", PruningRefineBy);
             writer.WriteAdditionalData(AdditionalData);
         }

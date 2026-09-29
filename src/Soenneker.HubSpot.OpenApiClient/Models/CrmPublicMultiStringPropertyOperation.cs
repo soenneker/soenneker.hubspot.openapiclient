@@ -16,8 +16,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A boolean indicating whether objects without a value set should be included in the operation.</summary>
         public bool? IncludeObjectsWithNoValueSet { get; set; }
-        /// <summary>A string indicating the type of operation. The default value is &apos;MULTI_STRING&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.MultistringOperationType? OperationType { get; set; }
+        /// <summary>A string that specifies the type of operation. The default value is &apos;MULTISTRING&apos;.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmMultistringOperationType? OperationType { get; set; }
         /// <summary>A string that defines the operator used in the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -60,7 +60,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "includeObjectsWithNoValueSet", n => { IncludeObjectsWithNoValueSet = n.GetBoolValue(); } },
-                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MultistringOperationType>(); } },
+                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmMultistringOperationType>(); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
                 { "values", n => { Values = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
@@ -73,7 +73,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("includeObjectsWithNoValueSet", IncludeObjectsWithNoValueSet);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MultistringOperationType>("operationType", OperationType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmMultistringOperationType>("operationType", OperationType);
             writer.WriteStringValue("operator", Operator);
             writer.WriteCollectionOfPrimitiveValues<string>("values", Values);
             writer.WriteAdditionalData(AdditionalData);

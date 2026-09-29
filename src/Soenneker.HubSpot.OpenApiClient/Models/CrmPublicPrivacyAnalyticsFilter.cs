@@ -14,8 +14,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A string representing the type of filter. The default value is &apos;PRIVACY_ANALYTICS&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PrivacyFilterType? FilterType { get; set; }
+        /// <summary>A string indicating the type of filter, which is &apos;PRIVACY&apos; for this component. It is a constant value used to identify the filter type.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPrivacyFilterType? FilterType { get; set; }
         /// <summary>A string specifying the operation or condition to be applied in the filter. The exact operations are not detailed in the specification.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -57,7 +57,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PrivacyFilterType>(); } },
+                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPrivacyFilterType>(); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
                 { "privacyName", n => { PrivacyName = n.GetStringValue(); } },
             };
@@ -69,7 +69,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PrivacyFilterType>("filterType", FilterType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPrivacyFilterType>("filterType", FilterType);
             writer.WriteStringValue("operator", Operator);
             writer.WriteStringValue("privacyName", PrivacyName);
             writer.WriteAdditionalData(AdditionalData);

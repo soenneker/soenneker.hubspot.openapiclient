@@ -17,10 +17,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>A map of additional property names to their values, represented as a string-to-string object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.StartTaskSeriesBodyPropertiesProperty? Properties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.StartTaskSeriesBodyPropertiesProperty2? Properties { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.StartTaskSeriesBodyPropertiesProperty Properties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.StartTaskSeriesBodyPropertiesProperty2 Properties { get; set; }
 #endif
         /// <summary>The series property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -57,7 +57,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.StartTaskSeriesBodyPropertiesProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.StartTaskSeriesBodyPropertiesProperty.CreateFromDiscriminatorValue); } },
+                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.StartTaskSeriesBodyPropertiesProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.StartTaskSeriesBodyPropertiesProperty2.CreateFromDiscriminatorValue); } },
                 { "series", n => { Series = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTaskSeries>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicTaskSeries.CreateFromDiscriminatorValue); } },
                 { "taskId", n => { TaskId = n.GetLongValue(); } },
             };
@@ -69,7 +69,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.StartTaskSeriesBodyPropertiesProperty>("properties", Properties);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.StartTaskSeriesBodyPropertiesProperty2>("properties", Properties);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTaskSeries>("series", Series);
             writer.WriteLongValue("taskId", TaskId);
             writer.WriteAdditionalData(AdditionalData);

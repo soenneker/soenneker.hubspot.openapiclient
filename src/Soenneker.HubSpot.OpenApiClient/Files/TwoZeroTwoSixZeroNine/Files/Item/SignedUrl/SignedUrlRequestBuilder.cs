@@ -90,7 +90,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Files.TwoZeroTwoSixZeroNine.Files.Item
             public long? ExpirationSeconds { get; set; }
             /// <summary>The desired size of the file. Valid values are &apos;thumb&apos;, &apos;icon&apos;, &apos;medium&apos;, and &apos;preview&apos;.</summary>
             [QueryParameter("size")]
-            public global::Soenneker.HubSpot.OpenApiClient.Models.FilesGetFiles202609FilesFileIdSignedUrlSizeParameter? Size { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.GetFiles202609FilesFileIdSignedUrlSizeParameter? Size { get; set; }
             /// <summary>A boolean indicating whether the image should be upscaled if necessary.</summary>
             [QueryParameter("upscale")]
             public bool? Upscale { get; set; }

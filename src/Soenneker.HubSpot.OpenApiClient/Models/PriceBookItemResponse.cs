@@ -41,10 +41,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>A map of custom property names to their values for the price book item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemResponseCustomPropertiesProperty? CustomProperties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemResponseCustomPropertiesProperty2? CustomProperties { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemResponseCustomPropertiesProperty CustomProperties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemResponseCustomPropertiesProperty2 CustomProperties { get; set; }
 #endif
         /// <summary>A description of the price book item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -167,7 +167,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "billingPeriod", n => { BillingPeriod = n.GetStringValue(); } },
                 { "costOfGoodsSold", n => { CostOfGoodsSold = n.GetStringValue(); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
-                { "customProperties", n => { CustomProperties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemResponseCustomPropertiesProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemResponseCustomPropertiesProperty.CreateFromDiscriminatorValue); } },
+                { "customProperties", n => { CustomProperties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemResponseCustomPropertiesProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemResponseCustomPropertiesProperty2.CreateFromDiscriminatorValue); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "images", n => { Images = n.GetStringValue(); } },
@@ -198,7 +198,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("billingPeriod", BillingPeriod);
             writer.WriteStringValue("costOfGoodsSold", CostOfGoodsSold);
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemResponseCustomPropertiesProperty>("customProperties", CustomProperties);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemResponseCustomPropertiesProperty2>("customProperties", CustomProperties);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("images", Images);

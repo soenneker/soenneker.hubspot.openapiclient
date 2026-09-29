@@ -17,7 +17,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>A boolean indicating whether objects with no value set should be included in the operation.</summary>
         public bool? IncludeObjectsWithNoValueSet { get; set; }
         /// <summary>A string indicating the type of operation. The default value is &apos;NUMBER&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.NumberOperationType? OperationType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmNumberOperationType2? OperationType { get; set; }
         /// <summary>A string representing the operator used in the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -54,7 +54,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "includeObjectsWithNoValueSet", n => { IncludeObjectsWithNoValueSet = n.GetBoolValue(); } },
-                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.NumberOperationType>(); } },
+                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmNumberOperationType2>(); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
                 { "value", n => { Value = n.GetDoubleValue(); } },
             };
@@ -67,7 +67,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("includeObjectsWithNoValueSet", IncludeObjectsWithNoValueSet);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.NumberOperationType>("operationType", OperationType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmNumberOperationType2>("operationType", OperationType);
             writer.WriteStringValue("operator", Operator);
             writer.WriteDoubleValue("value", Value);
             writer.WriteAdditionalData(AdditionalData);

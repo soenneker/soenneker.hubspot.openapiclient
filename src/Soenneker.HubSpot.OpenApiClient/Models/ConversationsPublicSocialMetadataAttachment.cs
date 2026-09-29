@@ -22,8 +22,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsSocialMetadata SocialMetadata { get; set; }
 #endif
-        /// <summary>A string that specifies the type of the component. The default value is &apos;SOCIAL_MEDIA_METADATA&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.SocialMediaMetadataType? Type { get; set; }
+        /// <summary>A string indicating the type of attachment, which is &apos;SOCIAL_MEDIA_METADATA&apos;.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsSocialMediaMetadataType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicSocialMetadataAttachment"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "socialMetadata", n => { SocialMetadata = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsSocialMetadata>(global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsSocialMetadata.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SocialMediaMetadataType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsSocialMediaMetadataType>(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsSocialMetadata>("socialMetadata", SocialMetadata);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SocialMediaMetadataType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsSocialMediaMetadataType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -233,7 +233,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.Emails.TwoZeroTwoSixZeroNine
 #endif
             /// <summary>Filter emails by type. Accepts specific email types such as AB_EMAIL, BATCH_EMAIL, etc.</summary>
             [QueryParameter("type")]
-            public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingGetMarketingEmails202609MarketingEmailsV3TypeParameter? Type { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.GetMarketingEmails202609MarketingEmailsV3TypeParameter? Type { get; set; }
             /// <summary>Filter emails updated after a specific date. Format should be date-time.</summary>
             [QueryParameter("updatedAfter")]
             public DateTimeOffset? UpdatedAfter { get; set; }

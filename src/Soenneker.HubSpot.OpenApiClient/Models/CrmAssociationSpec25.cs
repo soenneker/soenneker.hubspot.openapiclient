@@ -16,7 +16,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The category of the association, such as &quot;HUBSPOT_DEFINED&quot;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec25AssociationCategory? AssociationCategory { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecAssociationCategory25? AssociationCategory { get; set; }
         /// <summary>The ID representing the specific type of association.</summary>
         public int? AssociationTypeId { get; set; }
         /// <summary>
@@ -44,7 +44,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "associationCategory", n => { AssociationCategory = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec25AssociationCategory>(); } },
+                { "associationCategory", n => { AssociationCategory = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecAssociationCategory25>(); } },
                 { "associationTypeId", n => { AssociationTypeId = n.GetIntValue(); } },
             };
         }
@@ -55,7 +55,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec25AssociationCategory>("associationCategory", AssociationCategory);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecAssociationCategory25>("associationCategory", AssociationCategory);
             writer.WriteIntValue("associationTypeId", AssociationTypeId);
             writer.WriteAdditionalData(AdditionalData);
         }

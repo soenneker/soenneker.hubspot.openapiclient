@@ -24,8 +24,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>A string that specifies the usage type of the file. Valid values include &apos;STICKER&apos;, &apos;VOICE_RECORDING&apos;, &apos;IMAGE&apos;, &apos;AUDIO&apos;, and &apos;OTHER&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.FileAttachmentFileUsageType? FileUsageType { get; set; }
-        /// <summary>A string indicating the type of the object, which is &apos;FILE&apos; by default.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.FileType? Type { get; set; }
+        /// <summary>A string that indicates the type of attachment. The default value is &apos;FILE&apos;.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsFileType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.FileAttachment"/> and sets the default values.
         /// </summary>
@@ -53,7 +53,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "fileId", n => { FileId = n.GetStringValue(); } },
                 { "fileUsageType", n => { FileUsageType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FileAttachmentFileUsageType>(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FileType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsFileType>(); } },
             };
         }
         /// <summary>
@@ -65,7 +65,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("fileId", FileId);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FileAttachmentFileUsageType>("fileUsageType", FileUsageType);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FileType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsFileType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

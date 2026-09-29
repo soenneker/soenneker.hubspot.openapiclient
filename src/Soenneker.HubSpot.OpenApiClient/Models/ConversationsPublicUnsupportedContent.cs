@@ -14,8 +14,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A string indicating the type of content. The default value is &apos;UNSUPPORTED_CONTENT&apos;, and it must be &apos;UNSUPPORTED_CONTENT&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.UnsupportedContentType? Type { get; set; }
+        /// <summary>A string that specifies the type of unsupported content. The default and only valid value is &apos;UNSUPPORTED_CONTENT&apos;.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsUnsupportedContentType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicUnsupportedContent"/> and sets the default values.
         /// </summary>
@@ -41,7 +41,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.UnsupportedContentType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsUnsupportedContentType>(); } },
             };
         }
         /// <summary>
@@ -51,7 +51,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.UnsupportedContentType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsUnsupportedContentType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -17,10 +17,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An array of nested filter branches. Each item can be one of several types, including &apos;PublicOrFilterBranch&apos;, &apos;PublicAndFilterBranch&apos;, &apos;PublicNotAllFilterBranch&apos;, &apos;PublicNotAnyFilterBranch&apos;, &apos;PublicRestrictedFilterBranch&apos;, &apos;PublicUnifiedEventsFilterBranch&apos;, or &apos;PublicAssociationFilterBranch&apos;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRestrictedFilterBranch2FilterBranchesItem>? FilterBranches { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRestrictedFilterBranchFilterBranchesItem2>? FilterBranches { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRestrictedFilterBranch2FilterBranchesItem> FilterBranches { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRestrictedFilterBranchFilterBranchesItem2> FilterBranches { get; set; }
 #endif
         /// <summary>A string representing the operator used within the filter branch.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -30,15 +30,15 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string FilterBranchOperator { get; set; }
 #endif
-        /// <summary>A string indicating the type of filter branch. The default value is &apos;RESTRICTED&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.RestrictedFilterBranchType? FilterBranchType { get; set; }
+        /// <summary>A string indicating the type of the filter branch. Defaults to &apos;RESTRICTED&apos;.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmRestrictedFilterBranchType2? FilterBranchType { get; set; }
         /// <summary>An array of filters applied within this branch. Each filter can be one of several types, such as &apos;PublicPropertyFilter&apos;, &apos;PublicAssociationInListFilter&apos;, &apos;PublicPageViewAnalyticsFilter&apos;, &apos;PublicCtaAnalyticsFilter&apos;, &apos;PublicEventAnalyticsFilter&apos;, &apos;PublicFormSubmissionFilter&apos;, &apos;PublicFormSubmissionOnPageFilter&apos;, &apos;PublicIntegrationEventFilter&apos;, &apos;PublicEmailSubscriptionFilter&apos;, &apos;PublicCommunicationSubscriptionFilter&apos;, &apos;PublicSurveyMonkeyFilter&apos;, &apos;PublicSurveyMonkeyValueFilter&apos;, &apos;PublicWebinarFilter&apos;, &apos;PublicEmailEventFilter&apos;, &apos;PublicPrivacyAnalyticsFilter&apos;, &apos;PublicAdsSearchFilter&apos;, &apos;PublicAdsTimeFilter&apos;, &apos;PublicInListFilter&apos;, &apos;PublicUnifiedEventsFilter&apos;, or &apos;PublicConstantFilter&apos;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRestrictedFilterBranch2FiltersItem>? Filters { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRestrictedFilterBranchFiltersItem2>? Filters { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRestrictedFilterBranch2FiltersItem> Filters { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRestrictedFilterBranchFiltersItem2> Filters { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRestrictedFilterBranch2"/> and sets the default values.
@@ -66,9 +66,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "filterBranchOperator", n => { FilterBranchOperator = n.GetStringValue(); } },
-                { "filterBranchType", n => { FilterBranchType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RestrictedFilterBranchType>(); } },
-                { "filterBranches", n => { FilterBranches = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRestrictedFilterBranch2FilterBranchesItem>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRestrictedFilterBranch2FilterBranchesItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "filters", n => { Filters = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRestrictedFilterBranch2FiltersItem>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRestrictedFilterBranch2FiltersItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "filterBranchType", n => { FilterBranchType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmRestrictedFilterBranchType2>(); } },
+                { "filterBranches", n => { FilterBranches = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRestrictedFilterBranchFilterBranchesItem2>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRestrictedFilterBranchFilterBranchesItem2.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "filters", n => { Filters = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRestrictedFilterBranchFiltersItem2>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRestrictedFilterBranchFiltersItem2.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -78,10 +78,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRestrictedFilterBranch2FilterBranchesItem>("filterBranches", FilterBranches);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRestrictedFilterBranchFilterBranchesItem2>("filterBranches", FilterBranches);
             writer.WriteStringValue("filterBranchOperator", FilterBranchOperator);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RestrictedFilterBranchType>("filterBranchType", FilterBranchType);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRestrictedFilterBranch2FiltersItem>("filters", Filters);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmRestrictedFilterBranchType2>("filterBranchType", FilterBranchType);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRestrictedFilterBranchFiltersItem2>("filters", Filters);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

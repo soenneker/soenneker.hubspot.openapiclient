@@ -25,10 +25,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object containing key-value pairs of the campaign properties to be updated. Each key is a property name, and each value is the new value for that property, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignBatchUpdateItemPropertiesProperty? Properties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignBatchUpdateItemPropertiesProperty2? Properties { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignBatchUpdateItemPropertiesProperty Properties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignBatchUpdateItemPropertiesProperty2 Properties { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignBatchUpdateItem"/> and sets the default values.
@@ -56,7 +56,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignBatchUpdateItemPropertiesProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignBatchUpdateItemPropertiesProperty.CreateFromDiscriminatorValue); } },
+                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignBatchUpdateItemPropertiesProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignBatchUpdateItemPropertiesProperty2.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,7 +67,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignBatchUpdateItemPropertiesProperty>("properties", Properties);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignBatchUpdateItemPropertiesProperty2>("properties", Properties);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

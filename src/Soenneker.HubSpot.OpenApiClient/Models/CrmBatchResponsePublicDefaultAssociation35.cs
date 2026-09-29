@@ -28,10 +28,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>A map of link names to associated URIs, providing additional information or actions related to the batch operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponsePublicDefaultAssociation35LinksProperty? Links { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponsePublicDefaultAssociation35Links? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponsePublicDefaultAssociation35LinksProperty Links { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponsePublicDefaultAssociation35Links Links { get; set; }
 #endif
         /// <summary>The total number of errors that occurred during the operation.</summary>
         public int? NumErrors { get; set; }
@@ -48,7 +48,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The timestamp when the batch process began execution, in ISO 8601 format.</summary>
         public DateTimeOffset? StartedAt { get; set; }
         /// <summary>The status of the batch processing request. Can be: &quot;PENDING&quot;, &quot;PROCESSING&quot;, &quot;CANCELED&quot;, or &quot;COMPLETE&quot;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponsePublicDefaultAssociation35Status? Status { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponsePublicDefaultAssociationStatus35? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponsePublicDefaultAssociation35"/> and sets the default values.
         /// </summary>
@@ -76,12 +76,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "completedAt", n => { CompletedAt = n.GetDateTimeOffsetValue(); } },
                 { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError44>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError44.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponsePublicDefaultAssociation35LinksProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponsePublicDefaultAssociation35LinksProperty.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponsePublicDefaultAssociation35Links>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponsePublicDefaultAssociation35Links.CreateFromDiscriminatorValue); } },
                 { "numErrors", n => { NumErrors = n.GetIntValue(); } },
                 { "requestedAt", n => { RequestedAt = n.GetDateTimeOffsetValue(); } },
                 { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicDefaultAssociation34>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicDefaultAssociation34.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "startedAt", n => { StartedAt = n.GetDateTimeOffsetValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponsePublicDefaultAssociation35Status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponsePublicDefaultAssociationStatus35>(); } },
             };
         }
         /// <summary>
@@ -93,12 +93,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDateTimeOffsetValue("completedAt", CompletedAt);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError44>("errors", Errors);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponsePublicDefaultAssociation35LinksProperty>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponsePublicDefaultAssociation35Links>("links", Links);
             writer.WriteIntValue("numErrors", NumErrors);
             writer.WriteDateTimeOffsetValue("requestedAt", RequestedAt);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicDefaultAssociation34>("results", Results);
             writer.WriteDateTimeOffsetValue("startedAt", StartedAt);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponsePublicDefaultAssociation35Status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponsePublicDefaultAssociationStatus35>("status", Status);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -33,10 +33,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Holds the output fields for the callback completion.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequestOutputFieldsProperty? OutputFields { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequestOutputFieldsProperty2? OutputFields { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequestOutputFieldsProperty OutputFields { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequestOutputFieldsProperty2 OutputFields { get; set; }
 #endif
         /// <summary>Defines the context of the request, which can be one of several predefined types.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -49,10 +49,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Contains the typed outputs for the callback completion.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequestTypedOutputsProperty? TypedOutputs { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequestTypedOutputsProperty2? TypedOutputs { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequestTypedOutputsProperty TypedOutputs { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequestTypedOutputsProperty2 TypedOutputs { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequest"/> and sets the default values.
@@ -81,9 +81,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "callbackId", n => { CallbackId = n.GetStringValue(); } },
                 { "failureReasonType", n => { FailureReasonType = n.GetStringValue(); } },
-                { "outputFields", n => { OutputFields = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequestOutputFieldsProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequestOutputFieldsProperty.CreateFromDiscriminatorValue); } },
+                { "outputFields", n => { OutputFields = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequestOutputFieldsProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequestOutputFieldsProperty2.CreateFromDiscriminatorValue); } },
                 { "requestContext", n => { RequestContext = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequestRequestContext>(global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequestRequestContext.CreateFromDiscriminatorValue); } },
-                { "typedOutputs", n => { TypedOutputs = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequestTypedOutputsProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequestTypedOutputsProperty.CreateFromDiscriminatorValue); } },
+                { "typedOutputs", n => { TypedOutputs = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequestTypedOutputsProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequestTypedOutputsProperty2.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -95,9 +95,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("callbackId", CallbackId);
             writer.WriteStringValue("failureReasonType", FailureReasonType);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequestOutputFieldsProperty>("outputFields", OutputFields);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequestOutputFieldsProperty2>("outputFields", OutputFields);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequestRequestContext>("requestContext", RequestContext);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequestTypedOutputsProperty>("typedOutputs", TypedOutputs);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequestTypedOutputsProperty2>("typedOutputs", TypedOutputs);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

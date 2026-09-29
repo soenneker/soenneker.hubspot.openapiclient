@@ -26,10 +26,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Additional context-specific information related to the error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError28ContextProperty? Context { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError28Context? Context { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError28ContextProperty Context { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError28Context Context { get; set; }
 #endif
         /// <summary>The detailed error objects.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -50,10 +50,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>URLs linking to documentation or resources associated with the error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError28LinksProperty? Links { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError28Links? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError28LinksProperty Links { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError28Links Links { get; set; }
 #endif
         /// <summary>A human-readable string describing the error and possible remediation steps.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -74,10 +74,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>A more specific error category within each main category.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError28SubCategoryProperty? SubCategory { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError28SubCategory? SubCategory { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError28SubCategoryProperty SubCategory { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError28SubCategory SubCategory { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError28"/> and sets the default values.
@@ -105,13 +105,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "category", n => { Category = n.GetStringValue(); } },
-                { "context", n => { Context = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError28ContextProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError28ContextProperty.CreateFromDiscriminatorValue); } },
+                { "context", n => { Context = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError28Context>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError28Context.CreateFromDiscriminatorValue); } },
                 { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmErrorDetail35>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmErrorDetail35.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError28LinksProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError28LinksProperty.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError28Links>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError28Links.CreateFromDiscriminatorValue); } },
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
-                { "subCategory", n => { SubCategory = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError28SubCategoryProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError28SubCategoryProperty.CreateFromDiscriminatorValue); } },
+                { "subCategory", n => { SubCategory = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError28SubCategory>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError28SubCategory.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -122,13 +122,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("category", Category);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError28ContextProperty>("context", Context);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError28Context>("context", Context);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmErrorDetail35>("errors", Errors);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError28LinksProperty>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError28Links>("links", Links);
             writer.WriteStringValue("message", Message);
             writer.WriteStringValue("status", Status);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError28SubCategoryProperty>("subCategory", SubCategory);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError28SubCategory>("subCategory", SubCategory);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

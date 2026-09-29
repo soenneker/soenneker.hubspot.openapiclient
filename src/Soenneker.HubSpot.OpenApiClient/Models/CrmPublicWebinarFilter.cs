@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A string that specifies the type of filter being applied. The default value is &apos;WEBINAR&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.WebinarFilterType? FilterType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmWebinarFilterType? FilterType { get; set; }
         /// <summary>A string representing the operator used in the filter condition.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -57,7 +57,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.WebinarFilterType>(); } },
+                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmWebinarFilterType>(); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
                 { "webinarId", n => { WebinarId = n.GetStringValue(); } },
             };
@@ -69,7 +69,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.WebinarFilterType>("filterType", FilterType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmWebinarFilterType>("filterType", FilterType);
             writer.WriteStringValue("operator", Operator);
             writer.WriteStringValue("webinarId", WebinarId);
             writer.WriteAdditionalData(AdditionalData);

@@ -135,7 +135,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Indicates whether the message content is truncated. Valid values are &apos;NOT_TRUNCATED&apos;, &apos;TRUNCATED_TO_MOST_RECENT_REPLY&apos;, and &apos;TRUNCATED&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicConversationsMessageTruncationStatus? TruncationStatus { get; set; }
         /// <summary>The type of the message, which is always &apos;MESSAGE&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.MessageType? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsMessageType? Type { get; set; }
         /// <summary>The date and time when the message was last updated, in ISO 8601 format.</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>
@@ -181,7 +181,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "subject", n => { Subject = n.GetStringValue(); } },
                 { "text", n => { Text = n.GetStringValue(); } },
                 { "truncationStatus", n => { TruncationStatus = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicConversationsMessageTruncationStatus>(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MessageType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsMessageType>(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
             };
         }
@@ -210,7 +210,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("subject", Subject);
             writer.WriteStringValue("text", Text);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicConversationsMessageTruncationStatus>("truncationStatus", TruncationStatus);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MessageType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsMessageType>("type", Type);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             writer.WriteAdditionalData(AdditionalData);
         }

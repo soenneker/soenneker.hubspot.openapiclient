@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The status code associated with the error detail</summary>
+        /// <summary>The status code associated with the error detail. This is a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Code { get; set; }
@@ -23,15 +23,15 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Code { get; set; }
 #endif
-        /// <summary>Context about the error condition</summary>
+        /// <summary>Context about the error condition, represented as an object with additional properties that are arrays of strings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmErrorDetailContextProperty? Context { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmErrorDetailContextProperty59? Context { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmErrorDetailContextProperty Context { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmErrorDetailContextProperty59 Context { get; set; }
 #endif
-        /// <summary>The name of the field or parameter in which the error was found.</summary>
+        /// <summary>The name of the field or parameter in which the error was found. This is a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? In { get; set; }
@@ -39,7 +39,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string In { get; set; }
 #endif
-        /// <summary>A human readable message describing the error along with remediation steps where appropriate</summary>
+        /// <summary>A human readable message describing the error along with remediation steps where appropriate. This is a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Message { get; set; }
@@ -47,7 +47,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Message { get; set; }
 #endif
-        /// <summary>A specific category that contains more specific detail about the error</summary>
+        /// <summary>A specific category that contains more specific detail about the error. This is a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SubCategory { get; set; }
@@ -81,7 +81,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "code", n => { Code = n.GetStringValue(); } },
-                { "context", n => { Context = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmErrorDetailContextProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmErrorDetailContextProperty.CreateFromDiscriminatorValue); } },
+                { "context", n => { Context = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmErrorDetailContextProperty59>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmErrorDetailContextProperty59.CreateFromDiscriminatorValue); } },
                 { "in", n => { In = n.GetStringValue(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "subCategory", n => { SubCategory = n.GetStringValue(); } },
@@ -95,7 +95,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("code", Code);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmErrorDetailContextProperty>("context", Context);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmErrorDetailContextProperty59>("context", Context);
             writer.WriteStringValue("in", In);
             writer.WriteStringValue("message", Message);
             writer.WriteStringValue("subCategory", SubCategory);

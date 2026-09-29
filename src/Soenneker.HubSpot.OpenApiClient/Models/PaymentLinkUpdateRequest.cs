@@ -35,10 +35,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object representing the business unit ID associated with the payment link.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestBusinessUnitIdProperty? BusinessUnitId { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestBusinessUnitIdProperty2? BusinessUnitId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestBusinessUnitIdProperty BusinessUnitId { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestBusinessUnitIdProperty2 BusinessUnitId { get; set; }
 #endif
         /// <summary>A boolean indicating whether to collect the full billing address during checkout.</summary>
         public bool? CollectFullBillingAddress { get; set; }
@@ -57,18 +57,18 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object containing deal configuration settings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestDealConfigurationsProperty? DealConfigurations { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestDealConfigurationsProperty2? DealConfigurations { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestDealConfigurationsProperty DealConfigurations { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestDealConfigurationsProperty2 DealConfigurations { get; set; }
 #endif
         /// <summary>An object containing the HTML description of the payment link.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestDescriptionHtmlProperty? DescriptionHtml { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestDescriptionHtmlProperty2? DescriptionHtml { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestDescriptionHtmlProperty DescriptionHtml { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestDescriptionHtmlProperty2 DescriptionHtml { get; set; }
 #endif
         /// <summary>The discount property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -83,28 +83,28 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object representing the discount object ID associated with the payment link.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestDiscountObjectIdProperty? DiscountObjectId { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestDiscountObjectIdProperty2? DiscountObjectId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestDiscountObjectIdProperty DiscountObjectId { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestDiscountObjectIdProperty2 DiscountObjectId { get; set; }
 #endif
         /// <summary>An object representing the domain ID associated with the payment link.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestDomainIdProperty? DomainId { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestDomainIdProperty2? DomainId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestDomainIdProperty DomainId { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestDomainIdProperty2 DomainId { get; set; }
 #endif
         /// <summary>A boolean indicating whether default checkout fees are enabled.</summary>
         public bool? EnableDefaultCheckoutFees { get; set; }
         /// <summary>An object representing the expiration settings for the payment link.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestExpirationSettingsProperty? ExpirationSettings { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestExpirationSettingsProperty2? ExpirationSettings { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestExpirationSettingsProperty ExpirationSettings { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestExpirationSettingsProperty2 ExpirationSettings { get; set; }
 #endif
         /// <summary>An array of strings representing the IDs of fee objects associated with the payment link.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -157,10 +157,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object representing the success URL where the user is redirected after a successful transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestSuccessUrlProperty? SuccessUrl { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestSuccessUrlProperty2? SuccessUrl { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestSuccessUrlProperty SuccessUrl { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestSuccessUrlProperty2 SuccessUrl { get; set; }
 #endif
         /// <summary>An array of TaxRequest objects representing the taxes associated with the payment link.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -206,19 +206,19 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "acceptedPaymentMethods", n => { AcceptedPaymentMethods = n.GetCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestAcceptedPaymentMethodsItem>()?.AsList(); } },
                 { "additionalFormFields", n => { AdditionalFormFields = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkFormField>(global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkFormField.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "automatedSalesTaxEnabled", n => { AutomatedSalesTaxEnabled = n.GetBoolValue(); } },
-                { "businessUnitId", n => { BusinessUnitId = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestBusinessUnitIdProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestBusinessUnitIdProperty.CreateFromDiscriminatorValue); } },
+                { "businessUnitId", n => { BusinessUnitId = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestBusinessUnitIdProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestBusinessUnitIdProperty2.CreateFromDiscriminatorValue); } },
                 { "collectFullBillingAddress", n => { CollectFullBillingAddress = n.GetBoolValue(); } },
                 { "collectShippingAddress", n => { CollectShippingAddress = n.GetBoolValue(); } },
                 { "createContractOnPurchase", n => { CreateContractOnPurchase = n.GetBoolValue(); } },
                 { "currencyCode", n => { CurrencyCode = n.GetStringValue(); } },
-                { "dealConfigurations", n => { DealConfigurations = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestDealConfigurationsProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestDealConfigurationsProperty.CreateFromDiscriminatorValue); } },
-                { "descriptionHtml", n => { DescriptionHtml = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestDescriptionHtmlProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestDescriptionHtmlProperty.CreateFromDiscriminatorValue); } },
+                { "dealConfigurations", n => { DealConfigurations = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestDealConfigurationsProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestDealConfigurationsProperty2.CreateFromDiscriminatorValue); } },
+                { "descriptionHtml", n => { DescriptionHtml = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestDescriptionHtmlProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestDescriptionHtmlProperty2.CreateFromDiscriminatorValue); } },
                 { "discount", n => { Discount = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.DiscountRequest>(global::Soenneker.HubSpot.OpenApiClient.Models.DiscountRequest.CreateFromDiscriminatorValue); } },
                 { "discountCodeEnabled", n => { DiscountCodeEnabled = n.GetBoolValue(); } },
-                { "discountObjectId", n => { DiscountObjectId = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestDiscountObjectIdProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestDiscountObjectIdProperty.CreateFromDiscriminatorValue); } },
-                { "domainId", n => { DomainId = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestDomainIdProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestDomainIdProperty.CreateFromDiscriminatorValue); } },
+                { "discountObjectId", n => { DiscountObjectId = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestDiscountObjectIdProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestDiscountObjectIdProperty2.CreateFromDiscriminatorValue); } },
+                { "domainId", n => { DomainId = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestDomainIdProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestDomainIdProperty2.CreateFromDiscriminatorValue); } },
                 { "enableDefaultCheckoutFees", n => { EnableDefaultCheckoutFees = n.GetBoolValue(); } },
-                { "expirationSettings", n => { ExpirationSettings = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestExpirationSettingsProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestExpirationSettingsProperty.CreateFromDiscriminatorValue); } },
+                { "expirationSettings", n => { ExpirationSettings = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestExpirationSettingsProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestExpirationSettingsProperty2.CreateFromDiscriminatorValue); } },
                 { "feeObjectIds", n => { FeeObjectIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "fees", n => { Fees = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.FeeRequest>(global::Soenneker.HubSpot.OpenApiClient.Models.FeeRequest.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "includeEmailInSuccessRedirect", n => { IncludeEmailInSuccessRedirect = n.GetBoolValue(); } },
@@ -228,7 +228,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "paymentLinkName", n => { PaymentLinkName = n.GetStringValue(); } },
                 { "state", n => { State = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestState>(); } },
                 { "storePaymentMethodAtCheckout", n => { StorePaymentMethodAtCheckout = n.GetBoolValue(); } },
-                { "successUrl", n => { SuccessUrl = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestSuccessUrlProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestSuccessUrlProperty.CreateFromDiscriminatorValue); } },
+                { "successUrl", n => { SuccessUrl = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestSuccessUrlProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestSuccessUrlProperty2.CreateFromDiscriminatorValue); } },
                 { "taxObjectIds", n => { TaxObjectIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "taxes", n => { Taxes = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.TaxRequest>(global::Soenneker.HubSpot.OpenApiClient.Models.TaxRequest.CreateFromDiscriminatorValue)?.AsList(); } },
             };
@@ -243,19 +243,19 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestAcceptedPaymentMethodsItem>("acceptedPaymentMethods", AcceptedPaymentMethods);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkFormField>("additionalFormFields", AdditionalFormFields);
             writer.WriteBoolValue("automatedSalesTaxEnabled", AutomatedSalesTaxEnabled);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestBusinessUnitIdProperty>("businessUnitId", BusinessUnitId);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestBusinessUnitIdProperty2>("businessUnitId", BusinessUnitId);
             writer.WriteBoolValue("collectFullBillingAddress", CollectFullBillingAddress);
             writer.WriteBoolValue("collectShippingAddress", CollectShippingAddress);
             writer.WriteBoolValue("createContractOnPurchase", CreateContractOnPurchase);
             writer.WriteStringValue("currencyCode", CurrencyCode);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestDealConfigurationsProperty>("dealConfigurations", DealConfigurations);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestDescriptionHtmlProperty>("descriptionHtml", DescriptionHtml);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestDealConfigurationsProperty2>("dealConfigurations", DealConfigurations);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestDescriptionHtmlProperty2>("descriptionHtml", DescriptionHtml);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.DiscountRequest>("discount", Discount);
             writer.WriteBoolValue("discountCodeEnabled", DiscountCodeEnabled);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestDiscountObjectIdProperty>("discountObjectId", DiscountObjectId);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestDomainIdProperty>("domainId", DomainId);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestDiscountObjectIdProperty2>("discountObjectId", DiscountObjectId);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestDomainIdProperty2>("domainId", DomainId);
             writer.WriteBoolValue("enableDefaultCheckoutFees", EnableDefaultCheckoutFees);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestExpirationSettingsProperty>("expirationSettings", ExpirationSettings);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestExpirationSettingsProperty2>("expirationSettings", ExpirationSettings);
             writer.WriteCollectionOfPrimitiveValues<string>("feeObjectIds", FeeObjectIds);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.FeeRequest>("fees", Fees);
             writer.WriteBoolValue("includeEmailInSuccessRedirect", IncludeEmailInSuccessRedirect);
@@ -265,7 +265,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("paymentLinkName", PaymentLinkName);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestState>("state", State);
             writer.WriteBoolValue("storePaymentMethodAtCheckout", StorePaymentMethodAtCheckout);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestSuccessUrlProperty>("successUrl", SuccessUrl);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkUpdateRequestSuccessUrlProperty2>("successUrl", SuccessUrl);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.TaxRequest>("taxes", Taxes);
             writer.WriteCollectionOfPrimitiveValues<string>("taxObjectIds", TaxObjectIds);
             writer.WriteAdditionalData(AdditionalData);

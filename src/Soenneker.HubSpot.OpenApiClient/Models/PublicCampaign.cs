@@ -35,10 +35,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>A map of custom property names to their values, representing specific attributes of the campaign.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignPropertiesProperty? Properties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignPropertiesProperty2? Properties { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignPropertiesProperty Properties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignPropertiesProperty2 Properties { get; set; }
 #endif
         /// <summary>The date and time when the campaign was last updated, in ISO 8601 format.</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
@@ -70,7 +70,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "businessUnits", n => { BusinessUnits = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPublicBusinessUnit>(global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPublicBusinessUnit.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignPropertiesProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignPropertiesProperty.CreateFromDiscriminatorValue); } },
+                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignPropertiesProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignPropertiesProperty2.CreateFromDiscriminatorValue); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
             };
         }
@@ -84,7 +84,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPublicBusinessUnit>("businessUnits", BusinessUnits);
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignPropertiesProperty>("properties", Properties);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignPropertiesProperty2>("properties", Properties);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             writer.WriteAdditionalData(AdditionalData);
         }

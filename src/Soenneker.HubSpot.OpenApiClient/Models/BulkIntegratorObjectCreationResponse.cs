@@ -17,10 +17,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An array of objects that have been successfully created. Each object in the array represents a newly created integrator object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.BulkIntegratorObjectCreationResponseCreatedObjectsProperty? CreatedObjects { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.BulkIntegratorObjectCreationResponseCreatedObjectsProperty2? CreatedObjects { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.BulkIntegratorObjectCreationResponseCreatedObjectsProperty CreatedObjects { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.BulkIntegratorObjectCreationResponseCreatedObjectsProperty2 CreatedObjects { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.BulkIntegratorObjectCreationResponse"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "createdObjects", n => { CreatedObjects = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.BulkIntegratorObjectCreationResponseCreatedObjectsProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.BulkIntegratorObjectCreationResponseCreatedObjectsProperty.CreateFromDiscriminatorValue); } },
+                { "createdObjects", n => { CreatedObjects = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.BulkIntegratorObjectCreationResponseCreatedObjectsProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.BulkIntegratorObjectCreationResponseCreatedObjectsProperty2.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.BulkIntegratorObjectCreationResponseCreatedObjectsProperty>("createdObjects", CreatedObjects);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.BulkIntegratorObjectCreationResponseCreatedObjectsProperty2>("createdObjects", CreatedObjects);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -27,10 +27,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object that defines the lower bound time point of the range. It can be a date point, indexed time point, or property-referenced time.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperation2LowerBoundTimePoint? LowerBoundTimePoint { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperationLowerBoundTimePoint2? LowerBoundTimePoint { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperation2LowerBoundTimePoint LowerBoundTimePoint { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperationLowerBoundTimePoint2 LowerBoundTimePoint { get; set; }
 #endif
         /// <summary>A string that specifies the type of operation being performed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -56,8 +56,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string PropertyParser { get; set; }
 #endif
-        /// <summary>A string indicating the type of operation, which is &apos;TIME_RANGED&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.TimeRangedType? Type { get; set; }
+        /// <summary>A string that specifies the type of operation, with a default value of &apos;TIME_RANGED&apos;.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmTimeRangedType2? Type { get; set; }
         /// <summary>A string that specifies the behavior of the upper bound endpoint in the time range.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -69,10 +69,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object that defines the upper bound time point of the range. It can be a date point, indexed time point, or property-referenced time.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperation2UpperBoundTimePoint? UpperBoundTimePoint { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperationUpperBoundTimePoint2? UpperBoundTimePoint { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperation2UpperBoundTimePoint UpperBoundTimePoint { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperationUpperBoundTimePoint2 UpperBoundTimePoint { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperation2"/> and sets the default values.
@@ -101,13 +101,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "includeObjectsWithNoValueSet", n => { IncludeObjectsWithNoValueSet = n.GetBoolValue(); } },
                 { "lowerBoundEndpointBehavior", n => { LowerBoundEndpointBehavior = n.GetStringValue(); } },
-                { "lowerBoundTimePoint", n => { LowerBoundTimePoint = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperation2LowerBoundTimePoint>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperation2LowerBoundTimePoint.CreateFromDiscriminatorValue); } },
+                { "lowerBoundTimePoint", n => { LowerBoundTimePoint = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperationLowerBoundTimePoint2>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperationLowerBoundTimePoint2.CreateFromDiscriminatorValue); } },
                 { "operationType", n => { OperationType = n.GetStringValue(); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
                 { "propertyParser", n => { PropertyParser = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TimeRangedType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmTimeRangedType2>(); } },
                 { "upperBoundEndpointBehavior", n => { UpperBoundEndpointBehavior = n.GetStringValue(); } },
-                { "upperBoundTimePoint", n => { UpperBoundTimePoint = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperation2UpperBoundTimePoint>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperation2UpperBoundTimePoint.CreateFromDiscriminatorValue); } },
+                { "upperBoundTimePoint", n => { UpperBoundTimePoint = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperationUpperBoundTimePoint2>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperationUpperBoundTimePoint2.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -119,13 +119,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("includeObjectsWithNoValueSet", IncludeObjectsWithNoValueSet);
             writer.WriteStringValue("lowerBoundEndpointBehavior", LowerBoundEndpointBehavior);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperation2LowerBoundTimePoint>("lowerBoundTimePoint", LowerBoundTimePoint);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperationLowerBoundTimePoint2>("lowerBoundTimePoint", LowerBoundTimePoint);
             writer.WriteStringValue("operationType", OperationType);
             writer.WriteStringValue("operator", Operator);
             writer.WriteStringValue("propertyParser", PropertyParser);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TimeRangedType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmTimeRangedType2>("type", Type);
             writer.WriteStringValue("upperBoundEndpointBehavior", UpperBoundEndpointBehavior);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperation2UpperBoundTimePoint>("upperBoundTimePoint", UpperBoundTimePoint);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperationUpperBoundTimePoint2>("upperBoundTimePoint", UpperBoundTimePoint);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

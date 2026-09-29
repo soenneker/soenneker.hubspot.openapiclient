@@ -23,6 +23,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         #pragma warning disable CS1591
         ObjectCoordinate,
         #pragma warning restore CS1591
+        [EnumMember(Value = "OBJECT_TYPE")]
+        #pragma warning disable CS1591
+        ObjectType,
+        #pragma warning restore CS1591
         [EnumMember(Value = "TIME")]
         #pragma warning disable CS1591
         Time,

@@ -24,8 +24,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>An integer representing the ID for insights related to the filter.</summary>
         public int? FilterInsightsId { get; set; }
-        /// <summary>The type of filter being applied. This is a string value that specifies the kind of filter operation.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyFilterType? FilterType { get; set; }
+        /// <summary>A string that specifies the type of filter being applied. The default value is &apos;PROPERTY&apos;.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EventsPropertyFilterType? FilterType { get; set; }
         /// <summary>An integer that uniquely identifies the framework filter.</summary>
         public long? FrameworkFilterId { get; set; }
         /// <summary>Defines the operation to be performed on the property. It can be one of several types, such as BoolPropertyOperation, NumberPropertyOperation, StringPropertyOperation, etc.</summary>
@@ -71,7 +71,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "context", n => { Context = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyFilterContext>(global::Soenneker.HubSpot.OpenApiClient.Models.PropertyFilterContext.CreateFromDiscriminatorValue); } },
                 { "filterInsightsId", n => { FilterInsightsId = n.GetIntValue(); } },
-                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyFilterType>(); } },
+                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsPropertyFilterType>(); } },
                 { "frameworkFilterId", n => { FrameworkFilterId = n.GetLongValue(); } },
                 { "operation", n => { Operation = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyFilterOperation>(global::Soenneker.HubSpot.OpenApiClient.Models.PropertyFilterOperation.CreateFromDiscriminatorValue); } },
                 { "property", n => { Property = n.GetStringValue(); } },
@@ -86,7 +86,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyFilterContext>("context", Context);
             writer.WriteIntValue("filterInsightsId", FilterInsightsId);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyFilterType>("filterType", FilterType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsPropertyFilterType>("filterType", FilterType);
             writer.WriteLongValue("frameworkFilterId", FrameworkFilterId);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyFilterOperation>("operation", Operation);
             writer.WriteStringValue("property", Property);

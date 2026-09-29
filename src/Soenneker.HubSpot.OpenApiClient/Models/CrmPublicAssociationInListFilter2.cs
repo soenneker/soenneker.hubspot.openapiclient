@@ -27,13 +27,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object that defines the criteria for refining the filter. It can be one of several types, such as PublicNumOccurrencesRefineBy or PublicTimePointOperation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationInListFilter2CoalescingRefineBy? CoalescingRefineBy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationInListFilterCoalescingRefineBy2? CoalescingRefineBy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationInListFilter2CoalescingRefineBy CoalescingRefineBy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationInListFilterCoalescingRefineBy2 CoalescingRefineBy { get; set; }
 #endif
-        /// <summary>A string that specifies the type of filter being applied. The default value is &apos;IN_LIST&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AssociationFilterType? FilterType { get; set; }
+        /// <summary>A string that specifies the type of filter. The default value is &apos;ASSOCIATION&apos;.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationFilterType2? FilterType { get; set; }
         /// <summary>A string that identifies the list to which the filter is applied.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -93,8 +93,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "associationCategory", n => { AssociationCategory = n.GetStringValue(); } },
                 { "associationTypeId", n => { AssociationTypeId = n.GetIntValue(); } },
-                { "coalescingRefineBy", n => { CoalescingRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationInListFilter2CoalescingRefineBy>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationInListFilter2CoalescingRefineBy.CreateFromDiscriminatorValue); } },
-                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AssociationFilterType>(); } },
+                { "coalescingRefineBy", n => { CoalescingRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationInListFilterCoalescingRefineBy2>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationInListFilterCoalescingRefineBy2.CreateFromDiscriminatorValue); } },
+                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationFilterType2>(); } },
                 { "listId", n => { ListId = n.GetStringValue(); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
                 { "toObjectType", n => { ToObjectType = n.GetStringValue(); } },
@@ -110,8 +110,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("associationCategory", AssociationCategory);
             writer.WriteIntValue("associationTypeId", AssociationTypeId);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationInListFilter2CoalescingRefineBy>("coalescingRefineBy", CoalescingRefineBy);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AssociationFilterType>("filterType", FilterType);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationInListFilterCoalescingRefineBy2>("coalescingRefineBy", CoalescingRefineBy);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationFilterType2>("filterType", FilterType);
             writer.WriteStringValue("listId", ListId);
             writer.WriteStringValue("operator", Operator);
             writer.WriteStringValue("toObjectType", ToObjectType);

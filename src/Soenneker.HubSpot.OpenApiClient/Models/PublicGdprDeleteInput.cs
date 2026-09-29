@@ -15,7 +15,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The name of a property whose values are unique for this object</summary>
+        /// <summary>A string specifying the name of a property whose values are unique for this object type. It can be used to identify the contact by a property other than the object ID, such as an email address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? IdProperty { get; set; }
@@ -23,7 +23,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string IdProperty { get; set; }
 #endif
-        /// <summary>The unique identifier of the object to be fully purged along with any GDPR-related data.</summary>
+        /// <summary>A string representing the unique identifier of the object to be deleted. This is a required field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ObjectId { get; set; }

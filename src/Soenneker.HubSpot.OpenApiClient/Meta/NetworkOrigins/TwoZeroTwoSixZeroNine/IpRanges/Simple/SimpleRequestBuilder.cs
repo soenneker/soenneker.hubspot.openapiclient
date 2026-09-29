@@ -89,21 +89,21 @@ namespace Soenneker.HubSpot.OpenApiClient.Meta.NetworkOrigins.TwoZeroTwoSixZeroN
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("direction")]
-            public global::Soenneker.HubSpot.OpenApiClient.Models.MetaGetMetaNetworkOrigins202609IpRangesSimpleMetaNetworkOrigins202609BetaIpRangesSimpleDirectionParameterItem[]? Direction { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.GetMetaNetworkOrigins202609IpRangesSimpleMetaNetworkOrigins202609BetaIpRangesSimpleDirectionParameterItem[]? Direction { get; set; }
 #nullable restore
 #else
             [QueryParameter("direction")]
-            public global::Soenneker.HubSpot.OpenApiClient.Models.MetaGetMetaNetworkOrigins202609IpRangesSimpleMetaNetworkOrigins202609BetaIpRangesSimpleDirectionParameterItem[] Direction { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.GetMetaNetworkOrigins202609IpRangesSimpleMetaNetworkOrigins202609BetaIpRangesSimpleDirectionParameterItem[] Direction { get; set; }
 #endif
             /// <summary>An array specifying the service type for which the IP ranges are applicable. Valid values include &apos;EMAIL&apos;, &apos;API&apos;, &apos;DNS&apos;, &apos;WEB_SCRAPING&apos;, and &apos;TEST_SERVICE&apos;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("service")]
-            public global::Soenneker.HubSpot.OpenApiClient.Models.MetaGetMetaNetworkOrigins202609IpRangesSimpleMetaNetworkOrigins202609BetaIpRangesSimpleServiceParameterItem[]? Service { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.GetMetaNetworkOrigins202609IpRangesSimpleMetaNetworkOrigins202609BetaIpRangesSimpleServiceParameterItem[]? Service { get; set; }
 #nullable restore
 #else
             [QueryParameter("service")]
-            public global::Soenneker.HubSpot.OpenApiClient.Models.MetaGetMetaNetworkOrigins202609IpRangesSimpleMetaNetworkOrigins202609BetaIpRangesSimpleServiceParameterItem[] Service { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.GetMetaNetworkOrigins202609IpRangesSimpleMetaNetworkOrigins202609BetaIpRangesSimpleServiceParameterItem[] Service { get; set; }
 #endif
         }
     }

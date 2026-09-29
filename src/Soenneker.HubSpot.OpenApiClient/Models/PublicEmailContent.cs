@@ -17,10 +17,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object containing flexible area configurations, where each key is an area identifier and the value is an object with area properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentFlexAreasProperty? FlexAreas { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentFlexAreasProperty2? FlexAreas { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentFlexAreasProperty FlexAreas { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentFlexAreasProperty2 FlexAreas { get; set; }
 #endif
         /// <summary>A string containing the plain text version of the email content.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -33,10 +33,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object containing smart field configurations, where each key is a field identifier and the value is a SmartEmailField object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentSmartFieldsProperty? SmartFields { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentSmartFieldsProperty2? SmartFields { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentSmartFieldsProperty SmartFields { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentSmartFieldsProperty2 SmartFields { get; set; }
 #endif
         /// <summary>The styleSettings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -57,26 +57,26 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object containing theme settings values, where each key is a setting identifier and the value is an object with setting properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentThemeSettingsValuesProperty? ThemeSettingsValues { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentThemeSettingsValuesProperty2? ThemeSettingsValues { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentThemeSettingsValuesProperty ThemeSettingsValues { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentThemeSettingsValuesProperty2 ThemeSettingsValues { get; set; }
 #endif
         /// <summary>An object containing widget container configurations, where each key is a container identifier and the value is an object with container properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgetContainersProperty? WidgetContainers { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgetContainersProperty2? WidgetContainers { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgetContainersProperty WidgetContainers { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgetContainersProperty2 WidgetContainers { get; set; }
 #endif
         /// <summary>An object containing widget configurations, where each key is a widget identifier and the value is an object with widget properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgetsProperty? Widgets { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgetsProperty2? Widgets { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgetsProperty Widgets { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgetsProperty2 Widgets { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContent"/> and sets the default values.
@@ -103,14 +103,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "flexAreas", n => { FlexAreas = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentFlexAreasProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentFlexAreasProperty.CreateFromDiscriminatorValue); } },
+                { "flexAreas", n => { FlexAreas = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentFlexAreasProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentFlexAreasProperty2.CreateFromDiscriminatorValue); } },
                 { "plainTextVersion", n => { PlainTextVersion = n.GetStringValue(); } },
-                { "smartFields", n => { SmartFields = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentSmartFieldsProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentSmartFieldsProperty.CreateFromDiscriminatorValue); } },
+                { "smartFields", n => { SmartFields = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentSmartFieldsProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentSmartFieldsProperty2.CreateFromDiscriminatorValue); } },
                 { "styleSettings", n => { StyleSettings = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailStyleSettings>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailStyleSettings.CreateFromDiscriminatorValue); } },
                 { "templatePath", n => { TemplatePath = n.GetStringValue(); } },
-                { "themeSettingsValues", n => { ThemeSettingsValues = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentThemeSettingsValuesProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentThemeSettingsValuesProperty.CreateFromDiscriminatorValue); } },
-                { "widgetContainers", n => { WidgetContainers = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgetContainersProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgetContainersProperty.CreateFromDiscriminatorValue); } },
-                { "widgets", n => { Widgets = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgetsProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgetsProperty.CreateFromDiscriminatorValue); } },
+                { "themeSettingsValues", n => { ThemeSettingsValues = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentThemeSettingsValuesProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentThemeSettingsValuesProperty2.CreateFromDiscriminatorValue); } },
+                { "widgetContainers", n => { WidgetContainers = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgetContainersProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgetContainersProperty2.CreateFromDiscriminatorValue); } },
+                { "widgets", n => { Widgets = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgetsProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgetsProperty2.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -120,14 +120,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentFlexAreasProperty>("flexAreas", FlexAreas);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentFlexAreasProperty2>("flexAreas", FlexAreas);
             writer.WriteStringValue("plainTextVersion", PlainTextVersion);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentSmartFieldsProperty>("smartFields", SmartFields);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentSmartFieldsProperty2>("smartFields", SmartFields);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailStyleSettings>("styleSettings", StyleSettings);
             writer.WriteStringValue("templatePath", TemplatePath);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentThemeSettingsValuesProperty>("themeSettingsValues", ThemeSettingsValues);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgetContainersProperty>("widgetContainers", WidgetContainers);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgetsProperty>("widgets", Widgets);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentThemeSettingsValuesProperty2>("themeSettingsValues", ThemeSettingsValues);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgetContainersProperty2>("widgetContainers", WidgetContainers);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgetsProperty2>("widgets", Widgets);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

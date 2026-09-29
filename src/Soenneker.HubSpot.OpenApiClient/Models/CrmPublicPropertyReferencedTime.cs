@@ -30,8 +30,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string ReferenceType { get; set; }
 #endif
-        /// <summary>A string indicating the type of time reference. It defaults to &apos;PROPERTY_REFERENCE&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyReferencedTimeType? TimeType { get; set; }
+        /// <summary>A string indicating the type of time reference, which is &apos;PROPERTY_REFERENCED&apos; by default.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyReferencedTimeType? TimeType { get; set; }
         /// <summary>A string specifying the source of the timezone information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -75,7 +75,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "property", n => { Property = n.GetStringValue(); } },
                 { "referenceType", n => { ReferenceType = n.GetStringValue(); } },
-                { "timeType", n => { TimeType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyReferencedTimeType>(); } },
+                { "timeType", n => { TimeType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyReferencedTimeType>(); } },
                 { "timezoneSource", n => { TimezoneSource = n.GetStringValue(); } },
                 { "zoneId", n => { ZoneId = n.GetStringValue(); } },
             };
@@ -89,7 +89,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("property", Property);
             writer.WriteStringValue("referenceType", ReferenceType);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyReferencedTimeType>("timeType", TimeType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyReferencedTimeType>("timeType", TimeType);
             writer.WriteStringValue("timezoneSource", TimezoneSource);
             writer.WriteStringValue("zoneId", ZoneId);
             writer.WriteAdditionalData(AdditionalData);

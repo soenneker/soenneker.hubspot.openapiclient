@@ -27,10 +27,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>A map of custom property names to their values, where each value is a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicTaskSeriesResponsePropertiesProperty? Properties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicTaskSeriesResponsePropertiesProperty2? Properties { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicTaskSeriesResponsePropertiesProperty Properties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicTaskSeriesResponsePropertiesProperty2 Properties { get; set; }
 #endif
         /// <summary>The series property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -69,7 +69,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTaskSeriesResponsePropertiesProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicTaskSeriesResponsePropertiesProperty.CreateFromDiscriminatorValue); } },
+                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTaskSeriesResponsePropertiesProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicTaskSeriesResponsePropertiesProperty2.CreateFromDiscriminatorValue); } },
                 { "series", n => { Series = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTaskSeries>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicTaskSeries.CreateFromDiscriminatorValue); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
             };
@@ -83,7 +83,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTaskSeriesResponsePropertiesProperty>("properties", Properties);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTaskSeriesResponsePropertiesProperty2>("properties", Properties);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTaskSeries>("series", Series);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             writer.WriteAdditionalData(AdditionalData);

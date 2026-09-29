@@ -32,8 +32,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>A boolean indicating whether to include objects that have no value set for the property.</summary>
         public bool? IncludeObjectsWithNoValueSet { get; set; }
-        /// <summary>A string indicating the type of operation. Defaults to &apos;COMPARATIVE_STRING&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ComparativeStringOperationType? OperationType { get; set; }
+        /// <summary>A string indicating the type of operation, which is &apos;COMPARATIVE_STRING&apos; by default.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmComparativeStringOperationType2? OperationType { get; set; }
         /// <summary>The operator used for the comparison operation. It is a string value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -70,7 +70,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "comparisonPropertyName", n => { ComparisonPropertyName = n.GetStringValue(); } },
                 { "defaultComparisonValue", n => { DefaultComparisonValue = n.GetStringValue(); } },
                 { "includeObjectsWithNoValueSet", n => { IncludeObjectsWithNoValueSet = n.GetBoolValue(); } },
-                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ComparativeStringOperationType>(); } },
+                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmComparativeStringOperationType2>(); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
             };
         }
@@ -84,7 +84,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("comparisonPropertyName", ComparisonPropertyName);
             writer.WriteStringValue("defaultComparisonValue", DefaultComparisonValue);
             writer.WriteBoolValue("includeObjectsWithNoValueSet", IncludeObjectsWithNoValueSet);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ComparativeStringOperationType>("operationType", OperationType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmComparativeStringOperationType2>("operationType", OperationType);
             writer.WriteStringValue("operator", Operator);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -17,42 +17,42 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object representing the new color for the CRM object tag.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestColorProperty? Color { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestColorProperty2? Color { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestColorProperty Color { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestColorProperty2 Color { get; set; }
 #endif
         /// <summary>An object representing the new description for the CRM object tag.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestDescriptionProperty? Description { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestDescriptionProperty2? Description { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestDescriptionProperty Description { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestDescriptionProperty2 Description { get; set; }
 #endif
         /// <summary>An object representing the new filter branch for the CRM object tag.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestFilterBranchProperty? FilterBranch { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestFilterBranchProperty2? FilterBranch { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestFilterBranchProperty FilterBranch { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestFilterBranchProperty2 FilterBranch { get; set; }
 #endif
         /// <summary>An object representing the new set of pipeline IDs associated with the CRM object tag.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestFilterPipelineIdsProperty? FilterPipelineIds { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestFilterPipelineIdsProperty2? FilterPipelineIds { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestFilterPipelineIdsProperty FilterPipelineIds { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestFilterPipelineIdsProperty2 FilterPipelineIds { get; set; }
 #endif
         /// <summary>An object representing the new name for the CRM object tag.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestNameProperty? Name { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestNameProperty2? Name { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestNameProperty Name { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestNameProperty2 Name { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequest"/> and sets the default values.
@@ -79,11 +79,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "color", n => { Color = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestColorProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestColorProperty.CreateFromDiscriminatorValue); } },
-                { "description", n => { Description = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestDescriptionProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestDescriptionProperty.CreateFromDiscriminatorValue); } },
-                { "filterBranch", n => { FilterBranch = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestFilterBranchProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestFilterBranchProperty.CreateFromDiscriminatorValue); } },
-                { "filterPipelineIds", n => { FilterPipelineIds = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestFilterPipelineIdsProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestFilterPipelineIdsProperty.CreateFromDiscriminatorValue); } },
-                { "name", n => { Name = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestNameProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestNameProperty.CreateFromDiscriminatorValue); } },
+                { "color", n => { Color = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestColorProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestColorProperty2.CreateFromDiscriminatorValue); } },
+                { "description", n => { Description = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestDescriptionProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestDescriptionProperty2.CreateFromDiscriminatorValue); } },
+                { "filterBranch", n => { FilterBranch = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestFilterBranchProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestFilterBranchProperty2.CreateFromDiscriminatorValue); } },
+                { "filterPipelineIds", n => { FilterPipelineIds = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestFilterPipelineIdsProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestFilterPipelineIdsProperty2.CreateFromDiscriminatorValue); } },
+                { "name", n => { Name = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestNameProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestNameProperty2.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -93,11 +93,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestColorProperty>("color", Color);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestDescriptionProperty>("description", Description);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestFilterBranchProperty>("filterBranch", FilterBranch);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestFilterPipelineIdsProperty>("filterPipelineIds", FilterPipelineIds);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestNameProperty>("name", Name);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestColorProperty2>("color", Color);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestDescriptionProperty2>("description", Description);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestFilterBranchProperty2>("filterBranch", FilterBranch);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestFilterPipelineIdsProperty2>("filterPipelineIds", FilterPipelineIds);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestNameProperty2>("name", Name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

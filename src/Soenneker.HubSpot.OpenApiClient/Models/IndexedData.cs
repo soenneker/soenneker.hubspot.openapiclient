@@ -17,10 +17,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The indexed fields in HubSpot.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.IndexedDataFieldsProperty? Fields { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.IndexedDataFieldsProperty2? Fields { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.IndexedDataFieldsProperty Fields { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.IndexedDataFieldsProperty2 Fields { get; set; }
 #endif
         /// <summary>The ID of the document in HubSpot.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -57,7 +57,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "fields", n => { Fields = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.IndexedDataFieldsProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.IndexedDataFieldsProperty.CreateFromDiscriminatorValue); } },
+                { "fields", n => { Fields = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.IndexedDataFieldsProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.IndexedDataFieldsProperty2.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.IndexedDataType>(); } },
             };
@@ -69,7 +69,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.IndexedDataFieldsProperty>("fields", Fields);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.IndexedDataFieldsProperty2>("fields", Fields);
             writer.WriteStringValue("id", Id);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.IndexedDataType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);

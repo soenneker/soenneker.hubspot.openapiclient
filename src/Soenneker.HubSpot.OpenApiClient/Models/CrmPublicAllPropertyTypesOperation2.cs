@@ -16,8 +16,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A boolean indicating whether to include objects that have no value set for the property.</summary>
         public bool? IncludeObjectsWithNoValueSet { get; set; }
-        /// <summary>A string indicating the type of operation being performed. This property is required.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AllPropertyOperationType? OperationType { get; set; }
+        /// <summary>A string indicating the type of operation. The default and only valid value is &apos;ALL_PROPERTY_TYPES&apos;.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmAllPropertyOperationType2? OperationType { get; set; }
         /// <summary>A string representing the operator to be used in the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -52,7 +52,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "includeObjectsWithNoValueSet", n => { IncludeObjectsWithNoValueSet = n.GetBoolValue(); } },
-                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AllPropertyOperationType>(); } },
+                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAllPropertyOperationType2>(); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
             };
         }
@@ -64,7 +64,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("includeObjectsWithNoValueSet", IncludeObjectsWithNoValueSet);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AllPropertyOperationType>("operationType", OperationType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAllPropertyOperationType2>("operationType", OperationType);
             writer.WriteStringValue("operator", Operator);
             writer.WriteAdditionalData(AdditionalData);
         }

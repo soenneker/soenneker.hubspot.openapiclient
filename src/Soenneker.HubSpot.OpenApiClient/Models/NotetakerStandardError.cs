@@ -26,10 +26,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object containing additional context about the error condition, where each key maps to an array of strings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerStandardErrorContextProperty? Context { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerStandardErrorContextProperty2? Context { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerStandardErrorContextProperty Context { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerStandardErrorContextProperty2 Context { get; set; }
 #endif
         /// <summary>An array of ErrorDetail objects providing further information about the error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -50,10 +50,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object mapping link names to associated URIs that contain documentation or recommended remediation steps related to the error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerStandardErrorLinksProperty? Links { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerStandardErrorLinksProperty2? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerStandardErrorLinksProperty Links { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerStandardErrorLinksProperty2 Links { get; set; }
 #endif
         /// <summary>A string containing a human-readable message describing the error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -74,10 +74,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object providing more specific details about the error category.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerStandardErrorSubCategoryProperty? SubCategory { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerStandardErrorSubCategoryProperty2? SubCategory { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerStandardErrorSubCategoryProperty SubCategory { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerStandardErrorSubCategoryProperty2 SubCategory { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerStandardError"/> and sets the default values.
@@ -105,13 +105,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "category", n => { Category = n.GetStringValue(); } },
-                { "context", n => { Context = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerStandardErrorContextProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerStandardErrorContextProperty.CreateFromDiscriminatorValue); } },
+                { "context", n => { Context = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerStandardErrorContextProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerStandardErrorContextProperty2.CreateFromDiscriminatorValue); } },
                 { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerErrorDetail>(global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerErrorDetail.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerStandardErrorLinksProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerStandardErrorLinksProperty.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerStandardErrorLinksProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerStandardErrorLinksProperty2.CreateFromDiscriminatorValue); } },
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
-                { "subCategory", n => { SubCategory = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerStandardErrorSubCategoryProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerStandardErrorSubCategoryProperty.CreateFromDiscriminatorValue); } },
+                { "subCategory", n => { SubCategory = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerStandardErrorSubCategoryProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerStandardErrorSubCategoryProperty2.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -122,13 +122,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("category", Category);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerStandardErrorContextProperty>("context", Context);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerStandardErrorContextProperty2>("context", Context);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerErrorDetail>("errors", Errors);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerStandardErrorLinksProperty>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerStandardErrorLinksProperty2>("links", Links);
             writer.WriteStringValue("message", Message);
             writer.WriteStringValue("status", Status);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerStandardErrorSubCategoryProperty>("subCategory", SubCategory);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerStandardErrorSubCategoryProperty2>("subCategory", SubCategory);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

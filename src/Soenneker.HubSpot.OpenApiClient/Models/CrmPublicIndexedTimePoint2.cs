@@ -17,10 +17,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>A reference point for indexing the time, which can be one of several predefined time references such as &apos;NOW&apos;, &apos;TODAY&apos;, &apos;WEEK&apos;, etc.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicIndexedTimePoint2IndexReference? IndexReference { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicIndexedTimePointIndexReference2? IndexReference { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicIndexedTimePoint2IndexReference IndexReference { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicIndexedTimePointIndexReference2 IndexReference { get; set; }
 #endif
         /// <summary>The offset property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -30,8 +30,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicIndexOffset2 Offset { get; set; }
 #endif
-        /// <summary>A string indicating the type of time point, with a default value of &apos;INDEXED&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.IndexedTimeType? TimeType { get; set; }
+        /// <summary>A string representing the type of time point, which is always &apos;INDEXED&apos;.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmIndexedTimeType2? TimeType { get; set; }
         /// <summary>A string indicating the source of the timezone information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -73,9 +73,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "indexReference", n => { IndexReference = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicIndexedTimePoint2IndexReference>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicIndexedTimePoint2IndexReference.CreateFromDiscriminatorValue); } },
+                { "indexReference", n => { IndexReference = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicIndexedTimePointIndexReference2>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicIndexedTimePointIndexReference2.CreateFromDiscriminatorValue); } },
                 { "offset", n => { Offset = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicIndexOffset2>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicIndexOffset2.CreateFromDiscriminatorValue); } },
-                { "timeType", n => { TimeType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.IndexedTimeType>(); } },
+                { "timeType", n => { TimeType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmIndexedTimeType2>(); } },
                 { "timezoneSource", n => { TimezoneSource = n.GetStringValue(); } },
                 { "zoneId", n => { ZoneId = n.GetStringValue(); } },
             };
@@ -87,9 +87,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicIndexedTimePoint2IndexReference>("indexReference", IndexReference);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicIndexedTimePointIndexReference2>("indexReference", IndexReference);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicIndexOffset2>("offset", Offset);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.IndexedTimeType>("timeType", TimeType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmIndexedTimeType2>("timeType", TimeType);
             writer.WriteStringValue("timezoneSource", TimezoneSource);
             writer.WriteStringValue("zoneId", ZoneId);
             writer.WriteAdditionalData(AdditionalData);

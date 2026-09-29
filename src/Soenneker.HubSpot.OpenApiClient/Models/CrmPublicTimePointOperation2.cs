@@ -24,8 +24,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>A boolean indicating whether to include objects with no value set in the operation.</summary>
         public bool? IncludeObjectsWithNoValueSet { get; set; }
-        /// <summary>A string indicating the type of operation, which is &apos;TIME_POINT&apos; by default.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.TimePointOperationType? OperationType { get; set; }
+        /// <summary>A string indicating the type of operation, defaulting to &apos;TIME_POINT&apos;.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmTimePointOperationType2? OperationType { get; set; }
         /// <summary>A string representing the operator used in the time point operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -45,10 +45,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Defines the specific time point for the operation. It can be one of several types, including PublicDatePoint, PublicIndexedTimePoint, or PublicPropertyReferencedTime.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimePointOperation2TimePoint? TimePoint { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimePointOperationTimePoint2? TimePoint { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimePointOperation2TimePoint TimePoint { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimePointOperationTimePoint2 TimePoint { get; set; }
 #endif
         /// <summary>A string representing the type of the time point operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -85,10 +85,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "endpointBehavior", n => { EndpointBehavior = n.GetStringValue(); } },
                 { "includeObjectsWithNoValueSet", n => { IncludeObjectsWithNoValueSet = n.GetBoolValue(); } },
-                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TimePointOperationType>(); } },
+                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmTimePointOperationType2>(); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
                 { "propertyParser", n => { PropertyParser = n.GetStringValue(); } },
-                { "timePoint", n => { TimePoint = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimePointOperation2TimePoint>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimePointOperation2TimePoint.CreateFromDiscriminatorValue); } },
+                { "timePoint", n => { TimePoint = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimePointOperationTimePoint2>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimePointOperationTimePoint2.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
             };
         }
@@ -101,10 +101,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("endpointBehavior", EndpointBehavior);
             writer.WriteBoolValue("includeObjectsWithNoValueSet", IncludeObjectsWithNoValueSet);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TimePointOperationType>("operationType", OperationType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmTimePointOperationType2>("operationType", OperationType);
             writer.WriteStringValue("operator", Operator);
             writer.WriteStringValue("propertyParser", PropertyParser);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimePointOperation2TimePoint>("timePoint", TimePoint);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimePointOperationTimePoint2>("timePoint", TimePoint);
             writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

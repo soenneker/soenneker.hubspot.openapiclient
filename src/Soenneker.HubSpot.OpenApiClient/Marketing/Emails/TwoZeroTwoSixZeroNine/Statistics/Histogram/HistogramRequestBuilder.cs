@@ -100,7 +100,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.Emails.TwoZeroTwoSixZeroNine
             public DateTimeOffset? EndTimestamp { get; set; }
             /// <summary>The time interval for the histogram. Valid values are YEAR, QUARTER, MONTH, WEEK, DAY, HOUR, QUARTER_HOUR, MINUTE, and SECOND.</summary>
             [QueryParameter("interval")]
-            public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingGetMarketingEmails202609StatisticsHistogramGetHistogramIntervalParameter? Interval { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.GetMarketingEmails202609StatisticsHistogramGetHistogramIntervalParameter? Interval { get; set; }
             /// <summary>The start timestamp for the statistics data range. Must be in date-time format.</summary>
             [QueryParameter("startTimestamp")]
             public DateTimeOffset? StartTimestamp { get; set; }

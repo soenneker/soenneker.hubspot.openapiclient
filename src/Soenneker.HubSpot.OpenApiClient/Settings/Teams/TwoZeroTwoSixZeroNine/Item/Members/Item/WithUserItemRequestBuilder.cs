@@ -85,7 +85,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Settings.Teams.TwoZeroTwoSixZeroNine.I
         {
             /// <summary>Specifies the type of removal. Acceptable values are &apos;DEFAULT&apos; or &apos;EXTRA&apos;. Defaults to &apos;DEFAULT&apos;.</summary>
             [QueryParameter("type")]
-            public global::Soenneker.HubSpot.OpenApiClient.Models.SettingsDeleteSettingsTeams202609TeamIdMembersUserIdTypeParameter? Type { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.DeleteSettingsTeams202609TeamIdMembersUserIdTypeParameter? Type { get; set; }
         }
     }
 }

@@ -24,8 +24,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string RangeType { get; set; }
 #endif
-        /// <summary>A string that indicates the type of refine by operation, which is &apos;ABSOLUTE_RANGED&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteRangedType? Type { get; set; }
+        /// <summary>A string that specifies the type of refine by operation. The default value is &apos;ABSOLUTE_RANGED&apos;.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmAbsoluteRangedType2? Type { get; set; }
         /// <summary>An integer representing the upper bound of the timestamp range, specified as a Unix timestamp in milliseconds.</summary>
         public long? UpperTimestamp { get; set; }
         /// <summary>
@@ -55,7 +55,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "lowerTimestamp", n => { LowerTimestamp = n.GetLongValue(); } },
                 { "rangeType", n => { RangeType = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteRangedType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAbsoluteRangedType2>(); } },
                 { "upperTimestamp", n => { UpperTimestamp = n.GetLongValue(); } },
             };
         }
@@ -68,7 +68,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteLongValue("lowerTimestamp", LowerTimestamp);
             writer.WriteStringValue("rangeType", RangeType);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteRangedType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAbsoluteRangedType2>("type", Type);
             writer.WriteLongValue("upperTimestamp", UpperTimestamp);
             writer.WriteAdditionalData(AdditionalData);
         }

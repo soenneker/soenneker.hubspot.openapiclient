@@ -26,8 +26,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public int? Month { get; set; }
         /// <summary>An integer representing the second component of the time.</summary>
         public int? Second { get; set; }
-        /// <summary>A string indicating the type of time reference, typically set to &apos;DATE&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.DateTimeType? TimeType { get; set; }
+        /// <summary>A string indicating the type of time reference used.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmDateTimeType? TimeType { get; set; }
         /// <summary>A string specifying the source of the timezone information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -77,7 +77,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "minute", n => { Minute = n.GetIntValue(); } },
                 { "month", n => { Month = n.GetIntValue(); } },
                 { "second", n => { Second = n.GetIntValue(); } },
-                { "timeType", n => { TimeType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DateTimeType>(); } },
+                { "timeType", n => { TimeType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmDateTimeType>(); } },
                 { "timezoneSource", n => { TimezoneSource = n.GetStringValue(); } },
                 { "year", n => { Year = n.GetIntValue(); } },
                 { "zoneId", n => { ZoneId = n.GetStringValue(); } },
@@ -96,7 +96,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteIntValue("minute", Minute);
             writer.WriteIntValue("month", Month);
             writer.WriteIntValue("second", Second);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DateTimeType>("timeType", TimeType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmDateTimeType>("timeType", TimeType);
             writer.WriteStringValue("timezoneSource", TimezoneSource);
             writer.WriteIntValue("year", Year);
             writer.WriteStringValue("zoneId", ZoneId);

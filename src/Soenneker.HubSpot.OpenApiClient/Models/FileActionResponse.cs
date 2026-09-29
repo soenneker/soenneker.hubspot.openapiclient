@@ -27,10 +27,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>A map of link names to associated URIs, providing additional information about the file action.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.FileActionResponseLinksProperty? Links { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.FileActionResponseLinksProperty2? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.FileActionResponseLinksProperty Links { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.FileActionResponseLinksProperty2 Links { get; set; }
 #endif
         /// <summary>The number of errors encountered during the file action, represented as an integer.</summary>
         public int? NumErrors { get; set; }
@@ -83,7 +83,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "completedAt", n => { CompletedAt = n.GetDateTimeOffsetValue(); } },
                 { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.FilesStandardError>(global::Soenneker.HubSpot.OpenApiClient.Models.FilesStandardError.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.FileActionResponseLinksProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.FileActionResponseLinksProperty.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.FileActionResponseLinksProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.FileActionResponseLinksProperty2.CreateFromDiscriminatorValue); } },
                 { "numErrors", n => { NumErrors = n.GetIntValue(); } },
                 { "requestedAt", n => { RequestedAt = n.GetDateTimeOffsetValue(); } },
                 { "result", n => { Result = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.FileObject>(global::Soenneker.HubSpot.OpenApiClient.Models.FileObject.CreateFromDiscriminatorValue); } },
@@ -101,7 +101,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDateTimeOffsetValue("completedAt", CompletedAt);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.FilesStandardError>("errors", Errors);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.FileActionResponseLinksProperty>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.FileActionResponseLinksProperty2>("links", Links);
             writer.WriteIntValue("numErrors", NumErrors);
             writer.WriteDateTimeOffsetValue("requestedAt", RequestedAt);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.FileObject>("result", Result);

@@ -14,8 +14,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A string that specifies the type of filter being applied. Default value is &apos;SURVEY_MONKEY_VALUE&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.SurveyMonkeyValueFilterType? FilterType { get; set; }
+        /// <summary>A string representing the type of filter, which is &apos;SURVEY_MONKEY_VALUE&apos; for this component.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmSurveyMonkeyValueFilterType? FilterType { get; set; }
         /// <summary>A string representing the operator used in the filter to compare survey response values.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -89,7 +89,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SurveyMonkeyValueFilterType>(); } },
+                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSurveyMonkeyValueFilterType>(); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
                 { "surveyAnswerColId", n => { SurveyAnswerColId = n.GetStringValue(); } },
                 { "surveyAnswerRowId", n => { SurveyAnswerRowId = n.GetStringValue(); } },
@@ -105,7 +105,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SurveyMonkeyValueFilterType>("filterType", FilterType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSurveyMonkeyValueFilterType>("filterType", FilterType);
             writer.WriteStringValue("operator", Operator);
             writer.WriteStringValue("surveyAnswerColId", SurveyAnswerColId);
             writer.WriteStringValue("surveyAnswerRowId", SurveyAnswerRowId);

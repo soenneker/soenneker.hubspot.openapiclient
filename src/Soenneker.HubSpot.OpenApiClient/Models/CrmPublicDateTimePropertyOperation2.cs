@@ -16,8 +16,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A boolean indicating whether objects without a set value should be included in the operation.</summary>
         public bool? IncludeObjectsWithNoValueSet { get; set; }
-        /// <summary>A string representing the type of operation being performed. The default value is &apos;DATE_TIME&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.DatetimeOperationType? OperationType { get; set; }
+        /// <summary>A string indicating the type of operation, which is always &apos;DATETIME&apos; for this component.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmDatetimeOperationType2? OperationType { get; set; }
         /// <summary>A string representing the operator used in the datetime operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -56,7 +56,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "includeObjectsWithNoValueSet", n => { IncludeObjectsWithNoValueSet = n.GetBoolValue(); } },
-                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DatetimeOperationType>(); } },
+                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmDatetimeOperationType2>(); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
                 { "requiresTimeZoneConversion", n => { RequiresTimeZoneConversion = n.GetBoolValue(); } },
                 { "timestamp", n => { Timestamp = n.GetLongValue(); } },
@@ -70,7 +70,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("includeObjectsWithNoValueSet", IncludeObjectsWithNoValueSet);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DatetimeOperationType>("operationType", OperationType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmDatetimeOperationType2>("operationType", OperationType);
             writer.WriteStringValue("operator", Operator);
             writer.WriteBoolValue("requiresTimeZoneConversion", RequiresTimeZoneConversion);
             writer.WriteLongValue("timestamp", Timestamp);

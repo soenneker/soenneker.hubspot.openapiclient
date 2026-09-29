@@ -22,8 +22,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A string indicating the type of filter. The default value is &apos;EMAIL_SUBSCRIPTION&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailSubscriptionFilterType? FilterType { get; set; }
+        /// <summary>A string indicating the type of filter, which is &apos;EMAIL_SUBSCRIPTION&apos; for this component.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmEmailSubscriptionFilterType? FilterType { get; set; }
         /// <summary>An array of strings representing the IDs of the subscriptions to be filtered.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -66,7 +66,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "acceptedStatuses", n => { AcceptedStatuses = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailSubscriptionFilterType>(); } },
+                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmEmailSubscriptionFilterType>(); } },
                 { "subscriptionIds", n => { SubscriptionIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "subscriptionType", n => { SubscriptionType = n.GetStringValue(); } },
             };
@@ -79,7 +79,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("acceptedStatuses", AcceptedStatuses);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailSubscriptionFilterType>("filterType", FilterType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmEmailSubscriptionFilterType>("filterType", FilterType);
             writer.WriteCollectionOfPrimitiveValues<string>("subscriptionIds", SubscriptionIds);
             writer.WriteStringValue("subscriptionType", SubscriptionType);
             writer.WriteAdditionalData(AdditionalData);

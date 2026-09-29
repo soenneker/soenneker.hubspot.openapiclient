@@ -17,13 +17,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object used to refine the filter by coalescing criteria. It can be one of several types, such as occurrences or timestamp-based refinements.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicFormSubmissionFilter2CoalescingRefineBy? CoalescingRefineBy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicFormSubmissionFilterCoalescingRefineBy2? CoalescingRefineBy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicFormSubmissionFilter2CoalescingRefineBy CoalescingRefineBy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicFormSubmissionFilterCoalescingRefineBy2 CoalescingRefineBy { get; set; }
 #endif
-        /// <summary>A string that specifies the type of filter being applied. The default value is &apos;FORM_SUBMISSION&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.FormSubmissionFilterType? FilterType { get; set; }
+        /// <summary>A string that specifies the type of filter. The default value is &apos;FORM_SUBMISSION&apos;.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmFormSubmissionFilterType2? FilterType { get; set; }
         /// <summary>A string representing the unique identifier of the form.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -33,14 +33,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string FormId { get; set; }
 #endif
         /// <summary>A string that specifies the operation to apply, with valid values being &apos;FILLED_OUT&apos; or &apos;NOT_FILLED_OUT&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicFormSubmissionFilter2Operator? Operator { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicFormSubmissionFilterOperator2? Operator { get; set; }
         /// <summary>An object used to refine the filter by pruning criteria. It can be one of several types, such as occurrences or timestamp-based refinements.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicFormSubmissionFilter2PruningRefineBy? PruningRefineBy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicFormSubmissionFilterPruningRefineBy2? PruningRefineBy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicFormSubmissionFilter2PruningRefineBy PruningRefineBy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicFormSubmissionFilterPruningRefineBy2 PruningRefineBy { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicFormSubmissionFilter2"/> and sets the default values.
@@ -67,11 +67,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "coalescingRefineBy", n => { CoalescingRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicFormSubmissionFilter2CoalescingRefineBy>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicFormSubmissionFilter2CoalescingRefineBy.CreateFromDiscriminatorValue); } },
-                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FormSubmissionFilterType>(); } },
+                { "coalescingRefineBy", n => { CoalescingRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicFormSubmissionFilterCoalescingRefineBy2>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicFormSubmissionFilterCoalescingRefineBy2.CreateFromDiscriminatorValue); } },
+                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFormSubmissionFilterType2>(); } },
                 { "formId", n => { FormId = n.GetStringValue(); } },
-                { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicFormSubmissionFilter2Operator>(); } },
-                { "pruningRefineBy", n => { PruningRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicFormSubmissionFilter2PruningRefineBy>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicFormSubmissionFilter2PruningRefineBy.CreateFromDiscriminatorValue); } },
+                { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicFormSubmissionFilterOperator2>(); } },
+                { "pruningRefineBy", n => { PruningRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicFormSubmissionFilterPruningRefineBy2>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicFormSubmissionFilterPruningRefineBy2.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -81,11 +81,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicFormSubmissionFilter2CoalescingRefineBy>("coalescingRefineBy", CoalescingRefineBy);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FormSubmissionFilterType>("filterType", FilterType);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicFormSubmissionFilterCoalescingRefineBy2>("coalescingRefineBy", CoalescingRefineBy);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFormSubmissionFilterType2>("filterType", FilterType);
             writer.WriteStringValue("formId", FormId);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicFormSubmissionFilter2Operator>("operator", Operator);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicFormSubmissionFilter2PruningRefineBy>("pruningRefineBy", PruningRefineBy);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicFormSubmissionFilterOperator2>("operator", Operator);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicFormSubmissionFilterPruningRefineBy2>("pruningRefineBy", PruningRefineBy);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

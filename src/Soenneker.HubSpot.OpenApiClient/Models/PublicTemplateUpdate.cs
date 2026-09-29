@@ -17,34 +17,34 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object representing the body content of the email template.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplateUpdateBodyProperty? Body { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplateUpdateBodyProperty2? Body { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplateUpdateBodyProperty Body { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplateUpdateBodyProperty2 Body { get; set; }
 #endif
         /// <summary>An object representing the identifier of the folder where the email template is stored.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplateUpdateFolderIdProperty? FolderId { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplateUpdateFolderIdProperty2? FolderId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplateUpdateFolderIdProperty FolderId { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplateUpdateFolderIdProperty2 FolderId { get; set; }
 #endif
         /// <summary>An object representing the name of the email template.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplateUpdateNameProperty? Name { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplateUpdateNameProperty2? Name { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplateUpdateNameProperty Name { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplateUpdateNameProperty2 Name { get; set; }
 #endif
         /// <summary>An object representing the subject line of the email template.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplateUpdateSubjectProperty? Subject { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplateUpdateSubjectProperty2? Subject { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplateUpdateSubjectProperty Subject { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplateUpdateSubjectProperty2 Subject { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplateUpdate"/> and sets the default values.
@@ -71,10 +71,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "body", n => { Body = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplateUpdateBodyProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplateUpdateBodyProperty.CreateFromDiscriminatorValue); } },
-                { "folderId", n => { FolderId = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplateUpdateFolderIdProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplateUpdateFolderIdProperty.CreateFromDiscriminatorValue); } },
-                { "name", n => { Name = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplateUpdateNameProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplateUpdateNameProperty.CreateFromDiscriminatorValue); } },
-                { "subject", n => { Subject = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplateUpdateSubjectProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplateUpdateSubjectProperty.CreateFromDiscriminatorValue); } },
+                { "body", n => { Body = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplateUpdateBodyProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplateUpdateBodyProperty2.CreateFromDiscriminatorValue); } },
+                { "folderId", n => { FolderId = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplateUpdateFolderIdProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplateUpdateFolderIdProperty2.CreateFromDiscriminatorValue); } },
+                { "name", n => { Name = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplateUpdateNameProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplateUpdateNameProperty2.CreateFromDiscriminatorValue); } },
+                { "subject", n => { Subject = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplateUpdateSubjectProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplateUpdateSubjectProperty2.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -84,10 +84,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplateUpdateBodyProperty>("body", Body);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplateUpdateFolderIdProperty>("folderId", FolderId);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplateUpdateNameProperty>("name", Name);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplateUpdateSubjectProperty>("subject", Subject);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplateUpdateBodyProperty2>("body", Body);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplateUpdateFolderIdProperty2>("folderId", FolderId);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplateUpdateNameProperty2>("name", Name);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplateUpdateSubjectProperty2>("subject", Subject);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

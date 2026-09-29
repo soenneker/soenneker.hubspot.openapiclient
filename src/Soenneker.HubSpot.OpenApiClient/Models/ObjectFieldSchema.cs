@@ -17,10 +17,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Contains the properties of the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ObjectFieldSchemaPropertiesProperty? Properties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ObjectFieldSchemaPropertiesProperty2? Properties { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ObjectFieldSchemaPropertiesProperty Properties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ObjectFieldSchemaPropertiesProperty2 Properties { get; set; }
 #endif
         /// <summary>Specifies the type of the field, which is &apos;OBJECT&apos; by default.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.ObjectValueType? Type { get; set; }
@@ -49,7 +49,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ObjectFieldSchemaPropertiesProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.ObjectFieldSchemaPropertiesProperty.CreateFromDiscriminatorValue); } },
+                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ObjectFieldSchemaPropertiesProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.ObjectFieldSchemaPropertiesProperty2.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ObjectValueType>(); } },
             };
         }
@@ -60,7 +60,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ObjectFieldSchemaPropertiesProperty>("properties", Properties);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ObjectFieldSchemaPropertiesProperty2>("properties", Properties);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ObjectValueType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

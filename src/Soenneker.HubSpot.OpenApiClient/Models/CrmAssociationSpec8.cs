@@ -16,7 +16,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>For [labeled associations](https://developers.hubspot.com/docs/guides/api/crm/associations/associations-v4#associate-records-with-a-label), the category of the association.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec8AssociationCategory? AssociationCategory { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecAssociationCategory8? AssociationCategory { get; set; }
         /// <summary>The [association type ID](https://developers.hubspot.com/docs/guides/api/crm/associations/associations-v4#association-type-id-values) (e.g., `4` for contact-to-company associations).</summary>
         public int? AssociationTypeId { get; set; }
         /// <summary>
@@ -44,7 +44,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "associationCategory", n => { AssociationCategory = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec8AssociationCategory>(); } },
+                { "associationCategory", n => { AssociationCategory = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecAssociationCategory8>(); } },
                 { "associationTypeId", n => { AssociationTypeId = n.GetIntValue(); } },
             };
         }
@@ -55,7 +55,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec8AssociationCategory>("associationCategory", AssociationCategory);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecAssociationCategory8>("associationCategory", AssociationCategory);
             writer.WriteIntValue("associationTypeId", AssociationTypeId);
             writer.WriteAdditionalData(AdditionalData);
         }

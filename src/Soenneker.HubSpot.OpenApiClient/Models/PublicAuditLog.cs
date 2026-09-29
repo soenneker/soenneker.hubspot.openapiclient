@@ -27,10 +27,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Supplementary metadata associated with the audit log entry. It provides additional context about the audited event (ex: rows deleted/updated for a HubDB event, the specific fields that were changed for a Content Settings event).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditLogMetaProperty? Meta { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditLogMetaProperty2? Meta { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditLogMetaProperty Meta { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditLogMetaProperty2 Meta { get; set; }
 #endif
         /// <summary>The ID of the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -87,7 +87,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "event", n => { Event = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditLogEvent>(); } },
                 { "fullName", n => { FullName = n.GetStringValue(); } },
-                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditLogMetaProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditLogMetaProperty.CreateFromDiscriminatorValue); } },
+                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditLogMetaProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditLogMetaProperty2.CreateFromDiscriminatorValue); } },
                 { "objectId", n => { ObjectId = n.GetStringValue(); } },
                 { "objectName", n => { ObjectName = n.GetStringValue(); } },
                 { "objectType", n => { ObjectType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditLogObjectType>(); } },
@@ -104,7 +104,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditLogEvent>("event", Event);
             writer.WriteStringValue("fullName", FullName);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditLogMetaProperty>("meta", Meta);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditLogMetaProperty2>("meta", Meta);
             writer.WriteStringValue("objectId", ObjectId);
             writer.WriteStringValue("objectName", ObjectName);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditLogObjectType>("objectType", ObjectType);

@@ -14,8 +14,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A string indicating the type of filter applied. Valid value is &apos;CRM_OBJECT_PROPERTY&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectPropertyFilterType? FilterType { get; set; }
+        /// <summary>A string indicating the type of filter being applied. Valid value is &apos;CRM_OBJECT_PROPERTY&apos;.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksCrmObjectPropertyFilterType? FilterType { get; set; }
         /// <summary>A string specifying the operation to be performed in the condition. Valid values include &apos;EQ&apos;, &apos;N_EQ&apos;, &apos;LT&apos;, &apos;GT&apos;, &apos;LTE&apos;, &apos;GTE&apos;, &apos;CONTAINS&apos;, &apos;STARTS_WITH&apos;, &apos;ENDS_WITH&apos;, &apos;IN&apos;, &apos;NOT_IN&apos;, &apos;IS_EMPTY&apos;, and &apos;IS_NOT_EMPTY&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksConditionOperator? Operator { get; set; }
         /// <summary>A string representing the specific property of the CRM object that the condition applies to.</summary>
@@ -67,7 +67,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectPropertyFilterType>(); } },
+                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksCrmObjectPropertyFilterType>(); } },
                 { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksConditionOperator>(); } },
                 { "property", n => { Property = n.GetStringValue(); } },
                 { "value", n => { Value = n.GetStringValue(); } },
@@ -81,7 +81,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectPropertyFilterType>("filterType", FilterType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksCrmObjectPropertyFilterType>("filterType", FilterType);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksConditionOperator>("operator", Operator);
             writer.WriteStringValue("property", Property);
             writer.WriteStringValue("value", Value);

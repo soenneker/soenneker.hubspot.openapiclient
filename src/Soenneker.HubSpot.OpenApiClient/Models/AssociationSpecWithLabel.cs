@@ -17,7 +17,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The category of the association, such as &apos;HUBSPOT_DEFINED&apos;, &apos;USER_DEFINED&apos;, or &apos;INTEGRATOR_DEFINED&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.AssociationSpecWithLabelCategory? Category { get; set; }
-        /// <summary>A string representing the type ID of the source object in the association.</summary>
+        /// <summary>A string representing the object type ID from which the association originates.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FromObjectTypeId { get; set; }
@@ -25,7 +25,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string FromObjectTypeId { get; set; }
 #endif
-        /// <summary>The label associated with the type of association.</summary>
+        /// <summary>A label describing the association between two objects.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Label { get; set; }
@@ -33,7 +33,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Label { get; set; }
 #endif
-        /// <summary>A string representing the type ID of the target object in the association.</summary>
+        /// <summary>A string representing the object type ID to which the association is directed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ToObjectTypeId { get; set; }

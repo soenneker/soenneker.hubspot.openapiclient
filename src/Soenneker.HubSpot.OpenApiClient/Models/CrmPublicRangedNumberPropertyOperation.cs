@@ -18,8 +18,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public bool? IncludeObjectsWithNoValueSet { get; set; }
         /// <summary>An integer specifying the lower bound of the range, in int64 format.</summary>
         public long? LowerBound { get; set; }
-        /// <summary>A string indicating the type of operation, which is &apos;RANGED_NUMBER&apos; by default.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.NumberRangedOperationType? OperationType { get; set; }
+        /// <summary>A string that indicates the type of operation. The default value is &apos;RANGED_NUMBER&apos;.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmNumberRangedOperationType? OperationType { get; set; }
         /// <summary>A string representing the operator used in the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -57,7 +57,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "includeObjectsWithNoValueSet", n => { IncludeObjectsWithNoValueSet = n.GetBoolValue(); } },
                 { "lowerBound", n => { LowerBound = n.GetLongValue(); } },
-                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.NumberRangedOperationType>(); } },
+                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmNumberRangedOperationType>(); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
                 { "upperBound", n => { UpperBound = n.GetLongValue(); } },
             };
@@ -71,7 +71,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("includeObjectsWithNoValueSet", IncludeObjectsWithNoValueSet);
             writer.WriteLongValue("lowerBound", LowerBound);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.NumberRangedOperationType>("operationType", OperationType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmNumberRangedOperationType>("operationType", OperationType);
             writer.WriteStringValue("operator", Operator);
             writer.WriteLongValue("upperBound", UpperBound);
             writer.WriteAdditionalData(AdditionalData);

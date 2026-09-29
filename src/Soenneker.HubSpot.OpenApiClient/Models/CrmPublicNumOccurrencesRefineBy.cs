@@ -18,8 +18,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public int? MaxOccurrences { get; set; }
         /// <summary>An integer representing the minimum number of occurrences required for the refinement.</summary>
         public int? MinOccurrences { get; set; }
-        /// <summary>A string indicating the type of refinement, which is &apos;NUM_OCCURRENCES&apos; by default.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.NumOccurrencesType? Type { get; set; }
+        /// <summary>A string that specifies the type of refinement. The default value is &apos;NUM_OCCURRENCES&apos;.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmNumOccurrencesType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicNumOccurrencesRefineBy"/> and sets the default values.
         /// </summary>
@@ -47,7 +47,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "maxOccurrences", n => { MaxOccurrences = n.GetIntValue(); } },
                 { "minOccurrences", n => { MinOccurrences = n.GetIntValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.NumOccurrencesType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmNumOccurrencesType>(); } },
             };
         }
         /// <summary>
@@ -59,7 +59,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("maxOccurrences", MaxOccurrences);
             writer.WriteIntValue("minOccurrences", MinOccurrences);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.NumOccurrencesType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmNumOccurrencesType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

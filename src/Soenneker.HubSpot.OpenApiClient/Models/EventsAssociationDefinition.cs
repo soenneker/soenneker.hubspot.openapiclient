@@ -18,11 +18,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>A boolean indicating if custom labels are allowed for this association.</summary>
         public bool? AllowsCustomLabels { get; set; }
         /// <summary>The nature of the association in terms of cardinality, which can be &apos;ONE_TO_ONE&apos; or &apos;ONE_TO_MANY&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EventsAssociationDefinitionCardinality? Cardinality { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AssociationDefinitionCardinality? Cardinality { get; set; }
         /// <summary>The category of the association, indicating whether it is defined by HubSpot, the user, an integrator, or for work purposes. Valid values include &apos;HUBSPOT_DEFINED&apos;, &apos;USER_DEFINED&apos;, &apos;INTEGRATOR_DEFINED&apos;, and &apos;WORK&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EventsAssociationDefinitionCategory? Category { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AssociationDefinitionCategory? Category { get; set; }
         /// <summary>The type of object from which the association originates. Valid values include various HubSpot object types such as &apos;CONTACT&apos;, &apos;COMPANY&apos;, &apos;DEAL&apos;, etc.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EventsAssociationDefinitionFromObjectType? FromObjectType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AssociationDefinitionFromObjectType? FromObjectType { get; set; }
         /// <summary>The object type ID from which the association originates.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -42,13 +42,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>A boolean indicating if the association is hidden.</summary>
         public bool? Hidden { get; set; }
         /// <summary>The reason why the association is hidden, if applicable. Valid values include &apos;DEFAULT&apos;, &apos;INTERNAL&apos;, and &apos;USER_CONFIGURED&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EventsAssociationDefinitionHiddenReason? HiddenReason { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AssociationDefinitionHiddenReason? HiddenReason { get; set; }
         /// <summary>The unique identifier for this association definition.</summary>
         public int? Id { get; set; }
         /// <summary>A boolean indicating if custom labels are allowed for the inverse association.</summary>
         public bool? InverseAllowsCustomLabels { get; set; }
         /// <summary>The cardinality of the inverse association, which can also be &apos;ONE_TO_ONE&apos; or &apos;ONE_TO_MANY&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EventsAssociationDefinitionInverseCardinality? InverseCardinality { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AssociationDefinitionInverseCardinality? InverseCardinality { get; set; }
         /// <summary>A boolean indicating if all associated objects are included in the inverse association.</summary>
         public bool? InverseHasAllAssociatedObjects { get; set; }
         /// <summary>The unique identifier for the inverse of this association definition.</summary>
@@ -106,7 +106,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>A boolean indicating if the association is read-only.</summary>
         public bool? ReadOnly { get; set; }
         /// <summary>The type of object to which the association points. Valid values include various HubSpot object types such as &apos;CONTACT&apos;, &apos;COMPANY&apos;, &apos;DEAL&apos;, etc.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EventsAssociationDefinitionToObjectType? ToObjectType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AssociationDefinitionToObjectType? ToObjectType { get; set; }
         /// <summary>The object type ID to which the association points.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -141,19 +141,19 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "allowsCustomLabels", n => { AllowsCustomLabels = n.GetBoolValue(); } },
-                { "cardinality", n => { Cardinality = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsAssociationDefinitionCardinality>(); } },
-                { "category", n => { Category = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsAssociationDefinitionCategory>(); } },
-                { "fromObjectType", n => { FromObjectType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsAssociationDefinitionFromObjectType>(); } },
+                { "cardinality", n => { Cardinality = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AssociationDefinitionCardinality>(); } },
+                { "category", n => { Category = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AssociationDefinitionCategory>(); } },
+                { "fromObjectType", n => { FromObjectType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AssociationDefinitionFromObjectType>(); } },
                 { "fromObjectTypeId", n => { FromObjectTypeId = n.GetStringValue(); } },
                 { "hasAllAssociatedObjects", n => { HasAllAssociatedObjects = n.GetBoolValue(); } },
                 { "hasCascadingDeletes", n => { HasCascadingDeletes = n.GetBoolValue(); } },
                 { "hasUserEnforcedMaxFromObjectIds", n => { HasUserEnforcedMaxFromObjectIds = n.GetBoolValue(); } },
                 { "hasUserEnforcedMaxToObjectIds", n => { HasUserEnforcedMaxToObjectIds = n.GetBoolValue(); } },
                 { "hidden", n => { Hidden = n.GetBoolValue(); } },
-                { "hiddenReason", n => { HiddenReason = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsAssociationDefinitionHiddenReason>(); } },
+                { "hiddenReason", n => { HiddenReason = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AssociationDefinitionHiddenReason>(); } },
                 { "id", n => { Id = n.GetIntValue(); } },
                 { "inverseAllowsCustomLabels", n => { InverseAllowsCustomLabels = n.GetBoolValue(); } },
-                { "inverseCardinality", n => { InverseCardinality = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsAssociationDefinitionInverseCardinality>(); } },
+                { "inverseCardinality", n => { InverseCardinality = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AssociationDefinitionInverseCardinality>(); } },
                 { "inverseHasAllAssociatedObjects", n => { InverseHasAllAssociatedObjects = n.GetBoolValue(); } },
                 { "inverseId", n => { InverseId = n.GetIntValue(); } },
                 { "inverseLabel", n => { InverseLabel = n.GetStringValue(); } },
@@ -167,7 +167,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "portalUniqueIdentifier", n => { PortalUniqueIdentifier = n.GetStringValue(); } },
                 { "readOnly", n => { ReadOnly = n.GetBoolValue(); } },
-                { "toObjectType", n => { ToObjectType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsAssociationDefinitionToObjectType>(); } },
+                { "toObjectType", n => { ToObjectType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AssociationDefinitionToObjectType>(); } },
                 { "toObjectTypeId", n => { ToObjectTypeId = n.GetStringValue(); } },
             };
         }
@@ -179,19 +179,19 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("allowsCustomLabels", AllowsCustomLabels);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsAssociationDefinitionCardinality>("cardinality", Cardinality);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsAssociationDefinitionCategory>("category", Category);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsAssociationDefinitionFromObjectType>("fromObjectType", FromObjectType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AssociationDefinitionCardinality>("cardinality", Cardinality);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AssociationDefinitionCategory>("category", Category);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AssociationDefinitionFromObjectType>("fromObjectType", FromObjectType);
             writer.WriteStringValue("fromObjectTypeId", FromObjectTypeId);
             writer.WriteBoolValue("hasAllAssociatedObjects", HasAllAssociatedObjects);
             writer.WriteBoolValue("hasCascadingDeletes", HasCascadingDeletes);
             writer.WriteBoolValue("hasUserEnforcedMaxFromObjectIds", HasUserEnforcedMaxFromObjectIds);
             writer.WriteBoolValue("hasUserEnforcedMaxToObjectIds", HasUserEnforcedMaxToObjectIds);
             writer.WriteBoolValue("hidden", Hidden);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsAssociationDefinitionHiddenReason>("hiddenReason", HiddenReason);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AssociationDefinitionHiddenReason>("hiddenReason", HiddenReason);
             writer.WriteIntValue("id", Id);
             writer.WriteBoolValue("inverseAllowsCustomLabels", InverseAllowsCustomLabels);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsAssociationDefinitionInverseCardinality>("inverseCardinality", InverseCardinality);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AssociationDefinitionInverseCardinality>("inverseCardinality", InverseCardinality);
             writer.WriteBoolValue("inverseHasAllAssociatedObjects", InverseHasAllAssociatedObjects);
             writer.WriteIntValue("inverseId", InverseId);
             writer.WriteStringValue("inverseLabel", InverseLabel);
@@ -205,7 +205,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("portalUniqueIdentifier", PortalUniqueIdentifier);
             writer.WriteBoolValue("readOnly", ReadOnly);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsAssociationDefinitionToObjectType>("toObjectType", ToObjectType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AssociationDefinitionToObjectType>("toObjectType", ToObjectType);
             writer.WriteStringValue("toObjectTypeId", ToObjectTypeId);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -132,7 +132,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Scheduler.TwoZeroTwoSixZeroNine.Meetin
 #endif
             #pragma warning disable CS1591
             [QueryParameter("type")]
-            public global::Soenneker.HubSpot.OpenApiClient.Models.SchedulerGetScheduler202609MeetingsMeetingLinksTypeParameter? Type { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.GetScheduler202609MeetingsMeetingLinksTypeParameter? Type { get; set; }
             #pragma warning restore CS1591
         }
     }

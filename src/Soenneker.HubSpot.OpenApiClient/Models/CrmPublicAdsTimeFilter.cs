@@ -14,8 +14,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A string representing the type of filter being applied. The default value is &apos;ADS_TIME&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AdsTimeFilterType? FilterType { get; set; }
+        /// <summary>A string that specifies the type of filter being applied. The default value is &apos;ADS_TIME&apos;.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmAdsTimeFilterType? FilterType { get; set; }
         /// <summary>An object that defines the criteria for refining the pruning of the filter. It can be one of several types, such as PublicNumOccurrencesRefineBy, PublicSetOccurrencesRefineBy, or various timestamp refine types.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -49,7 +49,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AdsTimeFilterType>(); } },
+                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAdsTimeFilterType>(); } },
                 { "pruningRefineBy", n => { PruningRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAdsTimeFilterPruningRefineBy>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAdsTimeFilterPruningRefineBy.CreateFromDiscriminatorValue); } },
             };
         }
@@ -60,7 +60,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AdsTimeFilterType>("filterType", FilterType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAdsTimeFilterType>("filterType", FilterType);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAdsTimeFilterPruningRefineBy>("pruningRefineBy", PruningRefineBy);
             writer.WriteAdditionalData(AdditionalData);
         }

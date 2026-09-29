@@ -170,13 +170,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Settings.Currencies.TwoZeroTwoSixZeroN
 #endif
             /// <summary>Filter results by the source currency code. Valid values include standard currency codes such as &apos;USD&apos;, &apos;EUR&apos;, etc.</summary>
             [QueryParameter("fromCurrencyCode")]
-            public global::Soenneker.HubSpot.OpenApiClient.Models.SettingsGetSettingsCurrencies202609ExchangeRatesFromCurrencyCodeParameter? FromCurrencyCode { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.GetSettingsCurrencies202609ExchangeRatesFromCurrencyCodeParameter? FromCurrencyCode { get; set; }
             /// <summary>The maximum number of results to display per page.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
             /// <summary>Filter results by the target currency code. Valid values include standard currency codes such as &apos;USD&apos;, &apos;EUR&apos;, etc.</summary>
             [QueryParameter("toCurrencyCode")]
-            public global::Soenneker.HubSpot.OpenApiClient.Models.SettingsGetSettingsCurrencies202609ExchangeRatesToCurrencyCodeParameter? ToCurrencyCode { get; set; }
+            public global::Soenneker.HubSpot.OpenApiClient.Models.GetSettingsCurrencies202609ExchangeRatesToCurrencyCodeParameter? ToCurrencyCode { get; set; }
         }
     }
 }

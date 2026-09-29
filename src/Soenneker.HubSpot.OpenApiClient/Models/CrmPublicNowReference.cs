@@ -20,8 +20,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public int? Millisecond { get; set; }
         /// <summary>An integer representing the current minute.</summary>
         public int? Minute { get; set; }
-        /// <summary>A string that indicates the type of reference. The default value is &apos;NOW&apos;, and it is used to specify that the reference is to the current time.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.NowReferenceType? ReferenceType { get; set; }
+        /// <summary>A string indicating the type of reference, which is always &apos;NOW&apos;.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmNowReferenceType? ReferenceType { get; set; }
         /// <summary>An integer representing the current second.</summary>
         public int? Second { get; set; }
         /// <summary>
@@ -52,7 +52,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "hour", n => { Hour = n.GetIntValue(); } },
                 { "millisecond", n => { Millisecond = n.GetIntValue(); } },
                 { "minute", n => { Minute = n.GetIntValue(); } },
-                { "referenceType", n => { ReferenceType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.NowReferenceType>(); } },
+                { "referenceType", n => { ReferenceType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmNowReferenceType>(); } },
                 { "second", n => { Second = n.GetIntValue(); } },
             };
         }
@@ -66,7 +66,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteIntValue("hour", Hour);
             writer.WriteIntValue("millisecond", Millisecond);
             writer.WriteIntValue("minute", Minute);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.NowReferenceType>("referenceType", ReferenceType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmNowReferenceType>("referenceType", ReferenceType);
             writer.WriteIntValue("second", Second);
             writer.WriteAdditionalData(AdditionalData);
         }

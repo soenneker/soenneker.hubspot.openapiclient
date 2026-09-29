@@ -93,10 +93,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>A map of raw data key-value pairs providing additional context about the event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequestRawDataMapProperty? RawDataMap { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequestRawDataMapProperty2? RawDataMap { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequestRawDataMapProperty RawDataMap { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequestRawDataMapProperty2 RawDataMap { get; set; }
 #endif
         /// <summary>A raw data string containing additional information about the event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -153,7 +153,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "pageId", n => { PageId = n.GetLongValue(); } },
                 { "pageName", n => { PageName = n.GetStringValue(); } },
                 { "pageUrl", n => { PageUrl = n.GetStringValue(); } },
-                { "rawDataMap", n => { RawDataMap = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequestRawDataMapProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequestRawDataMapProperty.CreateFromDiscriminatorValue); } },
+                { "rawDataMap", n => { RawDataMap = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequestRawDataMapProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequestRawDataMapProperty2.CreateFromDiscriminatorValue); } },
                 { "rawDataString", n => { RawDataString = n.GetStringValue(); } },
                 { "sessionId", n => { SessionId = n.GetStringValue(); } },
             };
@@ -179,7 +179,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteLongValue("pageId", PageId);
             writer.WriteStringValue("pageName", PageName);
             writer.WriteStringValue("pageUrl", PageUrl);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequestRawDataMapProperty>("rawDataMap", RawDataMap);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequestRawDataMapProperty2>("rawDataMap", RawDataMap);
             writer.WriteStringValue("rawDataString", RawDataString);
             writer.WriteStringValue("sessionId", SessionId);
             writer.WriteAdditionalData(AdditionalData);

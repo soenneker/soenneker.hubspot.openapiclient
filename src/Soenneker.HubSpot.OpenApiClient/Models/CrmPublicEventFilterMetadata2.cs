@@ -17,10 +17,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object that defines the operation to be performed on the specified property. This operation can be one of several types, such as boolean, number, string, or date operations, among others.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEventFilterMetadata2Operation? Operation { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEventFilterMetadataOperation2? Operation { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEventFilterMetadata2Operation Operation { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEventFilterMetadataOperation2 Operation { get; set; }
 #endif
         /// <summary>A string representing the specific property of the event that the filter is targeting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,7 +55,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "operation", n => { Operation = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEventFilterMetadata2Operation>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEventFilterMetadata2Operation.CreateFromDiscriminatorValue); } },
+                { "operation", n => { Operation = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEventFilterMetadataOperation2>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEventFilterMetadataOperation2.CreateFromDiscriminatorValue); } },
                 { "property", n => { Property = n.GetStringValue(); } },
             };
         }
@@ -66,7 +66,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEventFilterMetadata2Operation>("operation", Operation);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEventFilterMetadataOperation2>("operation", Operation);
             writer.WriteStringValue("property", Property);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -25,10 +25,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Initial data of the datasource</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.JsonDataRequestDataItemProperty>? Data { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.JsonDataRequestDataItemProperty2>? Data { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.JsonDataRequestDataItemProperty> Data { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.JsonDataRequestDataItemProperty2> Data { get; set; }
 #endif
         /// <summary>Optional column-name which is used for identifying records of a datasource. This is required for updating single records of a datasource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -64,7 +64,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "columns", n => { Columns = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.FileColumn>(global::Soenneker.HubSpot.OpenApiClient.Models.FileColumn.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "data", n => { Data = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.JsonDataRequestDataItemProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.JsonDataRequestDataItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "data", n => { Data = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.JsonDataRequestDataItemProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.JsonDataRequestDataItemProperty2.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "recordId", n => { RecordId = n.GetStringValue(); } },
             };
         }
@@ -76,7 +76,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.FileColumn>("columns", Columns);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.JsonDataRequestDataItemProperty>("data", Data);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.JsonDataRequestDataItemProperty2>("data", Data);
             writer.WriteStringValue("recordId", RecordId);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -14,8 +14,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A string that specifies the type of refinement, with a default value of &apos;ALL_HISTORY&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AllHistoryType? Type { get; set; }
+        /// <summary>A string that specifies the type of refinement. The default and only valid value is &apos;ALL_HISTORY&apos;.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmAllHistoryType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAllHistoryRefineBy"/> and sets the default values.
         /// </summary>
@@ -41,7 +41,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AllHistoryType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAllHistoryType>(); } },
             };
         }
         /// <summary>
@@ -51,7 +51,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AllHistoryType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAllHistoryType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

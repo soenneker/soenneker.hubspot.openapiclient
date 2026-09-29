@@ -18,8 +18,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public bool? IncludeObjectsWithNoValueSet { get; set; }
         /// <summary>An integer specifying the number of days for the rolling date range.</summary>
         public int? NumberOfDays { get; set; }
-        /// <summary>A string indicating the type of operation, which is &apos;ROLLING_DATE_RANGE&apos; by default.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.RollingDateRangeOperationType? OperationType { get; set; }
+        /// <summary>A string indicating the type of operation, which is &apos;ROLLING_DATE_RANGE&apos; for this component.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmRollingDateRangeOperationType? OperationType { get; set; }
         /// <summary>A string representing the operator used in the date range operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -57,7 +57,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "includeObjectsWithNoValueSet", n => { IncludeObjectsWithNoValueSet = n.GetBoolValue(); } },
                 { "numberOfDays", n => { NumberOfDays = n.GetIntValue(); } },
-                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RollingDateRangeOperationType>(); } },
+                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmRollingDateRangeOperationType>(); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
                 { "requiresTimeZoneConversion", n => { RequiresTimeZoneConversion = n.GetBoolValue(); } },
             };
@@ -71,7 +71,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("includeObjectsWithNoValueSet", IncludeObjectsWithNoValueSet);
             writer.WriteIntValue("numberOfDays", NumberOfDays);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RollingDateRangeOperationType>("operationType", OperationType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmRollingDateRangeOperationType>("operationType", OperationType);
             writer.WriteStringValue("operator", Operator);
             writer.WriteBoolValue("requiresTimeZoneConversion", RequiresTimeZoneConversion);
             writer.WriteAdditionalData(AdditionalData);

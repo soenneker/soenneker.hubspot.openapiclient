@@ -48,8 +48,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>An integer representing the unique identifier of the HubSpot portal.</summary>
         public long? PortalId { get; set; }
-        /// <summary>A string indicating the type of subscription, which is &apos;ASSOCIATION&apos; for this component.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AssociationSubscriptionType? SubscriptionType { get; set; }
+        /// <summary>A string indicating the type of subscription, which is &apos;ASSOCIATION&apos; by default.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksAssociationSubscriptionType? SubscriptionType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksAssociationSubscriptionUpsertRequest"/> and sets the default values.
         /// </summary>
@@ -80,7 +80,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "objectIds", n => { ObjectIds = n.GetCollectionOfPrimitiveValues<long?>()?.AsList(); } },
                 { "objectTypeId", n => { ObjectTypeId = n.GetStringValue(); } },
                 { "portalId", n => { PortalId = n.GetLongValue(); } },
-                { "subscriptionType", n => { SubscriptionType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AssociationSubscriptionType>(); } },
+                { "subscriptionType", n => { SubscriptionType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksAssociationSubscriptionType>(); } },
             };
         }
         /// <summary>
@@ -95,7 +95,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<long?>("objectIds", ObjectIds);
             writer.WriteStringValue("objectTypeId", ObjectTypeId);
             writer.WriteLongValue("portalId", PortalId);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AssociationSubscriptionType>("subscriptionType", SubscriptionType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksAssociationSubscriptionType>("subscriptionType", SubscriptionType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

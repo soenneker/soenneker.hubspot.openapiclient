@@ -16,7 +16,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Association category. Can be HUBSPOT_DEFINED, USER_DEFINED, INTEGRATOR_DEFINED or WORK</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecWithLabel12Category? Category { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecWithLabelCategory12? Category { get; set; }
         /// <summary>A string representing the object type ID from which the association originates.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -68,7 +68,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "category", n => { Category = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecWithLabel12Category>(); } },
+                { "category", n => { Category = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecWithLabelCategory12>(); } },
                 { "fromObjectTypeId", n => { FromObjectTypeId = n.GetStringValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "toObjectTypeId", n => { ToObjectTypeId = n.GetStringValue(); } },
@@ -82,7 +82,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecWithLabel12Category>("category", Category);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecWithLabelCategory12>("category", Category);
             writer.WriteStringValue("fromObjectTypeId", FromObjectTypeId);
             writer.WriteStringValue("label", Label);
             writer.WriteStringValue("toObjectTypeId", ToObjectTypeId);

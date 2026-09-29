@@ -40,8 +40,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string FilterBranchOperator { get; set; }
 #endif
-        /// <summary>A string indicating the type of filter branch, which is &apos;ASSOCIATION&apos; for this component.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AssociationFilterBranchType? FilterBranchType { get; set; }
+        /// <summary>A string indicating the type of filter branch. Defaults to &apos;ASSOCIATION&apos;.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationFilterBranchType? FilterBranchType { get; set; }
         /// <summary>An array of filters that can include various types such as property filters, association filters, and analytics filters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -94,7 +94,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "associationCategory", n => { AssociationCategory = n.GetStringValue(); } },
                 { "associationTypeId", n => { AssociationTypeId = n.GetIntValue(); } },
                 { "filterBranchOperator", n => { FilterBranchOperator = n.GetStringValue(); } },
-                { "filterBranchType", n => { FilterBranchType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AssociationFilterBranchType>(); } },
+                { "filterBranchType", n => { FilterBranchType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationFilterBranchType>(); } },
                 { "filterBranches", n => { FilterBranches = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationFilterBranchFilterBranchesItem>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationFilterBranchFilterBranchesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "filters", n => { Filters = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationFilterBranchFiltersItem>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationFilterBranchFiltersItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "objectTypeId", n => { ObjectTypeId = n.GetStringValue(); } },
@@ -112,7 +112,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteIntValue("associationTypeId", AssociationTypeId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationFilterBranchFilterBranchesItem>("filterBranches", FilterBranches);
             writer.WriteStringValue("filterBranchOperator", FilterBranchOperator);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AssociationFilterBranchType>("filterBranchType", FilterBranchType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationFilterBranchType>("filterBranchType", FilterBranchType);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationFilterBranchFiltersItem>("filters", Filters);
             writer.WriteStringValue("objectTypeId", ObjectTypeId);
             writer.WriteStringValue("operator", Operator);

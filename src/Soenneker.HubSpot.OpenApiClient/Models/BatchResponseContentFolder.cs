@@ -19,10 +19,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Links associated with batch operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseContentFolderLinksProperty? Links { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseContentFolderLinksProperty2? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseContentFolderLinksProperty Links { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseContentFolderLinksProperty2 Links { get; set; }
 #endif
         /// <summary>Time of batch operation request.</summary>
         public DateTimeOffset? RequestedAt { get; set; }
@@ -64,7 +64,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "completedAt", n => { CompletedAt = n.GetDateTimeOffsetValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseContentFolderLinksProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseContentFolderLinksProperty.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseContentFolderLinksProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseContentFolderLinksProperty2.CreateFromDiscriminatorValue); } },
                 { "requestedAt", n => { RequestedAt = n.GetDateTimeOffsetValue(); } },
                 { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ContentFolder>(global::Soenneker.HubSpot.OpenApiClient.Models.ContentFolder.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "startedAt", n => { StartedAt = n.GetDateTimeOffsetValue(); } },
@@ -79,7 +79,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDateTimeOffsetValue("completedAt", CompletedAt);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseContentFolderLinksProperty>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseContentFolderLinksProperty2>("links", Links);
             writer.WriteDateTimeOffsetValue("requestedAt", RequestedAt);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ContentFolder>("results", Results);
             writer.WriteDateTimeOffsetValue("startedAt", StartedAt);

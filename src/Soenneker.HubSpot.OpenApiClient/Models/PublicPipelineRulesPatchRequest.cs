@@ -17,34 +17,34 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>A rule that defines the approval process for a specific pipeline stage. It is defined using the PublicApprovalStageRuleRequest schema.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestApprovalStageProperty? ApprovalStage { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestApprovalStageProperty2? ApprovalStage { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestApprovalStageProperty ApprovalStage { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestApprovalStageProperty2 ApprovalStage { get; set; }
 #endif
         /// <summary>A rule that prevents moving backwards in the pipeline stages. It is defined using the PublicSequenceValidationRule schema.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestNoBackwardsMovementRuleProperty? NoBackwardsMovementRule { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestNoBackwardsMovementRuleProperty2? NoBackwardsMovementRule { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestNoBackwardsMovementRuleProperty NoBackwardsMovementRule { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestNoBackwardsMovementRuleProperty2 NoBackwardsMovementRule { get; set; }
 #endif
         /// <summary>A rule that prevents skipping stages in the pipeline. It is defined using the PublicSequenceValidationRule schema.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestNoSkippingStagesRuleProperty? NoSkippingStagesRule { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestNoSkippingStagesRuleProperty2? NoSkippingStagesRule { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestNoSkippingStagesRuleProperty NoSkippingStagesRule { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestNoSkippingStagesRuleProperty2 NoSkippingStagesRule { get; set; }
 #endif
         /// <summary>A rule that specifies conditions for object creation within the pipeline. It is defined using the PublicObjectCreationRule schema.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestObjectCreationRuleProperty? ObjectCreationRule { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestObjectCreationRuleProperty2? ObjectCreationRule { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestObjectCreationRuleProperty ObjectCreationRule { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestObjectCreationRuleProperty2 ObjectCreationRule { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequest"/> and sets the default values.
@@ -71,10 +71,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "approvalStage", n => { ApprovalStage = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestApprovalStageProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestApprovalStageProperty.CreateFromDiscriminatorValue); } },
-                { "noBackwardsMovementRule", n => { NoBackwardsMovementRule = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestNoBackwardsMovementRuleProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestNoBackwardsMovementRuleProperty.CreateFromDiscriminatorValue); } },
-                { "noSkippingStagesRule", n => { NoSkippingStagesRule = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestNoSkippingStagesRuleProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestNoSkippingStagesRuleProperty.CreateFromDiscriminatorValue); } },
-                { "objectCreationRule", n => { ObjectCreationRule = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestObjectCreationRuleProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestObjectCreationRuleProperty.CreateFromDiscriminatorValue); } },
+                { "approvalStage", n => { ApprovalStage = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestApprovalStageProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestApprovalStageProperty2.CreateFromDiscriminatorValue); } },
+                { "noBackwardsMovementRule", n => { NoBackwardsMovementRule = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestNoBackwardsMovementRuleProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestNoBackwardsMovementRuleProperty2.CreateFromDiscriminatorValue); } },
+                { "noSkippingStagesRule", n => { NoSkippingStagesRule = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestNoSkippingStagesRuleProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestNoSkippingStagesRuleProperty2.CreateFromDiscriminatorValue); } },
+                { "objectCreationRule", n => { ObjectCreationRule = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestObjectCreationRuleProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestObjectCreationRuleProperty2.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -84,10 +84,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestApprovalStageProperty>("approvalStage", ApprovalStage);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestNoBackwardsMovementRuleProperty>("noBackwardsMovementRule", NoBackwardsMovementRule);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestNoSkippingStagesRuleProperty>("noSkippingStagesRule", NoSkippingStagesRule);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestObjectCreationRuleProperty>("objectCreationRule", ObjectCreationRule);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestApprovalStageProperty2>("approvalStage", ApprovalStage);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestNoBackwardsMovementRuleProperty2>("noBackwardsMovementRule", NoBackwardsMovementRule);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestNoSkippingStagesRuleProperty2>("noSkippingStagesRule", NoSkippingStagesRule);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestObjectCreationRuleProperty2>("objectCreationRule", ObjectCreationRule);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

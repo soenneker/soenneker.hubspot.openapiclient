@@ -30,8 +30,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string RangeType { get; set; }
 #endif
-        /// <summary>A string indicating the type of refinement, with a default value of &apos;RELATIVE_RANGED&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.RelativeRangedType? Type { get; set; }
+        /// <summary>A string that specifies the type of refine operation. The default value is &apos;RELATIVE_RANGED&apos;.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmRelativeRangedType? Type { get; set; }
         /// <summary>The upperBoundOffset property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -67,7 +67,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "lowerBoundOffset", n => { LowerBoundOffset = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimeOffset>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimeOffset.CreateFromDiscriminatorValue); } },
                 { "rangeType", n => { RangeType = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RelativeRangedType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmRelativeRangedType>(); } },
                 { "upperBoundOffset", n => { UpperBoundOffset = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimeOffset>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimeOffset.CreateFromDiscriminatorValue); } },
             };
         }
@@ -80,7 +80,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimeOffset>("lowerBoundOffset", LowerBoundOffset);
             writer.WriteStringValue("rangeType", RangeType);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RelativeRangedType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmRelativeRangedType>("type", Type);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimeOffset>("upperBoundOffset", UpperBoundOffset);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -32,8 +32,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationInListFilterCoalescingRefineBy CoalescingRefineBy { get; set; }
 #endif
-        /// <summary>A string that specifies the type of filter being applied. The default value is &apos;IN_LIST&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AssociationFilterType? FilterType { get; set; }
+        /// <summary>A string indicating the type of filter. Defaults to &apos;ASSOCIATION&apos;.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationFilterType? FilterType { get; set; }
         /// <summary>A string representing the unique identifier of the list to filter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -94,7 +94,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "associationCategory", n => { AssociationCategory = n.GetStringValue(); } },
                 { "associationTypeId", n => { AssociationTypeId = n.GetIntValue(); } },
                 { "coalescingRefineBy", n => { CoalescingRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationInListFilterCoalescingRefineBy>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationInListFilterCoalescingRefineBy.CreateFromDiscriminatorValue); } },
-                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AssociationFilterType>(); } },
+                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationFilterType>(); } },
                 { "listId", n => { ListId = n.GetStringValue(); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
                 { "toObjectType", n => { ToObjectType = n.GetStringValue(); } },
@@ -111,7 +111,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("associationCategory", AssociationCategory);
             writer.WriteIntValue("associationTypeId", AssociationTypeId);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationInListFilterCoalescingRefineBy>("coalescingRefineBy", CoalescingRefineBy);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AssociationFilterType>("filterType", FilterType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationFilterType>("filterType", FilterType);
             writer.WriteStringValue("listId", ListId);
             writer.WriteStringValue("operator", Operator);
             writer.WriteStringValue("toObjectType", ToObjectType);

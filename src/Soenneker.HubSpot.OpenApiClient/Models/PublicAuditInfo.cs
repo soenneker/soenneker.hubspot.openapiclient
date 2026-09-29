@@ -45,10 +45,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object containing the raw data associated with the action. This can include detailed information about the state before and after the action.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditInfoRawObjectProperty? RawObject { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditInfoRawObjectProperty2? RawObject { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditInfoRawObjectProperty RawObject { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditInfoRawObjectProperty2 RawObject { get; set; }
 #endif
         /// <summary>The date and time when the action occurred, in ISO 8601 format.</summary>
         public DateTimeOffset? Timestamp { get; set; }
@@ -82,7 +82,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "identifier", n => { Identifier = n.GetStringValue(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "portalId", n => { PortalId = n.GetIntValue(); } },
-                { "rawObject", n => { RawObject = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditInfoRawObjectProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditInfoRawObjectProperty.CreateFromDiscriminatorValue); } },
+                { "rawObject", n => { RawObject = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditInfoRawObjectProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditInfoRawObjectProperty2.CreateFromDiscriminatorValue); } },
                 { "timestamp", n => { Timestamp = n.GetDateTimeOffsetValue(); } },
             };
         }
@@ -98,7 +98,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("identifier", Identifier);
             writer.WriteStringValue("message", Message);
             writer.WriteIntValue("portalId", PortalId);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditInfoRawObjectProperty>("rawObject", RawObject);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditInfoRawObjectProperty2>("rawObject", RawObject);
             writer.WriteDateTimeOffsetValue("timestamp", Timestamp);
             writer.WriteAdditionalData(AdditionalData);
         }

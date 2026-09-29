@@ -14,15 +14,15 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The type of filter being applied. This is a string value that specifies the kind of filter operation.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyFilterType? FilterType { get; set; }
+        /// <summary>A string indicating the type of filter. The default value is &apos;PROPERTY&apos;.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyFilterType2? FilterType { get; set; }
         /// <summary>Defines the operation to be performed on the property. This can be one of several operation types, such as boolean, number, string, date, and more, each with its own specific behavior.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPropertyFilter2Operation? Operation { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPropertyFilterOperation2? Operation { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPropertyFilter2Operation Operation { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPropertyFilterOperation2 Operation { get; set; }
 #endif
         /// <summary>A string representing the name of the property to be filtered.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -57,8 +57,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyFilterType>(); } },
-                { "operation", n => { Operation = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPropertyFilter2Operation>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPropertyFilter2Operation.CreateFromDiscriminatorValue); } },
+                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyFilterType2>(); } },
+                { "operation", n => { Operation = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPropertyFilterOperation2>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPropertyFilterOperation2.CreateFromDiscriminatorValue); } },
                 { "property", n => { Property = n.GetStringValue(); } },
             };
         }
@@ -69,8 +69,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyFilterType>("filterType", FilterType);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPropertyFilter2Operation>("operation", Operation);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyFilterType2>("filterType", FilterType);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPropertyFilterOperation2>("operation", Operation);
             writer.WriteStringValue("property", Property);
             writer.WriteAdditionalData(AdditionalData);
         }

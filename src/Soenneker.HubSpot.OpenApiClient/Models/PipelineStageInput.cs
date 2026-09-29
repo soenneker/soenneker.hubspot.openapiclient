@@ -27,10 +27,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object containing additional properties for the stage. Each property is a key-value pair where both key and value are strings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageInputMetadataProperty? Metadata { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageInputMetadataProperty2? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageInputMetadataProperty Metadata { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageInputMetadataProperty2 Metadata { get; set; }
 #endif
         /// <summary>A string that uniquely identifies the stage within the pipeline.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -67,7 +67,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "displayOrder", n => { DisplayOrder = n.GetIntValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageInputMetadataProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageInputMetadataProperty.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageInputMetadataProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageInputMetadataProperty2.CreateFromDiscriminatorValue); } },
                 { "stageId", n => { StageId = n.GetStringValue(); } },
             };
         }
@@ -80,7 +80,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("displayOrder", DisplayOrder);
             writer.WriteStringValue("label", Label);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageInputMetadataProperty>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageInputMetadataProperty2>("metadata", Metadata);
             writer.WriteStringValue("stageId", StageId);
             writer.WriteAdditionalData(AdditionalData);
         }

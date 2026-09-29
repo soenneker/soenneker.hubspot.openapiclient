@@ -41,10 +41,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object containing additional metadata for the stage, with string values for each property.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageMetadataProperty? Metadata { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageMetadataProperty2? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageMetadataProperty Metadata { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageMetadataProperty2 Metadata { get; set; }
 #endif
         /// <summary>The date and time when the stage was last updated, in ISO 8601 format.</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
@@ -81,7 +81,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "displayOrder", n => { DisplayOrder = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageMetadataProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageMetadataProperty.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageMetadataProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageMetadataProperty2.CreateFromDiscriminatorValue); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
                 { "writePermissions", n => { WritePermissions = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageWritePermissions>(); } },
             };
@@ -99,7 +99,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteIntValue("displayOrder", DisplayOrder);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("label", Label);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageMetadataProperty>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageMetadataProperty2>("metadata", Metadata);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageWritePermissions>("writePermissions", WritePermissions);
             writer.WriteAdditionalData(AdditionalData);

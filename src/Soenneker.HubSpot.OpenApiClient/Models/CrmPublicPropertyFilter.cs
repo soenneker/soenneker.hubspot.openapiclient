@@ -14,8 +14,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The type of filter being applied. This is a string value that specifies the kind of filter operation.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyFilterType? FilterType { get; set; }
+        /// <summary>A string indicating the type of filter, which is &apos;PROPERTY&apos; by default.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyFilterType? FilterType { get; set; }
         /// <summary>Defines the operation to be performed on the property for filtering. This can be one of several operation types, such as boolean, number, string, date, and more, depending on the schema referenced.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -57,7 +57,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyFilterType>(); } },
+                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyFilterType>(); } },
                 { "operation", n => { Operation = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPropertyFilterOperation>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPropertyFilterOperation.CreateFromDiscriminatorValue); } },
                 { "property", n => { Property = n.GetStringValue(); } },
             };
@@ -69,7 +69,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyFilterType>("filterType", FilterType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyFilterType>("filterType", FilterType);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPropertyFilterOperation>("operation", Operation);
             writer.WriteStringValue("property", Property);
             writer.WriteAdditionalData(AdditionalData);

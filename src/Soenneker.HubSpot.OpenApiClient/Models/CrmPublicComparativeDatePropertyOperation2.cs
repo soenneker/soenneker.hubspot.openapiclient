@@ -32,8 +32,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>A boolean indicating whether objects with no value set should be included in the operation.</summary>
         public bool? IncludeObjectsWithNoValueSet { get; set; }
-        /// <summary>A string indicating the type of operation, with a default value of &apos;COMPARATIVE_DATE&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ComparativeDateOperationType? OperationType { get; set; }
+        /// <summary>A string indicating the type of operation. The default value is &apos;COMPARATIVE_DATE&apos;.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmComparativeDateOperationType2? OperationType { get; set; }
         /// <summary>A string representing the operator used for comparison.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -70,7 +70,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "comparisonPropertyName", n => { ComparisonPropertyName = n.GetStringValue(); } },
                 { "defaultComparisonValue", n => { DefaultComparisonValue = n.GetStringValue(); } },
                 { "includeObjectsWithNoValueSet", n => { IncludeObjectsWithNoValueSet = n.GetBoolValue(); } },
-                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ComparativeDateOperationType>(); } },
+                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmComparativeDateOperationType2>(); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
             };
         }
@@ -84,7 +84,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("comparisonPropertyName", ComparisonPropertyName);
             writer.WriteStringValue("defaultComparisonValue", DefaultComparisonValue);
             writer.WriteBoolValue("includeObjectsWithNoValueSet", IncludeObjectsWithNoValueSet);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ComparativeDateOperationType>("operationType", OperationType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmComparativeDateOperationType2>("operationType", OperationType);
             writer.WriteStringValue("operator", Operator);
             writer.WriteAdditionalData(AdditionalData);
         }

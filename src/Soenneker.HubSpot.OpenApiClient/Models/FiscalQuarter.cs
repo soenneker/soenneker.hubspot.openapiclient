@@ -24,8 +24,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public int? Minute { get; set; }
         /// <summary>An integer representing the month of the fiscal quarter.</summary>
         public int? Month { get; set; }
-        /// <summary>A string indicating the type of reference, which is &apos;FISCAL_QUARTER&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.FiscalQuarterReferenceType? ReferenceType { get; set; }
+        /// <summary>A string that indicates the type of reference, which is &apos;FISCAL_QUARTER&apos; for this component.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EventsFiscalQuarterReferenceType? ReferenceType { get; set; }
         /// <summary>An integer representing the second within the minute.</summary>
         public int? Second { get; set; }
         /// <summary>
@@ -58,7 +58,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "millisecond", n => { Millisecond = n.GetIntValue(); } },
                 { "minute", n => { Minute = n.GetIntValue(); } },
                 { "month", n => { Month = n.GetIntValue(); } },
-                { "referenceType", n => { ReferenceType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FiscalQuarterReferenceType>(); } },
+                { "referenceType", n => { ReferenceType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsFiscalQuarterReferenceType>(); } },
                 { "second", n => { Second = n.GetIntValue(); } },
             };
         }
@@ -74,7 +74,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteIntValue("millisecond", Millisecond);
             writer.WriteIntValue("minute", Minute);
             writer.WriteIntValue("month", Month);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FiscalQuarterReferenceType>("referenceType", ReferenceType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsFiscalQuarterReferenceType>("referenceType", ReferenceType);
             writer.WriteIntValue("second", Second);
             writer.WriteAdditionalData(AdditionalData);
         }

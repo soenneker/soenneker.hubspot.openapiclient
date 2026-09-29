@@ -24,8 +24,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>A boolean indicating whether tracking is enabled for the page view analytics.</summary>
         public bool? EnableTracking { get; set; }
-        /// <summary>A string representing the type of filter being applied. This property determines the category of the filter used in the analytics.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PageViewFilterType? FilterType { get; set; }
+        /// <summary>A string that specifies the type of filter being applied. For this component, it defaults to &apos;PAGE_VIEW&apos;.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPageViewFilterType? FilterType { get; set; }
         /// <summary>A string representing the operator used in the filter. This determines how the filter criteria are applied.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -77,7 +77,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "coalescingRefineBy", n => { CoalescingRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPageViewAnalyticsFilterCoalescingRefineBy>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPageViewAnalyticsFilterCoalescingRefineBy.CreateFromDiscriminatorValue); } },
                 { "enableTracking", n => { EnableTracking = n.GetBoolValue(); } },
-                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PageViewFilterType>(); } },
+                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPageViewFilterType>(); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
                 { "pageUrl", n => { PageUrl = n.GetStringValue(); } },
                 { "pruningRefineBy", n => { PruningRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPageViewAnalyticsFilterPruningRefineBy>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPageViewAnalyticsFilterPruningRefineBy.CreateFromDiscriminatorValue); } },
@@ -92,7 +92,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPageViewAnalyticsFilterCoalescingRefineBy>("coalescingRefineBy", CoalescingRefineBy);
             writer.WriteBoolValue("enableTracking", EnableTracking);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PageViewFilterType>("filterType", FilterType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPageViewFilterType>("filterType", FilterType);
             writer.WriteStringValue("operator", Operator);
             writer.WriteStringValue("pageUrl", PageUrl);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPageViewAnalyticsFilterPruningRefineBy>("pruningRefineBy", PruningRefineBy);

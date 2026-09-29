@@ -32,8 +32,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #endif
         /// <summary>A boolean indicating whether a refresh time should be generated.</summary>
         public bool? ShouldGenerateRefreshTime { get; set; }
-        /// <summary>A string indicating the type of time point, with a default value of &apos;INDEXED&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.IndexedTimeType? TimeType { get; set; }
+        /// <summary>A string indicating the type of time point, defaulting to &apos;INDEXED&apos;.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EventsIndexedTimeType? TimeType { get; set; }
         /// <summary>A string specifying the source of the timezone, with possible values including &apos;CUSTOM&apos;, &apos;USER&apos;, and &apos;PORTAL&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.IndexedTimePointTimezoneSource? TimezoneSource { get; set; }
         /// <summary>A string representing the identifier of the timezone.</summary>
@@ -72,7 +72,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "indexReference", n => { IndexReference = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.IndexedTimePointIndexReference>(global::Soenneker.HubSpot.OpenApiClient.Models.IndexedTimePointIndexReference.CreateFromDiscriminatorValue); } },
                 { "offset", n => { Offset = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.IndexOffset>(global::Soenneker.HubSpot.OpenApiClient.Models.IndexOffset.CreateFromDiscriminatorValue); } },
                 { "shouldGenerateRefreshTime", n => { ShouldGenerateRefreshTime = n.GetBoolValue(); } },
-                { "timeType", n => { TimeType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.IndexedTimeType>(); } },
+                { "timeType", n => { TimeType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsIndexedTimeType>(); } },
                 { "timezoneSource", n => { TimezoneSource = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.IndexedTimePointTimezoneSource>(); } },
                 { "zoneId", n => { ZoneId = n.GetStringValue(); } },
             };
@@ -87,7 +87,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.IndexedTimePointIndexReference>("indexReference", IndexReference);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.IndexOffset>("offset", Offset);
             writer.WriteBoolValue("shouldGenerateRefreshTime", ShouldGenerateRefreshTime);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.IndexedTimeType>("timeType", TimeType);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventsIndexedTimeType>("timeType", TimeType);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.IndexedTimePointTimezoneSource>("timezoneSource", TimezoneSource);
             writer.WriteStringValue("zoneId", ZoneId);
             writer.WriteAdditionalData(AdditionalData);
