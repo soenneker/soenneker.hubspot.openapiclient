@@ -98,10 +98,9 @@ namespace Soenneker.HubSpot.OpenApiClient.AccountInfo.TwoZeroTwoSixZeroNine.Acti
             /// <summary>The maximum number of results to display per page.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
-            #pragma warning disable CS1591
+            /// <summary>The unique identifier of the user whose login activity is being queried.</summary>
             [QueryParameter("userId")]
             public int? UserId { get; set; }
-            #pragma warning restore CS1591
         }
     }
 }

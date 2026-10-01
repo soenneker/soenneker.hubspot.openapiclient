@@ -103,6 +103,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         #pragma warning disable CS1591
         ChangePassword,
         #pragma warning restore CS1591
+        [EnumMember(Value = "CHANNEL_SENSITIVE_DATA_DISABLED")]
+        #pragma warning disable CS1591
+        ChannelSensitiveDataDisabled,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "CHANNEL_SENSITIVE_DATA_ENABLED")]
+        #pragma warning disable CS1591
+        ChannelSensitiveDataEnabled,
+        #pragma warning restore CS1591
         [EnumMember(Value = "CONTACT_DATA_EXPORT")]
         #pragma warning disable CS1591
         ContactDataExport,

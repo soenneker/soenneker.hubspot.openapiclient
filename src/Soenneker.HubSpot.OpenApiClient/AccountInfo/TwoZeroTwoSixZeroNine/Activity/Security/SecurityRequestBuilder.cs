@@ -95,21 +95,18 @@ namespace Soenneker.HubSpot.OpenApiClient.AccountInfo.TwoZeroTwoSixZeroNine.Acti
             [QueryParameter("after")]
             public string After { get; set; }
 #endif
-            #pragma warning disable CS1591
+            /// <summary>The start of the time range for the security activity in Unix timestamp format.</summary>
             [QueryParameter("fromTimestamp")]
             public long? FromTimestamp { get; set; }
-            #pragma warning restore CS1591
             /// <summary>The maximum number of results to display per page.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
-            #pragma warning disable CS1591
+            /// <summary>The end of the time range for the security activity in Unix timestamp format.</summary>
             [QueryParameter("toTimestamp")]
             public long? ToTimestamp { get; set; }
-            #pragma warning restore CS1591
-            #pragma warning disable CS1591
+            /// <summary>The unique identifier of the user whose security activity you want to retrieve.</summary>
             [QueryParameter("userId")]
             public int? UserId { get; set; }
-            #pragma warning restore CS1591
         }
     }
 }

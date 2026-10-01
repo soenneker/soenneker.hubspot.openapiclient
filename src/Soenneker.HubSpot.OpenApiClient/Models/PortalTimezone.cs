@@ -7,46 +7,29 @@ using System.IO;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>
-    /// Specifies the paging information needed to retrieve the next set of results in a paginated API response
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class NextPage : IAdditionalDataHolder, IParsable
+    #pragma warning disable CS1591
+    public partial class PortalTimezone : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A string token used as a cursor to fetch the next set of results in a paged response.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? After { get; set; }
-#nullable restore
-#else
-        public string After { get; set; }
-#endif
-        /// <summary>A URL string that provides a direct link to the next page of results.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Link { get; set; }
-#nullable restore
-#else
-        public string Link { get; set; }
-#endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.NextPage"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PortalTimezone"/> and sets the default values.
         /// </summary>
-        public NextPage()
+        public PortalTimezone()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.NextPage"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PortalTimezone"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.HubSpot.OpenApiClient.Models.NextPage CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HubSpot.OpenApiClient.Models.PortalTimezone CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.NextPage();
+            return new global::Soenneker.HubSpot.OpenApiClient.Models.PortalTimezone();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -56,8 +39,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "after", n => { After = n.GetStringValue(); } },
-                { "link", n => { Link = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -67,8 +48,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("after", After);
-            writer.WriteStringValue("link", Link);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

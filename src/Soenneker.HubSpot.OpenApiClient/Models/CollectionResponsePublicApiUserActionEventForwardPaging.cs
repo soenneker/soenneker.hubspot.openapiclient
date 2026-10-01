@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.ForwardPaging Paging { get; set; }
 #endif
-        /// <summary>The results property</summary>
+        /// <summary>An array of user action events, each represented by a PublicApiUserActionEvent object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicApiUserActionEvent>? Results { get; set; }

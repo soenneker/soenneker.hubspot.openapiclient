@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.ForwardPaging Paging { get; set; }
 #endif
-        /// <summary>The results property</summary>
+        /// <summary>An array of hydrated critical actions, each containing detailed information about a specific critical action.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.HydratedCriticalAction>? Results { get; set; }
