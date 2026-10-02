@@ -300222,6 +300222,10 @@
       "PostOAuth202609TokenOAuthV3TokenXWwwFormUrlencodedRequest": {
         "type": "object",
         "properties": {
+          "assertion": {
+            "type": "string",
+            "example": null
+          },
           "client_assertion": {
             "type": "string",
             "example": null
@@ -300411,7 +300415,8 @@
         "enum": [
           "authorization_code",
           "client_credentials",
-          "refresh_token"
+          "refresh_token",
+          "urn:ietf:params:oauth:grant-type:jwt-bearer"
         ],
         "type": "string",
         "additionalProperties": {
@@ -300433,6 +300438,10 @@
             {
               "value": "refresh_token",
               "name": "RefreshToken"
+            },
+            {
+              "value": "urn:ietf:params:oauth:grant-type:jwt-bearer",
+              "name": "UrnColonIetfColonParamsColonOauthColonGrantTypeColonJwtBearer"
             }
           ]
         }
