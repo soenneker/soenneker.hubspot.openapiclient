@@ -3,9 +3,10 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>The status of the data fetch operation. Valid values include &apos;SUCCESS&apos;, &apos;TIMEOUT&apos;, &apos;FAILURE&apos;, &apos;CACHED&apos;, and &apos;NOTFOUND&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum ApiUsageFetchStatus
+    #pragma warning disable CS1591
+    public enum ApiUsageMarch2027FetchStatus
+    #pragma warning restore CS1591
     {
         [EnumMember(Value = "CACHED")]
         #pragma warning disable CS1591

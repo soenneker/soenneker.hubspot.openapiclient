@@ -9,35 +9,35 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class CollectionResponseApiUsageNoPaging : IAdditionalDataHolder, IParsable
+    public partial class CollectionResponseApiUsageMarch2027NoPaging : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>An array of API usage records, each detailing the usage metrics for a specific API. Each record includes information such as the name of the API, usage limits, current usage, and the status of the data fetch.</summary>
+        /// <summary>The results property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ApiUsage>? Results { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ApiUsageMarch2027>? Results { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ApiUsage> Results { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ApiUsageMarch2027> Results { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseApiUsageNoPaging"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseApiUsageMarch2027NoPaging"/> and sets the default values.
         /// </summary>
-        public CollectionResponseApiUsageNoPaging()
+        public CollectionResponseApiUsageMarch2027NoPaging()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseApiUsageNoPaging"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseApiUsageMarch2027NoPaging"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseApiUsageNoPaging CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseApiUsageMarch2027NoPaging CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseApiUsageNoPaging();
+            return new global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseApiUsageMarch2027NoPaging();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -47,7 +47,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ApiUsage>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiUsage.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ApiUsageMarch2027>(global::Soenneker.HubSpot.OpenApiClient.Models.ApiUsageMarch2027.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ApiUsage>("results", Results);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ApiUsageMarch2027>("results", Results);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -19,7 +19,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CollectionResponseApiUsageNoPaging"
+                  "$ref": "#/components/schemas/CollectionResponseApiUsageMarch2027NoPaging"
                 },
                 "example": null
               }
@@ -141943,12 +141943,12 @@
           },
           {
             "crm_oauth2_27": [
-              "crm.objects.deals.highly_sensitive.write.v2"
+              "crm.objects.custom.highly_sensitive.read.v2"
             ]
           },
           {
             "crm_oauth2_27": [
-              "crm.objects.custom.highly_sensitive.read.v2"
+              "crm.objects.deals.highly_sensitive.write.v2"
             ]
           },
           {
@@ -141998,12 +141998,12 @@
           },
           {
             "crm_oauth2_27": [
-              "crm.objects.deals.sensitive.read.v2"
+              "crm.objects.projects.sensitive.write"
             ]
           },
           {
             "crm_oauth2_27": [
-              "crm.objects.projects.sensitive.write"
+              "crm.objects.deals.sensitive.read.v2"
             ]
           },
           {
@@ -142371,12 +142371,12 @@
           },
           {
             "crm_oauth2_27": [
-              "crm.objects.deals.highly_sensitive.write.v2"
+              "crm.objects.custom.highly_sensitive.read.v2"
             ]
           },
           {
             "crm_oauth2_27": [
-              "crm.objects.custom.highly_sensitive.read.v2"
+              "crm.objects.deals.highly_sensitive.write.v2"
             ]
           },
           {
@@ -142426,12 +142426,12 @@
           },
           {
             "crm_oauth2_27": [
-              "crm.objects.deals.sensitive.read.v2"
+              "crm.objects.projects.sensitive.write"
             ]
           },
           {
             "crm_oauth2_27": [
-              "crm.objects.projects.sensitive.write"
+              "crm.objects.deals.sensitive.read.v2"
             ]
           },
           {
@@ -142811,12 +142811,12 @@
           },
           {
             "crm_oauth2_27": [
-              "crm.objects.deals.highly_sensitive.write.v2"
+              "crm.objects.custom.highly_sensitive.read.v2"
             ]
           },
           {
             "crm_oauth2_27": [
-              "crm.objects.custom.highly_sensitive.read.v2"
+              "crm.objects.deals.highly_sensitive.write.v2"
             ]
           },
           {
@@ -142866,12 +142866,12 @@
           },
           {
             "crm_oauth2_27": [
-              "crm.objects.deals.sensitive.read.v2"
+              "crm.objects.projects.sensitive.write"
             ]
           },
           {
             "crm_oauth2_27": [
-              "crm.objects.projects.sensitive.write"
+              "crm.objects.deals.sensitive.read.v2"
             ]
           },
           {
@@ -143261,12 +143261,12 @@
           },
           {
             "crm_oauth2_27": [
-              "crm.objects.deals.highly_sensitive.write.v2"
+              "crm.objects.custom.highly_sensitive.read.v2"
             ]
           },
           {
             "crm_oauth2_27": [
-              "crm.objects.custom.highly_sensitive.read.v2"
+              "crm.objects.deals.highly_sensitive.write.v2"
             ]
           },
           {
@@ -143316,12 +143316,12 @@
           },
           {
             "crm_oauth2_27": [
-              "crm.objects.deals.sensitive.read.v2"
+              "crm.objects.projects.sensitive.write"
             ]
           },
           {
             "crm_oauth2_27": [
-              "crm.objects.projects.sensitive.write"
+              "crm.objects.deals.sensitive.read.v2"
             ]
           },
           {
@@ -143689,12 +143689,12 @@
           },
           {
             "crm_oauth2_27": [
-              "crm.objects.deals.highly_sensitive.write.v2"
+              "crm.objects.custom.highly_sensitive.read.v2"
             ]
           },
           {
             "crm_oauth2_27": [
-              "crm.objects.custom.highly_sensitive.read.v2"
+              "crm.objects.deals.highly_sensitive.write.v2"
             ]
           },
           {
@@ -143744,12 +143744,12 @@
           },
           {
             "crm_oauth2_27": [
-              "crm.objects.deals.sensitive.read.v2"
+              "crm.objects.projects.sensitive.write"
             ]
           },
           {
             "crm_oauth2_27": [
-              "crm.objects.projects.sensitive.write"
+              "crm.objects.deals.sensitive.read.v2"
             ]
           },
           {
@@ -144190,12 +144190,12 @@
           },
           {
             "crm_oauth2_27": [
-              "crm.objects.deals.highly_sensitive.write.v2"
+              "crm.objects.custom.highly_sensitive.read.v2"
             ]
           },
           {
             "crm_oauth2_27": [
-              "crm.objects.custom.highly_sensitive.read.v2"
+              "crm.objects.deals.highly_sensitive.write.v2"
             ]
           },
           {
@@ -144245,12 +144245,12 @@
           },
           {
             "crm_oauth2_27": [
-              "crm.objects.deals.sensitive.read.v2"
+              "crm.objects.projects.sensitive.write"
             ]
           },
           {
             "crm_oauth2_27": [
-              "crm.objects.projects.sensitive.write"
+              "crm.objects.deals.sensitive.read.v2"
             ]
           },
           {
@@ -144618,12 +144618,12 @@
           },
           {
             "crm_oauth2_27": [
-              "crm.objects.deals.highly_sensitive.write.v2"
+              "crm.objects.custom.highly_sensitive.read.v2"
             ]
           },
           {
             "crm_oauth2_27": [
-              "crm.objects.custom.highly_sensitive.read.v2"
+              "crm.objects.deals.highly_sensitive.write.v2"
             ]
           },
           {
@@ -144673,12 +144673,12 @@
           },
           {
             "crm_oauth2_27": [
-              "crm.objects.deals.sensitive.read.v2"
+              "crm.objects.projects.sensitive.write"
             ]
           },
           {
             "crm_oauth2_27": [
-              "crm.objects.projects.sensitive.write"
+              "crm.objects.deals.sensitive.read.v2"
             ]
           },
           {
@@ -145046,12 +145046,12 @@
           },
           {
             "crm_oauth2_27": [
-              "crm.objects.deals.highly_sensitive.write.v2"
+              "crm.objects.custom.highly_sensitive.read.v2"
             ]
           },
           {
             "crm_oauth2_27": [
-              "crm.objects.custom.highly_sensitive.read.v2"
+              "crm.objects.deals.highly_sensitive.write.v2"
             ]
           },
           {
@@ -145101,12 +145101,12 @@
           },
           {
             "crm_oauth2_27": [
-              "crm.objects.deals.sensitive.read.v2"
+              "crm.objects.projects.sensitive.write"
             ]
           },
           {
             "crm_oauth2_27": [
-              "crm.objects.projects.sensitive.write"
+              "crm.objects.deals.sensitive.read.v2"
             ]
           },
           {
@@ -297941,52 +297941,73 @@
   },
   "components": {
     "schemas": {
-      "ApiUsage": {
+      "ApiUsageMarch2027": {
         "required": [
           "collectedAt",
           "currentUsage",
           "fetchStatus",
           "name",
+          "usageByAppType",
           "usageLimit"
         ],
         "type": "object",
         "properties": {
           "collectedAt": {
             "type": "string",
-            "description": "The date and time when the usage data was collected, in ISO 8601 format.",
             "format": "date-time",
             "example": null
           },
           "currentUsage": {
             "type": "integer",
-            "description": "An integer indicating the current usage count of the API resource.",
             "format": "int32",
             "example": null
           },
           "fetchStatus": {
-            "$ref": "#/components/schemas/ApiUsageFetchStatus"
+            "$ref": "#/components/schemas/ApiUsageMarch2027FetchStatus"
           },
           "name": {
             "type": "string",
-            "description": "The name of the API resource being tracked.",
             "example": null
           },
           "resetsAt": {
             "type": "string",
-            "description": "The date and time when the usage limit will reset, in ISO 8601 format.",
             "format": "date-time",
+            "example": null
+          },
+          "usageByAppType": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AppTypeUsage"
+            },
             "example": null
           },
           "usageLimit": {
             "type": "integer",
-            "description": "An integer representing the maximum allowable usage for the API resource.",
             "format": "int32",
             "example": null
           }
         },
         "example": null
       },
-      "CollectionResponseApiUsageNoPaging": {
+      "AppTypeUsage": {
+        "required": [
+          "appType",
+          "currentUsage"
+        ],
+        "type": "object",
+        "properties": {
+          "appType": {
+            "$ref": "#/components/schemas/AppTypeUsageAppType"
+          },
+          "currentUsage": {
+            "type": "integer",
+            "format": "int32",
+            "example": null
+          }
+        },
+        "example": null
+      },
+      "CollectionResponseApiUsageMarch2027NoPaging": {
         "required": [
           "results"
         ],
@@ -297995,9 +298016,8 @@
           "results": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/ApiUsage"
+              "$ref": "#/components/schemas/ApiUsageMarch2027"
             },
-            "description": "An array of API usage records, each detailing the usage metrics for a specific API. Each record includes information such as the name of the API, usage limits, current usage, and the status of the data fetch.",
             "example": null
           }
         },
@@ -298238,7 +298258,7 @@
         },
         "description": "Context about the error condition, represented as an object where each key is a string and each value is an array of strings."
       },
-      "ApiUsageFetchStatus": {
+      "ApiUsageMarch2027FetchStatus": {
         "enum": [
           "CACHED",
           "FAILURE",
@@ -298250,10 +298270,9 @@
         "additionalProperties": {
           "not": { }
         },
-        "description": "The status of the data fetch operation. Valid values include 'SUCCESS', 'TIMEOUT', 'FAILURE', 'CACHED', and 'NOTFOUND'.",
         "example": null,
         "x-ms-enum": {
-          "name": "ApiUsageFetchStatus",
+          "name": "ApiUsageMarch2027FetchStatus",
           "modelAsString": false,
           "values": [
             {
@@ -298275,6 +298294,36 @@
             {
               "value": "TIMEOUT",
               "name": "Timeout"
+            }
+          ]
+        }
+      },
+      "AppTypeUsageAppType": {
+        "enum": [
+          "DEVELOPER_PLATFORM_APP",
+          "LEGACY_PRIVATE_APP",
+          "SERVICE_KEY"
+        ],
+        "type": "string",
+        "additionalProperties": {
+          "not": { }
+        },
+        "example": null,
+        "x-ms-enum": {
+          "name": "AppTypeUsageAppType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "DEVELOPER_PLATFORM_APP",
+              "name": "DeveloperPlatformApp"
+            },
+            {
+              "value": "LEGACY_PRIVATE_APP",
+              "name": "LegacyPrivateApp"
+            },
+            {
+              "value": "SERVICE_KEY",
+              "name": "ServiceKey"
             }
           ]
         }
