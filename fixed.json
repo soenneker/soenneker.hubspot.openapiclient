@@ -173128,12 +173128,12 @@
           },
           {
             "notetaker_oauth2": [
-              "crm.objects.contacts.sensitive.read.v2"
+              "crm.schemas.contacts.read"
             ]
           },
           {
             "notetaker_oauth2": [
-              "crm.schemas.contacts.read"
+              "crm.objects.contacts.sensitive.read.v2"
             ]
           },
           {
