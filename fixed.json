@@ -29187,12 +29187,12 @@
           },
           {
             "crm_oauth2_3": [
-              "crm.objects.contacts.highly_sensitive.read.v2"
+              "crm.objects.appointments.sensitive.read.v2"
             ]
           },
           {
             "crm_oauth2_3": [
-              "crm.objects.appointments.sensitive.read.v2"
+              "crm.objects.contacts.highly_sensitive.read.v2"
             ]
           },
           {
@@ -29247,12 +29247,12 @@
           },
           {
             "crm_oauth2_3": [
-              "crm.objects.users.write"
+              "crm.objects.calls.read"
             ]
           },
           {
             "crm_oauth2_3": [
-              "crm.objects.calls.read"
+              "crm.objects.users.write"
             ]
           },
           {
@@ -29317,6 +29317,11 @@
           },
           {
             "crm_oauth2_3": [
+              "crm.objects.feedback_submissions.read"
+            ]
+          },
+          {
+            "crm_oauth2_3": [
               "crm.objects.services.write"
             ]
           },
@@ -29342,22 +29347,22 @@
           },
           {
             "crm_oauth2_3": [
-              "crm.objects.invoices.read"
-            ]
-          },
-          {
-            "crm_oauth2_3": [
               "crm.objects.projects.highly_sensitive.read"
             ]
           },
           {
             "crm_oauth2_3": [
-              "tickets.sensitive.v2"
+              "crm.objects.invoices.read"
             ]
           },
           {
             "crm_oauth2_3": [
               "crm.objects.custom.write"
+            ]
+          },
+          {
+            "crm_oauth2_3": [
+              "tickets.sensitive.v2"
             ]
           },
           {
@@ -29377,22 +29382,12 @@
           },
           {
             "crm_oauth2_3": [
-              "crm.objects.companies.sensitive.write.v2"
-            ]
-          },
-          {
-            "crm_oauth2_3": [
               "crm.objects.projects.read"
             ]
           },
           {
             "crm_oauth2_3": [
-              "crm.objects.custom.highly_sensitive.read.v2"
-            ]
-          },
-          {
-            "crm_oauth2_3": [
-              "crm.objects.deals.highly_sensitive.write.v2"
+              "crm.objects.companies.sensitive.write.v2"
             ]
           },
           {
@@ -29402,17 +29397,27 @@
           },
           {
             "crm_oauth2_3": [
+              "crm.objects.deals.highly_sensitive.write.v2"
+            ]
+          },
+          {
+            "crm_oauth2_3": [
+              "crm.objects.custom.highly_sensitive.read.v2"
+            ]
+          },
+          {
+            "crm_oauth2_3": [
               "crm.objects.goals.write"
             ]
           },
           {
             "crm_oauth2_3": [
-              "crm.objects.line_items.write"
+              "crm.objects.projects.sensitive.read"
             ]
           },
           {
             "crm_oauth2_3": [
-              "crm.objects.projects.sensitive.read"
+              "crm.objects.line_items.write"
             ]
           },
           {
@@ -29640,12 +29645,12 @@
           },
           {
             "crm_oauth2_3": [
-              "crm.objects.contacts.highly_sensitive.read.v2"
+              "crm.objects.appointments.sensitive.read.v2"
             ]
           },
           {
             "crm_oauth2_3": [
-              "crm.objects.appointments.sensitive.read.v2"
+              "crm.objects.contacts.highly_sensitive.read.v2"
             ]
           },
           {
@@ -29700,12 +29705,12 @@
           },
           {
             "crm_oauth2_3": [
-              "crm.objects.users.write"
+              "crm.objects.calls.read"
             ]
           },
           {
             "crm_oauth2_3": [
-              "crm.objects.calls.read"
+              "crm.objects.users.write"
             ]
           },
           {
@@ -29770,6 +29775,11 @@
           },
           {
             "crm_oauth2_3": [
+              "crm.objects.feedback_submissions.read"
+            ]
+          },
+          {
+            "crm_oauth2_3": [
               "crm.objects.services.write"
             ]
           },
@@ -29795,22 +29805,22 @@
           },
           {
             "crm_oauth2_3": [
-              "crm.objects.invoices.read"
-            ]
-          },
-          {
-            "crm_oauth2_3": [
               "crm.objects.projects.highly_sensitive.read"
             ]
           },
           {
             "crm_oauth2_3": [
-              "tickets.sensitive.v2"
+              "crm.objects.invoices.read"
             ]
           },
           {
             "crm_oauth2_3": [
               "crm.objects.custom.write"
+            ]
+          },
+          {
+            "crm_oauth2_3": [
+              "tickets.sensitive.v2"
             ]
           },
           {
@@ -29830,22 +29840,12 @@
           },
           {
             "crm_oauth2_3": [
-              "crm.objects.companies.sensitive.write.v2"
-            ]
-          },
-          {
-            "crm_oauth2_3": [
               "crm.objects.projects.read"
             ]
           },
           {
             "crm_oauth2_3": [
-              "crm.objects.custom.highly_sensitive.read.v2"
-            ]
-          },
-          {
-            "crm_oauth2_3": [
-              "crm.objects.deals.highly_sensitive.write.v2"
+              "crm.objects.companies.sensitive.write.v2"
             ]
           },
           {
@@ -29855,17 +29855,27 @@
           },
           {
             "crm_oauth2_3": [
+              "crm.objects.deals.highly_sensitive.write.v2"
+            ]
+          },
+          {
+            "crm_oauth2_3": [
+              "crm.objects.custom.highly_sensitive.read.v2"
+            ]
+          },
+          {
+            "crm_oauth2_3": [
               "crm.objects.goals.write"
             ]
           },
           {
             "crm_oauth2_3": [
-              "crm.objects.line_items.write"
+              "crm.objects.projects.sensitive.read"
             ]
           },
           {
             "crm_oauth2_3": [
-              "crm.objects.projects.sensitive.read"
+              "crm.objects.line_items.write"
             ]
           },
           {
@@ -30115,12 +30125,12 @@
           },
           {
             "crm_oauth2_3": [
-              "crm.objects.contacts.highly_sensitive.read.v2"
+              "crm.objects.appointments.sensitive.read.v2"
             ]
           },
           {
             "crm_oauth2_3": [
-              "crm.objects.appointments.sensitive.read.v2"
+              "crm.objects.contacts.highly_sensitive.read.v2"
             ]
           },
           {
@@ -30175,12 +30185,12 @@
           },
           {
             "crm_oauth2_3": [
-              "crm.objects.users.write"
+              "crm.objects.calls.read"
             ]
           },
           {
             "crm_oauth2_3": [
-              "crm.objects.calls.read"
+              "crm.objects.users.write"
             ]
           },
           {
@@ -30245,6 +30255,11 @@
           },
           {
             "crm_oauth2_3": [
+              "crm.objects.feedback_submissions.read"
+            ]
+          },
+          {
+            "crm_oauth2_3": [
               "crm.objects.services.write"
             ]
           },
@@ -30270,22 +30285,22 @@
           },
           {
             "crm_oauth2_3": [
-              "crm.objects.invoices.read"
-            ]
-          },
-          {
-            "crm_oauth2_3": [
               "crm.objects.projects.highly_sensitive.read"
             ]
           },
           {
             "crm_oauth2_3": [
-              "tickets.sensitive.v2"
+              "crm.objects.invoices.read"
             ]
           },
           {
             "crm_oauth2_3": [
               "crm.objects.custom.write"
+            ]
+          },
+          {
+            "crm_oauth2_3": [
+              "tickets.sensitive.v2"
             ]
           },
           {
@@ -30305,22 +30320,12 @@
           },
           {
             "crm_oauth2_3": [
-              "crm.objects.companies.sensitive.write.v2"
-            ]
-          },
-          {
-            "crm_oauth2_3": [
               "crm.objects.projects.read"
             ]
           },
           {
             "crm_oauth2_3": [
-              "crm.objects.custom.highly_sensitive.read.v2"
-            ]
-          },
-          {
-            "crm_oauth2_3": [
-              "crm.objects.deals.highly_sensitive.write.v2"
+              "crm.objects.companies.sensitive.write.v2"
             ]
           },
           {
@@ -30330,17 +30335,27 @@
           },
           {
             "crm_oauth2_3": [
+              "crm.objects.deals.highly_sensitive.write.v2"
+            ]
+          },
+          {
+            "crm_oauth2_3": [
+              "crm.objects.custom.highly_sensitive.read.v2"
+            ]
+          },
+          {
+            "crm_oauth2_3": [
               "crm.objects.goals.write"
             ]
           },
           {
             "crm_oauth2_3": [
-              "crm.objects.line_items.write"
+              "crm.objects.projects.sensitive.read"
             ]
           },
           {
             "crm_oauth2_3": [
-              "crm.objects.projects.sensitive.read"
+              "crm.objects.line_items.write"
             ]
           },
           {
@@ -30579,12 +30594,12 @@
           },
           {
             "crm_oauth2_3": [
-              "crm.objects.contacts.highly_sensitive.read.v2"
+              "crm.objects.appointments.sensitive.read.v2"
             ]
           },
           {
             "crm_oauth2_3": [
-              "crm.objects.appointments.sensitive.read.v2"
+              "crm.objects.contacts.highly_sensitive.read.v2"
             ]
           },
           {
@@ -30639,12 +30654,12 @@
           },
           {
             "crm_oauth2_3": [
-              "crm.objects.users.write"
+              "crm.objects.calls.read"
             ]
           },
           {
             "crm_oauth2_3": [
-              "crm.objects.calls.read"
+              "crm.objects.users.write"
             ]
           },
           {
@@ -30709,6 +30724,11 @@
           },
           {
             "crm_oauth2_3": [
+              "crm.objects.feedback_submissions.read"
+            ]
+          },
+          {
+            "crm_oauth2_3": [
               "crm.objects.services.write"
             ]
           },
@@ -30734,22 +30754,22 @@
           },
           {
             "crm_oauth2_3": [
-              "crm.objects.invoices.read"
-            ]
-          },
-          {
-            "crm_oauth2_3": [
               "crm.objects.projects.highly_sensitive.read"
             ]
           },
           {
             "crm_oauth2_3": [
-              "tickets.sensitive.v2"
+              "crm.objects.invoices.read"
             ]
           },
           {
             "crm_oauth2_3": [
               "crm.objects.custom.write"
+            ]
+          },
+          {
+            "crm_oauth2_3": [
+              "tickets.sensitive.v2"
             ]
           },
           {
@@ -30769,22 +30789,12 @@
           },
           {
             "crm_oauth2_3": [
-              "crm.objects.companies.sensitive.write.v2"
-            ]
-          },
-          {
-            "crm_oauth2_3": [
               "crm.objects.projects.read"
             ]
           },
           {
             "crm_oauth2_3": [
-              "crm.objects.custom.highly_sensitive.read.v2"
-            ]
-          },
-          {
-            "crm_oauth2_3": [
-              "crm.objects.deals.highly_sensitive.write.v2"
+              "crm.objects.companies.sensitive.write.v2"
             ]
           },
           {
@@ -30794,17 +30804,27 @@
           },
           {
             "crm_oauth2_3": [
+              "crm.objects.deals.highly_sensitive.write.v2"
+            ]
+          },
+          {
+            "crm_oauth2_3": [
+              "crm.objects.custom.highly_sensitive.read.v2"
+            ]
+          },
+          {
+            "crm_oauth2_3": [
               "crm.objects.goals.write"
             ]
           },
           {
             "crm_oauth2_3": [
-              "crm.objects.line_items.write"
+              "crm.objects.projects.sensitive.read"
             ]
           },
           {
             "crm_oauth2_3": [
-              "crm.objects.projects.sensitive.read"
+              "crm.objects.line_items.write"
             ]
           },
           {
@@ -31054,12 +31074,12 @@
           },
           {
             "crm_oauth2_3": [
-              "crm.objects.contacts.highly_sensitive.read.v2"
+              "crm.objects.appointments.sensitive.read.v2"
             ]
           },
           {
             "crm_oauth2_3": [
-              "crm.objects.appointments.sensitive.read.v2"
+              "crm.objects.contacts.highly_sensitive.read.v2"
             ]
           },
           {
@@ -31114,12 +31134,12 @@
           },
           {
             "crm_oauth2_3": [
-              "crm.objects.users.write"
+              "crm.objects.calls.read"
             ]
           },
           {
             "crm_oauth2_3": [
-              "crm.objects.calls.read"
+              "crm.objects.users.write"
             ]
           },
           {
@@ -31184,6 +31204,11 @@
           },
           {
             "crm_oauth2_3": [
+              "crm.objects.feedback_submissions.read"
+            ]
+          },
+          {
+            "crm_oauth2_3": [
               "crm.objects.services.write"
             ]
           },
@@ -31209,22 +31234,22 @@
           },
           {
             "crm_oauth2_3": [
-              "crm.objects.invoices.read"
-            ]
-          },
-          {
-            "crm_oauth2_3": [
               "crm.objects.projects.highly_sensitive.read"
             ]
           },
           {
             "crm_oauth2_3": [
-              "tickets.sensitive.v2"
+              "crm.objects.invoices.read"
             ]
           },
           {
             "crm_oauth2_3": [
               "crm.objects.custom.write"
+            ]
+          },
+          {
+            "crm_oauth2_3": [
+              "tickets.sensitive.v2"
             ]
           },
           {
@@ -31244,22 +31269,12 @@
           },
           {
             "crm_oauth2_3": [
-              "crm.objects.companies.sensitive.write.v2"
-            ]
-          },
-          {
-            "crm_oauth2_3": [
               "crm.objects.projects.read"
             ]
           },
           {
             "crm_oauth2_3": [
-              "crm.objects.custom.highly_sensitive.read.v2"
-            ]
-          },
-          {
-            "crm_oauth2_3": [
-              "crm.objects.deals.highly_sensitive.write.v2"
+              "crm.objects.companies.sensitive.write.v2"
             ]
           },
           {
@@ -31269,17 +31284,27 @@
           },
           {
             "crm_oauth2_3": [
+              "crm.objects.deals.highly_sensitive.write.v2"
+            ]
+          },
+          {
+            "crm_oauth2_3": [
+              "crm.objects.custom.highly_sensitive.read.v2"
+            ]
+          },
+          {
+            "crm_oauth2_3": [
               "crm.objects.goals.write"
             ]
           },
           {
             "crm_oauth2_3": [
-              "crm.objects.line_items.write"
+              "crm.objects.projects.sensitive.read"
             ]
           },
           {
             "crm_oauth2_3": [
-              "crm.objects.projects.sensitive.read"
+              "crm.objects.line_items.write"
             ]
           },
           {
@@ -243446,12 +243471,12 @@
           },
           {
             "crm_object_schemas_oauth2": [
-              "crm.objects.custom.highly_sensitive.read.v2"
+              "crm.objects.custom.read"
             ]
           },
           {
             "crm_object_schemas_oauth2": [
-              "crm.objects.custom.read"
+              "crm.objects.custom.highly_sensitive.read.v2"
             ]
           }
         ],
@@ -243573,12 +243598,12 @@
           },
           {
             "crm_object_schemas_oauth2": [
-              "crm.objects.custom.highly_sensitive.read.v2"
+              "crm.objects.custom.read"
             ]
           },
           {
             "crm_object_schemas_oauth2": [
-              "crm.objects.custom.read"
+              "crm.objects.custom.highly_sensitive.read.v2"
             ]
           }
         ],
@@ -243671,12 +243696,12 @@
           },
           {
             "crm_object_schemas_oauth2": [
-              "crm.objects.custom.highly_sensitive.read.v2"
+              "crm.objects.custom.read"
             ]
           },
           {
             "crm_object_schemas_oauth2": [
-              "crm.objects.custom.read"
+              "crm.objects.custom.highly_sensitive.read.v2"
             ]
           }
         ],
@@ -286536,17 +286561,17 @@
           },
           {
             "scheduler_oauth2": [
+              "crm.objects.projects.sensitive.write"
+            ]
+          },
+          {
+            "scheduler_oauth2": [
               "crm.objects.contacts.sensitive.write.v2"
             ]
           },
           {
             "scheduler_oauth2": [
               "crm.objects.services.write"
-            ]
-          },
-          {
-            "scheduler_oauth2": [
-              "crm.objects.projects.sensitive.write"
             ]
           },
           {
@@ -286606,12 +286631,12 @@
           },
           {
             "scheduler_oauth2": [
-              "crm.objects.deals.highly_sensitive.write.v2"
+              "crm.objects.companies.highly_sensitive.write.v2"
             ]
           },
           {
             "scheduler_oauth2": [
-              "crm.objects.companies.highly_sensitive.write.v2"
+              "crm.objects.deals.highly_sensitive.write.v2"
             ]
           },
           {
@@ -286791,17 +286816,17 @@
           },
           {
             "scheduler_oauth2": [
+              "crm.objects.projects.sensitive.write"
+            ]
+          },
+          {
+            "scheduler_oauth2": [
               "crm.objects.contacts.sensitive.write.v2"
             ]
           },
           {
             "scheduler_oauth2": [
               "crm.objects.services.write"
-            ]
-          },
-          {
-            "scheduler_oauth2": [
-              "crm.objects.projects.sensitive.write"
             ]
           },
           {
@@ -286861,12 +286886,12 @@
           },
           {
             "scheduler_oauth2": [
-              "crm.objects.deals.highly_sensitive.write.v2"
+              "crm.objects.companies.highly_sensitive.write.v2"
             ]
           },
           {
             "scheduler_oauth2": [
-              "crm.objects.companies.highly_sensitive.write.v2"
+              "crm.objects.deals.highly_sensitive.write.v2"
             ]
           },
           {
@@ -302949,58 +302974,6 @@
           ]
         }
       },
-      "ActionExecutionIndexIdentifier": {
-        "required": [
-          "actionExecutionIndex",
-          "enrollmentId"
-        ],
-        "type": "object",
-        "properties": {
-          "actionExecutionIndex": {
-            "type": "integer",
-            "description": "The index number representing the execution order of the action.",
-            "format": "int32",
-            "example": null
-          },
-          "enrollmentId": {
-            "type": "integer",
-            "description": "The ID associated with the enrollment process.",
-            "format": "int64",
-            "example": null
-          }
-        },
-        "example": null
-      },
-      "AgentRequestContext": {
-        "title": "AGENTS",
-        "required": [
-          "agentId",
-          "chirpAiContextObject",
-          "source"
-        ],
-        "type": "object",
-        "properties": {
-          "agentId": {
-            "type": "integer",
-            "description": "The unique identifier for the agent making the request.",
-            "format": "int64",
-            "example": null
-          },
-          "chirpAiContextObject": {
-            "$ref": "#/components/schemas/ChirpAiContextObject"
-          },
-          "source": {
-            "$ref": "#/components/schemas/AgentsSource"
-          },
-          "trajectoryId": {
-            "type": "string",
-            "description": "The unique identifier for the trajectory associated with the agent request.",
-            "example": null
-          }
-        },
-        "example": null,
-        "x-hubspot-sub-type-impl": true
-      },
       "ArrayFieldSchema": {
         "title": "ARRAY",
         "required": [
@@ -303071,9 +303044,6 @@
           "outputFields": {
             "$ref": "#/components/schemas/CallbackCompletionBatchRequestOutputFieldsProperty2"
           },
-          "requestContext": {
-            "$ref": "#/components/schemas/CallbackCompletionBatchRequestRequestContext"
-          },
           "typedOutputs": {
             "$ref": "#/components/schemas/CallbackCompletionBatchRequestTypedOutputsProperty2"
           }
@@ -303095,82 +303065,8 @@
           "outputFields": {
             "$ref": "#/components/schemas/CallbackCompletionRequestOutputFieldsProperty2"
           },
-          "requestContext": {
-            "$ref": "#/components/schemas/CallbackCompletionRequestRequestContext"
-          },
           "typedOutputs": {
             "$ref": "#/components/schemas/CallbackCompletionRequestTypedOutputsProperty2"
-          }
-        },
-        "example": null
-      },
-      "ChirpAiContextObject": {
-        "required": [
-          "applicationGroup",
-          "applicationId",
-          "isPrivate",
-          "metadata",
-          "otelContextHolder",
-          "sensitivity",
-          "unstructuredSources"
-        ],
-        "type": "object",
-        "properties": {
-          "applicationGroup": {
-            "type": "string",
-            "description": "The group to which the application belongs.",
-            "example": null
-          },
-          "applicationId": {
-            "type": "string",
-            "description": "The identifier for the application associated with the context.",
-            "example": null
-          },
-          "complianceIds": {
-            "$ref": "#/components/schemas/ComplianceIds"
-          },
-          "conversationId": {
-            "type": "string",
-            "description": "A string identifier for the conversation associated with the context.",
-            "example": null
-          },
-          "featureId": {
-            "type": "string",
-            "description": "The identifier for the feature associated with the context.",
-            "example": null
-          },
-          "inferenceId": {
-            "type": "string",
-            "description": "The identifier for the inference associated with the context.",
-            "example": null
-          },
-          "isPrivate": {
-            "type": "boolean",
-            "description": "A boolean indicating whether the context is private.",
-            "example": null
-          },
-          "metadata": {
-            "$ref": "#/components/schemas/ChirpAiContextObjectMetadataProperty2"
-          },
-          "otelContextHolder": {
-            "$ref": "#/components/schemas/ChirpAiContextObjectOtelContextHolderProperty2"
-          },
-          "sensitivity": {
-            "$ref": "#/components/schemas/ChirpAiContextObjectSensitivity"
-          },
-          "trajectoryId": {
-            "type": "string",
-            "description": "The identifier for the trajectory, formatted as a UUID.",
-            "format": "uuid",
-            "example": null
-          },
-          "unstructuredSources": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ChirpAiContextObjectUnstructuredSourcesItem"
-            },
-            "description": "An array of strings indicating the sources of unstructured data. Valid values include 'NONE', 'USER_INPUT', 'LOGGED_EMAIL', 'VIDEO_CALL', 'AUDIO_CALL', 'CALL_TRANSCRIPT', 'MEETING_TRANSCRIPT', 'FORMS', 'FEEDBACK_SURVEY', 'PDF', 'QUOTE', 'INVOICE', 'OTHER_ATTACHMENT_DOC', 'WHATSAPP', 'SMS', 'CHAT', 'FACEBOOK_MESSENGER', 'CUSTOM_CHANNEL_OR_API', 'MANY', 'NOTE', and 'DERIVED'.",
-            "example": null
           }
         },
         "example": null
@@ -303231,105 +303127,6 @@
           }
         },
         "example": null
-      },
-      "ComplianceIds": {
-        "required": [
-          "contactIds",
-          "portalIds",
-          "userIds"
-        ],
-        "type": "object",
-        "properties": {
-          "contactIds": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ContactId"
-            },
-            "description": "An array of ContactId objects representing the IDs of the contacts involved.",
-            "example": null
-          },
-          "noContactIdReason": {
-            "type": "string",
-            "description": "The reason why no contact ID is available.",
-            "example": null
-          },
-          "noPortalIdReason": {
-            "type": "string",
-            "description": "The reason why no portal ID is available.",
-            "example": null
-          },
-          "noUserIdReason": {
-            "type": "string",
-            "description": "The reason why no user ID is available.",
-            "example": null
-          },
-          "portalIds": {
-            "type": "array",
-            "items": {
-              "type": "integer",
-              "format": "int32",
-              "example": null
-            },
-            "description": "An array of integers representing the IDs of the portals involved.",
-            "example": null
-          },
-          "userIds": {
-            "type": "array",
-            "items": {
-              "type": "integer",
-              "format": "int32",
-              "example": null
-            },
-            "description": "An array of integers representing the IDs of the users involved.",
-            "example": null
-          }
-        },
-        "example": null
-      },
-      "ContactId": {
-        "required": [
-          "portalId"
-        ],
-        "type": "object",
-        "properties": {
-          "email": {
-            "type": "string",
-            "description": "The email address of the contact.",
-            "example": null
-          },
-          "portalId": {
-            "type": "integer",
-            "description": "The ID of the portal associated with the contact.",
-            "format": "int32",
-            "example": null
-          },
-          "vid": {
-            "type": "integer",
-            "description": "The unique identifier for the contact.",
-            "format": "int64",
-            "example": null
-          }
-        },
-        "example": null
-      },
-      "CopilotRequestContext": {
-        "title": "COPILOT",
-        "required": [
-          "source"
-        ],
-        "type": "object",
-        "properties": {
-          "source": {
-            "$ref": "#/components/schemas/CopilotSource"
-          },
-          "trajectoryId": {
-            "type": "string",
-            "description": "The unique identifier for the trajectory.",
-            "example": null
-          }
-        },
-        "example": null,
-        "x-hubspot-sub-type-impl": true
       },
       "DoubleFieldSchema": {
         "title": "DOUBLE",
@@ -304280,29 +304077,6 @@
         "example": null,
         "x-hubspot-sub-type-impl": true
       },
-      "StandaloneRequestContext": {
-        "title": "STANDALONE",
-        "required": [
-          "chirpAiContextObject",
-          "source"
-        ],
-        "type": "object",
-        "properties": {
-          "chirpAiContextObject": {
-            "$ref": "#/components/schemas/ChirpAiContextObject"
-          },
-          "source": {
-            "$ref": "#/components/schemas/StandaloneSource"
-          },
-          "trajectoryId": {
-            "type": "string",
-            "description": "A unique identifier for tracking the trajectory of the request.",
-            "example": null
-          }
-        },
-        "example": null,
-        "x-hubspot-sub-type-impl": true
-      },
       "StringFieldSchema": {
         "title": "STRING",
         "required": [
@@ -304320,20 +304094,6 @@
         "example": null,
         "x-hubspot-sub-type-impl": true
       },
-      "TestRequestContext": {
-        "title": "TEST",
-        "required": [
-          "source"
-        ],
-        "type": "object",
-        "properties": {
-          "source": {
-            "$ref": "#/components/schemas/TestSource"
-          }
-        },
-        "example": null,
-        "x-hubspot-sub-type-impl": true
-      },
       "UnknownFieldSchema": {
         "title": "UNKNOWN",
         "required": [
@@ -304343,36 +304103,6 @@
         "properties": {
           "type": {
             "$ref": "#/components/schemas/UnknownType"
-          }
-        },
-        "example": null,
-        "x-hubspot-sub-type-impl": true
-      },
-      "WorkflowsRequestContext": {
-        "title": "WORKFLOWS",
-        "required": [
-          "source",
-          "workflowId"
-        ],
-        "type": "object",
-        "properties": {
-          "actionExecutionIndexIdentifier": {
-            "$ref": "#/components/schemas/ActionExecutionIndexIdentifier"
-          },
-          "actionId": {
-            "type": "integer",
-            "description": "The ID of the action within the workflow context.",
-            "format": "int64",
-            "example": null
-          },
-          "source": {
-            "$ref": "#/components/schemas/WorkflowsSource"
-          },
-          "workflowId": {
-            "type": "integer",
-            "description": "The ID of the workflow associated with the request context.",
-            "format": "int64",
-            "example": null
           }
         },
         "example": null,
@@ -304418,112 +304148,6 @@
           }
         },
         "description": "Defines the type of elements contained within the array, which can be an integer, long, double, string, boolean, another array, or an object.",
-        "example": null
-      },
-      "CallbackCompletionBatchRequestRequestContext": {
-        "type": "object",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/WorkflowsRequestContext"
-          },
-          {
-            "$ref": "#/components/schemas/AgentRequestContext"
-          },
-          {
-            "$ref": "#/components/schemas/CopilotRequestContext"
-          },
-          {
-            "$ref": "#/components/schemas/StandaloneRequestContext"
-          },
-          {
-            "$ref": "#/components/schemas/TestRequestContext"
-          }
-        ],
-        "properties": {
-          "actionExecutionIndexIdentifier": {
-            "$ref": "#/components/schemas/ActionExecutionIndexIdentifier"
-          },
-          "actionId": {
-            "type": "integer",
-            "description": "The ID of the action within the workflow context.",
-            "format": "int64",
-            "example": null
-          },
-          "workflowId": {
-            "type": "integer",
-            "description": "The ID of the workflow associated with the request context.",
-            "format": "int64",
-            "example": null
-          },
-          "agentId": {
-            "type": "integer",
-            "description": "The unique identifier for the agent making the request.",
-            "format": "int64",
-            "example": null
-          },
-          "chirpAiContextObject": {
-            "$ref": "#/components/schemas/ChirpAiContextObject"
-          },
-          "trajectoryId": {
-            "type": "string",
-            "description": "The unique identifier for the trajectory associated with the agent request.",
-            "example": null
-          }
-        },
-        "description": "Defines the context of the request, which can be one of several predefined types.",
-        "example": null
-      },
-      "CallbackCompletionRequestRequestContext": {
-        "type": "object",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/WorkflowsRequestContext"
-          },
-          {
-            "$ref": "#/components/schemas/AgentRequestContext"
-          },
-          {
-            "$ref": "#/components/schemas/CopilotRequestContext"
-          },
-          {
-            "$ref": "#/components/schemas/StandaloneRequestContext"
-          },
-          {
-            "$ref": "#/components/schemas/TestRequestContext"
-          }
-        ],
-        "properties": {
-          "actionExecutionIndexIdentifier": {
-            "$ref": "#/components/schemas/ActionExecutionIndexIdentifier"
-          },
-          "actionId": {
-            "type": "integer",
-            "description": "The ID of the action within the workflow context.",
-            "format": "int64",
-            "example": null
-          },
-          "workflowId": {
-            "type": "integer",
-            "description": "The ID of the workflow associated with the request context.",
-            "format": "int64",
-            "example": null
-          },
-          "agentId": {
-            "type": "integer",
-            "description": "The unique identifier for the agent making the request.",
-            "format": "int64",
-            "example": null
-          },
-          "chirpAiContextObject": {
-            "$ref": "#/components/schemas/ChirpAiContextObject"
-          },
-          "trajectoryId": {
-            "type": "string",
-            "description": "The unique identifier for the trajectory associated with the agent request.",
-            "example": null
-          }
-        },
-        "description": "Specifies the context in which the request is made, which can be one of several predefined contexts.",
         "example": null
       },
       "FieldTypeDefinitionSchema": {
@@ -304693,24 +304317,6 @@
       "CallbackCompletionRequestTypedOutputs": {
         "type": "object",
         "description": "Holds the typed outputs related to the callback, structured as an object.",
-        "example": null
-      },
-      "ChirpAiContextObjectMetadata": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string",
-          "example": null
-        },
-        "description": "Additional metadata related to the context, represented as key-value pairs.",
-        "example": null
-      },
-      "ChirpAiContextObjectOtelContextHolder": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string",
-          "example": null
-        },
-        "description": "Holds OpenTelemetry context information as key-value pairs.",
         "example": null
       },
       "AutomationErrorContext": {
@@ -304883,22 +304489,6 @@
         "type": "object",
         "description": "Holds the typed outputs related to the callback, structured as an object."
       },
-      "ChirpAiContextObjectMetadataProperty": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string",
-          "example": null
-        },
-        "description": "Additional metadata related to the context, represented as key-value pairs."
-      },
-      "ChirpAiContextObjectOtelContextHolderProperty": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string",
-          "example": null
-        },
-        "description": "Holds OpenTelemetry context information as key-value pairs."
-      },
       "AutomationErrorContextProperty": {
         "type": "object",
         "additionalProperties": {
@@ -305022,25 +304612,6 @@
       "PublicExecutionTranslationRuleConditionsPropertyAdditionalProperties": {
         "type": "object"
       },
-      "AgentsSource": {
-        "enum": [
-          "AGENTS"
-        ],
-        "type": "string",
-        "additionalProperties": false,
-        "description": "Indicates the source of the request, with the default value being 'AGENTS'.",
-        "example": null,
-        "x-ms-enum": {
-          "name": "AgentsSource",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "AGENTS",
-              "name": "Agents"
-            }
-          ]
-        }
-      },
       "ArrayType": {
         "enum": [
           "ARRAY"
@@ -305075,171 +304646,6 @@
             {
               "value": "BOOLEAN",
               "name": "Boolean"
-            }
-          ]
-        }
-      },
-      "ChirpAiContextObjectSensitivity": {
-        "enum": [
-          "HIPAA",
-          "NOT_SENSITIVE",
-          "SENSITIVE"
-        ],
-        "type": "string",
-        "additionalProperties": false,
-        "example": null,
-        "x-ms-enum": {
-          "name": "ChirpAiContextObjectSensitivity",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "HIPAA",
-              "name": "Hipaa"
-            },
-            {
-              "value": "NOT_SENSITIVE",
-              "name": "NotSensitive"
-            },
-            {
-              "value": "SENSITIVE",
-              "name": "Sensitive"
-            }
-          ]
-        }
-      },
-      "ChirpAiContextObjectUnstructuredSourcesItem": {
-        "enum": [
-          "NONE",
-          "USER_INPUT",
-          "LOGGED_EMAIL",
-          "VIDEO_CALL",
-          "AUDIO_CALL",
-          "CALL_TRANSCRIPT",
-          "MEETING_TRANSCRIPT",
-          "FORMS",
-          "FEEDBACK_SURVEY",
-          "PDF",
-          "QUOTE",
-          "INVOICE",
-          "OTHER_ATTACHMENT_DOC",
-          "WHATSAPP",
-          "SMS",
-          "CHAT",
-          "FACEBOOK_MESSENGER",
-          "CUSTOM_CHANNEL_OR_API",
-          "MANY",
-          "NOTE",
-          "DERIVED"
-        ],
-        "type": "string",
-        "additionalProperties": false,
-        "example": null,
-        "x-ms-enum": {
-          "name": "ChirpAiContextObjectUnstructuredSourcesItem",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "NONE",
-              "name": "None"
-            },
-            {
-              "value": "USER_INPUT",
-              "name": "UserInput"
-            },
-            {
-              "value": "LOGGED_EMAIL",
-              "name": "LoggedEmail"
-            },
-            {
-              "value": "VIDEO_CALL",
-              "name": "VideoCall"
-            },
-            {
-              "value": "AUDIO_CALL",
-              "name": "AudioCall"
-            },
-            {
-              "value": "CALL_TRANSCRIPT",
-              "name": "CallTranscript"
-            },
-            {
-              "value": "MEETING_TRANSCRIPT",
-              "name": "MeetingTranscript"
-            },
-            {
-              "value": "FORMS",
-              "name": "Forms"
-            },
-            {
-              "value": "FEEDBACK_SURVEY",
-              "name": "FeedbackSurvey"
-            },
-            {
-              "value": "PDF",
-              "name": "Pdf"
-            },
-            {
-              "value": "QUOTE",
-              "name": "Quote"
-            },
-            {
-              "value": "INVOICE",
-              "name": "Invoice"
-            },
-            {
-              "value": "OTHER_ATTACHMENT_DOC",
-              "name": "OtherAttachmentDoc"
-            },
-            {
-              "value": "WHATSAPP",
-              "name": "Whatsapp"
-            },
-            {
-              "value": "SMS",
-              "name": "Sms"
-            },
-            {
-              "value": "CHAT",
-              "name": "Chat"
-            },
-            {
-              "value": "FACEBOOK_MESSENGER",
-              "name": "FacebookMessenger"
-            },
-            {
-              "value": "CUSTOM_CHANNEL_OR_API",
-              "name": "CustomChannelOrApi"
-            },
-            {
-              "value": "MANY",
-              "name": "Many"
-            },
-            {
-              "value": "NOTE",
-              "name": "Note"
-            },
-            {
-              "value": "DERIVED",
-              "name": "Derived"
-            }
-          ]
-        }
-      },
-      "CopilotSource": {
-        "enum": [
-          "COPILOT"
-        ],
-        "type": "string",
-        "additionalProperties": false,
-        "description": "Indicates the source of the request, with the default value being 'COPILOT'.",
-        "example": null,
-        "x-ms-enum": {
-          "name": "CopilotSource",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "COPILOT",
-              "name": "Copilot"
             }
           ]
         }
@@ -306583,25 +305989,6 @@
           ]
         }
       },
-      "StandaloneSource": {
-        "enum": [
-          "STANDALONE"
-        ],
-        "type": "string",
-        "additionalProperties": false,
-        "description": "Indicates the source of the request, with the default value being 'STANDALONE'.",
-        "example": null,
-        "x-ms-enum": {
-          "name": "StandaloneSource",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "STANDALONE",
-              "name": "Standalone"
-            }
-          ]
-        }
-      },
       "StringFieldSchemaFormat": {
         "enum": [
           "DATE",
@@ -306670,25 +306057,6 @@
           ]
         }
       },
-      "TestSource": {
-        "enum": [
-          "TEST"
-        ],
-        "type": "string",
-        "additionalProperties": false,
-        "description": "Indicates the source of the test request, with the only accepted value being 'TEST'.",
-        "example": null,
-        "x-ms-enum": {
-          "name": "TestSource",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "TEST",
-              "name": "Test"
-            }
-          ]
-        }
-      },
       "UnknownType": {
         "enum": [
           "UNKNOWN"
@@ -306704,25 +306072,6 @@
             {
               "value": "UNKNOWN",
               "name": "Unknown"
-            }
-          ]
-        }
-      },
-      "WorkflowsSource": {
-        "enum": [
-          "WORKFLOWS"
-        ],
-        "type": "string",
-        "additionalProperties": false,
-        "description": "Indicates the source of the request, with the default value being WORKFLOWS.",
-        "example": null,
-        "x-ms-enum": {
-          "name": "WorkflowsSource",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "WORKFLOWS",
-              "name": "Workflows"
             }
           ]
         }
@@ -640527,7 +639876,7 @@
           },
           "folderId": {
             "type": "integer",
-            "description": "The ID of the folder where the email is stored, as a 64-bit integer.",
+            "description": "Deprecated — this field is no longer functional. Use folderIdV2 instead.",
             "format": "int64",
             "example": null
           },
@@ -682937,22 +682286,6 @@
         "type": "object",
         "description": "Holds the typed outputs related to the callback, structured as an object."
       },
-      "ChirpAiContextObjectMetadataProperty2": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string",
-          "example": null
-        },
-        "description": "Additional metadata related to the context, represented as key-value pairs."
-      },
-      "ChirpAiContextObjectOtelContextHolderProperty2": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string",
-          "example": null
-        },
-        "description": "Holds OpenTelemetry context information as key-value pairs."
-      },
       "AutomationErrorContextProperty4": {
         "type": "object",
         "additionalProperties": {
@@ -698362,6 +697695,7 @@
               "crm.objects.deals.sensitive.write.v2": "",
               "crm.objects.deals.write": "",
               "crm.objects.emails.read": "",
+              "crm.objects.feedback_submissions.read": "",
               "crm.objects.goals.read": "",
               "crm.objects.goals.write": "",
               "crm.objects.invoices.read": "",

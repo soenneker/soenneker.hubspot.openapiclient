@@ -30,14 +30,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionRequestOutputFieldsProperty2 OutputFields { get; set; }
 #endif
-        /// <summary>Specifies the context in which the request is made, which can be one of several predefined contexts.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionRequestRequestContext? RequestContext { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionRequestRequestContext RequestContext { get; set; }
-#endif
         /// <summary>Holds the typed outputs related to the callback, structured as an object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -73,7 +65,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "failureReasonType", n => { FailureReasonType = n.GetStringValue(); } },
                 { "outputFields", n => { OutputFields = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionRequestOutputFieldsProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionRequestOutputFieldsProperty2.CreateFromDiscriminatorValue); } },
-                { "requestContext", n => { RequestContext = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionRequestRequestContext>(global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionRequestRequestContext.CreateFromDiscriminatorValue); } },
                 { "typedOutputs", n => { TypedOutputs = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionRequestTypedOutputsProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionRequestTypedOutputsProperty2.CreateFromDiscriminatorValue); } },
             };
         }
@@ -86,7 +77,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("failureReasonType", FailureReasonType);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionRequestOutputFieldsProperty2>("outputFields", OutputFields);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionRequestRequestContext>("requestContext", RequestContext);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionRequestTypedOutputsProperty2>("typedOutputs", TypedOutputs);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -38,14 +38,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequestOutputFieldsProperty2 OutputFields { get; set; }
 #endif
-        /// <summary>Defines the context of the request, which can be one of several predefined types.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequestRequestContext? RequestContext { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequestRequestContext RequestContext { get; set; }
-#endif
         /// <summary>Contains the typed outputs for the callback completion.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -82,7 +74,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "callbackId", n => { CallbackId = n.GetStringValue(); } },
                 { "failureReasonType", n => { FailureReasonType = n.GetStringValue(); } },
                 { "outputFields", n => { OutputFields = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequestOutputFieldsProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequestOutputFieldsProperty2.CreateFromDiscriminatorValue); } },
-                { "requestContext", n => { RequestContext = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequestRequestContext>(global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequestRequestContext.CreateFromDiscriminatorValue); } },
                 { "typedOutputs", n => { TypedOutputs = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequestTypedOutputsProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequestTypedOutputsProperty2.CreateFromDiscriminatorValue); } },
             };
         }
@@ -96,7 +87,6 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("callbackId", CallbackId);
             writer.WriteStringValue("failureReasonType", FailureReasonType);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequestOutputFieldsProperty2>("outputFields", OutputFields);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequestRequestContext>("requestContext", RequestContext);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequestTypedOutputsProperty2>("typedOutputs", TypedOutputs);
             writer.WriteAdditionalData(AdditionalData);
         }

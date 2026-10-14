@@ -110,7 +110,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string FeedbackSurveyId { get; set; }
 #endif
-        /// <summary>The ID of the folder where the email is stored, as a 64-bit integer.</summary>
+        /// <summary>Deprecated — this field is no longer functional. Use folderIdV2 instead.</summary>
         public long? FolderId { get; set; }
         /// <summary>The version 2 ID of the folder where the email is stored, as a 64-bit integer.</summary>
         public long? FolderIdV2 { get; set; }
