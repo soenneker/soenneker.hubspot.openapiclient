@@ -732,6 +732,18 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         #pragma warning disable CS1591
         HsHasActiveSubscription,
         #pragma warning restore CS1591
+        [EnumMember(Value = "hs_inbound_agent_inquiry_type")]
+        #pragma warning disable CS1591
+        HsInboundAgentInquiryType,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "hs_inbound_agent_last_conversation_date")]
+        #pragma warning disable CS1591
+        HsInboundAgentLastConversationDate,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "hs_inbound_agent_qualification_status")]
+        #pragma warning disable CS1591
+        HsInboundAgentQualificationStatus,
+        #pragma warning restore CS1591
         [EnumMember(Value = "hs_inferred_language_codes")]
         #pragma warning disable CS1591
         HsInferredLanguageCodes,
