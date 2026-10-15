@@ -14,6 +14,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The apps property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.AppUsage>? Apps { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.AppUsage> Apps { get; set; }
+#endif
         /// <summary>The appType property</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.AppTypeUsageAppType? AppType { get; set; }
         /// <summary>The currentUsage property</summary>
@@ -44,6 +52,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "appType", n => { AppType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AppTypeUsageAppType>(); } },
+                { "apps", n => { Apps = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.AppUsage>(global::Soenneker.HubSpot.OpenApiClient.Models.AppUsage.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "currentUsage", n => { CurrentUsage = n.GetIntValue(); } },
             };
         }
@@ -54,6 +63,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.AppUsage>("apps", Apps);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AppTypeUsageAppType>("appType", AppType);
             writer.WriteIntValue("currentUsage", CurrentUsage);
             writer.WriteAdditionalData(AdditionalData);

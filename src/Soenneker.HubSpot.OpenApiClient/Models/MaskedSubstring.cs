@@ -16,6 +16,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An integer indicating the ending position of the substring.</summary>
         public int? End { get; set; }
+        /// <summary>The label property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Label { get; set; }
+#nullable restore
+#else
+        public string Label { get; set; }
+#endif
         /// <summary>An integer indicating the starting position of the substring.</summary>
         public int? Start { get; set; }
         /// <summary>
@@ -44,6 +52,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "end", n => { End = n.GetIntValue(); } },
+                { "label", n => { Label = n.GetStringValue(); } },
                 { "start", n => { Start = n.GetIntValue(); } },
             };
         }
@@ -55,6 +64,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("end", End);
+            writer.WriteStringValue("label", Label);
             writer.WriteIntValue("start", Start);
             writer.WriteAdditionalData(AdditionalData);
         }
