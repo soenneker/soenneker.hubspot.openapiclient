@@ -616911,6 +616911,9 @@
             "description": "A string representing the name of the operator used in the operation.",
             "example": null
           },
+          "propertyAspect": {
+            "$ref": "#/components/schemas/PropertyAspect"
+          },
           "propertyType": {
             "$ref": "#/components/schemas/AlltypesPropertyType"
           },
@@ -617150,6 +617153,9 @@
             "description": "A string representing the name of the operator used in the operation.",
             "example": null
           },
+          "propertyAspect": {
+            "$ref": "#/components/schemas/PropertyAspect"
+          },
           "propertyType": {
             "$ref": "#/components/schemas/BoolValuePropertyType"
           },
@@ -617206,6 +617212,9 @@
             "type": "string",
             "description": "A string representing the name of the operator used in the operation.",
             "example": null
+          },
+          "propertyAspect": {
+            "$ref": "#/components/schemas/PropertyAspect"
           },
           "propertyType": {
             "$ref": "#/components/schemas/CalendarDatePropertyType"
@@ -617366,6 +617375,9 @@
             "description": "A string representing the name of the operator used in the operation.",
             "example": null
           },
+          "propertyAspect": {
+            "$ref": "#/components/schemas/PropertyAspect"
+          },
           "propertyType": {
             "$ref": "#/components/schemas/BoolComparativePropertyType"
           },
@@ -617423,6 +617435,9 @@
             "description": "A string representing the name of the operator used in the operation.",
             "example": null
           },
+          "propertyAspect": {
+            "$ref": "#/components/schemas/PropertyAspect"
+          },
           "propertyType": {
             "$ref": "#/components/schemas/DatetimeComparativePropertyType"
           },
@@ -617474,6 +617489,9 @@
             "type": "string",
             "description": "A string representing the name of the operator.",
             "example": null
+          },
+          "propertyAspect": {
+            "$ref": "#/components/schemas/PropertyAspect"
           },
           "propertyType": {
             "$ref": "#/components/schemas/NumberComparativePropertyType"
@@ -617532,6 +617550,9 @@
             "description": "A string that provides a human-readable name for the operator.",
             "example": null
           },
+          "propertyAspect": {
+            "$ref": "#/components/schemas/PropertyAspect"
+          },
           "propertyType": {
             "$ref": "#/components/schemas/PropertyUpdatedComparativePropertyType"
           },
@@ -617583,6 +617604,9 @@
             "type": "string",
             "description": "A string representing the name of the operator used in the operation.",
             "example": null
+          },
+          "propertyAspect": {
+            "$ref": "#/components/schemas/PropertyAspect"
           },
           "propertyType": {
             "$ref": "#/components/schemas/StringComparativePropertyType"
@@ -617711,6 +617735,9 @@
             "description": "A string that provides a human-readable name for the operator.",
             "example": null
           },
+          "propertyAspect": {
+            "$ref": "#/components/schemas/PropertyAspect"
+          },
           "propertyType": {
             "$ref": "#/components/schemas/DatePropertyType"
           },
@@ -617764,6 +617791,9 @@
             "type": "string",
             "description": "A string representing the name of the operator used in the operation.",
             "example": null
+          },
+          "propertyAspect": {
+            "$ref": "#/components/schemas/PropertyAspect"
           },
           "propertyType": {
             "$ref": "#/components/schemas/DatetimePropertyType"
@@ -617822,6 +617852,9 @@
             "type": "string",
             "description": "A string representing the name of the operator used in the operation.",
             "example": null
+          },
+          "propertyAspect": {
+            "$ref": "#/components/schemas/PropertyAspect"
           },
           "propertyType": {
             "$ref": "#/components/schemas/EnumerationPropertyType"
@@ -618534,6 +618567,9 @@
             "description": "The name of the operator used in the operation.",
             "example": null
           },
+          "propertyAspect": {
+            "$ref": "#/components/schemas/PropertyAspect"
+          },
           "propertyType": {
             "$ref": "#/components/schemas/MultistringPropertyType"
           },
@@ -618676,6 +618712,9 @@
             "type": "string",
             "description": "A string representing the name of the operator used in the operation.",
             "example": null
+          },
+          "propertyAspect": {
+            "$ref": "#/components/schemas/PropertyAspect"
           },
           "propertyType": {
             "$ref": "#/components/schemas/NumberPropertyType"
@@ -618970,6 +619009,22 @@
         "description": "A HubSpot property",
         "example": null
       },
+      "PropertyAspect": {
+        "required": [
+          "aspect"
+        ],
+        "type": "object",
+        "properties": {
+          "aspect": {
+            "$ref": "#/components/schemas/PropertyAspectAspect"
+          },
+          "qualifier": {
+            "type": "string",
+            "example": null
+          }
+        },
+        "example": null
+      },
       "PropertyFilter": {
         "title": "PROPERTY",
         "required": [
@@ -619226,6 +619281,9 @@
             "description": "A string representing the name of the operator used in the operation.",
             "example": null
           },
+          "propertyAspect": {
+            "$ref": "#/components/schemas/PropertyAspect"
+          },
           "propertyType": {
             "$ref": "#/components/schemas/DatetimeRangedPropertyType"
           },
@@ -619290,6 +619348,9 @@
             "description": "A string representing the name of the operator used in the operation.",
             "example": null
           },
+          "propertyAspect": {
+            "$ref": "#/components/schemas/PropertyAspect"
+          },
           "propertyType": {
             "$ref": "#/components/schemas/NumberRangedPropertyType"
           },
@@ -619352,6 +619413,9 @@
             "type": "string",
             "description": "A string representing the name of the operator used in the operation.",
             "example": null
+          },
+          "propertyAspect": {
+            "$ref": "#/components/schemas/PropertyAspect"
           },
           "propertyParser": {
             "$ref": "#/components/schemas/RangedTimeOperationPropertyParser"
@@ -619424,6 +619488,9 @@
             "type": "string",
             "description": "A string representing the regex pattern to be used in the operation.",
             "example": null
+          },
+          "propertyAspect": {
+            "$ref": "#/components/schemas/PropertyAspect"
           },
           "propertyType": {
             "$ref": "#/components/schemas/RegexPropertyType"
@@ -619527,6 +619594,9 @@
             "description": "A string representing the name of the operator used in the operation.",
             "example": null
           },
+          "propertyAspect": {
+            "$ref": "#/components/schemas/PropertyAspect"
+          },
           "propertyType": {
             "$ref": "#/components/schemas/DatetimeRollingPropertyType"
           },
@@ -619584,6 +619654,9 @@
             "type": "string",
             "description": "A string representing the name of the operator used in the operation.",
             "example": null
+          },
+          "propertyAspect": {
+            "$ref": "#/components/schemas/PropertyAspect"
           },
           "propertyType": {
             "$ref": "#/components/schemas/RollingPropertyUpdatedPropertyType"
@@ -619649,6 +619722,9 @@
             "type": "string",
             "description": "A string representing the name of the operator.",
             "example": null
+          },
+          "propertyAspect": {
+            "$ref": "#/components/schemas/PropertyAspect"
           },
           "propertyType": {
             "$ref": "#/components/schemas/StringValuePropertyType"
@@ -619730,6 +619806,9 @@
             "type": "string",
             "description": "A string representing the name of the operator.",
             "example": null
+          },
+          "propertyAspect": {
+            "$ref": "#/components/schemas/PropertyAspect"
           },
           "propertyParser": {
             "$ref": "#/components/schemas/TimePointOperationPropertyParser"
@@ -619992,6 +620071,9 @@
             "description": "A string representing the name of the operator.",
             "example": null
           },
+          "propertyAspect": {
+            "$ref": "#/components/schemas/PropertyAspect"
+          },
           "renderSpec": {
             "type": "string",
             "description": "A string representing the rendering specification.",
@@ -620194,6 +620276,9 @@
             "description": "A string representing the name of the operator.",
             "example": null
           },
+          "propertyAspect": {
+            "$ref": "#/components/schemas/PropertyAspect"
+          },
           "renderSpec": {
             "type": "string",
             "description": "A string representing the rendering specification.",
@@ -620305,6 +620390,9 @@
             "type": "string",
             "description": "A string representing the name of the operator used in the operation.",
             "example": null
+          },
+          "propertyAspect": {
+            "$ref": "#/components/schemas/PropertyAspect"
           },
           "renderSpec": {
             "type": "string",
@@ -623972,6 +624060,29 @@
             {
               "value": "unformatted_single_line",
               "name": "UnformattedSingleLine"
+            }
+          ]
+        }
+      },
+      "PropertyAspectAspect": {
+        "enum": [
+          "TIMERANGE_END",
+          "TIMERANGE_START"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "example": null,
+        "x-ms-enum": {
+          "name": "PropertyAspectAspect",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "TIMERANGE_END",
+              "name": "TimerangeEnd"
+            },
+            {
+              "value": "TIMERANGE_START",
+              "name": "TimerangeStart"
             }
           ]
         }
@@ -648654,6 +648765,7 @@
       "MarketingMaskedSubstring": {
         "required": [
           "end",
+          "label",
           "start"
         ],
         "type": "object",
@@ -648662,6 +648774,10 @@
             "type": "integer",
             "description": "An integer indicating the ending position of the masked substring.",
             "format": "int32",
+            "example": null
+          },
+          "label": {
+            "type": "string",
             "example": null
           },
           "start": {

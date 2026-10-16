@@ -46,6 +46,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string OperatorName { get; set; }
 #endif
+        /// <summary>The propertyAspect property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyAspect? PropertyAspect { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyAspect PropertyAspect { get; set; }
+#endif
         /// <summary>A string indicating the type of property, which defaults to &apos;date&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.DatePropertyType? PropertyType { get; set; }
         /// <summary>A string that specifies how the operation should be rendered or displayed.</summary>
@@ -90,6 +98,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "operationType", n => { OperationType = n.GetStringValue(); } },
                 { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DatePropertyOperationOperator>(); } },
                 { "operatorName", n => { OperatorName = n.GetStringValue(); } },
+                { "propertyAspect", n => { PropertyAspect = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyAspect>(global::Soenneker.HubSpot.OpenApiClient.Models.PropertyAspect.CreateFromDiscriminatorValue); } },
                 { "propertyType", n => { PropertyType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DatePropertyType>(); } },
                 { "renderSpec", n => { RenderSpec = n.GetStringValue(); } },
                 { "year", n => { Year = n.GetIntValue(); } },
@@ -109,6 +118,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("operationType", OperationType);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DatePropertyOperationOperator>("operator", Operator);
             writer.WriteStringValue("operatorName", OperatorName);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyAspect>("propertyAspect", PropertyAspect);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DatePropertyType>("propertyType", PropertyType);
             writer.WriteStringValue("renderSpec", RenderSpec);
             writer.WriteIntValue("year", Year);

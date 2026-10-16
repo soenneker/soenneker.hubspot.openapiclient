@@ -42,6 +42,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string OperatorName { get; set; }
 #endif
+        /// <summary>The propertyAspect property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyAspect? PropertyAspect { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyAspect PropertyAspect { get; set; }
+#endif
         /// <summary>A string that specifies the type of property operation, with a default value of &apos;number&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.NumberPropertyType? PropertyType { get; set; }
         /// <summary>A string that provides specifications for rendering the operation.</summary>
@@ -84,6 +92,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "operationType", n => { OperationType = n.GetStringValue(); } },
                 { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.NumberPropertyOperationOperator>(); } },
                 { "operatorName", n => { OperatorName = n.GetStringValue(); } },
+                { "propertyAspect", n => { PropertyAspect = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyAspect>(global::Soenneker.HubSpot.OpenApiClient.Models.PropertyAspect.CreateFromDiscriminatorValue); } },
                 { "propertyType", n => { PropertyType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.NumberPropertyType>(); } },
                 { "renderSpec", n => { RenderSpec = n.GetStringValue(); } },
                 { "value", n => { Value = n.GetDoubleValue(); } },
@@ -101,6 +110,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("operationType", OperationType);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.NumberPropertyOperationOperator>("operator", Operator);
             writer.WriteStringValue("operatorName", OperatorName);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyAspect>("propertyAspect", PropertyAspect);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.NumberPropertyType>("propertyType", PropertyType);
             writer.WriteStringValue("renderSpec", RenderSpec);
             writer.WriteDoubleValue("value", Value);

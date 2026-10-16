@@ -58,6 +58,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string OperatorName { get; set; }
 #endif
+        /// <summary>The propertyAspect property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyAspect? PropertyAspect { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyAspect PropertyAspect { get; set; }
+#endif
         /// <summary>A string that specifies the type of property operation, with a default value of &apos;property-updated-comparative&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyUpdatedComparativePropertyType? PropertyType { get; set; }
         /// <summary>A string that defines the rendering specification for the operation.</summary>
@@ -100,6 +108,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "operationType", n => { OperationType = n.GetStringValue(); } },
                 { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ComparativePropertyUpdatedOperationOperator>(); } },
                 { "operatorName", n => { OperatorName = n.GetStringValue(); } },
+                { "propertyAspect", n => { PropertyAspect = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyAspect>(global::Soenneker.HubSpot.OpenApiClient.Models.PropertyAspect.CreateFromDiscriminatorValue); } },
                 { "propertyType", n => { PropertyType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyUpdatedComparativePropertyType>(); } },
                 { "renderSpec", n => { RenderSpec = n.GetStringValue(); } },
             };
@@ -118,6 +127,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("operationType", OperationType);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ComparativePropertyUpdatedOperationOperator>("operator", Operator);
             writer.WriteStringValue("operatorName", OperatorName);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyAspect>("propertyAspect", PropertyAspect);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyUpdatedComparativePropertyType>("propertyType", PropertyType);
             writer.WriteStringValue("renderSpec", RenderSpec);
             writer.WriteAdditionalData(AdditionalData);

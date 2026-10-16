@@ -44,6 +44,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string OperatorName { get; set; }
 #endif
+        /// <summary>The propertyAspect property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyAspect? PropertyAspect { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyAspect PropertyAspect { get; set; }
+#endif
         /// <summary>A string specifying the property parser, with possible values &apos;VALUE&apos;, &apos;UPDATED_AT&apos;, &apos;ANNIVERSARY&apos;, &apos;VALUE_WITH_ZONE_SAME_LOCAL_CONVERSION&apos;, and &apos;ANNIVERSARY_WITH_ZONE_SAME_LOCAL_CONVERSION&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.TimePointOperationPropertyParser? PropertyParser { get; set; }
         /// <summary>A string indicating the type of property, defaulting to &apos;timepoint&apos;.</summary>
@@ -103,6 +111,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "operationType", n => { OperationType = n.GetStringValue(); } },
                 { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TimePointOperationOperator>(); } },
                 { "operatorName", n => { OperatorName = n.GetStringValue(); } },
+                { "propertyAspect", n => { PropertyAspect = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyAspect>(global::Soenneker.HubSpot.OpenApiClient.Models.PropertyAspect.CreateFromDiscriminatorValue); } },
                 { "propertyParser", n => { PropertyParser = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TimePointOperationPropertyParser>(); } },
                 { "propertyType", n => { PropertyType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TimepointPropertyType>(); } },
                 { "renderSpec", n => { RenderSpec = n.GetStringValue(); } },
@@ -123,6 +132,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("operationType", OperationType);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TimePointOperationOperator>("operator", Operator);
             writer.WriteStringValue("operatorName", OperatorName);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyAspect>("propertyAspect", PropertyAspect);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TimePointOperationPropertyParser>("propertyParser", PropertyParser);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TimepointPropertyType>("propertyType", PropertyType);
             writer.WriteStringValue("renderSpec", RenderSpec);

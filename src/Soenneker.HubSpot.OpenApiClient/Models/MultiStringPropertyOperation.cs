@@ -50,6 +50,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string OperatorName { get; set; }
 #endif
+        /// <summary>The propertyAspect property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyAspect? PropertyAspect { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyAspect PropertyAspect { get; set; }
+#endif
         /// <summary>The type of property being operated on, which is &apos;multistring&apos; for this operation.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.MultistringPropertyType? PropertyType { get; set; }
         /// <summary>A refinement option that further specifies the operation, which can be one of several types such as &apos;RelativeComparativeTimestampRefineBy&apos;, &apos;RelativeRangedTimestampRefineBy&apos;, &apos;AbsoluteComparativeTimestampRefineBy&apos;, &apos;AbsoluteRangedTimestampRefineBy&apos;, &apos;AllHistoryRefineBy&apos;, &apos;TimePointOperation&apos;, or &apos;RangedTimeOperation&apos;.</summary>
@@ -107,6 +115,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "operationType", n => { OperationType = n.GetStringValue(); } },
                 { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MultiStringPropertyOperationOperator>(); } },
                 { "operatorName", n => { OperatorName = n.GetStringValue(); } },
+                { "propertyAspect", n => { PropertyAspect = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyAspect>(global::Soenneker.HubSpot.OpenApiClient.Models.PropertyAspect.CreateFromDiscriminatorValue); } },
                 { "propertyType", n => { PropertyType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MultistringPropertyType>(); } },
                 { "pruningRefineBy", n => { PruningRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MultiStringPropertyOperationPruningRefineBy>(global::Soenneker.HubSpot.OpenApiClient.Models.MultiStringPropertyOperationPruningRefineBy.CreateFromDiscriminatorValue); } },
                 { "renderSpec", n => { RenderSpec = n.GetStringValue(); } },
@@ -126,6 +135,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("operationType", OperationType);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MultiStringPropertyOperationOperator>("operator", Operator);
             writer.WriteStringValue("operatorName", OperatorName);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyAspect>("propertyAspect", PropertyAspect);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MultistringPropertyType>("propertyType", PropertyType);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MultiStringPropertyOperationPruningRefineBy>("pruningRefineBy", PruningRefineBy);
             writer.WriteStringValue("renderSpec", RenderSpec);

@@ -52,6 +52,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Pattern { get; set; }
 #endif
+        /// <summary>The propertyAspect property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyAspect? PropertyAspect { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyAspect PropertyAspect { get; set; }
+#endif
         /// <summary>A string indicating the type of property operation, which is &apos;regex&apos; for this component.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.RegexPropertyType? PropertyType { get; set; }
         /// <summary>A string that may define how the operation is rendered, though its specific use is not detailed.</summary>
@@ -94,6 +102,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RegexPropertyOperationOperator>(); } },
                 { "operatorName", n => { OperatorName = n.GetStringValue(); } },
                 { "pattern", n => { Pattern = n.GetStringValue(); } },
+                { "propertyAspect", n => { PropertyAspect = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyAspect>(global::Soenneker.HubSpot.OpenApiClient.Models.PropertyAspect.CreateFromDiscriminatorValue); } },
                 { "propertyType", n => { PropertyType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RegexPropertyType>(); } },
                 { "renderSpec", n => { RenderSpec = n.GetStringValue(); } },
             };
@@ -112,6 +121,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RegexPropertyOperationOperator>("operator", Operator);
             writer.WriteStringValue("operatorName", OperatorName);
             writer.WriteStringValue("pattern", Pattern);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyAspect>("propertyAspect", PropertyAspect);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RegexPropertyType>("propertyType", PropertyType);
             writer.WriteStringValue("renderSpec", RenderSpec);
             writer.WriteAdditionalData(AdditionalData);
