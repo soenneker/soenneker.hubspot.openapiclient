@@ -19,7 +19,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CollectionResponseApiUsageMarch2027NoPaging"
+                  "$ref": "#/components/schemas/CollectionResponseApiUsageNoPaging"
                 },
                 "example": null
               }
@@ -90385,6 +90385,16 @@
             "crm_oauth2_14": [
               "crm.objects.owners.read"
             ]
+          },
+          {
+            "crm_oauth2_14": [
+              "crm.pipelines.approval.read"
+            ]
+          },
+          {
+            "crm_oauth2_14": [
+              "crm.pipelines.governance.write"
+            ]
           }
         ],
         "servers": [
@@ -90461,6 +90471,16 @@
           {
             "crm_oauth2_14": [
               "crm.objects.owners.read"
+            ]
+          },
+          {
+            "crm_oauth2_14": [
+              "crm.pipelines.approval.read"
+            ]
+          },
+          {
+            "crm_oauth2_14": [
+              "crm.pipelines.governance.write"
             ]
           }
         ],
@@ -300436,106 +300456,52 @@
   },
   "components": {
     "schemas": {
-      "ApiUsageMarch2027": {
+      "ApiUsage": {
         "required": [
           "collectedAt",
           "currentUsage",
           "fetchStatus",
           "name",
-          "usageByAppType",
           "usageLimit"
         ],
         "type": "object",
         "properties": {
           "collectedAt": {
             "type": "string",
+            "description": "The date and time when the usage data was collected, in ISO 8601 format.",
             "format": "date-time",
             "example": null
           },
           "currentUsage": {
             "type": "integer",
+            "description": "An integer indicating the current usage count of the API resource.",
             "format": "int32",
             "example": null
           },
           "fetchStatus": {
-            "$ref": "#/components/schemas/ApiUsageMarch2027FetchStatus"
+            "$ref": "#/components/schemas/ApiUsageFetchStatus"
           },
           "name": {
             "type": "string",
+            "description": "The name of the API resource being tracked.",
             "example": null
           },
           "resetsAt": {
             "type": "string",
+            "description": "The date and time when the usage limit will reset, in ISO 8601 format.",
             "format": "date-time",
-            "example": null
-          },
-          "usageByAppType": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/AppTypeUsage"
-            },
             "example": null
           },
           "usageLimit": {
             "type": "integer",
+            "description": "An integer representing the maximum allowable usage for the API resource.",
             "format": "int32",
             "example": null
           }
         },
         "example": null
       },
-      "AppTypeUsage": {
-        "required": [
-          "appType",
-          "apps",
-          "currentUsage"
-        ],
-        "type": "object",
-        "properties": {
-          "appType": {
-            "$ref": "#/components/schemas/AppTypeUsageAppType"
-          },
-          "apps": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/AppUsage"
-            },
-            "example": null
-          },
-          "currentUsage": {
-            "type": "integer",
-            "format": "int32",
-            "example": null
-          }
-        },
-        "example": null
-      },
-      "AppUsage": {
-        "required": [
-          "appId",
-          "currentUsage",
-          "name"
-        ],
-        "type": "object",
-        "properties": {
-          "appId": {
-            "type": "integer",
-            "format": "int32",
-            "example": null
-          },
-          "currentUsage": {
-            "type": "integer",
-            "format": "int32",
-            "example": null
-          },
-          "name": {
-            "type": "string",
-            "example": null
-          }
-        },
-        "example": null
-      },
-      "CollectionResponseApiUsageMarch2027NoPaging": {
+      "CollectionResponseApiUsageNoPaging": {
         "required": [
           "results"
         ],
@@ -300544,8 +300510,9 @@
           "results": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/ApiUsageMarch2027"
+              "$ref": "#/components/schemas/ApiUsage"
             },
+            "description": "An array of API usage records, each detailing the usage metrics for a specific API. Each record includes information such as the name of the API, usage limits, current usage, and the status of the data fetch.",
             "example": null
           }
         },
@@ -300786,7 +300753,7 @@
         },
         "description": "Context about the error condition, represented as an object where each key is a string and each value is an array of strings."
       },
-      "ApiUsageMarch2027FetchStatus": {
+      "ApiUsageFetchStatus": {
         "enum": [
           "CACHED",
           "FAILURE",
@@ -300798,9 +300765,10 @@
         "additionalProperties": {
           "not": { }
         },
+        "description": "The status of the data fetch operation. Valid values include 'SUCCESS', 'TIMEOUT', 'FAILURE', 'CACHED', and 'NOTFOUND'.",
         "example": null,
         "x-ms-enum": {
-          "name": "ApiUsageMarch2027FetchStatus",
+          "name": "ApiUsageFetchStatus",
           "modelAsString": false,
           "values": [
             {
@@ -300822,36 +300790,6 @@
             {
               "value": "TIMEOUT",
               "name": "Timeout"
-            }
-          ]
-        }
-      },
-      "AppTypeUsageAppType": {
-        "enum": [
-          "DEVELOPER_PLATFORM_APP",
-          "LEGACY_PRIVATE_APP",
-          "SERVICE_KEY"
-        ],
-        "type": "string",
-        "additionalProperties": {
-          "not": { }
-        },
-        "example": null,
-        "x-ms-enum": {
-          "name": "AppTypeUsageAppType",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "DEVELOPER_PLATFORM_APP",
-              "name": "DeveloperPlatformApp"
-            },
-            {
-              "value": "LEGACY_PRIVATE_APP",
-              "name": "LegacyPrivateApp"
-            },
-            {
-              "value": "SERVICE_KEY",
-              "name": "ServiceKey"
             }
           ]
         }
@@ -688033,7 +687971,9 @@
             "tokenUrl": "https://api.hubapi.com/oauth/v1/token",
             "scopes": {
               "automation": "",
-              "crm.objects.owners.read": ""
+              "crm.objects.owners.read": "",
+              "crm.pipelines.approval.read": "",
+              "crm.pipelines.governance.write": ""
             }
           }
         }

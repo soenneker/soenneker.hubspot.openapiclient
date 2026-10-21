@@ -9,18 +9,18 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class ApiUsageMarch2027 : IAdditionalDataHolder, IParsable
+    public partial class ApiUsage : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The collectedAt property</summary>
+        /// <summary>The date and time when the usage data was collected, in ISO 8601 format.</summary>
         public DateTimeOffset? CollectedAt { get; set; }
-        /// <summary>The currentUsage property</summary>
+        /// <summary>An integer indicating the current usage count of the API resource.</summary>
         public int? CurrentUsage { get; set; }
-        /// <summary>The fetchStatus property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiUsageMarch2027FetchStatus? FetchStatus { get; set; }
-        /// <summary>The name property</summary>
+        /// <summary>The status of the data fetch operation. Valid values include &apos;SUCCESS&apos;, &apos;TIMEOUT&apos;, &apos;FAILURE&apos;, &apos;CACHED&apos;, and &apos;NOTFOUND&apos;.</summary>
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiUsageFetchStatus? FetchStatus { get; set; }
+        /// <summary>The name of the API resource being tracked.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -28,34 +28,26 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>The resetsAt property</summary>
+        /// <summary>The date and time when the usage limit will reset, in ISO 8601 format.</summary>
         public DateTimeOffset? ResetsAt { get; set; }
-        /// <summary>The usageByAppType property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.AppTypeUsage>? UsageByAppType { get; set; }
-#nullable restore
-#else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.AppTypeUsage> UsageByAppType { get; set; }
-#endif
-        /// <summary>The usageLimit property</summary>
+        /// <summary>An integer representing the maximum allowable usage for the API resource.</summary>
         public int? UsageLimit { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiUsageMarch2027"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiUsage"/> and sets the default values.
         /// </summary>
-        public ApiUsageMarch2027()
+        public ApiUsage()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiUsageMarch2027"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiUsage"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.HubSpot.OpenApiClient.Models.ApiUsageMarch2027 CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HubSpot.OpenApiClient.Models.ApiUsage CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.ApiUsageMarch2027();
+            return new global::Soenneker.HubSpot.OpenApiClient.Models.ApiUsage();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -67,10 +59,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "collectedAt", n => { CollectedAt = n.GetDateTimeOffsetValue(); } },
                 { "currentUsage", n => { CurrentUsage = n.GetIntValue(); } },
-                { "fetchStatus", n => { FetchStatus = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiUsageMarch2027FetchStatus>(); } },
+                { "fetchStatus", n => { FetchStatus = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiUsageFetchStatus>(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "resetsAt", n => { ResetsAt = n.GetDateTimeOffsetValue(); } },
-                { "usageByAppType", n => { UsageByAppType = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.AppTypeUsage>(global::Soenneker.HubSpot.OpenApiClient.Models.AppTypeUsage.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "usageLimit", n => { UsageLimit = n.GetIntValue(); } },
             };
         }
@@ -83,10 +74,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDateTimeOffsetValue("collectedAt", CollectedAt);
             writer.WriteIntValue("currentUsage", CurrentUsage);
-            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiUsageMarch2027FetchStatus>("fetchStatus", FetchStatus);
+            writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiUsageFetchStatus>("fetchStatus", FetchStatus);
             writer.WriteStringValue("name", Name);
             writer.WriteDateTimeOffsetValue("resetsAt", ResetsAt);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.AppTypeUsage>("usageByAppType", UsageByAppType);
             writer.WriteIntValue("usageLimit", UsageLimit);
             writer.WriteAdditionalData(AdditionalData);
         }
