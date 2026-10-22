@@ -83,7 +83,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.Campaigns.TwoZeroTwoSixZeroN
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalPublicCampaign>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalPublicCampaign.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Create a campaign with the specified properties and receive a copy of the object, including its ID. Note that the &apos;hs_goal&apos; property is deprecated and will be ignored if provided.
+        /// Create a campaign with the specified properties and receive a copy of the object, including its ID. Read-only and non-existent properties will result in a 400 error. Note: The &apos;hs_goal&apos; property is deprecated and will be ignored if provided.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaign"/></returns>
         /// <param name="body">The request body</param>
@@ -122,7 +122,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.Campaigns.TwoZeroTwoSixZeroN
             return requestInfo;
         }
         /// <summary>
-        /// Create a campaign with the specified properties and receive a copy of the object, including its ID. Note that the &apos;hs_goal&apos; property is deprecated and will be ignored if provided.
+        /// Create a campaign with the specified properties and receive a copy of the object, including its ID. Read-only and non-existent properties will result in a 400 error. Note: The &apos;hs_goal&apos; property is deprecated and will be ignored if provided.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
