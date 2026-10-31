@@ -11,16 +11,27 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class EventDetailSettingsUrl : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("eventDetailsUrl") is null) { _explicitNullValueEventDetailsUrl = default!; _explicitNullProperties?.Remove("eventDetailsUrl"); }
+            else if (parseNode.GetChildNode("eventDetailsUrl") is { } nullNodeEventDetailsUrl && nullNodeEventDetailsUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventDetailsUrl = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The url that will be used to fetch marketing event details by id. Must contain a `%s` character sequence that will be substituted with the event id. For example: `https://my.event.app/events/%s`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EventDetailsUrl { get; set; }
+        public string? EventDetailsUrl { get => _explicitNullValueEventDetailsUrl; set { _explicitNullValueEventDetailsUrl = value; AdditionalData?.Remove("eventDetailsUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eventDetailsUrl"); else _explicitNullProperties?.Remove("eventDetailsUrl"); } }
+        private string? _explicitNullValueEventDetailsUrl = default!;
 #nullable restore
 #else
-        public string EventDetailsUrl { get; set; }
+        public string EventDetailsUrl { get => _explicitNullValueEventDetailsUrl; set { _explicitNullValueEventDetailsUrl = value; AdditionalData?.Remove("eventDetailsUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eventDetailsUrl"); else _explicitNullProperties?.Remove("eventDetailsUrl"); } }
+        private string _explicitNullValueEventDetailsUrl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.EventDetailSettingsUrl"/> and sets the default values.
@@ -37,7 +48,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.EventDetailSettingsUrl CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.EventDetailSettingsUrl();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.EventDetailSettingsUrl(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -58,6 +69,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("eventDetailsUrl", EventDetailsUrl);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

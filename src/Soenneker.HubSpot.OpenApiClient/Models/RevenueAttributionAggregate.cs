@@ -11,19 +11,41 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class RevenueAttributionAggregate : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("contactsNumber") is null) { _explicitNullValueContactsNumber = default!; _explicitNullProperties?.Remove("contactsNumber"); }
+            else if (parseNode.GetChildNode("contactsNumber") is { } nullNodeContactsNumber && nullNodeContactsNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactsNumber = null;
+            if (parseNode.GetChildNode("currencyCode") is null) { _explicitNullValueCurrencyCode = default!; _explicitNullProperties?.Remove("currencyCode"); }
+            else if (parseNode.GetChildNode("currencyCode") is { } nullNodeCurrencyCode && nullNodeCurrencyCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrencyCode = null;
+            if (parseNode.GetChildNode("dealAmount") is null) { _explicitNullValueDealAmount = default!; _explicitNullProperties?.Remove("dealAmount"); }
+            else if (parseNode.GetChildNode("dealAmount") is { } nullNodeDealAmount && nullNodeDealAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DealAmount = null;
+            if (parseNode.GetChildNode("dealsNumber") is null) { _explicitNullValueDealsNumber = default!; _explicitNullProperties?.Remove("dealsNumber"); }
+            else if (parseNode.GetChildNode("dealsNumber") is { } nullNodeDealsNumber && nullNodeDealsNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DealsNumber = null;
+            if (parseNode.GetChildNode("revenueAmount") is null) { _explicitNullValueRevenueAmount = default!; _explicitNullProperties?.Remove("revenueAmount"); }
+            else if (parseNode.GetChildNode("revenueAmount") is { } nullNodeRevenueAmount && nullNodeRevenueAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RevenueAmount = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An integer representing the number of contacts associated with the campaign.</summary>
-        public int? ContactsNumber { get; set; }
+        public int? ContactsNumber { get => _explicitNullValueContactsNumber; set { _explicitNullValueContactsNumber = value; AdditionalData?.Remove("contactsNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactsNumber"); else _explicitNullProperties?.Remove("contactsNumber"); } }
+        private int? _explicitNullValueContactsNumber = default!;
         /// <summary>A string representing the currency code for the financial amounts, following ISO 4217 standards. Valid values include currency codes like &apos;USD&apos;, &apos;EUR&apos;, &apos;JPY&apos;, etc.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.RevenueAttributionAggregateCurrencyCode? CurrencyCode { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.RevenueAttributionAggregateCurrencyCode? CurrencyCode { get => _explicitNullValueCurrencyCode; set { _explicitNullValueCurrencyCode = value; AdditionalData?.Remove("currencyCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currencyCode"); else _explicitNullProperties?.Remove("currencyCode"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.RevenueAttributionAggregateCurrencyCode? _explicitNullValueCurrencyCode = default!;
         /// <summary>A number representing the total amount from deals associated with the campaign.</summary>
-        public double? DealAmount { get; set; }
+        public double? DealAmount { get => _explicitNullValueDealAmount; set { _explicitNullValueDealAmount = value; AdditionalData?.Remove("dealAmount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dealAmount"); else _explicitNullProperties?.Remove("dealAmount"); } }
+        private double? _explicitNullValueDealAmount = default!;
         /// <summary>An integer indicating the number of deals associated with the campaign.</summary>
-        public int? DealsNumber { get; set; }
+        public int? DealsNumber { get => _explicitNullValueDealsNumber; set { _explicitNullValueDealsNumber = value; AdditionalData?.Remove("dealsNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dealsNumber"); else _explicitNullProperties?.Remove("dealsNumber"); } }
+        private int? _explicitNullValueDealsNumber = default!;
         /// <summary>A number indicating the total revenue amount attributed to the campaign.</summary>
-        public double? RevenueAmount { get; set; }
+        public double? RevenueAmount { get => _explicitNullValueRevenueAmount; set { _explicitNullValueRevenueAmount = value; AdditionalData?.Remove("revenueAmount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("revenueAmount"); else _explicitNullProperties?.Remove("revenueAmount"); } }
+        private double? _explicitNullValueRevenueAmount = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.RevenueAttributionAggregate"/> and sets the default values.
         /// </summary>
@@ -39,7 +61,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.RevenueAttributionAggregate CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.RevenueAttributionAggregate();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.RevenueAttributionAggregate(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -50,7 +72,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "contactsNumber", n => { ContactsNumber = n.GetIntValue(); } },
-                { "currencyCode", n => { CurrencyCode = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RevenueAttributionAggregateCurrencyCode>(); } },
+                { "currencyCode", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RevenueAttributionAggregateCurrencyCode>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCurrencyCode = default; _explicitNullProperties?.Remove("currencyCode"); AdditionalData["currencyCode"] = unknown; } else { CurrencyCode = parsed; AdditionalData.Remove("currencyCode"); } } },
                 { "dealAmount", n => { DealAmount = n.GetDoubleValue(); } },
                 { "dealsNumber", n => { DealsNumber = n.GetIntValue(); } },
                 { "revenueAmount", n => { RevenueAmount = n.GetDoubleValue(); } },
@@ -68,6 +90,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteDoubleValue("dealAmount", DealAmount);
             writer.WriteIntValue("dealsNumber", DealsNumber);
             writer.WriteDoubleValue("revenueAmount", RevenueAmount);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

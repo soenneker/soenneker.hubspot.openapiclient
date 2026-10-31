@@ -11,27 +11,45 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class FormattedPhoneNumber : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("e164Number") is null) { _explicitNullValueE164Number = default!; _explicitNullProperties?.Remove("e164Number"); }
+            else if (parseNode.GetChildNode("e164Number") is { } nullNodeE164Number && nullNodeE164Number.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) E164Number = null;
+            if (parseNode.GetChildNode("extension") is null) { _explicitNullValueExtension = default!; _explicitNullProperties?.Remove("extension"); }
+            else if (parseNode.GetChildNode("extension") is { } nullNodeExtension && nullNodeExtension.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Extension = null;
+            if (parseNode.GetChildNode("phoneNumberType") is null) { _explicitNullValuePhoneNumberType = default!; _explicitNullProperties?.Remove("phoneNumberType"); }
+            else if (parseNode.GetChildNode("phoneNumberType") is { } nullNodePhoneNumberType && nullNodePhoneNumberType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhoneNumberType = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The phone number formatted in E.164 standard.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? E164Number { get; set; }
+        public string? E164Number { get => _explicitNullValueE164Number; set { _explicitNullValueE164Number = value; AdditionalData?.Remove("e164Number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("e164Number"); else _explicitNullProperties?.Remove("e164Number"); } }
+        private string? _explicitNullValueE164Number = default!;
 #nullable restore
 #else
-        public string E164Number { get; set; }
+        public string E164Number { get => _explicitNullValueE164Number; set { _explicitNullValueE164Number = value; AdditionalData?.Remove("e164Number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("e164Number"); else _explicitNullProperties?.Remove("e164Number"); } }
+        private string _explicitNullValueE164Number = default!;
 #endif
         /// <summary>The extension number associated with the phone number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Extension { get; set; }
+        public string? Extension { get => _explicitNullValueExtension; set { _explicitNullValueExtension = value; AdditionalData?.Remove("extension"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extension"); else _explicitNullProperties?.Remove("extension"); } }
+        private string? _explicitNullValueExtension = default!;
 #nullable restore
 #else
-        public string Extension { get; set; }
+        public string Extension { get => _explicitNullValueExtension; set { _explicitNullValueExtension = value; AdditionalData?.Remove("extension"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extension"); else _explicitNullProperties?.Remove("extension"); } }
+        private string _explicitNullValueExtension = default!;
 #endif
         /// <summary>The type of phone number, with accepted values including FIXED_LINE, MOBILE, VOIP, and others.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.FormattedPhoneNumberPhoneNumberType? PhoneNumberType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.FormattedPhoneNumberPhoneNumberType? PhoneNumberType { get => _explicitNullValuePhoneNumberType; set { _explicitNullValuePhoneNumberType = value; AdditionalData?.Remove("phoneNumberType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phoneNumberType"); else _explicitNullProperties?.Remove("phoneNumberType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.FormattedPhoneNumberPhoneNumberType? _explicitNullValuePhoneNumberType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.FormattedPhoneNumber"/> and sets the default values.
         /// </summary>
@@ -47,7 +65,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.FormattedPhoneNumber CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.FormattedPhoneNumber();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.FormattedPhoneNumber(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -59,7 +77,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "e164Number", n => { E164Number = n.GetStringValue(); } },
                 { "extension", n => { Extension = n.GetStringValue(); } },
-                { "phoneNumberType", n => { PhoneNumberType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FormattedPhoneNumberPhoneNumberType>(); } },
+                { "phoneNumberType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FormattedPhoneNumberPhoneNumberType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePhoneNumberType = default; _explicitNullProperties?.Remove("phoneNumberType"); AdditionalData["phoneNumberType"] = unknown; } else { PhoneNumberType = parsed; AdditionalData.Remove("phoneNumberType"); } } },
             };
         }
         /// <summary>
@@ -72,6 +90,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("e164Number", E164Number);
             writer.WriteStringValue("extension", Extension);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FormattedPhoneNumberPhoneNumberType>("phoneNumberType", PhoneNumberType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

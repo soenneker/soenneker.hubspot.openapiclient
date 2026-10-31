@@ -11,58 +11,100 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CmsAuditLoggingExportSettings : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("email") is null) { _explicitNullValueEmail = default!; _explicitNullProperties?.Remove("email"); }
+            else if (parseNode.GetChildNode("email") is { } nullNodeEmail && nullNodeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Email = null;
+            if (parseNode.GetChildNode("filters") is null) { _explicitNullValueFilters = default!; _explicitNullProperties?.Remove("filters"); }
+            else if (parseNode.GetChildNode("filters") is { } nullNodeFilters && nullNodeFilters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Filters = null;
+            if (parseNode.GetChildNode("format") is null) { _explicitNullValueFormat = default!; _explicitNullProperties?.Remove("format"); }
+            else if (parseNode.GetChildNode("format") is { } nullNodeFormat && nullNodeFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Format = null;
+            if (parseNode.GetChildNode("partition") is null) { _explicitNullValuePartition = default!; _explicitNullProperties?.Remove("partition"); }
+            else if (parseNode.GetChildNode("partition") is { } nullNodePartition && nullNodePartition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Partition = null;
+            if (parseNode.GetChildNode("portalId") is null) { _explicitNullValuePortalId = default!; _explicitNullProperties?.Remove("portalId"); }
+            else if (parseNode.GetChildNode("portalId") is { } nullNodePortalId && nullNodePortalId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PortalId = null;
+            if (parseNode.GetChildNode("recipientUserIds") is null) { _explicitNullValueRecipientUserIds = default!; _explicitNullProperties?.Remove("recipientUserIds"); }
+            else if (parseNode.GetChildNode("recipientUserIds") is { } nullNodeRecipientUserIds && nullNodeRecipientUserIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecipientUserIds = null;
+            if (parseNode.GetChildNode("shouldMarkExportFileAsSensitive") is null) { _explicitNullValueShouldMarkExportFileAsSensitive = default!; _explicitNullProperties?.Remove("shouldMarkExportFileAsSensitive"); }
+            else if (parseNode.GetChildNode("shouldMarkExportFileAsSensitive") is { } nullNodeShouldMarkExportFileAsSensitive && nullNodeShouldMarkExportFileAsSensitive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShouldMarkExportFileAsSensitive = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("userId") is null) { _explicitNullValueUserId = default!; _explicitNullProperties?.Remove("userId"); }
+            else if (parseNode.GetChildNode("userId") is { } nullNodeUserId && nullNodeUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserId = null;
+            if (parseNode.GetChildNode("userTimeZone") is null) { _explicitNullValueUserTimeZone = default!; _explicitNullProperties?.Remove("userTimeZone"); }
+            else if (parseNode.GetChildNode("userTimeZone") is { } nullNodeUserTimeZone && nullNodeUserTimeZone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserTimeZone = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A string specifying the email address to which notifications about the export should be sent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Email { get; set; }
+        public string? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; AdditionalData?.Remove("email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        private string? _explicitNullValueEmail = default!;
 #nullable restore
 #else
-        public string Email { get; set; }
+        public string Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; AdditionalData?.Remove("email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        private string _explicitNullValueEmail = default!;
 #endif
         /// <summary>The filters property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CmsAuditLoggingExportFilters? Filters { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CmsAuditLoggingExportFilters? Filters { get => _explicitNullValueFilters; set { _explicitNullValueFilters = value; AdditionalData?.Remove("filters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filters"); else _explicitNullProperties?.Remove("filters"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CmsAuditLoggingExportFilters? _explicitNullValueFilters = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CmsAuditLoggingExportFilters Filters { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CmsAuditLoggingExportFilters Filters { get => _explicitNullValueFilters; set { _explicitNullValueFilters = value; AdditionalData?.Remove("filters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filters"); else _explicitNullProperties?.Remove("filters"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CmsAuditLoggingExportFilters _explicitNullValueFilters = default!;
 #endif
         /// <summary>A string specifying the format of the export file. Valid values include &apos;XLS&apos;, &apos;XLSX&apos;, and &apos;CSV&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CmsAuditLoggingExportSettingsFormat? Format { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CmsAuditLoggingExportSettingsFormat? Format { get => _explicitNullValueFormat; set { _explicitNullValueFormat = value; AdditionalData?.Remove("format"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("format"); else _explicitNullProperties?.Remove("format"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CmsAuditLoggingExportSettingsFormat? _explicitNullValueFormat = default!;
         /// <summary>An integer used for partitioning the export data, if applicable.</summary>
-        public int? Partition { get; set; }
+        public int? Partition { get => _explicitNullValuePartition; set { _explicitNullValuePartition = value; AdditionalData?.Remove("partition"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partition"); else _explicitNullProperties?.Remove("partition"); } }
+        private int? _explicitNullValuePartition = default!;
         /// <summary>An integer representing the ID of the portal from which the audit logs are being exported.</summary>
-        public int? PortalId { get; set; }
+        public int? PortalId { get => _explicitNullValuePortalId; set { _explicitNullValuePortalId = value; AdditionalData?.Remove("portalId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("portalId"); else _explicitNullProperties?.Remove("portalId"); } }
+        private int? _explicitNullValuePortalId = default!;
         /// <summary>An array of integers specifying the IDs of users who should receive the exported file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? RecipientUserIds { get; set; }
+        public List<int?>? RecipientUserIds { get => _explicitNullValueRecipientUserIds; set { _explicitNullValueRecipientUserIds = value; AdditionalData?.Remove("recipientUserIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipientUserIds"); else _explicitNullProperties?.Remove("recipientUserIds"); } }
+        private List<int?>? _explicitNullValueRecipientUserIds = default!;
 #nullable restore
 #else
-        public List<int?> RecipientUserIds { get; set; }
+        public List<int?> RecipientUserIds { get => _explicitNullValueRecipientUserIds; set { _explicitNullValueRecipientUserIds = value; AdditionalData?.Remove("recipientUserIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipientUserIds"); else _explicitNullProperties?.Remove("recipientUserIds"); } }
+        private List<int?> _explicitNullValueRecipientUserIds = default!;
 #endif
         /// <summary>A boolean indicating whether the export file should be marked as sensitive.</summary>
-        public bool? ShouldMarkExportFileAsSensitive { get; set; }
+        public bool? ShouldMarkExportFileAsSensitive { get => _explicitNullValueShouldMarkExportFileAsSensitive; set { _explicitNullValueShouldMarkExportFileAsSensitive = value; AdditionalData?.Remove("shouldMarkExportFileAsSensitive"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shouldMarkExportFileAsSensitive"); else _explicitNullProperties?.Remove("shouldMarkExportFileAsSensitive"); } }
+        private bool? _explicitNullValueShouldMarkExportFileAsSensitive = default!;
         /// <summary>A string indicating the type of export being performed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Type { get; set; }
+        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private string? _explicitNullValueType = default!;
 #nullable restore
 #else
-        public string Type { get; set; }
+        public string Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private string _explicitNullValueType = default!;
 #endif
         /// <summary>An integer representing the ID of the user initiating the export.</summary>
-        public int? UserId { get; set; }
+        public int? UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; AdditionalData?.Remove("userId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userId"); else _explicitNullProperties?.Remove("userId"); } }
+        private int? _explicitNullValueUserId = default!;
         /// <summary>A string representing the time zone of the user initiating the export.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserTimeZone { get; set; }
+        public string? UserTimeZone { get => _explicitNullValueUserTimeZone; set { _explicitNullValueUserTimeZone = value; AdditionalData?.Remove("userTimeZone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userTimeZone"); else _explicitNullProperties?.Remove("userTimeZone"); } }
+        private string? _explicitNullValueUserTimeZone = default!;
 #nullable restore
 #else
-        public string UserTimeZone { get; set; }
+        public string UserTimeZone { get => _explicitNullValueUserTimeZone; set { _explicitNullValueUserTimeZone = value; AdditionalData?.Remove("userTimeZone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userTimeZone"); else _explicitNullProperties?.Remove("userTimeZone"); } }
+        private string _explicitNullValueUserTimeZone = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CmsAuditLoggingExportSettings"/> and sets the default values.
@@ -79,7 +121,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.CmsAuditLoggingExportSettings CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.CmsAuditLoggingExportSettings();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.CmsAuditLoggingExportSettings(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -91,7 +133,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "filters", n => { Filters = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CmsAuditLoggingExportFilters>(global::Soenneker.HubSpot.OpenApiClient.Models.CmsAuditLoggingExportFilters.CreateFromDiscriminatorValue); } },
-                { "format", n => { Format = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CmsAuditLoggingExportSettingsFormat>(); } },
+                { "format", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CmsAuditLoggingExportSettingsFormat>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFormat = default; _explicitNullProperties?.Remove("format"); AdditionalData["format"] = unknown; } else { Format = parsed; AdditionalData.Remove("format"); } } },
                 { "partition", n => { Partition = n.GetIntValue(); } },
                 { "portalId", n => { PortalId = n.GetIntValue(); } },
                 { "recipientUserIds", n => { RecipientUserIds = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
@@ -118,6 +160,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("type", Type);
             writer.WriteIntValue("userId", UserId);
             writer.WriteStringValue("userTimeZone", UserTimeZone);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

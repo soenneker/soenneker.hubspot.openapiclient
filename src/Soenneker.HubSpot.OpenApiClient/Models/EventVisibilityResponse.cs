@@ -11,18 +11,32 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class EventVisibilityResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("createdAt") is null) { _explicitNullValueCreatedAt = default!; _explicitNullProperties?.Remove("createdAt"); }
+            else if (parseNode.GetChildNode("createdAt") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("visibilitySettings") is null) { _explicitNullValueVisibilitySettings = default!; _explicitNullProperties?.Remove("visibilitySettings"); }
+            else if (parseNode.GetChildNode("visibilitySettings") is { } nullNodeVisibilitySettings && nullNodeVisibilitySettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VisibilitySettings = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The date and time when the visibility settings were created, in ISO 8601 format.</summary>
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; AdditionalData?.Remove("createdAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createdAt"); else _explicitNullProperties?.Remove("createdAt"); } }
+        private DateTimeOffset? _explicitNullValueCreatedAt = default!;
         /// <summary>An object containing the visibility settings for events. The specific structure and properties of this object are not detailed in the provided specification.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.EventVisibilityChange>? VisibilitySettings { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.EventVisibilityChange>? VisibilitySettings { get => _explicitNullValueVisibilitySettings; set { _explicitNullValueVisibilitySettings = value; AdditionalData?.Remove("visibilitySettings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visibilitySettings"); else _explicitNullProperties?.Remove("visibilitySettings"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.EventVisibilityChange>? _explicitNullValueVisibilitySettings = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.EventVisibilityChange> VisibilitySettings { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.EventVisibilityChange> VisibilitySettings { get => _explicitNullValueVisibilitySettings; set { _explicitNullValueVisibilitySettings = value; AdditionalData?.Remove("visibilitySettings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visibilitySettings"); else _explicitNullProperties?.Remove("visibilitySettings"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.EventVisibilityChange> _explicitNullValueVisibilitySettings = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.EventVisibilityResponse"/> and sets the default values.
@@ -39,7 +53,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.EventVisibilityResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.EventVisibilityResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.EventVisibilityResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -62,6 +76,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.EventVisibilityChange>("visibilitySettings", VisibilitySettings);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,26 +11,44 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicAssociationDefinitionUpdateRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("associationTypeId") is null) { _explicitNullValueAssociationTypeId = default!; _explicitNullProperties?.Remove("associationTypeId"); }
+            else if (parseNode.GetChildNode("associationTypeId") is { } nullNodeAssociationTypeId && nullNodeAssociationTypeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssociationTypeId = null;
+            if (parseNode.GetChildNode("inverseLabel") is null) { _explicitNullValueInverseLabel = default!; _explicitNullProperties?.Remove("inverseLabel"); }
+            else if (parseNode.GetChildNode("inverseLabel") is { } nullNodeInverseLabel && nullNodeInverseLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InverseLabel = null;
+            if (parseNode.GetChildNode("label") is null) { _explicitNullValueLabel = default!; _explicitNullProperties?.Remove("label"); }
+            else if (parseNode.GetChildNode("label") is { } nullNodeLabel && nullNodeLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Label = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An integer representing the unique identifier for the association type.</summary>
-        public int? AssociationTypeId { get; set; }
+        public int? AssociationTypeId { get => _explicitNullValueAssociationTypeId; set { _explicitNullValueAssociationTypeId = value; AdditionalData?.Remove("associationTypeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("associationTypeId"); else _explicitNullProperties?.Remove("associationTypeId"); } }
+        private int? _explicitNullValueAssociationTypeId = default!;
         /// <summary>A string representing the inverse label for the association.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InverseLabel { get; set; }
+        public string? InverseLabel { get => _explicitNullValueInverseLabel; set { _explicitNullValueInverseLabel = value; AdditionalData?.Remove("inverseLabel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inverseLabel"); else _explicitNullProperties?.Remove("inverseLabel"); } }
+        private string? _explicitNullValueInverseLabel = default!;
 #nullable restore
 #else
-        public string InverseLabel { get; set; }
+        public string InverseLabel { get => _explicitNullValueInverseLabel; set { _explicitNullValueInverseLabel = value; AdditionalData?.Remove("inverseLabel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inverseLabel"); else _explicitNullProperties?.Remove("inverseLabel"); } }
+        private string _explicitNullValueInverseLabel = default!;
 #endif
         /// <summary>A string representing the label for the association.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Label { get; set; }
+        public string? Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; AdditionalData?.Remove("label"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
+        private string? _explicitNullValueLabel = default!;
 #nullable restore
 #else
-        public string Label { get; set; }
+        public string Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; AdditionalData?.Remove("label"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
+        private string _explicitNullValueLabel = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationDefinitionUpdateRequest"/> and sets the default values.
@@ -47,7 +65,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationDefinitionUpdateRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationDefinitionUpdateRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationDefinitionUpdateRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -72,6 +90,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteIntValue("associationTypeId", AssociationTypeId);
             writer.WriteStringValue("inverseLabel", InverseLabel);
             writer.WriteStringValue("label", Label);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

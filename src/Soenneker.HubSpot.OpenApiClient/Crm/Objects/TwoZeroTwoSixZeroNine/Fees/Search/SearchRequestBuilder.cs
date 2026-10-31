@@ -51,7 +51,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroNine.Fees
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CrmCollectionResponseWithTotalSimplePublicObject16>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CrmCollectionResponseWithTotalSimplePublicObject16.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CrmCollectionResponseWithTotalSimplePublicObject16>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CrmCollectionResponseWithTotalSimplePublicObject16.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Perform a search for CRM objects of a specified type using various filters and criteria. This endpoint allows you to retrieve objects based on specific properties and conditions, providing flexibility in querying your CRM data.

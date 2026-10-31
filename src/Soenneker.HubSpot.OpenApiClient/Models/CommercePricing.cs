@@ -11,19 +11,33 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CommercePricing : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("prices") is null) { _explicitNullValuePrices = default!; _explicitNullProperties?.Remove("prices"); }
+            else if (parseNode.GetChildNode("prices") is { } nullNodePrices && nullNodePrices.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Prices = null;
+            if (parseNode.GetChildNode("pricingModel") is null) { _explicitNullValuePricingModel = default!; _explicitNullProperties?.Remove("pricingModel"); }
+            else if (parseNode.GetChildNode("pricingModel") is { } nullNodePricingModel && nullNodePricingModel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PricingModel = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An array of price entries, each detailing the amount and currency for a specific pricing tier.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CommercePriceEntry>? Prices { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CommercePriceEntry>? Prices { get => _explicitNullValuePrices; set { _explicitNullValuePrices = value; AdditionalData?.Remove("prices"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prices"); else _explicitNullProperties?.Remove("prices"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.CommercePriceEntry>? _explicitNullValuePrices = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CommercePriceEntry> Prices { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CommercePriceEntry> Prices { get => _explicitNullValuePrices; set { _explicitNullValuePrices = value; AdditionalData?.Remove("prices"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prices"); else _explicitNullProperties?.Remove("prices"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.CommercePriceEntry> _explicitNullValuePrices = default!;
 #endif
         /// <summary>The type of pricing model applied, which can be one of the following: &apos;FLAT&apos;, &apos;GRADUATED&apos;, &apos;STAIRSTEP&apos;, or &apos;VOLUME&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CommercePricingPricingModel? PricingModel { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CommercePricingPricingModel? PricingModel { get => _explicitNullValuePricingModel; set { _explicitNullValuePricingModel = value; AdditionalData?.Remove("pricingModel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pricingModel"); else _explicitNullProperties?.Remove("pricingModel"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CommercePricingPricingModel? _explicitNullValuePricingModel = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CommercePricing"/> and sets the default values.
         /// </summary>
@@ -39,7 +53,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.CommercePricing CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.CommercePricing();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.CommercePricing(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -50,7 +64,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "prices", n => { Prices = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CommercePriceEntry>(global::Soenneker.HubSpot.OpenApiClient.Models.CommercePriceEntry.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "pricingModel", n => { PricingModel = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CommercePricingPricingModel>(); } },
+                { "pricingModel", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CommercePricingPricingModel>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePricingModel = default; _explicitNullProperties?.Remove("pricingModel"); AdditionalData["pricingModel"] = unknown; } else { PricingModel = parsed; AdditionalData.Remove("pricingModel"); } } },
             };
         }
         /// <summary>
@@ -62,6 +76,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CommercePriceEntry>("prices", Prices);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CommercePricingPricingModel>("pricingModel", PricingModel);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

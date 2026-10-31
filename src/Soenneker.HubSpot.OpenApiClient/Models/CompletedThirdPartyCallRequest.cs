@@ -11,59 +11,101 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CompletedThirdPartyCallRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("callStartedTimestamp") is null) { _explicitNullValueCallStartedTimestamp = default!; _explicitNullProperties?.Remove("callStartedTimestamp"); }
+            else if (parseNode.GetChildNode("callStartedTimestamp") is { } nullNodeCallStartedTimestamp && nullNodeCallStartedTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallStartedTimestamp = null;
+            if (parseNode.GetChildNode("createEngagement") is null) { _explicitNullValueCreateEngagement = default!; _explicitNullProperties?.Remove("createEngagement"); }
+            else if (parseNode.GetChildNode("createEngagement") is { } nullNodeCreateEngagement && nullNodeCreateEngagement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateEngagement = null;
+            if (parseNode.GetChildNode("durationSeconds") is null) { _explicitNullValueDurationSeconds = default!; _explicitNullProperties?.Remove("durationSeconds"); }
+            else if (parseNode.GetChildNode("durationSeconds") is { } nullNodeDurationSeconds && nullNodeDurationSeconds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DurationSeconds = null;
+            if (parseNode.GetChildNode("engagementProperties") is null) { _explicitNullValueEngagementProperties = default!; _explicitNullProperties?.Remove("engagementProperties"); }
+            else if (parseNode.GetChildNode("engagementProperties") is { } nullNodeEngagementProperties && nullNodeEngagementProperties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EngagementProperties = null;
+            if (parseNode.GetChildNode("externalCallId") is null) { _explicitNullValueExternalCallId = default!; _explicitNullProperties?.Remove("externalCallId"); }
+            else if (parseNode.GetChildNode("externalCallId") is { } nullNodeExternalCallId && nullNodeExternalCallId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalCallId = null;
+            if (parseNode.GetChildNode("finalCallStatus") is null) { _explicitNullValueFinalCallStatus = default!; _explicitNullProperties?.Remove("finalCallStatus"); }
+            else if (parseNode.GetChildNode("finalCallStatus") is { } nullNodeFinalCallStatus && nullNodeFinalCallStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FinalCallStatus = null;
+            if (parseNode.GetChildNode("fromNumber") is null) { _explicitNullValueFromNumber = default!; _explicitNullProperties?.Remove("fromNumber"); }
+            else if (parseNode.GetChildNode("fromNumber") is { } nullNodeFromNumber && nullNodeFromNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FromNumber = null;
+            if (parseNode.GetChildNode("potentialRecipientUserIds") is null) { _explicitNullValuePotentialRecipientUserIds = default!; _explicitNullProperties?.Remove("potentialRecipientUserIds"); }
+            else if (parseNode.GetChildNode("potentialRecipientUserIds") is { } nullNodePotentialRecipientUserIds && nullNodePotentialRecipientUserIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PotentialRecipientUserIds = null;
+            if (parseNode.GetChildNode("toNumber") is null) { _explicitNullValueToNumber = default!; _explicitNullProperties?.Remove("toNumber"); }
+            else if (parseNode.GetChildNode("toNumber") is { } nullNodeToNumber && nullNodeToNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToNumber = null;
+            if (parseNode.GetChildNode("userId") is null) { _explicitNullValueUserId = default!; _explicitNullProperties?.Remove("userId"); }
+            else if (parseNode.GetChildNode("userId") is { } nullNodeUserId && nullNodeUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The timestamp indicating when the call started, formatted as a date-time string.</summary>
-        public DateTimeOffset? CallStartedTimestamp { get; set; }
+        public DateTimeOffset? CallStartedTimestamp { get => _explicitNullValueCallStartedTimestamp; set { _explicitNullValueCallStartedTimestamp = value; AdditionalData?.Remove("callStartedTimestamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callStartedTimestamp"); else _explicitNullProperties?.Remove("callStartedTimestamp"); } }
+        private DateTimeOffset? _explicitNullValueCallStartedTimestamp = default!;
         /// <summary>Indicates whether an engagement should be created for the call.</summary>
-        public bool? CreateEngagement { get; set; }
+        public bool? CreateEngagement { get => _explicitNullValueCreateEngagement; set { _explicitNullValueCreateEngagement = value; AdditionalData?.Remove("createEngagement"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createEngagement"); else _explicitNullProperties?.Remove("createEngagement"); } }
+        private bool? _explicitNullValueCreateEngagement = default!;
         /// <summary>The duration of the call in seconds.</summary>
-        public int? DurationSeconds { get; set; }
+        public int? DurationSeconds { get => _explicitNullValueDurationSeconds; set { _explicitNullValueDurationSeconds = value; AdditionalData?.Remove("durationSeconds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("durationSeconds"); else _explicitNullProperties?.Remove("durationSeconds"); } }
+        private int? _explicitNullValueDurationSeconds = default!;
         /// <summary>Contains additional properties related to the engagement.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequestEngagementPropertiesProperty2? EngagementProperties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequestEngagementPropertiesProperty2? EngagementProperties { get => _explicitNullValueEngagementProperties; set { _explicitNullValueEngagementProperties = value; AdditionalData?.Remove("engagementProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("engagementProperties"); else _explicitNullProperties?.Remove("engagementProperties"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequestEngagementPropertiesProperty2? _explicitNullValueEngagementProperties = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequestEngagementPropertiesProperty2 EngagementProperties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequestEngagementPropertiesProperty2 EngagementProperties { get => _explicitNullValueEngagementProperties; set { _explicitNullValueEngagementProperties = value; AdditionalData?.Remove("engagementProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("engagementProperties"); else _explicitNullProperties?.Remove("engagementProperties"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequestEngagementPropertiesProperty2 _explicitNullValueEngagementProperties = default!;
 #endif
         /// <summary>The unique identifier for the call from an external system.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExternalCallId { get; set; }
+        public string? ExternalCallId { get => _explicitNullValueExternalCallId; set { _explicitNullValueExternalCallId = value; AdditionalData?.Remove("externalCallId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalCallId"); else _explicitNullProperties?.Remove("externalCallId"); } }
+        private string? _explicitNullValueExternalCallId = default!;
 #nullable restore
 #else
-        public string ExternalCallId { get; set; }
+        public string ExternalCallId { get => _explicitNullValueExternalCallId; set { _explicitNullValueExternalCallId = value; AdditionalData?.Remove("externalCallId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalCallId"); else _explicitNullProperties?.Remove("externalCallId"); } }
+        private string _explicitNullValueExternalCallId = default!;
 #endif
         /// <summary>The final status of the call, with accepted values including: BUSY, CALLING_CRM_USER, CANCELED, COMPLETED, CONNECTING, FAILED, HOLD, IN_PROGRESS, MISSED, NO_ANSWER, QUEUED, RINGING, UNKNOWN.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequestFinalCallStatus? FinalCallStatus { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequestFinalCallStatus? FinalCallStatus { get => _explicitNullValueFinalCallStatus; set { _explicitNullValueFinalCallStatus = value; AdditionalData?.Remove("finalCallStatus"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("finalCallStatus"); else _explicitNullProperties?.Remove("finalCallStatus"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequestFinalCallStatus? _explicitNullValueFinalCallStatus = default!;
         /// <summary>The fromNumber property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.FormattedPhoneNumber? FromNumber { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.FormattedPhoneNumber? FromNumber { get => _explicitNullValueFromNumber; set { _explicitNullValueFromNumber = value; AdditionalData?.Remove("fromNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fromNumber"); else _explicitNullProperties?.Remove("fromNumber"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.FormattedPhoneNumber? _explicitNullValueFromNumber = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.FormattedPhoneNumber FromNumber { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.FormattedPhoneNumber FromNumber { get => _explicitNullValueFromNumber; set { _explicitNullValueFromNumber = value; AdditionalData?.Remove("fromNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fromNumber"); else _explicitNullProperties?.Remove("fromNumber"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.FormattedPhoneNumber _explicitNullValueFromNumber = default!;
 #endif
         /// <summary>The potentialRecipientUserIds property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? PotentialRecipientUserIds { get; set; }
+        public List<int?>? PotentialRecipientUserIds { get => _explicitNullValuePotentialRecipientUserIds; set { _explicitNullValuePotentialRecipientUserIds = value; AdditionalData?.Remove("potentialRecipientUserIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("potentialRecipientUserIds"); else _explicitNullProperties?.Remove("potentialRecipientUserIds"); } }
+        private List<int?>? _explicitNullValuePotentialRecipientUserIds = default!;
 #nullable restore
 #else
-        public List<int?> PotentialRecipientUserIds { get; set; }
+        public List<int?> PotentialRecipientUserIds { get => _explicitNullValuePotentialRecipientUserIds; set { _explicitNullValuePotentialRecipientUserIds = value; AdditionalData?.Remove("potentialRecipientUserIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("potentialRecipientUserIds"); else _explicitNullProperties?.Remove("potentialRecipientUserIds"); } }
+        private List<int?> _explicitNullValuePotentialRecipientUserIds = default!;
 #endif
         /// <summary>The toNumber property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.FormattedPhoneNumber? ToNumber { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.FormattedPhoneNumber? ToNumber { get => _explicitNullValueToNumber; set { _explicitNullValueToNumber = value; AdditionalData?.Remove("toNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("toNumber"); else _explicitNullProperties?.Remove("toNumber"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.FormattedPhoneNumber? _explicitNullValueToNumber = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.FormattedPhoneNumber ToNumber { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.FormattedPhoneNumber ToNumber { get => _explicitNullValueToNumber; set { _explicitNullValueToNumber = value; AdditionalData?.Remove("toNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("toNumber"); else _explicitNullProperties?.Remove("toNumber"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.FormattedPhoneNumber _explicitNullValueToNumber = default!;
 #endif
         /// <summary>The ID of the user associated with the call.</summary>
-        public int? UserId { get; set; }
+        public int? UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; AdditionalData?.Remove("userId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userId"); else _explicitNullProperties?.Remove("userId"); } }
+        private int? _explicitNullValueUserId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequest"/> and sets the default values.
         /// </summary>
@@ -79,7 +121,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -94,7 +136,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "durationSeconds", n => { DurationSeconds = n.GetIntValue(); } },
                 { "engagementProperties", n => { EngagementProperties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequestEngagementPropertiesProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequestEngagementPropertiesProperty2.CreateFromDiscriminatorValue); } },
                 { "externalCallId", n => { ExternalCallId = n.GetStringValue(); } },
-                { "finalCallStatus", n => { FinalCallStatus = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequestFinalCallStatus>(); } },
+                { "finalCallStatus", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequestFinalCallStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFinalCallStatus = default; _explicitNullProperties?.Remove("finalCallStatus"); AdditionalData["finalCallStatus"] = unknown; } else { FinalCallStatus = parsed; AdditionalData.Remove("finalCallStatus"); } } },
                 { "fromNumber", n => { FromNumber = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.FormattedPhoneNumber>(global::Soenneker.HubSpot.OpenApiClient.Models.FormattedPhoneNumber.CreateFromDiscriminatorValue); } },
                 { "potentialRecipientUserIds", n => { PotentialRecipientUserIds = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
                 { "toNumber", n => { ToNumber = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.FormattedPhoneNumber>(global::Soenneker.HubSpot.OpenApiClient.Models.FormattedPhoneNumber.CreateFromDiscriminatorValue); } },
@@ -118,6 +160,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<int?>("potentialRecipientUserIds", PotentialRecipientUserIds);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.FormattedPhoneNumber>("toNumber", ToNumber);
             writer.WriteIntValue("userId", UserId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,15 +11,31 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class IntegerFieldSchema : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("maximum") is null) { _explicitNullValueMaximum = default!; _explicitNullProperties?.Remove("maximum"); }
+            else if (parseNode.GetChildNode("maximum") is { } nullNodeMaximum && nullNodeMaximum.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Maximum = null;
+            if (parseNode.GetChildNode("minimum") is null) { _explicitNullValueMinimum = default!; _explicitNullProperties?.Remove("minimum"); }
+            else if (parseNode.GetChildNode("minimum") is { } nullNodeMinimum && nullNodeMinimum.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Minimum = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The maximum value allowed for the integer field.</summary>
-        public int? Maximum { get; set; }
+        public int? Maximum { get => _explicitNullValueMaximum; set { _explicitNullValueMaximum = value; AdditionalData?.Remove("maximum"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maximum"); else _explicitNullProperties?.Remove("maximum"); } }
+        private int? _explicitNullValueMaximum = default!;
         /// <summary>The minimum value allowed for the integer field.</summary>
-        public int? Minimum { get; set; }
+        public int? Minimum { get => _explicitNullValueMinimum; set { _explicitNullValueMinimum = value; AdditionalData?.Remove("minimum"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum"); else _explicitNullProperties?.Remove("minimum"); } }
+        private int? _explicitNullValueMinimum = default!;
         /// <summary>The type of the field, which is set to INTEGER.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.IntegerType? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.IntegerType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.IntegerType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IntegerFieldSchema"/> and sets the default values.
         /// </summary>
@@ -35,7 +51,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.IntegerFieldSchema CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.IntegerFieldSchema();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.IntegerFieldSchema(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -47,7 +63,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "maximum", n => { Maximum = n.GetIntValue(); } },
                 { "minimum", n => { Minimum = n.GetIntValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.IntegerType>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.IntegerType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
         /// <summary>
@@ -60,6 +76,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteIntValue("maximum", Maximum);
             writer.WriteIntValue("minimum", Minimum);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.IntegerType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

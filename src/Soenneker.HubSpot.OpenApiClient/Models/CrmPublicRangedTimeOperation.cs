@@ -11,68 +11,109 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CrmPublicRangedTimeOperation : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("includeObjectsWithNoValueSet") is null) { _explicitNullValueIncludeObjectsWithNoValueSet = default!; _explicitNullProperties?.Remove("includeObjectsWithNoValueSet"); }
+            else if (parseNode.GetChildNode("includeObjectsWithNoValueSet") is { } nullNodeIncludeObjectsWithNoValueSet && nullNodeIncludeObjectsWithNoValueSet.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncludeObjectsWithNoValueSet = null;
+            if (parseNode.GetChildNode("lowerBoundEndpointBehavior") is null) { _explicitNullValueLowerBoundEndpointBehavior = default!; _explicitNullProperties?.Remove("lowerBoundEndpointBehavior"); }
+            else if (parseNode.GetChildNode("lowerBoundEndpointBehavior") is { } nullNodeLowerBoundEndpointBehavior && nullNodeLowerBoundEndpointBehavior.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LowerBoundEndpointBehavior = null;
+            if (parseNode.GetChildNode("lowerBoundTimePoint") is null) { _explicitNullValueLowerBoundTimePoint = default!; _explicitNullProperties?.Remove("lowerBoundTimePoint"); }
+            else if (parseNode.GetChildNode("lowerBoundTimePoint") is { } nullNodeLowerBoundTimePoint && nullNodeLowerBoundTimePoint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LowerBoundTimePoint = null;
+            if (parseNode.GetChildNode("operationType") is null) { _explicitNullValueOperationType = default!; _explicitNullProperties?.Remove("operationType"); }
+            else if (parseNode.GetChildNode("operationType") is { } nullNodeOperationType && nullNodeOperationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OperationType = null;
+            if (parseNode.GetChildNode("operator") is null) { _explicitNullValueOperator = default!; _explicitNullProperties?.Remove("operator"); }
+            else if (parseNode.GetChildNode("operator") is { } nullNodeOperator && nullNodeOperator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Operator = null;
+            if (parseNode.GetChildNode("propertyParser") is null) { _explicitNullValuePropertyParser = default!; _explicitNullProperties?.Remove("propertyParser"); }
+            else if (parseNode.GetChildNode("propertyParser") is { } nullNodePropertyParser && nullNodePropertyParser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PropertyParser = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("upperBoundEndpointBehavior") is null) { _explicitNullValueUpperBoundEndpointBehavior = default!; _explicitNullProperties?.Remove("upperBoundEndpointBehavior"); }
+            else if (parseNode.GetChildNode("upperBoundEndpointBehavior") is { } nullNodeUpperBoundEndpointBehavior && nullNodeUpperBoundEndpointBehavior.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpperBoundEndpointBehavior = null;
+            if (parseNode.GetChildNode("upperBoundTimePoint") is null) { _explicitNullValueUpperBoundTimePoint = default!; _explicitNullProperties?.Remove("upperBoundTimePoint"); }
+            else if (parseNode.GetChildNode("upperBoundTimePoint") is { } nullNodeUpperBoundTimePoint && nullNodeUpperBoundTimePoint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpperBoundTimePoint = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A boolean indicating whether to include objects that have no value set for the specified property.</summary>
-        public bool? IncludeObjectsWithNoValueSet { get; set; }
+        public bool? IncludeObjectsWithNoValueSet { get => _explicitNullValueIncludeObjectsWithNoValueSet; set { _explicitNullValueIncludeObjectsWithNoValueSet = value; AdditionalData?.Remove("includeObjectsWithNoValueSet"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("includeObjectsWithNoValueSet"); else _explicitNullProperties?.Remove("includeObjectsWithNoValueSet"); } }
+        private bool? _explicitNullValueIncludeObjectsWithNoValueSet = default!;
         /// <summary>A string specifying the behavior at the lower endpoint of the time range.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LowerBoundEndpointBehavior { get; set; }
+        public string? LowerBoundEndpointBehavior { get => _explicitNullValueLowerBoundEndpointBehavior; set { _explicitNullValueLowerBoundEndpointBehavior = value; AdditionalData?.Remove("lowerBoundEndpointBehavior"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lowerBoundEndpointBehavior"); else _explicitNullProperties?.Remove("lowerBoundEndpointBehavior"); } }
+        private string? _explicitNullValueLowerBoundEndpointBehavior = default!;
 #nullable restore
 #else
-        public string LowerBoundEndpointBehavior { get; set; }
+        public string LowerBoundEndpointBehavior { get => _explicitNullValueLowerBoundEndpointBehavior; set { _explicitNullValueLowerBoundEndpointBehavior = value; AdditionalData?.Remove("lowerBoundEndpointBehavior"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lowerBoundEndpointBehavior"); else _explicitNullProperties?.Remove("lowerBoundEndpointBehavior"); } }
+        private string _explicitNullValueLowerBoundEndpointBehavior = default!;
 #endif
         /// <summary>Defines the lower bound of the time range, which can be a date point, indexed time point, or property-referenced time.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperationLowerBoundTimePoint? LowerBoundTimePoint { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperationLowerBoundTimePoint? LowerBoundTimePoint { get => _explicitNullValueLowerBoundTimePoint; set { _explicitNullValueLowerBoundTimePoint = value; AdditionalData?.Remove("lowerBoundTimePoint"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lowerBoundTimePoint"); else _explicitNullProperties?.Remove("lowerBoundTimePoint"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperationLowerBoundTimePoint? _explicitNullValueLowerBoundTimePoint = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperationLowerBoundTimePoint LowerBoundTimePoint { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperationLowerBoundTimePoint LowerBoundTimePoint { get => _explicitNullValueLowerBoundTimePoint; set { _explicitNullValueLowerBoundTimePoint = value; AdditionalData?.Remove("lowerBoundTimePoint"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lowerBoundTimePoint"); else _explicitNullProperties?.Remove("lowerBoundTimePoint"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperationLowerBoundTimePoint _explicitNullValueLowerBoundTimePoint = default!;
 #endif
         /// <summary>A string representing the type of operation being performed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OperationType { get; set; }
+        public string? OperationType { get => _explicitNullValueOperationType; set { _explicitNullValueOperationType = value; AdditionalData?.Remove("operationType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operationType"); else _explicitNullProperties?.Remove("operationType"); } }
+        private string? _explicitNullValueOperationType = default!;
 #nullable restore
 #else
-        public string OperationType { get; set; }
+        public string OperationType { get => _explicitNullValueOperationType; set { _explicitNullValueOperationType = value; AdditionalData?.Remove("operationType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operationType"); else _explicitNullProperties?.Remove("operationType"); } }
+        private string _explicitNullValueOperationType = default!;
 #endif
         /// <summary>A string representing the operator used in the time-ranged operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Operator { get; set; }
+        public string? Operator { get => _explicitNullValueOperator; set { _explicitNullValueOperator = value; AdditionalData?.Remove("operator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator"); else _explicitNullProperties?.Remove("operator"); } }
+        private string? _explicitNullValueOperator = default!;
 #nullable restore
 #else
-        public string Operator { get; set; }
+        public string Operator { get => _explicitNullValueOperator; set { _explicitNullValueOperator = value; AdditionalData?.Remove("operator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator"); else _explicitNullProperties?.Remove("operator"); } }
+        private string _explicitNullValueOperator = default!;
 #endif
         /// <summary>A string indicating the parser used for the property in the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PropertyParser { get; set; }
+        public string? PropertyParser { get => _explicitNullValuePropertyParser; set { _explicitNullValuePropertyParser = value; AdditionalData?.Remove("propertyParser"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("propertyParser"); else _explicitNullProperties?.Remove("propertyParser"); } }
+        private string? _explicitNullValuePropertyParser = default!;
 #nullable restore
 #else
-        public string PropertyParser { get; set; }
+        public string PropertyParser { get => _explicitNullValuePropertyParser; set { _explicitNullValuePropertyParser = value; AdditionalData?.Remove("propertyParser"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("propertyParser"); else _explicitNullProperties?.Remove("propertyParser"); } }
+        private string _explicitNullValuePropertyParser = default!;
 #endif
         /// <summary>A string indicating the type of operation, defaulting to &apos;TIME_RANGED&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmTimeRangedType? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmTimeRangedType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmTimeRangedType? _explicitNullValueType = default!;
         /// <summary>A string specifying the behavior at the upper endpoint of the time range.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UpperBoundEndpointBehavior { get; set; }
+        public string? UpperBoundEndpointBehavior { get => _explicitNullValueUpperBoundEndpointBehavior; set { _explicitNullValueUpperBoundEndpointBehavior = value; AdditionalData?.Remove("upperBoundEndpointBehavior"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upperBoundEndpointBehavior"); else _explicitNullProperties?.Remove("upperBoundEndpointBehavior"); } }
+        private string? _explicitNullValueUpperBoundEndpointBehavior = default!;
 #nullable restore
 #else
-        public string UpperBoundEndpointBehavior { get; set; }
+        public string UpperBoundEndpointBehavior { get => _explicitNullValueUpperBoundEndpointBehavior; set { _explicitNullValueUpperBoundEndpointBehavior = value; AdditionalData?.Remove("upperBoundEndpointBehavior"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upperBoundEndpointBehavior"); else _explicitNullProperties?.Remove("upperBoundEndpointBehavior"); } }
+        private string _explicitNullValueUpperBoundEndpointBehavior = default!;
 #endif
         /// <summary>Defines the upper bound of the time range, which can be a date point, indexed time point, or property-referenced time.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperationUpperBoundTimePoint? UpperBoundTimePoint { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperationUpperBoundTimePoint? UpperBoundTimePoint { get => _explicitNullValueUpperBoundTimePoint; set { _explicitNullValueUpperBoundTimePoint = value; AdditionalData?.Remove("upperBoundTimePoint"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upperBoundTimePoint"); else _explicitNullProperties?.Remove("upperBoundTimePoint"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperationUpperBoundTimePoint? _explicitNullValueUpperBoundTimePoint = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperationUpperBoundTimePoint UpperBoundTimePoint { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperationUpperBoundTimePoint UpperBoundTimePoint { get => _explicitNullValueUpperBoundTimePoint; set { _explicitNullValueUpperBoundTimePoint = value; AdditionalData?.Remove("upperBoundTimePoint"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upperBoundTimePoint"); else _explicitNullProperties?.Remove("upperBoundTimePoint"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperationUpperBoundTimePoint _explicitNullValueUpperBoundTimePoint = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperation"/> and sets the default values.
@@ -89,7 +130,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperation CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperation();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperation(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -105,7 +146,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "operationType", n => { OperationType = n.GetStringValue(); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
                 { "propertyParser", n => { PropertyParser = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmTimeRangedType>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmTimeRangedType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
                 { "upperBoundEndpointBehavior", n => { UpperBoundEndpointBehavior = n.GetStringValue(); } },
                 { "upperBoundTimePoint", n => { UpperBoundTimePoint = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperationUpperBoundTimePoint>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperationUpperBoundTimePoint.CreateFromDiscriminatorValue); } },
             };
@@ -126,6 +167,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmTimeRangedType>("type", Type);
             writer.WriteStringValue("upperBoundEndpointBehavior", UpperBoundEndpointBehavior);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedTimeOperationUpperBoundTimePoint>("upperBoundTimePoint", UpperBoundTimePoint);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -12,7 +12,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PublicAndFilterBranchFilterBranchesItem : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranch"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -79,35 +84,33 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranchFilterBranchesItem();
-            if("PublicAndFilterBranch".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.PublicAndFilterBranch = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranch();
-            }
-            else if("PublicAssociationFilterBranch".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.PublicAssociationFilterBranch = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationFilterBranch();
-            }
-            else if("PublicNotAllFilterBranch".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.PublicNotAllFilterBranch = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAllFilterBranch();
-            }
-            else if("PublicNotAnyFilterBranch".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.PublicNotAnyFilterBranch = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAnyFilterBranch();
-            }
-            else if("PublicOrFilterBranch".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.PublicOrFilterBranch = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicOrFilterBranch();
-            }
-            else if("PublicRestrictedFilterBranch".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.PublicRestrictedFilterBranch = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicRestrictedFilterBranch();
-            }
-            else if("PublicUnifiedEventsFilterBranch".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.PublicUnifiedEventsFilterBranch = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilterBranch();
-            }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => ((unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject)) && (unionPayload is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject shapeObject0 || (shapeObject0.GetValue() is var shapeMembers1 && (shapeMembers1.ContainsKey("filterBranchOperator") && shapeMembers1.ContainsKey("filterBranchType") && shapeMembers1.ContainsKey("filterBranches") && shapeMembers1.ContainsKey("filters") && (!shapeMembers1.ContainsKey("filterBranchOperator") || (((shapeMembers1["filterBranchOperator"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers1.ContainsKey("filterBranchType") || (((shapeMembers1["filterBranchType"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)) && ((shapeMembers1["filterBranchType"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal4 && "OR".Equals(literal4.GetValue(), global::System.StringComparison.Ordinal))))) && (!shapeMembers1.ContainsKey("filterBranches") || (((shapeMembers1["filterBranches"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray)))) && (!shapeMembers1.ContainsKey("filters") || (((shapeMembers1["filters"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray)))))))))();
+            bool matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => ((unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject)) && (unionPayload is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject shapeObject0 || (shapeObject0.GetValue() is var shapeMembers1 && (shapeMembers1.ContainsKey("filterBranchOperator") && shapeMembers1.ContainsKey("filterBranchType") && shapeMembers1.ContainsKey("filterBranches") && shapeMembers1.ContainsKey("filters") && (!shapeMembers1.ContainsKey("filterBranchOperator") || (((shapeMembers1["filterBranchOperator"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers1.ContainsKey("filterBranchType") || (((shapeMembers1["filterBranchType"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)) && ((shapeMembers1["filterBranchType"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal4 && "AND".Equals(literal4.GetValue(), global::System.StringComparison.Ordinal))))) && (!shapeMembers1.ContainsKey("filterBranches") || (((shapeMembers1["filterBranches"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray)))) && (!shapeMembers1.ContainsKey("filters") || (((shapeMembers1["filters"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray)))))))))();
+            bool matchesUnionBranch2 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => ((unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject)) && (unionPayload is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject shapeObject0 || (shapeObject0.GetValue() is var shapeMembers1 && (shapeMembers1.ContainsKey("filterBranchOperator") && shapeMembers1.ContainsKey("filterBranchType") && shapeMembers1.ContainsKey("filterBranches") && shapeMembers1.ContainsKey("filters") && (!shapeMembers1.ContainsKey("filterBranchOperator") || (((shapeMembers1["filterBranchOperator"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers1.ContainsKey("filterBranchType") || (((shapeMembers1["filterBranchType"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)) && ((shapeMembers1["filterBranchType"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal4 && "NOT_ALL".Equals(literal4.GetValue(), global::System.StringComparison.Ordinal))))) && (!shapeMembers1.ContainsKey("filterBranches") || (((shapeMembers1["filterBranches"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray)))) && (!shapeMembers1.ContainsKey("filters") || (((shapeMembers1["filters"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray)))))))))();
+            bool matchesUnionBranch3 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => ((unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject)) && (unionPayload is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject shapeObject0 || (shapeObject0.GetValue() is var shapeMembers1 && (shapeMembers1.ContainsKey("filterBranchOperator") && shapeMembers1.ContainsKey("filterBranchType") && shapeMembers1.ContainsKey("filterBranches") && shapeMembers1.ContainsKey("filters") && (!shapeMembers1.ContainsKey("filterBranchOperator") || (((shapeMembers1["filterBranchOperator"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers1.ContainsKey("filterBranchType") || (((shapeMembers1["filterBranchType"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)) && ((shapeMembers1["filterBranchType"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal4 && "NOT_ANY".Equals(literal4.GetValue(), global::System.StringComparison.Ordinal))))) && (!shapeMembers1.ContainsKey("filterBranches") || (((shapeMembers1["filterBranches"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray)))) && (!shapeMembers1.ContainsKey("filters") || (((shapeMembers1["filters"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray)))))))))();
+            bool matchesUnionBranch4 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => ((unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject)) && (unionPayload is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject shapeObject0 || (shapeObject0.GetValue() is var shapeMembers1 && (shapeMembers1.ContainsKey("filterBranchOperator") && shapeMembers1.ContainsKey("filterBranchType") && shapeMembers1.ContainsKey("filterBranches") && shapeMembers1.ContainsKey("filters") && (!shapeMembers1.ContainsKey("filterBranchOperator") || (((shapeMembers1["filterBranchOperator"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers1.ContainsKey("filterBranchType") || (((shapeMembers1["filterBranchType"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)) && ((shapeMembers1["filterBranchType"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal4 && "RESTRICTED".Equals(literal4.GetValue(), global::System.StringComparison.Ordinal))))) && (!shapeMembers1.ContainsKey("filterBranches") || (((shapeMembers1["filterBranches"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray)))) && (!shapeMembers1.ContainsKey("filters") || (((shapeMembers1["filters"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray)))))))))();
+            bool matchesUnionBranch5 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => ((unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject)) && (unionPayload is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject shapeObject0 || (shapeObject0.GetValue() is var shapeMembers1 && (shapeMembers1.ContainsKey("eventTypeId") && shapeMembers1.ContainsKey("filterBranchOperator") && shapeMembers1.ContainsKey("filterBranchType") && shapeMembers1.ContainsKey("filterBranches") && shapeMembers1.ContainsKey("filters") && shapeMembers1.ContainsKey("operator") && (!shapeMembers1.ContainsKey("eventTypeId") || (((shapeMembers1["eventTypeId"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers1.ContainsKey("filterBranchOperator") || (((shapeMembers1["filterBranchOperator"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers1.ContainsKey("filterBranchType") || (((shapeMembers1["filterBranchType"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)) && ((shapeMembers1["filterBranchType"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal149 && "UNIFIED_EVENTS".Equals(literal149.GetValue(), global::System.StringComparison.Ordinal))))) && (!shapeMembers1.ContainsKey("filterBranches") || (((shapeMembers1["filterBranches"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray)))) && (!shapeMembers1.ContainsKey("filters") || (((shapeMembers1["filters"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray)))) && (!shapeMembers1.ContainsKey("operator") || (((shapeMembers1["operator"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)) && ((shapeMembers1["operator"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal156 && "HAS_COMPLETED".Equals(literal156.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["operator"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal157 && "HAS_NOT_COMPLETED".Equals(literal157.GetValue(), global::System.StringComparison.Ordinal))))))))))();
+            bool matchesUnionBranch6 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => ((unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject)) && (unionPayload is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject shapeObject0 || (shapeObject0.GetValue() is var shapeMembers1 && (shapeMembers1.ContainsKey("associationCategory") && shapeMembers1.ContainsKey("associationTypeId") && shapeMembers1.ContainsKey("filterBranchOperator") && shapeMembers1.ContainsKey("filterBranchType") && shapeMembers1.ContainsKey("filterBranches") && shapeMembers1.ContainsKey("filters") && shapeMembers1.ContainsKey("objectTypeId") && shapeMembers1.ContainsKey("operator") && (!shapeMembers1.ContainsKey("associationCategory") || (((shapeMembers1["associationCategory"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers1.ContainsKey("associationTypeId") || ((((shapeMembers1["associationTypeId"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedInteger or global::Microsoft.Kiota.Abstractions.Serialization.UntypedLong || (shapeMembers1["associationTypeId"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedDouble integral4 && integral4.GetValue() % 1 == 0) || (shapeMembers1["associationTypeId"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedDecimal integral5 && integral5.GetValue() % 1 == 0) || (shapeMembers1["associationTypeId"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedFloat integral6 && integral6.GetValue() % 1 == 0)))))) && (!shapeMembers1.ContainsKey("filterBranchOperator") || (((shapeMembers1["filterBranchOperator"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers1.ContainsKey("filterBranchType") || (((shapeMembers1["filterBranchType"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)) && ((shapeMembers1["filterBranchType"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal11 && "ASSOCIATION".Equals(literal11.GetValue(), global::System.StringComparison.Ordinal))))) && (!shapeMembers1.ContainsKey("filterBranches") || (((shapeMembers1["filterBranches"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray)))) && (!shapeMembers1.ContainsKey("filters") || (((shapeMembers1["filters"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray)))) && (!shapeMembers1.ContainsKey("objectTypeId") || (((shapeMembers1["objectTypeId"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers1.ContainsKey("operator") || (((shapeMembers1["operator"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))))))))();
+            int matchingUnionBranches = 0;
+            if (matchesUnionBranch0) matchingUnionBranches++;
+            if (matchesUnionBranch1) matchingUnionBranches++;
+            if (matchesUnionBranch2) matchingUnionBranches++;
+            if (matchesUnionBranch3) matchingUnionBranches++;
+            if (matchesUnionBranch4) matchingUnionBranches++;
+            if (matchesUnionBranch5) matchingUnionBranches++;
+            if (matchesUnionBranch6) matchingUnionBranches++;
+            bool noSelectedUnionBranch = result.PublicAndFilterBranch == null && result.PublicAssociationFilterBranch == null && result.PublicNotAllFilterBranch == null && result.PublicNotAnyFilterBranch == null && result.PublicOrFilterBranch == null && result.PublicRestrictedFilterBranch == null && result.PublicUnifiedEventsFilterBranch == null;
+            if (noSelectedUnionBranch && matchesUnionBranch0 && matchingUnionBranches == 1) result.PublicOrFilterBranch = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicOrFilterBranch(), parseNode);
+            if (noSelectedUnionBranch && matchesUnionBranch1 && matchingUnionBranches == 1) result.PublicAndFilterBranch = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranch(), parseNode);
+            if (noSelectedUnionBranch && matchesUnionBranch2 && matchingUnionBranches == 1) result.PublicNotAllFilterBranch = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAllFilterBranch(), parseNode);
+            if (noSelectedUnionBranch && matchesUnionBranch3 && matchingUnionBranches == 1) result.PublicNotAnyFilterBranch = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAnyFilterBranch(), parseNode);
+            if (noSelectedUnionBranch && matchesUnionBranch4 && matchingUnionBranches == 1) result.PublicRestrictedFilterBranch = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicRestrictedFilterBranch(), parseNode);
+            if (noSelectedUnionBranch && matchesUnionBranch5 && matchingUnionBranches == 1) result.PublicUnifiedEventsFilterBranch = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilterBranch(), parseNode);
+            if (noSelectedUnionBranch && matchesUnionBranch6 && matchingUnionBranches == 1) result.PublicAssociationFilterBranch = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationFilterBranch(), parseNode);
+            if (result.PublicAndFilterBranch == null && result.PublicAssociationFilterBranch == null && result.PublicNotAllFilterBranch == null && result.PublicNotAnyFilterBranch == null && result.PublicOrFilterBranch == null && result.PublicRestrictedFilterBranch == null && result.PublicUnifiedEventsFilterBranch == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -115,6 +118,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
+            if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawFields) { var fields = new global::System.Collections.Generic.Dictionary<string, global::System.Action<IParseNode>>(); foreach (var entry in rawFields.GetValue()) fields[entry.Key] = _ => { }; return fields; }
+
             if(PublicAndFilterBranch != null)
             {
                 return PublicAndFilterBranch.GetFieldDeserializers();
@@ -151,33 +156,43 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (PublicAndFilterBranch == null && PublicAssociationFilterBranch == null && PublicNotAllFilterBranch == null && PublicNotAnyFilterBranch == null && PublicOrFilterBranch == null && PublicRestrictedFilterBranch == null && PublicUnifiedEventsFilterBranch == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(PublicAndFilterBranch != null)
             {
+                if (PublicAndFilterBranch is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranch>(null, PublicAndFilterBranch);
             }
             else if(PublicAssociationFilterBranch != null)
             {
+                if (PublicAssociationFilterBranch is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationFilterBranch>(null, PublicAssociationFilterBranch);
             }
             else if(PublicNotAllFilterBranch != null)
             {
+                if (PublicNotAllFilterBranch is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAllFilterBranch>(null, PublicNotAllFilterBranch);
             }
             else if(PublicNotAnyFilterBranch != null)
             {
+                if (PublicNotAnyFilterBranch is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicNotAnyFilterBranch>(null, PublicNotAnyFilterBranch);
             }
             else if(PublicOrFilterBranch != null)
             {
+                if (PublicOrFilterBranch is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicOrFilterBranch>(null, PublicOrFilterBranch);
             }
             else if(PublicRestrictedFilterBranch != null)
             {
+                if (PublicRestrictedFilterBranch is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRestrictedFilterBranch>(null, PublicRestrictedFilterBranch);
             }
             else if(PublicUnifiedEventsFilterBranch != null)
             {
+                if (PublicUnifiedEventsFilterBranch is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicUnifiedEventsFilterBranch>(null, PublicUnifiedEventsFilterBranch);
             }
         }

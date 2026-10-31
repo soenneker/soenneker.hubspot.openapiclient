@@ -11,17 +11,36 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PropertyModificationMetadata : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("archivable") is null) { _explicitNullValueArchivable = default!; _explicitNullProperties?.Remove("archivable"); }
+            else if (parseNode.GetChildNode("archivable") is { } nullNodeArchivable && nullNodeArchivable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Archivable = null;
+            if (parseNode.GetChildNode("readOnlyDefinition") is null) { _explicitNullValueReadOnlyDefinition = default!; _explicitNullProperties?.Remove("readOnlyDefinition"); }
+            else if (parseNode.GetChildNode("readOnlyDefinition") is { } nullNodeReadOnlyDefinition && nullNodeReadOnlyDefinition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReadOnlyDefinition = null;
+            if (parseNode.GetChildNode("readOnlyOptions") is null) { _explicitNullValueReadOnlyOptions = default!; _explicitNullProperties?.Remove("readOnlyOptions"); }
+            else if (parseNode.GetChildNode("readOnlyOptions") is { } nullNodeReadOnlyOptions && nullNodeReadOnlyOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReadOnlyOptions = null;
+            if (parseNode.GetChildNode("readOnlyValue") is null) { _explicitNullValueReadOnlyValue = default!; _explicitNullProperties?.Remove("readOnlyValue"); }
+            else if (parseNode.GetChildNode("readOnlyValue") is { } nullNodeReadOnlyValue && nullNodeReadOnlyValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReadOnlyValue = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A boolean indicating whether the property can be archived.</summary>
-        public bool? Archivable { get; set; }
+        public bool? Archivable { get => _explicitNullValueArchivable; set { _explicitNullValueArchivable = value; AdditionalData?.Remove("archivable"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("archivable"); else _explicitNullProperties?.Remove("archivable"); } }
+        private bool? _explicitNullValueArchivable = default!;
         /// <summary>A boolean indicating if the property&apos;s definition is read-only, meaning it cannot be modified.</summary>
-        public bool? ReadOnlyDefinition { get; set; }
+        public bool? ReadOnlyDefinition { get => _explicitNullValueReadOnlyDefinition; set { _explicitNullValueReadOnlyDefinition = value; AdditionalData?.Remove("readOnlyDefinition"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("readOnlyDefinition"); else _explicitNullProperties?.Remove("readOnlyDefinition"); } }
+        private bool? _explicitNullValueReadOnlyDefinition = default!;
         /// <summary>A boolean indicating if the options for the property are read-only.</summary>
-        public bool? ReadOnlyOptions { get; set; }
+        public bool? ReadOnlyOptions { get => _explicitNullValueReadOnlyOptions; set { _explicitNullValueReadOnlyOptions = value; AdditionalData?.Remove("readOnlyOptions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("readOnlyOptions"); else _explicitNullProperties?.Remove("readOnlyOptions"); } }
+        private bool? _explicitNullValueReadOnlyOptions = default!;
         /// <summary>A boolean indicating if the property&apos;s value is read-only, meaning it cannot be changed.</summary>
-        public bool? ReadOnlyValue { get; set; }
+        public bool? ReadOnlyValue { get => _explicitNullValueReadOnlyValue; set { _explicitNullValueReadOnlyValue = value; AdditionalData?.Remove("readOnlyValue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("readOnlyValue"); else _explicitNullProperties?.Remove("readOnlyValue"); } }
+        private bool? _explicitNullValueReadOnlyValue = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PropertyModificationMetadata"/> and sets the default values.
         /// </summary>
@@ -37,7 +56,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PropertyModificationMetadata CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PropertyModificationMetadata();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PropertyModificationMetadata(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -64,6 +83,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteBoolValue("readOnlyDefinition", ReadOnlyDefinition);
             writer.WriteBoolValue("readOnlyOptions", ReadOnlyOptions);
             writer.WriteBoolValue("readOnlyValue", ReadOnlyValue);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

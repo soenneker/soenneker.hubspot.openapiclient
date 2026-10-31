@@ -25,7 +25,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Files.TwoZeroTwoSixZeroNine.Folders
             get => new global::Soenneker.HubSpot.OpenApiClient.Files.TwoZeroTwoSixZeroNine.Folders.Search.SearchRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.files.TwoZeroTwoSixZeroNine.folders.item collection</summary>
-        /// <param name="position">The ID of the folder to retrieve.</param>
+        /// <param name="position">The ID of the folder to retrieve.The path of the folder to retrieve.</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Files.TwoZeroTwoSixZeroNine.Folders.Item.WithFolderItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Files.TwoZeroTwoSixZeroNine.Folders.Item.WithFolderItemRequestBuilder this[string position]
         {
@@ -70,7 +70,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Files.TwoZeroTwoSixZeroNine.Folders
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Folder>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Folder.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Folder>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Folder.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Create a new folder in the HubSpot file manager. This endpoint allows you to organize files by creating folders, which can be nested within other folders by specifying a parent folder ID or path.

@@ -11,19 +11,33 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PreResolvedContact : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("contactPropertiesLeadingToMatch") is null) { _explicitNullValueContactPropertiesLeadingToMatch = default!; _explicitNullProperties?.Remove("contactPropertiesLeadingToMatch"); }
+            else if (parseNode.GetChildNode("contactPropertiesLeadingToMatch") is { } nullNodeContactPropertiesLeadingToMatch && nullNodeContactPropertiesLeadingToMatch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactPropertiesLeadingToMatch = null;
+            if (parseNode.GetChildNode("contactVid") is null) { _explicitNullValueContactVid = default!; _explicitNullProperties?.Remove("contactVid"); }
+            else if (parseNode.GetChildNode("contactVid") is { } nullNodeContactVid && nullNodeContactVid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactVid = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An array of strings indicating the properties that were used to match and identify the contact. Valid values include various contact attributes such as &apos;email&apos;, &apos;firstname&apos;, &apos;lastname&apos;, and many more.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PreResolvedContactContactPropertiesLeadingToMatchItem?>? ContactPropertiesLeadingToMatch { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PreResolvedContactContactPropertiesLeadingToMatchItem?>? ContactPropertiesLeadingToMatch { get => _explicitNullValueContactPropertiesLeadingToMatch; set { _explicitNullValueContactPropertiesLeadingToMatch = value; AdditionalData?.Remove("contactPropertiesLeadingToMatch"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactPropertiesLeadingToMatch"); else _explicitNullProperties?.Remove("contactPropertiesLeadingToMatch"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PreResolvedContactContactPropertiesLeadingToMatchItem?>? _explicitNullValueContactPropertiesLeadingToMatch = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PreResolvedContactContactPropertiesLeadingToMatchItem?> ContactPropertiesLeadingToMatch { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PreResolvedContactContactPropertiesLeadingToMatchItem?> ContactPropertiesLeadingToMatch { get => _explicitNullValueContactPropertiesLeadingToMatch; set { _explicitNullValueContactPropertiesLeadingToMatch = value; AdditionalData?.Remove("contactPropertiesLeadingToMatch"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactPropertiesLeadingToMatch"); else _explicitNullProperties?.Remove("contactPropertiesLeadingToMatch"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PreResolvedContactContactPropertiesLeadingToMatchItem?> _explicitNullValueContactPropertiesLeadingToMatch = default!;
 #endif
         /// <summary>The unique identifier for the contact, represented as an integer in int64 format.</summary>
-        public long? ContactVid { get; set; }
+        public long? ContactVid { get => _explicitNullValueContactVid; set { _explicitNullValueContactVid = value; AdditionalData?.Remove("contactVid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactVid"); else _explicitNullProperties?.Remove("contactVid"); } }
+        private long? _explicitNullValueContactVid = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PreResolvedContact"/> and sets the default values.
         /// </summary>
@@ -39,7 +53,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PreResolvedContact CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PreResolvedContact();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PreResolvedContact(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -62,6 +76,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.PreResolvedContactContactPropertiesLeadingToMatchItem>("contactPropertiesLeadingToMatch", ContactPropertiesLeadingToMatch);
             writer.WriteLongValue("contactVid", ContactVid);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,85 +11,134 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicUser : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("email") is null) { _explicitNullValueEmail = default!; _explicitNullProperties?.Remove("email"); }
+            else if (parseNode.GetChildNode("email") is { } nullNodeEmail && nullNodeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Email = null;
+            if (parseNode.GetChildNode("firstName") is null) { _explicitNullValueFirstName = default!; _explicitNullProperties?.Remove("firstName"); }
+            else if (parseNode.GetChildNode("firstName") is { } nullNodeFirstName && nullNodeFirstName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstName = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("lastName") is null) { _explicitNullValueLastName = default!; _explicitNullProperties?.Remove("lastName"); }
+            else if (parseNode.GetChildNode("lastName") is { } nullNodeLastName && nullNodeLastName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastName = null;
+            if (parseNode.GetChildNode("primaryTeamId") is null) { _explicitNullValuePrimaryTeamId = default!; _explicitNullProperties?.Remove("primaryTeamId"); }
+            else if (parseNode.GetChildNode("primaryTeamId") is { } nullNodePrimaryTeamId && nullNodePrimaryTeamId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimaryTeamId = null;
+            if (parseNode.GetChildNode("roleId") is null) { _explicitNullValueRoleId = default!; _explicitNullProperties?.Remove("roleId"); }
+            else if (parseNode.GetChildNode("roleId") is { } nullNodeRoleId && nullNodeRoleId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RoleId = null;
+            if (parseNode.GetChildNode("roleIds") is null) { _explicitNullValueRoleIds = default!; _explicitNullProperties?.Remove("roleIds"); }
+            else if (parseNode.GetChildNode("roleIds") is { } nullNodeRoleIds && nullNodeRoleIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RoleIds = null;
+            if (parseNode.GetChildNode("seatNames") is null) { _explicitNullValueSeatNames = default!; _explicitNullProperties?.Remove("seatNames"); }
+            else if (parseNode.GetChildNode("seatNames") is { } nullNodeSeatNames && nullNodeSeatNames.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SeatNames = null;
+            if (parseNode.GetChildNode("secondaryTeamIds") is null) { _explicitNullValueSecondaryTeamIds = default!; _explicitNullProperties?.Remove("secondaryTeamIds"); }
+            else if (parseNode.GetChildNode("secondaryTeamIds") is { } nullNodeSecondaryTeamIds && nullNodeSecondaryTeamIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecondaryTeamIds = null;
+            if (parseNode.GetChildNode("sendWelcomeEmail") is null) { _explicitNullValueSendWelcomeEmail = default!; _explicitNullProperties?.Remove("sendWelcomeEmail"); }
+            else if (parseNode.GetChildNode("sendWelcomeEmail") is { } nullNodeSendWelcomeEmail && nullNodeSendWelcomeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SendWelcomeEmail = null;
+            if (parseNode.GetChildNode("superAdmin") is null) { _explicitNullValueSuperAdmin = default!; _explicitNullProperties?.Remove("superAdmin"); }
+            else if (parseNode.GetChildNode("superAdmin") is { } nullNodeSuperAdmin && nullNodeSuperAdmin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SuperAdmin = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The email address of the user. This is a required field and must be unique.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Email { get; set; }
+        public string? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; AdditionalData?.Remove("email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        private string? _explicitNullValueEmail = default!;
 #nullable restore
 #else
-        public string Email { get; set; }
+        public string Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; AdditionalData?.Remove("email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        private string _explicitNullValueEmail = default!;
 #endif
         /// <summary>The first name of the user, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FirstName { get; set; }
+        public string? FirstName { get => _explicitNullValueFirstName; set { _explicitNullValueFirstName = value; AdditionalData?.Remove("firstName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("firstName"); else _explicitNullProperties?.Remove("firstName"); } }
+        private string? _explicitNullValueFirstName = default!;
 #nullable restore
 #else
-        public string FirstName { get; set; }
+        public string FirstName { get => _explicitNullValueFirstName; set { _explicitNullValueFirstName = value; AdditionalData?.Remove("firstName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("firstName"); else _explicitNullProperties?.Remove("firstName"); } }
+        private string _explicitNullValueFirstName = default!;
 #endif
         /// <summary>The unique identifier for the user, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The last name of the user, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LastName { get; set; }
+        public string? LastName { get => _explicitNullValueLastName; set { _explicitNullValueLastName = value; AdditionalData?.Remove("lastName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastName"); else _explicitNullProperties?.Remove("lastName"); } }
+        private string? _explicitNullValueLastName = default!;
 #nullable restore
 #else
-        public string LastName { get; set; }
+        public string LastName { get => _explicitNullValueLastName; set { _explicitNullValueLastName = value; AdditionalData?.Remove("lastName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastName"); else _explicitNullProperties?.Remove("lastName"); } }
+        private string _explicitNullValueLastName = default!;
 #endif
         /// <summary>The ID of the primary team to which the user belongs, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrimaryTeamId { get; set; }
+        public string? PrimaryTeamId { get => _explicitNullValuePrimaryTeamId; set { _explicitNullValuePrimaryTeamId = value; AdditionalData?.Remove("primaryTeamId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primaryTeamId"); else _explicitNullProperties?.Remove("primaryTeamId"); } }
+        private string? _explicitNullValuePrimaryTeamId = default!;
 #nullable restore
 #else
-        public string PrimaryTeamId { get; set; }
+        public string PrimaryTeamId { get => _explicitNullValuePrimaryTeamId; set { _explicitNullValuePrimaryTeamId = value; AdditionalData?.Remove("primaryTeamId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primaryTeamId"); else _explicitNullProperties?.Remove("primaryTeamId"); } }
+        private string _explicitNullValuePrimaryTeamId = default!;
 #endif
         /// <summary>A string representing a single role ID assigned to the user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RoleId { get; set; }
+        public string? RoleId { get => _explicitNullValueRoleId; set { _explicitNullValueRoleId = value; AdditionalData?.Remove("roleId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("roleId"); else _explicitNullProperties?.Remove("roleId"); } }
+        private string? _explicitNullValueRoleId = default!;
 #nullable restore
 #else
-        public string RoleId { get; set; }
+        public string RoleId { get => _explicitNullValueRoleId; set { _explicitNullValueRoleId = value; AdditionalData?.Remove("roleId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("roleId"); else _explicitNullProperties?.Remove("roleId"); } }
+        private string _explicitNullValueRoleId = default!;
 #endif
         /// <summary>An array of strings representing the IDs of the roles assigned to the user. This is a required field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? RoleIds { get; set; }
+        public List<string>? RoleIds { get => _explicitNullValueRoleIds; set { _explicitNullValueRoleIds = value; AdditionalData?.Remove("roleIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("roleIds"); else _explicitNullProperties?.Remove("roleIds"); } }
+        private List<string>? _explicitNullValueRoleIds = default!;
 #nullable restore
 #else
-        public List<string> RoleIds { get; set; }
+        public List<string> RoleIds { get => _explicitNullValueRoleIds; set { _explicitNullValueRoleIds = value; AdditionalData?.Remove("roleIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("roleIds"); else _explicitNullProperties?.Remove("roleIds"); } }
+        private List<string> _explicitNullValueRoleIds = default!;
 #endif
         /// <summary>An array of strings representing the names of seats assigned to the user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? SeatNames { get; set; }
+        public List<string>? SeatNames { get => _explicitNullValueSeatNames; set { _explicitNullValueSeatNames = value; AdditionalData?.Remove("seatNames"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seatNames"); else _explicitNullProperties?.Remove("seatNames"); } }
+        private List<string>? _explicitNullValueSeatNames = default!;
 #nullable restore
 #else
-        public List<string> SeatNames { get; set; }
+        public List<string> SeatNames { get => _explicitNullValueSeatNames; set { _explicitNullValueSeatNames = value; AdditionalData?.Remove("seatNames"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seatNames"); else _explicitNullProperties?.Remove("seatNames"); } }
+        private List<string> _explicitNullValueSeatNames = default!;
 #endif
         /// <summary>An array of strings representing the IDs of secondary teams to which the user is associated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? SecondaryTeamIds { get; set; }
+        public List<string>? SecondaryTeamIds { get => _explicitNullValueSecondaryTeamIds; set { _explicitNullValueSecondaryTeamIds = value; AdditionalData?.Remove("secondaryTeamIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondaryTeamIds"); else _explicitNullProperties?.Remove("secondaryTeamIds"); } }
+        private List<string>? _explicitNullValueSecondaryTeamIds = default!;
 #nullable restore
 #else
-        public List<string> SecondaryTeamIds { get; set; }
+        public List<string> SecondaryTeamIds { get => _explicitNullValueSecondaryTeamIds; set { _explicitNullValueSecondaryTeamIds = value; AdditionalData?.Remove("secondaryTeamIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondaryTeamIds"); else _explicitNullProperties?.Remove("secondaryTeamIds"); } }
+        private List<string> _explicitNullValueSecondaryTeamIds = default!;
 #endif
         /// <summary>A boolean indicating whether a welcome email should be sent to the user.</summary>
-        public bool? SendWelcomeEmail { get; set; }
+        public bool? SendWelcomeEmail { get => _explicitNullValueSendWelcomeEmail; set { _explicitNullValueSendWelcomeEmail = value; AdditionalData?.Remove("sendWelcomeEmail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sendWelcomeEmail"); else _explicitNullProperties?.Remove("sendWelcomeEmail"); } }
+        private bool? _explicitNullValueSendWelcomeEmail = default!;
         /// <summary>A boolean indicating whether the user has super admin privileges. This is a required field.</summary>
-        public bool? SuperAdmin { get; set; }
+        public bool? SuperAdmin { get => _explicitNullValueSuperAdmin; set { _explicitNullValueSuperAdmin = value; AdditionalData?.Remove("superAdmin"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("superAdmin"); else _explicitNullProperties?.Remove("superAdmin"); } }
+        private bool? _explicitNullValueSuperAdmin = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicUser"/> and sets the default values.
         /// </summary>
@@ -105,7 +154,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicUser CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicUser();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicUser(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -146,6 +195,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("secondaryTeamIds", SecondaryTeamIds);
             writer.WriteBoolValue("sendWelcomeEmail", SendWelcomeEmail);
             writer.WriteBoolValue("superAdmin", SuperAdmin);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

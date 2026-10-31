@@ -11,41 +11,80 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PaymentAccountView : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("canPayout") is null) { _explicitNullValueCanPayout = default!; _explicitNullProperties?.Remove("canPayout"); }
+            else if (parseNode.GetChildNode("canPayout") is { } nullNodeCanPayout && nullNodeCanPayout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanPayout = null;
+            if (parseNode.GetChildNode("canTransact") is null) { _explicitNullValueCanTransact = default!; _explicitNullProperties?.Remove("canTransact"); }
+            else if (parseNode.GetChildNode("canTransact") is { } nullNodeCanTransact && nullNodeCanTransact.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanTransact = null;
+            if (parseNode.GetChildNode("createdAt") is null) { _explicitNullValueCreatedAt = default!; _explicitNullProperties?.Remove("createdAt"); }
+            else if (parseNode.GetChildNode("createdAt") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("eligibleProcessorTypes") is null) { _explicitNullValueEligibleProcessorTypes = default!; _explicitNullProperties?.Remove("eligibleProcessorTypes"); }
+            else if (parseNode.GetChildNode("eligibleProcessorTypes") is { } nullNodeEligibleProcessorTypes && nullNodeEligibleProcessorTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EligibleProcessorTypes = null;
+            if (parseNode.GetChildNode("enrollmentState") is null) { _explicitNullValueEnrollmentState = default!; _explicitNullProperties?.Remove("enrollmentState"); }
+            else if (parseNode.GetChildNode("enrollmentState") is { } nullNodeEnrollmentState && nullNodeEnrollmentState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnrollmentState = null;
+            if (parseNode.GetChildNode("hasTransacted") is null) { _explicitNullValueHasTransacted = default!; _explicitNullProperties?.Remove("hasTransacted"); }
+            else if (parseNode.GetChildNode("hasTransacted") is { } nullNodeHasTransacted && nullNodeHasTransacted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasTransacted = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("lastTransactedAt") is null) { _explicitNullValueLastTransactedAt = default!; _explicitNullProperties?.Remove("lastTransactedAt"); }
+            else if (parseNode.GetChildNode("lastTransactedAt") is { } nullNodeLastTransactedAt && nullNodeLastTransactedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastTransactedAt = null;
+            if (parseNode.GetChildNode("processorType") is null) { _explicitNullValueProcessorType = default!; _explicitNullProperties?.Remove("processorType"); }
+            else if (parseNode.GetChildNode("processorType") is { } nullNodeProcessorType && nullNodeProcessorType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProcessorType = null;
+            if (parseNode.GetChildNode("updatedAt") is null) { _explicitNullValueUpdatedAt = default!; _explicitNullProperties?.Remove("updatedAt"); }
+            else if (parseNode.GetChildNode("updatedAt") is { } nullNodeUpdatedAt && nullNodeUpdatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdatedAt = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A boolean indicating whether the account is capable of making payouts.</summary>
-        public bool? CanPayout { get; set; }
+        public bool? CanPayout { get => _explicitNullValueCanPayout; set { _explicitNullValueCanPayout = value; AdditionalData?.Remove("canPayout"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canPayout"); else _explicitNullProperties?.Remove("canPayout"); } }
+        private bool? _explicitNullValueCanPayout = default!;
         /// <summary>A boolean indicating whether the account is capable of processing transactions.</summary>
-        public bool? CanTransact { get; set; }
+        public bool? CanTransact { get => _explicitNullValueCanTransact; set { _explicitNullValueCanTransact = value; AdditionalData?.Remove("canTransact"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canTransact"); else _explicitNullProperties?.Remove("canTransact"); } }
+        private bool? _explicitNullValueCanTransact = default!;
         /// <summary>The date and time when the payment account was created, in ISO 8601 format.</summary>
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; AdditionalData?.Remove("createdAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createdAt"); else _explicitNullProperties?.Remove("createdAt"); } }
+        private DateTimeOffset? _explicitNullValueCreatedAt = default!;
         /// <summary>An array of processor types that the account is eligible to use. Valid values include &apos;HS_PAYMENTS&apos;, and &apos;BYO_STRIPE&apos;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentAccountViewEligibleProcessorTypesItem?>? EligibleProcessorTypes { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentAccountViewEligibleProcessorTypesItem?>? EligibleProcessorTypes { get => _explicitNullValueEligibleProcessorTypes; set { _explicitNullValueEligibleProcessorTypes = value; AdditionalData?.Remove("eligibleProcessorTypes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eligibleProcessorTypes"); else _explicitNullProperties?.Remove("eligibleProcessorTypes"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentAccountViewEligibleProcessorTypesItem?>? _explicitNullValueEligibleProcessorTypes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentAccountViewEligibleProcessorTypesItem?> EligibleProcessorTypes { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentAccountViewEligibleProcessorTypesItem?> EligibleProcessorTypes { get => _explicitNullValueEligibleProcessorTypes; set { _explicitNullValueEligibleProcessorTypes = value; AdditionalData?.Remove("eligibleProcessorTypes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eligibleProcessorTypes"); else _explicitNullProperties?.Remove("eligibleProcessorTypes"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentAccountViewEligibleProcessorTypesItem?> _explicitNullValueEligibleProcessorTypes = default!;
 #endif
         /// <summary>The current enrollment state of the payment account. Valid values include &apos;NOT_STARTED&apos;, &apos;IN_PROGRESS&apos;, &apos;IN_UNDERWRITING&apos;, &apos;ACTIVE&apos;, &apos;SUSPENDED&apos;, &apos;REJECTED&apos;, &apos;OPTED_OUT&apos;, and &apos;DISCONNECTED&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PaymentAccountViewEnrollmentState? EnrollmentState { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PaymentAccountViewEnrollmentState? EnrollmentState { get => _explicitNullValueEnrollmentState; set { _explicitNullValueEnrollmentState = value; AdditionalData?.Remove("enrollmentState"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enrollmentState"); else _explicitNullProperties?.Remove("enrollmentState"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PaymentAccountViewEnrollmentState? _explicitNullValueEnrollmentState = default!;
         /// <summary>A boolean indicating whether the account has ever processed a transaction.</summary>
-        public bool? HasTransacted { get; set; }
+        public bool? HasTransacted { get => _explicitNullValueHasTransacted; set { _explicitNullValueHasTransacted = value; AdditionalData?.Remove("hasTransacted"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hasTransacted"); else _explicitNullProperties?.Remove("hasTransacted"); } }
+        private bool? _explicitNullValueHasTransacted = default!;
         /// <summary>The portalId for the payment account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The date and time of the last transaction made with this account, in ISO 8601 format.</summary>
-        public DateTimeOffset? LastTransactedAt { get; set; }
+        public DateTimeOffset? LastTransactedAt { get => _explicitNullValueLastTransactedAt; set { _explicitNullValueLastTransactedAt = value; AdditionalData?.Remove("lastTransactedAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastTransactedAt"); else _explicitNullProperties?.Remove("lastTransactedAt"); } }
+        private DateTimeOffset? _explicitNullValueLastTransactedAt = default!;
         /// <summary>The type of payment processor associated with the account. Valid values include &apos;NOT_ENROLLED&apos;, &apos;HS_PAYMENTS&apos;, and &apos;BYO_STRIPE&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PaymentAccountViewProcessorType? ProcessorType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PaymentAccountViewProcessorType? ProcessorType { get => _explicitNullValueProcessorType; set { _explicitNullValueProcessorType = value; AdditionalData?.Remove("processorType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("processorType"); else _explicitNullProperties?.Remove("processorType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PaymentAccountViewProcessorType? _explicitNullValueProcessorType = default!;
         /// <summary>The date and time when the payment account was last updated, in ISO 8601 format.</summary>
-        public DateTimeOffset? UpdatedAt { get; set; }
+        public DateTimeOffset? UpdatedAt { get => _explicitNullValueUpdatedAt; set { _explicitNullValueUpdatedAt = value; AdditionalData?.Remove("updatedAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updatedAt"); else _explicitNullProperties?.Remove("updatedAt"); } }
+        private DateTimeOffset? _explicitNullValueUpdatedAt = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PaymentAccountView"/> and sets the default values.
         /// </summary>
@@ -61,7 +100,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PaymentAccountView CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PaymentAccountView();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PaymentAccountView(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -75,11 +114,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "canTransact", n => { CanTransact = n.GetBoolValue(); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "eligibleProcessorTypes", n => { EligibleProcessorTypes = n.GetCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentAccountViewEligibleProcessorTypesItem>()?.AsList(); } },
-                { "enrollmentState", n => { EnrollmentState = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentAccountViewEnrollmentState>(); } },
+                { "enrollmentState", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentAccountViewEnrollmentState>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueEnrollmentState = default; _explicitNullProperties?.Remove("enrollmentState"); AdditionalData["enrollmentState"] = unknown; } else { EnrollmentState = parsed; AdditionalData.Remove("enrollmentState"); } } },
                 { "hasTransacted", n => { HasTransacted = n.GetBoolValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "lastTransactedAt", n => { LastTransactedAt = n.GetDateTimeOffsetValue(); } },
-                { "processorType", n => { ProcessorType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentAccountViewProcessorType>(); } },
+                { "processorType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentAccountViewProcessorType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueProcessorType = default; _explicitNullProperties?.Remove("processorType"); AdditionalData["processorType"] = unknown; } else { ProcessorType = parsed; AdditionalData.Remove("processorType"); } } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
             };
         }
@@ -100,6 +139,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("lastTransactedAt", LastTransactedAt);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentAccountViewProcessorType>("processorType", ProcessorType);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

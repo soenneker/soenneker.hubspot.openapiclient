@@ -11,26 +11,44 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CrmPublicPropertyFilter2 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("filterType") is null) { _explicitNullValueFilterType = default!; _explicitNullProperties?.Remove("filterType"); }
+            else if (parseNode.GetChildNode("filterType") is { } nullNodeFilterType && nullNodeFilterType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FilterType = null;
+            if (parseNode.GetChildNode("operation") is null) { _explicitNullValueOperation = default!; _explicitNullProperties?.Remove("operation"); }
+            else if (parseNode.GetChildNode("operation") is { } nullNodeOperation && nullNodeOperation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Operation = null;
+            if (parseNode.GetChildNode("property") is null) { _explicitNullValueProperty = default!; _explicitNullProperties?.Remove("property"); }
+            else if (parseNode.GetChildNode("property") is { } nullNodeProperty && nullNodeProperty.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Property = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A string indicating the type of filter. The default value is &apos;PROPERTY&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyFilterType2? FilterType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyFilterType2? FilterType { get => _explicitNullValueFilterType; set { _explicitNullValueFilterType = value; AdditionalData?.Remove("filterType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filterType"); else _explicitNullProperties?.Remove("filterType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyFilterType2? _explicitNullValueFilterType = default!;
         /// <summary>Defines the operation to be performed on the property. This can be one of several operation types, such as boolean, number, string, date, and more, each with its own specific behavior.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPropertyFilterOperation2? Operation { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPropertyFilterOperation2? Operation { get => _explicitNullValueOperation; set { _explicitNullValueOperation = value; AdditionalData?.Remove("operation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operation"); else _explicitNullProperties?.Remove("operation"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPropertyFilterOperation2? _explicitNullValueOperation = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPropertyFilterOperation2 Operation { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPropertyFilterOperation2 Operation { get => _explicitNullValueOperation; set { _explicitNullValueOperation = value; AdditionalData?.Remove("operation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operation"); else _explicitNullProperties?.Remove("operation"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPropertyFilterOperation2 _explicitNullValueOperation = default!;
 #endif
         /// <summary>A string representing the name of the property to be filtered.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Property { get; set; }
+        public string? Property { get => _explicitNullValueProperty; set { _explicitNullValueProperty = value; AdditionalData?.Remove("property"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("property"); else _explicitNullProperties?.Remove("property"); } }
+        private string? _explicitNullValueProperty = default!;
 #nullable restore
 #else
-        public string Property { get; set; }
+        public string Property { get => _explicitNullValueProperty; set { _explicitNullValueProperty = value; AdditionalData?.Remove("property"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("property"); else _explicitNullProperties?.Remove("property"); } }
+        private string _explicitNullValueProperty = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPropertyFilter2"/> and sets the default values.
@@ -47,7 +65,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPropertyFilter2 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPropertyFilter2();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPropertyFilter2(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -57,7 +75,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyFilterType2>(); } },
+                { "filterType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyFilterType2>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFilterType = default; _explicitNullProperties?.Remove("filterType"); AdditionalData["filterType"] = unknown; } else { FilterType = parsed; AdditionalData.Remove("filterType"); } } },
                 { "operation", n => { Operation = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPropertyFilterOperation2>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPropertyFilterOperation2.CreateFromDiscriminatorValue); } },
                 { "property", n => { Property = n.GetStringValue(); } },
             };
@@ -72,6 +90,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyFilterType2>("filterType", FilterType);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPropertyFilterOperation2>("operation", Operation);
             writer.WriteStringValue("property", Property);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

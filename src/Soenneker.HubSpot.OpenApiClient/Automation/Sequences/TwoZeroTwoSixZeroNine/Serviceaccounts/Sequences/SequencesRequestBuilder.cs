@@ -62,7 +62,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Automation.Sequences.TwoZeroTwoSixZero
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalPublicSequenceLiteResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalPublicSequenceLiteResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalPublicSequenceLiteResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalPublicSequenceLiteResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Create a new sequence in your HubSpot account using the specified settings and steps. This endpoint allows you to define the sequence&apos;s properties, such as its name, settings, steps, and dependencies, to automate processes effectively. Please note: the scopes for this endpoint requires user-level access and will not work for existing apps with portal-level access.
@@ -82,7 +82,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Automation.Sequences.TwoZeroTwoSixZero
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCreateSequenceResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicCreateSequenceResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCreateSequenceResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicCreateSequenceResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve a list of sequences available in the service account. This endpoint supports pagination and allows filtering by sequence name. It is useful for obtaining an overview of sequences for management or reporting purposes. Please note: the scopes for this endpoint requires user-level access and will not work for existing apps with portal-level access.

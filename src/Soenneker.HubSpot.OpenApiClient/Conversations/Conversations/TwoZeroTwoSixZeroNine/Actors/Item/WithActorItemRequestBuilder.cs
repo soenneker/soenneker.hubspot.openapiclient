@@ -49,7 +49,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.Conversations.TwoZeroTwo
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActor>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicActor.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActor>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicActor.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve information about a specific actor in the conversations system using their unique actor ID. This endpoint is useful for obtaining details about a particular actor, which could be an agent, bot, or other entity involved in conversations.

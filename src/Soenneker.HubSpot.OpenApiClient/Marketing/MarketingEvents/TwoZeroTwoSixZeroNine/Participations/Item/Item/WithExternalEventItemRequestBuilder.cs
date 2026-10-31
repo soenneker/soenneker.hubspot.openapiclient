@@ -13,7 +13,7 @@ using System;
 namespace Soenneker.HubSpot.OpenApiClient.Marketing.MarketingEvents.TwoZeroTwoSixZeroNine.Participations.Item.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \marketing\marketing-events\2026-09\participations\{externalAccount-id}\{externalEventId}
+    /// Builds and executes requests for operations under \marketing\marketing-events\2026-09\participations\{externalAccountId}\{externalEventId}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithExternalEventItemRequestBuilder : BaseRequestBuilder
@@ -28,7 +28,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.MarketingEvents.TwoZeroTwoSi
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithExternalEventItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/marketing/marketing-events/2026-09/participations/{externalAccount%2Did}/{externalEventId}", pathParameters)
+        public WithExternalEventItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/marketing/marketing-events/2026-09/participations/{externalAccountId}/{externalEventId}", pathParameters)
         {
         }
         /// <summary>
@@ -36,7 +36,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.MarketingEvents.TwoZeroTwoSi
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithExternalEventItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/marketing/marketing-events/2026-09/participations/{externalAccount%2Did}/{externalEventId}", rawUrl)
+        public WithExternalEventItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/marketing/marketing-events/2026-09/participations/{externalAccountId}/{externalEventId}", rawUrl)
         {
         }
         /// <summary>
@@ -55,7 +55,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.MarketingEvents.TwoZeroTwoSi
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.AttendanceCounters>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.AttendanceCounters.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.AttendanceCounters>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.AttendanceCounters.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Read Marketing event&apos;s participations counters by externalAccountId and externalEventId pair.

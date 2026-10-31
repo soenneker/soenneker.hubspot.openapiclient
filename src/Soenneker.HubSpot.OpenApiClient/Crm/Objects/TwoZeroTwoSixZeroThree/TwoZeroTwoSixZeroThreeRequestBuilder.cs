@@ -17,14 +17,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree
     {
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.crm.objects.TwoZeroTwoSixZeroThree.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree.Item.FromObjectTypeItemRequestBuilder"/></returns>
-        public global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree.Item.FromObjectTypeItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree.Item.WithFromObjectTypeItemRequestBuilder"/></returns>
+        public global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree.Item.WithFromObjectTypeItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("fromObjectType%2Did", position);
-                return new global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree.Item.FromObjectTypeItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("fromObjectType", position);
+                return new global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree.Item.WithFromObjectTypeItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

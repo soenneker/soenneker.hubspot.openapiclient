@@ -11,40 +11,63 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicSequenceEnrollmentRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("contactId") is null) { _explicitNullValueContactId = default!; _explicitNullProperties?.Remove("contactId"); }
+            else if (parseNode.GetChildNode("contactId") is { } nullNodeContactId && nullNodeContactId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactId = null;
+            if (parseNode.GetChildNode("senderAliasAddress") is null) { _explicitNullValueSenderAliasAddress = default!; _explicitNullProperties?.Remove("senderAliasAddress"); }
+            else if (parseNode.GetChildNode("senderAliasAddress") is { } nullNodeSenderAliasAddress && nullNodeSenderAliasAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SenderAliasAddress = null;
+            if (parseNode.GetChildNode("senderEmail") is null) { _explicitNullValueSenderEmail = default!; _explicitNullProperties?.Remove("senderEmail"); }
+            else if (parseNode.GetChildNode("senderEmail") is { } nullNodeSenderEmail && nullNodeSenderEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SenderEmail = null;
+            if (parseNode.GetChildNode("sequenceId") is null) { _explicitNullValueSequenceId = default!; _explicitNullProperties?.Remove("sequenceId"); }
+            else if (parseNode.GetChildNode("sequenceId") is { } nullNodeSequenceId && nullNodeSequenceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SequenceId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The unique identifier of the contact to be enrolled in the sequence. It is a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ContactId { get; set; }
+        public string? ContactId { get => _explicitNullValueContactId; set { _explicitNullValueContactId = value; AdditionalData?.Remove("contactId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactId"); else _explicitNullProperties?.Remove("contactId"); } }
+        private string? _explicitNullValueContactId = default!;
 #nullable restore
 #else
-        public string ContactId { get; set; }
+        public string ContactId { get => _explicitNullValueContactId; set { _explicitNullValueContactId = value; AdditionalData?.Remove("contactId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactId"); else _explicitNullProperties?.Remove("contactId"); } }
+        private string _explicitNullValueContactId = default!;
 #endif
         /// <summary>An optional alias email address that can be used as the sender&apos;s address. It is a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SenderAliasAddress { get; set; }
+        public string? SenderAliasAddress { get => _explicitNullValueSenderAliasAddress; set { _explicitNullValueSenderAliasAddress = value; AdditionalData?.Remove("senderAliasAddress"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("senderAliasAddress"); else _explicitNullProperties?.Remove("senderAliasAddress"); } }
+        private string? _explicitNullValueSenderAliasAddress = default!;
 #nullable restore
 #else
-        public string SenderAliasAddress { get; set; }
+        public string SenderAliasAddress { get => _explicitNullValueSenderAliasAddress; set { _explicitNullValueSenderAliasAddress = value; AdditionalData?.Remove("senderAliasAddress"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("senderAliasAddress"); else _explicitNullProperties?.Remove("senderAliasAddress"); } }
+        private string _explicitNullValueSenderAliasAddress = default!;
 #endif
         /// <summary>The email address of the sender responsible for the sequence enrollment. It is a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SenderEmail { get; set; }
+        public string? SenderEmail { get => _explicitNullValueSenderEmail; set { _explicitNullValueSenderEmail = value; AdditionalData?.Remove("senderEmail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("senderEmail"); else _explicitNullProperties?.Remove("senderEmail"); } }
+        private string? _explicitNullValueSenderEmail = default!;
 #nullable restore
 #else
-        public string SenderEmail { get; set; }
+        public string SenderEmail { get => _explicitNullValueSenderEmail; set { _explicitNullValueSenderEmail = value; AdditionalData?.Remove("senderEmail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("senderEmail"); else _explicitNullProperties?.Remove("senderEmail"); } }
+        private string _explicitNullValueSenderEmail = default!;
 #endif
         /// <summary>The unique identifier of the sequence in which the contact is to be enrolled. It is a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SequenceId { get; set; }
+        public string? SequenceId { get => _explicitNullValueSequenceId; set { _explicitNullValueSequenceId = value; AdditionalData?.Remove("sequenceId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sequenceId"); else _explicitNullProperties?.Remove("sequenceId"); } }
+        private string? _explicitNullValueSequenceId = default!;
 #nullable restore
 #else
-        public string SequenceId { get; set; }
+        public string SequenceId { get => _explicitNullValueSequenceId; set { _explicitNullValueSequenceId = value; AdditionalData?.Remove("sequenceId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sequenceId"); else _explicitNullProperties?.Remove("sequenceId"); } }
+        private string _explicitNullValueSequenceId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceEnrollmentRequest"/> and sets the default values.
@@ -61,7 +84,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceEnrollmentRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceEnrollmentRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceEnrollmentRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,6 +111,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("senderAliasAddress", SenderAliasAddress);
             writer.WriteStringValue("senderEmail", SenderEmail);
             writer.WriteStringValue("sequenceId", SequenceId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

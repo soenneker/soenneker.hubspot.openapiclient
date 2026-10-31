@@ -49,7 +49,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Lists.TwoZeroTwoSixZeroNine.Item.U
         {
 #endif
             var requestInfo = ToPutRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ListUpdateResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ListUpdateResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ListUpdateResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ListUpdateResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Update the name of a specific list in your HubSpot account. This endpoint allows you to change the list&apos;s name by specifying the new name as a query parameter. It is useful for keeping your lists organized and up-to-date with relevant titles.

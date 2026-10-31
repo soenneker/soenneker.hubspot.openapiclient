@@ -11,33 +11,68 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicSequenceSettingsRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("eligibleFollowUpDays") is null) { _explicitNullValueEligibleFollowUpDays = default!; _explicitNullProperties?.Remove("eligibleFollowUpDays"); }
+            else if (parseNode.GetChildNode("eligibleFollowUpDays") is { } nullNodeEligibleFollowUpDays && nullNodeEligibleFollowUpDays.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EligibleFollowUpDays = null;
+            if (parseNode.GetChildNode("individualTaskRemindersEnabled") is null) { _explicitNullValueIndividualTaskRemindersEnabled = default!; _explicitNullProperties?.Remove("individualTaskRemindersEnabled"); }
+            else if (parseNode.GetChildNode("individualTaskRemindersEnabled") is { } nullNodeIndividualTaskRemindersEnabled && nullNodeIndividualTaskRemindersEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IndividualTaskRemindersEnabled = null;
+            if (parseNode.GetChildNode("sellingStrategy") is null) { _explicitNullValueSellingStrategy = default!; _explicitNullProperties?.Remove("sellingStrategy"); }
+            else if (parseNode.GetChildNode("sellingStrategy") is { } nullNodeSellingStrategy && nullNodeSellingStrategy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SellingStrategy = null;
+            if (parseNode.GetChildNode("sendWindowEndMinute") is null) { _explicitNullValueSendWindowEndMinute = default!; _explicitNullProperties?.Remove("sendWindowEndMinute"); }
+            else if (parseNode.GetChildNode("sendWindowEndMinute") is { } nullNodeSendWindowEndMinute && nullNodeSendWindowEndMinute.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SendWindowEndMinute = null;
+            if (parseNode.GetChildNode("sendWindowStartMinute") is null) { _explicitNullValueSendWindowStartMinute = default!; _explicitNullProperties?.Remove("sendWindowStartMinute"); }
+            else if (parseNode.GetChildNode("sendWindowStartMinute") is { } nullNodeSendWindowStartMinute && nullNodeSendWindowStartMinute.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SendWindowStartMinute = null;
+            if (parseNode.GetChildNode("taskCreationMinute") is null) { _explicitNullValueTaskCreationMinute = default!; _explicitNullProperties?.Remove("taskCreationMinute"); }
+            else if (parseNode.GetChildNode("taskCreationMinute") is { } nullNodeTaskCreationMinute && nullNodeTaskCreationMinute.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaskCreationMinute = null;
+            if (parseNode.GetChildNode("taskReminderMinute") is null) { _explicitNullValueTaskReminderMinute = default!; _explicitNullProperties?.Remove("taskReminderMinute"); }
+            else if (parseNode.GetChildNode("taskReminderMinute") is { } nullNodeTaskReminderMinute && nullNodeTaskReminderMinute.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaskReminderMinute = null;
+            if (parseNode.GetChildNode("unenrollmentSettings") is null) { _explicitNullValueUnenrollmentSettings = default!; _explicitNullProperties?.Remove("unenrollmentSettings"); }
+            else if (parseNode.GetChildNode("unenrollmentSettings") is { } nullNodeUnenrollmentSettings && nullNodeUnenrollmentSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnenrollmentSettings = null;
+            if (parseNode.GetChildNode("useThreadedFollowUps") is null) { _explicitNullValueUseThreadedFollowUps = default!; _explicitNullProperties?.Remove("useThreadedFollowUps"); }
+            else if (parseNode.GetChildNode("useThreadedFollowUps") is { } nullNodeUseThreadedFollowUps && nullNodeUseThreadedFollowUps.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UseThreadedFollowUps = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Specifies the days on which follow-ups are eligible to be sent. Valid values include &apos;EVERYDAY&apos;, &apos;BUSINESS_DAYS&apos;, and &apos;WEEKDAYS_ONLY&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceSettingsRequestEligibleFollowUpDays? EligibleFollowUpDays { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceSettingsRequestEligibleFollowUpDays? EligibleFollowUpDays { get => _explicitNullValueEligibleFollowUpDays; set { _explicitNullValueEligibleFollowUpDays = value; AdditionalData?.Remove("eligibleFollowUpDays"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eligibleFollowUpDays"); else _explicitNullProperties?.Remove("eligibleFollowUpDays"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceSettingsRequestEligibleFollowUpDays? _explicitNullValueEligibleFollowUpDays = default!;
         /// <summary>A boolean indicating whether individual task reminders are enabled.</summary>
-        public bool? IndividualTaskRemindersEnabled { get; set; }
+        public bool? IndividualTaskRemindersEnabled { get => _explicitNullValueIndividualTaskRemindersEnabled; set { _explicitNullValueIndividualTaskRemindersEnabled = value; AdditionalData?.Remove("individualTaskRemindersEnabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("individualTaskRemindersEnabled"); else _explicitNullProperties?.Remove("individualTaskRemindersEnabled"); } }
+        private bool? _explicitNullValueIndividualTaskRemindersEnabled = default!;
         /// <summary>Defines the selling strategy to be used. Valid values include &apos;LEAD_BASED&apos; and &apos;ACCOUNT_BASED&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceSettingsRequestSellingStrategy? SellingStrategy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceSettingsRequestSellingStrategy? SellingStrategy { get => _explicitNullValueSellingStrategy; set { _explicitNullValueSellingStrategy = value; AdditionalData?.Remove("sellingStrategy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sellingStrategy"); else _explicitNullProperties?.Remove("sellingStrategy"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceSettingsRequestSellingStrategy? _explicitNullValueSellingStrategy = default!;
         /// <summary>An integer representing the end minute of the window during which emails can be sent.</summary>
-        public int? SendWindowEndMinute { get; set; }
+        public int? SendWindowEndMinute { get => _explicitNullValueSendWindowEndMinute; set { _explicitNullValueSendWindowEndMinute = value; AdditionalData?.Remove("sendWindowEndMinute"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sendWindowEndMinute"); else _explicitNullProperties?.Remove("sendWindowEndMinute"); } }
+        private int? _explicitNullValueSendWindowEndMinute = default!;
         /// <summary>An integer representing the start minute of the window during which emails can be sent.</summary>
-        public int? SendWindowStartMinute { get; set; }
+        public int? SendWindowStartMinute { get => _explicitNullValueSendWindowStartMinute; set { _explicitNullValueSendWindowStartMinute = value; AdditionalData?.Remove("sendWindowStartMinute"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sendWindowStartMinute"); else _explicitNullProperties?.Remove("sendWindowStartMinute"); } }
+        private int? _explicitNullValueSendWindowStartMinute = default!;
         /// <summary>An integer indicating the minute at which tasks should be created.</summary>
-        public int? TaskCreationMinute { get; set; }
+        public int? TaskCreationMinute { get => _explicitNullValueTaskCreationMinute; set { _explicitNullValueTaskCreationMinute = value; AdditionalData?.Remove("taskCreationMinute"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taskCreationMinute"); else _explicitNullProperties?.Remove("taskCreationMinute"); } }
+        private int? _explicitNullValueTaskCreationMinute = default!;
         /// <summary>An integer indicating the minute at which task reminders should be sent.</summary>
-        public int? TaskReminderMinute { get; set; }
+        public int? TaskReminderMinute { get => _explicitNullValueTaskReminderMinute; set { _explicitNullValueTaskReminderMinute = value; AdditionalData?.Remove("taskReminderMinute"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taskReminderMinute"); else _explicitNullProperties?.Remove("taskReminderMinute"); } }
+        private int? _explicitNullValueTaskReminderMinute = default!;
         /// <summary>The unenrollmentSettings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.UnenrollmentSettingsResponse? UnenrollmentSettings { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.UnenrollmentSettingsResponse? UnenrollmentSettings { get => _explicitNullValueUnenrollmentSettings; set { _explicitNullValueUnenrollmentSettings = value; AdditionalData?.Remove("unenrollmentSettings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unenrollmentSettings"); else _explicitNullProperties?.Remove("unenrollmentSettings"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.UnenrollmentSettingsResponse? _explicitNullValueUnenrollmentSettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.UnenrollmentSettingsResponse UnenrollmentSettings { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.UnenrollmentSettingsResponse UnenrollmentSettings { get => _explicitNullValueUnenrollmentSettings; set { _explicitNullValueUnenrollmentSettings = value; AdditionalData?.Remove("unenrollmentSettings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unenrollmentSettings"); else _explicitNullProperties?.Remove("unenrollmentSettings"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.UnenrollmentSettingsResponse _explicitNullValueUnenrollmentSettings = default!;
 #endif
         /// <summary>A boolean indicating whether follow-ups should be threaded.</summary>
-        public bool? UseThreadedFollowUps { get; set; }
+        public bool? UseThreadedFollowUps { get => _explicitNullValueUseThreadedFollowUps; set { _explicitNullValueUseThreadedFollowUps = value; AdditionalData?.Remove("useThreadedFollowUps"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("useThreadedFollowUps"); else _explicitNullProperties?.Remove("useThreadedFollowUps"); } }
+        private bool? _explicitNullValueUseThreadedFollowUps = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceSettingsRequest"/> and sets the default values.
         /// </summary>
@@ -53,7 +88,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceSettingsRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceSettingsRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceSettingsRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -63,9 +98,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "eligibleFollowUpDays", n => { EligibleFollowUpDays = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceSettingsRequestEligibleFollowUpDays>(); } },
+                { "eligibleFollowUpDays", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceSettingsRequestEligibleFollowUpDays>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueEligibleFollowUpDays = default; _explicitNullProperties?.Remove("eligibleFollowUpDays"); AdditionalData["eligibleFollowUpDays"] = unknown; } else { EligibleFollowUpDays = parsed; AdditionalData.Remove("eligibleFollowUpDays"); } } },
                 { "individualTaskRemindersEnabled", n => { IndividualTaskRemindersEnabled = n.GetBoolValue(); } },
-                { "sellingStrategy", n => { SellingStrategy = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceSettingsRequestSellingStrategy>(); } },
+                { "sellingStrategy", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceSettingsRequestSellingStrategy>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueSellingStrategy = default; _explicitNullProperties?.Remove("sellingStrategy"); AdditionalData["sellingStrategy"] = unknown; } else { SellingStrategy = parsed; AdditionalData.Remove("sellingStrategy"); } } },
                 { "sendWindowEndMinute", n => { SendWindowEndMinute = n.GetIntValue(); } },
                 { "sendWindowStartMinute", n => { SendWindowStartMinute = n.GetIntValue(); } },
                 { "taskCreationMinute", n => { TaskCreationMinute = n.GetIntValue(); } },
@@ -90,6 +125,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteIntValue("taskReminderMinute", TaskReminderMinute);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.UnenrollmentSettingsResponse>("unenrollmentSettings", UnenrollmentSettings);
             writer.WriteBoolValue("useThreadedFollowUps", UseThreadedFollowUps);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

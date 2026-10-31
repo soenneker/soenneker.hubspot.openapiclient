@@ -68,7 +68,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Automation.EmailTemplates.TwoZeroTwoSi
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponsePublicTemplateForwardPaging>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponsePublicTemplateForwardPaging.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponsePublicTemplateForwardPaging>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponsePublicTemplateForwardPaging.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Create a new email template in your HubSpot account. This endpoint allows you to define the template&apos;s name, subject, body, and optionally assign it to a folder. The request must include the template&apos;s body and name. Please note: the scopes for these endpoints require user-level access and will not work for existing apps with portal-level access. 
@@ -88,7 +88,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Automation.EmailTemplates.TwoZeroTwoSi
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplate>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplate.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplate>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplate.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve a list of email templates available in the HubSpot account. This endpoint supports pagination to navigate through large sets of templates. Use this endpoint to access and manage your email templates efficiently. Please note: the scopes for these endpoints require user-level access and will not work for existing apps with portal-level access. 

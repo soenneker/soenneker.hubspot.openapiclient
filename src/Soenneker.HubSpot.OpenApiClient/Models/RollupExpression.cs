@@ -11,66 +11,104 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class RollupExpression : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("associationTypes") is null) { _explicitNullValueAssociationTypes = default!; _explicitNullProperties?.Remove("associationTypes"); }
+            else if (parseNode.GetChildNode("associationTypes") is { } nullNodeAssociationTypes && nullNodeAssociationTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssociationTypes = null;
+            if (parseNode.GetChildNode("conditionalExpression") is null) { _explicitNullValueConditionalExpression = default!; _explicitNullProperties?.Remove("conditionalExpression"); }
+            else if (parseNode.GetChildNode("conditionalExpression") is { } nullNodeConditionalExpression && nullNodeConditionalExpression.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConditionalExpression = null;
+            if (parseNode.GetChildNode("conditionalFormula") is null) { _explicitNullValueConditionalFormula = default!; _explicitNullProperties?.Remove("conditionalFormula"); }
+            else if (parseNode.GetChildNode("conditionalFormula") is { } nullNodeConditionalFormula && nullNodeConditionalFormula.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConditionalFormula = null;
+            if (parseNode.GetChildNode("emptyRollupValue") is null) { _explicitNullValueEmptyRollupValue = default!; _explicitNullProperties?.Remove("emptyRollupValue"); }
+            else if (parseNode.GetChildNode("emptyRollupValue") is { } nullNodeEmptyRollupValue && nullNodeEmptyRollupValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmptyRollupValue = null;
+            if (parseNode.GetChildNode("rollupOperator") is null) { _explicitNullValueRollupOperator = default!; _explicitNullProperties?.Remove("rollupOperator"); }
+            else if (parseNode.GetChildNode("rollupOperator") is { } nullNodeRollupOperator && nullNodeRollupOperator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RollupOperator = null;
+            if (parseNode.GetChildNode("sourceCompareByPropertyName") is null) { _explicitNullValueSourceCompareByPropertyName = default!; _explicitNullProperties?.Remove("sourceCompareByPropertyName"); }
+            else if (parseNode.GetChildNode("sourceCompareByPropertyName") is { } nullNodeSourceCompareByPropertyName && nullNodeSourceCompareByPropertyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceCompareByPropertyName = null;
+            if (parseNode.GetChildNode("sourceObjectTypeId") is null) { _explicitNullValueSourceObjectTypeId = default!; _explicitNullProperties?.Remove("sourceObjectTypeId"); }
+            else if (parseNode.GetChildNode("sourceObjectTypeId") is { } nullNodeSourceObjectTypeId && nullNodeSourceObjectTypeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceObjectTypeId = null;
+            if (parseNode.GetChildNode("sourcePropertyName") is null) { _explicitNullValueSourcePropertyName = default!; _explicitNullProperties?.Remove("sourcePropertyName"); }
+            else if (parseNode.GetChildNode("sourcePropertyName") is { } nullNodeSourcePropertyName && nullNodeSourcePropertyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourcePropertyName = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An array of association types that define the relationships between the source object and the target object for the rollup operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.AssociationSpec>? AssociationTypes { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.AssociationSpec>? AssociationTypes { get => _explicitNullValueAssociationTypes; set { _explicitNullValueAssociationTypes = value; AdditionalData?.Remove("associationTypes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("associationTypes"); else _explicitNullProperties?.Remove("associationTypes"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.AssociationSpec>? _explicitNullValueAssociationTypes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.AssociationSpec> AssociationTypes { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.AssociationSpec> AssociationTypes { get => _explicitNullValueAssociationTypes; set { _explicitNullValueAssociationTypes = value; AdditionalData?.Remove("associationTypes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("associationTypes"); else _explicitNullProperties?.Remove("associationTypes"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.AssociationSpec> _explicitNullValueAssociationTypes = default!;
 #endif
         /// <summary>An expression that specifies conditions under which the rollup operation should be performed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.RollupExpressionConditionalExpression? ConditionalExpression { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.RollupExpressionConditionalExpression? ConditionalExpression { get => _explicitNullValueConditionalExpression; set { _explicitNullValueConditionalExpression = value; AdditionalData?.Remove("conditionalExpression"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conditionalExpression"); else _explicitNullProperties?.Remove("conditionalExpression"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.RollupExpressionConditionalExpression? _explicitNullValueConditionalExpression = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.RollupExpressionConditionalExpression ConditionalExpression { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.RollupExpressionConditionalExpression ConditionalExpression { get => _explicitNullValueConditionalExpression; set { _explicitNullValueConditionalExpression = value; AdditionalData?.Remove("conditionalExpression"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conditionalExpression"); else _explicitNullProperties?.Remove("conditionalExpression"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.RollupExpressionConditionalExpression _explicitNullValueConditionalExpression = default!;
 #endif
         /// <summary>A formula that defines additional conditions or calculations to be applied during the rollup operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConditionalFormula { get; set; }
+        public string? ConditionalFormula { get => _explicitNullValueConditionalFormula; set { _explicitNullValueConditionalFormula = value; AdditionalData?.Remove("conditionalFormula"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conditionalFormula"); else _explicitNullProperties?.Remove("conditionalFormula"); } }
+        private string? _explicitNullValueConditionalFormula = default!;
 #nullable restore
 #else
-        public string ConditionalFormula { get; set; }
+        public string ConditionalFormula { get => _explicitNullValueConditionalFormula; set { _explicitNullValueConditionalFormula = value; AdditionalData?.Remove("conditionalFormula"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conditionalFormula"); else _explicitNullProperties?.Remove("conditionalFormula"); } }
+        private string _explicitNullValueConditionalFormula = default!;
 #endif
         /// <summary>The value to be used when the rollup operation results in no data, often a default or placeholder value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmptyRollupValue { get; set; }
+        public string? EmptyRollupValue { get => _explicitNullValueEmptyRollupValue; set { _explicitNullValueEmptyRollupValue = value; AdditionalData?.Remove("emptyRollupValue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emptyRollupValue"); else _explicitNullProperties?.Remove("emptyRollupValue"); } }
+        private string? _explicitNullValueEmptyRollupValue = default!;
 #nullable restore
 #else
-        public string EmptyRollupValue { get; set; }
+        public string EmptyRollupValue { get => _explicitNullValueEmptyRollupValue; set { _explicitNullValueEmptyRollupValue = value; AdditionalData?.Remove("emptyRollupValue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emptyRollupValue"); else _explicitNullProperties?.Remove("emptyRollupValue"); } }
+        private string _explicitNullValueEmptyRollupValue = default!;
 #endif
         /// <summary>The operator used to perform the rollup operation, such as sum, average, or count.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.RollupExpressionRollupOperator? RollupOperator { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.RollupExpressionRollupOperator? RollupOperator { get => _explicitNullValueRollupOperator; set { _explicitNullValueRollupOperator = value; AdditionalData?.Remove("rollupOperator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rollupOperator"); else _explicitNullProperties?.Remove("rollupOperator"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.RollupExpressionRollupOperator? _explicitNullValueRollupOperator = default!;
         /// <summary>The name of the property on the source object used for comparison during the rollup operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SourceCompareByPropertyName { get; set; }
+        public string? SourceCompareByPropertyName { get => _explicitNullValueSourceCompareByPropertyName; set { _explicitNullValueSourceCompareByPropertyName = value; AdditionalData?.Remove("sourceCompareByPropertyName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceCompareByPropertyName"); else _explicitNullProperties?.Remove("sourceCompareByPropertyName"); } }
+        private string? _explicitNullValueSourceCompareByPropertyName = default!;
 #nullable restore
 #else
-        public string SourceCompareByPropertyName { get; set; }
+        public string SourceCompareByPropertyName { get => _explicitNullValueSourceCompareByPropertyName; set { _explicitNullValueSourceCompareByPropertyName = value; AdditionalData?.Remove("sourceCompareByPropertyName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceCompareByPropertyName"); else _explicitNullProperties?.Remove("sourceCompareByPropertyName"); } }
+        private string _explicitNullValueSourceCompareByPropertyName = default!;
 #endif
         /// <summary>The unique identifier for the type of object from which data is being sourced.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SourceObjectTypeId { get; set; }
+        public string? SourceObjectTypeId { get => _explicitNullValueSourceObjectTypeId; set { _explicitNullValueSourceObjectTypeId = value; AdditionalData?.Remove("sourceObjectTypeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceObjectTypeId"); else _explicitNullProperties?.Remove("sourceObjectTypeId"); } }
+        private string? _explicitNullValueSourceObjectTypeId = default!;
 #nullable restore
 #else
-        public string SourceObjectTypeId { get; set; }
+        public string SourceObjectTypeId { get => _explicitNullValueSourceObjectTypeId; set { _explicitNullValueSourceObjectTypeId = value; AdditionalData?.Remove("sourceObjectTypeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceObjectTypeId"); else _explicitNullProperties?.Remove("sourceObjectTypeId"); } }
+        private string _explicitNullValueSourceObjectTypeId = default!;
 #endif
         /// <summary>The name of the property on the source object that is being used in the rollup operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SourcePropertyName { get; set; }
+        public string? SourcePropertyName { get => _explicitNullValueSourcePropertyName; set { _explicitNullValueSourcePropertyName = value; AdditionalData?.Remove("sourcePropertyName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourcePropertyName"); else _explicitNullProperties?.Remove("sourcePropertyName"); } }
+        private string? _explicitNullValueSourcePropertyName = default!;
 #nullable restore
 #else
-        public string SourcePropertyName { get; set; }
+        public string SourcePropertyName { get => _explicitNullValueSourcePropertyName; set { _explicitNullValueSourcePropertyName = value; AdditionalData?.Remove("sourcePropertyName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourcePropertyName"); else _explicitNullProperties?.Remove("sourcePropertyName"); } }
+        private string _explicitNullValueSourcePropertyName = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.RollupExpression"/> and sets the default values.
@@ -87,7 +125,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.RollupExpression CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.RollupExpression();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.RollupExpression(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -101,7 +139,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "conditionalExpression", n => { ConditionalExpression = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.RollupExpressionConditionalExpression>(global::Soenneker.HubSpot.OpenApiClient.Models.RollupExpressionConditionalExpression.CreateFromDiscriminatorValue); } },
                 { "conditionalFormula", n => { ConditionalFormula = n.GetStringValue(); } },
                 { "emptyRollupValue", n => { EmptyRollupValue = n.GetStringValue(); } },
-                { "rollupOperator", n => { RollupOperator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RollupExpressionRollupOperator>(); } },
+                { "rollupOperator", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RollupExpressionRollupOperator>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueRollupOperator = default; _explicitNullProperties?.Remove("rollupOperator"); AdditionalData["rollupOperator"] = unknown; } else { RollupOperator = parsed; AdditionalData.Remove("rollupOperator"); } } },
                 { "sourceCompareByPropertyName", n => { SourceCompareByPropertyName = n.GetStringValue(); } },
                 { "sourceObjectTypeId", n => { SourceObjectTypeId = n.GetStringValue(); } },
                 { "sourcePropertyName", n => { SourcePropertyName = n.GetStringValue(); } },
@@ -122,6 +160,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("sourceCompareByPropertyName", SourceCompareByPropertyName);
             writer.WriteStringValue("sourceObjectTypeId", SourceObjectTypeId);
             writer.WriteStringValue("sourcePropertyName", SourcePropertyName);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

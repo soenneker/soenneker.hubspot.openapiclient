@@ -11,42 +11,68 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicApprovalStageRule : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("approvalComment") is null) { _explicitNullValueApprovalComment = default!; _explicitNullProperties?.Remove("approvalComment"); }
+            else if (parseNode.GetChildNode("approvalComment") is { } nullNodeApprovalComment && nullNodeApprovalComment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApprovalComment = null;
+            if (parseNode.GetChildNode("approvalMode") is null) { _explicitNullValueApprovalMode = default!; _explicitNullProperties?.Remove("approvalMode"); }
+            else if (parseNode.GetChildNode("approvalMode") is { } nullNodeApprovalMode && nullNodeApprovalMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApprovalMode = null;
+            if (parseNode.GetChildNode("approverUserIds") is null) { _explicitNullValueApproverUserIds = default!; _explicitNullProperties?.Remove("approverUserIds"); }
+            else if (parseNode.GetChildNode("approverUserIds") is { } nullNodeApproverUserIds && nullNodeApproverUserIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApproverUserIds = null;
+            if (parseNode.GetChildNode("conditionalApprovalFilterBranch") is null) { _explicitNullValueConditionalApprovalFilterBranch = default!; _explicitNullProperties?.Remove("conditionalApprovalFilterBranch"); }
+            else if (parseNode.GetChildNode("conditionalApprovalFilterBranch") is { } nullNodeConditionalApprovalFilterBranch && nullNodeConditionalApprovalFilterBranch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConditionalApprovalFilterBranch = null;
+            if (parseNode.GetChildNode("pipelineStageId") is null) { _explicitNullValuePipelineStageId = default!; _explicitNullProperties?.Remove("pipelineStageId"); }
+            else if (parseNode.GetChildNode("pipelineStageId") is { } nullNodePipelineStageId && nullNodePipelineStageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PipelineStageId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A string that allows for an optional comment or note regarding the approval process.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ApprovalComment { get; set; }
+        public string? ApprovalComment { get => _explicitNullValueApprovalComment; set { _explicitNullValueApprovalComment = value; AdditionalData?.Remove("approvalComment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approvalComment"); else _explicitNullProperties?.Remove("approvalComment"); } }
+        private string? _explicitNullValueApprovalComment = default!;
 #nullable restore
 #else
-        public string ApprovalComment { get; set; }
+        public string ApprovalComment { get => _explicitNullValueApprovalComment; set { _explicitNullValueApprovalComment = value; AdditionalData?.Remove("approvalComment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approvalComment"); else _explicitNullProperties?.Remove("approvalComment"); } }
+        private string _explicitNullValueApprovalComment = default!;
 #endif
         /// <summary>Specifies the mode of approval required. It can be either &apos;ALL&apos;, meaning all approvers must approve, or &apos;ANY&apos;, meaning any one approver can approve. It is a string.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicApprovalStageRuleApprovalMode? ApprovalMode { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicApprovalStageRuleApprovalMode? ApprovalMode { get => _explicitNullValueApprovalMode; set { _explicitNullValueApprovalMode = value; AdditionalData?.Remove("approvalMode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approvalMode"); else _explicitNullProperties?.Remove("approvalMode"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicApprovalStageRuleApprovalMode? _explicitNullValueApprovalMode = default!;
         /// <summary>An array of user IDs representing the users who are designated as approvers for this stage. Each user ID is a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ApproverUserIds { get; set; }
+        public List<string>? ApproverUserIds { get => _explicitNullValueApproverUserIds; set { _explicitNullValueApproverUserIds = value; AdditionalData?.Remove("approverUserIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approverUserIds"); else _explicitNullProperties?.Remove("approverUserIds"); } }
+        private List<string>? _explicitNullValueApproverUserIds = default!;
 #nullable restore
 #else
-        public List<string> ApproverUserIds { get; set; }
+        public List<string> ApproverUserIds { get => _explicitNullValueApproverUserIds; set { _explicitNullValueApproverUserIds = value; AdditionalData?.Remove("approverUserIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approverUserIds"); else _explicitNullProperties?.Remove("approverUserIds"); } }
+        private List<string> _explicitNullValueApproverUserIds = default!;
 #endif
         /// <summary>Defines the conditions under which the approval is required. It can be one of several filter branch types, such as PublicOrFilterBranch or PublicAndFilterBranch, which determine the logical conditions for approval.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicApprovalStageRuleConditionalApprovalFilterBranch? ConditionalApprovalFilterBranch { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicApprovalStageRuleConditionalApprovalFilterBranch? ConditionalApprovalFilterBranch { get => _explicitNullValueConditionalApprovalFilterBranch; set { _explicitNullValueConditionalApprovalFilterBranch = value; AdditionalData?.Remove("conditionalApprovalFilterBranch"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conditionalApprovalFilterBranch"); else _explicitNullProperties?.Remove("conditionalApprovalFilterBranch"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicApprovalStageRuleConditionalApprovalFilterBranch? _explicitNullValueConditionalApprovalFilterBranch = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicApprovalStageRuleConditionalApprovalFilterBranch ConditionalApprovalFilterBranch { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicApprovalStageRuleConditionalApprovalFilterBranch ConditionalApprovalFilterBranch { get => _explicitNullValueConditionalApprovalFilterBranch; set { _explicitNullValueConditionalApprovalFilterBranch = value; AdditionalData?.Remove("conditionalApprovalFilterBranch"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conditionalApprovalFilterBranch"); else _explicitNullProperties?.Remove("conditionalApprovalFilterBranch"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicApprovalStageRuleConditionalApprovalFilterBranch _explicitNullValueConditionalApprovalFilterBranch = default!;
 #endif
         /// <summary>The unique identifier for the pipeline stage that this approval rule applies to. It is a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PipelineStageId { get; set; }
+        public string? PipelineStageId { get => _explicitNullValuePipelineStageId; set { _explicitNullValuePipelineStageId = value; AdditionalData?.Remove("pipelineStageId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipelineStageId"); else _explicitNullProperties?.Remove("pipelineStageId"); } }
+        private string? _explicitNullValuePipelineStageId = default!;
 #nullable restore
 #else
-        public string PipelineStageId { get; set; }
+        public string PipelineStageId { get => _explicitNullValuePipelineStageId; set { _explicitNullValuePipelineStageId = value; AdditionalData?.Remove("pipelineStageId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipelineStageId"); else _explicitNullProperties?.Remove("pipelineStageId"); } }
+        private string _explicitNullValuePipelineStageId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicApprovalStageRule"/> and sets the default values.
@@ -63,7 +89,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicApprovalStageRule CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicApprovalStageRule();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicApprovalStageRule(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -74,7 +100,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "approvalComment", n => { ApprovalComment = n.GetStringValue(); } },
-                { "approvalMode", n => { ApprovalMode = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicApprovalStageRuleApprovalMode>(); } },
+                { "approvalMode", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicApprovalStageRuleApprovalMode>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueApprovalMode = default; _explicitNullProperties?.Remove("approvalMode"); AdditionalData["approvalMode"] = unknown; } else { ApprovalMode = parsed; AdditionalData.Remove("approvalMode"); } } },
                 { "approverUserIds", n => { ApproverUserIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "conditionalApprovalFilterBranch", n => { ConditionalApprovalFilterBranch = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicApprovalStageRuleConditionalApprovalFilterBranch>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicApprovalStageRuleConditionalApprovalFilterBranch.CreateFromDiscriminatorValue); } },
                 { "pipelineStageId", n => { PipelineStageId = n.GetStringValue(); } },
@@ -92,6 +118,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("approverUserIds", ApproverUserIds);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicApprovalStageRuleConditionalApprovalFilterBranch>("conditionalApprovalFilterBranch", ConditionalApprovalFilterBranch);
             writer.WriteStringValue("pipelineStageId", PipelineStageId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

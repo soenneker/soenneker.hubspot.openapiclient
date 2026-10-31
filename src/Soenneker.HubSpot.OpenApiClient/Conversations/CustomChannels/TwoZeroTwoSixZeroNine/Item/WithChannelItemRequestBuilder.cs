@@ -66,7 +66,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.CustomChannels.TwoZeroTw
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
-            await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
+            await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve the details about a custom channel. This API allows you to see a custom channel&apos;s current capabilties and other configuration metadata
@@ -84,7 +84,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.CustomChannels.TwoZeroTw
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannel>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannel.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannel>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannel.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Update the capabilities for an existing. You can also use it to update the channel&apos;s webhookUri and its channelAccountConnectionRedirectUrl.
@@ -104,7 +104,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.CustomChannels.TwoZeroTw
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPatchRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannel>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannel.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannel>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannel.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Archive an existing registered custom channel

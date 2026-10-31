@@ -49,7 +49,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroNine.Comm
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CrmCollectionResponseMultiAssociatedObjectWithLabelForwardPaging6>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CrmCollectionResponseMultiAssociatedObjectWithLabelForwardPaging6.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CrmCollectionResponseMultiAssociatedObjectWithLabelForwardPaging6>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CrmCollectionResponseMultiAssociatedObjectWithLabelForwardPaging6.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// List all associations of a specified object by its type. This endpoint allows you to retrieve associations for a given object type and object ID, with a limit of 500 associations per call. It is useful for understanding the relationships and connections between different CRM objects.

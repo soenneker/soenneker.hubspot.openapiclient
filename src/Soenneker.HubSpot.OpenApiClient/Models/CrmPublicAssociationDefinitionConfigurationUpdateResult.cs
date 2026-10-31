@@ -11,15 +11,31 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CrmPublicAssociationDefinitionConfigurationUpdateResult : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("category") is null) { _explicitNullValueCategory = default!; _explicitNullProperties?.Remove("category"); }
+            else if (parseNode.GetChildNode("category") is { } nullNodeCategory && nullNodeCategory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Category = null;
+            if (parseNode.GetChildNode("typeId") is null) { _explicitNullValueTypeId = default!; _explicitNullProperties?.Remove("typeId"); }
+            else if (parseNode.GetChildNode("typeId") is { } nullNodeTypeId && nullNodeTypeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TypeId = null;
+            if (parseNode.GetChildNode("userEnforcedMaxToObjectIds") is null) { _explicitNullValueUserEnforcedMaxToObjectIds = default!; _explicitNullProperties?.Remove("userEnforcedMaxToObjectIds"); }
+            else if (parseNode.GetChildNode("userEnforcedMaxToObjectIds") is { } nullNodeUserEnforcedMaxToObjectIds && nullNodeUserEnforcedMaxToObjectIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserEnforcedMaxToObjectIds = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The category of the association, which can be HUBSPOT_DEFINED, INTEGRATOR_DEFINED, or USER_DEFINED.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationDefinitionConfigurationUpdateResultCategory? Category { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationDefinitionConfigurationUpdateResultCategory? Category { get => _explicitNullValueCategory; set { _explicitNullValueCategory = value; AdditionalData?.Remove("category"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("category"); else _explicitNullProperties?.Remove("category"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationDefinitionConfigurationUpdateResultCategory? _explicitNullValueCategory = default!;
         /// <summary>An integer value used to uniquely identify a specific association type within its Association Category.</summary>
-        public int? TypeId { get; set; }
+        public int? TypeId { get => _explicitNullValueTypeId; set { _explicitNullValueTypeId = value; AdditionalData?.Remove("typeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("typeId"); else _explicitNullProperties?.Remove("typeId"); } }
+        private int? _explicitNullValueTypeId = default!;
         /// <summary>The maximum number of object IDs that a user can enforce for associations.</summary>
-        public int? UserEnforcedMaxToObjectIds { get; set; }
+        public int? UserEnforcedMaxToObjectIds { get => _explicitNullValueUserEnforcedMaxToObjectIds; set { _explicitNullValueUserEnforcedMaxToObjectIds = value; AdditionalData?.Remove("userEnforcedMaxToObjectIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userEnforcedMaxToObjectIds"); else _explicitNullProperties?.Remove("userEnforcedMaxToObjectIds"); } }
+        private int? _explicitNullValueUserEnforcedMaxToObjectIds = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationDefinitionConfigurationUpdateResult"/> and sets the default values.
         /// </summary>
@@ -35,7 +51,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationDefinitionConfigurationUpdateResult CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationDefinitionConfigurationUpdateResult();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationDefinitionConfigurationUpdateResult(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -45,7 +61,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "category", n => { Category = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationDefinitionConfigurationUpdateResultCategory>(); } },
+                { "category", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationDefinitionConfigurationUpdateResultCategory>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCategory = default; _explicitNullProperties?.Remove("category"); AdditionalData["category"] = unknown; } else { Category = parsed; AdditionalData.Remove("category"); } } },
                 { "typeId", n => { TypeId = n.GetIntValue(); } },
                 { "userEnforcedMaxToObjectIds", n => { UserEnforcedMaxToObjectIds = n.GetIntValue(); } },
             };
@@ -60,6 +76,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationDefinitionConfigurationUpdateResultCategory>("category", Category);
             writer.WriteIntValue("typeId", TypeId);
             writer.WriteIntValue("userEnforcedMaxToObjectIds", UserEnforcedMaxToObjectIds);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

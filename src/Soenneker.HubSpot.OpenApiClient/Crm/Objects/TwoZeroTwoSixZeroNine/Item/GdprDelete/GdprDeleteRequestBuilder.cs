@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroNine.Item.GdprDelete
 {
     /// <summary>
-    /// Builds and executes requests for operations under \crm\objects\2026-09\{fromObjectType-id}\gdpr-delete
+    /// Builds and executes requests for operations under \crm\objects\2026-09\{fromObjectType}\gdpr-delete
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GdprDeleteRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroNine.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public GdprDeleteRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/crm/objects/2026-09/{fromObjectType%2Did}/gdpr-delete", pathParameters)
+        public GdprDeleteRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/crm/objects/2026-09/{fromObjectType}/gdpr-delete", pathParameters)
         {
         }
         /// <summary>
@@ -30,41 +30,41 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroNine.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public GdprDeleteRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/crm/objects/2026-09/{fromObjectType%2Did}/gdpr-delete", rawUrl)
+        public GdprDeleteRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/crm/objects/2026-09/{fromObjectType}/gdpr-delete", rawUrl)
         {
         }
         /// <summary>
-        /// Permanently delete a contact and all associated content to follow GDPR. Use optional property &apos;idProperty&apos; set to &apos;email&apos; to identify contact by email address. If email address is not found, the email address will be added to a blocklist and prevent it from being used in the future.
+        /// Permanently delete a contact and all associated content in compliance with GDPR. This endpoint can use the optional &apos;idProperty&apos; set to &apos;email&apos; to identify the contact by email address. If the email address is not found, it will be added to a blocklist to prevent future use.
         /// </summary>
         /// <param name="body">An input that contains the information required to process a public GDPR data deletion request.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.PublicGdprDeleteInput body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicGdprDeleteInput11 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.PublicGdprDeleteInput body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicGdprDeleteInput11 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
+            await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Permanently delete a contact and all associated content to follow GDPR. Use optional property &apos;idProperty&apos; set to &apos;email&apos; to identify contact by email address. If email address is not found, the email address will be added to a blocklist and prevent it from being used in the future.
+        /// Permanently delete a contact and all associated content in compliance with GDPR. This endpoint can use the optional &apos;idProperty&apos; set to &apos;email&apos; to identify the contact by email address. If the email address is not found, it will be added to a blocklist to prevent future use.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">An input that contains the information required to process a public GDPR data deletion request.</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.PublicGdprDeleteInput body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicGdprDeleteInput11 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.PublicGdprDeleteInput body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicGdprDeleteInput11 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

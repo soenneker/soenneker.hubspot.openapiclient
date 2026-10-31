@@ -11,15 +11,31 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TimeOffset : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("amount") is null) { _explicitNullValueAmount = default!; _explicitNullProperties?.Remove("amount"); }
+            else if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
+            if (parseNode.GetChildNode("offsetDirection") is null) { _explicitNullValueOffsetDirection = default!; _explicitNullProperties?.Remove("offsetDirection"); }
+            else if (parseNode.GetChildNode("offsetDirection") is { } nullNodeOffsetDirection && nullNodeOffsetDirection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OffsetDirection = null;
+            if (parseNode.GetChildNode("timeUnit") is null) { _explicitNullValueTimeUnit = default!; _explicitNullProperties?.Remove("timeUnit"); }
+            else if (parseNode.GetChildNode("timeUnit") is { } nullNodeTimeUnit && nullNodeTimeUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeUnit = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An integer specifying the amount of time to offset, measured in the unit defined by the timeUnit property.</summary>
-        public long? Amount { get; set; }
+        public long? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; AdditionalData?.Remove("amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
+        private long? _explicitNullValueAmount = default!;
         /// <summary>A string indicating the direction of the time offset. Valid values are &apos;PAST&apos; and &apos;FUTURE&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffsetOffsetDirection? OffsetDirection { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffsetOffsetDirection? OffsetDirection { get => _explicitNullValueOffsetDirection; set { _explicitNullValueOffsetDirection = value; AdditionalData?.Remove("offsetDirection"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offsetDirection"); else _explicitNullProperties?.Remove("offsetDirection"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffsetOffsetDirection? _explicitNullValueOffsetDirection = default!;
         /// <summary>A string representing the unit of time for the offset. Valid values include &apos;WEEKS&apos;, &apos;DAYS&apos;, &apos;HOURS&apos;, and &apos;MINUTES&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffsetTimeUnit? TimeUnit { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffsetTimeUnit? TimeUnit { get => _explicitNullValueTimeUnit; set { _explicitNullValueTimeUnit = value; AdditionalData?.Remove("timeUnit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeUnit"); else _explicitNullProperties?.Remove("timeUnit"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffsetTimeUnit? _explicitNullValueTimeUnit = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffset"/> and sets the default values.
         /// </summary>
@@ -35,7 +51,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffset CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffset();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffset(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -46,8 +62,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "amount", n => { Amount = n.GetLongValue(); } },
-                { "offsetDirection", n => { OffsetDirection = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffsetOffsetDirection>(); } },
-                { "timeUnit", n => { TimeUnit = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffsetTimeUnit>(); } },
+                { "offsetDirection", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffsetOffsetDirection>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueOffsetDirection = default; _explicitNullProperties?.Remove("offsetDirection"); AdditionalData["offsetDirection"] = unknown; } else { OffsetDirection = parsed; AdditionalData.Remove("offsetDirection"); } } },
+                { "timeUnit", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffsetTimeUnit>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTimeUnit = default; _explicitNullProperties?.Remove("timeUnit"); AdditionalData["timeUnit"] = unknown; } else { TimeUnit = parsed; AdditionalData.Remove("timeUnit"); } } },
             };
         }
         /// <summary>
@@ -60,6 +76,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteLongValue("amount", Amount);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffsetOffsetDirection>("offsetDirection", OffsetDirection);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffsetTimeUnit>("timeUnit", TimeUnit);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

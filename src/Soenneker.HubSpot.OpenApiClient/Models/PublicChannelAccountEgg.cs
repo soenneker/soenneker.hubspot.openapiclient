@@ -11,34 +11,56 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicChannelAccountEgg : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("authorized") is null) { _explicitNullValueAuthorized = default!; _explicitNullProperties?.Remove("authorized"); }
+            else if (parseNode.GetChildNode("authorized") is { } nullNodeAuthorized && nullNodeAuthorized.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Authorized = null;
+            if (parseNode.GetChildNode("deliveryIdentifier") is null) { _explicitNullValueDeliveryIdentifier = default!; _explicitNullProperties?.Remove("deliveryIdentifier"); }
+            else if (parseNode.GetChildNode("deliveryIdentifier") is { } nullNodeDeliveryIdentifier && nullNodeDeliveryIdentifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeliveryIdentifier = null;
+            if (parseNode.GetChildNode("inboxId") is null) { _explicitNullValueInboxId = default!; _explicitNullProperties?.Remove("inboxId"); }
+            else if (parseNode.GetChildNode("inboxId") is { } nullNodeInboxId && nullNodeInboxId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InboxId = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A boolean indicating whether the channel account is authorized.</summary>
-        public bool? Authorized { get; set; }
+        public bool? Authorized { get => _explicitNullValueAuthorized; set { _explicitNullValueAuthorized = value; AdditionalData?.Remove("authorized"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authorized"); else _explicitNullProperties?.Remove("authorized"); } }
+        private bool? _explicitNullValueAuthorized = default!;
         /// <summary>The deliveryIdentifier property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicDeliveryIdentifier? DeliveryIdentifier { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicDeliveryIdentifier? DeliveryIdentifier { get => _explicitNullValueDeliveryIdentifier; set { _explicitNullValueDeliveryIdentifier = value; AdditionalData?.Remove("deliveryIdentifier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deliveryIdentifier"); else _explicitNullProperties?.Remove("deliveryIdentifier"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicDeliveryIdentifier? _explicitNullValueDeliveryIdentifier = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicDeliveryIdentifier DeliveryIdentifier { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicDeliveryIdentifier DeliveryIdentifier { get => _explicitNullValueDeliveryIdentifier; set { _explicitNullValueDeliveryIdentifier = value; AdditionalData?.Remove("deliveryIdentifier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deliveryIdentifier"); else _explicitNullProperties?.Remove("deliveryIdentifier"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicDeliveryIdentifier _explicitNullValueDeliveryIdentifier = default!;
 #endif
         /// <summary>The unique identifier for the inbox associated with this channel account. It is a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InboxId { get; set; }
+        public string? InboxId { get => _explicitNullValueInboxId; set { _explicitNullValueInboxId = value; AdditionalData?.Remove("inboxId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inboxId"); else _explicitNullProperties?.Remove("inboxId"); } }
+        private string? _explicitNullValueInboxId = default!;
 #nullable restore
 #else
-        public string InboxId { get; set; }
+        public string InboxId { get => _explicitNullValueInboxId; set { _explicitNullValueInboxId = value; AdditionalData?.Remove("inboxId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inboxId"); else _explicitNullProperties?.Remove("inboxId"); } }
+        private string _explicitNullValueInboxId = default!;
 #endif
         /// <summary>The name of the channel account. It is a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelAccountEgg"/> and sets the default values.
@@ -55,7 +77,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelAccountEgg CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelAccountEgg();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelAccountEgg(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -82,6 +104,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicDeliveryIdentifier>("deliveryIdentifier", DeliveryIdentifier);
             writer.WriteStringValue("inboxId", InboxId);
             writer.WriteStringValue("name", Name);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

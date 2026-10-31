@@ -11,45 +11,74 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class IntegratorCardPayloadResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("allItemsLinkUrl") is null) { _explicitNullValueAllItemsLinkUrl = default!; _explicitNullProperties?.Remove("allItemsLinkUrl"); }
+            else if (parseNode.GetChildNode("allItemsLinkUrl") is { } nullNodeAllItemsLinkUrl && nullNodeAllItemsLinkUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllItemsLinkUrl = null;
+            if (parseNode.GetChildNode("cardLabel") is null) { _explicitNullValueCardLabel = default!; _explicitNullProperties?.Remove("cardLabel"); }
+            else if (parseNode.GetChildNode("cardLabel") is { } nullNodeCardLabel && nullNodeCardLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CardLabel = null;
+            if (parseNode.GetChildNode("responseVersion") is null) { _explicitNullValueResponseVersion = default!; _explicitNullProperties?.Remove("responseVersion"); }
+            else if (parseNode.GetChildNode("responseVersion") is { } nullNodeResponseVersion && nullNodeResponseVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResponseVersion = null;
+            if (parseNode.GetChildNode("sections") is null) { _explicitNullValueSections = default!; _explicitNullProperties?.Remove("sections"); }
+            else if (parseNode.GetChildNode("sections") is { } nullNodeSections && nullNodeSections.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sections = null;
+            if (parseNode.GetChildNode("topLevelActions") is null) { _explicitNullValueTopLevelActions = default!; _explicitNullProperties?.Remove("topLevelActions"); }
+            else if (parseNode.GetChildNode("topLevelActions") is { } nullNodeTopLevelActions && nullNodeTopLevelActions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TopLevelActions = null;
+            if (parseNode.GetChildNode("totalCount") is null) { _explicitNullValueTotalCount = default!; _explicitNullProperties?.Remove("totalCount"); }
+            else if (parseNode.GetChildNode("totalCount") is { } nullNodeTotalCount && nullNodeTotalCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalCount = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>URL to a page the integrator has built that displays all details for this card. This URL will be displayed to users under a `See more [x]` link if there are more than five items in your response, where `[x]` is the value of `itemLabel`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AllItemsLinkUrl { get; set; }
+        public string? AllItemsLinkUrl { get => _explicitNullValueAllItemsLinkUrl; set { _explicitNullValueAllItemsLinkUrl = value; AdditionalData?.Remove("allItemsLinkUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allItemsLinkUrl"); else _explicitNullProperties?.Remove("allItemsLinkUrl"); } }
+        private string? _explicitNullValueAllItemsLinkUrl = default!;
 #nullable restore
 #else
-        public string AllItemsLinkUrl { get; set; }
+        public string AllItemsLinkUrl { get => _explicitNullValueAllItemsLinkUrl; set { _explicitNullValueAllItemsLinkUrl = value; AdditionalData?.Remove("allItemsLinkUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allItemsLinkUrl"); else _explicitNullProperties?.Remove("allItemsLinkUrl"); } }
+        private string _explicitNullValueAllItemsLinkUrl = default!;
 #endif
         /// <summary>The label to be used for the `allItemsLinkUrl` link (e.g. &apos;See more tickets&apos;). If not provided, this falls back to the card&apos;s title.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CardLabel { get; set; }
+        public string? CardLabel { get => _explicitNullValueCardLabel; set { _explicitNullValueCardLabel = value; AdditionalData?.Remove("cardLabel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cardLabel"); else _explicitNullProperties?.Remove("cardLabel"); } }
+        private string? _explicitNullValueCardLabel = default!;
 #nullable restore
 #else
-        public string CardLabel { get; set; }
+        public string CardLabel { get => _explicitNullValueCardLabel; set { _explicitNullValueCardLabel = value; AdditionalData?.Remove("cardLabel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cardLabel"); else _explicitNullProperties?.Remove("cardLabel"); } }
+        private string _explicitNullValueCardLabel = default!;
 #endif
         /// <summary>The number version of the response.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorCardPayloadResponseResponseVersion? ResponseVersion { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorCardPayloadResponseResponseVersion? ResponseVersion { get => _explicitNullValueResponseVersion; set { _explicitNullValueResponseVersion = value; AdditionalData?.Remove("responseVersion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("responseVersion"); else _explicitNullProperties?.Remove("responseVersion"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorCardPayloadResponseResponseVersion? _explicitNullValueResponseVersion = default!;
         /// <summary>A list of up to five valid card sub categories.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorObjectResult>? Sections { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorObjectResult>? Sections { get => _explicitNullValueSections; set { _explicitNullValueSections = value; AdditionalData?.Remove("sections"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sections"); else _explicitNullProperties?.Remove("sections"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorObjectResult>? _explicitNullValueSections = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorObjectResult> Sections { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorObjectResult> Sections { get => _explicitNullValueSections; set { _explicitNullValueSections = value; AdditionalData?.Remove("sections"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sections"); else _explicitNullProperties?.Remove("sections"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorObjectResult> _explicitNullValueSections = default!;
 #endif
         /// <summary>The topLevelActions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.TopLevelActions? TopLevelActions { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.TopLevelActions? TopLevelActions { get => _explicitNullValueTopLevelActions; set { _explicitNullValueTopLevelActions = value; AdditionalData?.Remove("topLevelActions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("topLevelActions"); else _explicitNullProperties?.Remove("topLevelActions"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.TopLevelActions? _explicitNullValueTopLevelActions = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.TopLevelActions TopLevelActions { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.TopLevelActions TopLevelActions { get => _explicitNullValueTopLevelActions; set { _explicitNullValueTopLevelActions = value; AdditionalData?.Remove("topLevelActions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("topLevelActions"); else _explicitNullProperties?.Remove("topLevelActions"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.TopLevelActions _explicitNullValueTopLevelActions = default!;
 #endif
         /// <summary>The total number of card properties that will be sent in this response.</summary>
-        public int? TotalCount { get; set; }
+        public int? TotalCount { get => _explicitNullValueTotalCount; set { _explicitNullValueTotalCount = value; AdditionalData?.Remove("totalCount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalCount"); else _explicitNullProperties?.Remove("totalCount"); } }
+        private int? _explicitNullValueTotalCount = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorCardPayloadResponse"/> and sets the default values.
         /// </summary>
@@ -65,7 +94,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorCardPayloadResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorCardPayloadResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorCardPayloadResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -77,7 +106,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "allItemsLinkUrl", n => { AllItemsLinkUrl = n.GetStringValue(); } },
                 { "cardLabel", n => { CardLabel = n.GetStringValue(); } },
-                { "responseVersion", n => { ResponseVersion = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorCardPayloadResponseResponseVersion>(); } },
+                { "responseVersion", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorCardPayloadResponseResponseVersion>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueResponseVersion = default; _explicitNullProperties?.Remove("responseVersion"); AdditionalData["responseVersion"] = unknown; } else { ResponseVersion = parsed; AdditionalData.Remove("responseVersion"); } } },
                 { "sections", n => { Sections = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorObjectResult>(global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorObjectResult.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "topLevelActions", n => { TopLevelActions = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.TopLevelActions>(global::Soenneker.HubSpot.OpenApiClient.Models.TopLevelActions.CreateFromDiscriminatorValue); } },
                 { "totalCount", n => { TotalCount = n.GetIntValue(); } },
@@ -96,6 +125,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorObjectResult>("sections", Sections);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.TopLevelActions>("topLevelActions", TopLevelActions);
             writer.WriteIntValue("totalCount", TotalCount);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

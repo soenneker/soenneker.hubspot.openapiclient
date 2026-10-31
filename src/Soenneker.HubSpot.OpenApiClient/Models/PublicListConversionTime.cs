@@ -12,7 +12,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PublicListConversionTime : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionDate"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -41,13 +46,24 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             var result = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionTime();
             if("PublicListConversionDate".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.PublicListConversionDate = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionDate();
+                
             }
             else if("PublicListConversionInactivity".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.PublicListConversionInactivity = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionInactivity();
+                
             }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => ((unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject)) && (unionPayload is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject shapeObject0 || (shapeObject0.GetValue() is var shapeMembers1 && (shapeMembers1.ContainsKey("conversionType") && shapeMembers1.ContainsKey("day") && shapeMembers1.ContainsKey("month") && shapeMembers1.ContainsKey("year") && (!shapeMembers1.ContainsKey("conversionType") || (((shapeMembers1["conversionType"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)) && ((shapeMembers1["conversionType"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal2 && "CONVERSION_DATE".Equals(literal2.GetValue(), global::System.StringComparison.Ordinal))))) && (!shapeMembers1.ContainsKey("day") || ((((shapeMembers1["day"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedInteger or global::Microsoft.Kiota.Abstractions.Serialization.UntypedLong || (shapeMembers1["day"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedDouble integral5 && integral5.GetValue() % 1 == 0) || (shapeMembers1["day"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedDecimal integral6 && integral6.GetValue() % 1 == 0) || (shapeMembers1["day"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedFloat integral7 && integral7.GetValue() % 1 == 0)))))) && (!shapeMembers1.ContainsKey("month") || ((((shapeMembers1["month"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedInteger or global::Microsoft.Kiota.Abstractions.Serialization.UntypedLong || (shapeMembers1["month"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedDouble integral10 && integral10.GetValue() % 1 == 0) || (shapeMembers1["month"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedDecimal integral11 && integral11.GetValue() % 1 == 0) || (shapeMembers1["month"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedFloat integral12 && integral12.GetValue() % 1 == 0)))))) && (!shapeMembers1.ContainsKey("year") || ((((shapeMembers1["year"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedInteger or global::Microsoft.Kiota.Abstractions.Serialization.UntypedLong || (shapeMembers1["year"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedDouble integral15 && integral15.GetValue() % 1 == 0) || (shapeMembers1["year"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedDecimal integral16 && integral16.GetValue() % 1 == 0) || (shapeMembers1["year"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedFloat integral17 && integral17.GetValue() % 1 == 0)))))))))))();
+            bool matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => ((unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject)) && (unionPayload is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject shapeObject0 || (shapeObject0.GetValue() is var shapeMembers1 && (shapeMembers1.ContainsKey("conversionType") && shapeMembers1.ContainsKey("offset") && shapeMembers1.ContainsKey("timeUnit") && (!shapeMembers1.ContainsKey("conversionType") || (((shapeMembers1["conversionType"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)) && ((shapeMembers1["conversionType"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal2 && "INACTIVITY".Equals(literal2.GetValue(), global::System.StringComparison.Ordinal))))) && (!shapeMembers1.ContainsKey("offset") || ((((shapeMembers1["offset"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedInteger or global::Microsoft.Kiota.Abstractions.Serialization.UntypedLong || (shapeMembers1["offset"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedDouble integral5 && integral5.GetValue() % 1 == 0) || (shapeMembers1["offset"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedDecimal integral6 && integral6.GetValue() % 1 == 0) || (shapeMembers1["offset"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedFloat integral7 && integral7.GetValue() % 1 == 0)))))) && (!shapeMembers1.ContainsKey("timeUnit") || (((shapeMembers1["timeUnit"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)) && ((shapeMembers1["timeUnit"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal10 && "DAY".Equals(literal10.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["timeUnit"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal11 && "MONTH".Equals(literal11.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["timeUnit"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal12 && "WEEK".Equals(literal12.GetValue(), global::System.StringComparison.Ordinal))))))))))();
+            int matchingUnionBranches = 0;
+            if (matchesUnionBranch0) matchingUnionBranches++;
+            if (matchesUnionBranch1) matchingUnionBranches++;
+            bool noSelectedUnionBranch = result.PublicListConversionDate == null && result.PublicListConversionInactivity == null;
+            if (noSelectedUnionBranch && matchesUnionBranch0 && matchingUnionBranches == 1) result.PublicListConversionDate = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionDate(), parseNode);
+            if (noSelectedUnionBranch && matchesUnionBranch1 && matchingUnionBranches == 1) result.PublicListConversionInactivity = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionInactivity(), parseNode);
+            if (result.PublicListConversionDate == null && result.PublicListConversionInactivity == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -55,6 +71,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
+            if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawFields) { var fields = new global::System.Collections.Generic.Dictionary<string, global::System.Action<IParseNode>>(); foreach (var entry in rawFields.GetValue()) fields[entry.Key] = _ => { }; return fields; }
+
             if(PublicListConversionDate != null)
             {
                 return PublicListConversionDate.GetFieldDeserializers();
@@ -71,13 +89,23 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (PublicListConversionDate == null && PublicListConversionInactivity == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            int selectedUnionBranches = 0;
+            if (PublicListConversionDate != null) selectedUnionBranches++;
+            if (PublicListConversionInactivity != null) selectedUnionBranches++;
+            if (PublicListConversionDate != null && selectedUnionBranches == 1) { if (PublicListConversionDate is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, PublicListConversionDate); return; }
+            if (PublicListConversionInactivity != null && selectedUnionBranches == 1) { if (PublicListConversionInactivity is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, PublicListConversionInactivity); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(PublicListConversionDate != null)
             {
+                if (PublicListConversionDate is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionDate>(null, PublicListConversionDate);
             }
             else if(PublicListConversionInactivity != null)
             {
+                if (PublicListConversionInactivity is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionInactivity>(null, PublicListConversionInactivity);
             }
         }

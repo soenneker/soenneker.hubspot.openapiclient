@@ -11,40 +11,63 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class LinkGenerationResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("managePreferencesUrl") is null) { _explicitNullValueManagePreferencesUrl = default!; _explicitNullProperties?.Remove("managePreferencesUrl"); }
+            else if (parseNode.GetChildNode("managePreferencesUrl") is { } nullNodeManagePreferencesUrl && nullNodeManagePreferencesUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ManagePreferencesUrl = null;
+            if (parseNode.GetChildNode("subscriberIdString") is null) { _explicitNullValueSubscriberIdString = default!; _explicitNullProperties?.Remove("subscriberIdString"); }
+            else if (parseNode.GetChildNode("subscriberIdString") is { } nullNodeSubscriberIdString && nullNodeSubscriberIdString.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriberIdString = null;
+            if (parseNode.GetChildNode("unsubscribeAllUrl") is null) { _explicitNullValueUnsubscribeAllUrl = default!; _explicitNullProperties?.Remove("unsubscribeAllUrl"); }
+            else if (parseNode.GetChildNode("unsubscribeAllUrl") is { } nullNodeUnsubscribeAllUrl && nullNodeUnsubscribeAllUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnsubscribeAllUrl = null;
+            if (parseNode.GetChildNode("unsubscribeSingleUrl") is null) { _explicitNullValueUnsubscribeSingleUrl = default!; _explicitNullProperties?.Remove("unsubscribeSingleUrl"); }
+            else if (parseNode.GetChildNode("unsubscribeSingleUrl") is { } nullNodeUnsubscribeSingleUrl && nullNodeUnsubscribeSingleUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnsubscribeSingleUrl = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The URL where the subscriber can manage their communication preferences.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ManagePreferencesUrl { get; set; }
+        public string? ManagePreferencesUrl { get => _explicitNullValueManagePreferencesUrl; set { _explicitNullValueManagePreferencesUrl = value; AdditionalData?.Remove("managePreferencesUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("managePreferencesUrl"); else _explicitNullProperties?.Remove("managePreferencesUrl"); } }
+        private string? _explicitNullValueManagePreferencesUrl = default!;
 #nullable restore
 #else
-        public string ManagePreferencesUrl { get; set; }
+        public string ManagePreferencesUrl { get => _explicitNullValueManagePreferencesUrl; set { _explicitNullValueManagePreferencesUrl = value; AdditionalData?.Remove("managePreferencesUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("managePreferencesUrl"); else _explicitNullProperties?.Remove("managePreferencesUrl"); } }
+        private string _explicitNullValueManagePreferencesUrl = default!;
 #endif
         /// <summary>A string representing the unique identifier of the subscriber.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SubscriberIdString { get; set; }
+        public string? SubscriberIdString { get => _explicitNullValueSubscriberIdString; set { _explicitNullValueSubscriberIdString = value; AdditionalData?.Remove("subscriberIdString"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscriberIdString"); else _explicitNullProperties?.Remove("subscriberIdString"); } }
+        private string? _explicitNullValueSubscriberIdString = default!;
 #nullable restore
 #else
-        public string SubscriberIdString { get; set; }
+        public string SubscriberIdString { get => _explicitNullValueSubscriberIdString; set { _explicitNullValueSubscriberIdString = value; AdditionalData?.Remove("subscriberIdString"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscriberIdString"); else _explicitNullProperties?.Remove("subscriberIdString"); } }
+        private string _explicitNullValueSubscriberIdString = default!;
 #endif
         /// <summary>A string containing the URL for unsubscribing the subscriber from all communications.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UnsubscribeAllUrl { get; set; }
+        public string? UnsubscribeAllUrl { get => _explicitNullValueUnsubscribeAllUrl; set { _explicitNullValueUnsubscribeAllUrl = value; AdditionalData?.Remove("unsubscribeAllUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unsubscribeAllUrl"); else _explicitNullProperties?.Remove("unsubscribeAllUrl"); } }
+        private string? _explicitNullValueUnsubscribeAllUrl = default!;
 #nullable restore
 #else
-        public string UnsubscribeAllUrl { get; set; }
+        public string UnsubscribeAllUrl { get => _explicitNullValueUnsubscribeAllUrl; set { _explicitNullValueUnsubscribeAllUrl = value; AdditionalData?.Remove("unsubscribeAllUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unsubscribeAllUrl"); else _explicitNullProperties?.Remove("unsubscribeAllUrl"); } }
+        private string _explicitNullValueUnsubscribeAllUrl = default!;
 #endif
         /// <summary>A string containing the URL to unsubscribe the subscriber from a single communication.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UnsubscribeSingleUrl { get; set; }
+        public string? UnsubscribeSingleUrl { get => _explicitNullValueUnsubscribeSingleUrl; set { _explicitNullValueUnsubscribeSingleUrl = value; AdditionalData?.Remove("unsubscribeSingleUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unsubscribeSingleUrl"); else _explicitNullProperties?.Remove("unsubscribeSingleUrl"); } }
+        private string? _explicitNullValueUnsubscribeSingleUrl = default!;
 #nullable restore
 #else
-        public string UnsubscribeSingleUrl { get; set; }
+        public string UnsubscribeSingleUrl { get => _explicitNullValueUnsubscribeSingleUrl; set { _explicitNullValueUnsubscribeSingleUrl = value; AdditionalData?.Remove("unsubscribeSingleUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unsubscribeSingleUrl"); else _explicitNullProperties?.Remove("unsubscribeSingleUrl"); } }
+        private string _explicitNullValueUnsubscribeSingleUrl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.LinkGenerationResponse"/> and sets the default values.
@@ -61,7 +84,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.LinkGenerationResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.LinkGenerationResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.LinkGenerationResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,6 +111,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("subscriberIdString", SubscriberIdString);
             writer.WriteStringValue("unsubscribeAllUrl", UnsubscribeAllUrl);
             writer.WriteStringValue("unsubscribeSingleUrl", UnsubscribeSingleUrl);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -72,7 +72,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Commerce.PriceBooks.TwoZeroTwoSixZeroN
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
-            await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
+            await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve a specific price book by its unique identifier in your HubSpot account. This endpoint allows you to access detailed information about a price book, including its status and supported currencies. It can be useful for managing and reviewing pricing strategies within your commerce system.
@@ -90,7 +90,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Commerce.PriceBooks.TwoZeroTwoSixZeroN
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Update an existing price book in your HubSpot account. This operation allows you to modify details such as the name, description, supported currencies, and custom properties of a price book. It is useful for keeping your price book information up to date with the latest changes.
@@ -110,7 +110,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Commerce.PriceBooks.TwoZeroTwoSixZeroN
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPatchRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Delete a specific price book from your HubSpot account using its unique identifier. This operation will permanently remove the price book and its associated data, making it unavailable for future use.

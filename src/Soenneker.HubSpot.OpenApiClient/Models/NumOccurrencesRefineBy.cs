@@ -11,15 +11,31 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class NumOccurrencesRefineBy : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("maxOccurrences") is null) { _explicitNullValueMaxOccurrences = default!; _explicitNullProperties?.Remove("maxOccurrences"); }
+            else if (parseNode.GetChildNode("maxOccurrences") is { } nullNodeMaxOccurrences && nullNodeMaxOccurrences.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxOccurrences = null;
+            if (parseNode.GetChildNode("minOccurrences") is null) { _explicitNullValueMinOccurrences = default!; _explicitNullProperties?.Remove("minOccurrences"); }
+            else if (parseNode.GetChildNode("minOccurrences") is { } nullNodeMinOccurrences && nullNodeMinOccurrences.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinOccurrences = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An integer indicating the maximum number of times an event can occur.</summary>
-        public int? MaxOccurrences { get; set; }
+        public int? MaxOccurrences { get => _explicitNullValueMaxOccurrences; set { _explicitNullValueMaxOccurrences = value; AdditionalData?.Remove("maxOccurrences"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxOccurrences"); else _explicitNullProperties?.Remove("maxOccurrences"); } }
+        private int? _explicitNullValueMaxOccurrences = default!;
         /// <summary>An integer indicating the minimum number of times an event must occur.</summary>
-        public int? MinOccurrences { get; set; }
+        public int? MinOccurrences { get => _explicitNullValueMinOccurrences; set { _explicitNullValueMinOccurrences = value; AdditionalData?.Remove("minOccurrences"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minOccurrences"); else _explicitNullProperties?.Remove("minOccurrences"); } }
+        private int? _explicitNullValueMinOccurrences = default!;
         /// <summary>A string that specifies the type of refinement, which is &apos;NumOccurrencesRefineBy&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.NumOccurrencesRefineByType? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.NumOccurrencesRefineByType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.NumOccurrencesRefineByType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.NumOccurrencesRefineBy"/> and sets the default values.
         /// </summary>
@@ -35,7 +51,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.NumOccurrencesRefineBy CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.NumOccurrencesRefineBy();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.NumOccurrencesRefineBy(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -47,7 +63,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "maxOccurrences", n => { MaxOccurrences = n.GetIntValue(); } },
                 { "minOccurrences", n => { MinOccurrences = n.GetIntValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.NumOccurrencesRefineByType>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.NumOccurrencesRefineByType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
         /// <summary>
@@ -60,6 +76,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteIntValue("maxOccurrences", MaxOccurrences);
             writer.WriteIntValue("minOccurrences", MinOccurrences);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.NumOccurrencesRefineByType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

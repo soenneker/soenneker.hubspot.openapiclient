@@ -11,36 +11,61 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicStagePermissionRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("permissionMode") is null) { _explicitNullValuePermissionMode = default!; _explicitNullProperties?.Remove("permissionMode"); }
+            else if (parseNode.GetChildNode("permissionMode") is { } nullNodePermissionMode && nullNodePermissionMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PermissionMode = null;
+            if (parseNode.GetChildNode("pipelineStageId") is null) { _explicitNullValuePipelineStageId = default!; _explicitNullProperties?.Remove("pipelineStageId"); }
+            else if (parseNode.GetChildNode("pipelineStageId") is { } nullNodePipelineStageId && nullNodePipelineStageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PipelineStageId = null;
+            if (parseNode.GetChildNode("superAdmin") is null) { _explicitNullValueSuperAdmin = default!; _explicitNullProperties?.Remove("superAdmin"); }
+            else if (parseNode.GetChildNode("superAdmin") is { } nullNodeSuperAdmin && nullNodeSuperAdmin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SuperAdmin = null;
+            if (parseNode.GetChildNode("teamIds") is null) { _explicitNullValueTeamIds = default!; _explicitNullProperties?.Remove("teamIds"); }
+            else if (parseNode.GetChildNode("teamIds") is { } nullNodeTeamIds && nullNodeTeamIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TeamIds = null;
+            if (parseNode.GetChildNode("userIds") is null) { _explicitNullValueUserIds = default!; _explicitNullProperties?.Remove("userIds"); }
+            else if (parseNode.GetChildNode("userIds") is { } nullNodeUserIds && nullNodeUserIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserIds = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The mode of permission for the stage. It is a string that can be either &apos;OPEN&apos; or &apos;RESTRICTED&apos;, indicating the level of access allowed.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicStagePermissionRequestPermissionMode? PermissionMode { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicStagePermissionRequestPermissionMode? PermissionMode { get => _explicitNullValuePermissionMode; set { _explicitNullValuePermissionMode = value; AdditionalData?.Remove("permissionMode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissionMode"); else _explicitNullProperties?.Remove("permissionMode"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicStagePermissionRequestPermissionMode? _explicitNullValuePermissionMode = default!;
         /// <summary>The unique identifier for the pipeline stage. It is a string that specifies which stage the permissions apply to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PipelineStageId { get; set; }
+        public string? PipelineStageId { get => _explicitNullValuePipelineStageId; set { _explicitNullValuePipelineStageId = value; AdditionalData?.Remove("pipelineStageId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipelineStageId"); else _explicitNullProperties?.Remove("pipelineStageId"); } }
+        private string? _explicitNullValuePipelineStageId = default!;
 #nullable restore
 #else
-        public string PipelineStageId { get; set; }
+        public string PipelineStageId { get => _explicitNullValuePipelineStageId; set { _explicitNullValuePipelineStageId = value; AdditionalData?.Remove("pipelineStageId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipelineStageId"); else _explicitNullProperties?.Remove("pipelineStageId"); } }
+        private string _explicitNullValuePipelineStageId = default!;
 #endif
         /// <summary>A boolean indicating whether super admin users have permission to edit the stage.</summary>
-        public bool? SuperAdmin { get; set; }
+        public bool? SuperAdmin { get => _explicitNullValueSuperAdmin; set { _explicitNullValueSuperAdmin = value; AdditionalData?.Remove("superAdmin"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("superAdmin"); else _explicitNullProperties?.Remove("superAdmin"); } }
+        private bool? _explicitNullValueSuperAdmin = default!;
         /// <summary>An array of strings representing the IDs of teams that have permission to edit the stage.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? TeamIds { get; set; }
+        public List<string>? TeamIds { get => _explicitNullValueTeamIds; set { _explicitNullValueTeamIds = value; AdditionalData?.Remove("teamIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("teamIds"); else _explicitNullProperties?.Remove("teamIds"); } }
+        private List<string>? _explicitNullValueTeamIds = default!;
 #nullable restore
 #else
-        public List<string> TeamIds { get; set; }
+        public List<string> TeamIds { get => _explicitNullValueTeamIds; set { _explicitNullValueTeamIds = value; AdditionalData?.Remove("teamIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("teamIds"); else _explicitNullProperties?.Remove("teamIds"); } }
+        private List<string> _explicitNullValueTeamIds = default!;
 #endif
         /// <summary>An array of strings representing the IDs of individual users who have permission to edit the stage.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? UserIds { get; set; }
+        public List<string>? UserIds { get => _explicitNullValueUserIds; set { _explicitNullValueUserIds = value; AdditionalData?.Remove("userIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userIds"); else _explicitNullProperties?.Remove("userIds"); } }
+        private List<string>? _explicitNullValueUserIds = default!;
 #nullable restore
 #else
-        public List<string> UserIds { get; set; }
+        public List<string> UserIds { get => _explicitNullValueUserIds; set { _explicitNullValueUserIds = value; AdditionalData?.Remove("userIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userIds"); else _explicitNullProperties?.Remove("userIds"); } }
+        private List<string> _explicitNullValueUserIds = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicStagePermissionRequest"/> and sets the default values.
@@ -57,7 +82,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicStagePermissionRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicStagePermissionRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicStagePermissionRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -67,7 +92,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "permissionMode", n => { PermissionMode = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStagePermissionRequestPermissionMode>(); } },
+                { "permissionMode", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStagePermissionRequestPermissionMode>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePermissionMode = default; _explicitNullProperties?.Remove("permissionMode"); AdditionalData["permissionMode"] = unknown; } else { PermissionMode = parsed; AdditionalData.Remove("permissionMode"); } } },
                 { "pipelineStageId", n => { PipelineStageId = n.GetStringValue(); } },
                 { "superAdmin", n => { SuperAdmin = n.GetBoolValue(); } },
                 { "teamIds", n => { TeamIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -86,6 +111,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteBoolValue("superAdmin", SuperAdmin);
             writer.WriteCollectionOfPrimitiveValues<string>("teamIds", TeamIds);
             writer.WriteCollectionOfPrimitiveValues<string>("userIds", UserIds);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,15 +11,31 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CurrencyPairUpdate : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("fromCurrencyCode") is null) { _explicitNullValueFromCurrencyCode = default!; _explicitNullProperties?.Remove("fromCurrencyCode"); }
+            else if (parseNode.GetChildNode("fromCurrencyCode") is { } nullNodeFromCurrencyCode && nullNodeFromCurrencyCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FromCurrencyCode = null;
+            if (parseNode.GetChildNode("toCurrencyCode") is null) { _explicitNullValueToCurrencyCode = default!; _explicitNullProperties?.Remove("toCurrencyCode"); }
+            else if (parseNode.GetChildNode("toCurrencyCode") is { } nullNodeToCurrencyCode && nullNodeToCurrencyCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToCurrencyCode = null;
+            if (parseNode.GetChildNode("visibleInUI") is null) { _explicitNullValueVisibleInUI = default!; _explicitNullProperties?.Remove("visibleInUI"); }
+            else if (parseNode.GetChildNode("visibleInUI") is { } nullNodeVisibleInUI && nullNodeVisibleInUI.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VisibleInUI = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>This represents the three-letter currency code (such as USD for US Dollar) of the currency you want to convert from.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CurrencyPairUpdateFromCurrencyCode? FromCurrencyCode { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CurrencyPairUpdateFromCurrencyCode? FromCurrencyCode { get => _explicitNullValueFromCurrencyCode; set { _explicitNullValueFromCurrencyCode = value; AdditionalData?.Remove("fromCurrencyCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fromCurrencyCode"); else _explicitNullProperties?.Remove("fromCurrencyCode"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CurrencyPairUpdateFromCurrencyCode? _explicitNullValueFromCurrencyCode = default!;
         /// <summary>This represents the three-letter currency code (such as USD for US Dollar) of the currency you want to convert to.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CurrencyPairUpdateToCurrencyCode? ToCurrencyCode { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CurrencyPairUpdateToCurrencyCode? ToCurrencyCode { get => _explicitNullValueToCurrencyCode; set { _explicitNullValueToCurrencyCode = value; AdditionalData?.Remove("toCurrencyCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("toCurrencyCode"); else _explicitNullProperties?.Remove("toCurrencyCode"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CurrencyPairUpdateToCurrencyCode? _explicitNullValueToCurrencyCode = default!;
         /// <summary>This indicates if the currency pair is shown in the MultiCurrency settings page. Setting this to false will remove the currency pair from the settings page.</summary>
-        public bool? VisibleInUI { get; set; }
+        public bool? VisibleInUI { get => _explicitNullValueVisibleInUI; set { _explicitNullValueVisibleInUI = value; AdditionalData?.Remove("visibleInUI"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visibleInUI"); else _explicitNullProperties?.Remove("visibleInUI"); } }
+        private bool? _explicitNullValueVisibleInUI = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CurrencyPairUpdate"/> and sets the default values.
         /// </summary>
@@ -35,7 +51,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.CurrencyPairUpdate CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.CurrencyPairUpdate();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.CurrencyPairUpdate(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -45,8 +61,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "fromCurrencyCode", n => { FromCurrencyCode = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CurrencyPairUpdateFromCurrencyCode>(); } },
-                { "toCurrencyCode", n => { ToCurrencyCode = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CurrencyPairUpdateToCurrencyCode>(); } },
+                { "fromCurrencyCode", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CurrencyPairUpdateFromCurrencyCode>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFromCurrencyCode = default; _explicitNullProperties?.Remove("fromCurrencyCode"); AdditionalData["fromCurrencyCode"] = unknown; } else { FromCurrencyCode = parsed; AdditionalData.Remove("fromCurrencyCode"); } } },
+                { "toCurrencyCode", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CurrencyPairUpdateToCurrencyCode>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueToCurrencyCode = default; _explicitNullProperties?.Remove("toCurrencyCode"); AdditionalData["toCurrencyCode"] = unknown; } else { ToCurrencyCode = parsed; AdditionalData.Remove("toCurrencyCode"); } } },
                 { "visibleInUI", n => { VisibleInUI = n.GetBoolValue(); } },
             };
         }
@@ -60,6 +76,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CurrencyPairUpdateFromCurrencyCode>("fromCurrencyCode", FromCurrencyCode);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CurrencyPairUpdateToCurrencyCode>("toCurrencyCode", ToCurrencyCode);
             writer.WriteBoolValue("visibleInUI", VisibleInUI);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -48,7 +48,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.ObjectTags.TwoZeroTwoSixZeroNine.I
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
-            await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
+            await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve a specific CRM object tag using its unique identifiers. This endpoint is useful for obtaining details about a particular tag associated with a CRM object type, which can help in managing or analyzing tagged data within your HubSpot account.
@@ -66,7 +66,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.ObjectTags.TwoZeroTwoSixZeroNine.I
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCrmObjectTag>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicCrmObjectTag.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCrmObjectTag>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicCrmObjectTag.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Update an existing CRM object tag in your HubSpot account. This endpoint allows you to modify properties of a specific tag identified by its tagId and objectTypeId. Use this to change tag attributes such as color, description, or associated filters.
@@ -86,7 +86,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.ObjectTags.TwoZeroTwoSixZeroNine.I
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPatchRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCrmObjectTag>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicCrmObjectTag.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCrmObjectTag>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicCrmObjectTag.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Update an existing CRM object tag in your HubSpot account. This operation allows you to modify the properties of a tag identified by its objectTypeId and tagId. Use this endpoint to change tag details such as name, color, and associated filters.
@@ -106,7 +106,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.ObjectTags.TwoZeroTwoSixZeroNine.I
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCrmObjectTag>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicCrmObjectTag.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCrmObjectTag>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicCrmObjectTag.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Delete a specific CRM object tag identified by its object type ID and tag ID. This operation will remove the tag from the system, and it will no longer be available for use or reference.

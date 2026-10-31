@@ -11,11 +11,21 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CaseChangeTestExtensionData : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("mood") is null) { _explicitNullValueMood = default!; _explicitNullProperties?.Remove("mood"); }
+            else if (parseNode.GetChildNode("mood") is { } nullNodeMood && nullNodeMood.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mood = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A property representing the mood, typically used for testing case changes in text. The data type and constraints are not specified in the provided schema.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CaseChangeTestExtensionDataMood? Mood { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CaseChangeTestExtensionDataMood? Mood { get => _explicitNullValueMood; set { _explicitNullValueMood = value; AdditionalData?.Remove("mood"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mood"); else _explicitNullProperties?.Remove("mood"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CaseChangeTestExtensionDataMood? _explicitNullValueMood = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CaseChangeTestExtensionData"/> and sets the default values.
         /// </summary>
@@ -31,7 +41,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.CaseChangeTestExtensionData CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.CaseChangeTestExtensionData();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.CaseChangeTestExtensionData(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -41,7 +51,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "mood", n => { Mood = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CaseChangeTestExtensionDataMood>(); } },
+                { "mood", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CaseChangeTestExtensionDataMood>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMood = default; _explicitNullProperties?.Remove("mood"); AdditionalData["mood"] = unknown; } else { Mood = parsed; AdditionalData.Remove("mood"); } } },
             };
         }
         /// <summary>
@@ -52,6 +62,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CaseChangeTestExtensionDataMood>("mood", Mood);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

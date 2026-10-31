@@ -36,22 +36,22 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroNine.Call
         /// <summary>
         /// Create a batch of calls. The `inputs` array can contain a `properties` object to define property values for each record, along with an `associations` array to define [associations](https://developers.hubspot.com/docs/guides/api/crm/associations/associations-v4) with other CRM records.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponseSimplePublicObject2"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PostCrmObjects202609CallsBatchCreateCrmObjects202609BetaObjectTypeBatchCreateSuccessResponse"/></returns>
         /// <param name="body">Represents a batch input for creating multiple simple public objects in a single request. This component is used to streamline the process of adding new objects to a HubSpot account by allowing multiple entries to be created at once.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponseSimplePublicObject2?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchInputSimplePublicObjectBatchInputForCreate2 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.PostCrmObjects202609CallsBatchCreateCrmObjects202609BetaObjectTypeBatchCreateSuccessResponse?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchInputSimplePublicObjectBatchInputForCreate2 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponseSimplePublicObject2> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchInputSimplePublicObjectBatchInputForCreate2 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.PostCrmObjects202609CallsBatchCreateCrmObjects202609BetaObjectTypeBatchCreateSuccessResponse> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchInputSimplePublicObjectBatchInputForCreate2 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponseSimplePublicObject2>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponseSimplePublicObject2.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PostCrmObjects202609CallsBatchCreateCrmObjects202609BetaObjectTypeBatchCreateSuccessResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PostCrmObjects202609CallsBatchCreateCrmObjects202609BetaObjectTypeBatchCreateSuccessResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Create a batch of calls. The `inputs` array can contain a `properties` object to define property values for each record, along with an `associations` array to define [associations](https://developers.hubspot.com/docs/guides/api/crm/associations/associations-v4) with other CRM records.

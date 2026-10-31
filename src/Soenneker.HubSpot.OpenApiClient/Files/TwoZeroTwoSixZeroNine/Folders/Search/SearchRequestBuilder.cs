@@ -49,7 +49,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Files.TwoZeroTwoSixZeroNine.Folders.Se
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseFolder>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseFolder.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseFolder>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseFolder.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Search for folders in the HubSpot file manager using various query parameters to filter results. This endpoint allows you to retrieve folders based on specific criteria such as creation date, update date, folder name, and parent folder IDs. It supports pagination and sorting to help manage large sets of data efficiently.

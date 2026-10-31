@@ -62,7 +62,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Commerce.PaymentLinks.TwoZeroTwoSixZer
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponsePaymentLinkResponseForwardPaging>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponsePaymentLinkResponseForwardPaging.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponsePaymentLinkResponseForwardPaging>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponsePaymentLinkResponseForwardPaging.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Create a new payment link in your HubSpot account. This endpoint allows you to specify various attributes for the payment link, such as accepted payment methods, currency, and additional form fields. The payment link can be configured for one-time use and can also collect shipping and billing addresses. This operation requires a valid JSON request body. Some defaults will be applied if no value provided.
@@ -82,7 +82,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Commerce.PaymentLinks.TwoZeroTwoSixZer
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve a list of payment links from your HubSpot account. This endpoint allows you to filter and sort payment links based on various criteria such as creation and update timestamps. It supports pagination and can include archived payment links if specified.

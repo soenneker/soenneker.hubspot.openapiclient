@@ -54,7 +54,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Settings.Teams.TwoZeroTwoSixZeroNine.I
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
-            await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
+            await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve detailed information about a specific team in your HubSpot account using the team&apos;s unique identifier. This endpoint is useful for accessing the team&apos;s properties, such as its name and parent team ID, to manage or display team-related data.
@@ -72,7 +72,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Settings.Teams.TwoZeroTwoSixZeroNine.I
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.TeamResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.TeamResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.TeamResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.TeamResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Update the details of a specific team in your HubSpot account. This endpoint allows you to modify the team&apos;s information, such as its name or parent team ID. Ensure that the teamId provided in the path is correct, as it identifies the team to be updated.
@@ -92,7 +92,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Settings.Teams.TwoZeroTwoSixZeroNine.I
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPatchRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.TeamResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.TeamResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.TeamResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.TeamResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Delete a specific team from your HubSpot account using the team&apos;s unique identifier. This operation will remove the team and its associated data. Ensure that you have the necessary permissions to perform this action.

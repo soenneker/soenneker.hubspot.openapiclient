@@ -11,18 +11,32 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ExternalLinkAvailability : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("hasMore") is null) { _explicitNullValueHasMore = default!; _explicitNullProperties?.Remove("hasMore"); }
+            else if (parseNode.GetChildNode("hasMore") is { } nullNodeHasMore && nullNodeHasMore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasMore = null;
+            if (parseNode.GetChildNode("linkAvailabilityByDuration") is null) { _explicitNullValueLinkAvailabilityByDuration = default!; _explicitNullProperties?.Remove("linkAvailabilityByDuration"); }
+            else if (parseNode.GetChildNode("linkAvailabilityByDuration") is { } nullNodeLinkAvailabilityByDuration && nullNodeLinkAvailabilityByDuration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LinkAvailabilityByDuration = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A boolean indicating whether there are more available meeting times beyond those currently provided.</summary>
-        public bool? HasMore { get; set; }
+        public bool? HasMore { get => _explicitNullValueHasMore; set { _explicitNullValueHasMore = value; AdditionalData?.Remove("hasMore"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hasMore"); else _explicitNullProperties?.Remove("hasMore"); } }
+        private bool? _explicitNullValueHasMore = default!;
         /// <summary>An object where each key is a duration and the value is an availability object for that duration. This provides detailed availability information for each specified meeting duration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailabilityLinkAvailabilityByDurationProperty2? LinkAvailabilityByDuration { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailabilityLinkAvailabilityByDurationProperty2? LinkAvailabilityByDuration { get => _explicitNullValueLinkAvailabilityByDuration; set { _explicitNullValueLinkAvailabilityByDuration = value; AdditionalData?.Remove("linkAvailabilityByDuration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("linkAvailabilityByDuration"); else _explicitNullProperties?.Remove("linkAvailabilityByDuration"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailabilityLinkAvailabilityByDurationProperty2? _explicitNullValueLinkAvailabilityByDuration = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailabilityLinkAvailabilityByDurationProperty2 LinkAvailabilityByDuration { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailabilityLinkAvailabilityByDurationProperty2 LinkAvailabilityByDuration { get => _explicitNullValueLinkAvailabilityByDuration; set { _explicitNullValueLinkAvailabilityByDuration = value; AdditionalData?.Remove("linkAvailabilityByDuration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("linkAvailabilityByDuration"); else _explicitNullProperties?.Remove("linkAvailabilityByDuration"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailabilityLinkAvailabilityByDurationProperty2 _explicitNullValueLinkAvailabilityByDuration = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailability"/> and sets the default values.
@@ -39,7 +53,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailability CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailability();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailability(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -62,6 +76,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("hasMore", HasMore);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailabilityLinkAvailabilityByDurationProperty2>("linkAvailabilityByDuration", LinkAvailabilityByDuration);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

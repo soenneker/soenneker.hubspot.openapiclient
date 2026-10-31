@@ -11,32 +11,59 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GroupView : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("displayName") is null) { _explicitNullValueDisplayName = default!; _explicitNullProperties?.Remove("displayName"); }
+            else if (parseNode.GetChildNode("displayName") is { } nullNodeDisplayName && nullNodeDisplayName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayName = null;
+            if (parseNode.GetChildNode("displayOrder") is null) { _explicitNullValueDisplayOrder = default!; _explicitNullProperties?.Remove("displayOrder"); }
+            else if (parseNode.GetChildNode("displayOrder") is { } nullNodeDisplayOrder && nullNodeDisplayOrder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayOrder = null;
+            if (parseNode.GetChildNode("fulcrumPortalId") is null) { _explicitNullValueFulcrumPortalId = default!; _explicitNullProperties?.Remove("fulcrumPortalId"); }
+            else if (parseNode.GetChildNode("fulcrumPortalId") is { } nullNodeFulcrumPortalId && nullNodeFulcrumPortalId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FulcrumPortalId = null;
+            if (parseNode.GetChildNode("fulcrumTimestamp") is null) { _explicitNullValueFulcrumTimestamp = default!; _explicitNullProperties?.Remove("fulcrumTimestamp"); }
+            else if (parseNode.GetChildNode("fulcrumTimestamp") is { } nullNodeFulcrumTimestamp && nullNodeFulcrumTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FulcrumTimestamp = null;
+            if (parseNode.GetChildNode("hubspotDefined") is null) { _explicitNullValueHubspotDefined = default!; _explicitNullProperties?.Remove("hubspotDefined"); }
+            else if (parseNode.GetChildNode("hubspotDefined") is { } nullNodeHubspotDefined && nullNodeHubspotDefined.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HubspotDefined = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A string representing the display name of the group, used for user-friendly identification.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DisplayName { get; set; }
+        public string? DisplayName { get => _explicitNullValueDisplayName; set { _explicitNullValueDisplayName = value; AdditionalData?.Remove("displayName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayName"); else _explicitNullProperties?.Remove("displayName"); } }
+        private string? _explicitNullValueDisplayName = default!;
 #nullable restore
 #else
-        public string DisplayName { get; set; }
+        public string DisplayName { get => _explicitNullValueDisplayName; set { _explicitNullValueDisplayName = value; AdditionalData?.Remove("displayName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayName"); else _explicitNullProperties?.Remove("displayName"); } }
+        private string _explicitNullValueDisplayName = default!;
 #endif
         /// <summary>An integer that determines the order in which the group is displayed relative to other groups.</summary>
-        public int? DisplayOrder { get; set; }
+        public int? DisplayOrder { get => _explicitNullValueDisplayOrder; set { _explicitNullValueDisplayOrder = value; AdditionalData?.Remove("displayOrder"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayOrder"); else _explicitNullProperties?.Remove("displayOrder"); } }
+        private int? _explicitNullValueDisplayOrder = default!;
         /// <summary>An integer representing the ID of the portal associated with this group.</summary>
-        public int? FulcrumPortalId { get; set; }
+        public int? FulcrumPortalId { get => _explicitNullValueFulcrumPortalId; set { _explicitNullValueFulcrumPortalId = value; AdditionalData?.Remove("fulcrumPortalId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fulcrumPortalId"); else _explicitNullProperties?.Remove("fulcrumPortalId"); } }
+        private int? _explicitNullValueFulcrumPortalId = default!;
         /// <summary>A Unix timestamp in milliseconds indicating when the group was last updated.</summary>
-        public long? FulcrumTimestamp { get; set; }
+        public long? FulcrumTimestamp { get => _explicitNullValueFulcrumTimestamp; set { _explicitNullValueFulcrumTimestamp = value; AdditionalData?.Remove("fulcrumTimestamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fulcrumTimestamp"); else _explicitNullProperties?.Remove("fulcrumTimestamp"); } }
+        private long? _explicitNullValueFulcrumTimestamp = default!;
         /// <summary>A boolean indicating whether the group is defined by HubSpot. If true, the group is a default HubSpot group.</summary>
-        public bool? HubspotDefined { get; set; }
+        public bool? HubspotDefined { get => _explicitNullValueHubspotDefined; set { _explicitNullValueHubspotDefined = value; AdditionalData?.Remove("hubspotDefined"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hubspotDefined"); else _explicitNullProperties?.Remove("hubspotDefined"); } }
+        private bool? _explicitNullValueHubspotDefined = default!;
         /// <summary>The name of the group. It is a string that uniquely identifies the group within the context of the MediaBridgeService.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.GroupView"/> and sets the default values.
@@ -53,7 +80,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.GroupView CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.GroupView();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.GroupView(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -84,6 +111,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteLongValue("fulcrumTimestamp", FulcrumTimestamp);
             writer.WriteBoolValue("hubspotDefined", HubspotDefined);
             writer.WriteStringValue("name", Name);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

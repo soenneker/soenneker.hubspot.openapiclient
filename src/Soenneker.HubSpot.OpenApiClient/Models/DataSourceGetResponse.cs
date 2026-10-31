@@ -11,45 +11,74 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class DataSourceGetResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("columns") is null) { _explicitNullValueColumns = default!; _explicitNullProperties?.Remove("columns"); }
+            else if (parseNode.GetChildNode("columns") is { } nullNodeColumns && nullNodeColumns.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Columns = null;
+            if (parseNode.GetChildNode("createdAt") is null) { _explicitNullValueCreatedAt = default!; _explicitNullProperties?.Remove("createdAt"); }
+            else if (parseNode.GetChildNode("createdAt") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("datasourceId") is null) { _explicitNullValueDatasourceId = default!; _explicitNullProperties?.Remove("datasourceId"); }
+            else if (parseNode.GetChildNode("datasourceId") is { } nullNodeDatasourceId && nullNodeDatasourceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DatasourceId = null;
+            if (parseNode.GetChildNode("datasourceName") is null) { _explicitNullValueDatasourceName = default!; _explicitNullProperties?.Remove("datasourceName"); }
+            else if (parseNode.GetChildNode("datasourceName") is { } nullNodeDatasourceName && nullNodeDatasourceName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DatasourceName = null;
+            if (parseNode.GetChildNode("datasourceType") is null) { _explicitNullValueDatasourceType = default!; _explicitNullProperties?.Remove("datasourceType"); }
+            else if (parseNode.GetChildNode("datasourceType") is { } nullNodeDatasourceType && nullNodeDatasourceType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DatasourceType = null;
+            if (parseNode.GetChildNode("lastIngestionStatus") is null) { _explicitNullValueLastIngestionStatus = default!; _explicitNullProperties?.Remove("lastIngestionStatus"); }
+            else if (parseNode.GetChildNode("lastIngestionStatus") is { } nullNodeLastIngestionStatus && nullNodeLastIngestionStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastIngestionStatus = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An array of FileColumn objects representing the columns in the data source.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.FileColumn>? Columns { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.FileColumn>? Columns { get => _explicitNullValueColumns; set { _explicitNullValueColumns = value; AdditionalData?.Remove("columns"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("columns"); else _explicitNullProperties?.Remove("columns"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.FileColumn>? _explicitNullValueColumns = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.FileColumn> Columns { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.FileColumn> Columns { get => _explicitNullValueColumns; set { _explicitNullValueColumns = value; AdditionalData?.Remove("columns"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("columns"); else _explicitNullProperties?.Remove("columns"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.FileColumn> _explicitNullValueColumns = default!;
 #endif
         /// <summary>The creation date and time of the data source, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CreatedAt { get; set; }
+        public string? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; AdditionalData?.Remove("createdAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createdAt"); else _explicitNullProperties?.Remove("createdAt"); } }
+        private string? _explicitNullValueCreatedAt = default!;
 #nullable restore
 #else
-        public string CreatedAt { get; set; }
+        public string CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; AdditionalData?.Remove("createdAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createdAt"); else _explicitNullProperties?.Remove("createdAt"); } }
+        private string _explicitNullValueCreatedAt = default!;
 #endif
         /// <summary>The unique identifier for the data source, represented as a 64-bit integer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DatasourceId { get; set; }
+        public string? DatasourceId { get => _explicitNullValueDatasourceId; set { _explicitNullValueDatasourceId = value; AdditionalData?.Remove("datasourceId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("datasourceId"); else _explicitNullProperties?.Remove("datasourceId"); } }
+        private string? _explicitNullValueDatasourceId = default!;
 #nullable restore
 #else
-        public string DatasourceId { get; set; }
+        public string DatasourceId { get => _explicitNullValueDatasourceId; set { _explicitNullValueDatasourceId = value; AdditionalData?.Remove("datasourceId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("datasourceId"); else _explicitNullProperties?.Remove("datasourceId"); } }
+        private string _explicitNullValueDatasourceId = default!;
 #endif
         /// <summary>The name of the data source, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DatasourceName { get; set; }
+        public string? DatasourceName { get => _explicitNullValueDatasourceName; set { _explicitNullValueDatasourceName = value; AdditionalData?.Remove("datasourceName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("datasourceName"); else _explicitNullProperties?.Remove("datasourceName"); } }
+        private string? _explicitNullValueDatasourceName = default!;
 #nullable restore
 #else
-        public string DatasourceName { get; set; }
+        public string DatasourceName { get => _explicitNullValueDatasourceName; set { _explicitNullValueDatasourceName = value; AdditionalData?.Remove("datasourceName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("datasourceName"); else _explicitNullProperties?.Remove("datasourceName"); } }
+        private string _explicitNullValueDatasourceName = default!;
 #endif
         /// <summary>The type of the data source, which is a string with a valid value of &apos;FILE&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.DataSourceGetResponseDatasourceType? DatasourceType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.DataSourceGetResponseDatasourceType? DatasourceType { get => _explicitNullValueDatasourceType; set { _explicitNullValueDatasourceType = value; AdditionalData?.Remove("datasourceType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("datasourceType"); else _explicitNullProperties?.Remove("datasourceType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.DataSourceGetResponseDatasourceType? _explicitNullValueDatasourceType = default!;
         /// <summary>The status of the last data ingestion process, represented as a string. Valid values include &apos;SUCCESSFUL&apos;, &apos;IN_PROGRESS&apos;, and &apos;FAILED&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.DataSourceGetResponseLastIngestionStatus? LastIngestionStatus { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.DataSourceGetResponseLastIngestionStatus? LastIngestionStatus { get => _explicitNullValueLastIngestionStatus; set { _explicitNullValueLastIngestionStatus = value; AdditionalData?.Remove("lastIngestionStatus"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastIngestionStatus"); else _explicitNullProperties?.Remove("lastIngestionStatus"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.DataSourceGetResponseLastIngestionStatus? _explicitNullValueLastIngestionStatus = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.DataSourceGetResponse"/> and sets the default values.
         /// </summary>
@@ -65,7 +94,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.DataSourceGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.DataSourceGetResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.DataSourceGetResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,8 +108,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "createdAt", n => { CreatedAt = n.GetStringValue(); } },
                 { "datasourceId", n => { DatasourceId = n.GetStringValue(); } },
                 { "datasourceName", n => { DatasourceName = n.GetStringValue(); } },
-                { "datasourceType", n => { DatasourceType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DataSourceGetResponseDatasourceType>(); } },
-                { "lastIngestionStatus", n => { LastIngestionStatus = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DataSourceGetResponseLastIngestionStatus>(); } },
+                { "datasourceType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DataSourceGetResponseDatasourceType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDatasourceType = default; _explicitNullProperties?.Remove("datasourceType"); AdditionalData["datasourceType"] = unknown; } else { DatasourceType = parsed; AdditionalData.Remove("datasourceType"); } } },
+                { "lastIngestionStatus", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DataSourceGetResponseLastIngestionStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueLastIngestionStatus = default; _explicitNullProperties?.Remove("lastIngestionStatus"); AdditionalData["lastIngestionStatus"] = unknown; } else { LastIngestionStatus = parsed; AdditionalData.Remove("lastIngestionStatus"); } } },
             };
         }
         /// <summary>
@@ -96,6 +125,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("datasourceName", DatasourceName);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DataSourceGetResponseDatasourceType>("datasourceType", DatasourceType);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DataSourceGetResponseLastIngestionStatus>("lastIngestionStatus", LastIngestionStatus);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

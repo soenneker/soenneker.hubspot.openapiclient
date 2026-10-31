@@ -11,48 +11,75 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PatchPublicCrmObjectTagRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("color") is null) { _explicitNullValueColor = default!; _explicitNullProperties?.Remove("color"); }
+            else if (parseNode.GetChildNode("color") is { } nullNodeColor && nullNodeColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Color = null;
+            if (parseNode.GetChildNode("description") is null) { _explicitNullValueDescription = default!; _explicitNullProperties?.Remove("description"); }
+            else if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("filterBranch") is null) { _explicitNullValueFilterBranch = default!; _explicitNullProperties?.Remove("filterBranch"); }
+            else if (parseNode.GetChildNode("filterBranch") is { } nullNodeFilterBranch && nullNodeFilterBranch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FilterBranch = null;
+            if (parseNode.GetChildNode("filterPipelineIds") is null) { _explicitNullValueFilterPipelineIds = default!; _explicitNullProperties?.Remove("filterPipelineIds"); }
+            else if (parseNode.GetChildNode("filterPipelineIds") is { } nullNodeFilterPipelineIds && nullNodeFilterPipelineIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FilterPipelineIds = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An object representing the new color for the CRM object tag.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestColorProperty2? Color { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestColorProperty2? Color { get => _explicitNullValueColor; set { _explicitNullValueColor = value; AdditionalData?.Remove("color"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("color"); else _explicitNullProperties?.Remove("color"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestColorProperty2? _explicitNullValueColor = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestColorProperty2 Color { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestColorProperty2 Color { get => _explicitNullValueColor; set { _explicitNullValueColor = value; AdditionalData?.Remove("color"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("color"); else _explicitNullProperties?.Remove("color"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestColorProperty2 _explicitNullValueColor = default!;
 #endif
         /// <summary>An object representing the new description for the CRM object tag.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestDescriptionProperty2? Description { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestDescriptionProperty2? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestDescriptionProperty2? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestDescriptionProperty2 Description { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestDescriptionProperty2 Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestDescriptionProperty2 _explicitNullValueDescription = default!;
 #endif
         /// <summary>An object representing the new filter branch for the CRM object tag.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestFilterBranchProperty2? FilterBranch { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestFilterBranchProperty2? FilterBranch { get => _explicitNullValueFilterBranch; set { _explicitNullValueFilterBranch = value; AdditionalData?.Remove("filterBranch"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filterBranch"); else _explicitNullProperties?.Remove("filterBranch"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestFilterBranchProperty2? _explicitNullValueFilterBranch = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestFilterBranchProperty2 FilterBranch { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestFilterBranchProperty2 FilterBranch { get => _explicitNullValueFilterBranch; set { _explicitNullValueFilterBranch = value; AdditionalData?.Remove("filterBranch"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filterBranch"); else _explicitNullProperties?.Remove("filterBranch"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestFilterBranchProperty2 _explicitNullValueFilterBranch = default!;
 #endif
         /// <summary>An object representing the new set of pipeline IDs associated with the CRM object tag.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestFilterPipelineIdsProperty2? FilterPipelineIds { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestFilterPipelineIdsProperty2? FilterPipelineIds { get => _explicitNullValueFilterPipelineIds; set { _explicitNullValueFilterPipelineIds = value; AdditionalData?.Remove("filterPipelineIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filterPipelineIds"); else _explicitNullProperties?.Remove("filterPipelineIds"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestFilterPipelineIdsProperty2? _explicitNullValueFilterPipelineIds = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestFilterPipelineIdsProperty2 FilterPipelineIds { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestFilterPipelineIdsProperty2 FilterPipelineIds { get => _explicitNullValueFilterPipelineIds; set { _explicitNullValueFilterPipelineIds = value; AdditionalData?.Remove("filterPipelineIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filterPipelineIds"); else _explicitNullProperties?.Remove("filterPipelineIds"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestFilterPipelineIdsProperty2 _explicitNullValueFilterPipelineIds = default!;
 #endif
         /// <summary>An object representing the new name for the CRM object tag.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestNameProperty2? Name { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestNameProperty2? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestNameProperty2? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestNameProperty2 Name { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestNameProperty2 Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestNameProperty2 _explicitNullValueName = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequest"/> and sets the default values.
@@ -69,7 +96,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -98,6 +125,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestFilterBranchProperty2>("filterBranch", FilterBranch);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestFilterPipelineIdsProperty2>("filterPipelineIds", FilterPipelineIds);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PatchPublicCrmObjectTagRequestNameProperty2>("name", Name);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

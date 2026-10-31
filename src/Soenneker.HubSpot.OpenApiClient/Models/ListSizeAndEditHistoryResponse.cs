@@ -11,24 +11,39 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ListSizeAndEditHistoryResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("editHistory") is null) { _explicitNullValueEditHistory = default!; _explicitNullProperties?.Remove("editHistory"); }
+            else if (parseNode.GetChildNode("editHistory") is { } nullNodeEditHistory && nullNodeEditHistory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EditHistory = null;
+            if (parseNode.GetChildNode("sizeHistory") is null) { _explicitNullValueSizeHistory = default!; _explicitNullProperties?.Remove("sizeHistory"); }
+            else if (parseNode.GetChildNode("sizeHistory") is { } nullNodeSizeHistory && nullNodeSizeHistory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SizeHistory = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An array of date-time strings indicating the timestamps of edits made to the list.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<DateTimeOffset?>? EditHistory { get; set; }
+        public List<DateTimeOffset?>? EditHistory { get => _explicitNullValueEditHistory; set { _explicitNullValueEditHistory = value; AdditionalData?.Remove("editHistory"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("editHistory"); else _explicitNullProperties?.Remove("editHistory"); } }
+        private List<DateTimeOffset?>? _explicitNullValueEditHistory = default!;
 #nullable restore
 #else
-        public List<DateTimeOffset?> EditHistory { get; set; }
+        public List<DateTimeOffset?> EditHistory { get => _explicitNullValueEditHistory; set { _explicitNullValueEditHistory = value; AdditionalData?.Remove("editHistory"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("editHistory"); else _explicitNullProperties?.Remove("editHistory"); } }
+        private List<DateTimeOffset?> _explicitNullValueEditHistory = default!;
 #endif
         /// <summary>An array of ListSizeDataPoint objects representing the historical size data of the list.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ListSizeDataPoint>? SizeHistory { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ListSizeDataPoint>? SizeHistory { get => _explicitNullValueSizeHistory; set { _explicitNullValueSizeHistory = value; AdditionalData?.Remove("sizeHistory"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sizeHistory"); else _explicitNullProperties?.Remove("sizeHistory"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.ListSizeDataPoint>? _explicitNullValueSizeHistory = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ListSizeDataPoint> SizeHistory { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ListSizeDataPoint> SizeHistory { get => _explicitNullValueSizeHistory; set { _explicitNullValueSizeHistory = value; AdditionalData?.Remove("sizeHistory"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sizeHistory"); else _explicitNullProperties?.Remove("sizeHistory"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.ListSizeDataPoint> _explicitNullValueSizeHistory = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ListSizeAndEditHistoryResponse"/> and sets the default values.
@@ -45,7 +60,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.ListSizeAndEditHistoryResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.ListSizeAndEditHistoryResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.ListSizeAndEditHistoryResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +83,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<DateTimeOffset?>("editHistory", EditHistory);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ListSizeDataPoint>("sizeHistory", SizeHistory);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

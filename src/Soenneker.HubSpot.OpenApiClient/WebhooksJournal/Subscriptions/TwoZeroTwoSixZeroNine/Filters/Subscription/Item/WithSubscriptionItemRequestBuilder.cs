@@ -49,7 +49,7 @@ namespace Soenneker.HubSpot.OpenApiClient.WebhooksJournal.Subscriptions.TwoZeroT
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.HubSpot.OpenApiClient.Models.FilterResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.FilterResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.HubSpot.OpenApiClient.Models.FilterResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.FilterResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
             return collectionResult?.AsList();
         }
         /// <summary>

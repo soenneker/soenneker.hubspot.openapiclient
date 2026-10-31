@@ -51,7 +51,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.CustomChannels.TwoZeroTw
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPatchRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelAccountStagingToken>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelAccountStagingToken.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelAccountStagingToken>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelAccountStagingToken.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Update a channel account staging token&apos;s account name and delivery identifier. This information will be applied to the channel account created from this staging token. This is used for public apps.

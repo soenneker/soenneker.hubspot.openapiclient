@@ -68,7 +68,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Settings.Teams.TwoZeroTwoSixZeroNine.I
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseTeamMemberResponseForwardPaging>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseTeamMemberResponseForwardPaging.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseTeamMemberResponseForwardPaging>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseTeamMemberResponseForwardPaging.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Assign new members to a specific team in your HubSpot account. This endpoint allows you to add users to a team by specifying their user IDs and roles. It is useful for managing team compositions and ensuring the right users have access to team resources.
@@ -88,7 +88,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Settings.Teams.TwoZeroTwoSixZeroNine.I
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.TeamMemberResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.TeamMemberResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.TeamMemberResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.TeamMemberResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve a list of members for a specified team in your HubSpot account. This endpoint allows you to paginate through the team members using the &apos;limit&apos; and &apos;after&apos; query parameters. It is useful for managing and viewing team compositions and roles within your organization.

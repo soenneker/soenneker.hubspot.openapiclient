@@ -11,20 +11,37 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class BatchReadInputPropertyName : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("archived") is null) { _explicitNullValueArchived = default!; _explicitNullProperties?.Remove("archived"); }
+            else if (parseNode.GetChildNode("archived") is { } nullNodeArchived && nullNodeArchived.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Archived = null;
+            if (parseNode.GetChildNode("dataSensitivity") is null) { _explicitNullValueDataSensitivity = default!; _explicitNullProperties?.Remove("dataSensitivity"); }
+            else if (parseNode.GetChildNode("dataSensitivity") is { } nullNodeDataSensitivity && nullNodeDataSensitivity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DataSensitivity = null;
+            if (parseNode.GetChildNode("inputs") is null) { _explicitNullValueInputs = default!; _explicitNullProperties?.Remove("inputs"); }
+            else if (parseNode.GetChildNode("inputs") is { } nullNodeInputs && nullNodeInputs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Inputs = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A boolean indicating whether to include archived properties in the batch read. Defaults to false if not specified.</summary>
-        public bool? Archived { get; set; }
+        public bool? Archived { get => _explicitNullValueArchived; set { _explicitNullValueArchived = value; AdditionalData?.Remove("archived"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("archived"); else _explicitNullProperties?.Remove("archived"); } }
+        private bool? _explicitNullValueArchived = default!;
         /// <summary>A string representing the sensitivity level of the data being accessed. This property helps in determining the security measures needed for handling the data.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.BatchReadInputPropertyNameDataSensitivity? DataSensitivity { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.BatchReadInputPropertyNameDataSensitivity? DataSensitivity { get => _explicitNullValueDataSensitivity; set { _explicitNullValueDataSensitivity = value; AdditionalData?.Remove("dataSensitivity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dataSensitivity"); else _explicitNullProperties?.Remove("dataSensitivity"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.BatchReadInputPropertyNameDataSensitivity? _explicitNullValueDataSensitivity = default!;
         /// <summary>An array of strings, each representing a property name to be included in the batch read operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyName>? Inputs { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyName>? Inputs { get => _explicitNullValueInputs; set { _explicitNullValueInputs = value; AdditionalData?.Remove("inputs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputs"); else _explicitNullProperties?.Remove("inputs"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyName>? _explicitNullValueInputs = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyName> Inputs { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyName> Inputs { get => _explicitNullValueInputs; set { _explicitNullValueInputs = value; AdditionalData?.Remove("inputs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputs"); else _explicitNullProperties?.Remove("inputs"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyName> _explicitNullValueInputs = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.BatchReadInputPropertyName"/> and sets the default values.
@@ -41,7 +58,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.BatchReadInputPropertyName CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.BatchReadInputPropertyName();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.BatchReadInputPropertyName(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -52,7 +69,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "archived", n => { Archived = n.GetBoolValue(); } },
-                { "dataSensitivity", n => { DataSensitivity = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchReadInputPropertyNameDataSensitivity>(); } },
+                { "dataSensitivity", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchReadInputPropertyNameDataSensitivity>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDataSensitivity = default; _explicitNullProperties?.Remove("dataSensitivity"); AdditionalData["dataSensitivity"] = unknown; } else { DataSensitivity = parsed; AdditionalData.Remove("dataSensitivity"); } } },
                 { "inputs", n => { Inputs = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyName>(global::Soenneker.HubSpot.OpenApiClient.Models.PropertyName.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -66,6 +83,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteBoolValue("archived", Archived);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchReadInputPropertyNameDataSensitivity>("dataSensitivity", DataSensitivity);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyName>("inputs", Inputs);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

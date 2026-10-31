@@ -11,28 +11,49 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class HubDbTableCloneRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("copyRows") is null) { _explicitNullValueCopyRows = default!; _explicitNullProperties?.Remove("copyRows"); }
+            else if (parseNode.GetChildNode("copyRows") is { } nullNodeCopyRows && nullNodeCopyRows.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CopyRows = null;
+            if (parseNode.GetChildNode("isHubspotDefined") is null) { _explicitNullValueIsHubspotDefined = default!; _explicitNullProperties?.Remove("isHubspotDefined"); }
+            else if (parseNode.GetChildNode("isHubspotDefined") is { } nullNodeIsHubspotDefined && nullNodeIsHubspotDefined.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsHubspotDefined = null;
+            if (parseNode.GetChildNode("newLabel") is null) { _explicitNullValueNewLabel = default!; _explicitNullProperties?.Remove("newLabel"); }
+            else if (parseNode.GetChildNode("newLabel") is { } nullNodeNewLabel && nullNodeNewLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewLabel = null;
+            if (parseNode.GetChildNode("newName") is null) { _explicitNullValueNewName = default!; _explicitNullProperties?.Remove("newName"); }
+            else if (parseNode.GetChildNode("newName") is { } nullNodeNewName && nullNodeNewName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewName = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Specifies whether to copy the rows during clone</summary>
-        public bool? CopyRows { get; set; }
+        public bool? CopyRows { get => _explicitNullValueCopyRows; set { _explicitNullValueCopyRows = value; AdditionalData?.Remove("copyRows"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("copyRows"); else _explicitNullProperties?.Remove("copyRows"); } }
+        private bool? _explicitNullValueCopyRows = default!;
         /// <summary>Indicates whether the table is defined by HubSpot.</summary>
-        public bool? IsHubspotDefined { get; set; }
+        public bool? IsHubspotDefined { get => _explicitNullValueIsHubspotDefined; set { _explicitNullValueIsHubspotDefined = value; AdditionalData?.Remove("isHubspotDefined"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isHubspotDefined"); else _explicitNullProperties?.Remove("isHubspotDefined"); } }
+        private bool? _explicitNullValueIsHubspotDefined = default!;
         /// <summary>The new label for the cloned table</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NewLabel { get; set; }
+        public string? NewLabel { get => _explicitNullValueNewLabel; set { _explicitNullValueNewLabel = value; AdditionalData?.Remove("newLabel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newLabel"); else _explicitNullProperties?.Remove("newLabel"); } }
+        private string? _explicitNullValueNewLabel = default!;
 #nullable restore
 #else
-        public string NewLabel { get; set; }
+        public string NewLabel { get => _explicitNullValueNewLabel; set { _explicitNullValueNewLabel = value; AdditionalData?.Remove("newLabel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newLabel"); else _explicitNullProperties?.Remove("newLabel"); } }
+        private string _explicitNullValueNewLabel = default!;
 #endif
         /// <summary>The new name for the cloned table</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NewName { get; set; }
+        public string? NewName { get => _explicitNullValueNewName; set { _explicitNullValueNewName = value; AdditionalData?.Remove("newName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newName"); else _explicitNullProperties?.Remove("newName"); } }
+        private string? _explicitNullValueNewName = default!;
 #nullable restore
 #else
-        public string NewName { get; set; }
+        public string NewName { get => _explicitNullValueNewName; set { _explicitNullValueNewName = value; AdditionalData?.Remove("newName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newName"); else _explicitNullProperties?.Remove("newName"); } }
+        private string _explicitNullValueNewName = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableCloneRequest"/> and sets the default values.
@@ -49,7 +70,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableCloneRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableCloneRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableCloneRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -76,6 +97,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteBoolValue("isHubspotDefined", IsHubspotDefined);
             writer.WriteStringValue("newLabel", NewLabel);
             writer.WriteStringValue("newName", NewName);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

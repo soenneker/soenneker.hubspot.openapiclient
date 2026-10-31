@@ -356,6 +356,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         #pragma warning disable CS1591
         HsCreatedByConversations,
         #pragma warning restore CS1591
+        [EnumMember(Value = "hs_cross_account_data_mirroring_source_account_ids")]
+        #pragma warning disable CS1591
+        HsCrossAccountDataMirroringSourceAccountIds,
+        #pragma warning restore CS1591
         [EnumMember(Value = "hs_cross_account_note")]
         #pragma warning disable CS1591
         HsCrossAccountNote,
@@ -1160,6 +1164,22 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         #pragma warning disable CS1591
         HsSequencesIsEnrolled,
         #pragma warning restore CS1591
+        [EnumMember(Value = "hs_sms_mobilephone_communication_subscriptions_opted_in")]
+        #pragma warning disable CS1591
+        HsSmsMobilephoneCommunicationSubscriptionsOptedIn,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "hs_sms_mobilephone_communication_subscriptions_opted_out")]
+        #pragma warning disable CS1591
+        HsSmsMobilephoneCommunicationSubscriptionsOptedOut,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "hs_sms_phone_communication_subscriptions_opted_in")]
+        #pragma warning disable CS1591
+        HsSmsPhoneCommunicationSubscriptionsOptedIn,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "hs_sms_phone_communication_subscriptions_opted_out")]
+        #pragma warning disable CS1591
+        HsSmsPhoneCommunicationSubscriptionsOptedOut,
+        #pragma warning restore CS1591
         [EnumMember(Value = "hs_social_facebook_clicks")]
         #pragma warning disable CS1591
         HsSocialFacebookClicks,
@@ -1435,6 +1455,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         [EnumMember(Value = "hs_whatsapp_bsuids")]
         #pragma warning disable CS1591
         HsWhatsappBsuids,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "hs_whatsapp_communication_subscriptions_opted_in")]
+        #pragma warning disable CS1591
+        HsWhatsappCommunicationSubscriptionsOptedIn,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "hs_whatsapp_communication_subscriptions_opted_out")]
+        #pragma warning disable CS1591
+        HsWhatsappCommunicationSubscriptionsOptedOut,
         #pragma warning restore CS1591
         [EnumMember(Value = "hs_whatsapp_phone_number")]
         #pragma warning disable CS1591

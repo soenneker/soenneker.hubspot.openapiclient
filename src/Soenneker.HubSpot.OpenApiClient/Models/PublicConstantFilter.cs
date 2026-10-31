@@ -11,20 +11,37 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicConstantFilter : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("filterType") is null) { _explicitNullValueFilterType = default!; _explicitNullProperties?.Remove("filterType"); }
+            else if (parseNode.GetChildNode("filterType") is { } nullNodeFilterType && nullNodeFilterType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FilterType = null;
+            if (parseNode.GetChildNode("shouldAccept") is null) { _explicitNullValueShouldAccept = default!; _explicitNullProperties?.Remove("shouldAccept"); }
+            else if (parseNode.GetChildNode("shouldAccept") is { } nullNodeShouldAccept && nullNodeShouldAccept.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShouldAccept = null;
+            if (parseNode.GetChildNode("source") is null) { _explicitNullValueSource = default!; _explicitNullProperties?.Remove("source"); }
+            else if (parseNode.GetChildNode("source") is { } nullNodeSource && nullNodeSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Source = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A string that specifies the type of filter. For this component, it is a constant value indicating the filter&apos;s nature.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ConstantFilterType? FilterType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConstantFilterType? FilterType { get => _explicitNullValueFilterType; set { _explicitNullValueFilterType = value; AdditionalData?.Remove("filterType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filterType"); else _explicitNullProperties?.Remove("filterType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ConstantFilterType? _explicitNullValueFilterType = default!;
         /// <summary>A boolean indicating whether the filter condition should be accepted or not.</summary>
-        public bool? ShouldAccept { get; set; }
+        public bool? ShouldAccept { get => _explicitNullValueShouldAccept; set { _explicitNullValueShouldAccept = value; AdditionalData?.Remove("shouldAccept"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shouldAccept"); else _explicitNullProperties?.Remove("shouldAccept"); } }
+        private bool? _explicitNullValueShouldAccept = default!;
         /// <summary>A string that represents the origin or context of the filter, providing additional information about where or how the filter is applied.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Source { get; set; }
+        public string? Source { get => _explicitNullValueSource; set { _explicitNullValueSource = value; AdditionalData?.Remove("source"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source"); else _explicitNullProperties?.Remove("source"); } }
+        private string? _explicitNullValueSource = default!;
 #nullable restore
 #else
-        public string Source { get; set; }
+        public string Source { get => _explicitNullValueSource; set { _explicitNullValueSource = value; AdditionalData?.Remove("source"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source"); else _explicitNullProperties?.Remove("source"); } }
+        private string _explicitNullValueSource = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicConstantFilter"/> and sets the default values.
@@ -41,7 +58,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicConstantFilter CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicConstantFilter();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicConstantFilter(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -51,7 +68,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConstantFilterType>(); } },
+                { "filterType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConstantFilterType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFilterType = default; _explicitNullProperties?.Remove("filterType"); AdditionalData["filterType"] = unknown; } else { FilterType = parsed; AdditionalData.Remove("filterType"); } } },
                 { "shouldAccept", n => { ShouldAccept = n.GetBoolValue(); } },
                 { "source", n => { Source = n.GetStringValue(); } },
             };
@@ -66,6 +83,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConstantFilterType>("filterType", FilterType);
             writer.WriteBoolValue("shouldAccept", ShouldAccept);
             writer.WriteStringValue("source", Source);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

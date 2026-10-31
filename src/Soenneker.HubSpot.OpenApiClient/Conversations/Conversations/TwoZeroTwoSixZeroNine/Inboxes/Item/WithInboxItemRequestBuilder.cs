@@ -49,7 +49,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.Conversations.TwoZeroTwo
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicInbox>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicInbox.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicInbox>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicInbox.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve details of a specific inbox within your HubSpot account using its unique identifier. This endpoint allows you to access information about the inbox, including whether it is archived. It is useful for managing and organizing conversations within different inboxes.

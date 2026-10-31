@@ -11,44 +11,73 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CrmPublicPageViewAnalyticsFilter : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("coalescingRefineBy") is null) { _explicitNullValueCoalescingRefineBy = default!; _explicitNullProperties?.Remove("coalescingRefineBy"); }
+            else if (parseNode.GetChildNode("coalescingRefineBy") is { } nullNodeCoalescingRefineBy && nullNodeCoalescingRefineBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CoalescingRefineBy = null;
+            if (parseNode.GetChildNode("enableTracking") is null) { _explicitNullValueEnableTracking = default!; _explicitNullProperties?.Remove("enableTracking"); }
+            else if (parseNode.GetChildNode("enableTracking") is { } nullNodeEnableTracking && nullNodeEnableTracking.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableTracking = null;
+            if (parseNode.GetChildNode("filterType") is null) { _explicitNullValueFilterType = default!; _explicitNullProperties?.Remove("filterType"); }
+            else if (parseNode.GetChildNode("filterType") is { } nullNodeFilterType && nullNodeFilterType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FilterType = null;
+            if (parseNode.GetChildNode("operator") is null) { _explicitNullValueOperator = default!; _explicitNullProperties?.Remove("operator"); }
+            else if (parseNode.GetChildNode("operator") is { } nullNodeOperator && nullNodeOperator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Operator = null;
+            if (parseNode.GetChildNode("pageUrl") is null) { _explicitNullValuePageUrl = default!; _explicitNullProperties?.Remove("pageUrl"); }
+            else if (parseNode.GetChildNode("pageUrl") is { } nullNodePageUrl && nullNodePageUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PageUrl = null;
+            if (parseNode.GetChildNode("pruningRefineBy") is null) { _explicitNullValuePruningRefineBy = default!; _explicitNullProperties?.Remove("pruningRefineBy"); }
+            else if (parseNode.GetChildNode("pruningRefineBy") is { } nullNodePruningRefineBy && nullNodePruningRefineBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PruningRefineBy = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An optional refinement criterion used to coalesce data. It can be one of several predefined schemas, such as PublicNumOccurrencesRefineBy or PublicTimePointOperation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPageViewAnalyticsFilterCoalescingRefineBy? CoalescingRefineBy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPageViewAnalyticsFilterCoalescingRefineBy? CoalescingRefineBy { get => _explicitNullValueCoalescingRefineBy; set { _explicitNullValueCoalescingRefineBy = value; AdditionalData?.Remove("coalescingRefineBy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("coalescingRefineBy"); else _explicitNullProperties?.Remove("coalescingRefineBy"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPageViewAnalyticsFilterCoalescingRefineBy? _explicitNullValueCoalescingRefineBy = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPageViewAnalyticsFilterCoalescingRefineBy CoalescingRefineBy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPageViewAnalyticsFilterCoalescingRefineBy CoalescingRefineBy { get => _explicitNullValueCoalescingRefineBy; set { _explicitNullValueCoalescingRefineBy = value; AdditionalData?.Remove("coalescingRefineBy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("coalescingRefineBy"); else _explicitNullProperties?.Remove("coalescingRefineBy"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPageViewAnalyticsFilterCoalescingRefineBy _explicitNullValueCoalescingRefineBy = default!;
 #endif
         /// <summary>A boolean indicating whether tracking is enabled for the page view analytics.</summary>
-        public bool? EnableTracking { get; set; }
+        public bool? EnableTracking { get => _explicitNullValueEnableTracking; set { _explicitNullValueEnableTracking = value; AdditionalData?.Remove("enableTracking"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enableTracking"); else _explicitNullProperties?.Remove("enableTracking"); } }
+        private bool? _explicitNullValueEnableTracking = default!;
         /// <summary>A string that specifies the type of filter being applied. For this component, it defaults to &apos;PAGE_VIEW&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPageViewFilterType? FilterType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPageViewFilterType? FilterType { get => _explicitNullValueFilterType; set { _explicitNullValueFilterType = value; AdditionalData?.Remove("filterType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filterType"); else _explicitNullProperties?.Remove("filterType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmPageViewFilterType? _explicitNullValueFilterType = default!;
         /// <summary>A string representing the operator used in the filter. This determines how the filter criteria are applied.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Operator { get; set; }
+        public string? Operator { get => _explicitNullValueOperator; set { _explicitNullValueOperator = value; AdditionalData?.Remove("operator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator"); else _explicitNullProperties?.Remove("operator"); } }
+        private string? _explicitNullValueOperator = default!;
 #nullable restore
 #else
-        public string Operator { get; set; }
+        public string Operator { get => _explicitNullValueOperator; set { _explicitNullValueOperator = value; AdditionalData?.Remove("operator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator"); else _explicitNullProperties?.Remove("operator"); } }
+        private string _explicitNullValueOperator = default!;
 #endif
         /// <summary>A string representing the URL of the page for which analytics data is being filtered.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PageUrl { get; set; }
+        public string? PageUrl { get => _explicitNullValuePageUrl; set { _explicitNullValuePageUrl = value; AdditionalData?.Remove("pageUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pageUrl"); else _explicitNullProperties?.Remove("pageUrl"); } }
+        private string? _explicitNullValuePageUrl = default!;
 #nullable restore
 #else
-        public string PageUrl { get; set; }
+        public string PageUrl { get => _explicitNullValuePageUrl; set { _explicitNullValuePageUrl = value; AdditionalData?.Remove("pageUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pageUrl"); else _explicitNullProperties?.Remove("pageUrl"); } }
+        private string _explicitNullValuePageUrl = default!;
 #endif
         /// <summary>An optional refinement criterion used to prune data. Similar to coalescingRefineBy, it can be one of several predefined schemas.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPageViewAnalyticsFilterPruningRefineBy? PruningRefineBy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPageViewAnalyticsFilterPruningRefineBy? PruningRefineBy { get => _explicitNullValuePruningRefineBy; set { _explicitNullValuePruningRefineBy = value; AdditionalData?.Remove("pruningRefineBy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pruningRefineBy"); else _explicitNullProperties?.Remove("pruningRefineBy"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPageViewAnalyticsFilterPruningRefineBy? _explicitNullValuePruningRefineBy = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPageViewAnalyticsFilterPruningRefineBy PruningRefineBy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPageViewAnalyticsFilterPruningRefineBy PruningRefineBy { get => _explicitNullValuePruningRefineBy; set { _explicitNullValuePruningRefineBy = value; AdditionalData?.Remove("pruningRefineBy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pruningRefineBy"); else _explicitNullProperties?.Remove("pruningRefineBy"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPageViewAnalyticsFilterPruningRefineBy _explicitNullValuePruningRefineBy = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPageViewAnalyticsFilter"/> and sets the default values.
@@ -65,7 +94,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPageViewAnalyticsFilter CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPageViewAnalyticsFilter();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPageViewAnalyticsFilter(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -77,7 +106,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "coalescingRefineBy", n => { CoalescingRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPageViewAnalyticsFilterCoalescingRefineBy>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPageViewAnalyticsFilterCoalescingRefineBy.CreateFromDiscriminatorValue); } },
                 { "enableTracking", n => { EnableTracking = n.GetBoolValue(); } },
-                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPageViewFilterType>(); } },
+                { "filterType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPageViewFilterType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFilterType = default; _explicitNullProperties?.Remove("filterType"); AdditionalData["filterType"] = unknown; } else { FilterType = parsed; AdditionalData.Remove("filterType"); } } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
                 { "pageUrl", n => { PageUrl = n.GetStringValue(); } },
                 { "pruningRefineBy", n => { PruningRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPageViewAnalyticsFilterPruningRefineBy>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPageViewAnalyticsFilterPruningRefineBy.CreateFromDiscriminatorValue); } },
@@ -96,6 +125,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("operator", Operator);
             writer.WriteStringValue("pageUrl", PageUrl);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicPageViewAnalyticsFilterPruningRefineBy>("pruningRefineBy", PruningRefineBy);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

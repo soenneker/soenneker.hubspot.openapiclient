@@ -11,15 +11,31 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicListConversionInactivity : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("conversionType") is null) { _explicitNullValueConversionType = default!; _explicitNullProperties?.Remove("conversionType"); }
+            else if (parseNode.GetChildNode("conversionType") is { } nullNodeConversionType && nullNodeConversionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConversionType = null;
+            if (parseNode.GetChildNode("offset") is null) { _explicitNullValueOffset = default!; _explicitNullProperties?.Remove("offset"); }
+            else if (parseNode.GetChildNode("offset") is { } nullNodeOffset && nullNodeOffset.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Offset = null;
+            if (parseNode.GetChildNode("timeUnit") is null) { _explicitNullValueTimeUnit = default!; _explicitNullProperties?.Remove("timeUnit"); }
+            else if (parseNode.GetChildNode("timeUnit") is { } nullNodeTimeUnit && nullNodeTimeUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeUnit = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A string that specifies the type of conversion, with a default value of &apos;INACTIVITY&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.InactivityConversionType? ConversionType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.InactivityConversionType? ConversionType { get => _explicitNullValueConversionType; set { _explicitNullValueConversionType = value; AdditionalData?.Remove("conversionType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversionType"); else _explicitNullProperties?.Remove("conversionType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.InactivityConversionType? _explicitNullValueConversionType = default!;
         /// <summary>An integer indicating the offset value used in conjunction with the time unit to determine inactivity.</summary>
-        public int? Offset { get; set; }
+        public int? Offset { get => _explicitNullValueOffset; set { _explicitNullValueOffset = value; AdditionalData?.Remove("offset"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offset"); else _explicitNullProperties?.Remove("offset"); } }
+        private int? _explicitNullValueOffset = default!;
         /// <summary>A string representing the unit of time for measuring inactivity. Valid values include &apos;DAY&apos;, &apos;WEEK&apos;, and &apos;MONTH&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionInactivityTimeUnit? TimeUnit { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionInactivityTimeUnit? TimeUnit { get => _explicitNullValueTimeUnit; set { _explicitNullValueTimeUnit = value; AdditionalData?.Remove("timeUnit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeUnit"); else _explicitNullProperties?.Remove("timeUnit"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionInactivityTimeUnit? _explicitNullValueTimeUnit = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionInactivity"/> and sets the default values.
         /// </summary>
@@ -35,7 +51,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionInactivity CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionInactivity();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionInactivity(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -45,9 +61,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "conversionType", n => { ConversionType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.InactivityConversionType>(); } },
+                { "conversionType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.InactivityConversionType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueConversionType = default; _explicitNullProperties?.Remove("conversionType"); AdditionalData["conversionType"] = unknown; } else { ConversionType = parsed; AdditionalData.Remove("conversionType"); } } },
                 { "offset", n => { Offset = n.GetIntValue(); } },
-                { "timeUnit", n => { TimeUnit = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionInactivityTimeUnit>(); } },
+                { "timeUnit", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionInactivityTimeUnit>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTimeUnit = default; _explicitNullProperties?.Remove("timeUnit"); AdditionalData["timeUnit"] = unknown; } else { TimeUnit = parsed; AdditionalData.Remove("timeUnit"); } } },
             };
         }
         /// <summary>
@@ -60,6 +76,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.InactivityConversionType>("conversionType", ConversionType);
             writer.WriteIntValue("offset", Offset);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionInactivityTimeUnit>("timeUnit", TimeUnit);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

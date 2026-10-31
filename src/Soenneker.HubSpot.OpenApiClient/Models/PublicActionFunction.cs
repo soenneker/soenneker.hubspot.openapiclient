@@ -11,26 +11,44 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicActionFunction : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("functionSource") is null) { _explicitNullValueFunctionSource = default!; _explicitNullProperties?.Remove("functionSource"); }
+            else if (parseNode.GetChildNode("functionSource") is { } nullNodeFunctionSource && nullNodeFunctionSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FunctionSource = null;
+            if (parseNode.GetChildNode("functionType") is null) { _explicitNullValueFunctionType = default!; _explicitNullProperties?.Remove("functionType"); }
+            else if (parseNode.GetChildNode("functionType") is { } nullNodeFunctionType && nullNodeFunctionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FunctionType = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The source code or script that defines the function&apos;s behavior.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FunctionSource { get; set; }
+        public string? FunctionSource { get => _explicitNullValueFunctionSource; set { _explicitNullValueFunctionSource = value; AdditionalData?.Remove("functionSource"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("functionSource"); else _explicitNullProperties?.Remove("functionSource"); } }
+        private string? _explicitNullValueFunctionSource = default!;
 #nullable restore
 #else
-        public string FunctionSource { get; set; }
+        public string FunctionSource { get => _explicitNullValueFunctionSource; set { _explicitNullValueFunctionSource = value; AdditionalData?.Remove("functionSource"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("functionSource"); else _explicitNullProperties?.Remove("functionSource"); } }
+        private string _explicitNullValueFunctionSource = default!;
 #endif
         /// <summary>The type of function, with accepted values: POST_ACTION_EXECUTION, POST_FETCH_OPTIONS, PRE_ACTION_EXECUTION, PRE_FETCH_OPTIONS.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionFunctionFunctionType? FunctionType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionFunctionFunctionType? FunctionType { get => _explicitNullValueFunctionType; set { _explicitNullValueFunctionType = value; AdditionalData?.Remove("functionType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("functionType"); else _explicitNullProperties?.Remove("functionType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionFunctionFunctionType? _explicitNullValueFunctionType = default!;
         /// <summary>The unique identifier for the action function.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionFunction"/> and sets the default values.
@@ -47,7 +65,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionFunction CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionFunction();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionFunction(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -58,7 +76,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "functionSource", n => { FunctionSource = n.GetStringValue(); } },
-                { "functionType", n => { FunctionType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionFunctionFunctionType>(); } },
+                { "functionType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionFunctionFunctionType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFunctionType = default; _explicitNullProperties?.Remove("functionType"); AdditionalData["functionType"] = unknown; } else { FunctionType = parsed; AdditionalData.Remove("functionType"); } } },
                 { "id", n => { Id = n.GetStringValue(); } },
             };
         }
@@ -72,6 +90,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("functionSource", FunctionSource);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionFunctionFunctionType>("functionType", FunctionType);
             writer.WriteStringValue("id", Id);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

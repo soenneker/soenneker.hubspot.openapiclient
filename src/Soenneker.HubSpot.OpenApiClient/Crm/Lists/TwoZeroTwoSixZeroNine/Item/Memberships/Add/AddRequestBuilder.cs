@@ -51,7 +51,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Lists.TwoZeroTwoSixZeroNine.Item.M
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.MembershipsUpdateResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.MembershipsUpdateResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.MembershipsUpdateResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.MembershipsUpdateResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Add memberships to a specified list in your HubSpot account. This endpoint allows you to add multiple memberships to a list identified by the listId. It is useful for managing list memberships in bulk, ensuring that the specified records are included in the list.

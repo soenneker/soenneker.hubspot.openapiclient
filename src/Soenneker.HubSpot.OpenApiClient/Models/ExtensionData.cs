@@ -11,56 +11,87 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ExtensionData : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("caseChangeTestExtensionData") is null) { _explicitNullValueCaseChangeTestExtensionData = default!; _explicitNullProperties?.Remove("caseChangeTestExtensionData"); }
+            else if (parseNode.GetChildNode("caseChangeTestExtensionData") is { } nullNodeCaseChangeTestExtensionData && nullNodeCaseChangeTestExtensionData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CaseChangeTestExtensionData = null;
+            if (parseNode.GetChildNode("extensionStatusMap") is null) { _explicitNullValueExtensionStatusMap = default!; _explicitNullProperties?.Remove("extensionStatusMap"); }
+            else if (parseNode.GetChildNode("extensionStatusMap") is { } nullNodeExtensionStatusMap && nullNodeExtensionStatusMap.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExtensionStatusMap = null;
+            if (parseNode.GetChildNode("optionDecoratorsExtensionData") is null) { _explicitNullValueOptionDecoratorsExtensionData = default!; _explicitNullProperties?.Remove("optionDecoratorsExtensionData"); }
+            else if (parseNode.GetChildNode("optionDecoratorsExtensionData") is { } nullNodeOptionDecoratorsExtensionData && nullNodeOptionDecoratorsExtensionData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptionDecoratorsExtensionData = null;
+            if (parseNode.GetChildNode("requiredPropertiesExtensionData") is null) { _explicitNullValueRequiredPropertiesExtensionData = default!; _explicitNullProperties?.Remove("requiredPropertiesExtensionData"); }
+            else if (parseNode.GetChildNode("requiredPropertiesExtensionData") is { } nullNodeRequiredPropertiesExtensionData && nullNodeRequiredPropertiesExtensionData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequiredPropertiesExtensionData = null;
+            if (parseNode.GetChildNode("softRequiredPropertiesExtensionData") is null) { _explicitNullValueSoftRequiredPropertiesExtensionData = default!; _explicitNullProperties?.Remove("softRequiredPropertiesExtensionData"); }
+            else if (parseNode.GetChildNode("softRequiredPropertiesExtensionData") is { } nullNodeSoftRequiredPropertiesExtensionData && nullNodeSoftRequiredPropertiesExtensionData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SoftRequiredPropertiesExtensionData = null;
+            if (parseNode.GetChildNode("tags") is null) { _explicitNullValueTags = default!; _explicitNullProperties?.Remove("tags"); }
+            else if (parseNode.GetChildNode("tags") is { } nullNodeTags && nullNodeTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tags = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The caseChangeTestExtensionData property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CaseChangeTestExtensionData? CaseChangeTestExtensionData { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CaseChangeTestExtensionData? CaseChangeTestExtensionData { get => _explicitNullValueCaseChangeTestExtensionData; set { _explicitNullValueCaseChangeTestExtensionData = value; AdditionalData?.Remove("caseChangeTestExtensionData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("caseChangeTestExtensionData"); else _explicitNullProperties?.Remove("caseChangeTestExtensionData"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CaseChangeTestExtensionData? _explicitNullValueCaseChangeTestExtensionData = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CaseChangeTestExtensionData CaseChangeTestExtensionData { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CaseChangeTestExtensionData CaseChangeTestExtensionData { get => _explicitNullValueCaseChangeTestExtensionData; set { _explicitNullValueCaseChangeTestExtensionData = value; AdditionalData?.Remove("caseChangeTestExtensionData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("caseChangeTestExtensionData"); else _explicitNullProperties?.Remove("caseChangeTestExtensionData"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CaseChangeTestExtensionData _explicitNullValueCaseChangeTestExtensionData = default!;
 #endif
         /// <summary>A map that holds the status of various extensions. The keys are extension identifiers, and the values represent the status of each extension.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExtensionDataExtensionStatusMapProperty2? ExtensionStatusMap { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExtensionDataExtensionStatusMapProperty2? ExtensionStatusMap { get => _explicitNullValueExtensionStatusMap; set { _explicitNullValueExtensionStatusMap = value; AdditionalData?.Remove("extensionStatusMap"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extensionStatusMap"); else _explicitNullProperties?.Remove("extensionStatusMap"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ExtensionDataExtensionStatusMapProperty2? _explicitNullValueExtensionStatusMap = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExtensionDataExtensionStatusMapProperty2 ExtensionStatusMap { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExtensionDataExtensionStatusMapProperty2 ExtensionStatusMap { get => _explicitNullValueExtensionStatusMap; set { _explicitNullValueExtensionStatusMap = value; AdditionalData?.Remove("extensionStatusMap"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extensionStatusMap"); else _explicitNullProperties?.Remove("extensionStatusMap"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ExtensionDataExtensionStatusMapProperty2 _explicitNullValueExtensionStatusMap = default!;
 #endif
         /// <summary>The optionDecoratorsExtensionData property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionData? OptionDecoratorsExtensionData { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionData? OptionDecoratorsExtensionData { get => _explicitNullValueOptionDecoratorsExtensionData; set { _explicitNullValueOptionDecoratorsExtensionData = value; AdditionalData?.Remove("optionDecoratorsExtensionData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("optionDecoratorsExtensionData"); else _explicitNullProperties?.Remove("optionDecoratorsExtensionData"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionData? _explicitNullValueOptionDecoratorsExtensionData = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionData OptionDecoratorsExtensionData { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionData OptionDecoratorsExtensionData { get => _explicitNullValueOptionDecoratorsExtensionData; set { _explicitNullValueOptionDecoratorsExtensionData = value; AdditionalData?.Remove("optionDecoratorsExtensionData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("optionDecoratorsExtensionData"); else _explicitNullProperties?.Remove("optionDecoratorsExtensionData"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionData _explicitNullValueOptionDecoratorsExtensionData = default!;
 #endif
         /// <summary>The requiredPropertiesExtensionData property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.RequiredPropertiesExtensionData? RequiredPropertiesExtensionData { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.RequiredPropertiesExtensionData? RequiredPropertiesExtensionData { get => _explicitNullValueRequiredPropertiesExtensionData; set { _explicitNullValueRequiredPropertiesExtensionData = value; AdditionalData?.Remove("requiredPropertiesExtensionData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requiredPropertiesExtensionData"); else _explicitNullProperties?.Remove("requiredPropertiesExtensionData"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.RequiredPropertiesExtensionData? _explicitNullValueRequiredPropertiesExtensionData = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.RequiredPropertiesExtensionData RequiredPropertiesExtensionData { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.RequiredPropertiesExtensionData RequiredPropertiesExtensionData { get => _explicitNullValueRequiredPropertiesExtensionData; set { _explicitNullValueRequiredPropertiesExtensionData = value; AdditionalData?.Remove("requiredPropertiesExtensionData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requiredPropertiesExtensionData"); else _explicitNullProperties?.Remove("requiredPropertiesExtensionData"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.RequiredPropertiesExtensionData _explicitNullValueRequiredPropertiesExtensionData = default!;
 #endif
         /// <summary>The softRequiredPropertiesExtensionData property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.SoftRequiredPropertiesExtensionData? SoftRequiredPropertiesExtensionData { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.SoftRequiredPropertiesExtensionData? SoftRequiredPropertiesExtensionData { get => _explicitNullValueSoftRequiredPropertiesExtensionData; set { _explicitNullValueSoftRequiredPropertiesExtensionData = value; AdditionalData?.Remove("softRequiredPropertiesExtensionData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("softRequiredPropertiesExtensionData"); else _explicitNullProperties?.Remove("softRequiredPropertiesExtensionData"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.SoftRequiredPropertiesExtensionData? _explicitNullValueSoftRequiredPropertiesExtensionData = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.SoftRequiredPropertiesExtensionData SoftRequiredPropertiesExtensionData { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.SoftRequiredPropertiesExtensionData SoftRequiredPropertiesExtensionData { get => _explicitNullValueSoftRequiredPropertiesExtensionData; set { _explicitNullValueSoftRequiredPropertiesExtensionData = value; AdditionalData?.Remove("softRequiredPropertiesExtensionData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("softRequiredPropertiesExtensionData"); else _explicitNullProperties?.Remove("softRequiredPropertiesExtensionData"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.SoftRequiredPropertiesExtensionData _explicitNullValueSoftRequiredPropertiesExtensionData = default!;
 #endif
         /// <summary>An array of tags associated with the extension data. Each tag is a string that categorizes or describes the extension.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Tags { get; set; }
+        public List<string>? Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; AdditionalData?.Remove("tags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tags"); else _explicitNullProperties?.Remove("tags"); } }
+        private List<string>? _explicitNullValueTags = default!;
 #nullable restore
 #else
-        public List<string> Tags { get; set; }
+        public List<string> Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; AdditionalData?.Remove("tags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tags"); else _explicitNullProperties?.Remove("tags"); } }
+        private List<string> _explicitNullValueTags = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExtensionData"/> and sets the default values.
@@ -77,7 +108,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.ExtensionData CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.ExtensionData();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.ExtensionData(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -108,6 +139,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.RequiredPropertiesExtensionData>("requiredPropertiesExtensionData", RequiredPropertiesExtensionData);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.SoftRequiredPropertiesExtensionData>("softRequiredPropertiesExtensionData", SoftRequiredPropertiesExtensionData);
             writer.WriteCollectionOfPrimitiveValues<string>("tags", Tags);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

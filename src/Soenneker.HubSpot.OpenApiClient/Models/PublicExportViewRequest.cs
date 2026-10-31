@@ -11,68 +11,117 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicExportViewRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("associatedObjectType") is null) { _explicitNullValueAssociatedObjectType = default!; _explicitNullProperties?.Remove("associatedObjectType"); }
+            else if (parseNode.GetChildNode("associatedObjectType") is { } nullNodeAssociatedObjectType && nullNodeAssociatedObjectType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssociatedObjectType = null;
+            if (parseNode.GetChildNode("exportInternalValuesOptions") is null) { _explicitNullValueExportInternalValuesOptions = default!; _explicitNullProperties?.Remove("exportInternalValuesOptions"); }
+            else if (parseNode.GetChildNode("exportInternalValuesOptions") is { } nullNodeExportInternalValuesOptions && nullNodeExportInternalValuesOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExportInternalValuesOptions = null;
+            if (parseNode.GetChildNode("exportName") is null) { _explicitNullValueExportName = default!; _explicitNullProperties?.Remove("exportName"); }
+            else if (parseNode.GetChildNode("exportName") is { } nullNodeExportName && nullNodeExportName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExportName = null;
+            if (parseNode.GetChildNode("exportType") is null) { _explicitNullValueExportType = default!; _explicitNullProperties?.Remove("exportType"); }
+            else if (parseNode.GetChildNode("exportType") is { } nullNodeExportType && nullNodeExportType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExportType = null;
+            if (parseNode.GetChildNode("format") is null) { _explicitNullValueFormat = default!; _explicitNullProperties?.Remove("format"); }
+            else if (parseNode.GetChildNode("format") is { } nullNodeFormat && nullNodeFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Format = null;
+            if (parseNode.GetChildNode("includeLabeledAssociations") is null) { _explicitNullValueIncludeLabeledAssociations = default!; _explicitNullProperties?.Remove("includeLabeledAssociations"); }
+            else if (parseNode.GetChildNode("includeLabeledAssociations") is { } nullNodeIncludeLabeledAssociations && nullNodeIncludeLabeledAssociations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncludeLabeledAssociations = null;
+            if (parseNode.GetChildNode("includePrimaryDisplayPropertyForAssociatedObjects") is null) { _explicitNullValueIncludePrimaryDisplayPropertyForAssociatedObjects = default!; _explicitNullProperties?.Remove("includePrimaryDisplayPropertyForAssociatedObjects"); }
+            else if (parseNode.GetChildNode("includePrimaryDisplayPropertyForAssociatedObjects") is { } nullNodeIncludePrimaryDisplayPropertyForAssociatedObjects && nullNodeIncludePrimaryDisplayPropertyForAssociatedObjects.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncludePrimaryDisplayPropertyForAssociatedObjects = null;
+            if (parseNode.GetChildNode("language") is null) { _explicitNullValueLanguage = default!; _explicitNullProperties?.Remove("language"); }
+            else if (parseNode.GetChildNode("language") is { } nullNodeLanguage && nullNodeLanguage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Language = null;
+            if (parseNode.GetChildNode("objectProperties") is null) { _explicitNullValueObjectProperties = default!; _explicitNullProperties?.Remove("objectProperties"); }
+            else if (parseNode.GetChildNode("objectProperties") is { } nullNodeObjectProperties && nullNodeObjectProperties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectProperties = null;
+            if (parseNode.GetChildNode("objectType") is null) { _explicitNullValueObjectType = default!; _explicitNullProperties?.Remove("objectType"); }
+            else if (parseNode.GetChildNode("objectType") is { } nullNodeObjectType && nullNodeObjectType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectType = null;
+            if (parseNode.GetChildNode("overrideAssociatedObjectsPerDefinitionPerRowLimit") is null) { _explicitNullValueOverrideAssociatedObjectsPerDefinitionPerRowLimit = default!; _explicitNullProperties?.Remove("overrideAssociatedObjectsPerDefinitionPerRowLimit"); }
+            else if (parseNode.GetChildNode("overrideAssociatedObjectsPerDefinitionPerRowLimit") is { } nullNodeOverrideAssociatedObjectsPerDefinitionPerRowLimit && nullNodeOverrideAssociatedObjectsPerDefinitionPerRowLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverrideAssociatedObjectsPerDefinitionPerRowLimit = null;
+            if (parseNode.GetChildNode("publicCrmSearchRequest") is null) { _explicitNullValuePublicCrmSearchRequest = default!; _explicitNullProperties?.Remove("publicCrmSearchRequest"); }
+            else if (parseNode.GetChildNode("publicCrmSearchRequest") is { } nullNodePublicCrmSearchRequest && nullNodePublicCrmSearchRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PublicCrmSearchRequest = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An array of strings indicating the types of associated objects to include in the export.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AssociatedObjectType { get; set; }
+        public List<string>? AssociatedObjectType { get => _explicitNullValueAssociatedObjectType; set { _explicitNullValueAssociatedObjectType = value; AdditionalData?.Remove("associatedObjectType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("associatedObjectType"); else _explicitNullProperties?.Remove("associatedObjectType"); } }
+        private List<string>? _explicitNullValueAssociatedObjectType = default!;
 #nullable restore
 #else
-        public List<string> AssociatedObjectType { get; set; }
+        public List<string> AssociatedObjectType { get => _explicitNullValueAssociatedObjectType; set { _explicitNullValueAssociatedObjectType = value; AdditionalData?.Remove("associatedObjectType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("associatedObjectType"); else _explicitNullProperties?.Remove("associatedObjectType"); } }
+        private List<string> _explicitNullValueAssociatedObjectType = default!;
 #endif
         /// <summary>An array of strings specifying options for internal values in the export. Valid values are &apos;NAMES&apos; and &apos;VALUES&apos;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportViewRequestExportInternalValuesOptionsItem?>? ExportInternalValuesOptions { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportViewRequestExportInternalValuesOptionsItem?>? ExportInternalValuesOptions { get => _explicitNullValueExportInternalValuesOptions; set { _explicitNullValueExportInternalValuesOptions = value; AdditionalData?.Remove("exportInternalValuesOptions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exportInternalValuesOptions"); else _explicitNullProperties?.Remove("exportInternalValuesOptions"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportViewRequestExportInternalValuesOptionsItem?>? _explicitNullValueExportInternalValuesOptions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportViewRequestExportInternalValuesOptionsItem?> ExportInternalValuesOptions { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportViewRequestExportInternalValuesOptionsItem?> ExportInternalValuesOptions { get => _explicitNullValueExportInternalValuesOptions; set { _explicitNullValueExportInternalValuesOptions = value; AdditionalData?.Remove("exportInternalValuesOptions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exportInternalValuesOptions"); else _explicitNullProperties?.Remove("exportInternalValuesOptions"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportViewRequestExportInternalValuesOptionsItem?> _explicitNullValueExportInternalValuesOptions = default!;
 #endif
         /// <summary>The name assigned to the export, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExportName { get; set; }
+        public string? ExportName { get => _explicitNullValueExportName; set { _explicitNullValueExportName = value; AdditionalData?.Remove("exportName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exportName"); else _explicitNullProperties?.Remove("exportName"); } }
+        private string? _explicitNullValueExportName = default!;
 #nullable restore
 #else
-        public string ExportName { get; set; }
+        public string ExportName { get => _explicitNullValueExportName; set { _explicitNullValueExportName = value; AdditionalData?.Remove("exportName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exportName"); else _explicitNullProperties?.Remove("exportName"); } }
+        private string _explicitNullValueExportName = default!;
 #endif
         /// <summary>The type of export being requested. The only valid value is &apos;VIEW&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ViewExportType? ExportType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ViewExportType? ExportType { get => _explicitNullValueExportType; set { _explicitNullValueExportType = value; AdditionalData?.Remove("exportType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exportType"); else _explicitNullProperties?.Remove("exportType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ViewExportType? _explicitNullValueExportType = default!;
         /// <summary>The file format for the export. Valid options are &apos;XLS&apos;, &apos;XLSX&apos;, and &apos;CSV&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportViewRequestFormat? Format { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportViewRequestFormat? Format { get => _explicitNullValueFormat; set { _explicitNullValueFormat = value; AdditionalData?.Remove("format"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("format"); else _explicitNullProperties?.Remove("format"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportViewRequestFormat? _explicitNullValueFormat = default!;
         /// <summary>A boolean indicating whether labeled associations should be included in the export.</summary>
-        public bool? IncludeLabeledAssociations { get; set; }
+        public bool? IncludeLabeledAssociations { get => _explicitNullValueIncludeLabeledAssociations; set { _explicitNullValueIncludeLabeledAssociations = value; AdditionalData?.Remove("includeLabeledAssociations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("includeLabeledAssociations"); else _explicitNullProperties?.Remove("includeLabeledAssociations"); } }
+        private bool? _explicitNullValueIncludeLabeledAssociations = default!;
         /// <summary>A boolean indicating whether the primary display property for associated objects should be included.</summary>
-        public bool? IncludePrimaryDisplayPropertyForAssociatedObjects { get; set; }
+        public bool? IncludePrimaryDisplayPropertyForAssociatedObjects { get => _explicitNullValueIncludePrimaryDisplayPropertyForAssociatedObjects; set { _explicitNullValueIncludePrimaryDisplayPropertyForAssociatedObjects = value; AdditionalData?.Remove("includePrimaryDisplayPropertyForAssociatedObjects"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("includePrimaryDisplayPropertyForAssociatedObjects"); else _explicitNullProperties?.Remove("includePrimaryDisplayPropertyForAssociatedObjects"); } }
+        private bool? _explicitNullValueIncludePrimaryDisplayPropertyForAssociatedObjects = default!;
         /// <summary>The language code for the export. Valid values include &apos;EN&apos;, &apos;FR&apos;, &apos;DE&apos;, &apos;JA&apos;, &apos;ES&apos;, &apos;PT_BR&apos;, &apos;NL&apos;, &apos;BN&apos;, &apos;CS&apos;, &apos;DA_DK&apos;, &apos;EL_GR&apos;, &apos;ES_MX&apos;, &apos;FI&apos;, &apos;HR&apos;, &apos;HU&apos;, &apos;ID&apos;, &apos;IT&apos;, &apos;KO_KR&apos;, &apos;NO&apos;, &apos;PL&apos;, &apos;RO&apos;, &apos;RU&apos;, &apos;SV&apos;, &apos;TH&apos;, &apos;VI_VN&apos;, &apos;ZH_CN&apos;, &apos;ZH_HK&apos;, &apos;AF_ZA&apos;, &apos;AR_EG&apos;, &apos;BG&apos;, &apos;CA_ES&apos;, &apos;SL&apos;, &apos;TR&apos;, &apos;UK&apos;, &apos;EN_GB&apos;, &apos;FR_CA&apos;, &apos;HE_IL&apos;, &apos;LT_LT&apos;, &apos;PT_PT&apos;, &apos;SK_SK&apos;, &apos;MS&apos;, &apos;TL&apos;, &apos;ZH_TW&apos;, &apos;HI_IN&apos;, &apos;ET_EE&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportViewRequestLanguage? Language { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportViewRequestLanguage? Language { get => _explicitNullValueLanguage; set { _explicitNullValueLanguage = value; AdditionalData?.Remove("language"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("language"); else _explicitNullProperties?.Remove("language"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportViewRequestLanguage? _explicitNullValueLanguage = default!;
         /// <summary>An array of strings specifying the properties of the object to be included in the export.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ObjectProperties { get; set; }
+        public List<string>? ObjectProperties { get => _explicitNullValueObjectProperties; set { _explicitNullValueObjectProperties = value; AdditionalData?.Remove("objectProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("objectProperties"); else _explicitNullProperties?.Remove("objectProperties"); } }
+        private List<string>? _explicitNullValueObjectProperties = default!;
 #nullable restore
 #else
-        public List<string> ObjectProperties { get; set; }
+        public List<string> ObjectProperties { get => _explicitNullValueObjectProperties; set { _explicitNullValueObjectProperties = value; AdditionalData?.Remove("objectProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("objectProperties"); else _explicitNullProperties?.Remove("objectProperties"); } }
+        private List<string> _explicitNullValueObjectProperties = default!;
 #endif
         /// <summary>A string representing the type of object being exported.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ObjectType { get; set; }
+        public string? ObjectType { get => _explicitNullValueObjectType; set { _explicitNullValueObjectType = value; AdditionalData?.Remove("objectType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("objectType"); else _explicitNullProperties?.Remove("objectType"); } }
+        private string? _explicitNullValueObjectType = default!;
 #nullable restore
 #else
-        public string ObjectType { get; set; }
+        public string ObjectType { get => _explicitNullValueObjectType; set { _explicitNullValueObjectType = value; AdditionalData?.Remove("objectType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("objectType"); else _explicitNullProperties?.Remove("objectType"); } }
+        private string _explicitNullValueObjectType = default!;
 #endif
         /// <summary>A boolean indicating whether to override the limit of associated objects per definition per row.</summary>
-        public bool? OverrideAssociatedObjectsPerDefinitionPerRowLimit { get; set; }
+        public bool? OverrideAssociatedObjectsPerDefinitionPerRowLimit { get => _explicitNullValueOverrideAssociatedObjectsPerDefinitionPerRowLimit; set { _explicitNullValueOverrideAssociatedObjectsPerDefinitionPerRowLimit = value; AdditionalData?.Remove("overrideAssociatedObjectsPerDefinitionPerRowLimit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overrideAssociatedObjectsPerDefinitionPerRowLimit"); else _explicitNullProperties?.Remove("overrideAssociatedObjectsPerDefinitionPerRowLimit"); } }
+        private bool? _explicitNullValueOverrideAssociatedObjectsPerDefinitionPerRowLimit = default!;
         /// <summary>The publicCrmSearchRequest property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCrmSearchRequest? PublicCrmSearchRequest { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCrmSearchRequest? PublicCrmSearchRequest { get => _explicitNullValuePublicCrmSearchRequest; set { _explicitNullValuePublicCrmSearchRequest = value; AdditionalData?.Remove("publicCrmSearchRequest"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("publicCrmSearchRequest"); else _explicitNullProperties?.Remove("publicCrmSearchRequest"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicCrmSearchRequest? _explicitNullValuePublicCrmSearchRequest = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCrmSearchRequest PublicCrmSearchRequest { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCrmSearchRequest PublicCrmSearchRequest { get => _explicitNullValuePublicCrmSearchRequest; set { _explicitNullValuePublicCrmSearchRequest = value; AdditionalData?.Remove("publicCrmSearchRequest"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("publicCrmSearchRequest"); else _explicitNullProperties?.Remove("publicCrmSearchRequest"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicCrmSearchRequest _explicitNullValuePublicCrmSearchRequest = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportViewRequest"/> and sets the default values.
@@ -89,7 +138,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportViewRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportViewRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportViewRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -102,11 +151,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "associatedObjectType", n => { AssociatedObjectType = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "exportInternalValuesOptions", n => { ExportInternalValuesOptions = n.GetCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportViewRequestExportInternalValuesOptionsItem>()?.AsList(); } },
                 { "exportName", n => { ExportName = n.GetStringValue(); } },
-                { "exportType", n => { ExportType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ViewExportType>(); } },
-                { "format", n => { Format = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportViewRequestFormat>(); } },
+                { "exportType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ViewExportType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueExportType = default; _explicitNullProperties?.Remove("exportType"); AdditionalData["exportType"] = unknown; } else { ExportType = parsed; AdditionalData.Remove("exportType"); } } },
+                { "format", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportViewRequestFormat>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFormat = default; _explicitNullProperties?.Remove("format"); AdditionalData["format"] = unknown; } else { Format = parsed; AdditionalData.Remove("format"); } } },
                 { "includeLabeledAssociations", n => { IncludeLabeledAssociations = n.GetBoolValue(); } },
                 { "includePrimaryDisplayPropertyForAssociatedObjects", n => { IncludePrimaryDisplayPropertyForAssociatedObjects = n.GetBoolValue(); } },
-                { "language", n => { Language = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportViewRequestLanguage>(); } },
+                { "language", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExportViewRequestLanguage>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueLanguage = default; _explicitNullProperties?.Remove("language"); AdditionalData["language"] = unknown; } else { Language = parsed; AdditionalData.Remove("language"); } } },
                 { "objectProperties", n => { ObjectProperties = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "objectType", n => { ObjectType = n.GetStringValue(); } },
                 { "overrideAssociatedObjectsPerDefinitionPerRowLimit", n => { OverrideAssociatedObjectsPerDefinitionPerRowLimit = n.GetBoolValue(); } },
@@ -132,6 +181,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("objectType", ObjectType);
             writer.WriteBoolValue("overrideAssociatedObjectsPerDefinitionPerRowLimit", OverrideAssociatedObjectsPerDefinitionPerRowLimit);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCrmSearchRequest>("publicCrmSearchRequest", PublicCrmSearchRequest);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

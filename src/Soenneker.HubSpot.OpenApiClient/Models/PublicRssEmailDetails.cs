@@ -11,57 +11,96 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicRssEmailDetails : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("blogEmailType") is null) { _explicitNullValueBlogEmailType = default!; _explicitNullProperties?.Remove("blogEmailType"); }
+            else if (parseNode.GetChildNode("blogEmailType") is { } nullNodeBlogEmailType && nullNodeBlogEmailType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlogEmailType = null;
+            if (parseNode.GetChildNode("blogImageMaxWidth") is null) { _explicitNullValueBlogImageMaxWidth = default!; _explicitNullProperties?.Remove("blogImageMaxWidth"); }
+            else if (parseNode.GetChildNode("blogImageMaxWidth") is { } nullNodeBlogImageMaxWidth && nullNodeBlogImageMaxWidth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlogImageMaxWidth = null;
+            if (parseNode.GetChildNode("blogLayout") is null) { _explicitNullValueBlogLayout = default!; _explicitNullProperties?.Remove("blogLayout"); }
+            else if (parseNode.GetChildNode("blogLayout") is { } nullNodeBlogLayout && nullNodeBlogLayout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlogLayout = null;
+            if (parseNode.GetChildNode("hubspotBlogId") is null) { _explicitNullValueHubspotBlogId = default!; _explicitNullProperties?.Remove("hubspotBlogId"); }
+            else if (parseNode.GetChildNode("hubspotBlogId") is { } nullNodeHubspotBlogId && nullNodeHubspotBlogId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HubspotBlogId = null;
+            if (parseNode.GetChildNode("maxEntries") is null) { _explicitNullValueMaxEntries = default!; _explicitNullProperties?.Remove("maxEntries"); }
+            else if (parseNode.GetChildNode("maxEntries") is { } nullNodeMaxEntries && nullNodeMaxEntries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxEntries = null;
+            if (parseNode.GetChildNode("rssEntryTemplate") is null) { _explicitNullValueRssEntryTemplate = default!; _explicitNullProperties?.Remove("rssEntryTemplate"); }
+            else if (parseNode.GetChildNode("rssEntryTemplate") is { } nullNodeRssEntryTemplate && nullNodeRssEntryTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RssEntryTemplate = null;
+            if (parseNode.GetChildNode("timing") is null) { _explicitNullValueTiming = default!; _explicitNullProperties?.Remove("timing"); }
+            else if (parseNode.GetChildNode("timing") is { } nullNodeTiming && nullNodeTiming.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Timing = null;
+            if (parseNode.GetChildNode("url") is null) { _explicitNullValueUrl = default!; _explicitNullProperties?.Remove("url"); }
+            else if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+            if (parseNode.GetChildNode("useHeadlineAsSubject") is null) { _explicitNullValueUseHeadlineAsSubject = default!; _explicitNullProperties?.Remove("useHeadlineAsSubject"); }
+            else if (parseNode.GetChildNode("useHeadlineAsSubject") is { } nullNodeUseHeadlineAsSubject && nullNodeUseHeadlineAsSubject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UseHeadlineAsSubject = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A string representing the type of blog email.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BlogEmailType { get; set; }
+        public string? BlogEmailType { get => _explicitNullValueBlogEmailType; set { _explicitNullValueBlogEmailType = value; AdditionalData?.Remove("blogEmailType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blogEmailType"); else _explicitNullProperties?.Remove("blogEmailType"); } }
+        private string? _explicitNullValueBlogEmailType = default!;
 #nullable restore
 #else
-        public string BlogEmailType { get; set; }
+        public string BlogEmailType { get => _explicitNullValueBlogEmailType; set { _explicitNullValueBlogEmailType = value; AdditionalData?.Remove("blogEmailType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blogEmailType"); else _explicitNullProperties?.Remove("blogEmailType"); } }
+        private string _explicitNullValueBlogEmailType = default!;
 #endif
         /// <summary>The maximum width for images in the blog, specified as an integer.</summary>
-        public int? BlogImageMaxWidth { get; set; }
+        public int? BlogImageMaxWidth { get => _explicitNullValueBlogImageMaxWidth; set { _explicitNullValueBlogImageMaxWidth = value; AdditionalData?.Remove("blogImageMaxWidth"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blogImageMaxWidth"); else _explicitNullProperties?.Remove("blogImageMaxWidth"); } }
+        private int? _explicitNullValueBlogImageMaxWidth = default!;
         /// <summary>The layout of the blog in the email. Valid values include &apos;SUMMARY_NO_FEATURED_IMAGE&apos;, &apos;SUMMARY_WITH_FEATURED_IMAGE&apos;, and &apos;FULL_POST&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetailsBlogLayout? BlogLayout { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetailsBlogLayout? BlogLayout { get => _explicitNullValueBlogLayout; set { _explicitNullValueBlogLayout = value; AdditionalData?.Remove("blogLayout"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blogLayout"); else _explicitNullProperties?.Remove("blogLayout"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetailsBlogLayout? _explicitNullValueBlogLayout = default!;
         /// <summary>The unique identifier of the HubSpot blog associated with the RSS email. It is a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HubspotBlogId { get; set; }
+        public string? HubspotBlogId { get => _explicitNullValueHubspotBlogId; set { _explicitNullValueHubspotBlogId = value; AdditionalData?.Remove("hubspotBlogId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hubspotBlogId"); else _explicitNullProperties?.Remove("hubspotBlogId"); } }
+        private string? _explicitNullValueHubspotBlogId = default!;
 #nullable restore
 #else
-        public string HubspotBlogId { get; set; }
+        public string HubspotBlogId { get => _explicitNullValueHubspotBlogId; set { _explicitNullValueHubspotBlogId = value; AdditionalData?.Remove("hubspotBlogId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hubspotBlogId"); else _explicitNullProperties?.Remove("hubspotBlogId"); } }
+        private string _explicitNullValueHubspotBlogId = default!;
 #endif
         /// <summary>The maximum number of entries to include from the RSS feed. It is an integer value.</summary>
-        public int? MaxEntries { get; set; }
+        public int? MaxEntries { get => _explicitNullValueMaxEntries; set { _explicitNullValueMaxEntries = value; AdditionalData?.Remove("maxEntries"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxEntries"); else _explicitNullProperties?.Remove("maxEntries"); } }
+        private int? _explicitNullValueMaxEntries = default!;
         /// <summary>A string representing the template used for each RSS entry in the email.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RssEntryTemplate { get; set; }
+        public string? RssEntryTemplate { get => _explicitNullValueRssEntryTemplate; set { _explicitNullValueRssEntryTemplate = value; AdditionalData?.Remove("rssEntryTemplate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rssEntryTemplate"); else _explicitNullProperties?.Remove("rssEntryTemplate"); } }
+        private string? _explicitNullValueRssEntryTemplate = default!;
 #nullable restore
 #else
-        public string RssEntryTemplate { get; set; }
+        public string RssEntryTemplate { get => _explicitNullValueRssEntryTemplate; set { _explicitNullValueRssEntryTemplate = value; AdditionalData?.Remove("rssEntryTemplate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rssEntryTemplate"); else _explicitNullProperties?.Remove("rssEntryTemplate"); } }
+        private string _explicitNullValueRssEntryTemplate = default!;
 #endif
         /// <summary>An object representing the timing configuration for the RSS email. The specific properties of this object are not detailed in the specification.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetailsTimingProperty2? Timing { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetailsTimingProperty2? Timing { get => _explicitNullValueTiming; set { _explicitNullValueTiming = value; AdditionalData?.Remove("timing"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timing"); else _explicitNullProperties?.Remove("timing"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetailsTimingProperty2? _explicitNullValueTiming = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetailsTimingProperty2 Timing { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetailsTimingProperty2 Timing { get => _explicitNullValueTiming; set { _explicitNullValueTiming = value; AdditionalData?.Remove("timing"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timing"); else _explicitNullProperties?.Remove("timing"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetailsTimingProperty2 _explicitNullValueTiming = default!;
 #endif
         /// <summary>The URL of the RSS feed to be used in the email. It is a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get; set; }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get; set; }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>A boolean indicating whether to use the headline of the RSS entry as the subject of the email.</summary>
-        public bool? UseHeadlineAsSubject { get; set; }
+        public bool? UseHeadlineAsSubject { get => _explicitNullValueUseHeadlineAsSubject; set { _explicitNullValueUseHeadlineAsSubject = value; AdditionalData?.Remove("useHeadlineAsSubject"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("useHeadlineAsSubject"); else _explicitNullProperties?.Remove("useHeadlineAsSubject"); } }
+        private bool? _explicitNullValueUseHeadlineAsSubject = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetails"/> and sets the default values.
         /// </summary>
@@ -77,7 +116,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -89,7 +128,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "blogEmailType", n => { BlogEmailType = n.GetStringValue(); } },
                 { "blogImageMaxWidth", n => { BlogImageMaxWidth = n.GetIntValue(); } },
-                { "blogLayout", n => { BlogLayout = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetailsBlogLayout>(); } },
+                { "blogLayout", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetailsBlogLayout>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueBlogLayout = default; _explicitNullProperties?.Remove("blogLayout"); AdditionalData["blogLayout"] = unknown; } else { BlogLayout = parsed; AdditionalData.Remove("blogLayout"); } } },
                 { "hubspotBlogId", n => { HubspotBlogId = n.GetStringValue(); } },
                 { "maxEntries", n => { MaxEntries = n.GetIntValue(); } },
                 { "rssEntryTemplate", n => { RssEntryTemplate = n.GetStringValue(); } },
@@ -114,6 +153,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetailsTimingProperty2>("timing", Timing);
             writer.WriteStringValue("url", Url);
             writer.WriteBoolValue("useHeadlineAsSubject", UseHeadlineAsSubject);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

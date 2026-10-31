@@ -12,234 +12,436 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class LineItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("acv") is null) { _explicitNullValueAcv = default!; _explicitNullProperties?.Remove("acv"); }
+            else if (parseNode.GetChildNode("acv") is { } nullNodeAcv && nullNodeAcv.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Acv = null;
+            if (parseNode.GetChildNode("allowBuyerSelectedQuantity") is null) { _explicitNullValueAllowBuyerSelectedQuantity = default!; _explicitNullProperties?.Remove("allowBuyerSelectedQuantity"); }
+            else if (parseNode.GetChildNode("allowBuyerSelectedQuantity") is { } nullNodeAllowBuyerSelectedQuantity && nullNodeAllowBuyerSelectedQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowBuyerSelectedQuantity = null;
+            if (parseNode.GetChildNode("amount") is null) { _explicitNullValueAmount = default!; _explicitNullProperties?.Remove("amount"); }
+            else if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
+            if (parseNode.GetChildNode("archived") is null) { _explicitNullValueArchived = default!; _explicitNullProperties?.Remove("archived"); }
+            else if (parseNode.GetChildNode("archived") is { } nullNodeArchived && nullNodeArchived.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Archived = null;
+            if (parseNode.GetChildNode("archivedAt") is null) { _explicitNullValueArchivedAt = default!; _explicitNullProperties?.Remove("archivedAt"); }
+            else if (parseNode.GetChildNode("archivedAt") is { } nullNodeArchivedAt && nullNodeArchivedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ArchivedAt = null;
+            if (parseNode.GetChildNode("arr") is null) { _explicitNullValueArr = default!; _explicitNullProperties?.Remove("arr"); }
+            else if (parseNode.GetChildNode("arr") is { } nullNodeArr && nullNodeArr.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Arr = null;
+            if (parseNode.GetChildNode("billingCycleAnchorDate") is null) { _explicitNullValueBillingCycleAnchorDate = default!; _explicitNullProperties?.Remove("billingCycleAnchorDate"); }
+            else if (parseNode.GetChildNode("billingCycleAnchorDate") is { } nullNodeBillingCycleAnchorDate && nullNodeBillingCycleAnchorDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingCycleAnchorDate = null;
+            if (parseNode.GetChildNode("billingPeriodEndDate") is null) { _explicitNullValueBillingPeriodEndDate = default!; _explicitNullProperties?.Remove("billingPeriodEndDate"); }
+            else if (parseNode.GetChildNode("billingPeriodEndDate") is { } nullNodeBillingPeriodEndDate && nullNodeBillingPeriodEndDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingPeriodEndDate = null;
+            if (parseNode.GetChildNode("billingPeriodStartDate") is null) { _explicitNullValueBillingPeriodStartDate = default!; _explicitNullProperties?.Remove("billingPeriodStartDate"); }
+            else if (parseNode.GetChildNode("billingPeriodStartDate") is { } nullNodeBillingPeriodStartDate && nullNodeBillingPeriodStartDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingPeriodStartDate = null;
+            if (parseNode.GetChildNode("billingStartDelayDays") is null) { _explicitNullValueBillingStartDelayDays = default!; _explicitNullProperties?.Remove("billingStartDelayDays"); }
+            else if (parseNode.GetChildNode("billingStartDelayDays") is { } nullNodeBillingStartDelayDays && nullNodeBillingStartDelayDays.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingStartDelayDays = null;
+            if (parseNode.GetChildNode("billingStartDelayMonths") is null) { _explicitNullValueBillingStartDelayMonths = default!; _explicitNullProperties?.Remove("billingStartDelayMonths"); }
+            else if (parseNode.GetChildNode("billingStartDelayMonths") is { } nullNodeBillingStartDelayMonths && nullNodeBillingStartDelayMonths.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingStartDelayMonths = null;
+            if (parseNode.GetChildNode("billingStartDelayType") is null) { _explicitNullValueBillingStartDelayType = default!; _explicitNullProperties?.Remove("billingStartDelayType"); }
+            else if (parseNode.GetChildNode("billingStartDelayType") is { } nullNodeBillingStartDelayType && nullNodeBillingStartDelayType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingStartDelayType = null;
+            if (parseNode.GetChildNode("buyerSelectedQuantityMax") is null) { _explicitNullValueBuyerSelectedQuantityMax = default!; _explicitNullProperties?.Remove("buyerSelectedQuantityMax"); }
+            else if (parseNode.GetChildNode("buyerSelectedQuantityMax") is { } nullNodeBuyerSelectedQuantityMax && nullNodeBuyerSelectedQuantityMax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BuyerSelectedQuantityMax = null;
+            if (parseNode.GetChildNode("buyerSelectedQuantityMin") is null) { _explicitNullValueBuyerSelectedQuantityMin = default!; _explicitNullProperties?.Remove("buyerSelectedQuantityMin"); }
+            else if (parseNode.GetChildNode("buyerSelectedQuantityMin") is { } nullNodeBuyerSelectedQuantityMin && nullNodeBuyerSelectedQuantityMin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BuyerSelectedQuantityMin = null;
+            if (parseNode.GetChildNode("createdAt") is null) { _explicitNullValueCreatedAt = default!; _explicitNullProperties?.Remove("createdAt"); }
+            else if (parseNode.GetChildNode("createdAt") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("description") is null) { _explicitNullValueDescription = default!; _explicitNullProperties?.Remove("description"); }
+            else if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("discount") is null) { _explicitNullValueDiscount = default!; _explicitNullProperties?.Remove("discount"); }
+            else if (parseNode.GetChildNode("discount") is { } nullNodeDiscount && nullNodeDiscount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Discount = null;
+            if (parseNode.GetChildNode("discountPercentage") is null) { _explicitNullValueDiscountPercentage = default!; _explicitNullProperties?.Remove("discountPercentage"); }
+            else if (parseNode.GetChildNode("discountPercentage") is { } nullNodeDiscountPercentage && nullNodeDiscountPercentage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiscountPercentage = null;
+            if (parseNode.GetChildNode("effectiveUnitPrice") is null) { _explicitNullValueEffectiveUnitPrice = default!; _explicitNullProperties?.Remove("effectiveUnitPrice"); }
+            else if (parseNode.GetChildNode("effectiveUnitPrice") is { } nullNodeEffectiveUnitPrice && nullNodeEffectiveUnitPrice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EffectiveUnitPrice = null;
+            if (parseNode.GetChildNode("externalId") is null) { _explicitNullValueExternalId = default!; _explicitNullProperties?.Remove("externalId"); }
+            else if (parseNode.GetChildNode("externalId") is { } nullNodeExternalId && nullNodeExternalId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalId = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("images") is null) { _explicitNullValueImages = default!; _explicitNullProperties?.Remove("images"); }
+            else if (parseNode.GetChildNode("images") is { } nullNodeImages && nullNodeImages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Images = null;
+            if (parseNode.GetChildNode("isEditablePrice") is null) { _explicitNullValueIsEditablePrice = default!; _explicitNullProperties?.Remove("isEditablePrice"); }
+            else if (parseNode.GetChildNode("isEditablePrice") is { } nullNodeIsEditablePrice && nullNodeIsEditablePrice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsEditablePrice = null;
+            if (parseNode.GetChildNode("isOptional") is null) { _explicitNullValueIsOptional = default!; _explicitNullProperties?.Remove("isOptional"); }
+            else if (parseNode.GetChildNode("isOptional") is { } nullNodeIsOptional && nullNodeIsOptional.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsOptional = null;
+            if (parseNode.GetChildNode("isParent") is null) { _explicitNullValueIsParent = default!; _explicitNullProperties?.Remove("isParent"); }
+            else if (parseNode.GetChildNode("isParent") is { } nullNodeIsParent && nullNodeIsParent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsParent = null;
+            if (parseNode.GetChildNode("lineItemCurrencyCode") is null) { _explicitNullValueLineItemCurrencyCode = default!; _explicitNullProperties?.Remove("lineItemCurrencyCode"); }
+            else if (parseNode.GetChildNode("lineItemCurrencyCode") is { } nullNodeLineItemCurrencyCode && nullNodeLineItemCurrencyCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LineItemCurrencyCode = null;
+            if (parseNode.GetChildNode("mrr") is null) { _explicitNullValueMrr = default!; _explicitNullProperties?.Remove("mrr"); }
+            else if (parseNode.GetChildNode("mrr") is { } nullNodeMrr && nullNodeMrr.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mrr = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("parentLineItemId") is null) { _explicitNullValueParentLineItemId = default!; _explicitNullProperties?.Remove("parentLineItemId"); }
+            else if (parseNode.GetChildNode("parentLineItemId") is { } nullNodeParentLineItemId && nullNodeParentLineItemId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParentLineItemId = null;
+            if (parseNode.GetChildNode("positionOnQuote") is null) { _explicitNullValuePositionOnQuote = default!; _explicitNullProperties?.Remove("positionOnQuote"); }
+            else if (parseNode.GetChildNode("positionOnQuote") is { } nullNodePositionOnQuote && nullNodePositionOnQuote.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PositionOnQuote = null;
+            if (parseNode.GetChildNode("postTaxAmount") is null) { _explicitNullValuePostTaxAmount = default!; _explicitNullProperties?.Remove("postTaxAmount"); }
+            else if (parseNode.GetChildNode("postTaxAmount") is { } nullNodePostTaxAmount && nullNodePostTaxAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PostTaxAmount = null;
+            if (parseNode.GetChildNode("preDiscountAmount") is null) { _explicitNullValuePreDiscountAmount = default!; _explicitNullProperties?.Remove("preDiscountAmount"); }
+            else if (parseNode.GetChildNode("preDiscountAmount") is { } nullNodePreDiscountAmount && nullNodePreDiscountAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreDiscountAmount = null;
+            if (parseNode.GetChildNode("price") is null) { _explicitNullValuePrice = default!; _explicitNullProperties?.Remove("price"); }
+            else if (parseNode.GetChildNode("price") is { } nullNodePrice && nullNodePrice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Price = null;
+            if (parseNode.GetChildNode("priceBookId") is null) { _explicitNullValuePriceBookId = default!; _explicitNullProperties?.Remove("priceBookId"); }
+            else if (parseNode.GetChildNode("priceBookId") is { } nullNodePriceBookId && nullNodePriceBookId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PriceBookId = null;
+            if (parseNode.GetChildNode("pricing") is null) { _explicitNullValuePricing = default!; _explicitNullProperties?.Remove("pricing"); }
+            else if (parseNode.GetChildNode("pricing") is { } nullNodePricing && nullNodePricing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pricing = null;
+            if (parseNode.GetChildNode("pricingModel") is null) { _explicitNullValuePricingModel = default!; _explicitNullProperties?.Remove("pricingModel"); }
+            else if (parseNode.GetChildNode("pricingModel") is { } nullNodePricingModel && nullNodePricingModel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PricingModel = null;
+            if (parseNode.GetChildNode("productId") is null) { _explicitNullValueProductId = default!; _explicitNullProperties?.Remove("productId"); }
+            else if (parseNode.GetChildNode("productId") is { } nullNodeProductId && nullNodeProductId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductId = null;
+            if (parseNode.GetChildNode("productType") is null) { _explicitNullValueProductType = default!; _explicitNullProperties?.Remove("productType"); }
+            else if (parseNode.GetChildNode("productType") is { } nullNodeProductType && nullNodeProductType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductType = null;
+            if (parseNode.GetChildNode("quantity") is null) { _explicitNullValueQuantity = default!; _explicitNullProperties?.Remove("quantity"); }
+            else if (parseNode.GetChildNode("quantity") is { } nullNodeQuantity && nullNodeQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Quantity = null;
+            if (parseNode.GetChildNode("rampKey") is null) { _explicitNullValueRampKey = default!; _explicitNullProperties?.Remove("rampKey"); }
+            else if (parseNode.GetChildNode("rampKey") is { } nullNodeRampKey && nullNodeRampKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RampKey = null;
+            if (parseNode.GetChildNode("recurringBillingDayOfMonth") is null) { _explicitNullValueRecurringBillingDayOfMonth = default!; _explicitNullProperties?.Remove("recurringBillingDayOfMonth"); }
+            else if (parseNode.GetChildNode("recurringBillingDayOfMonth") is { } nullNodeRecurringBillingDayOfMonth && nullNodeRecurringBillingDayOfMonth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecurringBillingDayOfMonth = null;
+            if (parseNode.GetChildNode("recurringBillingEndDate") is null) { _explicitNullValueRecurringBillingEndDate = default!; _explicitNullProperties?.Remove("recurringBillingEndDate"); }
+            else if (parseNode.GetChildNode("recurringBillingEndDate") is { } nullNodeRecurringBillingEndDate && nullNodeRecurringBillingEndDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecurringBillingEndDate = null;
+            if (parseNode.GetChildNode("recurringBillingFrequency") is null) { _explicitNullValueRecurringBillingFrequency = default!; _explicitNullProperties?.Remove("recurringBillingFrequency"); }
+            else if (parseNode.GetChildNode("recurringBillingFrequency") is { } nullNodeRecurringBillingFrequency && nullNodeRecurringBillingFrequency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecurringBillingFrequency = null;
+            if (parseNode.GetChildNode("recurringBillingNumberOfPayments") is null) { _explicitNullValueRecurringBillingNumberOfPayments = default!; _explicitNullProperties?.Remove("recurringBillingNumberOfPayments"); }
+            else if (parseNode.GetChildNode("recurringBillingNumberOfPayments") is { } nullNodeRecurringBillingNumberOfPayments && nullNodeRecurringBillingNumberOfPayments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecurringBillingNumberOfPayments = null;
+            if (parseNode.GetChildNode("recurringBillingPeriod") is null) { _explicitNullValueRecurringBillingPeriod = default!; _explicitNullProperties?.Remove("recurringBillingPeriod"); }
+            else if (parseNode.GetChildNode("recurringBillingPeriod") is { } nullNodeRecurringBillingPeriod && nullNodeRecurringBillingPeriod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecurringBillingPeriod = null;
+            if (parseNode.GetChildNode("recurringBillingStartDate") is null) { _explicitNullValueRecurringBillingStartDate = default!; _explicitNullProperties?.Remove("recurringBillingStartDate"); }
+            else if (parseNode.GetChildNode("recurringBillingStartDate") is { } nullNodeRecurringBillingStartDate && nullNodeRecurringBillingStartDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecurringBillingStartDate = null;
+            if (parseNode.GetChildNode("recurringBillingTerms") is null) { _explicitNullValueRecurringBillingTerms = default!; _explicitNullProperties?.Remove("recurringBillingTerms"); }
+            else if (parseNode.GetChildNode("recurringBillingTerms") is { } nullNodeRecurringBillingTerms && nullNodeRecurringBillingTerms.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecurringBillingTerms = null;
+            if (parseNode.GetChildNode("richTextDescription") is null) { _explicitNullValueRichTextDescription = default!; _explicitNullProperties?.Remove("richTextDescription"); }
+            else if (parseNode.GetChildNode("richTextDescription") is { } nullNodeRichTextDescription && nullNodeRichTextDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RichTextDescription = null;
+            if (parseNode.GetChildNode("sku") is null) { _explicitNullValueSku = default!; _explicitNullProperties?.Remove("sku"); }
+            else if (parseNode.GetChildNode("sku") is { } nullNodeSku && nullNodeSku.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sku = null;
+            if (parseNode.GetChildNode("tax") is null) { _explicitNullValueTax = default!; _explicitNullProperties?.Remove("tax"); }
+            else if (parseNode.GetChildNode("tax") is { } nullNodeTax && nullNodeTax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tax = null;
+            if (parseNode.GetChildNode("taxAmount") is null) { _explicitNullValueTaxAmount = default!; _explicitNullProperties?.Remove("taxAmount"); }
+            else if (parseNode.GetChildNode("taxAmount") is { } nullNodeTaxAmount && nullNodeTaxAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxAmount = null;
+            if (parseNode.GetChildNode("taxCategory") is null) { _explicitNullValueTaxCategory = default!; _explicitNullProperties?.Remove("taxCategory"); }
+            else if (parseNode.GetChildNode("taxCategory") is { } nullNodeTaxCategory && nullNodeTaxCategory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxCategory = null;
+            if (parseNode.GetChildNode("taxRateGroupId") is null) { _explicitNullValueTaxRateGroupId = default!; _explicitNullProperties?.Remove("taxRateGroupId"); }
+            else if (parseNode.GetChildNode("taxRateGroupId") is { } nullNodeTaxRateGroupId && nullNodeTaxRateGroupId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxRateGroupId = null;
+            if (parseNode.GetChildNode("tcv") is null) { _explicitNullValueTcv = default!; _explicitNullProperties?.Remove("tcv"); }
+            else if (parseNode.GetChildNode("tcv") is { } nullNodeTcv && nullNodeTcv.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tcv = null;
+            if (parseNode.GetChildNode("termInMonths") is null) { _explicitNullValueTermInMonths = default!; _explicitNullProperties?.Remove("termInMonths"); }
+            else if (parseNode.GetChildNode("termInMonths") is { } nullNodeTermInMonths && nullNodeTermInMonths.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TermInMonths = null;
+            if (parseNode.GetChildNode("tierAmount") is null) { _explicitNullValueTierAmount = default!; _explicitNullProperties?.Remove("tierAmount"); }
+            else if (parseNode.GetChildNode("tierAmount") is { } nullNodeTierAmount && nullNodeTierAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TierAmount = null;
+            if (parseNode.GetChildNode("totalDiscount") is null) { _explicitNullValueTotalDiscount = default!; _explicitNullProperties?.Remove("totalDiscount"); }
+            else if (parseNode.GetChildNode("totalDiscount") is { } nullNodeTotalDiscount && nullNodeTotalDiscount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalDiscount = null;
+            if (parseNode.GetChildNode("updatedAt") is null) { _explicitNullValueUpdatedAt = default!; _explicitNullProperties?.Remove("updatedAt"); }
+            else if (parseNode.GetChildNode("updatedAt") is { } nullNodeUpdatedAt && nullNodeUpdatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdatedAt = null;
+            if (parseNode.GetChildNode("variantId") is null) { _explicitNullValueVariantId = default!; _explicitNullProperties?.Remove("variantId"); }
+            else if (parseNode.GetChildNode("variantId") is { } nullNodeVariantId && nullNodeVariantId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VariantId = null;
+        }
+
         /// <summary>The annual contract value for the line item.</summary>
-        public double? Acv { get; set; }
+        public double? Acv { get => _explicitNullValueAcv; set { _explicitNullValueAcv = value; AdditionalData?.Remove("acv"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acv"); else _explicitNullProperties?.Remove("acv"); } }
+        private double? _explicitNullValueAcv = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Indicates whether the buyer can select the quantity of the line item.</summary>
-        public bool? AllowBuyerSelectedQuantity { get; set; }
+        public bool? AllowBuyerSelectedQuantity { get => _explicitNullValueAllowBuyerSelectedQuantity; set { _explicitNullValueAllowBuyerSelectedQuantity = value; AdditionalData?.Remove("allowBuyerSelectedQuantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowBuyerSelectedQuantity"); else _explicitNullProperties?.Remove("allowBuyerSelectedQuantity"); } }
+        private bool? _explicitNullValueAllowBuyerSelectedQuantity = default!;
         /// <summary>The total amount for the line item, calculated as price multiplied by quantity.</summary>
-        public double? Amount { get; set; }
+        public double? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; AdditionalData?.Remove("amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
+        private double? _explicitNullValueAmount = default!;
         /// <summary>Indicates whether the line item is archived.</summary>
-        public bool? Archived { get; set; }
+        public bool? Archived { get => _explicitNullValueArchived; set { _explicitNullValueArchived = value; AdditionalData?.Remove("archived"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("archived"); else _explicitNullProperties?.Remove("archived"); } }
+        private bool? _explicitNullValueArchived = default!;
         /// <summary>The date and time when the line item was archived, in ISO 8601 format.</summary>
-        public DateTimeOffset? ArchivedAt { get; set; }
+        public DateTimeOffset? ArchivedAt { get => _explicitNullValueArchivedAt; set { _explicitNullValueArchivedAt = value; AdditionalData?.Remove("archivedAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("archivedAt"); else _explicitNullProperties?.Remove("archivedAt"); } }
+        private DateTimeOffset? _explicitNullValueArchivedAt = default!;
         /// <summary>The annual recurring revenue for the line item.</summary>
-        public double? Arr { get; set; }
+        public double? Arr { get => _explicitNullValueArr; set { _explicitNullValueArr = value; AdditionalData?.Remove("arr"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("arr"); else _explicitNullProperties?.Remove("arr"); } }
+        private double? _explicitNullValueArr = default!;
         /// <summary>The anchor date for the billing cycle, in ISO 8601 date format.</summary>
-        public Date? BillingCycleAnchorDate { get; set; }
+        public Date? BillingCycleAnchorDate { get => _explicitNullValueBillingCycleAnchorDate; set { _explicitNullValueBillingCycleAnchorDate = value; AdditionalData?.Remove("billingCycleAnchorDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billingCycleAnchorDate"); else _explicitNullProperties?.Remove("billingCycleAnchorDate"); } }
+        private Date? _explicitNullValueBillingCycleAnchorDate = default!;
         /// <summary>The end date of the billing period, in ISO 8601 date format.</summary>
-        public Date? BillingPeriodEndDate { get; set; }
+        public Date? BillingPeriodEndDate { get => _explicitNullValueBillingPeriodEndDate; set { _explicitNullValueBillingPeriodEndDate = value; AdditionalData?.Remove("billingPeriodEndDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billingPeriodEndDate"); else _explicitNullProperties?.Remove("billingPeriodEndDate"); } }
+        private Date? _explicitNullValueBillingPeriodEndDate = default!;
         /// <summary>The start date of the billing period, in ISO 8601 date format.</summary>
-        public Date? BillingPeriodStartDate { get; set; }
+        public Date? BillingPeriodStartDate { get => _explicitNullValueBillingPeriodStartDate; set { _explicitNullValueBillingPeriodStartDate = value; AdditionalData?.Remove("billingPeriodStartDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billingPeriodStartDate"); else _explicitNullProperties?.Remove("billingPeriodStartDate"); } }
+        private Date? _explicitNullValueBillingPeriodStartDate = default!;
         /// <summary>The number of days to delay the start of billing.</summary>
-        public int? BillingStartDelayDays { get; set; }
+        public int? BillingStartDelayDays { get => _explicitNullValueBillingStartDelayDays; set { _explicitNullValueBillingStartDelayDays = value; AdditionalData?.Remove("billingStartDelayDays"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billingStartDelayDays"); else _explicitNullProperties?.Remove("billingStartDelayDays"); } }
+        private int? _explicitNullValueBillingStartDelayDays = default!;
         /// <summary>The number of months to delay the start of billing.</summary>
-        public int? BillingStartDelayMonths { get; set; }
+        public int? BillingStartDelayMonths { get => _explicitNullValueBillingStartDelayMonths; set { _explicitNullValueBillingStartDelayMonths = value; AdditionalData?.Remove("billingStartDelayMonths"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billingStartDelayMonths"); else _explicitNullProperties?.Remove("billingStartDelayMonths"); } }
+        private int? _explicitNullValueBillingStartDelayMonths = default!;
         /// <summary>The type of delay for the start of billing. Valid values include &apos;HS_BILLING_START_DELAY_DAYS&apos;, &apos;HS_BILLING_START_DELAY_MONTHS&apos;, and &apos;HS_RECURRING_BILLING_START_DATE&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemBillingStartDelayType? BillingStartDelayType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemBillingStartDelayType? BillingStartDelayType { get => _explicitNullValueBillingStartDelayType; set { _explicitNullValueBillingStartDelayType = value; AdditionalData?.Remove("billingStartDelayType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billingStartDelayType"); else _explicitNullProperties?.Remove("billingStartDelayType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemBillingStartDelayType? _explicitNullValueBillingStartDelayType = default!;
         /// <summary>The maximum quantity the buyer can select for the line item.</summary>
-        public double? BuyerSelectedQuantityMax { get; set; }
+        public double? BuyerSelectedQuantityMax { get => _explicitNullValueBuyerSelectedQuantityMax; set { _explicitNullValueBuyerSelectedQuantityMax = value; AdditionalData?.Remove("buyerSelectedQuantityMax"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buyerSelectedQuantityMax"); else _explicitNullProperties?.Remove("buyerSelectedQuantityMax"); } }
+        private double? _explicitNullValueBuyerSelectedQuantityMax = default!;
         /// <summary>The minimum quantity the buyer can select for the line item.</summary>
-        public double? BuyerSelectedQuantityMin { get; set; }
+        public double? BuyerSelectedQuantityMin { get => _explicitNullValueBuyerSelectedQuantityMin; set { _explicitNullValueBuyerSelectedQuantityMin = value; AdditionalData?.Remove("buyerSelectedQuantityMin"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buyerSelectedQuantityMin"); else _explicitNullProperties?.Remove("buyerSelectedQuantityMin"); } }
+        private double? _explicitNullValueBuyerSelectedQuantityMin = default!;
         /// <summary>The date and time when the line item was created, in ISO 8601 format.</summary>
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; AdditionalData?.Remove("createdAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createdAt"); else _explicitNullProperties?.Remove("createdAt"); } }
+        private DateTimeOffset? _explicitNullValueCreatedAt = default!;
         /// <summary>A text description of the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>The discount applied to the line item.</summary>
-        public double? Discount { get; set; }
+        public double? Discount { get => _explicitNullValueDiscount; set { _explicitNullValueDiscount = value; AdditionalData?.Remove("discount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discount"); else _explicitNullProperties?.Remove("discount"); } }
+        private double? _explicitNullValueDiscount = default!;
         /// <summary>The percentage discount applied to the line item.</summary>
-        public double? DiscountPercentage { get; set; }
+        public double? DiscountPercentage { get => _explicitNullValueDiscountPercentage; set { _explicitNullValueDiscountPercentage = value; AdditionalData?.Remove("discountPercentage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discountPercentage"); else _explicitNullProperties?.Remove("discountPercentage"); } }
+        private double? _explicitNullValueDiscountPercentage = default!;
         /// <summary>The effective price per unit after discounts.</summary>
-        public double? EffectiveUnitPrice { get; set; }
+        public double? EffectiveUnitPrice { get => _explicitNullValueEffectiveUnitPrice; set { _explicitNullValueEffectiveUnitPrice = value; AdditionalData?.Remove("effectiveUnitPrice"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("effectiveUnitPrice"); else _explicitNullProperties?.Remove("effectiveUnitPrice"); } }
+        private double? _explicitNullValueEffectiveUnitPrice = default!;
         /// <summary>An external identifier for the line item, used for integration purposes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExternalId { get; set; }
+        public string? ExternalId { get => _explicitNullValueExternalId; set { _explicitNullValueExternalId = value; AdditionalData?.Remove("externalId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalId"); else _explicitNullProperties?.Remove("externalId"); } }
+        private string? _explicitNullValueExternalId = default!;
 #nullable restore
 #else
-        public string ExternalId { get; set; }
+        public string ExternalId { get => _explicitNullValueExternalId; set { _explicitNullValueExternalId = value; AdditionalData?.Remove("externalId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalId"); else _explicitNullProperties?.Remove("externalId"); } }
+        private string _explicitNullValueExternalId = default!;
 #endif
         /// <summary>The unique identifier for the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>A URL or identifier for images associated with the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Images { get; set; }
+        public string? Images { get => _explicitNullValueImages; set { _explicitNullValueImages = value; AdditionalData?.Remove("images"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("images"); else _explicitNullProperties?.Remove("images"); } }
+        private string? _explicitNullValueImages = default!;
 #nullable restore
 #else
-        public string Images { get; set; }
+        public string Images { get => _explicitNullValueImages; set { _explicitNullValueImages = value; AdditionalData?.Remove("images"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("images"); else _explicitNullProperties?.Remove("images"); } }
+        private string _explicitNullValueImages = default!;
 #endif
         /// <summary>Indicates whether the price of the line item is editable.</summary>
-        public bool? IsEditablePrice { get; set; }
+        public bool? IsEditablePrice { get => _explicitNullValueIsEditablePrice; set { _explicitNullValueIsEditablePrice = value; AdditionalData?.Remove("isEditablePrice"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isEditablePrice"); else _explicitNullProperties?.Remove("isEditablePrice"); } }
+        private bool? _explicitNullValueIsEditablePrice = default!;
         /// <summary>Indicates whether the line item is optional.</summary>
-        public bool? IsOptional { get; set; }
+        public bool? IsOptional { get => _explicitNullValueIsOptional; set { _explicitNullValueIsOptional = value; AdditionalData?.Remove("isOptional"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isOptional"); else _explicitNullProperties?.Remove("isOptional"); } }
+        private bool? _explicitNullValueIsOptional = default!;
         /// <summary>Indicates whether this line item is a parent line item.</summary>
-        public bool? IsParent { get; set; }
+        public bool? IsParent { get => _explicitNullValueIsParent; set { _explicitNullValueIsParent = value; AdditionalData?.Remove("isParent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isParent"); else _explicitNullProperties?.Remove("isParent"); } }
+        private bool? _explicitNullValueIsParent = default!;
         /// <summary>The currency code for the line item, following ISO 4217 format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LineItemCurrencyCode { get; set; }
+        public string? LineItemCurrencyCode { get => _explicitNullValueLineItemCurrencyCode; set { _explicitNullValueLineItemCurrencyCode = value; AdditionalData?.Remove("lineItemCurrencyCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lineItemCurrencyCode"); else _explicitNullProperties?.Remove("lineItemCurrencyCode"); } }
+        private string? _explicitNullValueLineItemCurrencyCode = default!;
 #nullable restore
 #else
-        public string LineItemCurrencyCode { get; set; }
+        public string LineItemCurrencyCode { get => _explicitNullValueLineItemCurrencyCode; set { _explicitNullValueLineItemCurrencyCode = value; AdditionalData?.Remove("lineItemCurrencyCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lineItemCurrencyCode"); else _explicitNullProperties?.Remove("lineItemCurrencyCode"); } }
+        private string _explicitNullValueLineItemCurrencyCode = default!;
 #endif
         /// <summary>The monthly recurring revenue for the line item.</summary>
-        public double? Mrr { get; set; }
+        public double? Mrr { get => _explicitNullValueMrr; set { _explicitNullValueMrr = value; AdditionalData?.Remove("mrr"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mrr"); else _explicitNullProperties?.Remove("mrr"); } }
+        private double? _explicitNullValueMrr = default!;
         /// <summary>The name of the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The unique identifier for the parent line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ParentLineItemId { get; set; }
+        public string? ParentLineItemId { get => _explicitNullValueParentLineItemId; set { _explicitNullValueParentLineItemId = value; AdditionalData?.Remove("parentLineItemId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parentLineItemId"); else _explicitNullProperties?.Remove("parentLineItemId"); } }
+        private string? _explicitNullValueParentLineItemId = default!;
 #nullable restore
 #else
-        public string ParentLineItemId { get; set; }
+        public string ParentLineItemId { get => _explicitNullValueParentLineItemId; set { _explicitNullValueParentLineItemId = value; AdditionalData?.Remove("parentLineItemId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parentLineItemId"); else _explicitNullProperties?.Remove("parentLineItemId"); } }
+        private string _explicitNullValueParentLineItemId = default!;
 #endif
         /// <summary>The position of the line item on a quote, represented as an integer.</summary>
-        public int? PositionOnQuote { get; set; }
+        public int? PositionOnQuote { get => _explicitNullValuePositionOnQuote; set { _explicitNullValuePositionOnQuote = value; AdditionalData?.Remove("positionOnQuote"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("positionOnQuote"); else _explicitNullProperties?.Remove("positionOnQuote"); } }
+        private int? _explicitNullValuePositionOnQuote = default!;
         /// <summary>The amount after taxes are applied.</summary>
-        public double? PostTaxAmount { get; set; }
+        public double? PostTaxAmount { get => _explicitNullValuePostTaxAmount; set { _explicitNullValuePostTaxAmount = value; AdditionalData?.Remove("postTaxAmount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("postTaxAmount"); else _explicitNullProperties?.Remove("postTaxAmount"); } }
+        private double? _explicitNullValuePostTaxAmount = default!;
         /// <summary>The amount before any discounts are applied.</summary>
-        public double? PreDiscountAmount { get; set; }
+        public double? PreDiscountAmount { get => _explicitNullValuePreDiscountAmount; set { _explicitNullValuePreDiscountAmount = value; AdditionalData?.Remove("preDiscountAmount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preDiscountAmount"); else _explicitNullProperties?.Remove("preDiscountAmount"); } }
+        private double? _explicitNullValuePreDiscountAmount = default!;
         /// <summary>The price of a single unit of the line item.</summary>
-        public double? Price { get; set; }
+        public double? Price { get => _explicitNullValuePrice; set { _explicitNullValuePrice = value; AdditionalData?.Remove("price"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("price"); else _explicitNullProperties?.Remove("price"); } }
+        private double? _explicitNullValuePrice = default!;
         /// <summary>The identifier for the price book associated with the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PriceBookId { get; set; }
+        public string? PriceBookId { get => _explicitNullValuePriceBookId; set { _explicitNullValuePriceBookId = value; AdditionalData?.Remove("priceBookId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priceBookId"); else _explicitNullProperties?.Remove("priceBookId"); } }
+        private string? _explicitNullValuePriceBookId = default!;
 #nullable restore
 #else
-        public string PriceBookId { get; set; }
+        public string PriceBookId { get => _explicitNullValuePriceBookId; set { _explicitNullValuePriceBookId = value; AdditionalData?.Remove("priceBookId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priceBookId"); else _explicitNullProperties?.Remove("priceBookId"); } }
+        private string _explicitNullValuePriceBookId = default!;
 #endif
         /// <summary>The pricing property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.Pricing? Pricing { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.Pricing? Pricing { get => _explicitNullValuePricing; set { _explicitNullValuePricing = value; AdditionalData?.Remove("pricing"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pricing"); else _explicitNullProperties?.Remove("pricing"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.Pricing? _explicitNullValuePricing = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.Pricing Pricing { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.Pricing Pricing { get => _explicitNullValuePricing; set { _explicitNullValuePricing = value; AdditionalData?.Remove("pricing"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pricing"); else _explicitNullProperties?.Remove("pricing"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.Pricing _explicitNullValuePricing = default!;
 #endif
         /// <summary>The pricing model used for the line item. Valid values include &apos;FLAT&apos;, &apos;GRADUATED&apos;, &apos;STAIRSTEP&apos;, and &apos;VOLUME&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemPricingModel? PricingModel { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemPricingModel? PricingModel { get => _explicitNullValuePricingModel; set { _explicitNullValuePricingModel = value; AdditionalData?.Remove("pricingModel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pricingModel"); else _explicitNullProperties?.Remove("pricingModel"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemPricingModel? _explicitNullValuePricingModel = default!;
         /// <summary>The identifier for the product associated with the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProductId { get; set; }
+        public string? ProductId { get => _explicitNullValueProductId; set { _explicitNullValueProductId = value; AdditionalData?.Remove("productId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("productId"); else _explicitNullProperties?.Remove("productId"); } }
+        private string? _explicitNullValueProductId = default!;
 #nullable restore
 #else
-        public string ProductId { get; set; }
+        public string ProductId { get => _explicitNullValueProductId; set { _explicitNullValueProductId = value; AdditionalData?.Remove("productId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("productId"); else _explicitNullProperties?.Remove("productId"); } }
+        private string _explicitNullValueProductId = default!;
 #endif
         /// <summary>The type of product for the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProductType { get; set; }
+        public string? ProductType { get => _explicitNullValueProductType; set { _explicitNullValueProductType = value; AdditionalData?.Remove("productType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("productType"); else _explicitNullProperties?.Remove("productType"); } }
+        private string? _explicitNullValueProductType = default!;
 #nullable restore
 #else
-        public string ProductType { get; set; }
+        public string ProductType { get => _explicitNullValueProductType; set { _explicitNullValueProductType = value; AdditionalData?.Remove("productType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("productType"); else _explicitNullProperties?.Remove("productType"); } }
+        private string _explicitNullValueProductType = default!;
 #endif
         /// <summary>The quantity of the line item, represented as a number.</summary>
-        public double? Quantity { get; set; }
+        public double? Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; AdditionalData?.Remove("quantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quantity"); else _explicitNullProperties?.Remove("quantity"); } }
+        private double? _explicitNullValueQuantity = default!;
         /// <summary>A key used to identify the ramp schedule for the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RampKey { get; set; }
+        public string? RampKey { get => _explicitNullValueRampKey; set { _explicitNullValueRampKey = value; AdditionalData?.Remove("rampKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rampKey"); else _explicitNullProperties?.Remove("rampKey"); } }
+        private string? _explicitNullValueRampKey = default!;
 #nullable restore
 #else
-        public string RampKey { get; set; }
+        public string RampKey { get => _explicitNullValueRampKey; set { _explicitNullValueRampKey = value; AdditionalData?.Remove("rampKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rampKey"); else _explicitNullProperties?.Remove("rampKey"); } }
+        private string _explicitNullValueRampKey = default!;
 #endif
         /// <summary>The day of the month when recurring billing occurs.</summary>
-        public int? RecurringBillingDayOfMonth { get; set; }
+        public int? RecurringBillingDayOfMonth { get => _explicitNullValueRecurringBillingDayOfMonth; set { _explicitNullValueRecurringBillingDayOfMonth = value; AdditionalData?.Remove("recurringBillingDayOfMonth"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurringBillingDayOfMonth"); else _explicitNullProperties?.Remove("recurringBillingDayOfMonth"); } }
+        private int? _explicitNullValueRecurringBillingDayOfMonth = default!;
         /// <summary>The end date for recurring billing, in ISO 8601 date format.</summary>
-        public Date? RecurringBillingEndDate { get; set; }
+        public Date? RecurringBillingEndDate { get => _explicitNullValueRecurringBillingEndDate; set { _explicitNullValueRecurringBillingEndDate = value; AdditionalData?.Remove("recurringBillingEndDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurringBillingEndDate"); else _explicitNullProperties?.Remove("recurringBillingEndDate"); } }
+        private Date? _explicitNullValueRecurringBillingEndDate = default!;
         /// <summary>The frequency of recurring billing for the line item. Valid values include &apos;ANNUALLY&apos;, &apos;BIWEEKLY&apos;, &apos;MONTHLY&apos;, &apos;PER_FIVE_YEARS&apos;, &apos;PER_FOUR_YEARS&apos;, &apos;PER_SIX_MONTHS&apos;, &apos;PER_THREE_YEARS&apos;, &apos;PER_TWO_YEARS&apos;, &apos;QUARTERLY&apos;, and &apos;WEEKLY&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemRecurringBillingFrequency? RecurringBillingFrequency { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemRecurringBillingFrequency? RecurringBillingFrequency { get => _explicitNullValueRecurringBillingFrequency; set { _explicitNullValueRecurringBillingFrequency = value; AdditionalData?.Remove("recurringBillingFrequency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurringBillingFrequency"); else _explicitNullProperties?.Remove("recurringBillingFrequency"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemRecurringBillingFrequency? _explicitNullValueRecurringBillingFrequency = default!;
         /// <summary>The number of payments for the recurring billing cycle.</summary>
-        public int? RecurringBillingNumberOfPayments { get; set; }
+        public int? RecurringBillingNumberOfPayments { get => _explicitNullValueRecurringBillingNumberOfPayments; set { _explicitNullValueRecurringBillingNumberOfPayments = value; AdditionalData?.Remove("recurringBillingNumberOfPayments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurringBillingNumberOfPayments"); else _explicitNullProperties?.Remove("recurringBillingNumberOfPayments"); } }
+        private int? _explicitNullValueRecurringBillingNumberOfPayments = default!;
         /// <summary>The period for recurring billing.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RecurringBillingPeriod { get; set; }
+        public string? RecurringBillingPeriod { get => _explicitNullValueRecurringBillingPeriod; set { _explicitNullValueRecurringBillingPeriod = value; AdditionalData?.Remove("recurringBillingPeriod"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurringBillingPeriod"); else _explicitNullProperties?.Remove("recurringBillingPeriod"); } }
+        private string? _explicitNullValueRecurringBillingPeriod = default!;
 #nullable restore
 #else
-        public string RecurringBillingPeriod { get; set; }
+        public string RecurringBillingPeriod { get => _explicitNullValueRecurringBillingPeriod; set { _explicitNullValueRecurringBillingPeriod = value; AdditionalData?.Remove("recurringBillingPeriod"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurringBillingPeriod"); else _explicitNullProperties?.Remove("recurringBillingPeriod"); } }
+        private string _explicitNullValueRecurringBillingPeriod = default!;
 #endif
         /// <summary>The start date for recurring billing, in ISO 8601 date format.</summary>
-        public Date? RecurringBillingStartDate { get; set; }
+        public Date? RecurringBillingStartDate { get => _explicitNullValueRecurringBillingStartDate; set { _explicitNullValueRecurringBillingStartDate = value; AdditionalData?.Remove("recurringBillingStartDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurringBillingStartDate"); else _explicitNullProperties?.Remove("recurringBillingStartDate"); } }
+        private Date? _explicitNullValueRecurringBillingStartDate = default!;
         /// <summary>The terms of recurring billing. Valid values include &apos;AUTOMATICALLY_RENEW&apos; and &apos;FIXED&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemRecurringBillingTerms? RecurringBillingTerms { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemRecurringBillingTerms? RecurringBillingTerms { get => _explicitNullValueRecurringBillingTerms; set { _explicitNullValueRecurringBillingTerms = value; AdditionalData?.Remove("recurringBillingTerms"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurringBillingTerms"); else _explicitNullProperties?.Remove("recurringBillingTerms"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemRecurringBillingTerms? _explicitNullValueRecurringBillingTerms = default!;
         /// <summary>A rich text formatted description of the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RichTextDescription { get; set; }
+        public string? RichTextDescription { get => _explicitNullValueRichTextDescription; set { _explicitNullValueRichTextDescription = value; AdditionalData?.Remove("richTextDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("richTextDescription"); else _explicitNullProperties?.Remove("richTextDescription"); } }
+        private string? _explicitNullValueRichTextDescription = default!;
 #nullable restore
 #else
-        public string RichTextDescription { get; set; }
+        public string RichTextDescription { get => _explicitNullValueRichTextDescription; set { _explicitNullValueRichTextDescription = value; AdditionalData?.Remove("richTextDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("richTextDescription"); else _explicitNullProperties?.Remove("richTextDescription"); } }
+        private string _explicitNullValueRichTextDescription = default!;
 #endif
         /// <summary>The stock keeping unit (SKU) identifier for the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Sku { get; set; }
+        public string? Sku { get => _explicitNullValueSku; set { _explicitNullValueSku = value; AdditionalData?.Remove("sku"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sku"); else _explicitNullProperties?.Remove("sku"); } }
+        private string? _explicitNullValueSku = default!;
 #nullable restore
 #else
-        public string Sku { get; set; }
+        public string Sku { get => _explicitNullValueSku; set { _explicitNullValueSku = value; AdditionalData?.Remove("sku"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sku"); else _explicitNullProperties?.Remove("sku"); } }
+        private string _explicitNullValueSku = default!;
 #endif
         /// <summary>The tax amount applied to the line item.</summary>
-        public double? Tax { get; set; }
+        public double? Tax { get => _explicitNullValueTax; set { _explicitNullValueTax = value; AdditionalData?.Remove("tax"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax"); else _explicitNullProperties?.Remove("tax"); } }
+        private double? _explicitNullValueTax = default!;
         /// <summary>The total tax amount for this line item.</summary>
-        public double? TaxAmount { get; set; }
+        public double? TaxAmount { get => _explicitNullValueTaxAmount; set { _explicitNullValueTaxAmount = value; AdditionalData?.Remove("taxAmount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taxAmount"); else _explicitNullProperties?.Remove("taxAmount"); } }
+        private double? _explicitNullValueTaxAmount = default!;
         /// <summary>The tax category applicable to this line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TaxCategory { get; set; }
+        public string? TaxCategory { get => _explicitNullValueTaxCategory; set { _explicitNullValueTaxCategory = value; AdditionalData?.Remove("taxCategory"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taxCategory"); else _explicitNullProperties?.Remove("taxCategory"); } }
+        private string? _explicitNullValueTaxCategory = default!;
 #nullable restore
 #else
-        public string TaxCategory { get; set; }
+        public string TaxCategory { get => _explicitNullValueTaxCategory; set { _explicitNullValueTaxCategory = value; AdditionalData?.Remove("taxCategory"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taxCategory"); else _explicitNullProperties?.Remove("taxCategory"); } }
+        private string _explicitNullValueTaxCategory = default!;
 #endif
         /// <summary>The unique identifier for the tax rate group.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TaxRateGroupId { get; set; }
+        public string? TaxRateGroupId { get => _explicitNullValueTaxRateGroupId; set { _explicitNullValueTaxRateGroupId = value; AdditionalData?.Remove("taxRateGroupId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taxRateGroupId"); else _explicitNullProperties?.Remove("taxRateGroupId"); } }
+        private string? _explicitNullValueTaxRateGroupId = default!;
 #nullable restore
 #else
-        public string TaxRateGroupId { get; set; }
+        public string TaxRateGroupId { get => _explicitNullValueTaxRateGroupId; set { _explicitNullValueTaxRateGroupId = value; AdditionalData?.Remove("taxRateGroupId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taxRateGroupId"); else _explicitNullProperties?.Remove("taxRateGroupId"); } }
+        private string _explicitNullValueTaxRateGroupId = default!;
 #endif
         /// <summary>The total contract value for the line item.</summary>
-        public double? Tcv { get; set; }
+        public double? Tcv { get => _explicitNullValueTcv; set { _explicitNullValueTcv = value; AdditionalData?.Remove("tcv"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tcv"); else _explicitNullProperties?.Remove("tcv"); } }
+        private double? _explicitNullValueTcv = default!;
         /// <summary>The term length for the line item in months.</summary>
-        public int? TermInMonths { get; set; }
+        public int? TermInMonths { get => _explicitNullValueTermInMonths; set { _explicitNullValueTermInMonths = value; AdditionalData?.Remove("termInMonths"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("termInMonths"); else _explicitNullProperties?.Remove("termInMonths"); } }
+        private int? _explicitNullValueTermInMonths = default!;
         /// <summary>The tiered amount applicable to the line item.</summary>
-        public double? TierAmount { get; set; }
+        public double? TierAmount { get => _explicitNullValueTierAmount; set { _explicitNullValueTierAmount = value; AdditionalData?.Remove("tierAmount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tierAmount"); else _explicitNullProperties?.Remove("tierAmount"); } }
+        private double? _explicitNullValueTierAmount = default!;
         /// <summary>The total discount amount applied to the line item.</summary>
-        public double? TotalDiscount { get; set; }
+        public double? TotalDiscount { get => _explicitNullValueTotalDiscount; set { _explicitNullValueTotalDiscount = value; AdditionalData?.Remove("totalDiscount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalDiscount"); else _explicitNullProperties?.Remove("totalDiscount"); } }
+        private double? _explicitNullValueTotalDiscount = default!;
         /// <summary>The date and time when the line item was last updated, in ISO 8601 format.</summary>
-        public DateTimeOffset? UpdatedAt { get; set; }
+        public DateTimeOffset? UpdatedAt { get => _explicitNullValueUpdatedAt; set { _explicitNullValueUpdatedAt = value; AdditionalData?.Remove("updatedAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updatedAt"); else _explicitNullProperties?.Remove("updatedAt"); } }
+        private DateTimeOffset? _explicitNullValueUpdatedAt = default!;
         /// <summary>The identifier for the product variant associated with the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VariantId { get; set; }
+        public string? VariantId { get => _explicitNullValueVariantId; set { _explicitNullValueVariantId = value; AdditionalData?.Remove("variantId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variantId"); else _explicitNullProperties?.Remove("variantId"); } }
+        private string? _explicitNullValueVariantId = default!;
 #nullable restore
 #else
-        public string VariantId { get; set; }
+        public string VariantId { get => _explicitNullValueVariantId; set { _explicitNullValueVariantId = value; AdditionalData?.Remove("variantId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variantId"); else _explicitNullProperties?.Remove("variantId"); } }
+        private string _explicitNullValueVariantId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.LineItem"/> and sets the default values.
@@ -256,7 +458,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.LineItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.LineItem();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.LineItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -277,7 +479,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "billingPeriodStartDate", n => { BillingPeriodStartDate = n.GetDateValue(); } },
                 { "billingStartDelayDays", n => { BillingStartDelayDays = n.GetIntValue(); } },
                 { "billingStartDelayMonths", n => { BillingStartDelayMonths = n.GetIntValue(); } },
-                { "billingStartDelayType", n => { BillingStartDelayType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemBillingStartDelayType>(); } },
+                { "billingStartDelayType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemBillingStartDelayType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueBillingStartDelayType = default; _explicitNullProperties?.Remove("billingStartDelayType"); AdditionalData["billingStartDelayType"] = unknown; } else { BillingStartDelayType = parsed; AdditionalData.Remove("billingStartDelayType"); } } },
                 { "buyerSelectedQuantityMax", n => { BuyerSelectedQuantityMax = n.GetDoubleValue(); } },
                 { "buyerSelectedQuantityMin", n => { BuyerSelectedQuantityMin = n.GetDoubleValue(); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
@@ -301,18 +503,18 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "price", n => { Price = n.GetDoubleValue(); } },
                 { "priceBookId", n => { PriceBookId = n.GetStringValue(); } },
                 { "pricing", n => { Pricing = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.Pricing>(global::Soenneker.HubSpot.OpenApiClient.Models.Pricing.CreateFromDiscriminatorValue); } },
-                { "pricingModel", n => { PricingModel = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemPricingModel>(); } },
+                { "pricingModel", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemPricingModel>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePricingModel = default; _explicitNullProperties?.Remove("pricingModel"); AdditionalData["pricingModel"] = unknown; } else { PricingModel = parsed; AdditionalData.Remove("pricingModel"); } } },
                 { "productId", n => { ProductId = n.GetStringValue(); } },
                 { "productType", n => { ProductType = n.GetStringValue(); } },
                 { "quantity", n => { Quantity = n.GetDoubleValue(); } },
                 { "rampKey", n => { RampKey = n.GetStringValue(); } },
                 { "recurringBillingDayOfMonth", n => { RecurringBillingDayOfMonth = n.GetIntValue(); } },
                 { "recurringBillingEndDate", n => { RecurringBillingEndDate = n.GetDateValue(); } },
-                { "recurringBillingFrequency", n => { RecurringBillingFrequency = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemRecurringBillingFrequency>(); } },
+                { "recurringBillingFrequency", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemRecurringBillingFrequency>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueRecurringBillingFrequency = default; _explicitNullProperties?.Remove("recurringBillingFrequency"); AdditionalData["recurringBillingFrequency"] = unknown; } else { RecurringBillingFrequency = parsed; AdditionalData.Remove("recurringBillingFrequency"); } } },
                 { "recurringBillingNumberOfPayments", n => { RecurringBillingNumberOfPayments = n.GetIntValue(); } },
                 { "recurringBillingPeriod", n => { RecurringBillingPeriod = n.GetStringValue(); } },
                 { "recurringBillingStartDate", n => { RecurringBillingStartDate = n.GetDateValue(); } },
-                { "recurringBillingTerms", n => { RecurringBillingTerms = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemRecurringBillingTerms>(); } },
+                { "recurringBillingTerms", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemRecurringBillingTerms>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueRecurringBillingTerms = default; _explicitNullProperties?.Remove("recurringBillingTerms"); AdditionalData["recurringBillingTerms"] = unknown; } else { RecurringBillingTerms = parsed; AdditionalData.Remove("recurringBillingTerms"); } } },
                 { "richTextDescription", n => { RichTextDescription = n.GetStringValue(); } },
                 { "sku", n => { Sku = n.GetStringValue(); } },
                 { "tax", n => { Tax = n.GetDoubleValue(); } },
@@ -393,6 +595,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteDoubleValue("totalDiscount", TotalDiscount);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             writer.WriteStringValue("variantId", VariantId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

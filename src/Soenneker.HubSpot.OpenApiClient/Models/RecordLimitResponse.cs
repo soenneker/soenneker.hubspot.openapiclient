@@ -11,24 +11,39 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class RecordLimitResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("customObjectTypes") is null) { _explicitNullValueCustomObjectTypes = default!; _explicitNullProperties?.Remove("customObjectTypes"); }
+            else if (parseNode.GetChildNode("customObjectTypes") is { } nullNodeCustomObjectTypes && nullNodeCustomObjectTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomObjectTypes = null;
+            if (parseNode.GetChildNode("hubspotDefinedObjectTypes") is null) { _explicitNullValueHubspotDefinedObjectTypes = default!; _explicitNullProperties?.Remove("hubspotDefinedObjectTypes"); }
+            else if (parseNode.GetChildNode("hubspotDefinedObjectTypes") is { } nullNodeHubspotDefinedObjectTypes && nullNodeHubspotDefinedObjectTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HubspotDefinedObjectTypes = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The customObjectTypes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CustomObjectRecordLimitResponse? CustomObjectTypes { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CustomObjectRecordLimitResponse? CustomObjectTypes { get => _explicitNullValueCustomObjectTypes; set { _explicitNullValueCustomObjectTypes = value; AdditionalData?.Remove("customObjectTypes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customObjectTypes"); else _explicitNullProperties?.Remove("customObjectTypes"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CustomObjectRecordLimitResponse? _explicitNullValueCustomObjectTypes = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CustomObjectRecordLimitResponse CustomObjectTypes { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CustomObjectRecordLimitResponse CustomObjectTypes { get => _explicitNullValueCustomObjectTypes; set { _explicitNullValueCustomObjectTypes = value; AdditionalData?.Remove("customObjectTypes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customObjectTypes"); else _explicitNullProperties?.Remove("customObjectTypes"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CustomObjectRecordLimitResponse _explicitNullValueCustomObjectTypes = default!;
 #endif
         /// <summary>An array of objects detailing the limits and usage for HubSpot-defined object types.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.LimitAndUsageForObjectType>? HubspotDefinedObjectTypes { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.LimitAndUsageForObjectType>? HubspotDefinedObjectTypes { get => _explicitNullValueHubspotDefinedObjectTypes; set { _explicitNullValueHubspotDefinedObjectTypes = value; AdditionalData?.Remove("hubspotDefinedObjectTypes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hubspotDefinedObjectTypes"); else _explicitNullProperties?.Remove("hubspotDefinedObjectTypes"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.LimitAndUsageForObjectType>? _explicitNullValueHubspotDefinedObjectTypes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.LimitAndUsageForObjectType> HubspotDefinedObjectTypes { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.LimitAndUsageForObjectType> HubspotDefinedObjectTypes { get => _explicitNullValueHubspotDefinedObjectTypes; set { _explicitNullValueHubspotDefinedObjectTypes = value; AdditionalData?.Remove("hubspotDefinedObjectTypes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hubspotDefinedObjectTypes"); else _explicitNullProperties?.Remove("hubspotDefinedObjectTypes"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.LimitAndUsageForObjectType> _explicitNullValueHubspotDefinedObjectTypes = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.RecordLimitResponse"/> and sets the default values.
@@ -45,7 +60,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.RecordLimitResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.RecordLimitResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.RecordLimitResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +83,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CustomObjectRecordLimitResponse>("customObjectTypes", CustomObjectTypes);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.LimitAndUsageForObjectType>("hubspotDefinedObjectTypes", HubspotDefinedObjectTypes);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

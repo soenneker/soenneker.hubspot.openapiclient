@@ -68,7 +68,7 @@ namespace Soenneker.HubSpot.OpenApiClient.FeatureFlags.TwoZeroTwoSixZeroNine.Ite
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStateBatchResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStateBatchResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStateBatchResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStateBatchResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve a list of HubSpot accounts with an account-level flag setting for the specified app. No request body is included.

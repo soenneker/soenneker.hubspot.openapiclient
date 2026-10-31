@@ -11,18 +11,32 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PropertyAspect : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("aspect") is null) { _explicitNullValueAspect = default!; _explicitNullProperties?.Remove("aspect"); }
+            else if (parseNode.GetChildNode("aspect") is { } nullNodeAspect && nullNodeAspect.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Aspect = null;
+            if (parseNode.GetChildNode("qualifier") is null) { _explicitNullValueQualifier = default!; _explicitNullProperties?.Remove("qualifier"); }
+            else if (parseNode.GetChildNode("qualifier") is { } nullNodeQualifier && nullNodeQualifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Qualifier = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The aspect property</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyAspectAspect? Aspect { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyAspectAspect? Aspect { get => _explicitNullValueAspect; set { _explicitNullValueAspect = value; AdditionalData?.Remove("aspect"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aspect"); else _explicitNullProperties?.Remove("aspect"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PropertyAspectAspect? _explicitNullValueAspect = default!;
         /// <summary>The qualifier property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Qualifier { get; set; }
+        public string? Qualifier { get => _explicitNullValueQualifier; set { _explicitNullValueQualifier = value; AdditionalData?.Remove("qualifier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("qualifier"); else _explicitNullProperties?.Remove("qualifier"); } }
+        private string? _explicitNullValueQualifier = default!;
 #nullable restore
 #else
-        public string Qualifier { get; set; }
+        public string Qualifier { get => _explicitNullValueQualifier; set { _explicitNullValueQualifier = value; AdditionalData?.Remove("qualifier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("qualifier"); else _explicitNullProperties?.Remove("qualifier"); } }
+        private string _explicitNullValueQualifier = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PropertyAspect"/> and sets the default values.
@@ -39,7 +53,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PropertyAspect CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PropertyAspect();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PropertyAspect(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -49,7 +63,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "aspect", n => { Aspect = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyAspectAspect>(); } },
+                { "aspect", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyAspectAspect>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAspect = default; _explicitNullProperties?.Remove("aspect"); AdditionalData["aspect"] = unknown; } else { Aspect = parsed; AdditionalData.Remove("aspect"); } } },
                 { "qualifier", n => { Qualifier = n.GetStringValue(); } },
             };
         }
@@ -62,6 +76,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyAspectAspect>("aspect", Aspect);
             writer.WriteStringValue("qualifier", Qualifier);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

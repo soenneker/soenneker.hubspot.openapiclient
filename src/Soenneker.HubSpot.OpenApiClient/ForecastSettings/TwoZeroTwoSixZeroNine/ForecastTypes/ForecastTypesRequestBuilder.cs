@@ -62,7 +62,7 @@ namespace Soenneker.HubSpot.OpenApiClient.ForecastSettings.TwoZeroTwoSixZeroNine
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ForecastTypeSettingPublicResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ForecastTypeSettingPublicResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ForecastTypeSettingPublicResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ForecastTypeSettingPublicResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Returns all forecast types configured for the portal. Forecast types define which properties are used to calculate forecasts. This endpoint is useful for retrieving the different forecast configurations available in your HubSpot account, allowing you to understand how forecasts are generated based on various properties.

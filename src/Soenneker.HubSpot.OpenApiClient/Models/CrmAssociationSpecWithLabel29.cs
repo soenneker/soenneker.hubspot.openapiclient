@@ -12,37 +12,62 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CrmAssociationSpecWithLabel29 : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("category") is null) { _explicitNullValueCategory = default!; _explicitNullProperties?.Remove("category"); }
+            else if (parseNode.GetChildNode("category") is { } nullNodeCategory && nullNodeCategory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Category = null;
+            if (parseNode.GetChildNode("fromObjectTypeId") is null) { _explicitNullValueFromObjectTypeId = default!; _explicitNullProperties?.Remove("fromObjectTypeId"); }
+            else if (parseNode.GetChildNode("fromObjectTypeId") is { } nullNodeFromObjectTypeId && nullNodeFromObjectTypeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FromObjectTypeId = null;
+            if (parseNode.GetChildNode("label") is null) { _explicitNullValueLabel = default!; _explicitNullProperties?.Remove("label"); }
+            else if (parseNode.GetChildNode("label") is { } nullNodeLabel && nullNodeLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Label = null;
+            if (parseNode.GetChildNode("toObjectTypeId") is null) { _explicitNullValueToObjectTypeId = default!; _explicitNullProperties?.Remove("toObjectTypeId"); }
+            else if (parseNode.GetChildNode("toObjectTypeId") is { } nullNodeToObjectTypeId && nullNodeToObjectTypeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToObjectTypeId = null;
+            if (parseNode.GetChildNode("typeId") is null) { _explicitNullValueTypeId = default!; _explicitNullProperties?.Remove("typeId"); }
+            else if (parseNode.GetChildNode("typeId") is { } nullNodeTypeId && nullNodeTypeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TypeId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A string representing the category of the association. Valid values include &apos;HUBSPOT_DEFINED&apos;, &apos;USER_DEFINED&apos;, &apos;INTEGRATOR_DEFINED&apos;, and &apos;WORK&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecWithLabelCategory29? Category { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecWithLabelCategory29? Category { get => _explicitNullValueCategory; set { _explicitNullValueCategory = value; AdditionalData?.Remove("category"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("category"); else _explicitNullProperties?.Remove("category"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecWithLabelCategory29? _explicitNullValueCategory = default!;
         /// <summary>A string representing the object type ID from which the association originates.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FromObjectTypeId { get; set; }
+        public string? FromObjectTypeId { get => _explicitNullValueFromObjectTypeId; set { _explicitNullValueFromObjectTypeId = value; AdditionalData?.Remove("fromObjectTypeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fromObjectTypeId"); else _explicitNullProperties?.Remove("fromObjectTypeId"); } }
+        private string? _explicitNullValueFromObjectTypeId = default!;
 #nullable restore
 #else
-        public string FromObjectTypeId { get; set; }
+        public string FromObjectTypeId { get => _explicitNullValueFromObjectTypeId; set { _explicitNullValueFromObjectTypeId = value; AdditionalData?.Remove("fromObjectTypeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fromObjectTypeId"); else _explicitNullProperties?.Remove("fromObjectTypeId"); } }
+        private string _explicitNullValueFromObjectTypeId = default!;
 #endif
         /// <summary>A string representing an optional label for the association.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Label { get; set; }
+        public string? Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; AdditionalData?.Remove("label"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
+        private string? _explicitNullValueLabel = default!;
 #nullable restore
 #else
-        public string Label { get; set; }
+        public string Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; AdditionalData?.Remove("label"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
+        private string _explicitNullValueLabel = default!;
 #endif
         /// <summary>A string representing the object type ID to which the association is directed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ToObjectTypeId { get; set; }
+        public string? ToObjectTypeId { get => _explicitNullValueToObjectTypeId; set { _explicitNullValueToObjectTypeId = value; AdditionalData?.Remove("toObjectTypeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("toObjectTypeId"); else _explicitNullProperties?.Remove("toObjectTypeId"); } }
+        private string? _explicitNullValueToObjectTypeId = default!;
 #nullable restore
 #else
-        public string ToObjectTypeId { get; set; }
+        public string ToObjectTypeId { get => _explicitNullValueToObjectTypeId; set { _explicitNullValueToObjectTypeId = value; AdditionalData?.Remove("toObjectTypeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("toObjectTypeId"); else _explicitNullProperties?.Remove("toObjectTypeId"); } }
+        private string _explicitNullValueToObjectTypeId = default!;
 #endif
         /// <summary>An integer representing the unique identifier for the type of association.</summary>
-        public int? TypeId { get; set; }
+        public int? TypeId { get => _explicitNullValueTypeId; set { _explicitNullValueTypeId = value; AdditionalData?.Remove("typeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("typeId"); else _explicitNullProperties?.Remove("typeId"); } }
+        private int? _explicitNullValueTypeId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecWithLabel29"/> and sets the default values.
         /// </summary>
@@ -58,7 +83,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecWithLabel29 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecWithLabel29();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecWithLabel29(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,7 +93,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "category", n => { Category = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecWithLabelCategory29>(); } },
+                { "category", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecWithLabelCategory29>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCategory = default; _explicitNullProperties?.Remove("category"); AdditionalData["category"] = unknown; } else { Category = parsed; AdditionalData.Remove("category"); } } },
                 { "fromObjectTypeId", n => { FromObjectTypeId = n.GetStringValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "toObjectTypeId", n => { ToObjectTypeId = n.GetStringValue(); } },
@@ -87,6 +112,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("label", Label);
             writer.WriteStringValue("toObjectTypeId", ToObjectTypeId);
             writer.WriteIntValue("typeId", TypeId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

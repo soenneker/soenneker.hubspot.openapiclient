@@ -11,40 +11,63 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CallbackCompletionBatchRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("callbackId") is null) { _explicitNullValueCallbackId = default!; _explicitNullProperties?.Remove("callbackId"); }
+            else if (parseNode.GetChildNode("callbackId") is { } nullNodeCallbackId && nullNodeCallbackId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallbackId = null;
+            if (parseNode.GetChildNode("failureReasonType") is null) { _explicitNullValueFailureReasonType = default!; _explicitNullProperties?.Remove("failureReasonType"); }
+            else if (parseNode.GetChildNode("failureReasonType") is { } nullNodeFailureReasonType && nullNodeFailureReasonType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailureReasonType = null;
+            if (parseNode.GetChildNode("outputFields") is null) { _explicitNullValueOutputFields = default!; _explicitNullProperties?.Remove("outputFields"); }
+            else if (parseNode.GetChildNode("outputFields") is { } nullNodeOutputFields && nullNodeOutputFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutputFields = null;
+            if (parseNode.GetChildNode("typedOutputs") is null) { _explicitNullValueTypedOutputs = default!; _explicitNullProperties?.Remove("typedOutputs"); }
+            else if (parseNode.GetChildNode("typedOutputs") is { } nullNodeTypedOutputs && nullNodeTypedOutputs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TypedOutputs = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The unique identifier for the callback.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CallbackId { get; set; }
+        public string? CallbackId { get => _explicitNullValueCallbackId; set { _explicitNullValueCallbackId = value; AdditionalData?.Remove("callbackId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callbackId"); else _explicitNullProperties?.Remove("callbackId"); } }
+        private string? _explicitNullValueCallbackId = default!;
 #nullable restore
 #else
-        public string CallbackId { get; set; }
+        public string CallbackId { get => _explicitNullValueCallbackId; set { _explicitNullValueCallbackId = value; AdditionalData?.Remove("callbackId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callbackId"); else _explicitNullProperties?.Remove("callbackId"); } }
+        private string _explicitNullValueCallbackId = default!;
 #endif
         /// <summary>Specifies the type of failure reason for the callback completion.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FailureReasonType { get; set; }
+        public string? FailureReasonType { get => _explicitNullValueFailureReasonType; set { _explicitNullValueFailureReasonType = value; AdditionalData?.Remove("failureReasonType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failureReasonType"); else _explicitNullProperties?.Remove("failureReasonType"); } }
+        private string? _explicitNullValueFailureReasonType = default!;
 #nullable restore
 #else
-        public string FailureReasonType { get; set; }
+        public string FailureReasonType { get => _explicitNullValueFailureReasonType; set { _explicitNullValueFailureReasonType = value; AdditionalData?.Remove("failureReasonType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failureReasonType"); else _explicitNullProperties?.Remove("failureReasonType"); } }
+        private string _explicitNullValueFailureReasonType = default!;
 #endif
         /// <summary>Holds the output fields for the callback completion.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequestOutputFieldsProperty2? OutputFields { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequestOutputFieldsProperty2? OutputFields { get => _explicitNullValueOutputFields; set { _explicitNullValueOutputFields = value; AdditionalData?.Remove("outputFields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outputFields"); else _explicitNullProperties?.Remove("outputFields"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequestOutputFieldsProperty2? _explicitNullValueOutputFields = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequestOutputFieldsProperty2 OutputFields { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequestOutputFieldsProperty2 OutputFields { get => _explicitNullValueOutputFields; set { _explicitNullValueOutputFields = value; AdditionalData?.Remove("outputFields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outputFields"); else _explicitNullProperties?.Remove("outputFields"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequestOutputFieldsProperty2 _explicitNullValueOutputFields = default!;
 #endif
         /// <summary>Contains the typed outputs for the callback completion.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequestTypedOutputsProperty2? TypedOutputs { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequestTypedOutputsProperty2? TypedOutputs { get => _explicitNullValueTypedOutputs; set { _explicitNullValueTypedOutputs = value; AdditionalData?.Remove("typedOutputs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("typedOutputs"); else _explicitNullProperties?.Remove("typedOutputs"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequestTypedOutputsProperty2? _explicitNullValueTypedOutputs = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequestTypedOutputsProperty2 TypedOutputs { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequestTypedOutputsProperty2 TypedOutputs { get => _explicitNullValueTypedOutputs; set { _explicitNullValueTypedOutputs = value; AdditionalData?.Remove("typedOutputs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("typedOutputs"); else _explicitNullProperties?.Remove("typedOutputs"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequestTypedOutputsProperty2 _explicitNullValueTypedOutputs = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequest"/> and sets the default values.
@@ -61,7 +84,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,6 +111,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("failureReasonType", FailureReasonType);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequestOutputFieldsProperty2>("outputFields", OutputFields);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CallbackCompletionBatchRequestTypedOutputsProperty2>("typedOutputs", TypedOutputs);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

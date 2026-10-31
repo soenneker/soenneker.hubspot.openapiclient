@@ -11,82 +11,136 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicCampaignCloneInput : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("assetsToClone") is null) { _explicitNullValueAssetsToClone = default!; _explicitNullProperties?.Remove("assetsToClone"); }
+            else if (parseNode.GetChildNode("assetsToClone") is { } nullNodeAssetsToClone && nullNodeAssetsToClone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssetsToClone = null;
+            if (parseNode.GetChildNode("audience") is null) { _explicitNullValueAudience = default!; _explicitNullProperties?.Remove("audience"); }
+            else if (parseNode.GetChildNode("audience") is { } nullNodeAudience && nullNodeAudience.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Audience = null;
+            if (parseNode.GetChildNode("currencyCode") is null) { _explicitNullValueCurrencyCode = default!; _explicitNullProperties?.Remove("currencyCode"); }
+            else if (parseNode.GetChildNode("currencyCode") is { } nullNodeCurrencyCode && nullNodeCurrencyCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrencyCode = null;
+            if (parseNode.GetChildNode("endDate") is null) { _explicitNullValueEndDate = default!; _explicitNullProperties?.Remove("endDate"); }
+            else if (parseNode.GetChildNode("endDate") is { } nullNodeEndDate && nullNodeEndDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndDate = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("notes") is null) { _explicitNullValueNotes = default!; _explicitNullProperties?.Remove("notes"); }
+            else if (parseNode.GetChildNode("notes") is { } nullNodeNotes && nullNodeNotes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Notes = null;
+            if (parseNode.GetChildNode("shouldCloneDraftNodes") is null) { _explicitNullValueShouldCloneDraftNodes = default!; _explicitNullProperties?.Remove("shouldCloneDraftNodes"); }
+            else if (parseNode.GetChildNode("shouldCloneDraftNodes") is { } nullNodeShouldCloneDraftNodes && nullNodeShouldCloneDraftNodes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShouldCloneDraftNodes = null;
+            if (parseNode.GetChildNode("shouldCloneEdges") is null) { _explicitNullValueShouldCloneEdges = default!; _explicitNullProperties?.Remove("shouldCloneEdges"); }
+            else if (parseNode.GetChildNode("shouldCloneEdges") is { } nullNodeShouldCloneEdges && nullNodeShouldCloneEdges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShouldCloneEdges = null;
+            if (parseNode.GetChildNode("shouldCloneStickyNotes") is null) { _explicitNullValueShouldCloneStickyNotes = default!; _explicitNullProperties?.Remove("shouldCloneStickyNotes"); }
+            else if (parseNode.GetChildNode("shouldCloneStickyNotes") is { } nullNodeShouldCloneStickyNotes && nullNodeShouldCloneStickyNotes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShouldCloneStickyNotes = null;
+            if (parseNode.GetChildNode("shouldCloneTasks") is null) { _explicitNullValueShouldCloneTasks = default!; _explicitNullProperties?.Remove("shouldCloneTasks"); }
+            else if (parseNode.GetChildNode("shouldCloneTasks") is { } nullNodeShouldCloneTasks && nullNodeShouldCloneTasks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShouldCloneTasks = null;
+            if (parseNode.GetChildNode("shouldCloneTrackingUrls") is null) { _explicitNullValueShouldCloneTrackingUrls = default!; _explicitNullProperties?.Remove("shouldCloneTrackingUrls"); }
+            else if (parseNode.GetChildNode("shouldCloneTrackingUrls") is { } nullNodeShouldCloneTrackingUrls && nullNodeShouldCloneTrackingUrls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShouldCloneTrackingUrls = null;
+            if (parseNode.GetChildNode("sourceCampaignGuid") is null) { _explicitNullValueSourceCampaignGuid = default!; _explicitNullProperties?.Remove("sourceCampaignGuid"); }
+            else if (parseNode.GetChildNode("sourceCampaignGuid") is { } nullNodeSourceCampaignGuid && nullNodeSourceCampaignGuid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceCampaignGuid = null;
+            if (parseNode.GetChildNode("startDate") is null) { _explicitNullValueStartDate = default!; _explicitNullProperties?.Remove("startDate"); }
+            else if (parseNode.GetChildNode("startDate") is { } nullNodeStartDate && nullNodeStartDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartDate = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A map of asset types to be cloned, where each key is an asset type and the value is an array of asset identifiers. It is an object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignCloneInputAssetsToCloneProperty2? AssetsToClone { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignCloneInputAssetsToCloneProperty2? AssetsToClone { get => _explicitNullValueAssetsToClone; set { _explicitNullValueAssetsToClone = value; AdditionalData?.Remove("assetsToClone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assetsToClone"); else _explicitNullProperties?.Remove("assetsToClone"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignCloneInputAssetsToCloneProperty2? _explicitNullValueAssetsToClone = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignCloneInputAssetsToCloneProperty2 AssetsToClone { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignCloneInputAssetsToCloneProperty2 AssetsToClone { get => _explicitNullValueAssetsToClone; set { _explicitNullValueAssetsToClone = value; AdditionalData?.Remove("assetsToClone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assetsToClone"); else _explicitNullProperties?.Remove("assetsToClone"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignCloneInputAssetsToCloneProperty2 _explicitNullValueAssetsToClone = default!;
 #endif
         /// <summary>The target audience for the cloned campaign. It is a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Audience { get; set; }
+        public string? Audience { get => _explicitNullValueAudience; set { _explicitNullValueAudience = value; AdditionalData?.Remove("audience"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audience"); else _explicitNullProperties?.Remove("audience"); } }
+        private string? _explicitNullValueAudience = default!;
 #nullable restore
 #else
-        public string Audience { get; set; }
+        public string Audience { get => _explicitNullValueAudience; set { _explicitNullValueAudience = value; AdditionalData?.Remove("audience"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audience"); else _explicitNullProperties?.Remove("audience"); } }
+        private string _explicitNullValueAudience = default!;
 #endif
         /// <summary>The currency code for the cloned campaign&apos;s budget. It is a string. This value is optional.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CurrencyCode { get; set; }
+        public string? CurrencyCode { get => _explicitNullValueCurrencyCode; set { _explicitNullValueCurrencyCode = value; AdditionalData?.Remove("currencyCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currencyCode"); else _explicitNullProperties?.Remove("currencyCode"); } }
+        private string? _explicitNullValueCurrencyCode = default!;
 #nullable restore
 #else
-        public string CurrencyCode { get; set; }
+        public string CurrencyCode { get => _explicitNullValueCurrencyCode; set { _explicitNullValueCurrencyCode = value; AdditionalData?.Remove("currencyCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currencyCode"); else _explicitNullProperties?.Remove("currencyCode"); } }
+        private string _explicitNullValueCurrencyCode = default!;
 #endif
         /// <summary>The end date for the cloned campaign. It is a string in ISO 8601 format (YYYY-MM-DD).  If omitted, this will match the start date of the source campaign.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EndDate { get; set; }
+        public string? EndDate { get => _explicitNullValueEndDate; set { _explicitNullValueEndDate = value; AdditionalData?.Remove("endDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endDate"); else _explicitNullProperties?.Remove("endDate"); } }
+        private string? _explicitNullValueEndDate = default!;
 #nullable restore
 #else
-        public string EndDate { get; set; }
+        public string EndDate { get => _explicitNullValueEndDate; set { _explicitNullValueEndDate = value; AdditionalData?.Remove("endDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endDate"); else _explicitNullProperties?.Remove("endDate"); } }
+        private string _explicitNullValueEndDate = default!;
 #endif
         /// <summary>The name for the new cloned campaign. It is a string. The name needs to be unique compared to other campaigns in the portal.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>Additional notes or comments about the cloned campaign. It is a string. This value is optional.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Notes { get; set; }
+        public string? Notes { get => _explicitNullValueNotes; set { _explicitNullValueNotes = value; AdditionalData?.Remove("notes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notes"); else _explicitNullProperties?.Remove("notes"); } }
+        private string? _explicitNullValueNotes = default!;
 #nullable restore
 #else
-        public string Notes { get; set; }
+        public string Notes { get => _explicitNullValueNotes; set { _explicitNullValueNotes = value; AdditionalData?.Remove("notes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notes"); else _explicitNullProperties?.Remove("notes"); } }
+        private string _explicitNullValueNotes = default!;
 #endif
         /// <summary>A boolean indicating whether draft nodes should be cloned. By default this is true.</summary>
-        public bool? ShouldCloneDraftNodes { get; set; }
+        public bool? ShouldCloneDraftNodes { get => _explicitNullValueShouldCloneDraftNodes; set { _explicitNullValueShouldCloneDraftNodes = value; AdditionalData?.Remove("shouldCloneDraftNodes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shouldCloneDraftNodes"); else _explicitNullProperties?.Remove("shouldCloneDraftNodes"); } }
+        private bool? _explicitNullValueShouldCloneDraftNodes = default!;
         /// <summary>A boolean indicating whether edges should be cloned. By default this is true.</summary>
-        public bool? ShouldCloneEdges { get; set; }
+        public bool? ShouldCloneEdges { get => _explicitNullValueShouldCloneEdges; set { _explicitNullValueShouldCloneEdges = value; AdditionalData?.Remove("shouldCloneEdges"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shouldCloneEdges"); else _explicitNullProperties?.Remove("shouldCloneEdges"); } }
+        private bool? _explicitNullValueShouldCloneEdges = default!;
         /// <summary>A boolean indicating whether sticky notes should be cloned. By default this is true.</summary>
-        public bool? ShouldCloneStickyNotes { get; set; }
+        public bool? ShouldCloneStickyNotes { get => _explicitNullValueShouldCloneStickyNotes; set { _explicitNullValueShouldCloneStickyNotes = value; AdditionalData?.Remove("shouldCloneStickyNotes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shouldCloneStickyNotes"); else _explicitNullProperties?.Remove("shouldCloneStickyNotes"); } }
+        private bool? _explicitNullValueShouldCloneStickyNotes = default!;
         /// <summary>A boolean indicating whether tasks should be cloned. By default this is true.</summary>
-        public bool? ShouldCloneTasks { get; set; }
+        public bool? ShouldCloneTasks { get => _explicitNullValueShouldCloneTasks; set { _explicitNullValueShouldCloneTasks = value; AdditionalData?.Remove("shouldCloneTasks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shouldCloneTasks"); else _explicitNullProperties?.Remove("shouldCloneTasks"); } }
+        private bool? _explicitNullValueShouldCloneTasks = default!;
         /// <summary>A boolean indicating whether tracking URLs should be cloned. By default this is true.</summary>
-        public bool? ShouldCloneTrackingUrls { get; set; }
+        public bool? ShouldCloneTrackingUrls { get => _explicitNullValueShouldCloneTrackingUrls; set { _explicitNullValueShouldCloneTrackingUrls = value; AdditionalData?.Remove("shouldCloneTrackingUrls"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shouldCloneTrackingUrls"); else _explicitNullProperties?.Remove("shouldCloneTrackingUrls"); } }
+        private bool? _explicitNullValueShouldCloneTrackingUrls = default!;
         /// <summary>The unique identifier of the campaign to be cloned. It is a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SourceCampaignGuid { get; set; }
+        public string? SourceCampaignGuid { get => _explicitNullValueSourceCampaignGuid; set { _explicitNullValueSourceCampaignGuid = value; AdditionalData?.Remove("sourceCampaignGuid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceCampaignGuid"); else _explicitNullProperties?.Remove("sourceCampaignGuid"); } }
+        private string? _explicitNullValueSourceCampaignGuid = default!;
 #nullable restore
 #else
-        public string SourceCampaignGuid { get; set; }
+        public string SourceCampaignGuid { get => _explicitNullValueSourceCampaignGuid; set { _explicitNullValueSourceCampaignGuid = value; AdditionalData?.Remove("sourceCampaignGuid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceCampaignGuid"); else _explicitNullProperties?.Remove("sourceCampaignGuid"); } }
+        private string _explicitNullValueSourceCampaignGuid = default!;
 #endif
         /// <summary>The start date for the cloned campaign. It is a string in ISO 8601 format (YYYY-MM-DD). If omitted, this will match the start date of the source campaign.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StartDate { get; set; }
+        public string? StartDate { get => _explicitNullValueStartDate; set { _explicitNullValueStartDate = value; AdditionalData?.Remove("startDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startDate"); else _explicitNullProperties?.Remove("startDate"); } }
+        private string? _explicitNullValueStartDate = default!;
 #nullable restore
 #else
-        public string StartDate { get; set; }
+        public string StartDate { get => _explicitNullValueStartDate; set { _explicitNullValueStartDate = value; AdditionalData?.Remove("startDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startDate"); else _explicitNullProperties?.Remove("startDate"); } }
+        private string _explicitNullValueStartDate = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignCloneInput"/> and sets the default values.
@@ -103,7 +157,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignCloneInput CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignCloneInput();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignCloneInput(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -148,6 +202,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteBoolValue("shouldCloneTrackingUrls", ShouldCloneTrackingUrls);
             writer.WriteStringValue("sourceCampaignGuid", SourceCampaignGuid);
             writer.WriteStringValue("startDate", StartDate);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

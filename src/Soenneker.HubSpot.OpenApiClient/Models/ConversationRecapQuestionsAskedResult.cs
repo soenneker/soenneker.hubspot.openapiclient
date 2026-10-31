@@ -11,27 +11,45 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ConversationRecapQuestionsAskedResult : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("error") is null) { _explicitNullValueError = default!; _explicitNullProperties?.Remove("error"); }
+            else if (parseNode.GetChildNode("error") is { } nullNodeError && nullNodeError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Error = null;
+            if (parseNode.GetChildNode("questionsAndAnswers") is null) { _explicitNullValueQuestionsAndAnswers = default!; _explicitNullProperties?.Remove("questionsAndAnswers"); }
+            else if (parseNode.GetChildNode("questionsAndAnswers") is { } nullNodeQuestionsAndAnswers && nullNodeQuestionsAndAnswers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QuestionsAndAnswers = null;
+            if (parseNode.GetChildNode("status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("status"); }
+            else if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Ye olde error</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerStandardError? Error { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerStandardError? Error { get => _explicitNullValueError; set { _explicitNullValueError = value; AdditionalData?.Remove("error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerStandardError? _explicitNullValueError = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerStandardError Error { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerStandardError Error { get => _explicitNullValueError; set { _explicitNullValueError = value; AdditionalData?.Remove("error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerStandardError _explicitNullValueError = default!;
 #endif
         /// <summary>A list of question and answer pairs. </summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.QuestionAndAnswer>? QuestionsAndAnswers { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.QuestionAndAnswer>? QuestionsAndAnswers { get => _explicitNullValueQuestionsAndAnswers; set { _explicitNullValueQuestionsAndAnswers = value; AdditionalData?.Remove("questionsAndAnswers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("questionsAndAnswers"); else _explicitNullProperties?.Remove("questionsAndAnswers"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.QuestionAndAnswer>? _explicitNullValueQuestionsAndAnswers = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.QuestionAndAnswer> QuestionsAndAnswers { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.QuestionAndAnswer> QuestionsAndAnswers { get => _explicitNullValueQuestionsAndAnswers; set { _explicitNullValueQuestionsAndAnswers = value; AdditionalData?.Remove("questionsAndAnswers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("questionsAndAnswers"); else _explicitNullProperties?.Remove("questionsAndAnswers"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.QuestionAndAnswer> _explicitNullValueQuestionsAndAnswers = default!;
 #endif
         /// <summary>The status of fetching questions and answers. Either FAILED, NOT_FOUND, or SUCCEEDED.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapQuestionsAskedResultStatus? Status { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapQuestionsAskedResultStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapQuestionsAskedResultStatus? _explicitNullValueStatus = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapQuestionsAskedResult"/> and sets the default values.
         /// </summary>
@@ -47,7 +65,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapQuestionsAskedResult CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapQuestionsAskedResult();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapQuestionsAskedResult(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -59,7 +77,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "error", n => { Error = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerStandardError>(global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerStandardError.CreateFromDiscriminatorValue); } },
                 { "questionsAndAnswers", n => { QuestionsAndAnswers = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.QuestionAndAnswer>(global::Soenneker.HubSpot.OpenApiClient.Models.QuestionAndAnswer.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapQuestionsAskedResultStatus>(); } },
+                { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapQuestionsAskedResultStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
             };
         }
         /// <summary>
@@ -72,6 +90,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerStandardError>("error", Error);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.QuestionAndAnswer>("questionsAndAnswers", QuestionsAndAnswers);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapQuestionsAskedResultStatus>("status", Status);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

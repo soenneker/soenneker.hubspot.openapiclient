@@ -11,26 +11,44 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicButtonStyleSettings : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("backgroundColor") is null) { _explicitNullValueBackgroundColor = default!; _explicitNullProperties?.Remove("backgroundColor"); }
+            else if (parseNode.GetChildNode("backgroundColor") is { } nullNodeBackgroundColor && nullNodeBackgroundColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BackgroundColor = null;
+            if (parseNode.GetChildNode("cornerRadius") is null) { _explicitNullValueCornerRadius = default!; _explicitNullProperties?.Remove("cornerRadius"); }
+            else if (parseNode.GetChildNode("cornerRadius") is { } nullNodeCornerRadius && nullNodeCornerRadius.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CornerRadius = null;
+            if (parseNode.GetChildNode("fontStyle") is null) { _explicitNullValueFontStyle = default!; _explicitNullProperties?.Remove("fontStyle"); }
+            else if (parseNode.GetChildNode("fontStyle") is { } nullNodeFontStyle && nullNodeFontStyle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FontStyle = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An object representing the background color of the button.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicButtonStyleSettingsBackgroundColorProperty2? BackgroundColor { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicButtonStyleSettingsBackgroundColorProperty2? BackgroundColor { get => _explicitNullValueBackgroundColor; set { _explicitNullValueBackgroundColor = value; AdditionalData?.Remove("backgroundColor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("backgroundColor"); else _explicitNullProperties?.Remove("backgroundColor"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicButtonStyleSettingsBackgroundColorProperty2? _explicitNullValueBackgroundColor = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicButtonStyleSettingsBackgroundColorProperty2 BackgroundColor { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicButtonStyleSettingsBackgroundColorProperty2 BackgroundColor { get => _explicitNullValueBackgroundColor; set { _explicitNullValueBackgroundColor = value; AdditionalData?.Remove("backgroundColor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("backgroundColor"); else _explicitNullProperties?.Remove("backgroundColor"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicButtonStyleSettingsBackgroundColorProperty2 _explicitNullValueBackgroundColor = default!;
 #endif
         /// <summary>An integer specifying the radius of the button&apos;s corners.</summary>
-        public int? CornerRadius { get; set; }
+        public int? CornerRadius { get => _explicitNullValueCornerRadius; set { _explicitNullValueCornerRadius = value; AdditionalData?.Remove("cornerRadius"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cornerRadius"); else _explicitNullProperties?.Remove("cornerRadius"); } }
+        private int? _explicitNullValueCornerRadius = default!;
         /// <summary>The fontStyle property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicFontStyle? FontStyle { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicFontStyle? FontStyle { get => _explicitNullValueFontStyle; set { _explicitNullValueFontStyle = value; AdditionalData?.Remove("fontStyle"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontStyle"); else _explicitNullProperties?.Remove("fontStyle"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicFontStyle? _explicitNullValueFontStyle = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicFontStyle FontStyle { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicFontStyle FontStyle { get => _explicitNullValueFontStyle; set { _explicitNullValueFontStyle = value; AdditionalData?.Remove("fontStyle"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontStyle"); else _explicitNullProperties?.Remove("fontStyle"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicFontStyle _explicitNullValueFontStyle = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicButtonStyleSettings"/> and sets the default values.
@@ -47,7 +65,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicButtonStyleSettings CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicButtonStyleSettings();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicButtonStyleSettings(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -72,6 +90,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicButtonStyleSettingsBackgroundColorProperty2>("backgroundColor", BackgroundColor);
             writer.WriteIntValue("cornerRadius", CornerRadius);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicFontStyle>("fontStyle", FontStyle);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

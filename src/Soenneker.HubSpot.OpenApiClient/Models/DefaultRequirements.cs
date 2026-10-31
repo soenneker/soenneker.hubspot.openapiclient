@@ -11,34 +11,56 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class DefaultRequirements : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("gates") is null) { _explicitNullValueGates = default!; _explicitNullProperties?.Remove("gates"); }
+            else if (parseNode.GetChildNode("gates") is { } nullNodeGates && nullNodeGates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Gates = null;
+            if (parseNode.GetChildNode("operator") is null) { _explicitNullValueOperator = default!; _explicitNullProperties?.Remove("operator"); }
+            else if (parseNode.GetChildNode("operator") is { } nullNodeOperator && nullNodeOperator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Operator = null;
+            if (parseNode.GetChildNode("scopeNames") is null) { _explicitNullValueScopeNames = default!; _explicitNullProperties?.Remove("scopeNames"); }
+            else if (parseNode.GetChildNode("scopeNames") is { } nullNodeScopeNames && nullNodeScopeNames.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScopeNames = null;
+            if (parseNode.GetChildNode("settings") is null) { _explicitNullValueSettings = default!; _explicitNullProperties?.Remove("settings"); }
+            else if (parseNode.GetChildNode("settings") is { } nullNodeSettings && nullNodeSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Settings = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An array of conditions or constraints that must be satisfied. Each element in the array represents a specific gate or requirement.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Gates { get; set; }
+        public List<string>? Gates { get => _explicitNullValueGates; set { _explicitNullValueGates = value; AdditionalData?.Remove("gates"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gates"); else _explicitNullProperties?.Remove("gates"); } }
+        private List<string>? _explicitNullValueGates = default!;
 #nullable restore
 #else
-        public List<string> Gates { get; set; }
+        public List<string> Gates { get => _explicitNullValueGates; set { _explicitNullValueGates = value; AdditionalData?.Remove("gates"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gates"); else _explicitNullProperties?.Remove("gates"); } }
+        private List<string> _explicitNullValueGates = default!;
 #endif
         /// <summary>A string representing the logical operator used to evaluate the requirements. Common operators include &apos;AND&apos; and &apos;OR&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.DefaultRequirementsOperator? Operator { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.DefaultRequirementsOperator? Operator { get => _explicitNullValueOperator; set { _explicitNullValueOperator = value; AdditionalData?.Remove("operator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator"); else _explicitNullProperties?.Remove("operator"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.DefaultRequirementsOperator? _explicitNullValueOperator = default!;
         /// <summary>An array of scope names that define the permissions or access levels required. Each scope name corresponds to a specific permission.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ScopeNames { get; set; }
+        public List<string>? ScopeNames { get => _explicitNullValueScopeNames; set { _explicitNullValueScopeNames = value; AdditionalData?.Remove("scopeNames"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scopeNames"); else _explicitNullProperties?.Remove("scopeNames"); } }
+        private List<string>? _explicitNullValueScopeNames = default!;
 #nullable restore
 #else
-        public List<string> ScopeNames { get; set; }
+        public List<string> ScopeNames { get => _explicitNullValueScopeNames; set { _explicitNullValueScopeNames = value; AdditionalData?.Remove("scopeNames"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scopeNames"); else _explicitNullProperties?.Remove("scopeNames"); } }
+        private List<string> _explicitNullValueScopeNames = default!;
 #endif
         /// <summary>A collection of configuration settings that influence the behavior of the operation. These settings may include various options and parameters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Settings { get; set; }
+        public List<string>? Settings { get => _explicitNullValueSettings; set { _explicitNullValueSettings = value; AdditionalData?.Remove("settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("settings"); else _explicitNullProperties?.Remove("settings"); } }
+        private List<string>? _explicitNullValueSettings = default!;
 #nullable restore
 #else
-        public List<string> Settings { get; set; }
+        public List<string> Settings { get => _explicitNullValueSettings; set { _explicitNullValueSettings = value; AdditionalData?.Remove("settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("settings"); else _explicitNullProperties?.Remove("settings"); } }
+        private List<string> _explicitNullValueSettings = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.DefaultRequirements"/> and sets the default values.
@@ -55,7 +77,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.DefaultRequirements CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.DefaultRequirements();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.DefaultRequirements(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -66,7 +88,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "gates", n => { Gates = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DefaultRequirementsOperator>(); } },
+                { "operator", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DefaultRequirementsOperator>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueOperator = default; _explicitNullProperties?.Remove("operator"); AdditionalData["operator"] = unknown; } else { Operator = parsed; AdditionalData.Remove("operator"); } } },
                 { "scopeNames", n => { ScopeNames = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "settings", n => { Settings = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
@@ -82,6 +104,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.DefaultRequirementsOperator>("operator", Operator);
             writer.WriteCollectionOfPrimitiveValues<string>("scopeNames", ScopeNames);
             writer.WriteCollectionOfPrimitiveValues<string>("settings", Settings);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

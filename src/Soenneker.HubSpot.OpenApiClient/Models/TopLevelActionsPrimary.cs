@@ -12,7 +12,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TopLevelActionsPrimary : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ActionHookActionBody"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -41,13 +46,24 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             var result = new global::Soenneker.HubSpot.OpenApiClient.Models.TopLevelActionsPrimary();
             if("ActionHookActionBody".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.ActionHookActionBody = new global::Soenneker.HubSpot.OpenApiClient.Models.ActionHookActionBody();
+                
             }
             else if("IFrameActionBody".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.IFrameActionBody = new global::Soenneker.HubSpot.OpenApiClient.Models.IFrameActionBody();
+                
             }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => ((unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject)) && (unionPayload is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject shapeObject0 || (shapeObject0.GetValue() is var shapeMembers1 && (shapeMembers1.ContainsKey("httpMethod") && shapeMembers1.ContainsKey("propertyNamesIncluded") && shapeMembers1.ContainsKey("type") && shapeMembers1.ContainsKey("url") && (!shapeMembers1.ContainsKey("confirmation") || (((shapeMembers1["confirmation"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject)) && (shapeMembers1["confirmation"] is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject shapeObject2 || (shapeObject2.GetValue() is var shapeMembers3 && (shapeMembers3.ContainsKey("cancelButtonLabel") && shapeMembers3.ContainsKey("confirmButtonLabel") && shapeMembers3.ContainsKey("prompt") && (!shapeMembers3.ContainsKey("cancelButtonLabel") || (((shapeMembers3["cancelButtonLabel"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers3.ContainsKey("confirmButtonLabel") || (((shapeMembers3["confirmButtonLabel"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers3.ContainsKey("prompt") || (((shapeMembers3["prompt"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString))))))))) && (!shapeMembers1.ContainsKey("httpMethod") || (((shapeMembers1["httpMethod"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)) && ((shapeMembers1["httpMethod"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal10 && "CONNECT".Equals(literal10.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["httpMethod"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal11 && "DELETE".Equals(literal11.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["httpMethod"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal12 && "GET".Equals(literal12.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["httpMethod"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal13 && "HEAD".Equals(literal13.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["httpMethod"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal14 && "OPTIONS".Equals(literal14.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["httpMethod"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal15 && "PATCH".Equals(literal15.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["httpMethod"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal16 && "POST".Equals(literal16.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["httpMethod"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal17 && "PUT".Equals(literal17.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["httpMethod"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal18 && "TRACE".Equals(literal18.GetValue(), global::System.StringComparison.Ordinal))))) && (!shapeMembers1.ContainsKey("label") || (((shapeMembers1["label"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers1.ContainsKey("propertyNamesIncluded") || (((shapeMembers1["propertyNamesIncluded"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray)))) && (!shapeMembers1.ContainsKey("type") || (((shapeMembers1["type"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)) && ((shapeMembers1["type"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal25 && "ACTION_HOOK".Equals(literal25.GetValue(), global::System.StringComparison.Ordinal))))) && (!shapeMembers1.ContainsKey("url") || (((shapeMembers1["url"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))))))))();
+            bool matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => ((unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject)) && (unionPayload is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject shapeObject0 || (shapeObject0.GetValue() is var shapeMembers1 && (shapeMembers1.ContainsKey("height") && shapeMembers1.ContainsKey("propertyNamesIncluded") && shapeMembers1.ContainsKey("type") && shapeMembers1.ContainsKey("url") && shapeMembers1.ContainsKey("width") && (!shapeMembers1.ContainsKey("height") || ((((shapeMembers1["height"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedInteger or global::Microsoft.Kiota.Abstractions.Serialization.UntypedLong || (shapeMembers1["height"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedDouble integral2 && integral2.GetValue() % 1 == 0) || (shapeMembers1["height"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedDecimal integral3 && integral3.GetValue() % 1 == 0) || (shapeMembers1["height"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedFloat integral4 && integral4.GetValue() % 1 == 0)))))) && (!shapeMembers1.ContainsKey("label") || (((shapeMembers1["label"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers1.ContainsKey("propertyNamesIncluded") || (((shapeMembers1["propertyNamesIncluded"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray)))) && (!shapeMembers1.ContainsKey("type") || (((shapeMembers1["type"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)) && ((shapeMembers1["type"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal11 && "IFRAME".Equals(literal11.GetValue(), global::System.StringComparison.Ordinal))))) && (!shapeMembers1.ContainsKey("url") || (((shapeMembers1["url"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers1.ContainsKey("width") || ((((shapeMembers1["width"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedInteger or global::Microsoft.Kiota.Abstractions.Serialization.UntypedLong || (shapeMembers1["width"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedDouble integral16 && integral16.GetValue() % 1 == 0) || (shapeMembers1["width"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedDecimal integral17 && integral17.GetValue() % 1 == 0) || (shapeMembers1["width"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedFloat integral18 && integral18.GetValue() % 1 == 0)))))))))))();
+            int matchingUnionBranches = 0;
+            if (matchesUnionBranch0) matchingUnionBranches++;
+            if (matchesUnionBranch1) matchingUnionBranches++;
+            bool noSelectedUnionBranch = result.ActionHookActionBody == null && result.IFrameActionBody == null;
+            if (noSelectedUnionBranch && matchesUnionBranch0 && matchingUnionBranches == 1) result.ActionHookActionBody = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.ActionHookActionBody(), parseNode);
+            if (noSelectedUnionBranch && matchesUnionBranch1 && matchingUnionBranches == 1) result.IFrameActionBody = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.IFrameActionBody(), parseNode);
+            if (result.ActionHookActionBody == null && result.IFrameActionBody == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -55,6 +71,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
+            if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawFields) { var fields = new global::System.Collections.Generic.Dictionary<string, global::System.Action<IParseNode>>(); foreach (var entry in rawFields.GetValue()) fields[entry.Key] = _ => { }; return fields; }
+
             if(ActionHookActionBody != null)
             {
                 return ActionHookActionBody.GetFieldDeserializers();
@@ -71,13 +89,23 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (ActionHookActionBody == null && IFrameActionBody == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            int selectedUnionBranches = 0;
+            if (ActionHookActionBody != null) selectedUnionBranches++;
+            if (IFrameActionBody != null) selectedUnionBranches++;
+            if (ActionHookActionBody != null && selectedUnionBranches == 1) { if (ActionHookActionBody is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ActionHookActionBody); return; }
+            if (IFrameActionBody != null && selectedUnionBranches == 1) { if (IFrameActionBody is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, IFrameActionBody); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(ActionHookActionBody != null)
             {
+                if (ActionHookActionBody is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionHookActionBody>(null, ActionHookActionBody);
             }
             else if(IFrameActionBody != null)
             {
+                if (IFrameActionBody is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.IFrameActionBody>(null, IFrameActionBody);
             }
         }

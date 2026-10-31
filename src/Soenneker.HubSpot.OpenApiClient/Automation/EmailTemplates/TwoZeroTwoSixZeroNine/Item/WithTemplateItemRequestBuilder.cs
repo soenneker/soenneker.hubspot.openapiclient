@@ -49,7 +49,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Automation.EmailTemplates.TwoZeroTwoSi
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplate>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplate.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplate>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplate.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Update an existing email template in your HubSpot account. This endpoint allows you to modify the template&apos;s properties such as name, subject, body, and folderId. Ensure that the templateId provided corresponds to an existing template. Please note: the scopes for these endpoints require user-level access and will not work for existing apps with portal-level access. 
@@ -69,7 +69,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Automation.EmailTemplates.TwoZeroTwoSi
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPatchRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplate>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplate.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplate>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicTemplate.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve a specific email template by its unique identifier. This endpoint allows you to access the details of an email template, which can be useful for reviewing or managing your email automation strategies. Please note: the scopes for these endpoints require user-level access and will not work for existing apps with portal-level access. 

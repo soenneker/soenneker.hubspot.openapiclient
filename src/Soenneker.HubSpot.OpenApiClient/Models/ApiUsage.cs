@@ -11,27 +11,53 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiUsage : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("collectedAt") is null) { _explicitNullValueCollectedAt = default!; _explicitNullProperties?.Remove("collectedAt"); }
+            else if (parseNode.GetChildNode("collectedAt") is { } nullNodeCollectedAt && nullNodeCollectedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CollectedAt = null;
+            if (parseNode.GetChildNode("currentUsage") is null) { _explicitNullValueCurrentUsage = default!; _explicitNullProperties?.Remove("currentUsage"); }
+            else if (parseNode.GetChildNode("currentUsage") is { } nullNodeCurrentUsage && nullNodeCurrentUsage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentUsage = null;
+            if (parseNode.GetChildNode("fetchStatus") is null) { _explicitNullValueFetchStatus = default!; _explicitNullProperties?.Remove("fetchStatus"); }
+            else if (parseNode.GetChildNode("fetchStatus") is { } nullNodeFetchStatus && nullNodeFetchStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FetchStatus = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("resetsAt") is null) { _explicitNullValueResetsAt = default!; _explicitNullProperties?.Remove("resetsAt"); }
+            else if (parseNode.GetChildNode("resetsAt") is { } nullNodeResetsAt && nullNodeResetsAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResetsAt = null;
+            if (parseNode.GetChildNode("usageLimit") is null) { _explicitNullValueUsageLimit = default!; _explicitNullProperties?.Remove("usageLimit"); }
+            else if (parseNode.GetChildNode("usageLimit") is { } nullNodeUsageLimit && nullNodeUsageLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UsageLimit = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The date and time when the usage data was collected, in ISO 8601 format.</summary>
-        public DateTimeOffset? CollectedAt { get; set; }
+        public DateTimeOffset? CollectedAt { get => _explicitNullValueCollectedAt; set { _explicitNullValueCollectedAt = value; AdditionalData?.Remove("collectedAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collectedAt"); else _explicitNullProperties?.Remove("collectedAt"); } }
+        private DateTimeOffset? _explicitNullValueCollectedAt = default!;
         /// <summary>An integer indicating the current usage count of the API resource.</summary>
-        public int? CurrentUsage { get; set; }
+        public int? CurrentUsage { get => _explicitNullValueCurrentUsage; set { _explicitNullValueCurrentUsage = value; AdditionalData?.Remove("currentUsage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currentUsage"); else _explicitNullProperties?.Remove("currentUsage"); } }
+        private int? _explicitNullValueCurrentUsage = default!;
         /// <summary>The status of the data fetch operation. Valid values include &apos;SUCCESS&apos;, &apos;TIMEOUT&apos;, &apos;FAILURE&apos;, &apos;CACHED&apos;, and &apos;NOTFOUND&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiUsageFetchStatus? FetchStatus { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ApiUsageFetchStatus? FetchStatus { get => _explicitNullValueFetchStatus; set { _explicitNullValueFetchStatus = value; AdditionalData?.Remove("fetchStatus"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fetchStatus"); else _explicitNullProperties?.Remove("fetchStatus"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ApiUsageFetchStatus? _explicitNullValueFetchStatus = default!;
         /// <summary>The name of the API resource being tracked.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The date and time when the usage limit will reset, in ISO 8601 format.</summary>
-        public DateTimeOffset? ResetsAt { get; set; }
+        public DateTimeOffset? ResetsAt { get => _explicitNullValueResetsAt; set { _explicitNullValueResetsAt = value; AdditionalData?.Remove("resetsAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resetsAt"); else _explicitNullProperties?.Remove("resetsAt"); } }
+        private DateTimeOffset? _explicitNullValueResetsAt = default!;
         /// <summary>An integer representing the maximum allowable usage for the API resource.</summary>
-        public int? UsageLimit { get; set; }
+        public int? UsageLimit { get => _explicitNullValueUsageLimit; set { _explicitNullValueUsageLimit = value; AdditionalData?.Remove("usageLimit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usageLimit"); else _explicitNullProperties?.Remove("usageLimit"); } }
+        private int? _explicitNullValueUsageLimit = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ApiUsage"/> and sets the default values.
         /// </summary>
@@ -47,7 +73,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.ApiUsage CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.ApiUsage();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.ApiUsage(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -59,7 +85,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "collectedAt", n => { CollectedAt = n.GetDateTimeOffsetValue(); } },
                 { "currentUsage", n => { CurrentUsage = n.GetIntValue(); } },
-                { "fetchStatus", n => { FetchStatus = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiUsageFetchStatus>(); } },
+                { "fetchStatus", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ApiUsageFetchStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFetchStatus = default; _explicitNullProperties?.Remove("fetchStatus"); AdditionalData["fetchStatus"] = unknown; } else { FetchStatus = parsed; AdditionalData.Remove("fetchStatus"); } } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "resetsAt", n => { ResetsAt = n.GetDateTimeOffsetValue(); } },
                 { "usageLimit", n => { UsageLimit = n.GetIntValue(); } },
@@ -78,6 +104,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteDateTimeOffsetValue("resetsAt", ResetsAt);
             writer.WriteIntValue("usageLimit", UsageLimit);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

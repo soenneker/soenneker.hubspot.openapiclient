@@ -11,34 +11,56 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class SearchPublicResponseWrapper : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("appId") is null) { _explicitNullValueAppId = default!; _explicitNullProperties?.Remove("appId"); }
+            else if (parseNode.GetChildNode("appId") is { } nullNodeAppId && nullNodeAppId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppId = null;
+            if (parseNode.GetChildNode("externalAccountId") is null) { _explicitNullValueExternalAccountId = default!; _explicitNullProperties?.Remove("externalAccountId"); }
+            else if (parseNode.GetChildNode("externalAccountId") is { } nullNodeExternalAccountId && nullNodeExternalAccountId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalAccountId = null;
+            if (parseNode.GetChildNode("externalEventId") is null) { _explicitNullValueExternalEventId = default!; _explicitNullProperties?.Remove("externalEventId"); }
+            else if (parseNode.GetChildNode("externalEventId") is { } nullNodeExternalEventId && nullNodeExternalEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalEventId = null;
+            if (parseNode.GetChildNode("objectId") is null) { _explicitNullValueObjectId = default!; _explicitNullProperties?.Remove("objectId"); }
+            else if (parseNode.GetChildNode("objectId") is { } nullNodeObjectId && nullNodeObjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The ID of the source application of the marketing event</summary>
-        public int? AppId { get; set; }
+        public int? AppId { get => _explicitNullValueAppId; set { _explicitNullValueAppId = value; AdditionalData?.Remove("appId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("appId"); else _explicitNullProperties?.Remove("appId"); } }
+        private int? _explicitNullValueAppId = default!;
         /// <summary>The account ID associated with this marketing event in the external application</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExternalAccountId { get; set; }
+        public string? ExternalAccountId { get => _explicitNullValueExternalAccountId; set { _explicitNullValueExternalAccountId = value; AdditionalData?.Remove("externalAccountId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalAccountId"); else _explicitNullProperties?.Remove("externalAccountId"); } }
+        private string? _explicitNullValueExternalAccountId = default!;
 #nullable restore
 #else
-        public string ExternalAccountId { get; set; }
+        public string ExternalAccountId { get => _explicitNullValueExternalAccountId; set { _explicitNullValueExternalAccountId = value; AdditionalData?.Remove("externalAccountId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalAccountId"); else _explicitNullProperties?.Remove("externalAccountId"); } }
+        private string _explicitNullValueExternalAccountId = default!;
 #endif
         /// <summary>The ID of the marketing event in the external event application</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExternalEventId { get; set; }
+        public string? ExternalEventId { get => _explicitNullValueExternalEventId; set { _explicitNullValueExternalEventId = value; AdditionalData?.Remove("externalEventId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalEventId"); else _explicitNullProperties?.Remove("externalEventId"); } }
+        private string? _explicitNullValueExternalEventId = default!;
 #nullable restore
 #else
-        public string ExternalEventId { get; set; }
+        public string ExternalEventId { get => _explicitNullValueExternalEventId; set { _explicitNullValueExternalEventId = value; AdditionalData?.Remove("externalEventId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalEventId"); else _explicitNullProperties?.Remove("externalEventId"); } }
+        private string _explicitNullValueExternalEventId = default!;
 #endif
         /// <summary>The internal ID of the marketing event in HubSpot</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ObjectId { get; set; }
+        public string? ObjectId { get => _explicitNullValueObjectId; set { _explicitNullValueObjectId = value; AdditionalData?.Remove("objectId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("objectId"); else _explicitNullProperties?.Remove("objectId"); } }
+        private string? _explicitNullValueObjectId = default!;
 #nullable restore
 #else
-        public string ObjectId { get; set; }
+        public string ObjectId { get => _explicitNullValueObjectId; set { _explicitNullValueObjectId = value; AdditionalData?.Remove("objectId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("objectId"); else _explicitNullProperties?.Remove("objectId"); } }
+        private string _explicitNullValueObjectId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.SearchPublicResponseWrapper"/> and sets the default values.
@@ -55,7 +77,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.SearchPublicResponseWrapper CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.SearchPublicResponseWrapper();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.SearchPublicResponseWrapper(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -82,6 +104,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("externalAccountId", ExternalAccountId);
             writer.WriteStringValue("externalEventId", ExternalEventId);
             writer.WriteStringValue("objectId", ObjectId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

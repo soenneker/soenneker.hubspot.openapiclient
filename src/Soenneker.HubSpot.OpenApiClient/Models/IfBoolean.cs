@@ -11,47 +11,79 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class IfBoolean : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("elseExpression") is null) { _explicitNullValueElseExpression = default!; _explicitNullProperties?.Remove("elseExpression"); }
+            else if (parseNode.GetChildNode("elseExpression") is { } nullNodeElseExpression && nullNodeElseExpression.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ElseExpression = null;
+            if (parseNode.GetChildNode("enclosedInParentheses") is null) { _explicitNullValueEnclosedInParentheses = default!; _explicitNullProperties?.Remove("enclosedInParentheses"); }
+            else if (parseNode.GetChildNode("enclosedInParentheses") is { } nullNodeEnclosedInParentheses && nullNodeEnclosedInParentheses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnclosedInParentheses = null;
+            if (parseNode.GetChildNode("ifExpression") is null) { _explicitNullValueIfExpression = default!; _explicitNullProperties?.Remove("ifExpression"); }
+            else if (parseNode.GetChildNode("ifExpression") is { } nullNodeIfExpression && nullNodeIfExpression.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IfExpression = null;
+            if (parseNode.GetChildNode("inputs") is null) { _explicitNullValueInputs = default!; _explicitNullProperties?.Remove("inputs"); }
+            else if (parseNode.GetChildNode("inputs") is { } nullNodeInputs && nullNodeInputs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Inputs = null;
+            if (parseNode.GetChildNode("operator") is null) { _explicitNullValueOperator = default!; _explicitNullProperties?.Remove("operator"); }
+            else if (parseNode.GetChildNode("operator") is { } nullNodeOperator && nullNodeOperator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Operator = null;
+            if (parseNode.GetChildNode("propertyName") is null) { _explicitNullValuePropertyName = default!; _explicitNullProperties?.Remove("propertyName"); }
+            else if (parseNode.GetChildNode("propertyName") is { } nullNodePropertyName && nullNodePropertyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PropertyName = null;
+            if (parseNode.GetChildNode("value") is null) { _explicitNullValueValue = default!; _explicitNullProperties?.Remove("value"); }
+            else if (parseNode.GetChildNode("value") is { } nullNodeValue && nullNodeValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Value = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The expression that is executed if the condition evaluates to false.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.IfBooleanElseExpression? ElseExpression { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.IfBooleanElseExpression? ElseExpression { get => _explicitNullValueElseExpression; set { _explicitNullValueElseExpression = value; AdditionalData?.Remove("elseExpression"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("elseExpression"); else _explicitNullProperties?.Remove("elseExpression"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.IfBooleanElseExpression? _explicitNullValueElseExpression = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.IfBooleanElseExpression ElseExpression { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.IfBooleanElseExpression ElseExpression { get => _explicitNullValueElseExpression; set { _explicitNullValueElseExpression = value; AdditionalData?.Remove("elseExpression"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("elseExpression"); else _explicitNullProperties?.Remove("elseExpression"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.IfBooleanElseExpression _explicitNullValueElseExpression = default!;
 #endif
         /// <summary>A boolean indicating whether the condition is enclosed in parentheses, affecting the order of evaluation.</summary>
-        public bool? EnclosedInParentheses { get; set; }
+        public bool? EnclosedInParentheses { get => _explicitNullValueEnclosedInParentheses; set { _explicitNullValueEnclosedInParentheses = value; AdditionalData?.Remove("enclosedInParentheses"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enclosedInParentheses"); else _explicitNullProperties?.Remove("enclosedInParentheses"); } }
+        private bool? _explicitNullValueEnclosedInParentheses = default!;
         /// <summary>The expression that is executed if the condition evaluates to true.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.IfBooleanIfExpression? IfExpression { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.IfBooleanIfExpression? IfExpression { get => _explicitNullValueIfExpression; set { _explicitNullValueIfExpression = value; AdditionalData?.Remove("ifExpression"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ifExpression"); else _explicitNullProperties?.Remove("ifExpression"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.IfBooleanIfExpression? _explicitNullValueIfExpression = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.IfBooleanIfExpression IfExpression { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.IfBooleanIfExpression IfExpression { get => _explicitNullValueIfExpression; set { _explicitNullValueIfExpression = value; AdditionalData?.Remove("ifExpression"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ifExpression"); else _explicitNullProperties?.Remove("ifExpression"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.IfBooleanIfExpression _explicitNullValueIfExpression = default!;
 #endif
         /// <summary>An array of inputs that are evaluated as part of the condition. These inputs can be various types of expressions or variables.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.IfBooleanInputsItem>? Inputs { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteValueInputsItem>? Inputs { get => _explicitNullValueInputs; set { _explicitNullValueInputs = value; AdditionalData?.Remove("inputs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputs"); else _explicitNullProperties?.Remove("inputs"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteValueInputsItem>? _explicitNullValueInputs = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.IfBooleanInputsItem> Inputs { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteValueInputsItem> Inputs { get => _explicitNullValueInputs; set { _explicitNullValueInputs = value; AdditionalData?.Remove("inputs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputs"); else _explicitNullProperties?.Remove("inputs"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteValueInputsItem> _explicitNullValueInputs = default!;
 #endif
         /// <summary>A string representing the logical operator used in the condition. It is required and typically set to &apos;IF&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.IfBooleanOperator? Operator { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.IfBooleanOperator? Operator { get => _explicitNullValueOperator; set { _explicitNullValueOperator = value; AdditionalData?.Remove("operator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator"); else _explicitNullProperties?.Remove("operator"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.IfBooleanOperator? _explicitNullValueOperator = default!;
         /// <summary>A string representing the name of the property involved in the condition.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PropertyName { get; set; }
+        public string? PropertyName { get => _explicitNullValuePropertyName; set { _explicitNullValuePropertyName = value; AdditionalData?.Remove("propertyName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("propertyName"); else _explicitNullProperties?.Remove("propertyName"); } }
+        private string? _explicitNullValuePropertyName = default!;
 #nullable restore
 #else
-        public string PropertyName { get; set; }
+        public string PropertyName { get => _explicitNullValuePropertyName; set { _explicitNullValuePropertyName = value; AdditionalData?.Remove("propertyName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("propertyName"); else _explicitNullProperties?.Remove("propertyName"); } }
+        private string _explicitNullValuePropertyName = default!;
 #endif
         /// <summary>A boolean value that represents the result of the conditional evaluation.</summary>
-        public bool? Value { get; set; }
+        public bool? Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; AdditionalData?.Remove("value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
+        private bool? _explicitNullValueValue = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.IfBoolean"/> and sets the default values.
         /// </summary>
@@ -67,7 +99,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.IfBoolean CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.IfBoolean();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.IfBoolean(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -80,8 +112,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "elseExpression", n => { ElseExpression = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.IfBooleanElseExpression>(global::Soenneker.HubSpot.OpenApiClient.Models.IfBooleanElseExpression.CreateFromDiscriminatorValue); } },
                 { "enclosedInParentheses", n => { EnclosedInParentheses = n.GetBoolValue(); } },
                 { "ifExpression", n => { IfExpression = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.IfBooleanIfExpression>(global::Soenneker.HubSpot.OpenApiClient.Models.IfBooleanIfExpression.CreateFromDiscriminatorValue); } },
-                { "inputs", n => { Inputs = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.IfBooleanInputsItem>(global::Soenneker.HubSpot.OpenApiClient.Models.IfBooleanInputsItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.IfBooleanOperator>(); } },
+                { "inputs", n => { Inputs = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteValueInputsItem>(global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteValueInputsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "operator", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.IfBooleanOperator>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueOperator = default; _explicitNullProperties?.Remove("operator"); AdditionalData["operator"] = unknown; } else { Operator = parsed; AdditionalData.Remove("operator"); } } },
                 { "propertyName", n => { PropertyName = n.GetStringValue(); } },
                 { "value", n => { Value = n.GetBoolValue(); } },
             };
@@ -96,10 +128,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.IfBooleanElseExpression>("elseExpression", ElseExpression);
             writer.WriteBoolValue("enclosedInParentheses", EnclosedInParentheses);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.IfBooleanIfExpression>("ifExpression", IfExpression);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.IfBooleanInputsItem>("inputs", Inputs);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteValueInputsItem>("inputs", Inputs);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.IfBooleanOperator>("operator", Operator);
             writer.WriteStringValue("propertyName", PropertyName);
             writer.WriteBoolValue("value", Value);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

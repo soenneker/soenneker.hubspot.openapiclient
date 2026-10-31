@@ -11,24 +11,39 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ParticipationAssociations : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("contact") is null) { _explicitNullValueContact = default!; _explicitNullProperties?.Remove("contact"); }
+            else if (parseNode.GetChildNode("contact") is { } nullNodeContact && nullNodeContact.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Contact = null;
+            if (parseNode.GetChildNode("marketingEvent") is null) { _explicitNullValueMarketingEvent = default!; _explicitNullProperties?.Remove("marketingEvent"); }
+            else if (parseNode.GetChildNode("marketingEvent") is { } nullNodeMarketingEvent && nullNodeMarketingEvent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MarketingEvent = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The contact property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ContactAssociation? Contact { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ContactAssociation? Contact { get => _explicitNullValueContact; set { _explicitNullValueContact = value; AdditionalData?.Remove("contact"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact"); else _explicitNullProperties?.Remove("contact"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ContactAssociation? _explicitNullValueContact = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ContactAssociation Contact { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ContactAssociation Contact { get => _explicitNullValueContact; set { _explicitNullValueContact = value; AdditionalData?.Remove("contact"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact"); else _explicitNullProperties?.Remove("contact"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ContactAssociation _explicitNullValueContact = default!;
 #endif
         /// <summary>The marketingEvent property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventAssociation? MarketingEvent { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventAssociation? MarketingEvent { get => _explicitNullValueMarketingEvent; set { _explicitNullValueMarketingEvent = value; AdditionalData?.Remove("marketingEvent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("marketingEvent"); else _explicitNullProperties?.Remove("marketingEvent"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventAssociation? _explicitNullValueMarketingEvent = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventAssociation MarketingEvent { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventAssociation MarketingEvent { get => _explicitNullValueMarketingEvent; set { _explicitNullValueMarketingEvent = value; AdditionalData?.Remove("marketingEvent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("marketingEvent"); else _explicitNullProperties?.Remove("marketingEvent"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventAssociation _explicitNullValueMarketingEvent = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ParticipationAssociations"/> and sets the default values.
@@ -45,7 +60,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.ParticipationAssociations CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.ParticipationAssociations();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.ParticipationAssociations(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +83,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ContactAssociation>("contact", Contact);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventAssociation>("marketingEvent", MarketingEvent);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

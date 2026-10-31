@@ -51,7 +51,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.PipelinesRules.TwoZeroTwoSixZeroNi
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectApprovalStatus>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectApprovalStatus.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectApprovalStatus>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectApprovalStatus.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Initiate the approval process for a specific pipeline within a given object type. This endpoint is useful for triggering approval workflows that are associated with pipeline stages, ensuring that the necessary approvals are obtained before proceeding with further actions in the pipeline.

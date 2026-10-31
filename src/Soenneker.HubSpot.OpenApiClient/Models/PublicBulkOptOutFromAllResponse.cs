@@ -11,24 +11,39 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicBulkOptOutFromAllResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("statuses") is null) { _explicitNullValueStatuses = default!; _explicitNullProperties?.Remove("statuses"); }
+            else if (parseNode.GetChildNode("statuses") is { } nullNodeStatuses && nullNodeStatuses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Statuses = null;
+            if (parseNode.GetChildNode("subscriberIdString") is null) { _explicitNullValueSubscriberIdString = default!; _explicitNullProperties?.Remove("subscriberIdString"); }
+            else if (parseNode.GetChildNode("subscriberIdString") is { } nullNodeSubscriberIdString && nullNodeSubscriberIdString.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriberIdString = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An array of subscription status objects for the contact.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatus>? Statuses { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatus>? Statuses { get => _explicitNullValueStatuses; set { _explicitNullValueStatuses = value; AdditionalData?.Remove("statuses"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statuses"); else _explicitNullProperties?.Remove("statuses"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatus>? _explicitNullValueStatuses = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatus> Statuses { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatus> Statuses { get => _explicitNullValueStatuses; set { _explicitNullValueStatuses = value; AdditionalData?.Remove("statuses"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statuses"); else _explicitNullProperties?.Remove("statuses"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatus> _explicitNullValueStatuses = default!;
 #endif
         /// <summary>The email address of the contact.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SubscriberIdString { get; set; }
+        public string? SubscriberIdString { get => _explicitNullValueSubscriberIdString; set { _explicitNullValueSubscriberIdString = value; AdditionalData?.Remove("subscriberIdString"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscriberIdString"); else _explicitNullProperties?.Remove("subscriberIdString"); } }
+        private string? _explicitNullValueSubscriberIdString = default!;
 #nullable restore
 #else
-        public string SubscriberIdString { get; set; }
+        public string SubscriberIdString { get => _explicitNullValueSubscriberIdString; set { _explicitNullValueSubscriberIdString = value; AdditionalData?.Remove("subscriberIdString"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscriberIdString"); else _explicitNullProperties?.Remove("subscriberIdString"); } }
+        private string _explicitNullValueSubscriberIdString = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicBulkOptOutFromAllResponse"/> and sets the default values.
@@ -45,7 +60,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicBulkOptOutFromAllResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicBulkOptOutFromAllResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicBulkOptOutFromAllResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +83,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatus>("statuses", Statuses);
             writer.WriteStringValue("subscriberIdString", SubscriberIdString);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

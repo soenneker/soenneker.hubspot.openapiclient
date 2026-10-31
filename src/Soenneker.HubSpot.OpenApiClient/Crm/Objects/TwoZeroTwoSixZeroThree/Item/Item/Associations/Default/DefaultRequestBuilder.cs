@@ -10,7 +10,7 @@ using System;
 namespace Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree.Item.Item.Associations.Default
 {
     /// <summary>
-    /// Builds and executes requests for operations under \crm\objects\2026-03\{fromObjectType-id}\{fromObject-id}\associations\default
+    /// Builds and executes requests for operations under \crm\objects\2026-03\{fromObjectType}\{fromObjectId}\associations\default
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class DefaultRequestBuilder : BaseRequestBuilder
@@ -32,7 +32,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree.Ite
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DefaultRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/crm/objects/2026-03/{fromObjectType%2Did}/{fromObject%2Did}/associations/default", pathParameters)
+        public DefaultRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/crm/objects/2026-03/{fromObjectType}/{fromObjectId}/associations/default", pathParameters)
         {
         }
         /// <summary>
@@ -40,7 +40,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroThree.Ite
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DefaultRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/crm/objects/2026-03/{fromObjectType%2Did}/{fromObject%2Did}/associations/default", rawUrl)
+        public DefaultRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/crm/objects/2026-03/{fromObjectType}/{fromObjectId}/associations/default", rawUrl)
         {
         }
     }

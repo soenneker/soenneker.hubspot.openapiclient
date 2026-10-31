@@ -11,21 +11,38 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class FileStructureRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("columns") is null) { _explicitNullValueColumns = default!; _explicitNullProperties?.Remove("columns"); }
+            else if (parseNode.GetChildNode("columns") is { } nullNodeColumns && nullNodeColumns.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Columns = null;
+            if (parseNode.GetChildNode("headerRowIndex") is null) { _explicitNullValueHeaderRowIndex = default!; _explicitNullProperties?.Remove("headerRowIndex"); }
+            else if (parseNode.GetChildNode("headerRowIndex") is { } nullNodeHeaderRowIndex && nullNodeHeaderRowIndex.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HeaderRowIndex = null;
+            if (parseNode.GetChildNode("sheetIndex") is null) { _explicitNullValueSheetIndex = default!; _explicitNullProperties?.Remove("sheetIndex"); }
+            else if (parseNode.GetChildNode("sheetIndex") is { } nullNodeSheetIndex && nullNodeSheetIndex.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SheetIndex = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>List of columns to pick as datasource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.FileColumn>? Columns { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.FileColumn>? Columns { get => _explicitNullValueColumns; set { _explicitNullValueColumns = value; AdditionalData?.Remove("columns"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("columns"); else _explicitNullProperties?.Remove("columns"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.FileColumn>? _explicitNullValueColumns = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.FileColumn> Columns { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.FileColumn> Columns { get => _explicitNullValueColumns; set { _explicitNullValueColumns = value; AdditionalData?.Remove("columns"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("columns"); else _explicitNullProperties?.Remove("columns"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.FileColumn> _explicitNullValueColumns = default!;
 #endif
         /// <summary>Index of the header row. Starting with 1. Default is: 1</summary>
-        public int? HeaderRowIndex { get; set; }
+        public int? HeaderRowIndex { get => _explicitNullValueHeaderRowIndex; set { _explicitNullValueHeaderRowIndex = value; AdditionalData?.Remove("headerRowIndex"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("headerRowIndex"); else _explicitNullProperties?.Remove("headerRowIndex"); } }
+        private int? _explicitNullValueHeaderRowIndex = default!;
         /// <summary>Index of the sheet. Starting with 0. Default is: 0.Only relevant in case of XLS or XLSX.</summary>
-        public int? SheetIndex { get; set; }
+        public int? SheetIndex { get => _explicitNullValueSheetIndex; set { _explicitNullValueSheetIndex = value; AdditionalData?.Remove("sheetIndex"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sheetIndex"); else _explicitNullProperties?.Remove("sheetIndex"); } }
+        private int? _explicitNullValueSheetIndex = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.FileStructureRequest"/> and sets the default values.
         /// </summary>
@@ -41,7 +58,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.FileStructureRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.FileStructureRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.FileStructureRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -66,6 +83,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.FileColumn>("columns", Columns);
             writer.WriteIntValue("headerRowIndex", HeaderRowIndex);
             writer.WriteIntValue("sheetIndex", SheetIndex);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

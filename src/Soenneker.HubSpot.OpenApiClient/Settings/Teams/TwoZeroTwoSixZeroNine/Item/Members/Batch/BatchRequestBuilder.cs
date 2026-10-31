@@ -51,7 +51,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Settings.Teams.TwoZeroTwoSixZeroNine.I
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseTeamMemberResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseTeamMemberResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseTeamMemberResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseTeamMemberResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Assign multiple members to a specific team in a single request. This endpoint allows for efficient management of team memberships by processing multiple assignments at once. It is useful for organizations looking to streamline their team management processes.

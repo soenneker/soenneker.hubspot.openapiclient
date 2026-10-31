@@ -49,7 +49,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Lists.TwoZeroTwoSixZeroNine.Item.M
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ApiCollectionResponseJoinTimeAndRecordId>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ApiCollectionResponseJoinTimeAndRecordId.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ApiCollectionResponseJoinTimeAndRecordId>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ApiCollectionResponseJoinTimeAndRecordId.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve the join order of memberships for a specific list in your HubSpot account. This endpoint allows you to view the order in which records joined the list, which can be useful for tracking membership changes over time.

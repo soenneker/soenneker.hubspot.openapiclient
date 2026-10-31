@@ -11,40 +11,79 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class UrlMappingCreateRequestBody : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("destination") is null) { _explicitNullValueDestination = default!; _explicitNullProperties?.Remove("destination"); }
+            else if (parseNode.GetChildNode("destination") is { } nullNodeDestination && nullNodeDestination.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Destination = null;
+            if (parseNode.GetChildNode("isMatchFullUrl") is null) { _explicitNullValueIsMatchFullUrl = default!; _explicitNullProperties?.Remove("isMatchFullUrl"); }
+            else if (parseNode.GetChildNode("isMatchFullUrl") is { } nullNodeIsMatchFullUrl && nullNodeIsMatchFullUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsMatchFullUrl = null;
+            if (parseNode.GetChildNode("isMatchQueryString") is null) { _explicitNullValueIsMatchQueryString = default!; _explicitNullProperties?.Remove("isMatchQueryString"); }
+            else if (parseNode.GetChildNode("isMatchQueryString") is { } nullNodeIsMatchQueryString && nullNodeIsMatchQueryString.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsMatchQueryString = null;
+            if (parseNode.GetChildNode("isOnlyAfterNotFound") is null) { _explicitNullValueIsOnlyAfterNotFound = default!; _explicitNullProperties?.Remove("isOnlyAfterNotFound"); }
+            else if (parseNode.GetChildNode("isOnlyAfterNotFound") is { } nullNodeIsOnlyAfterNotFound && nullNodeIsOnlyAfterNotFound.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsOnlyAfterNotFound = null;
+            if (parseNode.GetChildNode("isPattern") is null) { _explicitNullValueIsPattern = default!; _explicitNullProperties?.Remove("isPattern"); }
+            else if (parseNode.GetChildNode("isPattern") is { } nullNodeIsPattern && nullNodeIsPattern.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsPattern = null;
+            if (parseNode.GetChildNode("isProtocolAgnostic") is null) { _explicitNullValueIsProtocolAgnostic = default!; _explicitNullProperties?.Remove("isProtocolAgnostic"); }
+            else if (parseNode.GetChildNode("isProtocolAgnostic") is { } nullNodeIsProtocolAgnostic && nullNodeIsProtocolAgnostic.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsProtocolAgnostic = null;
+            if (parseNode.GetChildNode("isTrailingSlashOptional") is null) { _explicitNullValueIsTrailingSlashOptional = default!; _explicitNullProperties?.Remove("isTrailingSlashOptional"); }
+            else if (parseNode.GetChildNode("isTrailingSlashOptional") is { } nullNodeIsTrailingSlashOptional && nullNodeIsTrailingSlashOptional.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsTrailingSlashOptional = null;
+            if (parseNode.GetChildNode("precedence") is null) { _explicitNullValuePrecedence = default!; _explicitNullProperties?.Remove("precedence"); }
+            else if (parseNode.GetChildNode("precedence") is { } nullNodePrecedence && nullNodePrecedence.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Precedence = null;
+            if (parseNode.GetChildNode("redirectStyle") is null) { _explicitNullValueRedirectStyle = default!; _explicitNullProperties?.Remove("redirectStyle"); }
+            else if (parseNode.GetChildNode("redirectStyle") is { } nullNodeRedirectStyle && nullNodeRedirectStyle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RedirectStyle = null;
+            if (parseNode.GetChildNode("routePrefix") is null) { _explicitNullValueRoutePrefix = default!; _explicitNullProperties?.Remove("routePrefix"); }
+            else if (parseNode.GetChildNode("routePrefix") is { } nullNodeRoutePrefix && nullNodeRoutePrefix.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RoutePrefix = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The destination URL, where the target URL should be redirected if it matches the `routePrefix`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Destination { get; set; }
+        public string? Destination { get => _explicitNullValueDestination; set { _explicitNullValueDestination = value; AdditionalData?.Remove("destination"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destination"); else _explicitNullProperties?.Remove("destination"); } }
+        private string? _explicitNullValueDestination = default!;
 #nullable restore
 #else
-        public string Destination { get; set; }
+        public string Destination { get => _explicitNullValueDestination; set { _explicitNullValueDestination = value; AdditionalData?.Remove("destination"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destination"); else _explicitNullProperties?.Remove("destination"); } }
+        private string _explicitNullValueDestination = default!;
 #endif
         /// <summary>Whether the `routePrefix` should match on the entire URL, including the domain.</summary>
-        public bool? IsMatchFullUrl { get; set; }
+        public bool? IsMatchFullUrl { get => _explicitNullValueIsMatchFullUrl; set { _explicitNullValueIsMatchFullUrl = value; AdditionalData?.Remove("isMatchFullUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isMatchFullUrl"); else _explicitNullProperties?.Remove("isMatchFullUrl"); } }
+        private bool? _explicitNullValueIsMatchFullUrl = default!;
         /// <summary>Whether the `routePrefix` should match on the entire URL path, including the query string.</summary>
-        public bool? IsMatchQueryString { get; set; }
+        public bool? IsMatchQueryString { get => _explicitNullValueIsMatchQueryString; set { _explicitNullValueIsMatchQueryString = value; AdditionalData?.Remove("isMatchQueryString"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isMatchQueryString"); else _explicitNullProperties?.Remove("isMatchQueryString"); } }
+        private bool? _explicitNullValueIsMatchQueryString = default!;
         /// <summary>Whether the URL redirect mapping should apply only if a live page on the URL isn&apos;t found. If False, the URL redirect mapping will take precedence over any existing page.</summary>
-        public bool? IsOnlyAfterNotFound { get; set; }
+        public bool? IsOnlyAfterNotFound { get => _explicitNullValueIsOnlyAfterNotFound; set { _explicitNullValueIsOnlyAfterNotFound = value; AdditionalData?.Remove("isOnlyAfterNotFound"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isOnlyAfterNotFound"); else _explicitNullProperties?.Remove("isOnlyAfterNotFound"); } }
+        private bool? _explicitNullValueIsOnlyAfterNotFound = default!;
         /// <summary>Whether the `routePrefix` should match based on pattern.</summary>
-        public bool? IsPattern { get; set; }
+        public bool? IsPattern { get => _explicitNullValueIsPattern; set { _explicitNullValueIsPattern = value; AdditionalData?.Remove("isPattern"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isPattern"); else _explicitNullProperties?.Remove("isPattern"); } }
+        private bool? _explicitNullValueIsPattern = default!;
         /// <summary>Whether the `routePrefix` should match both HTTP and HTTPS protocols.</summary>
-        public bool? IsProtocolAgnostic { get; set; }
+        public bool? IsProtocolAgnostic { get => _explicitNullValueIsProtocolAgnostic; set { _explicitNullValueIsProtocolAgnostic = value; AdditionalData?.Remove("isProtocolAgnostic"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isProtocolAgnostic"); else _explicitNullProperties?.Remove("isProtocolAgnostic"); } }
+        private bool? _explicitNullValueIsProtocolAgnostic = default!;
         /// <summary>Whether a trailing slash will be ignored.</summary>
-        public bool? IsTrailingSlashOptional { get; set; }
+        public bool? IsTrailingSlashOptional { get => _explicitNullValueIsTrailingSlashOptional; set { _explicitNullValueIsTrailingSlashOptional = value; AdditionalData?.Remove("isTrailingSlashOptional"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isTrailingSlashOptional"); else _explicitNullProperties?.Remove("isTrailingSlashOptional"); } }
+        private bool? _explicitNullValueIsTrailingSlashOptional = default!;
         /// <summary>Used to prioritize URL redirection. If a given URL matches more than one redirect, the one with the **lower** precedence will be used.</summary>
-        public int? Precedence { get; set; }
+        public int? Precedence { get => _explicitNullValuePrecedence; set { _explicitNullValuePrecedence = value; AdditionalData?.Remove("precedence"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("precedence"); else _explicitNullProperties?.Remove("precedence"); } }
+        private int? _explicitNullValuePrecedence = default!;
         /// <summary>The type of redirect to create. Options include: 301 (permanent), 302 (temporary), or 305 (proxy). Find more details [here](https://knowledge.hubspot.com/cos-general/how-to-redirect-a-hubspot-page).</summary>
-        public int? RedirectStyle { get; set; }
+        public int? RedirectStyle { get => _explicitNullValueRedirectStyle; set { _explicitNullValueRedirectStyle = value; AdditionalData?.Remove("redirectStyle"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redirectStyle"); else _explicitNullProperties?.Remove("redirectStyle"); } }
+        private int? _explicitNullValueRedirectStyle = default!;
         /// <summary>The target incoming URL, path, or pattern to match for redirection.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RoutePrefix { get; set; }
+        public string? RoutePrefix { get => _explicitNullValueRoutePrefix; set { _explicitNullValueRoutePrefix = value; AdditionalData?.Remove("routePrefix"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("routePrefix"); else _explicitNullProperties?.Remove("routePrefix"); } }
+        private string? _explicitNullValueRoutePrefix = default!;
 #nullable restore
 #else
-        public string RoutePrefix { get; set; }
+        public string RoutePrefix { get => _explicitNullValueRoutePrefix; set { _explicitNullValueRoutePrefix = value; AdditionalData?.Remove("routePrefix"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("routePrefix"); else _explicitNullProperties?.Remove("routePrefix"); } }
+        private string _explicitNullValueRoutePrefix = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.UrlMappingCreateRequestBody"/> and sets the default values.
@@ -61,7 +100,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.UrlMappingCreateRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.UrlMappingCreateRequestBody();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.UrlMappingCreateRequestBody(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -100,6 +139,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteIntValue("precedence", Precedence);
             writer.WriteIntValue("redirectStyle", RedirectStyle);
             writer.WriteStringValue("routePrefix", RoutePrefix);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

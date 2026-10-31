@@ -11,27 +11,53 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicWideStatus : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("businessUnitId") is null) { _explicitNullValueBusinessUnitId = default!; _explicitNullProperties?.Remove("businessUnitId"); }
+            else if (parseNode.GetChildNode("businessUnitId") is { } nullNodeBusinessUnitId && nullNodeBusinessUnitId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BusinessUnitId = null;
+            if (parseNode.GetChildNode("channel") is null) { _explicitNullValueChannel = default!; _explicitNullProperties?.Remove("channel"); }
+            else if (parseNode.GetChildNode("channel") is { } nullNodeChannel && nullNodeChannel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Channel = null;
+            if (parseNode.GetChildNode("status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("status"); }
+            else if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("subscriberIdString") is null) { _explicitNullValueSubscriberIdString = default!; _explicitNullProperties?.Remove("subscriberIdString"); }
+            else if (parseNode.GetChildNode("subscriberIdString") is { } nullNodeSubscriberIdString && nullNodeSubscriberIdString.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriberIdString = null;
+            if (parseNode.GetChildNode("timestamp") is null) { _explicitNullValueTimestamp = default!; _explicitNullProperties?.Remove("timestamp"); }
+            else if (parseNode.GetChildNode("timestamp") is { } nullNodeTimestamp && nullNodeTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Timestamp = null;
+            if (parseNode.GetChildNode("wideStatusType") is null) { _explicitNullValueWideStatusType = default!; _explicitNullProperties?.Remove("wideStatusType"); }
+            else if (parseNode.GetChildNode("wideStatusType") is { } nullNodeWideStatusType && nullNodeWideStatusType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WideStatusType = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The ID of the business unit associated with the status.</summary>
-        public long? BusinessUnitId { get; set; }
+        public long? BusinessUnitId { get => _explicitNullValueBusinessUnitId; set { _explicitNullValueBusinessUnitId = value; AdditionalData?.Remove("businessUnitId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("businessUnitId"); else _explicitNullProperties?.Remove("businessUnitId"); } }
+        private long? _explicitNullValueBusinessUnitId = default!;
         /// <summary>The type of communication channel, with &apos;EMAIL&apos; as the only supported option.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailChannel? Channel { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailChannel? Channel { get => _explicitNullValueChannel; set { _explicitNullValueChannel = value; AdditionalData?.Remove("channel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel"); else _explicitNullProperties?.Remove("channel"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.EmailChannel? _explicitNullValueChannel = default!;
         /// <summary>The subscription status of the contact, which can be &apos;SUBSCRIBED&apos;, &apos;UNSUBSCRIBED&apos;, or &apos;NOT_SPECIFIED&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWideStatusStatus? Status { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWideStatusStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicWideStatusStatus? _explicitNullValueStatus = default!;
         /// <summary>The email address of the contact.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SubscriberIdString { get; set; }
+        public string? SubscriberIdString { get => _explicitNullValueSubscriberIdString; set { _explicitNullValueSubscriberIdString = value; AdditionalData?.Remove("subscriberIdString"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscriberIdString"); else _explicitNullProperties?.Remove("subscriberIdString"); } }
+        private string? _explicitNullValueSubscriberIdString = default!;
 #nullable restore
 #else
-        public string SubscriberIdString { get; set; }
+        public string SubscriberIdString { get => _explicitNullValueSubscriberIdString; set { _explicitNullValueSubscriberIdString = value; AdditionalData?.Remove("subscriberIdString"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscriberIdString"); else _explicitNullProperties?.Remove("subscriberIdString"); } }
+        private string _explicitNullValueSubscriberIdString = default!;
 #endif
         /// <summary>The date and time when the status was recorded.</summary>
-        public DateTimeOffset? Timestamp { get; set; }
+        public DateTimeOffset? Timestamp { get => _explicitNullValueTimestamp; set { _explicitNullValueTimestamp = value; AdditionalData?.Remove("timestamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timestamp"); else _explicitNullProperties?.Remove("timestamp"); } }
+        private DateTimeOffset? _explicitNullValueTimestamp = default!;
         /// <summary>The type of wide status, which can be &apos;PORTAL_WIDE&apos; or &apos;BUSINESS_UNIT_WIDE&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWideStatusWideStatusType? WideStatusType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWideStatusWideStatusType? WideStatusType { get => _explicitNullValueWideStatusType; set { _explicitNullValueWideStatusType = value; AdditionalData?.Remove("wideStatusType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wideStatusType"); else _explicitNullProperties?.Remove("wideStatusType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicWideStatusWideStatusType? _explicitNullValueWideStatusType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicWideStatus"/> and sets the default values.
         /// </summary>
@@ -47,7 +73,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicWideStatus CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicWideStatus();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicWideStatus(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -58,11 +84,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "businessUnitId", n => { BusinessUnitId = n.GetLongValue(); } },
-                { "channel", n => { Channel = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailChannel>(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWideStatusStatus>(); } },
+                { "channel", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailChannel>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueChannel = default; _explicitNullProperties?.Remove("channel"); AdditionalData["channel"] = unknown; } else { Channel = parsed; AdditionalData.Remove("channel"); } } },
+                { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWideStatusStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
                 { "subscriberIdString", n => { SubscriberIdString = n.GetStringValue(); } },
                 { "timestamp", n => { Timestamp = n.GetDateTimeOffsetValue(); } },
-                { "wideStatusType", n => { WideStatusType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWideStatusWideStatusType>(); } },
+                { "wideStatusType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWideStatusWideStatusType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueWideStatusType = default; _explicitNullProperties?.Remove("wideStatusType"); AdditionalData["wideStatusType"] = unknown; } else { WideStatusType = parsed; AdditionalData.Remove("wideStatusType"); } } },
             };
         }
         /// <summary>
@@ -78,6 +104,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("subscriberIdString", SubscriberIdString);
             writer.WriteDateTimeOffsetValue("timestamp", Timestamp);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWideStatusWideStatusType>("wideStatusType", WideStatusType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

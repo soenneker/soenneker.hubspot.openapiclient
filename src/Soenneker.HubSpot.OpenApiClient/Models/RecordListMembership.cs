@@ -11,25 +11,48 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class RecordListMembership : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("firstAddedTimestamp") is null) { _explicitNullValueFirstAddedTimestamp = default!; _explicitNullProperties?.Remove("firstAddedTimestamp"); }
+            else if (parseNode.GetChildNode("firstAddedTimestamp") is { } nullNodeFirstAddedTimestamp && nullNodeFirstAddedTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstAddedTimestamp = null;
+            if (parseNode.GetChildNode("isPublicList") is null) { _explicitNullValueIsPublicList = default!; _explicitNullProperties?.Remove("isPublicList"); }
+            else if (parseNode.GetChildNode("isPublicList") is { } nullNodeIsPublicList && nullNodeIsPublicList.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsPublicList = null;
+            if (parseNode.GetChildNode("lastAddedTimestamp") is null) { _explicitNullValueLastAddedTimestamp = default!; _explicitNullProperties?.Remove("lastAddedTimestamp"); }
+            else if (parseNode.GetChildNode("lastAddedTimestamp") is { } nullNodeLastAddedTimestamp && nullNodeLastAddedTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastAddedTimestamp = null;
+            if (parseNode.GetChildNode("listId") is null) { _explicitNullValueListId = default!; _explicitNullProperties?.Remove("listId"); }
+            else if (parseNode.GetChildNode("listId") is { } nullNodeListId && nullNodeListId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ListId = null;
+            if (parseNode.GetChildNode("listVersion") is null) { _explicitNullValueListVersion = default!; _explicitNullProperties?.Remove("listVersion"); }
+            else if (parseNode.GetChildNode("listVersion") is { } nullNodeListVersion && nullNodeListVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ListVersion = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The date and time when the record was first added to the list, in ISO 8601 format.</summary>
-        public DateTimeOffset? FirstAddedTimestamp { get; set; }
+        public DateTimeOffset? FirstAddedTimestamp { get => _explicitNullValueFirstAddedTimestamp; set { _explicitNullValueFirstAddedTimestamp = value; AdditionalData?.Remove("firstAddedTimestamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("firstAddedTimestamp"); else _explicitNullProperties?.Remove("firstAddedTimestamp"); } }
+        private DateTimeOffset? _explicitNullValueFirstAddedTimestamp = default!;
         /// <summary>A boolean indicating whether the list is public.</summary>
-        public bool? IsPublicList { get; set; }
+        public bool? IsPublicList { get => _explicitNullValueIsPublicList; set { _explicitNullValueIsPublicList = value; AdditionalData?.Remove("isPublicList"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isPublicList"); else _explicitNullProperties?.Remove("isPublicList"); } }
+        private bool? _explicitNullValueIsPublicList = default!;
         /// <summary>The date and time when the record was last added to the list, in ISO 8601 format.</summary>
-        public DateTimeOffset? LastAddedTimestamp { get; set; }
+        public DateTimeOffset? LastAddedTimestamp { get => _explicitNullValueLastAddedTimestamp; set { _explicitNullValueLastAddedTimestamp = value; AdditionalData?.Remove("lastAddedTimestamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastAddedTimestamp"); else _explicitNullProperties?.Remove("lastAddedTimestamp"); } }
+        private DateTimeOffset? _explicitNullValueLastAddedTimestamp = default!;
         /// <summary>The unique identifier of the list. It is a string value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ListId { get; set; }
+        public string? ListId { get => _explicitNullValueListId; set { _explicitNullValueListId = value; AdditionalData?.Remove("listId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("listId"); else _explicitNullProperties?.Remove("listId"); } }
+        private string? _explicitNullValueListId = default!;
 #nullable restore
 #else
-        public string ListId { get; set; }
+        public string ListId { get => _explicitNullValueListId; set { _explicitNullValueListId = value; AdditionalData?.Remove("listId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("listId"); else _explicitNullProperties?.Remove("listId"); } }
+        private string _explicitNullValueListId = default!;
 #endif
         /// <summary>The version number of the list, represented as an integer.</summary>
-        public int? ListVersion { get; set; }
+        public int? ListVersion { get => _explicitNullValueListVersion; set { _explicitNullValueListVersion = value; AdditionalData?.Remove("listVersion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("listVersion"); else _explicitNullProperties?.Remove("listVersion"); } }
+        private int? _explicitNullValueListVersion = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.RecordListMembership"/> and sets the default values.
         /// </summary>
@@ -45,7 +68,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.RecordListMembership CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.RecordListMembership();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.RecordListMembership(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -74,6 +97,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("lastAddedTimestamp", LastAddedTimestamp);
             writer.WriteStringValue("listId", ListId);
             writer.WriteIntValue("listVersion", ListVersion);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -36,22 +36,22 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroNine.Part
         /// <summary>
         /// Create or update a batch of CRM objects by their unique property values. This endpoint is useful for synchronizing data where some objects may already exist and others need to be created. The operation will return a response indicating the success or failure of each object upserted.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponseSimplePublicUpsertObject26"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PostCrmObjects202609PartnerClientsBatchUpsertCrmObjects202609BetaObjectTypeBatchUpsertSuccessResponse"/></returns>
         /// <param name="body">Represents a batch input operation for upserting simple public objects in HubSpot. This component is used to process multiple upsert operations in a single request, improving efficiency and performance.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponseSimplePublicUpsertObject26?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchInputSimplePublicObjectBatchInputUpsert26 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.PostCrmObjects202609PartnerClientsBatchUpsertCrmObjects202609BetaObjectTypeBatchUpsertSuccessResponse?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchInputSimplePublicObjectBatchInputUpsert26 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponseSimplePublicUpsertObject26> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchInputSimplePublicObjectBatchInputUpsert26 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.PostCrmObjects202609PartnerClientsBatchUpsertCrmObjects202609BetaObjectTypeBatchUpsertSuccessResponse> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchInputSimplePublicObjectBatchInputUpsert26 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponseSimplePublicUpsertObject26>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponseSimplePublicUpsertObject26.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PostCrmObjects202609PartnerClientsBatchUpsertCrmObjects202609BetaObjectTypeBatchUpsertSuccessResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PostCrmObjects202609PartnerClientsBatchUpsertCrmObjects202609BetaObjectTypeBatchUpsertSuccessResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Create or update a batch of CRM objects by their unique property values. This endpoint is useful for synchronizing data where some objects may already exist and others need to be created. The operation will return a response indicating the success or failure of each object upserted.

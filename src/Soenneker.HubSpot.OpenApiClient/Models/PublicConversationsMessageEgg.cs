@@ -11,75 +11,117 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicConversationsMessageEgg : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("attachments") is null) { _explicitNullValueAttachments = default!; _explicitNullProperties?.Remove("attachments"); }
+            else if (parseNode.GetChildNode("attachments") is { } nullNodeAttachments && nullNodeAttachments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Attachments = null;
+            if (parseNode.GetChildNode("channelAccountId") is null) { _explicitNullValueChannelAccountId = default!; _explicitNullProperties?.Remove("channelAccountId"); }
+            else if (parseNode.GetChildNode("channelAccountId") is { } nullNodeChannelAccountId && nullNodeChannelAccountId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChannelAccountId = null;
+            if (parseNode.GetChildNode("channelId") is null) { _explicitNullValueChannelId = default!; _explicitNullProperties?.Remove("channelId"); }
+            else if (parseNode.GetChildNode("channelId") is { } nullNodeChannelId && nullNodeChannelId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChannelId = null;
+            if (parseNode.GetChildNode("recipients") is null) { _explicitNullValueRecipients = default!; _explicitNullProperties?.Remove("recipients"); }
+            else if (parseNode.GetChildNode("recipients") is { } nullNodeRecipients && nullNodeRecipients.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Recipients = null;
+            if (parseNode.GetChildNode("richText") is null) { _explicitNullValueRichText = default!; _explicitNullProperties?.Remove("richText"); }
+            else if (parseNode.GetChildNode("richText") is { } nullNodeRichText && nullNodeRichText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RichText = null;
+            if (parseNode.GetChildNode("senderActorId") is null) { _explicitNullValueSenderActorId = default!; _explicitNullProperties?.Remove("senderActorId"); }
+            else if (parseNode.GetChildNode("senderActorId") is { } nullNodeSenderActorId && nullNodeSenderActorId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SenderActorId = null;
+            if (parseNode.GetChildNode("subject") is null) { _explicitNullValueSubject = default!; _explicitNullProperties?.Remove("subject"); }
+            else if (parseNode.GetChildNode("subject") is { } nullNodeSubject && nullNodeSubject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Subject = null;
+            if (parseNode.GetChildNode("text") is null) { _explicitNullValueText = default!; _explicitNullProperties?.Remove("text"); }
+            else if (parseNode.GetChildNode("text") is { } nullNodeText && nullNodeText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Text = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An array of attachments associated with the message. Each attachment can be a file, quick reply, or social media metadata.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessageEggAttachmentsItem>? Attachments { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCommentEggAttachmentsItem>? Attachments { get => _explicitNullValueAttachments; set { _explicitNullValueAttachments = value; AdditionalData?.Remove("attachments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attachments"); else _explicitNullProperties?.Remove("attachments"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCommentEggAttachmentsItem>? _explicitNullValueAttachments = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessageEggAttachmentsItem> Attachments { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCommentEggAttachmentsItem> Attachments { get => _explicitNullValueAttachments; set { _explicitNullValueAttachments = value; AdditionalData?.Remove("attachments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attachments"); else _explicitNullProperties?.Remove("attachments"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCommentEggAttachmentsItem> _explicitNullValueAttachments = default!;
 #endif
         /// <summary>A string representing the unique identifier of the channel account used to send the message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ChannelAccountId { get; set; }
+        public string? ChannelAccountId { get => _explicitNullValueChannelAccountId; set { _explicitNullValueChannelAccountId = value; AdditionalData?.Remove("channelAccountId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channelAccountId"); else _explicitNullProperties?.Remove("channelAccountId"); } }
+        private string? _explicitNullValueChannelAccountId = default!;
 #nullable restore
 #else
-        public string ChannelAccountId { get; set; }
+        public string ChannelAccountId { get => _explicitNullValueChannelAccountId; set { _explicitNullValueChannelAccountId = value; AdditionalData?.Remove("channelAccountId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channelAccountId"); else _explicitNullProperties?.Remove("channelAccountId"); } }
+        private string _explicitNullValueChannelAccountId = default!;
 #endif
         /// <summary>A string representing the unique identifier of the channel through which the message is sent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ChannelId { get; set; }
+        public string? ChannelId { get => _explicitNullValueChannelId; set { _explicitNullValueChannelId = value; AdditionalData?.Remove("channelId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channelId"); else _explicitNullProperties?.Remove("channelId"); } }
+        private string? _explicitNullValueChannelId = default!;
 #nullable restore
 #else
-        public string ChannelId { get; set; }
+        public string ChannelId { get => _explicitNullValueChannelId; set { _explicitNullValueChannelId = value; AdditionalData?.Remove("channelId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channelId"); else _explicitNullProperties?.Remove("channelId"); } }
+        private string _explicitNullValueChannelId = default!;
 #endif
         /// <summary>An array of recipient objects representing the intended recipients of the message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRecipientEgg>? Recipients { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRecipientEgg>? Recipients { get => _explicitNullValueRecipients; set { _explicitNullValueRecipients = value; AdditionalData?.Remove("recipients"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipients"); else _explicitNullProperties?.Remove("recipients"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRecipientEgg>? _explicitNullValueRecipients = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRecipientEgg> Recipients { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRecipientEgg> Recipients { get => _explicitNullValueRecipients; set { _explicitNullValueRecipients = value; AdditionalData?.Remove("recipients"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipients"); else _explicitNullProperties?.Remove("recipients"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRecipientEgg> _explicitNullValueRecipients = default!;
 #endif
         /// <summary>A string containing the rich text content of the message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RichText { get; set; }
+        public string? RichText { get => _explicitNullValueRichText; set { _explicitNullValueRichText = value; AdditionalData?.Remove("richText"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("richText"); else _explicitNullProperties?.Remove("richText"); } }
+        private string? _explicitNullValueRichText = default!;
 #nullable restore
 #else
-        public string RichText { get; set; }
+        public string RichText { get => _explicitNullValueRichText; set { _explicitNullValueRichText = value; AdditionalData?.Remove("richText"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("richText"); else _explicitNullProperties?.Remove("richText"); } }
+        private string _explicitNullValueRichText = default!;
 #endif
         /// <summary>A string representing the unique identifier of the sender actor.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SenderActorId { get; set; }
+        public string? SenderActorId { get => _explicitNullValueSenderActorId; set { _explicitNullValueSenderActorId = value; AdditionalData?.Remove("senderActorId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("senderActorId"); else _explicitNullProperties?.Remove("senderActorId"); } }
+        private string? _explicitNullValueSenderActorId = default!;
 #nullable restore
 #else
-        public string SenderActorId { get; set; }
+        public string SenderActorId { get => _explicitNullValueSenderActorId; set { _explicitNullValueSenderActorId = value; AdditionalData?.Remove("senderActorId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("senderActorId"); else _explicitNullProperties?.Remove("senderActorId"); } }
+        private string _explicitNullValueSenderActorId = default!;
 #endif
         /// <summary>A string representing the subject of the message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Subject { get; set; }
+        public string? Subject { get => _explicitNullValueSubject; set { _explicitNullValueSubject = value; AdditionalData?.Remove("subject"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subject"); else _explicitNullProperties?.Remove("subject"); } }
+        private string? _explicitNullValueSubject = default!;
 #nullable restore
 #else
-        public string Subject { get; set; }
+        public string Subject { get => _explicitNullValueSubject; set { _explicitNullValueSubject = value; AdditionalData?.Remove("subject"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subject"); else _explicitNullProperties?.Remove("subject"); } }
+        private string _explicitNullValueSubject = default!;
 #endif
         /// <summary>A string containing the plain text content of the message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Text { get; set; }
+        public string? Text { get => _explicitNullValueText; set { _explicitNullValueText = value; AdditionalData?.Remove("text"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text"); else _explicitNullProperties?.Remove("text"); } }
+        private string? _explicitNullValueText = default!;
 #nullable restore
 #else
-        public string Text { get; set; }
+        public string Text { get => _explicitNullValueText; set { _explicitNullValueText = value; AdditionalData?.Remove("text"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text"); else _explicitNullProperties?.Remove("text"); } }
+        private string _explicitNullValueText = default!;
 #endif
         /// <summary>The type of the message, which is always &apos;MESSAGE&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.MessageType? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.MessageType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.MessageType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessageEgg"/> and sets the default values.
         /// </summary>
@@ -95,7 +137,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessageEgg CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessageEgg();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessageEgg(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -105,7 +147,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "attachments", n => { Attachments = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessageEggAttachmentsItem>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessageEggAttachmentsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "attachments", n => { Attachments = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCommentEggAttachmentsItem>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicCommentEggAttachmentsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "channelAccountId", n => { ChannelAccountId = n.GetStringValue(); } },
                 { "channelId", n => { ChannelId = n.GetStringValue(); } },
                 { "recipients", n => { Recipients = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRecipientEgg>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicRecipientEgg.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -113,7 +155,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "senderActorId", n => { SenderActorId = n.GetStringValue(); } },
                 { "subject", n => { Subject = n.GetStringValue(); } },
                 { "text", n => { Text = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MessageType>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MessageType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
         /// <summary>
@@ -123,7 +165,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessageEggAttachmentsItem>("attachments", Attachments);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCommentEggAttachmentsItem>("attachments", Attachments);
             writer.WriteStringValue("channelAccountId", ChannelAccountId);
             writer.WriteStringValue("channelId", ChannelId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRecipientEgg>("recipients", Recipients);
@@ -132,6 +174,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("subject", Subject);
             writer.WriteStringValue("text", Text);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MessageType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

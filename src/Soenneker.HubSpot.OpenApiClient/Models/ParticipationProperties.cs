@@ -11,23 +11,43 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ParticipationProperties : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("attendanceDurationSeconds") is null) { _explicitNullValueAttendanceDurationSeconds = default!; _explicitNullProperties?.Remove("attendanceDurationSeconds"); }
+            else if (parseNode.GetChildNode("attendanceDurationSeconds") is { } nullNodeAttendanceDurationSeconds && nullNodeAttendanceDurationSeconds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AttendanceDurationSeconds = null;
+            if (parseNode.GetChildNode("attendancePercentage") is null) { _explicitNullValueAttendancePercentage = default!; _explicitNullProperties?.Remove("attendancePercentage"); }
+            else if (parseNode.GetChildNode("attendancePercentage") is { } nullNodeAttendancePercentage && nullNodeAttendancePercentage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AttendancePercentage = null;
+            if (parseNode.GetChildNode("attendanceState") is null) { _explicitNullValueAttendanceState = default!; _explicitNullProperties?.Remove("attendanceState"); }
+            else if (parseNode.GetChildNode("attendanceState") is { } nullNodeAttendanceState && nullNodeAttendanceState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AttendanceState = null;
+            if (parseNode.GetChildNode("occurredAt") is null) { _explicitNullValueOccurredAt = default!; _explicitNullProperties?.Remove("occurredAt"); }
+            else if (parseNode.GetChildNode("occurredAt") is { } nullNodeOccurredAt && nullNodeOccurredAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OccurredAt = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The number of seconds the participation lasted</summary>
-        public int? AttendanceDurationSeconds { get; set; }
+        public int? AttendanceDurationSeconds { get => _explicitNullValueAttendanceDurationSeconds; set { _explicitNullValueAttendanceDurationSeconds = value; AdditionalData?.Remove("attendanceDurationSeconds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attendanceDurationSeconds"); else _explicitNullProperties?.Remove("attendanceDurationSeconds"); } }
+        private int? _explicitNullValueAttendanceDurationSeconds = default!;
         /// <summary>Percentage of the participation duration relative to the event duration</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AttendancePercentage { get; set; }
+        public string? AttendancePercentage { get => _explicitNullValueAttendancePercentage; set { _explicitNullValueAttendancePercentage = value; AdditionalData?.Remove("attendancePercentage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attendancePercentage"); else _explicitNullProperties?.Remove("attendancePercentage"); } }
+        private string? _explicitNullValueAttendancePercentage = default!;
 #nullable restore
 #else
-        public string AttendancePercentage { get; set; }
+        public string AttendancePercentage { get => _explicitNullValueAttendancePercentage; set { _explicitNullValueAttendancePercentage = value; AdditionalData?.Remove("attendancePercentage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attendancePercentage"); else _explicitNullProperties?.Remove("attendancePercentage"); } }
+        private string _explicitNullValueAttendancePercentage = default!;
 #endif
         /// <summary>The state of the participation</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ParticipationPropertiesAttendanceState? AttendanceState { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ParticipationPropertiesAttendanceState? AttendanceState { get => _explicitNullValueAttendanceState; set { _explicitNullValueAttendanceState = value; AdditionalData?.Remove("attendanceState"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attendanceState"); else _explicitNullProperties?.Remove("attendanceState"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ParticipationPropertiesAttendanceState? _explicitNullValueAttendanceState = default!;
         /// <summary>Timestamp of when the participation occurred</summary>
-        public long? OccurredAt { get; set; }
+        public long? OccurredAt { get => _explicitNullValueOccurredAt; set { _explicitNullValueOccurredAt = value; AdditionalData?.Remove("occurredAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("occurredAt"); else _explicitNullProperties?.Remove("occurredAt"); } }
+        private long? _explicitNullValueOccurredAt = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ParticipationProperties"/> and sets the default values.
         /// </summary>
@@ -43,7 +63,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.ParticipationProperties CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.ParticipationProperties();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.ParticipationProperties(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -55,7 +75,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "attendanceDurationSeconds", n => { AttendanceDurationSeconds = n.GetIntValue(); } },
                 { "attendancePercentage", n => { AttendancePercentage = n.GetStringValue(); } },
-                { "attendanceState", n => { AttendanceState = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ParticipationPropertiesAttendanceState>(); } },
+                { "attendanceState", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ParticipationPropertiesAttendanceState>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAttendanceState = default; _explicitNullProperties?.Remove("attendanceState"); AdditionalData["attendanceState"] = unknown; } else { AttendanceState = parsed; AdditionalData.Remove("attendanceState"); } } },
                 { "occurredAt", n => { OccurredAt = n.GetLongValue(); } },
             };
         }
@@ -70,6 +90,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("attendancePercentage", AttendancePercentage);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ParticipationPropertiesAttendanceState>("attendanceState", AttendanceState);
             writer.WriteLongValue("occurredAt", OccurredAt);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

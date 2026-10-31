@@ -36,22 +36,22 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Associations.TwoZeroTwoSixZeroNine
         /// <summary>
         /// Batch read associations for objects to specific object type. The &apos;after&apos; field in a returned paging object  can be added alongside the &apos;id&apos; to retrieve the next page of associations from that objectId. The &apos;link&apos; field is deprecated and should be ignored. Note: The &apos;paging&apos; field will only be present if there are more pages and absent otherwise.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicAssociationMultiWithLabel"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PostCrmAssociations202609FromObjectTypeToObjectTypeBatchReadCrmAssociations202609BetaFromObjectTypeToObjectTypeBatchReadSuccessResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicAssociationMultiWithLabel?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.BatchInputPublicFetchAssociationsBatchRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.PostCrmAssociations202609FromObjectTypeToObjectTypeBatchReadCrmAssociations202609BetaFromObjectTypeToObjectTypeBatchReadSuccessResponse?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.BatchInputPublicFetchAssociationsBatchRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicAssociationMultiWithLabel> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.BatchInputPublicFetchAssociationsBatchRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.PostCrmAssociations202609FromObjectTypeToObjectTypeBatchReadCrmAssociations202609BetaFromObjectTypeToObjectTypeBatchReadSuccessResponse> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.BatchInputPublicFetchAssociationsBatchRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicAssociationMultiWithLabel>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponsePublicAssociationMultiWithLabel.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PostCrmAssociations202609FromObjectTypeToObjectTypeBatchReadCrmAssociations202609BetaFromObjectTypeToObjectTypeBatchReadSuccessResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PostCrmAssociations202609FromObjectTypeToObjectTypeBatchReadCrmAssociations202609BetaFromObjectTypeToObjectTypeBatchReadSuccessResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Batch read associations for objects to specific object type. The &apos;after&apos; field in a returned paging object  can be added alongside the &apos;id&apos; to retrieve the next page of associations from that objectId. The &apos;link&apos; field is deprecated and should be ignored. Note: The &apos;paging&apos; field will only be present if there are more pages and absent otherwise.

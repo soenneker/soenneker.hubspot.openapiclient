@@ -10,7 +10,7 @@ using System;
 namespace Soenneker.HubSpot.OpenApiClient.Marketing.MarketingEvents.TwoZeroTwoSixZeroNine.Item.Attendance
 {
     /// <summary>
-    /// Builds and executes requests for operations under \marketing\marketing-events\2026-09\{app-id}\attendance
+    /// Builds and executes requests for operations under \marketing\marketing-events\2026-09\{appId}\attendance
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AttendanceRequestBuilder : BaseRequestBuilder
@@ -32,7 +32,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.MarketingEvents.TwoZeroTwoSi
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AttendanceRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/marketing/marketing-events/2026-09/{app%2Did}/attendance", pathParameters)
+        public AttendanceRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/marketing/marketing-events/2026-09/{appId}/attendance", pathParameters)
         {
         }
         /// <summary>
@@ -40,7 +40,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.MarketingEvents.TwoZeroTwoSi
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AttendanceRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/marketing/marketing-events/2026-09/{app%2Did}/attendance", rawUrl)
+        public AttendanceRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/marketing/marketing-events/2026-09/{appId}/attendance", rawUrl)
         {
         }
     }

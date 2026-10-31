@@ -51,7 +51,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Oauth.TwoZeroTwoSixZeroNine.Token.Intr
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.TokenInfoResponseBaseIf>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.TokenInfoResponseBaseIf.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.TokenInfoResponseBaseIf>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.TokenInfoResponseBaseIf.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Returns validity and metadata for access and refresh tokens.
@@ -72,7 +72,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Oauth.TwoZeroTwoSixZeroNine.Token.Intr
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>

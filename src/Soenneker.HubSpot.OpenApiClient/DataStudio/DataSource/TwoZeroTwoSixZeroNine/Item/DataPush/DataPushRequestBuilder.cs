@@ -51,7 +51,7 @@ namespace Soenneker.HubSpot.OpenApiClient.DataStudio.DataSource.TwoZeroTwoSixZer
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.DataPushResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.DataPushResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.DataPushResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.DataPushResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Push additional data rows to an existing JSON datasource. This enables incremental data ingestion without replacing the entire dataset.

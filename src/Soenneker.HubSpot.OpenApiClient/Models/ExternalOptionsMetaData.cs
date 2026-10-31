@@ -11,34 +11,56 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ExternalOptionsMetaData : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("filter") is null) { _explicitNullValueFilter = default!; _explicitNullProperties?.Remove("filter"); }
+            else if (parseNode.GetChildNode("filter") is { } nullNodeFilter && nullNodeFilter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Filter = null;
+            if (parseNode.GetChildNode("fromObjectId") is null) { _explicitNullValueFromObjectId = default!; _explicitNullProperties?.Remove("fromObjectId"); }
+            else if (parseNode.GetChildNode("fromObjectId") is { } nullNodeFromObjectId && nullNodeFromObjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FromObjectId = null;
+            if (parseNode.GetChildNode("propertyName") is null) { _explicitNullValuePropertyName = default!; _explicitNullProperties?.Remove("propertyName"); }
+            else if (parseNode.GetChildNode("propertyName") is { } nullNodePropertyName && nullNodePropertyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PropertyName = null;
+            if (parseNode.GetChildNode("relatedObjectTypeId") is null) { _explicitNullValueRelatedObjectTypeId = default!; _explicitNullProperties?.Remove("relatedObjectTypeId"); }
+            else if (parseNode.GetChildNode("relatedObjectTypeId") is { } nullNodeRelatedObjectTypeId && nullNodeRelatedObjectTypeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RelatedObjectTypeId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The filter property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.FilteringMetaData? Filter { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.FilteringMetaData? Filter { get => _explicitNullValueFilter; set { _explicitNullValueFilter = value; AdditionalData?.Remove("filter"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filter"); else _explicitNullProperties?.Remove("filter"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.FilteringMetaData? _explicitNullValueFilter = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.FilteringMetaData Filter { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.FilteringMetaData Filter { get => _explicitNullValueFilter; set { _explicitNullValueFilter = value; AdditionalData?.Remove("filter"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filter"); else _explicitNullProperties?.Remove("filter"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.FilteringMetaData _explicitNullValueFilter = default!;
 #endif
         /// <summary>A string representing the identifier of the object from which the external options are derived or related.</summary>
-        public long? FromObjectId { get; set; }
+        public long? FromObjectId { get => _explicitNullValueFromObjectId; set { _explicitNullValueFromObjectId = value; AdditionalData?.Remove("fromObjectId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fromObjectId"); else _explicitNullProperties?.Remove("fromObjectId"); } }
+        private long? _explicitNullValueFromObjectId = default!;
         /// <summary>A string indicating the name of the property for which the external options metadata is being defined.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PropertyName { get; set; }
+        public string? PropertyName { get => _explicitNullValuePropertyName; set { _explicitNullValuePropertyName = value; AdditionalData?.Remove("propertyName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("propertyName"); else _explicitNullProperties?.Remove("propertyName"); } }
+        private string? _explicitNullValuePropertyName = default!;
 #nullable restore
 #else
-        public string PropertyName { get; set; }
+        public string PropertyName { get => _explicitNullValuePropertyName; set { _explicitNullValuePropertyName = value; AdditionalData?.Remove("propertyName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("propertyName"); else _explicitNullProperties?.Remove("propertyName"); } }
+        private string _explicitNullValuePropertyName = default!;
 #endif
         /// <summary>A string representing the identifier of the related object type. This is used to specify which type of object the external options are associated with.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RelatedObjectTypeId { get; set; }
+        public string? RelatedObjectTypeId { get => _explicitNullValueRelatedObjectTypeId; set { _explicitNullValueRelatedObjectTypeId = value; AdditionalData?.Remove("relatedObjectTypeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("relatedObjectTypeId"); else _explicitNullProperties?.Remove("relatedObjectTypeId"); } }
+        private string? _explicitNullValueRelatedObjectTypeId = default!;
 #nullable restore
 #else
-        public string RelatedObjectTypeId { get; set; }
+        public string RelatedObjectTypeId { get => _explicitNullValueRelatedObjectTypeId; set { _explicitNullValueRelatedObjectTypeId = value; AdditionalData?.Remove("relatedObjectTypeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("relatedObjectTypeId"); else _explicitNullProperties?.Remove("relatedObjectTypeId"); } }
+        private string _explicitNullValueRelatedObjectTypeId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExternalOptionsMetaData"/> and sets the default values.
@@ -55,7 +77,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.ExternalOptionsMetaData CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.ExternalOptionsMetaData();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.ExternalOptionsMetaData(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -82,6 +104,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteLongValue("fromObjectId", FromObjectId);
             writer.WriteStringValue("propertyName", PropertyName);
             writer.WriteStringValue("relatedObjectTypeId", RelatedObjectTypeId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

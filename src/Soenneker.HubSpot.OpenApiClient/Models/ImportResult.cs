@@ -11,23 +11,43 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ImportResult : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("duplicateRows") is null) { _explicitNullValueDuplicateRows = default!; _explicitNullProperties?.Remove("duplicateRows"); }
+            else if (parseNode.GetChildNode("duplicateRows") is { } nullNodeDuplicateRows && nullNodeDuplicateRows.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuplicateRows = null;
+            if (parseNode.GetChildNode("errors") is null) { _explicitNullValueErrors = default!; _explicitNullProperties?.Remove("errors"); }
+            else if (parseNode.GetChildNode("errors") is { } nullNodeErrors && nullNodeErrors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Errors = null;
+            if (parseNode.GetChildNode("rowLimitExceeded") is null) { _explicitNullValueRowLimitExceeded = default!; _explicitNullProperties?.Remove("rowLimitExceeded"); }
+            else if (parseNode.GetChildNode("rowLimitExceeded") is { } nullNodeRowLimitExceeded && nullNodeRowLimitExceeded.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RowLimitExceeded = null;
+            if (parseNode.GetChildNode("rowsImported") is null) { _explicitNullValueRowsImported = default!; _explicitNullProperties?.Remove("rowsImported"); }
+            else if (parseNode.GetChildNode("rowsImported") is { } nullNodeRowsImported && nullNodeRowsImported.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RowsImported = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Specifies number of duplicate rows</summary>
-        public int? DuplicateRows { get; set; }
+        public int? DuplicateRows { get => _explicitNullValueDuplicateRows; set { _explicitNullValueDuplicateRows = value; AdditionalData?.Remove("duplicateRows"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duplicateRows"); else _explicitNullProperties?.Remove("duplicateRows"); } }
+        private int? _explicitNullValueDuplicateRows = default!;
         /// <summary>List of errors during import</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CmsError5>? Errors { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CmsError5>? Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; AdditionalData?.Remove("errors"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.CmsError5>? _explicitNullValueErrors = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CmsError5> Errors { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CmsError5> Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; AdditionalData?.Remove("errors"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.CmsError5> _explicitNullValueErrors = default!;
 #endif
         /// <summary>Specifies whether row limit exceeded during import</summary>
-        public bool? RowLimitExceeded { get; set; }
+        public bool? RowLimitExceeded { get => _explicitNullValueRowLimitExceeded; set { _explicitNullValueRowLimitExceeded = value; AdditionalData?.Remove("rowLimitExceeded"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rowLimitExceeded"); else _explicitNullProperties?.Remove("rowLimitExceeded"); } }
+        private bool? _explicitNullValueRowLimitExceeded = default!;
         /// <summary>Specifies number of rows imported</summary>
-        public int? RowsImported { get; set; }
+        public int? RowsImported { get => _explicitNullValueRowsImported; set { _explicitNullValueRowsImported = value; AdditionalData?.Remove("rowsImported"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rowsImported"); else _explicitNullProperties?.Remove("rowsImported"); } }
+        private int? _explicitNullValueRowsImported = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ImportResult"/> and sets the default values.
         /// </summary>
@@ -43,7 +63,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.ImportResult CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.ImportResult();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.ImportResult(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -70,6 +90,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CmsError5>("errors", Errors);
             writer.WriteBoolValue("rowLimitExceeded", RowLimitExceeded);
             writer.WriteIntValue("rowsImported", RowsImported);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,114 +11,192 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class EmailUpdateRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("activeDomain") is null) { _explicitNullValueActiveDomain = default!; _explicitNullProperties?.Remove("activeDomain"); }
+            else if (parseNode.GetChildNode("activeDomain") is { } nullNodeActiveDomain && nullNodeActiveDomain.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActiveDomain = null;
+            if (parseNode.GetChildNode("archived") is null) { _explicitNullValueArchived = default!; _explicitNullProperties?.Remove("archived"); }
+            else if (parseNode.GetChildNode("archived") is { } nullNodeArchived && nullNodeArchived.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Archived = null;
+            if (parseNode.GetChildNode("businessUnitId") is null) { _explicitNullValueBusinessUnitId = default!; _explicitNullProperties?.Remove("businessUnitId"); }
+            else if (parseNode.GetChildNode("businessUnitId") is { } nullNodeBusinessUnitId && nullNodeBusinessUnitId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BusinessUnitId = null;
+            if (parseNode.GetChildNode("campaign") is null) { _explicitNullValueCampaign = default!; _explicitNullProperties?.Remove("campaign"); }
+            else if (parseNode.GetChildNode("campaign") is { } nullNodeCampaign && nullNodeCampaign.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Campaign = null;
+            if (parseNode.GetChildNode("content") is null) { _explicitNullValueContent = default!; _explicitNullProperties?.Remove("content"); }
+            else if (parseNode.GetChildNode("content") is { } nullNodeContent && nullNodeContent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Content = null;
+            if (parseNode.GetChildNode("folderIdV2") is null) { _explicitNullValueFolderIdV2 = default!; _explicitNullProperties?.Remove("folderIdV2"); }
+            else if (parseNode.GetChildNode("folderIdV2") is { } nullNodeFolderIdV2 && nullNodeFolderIdV2.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FolderIdV2 = null;
+            if (parseNode.GetChildNode("from") is null) { _explicitNullValueFrom = default!; _explicitNullProperties?.Remove("from"); }
+            else if (parseNode.GetChildNode("from") is { } nullNodeFrom && nullNodeFrom.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) From = null;
+            if (parseNode.GetChildNode("jitterSendTime") is null) { _explicitNullValueJitterSendTime = default!; _explicitNullProperties?.Remove("jitterSendTime"); }
+            else if (parseNode.GetChildNode("jitterSendTime") is { } nullNodeJitterSendTime && nullNodeJitterSendTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JitterSendTime = null;
+            if (parseNode.GetChildNode("language") is null) { _explicitNullValueLanguage = default!; _explicitNullProperties?.Remove("language"); }
+            else if (parseNode.GetChildNode("language") is { } nullNodeLanguage && nullNodeLanguage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Language = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("publishDate") is null) { _explicitNullValuePublishDate = default!; _explicitNullProperties?.Remove("publishDate"); }
+            else if (parseNode.GetChildNode("publishDate") is { } nullNodePublishDate && nullNodePublishDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PublishDate = null;
+            if (parseNode.GetChildNode("rssData") is null) { _explicitNullValueRssData = default!; _explicitNullProperties?.Remove("rssData"); }
+            else if (parseNode.GetChildNode("rssData") is { } nullNodeRssData && nullNodeRssData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RssData = null;
+            if (parseNode.GetChildNode("sendOnPublish") is null) { _explicitNullValueSendOnPublish = default!; _explicitNullProperties?.Remove("sendOnPublish"); }
+            else if (parseNode.GetChildNode("sendOnPublish") is { } nullNodeSendOnPublish && nullNodeSendOnPublish.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SendOnPublish = null;
+            if (parseNode.GetChildNode("state") is null) { _explicitNullValueState = default!; _explicitNullProperties?.Remove("state"); }
+            else if (parseNode.GetChildNode("state") is { } nullNodeState && nullNodeState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) State = null;
+            if (parseNode.GetChildNode("subcategory") is null) { _explicitNullValueSubcategory = default!; _explicitNullProperties?.Remove("subcategory"); }
+            else if (parseNode.GetChildNode("subcategory") is { } nullNodeSubcategory && nullNodeSubcategory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Subcategory = null;
+            if (parseNode.GetChildNode("subject") is null) { _explicitNullValueSubject = default!; _explicitNullProperties?.Remove("subject"); }
+            else if (parseNode.GetChildNode("subject") is { } nullNodeSubject && nullNodeSubject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Subject = null;
+            if (parseNode.GetChildNode("subscriptionDetails") is null) { _explicitNullValueSubscriptionDetails = default!; _explicitNullProperties?.Remove("subscriptionDetails"); }
+            else if (parseNode.GetChildNode("subscriptionDetails") is { } nullNodeSubscriptionDetails && nullNodeSubscriptionDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionDetails = null;
+            if (parseNode.GetChildNode("testing") is null) { _explicitNullValueTesting = default!; _explicitNullProperties?.Remove("testing"); }
+            else if (parseNode.GetChildNode("testing") is { } nullNodeTesting && nullNodeTesting.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Testing = null;
+            if (parseNode.GetChildNode("to") is null) { _explicitNullValueTo = default!; _explicitNullProperties?.Remove("to"); }
+            else if (parseNode.GetChildNode("to") is { } nullNodeTo && nullNodeTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) To = null;
+            if (parseNode.GetChildNode("webversion") is null) { _explicitNullValueWebversion = default!; _explicitNullProperties?.Remove("webversion"); }
+            else if (parseNode.GetChildNode("webversion") is { } nullNodeWebversion && nullNodeWebversion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Webversion = null;
+        }
+
         /// <summary>The active domain of the email.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ActiveDomain { get; set; }
+        public string? ActiveDomain { get => _explicitNullValueActiveDomain; set { _explicitNullValueActiveDomain = value; AdditionalData?.Remove("activeDomain"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activeDomain"); else _explicitNullProperties?.Remove("activeDomain"); } }
+        private string? _explicitNullValueActiveDomain = default!;
 #nullable restore
 #else
-        public string ActiveDomain { get; set; }
+        public string ActiveDomain { get => _explicitNullValueActiveDomain; set { _explicitNullValueActiveDomain = value; AdditionalData?.Remove("activeDomain"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activeDomain"); else _explicitNullProperties?.Remove("activeDomain"); } }
+        private string _explicitNullValueActiveDomain = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Determines if the email is archived or not.</summary>
-        public bool? Archived { get; set; }
+        public bool? Archived { get => _explicitNullValueArchived; set { _explicitNullValueArchived = value; AdditionalData?.Remove("archived"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("archived"); else _explicitNullProperties?.Remove("archived"); } }
+        private bool? _explicitNullValueArchived = default!;
         /// <summary>The ID of the business unit associated with the email.</summary>
-        public long? BusinessUnitId { get; set; }
+        public long? BusinessUnitId { get => _explicitNullValueBusinessUnitId; set { _explicitNullValueBusinessUnitId = value; AdditionalData?.Remove("businessUnitId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("businessUnitId"); else _explicitNullProperties?.Remove("businessUnitId"); } }
+        private long? _explicitNullValueBusinessUnitId = default!;
         /// <summary>The ID of the campaign this email is associated to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Campaign { get; set; }
+        public string? Campaign { get => _explicitNullValueCampaign; set { _explicitNullValueCampaign = value; AdditionalData?.Remove("campaign"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("campaign"); else _explicitNullProperties?.Remove("campaign"); } }
+        private string? _explicitNullValueCampaign = default!;
 #nullable restore
 #else
-        public string Campaign { get; set; }
+        public string Campaign { get => _explicitNullValueCampaign; set { _explicitNullValueCampaign = value; AdditionalData?.Remove("campaign"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("campaign"); else _explicitNullProperties?.Remove("campaign"); } }
+        private string _explicitNullValueCampaign = default!;
 #endif
         /// <summary>The content property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContent? Content { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContent? Content { get => _explicitNullValueContent; set { _explicitNullValueContent = value; AdditionalData?.Remove("content"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content"); else _explicitNullProperties?.Remove("content"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContent? _explicitNullValueContent = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContent Content { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContent Content { get => _explicitNullValueContent; set { _explicitNullValueContent = value; AdditionalData?.Remove("content"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content"); else _explicitNullProperties?.Remove("content"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContent _explicitNullValueContent = default!;
 #endif
         /// <summary>The ID of the folder where the email will be stored.</summary>
-        public long? FolderIdV2 { get; set; }
+        public long? FolderIdV2 { get => _explicitNullValueFolderIdV2; set { _explicitNullValueFolderIdV2 = value; AdditionalData?.Remove("folderIdV2"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("folderIdV2"); else _explicitNullProperties?.Remove("folderIdV2"); } }
+        private long? _explicitNullValueFolderIdV2 = default!;
         /// <summary>The from property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailFromDetails? From { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailFromDetails? From { get => _explicitNullValueFrom; set { _explicitNullValueFrom = value; AdditionalData?.Remove("from"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from"); else _explicitNullProperties?.Remove("from"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailFromDetails? _explicitNullValueFrom = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailFromDetails From { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailFromDetails From { get => _explicitNullValueFrom; set { _explicitNullValueFrom = value; AdditionalData?.Remove("from"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from"); else _explicitNullProperties?.Remove("from"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailFromDetails _explicitNullValueFrom = default!;
 #endif
         /// <summary>Determines whether the email send time should be randomized to avoid sending all emails at the exact same time.</summary>
-        public bool? JitterSendTime { get; set; }
+        public bool? JitterSendTime { get => _explicitNullValueJitterSendTime; set { _explicitNullValueJitterSendTime = value; AdditionalData?.Remove("jitterSendTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jitterSendTime"); else _explicitNullProperties?.Remove("jitterSendTime"); } }
+        private bool? _explicitNullValueJitterSendTime = default!;
         /// <summary>The language code for the email, such as &apos;en&apos; for English.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailUpdateRequestLanguage? Language { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailUpdateRequestLanguage? Language { get => _explicitNullValueLanguage; set { _explicitNullValueLanguage = value; AdditionalData?.Remove("language"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("language"); else _explicitNullProperties?.Remove("language"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.EmailUpdateRequestLanguage? _explicitNullValueLanguage = default!;
         /// <summary>The name of the email, as displayed on the email dashboard.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The date and time the email is scheduled for, in ISO8601 representation. This is only used in local time or scheduled emails.</summary>
-        public DateTimeOffset? PublishDate { get; set; }
+        public DateTimeOffset? PublishDate { get => _explicitNullValuePublishDate; set { _explicitNullValuePublishDate = value; AdditionalData?.Remove("publishDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("publishDate"); else _explicitNullProperties?.Remove("publishDate"); } }
+        private DateTimeOffset? _explicitNullValuePublishDate = default!;
         /// <summary>The rssData property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetails? RssData { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetails? RssData { get => _explicitNullValueRssData; set { _explicitNullValueRssData = value; AdditionalData?.Remove("rssData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rssData"); else _explicitNullProperties?.Remove("rssData"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetails? _explicitNullValueRssData = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetails RssData { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetails RssData { get => _explicitNullValueRssData; set { _explicitNullValueRssData = value; AdditionalData?.Remove("rssData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rssData"); else _explicitNullProperties?.Remove("rssData"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetails _explicitNullValueRssData = default!;
 #endif
         /// <summary>Determines whether the email will be sent immediately on publish.</summary>
-        public bool? SendOnPublish { get; set; }
+        public bool? SendOnPublish { get => _explicitNullValueSendOnPublish; set { _explicitNullValueSendOnPublish = value; AdditionalData?.Remove("sendOnPublish"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sendOnPublish"); else _explicitNullProperties?.Remove("sendOnPublish"); } }
+        private bool? _explicitNullValueSendOnPublish = default!;
         /// <summary>The email state.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailUpdateRequestState? State { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailUpdateRequestState? State { get => _explicitNullValueState; set { _explicitNullValueState = value; AdditionalData?.Remove("state"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state"); else _explicitNullProperties?.Remove("state"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.EmailUpdateRequestState? _explicitNullValueState = default!;
         /// <summary>The email subcategory.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailUpdateRequestSubcategory? Subcategory { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailUpdateRequestSubcategory? Subcategory { get => _explicitNullValueSubcategory; set { _explicitNullValueSubcategory = value; AdditionalData?.Remove("subcategory"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subcategory"); else _explicitNullProperties?.Remove("subcategory"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.EmailUpdateRequestSubcategory? _explicitNullValueSubcategory = default!;
         /// <summary>The subject of the email.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Subject { get; set; }
+        public string? Subject { get => _explicitNullValueSubject; set { _explicitNullValueSubject = value; AdditionalData?.Remove("subject"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subject"); else _explicitNullProperties?.Remove("subject"); } }
+        private string? _explicitNullValueSubject = default!;
 #nullable restore
 #else
-        public string Subject { get; set; }
+        public string Subject { get => _explicitNullValueSubject; set { _explicitNullValueSubject = value; AdditionalData?.Remove("subject"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subject"); else _explicitNullProperties?.Remove("subject"); } }
+        private string _explicitNullValueSubject = default!;
 #endif
         /// <summary>The subscriptionDetails property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailSubscriptionDetails? SubscriptionDetails { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailSubscriptionDetails? SubscriptionDetails { get => _explicitNullValueSubscriptionDetails; set { _explicitNullValueSubscriptionDetails = value; AdditionalData?.Remove("subscriptionDetails"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscriptionDetails"); else _explicitNullProperties?.Remove("subscriptionDetails"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailSubscriptionDetails? _explicitNullValueSubscriptionDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailSubscriptionDetails SubscriptionDetails { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailSubscriptionDetails SubscriptionDetails { get => _explicitNullValueSubscriptionDetails; set { _explicitNullValueSubscriptionDetails = value; AdditionalData?.Remove("subscriptionDetails"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscriptionDetails"); else _explicitNullProperties?.Remove("subscriptionDetails"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailSubscriptionDetails _explicitNullValueSubscriptionDetails = default!;
 #endif
         /// <summary>The testing property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetails? Testing { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetails? Testing { get => _explicitNullValueTesting; set { _explicitNullValueTesting = value; AdditionalData?.Remove("testing"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("testing"); else _explicitNullProperties?.Remove("testing"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetails? _explicitNullValueTesting = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetails Testing { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetails Testing { get => _explicitNullValueTesting; set { _explicitNullValueTesting = value; AdditionalData?.Remove("testing"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("testing"); else _explicitNullProperties?.Remove("testing"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetails _explicitNullValueTesting = default!;
 #endif
         /// <summary>The to property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailToDetails? To { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailToDetails? To { get => _explicitNullValueTo; set { _explicitNullValueTo = value; AdditionalData?.Remove("to"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("to"); else _explicitNullProperties?.Remove("to"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailToDetails? _explicitNullValueTo = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailToDetails To { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailToDetails To { get => _explicitNullValueTo; set { _explicitNullValueTo = value; AdditionalData?.Remove("to"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("to"); else _explicitNullProperties?.Remove("to"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailToDetails _explicitNullValueTo = default!;
 #endif
         /// <summary>The webversion property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWebversionDetails? Webversion { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWebversionDetails? Webversion { get => _explicitNullValueWebversion; set { _explicitNullValueWebversion = value; AdditionalData?.Remove("webversion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webversion"); else _explicitNullProperties?.Remove("webversion"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicWebversionDetails? _explicitNullValueWebversion = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWebversionDetails Webversion { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWebversionDetails Webversion { get => _explicitNullValueWebversion; set { _explicitNullValueWebversion = value; AdditionalData?.Remove("webversion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webversion"); else _explicitNullProperties?.Remove("webversion"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicWebversionDetails _explicitNullValueWebversion = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.EmailUpdateRequest"/> and sets the default values.
@@ -135,7 +213,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.EmailUpdateRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.EmailUpdateRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.EmailUpdateRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -153,13 +231,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "folderIdV2", n => { FolderIdV2 = n.GetLongValue(); } },
                 { "from", n => { From = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailFromDetails>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailFromDetails.CreateFromDiscriminatorValue); } },
                 { "jitterSendTime", n => { JitterSendTime = n.GetBoolValue(); } },
-                { "language", n => { Language = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailUpdateRequestLanguage>(); } },
+                { "language", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailUpdateRequestLanguage>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueLanguage = default; _explicitNullProperties?.Remove("language"); AdditionalData["language"] = unknown; } else { Language = parsed; AdditionalData.Remove("language"); } } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "publishDate", n => { PublishDate = n.GetDateTimeOffsetValue(); } },
                 { "rssData", n => { RssData = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetails>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetails.CreateFromDiscriminatorValue); } },
                 { "sendOnPublish", n => { SendOnPublish = n.GetBoolValue(); } },
-                { "state", n => { State = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailUpdateRequestState>(); } },
-                { "subcategory", n => { Subcategory = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailUpdateRequestSubcategory>(); } },
+                { "state", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailUpdateRequestState>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueState = default; _explicitNullProperties?.Remove("state"); AdditionalData["state"] = unknown; } else { State = parsed; AdditionalData.Remove("state"); } } },
+                { "subcategory", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailUpdateRequestSubcategory>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueSubcategory = default; _explicitNullProperties?.Remove("subcategory"); AdditionalData["subcategory"] = unknown; } else { Subcategory = parsed; AdditionalData.Remove("subcategory"); } } },
                 { "subject", n => { Subject = n.GetStringValue(); } },
                 { "subscriptionDetails", n => { SubscriptionDetails = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailSubscriptionDetails>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailSubscriptionDetails.CreateFromDiscriminatorValue); } },
                 { "testing", n => { Testing = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetails>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetails.CreateFromDiscriminatorValue); } },
@@ -194,6 +272,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetails>("testing", Testing);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailToDetails>("to", To);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWebversionDetails>("webversion", Webversion);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

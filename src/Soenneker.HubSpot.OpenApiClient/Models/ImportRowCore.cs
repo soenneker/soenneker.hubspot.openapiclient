@@ -11,38 +11,66 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ImportRowCore : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("additionalRowData") is null) { _explicitNullValueAdditionalRowData = default!; _explicitNullProperties?.Remove("additionalRowData"); }
+            else if (parseNode.GetChildNode("additionalRowData") is { } nullNodeAdditionalRowData && nullNodeAdditionalRowData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdditionalRowData = null;
+            if (parseNode.GetChildNode("containsEncryptedProperties") is null) { _explicitNullValueContainsEncryptedProperties = default!; _explicitNullProperties?.Remove("containsEncryptedProperties"); }
+            else if (parseNode.GetChildNode("containsEncryptedProperties") is { } nullNodeContainsEncryptedProperties && nullNodeContainsEncryptedProperties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContainsEncryptedProperties = null;
+            if (parseNode.GetChildNode("fileId") is null) { _explicitNullValueFileId = default!; _explicitNullProperties?.Remove("fileId"); }
+            else if (parseNode.GetChildNode("fileId") is { } nullNodeFileId && nullNodeFileId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileId = null;
+            if (parseNode.GetChildNode("lineNumber") is null) { _explicitNullValueLineNumber = default!; _explicitNullProperties?.Remove("lineNumber"); }
+            else if (parseNode.GetChildNode("lineNumber") is { } nullNodeLineNumber && nullNodeLineNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LineNumber = null;
+            if (parseNode.GetChildNode("pageName") is null) { _explicitNullValuePageName = default!; _explicitNullProperties?.Remove("pageName"); }
+            else if (parseNode.GetChildNode("pageName") is { } nullNodePageName && nullNodePageName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PageName = null;
+            if (parseNode.GetChildNode("rowData") is null) { _explicitNullValueRowData = default!; _explicitNullProperties?.Remove("rowData"); }
+            else if (parseNode.GetChildNode("rowData") is { } nullNodeRowData && nullNodeRowData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RowData = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An array of strings containing any additional data associated with this row.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AdditionalRowData { get; set; }
+        public List<string>? AdditionalRowData { get => _explicitNullValueAdditionalRowData; set { _explicitNullValueAdditionalRowData = value; AdditionalData?.Remove("additionalRowData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additionalRowData"); else _explicitNullProperties?.Remove("additionalRowData"); } }
+        private List<string>? _explicitNullValueAdditionalRowData = default!;
 #nullable restore
 #else
-        public List<string> AdditionalRowData { get; set; }
+        public List<string> AdditionalRowData { get => _explicitNullValueAdditionalRowData; set { _explicitNullValueAdditionalRowData = value; AdditionalData?.Remove("additionalRowData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additionalRowData"); else _explicitNullProperties?.Remove("additionalRowData"); } }
+        private List<string> _explicitNullValueAdditionalRowData = default!;
 #endif
         /// <summary>Indicates whether this row contains values that were encrypted.</summary>
-        public bool? ContainsEncryptedProperties { get; set; }
+        public bool? ContainsEncryptedProperties { get => _explicitNullValueContainsEncryptedProperties; set { _explicitNullValueContainsEncryptedProperties = value; AdditionalData?.Remove("containsEncryptedProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("containsEncryptedProperties"); else _explicitNullProperties?.Remove("containsEncryptedProperties"); } }
+        private bool? _explicitNullValueContainsEncryptedProperties = default!;
         /// <summary>The unique identifier of the uploaded file containing this row.</summary>
-        public long? FileId { get; set; }
+        public long? FileId { get => _explicitNullValueFileId; set { _explicitNullValueFileId = value; AdditionalData?.Remove("fileId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fileId"); else _explicitNullProperties?.Remove("fileId"); } }
+        private long? _explicitNullValueFileId = default!;
         /// <summary>The 1-indexed line number of this row in the source file. Line number 0 is reserved for file-wide errors that don&apos;t correspond to a specific row.</summary>
-        public int? LineNumber { get; set; }
+        public int? LineNumber { get => _explicitNullValueLineNumber; set { _explicitNullValueLineNumber = value; AdditionalData?.Remove("lineNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lineNumber"); else _explicitNullProperties?.Remove("lineNumber"); } }
+        private int? _explicitNullValueLineNumber = default!;
         /// <summary>The name of the spreadsheet sheet/page containing this row.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PageName { get; set; }
+        public string? PageName { get => _explicitNullValuePageName; set { _explicitNullValuePageName = value; AdditionalData?.Remove("pageName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pageName"); else _explicitNullProperties?.Remove("pageName"); } }
+        private string? _explicitNullValuePageName = default!;
 #nullable restore
 #else
-        public string PageName { get; set; }
+        public string PageName { get => _explicitNullValuePageName; set { _explicitNullValuePageName = value; AdditionalData?.Remove("pageName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pageName"); else _explicitNullProperties?.Remove("pageName"); } }
+        private string _explicitNullValuePageName = default!;
 #endif
         /// <summary>An array of strings representing the core data of the row.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? RowData { get; set; }
+        public List<string>? RowData { get => _explicitNullValueRowData; set { _explicitNullValueRowData = value; AdditionalData?.Remove("rowData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rowData"); else _explicitNullProperties?.Remove("rowData"); } }
+        private List<string>? _explicitNullValueRowData = default!;
 #nullable restore
 #else
-        public List<string> RowData { get; set; }
+        public List<string> RowData { get => _explicitNullValueRowData; set { _explicitNullValueRowData = value; AdditionalData?.Remove("rowData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rowData"); else _explicitNullProperties?.Remove("rowData"); } }
+        private List<string> _explicitNullValueRowData = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ImportRowCore"/> and sets the default values.
@@ -59,7 +87,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.ImportRowCore CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.ImportRowCore();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.ImportRowCore(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -90,6 +118,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteIntValue("lineNumber", LineNumber);
             writer.WriteStringValue("pageName", PageName);
             writer.WriteCollectionOfPrimitiveValues<string>("rowData", RowData);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -12,24 +12,39 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CrmPublicMergeInput24 : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("objectIdToMerge") is null) { _explicitNullValueObjectIdToMerge = default!; _explicitNullProperties?.Remove("objectIdToMerge"); }
+            else if (parseNode.GetChildNode("objectIdToMerge") is { } nullNodeObjectIdToMerge && nullNodeObjectIdToMerge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectIdToMerge = null;
+            if (parseNode.GetChildNode("primaryObjectId") is null) { _explicitNullValuePrimaryObjectId = default!; _explicitNullProperties?.Remove("primaryObjectId"); }
+            else if (parseNode.GetChildNode("primaryObjectId") is { } nullNodePrimaryObjectId && nullNodePrimaryObjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimaryObjectId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The unique identifier of the object that will be merged into the primary object. It is a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ObjectIdToMerge { get; set; }
+        public string? ObjectIdToMerge { get => _explicitNullValueObjectIdToMerge; set { _explicitNullValueObjectIdToMerge = value; AdditionalData?.Remove("objectIdToMerge"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("objectIdToMerge"); else _explicitNullProperties?.Remove("objectIdToMerge"); } }
+        private string? _explicitNullValueObjectIdToMerge = default!;
 #nullable restore
 #else
-        public string ObjectIdToMerge { get; set; }
+        public string ObjectIdToMerge { get => _explicitNullValueObjectIdToMerge; set { _explicitNullValueObjectIdToMerge = value; AdditionalData?.Remove("objectIdToMerge"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("objectIdToMerge"); else _explicitNullProperties?.Remove("objectIdToMerge"); } }
+        private string _explicitNullValueObjectIdToMerge = default!;
 #endif
         /// <summary>The unique identifier of the primary object that will remain after the merge. It is a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrimaryObjectId { get; set; }
+        public string? PrimaryObjectId { get => _explicitNullValuePrimaryObjectId; set { _explicitNullValuePrimaryObjectId = value; AdditionalData?.Remove("primaryObjectId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primaryObjectId"); else _explicitNullProperties?.Remove("primaryObjectId"); } }
+        private string? _explicitNullValuePrimaryObjectId = default!;
 #nullable restore
 #else
-        public string PrimaryObjectId { get; set; }
+        public string PrimaryObjectId { get => _explicitNullValuePrimaryObjectId; set { _explicitNullValuePrimaryObjectId = value; AdditionalData?.Remove("primaryObjectId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primaryObjectId"); else _explicitNullProperties?.Remove("primaryObjectId"); } }
+        private string _explicitNullValuePrimaryObjectId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicMergeInput24"/> and sets the default values.
@@ -46,7 +61,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicMergeInput24 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicMergeInput24();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicMergeInput24(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +84,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("objectIdToMerge", ObjectIdToMerge);
             writer.WriteStringValue("primaryObjectId", PrimaryObjectId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

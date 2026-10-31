@@ -64,7 +64,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.TaskSeries.TwoZeroTwoSixZeroNine
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTaskSeriesResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicTaskSeriesResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTaskSeriesResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicTaskSeriesResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Create a new task series in the HubSpot CRM. This endpoint allows you to start a series of tasks by providing the necessary properties and series details. It is useful for automating repetitive task sequences within your CRM workflows.

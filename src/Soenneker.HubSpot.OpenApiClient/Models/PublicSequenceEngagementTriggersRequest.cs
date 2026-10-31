@@ -11,13 +11,26 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicSequenceEngagementTriggersRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("numberOfClicks") is null) { _explicitNullValueNumberOfClicks = default!; _explicitNullProperties?.Remove("numberOfClicks"); }
+            else if (parseNode.GetChildNode("numberOfClicks") is { } nullNodeNumberOfClicks && nullNodeNumberOfClicks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumberOfClicks = null;
+            if (parseNode.GetChildNode("numberOfOpens") is null) { _explicitNullValueNumberOfOpens = default!; _explicitNullProperties?.Remove("numberOfOpens"); }
+            else if (parseNode.GetChildNode("numberOfOpens") is { } nullNodeNumberOfOpens && nullNodeNumberOfOpens.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumberOfOpens = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An integer representing the number of times links within an email must be clicked to trigger an engagement action.</summary>
-        public int? NumberOfClicks { get; set; }
+        public int? NumberOfClicks { get => _explicitNullValueNumberOfClicks; set { _explicitNullValueNumberOfClicks = value; AdditionalData?.Remove("numberOfClicks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("numberOfClicks"); else _explicitNullProperties?.Remove("numberOfClicks"); } }
+        private int? _explicitNullValueNumberOfClicks = default!;
         /// <summary>An integer representing the number of times an email must be opened to trigger an engagement action.</summary>
-        public int? NumberOfOpens { get; set; }
+        public int? NumberOfOpens { get => _explicitNullValueNumberOfOpens; set { _explicitNullValueNumberOfOpens = value; AdditionalData?.Remove("numberOfOpens"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("numberOfOpens"); else _explicitNullProperties?.Remove("numberOfOpens"); } }
+        private int? _explicitNullValueNumberOfOpens = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceEngagementTriggersRequest"/> and sets the default values.
         /// </summary>
@@ -33,7 +46,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceEngagementTriggersRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceEngagementTriggersRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceEngagementTriggersRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -56,6 +69,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("numberOfClicks", NumberOfClicks);
             writer.WriteIntValue("numberOfOpens", NumberOfOpens);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

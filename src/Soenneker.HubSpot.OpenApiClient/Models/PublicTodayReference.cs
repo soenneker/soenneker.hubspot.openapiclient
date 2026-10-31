@@ -11,19 +11,41 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicTodayReference : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("hour") is null) { _explicitNullValueHour = default!; _explicitNullProperties?.Remove("hour"); }
+            else if (parseNode.GetChildNode("hour") is { } nullNodeHour && nullNodeHour.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Hour = null;
+            if (parseNode.GetChildNode("millisecond") is null) { _explicitNullValueMillisecond = default!; _explicitNullProperties?.Remove("millisecond"); }
+            else if (parseNode.GetChildNode("millisecond") is { } nullNodeMillisecond && nullNodeMillisecond.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Millisecond = null;
+            if (parseNode.GetChildNode("minute") is null) { _explicitNullValueMinute = default!; _explicitNullProperties?.Remove("minute"); }
+            else if (parseNode.GetChildNode("minute") is { } nullNodeMinute && nullNodeMinute.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Minute = null;
+            if (parseNode.GetChildNode("referenceType") is null) { _explicitNullValueReferenceType = default!; _explicitNullProperties?.Remove("referenceType"); }
+            else if (parseNode.GetChildNode("referenceType") is { } nullNodeReferenceType && nullNodeReferenceType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReferenceType = null;
+            if (parseNode.GetChildNode("second") is null) { _explicitNullValueSecond = default!; _explicitNullProperties?.Remove("second"); }
+            else if (parseNode.GetChildNode("second") is { } nullNodeSecond && nullNodeSecond.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Second = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An integer representing the hour of the day.</summary>
-        public int? Hour { get; set; }
+        public int? Hour { get => _explicitNullValueHour; set { _explicitNullValueHour = value; AdditionalData?.Remove("hour"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hour"); else _explicitNullProperties?.Remove("hour"); } }
+        private int? _explicitNullValueHour = default!;
         /// <summary>An integer representing the millisecond within the second.</summary>
-        public int? Millisecond { get; set; }
+        public int? Millisecond { get => _explicitNullValueMillisecond; set { _explicitNullValueMillisecond = value; AdditionalData?.Remove("millisecond"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("millisecond"); else _explicitNullProperties?.Remove("millisecond"); } }
+        private int? _explicitNullValueMillisecond = default!;
         /// <summary>An integer representing the minute within the hour.</summary>
-        public int? Minute { get; set; }
+        public int? Minute { get => _explicitNullValueMinute; set { _explicitNullValueMinute = value; AdditionalData?.Remove("minute"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minute"); else _explicitNullProperties?.Remove("minute"); } }
+        private int? _explicitNullValueMinute = default!;
         /// <summary>A string indicating the type of reference, which is &apos;TODAY&apos; by default.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.TodayReferenceType? ReferenceType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.TodayReferenceType? ReferenceType { get => _explicitNullValueReferenceType; set { _explicitNullValueReferenceType = value; AdditionalData?.Remove("referenceType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("referenceType"); else _explicitNullProperties?.Remove("referenceType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.TodayReferenceType? _explicitNullValueReferenceType = default!;
         /// <summary>An integer representing the second within the minute.</summary>
-        public int? Second { get; set; }
+        public int? Second { get => _explicitNullValueSecond; set { _explicitNullValueSecond = value; AdditionalData?.Remove("second"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("second"); else _explicitNullProperties?.Remove("second"); } }
+        private int? _explicitNullValueSecond = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicTodayReference"/> and sets the default values.
         /// </summary>
@@ -39,7 +61,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicTodayReference CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicTodayReference();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicTodayReference(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -52,7 +74,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "hour", n => { Hour = n.GetIntValue(); } },
                 { "millisecond", n => { Millisecond = n.GetIntValue(); } },
                 { "minute", n => { Minute = n.GetIntValue(); } },
-                { "referenceType", n => { ReferenceType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TodayReferenceType>(); } },
+                { "referenceType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TodayReferenceType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueReferenceType = default; _explicitNullProperties?.Remove("referenceType"); AdditionalData["referenceType"] = unknown; } else { ReferenceType = parsed; AdditionalData.Remove("referenceType"); } } },
                 { "second", n => { Second = n.GetIntValue(); } },
             };
         }
@@ -68,6 +90,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteIntValue("minute", Minute);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TodayReferenceType>("referenceType", ReferenceType);
             writer.WriteIntValue("second", Second);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -36,22 +36,22 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroNine.Invo
         /// <summary>
         /// Read a batch of CRM objects by their internal IDs or unique property values. This endpoint is useful for retrieving multiple objects in a single request, which can be more efficient than making individual requests for each object. The response includes the objects&apos; details, and you can specify whether to include archived objects.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponseSimplePublicObject18"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PostCrmObjects202609InvoicesBatchCreateCrmObjects202609BetaObjectTypeBatchCreateSuccessResponse"/></returns>
         /// <param name="body">Specifies the input for reading a batch of CRM objects, including arrays of object IDs, requested property names (with optional history), and an optional unique identifying property.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponseSimplePublicObject18?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchReadInputSimplePublicObjectId18 body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroNine.Invoices.Batch.Read.ReadRequestBuilder.ReadRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.PostCrmObjects202609InvoicesBatchCreateCrmObjects202609BetaObjectTypeBatchCreateSuccessResponse?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchReadInputSimplePublicObjectId18 body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroNine.Invoices.Batch.Read.ReadRequestBuilder.ReadRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponseSimplePublicObject18> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchReadInputSimplePublicObjectId18 body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroNine.Invoices.Batch.Read.ReadRequestBuilder.ReadRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.PostCrmObjects202609InvoicesBatchCreateCrmObjects202609BetaObjectTypeBatchCreateSuccessResponse> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchReadInputSimplePublicObjectId18 body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroNine.Invoices.Batch.Read.ReadRequestBuilder.ReadRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponseSimplePublicObject18>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CrmBatchResponseSimplePublicObject18.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PostCrmObjects202609InvoicesBatchCreateCrmObjects202609BetaObjectTypeBatchCreateSuccessResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PostCrmObjects202609InvoicesBatchCreateCrmObjects202609BetaObjectTypeBatchCreateSuccessResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Read a batch of CRM objects by their internal IDs or unique property values. This endpoint is useful for retrieving multiple objects in a single request, which can be more efficient than making individual requests for each object. The response includes the objects&apos; details, and you can specify whether to include archived objects.

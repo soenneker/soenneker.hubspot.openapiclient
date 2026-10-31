@@ -11,66 +11,104 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicChannelIntegrationChannel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("capabilities") is null) { _explicitNullValueCapabilities = default!; _explicitNullProperties?.Remove("capabilities"); }
+            else if (parseNode.GetChildNode("capabilities") is { } nullNodeCapabilities && nullNodeCapabilities.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Capabilities = null;
+            if (parseNode.GetChildNode("channelAccountConnectionRedirectUrl") is null) { _explicitNullValueChannelAccountConnectionRedirectUrl = default!; _explicitNullProperties?.Remove("channelAccountConnectionRedirectUrl"); }
+            else if (parseNode.GetChildNode("channelAccountConnectionRedirectUrl") is { } nullNodeChannelAccountConnectionRedirectUrl && nullNodeChannelAccountConnectionRedirectUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChannelAccountConnectionRedirectUrl = null;
+            if (parseNode.GetChildNode("channelDescription") is null) { _explicitNullValueChannelDescription = default!; _explicitNullProperties?.Remove("channelDescription"); }
+            else if (parseNode.GetChildNode("channelDescription") is { } nullNodeChannelDescription && nullNodeChannelDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChannelDescription = null;
+            if (parseNode.GetChildNode("channelLogoUrl") is null) { _explicitNullValueChannelLogoUrl = default!; _explicitNullProperties?.Remove("channelLogoUrl"); }
+            else if (parseNode.GetChildNode("channelLogoUrl") is { } nullNodeChannelLogoUrl && nullNodeChannelLogoUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChannelLogoUrl = null;
+            if (parseNode.GetChildNode("createdAt") is null) { _explicitNullValueCreatedAt = default!; _explicitNullProperties?.Remove("createdAt"); }
+            else if (parseNode.GetChildNode("createdAt") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("webhookUrl") is null) { _explicitNullValueWebhookUrl = default!; _explicitNullProperties?.Remove("webhookUrl"); }
+            else if (parseNode.GetChildNode("webhookUrl") is { } nullNodeWebhookUrl && nullNodeWebhookUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhookUrl = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An object detailing the capabilities of the channel, with additional properties as objects.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelCapabilitiesProperty2? Capabilities { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelCapabilitiesProperty2? Capabilities { get => _explicitNullValueCapabilities; set { _explicitNullValueCapabilities = value; AdditionalData?.Remove("capabilities"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("capabilities"); else _explicitNullProperties?.Remove("capabilities"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelCapabilitiesProperty2? _explicitNullValueCapabilities = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelCapabilitiesProperty2 Capabilities { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelCapabilitiesProperty2 Capabilities { get => _explicitNullValueCapabilities; set { _explicitNullValueCapabilities = value; AdditionalData?.Remove("capabilities"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("capabilities"); else _explicitNullProperties?.Remove("capabilities"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelCapabilitiesProperty2 _explicitNullValueCapabilities = default!;
 #endif
         /// <summary>A string representing the URL used to redirect for channel account connection.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ChannelAccountConnectionRedirectUrl { get; set; }
+        public string? ChannelAccountConnectionRedirectUrl { get => _explicitNullValueChannelAccountConnectionRedirectUrl; set { _explicitNullValueChannelAccountConnectionRedirectUrl = value; AdditionalData?.Remove("channelAccountConnectionRedirectUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channelAccountConnectionRedirectUrl"); else _explicitNullProperties?.Remove("channelAccountConnectionRedirectUrl"); } }
+        private string? _explicitNullValueChannelAccountConnectionRedirectUrl = default!;
 #nullable restore
 #else
-        public string ChannelAccountConnectionRedirectUrl { get; set; }
+        public string ChannelAccountConnectionRedirectUrl { get => _explicitNullValueChannelAccountConnectionRedirectUrl; set { _explicitNullValueChannelAccountConnectionRedirectUrl = value; AdditionalData?.Remove("channelAccountConnectionRedirectUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channelAccountConnectionRedirectUrl"); else _explicitNullProperties?.Remove("channelAccountConnectionRedirectUrl"); } }
+        private string _explicitNullValueChannelAccountConnectionRedirectUrl = default!;
 #endif
         /// <summary>A string providing a description of the channel.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ChannelDescription { get; set; }
+        public string? ChannelDescription { get => _explicitNullValueChannelDescription; set { _explicitNullValueChannelDescription = value; AdditionalData?.Remove("channelDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channelDescription"); else _explicitNullProperties?.Remove("channelDescription"); } }
+        private string? _explicitNullValueChannelDescription = default!;
 #nullable restore
 #else
-        public string ChannelDescription { get; set; }
+        public string ChannelDescription { get => _explicitNullValueChannelDescription; set { _explicitNullValueChannelDescription = value; AdditionalData?.Remove("channelDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channelDescription"); else _explicitNullProperties?.Remove("channelDescription"); } }
+        private string _explicitNullValueChannelDescription = default!;
 #endif
         /// <summary>A string representing the URL of the channel&apos;s logo.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ChannelLogoUrl { get; set; }
+        public string? ChannelLogoUrl { get => _explicitNullValueChannelLogoUrl; set { _explicitNullValueChannelLogoUrl = value; AdditionalData?.Remove("channelLogoUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channelLogoUrl"); else _explicitNullProperties?.Remove("channelLogoUrl"); } }
+        private string? _explicitNullValueChannelLogoUrl = default!;
 #nullable restore
 #else
-        public string ChannelLogoUrl { get; set; }
+        public string ChannelLogoUrl { get => _explicitNullValueChannelLogoUrl; set { _explicitNullValueChannelLogoUrl = value; AdditionalData?.Remove("channelLogoUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channelLogoUrl"); else _explicitNullProperties?.Remove("channelLogoUrl"); } }
+        private string _explicitNullValueChannelLogoUrl = default!;
 #endif
         /// <summary>The date and time when the channel was created, in ISO 8601 format.</summary>
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; AdditionalData?.Remove("createdAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createdAt"); else _explicitNullProperties?.Remove("createdAt"); } }
+        private DateTimeOffset? _explicitNullValueCreatedAt = default!;
         /// <summary>A string that uniquely identifies the channel.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>A string representing the name of the channel.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>A string representing the URL to which webhook events will be sent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WebhookUrl { get; set; }
+        public string? WebhookUrl { get => _explicitNullValueWebhookUrl; set { _explicitNullValueWebhookUrl = value; AdditionalData?.Remove("webhookUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webhookUrl"); else _explicitNullProperties?.Remove("webhookUrl"); } }
+        private string? _explicitNullValueWebhookUrl = default!;
 #nullable restore
 #else
-        public string WebhookUrl { get; set; }
+        public string WebhookUrl { get => _explicitNullValueWebhookUrl; set { _explicitNullValueWebhookUrl = value; AdditionalData?.Remove("webhookUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webhookUrl"); else _explicitNullProperties?.Remove("webhookUrl"); } }
+        private string _explicitNullValueWebhookUrl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannel"/> and sets the default values.
@@ -87,7 +125,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannel CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannel();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannel(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -122,6 +160,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("webhookUrl", WebhookUrl);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

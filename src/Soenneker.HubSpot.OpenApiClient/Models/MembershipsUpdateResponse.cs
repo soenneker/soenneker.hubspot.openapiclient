@@ -11,32 +11,51 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class MembershipsUpdateResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("recordIdsMissing") is null) { _explicitNullValueRecordIdsMissing = default!; _explicitNullProperties?.Remove("recordIdsMissing"); }
+            else if (parseNode.GetChildNode("recordIdsMissing") is { } nullNodeRecordIdsMissing && nullNodeRecordIdsMissing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecordIdsMissing = null;
+            if (parseNode.GetChildNode("recordIdsRemoved") is null) { _explicitNullValueRecordIdsRemoved = default!; _explicitNullProperties?.Remove("recordIdsRemoved"); }
+            else if (parseNode.GetChildNode("recordIdsRemoved") is { } nullNodeRecordIdsRemoved && nullNodeRecordIdsRemoved.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecordIdsRemoved = null;
+            if (parseNode.GetChildNode("recordsIdsAdded") is null) { _explicitNullValueRecordsIdsAdded = default!; _explicitNullProperties?.Remove("recordsIdsAdded"); }
+            else if (parseNode.GetChildNode("recordsIdsAdded") is { } nullNodeRecordsIdsAdded && nullNodeRecordsIdsAdded.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecordsIdsAdded = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An array of strings representing the IDs of records that were not found or could not be processed during the update.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? RecordIdsMissing { get; set; }
+        public List<string>? RecordIdsMissing { get => _explicitNullValueRecordIdsMissing; set { _explicitNullValueRecordIdsMissing = value; AdditionalData?.Remove("recordIdsMissing"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recordIdsMissing"); else _explicitNullProperties?.Remove("recordIdsMissing"); } }
+        private List<string>? _explicitNullValueRecordIdsMissing = default!;
 #nullable restore
 #else
-        public List<string> RecordIdsMissing { get; set; }
+        public List<string> RecordIdsMissing { get => _explicitNullValueRecordIdsMissing; set { _explicitNullValueRecordIdsMissing = value; AdditionalData?.Remove("recordIdsMissing"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recordIdsMissing"); else _explicitNullProperties?.Remove("recordIdsMissing"); } }
+        private List<string> _explicitNullValueRecordIdsMissing = default!;
 #endif
         /// <summary>An array of strings representing the IDs of records that were successfully removed from the list.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? RecordIdsRemoved { get; set; }
+        public List<string>? RecordIdsRemoved { get => _explicitNullValueRecordIdsRemoved; set { _explicitNullValueRecordIdsRemoved = value; AdditionalData?.Remove("recordIdsRemoved"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recordIdsRemoved"); else _explicitNullProperties?.Remove("recordIdsRemoved"); } }
+        private List<string>? _explicitNullValueRecordIdsRemoved = default!;
 #nullable restore
 #else
-        public List<string> RecordIdsRemoved { get; set; }
+        public List<string> RecordIdsRemoved { get => _explicitNullValueRecordIdsRemoved; set { _explicitNullValueRecordIdsRemoved = value; AdditionalData?.Remove("recordIdsRemoved"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recordIdsRemoved"); else _explicitNullProperties?.Remove("recordIdsRemoved"); } }
+        private List<string> _explicitNullValueRecordIdsRemoved = default!;
 #endif
         /// <summary>An array of strings representing the IDs of records that were successfully added to the list.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? RecordsIdsAdded { get; set; }
+        public List<string>? RecordsIdsAdded { get => _explicitNullValueRecordsIdsAdded; set { _explicitNullValueRecordsIdsAdded = value; AdditionalData?.Remove("recordsIdsAdded"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recordsIdsAdded"); else _explicitNullProperties?.Remove("recordsIdsAdded"); } }
+        private List<string>? _explicitNullValueRecordsIdsAdded = default!;
 #nullable restore
 #else
-        public List<string> RecordsIdsAdded { get; set; }
+        public List<string> RecordsIdsAdded { get => _explicitNullValueRecordsIdsAdded; set { _explicitNullValueRecordsIdsAdded = value; AdditionalData?.Remove("recordsIdsAdded"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recordsIdsAdded"); else _explicitNullProperties?.Remove("recordsIdsAdded"); } }
+        private List<string> _explicitNullValueRecordsIdsAdded = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.MembershipsUpdateResponse"/> and sets the default values.
@@ -53,7 +72,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.MembershipsUpdateResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.MembershipsUpdateResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.MembershipsUpdateResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +97,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("recordIdsMissing", RecordIdsMissing);
             writer.WriteCollectionOfPrimitiveValues<string>("recordIdsRemoved", RecordIdsRemoved);
             writer.WriteCollectionOfPrimitiveValues<string>("recordsIdsAdded", RecordsIdsAdded);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

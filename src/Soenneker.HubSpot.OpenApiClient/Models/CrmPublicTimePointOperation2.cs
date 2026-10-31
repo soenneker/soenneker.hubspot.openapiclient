@@ -11,52 +11,85 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CrmPublicTimePointOperation2 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("endpointBehavior") is null) { _explicitNullValueEndpointBehavior = default!; _explicitNullProperties?.Remove("endpointBehavior"); }
+            else if (parseNode.GetChildNode("endpointBehavior") is { } nullNodeEndpointBehavior && nullNodeEndpointBehavior.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndpointBehavior = null;
+            if (parseNode.GetChildNode("includeObjectsWithNoValueSet") is null) { _explicitNullValueIncludeObjectsWithNoValueSet = default!; _explicitNullProperties?.Remove("includeObjectsWithNoValueSet"); }
+            else if (parseNode.GetChildNode("includeObjectsWithNoValueSet") is { } nullNodeIncludeObjectsWithNoValueSet && nullNodeIncludeObjectsWithNoValueSet.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncludeObjectsWithNoValueSet = null;
+            if (parseNode.GetChildNode("operationType") is null) { _explicitNullValueOperationType = default!; _explicitNullProperties?.Remove("operationType"); }
+            else if (parseNode.GetChildNode("operationType") is { } nullNodeOperationType && nullNodeOperationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OperationType = null;
+            if (parseNode.GetChildNode("operator") is null) { _explicitNullValueOperator = default!; _explicitNullProperties?.Remove("operator"); }
+            else if (parseNode.GetChildNode("operator") is { } nullNodeOperator && nullNodeOperator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Operator = null;
+            if (parseNode.GetChildNode("propertyParser") is null) { _explicitNullValuePropertyParser = default!; _explicitNullProperties?.Remove("propertyParser"); }
+            else if (parseNode.GetChildNode("propertyParser") is { } nullNodePropertyParser && nullNodePropertyParser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PropertyParser = null;
+            if (parseNode.GetChildNode("timePoint") is null) { _explicitNullValueTimePoint = default!; _explicitNullProperties?.Remove("timePoint"); }
+            else if (parseNode.GetChildNode("timePoint") is { } nullNodeTimePoint && nullNodeTimePoint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimePoint = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A string describing the behavior of the endpoint in the context of the time point operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EndpointBehavior { get; set; }
+        public string? EndpointBehavior { get => _explicitNullValueEndpointBehavior; set { _explicitNullValueEndpointBehavior = value; AdditionalData?.Remove("endpointBehavior"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endpointBehavior"); else _explicitNullProperties?.Remove("endpointBehavior"); } }
+        private string? _explicitNullValueEndpointBehavior = default!;
 #nullable restore
 #else
-        public string EndpointBehavior { get; set; }
+        public string EndpointBehavior { get => _explicitNullValueEndpointBehavior; set { _explicitNullValueEndpointBehavior = value; AdditionalData?.Remove("endpointBehavior"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endpointBehavior"); else _explicitNullProperties?.Remove("endpointBehavior"); } }
+        private string _explicitNullValueEndpointBehavior = default!;
 #endif
         /// <summary>A boolean indicating whether to include objects with no value set in the operation.</summary>
-        public bool? IncludeObjectsWithNoValueSet { get; set; }
+        public bool? IncludeObjectsWithNoValueSet { get => _explicitNullValueIncludeObjectsWithNoValueSet; set { _explicitNullValueIncludeObjectsWithNoValueSet = value; AdditionalData?.Remove("includeObjectsWithNoValueSet"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("includeObjectsWithNoValueSet"); else _explicitNullProperties?.Remove("includeObjectsWithNoValueSet"); } }
+        private bool? _explicitNullValueIncludeObjectsWithNoValueSet = default!;
         /// <summary>A string indicating the type of operation, defaulting to &apos;TIME_POINT&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmTimePointOperationType2? OperationType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmTimePointOperationType2? OperationType { get => _explicitNullValueOperationType; set { _explicitNullValueOperationType = value; AdditionalData?.Remove("operationType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operationType"); else _explicitNullProperties?.Remove("operationType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmTimePointOperationType2? _explicitNullValueOperationType = default!;
         /// <summary>A string representing the operator used in the time point operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Operator { get; set; }
+        public string? Operator { get => _explicitNullValueOperator; set { _explicitNullValueOperator = value; AdditionalData?.Remove("operator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator"); else _explicitNullProperties?.Remove("operator"); } }
+        private string? _explicitNullValueOperator = default!;
 #nullable restore
 #else
-        public string Operator { get; set; }
+        public string Operator { get => _explicitNullValueOperator; set { _explicitNullValueOperator = value; AdditionalData?.Remove("operator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator"); else _explicitNullProperties?.Remove("operator"); } }
+        private string _explicitNullValueOperator = default!;
 #endif
         /// <summary>A string specifying the parser used for the property in the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PropertyParser { get; set; }
+        public string? PropertyParser { get => _explicitNullValuePropertyParser; set { _explicitNullValuePropertyParser = value; AdditionalData?.Remove("propertyParser"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("propertyParser"); else _explicitNullProperties?.Remove("propertyParser"); } }
+        private string? _explicitNullValuePropertyParser = default!;
 #nullable restore
 #else
-        public string PropertyParser { get; set; }
+        public string PropertyParser { get => _explicitNullValuePropertyParser; set { _explicitNullValuePropertyParser = value; AdditionalData?.Remove("propertyParser"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("propertyParser"); else _explicitNullProperties?.Remove("propertyParser"); } }
+        private string _explicitNullValuePropertyParser = default!;
 #endif
         /// <summary>Defines the specific time point for the operation. It can be one of several types, including PublicDatePoint, PublicIndexedTimePoint, or PublicPropertyReferencedTime.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimePointOperationTimePoint2? TimePoint { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimePointOperationTimePoint2? TimePoint { get => _explicitNullValueTimePoint; set { _explicitNullValueTimePoint = value; AdditionalData?.Remove("timePoint"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timePoint"); else _explicitNullProperties?.Remove("timePoint"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimePointOperationTimePoint2? _explicitNullValueTimePoint = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimePointOperationTimePoint2 TimePoint { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimePointOperationTimePoint2 TimePoint { get => _explicitNullValueTimePoint; set { _explicitNullValueTimePoint = value; AdditionalData?.Remove("timePoint"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timePoint"); else _explicitNullProperties?.Remove("timePoint"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimePointOperationTimePoint2 _explicitNullValueTimePoint = default!;
 #endif
         /// <summary>A string representing the type of the time point operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Type { get; set; }
+        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private string? _explicitNullValueType = default!;
 #nullable restore
 #else
-        public string Type { get; set; }
+        public string Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private string _explicitNullValueType = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimePointOperation2"/> and sets the default values.
@@ -73,7 +106,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimePointOperation2 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimePointOperation2();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimePointOperation2(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -85,7 +118,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "endpointBehavior", n => { EndpointBehavior = n.GetStringValue(); } },
                 { "includeObjectsWithNoValueSet", n => { IncludeObjectsWithNoValueSet = n.GetBoolValue(); } },
-                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmTimePointOperationType2>(); } },
+                { "operationType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmTimePointOperationType2>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueOperationType = default; _explicitNullProperties?.Remove("operationType"); AdditionalData["operationType"] = unknown; } else { OperationType = parsed; AdditionalData.Remove("operationType"); } } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
                 { "propertyParser", n => { PropertyParser = n.GetStringValue(); } },
                 { "timePoint", n => { TimePoint = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimePointOperationTimePoint2>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimePointOperationTimePoint2.CreateFromDiscriminatorValue); } },
@@ -106,6 +139,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("propertyParser", PropertyParser);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimePointOperationTimePoint2>("timePoint", TimePoint);
             writer.WriteStringValue("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

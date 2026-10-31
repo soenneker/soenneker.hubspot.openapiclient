@@ -11,19 +11,33 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ConversationsPublicMessageStatus : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("failureDetails") is null) { _explicitNullValueFailureDetails = default!; _explicitNullProperties?.Remove("failureDetails"); }
+            else if (parseNode.GetChildNode("failureDetails") is { } nullNodeFailureDetails && nullNodeFailureDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailureDetails = null;
+            if (parseNode.GetChildNode("statusType") is null) { _explicitNullValueStatusType = default!; _explicitNullProperties?.Remove("statusType"); }
+            else if (parseNode.GetChildNode("statusType") is { } nullNodeStatusType && nullNodeStatusType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusType = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The failureDetails property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicMessageFailureDetails? FailureDetails { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicMessageFailureDetails? FailureDetails { get => _explicitNullValueFailureDetails; set { _explicitNullValueFailureDetails = value; AdditionalData?.Remove("failureDetails"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failureDetails"); else _explicitNullProperties?.Remove("failureDetails"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicMessageFailureDetails? _explicitNullValueFailureDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicMessageFailureDetails FailureDetails { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicMessageFailureDetails FailureDetails { get => _explicitNullValueFailureDetails; set { _explicitNullValueFailureDetails = value; AdditionalData?.Remove("failureDetails"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failureDetails"); else _explicitNullProperties?.Remove("failureDetails"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicMessageFailureDetails _explicitNullValueFailureDetails = default!;
 #endif
         /// <summary>The current status of the message. Valid values include &apos;SENT&apos;, &apos;FAILED&apos;, &apos;RECEIVED&apos;, and &apos;READ&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicMessageStatusStatusType? StatusType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicMessageStatusStatusType? StatusType { get => _explicitNullValueStatusType; set { _explicitNullValueStatusType = value; AdditionalData?.Remove("statusType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusType"); else _explicitNullProperties?.Remove("statusType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicMessageStatusStatusType? _explicitNullValueStatusType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicMessageStatus"/> and sets the default values.
         /// </summary>
@@ -39,7 +53,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicMessageStatus CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicMessageStatus();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicMessageStatus(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -50,7 +64,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "failureDetails", n => { FailureDetails = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicMessageFailureDetails>(global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicMessageFailureDetails.CreateFromDiscriminatorValue); } },
-                { "statusType", n => { StatusType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicMessageStatusStatusType>(); } },
+                { "statusType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicMessageStatusStatusType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatusType = default; _explicitNullProperties?.Remove("statusType"); AdditionalData["statusType"] = unknown; } else { StatusType = parsed; AdditionalData.Remove("statusType"); } } },
             };
         }
         /// <summary>
@@ -62,6 +76,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicMessageFailureDetails>("failureDetails", FailureDetails);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicMessageStatusStatusType>("statusType", StatusType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

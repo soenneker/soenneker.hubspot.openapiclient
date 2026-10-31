@@ -11,18 +11,32 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TranscriptCreateRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("engagementId") is null) { _explicitNullValueEngagementId = default!; _explicitNullProperties?.Remove("engagementId"); }
+            else if (parseNode.GetChildNode("engagementId") is { } nullNodeEngagementId && nullNodeEngagementId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EngagementId = null;
+            if (parseNode.GetChildNode("transcriptCreateUtterances") is null) { _explicitNullValueTranscriptCreateUtterances = default!; _explicitNullProperties?.Remove("transcriptCreateUtterances"); }
+            else if (parseNode.GetChildNode("transcriptCreateUtterances") is { } nullNodeTranscriptCreateUtterances && nullNodeTranscriptCreateUtterances.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TranscriptCreateUtterances = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The unique identifier for the engagement associated with this transcript. It is an integer in int64 format.</summary>
-        public long? EngagementId { get; set; }
+        public long? EngagementId { get => _explicitNullValueEngagementId; set { _explicitNullValueEngagementId = value; AdditionalData?.Remove("engagementId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("engagementId"); else _explicitNullProperties?.Remove("engagementId"); } }
+        private long? _explicitNullValueEngagementId = default!;
         /// <summary>An array of utterances that make up the transcript. Each utterance is represented by a TranscriptCreateUtterance object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.TranscriptCreateUtterance>? TranscriptCreateUtterances { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.TranscriptCreateUtterance>? TranscriptCreateUtterances { get => _explicitNullValueTranscriptCreateUtterances; set { _explicitNullValueTranscriptCreateUtterances = value; AdditionalData?.Remove("transcriptCreateUtterances"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transcriptCreateUtterances"); else _explicitNullProperties?.Remove("transcriptCreateUtterances"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.TranscriptCreateUtterance>? _explicitNullValueTranscriptCreateUtterances = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.TranscriptCreateUtterance> TranscriptCreateUtterances { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.TranscriptCreateUtterance> TranscriptCreateUtterances { get => _explicitNullValueTranscriptCreateUtterances; set { _explicitNullValueTranscriptCreateUtterances = value; AdditionalData?.Remove("transcriptCreateUtterances"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transcriptCreateUtterances"); else _explicitNullProperties?.Remove("transcriptCreateUtterances"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.TranscriptCreateUtterance> _explicitNullValueTranscriptCreateUtterances = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.TranscriptCreateRequest"/> and sets the default values.
@@ -39,7 +53,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.TranscriptCreateRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.TranscriptCreateRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.TranscriptCreateRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -62,6 +76,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteLongValue("engagementId", EngagementId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.TranscriptCreateUtterance>("transcriptCreateUtterances", TranscriptCreateUtterances);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -48,7 +48,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Commerce.PaymentLinks.TwoZeroTwoSixZer
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
-            await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
+            await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve details of a specific payment link using its unique identifier. This endpoint allows you to access information about the payment link, including its status and configuration. It is useful for checking the current settings or status of a payment link in your HubSpot account.
@@ -66,7 +66,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Commerce.PaymentLinks.TwoZeroTwoSixZer
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Update a payment link by ID.
@@ -86,7 +86,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Commerce.PaymentLinks.TwoZeroTwoSixZer
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPatchRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PaymentLinkResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Delete a specific payment link in your HubSpot account. This operation is irreversible and will remove the payment link identified by the provided ID. Use this endpoint to manage and clean up payment links that are no longer needed.

@@ -11,98 +11,168 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ForecastTypeSettingPublicResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("amountInHomeCurrencyProperty") is null) { _explicitNullValueAmountInHomeCurrencyProperty = default!; _explicitNullProperties?.Remove("amountInHomeCurrencyProperty"); }
+            else if (parseNode.GetChildNode("amountInHomeCurrencyProperty") is { } nullNodeAmountInHomeCurrencyProperty && nullNodeAmountInHomeCurrencyProperty.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountInHomeCurrencyProperty = null;
+            if (parseNode.GetChildNode("amountOrDatePropertyRestrictedForUser") is null) { _explicitNullValueAmountOrDatePropertyRestrictedForUser = default!; _explicitNullProperties?.Remove("amountOrDatePropertyRestrictedForUser"); }
+            else if (parseNode.GetChildNode("amountOrDatePropertyRestrictedForUser") is { } nullNodeAmountOrDatePropertyRestrictedForUser && nullNodeAmountOrDatePropertyRestrictedForUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountOrDatePropertyRestrictedForUser = null;
+            if (parseNode.GetChildNode("amountProperty") is null) { _explicitNullValueAmountProperty = default!; _explicitNullProperties?.Remove("amountProperty"); }
+            else if (parseNode.GetChildNode("amountProperty") is { } nullNodeAmountProperty && nullNodeAmountProperty.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountProperty = null;
+            if (parseNode.GetChildNode("createdAt") is null) { _explicitNullValueCreatedAt = default!; _explicitNullProperties?.Remove("createdAt"); }
+            else if (parseNode.GetChildNode("createdAt") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("createdAtTimestamp") is null) { _explicitNullValueCreatedAtTimestamp = default!; _explicitNullProperties?.Remove("createdAtTimestamp"); }
+            else if (parseNode.GetChildNode("createdAtTimestamp") is { } nullNodeCreatedAtTimestamp && nullNodeCreatedAtTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAtTimestamp = null;
+            if (parseNode.GetChildNode("createdBy") is null) { _explicitNullValueCreatedBy = default!; _explicitNullProperties?.Remove("createdBy"); }
+            else if (parseNode.GetChildNode("createdBy") is { } nullNodeCreatedBy && nullNodeCreatedBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedBy = null;
+            if (parseNode.GetChildNode("dateProperty") is null) { _explicitNullValueDateProperty = default!; _explicitNullProperties?.Remove("dateProperty"); }
+            else if (parseNode.GetChildNode("dateProperty") is { } nullNodeDateProperty && nullNodeDateProperty.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateProperty = null;
+            if (parseNode.GetChildNode("dealSplitProperties") is null) { _explicitNullValueDealSplitProperties = default!; _explicitNullProperties?.Remove("dealSplitProperties"); }
+            else if (parseNode.GetChildNode("dealSplitProperties") is { } nullNodeDealSplitProperties && nullNodeDealSplitProperties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DealSplitProperties = null;
+            if (parseNode.GetChildNode("defaultType") is null) { _explicitNullValueDefaultType = default!; _explicitNullProperties?.Remove("defaultType"); }
+            else if (parseNode.GetChildNode("defaultType") is { } nullNodeDefaultType && nullNodeDefaultType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultType = null;
+            if (parseNode.GetChildNode("forecastName") is null) { _explicitNullValueForecastName = default!; _explicitNullProperties?.Remove("forecastName"); }
+            else if (parseNode.GetChildNode("forecastName") is { } nullNodeForecastName && nullNodeForecastName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ForecastName = null;
+            if (parseNode.GetChildNode("forecastTypeId") is null) { _explicitNullValueForecastTypeId = default!; _explicitNullProperties?.Remove("forecastTypeId"); }
+            else if (parseNode.GetChildNode("forecastTypeId") is { } nullNodeForecastTypeId && nullNodeForecastTypeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ForecastTypeId = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("objectTypeId") is null) { _explicitNullValueObjectTypeId = default!; _explicitNullProperties?.Remove("objectTypeId"); }
+            else if (parseNode.GetChildNode("objectTypeId") is { } nullNodeObjectTypeId && nullNodeObjectTypeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectTypeId = null;
+            if (parseNode.GetChildNode("updatedAt") is null) { _explicitNullValueUpdatedAt = default!; _explicitNullProperties?.Remove("updatedAt"); }
+            else if (parseNode.GetChildNode("updatedAt") is { } nullNodeUpdatedAt && nullNodeUpdatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdatedAt = null;
+            if (parseNode.GetChildNode("updatedBy") is null) { _explicitNullValueUpdatedBy = default!; _explicitNullProperties?.Remove("updatedBy"); }
+            else if (parseNode.GetChildNode("updatedBy") is { } nullNodeUpdatedBy && nullNodeUpdatedBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdatedBy = null;
+            if (parseNode.GetChildNode("updatedTimestamp") is null) { _explicitNullValueUpdatedTimestamp = default!; _explicitNullProperties?.Remove("updatedTimestamp"); }
+            else if (parseNode.GetChildNode("updatedTimestamp") is { } nullNodeUpdatedTimestamp && nullNodeUpdatedTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdatedTimestamp = null;
+            if (parseNode.GetChildNode("weightedAmountInHomeCurrencyProperty") is null) { _explicitNullValueWeightedAmountInHomeCurrencyProperty = default!; _explicitNullProperties?.Remove("weightedAmountInHomeCurrencyProperty"); }
+            else if (parseNode.GetChildNode("weightedAmountInHomeCurrencyProperty") is { } nullNodeWeightedAmountInHomeCurrencyProperty && nullNodeWeightedAmountInHomeCurrencyProperty.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WeightedAmountInHomeCurrencyProperty = null;
+            if (parseNode.GetChildNode("weightedAmountProperty") is null) { _explicitNullValueWeightedAmountProperty = default!; _explicitNullProperties?.Remove("weightedAmountProperty"); }
+            else if (parseNode.GetChildNode("weightedAmountProperty") is { } nullNodeWeightedAmountProperty && nullNodeWeightedAmountProperty.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WeightedAmountProperty = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A string representing the property for the amount in the home currency.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AmountInHomeCurrencyProperty { get; set; }
+        public string? AmountInHomeCurrencyProperty { get => _explicitNullValueAmountInHomeCurrencyProperty; set { _explicitNullValueAmountInHomeCurrencyProperty = value; AdditionalData?.Remove("amountInHomeCurrencyProperty"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amountInHomeCurrencyProperty"); else _explicitNullProperties?.Remove("amountInHomeCurrencyProperty"); } }
+        private string? _explicitNullValueAmountInHomeCurrencyProperty = default!;
 #nullable restore
 #else
-        public string AmountInHomeCurrencyProperty { get; set; }
+        public string AmountInHomeCurrencyProperty { get => _explicitNullValueAmountInHomeCurrencyProperty; set { _explicitNullValueAmountInHomeCurrencyProperty = value; AdditionalData?.Remove("amountInHomeCurrencyProperty"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amountInHomeCurrencyProperty"); else _explicitNullProperties?.Remove("amountInHomeCurrencyProperty"); } }
+        private string _explicitNullValueAmountInHomeCurrencyProperty = default!;
 #endif
         /// <summary>A boolean indicating whether the amount or date property is restricted for the user.</summary>
-        public bool? AmountOrDatePropertyRestrictedForUser { get; set; }
+        public bool? AmountOrDatePropertyRestrictedForUser { get => _explicitNullValueAmountOrDatePropertyRestrictedForUser; set { _explicitNullValueAmountOrDatePropertyRestrictedForUser = value; AdditionalData?.Remove("amountOrDatePropertyRestrictedForUser"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amountOrDatePropertyRestrictedForUser"); else _explicitNullProperties?.Remove("amountOrDatePropertyRestrictedForUser"); } }
+        private bool? _explicitNullValueAmountOrDatePropertyRestrictedForUser = default!;
         /// <summary>The property used to represent the amount in the forecast, specified as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AmountProperty { get; set; }
+        public string? AmountProperty { get => _explicitNullValueAmountProperty; set { _explicitNullValueAmountProperty = value; AdditionalData?.Remove("amountProperty"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amountProperty"); else _explicitNullProperties?.Remove("amountProperty"); } }
+        private string? _explicitNullValueAmountProperty = default!;
 #nullable restore
 #else
-        public string AmountProperty { get; set; }
+        public string AmountProperty { get => _explicitNullValueAmountProperty; set { _explicitNullValueAmountProperty = value; AdditionalData?.Remove("amountProperty"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amountProperty"); else _explicitNullProperties?.Remove("amountProperty"); } }
+        private string _explicitNullValueAmountProperty = default!;
 #endif
         /// <summary>The date and time when the forecast type was created, in ISO 8601 format.</summary>
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; AdditionalData?.Remove("createdAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createdAt"); else _explicitNullProperties?.Remove("createdAt"); } }
+        private DateTimeOffset? _explicitNullValueCreatedAt = default!;
         /// <summary>An integer representing the timestamp of creation, in milliseconds since the Unix epoch.</summary>
-        public long? CreatedAtTimestamp { get; set; }
+        public long? CreatedAtTimestamp { get => _explicitNullValueCreatedAtTimestamp; set { _explicitNullValueCreatedAtTimestamp = value; AdditionalData?.Remove("createdAtTimestamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createdAtTimestamp"); else _explicitNullProperties?.Remove("createdAtTimestamp"); } }
+        private long? _explicitNullValueCreatedAtTimestamp = default!;
         /// <summary>An integer representing the ID of the user who created the forecast type.</summary>
-        public int? CreatedBy { get; set; }
+        public int? CreatedBy { get => _explicitNullValueCreatedBy; set { _explicitNullValueCreatedBy = value; AdditionalData?.Remove("createdBy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createdBy"); else _explicitNullProperties?.Remove("createdBy"); } }
+        private int? _explicitNullValueCreatedBy = default!;
         /// <summary>The property used to represent the date in the forecast, specified as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DateProperty { get; set; }
+        public string? DateProperty { get => _explicitNullValueDateProperty; set { _explicitNullValueDateProperty = value; AdditionalData?.Remove("dateProperty"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dateProperty"); else _explicitNullProperties?.Remove("dateProperty"); } }
+        private string? _explicitNullValueDateProperty = default!;
 #nullable restore
 #else
-        public string DateProperty { get; set; }
+        public string DateProperty { get => _explicitNullValueDateProperty; set { _explicitNullValueDateProperty = value; AdditionalData?.Remove("dateProperty"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dateProperty"); else _explicitNullProperties?.Remove("dateProperty"); } }
+        private string _explicitNullValueDateProperty = default!;
 #endif
         /// <summary>The dealSplitProperties property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ForecastTypeDealSplitProperties? DealSplitProperties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ForecastTypeDealSplitProperties? DealSplitProperties { get => _explicitNullValueDealSplitProperties; set { _explicitNullValueDealSplitProperties = value; AdditionalData?.Remove("dealSplitProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dealSplitProperties"); else _explicitNullProperties?.Remove("dealSplitProperties"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ForecastTypeDealSplitProperties? _explicitNullValueDealSplitProperties = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ForecastTypeDealSplitProperties DealSplitProperties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ForecastTypeDealSplitProperties DealSplitProperties { get => _explicitNullValueDealSplitProperties; set { _explicitNullValueDealSplitProperties = value; AdditionalData?.Remove("dealSplitProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dealSplitProperties"); else _explicitNullProperties?.Remove("dealSplitProperties"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ForecastTypeDealSplitProperties _explicitNullValueDealSplitProperties = default!;
 #endif
         /// <summary>A boolean indicating whether this forecast type is the default.</summary>
-        public bool? DefaultType { get; set; }
+        public bool? DefaultType { get => _explicitNullValueDefaultType; set { _explicitNullValueDefaultType = value; AdditionalData?.Remove("defaultType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultType"); else _explicitNullProperties?.Remove("defaultType"); } }
+        private bool? _explicitNullValueDefaultType = default!;
         /// <summary>The name of the forecast type, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ForecastName { get; set; }
+        public string? ForecastName { get => _explicitNullValueForecastName; set { _explicitNullValueForecastName = value; AdditionalData?.Remove("forecastName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forecastName"); else _explicitNullProperties?.Remove("forecastName"); } }
+        private string? _explicitNullValueForecastName = default!;
 #nullable restore
 #else
-        public string ForecastName { get; set; }
+        public string ForecastName { get => _explicitNullValueForecastName; set { _explicitNullValueForecastName = value; AdditionalData?.Remove("forecastName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forecastName"); else _explicitNullProperties?.Remove("forecastName"); } }
+        private string _explicitNullValueForecastName = default!;
 #endif
         /// <summary>An integer identifier for the forecast type.</summary>
-        public long? ForecastTypeId { get; set; }
+        public long? ForecastTypeId { get => _explicitNullValueForecastTypeId; set { _explicitNullValueForecastTypeId = value; AdditionalData?.Remove("forecastTypeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forecastTypeId"); else _explicitNullProperties?.Remove("forecastTypeId"); } }
+        private long? _explicitNullValueForecastTypeId = default!;
         /// <summary>A string identifier for the forecast type setting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>A string identifier for the object type associated with the forecast.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ObjectTypeId { get; set; }
+        public string? ObjectTypeId { get => _explicitNullValueObjectTypeId; set { _explicitNullValueObjectTypeId = value; AdditionalData?.Remove("objectTypeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("objectTypeId"); else _explicitNullProperties?.Remove("objectTypeId"); } }
+        private string? _explicitNullValueObjectTypeId = default!;
 #nullable restore
 #else
-        public string ObjectTypeId { get; set; }
+        public string ObjectTypeId { get => _explicitNullValueObjectTypeId; set { _explicitNullValueObjectTypeId = value; AdditionalData?.Remove("objectTypeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("objectTypeId"); else _explicitNullProperties?.Remove("objectTypeId"); } }
+        private string _explicitNullValueObjectTypeId = default!;
 #endif
         /// <summary>The date and time when the forecast type was last updated, in ISO 8601 format.</summary>
-        public DateTimeOffset? UpdatedAt { get; set; }
+        public DateTimeOffset? UpdatedAt { get => _explicitNullValueUpdatedAt; set { _explicitNullValueUpdatedAt = value; AdditionalData?.Remove("updatedAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updatedAt"); else _explicitNullProperties?.Remove("updatedAt"); } }
+        private DateTimeOffset? _explicitNullValueUpdatedAt = default!;
         /// <summary>An integer representing the ID of the user who last updated the forecast type.</summary>
-        public int? UpdatedBy { get; set; }
+        public int? UpdatedBy { get => _explicitNullValueUpdatedBy; set { _explicitNullValueUpdatedBy = value; AdditionalData?.Remove("updatedBy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updatedBy"); else _explicitNullProperties?.Remove("updatedBy"); } }
+        private int? _explicitNullValueUpdatedBy = default!;
         /// <summary>An integer representing the timestamp of the last update, in milliseconds since the Unix epoch.</summary>
-        public long? UpdatedTimestamp { get; set; }
+        public long? UpdatedTimestamp { get => _explicitNullValueUpdatedTimestamp; set { _explicitNullValueUpdatedTimestamp = value; AdditionalData?.Remove("updatedTimestamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updatedTimestamp"); else _explicitNullProperties?.Remove("updatedTimestamp"); } }
+        private long? _explicitNullValueUpdatedTimestamp = default!;
         /// <summary>A string representing the property for the weighted amount in the home currency.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WeightedAmountInHomeCurrencyProperty { get; set; }
+        public string? WeightedAmountInHomeCurrencyProperty { get => _explicitNullValueWeightedAmountInHomeCurrencyProperty; set { _explicitNullValueWeightedAmountInHomeCurrencyProperty = value; AdditionalData?.Remove("weightedAmountInHomeCurrencyProperty"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weightedAmountInHomeCurrencyProperty"); else _explicitNullProperties?.Remove("weightedAmountInHomeCurrencyProperty"); } }
+        private string? _explicitNullValueWeightedAmountInHomeCurrencyProperty = default!;
 #nullable restore
 #else
-        public string WeightedAmountInHomeCurrencyProperty { get; set; }
+        public string WeightedAmountInHomeCurrencyProperty { get => _explicitNullValueWeightedAmountInHomeCurrencyProperty; set { _explicitNullValueWeightedAmountInHomeCurrencyProperty = value; AdditionalData?.Remove("weightedAmountInHomeCurrencyProperty"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weightedAmountInHomeCurrencyProperty"); else _explicitNullProperties?.Remove("weightedAmountInHomeCurrencyProperty"); } }
+        private string _explicitNullValueWeightedAmountInHomeCurrencyProperty = default!;
 #endif
         /// <summary>The property representing the weighted amount, specified as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WeightedAmountProperty { get; set; }
+        public string? WeightedAmountProperty { get => _explicitNullValueWeightedAmountProperty; set { _explicitNullValueWeightedAmountProperty = value; AdditionalData?.Remove("weightedAmountProperty"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weightedAmountProperty"); else _explicitNullProperties?.Remove("weightedAmountProperty"); } }
+        private string? _explicitNullValueWeightedAmountProperty = default!;
 #nullable restore
 #else
-        public string WeightedAmountProperty { get; set; }
+        public string WeightedAmountProperty { get => _explicitNullValueWeightedAmountProperty; set { _explicitNullValueWeightedAmountProperty = value; AdditionalData?.Remove("weightedAmountProperty"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weightedAmountProperty"); else _explicitNullProperties?.Remove("weightedAmountProperty"); } }
+        private string _explicitNullValueWeightedAmountProperty = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ForecastTypeSettingPublicResponse"/> and sets the default values.
@@ -119,7 +189,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.ForecastTypeSettingPublicResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.ForecastTypeSettingPublicResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.ForecastTypeSettingPublicResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -174,6 +244,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteLongValue("updatedTimestamp", UpdatedTimestamp);
             writer.WriteStringValue("weightedAmountInHomeCurrencyProperty", WeightedAmountInHomeCurrencyProperty);
             writer.WriteStringValue("weightedAmountProperty", WeightedAmountProperty);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

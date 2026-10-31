@@ -11,60 +11,97 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CrmPublicUnifiedEventsFilterBranch : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("coalescingRefineBy") is null) { _explicitNullValueCoalescingRefineBy = default!; _explicitNullProperties?.Remove("coalescingRefineBy"); }
+            else if (parseNode.GetChildNode("coalescingRefineBy") is { } nullNodeCoalescingRefineBy && nullNodeCoalescingRefineBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CoalescingRefineBy = null;
+            if (parseNode.GetChildNode("eventTypeId") is null) { _explicitNullValueEventTypeId = default!; _explicitNullProperties?.Remove("eventTypeId"); }
+            else if (parseNode.GetChildNode("eventTypeId") is { } nullNodeEventTypeId && nullNodeEventTypeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventTypeId = null;
+            if (parseNode.GetChildNode("filterBranches") is null) { _explicitNullValueFilterBranches = default!; _explicitNullProperties?.Remove("filterBranches"); }
+            else if (parseNode.GetChildNode("filterBranches") is { } nullNodeFilterBranches && nullNodeFilterBranches.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FilterBranches = null;
+            if (parseNode.GetChildNode("filterBranchOperator") is null) { _explicitNullValueFilterBranchOperator = default!; _explicitNullProperties?.Remove("filterBranchOperator"); }
+            else if (parseNode.GetChildNode("filterBranchOperator") is { } nullNodeFilterBranchOperator && nullNodeFilterBranchOperator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FilterBranchOperator = null;
+            if (parseNode.GetChildNode("filterBranchType") is null) { _explicitNullValueFilterBranchType = default!; _explicitNullProperties?.Remove("filterBranchType"); }
+            else if (parseNode.GetChildNode("filterBranchType") is { } nullNodeFilterBranchType && nullNodeFilterBranchType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FilterBranchType = null;
+            if (parseNode.GetChildNode("filters") is null) { _explicitNullValueFilters = default!; _explicitNullProperties?.Remove("filters"); }
+            else if (parseNode.GetChildNode("filters") is { } nullNodeFilters && nullNodeFilters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Filters = null;
+            if (parseNode.GetChildNode("operator") is null) { _explicitNullValueOperator = default!; _explicitNullProperties?.Remove("operator"); }
+            else if (parseNode.GetChildNode("operator") is { } nullNodeOperator && nullNodeOperator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Operator = null;
+            if (parseNode.GetChildNode("pruningRefineBy") is null) { _explicitNullValuePruningRefineBy = default!; _explicitNullProperties?.Remove("pruningRefineBy"); }
+            else if (parseNode.GetChildNode("pruningRefineBy") is { } nullNodePruningRefineBy && nullNodePruningRefineBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PruningRefineBy = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An optional refinement criterion that can be one of several types, such as &apos;NUM_OCCURRENCES&apos;, &apos;SET_OCCURRENCES&apos;, &apos;RELATIVE_COMPARATIVE&apos;, and others, used to further refine the filter logic.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchCoalescingRefineBy? CoalescingRefineBy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchCoalescingRefineBy? CoalescingRefineBy { get => _explicitNullValueCoalescingRefineBy; set { _explicitNullValueCoalescingRefineBy = value; AdditionalData?.Remove("coalescingRefineBy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("coalescingRefineBy"); else _explicitNullProperties?.Remove("coalescingRefineBy"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchCoalescingRefineBy? _explicitNullValueCoalescingRefineBy = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchCoalescingRefineBy CoalescingRefineBy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchCoalescingRefineBy CoalescingRefineBy { get => _explicitNullValueCoalescingRefineBy; set { _explicitNullValueCoalescingRefineBy = value; AdditionalData?.Remove("coalescingRefineBy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("coalescingRefineBy"); else _explicitNullProperties?.Remove("coalescingRefineBy"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchCoalescingRefineBy _explicitNullValueCoalescingRefineBy = default!;
 #endif
         /// <summary>A string representing the unique identifier of the event type to which the filters apply.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EventTypeId { get; set; }
+        public string? EventTypeId { get => _explicitNullValueEventTypeId; set { _explicitNullValueEventTypeId = value; AdditionalData?.Remove("eventTypeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eventTypeId"); else _explicitNullProperties?.Remove("eventTypeId"); } }
+        private string? _explicitNullValueEventTypeId = default!;
 #nullable restore
 #else
-        public string EventTypeId { get; set; }
+        public string EventTypeId { get => _explicitNullValueEventTypeId; set { _explicitNullValueEventTypeId = value; AdditionalData?.Remove("eventTypeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eventTypeId"); else _explicitNullProperties?.Remove("eventTypeId"); } }
+        private string _explicitNullValueEventTypeId = default!;
 #endif
         /// <summary>An array of nested filter branches, each of which can be one of several types, such as &apos;OR&apos;, &apos;AND&apos;, &apos;NOT_ALL&apos;, &apos;NOT_ANY&apos;, &apos;RESTRICTED&apos;, &apos;UNIFIED_EVENTS&apos;, or &apos;ASSOCIATION&apos;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchFilterBranchesItem>? FilterBranches { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAndFilterBranchFilterBranchesItem>? FilterBranches { get => _explicitNullValueFilterBranches; set { _explicitNullValueFilterBranches = value; AdditionalData?.Remove("filterBranches"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filterBranches"); else _explicitNullProperties?.Remove("filterBranches"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAndFilterBranchFilterBranchesItem>? _explicitNullValueFilterBranches = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchFilterBranchesItem> FilterBranches { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAndFilterBranchFilterBranchesItem> FilterBranches { get => _explicitNullValueFilterBranches; set { _explicitNullValueFilterBranches = value; AdditionalData?.Remove("filterBranches"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filterBranches"); else _explicitNullProperties?.Remove("filterBranches"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAndFilterBranchFilterBranchesItem> _explicitNullValueFilterBranches = default!;
 #endif
         /// <summary>A string representing the operator used within the filter branch, allowing for logical operations between filters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FilterBranchOperator { get; set; }
+        public string? FilterBranchOperator { get => _explicitNullValueFilterBranchOperator; set { _explicitNullValueFilterBranchOperator = value; AdditionalData?.Remove("filterBranchOperator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filterBranchOperator"); else _explicitNullProperties?.Remove("filterBranchOperator"); } }
+        private string? _explicitNullValueFilterBranchOperator = default!;
 #nullable restore
 #else
-        public string FilterBranchOperator { get; set; }
+        public string FilterBranchOperator { get => _explicitNullValueFilterBranchOperator; set { _explicitNullValueFilterBranchOperator = value; AdditionalData?.Remove("filterBranchOperator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filterBranchOperator"); else _explicitNullProperties?.Remove("filterBranchOperator"); } }
+        private string _explicitNullValueFilterBranchOperator = default!;
 #endif
         /// <summary>A string indicating the type of filter branch, defaulting to &apos;UNIFIED_EVENTS&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmUnifiedEventsFilterBranchType? FilterBranchType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmUnifiedEventsFilterBranchType? FilterBranchType { get => _explicitNullValueFilterBranchType; set { _explicitNullValueFilterBranchType = value; AdditionalData?.Remove("filterBranchType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filterBranchType"); else _explicitNullProperties?.Remove("filterBranchType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmUnifiedEventsFilterBranchType? _explicitNullValueFilterBranchType = default!;
         /// <summary>An array of filters that can include various types such as property filters, association filters, and others, allowing for detailed and specific filtering criteria.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchFiltersItem>? Filters { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAndFilterBranchFiltersItem>? Filters { get => _explicitNullValueFilters; set { _explicitNullValueFilters = value; AdditionalData?.Remove("filters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filters"); else _explicitNullProperties?.Remove("filters"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAndFilterBranchFiltersItem>? _explicitNullValueFilters = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchFiltersItem> Filters { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAndFilterBranchFiltersItem> Filters { get => _explicitNullValueFilters; set { _explicitNullValueFilters = value; AdditionalData?.Remove("filters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filters"); else _explicitNullProperties?.Remove("filters"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAndFilterBranchFiltersItem> _explicitNullValueFilters = default!;
 #endif
         /// <summary>A string specifying the operation to be performed, with valid values including &apos;HAS_COMPLETED&apos; and &apos;HAS_NOT_COMPLETED&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchOperator? Operator { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchOperator? Operator { get => _explicitNullValueOperator; set { _explicitNullValueOperator = value; AdditionalData?.Remove("operator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator"); else _explicitNullProperties?.Remove("operator"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchOperator? _explicitNullValueOperator = default!;
         /// <summary>An optional refinement criterion similar to coalescingRefineBy, used to prune or limit the filter results based on additional criteria.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchPruningRefineBy? PruningRefineBy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchPruningRefineBy? PruningRefineBy { get => _explicitNullValuePruningRefineBy; set { _explicitNullValuePruningRefineBy = value; AdditionalData?.Remove("pruningRefineBy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pruningRefineBy"); else _explicitNullProperties?.Remove("pruningRefineBy"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchPruningRefineBy? _explicitNullValuePruningRefineBy = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchPruningRefineBy PruningRefineBy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchPruningRefineBy PruningRefineBy { get => _explicitNullValuePruningRefineBy; set { _explicitNullValuePruningRefineBy = value; AdditionalData?.Remove("pruningRefineBy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pruningRefineBy"); else _explicitNullProperties?.Remove("pruningRefineBy"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchPruningRefineBy _explicitNullValuePruningRefineBy = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranch"/> and sets the default values.
@@ -81,7 +118,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranch CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranch();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranch(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -94,10 +131,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "coalescingRefineBy", n => { CoalescingRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchCoalescingRefineBy>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchCoalescingRefineBy.CreateFromDiscriminatorValue); } },
                 { "eventTypeId", n => { EventTypeId = n.GetStringValue(); } },
                 { "filterBranchOperator", n => { FilterBranchOperator = n.GetStringValue(); } },
-                { "filterBranchType", n => { FilterBranchType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmUnifiedEventsFilterBranchType>(); } },
-                { "filterBranches", n => { FilterBranches = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchFilterBranchesItem>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchFilterBranchesItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "filters", n => { Filters = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchFiltersItem>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchFiltersItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchOperator>(); } },
+                { "filterBranchType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmUnifiedEventsFilterBranchType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFilterBranchType = default; _explicitNullProperties?.Remove("filterBranchType"); AdditionalData["filterBranchType"] = unknown; } else { FilterBranchType = parsed; AdditionalData.Remove("filterBranchType"); } } },
+                { "filterBranches", n => { FilterBranches = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAndFilterBranchFilterBranchesItem>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAndFilterBranchFilterBranchesItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "filters", n => { Filters = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAndFilterBranchFiltersItem>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAndFilterBranchFiltersItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "operator", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchOperator>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueOperator = default; _explicitNullProperties?.Remove("operator"); AdditionalData["operator"] = unknown; } else { Operator = parsed; AdditionalData.Remove("operator"); } } },
                 { "pruningRefineBy", n => { PruningRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchPruningRefineBy>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchPruningRefineBy.CreateFromDiscriminatorValue); } },
             };
         }
@@ -110,12 +147,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchCoalescingRefineBy>("coalescingRefineBy", CoalescingRefineBy);
             writer.WriteStringValue("eventTypeId", EventTypeId);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchFilterBranchesItem>("filterBranches", FilterBranches);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAndFilterBranchFilterBranchesItem>("filterBranches", FilterBranches);
             writer.WriteStringValue("filterBranchOperator", FilterBranchOperator);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmUnifiedEventsFilterBranchType>("filterBranchType", FilterBranchType);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchFiltersItem>("filters", Filters);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAndFilterBranchFiltersItem>("filters", Filters);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchOperator>("operator", Operator);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicUnifiedEventsFilterBranchPruningRefineBy>("pruningRefineBy", PruningRefineBy);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

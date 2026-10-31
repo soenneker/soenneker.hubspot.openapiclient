@@ -11,20 +11,37 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ScopeMapping : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("accessLevel") is null) { _explicitNullValueAccessLevel = default!; _explicitNullProperties?.Remove("accessLevel"); }
+            else if (parseNode.GetChildNode("accessLevel") is { } nullNodeAccessLevel && nullNodeAccessLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccessLevel = null;
+            if (parseNode.GetChildNode("requestAction") is null) { _explicitNullValueRequestAction = default!; _explicitNullProperties?.Remove("requestAction"); }
+            else if (parseNode.GetChildNode("requestAction") is { } nullNodeRequestAction && nullNodeRequestAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestAction = null;
+            if (parseNode.GetChildNode("scopeName") is null) { _explicitNullValueScopeName = default!; _explicitNullProperties?.Remove("scopeName"); }
+            else if (parseNode.GetChildNode("scopeName") is { } nullNodeScopeName && nullNodeScopeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScopeName = null;
+        }
+
         /// <summary>A string indicating the level of access granted for the scope.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ScopeMappingAccessLevel? AccessLevel { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ScopeMappingAccessLevel? AccessLevel { get => _explicitNullValueAccessLevel; set { _explicitNullValueAccessLevel = value; AdditionalData?.Remove("accessLevel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accessLevel"); else _explicitNullProperties?.Remove("accessLevel"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ScopeMappingAccessLevel? _explicitNullValueAccessLevel = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A string representing the action that can be requested within the scope.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ScopeMappingRequestAction? RequestAction { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ScopeMappingRequestAction? RequestAction { get => _explicitNullValueRequestAction; set { _explicitNullValueRequestAction = value; AdditionalData?.Remove("requestAction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestAction"); else _explicitNullProperties?.Remove("requestAction"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ScopeMappingRequestAction? _explicitNullValueRequestAction = default!;
         /// <summary>A string representing the name of the scope for which the access permissions are defined.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ScopeName { get; set; }
+        public string? ScopeName { get => _explicitNullValueScopeName; set { _explicitNullValueScopeName = value; AdditionalData?.Remove("scopeName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scopeName"); else _explicitNullProperties?.Remove("scopeName"); } }
+        private string? _explicitNullValueScopeName = default!;
 #nullable restore
 #else
-        public string ScopeName { get; set; }
+        public string ScopeName { get => _explicitNullValueScopeName; set { _explicitNullValueScopeName = value; AdditionalData?.Remove("scopeName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scopeName"); else _explicitNullProperties?.Remove("scopeName"); } }
+        private string _explicitNullValueScopeName = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ScopeMapping"/> and sets the default values.
@@ -41,7 +58,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.ScopeMapping CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.ScopeMapping();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.ScopeMapping(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -51,8 +68,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "accessLevel", n => { AccessLevel = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ScopeMappingAccessLevel>(); } },
-                { "requestAction", n => { RequestAction = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ScopeMappingRequestAction>(); } },
+                { "accessLevel", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ScopeMappingAccessLevel>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAccessLevel = default; _explicitNullProperties?.Remove("accessLevel"); AdditionalData["accessLevel"] = unknown; } else { AccessLevel = parsed; AdditionalData.Remove("accessLevel"); } } },
+                { "requestAction", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ScopeMappingRequestAction>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueRequestAction = default; _explicitNullProperties?.Remove("requestAction"); AdditionalData["requestAction"] = unknown; } else { RequestAction = parsed; AdditionalData.Remove("requestAction"); } } },
                 { "scopeName", n => { ScopeName = n.GetStringValue(); } },
             };
         }
@@ -66,6 +83,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ScopeMappingAccessLevel>("accessLevel", AccessLevel);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ScopeMappingRequestAction>("requestAction", RequestAction);
             writer.WriteStringValue("scopeName", ScopeName);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,32 +11,51 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicGovernanceValidationRules : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("noBackwardsMovementRule") is null) { _explicitNullValueNoBackwardsMovementRule = default!; _explicitNullProperties?.Remove("noBackwardsMovementRule"); }
+            else if (parseNode.GetChildNode("noBackwardsMovementRule") is { } nullNodeNoBackwardsMovementRule && nullNodeNoBackwardsMovementRule.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NoBackwardsMovementRule = null;
+            if (parseNode.GetChildNode("noSkippingStagesRule") is null) { _explicitNullValueNoSkippingStagesRule = default!; _explicitNullProperties?.Remove("noSkippingStagesRule"); }
+            else if (parseNode.GetChildNode("noSkippingStagesRule") is { } nullNodeNoSkippingStagesRule && nullNodeNoSkippingStagesRule.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NoSkippingStagesRule = null;
+            if (parseNode.GetChildNode("objectCreationRule") is null) { _explicitNullValueObjectCreationRule = default!; _explicitNullProperties?.Remove("objectCreationRule"); }
+            else if (parseNode.GetChildNode("objectCreationRule") is { } nullNodeObjectCreationRule && nullNodeObjectCreationRule.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectCreationRule = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The noBackwardsMovementRule property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceValidationRule? NoBackwardsMovementRule { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceValidationRule? NoBackwardsMovementRule { get => _explicitNullValueNoBackwardsMovementRule; set { _explicitNullValueNoBackwardsMovementRule = value; AdditionalData?.Remove("noBackwardsMovementRule"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("noBackwardsMovementRule"); else _explicitNullProperties?.Remove("noBackwardsMovementRule"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceValidationRule? _explicitNullValueNoBackwardsMovementRule = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceValidationRule NoBackwardsMovementRule { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceValidationRule NoBackwardsMovementRule { get => _explicitNullValueNoBackwardsMovementRule; set { _explicitNullValueNoBackwardsMovementRule = value; AdditionalData?.Remove("noBackwardsMovementRule"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("noBackwardsMovementRule"); else _explicitNullProperties?.Remove("noBackwardsMovementRule"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceValidationRule _explicitNullValueNoBackwardsMovementRule = default!;
 #endif
         /// <summary>The noSkippingStagesRule property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceValidationRule? NoSkippingStagesRule { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceValidationRule? NoSkippingStagesRule { get => _explicitNullValueNoSkippingStagesRule; set { _explicitNullValueNoSkippingStagesRule = value; AdditionalData?.Remove("noSkippingStagesRule"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("noSkippingStagesRule"); else _explicitNullProperties?.Remove("noSkippingStagesRule"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceValidationRule? _explicitNullValueNoSkippingStagesRule = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceValidationRule NoSkippingStagesRule { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceValidationRule NoSkippingStagesRule { get => _explicitNullValueNoSkippingStagesRule; set { _explicitNullValueNoSkippingStagesRule = value; AdditionalData?.Remove("noSkippingStagesRule"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("noSkippingStagesRule"); else _explicitNullProperties?.Remove("noSkippingStagesRule"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceValidationRule _explicitNullValueNoSkippingStagesRule = default!;
 #endif
         /// <summary>The objectCreationRule property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectCreationRule? ObjectCreationRule { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectCreationRule? ObjectCreationRule { get => _explicitNullValueObjectCreationRule; set { _explicitNullValueObjectCreationRule = value; AdditionalData?.Remove("objectCreationRule"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("objectCreationRule"); else _explicitNullProperties?.Remove("objectCreationRule"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectCreationRule? _explicitNullValueObjectCreationRule = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectCreationRule ObjectCreationRule { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectCreationRule ObjectCreationRule { get => _explicitNullValueObjectCreationRule; set { _explicitNullValueObjectCreationRule = value; AdditionalData?.Remove("objectCreationRule"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("objectCreationRule"); else _explicitNullProperties?.Remove("objectCreationRule"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectCreationRule _explicitNullValueObjectCreationRule = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicGovernanceValidationRules"/> and sets the default values.
@@ -53,7 +72,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicGovernanceValidationRules CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicGovernanceValidationRules();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicGovernanceValidationRules(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +97,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceValidationRule>("noBackwardsMovementRule", NoBackwardsMovementRule);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceValidationRule>("noSkippingStagesRule", NoSkippingStagesRule);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectCreationRule>("objectCreationRule", ObjectCreationRule);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

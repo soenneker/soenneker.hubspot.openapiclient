@@ -11,43 +11,93 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicSequenceStepPerformanceResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("calls") is null) { _explicitNullValueCalls = default!; _explicitNullProperties?.Remove("calls"); }
+            else if (parseNode.GetChildNode("calls") is { } nullNodeCalls && nullNodeCalls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Calls = null;
+            if (parseNode.GetChildNode("callsConnected") is null) { _explicitNullValueCallsConnected = default!; _explicitNullProperties?.Remove("callsConnected"); }
+            else if (parseNode.GetChildNode("callsConnected") is { } nullNodeCallsConnected && nullNodeCallsConnected.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallsConnected = null;
+            if (parseNode.GetChildNode("clicked") is null) { _explicitNullValueClicked = default!; _explicitNullProperties?.Remove("clicked"); }
+            else if (parseNode.GetChildNode("clicked") is { } nullNodeClicked && nullNodeClicked.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Clicked = null;
+            if (parseNode.GetChildNode("executionCount") is null) { _explicitNullValueExecutionCount = default!; _explicitNullProperties?.Remove("executionCount"); }
+            else if (parseNode.GetChildNode("executionCount") is { } nullNodeExecutionCount && nullNodeExecutionCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExecutionCount = null;
+            if (parseNode.GetChildNode("meetingsBooked") is null) { _explicitNullValueMeetingsBooked = default!; _explicitNullProperties?.Remove("meetingsBooked"); }
+            else if (parseNode.GetChildNode("meetingsBooked") is { } nullNodeMeetingsBooked && nullNodeMeetingsBooked.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MeetingsBooked = null;
+            if (parseNode.GetChildNode("onTimeTaskCompletionCount") is null) { _explicitNullValueOnTimeTaskCompletionCount = default!; _explicitNullProperties?.Remove("onTimeTaskCompletionCount"); }
+            else if (parseNode.GetChildNode("onTimeTaskCompletionCount") is { } nullNodeOnTimeTaskCompletionCount && nullNodeOnTimeTaskCompletionCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OnTimeTaskCompletionCount = null;
+            if (parseNode.GetChildNode("onTimeTaskCompletionSum") is null) { _explicitNullValueOnTimeTaskCompletionSum = default!; _explicitNullProperties?.Remove("onTimeTaskCompletionSum"); }
+            else if (parseNode.GetChildNode("onTimeTaskCompletionSum") is { } nullNodeOnTimeTaskCompletionSum && nullNodeOnTimeTaskCompletionSum.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OnTimeTaskCompletionSum = null;
+            if (parseNode.GetChildNode("opened") is null) { _explicitNullValueOpened = default!; _explicitNullProperties?.Remove("opened"); }
+            else if (parseNode.GetChildNode("opened") is { } nullNodeOpened && nullNodeOpened.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Opened = null;
+            if (parseNode.GetChildNode("personalizationRateAvg") is null) { _explicitNullValuePersonalizationRateAvg = default!; _explicitNullProperties?.Remove("personalizationRateAvg"); }
+            else if (parseNode.GetChildNode("personalizationRateAvg") is { } nullNodePersonalizationRateAvg && nullNodePersonalizationRateAvg.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PersonalizationRateAvg = null;
+            if (parseNode.GetChildNode("personalizationRateCount") is null) { _explicitNullValuePersonalizationRateCount = default!; _explicitNullProperties?.Remove("personalizationRateCount"); }
+            else if (parseNode.GetChildNode("personalizationRateCount") is { } nullNodePersonalizationRateCount && nullNodePersonalizationRateCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PersonalizationRateCount = null;
+            if (parseNode.GetChildNode("replied") is null) { _explicitNullValueReplied = default!; _explicitNullProperties?.Remove("replied"); }
+            else if (parseNode.GetChildNode("replied") is { } nullNodeReplied && nullNodeReplied.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Replied = null;
+            if (parseNode.GetChildNode("stepKey") is null) { _explicitNullValueStepKey = default!; _explicitNullProperties?.Remove("stepKey"); }
+            else if (parseNode.GetChildNode("stepKey") is { } nullNodeStepKey && nullNodeStepKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StepKey = null;
+            if (parseNode.GetChildNode("stepOrder") is null) { _explicitNullValueStepOrder = default!; _explicitNullProperties?.Remove("stepOrder"); }
+            else if (parseNode.GetChildNode("stepOrder") is { } nullNodeStepOrder && nullNodeStepOrder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StepOrder = null;
+            if (parseNode.GetChildNode("tasksCompleted") is null) { _explicitNullValueTasksCompleted = default!; _explicitNullProperties?.Remove("tasksCompleted"); }
+            else if (parseNode.GetChildNode("tasksCompleted") is { } nullNodeTasksCompleted && nullNodeTasksCompleted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TasksCompleted = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An integer (int64) representing the number of calls made in this step.</summary>
-        public long? Calls { get; set; }
+        public long? Calls { get => _explicitNullValueCalls; set { _explicitNullValueCalls = value; AdditionalData?.Remove("calls"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calls"); else _explicitNullProperties?.Remove("calls"); } }
+        private long? _explicitNullValueCalls = default!;
         /// <summary>An integer (int64) indicating the number of calls that were successfully connected in this step.</summary>
-        public long? CallsConnected { get; set; }
+        public long? CallsConnected { get => _explicitNullValueCallsConnected; set { _explicitNullValueCallsConnected = value; AdditionalData?.Remove("callsConnected"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callsConnected"); else _explicitNullProperties?.Remove("callsConnected"); } }
+        private long? _explicitNullValueCallsConnected = default!;
         /// <summary>An integer (int64) showing the number of times links in emails from this step have been clicked.</summary>
-        public long? Clicked { get; set; }
+        public long? Clicked { get => _explicitNullValueClicked; set { _explicitNullValueClicked = value; AdditionalData?.Remove("clicked"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clicked"); else _explicitNullProperties?.Remove("clicked"); } }
+        private long? _explicitNullValueClicked = default!;
         /// <summary>An integer (int64) indicating the number of times this step has been executed.</summary>
-        public long? ExecutionCount { get; set; }
+        public long? ExecutionCount { get => _explicitNullValueExecutionCount; set { _explicitNullValueExecutionCount = value; AdditionalData?.Remove("executionCount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("executionCount"); else _explicitNullProperties?.Remove("executionCount"); } }
+        private long? _explicitNullValueExecutionCount = default!;
         /// <summary>An integer (int64) representing the number of meetings booked as a result of this step.</summary>
-        public long? MeetingsBooked { get; set; }
+        public long? MeetingsBooked { get => _explicitNullValueMeetingsBooked; set { _explicitNullValueMeetingsBooked = value; AdditionalData?.Remove("meetingsBooked"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meetingsBooked"); else _explicitNullProperties?.Remove("meetingsBooked"); } }
+        private long? _explicitNullValueMeetingsBooked = default!;
         /// <summary>An integer (int64) representing the number of tasks completed on time in this step.</summary>
-        public long? OnTimeTaskCompletionCount { get; set; }
+        public long? OnTimeTaskCompletionCount { get => _explicitNullValueOnTimeTaskCompletionCount; set { _explicitNullValueOnTimeTaskCompletionCount = value; AdditionalData?.Remove("onTimeTaskCompletionCount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("onTimeTaskCompletionCount"); else _explicitNullProperties?.Remove("onTimeTaskCompletionCount"); } }
+        private long? _explicitNullValueOnTimeTaskCompletionCount = default!;
         /// <summary>An integer (int64) indicating the sum of on-time task completions for this step.</summary>
-        public long? OnTimeTaskCompletionSum { get; set; }
+        public long? OnTimeTaskCompletionSum { get => _explicitNullValueOnTimeTaskCompletionSum; set { _explicitNullValueOnTimeTaskCompletionSum = value; AdditionalData?.Remove("onTimeTaskCompletionSum"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("onTimeTaskCompletionSum"); else _explicitNullProperties?.Remove("onTimeTaskCompletionSum"); } }
+        private long? _explicitNullValueOnTimeTaskCompletionSum = default!;
         /// <summary>An integer (int64) indicating how many times emails from this step have been opened.</summary>
-        public long? Opened { get; set; }
+        public long? Opened { get => _explicitNullValueOpened; set { _explicitNullValueOpened = value; AdditionalData?.Remove("opened"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opened"); else _explicitNullProperties?.Remove("opened"); } }
+        private long? _explicitNullValueOpened = default!;
         /// <summary>A number representing the average personalization rate for this step.</summary>
-        public double? PersonalizationRateAvg { get; set; }
+        public double? PersonalizationRateAvg { get => _explicitNullValuePersonalizationRateAvg; set { _explicitNullValuePersonalizationRateAvg = value; AdditionalData?.Remove("personalizationRateAvg"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("personalizationRateAvg"); else _explicitNullProperties?.Remove("personalizationRateAvg"); } }
+        private double? _explicitNullValuePersonalizationRateAvg = default!;
         /// <summary>An integer (int64) indicating the count of personalized actions in this step.</summary>
-        public long? PersonalizationRateCount { get; set; }
+        public long? PersonalizationRateCount { get => _explicitNullValuePersonalizationRateCount; set { _explicitNullValuePersonalizationRateCount = value; AdditionalData?.Remove("personalizationRateCount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("personalizationRateCount"); else _explicitNullProperties?.Remove("personalizationRateCount"); } }
+        private long? _explicitNullValuePersonalizationRateCount = default!;
         /// <summary>An integer (int64) representing the number of replies received from emails sent in this step.</summary>
-        public long? Replied { get; set; }
+        public long? Replied { get => _explicitNullValueReplied; set { _explicitNullValueReplied = value; AdditionalData?.Remove("replied"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("replied"); else _explicitNullProperties?.Remove("replied"); } }
+        private long? _explicitNullValueReplied = default!;
         /// <summary>A string that uniquely identifies the step.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StepKey { get; set; }
+        public string? StepKey { get => _explicitNullValueStepKey; set { _explicitNullValueStepKey = value; AdditionalData?.Remove("stepKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stepKey"); else _explicitNullProperties?.Remove("stepKey"); } }
+        private string? _explicitNullValueStepKey = default!;
 #nullable restore
 #else
-        public string StepKey { get; set; }
+        public string StepKey { get => _explicitNullValueStepKey; set { _explicitNullValueStepKey = value; AdditionalData?.Remove("stepKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stepKey"); else _explicitNullProperties?.Remove("stepKey"); } }
+        private string _explicitNullValueStepKey = default!;
 #endif
         /// <summary>An integer representing the order of the step within the sequence.</summary>
-        public int? StepOrder { get; set; }
+        public int? StepOrder { get => _explicitNullValueStepOrder; set { _explicitNullValueStepOrder = value; AdditionalData?.Remove("stepOrder"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stepOrder"); else _explicitNullProperties?.Remove("stepOrder"); } }
+        private int? _explicitNullValueStepOrder = default!;
         /// <summary>An integer (int64) indicating the number of tasks completed in this step.</summary>
-        public long? TasksCompleted { get; set; }
+        public long? TasksCompleted { get => _explicitNullValueTasksCompleted; set { _explicitNullValueTasksCompleted = value; AdditionalData?.Remove("tasksCompleted"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tasksCompleted"); else _explicitNullProperties?.Remove("tasksCompleted"); } }
+        private long? _explicitNullValueTasksCompleted = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepPerformanceResponse"/> and sets the default values.
         /// </summary>
@@ -63,7 +113,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepPerformanceResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepPerformanceResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepPerformanceResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -110,6 +160,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("stepKey", StepKey);
             writer.WriteIntValue("stepOrder", StepOrder);
             writer.WriteLongValue("tasksCompleted", TasksCompleted);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

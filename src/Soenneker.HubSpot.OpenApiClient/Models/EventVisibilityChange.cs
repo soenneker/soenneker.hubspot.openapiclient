@@ -11,19 +11,41 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class EventVisibilityChange : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("eventType") is null) { _explicitNullValueEventType = default!; _explicitNullProperties?.Remove("eventType"); }
+            else if (parseNode.GetChildNode("eventType") is { } nullNodeEventType && nullNodeEventType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventType = null;
+            if (parseNode.GetChildNode("showInReporting") is null) { _explicitNullValueShowInReporting = default!; _explicitNullProperties?.Remove("showInReporting"); }
+            else if (parseNode.GetChildNode("showInReporting") is { } nullNodeShowInReporting && nullNodeShowInReporting.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShowInReporting = null;
+            if (parseNode.GetChildNode("showInTimeline") is null) { _explicitNullValueShowInTimeline = default!; _explicitNullProperties?.Remove("showInTimeline"); }
+            else if (parseNode.GetChildNode("showInTimeline") is { } nullNodeShowInTimeline && nullNodeShowInTimeline.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShowInTimeline = null;
+            if (parseNode.GetChildNode("showInWorkflows") is null) { _explicitNullValueShowInWorkflows = default!; _explicitNullProperties?.Remove("showInWorkflows"); }
+            else if (parseNode.GetChildNode("showInWorkflows") is { } nullNodeShowInWorkflows && nullNodeShowInWorkflows.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShowInWorkflows = null;
+            if (parseNode.GetChildNode("updatedAt") is null) { _explicitNullValueUpdatedAt = default!; _explicitNullProperties?.Remove("updatedAt"); }
+            else if (parseNode.GetChildNode("updatedAt") is { } nullNodeUpdatedAt && nullNodeUpdatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdatedAt = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A string representing the type of event whose visibility settings are being changed.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EventVisibilityChangeEventType? EventType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EventVisibilityChangeEventType? EventType { get => _explicitNullValueEventType; set { _explicitNullValueEventType = value; AdditionalData?.Remove("eventType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eventType"); else _explicitNullProperties?.Remove("eventType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.EventVisibilityChangeEventType? _explicitNullValueEventType = default!;
         /// <summary>A boolean indicating whether the event should be included in reporting.</summary>
-        public bool? ShowInReporting { get; set; }
+        public bool? ShowInReporting { get => _explicitNullValueShowInReporting; set { _explicitNullValueShowInReporting = value; AdditionalData?.Remove("showInReporting"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("showInReporting"); else _explicitNullProperties?.Remove("showInReporting"); } }
+        private bool? _explicitNullValueShowInReporting = default!;
         /// <summary>A boolean indicating whether the event should be displayed in the timeline.</summary>
-        public bool? ShowInTimeline { get; set; }
+        public bool? ShowInTimeline { get => _explicitNullValueShowInTimeline; set { _explicitNullValueShowInTimeline = value; AdditionalData?.Remove("showInTimeline"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("showInTimeline"); else _explicitNullProperties?.Remove("showInTimeline"); } }
+        private bool? _explicitNullValueShowInTimeline = default!;
         /// <summary>A boolean indicating whether the event should be available for use in workflows.</summary>
-        public bool? ShowInWorkflows { get; set; }
+        public bool? ShowInWorkflows { get => _explicitNullValueShowInWorkflows; set { _explicitNullValueShowInWorkflows = value; AdditionalData?.Remove("showInWorkflows"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("showInWorkflows"); else _explicitNullProperties?.Remove("showInWorkflows"); } }
+        private bool? _explicitNullValueShowInWorkflows = default!;
         /// <summary>A string representing the date and time when the visibility settings were last updated, in ISO 8601 format.</summary>
-        public long? UpdatedAt { get; set; }
+        public long? UpdatedAt { get => _explicitNullValueUpdatedAt; set { _explicitNullValueUpdatedAt = value; AdditionalData?.Remove("updatedAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updatedAt"); else _explicitNullProperties?.Remove("updatedAt"); } }
+        private long? _explicitNullValueUpdatedAt = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.EventVisibilityChange"/> and sets the default values.
         /// </summary>
@@ -39,7 +61,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.EventVisibilityChange CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.EventVisibilityChange();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.EventVisibilityChange(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -49,7 +71,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "eventType", n => { EventType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventVisibilityChangeEventType>(); } },
+                { "eventType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EventVisibilityChangeEventType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueEventType = default; _explicitNullProperties?.Remove("eventType"); AdditionalData["eventType"] = unknown; } else { EventType = parsed; AdditionalData.Remove("eventType"); } } },
                 { "showInReporting", n => { ShowInReporting = n.GetBoolValue(); } },
                 { "showInTimeline", n => { ShowInTimeline = n.GetBoolValue(); } },
                 { "showInWorkflows", n => { ShowInWorkflows = n.GetBoolValue(); } },
@@ -68,6 +90,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteBoolValue("showInTimeline", ShowInTimeline);
             writer.WriteBoolValue("showInWorkflows", ShowInWorkflows);
             writer.WriteLongValue("updatedAt", UpdatedAt);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

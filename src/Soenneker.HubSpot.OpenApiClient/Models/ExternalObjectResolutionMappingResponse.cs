@@ -11,16 +11,27 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ExternalObjectResolutionMappingResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("primaryObjectRule") is null) { _explicitNullValuePrimaryObjectRule = default!; _explicitNullProperties?.Remove("primaryObjectRule"); }
+            else if (parseNode.GetChildNode("primaryObjectRule") is { } nullNodePrimaryObjectRule && nullNodePrimaryObjectRule.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimaryObjectRule = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The primaryObjectRule property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalPrimaryObjectResolutionRule? PrimaryObjectRule { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalPrimaryObjectResolutionRule? PrimaryObjectRule { get => _explicitNullValuePrimaryObjectRule; set { _explicitNullValuePrimaryObjectRule = value; AdditionalData?.Remove("primaryObjectRule"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primaryObjectRule"); else _explicitNullProperties?.Remove("primaryObjectRule"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ExternalPrimaryObjectResolutionRule? _explicitNullValuePrimaryObjectRule = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalPrimaryObjectResolutionRule PrimaryObjectRule { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalPrimaryObjectResolutionRule PrimaryObjectRule { get => _explicitNullValuePrimaryObjectRule; set { _explicitNullValuePrimaryObjectRule = value; AdditionalData?.Remove("primaryObjectRule"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primaryObjectRule"); else _explicitNullProperties?.Remove("primaryObjectRule"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ExternalPrimaryObjectResolutionRule _explicitNullValuePrimaryObjectRule = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExternalObjectResolutionMappingResponse"/> and sets the default values.
@@ -37,7 +48,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.ExternalObjectResolutionMappingResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.ExternalObjectResolutionMappingResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.ExternalObjectResolutionMappingResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -58,6 +69,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalPrimaryObjectResolutionRule>("primaryObjectRule", PrimaryObjectRule);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

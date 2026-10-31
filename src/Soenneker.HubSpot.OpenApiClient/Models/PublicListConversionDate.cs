@@ -11,17 +11,36 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicListConversionDate : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("conversionType") is null) { _explicitNullValueConversionType = default!; _explicitNullProperties?.Remove("conversionType"); }
+            else if (parseNode.GetChildNode("conversionType") is { } nullNodeConversionType && nullNodeConversionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConversionType = null;
+            if (parseNode.GetChildNode("day") is null) { _explicitNullValueDay = default!; _explicitNullProperties?.Remove("day"); }
+            else if (parseNode.GetChildNode("day") is { } nullNodeDay && nullNodeDay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Day = null;
+            if (parseNode.GetChildNode("month") is null) { _explicitNullValueMonth = default!; _explicitNullProperties?.Remove("month"); }
+            else if (parseNode.GetChildNode("month") is { } nullNodeMonth && nullNodeMonth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Month = null;
+            if (parseNode.GetChildNode("year") is null) { _explicitNullValueYear = default!; _explicitNullProperties?.Remove("year"); }
+            else if (parseNode.GetChildNode("year") is { } nullNodeYear && nullNodeYear.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Year = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A string that indicates the type of conversion event. It specifies what kind of conversion has taken place.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversionDateConversionType? ConversionType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversionDateConversionType? ConversionType { get => _explicitNullValueConversionType; set { _explicitNullValueConversionType = value; AdditionalData?.Remove("conversionType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversionType"); else _explicitNullProperties?.Remove("conversionType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ConversionDateConversionType? _explicitNullValueConversionType = default!;
         /// <summary>An integer representing the day of the month when the conversion event occurred.</summary>
-        public int? Day { get; set; }
+        public int? Day { get => _explicitNullValueDay; set { _explicitNullValueDay = value; AdditionalData?.Remove("day"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("day"); else _explicitNullProperties?.Remove("day"); } }
+        private int? _explicitNullValueDay = default!;
         /// <summary>An integer representing the month of the year when the conversion event occurred.</summary>
-        public int? Month { get; set; }
+        public int? Month { get => _explicitNullValueMonth; set { _explicitNullValueMonth = value; AdditionalData?.Remove("month"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("month"); else _explicitNullProperties?.Remove("month"); } }
+        private int? _explicitNullValueMonth = default!;
         /// <summary>An integer representing the year when the conversion event occurred.</summary>
-        public int? Year { get; set; }
+        public int? Year { get => _explicitNullValueYear; set { _explicitNullValueYear = value; AdditionalData?.Remove("year"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("year"); else _explicitNullProperties?.Remove("year"); } }
+        private int? _explicitNullValueYear = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionDate"/> and sets the default values.
         /// </summary>
@@ -37,7 +56,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionDate CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionDate();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionDate(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -47,7 +66,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "conversionType", n => { ConversionType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversionDateConversionType>(); } },
+                { "conversionType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversionDateConversionType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueConversionType = default; _explicitNullProperties?.Remove("conversionType"); AdditionalData["conversionType"] = unknown; } else { ConversionType = parsed; AdditionalData.Remove("conversionType"); } } },
                 { "day", n => { Day = n.GetIntValue(); } },
                 { "month", n => { Month = n.GetIntValue(); } },
                 { "year", n => { Year = n.GetIntValue(); } },
@@ -64,6 +83,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteIntValue("day", Day);
             writer.WriteIntValue("month", Month);
             writer.WriteIntValue("year", Year);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -49,7 +49,7 @@ namespace Soenneker.HubSpot.OpenApiClient.AccountInfo.TwoZeroTwoSixZeroNine.Deta
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PortalInformationResponseSeptember2026>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PortalInformationResponseSeptember2026.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PortalInformationResponseSeptember2026>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PortalInformationResponseSeptember2026.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve detailed information about the account associated with the HubSpot portal. This endpoint provides insights into the account type, time zone, currency settings, and data hosting location. It is useful for obtaining a comprehensive overview of the account&apos;s configuration and settings.

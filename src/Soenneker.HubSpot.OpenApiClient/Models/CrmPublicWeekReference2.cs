@@ -11,21 +11,46 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CrmPublicWeekReference2 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("dayOfWeek") is null) { _explicitNullValueDayOfWeek = default!; _explicitNullProperties?.Remove("dayOfWeek"); }
+            else if (parseNode.GetChildNode("dayOfWeek") is { } nullNodeDayOfWeek && nullNodeDayOfWeek.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DayOfWeek = null;
+            if (parseNode.GetChildNode("hour") is null) { _explicitNullValueHour = default!; _explicitNullProperties?.Remove("hour"); }
+            else if (parseNode.GetChildNode("hour") is { } nullNodeHour && nullNodeHour.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Hour = null;
+            if (parseNode.GetChildNode("millisecond") is null) { _explicitNullValueMillisecond = default!; _explicitNullProperties?.Remove("millisecond"); }
+            else if (parseNode.GetChildNode("millisecond") is { } nullNodeMillisecond && nullNodeMillisecond.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Millisecond = null;
+            if (parseNode.GetChildNode("minute") is null) { _explicitNullValueMinute = default!; _explicitNullProperties?.Remove("minute"); }
+            else if (parseNode.GetChildNode("minute") is { } nullNodeMinute && nullNodeMinute.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Minute = null;
+            if (parseNode.GetChildNode("referenceType") is null) { _explicitNullValueReferenceType = default!; _explicitNullProperties?.Remove("referenceType"); }
+            else if (parseNode.GetChildNode("referenceType") is { } nullNodeReferenceType && nullNodeReferenceType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReferenceType = null;
+            if (parseNode.GetChildNode("second") is null) { _explicitNullValueSecond = default!; _explicitNullProperties?.Remove("second"); }
+            else if (parseNode.GetChildNode("second") is { } nullNodeSecond && nullNodeSecond.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Second = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A string representing the day of the week. Valid values include &apos;MONDAY&apos;, &apos;TUESDAY&apos;, &apos;WEDNESDAY&apos;, &apos;THURSDAY&apos;, &apos;FRIDAY&apos;, &apos;SATURDAY&apos;, &apos;SUNDAY&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicWeekReferenceDayOfWeek2? DayOfWeek { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicWeekReferenceDayOfWeek2? DayOfWeek { get => _explicitNullValueDayOfWeek; set { _explicitNullValueDayOfWeek = value; AdditionalData?.Remove("dayOfWeek"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dayOfWeek"); else _explicitNullProperties?.Remove("dayOfWeek"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicWeekReferenceDayOfWeek2? _explicitNullValueDayOfWeek = default!;
         /// <summary>An integer representing the hour of the day.</summary>
-        public int? Hour { get; set; }
+        public int? Hour { get => _explicitNullValueHour; set { _explicitNullValueHour = value; AdditionalData?.Remove("hour"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hour"); else _explicitNullProperties?.Remove("hour"); } }
+        private int? _explicitNullValueHour = default!;
         /// <summary>An integer representing the millisecond within the second.</summary>
-        public int? Millisecond { get; set; }
+        public int? Millisecond { get => _explicitNullValueMillisecond; set { _explicitNullValueMillisecond = value; AdditionalData?.Remove("millisecond"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("millisecond"); else _explicitNullProperties?.Remove("millisecond"); } }
+        private int? _explicitNullValueMillisecond = default!;
         /// <summary>An integer representing the minute within the hour.</summary>
-        public int? Minute { get; set; }
+        public int? Minute { get => _explicitNullValueMinute; set { _explicitNullValueMinute = value; AdditionalData?.Remove("minute"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minute"); else _explicitNullProperties?.Remove("minute"); } }
+        private int? _explicitNullValueMinute = default!;
         /// <summary>A string indicating the type of reference, which is &apos;WEEK&apos; by default.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmWeekReferenceType2? ReferenceType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmWeekReferenceType2? ReferenceType { get => _explicitNullValueReferenceType; set { _explicitNullValueReferenceType = value; AdditionalData?.Remove("referenceType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("referenceType"); else _explicitNullProperties?.Remove("referenceType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmWeekReferenceType2? _explicitNullValueReferenceType = default!;
         /// <summary>An integer representing the second within the minute.</summary>
-        public int? Second { get; set; }
+        public int? Second { get => _explicitNullValueSecond; set { _explicitNullValueSecond = value; AdditionalData?.Remove("second"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("second"); else _explicitNullProperties?.Remove("second"); } }
+        private int? _explicitNullValueSecond = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicWeekReference2"/> and sets the default values.
         /// </summary>
@@ -41,7 +66,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicWeekReference2 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicWeekReference2();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicWeekReference2(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -51,11 +76,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "dayOfWeek", n => { DayOfWeek = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicWeekReferenceDayOfWeek2>(); } },
+                { "dayOfWeek", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicWeekReferenceDayOfWeek2>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDayOfWeek = default; _explicitNullProperties?.Remove("dayOfWeek"); AdditionalData["dayOfWeek"] = unknown; } else { DayOfWeek = parsed; AdditionalData.Remove("dayOfWeek"); } } },
                 { "hour", n => { Hour = n.GetIntValue(); } },
                 { "millisecond", n => { Millisecond = n.GetIntValue(); } },
                 { "minute", n => { Minute = n.GetIntValue(); } },
-                { "referenceType", n => { ReferenceType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmWeekReferenceType2>(); } },
+                { "referenceType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmWeekReferenceType2>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueReferenceType = default; _explicitNullProperties?.Remove("referenceType"); AdditionalData["referenceType"] = unknown; } else { ReferenceType = parsed; AdditionalData.Remove("referenceType"); } } },
                 { "second", n => { Second = n.GetIntValue(); } },
             };
         }
@@ -72,6 +97,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteIntValue("minute", Minute);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmWeekReferenceType2>("referenceType", ReferenceType);
             writer.WriteIntValue("second", Second);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

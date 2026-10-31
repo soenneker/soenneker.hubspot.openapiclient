@@ -11,23 +11,43 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CrmPublicAbsoluteRangedTimestampRefineBy : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("lowerTimestamp") is null) { _explicitNullValueLowerTimestamp = default!; _explicitNullProperties?.Remove("lowerTimestamp"); }
+            else if (parseNode.GetChildNode("lowerTimestamp") is { } nullNodeLowerTimestamp && nullNodeLowerTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LowerTimestamp = null;
+            if (parseNode.GetChildNode("rangeType") is null) { _explicitNullValueRangeType = default!; _explicitNullProperties?.Remove("rangeType"); }
+            else if (parseNode.GetChildNode("rangeType") is { } nullNodeRangeType && nullNodeRangeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RangeType = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("upperTimestamp") is null) { _explicitNullValueUpperTimestamp = default!; _explicitNullProperties?.Remove("upperTimestamp"); }
+            else if (parseNode.GetChildNode("upperTimestamp") is { } nullNodeUpperTimestamp && nullNodeUpperTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpperTimestamp = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An integer representing the lower boundary of the timestamp range, specified in Unix time format.</summary>
-        public long? LowerTimestamp { get; set; }
+        public long? LowerTimestamp { get => _explicitNullValueLowerTimestamp; set { _explicitNullValueLowerTimestamp = value; AdditionalData?.Remove("lowerTimestamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lowerTimestamp"); else _explicitNullProperties?.Remove("lowerTimestamp"); } }
+        private long? _explicitNullValueLowerTimestamp = default!;
         /// <summary>A string that specifies the type of range being used.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RangeType { get; set; }
+        public string? RangeType { get => _explicitNullValueRangeType; set { _explicitNullValueRangeType = value; AdditionalData?.Remove("rangeType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rangeType"); else _explicitNullProperties?.Remove("rangeType"); } }
+        private string? _explicitNullValueRangeType = default!;
 #nullable restore
 #else
-        public string RangeType { get; set; }
+        public string RangeType { get => _explicitNullValueRangeType; set { _explicitNullValueRangeType = value; AdditionalData?.Remove("rangeType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rangeType"); else _explicitNullProperties?.Remove("rangeType"); } }
+        private string _explicitNullValueRangeType = default!;
 #endif
         /// <summary>A string indicating the type of refine by operation. The default value is &apos;ABSOLUTE_RANGED&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmAbsoluteRangedType? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmAbsoluteRangedType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmAbsoluteRangedType? _explicitNullValueType = default!;
         /// <summary>An integer representing the upper boundary of the timestamp range, specified in Unix time format.</summary>
-        public long? UpperTimestamp { get; set; }
+        public long? UpperTimestamp { get => _explicitNullValueUpperTimestamp; set { _explicitNullValueUpperTimestamp = value; AdditionalData?.Remove("upperTimestamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upperTimestamp"); else _explicitNullProperties?.Remove("upperTimestamp"); } }
+        private long? _explicitNullValueUpperTimestamp = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAbsoluteRangedTimestampRefineBy"/> and sets the default values.
         /// </summary>
@@ -43,7 +63,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAbsoluteRangedTimestampRefineBy CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAbsoluteRangedTimestampRefineBy();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAbsoluteRangedTimestampRefineBy(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -55,7 +75,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "lowerTimestamp", n => { LowerTimestamp = n.GetLongValue(); } },
                 { "rangeType", n => { RangeType = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAbsoluteRangedType>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAbsoluteRangedType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
                 { "upperTimestamp", n => { UpperTimestamp = n.GetLongValue(); } },
             };
         }
@@ -70,6 +90,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("rangeType", RangeType);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAbsoluteRangedType>("type", Type);
             writer.WriteLongValue("upperTimestamp", UpperTimestamp);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

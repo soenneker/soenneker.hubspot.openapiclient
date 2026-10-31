@@ -11,29 +11,50 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicSequenceStepVariantRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("activated") is null) { _explicitNullValueActivated = default!; _explicitNullProperties?.Remove("activated"); }
+            else if (parseNode.GetChildNode("activated") is { } nullNodeActivated && nullNodeActivated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Activated = null;
+            if (parseNode.GetChildNode("emailPattern") is null) { _explicitNullValueEmailPattern = default!; _explicitNullProperties?.Remove("emailPattern"); }
+            else if (parseNode.GetChildNode("emailPattern") is { } nullNodeEmailPattern && nullNodeEmailPattern.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailPattern = null;
+            if (parseNode.GetChildNode("taskPattern") is null) { _explicitNullValueTaskPattern = default!; _explicitNullProperties?.Remove("taskPattern"); }
+            else if (parseNode.GetChildNode("taskPattern") is { } nullNodeTaskPattern && nullNodeTaskPattern.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaskPattern = null;
+            if (parseNode.GetChildNode("variantOrdinal") is null) { _explicitNullValueVariantOrdinal = default!; _explicitNullProperties?.Remove("variantOrdinal"); }
+            else if (parseNode.GetChildNode("variantOrdinal") is { } nullNodeVariantOrdinal && nullNodeVariantOrdinal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VariantOrdinal = null;
+        }
+
         /// <summary>A boolean indicating whether this variant is active.</summary>
-        public bool? Activated { get; set; }
+        public bool? Activated { get => _explicitNullValueActivated; set { _explicitNullValueActivated = value; AdditionalData?.Remove("activated"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activated"); else _explicitNullProperties?.Remove("activated"); } }
+        private bool? _explicitNullValueActivated = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The emailPattern property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceEmailPatternRequest? EmailPattern { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceEmailPatternRequest? EmailPattern { get => _explicitNullValueEmailPattern; set { _explicitNullValueEmailPattern = value; AdditionalData?.Remove("emailPattern"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailPattern"); else _explicitNullProperties?.Remove("emailPattern"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceEmailPatternRequest? _explicitNullValueEmailPattern = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceEmailPatternRequest EmailPattern { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceEmailPatternRequest EmailPattern { get => _explicitNullValueEmailPattern; set { _explicitNullValueEmailPattern = value; AdditionalData?.Remove("emailPattern"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailPattern"); else _explicitNullProperties?.Remove("emailPattern"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceEmailPatternRequest _explicitNullValueEmailPattern = default!;
 #endif
         /// <summary>The taskPattern property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceTaskPatternRequest? TaskPattern { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceTaskPatternRequest? TaskPattern { get => _explicitNullValueTaskPattern; set { _explicitNullValueTaskPattern = value; AdditionalData?.Remove("taskPattern"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taskPattern"); else _explicitNullProperties?.Remove("taskPattern"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceTaskPatternRequest? _explicitNullValueTaskPattern = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceTaskPatternRequest TaskPattern { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceTaskPatternRequest TaskPattern { get => _explicitNullValueTaskPattern; set { _explicitNullValueTaskPattern = value; AdditionalData?.Remove("taskPattern"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taskPattern"); else _explicitNullProperties?.Remove("taskPattern"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceTaskPatternRequest _explicitNullValueTaskPattern = default!;
 #endif
         /// <summary>An integer indicating the order of this variant among other variants of the same step.</summary>
-        public int? VariantOrdinal { get; set; }
+        public int? VariantOrdinal { get => _explicitNullValueVariantOrdinal; set { _explicitNullValueVariantOrdinal = value; AdditionalData?.Remove("variantOrdinal"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variantOrdinal"); else _explicitNullProperties?.Remove("variantOrdinal"); } }
+        private int? _explicitNullValueVariantOrdinal = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepVariantRequest"/> and sets the default values.
         /// </summary>
@@ -49,7 +70,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepVariantRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepVariantRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepVariantRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -76,6 +97,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceEmailPatternRequest>("emailPattern", EmailPattern);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceTaskPatternRequest>("taskPattern", TaskPattern);
             writer.WriteIntValue("variantOrdinal", VariantOrdinal);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

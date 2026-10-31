@@ -11,26 +11,44 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ComboEventRuleBranch : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("composingRules") is null) { _explicitNullValueComposingRules = default!; _explicitNullProperties?.Remove("composingRules"); }
+            else if (parseNode.GetChildNode("composingRules") is { } nullNodeComposingRules && nullNodeComposingRules.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ComposingRules = null;
+            if (parseNode.GetChildNode("operationType") is null) { _explicitNullValueOperationType = default!; _explicitNullProperties?.Remove("operationType"); }
+            else if (parseNode.GetChildNode("operationType") is { } nullNodeOperationType && nullNodeOperationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OperationType = null;
+            if (parseNode.GetChildNode("ruleBranches") is null) { _explicitNullValueRuleBranches = default!; _explicitNullProperties?.Remove("ruleBranches"); }
+            else if (parseNode.GetChildNode("ruleBranches") is { } nullNodeRuleBranches && nullNodeRuleBranches.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RuleBranches = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An array of ComboEventRule objects that define the individual rules composing this branch.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRule>? ComposingRules { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRule>? ComposingRules { get => _explicitNullValueComposingRules; set { _explicitNullValueComposingRules = value; AdditionalData?.Remove("composingRules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("composingRules"); else _explicitNullProperties?.Remove("composingRules"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRule>? _explicitNullValueComposingRules = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRule> ComposingRules { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRule> ComposingRules { get => _explicitNullValueComposingRules; set { _explicitNullValueComposingRules = value; AdditionalData?.Remove("composingRules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("composingRules"); else _explicitNullProperties?.Remove("composingRules"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRule> _explicitNullValueComposingRules = default!;
 #endif
         /// <summary>The type of logical operation applied to the rule branches and composing rules. Valid values are &apos;AND&apos; and &apos;OR&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRuleBranchOperationType? OperationType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRuleBranchOperationType? OperationType { get => _explicitNullValueOperationType; set { _explicitNullValueOperationType = value; AdditionalData?.Remove("operationType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operationType"); else _explicitNullProperties?.Remove("operationType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRuleBranchOperationType? _explicitNullValueOperationType = default!;
         /// <summary>An array of nested ComboEventRuleBranch objects, allowing for hierarchical rule definitions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRuleBranch>? RuleBranches { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRuleBranch>? RuleBranches { get => _explicitNullValueRuleBranches; set { _explicitNullValueRuleBranches = value; AdditionalData?.Remove("ruleBranches"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleBranches"); else _explicitNullProperties?.Remove("ruleBranches"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRuleBranch>? _explicitNullValueRuleBranches = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRuleBranch> RuleBranches { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRuleBranch> RuleBranches { get => _explicitNullValueRuleBranches; set { _explicitNullValueRuleBranches = value; AdditionalData?.Remove("ruleBranches"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleBranches"); else _explicitNullProperties?.Remove("ruleBranches"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRuleBranch> _explicitNullValueRuleBranches = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRuleBranch"/> and sets the default values.
@@ -47,7 +65,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRuleBranch CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRuleBranch();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRuleBranch(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -58,7 +76,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "composingRules", n => { ComposingRules = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRule>(global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRule.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRuleBranchOperationType>(); } },
+                { "operationType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRuleBranchOperationType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueOperationType = default; _explicitNullProperties?.Remove("operationType"); AdditionalData["operationType"] = unknown; } else { OperationType = parsed; AdditionalData.Remove("operationType"); } } },
                 { "ruleBranches", n => { RuleBranches = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRuleBranch>(global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRuleBranch.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -72,6 +90,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRule>("composingRules", ComposingRules);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRuleBranchOperationType>("operationType", OperationType);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRuleBranch>("ruleBranches", RuleBranches);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

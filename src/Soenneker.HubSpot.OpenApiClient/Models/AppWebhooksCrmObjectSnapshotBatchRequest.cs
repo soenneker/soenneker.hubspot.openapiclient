@@ -11,16 +11,27 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AppWebhooksCrmObjectSnapshotBatchRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("snapshotRequests") is null) { _explicitNullValueSnapshotRequests = default!; _explicitNullProperties?.Remove("snapshotRequests"); }
+            else if (parseNode.GetChildNode("snapshotRequests") is { } nullNodeSnapshotRequests && nullNodeSnapshotRequests.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SnapshotRequests = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An array of CrmObjectSnapshotRequest objects, each representing a request to create a snapshot for a specific CRM object. This property is required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksCrmObjectSnapshotRequest>? SnapshotRequests { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksCrmObjectSnapshotRequest>? SnapshotRequests { get => _explicitNullValueSnapshotRequests; set { _explicitNullValueSnapshotRequests = value; AdditionalData?.Remove("snapshotRequests"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("snapshotRequests"); else _explicitNullProperties?.Remove("snapshotRequests"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksCrmObjectSnapshotRequest>? _explicitNullValueSnapshotRequests = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksCrmObjectSnapshotRequest> SnapshotRequests { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksCrmObjectSnapshotRequest> SnapshotRequests { get => _explicitNullValueSnapshotRequests; set { _explicitNullValueSnapshotRequests = value; AdditionalData?.Remove("snapshotRequests"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("snapshotRequests"); else _explicitNullProperties?.Remove("snapshotRequests"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksCrmObjectSnapshotRequest> _explicitNullValueSnapshotRequests = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksCrmObjectSnapshotBatchRequest"/> and sets the default values.
@@ -37,7 +48,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksCrmObjectSnapshotBatchRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksCrmObjectSnapshotBatchRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksCrmObjectSnapshotBatchRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -58,6 +69,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksCrmObjectSnapshotRequest>("snapshotRequests", SnapshotRequests);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

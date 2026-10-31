@@ -11,19 +11,33 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ExternalLegalConsentResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("communicationTypeId") is null) { _explicitNullValueCommunicationTypeId = default!; _explicitNullProperties?.Remove("communicationTypeId"); }
+            else if (parseNode.GetChildNode("communicationTypeId") is { } nullNodeCommunicationTypeId && nullNodeCommunicationTypeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommunicationTypeId = null;
+            if (parseNode.GetChildNode("consented") is null) { _explicitNullValueConsented = default!; _explicitNullProperties?.Remove("consented"); }
+            else if (parseNode.GetChildNode("consented") is { } nullNodeConsented && nullNodeConsented.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Consented = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A string representing the unique identifier for the type of communication for which consent is being recorded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CommunicationTypeId { get; set; }
+        public string? CommunicationTypeId { get => _explicitNullValueCommunicationTypeId; set { _explicitNullValueCommunicationTypeId = value; AdditionalData?.Remove("communicationTypeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("communicationTypeId"); else _explicitNullProperties?.Remove("communicationTypeId"); } }
+        private string? _explicitNullValueCommunicationTypeId = default!;
 #nullable restore
 #else
-        public string CommunicationTypeId { get; set; }
+        public string CommunicationTypeId { get => _explicitNullValueCommunicationTypeId; set { _explicitNullValueCommunicationTypeId = value; AdditionalData?.Remove("communicationTypeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("communicationTypeId"); else _explicitNullProperties?.Remove("communicationTypeId"); } }
+        private string _explicitNullValueCommunicationTypeId = default!;
 #endif
         /// <summary>A boolean indicating whether the user has given consent for the communication type. It is true if consent is given, otherwise false.</summary>
-        public bool? Consented { get; set; }
+        public bool? Consented { get => _explicitNullValueConsented; set { _explicitNullValueConsented = value; AdditionalData?.Remove("consented"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("consented"); else _explicitNullProperties?.Remove("consented"); } }
+        private bool? _explicitNullValueConsented = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentResponse"/> and sets the default values.
         /// </summary>
@@ -39,7 +53,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -62,6 +76,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("communicationTypeId", CommunicationTypeId);
             writer.WriteBoolValue("consented", Consented);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

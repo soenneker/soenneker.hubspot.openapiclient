@@ -11,11 +11,21 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class RequiredPropertiesExtensionData : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("isRequiredProperty") is null) { _explicitNullValueIsRequiredProperty = default!; _explicitNullProperties?.Remove("isRequiredProperty"); }
+            else if (parseNode.GetChildNode("isRequiredProperty") is { } nullNodeIsRequiredProperty && nullNodeIsRequiredProperty.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsRequiredProperty = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A boolean indicating if the property is required. This field is used to determine the necessity of a property within a given schema or operation.</summary>
-        public bool? IsRequiredProperty { get; set; }
+        public bool? IsRequiredProperty { get => _explicitNullValueIsRequiredProperty; set { _explicitNullValueIsRequiredProperty = value; AdditionalData?.Remove("isRequiredProperty"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isRequiredProperty"); else _explicitNullProperties?.Remove("isRequiredProperty"); } }
+        private bool? _explicitNullValueIsRequiredProperty = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.RequiredPropertiesExtensionData"/> and sets the default values.
         /// </summary>
@@ -31,7 +41,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.RequiredPropertiesExtensionData CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.RequiredPropertiesExtensionData();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.RequiredPropertiesExtensionData(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -52,6 +62,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("isRequiredProperty", IsRequiredProperty);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

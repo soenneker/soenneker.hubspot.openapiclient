@@ -11,122 +11,196 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ExternalCalendarMeetingEventResponseProperties : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("hs_activity_type") is null) { _explicitNullValueHsActivityType = default!; _explicitNullProperties?.Remove("hs_activity_type"); }
+            else if (parseNode.GetChildNode("hs_activity_type") is { } nullNodeHsActivityType && nullNodeHsActivityType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HsActivityType = null;
+            if (parseNode.GetChildNode("hs_attachment_ids") is null) { _explicitNullValueHsAttachmentIds = default!; _explicitNullProperties?.Remove("hs_attachment_ids"); }
+            else if (parseNode.GetChildNode("hs_attachment_ids") is { } nullNodeHsAttachmentIds && nullNodeHsAttachmentIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HsAttachmentIds = null;
+            if (parseNode.GetChildNode("hs_attendee_owner_ids") is null) { _explicitNullValueHsAttendeeOwnerIds = default!; _explicitNullProperties?.Remove("hs_attendee_owner_ids"); }
+            else if (parseNode.GetChildNode("hs_attendee_owner_ids") is { } nullNodeHsAttendeeOwnerIds && nullNodeHsAttendeeOwnerIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HsAttendeeOwnerIds = null;
+            if (parseNode.GetChildNode("hs_engagement_source") is null) { _explicitNullValueHsEngagementSource = default!; _explicitNullProperties?.Remove("hs_engagement_source"); }
+            else if (parseNode.GetChildNode("hs_engagement_source") is { } nullNodeHsEngagementSource && nullNodeHsEngagementSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HsEngagementSource = null;
+            if (parseNode.GetChildNode("hs_engagement_source_id") is null) { _explicitNullValueHsEngagementSourceId = default!; _explicitNullProperties?.Remove("hs_engagement_source_id"); }
+            else if (parseNode.GetChildNode("hs_engagement_source_id") is { } nullNodeHsEngagementSourceId && nullNodeHsEngagementSourceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HsEngagementSourceId = null;
+            if (parseNode.GetChildNode("hs_include_description_in_reminder") is null) { _explicitNullValueHsIncludeDescriptionInReminder = default!; _explicitNullProperties?.Remove("hs_include_description_in_reminder"); }
+            else if (parseNode.GetChildNode("hs_include_description_in_reminder") is { } nullNodeHsIncludeDescriptionInReminder && nullNodeHsIncludeDescriptionInReminder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HsIncludeDescriptionInReminder = null;
+            if (parseNode.GetChildNode("hs_internal_meeting_notes") is null) { _explicitNullValueHsInternalMeetingNotes = default!; _explicitNullProperties?.Remove("hs_internal_meeting_notes"); }
+            else if (parseNode.GetChildNode("hs_internal_meeting_notes") is { } nullNodeHsInternalMeetingNotes && nullNodeHsInternalMeetingNotes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HsInternalMeetingNotes = null;
+            if (parseNode.GetChildNode("hs_meeting_body") is null) { _explicitNullValueHsMeetingBody = default!; _explicitNullProperties?.Remove("hs_meeting_body"); }
+            else if (parseNode.GetChildNode("hs_meeting_body") is { } nullNodeHsMeetingBody && nullNodeHsMeetingBody.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HsMeetingBody = null;
+            if (parseNode.GetChildNode("hs_meeting_end_time") is null) { _explicitNullValueHsMeetingEndTime = default!; _explicitNullProperties?.Remove("hs_meeting_end_time"); }
+            else if (parseNode.GetChildNode("hs_meeting_end_time") is { } nullNodeHsMeetingEndTime && nullNodeHsMeetingEndTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HsMeetingEndTime = null;
+            if (parseNode.GetChildNode("hs_meeting_external_url") is null) { _explicitNullValueHsMeetingExternalUrl = default!; _explicitNullProperties?.Remove("hs_meeting_external_url"); }
+            else if (parseNode.GetChildNode("hs_meeting_external_url") is { } nullNodeHsMeetingExternalUrl && nullNodeHsMeetingExternalUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HsMeetingExternalUrl = null;
+            if (parseNode.GetChildNode("hs_meeting_location") is null) { _explicitNullValueHsMeetingLocation = default!; _explicitNullProperties?.Remove("hs_meeting_location"); }
+            else if (parseNode.GetChildNode("hs_meeting_location") is { } nullNodeHsMeetingLocation && nullNodeHsMeetingLocation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HsMeetingLocation = null;
+            if (parseNode.GetChildNode("hs_meeting_location_type") is null) { _explicitNullValueHsMeetingLocationType = default!; _explicitNullProperties?.Remove("hs_meeting_location_type"); }
+            else if (parseNode.GetChildNode("hs_meeting_location_type") is { } nullNodeHsMeetingLocationType && nullNodeHsMeetingLocationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HsMeetingLocationType = null;
+            if (parseNode.GetChildNode("hs_meeting_outcome") is null) { _explicitNullValueHsMeetingOutcome = default!; _explicitNullProperties?.Remove("hs_meeting_outcome"); }
+            else if (parseNode.GetChildNode("hs_meeting_outcome") is { } nullNodeHsMeetingOutcome && nullNodeHsMeetingOutcome.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HsMeetingOutcome = null;
+            if (parseNode.GetChildNode("hs_meeting_start_time") is null) { _explicitNullValueHsMeetingStartTime = default!; _explicitNullProperties?.Remove("hs_meeting_start_time"); }
+            else if (parseNode.GetChildNode("hs_meeting_start_time") is { } nullNodeHsMeetingStartTime && nullNodeHsMeetingStartTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HsMeetingStartTime = null;
+            if (parseNode.GetChildNode("hs_meeting_title") is null) { _explicitNullValueHsMeetingTitle = default!; _explicitNullProperties?.Remove("hs_meeting_title"); }
+            else if (parseNode.GetChildNode("hs_meeting_title") is { } nullNodeHsMeetingTitle && nullNodeHsMeetingTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HsMeetingTitle = null;
+            if (parseNode.GetChildNode("hs_timestamp") is null) { _explicitNullValueHsTimestamp = default!; _explicitNullProperties?.Remove("hs_timestamp"); }
+            else if (parseNode.GetChildNode("hs_timestamp") is { } nullNodeHsTimestamp && nullNodeHsTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HsTimestamp = null;
+            if (parseNode.GetChildNode("hs_unique_id") is null) { _explicitNullValueHsUniqueId = default!; _explicitNullProperties?.Remove("hs_unique_id"); }
+            else if (parseNode.GetChildNode("hs_unique_id") is { } nullNodeHsUniqueId && nullNodeHsUniqueId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HsUniqueId = null;
+            if (parseNode.GetChildNode("hubspot_owner_id") is null) { _explicitNullValueHubspotOwnerId = default!; _explicitNullProperties?.Remove("hubspot_owner_id"); }
+            else if (parseNode.GetChildNode("hubspot_owner_id") is { } nullNodeHubspotOwnerId && nullNodeHubspotOwnerId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HubspotOwnerId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The type of activity associated with the meeting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HsActivityType { get; set; }
+        public string? HsActivityType { get => _explicitNullValueHsActivityType; set { _explicitNullValueHsActivityType = value; AdditionalData?.Remove("hs_activity_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hs_activity_type"); else _explicitNullProperties?.Remove("hs_activity_type"); } }
+        private string? _explicitNullValueHsActivityType = default!;
 #nullable restore
 #else
-        public string HsActivityType { get; set; }
+        public string HsActivityType { get => _explicitNullValueHsActivityType; set { _explicitNullValueHsActivityType = value; AdditionalData?.Remove("hs_activity_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hs_activity_type"); else _explicitNullProperties?.Remove("hs_activity_type"); } }
+        private string _explicitNullValueHsActivityType = default!;
 #endif
         /// <summary>An array of unique identifiers for attachments associated with the meeting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? HsAttachmentIds { get; set; }
+        public List<string>? HsAttachmentIds { get => _explicitNullValueHsAttachmentIds; set { _explicitNullValueHsAttachmentIds = value; AdditionalData?.Remove("hs_attachment_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hs_attachment_ids"); else _explicitNullProperties?.Remove("hs_attachment_ids"); } }
+        private List<string>? _explicitNullValueHsAttachmentIds = default!;
 #nullable restore
 #else
-        public List<string> HsAttachmentIds { get; set; }
+        public List<string> HsAttachmentIds { get => _explicitNullValueHsAttachmentIds; set { _explicitNullValueHsAttachmentIds = value; AdditionalData?.Remove("hs_attachment_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hs_attachment_ids"); else _explicitNullProperties?.Remove("hs_attachment_ids"); } }
+        private List<string> _explicitNullValueHsAttachmentIds = default!;
 #endif
         /// <summary>An array of unique identifiers for the owners of the attendees.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? HsAttendeeOwnerIds { get; set; }
+        public List<string>? HsAttendeeOwnerIds { get => _explicitNullValueHsAttendeeOwnerIds; set { _explicitNullValueHsAttendeeOwnerIds = value; AdditionalData?.Remove("hs_attendee_owner_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hs_attendee_owner_ids"); else _explicitNullProperties?.Remove("hs_attendee_owner_ids"); } }
+        private List<string>? _explicitNullValueHsAttendeeOwnerIds = default!;
 #nullable restore
 #else
-        public List<string> HsAttendeeOwnerIds { get; set; }
+        public List<string> HsAttendeeOwnerIds { get => _explicitNullValueHsAttendeeOwnerIds; set { _explicitNullValueHsAttendeeOwnerIds = value; AdditionalData?.Remove("hs_attendee_owner_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hs_attendee_owner_ids"); else _explicitNullProperties?.Remove("hs_attendee_owner_ids"); } }
+        private List<string> _explicitNullValueHsAttendeeOwnerIds = default!;
 #endif
         /// <summary>The source of the engagement. Valid values include a wide range of sources such as &apos;UNKNOWN&apos;, &apos;IMPORT&apos;, &apos;API&apos;, &apos;FORM&apos;, and many others.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCalendarMeetingEventResponsePropertiesHsEngagementSource? HsEngagementSource { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCalendarMeetingEventResponsePropertiesHsEngagementSource? HsEngagementSource { get => _explicitNullValueHsEngagementSource; set { _explicitNullValueHsEngagementSource = value; AdditionalData?.Remove("hs_engagement_source"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hs_engagement_source"); else _explicitNullProperties?.Remove("hs_engagement_source"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCalendarMeetingEventResponsePropertiesHsEngagementSource? _explicitNullValueHsEngagementSource = default!;
         /// <summary>The unique identifier for the source of the engagement.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HsEngagementSourceId { get; set; }
+        public string? HsEngagementSourceId { get => _explicitNullValueHsEngagementSourceId; set { _explicitNullValueHsEngagementSourceId = value; AdditionalData?.Remove("hs_engagement_source_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hs_engagement_source_id"); else _explicitNullProperties?.Remove("hs_engagement_source_id"); } }
+        private string? _explicitNullValueHsEngagementSourceId = default!;
 #nullable restore
 #else
-        public string HsEngagementSourceId { get; set; }
+        public string HsEngagementSourceId { get => _explicitNullValueHsEngagementSourceId; set { _explicitNullValueHsEngagementSourceId = value; AdditionalData?.Remove("hs_engagement_source_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hs_engagement_source_id"); else _explicitNullProperties?.Remove("hs_engagement_source_id"); } }
+        private string _explicitNullValueHsEngagementSourceId = default!;
 #endif
         /// <summary>Indicates whether the meeting description should be included in reminders.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HsIncludeDescriptionInReminder { get; set; }
+        public string? HsIncludeDescriptionInReminder { get => _explicitNullValueHsIncludeDescriptionInReminder; set { _explicitNullValueHsIncludeDescriptionInReminder = value; AdditionalData?.Remove("hs_include_description_in_reminder"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hs_include_description_in_reminder"); else _explicitNullProperties?.Remove("hs_include_description_in_reminder"); } }
+        private string? _explicitNullValueHsIncludeDescriptionInReminder = default!;
 #nullable restore
 #else
-        public string HsIncludeDescriptionInReminder { get; set; }
+        public string HsIncludeDescriptionInReminder { get => _explicitNullValueHsIncludeDescriptionInReminder; set { _explicitNullValueHsIncludeDescriptionInReminder = value; AdditionalData?.Remove("hs_include_description_in_reminder"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hs_include_description_in_reminder"); else _explicitNullProperties?.Remove("hs_include_description_in_reminder"); } }
+        private string _explicitNullValueHsIncludeDescriptionInReminder = default!;
 #endif
         /// <summary>Internal notes related to the meeting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HsInternalMeetingNotes { get; set; }
+        public string? HsInternalMeetingNotes { get => _explicitNullValueHsInternalMeetingNotes; set { _explicitNullValueHsInternalMeetingNotes = value; AdditionalData?.Remove("hs_internal_meeting_notes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hs_internal_meeting_notes"); else _explicitNullProperties?.Remove("hs_internal_meeting_notes"); } }
+        private string? _explicitNullValueHsInternalMeetingNotes = default!;
 #nullable restore
 #else
-        public string HsInternalMeetingNotes { get; set; }
+        public string HsInternalMeetingNotes { get => _explicitNullValueHsInternalMeetingNotes; set { _explicitNullValueHsInternalMeetingNotes = value; AdditionalData?.Remove("hs_internal_meeting_notes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hs_internal_meeting_notes"); else _explicitNullProperties?.Remove("hs_internal_meeting_notes"); } }
+        private string _explicitNullValueHsInternalMeetingNotes = default!;
 #endif
         /// <summary>The body or description of the meeting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HsMeetingBody { get; set; }
+        public string? HsMeetingBody { get => _explicitNullValueHsMeetingBody; set { _explicitNullValueHsMeetingBody = value; AdditionalData?.Remove("hs_meeting_body"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hs_meeting_body"); else _explicitNullProperties?.Remove("hs_meeting_body"); } }
+        private string? _explicitNullValueHsMeetingBody = default!;
 #nullable restore
 #else
-        public string HsMeetingBody { get; set; }
+        public string HsMeetingBody { get => _explicitNullValueHsMeetingBody; set { _explicitNullValueHsMeetingBody = value; AdditionalData?.Remove("hs_meeting_body"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hs_meeting_body"); else _explicitNullProperties?.Remove("hs_meeting_body"); } }
+        private string _explicitNullValueHsMeetingBody = default!;
 #endif
         /// <summary>The end time of the meeting, in ISO 8601 format.</summary>
-        public DateTimeOffset? HsMeetingEndTime { get; set; }
+        public DateTimeOffset? HsMeetingEndTime { get => _explicitNullValueHsMeetingEndTime; set { _explicitNullValueHsMeetingEndTime = value; AdditionalData?.Remove("hs_meeting_end_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hs_meeting_end_time"); else _explicitNullProperties?.Remove("hs_meeting_end_time"); } }
+        private DateTimeOffset? _explicitNullValueHsMeetingEndTime = default!;
         /// <summary>The external URL associated with the meeting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HsMeetingExternalUrl { get; set; }
+        public string? HsMeetingExternalUrl { get => _explicitNullValueHsMeetingExternalUrl; set { _explicitNullValueHsMeetingExternalUrl = value; AdditionalData?.Remove("hs_meeting_external_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hs_meeting_external_url"); else _explicitNullProperties?.Remove("hs_meeting_external_url"); } }
+        private string? _explicitNullValueHsMeetingExternalUrl = default!;
 #nullable restore
 #else
-        public string HsMeetingExternalUrl { get; set; }
+        public string HsMeetingExternalUrl { get => _explicitNullValueHsMeetingExternalUrl; set { _explicitNullValueHsMeetingExternalUrl = value; AdditionalData?.Remove("hs_meeting_external_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hs_meeting_external_url"); else _explicitNullProperties?.Remove("hs_meeting_external_url"); } }
+        private string _explicitNullValueHsMeetingExternalUrl = default!;
 #endif
         /// <summary>The location where the meeting is held.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HsMeetingLocation { get; set; }
+        public string? HsMeetingLocation { get => _explicitNullValueHsMeetingLocation; set { _explicitNullValueHsMeetingLocation = value; AdditionalData?.Remove("hs_meeting_location"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hs_meeting_location"); else _explicitNullProperties?.Remove("hs_meeting_location"); } }
+        private string? _explicitNullValueHsMeetingLocation = default!;
 #nullable restore
 #else
-        public string HsMeetingLocation { get; set; }
+        public string HsMeetingLocation { get => _explicitNullValueHsMeetingLocation; set { _explicitNullValueHsMeetingLocation = value; AdditionalData?.Remove("hs_meeting_location"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hs_meeting_location"); else _explicitNullProperties?.Remove("hs_meeting_location"); } }
+        private string _explicitNullValueHsMeetingLocation = default!;
 #endif
         /// <summary>The type of location for the meeting. Valid values include &apos;PHONE&apos;, &apos;ADDRESS&apos;, and &apos;CUSTOM&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCalendarMeetingEventResponsePropertiesHsMeetingLocationType? HsMeetingLocationType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCalendarMeetingEventResponsePropertiesHsMeetingLocationType? HsMeetingLocationType { get => _explicitNullValueHsMeetingLocationType; set { _explicitNullValueHsMeetingLocationType = value; AdditionalData?.Remove("hs_meeting_location_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hs_meeting_location_type"); else _explicitNullProperties?.Remove("hs_meeting_location_type"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCalendarMeetingEventResponsePropertiesHsMeetingLocationType? _explicitNullValueHsMeetingLocationType = default!;
         /// <summary>The outcome of the meeting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HsMeetingOutcome { get; set; }
+        public string? HsMeetingOutcome { get => _explicitNullValueHsMeetingOutcome; set { _explicitNullValueHsMeetingOutcome = value; AdditionalData?.Remove("hs_meeting_outcome"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hs_meeting_outcome"); else _explicitNullProperties?.Remove("hs_meeting_outcome"); } }
+        private string? _explicitNullValueHsMeetingOutcome = default!;
 #nullable restore
 #else
-        public string HsMeetingOutcome { get; set; }
+        public string HsMeetingOutcome { get => _explicitNullValueHsMeetingOutcome; set { _explicitNullValueHsMeetingOutcome = value; AdditionalData?.Remove("hs_meeting_outcome"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hs_meeting_outcome"); else _explicitNullProperties?.Remove("hs_meeting_outcome"); } }
+        private string _explicitNullValueHsMeetingOutcome = default!;
 #endif
         /// <summary>The start time of the meeting, in ISO 8601 format.</summary>
-        public DateTimeOffset? HsMeetingStartTime { get; set; }
+        public DateTimeOffset? HsMeetingStartTime { get => _explicitNullValueHsMeetingStartTime; set { _explicitNullValueHsMeetingStartTime = value; AdditionalData?.Remove("hs_meeting_start_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hs_meeting_start_time"); else _explicitNullProperties?.Remove("hs_meeting_start_time"); } }
+        private DateTimeOffset? _explicitNullValueHsMeetingStartTime = default!;
         /// <summary>The title of the meeting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HsMeetingTitle { get; set; }
+        public string? HsMeetingTitle { get => _explicitNullValueHsMeetingTitle; set { _explicitNullValueHsMeetingTitle = value; AdditionalData?.Remove("hs_meeting_title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hs_meeting_title"); else _explicitNullProperties?.Remove("hs_meeting_title"); } }
+        private string? _explicitNullValueHsMeetingTitle = default!;
 #nullable restore
 #else
-        public string HsMeetingTitle { get; set; }
+        public string HsMeetingTitle { get => _explicitNullValueHsMeetingTitle; set { _explicitNullValueHsMeetingTitle = value; AdditionalData?.Remove("hs_meeting_title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hs_meeting_title"); else _explicitNullProperties?.Remove("hs_meeting_title"); } }
+        private string _explicitNullValueHsMeetingTitle = default!;
 #endif
         /// <summary>A timestamp indicating when the meeting event was recorded, in ISO 8601 format.</summary>
-        public DateTimeOffset? HsTimestamp { get; set; }
+        public DateTimeOffset? HsTimestamp { get => _explicitNullValueHsTimestamp; set { _explicitNullValueHsTimestamp = value; AdditionalData?.Remove("hs_timestamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hs_timestamp"); else _explicitNullProperties?.Remove("hs_timestamp"); } }
+        private DateTimeOffset? _explicitNullValueHsTimestamp = default!;
         /// <summary>A unique identifier for the meeting event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HsUniqueId { get; set; }
+        public string? HsUniqueId { get => _explicitNullValueHsUniqueId; set { _explicitNullValueHsUniqueId = value; AdditionalData?.Remove("hs_unique_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hs_unique_id"); else _explicitNullProperties?.Remove("hs_unique_id"); } }
+        private string? _explicitNullValueHsUniqueId = default!;
 #nullable restore
 #else
-        public string HsUniqueId { get; set; }
+        public string HsUniqueId { get => _explicitNullValueHsUniqueId; set { _explicitNullValueHsUniqueId = value; AdditionalData?.Remove("hs_unique_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hs_unique_id"); else _explicitNullProperties?.Remove("hs_unique_id"); } }
+        private string _explicitNullValueHsUniqueId = default!;
 #endif
         /// <summary>The unique identifier of the HubSpot owner associated with the meeting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HubspotOwnerId { get; set; }
+        public string? HubspotOwnerId { get => _explicitNullValueHubspotOwnerId; set { _explicitNullValueHubspotOwnerId = value; AdditionalData?.Remove("hubspot_owner_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hubspot_owner_id"); else _explicitNullProperties?.Remove("hubspot_owner_id"); } }
+        private string? _explicitNullValueHubspotOwnerId = default!;
 #nullable restore
 #else
-        public string HubspotOwnerId { get; set; }
+        public string HubspotOwnerId { get => _explicitNullValueHubspotOwnerId; set { _explicitNullValueHubspotOwnerId = value; AdditionalData?.Remove("hubspot_owner_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hubspot_owner_id"); else _explicitNullProperties?.Remove("hubspot_owner_id"); } }
+        private string _explicitNullValueHubspotOwnerId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCalendarMeetingEventResponseProperties"/> and sets the default values.
@@ -143,7 +217,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCalendarMeetingEventResponseProperties CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCalendarMeetingEventResponseProperties();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCalendarMeetingEventResponseProperties(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -156,7 +230,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "hs_activity_type", n => { HsActivityType = n.GetStringValue(); } },
                 { "hs_attachment_ids", n => { HsAttachmentIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "hs_attendee_owner_ids", n => { HsAttendeeOwnerIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "hs_engagement_source", n => { HsEngagementSource = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCalendarMeetingEventResponsePropertiesHsEngagementSource>(); } },
+                { "hs_engagement_source", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCalendarMeetingEventResponsePropertiesHsEngagementSource>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueHsEngagementSource = default; _explicitNullProperties?.Remove("hs_engagement_source"); AdditionalData["hs_engagement_source"] = unknown; } else { HsEngagementSource = parsed; AdditionalData.Remove("hs_engagement_source"); } } },
                 { "hs_engagement_source_id", n => { HsEngagementSourceId = n.GetStringValue(); } },
                 { "hs_include_description_in_reminder", n => { HsIncludeDescriptionInReminder = n.GetStringValue(); } },
                 { "hs_internal_meeting_notes", n => { HsInternalMeetingNotes = n.GetStringValue(); } },
@@ -164,7 +238,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "hs_meeting_end_time", n => { HsMeetingEndTime = n.GetDateTimeOffsetValue(); } },
                 { "hs_meeting_external_url", n => { HsMeetingExternalUrl = n.GetStringValue(); } },
                 { "hs_meeting_location", n => { HsMeetingLocation = n.GetStringValue(); } },
-                { "hs_meeting_location_type", n => { HsMeetingLocationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCalendarMeetingEventResponsePropertiesHsMeetingLocationType>(); } },
+                { "hs_meeting_location_type", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCalendarMeetingEventResponsePropertiesHsMeetingLocationType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueHsMeetingLocationType = default; _explicitNullProperties?.Remove("hs_meeting_location_type"); AdditionalData["hs_meeting_location_type"] = unknown; } else { HsMeetingLocationType = parsed; AdditionalData.Remove("hs_meeting_location_type"); } } },
                 { "hs_meeting_outcome", n => { HsMeetingOutcome = n.GetStringValue(); } },
                 { "hs_meeting_start_time", n => { HsMeetingStartTime = n.GetDateTimeOffsetValue(); } },
                 { "hs_meeting_title", n => { HsMeetingTitle = n.GetStringValue(); } },
@@ -198,6 +272,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("hs_timestamp", HsTimestamp);
             writer.WriteStringValue("hs_unique_id", HsUniqueId);
             writer.WriteStringValue("hubspot_owner_id", HubspotOwnerId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

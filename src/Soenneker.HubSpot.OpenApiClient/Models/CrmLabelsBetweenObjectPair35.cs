@@ -12,48 +12,75 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CrmLabelsBetweenObjectPair35 : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("fromObjectId") is null) { _explicitNullValueFromObjectId = default!; _explicitNullProperties?.Remove("fromObjectId"); }
+            else if (parseNode.GetChildNode("fromObjectId") is { } nullNodeFromObjectId && nullNodeFromObjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FromObjectId = null;
+            if (parseNode.GetChildNode("fromObjectTypeId") is null) { _explicitNullValueFromObjectTypeId = default!; _explicitNullProperties?.Remove("fromObjectTypeId"); }
+            else if (parseNode.GetChildNode("fromObjectTypeId") is { } nullNodeFromObjectTypeId && nullNodeFromObjectTypeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FromObjectTypeId = null;
+            if (parseNode.GetChildNode("labels") is null) { _explicitNullValueLabels = default!; _explicitNullProperties?.Remove("labels"); }
+            else if (parseNode.GetChildNode("labels") is { } nullNodeLabels && nullNodeLabels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Labels = null;
+            if (parseNode.GetChildNode("toObjectId") is null) { _explicitNullValueToObjectId = default!; _explicitNullProperties?.Remove("toObjectId"); }
+            else if (parseNode.GetChildNode("toObjectId") is { } nullNodeToObjectId && nullNodeToObjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToObjectId = null;
+            if (parseNode.GetChildNode("toObjectTypeId") is null) { _explicitNullValueToObjectTypeId = default!; _explicitNullProperties?.Remove("toObjectTypeId"); }
+            else if (parseNode.GetChildNode("toObjectTypeId") is { } nullNodeToObjectTypeId && nullNodeToObjectTypeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToObjectTypeId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Source unique ID of the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FromObjectId { get; set; }
+        public string? FromObjectId { get => _explicitNullValueFromObjectId; set { _explicitNullValueFromObjectId = value; AdditionalData?.Remove("fromObjectId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fromObjectId"); else _explicitNullProperties?.Remove("fromObjectId"); } }
+        private string? _explicitNullValueFromObjectId = default!;
 #nullable restore
 #else
-        public string FromObjectId { get; set; }
+        public string FromObjectId { get => _explicitNullValueFromObjectId; set { _explicitNullValueFromObjectId = value; AdditionalData?.Remove("fromObjectId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fromObjectId"); else _explicitNullProperties?.Remove("fromObjectId"); } }
+        private string _explicitNullValueFromObjectId = default!;
 #endif
         /// <summary>Source object type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FromObjectTypeId { get; set; }
+        public string? FromObjectTypeId { get => _explicitNullValueFromObjectTypeId; set { _explicitNullValueFromObjectTypeId = value; AdditionalData?.Remove("fromObjectTypeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fromObjectTypeId"); else _explicitNullProperties?.Remove("fromObjectTypeId"); } }
+        private string? _explicitNullValueFromObjectTypeId = default!;
 #nullable restore
 #else
-        public string FromObjectTypeId { get; set; }
+        public string FromObjectTypeId { get => _explicitNullValueFromObjectTypeId; set { _explicitNullValueFromObjectTypeId = value; AdditionalData?.Remove("fromObjectTypeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fromObjectTypeId"); else _explicitNullProperties?.Remove("fromObjectTypeId"); } }
+        private string _explicitNullValueFromObjectTypeId = default!;
 #endif
         /// <summary>An array of labels that describe the relationship between the two objects. This is a required property.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Labels { get; set; }
+        public List<string>? Labels { get => _explicitNullValueLabels; set { _explicitNullValueLabels = value; AdditionalData?.Remove("labels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("labels"); else _explicitNullProperties?.Remove("labels"); } }
+        private List<string>? _explicitNullValueLabels = default!;
 #nullable restore
 #else
-        public List<string> Labels { get; set; }
+        public List<string> Labels { get => _explicitNullValueLabels; set { _explicitNullValueLabels = value; AdditionalData?.Remove("labels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("labels"); else _explicitNullProperties?.Remove("labels"); } }
+        private List<string> _explicitNullValueLabels = default!;
 #endif
         /// <summary>Target unique ID of the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ToObjectId { get; set; }
+        public string? ToObjectId { get => _explicitNullValueToObjectId; set { _explicitNullValueToObjectId = value; AdditionalData?.Remove("toObjectId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("toObjectId"); else _explicitNullProperties?.Remove("toObjectId"); } }
+        private string? _explicitNullValueToObjectId = default!;
 #nullable restore
 #else
-        public string ToObjectId { get; set; }
+        public string ToObjectId { get => _explicitNullValueToObjectId; set { _explicitNullValueToObjectId = value; AdditionalData?.Remove("toObjectId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("toObjectId"); else _explicitNullProperties?.Remove("toObjectId"); } }
+        private string _explicitNullValueToObjectId = default!;
 #endif
         /// <summary>Target object type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ToObjectTypeId { get; set; }
+        public string? ToObjectTypeId { get => _explicitNullValueToObjectTypeId; set { _explicitNullValueToObjectTypeId = value; AdditionalData?.Remove("toObjectTypeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("toObjectTypeId"); else _explicitNullProperties?.Remove("toObjectTypeId"); } }
+        private string? _explicitNullValueToObjectTypeId = default!;
 #nullable restore
 #else
-        public string ToObjectTypeId { get; set; }
+        public string ToObjectTypeId { get => _explicitNullValueToObjectTypeId; set { _explicitNullValueToObjectTypeId = value; AdditionalData?.Remove("toObjectTypeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("toObjectTypeId"); else _explicitNullProperties?.Remove("toObjectTypeId"); } }
+        private string _explicitNullValueToObjectTypeId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmLabelsBetweenObjectPair35"/> and sets the default values.
@@ -70,7 +97,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.CrmLabelsBetweenObjectPair35 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.CrmLabelsBetweenObjectPair35();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.CrmLabelsBetweenObjectPair35(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -99,6 +126,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("labels", Labels);
             writer.WriteStringValue("toObjectId", ToObjectId);
             writer.WriteStringValue("toObjectTypeId", ToObjectTypeId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,225 +11,348 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicEmailStyleSettings : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("backgroundColor") is null) { _explicitNullValueBackgroundColor = default!; _explicitNullProperties?.Remove("backgroundColor"); }
+            else if (parseNode.GetChildNode("backgroundColor") is { } nullNodeBackgroundColor && nullNodeBackgroundColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BackgroundColor = null;
+            if (parseNode.GetChildNode("backgroundImage") is null) { _explicitNullValueBackgroundImage = default!; _explicitNullProperties?.Remove("backgroundImage"); }
+            else if (parseNode.GetChildNode("backgroundImage") is { } nullNodeBackgroundImage && nullNodeBackgroundImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BackgroundImage = null;
+            if (parseNode.GetChildNode("backgroundImageType") is null) { _explicitNullValueBackgroundImageType = default!; _explicitNullProperties?.Remove("backgroundImageType"); }
+            else if (parseNode.GetChildNode("backgroundImageType") is { } nullNodeBackgroundImageType && nullNodeBackgroundImageType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BackgroundImageType = null;
+            if (parseNode.GetChildNode("bodyBorderColor") is null) { _explicitNullValueBodyBorderColor = default!; _explicitNullProperties?.Remove("bodyBorderColor"); }
+            else if (parseNode.GetChildNode("bodyBorderColor") is { } nullNodeBodyBorderColor && nullNodeBodyBorderColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BodyBorderColor = null;
+            if (parseNode.GetChildNode("bodyBorderColorChoice") is null) { _explicitNullValueBodyBorderColorChoice = default!; _explicitNullProperties?.Remove("bodyBorderColorChoice"); }
+            else if (parseNode.GetChildNode("bodyBorderColorChoice") is { } nullNodeBodyBorderColorChoice && nullNodeBodyBorderColorChoice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BodyBorderColorChoice = null;
+            if (parseNode.GetChildNode("bodyBorderWidth") is null) { _explicitNullValueBodyBorderWidth = default!; _explicitNullProperties?.Remove("bodyBorderWidth"); }
+            else if (parseNode.GetChildNode("bodyBorderWidth") is { } nullNodeBodyBorderWidth && nullNodeBodyBorderWidth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BodyBorderWidth = null;
+            if (parseNode.GetChildNode("bodyColor") is null) { _explicitNullValueBodyColor = default!; _explicitNullProperties?.Remove("bodyColor"); }
+            else if (parseNode.GetChildNode("bodyColor") is { } nullNodeBodyColor && nullNodeBodyColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BodyColor = null;
+            if (parseNode.GetChildNode("buttonStyleSettings") is null) { _explicitNullValueButtonStyleSettings = default!; _explicitNullProperties?.Remove("buttonStyleSettings"); }
+            else if (parseNode.GetChildNode("buttonStyleSettings") is { } nullNodeButtonStyleSettings && nullNodeButtonStyleSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ButtonStyleSettings = null;
+            if (parseNode.GetChildNode("colorPickerFavorite1") is null) { _explicitNullValueColorPickerFavorite1 = default!; _explicitNullProperties?.Remove("colorPickerFavorite1"); }
+            else if (parseNode.GetChildNode("colorPickerFavorite1") is { } nullNodeColorPickerFavorite1 && nullNodeColorPickerFavorite1.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ColorPickerFavorite1 = null;
+            if (parseNode.GetChildNode("colorPickerFavorite2") is null) { _explicitNullValueColorPickerFavorite2 = default!; _explicitNullProperties?.Remove("colorPickerFavorite2"); }
+            else if (parseNode.GetChildNode("colorPickerFavorite2") is { } nullNodeColorPickerFavorite2 && nullNodeColorPickerFavorite2.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ColorPickerFavorite2 = null;
+            if (parseNode.GetChildNode("colorPickerFavorite3") is null) { _explicitNullValueColorPickerFavorite3 = default!; _explicitNullProperties?.Remove("colorPickerFavorite3"); }
+            else if (parseNode.GetChildNode("colorPickerFavorite3") is { } nullNodeColorPickerFavorite3 && nullNodeColorPickerFavorite3.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ColorPickerFavorite3 = null;
+            if (parseNode.GetChildNode("colorPickerFavorite4") is null) { _explicitNullValueColorPickerFavorite4 = default!; _explicitNullProperties?.Remove("colorPickerFavorite4"); }
+            else if (parseNode.GetChildNode("colorPickerFavorite4") is { } nullNodeColorPickerFavorite4 && nullNodeColorPickerFavorite4.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ColorPickerFavorite4 = null;
+            if (parseNode.GetChildNode("colorPickerFavorite5") is null) { _explicitNullValueColorPickerFavorite5 = default!; _explicitNullProperties?.Remove("colorPickerFavorite5"); }
+            else if (parseNode.GetChildNode("colorPickerFavorite5") is { } nullNodeColorPickerFavorite5 && nullNodeColorPickerFavorite5.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ColorPickerFavorite5 = null;
+            if (parseNode.GetChildNode("colorPickerFavorite6") is null) { _explicitNullValueColorPickerFavorite6 = default!; _explicitNullProperties?.Remove("colorPickerFavorite6"); }
+            else if (parseNode.GetChildNode("colorPickerFavorite6") is { } nullNodeColorPickerFavorite6 && nullNodeColorPickerFavorite6.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ColorPickerFavorite6 = null;
+            if (parseNode.GetChildNode("dividerStyleSettings") is null) { _explicitNullValueDividerStyleSettings = default!; _explicitNullProperties?.Remove("dividerStyleSettings"); }
+            else if (parseNode.GetChildNode("dividerStyleSettings") is { } nullNodeDividerStyleSettings && nullNodeDividerStyleSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DividerStyleSettings = null;
+            if (parseNode.GetChildNode("emailBodyPadding") is null) { _explicitNullValueEmailBodyPadding = default!; _explicitNullProperties?.Remove("emailBodyPadding"); }
+            else if (parseNode.GetChildNode("emailBodyPadding") is { } nullNodeEmailBodyPadding && nullNodeEmailBodyPadding.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailBodyPadding = null;
+            if (parseNode.GetChildNode("emailBodyWidth") is null) { _explicitNullValueEmailBodyWidth = default!; _explicitNullProperties?.Remove("emailBodyWidth"); }
+            else if (parseNode.GetChildNode("emailBodyWidth") is { } nullNodeEmailBodyWidth && nullNodeEmailBodyWidth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailBodyWidth = null;
+            if (parseNode.GetChildNode("headingOneFont") is null) { _explicitNullValueHeadingOneFont = default!; _explicitNullProperties?.Remove("headingOneFont"); }
+            else if (parseNode.GetChildNode("headingOneFont") is { } nullNodeHeadingOneFont && nullNodeHeadingOneFont.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HeadingOneFont = null;
+            if (parseNode.GetChildNode("headingTwoFont") is null) { _explicitNullValueHeadingTwoFont = default!; _explicitNullProperties?.Remove("headingTwoFont"); }
+            else if (parseNode.GetChildNode("headingTwoFont") is { } nullNodeHeadingTwoFont && nullNodeHeadingTwoFont.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HeadingTwoFont = null;
+            if (parseNode.GetChildNode("linksFont") is null) { _explicitNullValueLinksFont = default!; _explicitNullProperties?.Remove("linksFont"); }
+            else if (parseNode.GetChildNode("linksFont") is { } nullNodeLinksFont && nullNodeLinksFont.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LinksFont = null;
+            if (parseNode.GetChildNode("primaryAccentColor") is null) { _explicitNullValuePrimaryAccentColor = default!; _explicitNullProperties?.Remove("primaryAccentColor"); }
+            else if (parseNode.GetChildNode("primaryAccentColor") is { } nullNodePrimaryAccentColor && nullNodePrimaryAccentColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimaryAccentColor = null;
+            if (parseNode.GetChildNode("primaryFont") is null) { _explicitNullValuePrimaryFont = default!; _explicitNullProperties?.Remove("primaryFont"); }
+            else if (parseNode.GetChildNode("primaryFont") is { } nullNodePrimaryFont && nullNodePrimaryFont.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimaryFont = null;
+            if (parseNode.GetChildNode("primaryFontColor") is null) { _explicitNullValuePrimaryFontColor = default!; _explicitNullProperties?.Remove("primaryFontColor"); }
+            else if (parseNode.GetChildNode("primaryFontColor") is { } nullNodePrimaryFontColor && nullNodePrimaryFontColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimaryFontColor = null;
+            if (parseNode.GetChildNode("primaryFontLineHeight") is null) { _explicitNullValuePrimaryFontLineHeight = default!; _explicitNullProperties?.Remove("primaryFontLineHeight"); }
+            else if (parseNode.GetChildNode("primaryFontLineHeight") is { } nullNodePrimaryFontLineHeight && nullNodePrimaryFontLineHeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimaryFontLineHeight = null;
+            if (parseNode.GetChildNode("primaryFontSize") is null) { _explicitNullValuePrimaryFontSize = default!; _explicitNullProperties?.Remove("primaryFontSize"); }
+            else if (parseNode.GetChildNode("primaryFontSize") is { } nullNodePrimaryFontSize && nullNodePrimaryFontSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimaryFontSize = null;
+            if (parseNode.GetChildNode("secondaryAccentColor") is null) { _explicitNullValueSecondaryAccentColor = default!; _explicitNullProperties?.Remove("secondaryAccentColor"); }
+            else if (parseNode.GetChildNode("secondaryAccentColor") is { } nullNodeSecondaryAccentColor && nullNodeSecondaryAccentColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecondaryAccentColor = null;
+            if (parseNode.GetChildNode("secondaryFont") is null) { _explicitNullValueSecondaryFont = default!; _explicitNullProperties?.Remove("secondaryFont"); }
+            else if (parseNode.GetChildNode("secondaryFont") is { } nullNodeSecondaryFont && nullNodeSecondaryFont.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecondaryFont = null;
+            if (parseNode.GetChildNode("secondaryFontColor") is null) { _explicitNullValueSecondaryFontColor = default!; _explicitNullProperties?.Remove("secondaryFontColor"); }
+            else if (parseNode.GetChildNode("secondaryFontColor") is { } nullNodeSecondaryFontColor && nullNodeSecondaryFontColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecondaryFontColor = null;
+            if (parseNode.GetChildNode("secondaryFontLineHeight") is null) { _explicitNullValueSecondaryFontLineHeight = default!; _explicitNullProperties?.Remove("secondaryFontLineHeight"); }
+            else if (parseNode.GetChildNode("secondaryFontLineHeight") is { } nullNodeSecondaryFontLineHeight && nullNodeSecondaryFontLineHeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecondaryFontLineHeight = null;
+            if (parseNode.GetChildNode("secondaryFontSize") is null) { _explicitNullValueSecondaryFontSize = default!; _explicitNullProperties?.Remove("secondaryFontSize"); }
+            else if (parseNode.GetChildNode("secondaryFontSize") is { } nullNodeSecondaryFontSize && nullNodeSecondaryFontSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecondaryFontSize = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The background color of the email, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BackgroundColor { get; set; }
+        public string? BackgroundColor { get => _explicitNullValueBackgroundColor; set { _explicitNullValueBackgroundColor = value; AdditionalData?.Remove("backgroundColor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("backgroundColor"); else _explicitNullProperties?.Remove("backgroundColor"); } }
+        private string? _explicitNullValueBackgroundColor = default!;
 #nullable restore
 #else
-        public string BackgroundColor { get; set; }
+        public string BackgroundColor { get => _explicitNullValueBackgroundColor; set { _explicitNullValueBackgroundColor = value; AdditionalData?.Remove("backgroundColor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("backgroundColor"); else _explicitNullProperties?.Remove("backgroundColor"); } }
+        private string _explicitNullValueBackgroundColor = default!;
 #endif
         /// <summary>The URL of the background image used in the email.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BackgroundImage { get; set; }
+        public string? BackgroundImage { get => _explicitNullValueBackgroundImage; set { _explicitNullValueBackgroundImage = value; AdditionalData?.Remove("backgroundImage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("backgroundImage"); else _explicitNullProperties?.Remove("backgroundImage"); } }
+        private string? _explicitNullValueBackgroundImage = default!;
 #nullable restore
 #else
-        public string BackgroundImage { get; set; }
+        public string BackgroundImage { get => _explicitNullValueBackgroundImage; set { _explicitNullValueBackgroundImage = value; AdditionalData?.Remove("backgroundImage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("backgroundImage"); else _explicitNullProperties?.Remove("backgroundImage"); } }
+        private string _explicitNullValueBackgroundImage = default!;
 #endif
         /// <summary>The type of background image display, with valid values including &apos;SINGLE&apos;, &apos;STRETCH&apos;, and &apos;REPEAT&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailStyleSettingsBackgroundImageType? BackgroundImageType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailStyleSettingsBackgroundImageType? BackgroundImageType { get => _explicitNullValueBackgroundImageType; set { _explicitNullValueBackgroundImageType = value; AdditionalData?.Remove("backgroundImageType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("backgroundImageType"); else _explicitNullProperties?.Remove("backgroundImageType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailStyleSettingsBackgroundImageType? _explicitNullValueBackgroundImageType = default!;
         /// <summary>The color of the border around the email body.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BodyBorderColor { get; set; }
+        public string? BodyBorderColor { get => _explicitNullValueBodyBorderColor; set { _explicitNullValueBodyBorderColor = value; AdditionalData?.Remove("bodyBorderColor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bodyBorderColor"); else _explicitNullProperties?.Remove("bodyBorderColor"); } }
+        private string? _explicitNullValueBodyBorderColor = default!;
 #nullable restore
 #else
-        public string BodyBorderColor { get; set; }
+        public string BodyBorderColor { get => _explicitNullValueBodyBorderColor; set { _explicitNullValueBodyBorderColor = value; AdditionalData?.Remove("bodyBorderColor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bodyBorderColor"); else _explicitNullProperties?.Remove("bodyBorderColor"); } }
+        private string _explicitNullValueBodyBorderColor = default!;
 #endif
         /// <summary>A string representing the choice of border color for the email body.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BodyBorderColorChoice { get; set; }
+        public string? BodyBorderColorChoice { get => _explicitNullValueBodyBorderColorChoice; set { _explicitNullValueBodyBorderColorChoice = value; AdditionalData?.Remove("bodyBorderColorChoice"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bodyBorderColorChoice"); else _explicitNullProperties?.Remove("bodyBorderColorChoice"); } }
+        private string? _explicitNullValueBodyBorderColorChoice = default!;
 #nullable restore
 #else
-        public string BodyBorderColorChoice { get; set; }
+        public string BodyBorderColorChoice { get => _explicitNullValueBodyBorderColorChoice; set { _explicitNullValueBodyBorderColorChoice = value; AdditionalData?.Remove("bodyBorderColorChoice"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bodyBorderColorChoice"); else _explicitNullProperties?.Remove("bodyBorderColorChoice"); } }
+        private string _explicitNullValueBodyBorderColorChoice = default!;
 #endif
         /// <summary>The width of the border around the email body, represented as a number.</summary>
-        public double? BodyBorderWidth { get; set; }
+        public double? BodyBorderWidth { get => _explicitNullValueBodyBorderWidth; set { _explicitNullValueBodyBorderWidth = value; AdditionalData?.Remove("bodyBorderWidth"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bodyBorderWidth"); else _explicitNullProperties?.Remove("bodyBorderWidth"); } }
+        private double? _explicitNullValueBodyBorderWidth = default!;
         /// <summary>The color of the email body, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BodyColor { get; set; }
+        public string? BodyColor { get => _explicitNullValueBodyColor; set { _explicitNullValueBodyColor = value; AdditionalData?.Remove("bodyColor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bodyColor"); else _explicitNullProperties?.Remove("bodyColor"); } }
+        private string? _explicitNullValueBodyColor = default!;
 #nullable restore
 #else
-        public string BodyColor { get; set; }
+        public string BodyColor { get => _explicitNullValueBodyColor; set { _explicitNullValueBodyColor = value; AdditionalData?.Remove("bodyColor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bodyColor"); else _explicitNullProperties?.Remove("bodyColor"); } }
+        private string _explicitNullValueBodyColor = default!;
 #endif
         /// <summary>The buttonStyleSettings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicButtonStyleSettings? ButtonStyleSettings { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicButtonStyleSettings? ButtonStyleSettings { get => _explicitNullValueButtonStyleSettings; set { _explicitNullValueButtonStyleSettings = value; AdditionalData?.Remove("buttonStyleSettings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buttonStyleSettings"); else _explicitNullProperties?.Remove("buttonStyleSettings"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicButtonStyleSettings? _explicitNullValueButtonStyleSettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicButtonStyleSettings ButtonStyleSettings { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicButtonStyleSettings ButtonStyleSettings { get => _explicitNullValueButtonStyleSettings; set { _explicitNullValueButtonStyleSettings = value; AdditionalData?.Remove("buttonStyleSettings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buttonStyleSettings"); else _explicitNullProperties?.Remove("buttonStyleSettings"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicButtonStyleSettings _explicitNullValueButtonStyleSettings = default!;
 #endif
         /// <summary>A favorite color option available in the color picker, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ColorPickerFavorite1 { get; set; }
+        public string? ColorPickerFavorite1 { get => _explicitNullValueColorPickerFavorite1; set { _explicitNullValueColorPickerFavorite1 = value; AdditionalData?.Remove("colorPickerFavorite1"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("colorPickerFavorite1"); else _explicitNullProperties?.Remove("colorPickerFavorite1"); } }
+        private string? _explicitNullValueColorPickerFavorite1 = default!;
 #nullable restore
 #else
-        public string ColorPickerFavorite1 { get; set; }
+        public string ColorPickerFavorite1 { get => _explicitNullValueColorPickerFavorite1; set { _explicitNullValueColorPickerFavorite1 = value; AdditionalData?.Remove("colorPickerFavorite1"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("colorPickerFavorite1"); else _explicitNullProperties?.Remove("colorPickerFavorite1"); } }
+        private string _explicitNullValueColorPickerFavorite1 = default!;
 #endif
         /// <summary>A favorite color option available in the color picker, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ColorPickerFavorite2 { get; set; }
+        public string? ColorPickerFavorite2 { get => _explicitNullValueColorPickerFavorite2; set { _explicitNullValueColorPickerFavorite2 = value; AdditionalData?.Remove("colorPickerFavorite2"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("colorPickerFavorite2"); else _explicitNullProperties?.Remove("colorPickerFavorite2"); } }
+        private string? _explicitNullValueColorPickerFavorite2 = default!;
 #nullable restore
 #else
-        public string ColorPickerFavorite2 { get; set; }
+        public string ColorPickerFavorite2 { get => _explicitNullValueColorPickerFavorite2; set { _explicitNullValueColorPickerFavorite2 = value; AdditionalData?.Remove("colorPickerFavorite2"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("colorPickerFavorite2"); else _explicitNullProperties?.Remove("colorPickerFavorite2"); } }
+        private string _explicitNullValueColorPickerFavorite2 = default!;
 #endif
         /// <summary>A favorite color option available in the color picker, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ColorPickerFavorite3 { get; set; }
+        public string? ColorPickerFavorite3 { get => _explicitNullValueColorPickerFavorite3; set { _explicitNullValueColorPickerFavorite3 = value; AdditionalData?.Remove("colorPickerFavorite3"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("colorPickerFavorite3"); else _explicitNullProperties?.Remove("colorPickerFavorite3"); } }
+        private string? _explicitNullValueColorPickerFavorite3 = default!;
 #nullable restore
 #else
-        public string ColorPickerFavorite3 { get; set; }
+        public string ColorPickerFavorite3 { get => _explicitNullValueColorPickerFavorite3; set { _explicitNullValueColorPickerFavorite3 = value; AdditionalData?.Remove("colorPickerFavorite3"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("colorPickerFavorite3"); else _explicitNullProperties?.Remove("colorPickerFavorite3"); } }
+        private string _explicitNullValueColorPickerFavorite3 = default!;
 #endif
         /// <summary>A favorite color option available in the color picker, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ColorPickerFavorite4 { get; set; }
+        public string? ColorPickerFavorite4 { get => _explicitNullValueColorPickerFavorite4; set { _explicitNullValueColorPickerFavorite4 = value; AdditionalData?.Remove("colorPickerFavorite4"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("colorPickerFavorite4"); else _explicitNullProperties?.Remove("colorPickerFavorite4"); } }
+        private string? _explicitNullValueColorPickerFavorite4 = default!;
 #nullable restore
 #else
-        public string ColorPickerFavorite4 { get; set; }
+        public string ColorPickerFavorite4 { get => _explicitNullValueColorPickerFavorite4; set { _explicitNullValueColorPickerFavorite4 = value; AdditionalData?.Remove("colorPickerFavorite4"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("colorPickerFavorite4"); else _explicitNullProperties?.Remove("colorPickerFavorite4"); } }
+        private string _explicitNullValueColorPickerFavorite4 = default!;
 #endif
         /// <summary>A favorite color option available in the color picker, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ColorPickerFavorite5 { get; set; }
+        public string? ColorPickerFavorite5 { get => _explicitNullValueColorPickerFavorite5; set { _explicitNullValueColorPickerFavorite5 = value; AdditionalData?.Remove("colorPickerFavorite5"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("colorPickerFavorite5"); else _explicitNullProperties?.Remove("colorPickerFavorite5"); } }
+        private string? _explicitNullValueColorPickerFavorite5 = default!;
 #nullable restore
 #else
-        public string ColorPickerFavorite5 { get; set; }
+        public string ColorPickerFavorite5 { get => _explicitNullValueColorPickerFavorite5; set { _explicitNullValueColorPickerFavorite5 = value; AdditionalData?.Remove("colorPickerFavorite5"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("colorPickerFavorite5"); else _explicitNullProperties?.Remove("colorPickerFavorite5"); } }
+        private string _explicitNullValueColorPickerFavorite5 = default!;
 #endif
         /// <summary>A favorite color option available in the color picker, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ColorPickerFavorite6 { get; set; }
+        public string? ColorPickerFavorite6 { get => _explicitNullValueColorPickerFavorite6; set { _explicitNullValueColorPickerFavorite6 = value; AdditionalData?.Remove("colorPickerFavorite6"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("colorPickerFavorite6"); else _explicitNullProperties?.Remove("colorPickerFavorite6"); } }
+        private string? _explicitNullValueColorPickerFavorite6 = default!;
 #nullable restore
 #else
-        public string ColorPickerFavorite6 { get; set; }
+        public string ColorPickerFavorite6 { get => _explicitNullValueColorPickerFavorite6; set { _explicitNullValueColorPickerFavorite6 = value; AdditionalData?.Remove("colorPickerFavorite6"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("colorPickerFavorite6"); else _explicitNullProperties?.Remove("colorPickerFavorite6"); } }
+        private string _explicitNullValueColorPickerFavorite6 = default!;
 #endif
         /// <summary>The dividerStyleSettings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicDividerStyleSettings? DividerStyleSettings { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicDividerStyleSettings? DividerStyleSettings { get => _explicitNullValueDividerStyleSettings; set { _explicitNullValueDividerStyleSettings = value; AdditionalData?.Remove("dividerStyleSettings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dividerStyleSettings"); else _explicitNullProperties?.Remove("dividerStyleSettings"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicDividerStyleSettings? _explicitNullValueDividerStyleSettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicDividerStyleSettings DividerStyleSettings { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicDividerStyleSettings DividerStyleSettings { get => _explicitNullValueDividerStyleSettings; set { _explicitNullValueDividerStyleSettings = value; AdditionalData?.Remove("dividerStyleSettings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dividerStyleSettings"); else _explicitNullProperties?.Remove("dividerStyleSettings"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicDividerStyleSettings _explicitNullValueDividerStyleSettings = default!;
 #endif
         /// <summary>The padding applied to the email body, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmailBodyPadding { get; set; }
+        public string? EmailBodyPadding { get => _explicitNullValueEmailBodyPadding; set { _explicitNullValueEmailBodyPadding = value; AdditionalData?.Remove("emailBodyPadding"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailBodyPadding"); else _explicitNullProperties?.Remove("emailBodyPadding"); } }
+        private string? _explicitNullValueEmailBodyPadding = default!;
 #nullable restore
 #else
-        public string EmailBodyPadding { get; set; }
+        public string EmailBodyPadding { get => _explicitNullValueEmailBodyPadding; set { _explicitNullValueEmailBodyPadding = value; AdditionalData?.Remove("emailBodyPadding"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailBodyPadding"); else _explicitNullProperties?.Remove("emailBodyPadding"); } }
+        private string _explicitNullValueEmailBodyPadding = default!;
 #endif
         /// <summary>The width of the email body, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmailBodyWidth { get; set; }
+        public string? EmailBodyWidth { get => _explicitNullValueEmailBodyWidth; set { _explicitNullValueEmailBodyWidth = value; AdditionalData?.Remove("emailBodyWidth"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailBodyWidth"); else _explicitNullProperties?.Remove("emailBodyWidth"); } }
+        private string? _explicitNullValueEmailBodyWidth = default!;
 #nullable restore
 #else
-        public string EmailBodyWidth { get; set; }
+        public string EmailBodyWidth { get => _explicitNullValueEmailBodyWidth; set { _explicitNullValueEmailBodyWidth = value; AdditionalData?.Remove("emailBodyWidth"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailBodyWidth"); else _explicitNullProperties?.Remove("emailBodyWidth"); } }
+        private string _explicitNullValueEmailBodyWidth = default!;
 #endif
         /// <summary>The headingOneFont property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicFontStyle? HeadingOneFont { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicFontStyle? HeadingOneFont { get => _explicitNullValueHeadingOneFont; set { _explicitNullValueHeadingOneFont = value; AdditionalData?.Remove("headingOneFont"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("headingOneFont"); else _explicitNullProperties?.Remove("headingOneFont"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicFontStyle? _explicitNullValueHeadingOneFont = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicFontStyle HeadingOneFont { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicFontStyle HeadingOneFont { get => _explicitNullValueHeadingOneFont; set { _explicitNullValueHeadingOneFont = value; AdditionalData?.Remove("headingOneFont"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("headingOneFont"); else _explicitNullProperties?.Remove("headingOneFont"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicFontStyle _explicitNullValueHeadingOneFont = default!;
 #endif
         /// <summary>The headingTwoFont property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicFontStyle? HeadingTwoFont { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicFontStyle? HeadingTwoFont { get => _explicitNullValueHeadingTwoFont; set { _explicitNullValueHeadingTwoFont = value; AdditionalData?.Remove("headingTwoFont"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("headingTwoFont"); else _explicitNullProperties?.Remove("headingTwoFont"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicFontStyle? _explicitNullValueHeadingTwoFont = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicFontStyle HeadingTwoFont { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicFontStyle HeadingTwoFont { get => _explicitNullValueHeadingTwoFont; set { _explicitNullValueHeadingTwoFont = value; AdditionalData?.Remove("headingTwoFont"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("headingTwoFont"); else _explicitNullProperties?.Remove("headingTwoFont"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicFontStyle _explicitNullValueHeadingTwoFont = default!;
 #endif
         /// <summary>The linksFont property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicFontStyle? LinksFont { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicFontStyle? LinksFont { get => _explicitNullValueLinksFont; set { _explicitNullValueLinksFont = value; AdditionalData?.Remove("linksFont"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("linksFont"); else _explicitNullProperties?.Remove("linksFont"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicFontStyle? _explicitNullValueLinksFont = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicFontStyle LinksFont { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicFontStyle LinksFont { get => _explicitNullValueLinksFont; set { _explicitNullValueLinksFont = value; AdditionalData?.Remove("linksFont"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("linksFont"); else _explicitNullProperties?.Remove("linksFont"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicFontStyle _explicitNullValueLinksFont = default!;
 #endif
         /// <summary>The primary accent color used in the email.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrimaryAccentColor { get; set; }
+        public string? PrimaryAccentColor { get => _explicitNullValuePrimaryAccentColor; set { _explicitNullValuePrimaryAccentColor = value; AdditionalData?.Remove("primaryAccentColor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primaryAccentColor"); else _explicitNullProperties?.Remove("primaryAccentColor"); } }
+        private string? _explicitNullValuePrimaryAccentColor = default!;
 #nullable restore
 #else
-        public string PrimaryAccentColor { get; set; }
+        public string PrimaryAccentColor { get => _explicitNullValuePrimaryAccentColor; set { _explicitNullValuePrimaryAccentColor = value; AdditionalData?.Remove("primaryAccentColor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primaryAccentColor"); else _explicitNullProperties?.Remove("primaryAccentColor"); } }
+        private string _explicitNullValuePrimaryAccentColor = default!;
 #endif
         /// <summary>The primary font used in the email, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrimaryFont { get; set; }
+        public string? PrimaryFont { get => _explicitNullValuePrimaryFont; set { _explicitNullValuePrimaryFont = value; AdditionalData?.Remove("primaryFont"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primaryFont"); else _explicitNullProperties?.Remove("primaryFont"); } }
+        private string? _explicitNullValuePrimaryFont = default!;
 #nullable restore
 #else
-        public string PrimaryFont { get; set; }
+        public string PrimaryFont { get => _explicitNullValuePrimaryFont; set { _explicitNullValuePrimaryFont = value; AdditionalData?.Remove("primaryFont"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primaryFont"); else _explicitNullProperties?.Remove("primaryFont"); } }
+        private string _explicitNullValuePrimaryFont = default!;
 #endif
         /// <summary>The color of the primary font.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrimaryFontColor { get; set; }
+        public string? PrimaryFontColor { get => _explicitNullValuePrimaryFontColor; set { _explicitNullValuePrimaryFontColor = value; AdditionalData?.Remove("primaryFontColor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primaryFontColor"); else _explicitNullProperties?.Remove("primaryFontColor"); } }
+        private string? _explicitNullValuePrimaryFontColor = default!;
 #nullable restore
 #else
-        public string PrimaryFontColor { get; set; }
+        public string PrimaryFontColor { get => _explicitNullValuePrimaryFontColor; set { _explicitNullValuePrimaryFontColor = value; AdditionalData?.Remove("primaryFontColor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primaryFontColor"); else _explicitNullProperties?.Remove("primaryFontColor"); } }
+        private string _explicitNullValuePrimaryFontColor = default!;
 #endif
         /// <summary>The line height of the primary font, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrimaryFontLineHeight { get; set; }
+        public string? PrimaryFontLineHeight { get => _explicitNullValuePrimaryFontLineHeight; set { _explicitNullValuePrimaryFontLineHeight = value; AdditionalData?.Remove("primaryFontLineHeight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primaryFontLineHeight"); else _explicitNullProperties?.Remove("primaryFontLineHeight"); } }
+        private string? _explicitNullValuePrimaryFontLineHeight = default!;
 #nullable restore
 #else
-        public string PrimaryFontLineHeight { get; set; }
+        public string PrimaryFontLineHeight { get => _explicitNullValuePrimaryFontLineHeight; set { _explicitNullValuePrimaryFontLineHeight = value; AdditionalData?.Remove("primaryFontLineHeight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primaryFontLineHeight"); else _explicitNullProperties?.Remove("primaryFontLineHeight"); } }
+        private string _explicitNullValuePrimaryFontLineHeight = default!;
 #endif
         /// <summary>The size of the primary font, represented as a number.</summary>
-        public double? PrimaryFontSize { get; set; }
+        public double? PrimaryFontSize { get => _explicitNullValuePrimaryFontSize; set { _explicitNullValuePrimaryFontSize = value; AdditionalData?.Remove("primaryFontSize"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primaryFontSize"); else _explicitNullProperties?.Remove("primaryFontSize"); } }
+        private double? _explicitNullValuePrimaryFontSize = default!;
         /// <summary>The secondary accent color used in the email.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SecondaryAccentColor { get; set; }
+        public string? SecondaryAccentColor { get => _explicitNullValueSecondaryAccentColor; set { _explicitNullValueSecondaryAccentColor = value; AdditionalData?.Remove("secondaryAccentColor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondaryAccentColor"); else _explicitNullProperties?.Remove("secondaryAccentColor"); } }
+        private string? _explicitNullValueSecondaryAccentColor = default!;
 #nullable restore
 #else
-        public string SecondaryAccentColor { get; set; }
+        public string SecondaryAccentColor { get => _explicitNullValueSecondaryAccentColor; set { _explicitNullValueSecondaryAccentColor = value; AdditionalData?.Remove("secondaryAccentColor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondaryAccentColor"); else _explicitNullProperties?.Remove("secondaryAccentColor"); } }
+        private string _explicitNullValueSecondaryAccentColor = default!;
 #endif
         /// <summary>The secondary font used in the email, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SecondaryFont { get; set; }
+        public string? SecondaryFont { get => _explicitNullValueSecondaryFont; set { _explicitNullValueSecondaryFont = value; AdditionalData?.Remove("secondaryFont"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondaryFont"); else _explicitNullProperties?.Remove("secondaryFont"); } }
+        private string? _explicitNullValueSecondaryFont = default!;
 #nullable restore
 #else
-        public string SecondaryFont { get; set; }
+        public string SecondaryFont { get => _explicitNullValueSecondaryFont; set { _explicitNullValueSecondaryFont = value; AdditionalData?.Remove("secondaryFont"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondaryFont"); else _explicitNullProperties?.Remove("secondaryFont"); } }
+        private string _explicitNullValueSecondaryFont = default!;
 #endif
         /// <summary>The color of the secondary font.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SecondaryFontColor { get; set; }
+        public string? SecondaryFontColor { get => _explicitNullValueSecondaryFontColor; set { _explicitNullValueSecondaryFontColor = value; AdditionalData?.Remove("secondaryFontColor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondaryFontColor"); else _explicitNullProperties?.Remove("secondaryFontColor"); } }
+        private string? _explicitNullValueSecondaryFontColor = default!;
 #nullable restore
 #else
-        public string SecondaryFontColor { get; set; }
+        public string SecondaryFontColor { get => _explicitNullValueSecondaryFontColor; set { _explicitNullValueSecondaryFontColor = value; AdditionalData?.Remove("secondaryFontColor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondaryFontColor"); else _explicitNullProperties?.Remove("secondaryFontColor"); } }
+        private string _explicitNullValueSecondaryFontColor = default!;
 #endif
         /// <summary>The line height of the secondary font, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SecondaryFontLineHeight { get; set; }
+        public string? SecondaryFontLineHeight { get => _explicitNullValueSecondaryFontLineHeight; set { _explicitNullValueSecondaryFontLineHeight = value; AdditionalData?.Remove("secondaryFontLineHeight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondaryFontLineHeight"); else _explicitNullProperties?.Remove("secondaryFontLineHeight"); } }
+        private string? _explicitNullValueSecondaryFontLineHeight = default!;
 #nullable restore
 #else
-        public string SecondaryFontLineHeight { get; set; }
+        public string SecondaryFontLineHeight { get => _explicitNullValueSecondaryFontLineHeight; set { _explicitNullValueSecondaryFontLineHeight = value; AdditionalData?.Remove("secondaryFontLineHeight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondaryFontLineHeight"); else _explicitNullProperties?.Remove("secondaryFontLineHeight"); } }
+        private string _explicitNullValueSecondaryFontLineHeight = default!;
 #endif
         /// <summary>The size of the secondary font, represented as a number.</summary>
-        public double? SecondaryFontSize { get; set; }
+        public double? SecondaryFontSize { get => _explicitNullValueSecondaryFontSize; set { _explicitNullValueSecondaryFontSize = value; AdditionalData?.Remove("secondaryFontSize"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondaryFontSize"); else _explicitNullProperties?.Remove("secondaryFontSize"); } }
+        private double? _explicitNullValueSecondaryFontSize = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailStyleSettings"/> and sets the default values.
         /// </summary>
@@ -245,7 +368,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailStyleSettings CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailStyleSettings();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailStyleSettings(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -257,7 +380,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "backgroundColor", n => { BackgroundColor = n.GetStringValue(); } },
                 { "backgroundImage", n => { BackgroundImage = n.GetStringValue(); } },
-                { "backgroundImageType", n => { BackgroundImageType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailStyleSettingsBackgroundImageType>(); } },
+                { "backgroundImageType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailStyleSettingsBackgroundImageType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueBackgroundImageType = default; _explicitNullProperties?.Remove("backgroundImageType"); AdditionalData["backgroundImageType"] = unknown; } else { BackgroundImageType = parsed; AdditionalData.Remove("backgroundImageType"); } } },
                 { "bodyBorderColor", n => { BodyBorderColor = n.GetStringValue(); } },
                 { "bodyBorderColorChoice", n => { BodyBorderColorChoice = n.GetStringValue(); } },
                 { "bodyBorderWidth", n => { BodyBorderWidth = n.GetDoubleValue(); } },
@@ -324,6 +447,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("secondaryFontColor", SecondaryFontColor);
             writer.WriteStringValue("secondaryFontLineHeight", SecondaryFontLineHeight);
             writer.WriteDoubleValue("secondaryFontSize", SecondaryFontSize);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

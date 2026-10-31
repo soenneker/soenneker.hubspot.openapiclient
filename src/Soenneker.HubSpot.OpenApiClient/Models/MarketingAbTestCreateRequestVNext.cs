@@ -11,24 +11,39 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class MarketingAbTestCreateRequestVNext : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("contentId") is null) { _explicitNullValueContentId = default!; _explicitNullProperties?.Remove("contentId"); }
+            else if (parseNode.GetChildNode("contentId") is { } nullNodeContentId && nullNodeContentId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContentId = null;
+            if (parseNode.GetChildNode("variationName") is null) { _explicitNullValueVariationName = default!; _explicitNullProperties?.Remove("variationName"); }
+            else if (parseNode.GetChildNode("variationName") is { } nullNodeVariationName && nullNodeVariationName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VariationName = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>ID of the object to test.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ContentId { get; set; }
+        public string? ContentId { get => _explicitNullValueContentId; set { _explicitNullValueContentId = value; AdditionalData?.Remove("contentId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contentId"); else _explicitNullProperties?.Remove("contentId"); } }
+        private string? _explicitNullValueContentId = default!;
 #nullable restore
 #else
-        public string ContentId { get; set; }
+        public string ContentId { get => _explicitNullValueContentId; set { _explicitNullValueContentId = value; AdditionalData?.Remove("contentId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contentId"); else _explicitNullProperties?.Remove("contentId"); } }
+        private string _explicitNullValueContentId = default!;
 #endif
         /// <summary>Name of the variation to be created.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VariationName { get; set; }
+        public string? VariationName { get => _explicitNullValueVariationName; set { _explicitNullValueVariationName = value; AdditionalData?.Remove("variationName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variationName"); else _explicitNullProperties?.Remove("variationName"); } }
+        private string? _explicitNullValueVariationName = default!;
 #nullable restore
 #else
-        public string VariationName { get; set; }
+        public string VariationName { get => _explicitNullValueVariationName; set { _explicitNullValueVariationName = value; AdditionalData?.Remove("variationName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variationName"); else _explicitNullProperties?.Remove("variationName"); } }
+        private string _explicitNullValueVariationName = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.MarketingAbTestCreateRequestVNext"/> and sets the default values.
@@ -45,7 +60,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.MarketingAbTestCreateRequestVNext CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.MarketingAbTestCreateRequestVNext();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.MarketingAbTestCreateRequestVNext(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +83,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("contentId", ContentId);
             writer.WriteStringValue("variationName", VariationName);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

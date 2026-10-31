@@ -11,58 +11,92 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ExternalBehavioralEventTypeDefinitionEgg : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("customMatchingId") is null) { _explicitNullValueCustomMatchingId = default!; _explicitNullProperties?.Remove("customMatchingId"); }
+            else if (parseNode.GetChildNode("customMatchingId") is { } nullNodeCustomMatchingId && nullNodeCustomMatchingId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomMatchingId = null;
+            if (parseNode.GetChildNode("description") is null) { _explicitNullValueDescription = default!; _explicitNullProperties?.Remove("description"); }
+            else if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("includeDefaultProperties") is null) { _explicitNullValueIncludeDefaultProperties = default!; _explicitNullProperties?.Remove("includeDefaultProperties"); }
+            else if (parseNode.GetChildNode("includeDefaultProperties") is { } nullNodeIncludeDefaultProperties && nullNodeIncludeDefaultProperties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncludeDefaultProperties = null;
+            if (parseNode.GetChildNode("label") is null) { _explicitNullValueLabel = default!; _explicitNullProperties?.Remove("label"); }
+            else if (parseNode.GetChildNode("label") is { } nullNodeLabel && nullNodeLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Label = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("primaryObject") is null) { _explicitNullValuePrimaryObject = default!; _explicitNullProperties?.Remove("primaryObject"); }
+            else if (parseNode.GetChildNode("primaryObject") is { } nullNodePrimaryObject && nullNodePrimaryObject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimaryObject = null;
+            if (parseNode.GetChildNode("propertyDefinitions") is null) { _explicitNullValuePropertyDefinitions = default!; _explicitNullProperties?.Remove("propertyDefinitions"); }
+            else if (parseNode.GetChildNode("propertyDefinitions") is { } nullNodePropertyDefinitions && nullNodePropertyDefinitions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PropertyDefinitions = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The customMatchingId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalObjectResolutionMappingRequest? CustomMatchingId { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalObjectResolutionMappingRequest? CustomMatchingId { get => _explicitNullValueCustomMatchingId; set { _explicitNullValueCustomMatchingId = value; AdditionalData?.Remove("customMatchingId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customMatchingId"); else _explicitNullProperties?.Remove("customMatchingId"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ExternalObjectResolutionMappingRequest? _explicitNullValueCustomMatchingId = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalObjectResolutionMappingRequest CustomMatchingId { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalObjectResolutionMappingRequest CustomMatchingId { get => _explicitNullValueCustomMatchingId; set { _explicitNullValueCustomMatchingId = value; AdditionalData?.Remove("customMatchingId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customMatchingId"); else _explicitNullProperties?.Remove("customMatchingId"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ExternalObjectResolutionMappingRequest _explicitNullValueCustomMatchingId = default!;
 #endif
         /// <summary>A string providing a description of the event type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>A boolean indicating whether default properties should be included.</summary>
-        public bool? IncludeDefaultProperties { get; set; }
+        public bool? IncludeDefaultProperties { get => _explicitNullValueIncludeDefaultProperties; set { _explicitNullValueIncludeDefaultProperties = value; AdditionalData?.Remove("includeDefaultProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("includeDefaultProperties"); else _explicitNullProperties?.Remove("includeDefaultProperties"); } }
+        private bool? _explicitNullValueIncludeDefaultProperties = default!;
         /// <summary>A string representing the label of the event type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Label { get; set; }
+        public string? Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; AdditionalData?.Remove("label"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
+        private string? _explicitNullValueLabel = default!;
 #nullable restore
 #else
-        public string Label { get; set; }
+        public string Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; AdditionalData?.Remove("label"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
+        private string _explicitNullValueLabel = default!;
 #endif
         /// <summary>A string representing the name of the event type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>A string indicating the primary object associated with the event type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrimaryObject { get; set; }
+        public string? PrimaryObject { get => _explicitNullValuePrimaryObject; set { _explicitNullValuePrimaryObject = value; AdditionalData?.Remove("primaryObject"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primaryObject"); else _explicitNullProperties?.Remove("primaryObject"); } }
+        private string? _explicitNullValuePrimaryObject = default!;
 #nullable restore
 #else
-        public string PrimaryObject { get; set; }
+        public string PrimaryObject { get => _explicitNullValuePrimaryObject; set { _explicitNullValuePrimaryObject = value; AdditionalData?.Remove("primaryObject"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primaryObject"); else _explicitNullProperties?.Remove("primaryObject"); } }
+        private string _explicitNullValuePrimaryObject = default!;
 #endif
         /// <summary>An array of property definitions, each represented by an ExternalBehavioralEventPropertyCreate object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventPropertyCreate>? PropertyDefinitions { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventPropertyCreate>? PropertyDefinitions { get => _explicitNullValuePropertyDefinitions; set { _explicitNullValuePropertyDefinitions = value; AdditionalData?.Remove("propertyDefinitions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("propertyDefinitions"); else _explicitNullProperties?.Remove("propertyDefinitions"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventPropertyCreate>? _explicitNullValuePropertyDefinitions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventPropertyCreate> PropertyDefinitions { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventPropertyCreate> PropertyDefinitions { get => _explicitNullValuePropertyDefinitions; set { _explicitNullValuePropertyDefinitions = value; AdditionalData?.Remove("propertyDefinitions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("propertyDefinitions"); else _explicitNullProperties?.Remove("propertyDefinitions"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventPropertyCreate> _explicitNullValuePropertyDefinitions = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventTypeDefinitionEgg"/> and sets the default values.
@@ -79,7 +113,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventTypeDefinitionEgg CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventTypeDefinitionEgg();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventTypeDefinitionEgg(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -112,6 +146,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("primaryObject", PrimaryObject);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventPropertyCreate>("propertyDefinitions", PropertyDefinitions);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

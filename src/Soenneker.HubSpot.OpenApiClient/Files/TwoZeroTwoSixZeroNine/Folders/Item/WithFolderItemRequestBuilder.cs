@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Files.TwoZeroTwoSixZeroNine.Folders.It
         {
         }
         /// <summary>
-        /// Delete a folder in your HubSpot account using its ID. This operation deletes the folder and its contents recursively.
+        /// Delete a folder in your HubSpot account using its ID. This operation deletes the folder and its contents recursively.Delete a folder in your HubSpot account using its path. This operation deletes the folder and its contents recursively.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -48,25 +48,25 @@ namespace Soenneker.HubSpot.OpenApiClient.Files.TwoZeroTwoSixZeroNine.Folders.It
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
-            await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
+            await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieve folder metadata by its ID.
+        /// Retrieve folder metadata by its ID.Retrieve details about a specific folder in the file manager using its path.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Folder"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.GetFiles202609FoldersFolderId200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Folder?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Files.TwoZeroTwoSixZeroNine.Folders.Item.WithFolderItemRequestBuilder.WithFolderItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.GetFiles202609FoldersFolderId200Response?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Files.TwoZeroTwoSixZeroNine.Folders.Item.WithFolderItemRequestBuilder.WithFolderItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.Folder> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Files.TwoZeroTwoSixZeroNine.Folders.Item.WithFolderItemRequestBuilder.WithFolderItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.GetFiles202609FoldersFolderId200Response> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Files.TwoZeroTwoSixZeroNine.Folders.Item.WithFolderItemRequestBuilder.WithFolderItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Folder>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Folder.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.GetFiles202609FoldersFolderId200Response>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.GetFiles202609FoldersFolderId200Response.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Update the details of a specific folder in the file manager by providing the folder&apos;s unique identifier. This operation allows you to modify folder attributes such as its name or parent folder ID.
@@ -86,10 +86,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Files.TwoZeroTwoSixZeroNine.Folders.It
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPatchRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Folder>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Folder.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.Folder>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.Folder.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Delete a folder in your HubSpot account using its ID. This operation deletes the folder and its contents recursively.
+        /// Delete a folder in your HubSpot account using its ID. This operation deletes the folder and its contents recursively.Delete a folder in your HubSpot account using its path. This operation deletes the folder and its contents recursively.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -107,7 +107,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Files.TwoZeroTwoSixZeroNine.Folders.It
             return requestInfo;
         }
         /// <summary>
-        /// Retrieve folder metadata by its ID.
+        /// Retrieve folder metadata by its ID.Retrieve details about a specific folder in the file manager using its path.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -157,12 +157,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Files.TwoZeroTwoSixZeroNine.Folders.It
             return new global::Soenneker.HubSpot.OpenApiClient.Files.TwoZeroTwoSixZeroNine.Folders.Item.WithFolderItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Retrieve folder metadata by its ID.
+        /// Retrieve folder metadata by its ID.Retrieve details about a specific folder in the file manager using its path.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithFolderItemRequestBuilderGetQueryParameters 
         {
-            /// <summary>A comma-separated list of folder property names to include in the response.</summary>
+            /// <summary>A comma-separated list of folder property names to include in the response.A comma-separated list of property names to include in the response. This allows you to specify which folder properties you want to retrieve.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("properties")]

@@ -11,64 +11,99 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ForecastTypeDealSplitProperties : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("dealCustomAmountProperty") is null) { _explicitNullValueDealCustomAmountProperty = default!; _explicitNullProperties?.Remove("dealCustomAmountProperty"); }
+            else if (parseNode.GetChildNode("dealCustomAmountProperty") is { } nullNodeDealCustomAmountProperty && nullNodeDealCustomAmountProperty.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DealCustomAmountProperty = null;
+            if (parseNode.GetChildNode("dealCustomAmountPropertyInHomeCurrency") is null) { _explicitNullValueDealCustomAmountPropertyInHomeCurrency = default!; _explicitNullProperties?.Remove("dealCustomAmountPropertyInHomeCurrency"); }
+            else if (parseNode.GetChildNode("dealCustomAmountPropertyInHomeCurrency") is { } nullNodeDealCustomAmountPropertyInHomeCurrency && nullNodeDealCustomAmountPropertyInHomeCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DealCustomAmountPropertyInHomeCurrency = null;
+            if (parseNode.GetChildNode("dealCustomDateProperty") is null) { _explicitNullValueDealCustomDateProperty = default!; _explicitNullProperties?.Remove("dealCustomDateProperty"); }
+            else if (parseNode.GetChildNode("dealCustomDateProperty") is { } nullNodeDealCustomDateProperty && nullNodeDealCustomDateProperty.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DealCustomDateProperty = null;
+            if (parseNode.GetChildNode("dealSplitCustomAmountProperty") is null) { _explicitNullValueDealSplitCustomAmountProperty = default!; _explicitNullProperties?.Remove("dealSplitCustomAmountProperty"); }
+            else if (parseNode.GetChildNode("dealSplitCustomAmountProperty") is { } nullNodeDealSplitCustomAmountProperty && nullNodeDealSplitCustomAmountProperty.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DealSplitCustomAmountProperty = null;
+            if (parseNode.GetChildNode("dealSplitCustomAmountPropertyInHomeCurrency") is null) { _explicitNullValueDealSplitCustomAmountPropertyInHomeCurrency = default!; _explicitNullProperties?.Remove("dealSplitCustomAmountPropertyInHomeCurrency"); }
+            else if (parseNode.GetChildNode("dealSplitCustomAmountPropertyInHomeCurrency") is { } nullNodeDealSplitCustomAmountPropertyInHomeCurrency && nullNodeDealSplitCustomAmountPropertyInHomeCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DealSplitCustomAmountPropertyInHomeCurrency = null;
+            if (parseNode.GetChildNode("dealSplitWeightedCustomAmountProperty") is null) { _explicitNullValueDealSplitWeightedCustomAmountProperty = default!; _explicitNullProperties?.Remove("dealSplitWeightedCustomAmountProperty"); }
+            else if (parseNode.GetChildNode("dealSplitWeightedCustomAmountProperty") is { } nullNodeDealSplitWeightedCustomAmountProperty && nullNodeDealSplitWeightedCustomAmountProperty.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DealSplitWeightedCustomAmountProperty = null;
+            if (parseNode.GetChildNode("dealSplitWeightedCustomAmountPropertyInHomeCurrency") is null) { _explicitNullValueDealSplitWeightedCustomAmountPropertyInHomeCurrency = default!; _explicitNullProperties?.Remove("dealSplitWeightedCustomAmountPropertyInHomeCurrency"); }
+            else if (parseNode.GetChildNode("dealSplitWeightedCustomAmountPropertyInHomeCurrency") is { } nullNodeDealSplitWeightedCustomAmountPropertyInHomeCurrency && nullNodeDealSplitWeightedCustomAmountPropertyInHomeCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DealSplitWeightedCustomAmountPropertyInHomeCurrency = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A string representing a custom amount property for a deal.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DealCustomAmountProperty { get; set; }
+        public string? DealCustomAmountProperty { get => _explicitNullValueDealCustomAmountProperty; set { _explicitNullValueDealCustomAmountProperty = value; AdditionalData?.Remove("dealCustomAmountProperty"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dealCustomAmountProperty"); else _explicitNullProperties?.Remove("dealCustomAmountProperty"); } }
+        private string? _explicitNullValueDealCustomAmountProperty = default!;
 #nullable restore
 #else
-        public string DealCustomAmountProperty { get; set; }
+        public string DealCustomAmountProperty { get => _explicitNullValueDealCustomAmountProperty; set { _explicitNullValueDealCustomAmountProperty = value; AdditionalData?.Remove("dealCustomAmountProperty"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dealCustomAmountProperty"); else _explicitNullProperties?.Remove("dealCustomAmountProperty"); } }
+        private string _explicitNullValueDealCustomAmountProperty = default!;
 #endif
         /// <summary>A string representing a custom amount property for a deal, expressed in the home currency.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DealCustomAmountPropertyInHomeCurrency { get; set; }
+        public string? DealCustomAmountPropertyInHomeCurrency { get => _explicitNullValueDealCustomAmountPropertyInHomeCurrency; set { _explicitNullValueDealCustomAmountPropertyInHomeCurrency = value; AdditionalData?.Remove("dealCustomAmountPropertyInHomeCurrency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dealCustomAmountPropertyInHomeCurrency"); else _explicitNullProperties?.Remove("dealCustomAmountPropertyInHomeCurrency"); } }
+        private string? _explicitNullValueDealCustomAmountPropertyInHomeCurrency = default!;
 #nullable restore
 #else
-        public string DealCustomAmountPropertyInHomeCurrency { get; set; }
+        public string DealCustomAmountPropertyInHomeCurrency { get => _explicitNullValueDealCustomAmountPropertyInHomeCurrency; set { _explicitNullValueDealCustomAmountPropertyInHomeCurrency = value; AdditionalData?.Remove("dealCustomAmountPropertyInHomeCurrency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dealCustomAmountPropertyInHomeCurrency"); else _explicitNullProperties?.Remove("dealCustomAmountPropertyInHomeCurrency"); } }
+        private string _explicitNullValueDealCustomAmountPropertyInHomeCurrency = default!;
 #endif
         /// <summary>A string representing a custom date property for a deal.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DealCustomDateProperty { get; set; }
+        public string? DealCustomDateProperty { get => _explicitNullValueDealCustomDateProperty; set { _explicitNullValueDealCustomDateProperty = value; AdditionalData?.Remove("dealCustomDateProperty"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dealCustomDateProperty"); else _explicitNullProperties?.Remove("dealCustomDateProperty"); } }
+        private string? _explicitNullValueDealCustomDateProperty = default!;
 #nullable restore
 #else
-        public string DealCustomDateProperty { get; set; }
+        public string DealCustomDateProperty { get => _explicitNullValueDealCustomDateProperty; set { _explicitNullValueDealCustomDateProperty = value; AdditionalData?.Remove("dealCustomDateProperty"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dealCustomDateProperty"); else _explicitNullProperties?.Remove("dealCustomDateProperty"); } }
+        private string _explicitNullValueDealCustomDateProperty = default!;
 #endif
         /// <summary>A string representing a custom amount property for a deal split.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DealSplitCustomAmountProperty { get; set; }
+        public string? DealSplitCustomAmountProperty { get => _explicitNullValueDealSplitCustomAmountProperty; set { _explicitNullValueDealSplitCustomAmountProperty = value; AdditionalData?.Remove("dealSplitCustomAmountProperty"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dealSplitCustomAmountProperty"); else _explicitNullProperties?.Remove("dealSplitCustomAmountProperty"); } }
+        private string? _explicitNullValueDealSplitCustomAmountProperty = default!;
 #nullable restore
 #else
-        public string DealSplitCustomAmountProperty { get; set; }
+        public string DealSplitCustomAmountProperty { get => _explicitNullValueDealSplitCustomAmountProperty; set { _explicitNullValueDealSplitCustomAmountProperty = value; AdditionalData?.Remove("dealSplitCustomAmountProperty"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dealSplitCustomAmountProperty"); else _explicitNullProperties?.Remove("dealSplitCustomAmountProperty"); } }
+        private string _explicitNullValueDealSplitCustomAmountProperty = default!;
 #endif
         /// <summary>A string representing a custom amount property for a deal split, expressed in the home currency.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DealSplitCustomAmountPropertyInHomeCurrency { get; set; }
+        public string? DealSplitCustomAmountPropertyInHomeCurrency { get => _explicitNullValueDealSplitCustomAmountPropertyInHomeCurrency; set { _explicitNullValueDealSplitCustomAmountPropertyInHomeCurrency = value; AdditionalData?.Remove("dealSplitCustomAmountPropertyInHomeCurrency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dealSplitCustomAmountPropertyInHomeCurrency"); else _explicitNullProperties?.Remove("dealSplitCustomAmountPropertyInHomeCurrency"); } }
+        private string? _explicitNullValueDealSplitCustomAmountPropertyInHomeCurrency = default!;
 #nullable restore
 #else
-        public string DealSplitCustomAmountPropertyInHomeCurrency { get; set; }
+        public string DealSplitCustomAmountPropertyInHomeCurrency { get => _explicitNullValueDealSplitCustomAmountPropertyInHomeCurrency; set { _explicitNullValueDealSplitCustomAmountPropertyInHomeCurrency = value; AdditionalData?.Remove("dealSplitCustomAmountPropertyInHomeCurrency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dealSplitCustomAmountPropertyInHomeCurrency"); else _explicitNullProperties?.Remove("dealSplitCustomAmountPropertyInHomeCurrency"); } }
+        private string _explicitNullValueDealSplitCustomAmountPropertyInHomeCurrency = default!;
 #endif
         /// <summary>A string representing a weighted custom amount property for a deal split.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DealSplitWeightedCustomAmountProperty { get; set; }
+        public string? DealSplitWeightedCustomAmountProperty { get => _explicitNullValueDealSplitWeightedCustomAmountProperty; set { _explicitNullValueDealSplitWeightedCustomAmountProperty = value; AdditionalData?.Remove("dealSplitWeightedCustomAmountProperty"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dealSplitWeightedCustomAmountProperty"); else _explicitNullProperties?.Remove("dealSplitWeightedCustomAmountProperty"); } }
+        private string? _explicitNullValueDealSplitWeightedCustomAmountProperty = default!;
 #nullable restore
 #else
-        public string DealSplitWeightedCustomAmountProperty { get; set; }
+        public string DealSplitWeightedCustomAmountProperty { get => _explicitNullValueDealSplitWeightedCustomAmountProperty; set { _explicitNullValueDealSplitWeightedCustomAmountProperty = value; AdditionalData?.Remove("dealSplitWeightedCustomAmountProperty"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dealSplitWeightedCustomAmountProperty"); else _explicitNullProperties?.Remove("dealSplitWeightedCustomAmountProperty"); } }
+        private string _explicitNullValueDealSplitWeightedCustomAmountProperty = default!;
 #endif
         /// <summary>A string representing a weighted custom amount property for a deal split, expressed in the home currency.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DealSplitWeightedCustomAmountPropertyInHomeCurrency { get; set; }
+        public string? DealSplitWeightedCustomAmountPropertyInHomeCurrency { get => _explicitNullValueDealSplitWeightedCustomAmountPropertyInHomeCurrency; set { _explicitNullValueDealSplitWeightedCustomAmountPropertyInHomeCurrency = value; AdditionalData?.Remove("dealSplitWeightedCustomAmountPropertyInHomeCurrency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dealSplitWeightedCustomAmountPropertyInHomeCurrency"); else _explicitNullProperties?.Remove("dealSplitWeightedCustomAmountPropertyInHomeCurrency"); } }
+        private string? _explicitNullValueDealSplitWeightedCustomAmountPropertyInHomeCurrency = default!;
 #nullable restore
 #else
-        public string DealSplitWeightedCustomAmountPropertyInHomeCurrency { get; set; }
+        public string DealSplitWeightedCustomAmountPropertyInHomeCurrency { get => _explicitNullValueDealSplitWeightedCustomAmountPropertyInHomeCurrency; set { _explicitNullValueDealSplitWeightedCustomAmountPropertyInHomeCurrency = value; AdditionalData?.Remove("dealSplitWeightedCustomAmountPropertyInHomeCurrency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dealSplitWeightedCustomAmountPropertyInHomeCurrency"); else _explicitNullProperties?.Remove("dealSplitWeightedCustomAmountPropertyInHomeCurrency"); } }
+        private string _explicitNullValueDealSplitWeightedCustomAmountPropertyInHomeCurrency = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ForecastTypeDealSplitProperties"/> and sets the default values.
@@ -85,7 +120,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.ForecastTypeDealSplitProperties CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.ForecastTypeDealSplitProperties();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.ForecastTypeDealSplitProperties(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -118,6 +153,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("dealSplitCustomAmountPropertyInHomeCurrency", DealSplitCustomAmountPropertyInHomeCurrency);
             writer.WriteStringValue("dealSplitWeightedCustomAmountProperty", DealSplitWeightedCustomAmountProperty);
             writer.WriteStringValue("dealSplitWeightedCustomAmountPropertyInHomeCurrency", DealSplitWeightedCustomAmountPropertyInHomeCurrency);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,13 +11,26 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class SetOccurrencesRefineBy : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("setType") is null) { _explicitNullValueSetType = default!; _explicitNullProperties?.Remove("setType"); }
+            else if (parseNode.GetChildNode("setType") is { } nullNodeSetType && nullNodeSetType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SetType = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A string that indicates the set type for the refinement operation. Valid values include &apos;ALL&apos;, &apos;ALL_INCLUDE_EMPTY&apos;, &apos;ANY&apos;, &apos;NONE&apos;, &apos;NONE_EXCLUDE_EMPTY&apos;, and &apos;ANY_INCLUDE_EMPTY&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.SetOccurrencesRefineBySetType? SetType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.SetOccurrencesRefineBySetType? SetType { get => _explicitNullValueSetType; set { _explicitNullValueSetType = value; AdditionalData?.Remove("setType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("setType"); else _explicitNullProperties?.Remove("setType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.SetOccurrencesRefineBySetType? _explicitNullValueSetType = default!;
         /// <summary>A string that specifies the type of refinement operation. The default value is &apos;SetOccurrencesRefineBy&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.SetOccurrencesRefineByType? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.SetOccurrencesRefineByType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.SetOccurrencesRefineByType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.SetOccurrencesRefineBy"/> and sets the default values.
         /// </summary>
@@ -33,7 +46,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.SetOccurrencesRefineBy CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.SetOccurrencesRefineBy();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.SetOccurrencesRefineBy(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -43,8 +56,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "setType", n => { SetType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SetOccurrencesRefineBySetType>(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SetOccurrencesRefineByType>(); } },
+                { "setType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SetOccurrencesRefineBySetType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueSetType = default; _explicitNullProperties?.Remove("setType"); AdditionalData["setType"] = unknown; } else { SetType = parsed; AdditionalData.Remove("setType"); } } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SetOccurrencesRefineByType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
         /// <summary>
@@ -56,6 +69,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SetOccurrencesRefineBySetType>("setType", SetType);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SetOccurrencesRefineByType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

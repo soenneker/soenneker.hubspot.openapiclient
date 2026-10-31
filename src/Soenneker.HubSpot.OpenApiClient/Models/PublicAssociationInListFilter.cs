@@ -11,60 +11,97 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicAssociationInListFilter : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("associationCategory") is null) { _explicitNullValueAssociationCategory = default!; _explicitNullProperties?.Remove("associationCategory"); }
+            else if (parseNode.GetChildNode("associationCategory") is { } nullNodeAssociationCategory && nullNodeAssociationCategory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssociationCategory = null;
+            if (parseNode.GetChildNode("associationTypeId") is null) { _explicitNullValueAssociationTypeId = default!; _explicitNullProperties?.Remove("associationTypeId"); }
+            else if (parseNode.GetChildNode("associationTypeId") is { } nullNodeAssociationTypeId && nullNodeAssociationTypeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssociationTypeId = null;
+            if (parseNode.GetChildNode("coalescingRefineBy") is null) { _explicitNullValueCoalescingRefineBy = default!; _explicitNullProperties?.Remove("coalescingRefineBy"); }
+            else if (parseNode.GetChildNode("coalescingRefineBy") is { } nullNodeCoalescingRefineBy && nullNodeCoalescingRefineBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CoalescingRefineBy = null;
+            if (parseNode.GetChildNode("filterType") is null) { _explicitNullValueFilterType = default!; _explicitNullProperties?.Remove("filterType"); }
+            else if (parseNode.GetChildNode("filterType") is { } nullNodeFilterType && nullNodeFilterType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FilterType = null;
+            if (parseNode.GetChildNode("listId") is null) { _explicitNullValueListId = default!; _explicitNullProperties?.Remove("listId"); }
+            else if (parseNode.GetChildNode("listId") is { } nullNodeListId && nullNodeListId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ListId = null;
+            if (parseNode.GetChildNode("operator") is null) { _explicitNullValueOperator = default!; _explicitNullProperties?.Remove("operator"); }
+            else if (parseNode.GetChildNode("operator") is { } nullNodeOperator && nullNodeOperator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Operator = null;
+            if (parseNode.GetChildNode("toObjectType") is null) { _explicitNullValueToObjectType = default!; _explicitNullProperties?.Remove("toObjectType"); }
+            else if (parseNode.GetChildNode("toObjectType") is { } nullNodeToObjectType && nullNodeToObjectType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToObjectType = null;
+            if (parseNode.GetChildNode("toObjectTypeId") is null) { _explicitNullValueToObjectTypeId = default!; _explicitNullProperties?.Remove("toObjectTypeId"); }
+            else if (parseNode.GetChildNode("toObjectTypeId") is { } nullNodeToObjectTypeId && nullNodeToObjectTypeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToObjectTypeId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A string that categorizes the type of association, providing additional context for the filter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AssociationCategory { get; set; }
+        public string? AssociationCategory { get => _explicitNullValueAssociationCategory; set { _explicitNullValueAssociationCategory = value; AdditionalData?.Remove("associationCategory"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("associationCategory"); else _explicitNullProperties?.Remove("associationCategory"); } }
+        private string? _explicitNullValueAssociationCategory = default!;
 #nullable restore
 #else
-        public string AssociationCategory { get; set; }
+        public string AssociationCategory { get => _explicitNullValueAssociationCategory; set { _explicitNullValueAssociationCategory = value; AdditionalData?.Remove("associationCategory"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("associationCategory"); else _explicitNullProperties?.Remove("associationCategory"); } }
+        private string _explicitNullValueAssociationCategory = default!;
 #endif
         /// <summary>An integer that identifies the specific type of association that is being filtered.</summary>
-        public int? AssociationTypeId { get; set; }
+        public int? AssociationTypeId { get => _explicitNullValueAssociationTypeId; set { _explicitNullValueAssociationTypeId = value; AdditionalData?.Remove("associationTypeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("associationTypeId"); else _explicitNullProperties?.Remove("associationTypeId"); } }
+        private int? _explicitNullValueAssociationTypeId = default!;
         /// <summary>An optional refinement criterion that can be applied to the filter. It can be one of several types, such as PublicNumOccurrencesRefineBy or PublicRelativeComparativeTimestampRefineBy.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationInListFilterCoalescingRefineBy? CoalescingRefineBy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationInListFilterCoalescingRefineBy? CoalescingRefineBy { get => _explicitNullValueCoalescingRefineBy; set { _explicitNullValueCoalescingRefineBy = value; AdditionalData?.Remove("coalescingRefineBy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("coalescingRefineBy"); else _explicitNullProperties?.Remove("coalescingRefineBy"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationInListFilterCoalescingRefineBy? _explicitNullValueCoalescingRefineBy = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationInListFilterCoalescingRefineBy CoalescingRefineBy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationInListFilterCoalescingRefineBy CoalescingRefineBy { get => _explicitNullValueCoalescingRefineBy; set { _explicitNullValueCoalescingRefineBy = value; AdditionalData?.Remove("coalescingRefineBy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("coalescingRefineBy"); else _explicitNullProperties?.Remove("coalescingRefineBy"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationInListFilterCoalescingRefineBy _explicitNullValueCoalescingRefineBy = default!;
 #endif
         /// <summary>A string that specifies the type of filter being applied. The default value is &apos;IN_LIST&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AssociationFilterType? FilterType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AssociationFilterType? FilterType { get => _explicitNullValueFilterType; set { _explicitNullValueFilterType = value; AdditionalData?.Remove("filterType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filterType"); else _explicitNullProperties?.Remove("filterType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.AssociationFilterType? _explicitNullValueFilterType = default!;
         /// <summary>A string representing the unique identifier of the list to which the filter is applied.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ListId { get; set; }
+        public string? ListId { get => _explicitNullValueListId; set { _explicitNullValueListId = value; AdditionalData?.Remove("listId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("listId"); else _explicitNullProperties?.Remove("listId"); } }
+        private string? _explicitNullValueListId = default!;
 #nullable restore
 #else
-        public string ListId { get; set; }
+        public string ListId { get => _explicitNullValueListId; set { _explicitNullValueListId = value; AdditionalData?.Remove("listId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("listId"); else _explicitNullProperties?.Remove("listId"); } }
+        private string _explicitNullValueListId = default!;
 #endif
         /// <summary>A string that defines the operator used in the filter. This determines how the filter criteria are applied.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Operator { get; set; }
+        public string? Operator { get => _explicitNullValueOperator; set { _explicitNullValueOperator = value; AdditionalData?.Remove("operator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator"); else _explicitNullProperties?.Remove("operator"); } }
+        private string? _explicitNullValueOperator = default!;
 #nullable restore
 #else
-        public string Operator { get; set; }
+        public string Operator { get => _explicitNullValueOperator; set { _explicitNullValueOperator = value; AdditionalData?.Remove("operator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator"); else _explicitNullProperties?.Remove("operator"); } }
+        private string _explicitNullValueOperator = default!;
 #endif
         /// <summary>A string that describes the type of object to which the association is related.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ToObjectType { get; set; }
+        public string? ToObjectType { get => _explicitNullValueToObjectType; set { _explicitNullValueToObjectType = value; AdditionalData?.Remove("toObjectType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("toObjectType"); else _explicitNullProperties?.Remove("toObjectType"); } }
+        private string? _explicitNullValueToObjectType = default!;
 #nullable restore
 #else
-        public string ToObjectType { get; set; }
+        public string ToObjectType { get => _explicitNullValueToObjectType; set { _explicitNullValueToObjectType = value; AdditionalData?.Remove("toObjectType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("toObjectType"); else _explicitNullProperties?.Remove("toObjectType"); } }
+        private string _explicitNullValueToObjectType = default!;
 #endif
         /// <summary>A string that specifies the type ID of the object to which the association is related.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ToObjectTypeId { get; set; }
+        public string? ToObjectTypeId { get => _explicitNullValueToObjectTypeId; set { _explicitNullValueToObjectTypeId = value; AdditionalData?.Remove("toObjectTypeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("toObjectTypeId"); else _explicitNullProperties?.Remove("toObjectTypeId"); } }
+        private string? _explicitNullValueToObjectTypeId = default!;
 #nullable restore
 #else
-        public string ToObjectTypeId { get; set; }
+        public string ToObjectTypeId { get => _explicitNullValueToObjectTypeId; set { _explicitNullValueToObjectTypeId = value; AdditionalData?.Remove("toObjectTypeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("toObjectTypeId"); else _explicitNullProperties?.Remove("toObjectTypeId"); } }
+        private string _explicitNullValueToObjectTypeId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationInListFilter"/> and sets the default values.
@@ -81,7 +118,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationInListFilter CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationInListFilter();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationInListFilter(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -94,7 +131,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "associationCategory", n => { AssociationCategory = n.GetStringValue(); } },
                 { "associationTypeId", n => { AssociationTypeId = n.GetIntValue(); } },
                 { "coalescingRefineBy", n => { CoalescingRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationInListFilterCoalescingRefineBy>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicAssociationInListFilterCoalescingRefineBy.CreateFromDiscriminatorValue); } },
-                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AssociationFilterType>(); } },
+                { "filterType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AssociationFilterType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFilterType = default; _explicitNullProperties?.Remove("filterType"); AdditionalData["filterType"] = unknown; } else { FilterType = parsed; AdditionalData.Remove("filterType"); } } },
                 { "listId", n => { ListId = n.GetStringValue(); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
                 { "toObjectType", n => { ToObjectType = n.GetStringValue(); } },
@@ -116,6 +153,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("operator", Operator);
             writer.WriteStringValue("toObjectType", ToObjectType);
             writer.WriteStringValue("toObjectTypeId", ToObjectTypeId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,13 +11,26 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class EmailSettingsResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("criteria") is null) { _explicitNullValueCriteria = default!; _explicitNullProperties?.Remove("criteria"); }
+            else if (parseNode.GetChildNode("criteria") is { } nullNodeCriteria && nullNodeCriteria.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Criteria = null;
+            if (parseNode.GetChildNode("sellingStrategy") is null) { _explicitNullValueSellingStrategy = default!; _explicitNullProperties?.Remove("sellingStrategy"); }
+            else if (parseNode.GetChildNode("sellingStrategy") is { } nullNodeSellingStrategy && nullNodeSellingStrategy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SellingStrategy = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A string representing the criteria for email settings. Valid values include &apos;ALL&apos; and &apos;NONE&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailSettingsResponseCriteria? Criteria { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailSettingsResponseCriteria? Criteria { get => _explicitNullValueCriteria; set { _explicitNullValueCriteria = value; AdditionalData?.Remove("criteria"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("criteria"); else _explicitNullProperties?.Remove("criteria"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.EmailSettingsResponseCriteria? _explicitNullValueCriteria = default!;
         /// <summary>A string indicating the selling strategy for email settings. Valid values are &apos;LEAD_BASED&apos; and &apos;ACCOUNT_BASED&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailSettingsResponseSellingStrategy? SellingStrategy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailSettingsResponseSellingStrategy? SellingStrategy { get => _explicitNullValueSellingStrategy; set { _explicitNullValueSellingStrategy = value; AdditionalData?.Remove("sellingStrategy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sellingStrategy"); else _explicitNullProperties?.Remove("sellingStrategy"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.EmailSettingsResponseSellingStrategy? _explicitNullValueSellingStrategy = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.EmailSettingsResponse"/> and sets the default values.
         /// </summary>
@@ -33,7 +46,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.EmailSettingsResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.EmailSettingsResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.EmailSettingsResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -43,8 +56,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "criteria", n => { Criteria = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailSettingsResponseCriteria>(); } },
-                { "sellingStrategy", n => { SellingStrategy = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailSettingsResponseSellingStrategy>(); } },
+                { "criteria", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailSettingsResponseCriteria>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCriteria = default; _explicitNullProperties?.Remove("criteria"); AdditionalData["criteria"] = unknown; } else { Criteria = parsed; AdditionalData.Remove("criteria"); } } },
+                { "sellingStrategy", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailSettingsResponseSellingStrategy>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueSellingStrategy = default; _explicitNullProperties?.Remove("sellingStrategy"); AdditionalData["sellingStrategy"] = unknown; } else { SellingStrategy = parsed; AdditionalData.Remove("sellingStrategy"); } } },
             };
         }
         /// <summary>
@@ -56,6 +69,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailSettingsResponseCriteria>("criteria", Criteria);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailSettingsResponseSellingStrategy>("sellingStrategy", SellingStrategy);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -60,7 +60,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.PipelinesRules.TwoZeroTwoSixZeroNi
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
-            await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
+            await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve the rules associated with a specific pipeline in your HubSpot account. This endpoint allows you to access governance validation rules and approval stages for the specified pipeline. It is useful for understanding the constraints and approval processes applied to the pipeline.
@@ -78,7 +78,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.PipelinesRules.TwoZeroTwoSixZeroNi
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRules>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRules.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRules>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRules.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Update the rules for a specific pipeline within a given object type in HubSpot. This operation allows you to modify governance validation rules and approval stages for the specified pipeline. It is useful for maintaining or altering the workflow rules associated with your pipelines.
@@ -98,7 +98,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.PipelinesRules.TwoZeroTwoSixZeroNi
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPatchRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRules>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRules.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRules>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRules.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Update the rules for a specific pipeline in your HubSpot account. This endpoint allows you to modify governance validation rules and approval stages associated with a pipeline. It requires specifying the object type and pipeline identifiers.
@@ -118,7 +118,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.PipelinesRules.TwoZeroTwoSixZeroNi
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRules>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRules.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRules>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRules.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Delete a specific set of pipeline rules associated with a given object type and pipeline ID in your HubSpot account. This operation is useful for removing obsolete or incorrect rules from a pipeline. Ensure that the objectTypeId and pipelineId are correctly specified to avoid unintended deletions.

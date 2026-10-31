@@ -11,27 +11,45 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicTaskSeries : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("repeatInterval") is null) { _explicitNullValueRepeatInterval = default!; _explicitNullProperties?.Remove("repeatInterval"); }
+            else if (parseNode.GetChildNode("repeatInterval") is { } nullNodeRepeatInterval && nullNodeRepeatInterval.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RepeatInterval = null;
+            if (parseNode.GetChildNode("repeatStatus") is null) { _explicitNullValueRepeatStatus = default!; _explicitNullProperties?.Remove("repeatStatus"); }
+            else if (parseNode.GetChildNode("repeatStatus") is { } nullNodeRepeatStatus && nullNodeRepeatStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RepeatStatus = null;
+            if (parseNode.GetChildNode("startsAt") is null) { _explicitNullValueStartsAt = default!; _explicitNullProperties?.Remove("startsAt"); }
+            else if (parseNode.GetChildNode("startsAt") is { } nullNodeStartsAt && nullNodeStartsAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartsAt = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The recurrence schedule as a standards-compliant RFC-5545 RRULE string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RepeatInterval { get; set; }
+        public string? RepeatInterval { get => _explicitNullValueRepeatInterval; set { _explicitNullValueRepeatInterval = value; AdditionalData?.Remove("repeatInterval"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repeatInterval"); else _explicitNullProperties?.Remove("repeatInterval"); } }
+        private string? _explicitNullValueRepeatInterval = default!;
 #nullable restore
 #else
-        public string RepeatInterval { get; set; }
+        public string RepeatInterval { get => _explicitNullValueRepeatInterval; set { _explicitNullValueRepeatInterval = value; AdditionalData?.Remove("repeatInterval"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repeatInterval"); else _explicitNullProperties?.Remove("repeatInterval"); } }
+        private string _explicitNullValueRepeatInterval = default!;
 #endif
         /// <summary>A string representing the current status of the task series repetition.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RepeatStatus { get; set; }
+        public string? RepeatStatus { get => _explicitNullValueRepeatStatus; set { _explicitNullValueRepeatStatus = value; AdditionalData?.Remove("repeatStatus"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repeatStatus"); else _explicitNullProperties?.Remove("repeatStatus"); } }
+        private string? _explicitNullValueRepeatStatus = default!;
 #nullable restore
 #else
-        public string RepeatStatus { get; set; }
+        public string RepeatStatus { get => _explicitNullValueRepeatStatus; set { _explicitNullValueRepeatStatus = value; AdditionalData?.Remove("repeatStatus"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repeatStatus"); else _explicitNullProperties?.Remove("repeatStatus"); } }
+        private string _explicitNullValueRepeatStatus = default!;
 #endif
         /// <summary>The date and time when the task series is scheduled to start, in ISO 8601 format.</summary>
-        public DateTimeOffset? StartsAt { get; set; }
+        public DateTimeOffset? StartsAt { get => _explicitNullValueStartsAt; set { _explicitNullValueStartsAt = value; AdditionalData?.Remove("startsAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startsAt"); else _explicitNullProperties?.Remove("startsAt"); } }
+        private DateTimeOffset? _explicitNullValueStartsAt = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicTaskSeries"/> and sets the default values.
         /// </summary>
@@ -47,7 +65,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicTaskSeries CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicTaskSeries();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicTaskSeries(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -72,6 +90,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("repeatInterval", RepeatInterval);
             writer.WriteStringValue("repeatStatus", RepeatStatus);
             writer.WriteDateTimeOffsetValue("startsAt", StartsAt);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

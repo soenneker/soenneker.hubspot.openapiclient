@@ -49,7 +49,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Notetaker.TwoZeroTwoSixZeroNine.Conver
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve a recap of a conversation based on the specified object type and object ID. This endpoint provides a variety of insights related to the conversation, including summary, action items, questions asked, call stats, participants, and recording URL.

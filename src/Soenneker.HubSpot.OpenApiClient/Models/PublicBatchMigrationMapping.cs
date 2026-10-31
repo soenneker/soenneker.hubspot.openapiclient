@@ -11,24 +11,39 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicBatchMigrationMapping : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("legacyListIdsToIdsMapping") is null) { _explicitNullValueLegacyListIdsToIdsMapping = default!; _explicitNullProperties?.Remove("legacyListIdsToIdsMapping"); }
+            else if (parseNode.GetChildNode("legacyListIdsToIdsMapping") is { } nullNodeLegacyListIdsToIdsMapping && nullNodeLegacyListIdsToIdsMapping.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LegacyListIdsToIdsMapping = null;
+            if (parseNode.GetChildNode("missingLegacyListIds") is null) { _explicitNullValueMissingLegacyListIds = default!; _explicitNullProperties?.Remove("missingLegacyListIds"); }
+            else if (parseNode.GetChildNode("missingLegacyListIds") is { } nullNodeMissingLegacyListIds && nullNodeMissingLegacyListIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MissingLegacyListIds = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An array of PublicMigrationMapping objects that map legacy list IDs to their corresponding new IDs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicMigrationMapping>? LegacyListIdsToIdsMapping { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicMigrationMapping>? LegacyListIdsToIdsMapping { get => _explicitNullValueLegacyListIdsToIdsMapping; set { _explicitNullValueLegacyListIdsToIdsMapping = value; AdditionalData?.Remove("legacyListIdsToIdsMapping"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("legacyListIdsToIdsMapping"); else _explicitNullProperties?.Remove("legacyListIdsToIdsMapping"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicMigrationMapping>? _explicitNullValueLegacyListIdsToIdsMapping = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicMigrationMapping> LegacyListIdsToIdsMapping { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicMigrationMapping> LegacyListIdsToIdsMapping { get => _explicitNullValueLegacyListIdsToIdsMapping; set { _explicitNullValueLegacyListIdsToIdsMapping = value; AdditionalData?.Remove("legacyListIdsToIdsMapping"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("legacyListIdsToIdsMapping"); else _explicitNullProperties?.Remove("legacyListIdsToIdsMapping"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicMigrationMapping> _explicitNullValueLegacyListIdsToIdsMapping = default!;
 #endif
         /// <summary>An array of strings representing legacy list IDs that could not be found or migrated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? MissingLegacyListIds { get; set; }
+        public List<string>? MissingLegacyListIds { get => _explicitNullValueMissingLegacyListIds; set { _explicitNullValueMissingLegacyListIds = value; AdditionalData?.Remove("missingLegacyListIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("missingLegacyListIds"); else _explicitNullProperties?.Remove("missingLegacyListIds"); } }
+        private List<string>? _explicitNullValueMissingLegacyListIds = default!;
 #nullable restore
 #else
-        public List<string> MissingLegacyListIds { get; set; }
+        public List<string> MissingLegacyListIds { get => _explicitNullValueMissingLegacyListIds; set { _explicitNullValueMissingLegacyListIds = value; AdditionalData?.Remove("missingLegacyListIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("missingLegacyListIds"); else _explicitNullProperties?.Remove("missingLegacyListIds"); } }
+        private List<string> _explicitNullValueMissingLegacyListIds = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicBatchMigrationMapping"/> and sets the default values.
@@ -45,7 +60,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicBatchMigrationMapping CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicBatchMigrationMapping();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicBatchMigrationMapping(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +83,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicMigrationMapping>("legacyListIdsToIdsMapping", LegacyListIdsToIdsMapping);
             writer.WriteCollectionOfPrimitiveValues<string>("missingLegacyListIds", MissingLegacyListIds);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

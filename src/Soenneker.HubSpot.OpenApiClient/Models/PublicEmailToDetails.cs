@@ -11,37 +11,62 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicEmailToDetails : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("contactIds") is null) { _explicitNullValueContactIds = default!; _explicitNullProperties?.Remove("contactIds"); }
+            else if (parseNode.GetChildNode("contactIds") is { } nullNodeContactIds && nullNodeContactIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactIds = null;
+            if (parseNode.GetChildNode("contactIlsLists") is null) { _explicitNullValueContactIlsLists = default!; _explicitNullProperties?.Remove("contactIlsLists"); }
+            else if (parseNode.GetChildNode("contactIlsLists") is { } nullNodeContactIlsLists && nullNodeContactIlsLists.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactIlsLists = null;
+            if (parseNode.GetChildNode("contactLists") is null) { _explicitNullValueContactLists = default!; _explicitNullProperties?.Remove("contactLists"); }
+            else if (parseNode.GetChildNode("contactLists") is { } nullNodeContactLists && nullNodeContactLists.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactLists = null;
+            if (parseNode.GetChildNode("limitSendFrequency") is null) { _explicitNullValueLimitSendFrequency = default!; _explicitNullProperties?.Remove("limitSendFrequency"); }
+            else if (parseNode.GetChildNode("limitSendFrequency") is { } nullNodeLimitSendFrequency && nullNodeLimitSendFrequency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LimitSendFrequency = null;
+            if (parseNode.GetChildNode("suppressGraymail") is null) { _explicitNullValueSuppressGraymail = default!; _explicitNullProperties?.Remove("suppressGraymail"); }
+            else if (parseNode.GetChildNode("suppressGraymail") is { } nullNodeSuppressGraymail && nullNodeSuppressGraymail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SuppressGraymail = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The contactIds property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailRecipients? ContactIds { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailRecipients? ContactIds { get => _explicitNullValueContactIds; set { _explicitNullValueContactIds = value; AdditionalData?.Remove("contactIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactIds"); else _explicitNullProperties?.Remove("contactIds"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailRecipients? _explicitNullValueContactIds = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailRecipients ContactIds { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailRecipients ContactIds { get => _explicitNullValueContactIds; set { _explicitNullValueContactIds = value; AdditionalData?.Remove("contactIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactIds"); else _explicitNullProperties?.Remove("contactIds"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailRecipients _explicitNullValueContactIds = default!;
 #endif
         /// <summary>The contactIlsLists property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailRecipients? ContactIlsLists { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailRecipients? ContactIlsLists { get => _explicitNullValueContactIlsLists; set { _explicitNullValueContactIlsLists = value; AdditionalData?.Remove("contactIlsLists"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactIlsLists"); else _explicitNullProperties?.Remove("contactIlsLists"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailRecipients? _explicitNullValueContactIlsLists = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailRecipients ContactIlsLists { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailRecipients ContactIlsLists { get => _explicitNullValueContactIlsLists; set { _explicitNullValueContactIlsLists = value; AdditionalData?.Remove("contactIlsLists"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactIlsLists"); else _explicitNullProperties?.Remove("contactIlsLists"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailRecipients _explicitNullValueContactIlsLists = default!;
 #endif
         /// <summary>The contactLists property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailRecipients? ContactLists { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailRecipients? ContactLists { get => _explicitNullValueContactLists; set { _explicitNullValueContactLists = value; AdditionalData?.Remove("contactLists"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactLists"); else _explicitNullProperties?.Remove("contactLists"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailRecipients? _explicitNullValueContactLists = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailRecipients ContactLists { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailRecipients ContactLists { get => _explicitNullValueContactLists; set { _explicitNullValueContactLists = value; AdditionalData?.Remove("contactLists"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactLists"); else _explicitNullProperties?.Remove("contactLists"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailRecipients _explicitNullValueContactLists = default!;
 #endif
         /// <summary>A boolean indicating whether the frequency of sending emails to the recipients should be limited.</summary>
-        public bool? LimitSendFrequency { get; set; }
+        public bool? LimitSendFrequency { get => _explicitNullValueLimitSendFrequency; set { _explicitNullValueLimitSendFrequency = value; AdditionalData?.Remove("limitSendFrequency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("limitSendFrequency"); else _explicitNullProperties?.Remove("limitSendFrequency"); } }
+        private bool? _explicitNullValueLimitSendFrequency = default!;
         /// <summary>Whether to send to unengaged contacts (false) or not (true).</summary>
-        public bool? SuppressGraymail { get; set; }
+        public bool? SuppressGraymail { get => _explicitNullValueSuppressGraymail; set { _explicitNullValueSuppressGraymail = value; AdditionalData?.Remove("suppressGraymail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suppressGraymail"); else _explicitNullProperties?.Remove("suppressGraymail"); } }
+        private bool? _explicitNullValueSuppressGraymail = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailToDetails"/> and sets the default values.
         /// </summary>
@@ -57,7 +82,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailToDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailToDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailToDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -86,6 +111,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailRecipients>("contactLists", ContactLists);
             writer.WriteBoolValue("limitSendFrequency", LimitSendFrequency);
             writer.WriteBoolValue("suppressGraymail", SuppressGraymail);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

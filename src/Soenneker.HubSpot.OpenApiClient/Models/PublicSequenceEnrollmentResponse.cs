@@ -11,61 +11,98 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicSequenceEnrollmentResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("enrolledAt") is null) { _explicitNullValueEnrolledAt = default!; _explicitNullProperties?.Remove("enrolledAt"); }
+            else if (parseNode.GetChildNode("enrolledAt") is { } nullNodeEnrolledAt && nullNodeEnrolledAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnrolledAt = null;
+            if (parseNode.GetChildNode("enrolledBy") is null) { _explicitNullValueEnrolledBy = default!; _explicitNullProperties?.Remove("enrolledBy"); }
+            else if (parseNode.GetChildNode("enrolledBy") is { } nullNodeEnrolledBy && nullNodeEnrolledBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnrolledBy = null;
+            if (parseNode.GetChildNode("enrolledByEmail") is null) { _explicitNullValueEnrolledByEmail = default!; _explicitNullProperties?.Remove("enrolledByEmail"); }
+            else if (parseNode.GetChildNode("enrolledByEmail") is { } nullNodeEnrolledByEmail && nullNodeEnrolledByEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnrolledByEmail = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("sequenceId") is null) { _explicitNullValueSequenceId = default!; _explicitNullProperties?.Remove("sequenceId"); }
+            else if (parseNode.GetChildNode("sequenceId") is { } nullNodeSequenceId && nullNodeSequenceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SequenceId = null;
+            if (parseNode.GetChildNode("sequenceName") is null) { _explicitNullValueSequenceName = default!; _explicitNullProperties?.Remove("sequenceName"); }
+            else if (parseNode.GetChildNode("sequenceName") is { } nullNodeSequenceName && nullNodeSequenceName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SequenceName = null;
+            if (parseNode.GetChildNode("toEmail") is null) { _explicitNullValueToEmail = default!; _explicitNullProperties?.Remove("toEmail"); }
+            else if (parseNode.GetChildNode("toEmail") is { } nullNodeToEmail && nullNodeToEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToEmail = null;
+            if (parseNode.GetChildNode("updatedAt") is null) { _explicitNullValueUpdatedAt = default!; _explicitNullProperties?.Remove("updatedAt"); }
+            else if (parseNode.GetChildNode("updatedAt") is { } nullNodeUpdatedAt && nullNodeUpdatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdatedAt = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The date and time when the contact was enrolled in the sequence, in ISO 8601 format.</summary>
-        public DateTimeOffset? EnrolledAt { get; set; }
+        public DateTimeOffset? EnrolledAt { get => _explicitNullValueEnrolledAt; set { _explicitNullValueEnrolledAt = value; AdditionalData?.Remove("enrolledAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enrolledAt"); else _explicitNullProperties?.Remove("enrolledAt"); } }
+        private DateTimeOffset? _explicitNullValueEnrolledAt = default!;
         /// <summary>The unique identifier of the user who enrolled the contact in the sequence.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EnrolledBy { get; set; }
+        public string? EnrolledBy { get => _explicitNullValueEnrolledBy; set { _explicitNullValueEnrolledBy = value; AdditionalData?.Remove("enrolledBy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enrolledBy"); else _explicitNullProperties?.Remove("enrolledBy"); } }
+        private string? _explicitNullValueEnrolledBy = default!;
 #nullable restore
 #else
-        public string EnrolledBy { get; set; }
+        public string EnrolledBy { get => _explicitNullValueEnrolledBy; set { _explicitNullValueEnrolledBy = value; AdditionalData?.Remove("enrolledBy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enrolledBy"); else _explicitNullProperties?.Remove("enrolledBy"); } }
+        private string _explicitNullValueEnrolledBy = default!;
 #endif
         /// <summary>The email address of the user who enrolled the contact in the sequence.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EnrolledByEmail { get; set; }
+        public string? EnrolledByEmail { get => _explicitNullValueEnrolledByEmail; set { _explicitNullValueEnrolledByEmail = value; AdditionalData?.Remove("enrolledByEmail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enrolledByEmail"); else _explicitNullProperties?.Remove("enrolledByEmail"); } }
+        private string? _explicitNullValueEnrolledByEmail = default!;
 #nullable restore
 #else
-        public string EnrolledByEmail { get; set; }
+        public string EnrolledByEmail { get => _explicitNullValueEnrolledByEmail; set { _explicitNullValueEnrolledByEmail = value; AdditionalData?.Remove("enrolledByEmail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enrolledByEmail"); else _explicitNullProperties?.Remove("enrolledByEmail"); } }
+        private string _explicitNullValueEnrolledByEmail = default!;
 #endif
         /// <summary>The unique identifier for the sequence enrollment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The unique identifier of the sequence in which the contact is enrolled.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SequenceId { get; set; }
+        public string? SequenceId { get => _explicitNullValueSequenceId; set { _explicitNullValueSequenceId = value; AdditionalData?.Remove("sequenceId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sequenceId"); else _explicitNullProperties?.Remove("sequenceId"); } }
+        private string? _explicitNullValueSequenceId = default!;
 #nullable restore
 #else
-        public string SequenceId { get; set; }
+        public string SequenceId { get => _explicitNullValueSequenceId; set { _explicitNullValueSequenceId = value; AdditionalData?.Remove("sequenceId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sequenceId"); else _explicitNullProperties?.Remove("sequenceId"); } }
+        private string _explicitNullValueSequenceId = default!;
 #endif
         /// <summary>The name of the sequence in which the contact is enrolled.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SequenceName { get; set; }
+        public string? SequenceName { get => _explicitNullValueSequenceName; set { _explicitNullValueSequenceName = value; AdditionalData?.Remove("sequenceName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sequenceName"); else _explicitNullProperties?.Remove("sequenceName"); } }
+        private string? _explicitNullValueSequenceName = default!;
 #nullable restore
 #else
-        public string SequenceName { get; set; }
+        public string SequenceName { get => _explicitNullValueSequenceName; set { _explicitNullValueSequenceName = value; AdditionalData?.Remove("sequenceName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sequenceName"); else _explicitNullProperties?.Remove("sequenceName"); } }
+        private string _explicitNullValueSequenceName = default!;
 #endif
         /// <summary>The email address of the contact enrolled in the sequence.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ToEmail { get; set; }
+        public string? ToEmail { get => _explicitNullValueToEmail; set { _explicitNullValueToEmail = value; AdditionalData?.Remove("toEmail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("toEmail"); else _explicitNullProperties?.Remove("toEmail"); } }
+        private string? _explicitNullValueToEmail = default!;
 #nullable restore
 #else
-        public string ToEmail { get; set; }
+        public string ToEmail { get => _explicitNullValueToEmail; set { _explicitNullValueToEmail = value; AdditionalData?.Remove("toEmail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("toEmail"); else _explicitNullProperties?.Remove("toEmail"); } }
+        private string _explicitNullValueToEmail = default!;
 #endif
         /// <summary>The date and time when the sequence enrollment was last updated, in ISO 8601 format.</summary>
-        public DateTimeOffset? UpdatedAt { get; set; }
+        public DateTimeOffset? UpdatedAt { get => _explicitNullValueUpdatedAt; set { _explicitNullValueUpdatedAt = value; AdditionalData?.Remove("updatedAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updatedAt"); else _explicitNullProperties?.Remove("updatedAt"); } }
+        private DateTimeOffset? _explicitNullValueUpdatedAt = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceEnrollmentResponse"/> and sets the default values.
         /// </summary>
@@ -81,7 +118,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceEnrollmentResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceEnrollmentResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceEnrollmentResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -116,6 +153,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("sequenceName", SequenceName);
             writer.WriteStringValue("toEmail", ToEmail);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,26 +11,44 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicTimeOffset : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("amount") is null) { _explicitNullValueAmount = default!; _explicitNullProperties?.Remove("amount"); }
+            else if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
+            if (parseNode.GetChildNode("offsetDirection") is null) { _explicitNullValueOffsetDirection = default!; _explicitNullProperties?.Remove("offsetDirection"); }
+            else if (parseNode.GetChildNode("offsetDirection") is { } nullNodeOffsetDirection && nullNodeOffsetDirection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OffsetDirection = null;
+            if (parseNode.GetChildNode("timeUnit") is null) { _explicitNullValueTimeUnit = default!; _explicitNullProperties?.Remove("timeUnit"); }
+            else if (parseNode.GetChildNode("timeUnit") is { } nullNodeTimeUnit && nullNodeTimeUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeUnit = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An integer specifying the amount of time units to offset.</summary>
-        public long? Amount { get; set; }
+        public long? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; AdditionalData?.Remove("amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
+        private long? _explicitNullValueAmount = default!;
         /// <summary>A string indicating the direction of the time offset. Valid values are &apos;BEFORE&apos; and &apos;AFTER&apos;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OffsetDirection { get; set; }
+        public string? OffsetDirection { get => _explicitNullValueOffsetDirection; set { _explicitNullValueOffsetDirection = value; AdditionalData?.Remove("offsetDirection"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offsetDirection"); else _explicitNullProperties?.Remove("offsetDirection"); } }
+        private string? _explicitNullValueOffsetDirection = default!;
 #nullable restore
 #else
-        public string OffsetDirection { get; set; }
+        public string OffsetDirection { get => _explicitNullValueOffsetDirection; set { _explicitNullValueOffsetDirection = value; AdditionalData?.Remove("offsetDirection"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offsetDirection"); else _explicitNullProperties?.Remove("offsetDirection"); } }
+        private string _explicitNullValueOffsetDirection = default!;
 #endif
         /// <summary>A string representing the unit of time for the offset. Valid values include &apos;MINUTE&apos;, &apos;HOUR&apos;, &apos;DAY&apos;, &apos;WEEK&apos;, &apos;MONTH&apos;, &apos;QUARTER&apos;, and &apos;YEAR&apos;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TimeUnit { get; set; }
+        public string? TimeUnit { get => _explicitNullValueTimeUnit; set { _explicitNullValueTimeUnit = value; AdditionalData?.Remove("timeUnit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeUnit"); else _explicitNullProperties?.Remove("timeUnit"); } }
+        private string? _explicitNullValueTimeUnit = default!;
 #nullable restore
 #else
-        public string TimeUnit { get; set; }
+        public string TimeUnit { get => _explicitNullValueTimeUnit; set { _explicitNullValueTimeUnit = value; AdditionalData?.Remove("timeUnit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeUnit"); else _explicitNullProperties?.Remove("timeUnit"); } }
+        private string _explicitNullValueTimeUnit = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicTimeOffset"/> and sets the default values.
@@ -47,7 +65,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicTimeOffset CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicTimeOffset();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicTimeOffset(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -72,6 +90,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteLongValue("amount", Amount);
             writer.WriteStringValue("offsetDirection", OffsetDirection);
             writer.WriteStringValue("timeUnit", TimeUnit);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

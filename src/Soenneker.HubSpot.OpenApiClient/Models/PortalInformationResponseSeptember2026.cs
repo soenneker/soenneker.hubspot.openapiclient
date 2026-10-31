@@ -11,73 +11,120 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PortalInformationResponseSeptember2026 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("accountType") is null) { _explicitNullValueAccountType = default!; _explicitNullProperties?.Remove("accountType"); }
+            else if (parseNode.GetChildNode("accountType") is { } nullNodeAccountType && nullNodeAccountType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountType = null;
+            if (parseNode.GetChildNode("additionalCurrencies") is null) { _explicitNullValueAdditionalCurrencies = default!; _explicitNullProperties?.Remove("additionalCurrencies"); }
+            else if (parseNode.GetChildNode("additionalCurrencies") is { } nullNodeAdditionalCurrencies && nullNodeAdditionalCurrencies.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdditionalCurrencies = null;
+            if (parseNode.GetChildNode("companyCurrency") is null) { _explicitNullValueCompanyCurrency = default!; _explicitNullProperties?.Remove("companyCurrency"); }
+            else if (parseNode.GetChildNode("companyCurrency") is { } nullNodeCompanyCurrency && nullNodeCompanyCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CompanyCurrency = null;
+            if (parseNode.GetChildNode("createdAt") is null) { _explicitNullValueCreatedAt = default!; _explicitNullProperties?.Remove("createdAt"); }
+            else if (parseNode.GetChildNode("createdAt") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("dataHostingLocation") is null) { _explicitNullValueDataHostingLocation = default!; _explicitNullProperties?.Remove("dataHostingLocation"); }
+            else if (parseNode.GetChildNode("dataHostingLocation") is { } nullNodeDataHostingLocation && nullNodeDataHostingLocation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DataHostingLocation = null;
+            if (parseNode.GetChildNode("portalId") is null) { _explicitNullValuePortalId = default!; _explicitNullProperties?.Remove("portalId"); }
+            else if (parseNode.GetChildNode("portalId") is { } nullNodePortalId && nullNodePortalId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PortalId = null;
+            if (parseNode.GetChildNode("portalName") is null) { _explicitNullValuePortalName = default!; _explicitNullProperties?.Remove("portalName"); }
+            else if (parseNode.GetChildNode("portalName") is { } nullNodePortalName && nullNodePortalName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PortalName = null;
+            if (parseNode.GetChildNode("timeZone") is null) { _explicitNullValueTimeZone = default!; _explicitNullProperties?.Remove("timeZone"); }
+            else if (parseNode.GetChildNode("timeZone") is { } nullNodeTimeZone && nullNodeTimeZone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeZone = null;
+            if (parseNode.GetChildNode("uiDomain") is null) { _explicitNullValueUiDomain = default!; _explicitNullProperties?.Remove("uiDomain"); }
+            else if (parseNode.GetChildNode("uiDomain") is { } nullNodeUiDomain && nullNodeUiDomain.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UiDomain = null;
+            if (parseNode.GetChildNode("utcOffset") is null) { _explicitNullValueUtcOffset = default!; _explicitNullProperties?.Remove("utcOffset"); }
+            else if (parseNode.GetChildNode("utcOffset") is { } nullNodeUtcOffset && nullNodeUtcOffset.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UtcOffset = null;
+            if (parseNode.GetChildNode("utcOffsetMilliseconds") is null) { _explicitNullValueUtcOffsetMilliseconds = default!; _explicitNullProperties?.Remove("utcOffsetMilliseconds"); }
+            else if (parseNode.GetChildNode("utcOffsetMilliseconds") is { } nullNodeUtcOffsetMilliseconds && nullNodeUtcOffsetMilliseconds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UtcOffsetMilliseconds = null;
+        }
+
         /// <summary>The type of account associated with the portal. Valid values include &apos;STANDARD&apos;, &apos;DEVELOPER_TEST&apos;, &apos;SANDBOX&apos;, and &apos;APP_DEVELOPER&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PortalInformationResponseSeptember2026AccountType? AccountType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PortalInformationResponseSeptember2026AccountType? AccountType { get => _explicitNullValueAccountType; set { _explicitNullValueAccountType = value; AdditionalData?.Remove("accountType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accountType"); else _explicitNullProperties?.Remove("accountType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PortalInformationResponseSeptember2026AccountType? _explicitNullValueAccountType = default!;
         /// <summary>An array of additional currencies supported by the portal, each represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AdditionalCurrencies { get; set; }
+        public List<string>? AdditionalCurrencies { get => _explicitNullValueAdditionalCurrencies; set { _explicitNullValueAdditionalCurrencies = value; AdditionalData?.Remove("additionalCurrencies"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additionalCurrencies"); else _explicitNullProperties?.Remove("additionalCurrencies"); } }
+        private List<string>? _explicitNullValueAdditionalCurrencies = default!;
 #nullable restore
 #else
-        public List<string> AdditionalCurrencies { get; set; }
+        public List<string> AdditionalCurrencies { get => _explicitNullValueAdditionalCurrencies; set { _explicitNullValueAdditionalCurrencies = value; AdditionalData?.Remove("additionalCurrencies"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additionalCurrencies"); else _explicitNullProperties?.Remove("additionalCurrencies"); } }
+        private List<string> _explicitNullValueAdditionalCurrencies = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The primary currency used by the company, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CompanyCurrency { get; set; }
+        public string? CompanyCurrency { get => _explicitNullValueCompanyCurrency; set { _explicitNullValueCompanyCurrency = value; AdditionalData?.Remove("companyCurrency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("companyCurrency"); else _explicitNullProperties?.Remove("companyCurrency"); } }
+        private string? _explicitNullValueCompanyCurrency = default!;
 #nullable restore
 #else
-        public string CompanyCurrency { get; set; }
+        public string CompanyCurrency { get => _explicitNullValueCompanyCurrency; set { _explicitNullValueCompanyCurrency = value; AdditionalData?.Remove("companyCurrency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("companyCurrency"); else _explicitNullProperties?.Remove("companyCurrency"); } }
+        private string _explicitNullValueCompanyCurrency = default!;
 #endif
         /// <summary>The timestamp when the portal was created, represented as a Unix timestamp in milliseconds.</summary>
-        public long? CreatedAt { get; set; }
+        public long? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; AdditionalData?.Remove("createdAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createdAt"); else _explicitNullProperties?.Remove("createdAt"); } }
+        private long? _explicitNullValueCreatedAt = default!;
         /// <summary>The location where the portal&apos;s data is hosted, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DataHostingLocation { get; set; }
+        public string? DataHostingLocation { get => _explicitNullValueDataHostingLocation; set { _explicitNullValueDataHostingLocation = value; AdditionalData?.Remove("dataHostingLocation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dataHostingLocation"); else _explicitNullProperties?.Remove("dataHostingLocation"); } }
+        private string? _explicitNullValueDataHostingLocation = default!;
 #nullable restore
 #else
-        public string DataHostingLocation { get; set; }
+        public string DataHostingLocation { get => _explicitNullValueDataHostingLocation; set { _explicitNullValueDataHostingLocation = value; AdditionalData?.Remove("dataHostingLocation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dataHostingLocation"); else _explicitNullProperties?.Remove("dataHostingLocation"); } }
+        private string _explicitNullValueDataHostingLocation = default!;
 #endif
         /// <summary>The unique identifier for the HubSpot portal, represented as an integer.</summary>
-        public int? PortalId { get; set; }
+        public int? PortalId { get => _explicitNullValuePortalId; set { _explicitNullValuePortalId = value; AdditionalData?.Remove("portalId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("portalId"); else _explicitNullProperties?.Remove("portalId"); } }
+        private int? _explicitNullValuePortalId = default!;
         /// <summary>The name of the portal, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PortalName { get; set; }
+        public string? PortalName { get => _explicitNullValuePortalName; set { _explicitNullValuePortalName = value; AdditionalData?.Remove("portalName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("portalName"); else _explicitNullProperties?.Remove("portalName"); } }
+        private string? _explicitNullValuePortalName = default!;
 #nullable restore
 #else
-        public string PortalName { get; set; }
+        public string PortalName { get => _explicitNullValuePortalName; set { _explicitNullValuePortalName = value; AdditionalData?.Remove("portalName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("portalName"); else _explicitNullProperties?.Remove("portalName"); } }
+        private string _explicitNullValuePortalName = default!;
 #endif
         /// <summary>The time zone setting of the portal, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TimeZone { get; set; }
+        public string? TimeZone { get => _explicitNullValueTimeZone; set { _explicitNullValueTimeZone = value; AdditionalData?.Remove("timeZone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeZone"); else _explicitNullProperties?.Remove("timeZone"); } }
+        private string? _explicitNullValueTimeZone = default!;
 #nullable restore
 #else
-        public string TimeZone { get; set; }
+        public string TimeZone { get => _explicitNullValueTimeZone; set { _explicitNullValueTimeZone = value; AdditionalData?.Remove("timeZone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeZone"); else _explicitNullProperties?.Remove("timeZone"); } }
+        private string _explicitNullValueTimeZone = default!;
 #endif
         /// <summary>The domain used for the portal&apos;s user interface, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UiDomain { get; set; }
+        public string? UiDomain { get => _explicitNullValueUiDomain; set { _explicitNullValueUiDomain = value; AdditionalData?.Remove("uiDomain"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uiDomain"); else _explicitNullProperties?.Remove("uiDomain"); } }
+        private string? _explicitNullValueUiDomain = default!;
 #nullable restore
 #else
-        public string UiDomain { get; set; }
+        public string UiDomain { get => _explicitNullValueUiDomain; set { _explicitNullValueUiDomain = value; AdditionalData?.Remove("uiDomain"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uiDomain"); else _explicitNullProperties?.Remove("uiDomain"); } }
+        private string _explicitNullValueUiDomain = default!;
 #endif
         /// <summary>The UTC offset of the portal&apos;s time zone, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UtcOffset { get; set; }
+        public string? UtcOffset { get => _explicitNullValueUtcOffset; set { _explicitNullValueUtcOffset = value; AdditionalData?.Remove("utcOffset"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("utcOffset"); else _explicitNullProperties?.Remove("utcOffset"); } }
+        private string? _explicitNullValueUtcOffset = default!;
 #nullable restore
 #else
-        public string UtcOffset { get; set; }
+        public string UtcOffset { get => _explicitNullValueUtcOffset; set { _explicitNullValueUtcOffset = value; AdditionalData?.Remove("utcOffset"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("utcOffset"); else _explicitNullProperties?.Remove("utcOffset"); } }
+        private string _explicitNullValueUtcOffset = default!;
 #endif
         /// <summary>The UTC offset of the portal&apos;s time zone in milliseconds, represented as an integer.</summary>
-        public long? UtcOffsetMilliseconds { get; set; }
+        public long? UtcOffsetMilliseconds { get => _explicitNullValueUtcOffsetMilliseconds; set { _explicitNullValueUtcOffsetMilliseconds = value; AdditionalData?.Remove("utcOffsetMilliseconds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("utcOffsetMilliseconds"); else _explicitNullProperties?.Remove("utcOffsetMilliseconds"); } }
+        private long? _explicitNullValueUtcOffsetMilliseconds = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PortalInformationResponseSeptember2026"/> and sets the default values.
         /// </summary>
@@ -93,7 +140,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PortalInformationResponseSeptember2026 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PortalInformationResponseSeptember2026();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PortalInformationResponseSeptember2026(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -103,7 +150,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "accountType", n => { AccountType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PortalInformationResponseSeptember2026AccountType>(); } },
+                { "accountType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PortalInformationResponseSeptember2026AccountType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAccountType = default; _explicitNullProperties?.Remove("accountType"); AdditionalData["accountType"] = unknown; } else { AccountType = parsed; AdditionalData.Remove("accountType"); } } },
                 { "additionalCurrencies", n => { AdditionalCurrencies = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "companyCurrency", n => { CompanyCurrency = n.GetStringValue(); } },
                 { "createdAt", n => { CreatedAt = n.GetLongValue(); } },
@@ -134,6 +181,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("uiDomain", UiDomain);
             writer.WriteStringValue("utcOffset", UtcOffset);
             writer.WriteLongValue("utcOffsetMilliseconds", UtcOffsetMilliseconds);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

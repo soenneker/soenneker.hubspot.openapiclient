@@ -11,39 +11,75 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class SettingsRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("height") is null) { _explicitNullValueHeight = default!; _explicitNullProperties?.Remove("height"); }
+            else if (parseNode.GetChildNode("height") is { } nullNodeHeight && nullNodeHeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Height = null;
+            if (parseNode.GetChildNode("isReady") is null) { _explicitNullValueIsReady = default!; _explicitNullProperties?.Remove("isReady"); }
+            else if (parseNode.GetChildNode("isReady") is { } nullNodeIsReady && nullNodeIsReady.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsReady = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("supportsCustomObjects") is null) { _explicitNullValueSupportsCustomObjects = default!; _explicitNullProperties?.Remove("supportsCustomObjects"); }
+            else if (parseNode.GetChildNode("supportsCustomObjects") is { } nullNodeSupportsCustomObjects && nullNodeSupportsCustomObjects.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SupportsCustomObjects = null;
+            if (parseNode.GetChildNode("supportsInboundCalling") is null) { _explicitNullValueSupportsInboundCalling = default!; _explicitNullProperties?.Remove("supportsInboundCalling"); }
+            else if (parseNode.GetChildNode("supportsInboundCalling") is { } nullNodeSupportsInboundCalling && nullNodeSupportsInboundCalling.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SupportsInboundCalling = null;
+            if (parseNode.GetChildNode("url") is null) { _explicitNullValueUrl = default!; _explicitNullProperties?.Remove("url"); }
+            else if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+            if (parseNode.GetChildNode("usesCallingWindow") is null) { _explicitNullValueUsesCallingWindow = default!; _explicitNullProperties?.Remove("usesCallingWindow"); }
+            else if (parseNode.GetChildNode("usesCallingWindow") is { } nullNodeUsesCallingWindow && nullNodeUsesCallingWindow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UsesCallingWindow = null;
+            if (parseNode.GetChildNode("usesRemote") is null) { _explicitNullValueUsesRemote = default!; _explicitNullProperties?.Remove("usesRemote"); }
+            else if (parseNode.GetChildNode("usesRemote") is { } nullNodeUsesRemote && nullNodeUsesRemote.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UsesRemote = null;
+            if (parseNode.GetChildNode("width") is null) { _explicitNullValueWidth = default!; _explicitNullProperties?.Remove("width"); }
+            else if (parseNode.GetChildNode("width") is { } nullNodeWidth && nullNodeWidth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Width = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Specifies the height of the calling extension interface.</summary>
-        public int? Height { get; set; }
+        public int? Height { get => _explicitNullValueHeight; set { _explicitNullValueHeight = value; AdditionalData?.Remove("height"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("height"); else _explicitNullProperties?.Remove("height"); } }
+        private int? _explicitNullValueHeight = default!;
         /// <summary>Indicates if the calling extension is ready for use.</summary>
-        public bool? IsReady { get; set; }
+        public bool? IsReady { get => _explicitNullValueIsReady; set { _explicitNullValueIsReady = value; AdditionalData?.Remove("isReady"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isReady"); else _explicitNullProperties?.Remove("isReady"); } }
+        private bool? _explicitNullValueIsReady = default!;
         /// <summary>The name of the calling extension.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>Indicates if the calling extension supports custom objects.</summary>
-        public bool? SupportsCustomObjects { get; set; }
+        public bool? SupportsCustomObjects { get => _explicitNullValueSupportsCustomObjects; set { _explicitNullValueSupportsCustomObjects = value; AdditionalData?.Remove("supportsCustomObjects"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supportsCustomObjects"); else _explicitNullProperties?.Remove("supportsCustomObjects"); } }
+        private bool? _explicitNullValueSupportsCustomObjects = default!;
         /// <summary>Indicates if the calling extension supports inbound calling.</summary>
-        public bool? SupportsInboundCalling { get; set; }
+        public bool? SupportsInboundCalling { get => _explicitNullValueSupportsInboundCalling; set { _explicitNullValueSupportsInboundCalling = value; AdditionalData?.Remove("supportsInboundCalling"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supportsInboundCalling"); else _explicitNullProperties?.Remove("supportsInboundCalling"); } }
+        private bool? _explicitNullValueSupportsInboundCalling = default!;
         /// <summary>The URL associated with the calling extension.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get; set; }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get; set; }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>Indicates if the calling extension uses a separate calling window.</summary>
-        public bool? UsesCallingWindow { get; set; }
+        public bool? UsesCallingWindow { get => _explicitNullValueUsesCallingWindow; set { _explicitNullValueUsesCallingWindow = value; AdditionalData?.Remove("usesCallingWindow"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usesCallingWindow"); else _explicitNullProperties?.Remove("usesCallingWindow"); } }
+        private bool? _explicitNullValueUsesCallingWindow = default!;
         /// <summary>Indicates if the calling extension uses remote services.</summary>
-        public bool? UsesRemote { get; set; }
+        public bool? UsesRemote { get => _explicitNullValueUsesRemote; set { _explicitNullValueUsesRemote = value; AdditionalData?.Remove("usesRemote"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usesRemote"); else _explicitNullProperties?.Remove("usesRemote"); } }
+        private bool? _explicitNullValueUsesRemote = default!;
         /// <summary>Specifies the width of the calling extension interface.</summary>
-        public int? Width { get; set; }
+        public int? Width { get => _explicitNullValueWidth; set { _explicitNullValueWidth = value; AdditionalData?.Remove("width"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("width"); else _explicitNullProperties?.Remove("width"); } }
+        private int? _explicitNullValueWidth = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.SettingsRequest"/> and sets the default values.
         /// </summary>
@@ -59,7 +95,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.SettingsRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.SettingsRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.SettingsRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -96,6 +132,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteBoolValue("usesCallingWindow", UsesCallingWindow);
             writer.WriteBoolValue("usesRemote", UsesRemote);
             writer.WriteIntValue("width", Width);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

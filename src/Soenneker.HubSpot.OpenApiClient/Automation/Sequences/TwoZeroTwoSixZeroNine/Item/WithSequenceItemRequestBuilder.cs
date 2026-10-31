@@ -49,7 +49,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Automation.Sequences.TwoZeroTwoSixZero
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve details of a specific sequence in your HubSpot account using its unique identifier. This endpoint requires specifying the sequence ID and the user ID associated with the sequence. It is useful for accessing detailed information about a sequence&apos;s configuration and status. Please note: the scopes for this endpoint requires user-level access and will not work for existing apps with portal-level access.

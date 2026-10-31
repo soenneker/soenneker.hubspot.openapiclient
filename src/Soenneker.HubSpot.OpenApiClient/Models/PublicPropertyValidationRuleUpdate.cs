@@ -11,19 +11,33 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicPropertyValidationRuleUpdate : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("ruleArguments") is null) { _explicitNullValueRuleArguments = default!; _explicitNullProperties?.Remove("ruleArguments"); }
+            else if (parseNode.GetChildNode("ruleArguments") is { } nullNodeRuleArguments && nullNodeRuleArguments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RuleArguments = null;
+            if (parseNode.GetChildNode("shouldApplyNormalization") is null) { _explicitNullValueShouldApplyNormalization = default!; _explicitNullProperties?.Remove("shouldApplyNormalization"); }
+            else if (parseNode.GetChildNode("shouldApplyNormalization") is { } nullNodeShouldApplyNormalization && nullNodeShouldApplyNormalization.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShouldApplyNormalization = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A list of arguments that define the constraints for the validation rule.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? RuleArguments { get; set; }
+        public List<string>? RuleArguments { get => _explicitNullValueRuleArguments; set { _explicitNullValueRuleArguments = value; AdditionalData?.Remove("ruleArguments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleArguments"); else _explicitNullProperties?.Remove("ruleArguments"); } }
+        private List<string>? _explicitNullValueRuleArguments = default!;
 #nullable restore
 #else
-        public List<string> RuleArguments { get; set; }
+        public List<string> RuleArguments { get => _explicitNullValueRuleArguments; set { _explicitNullValueRuleArguments = value; AdditionalData?.Remove("ruleArguments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleArguments"); else _explicitNullProperties?.Remove("ruleArguments"); } }
+        private List<string> _explicitNullValueRuleArguments = default!;
 #endif
         /// <summary>A boolean indicating whether normalization should be applied to the property value as part of the validation process.</summary>
-        public bool? ShouldApplyNormalization { get; set; }
+        public bool? ShouldApplyNormalization { get => _explicitNullValueShouldApplyNormalization; set { _explicitNullValueShouldApplyNormalization = value; AdditionalData?.Remove("shouldApplyNormalization"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shouldApplyNormalization"); else _explicitNullProperties?.Remove("shouldApplyNormalization"); } }
+        private bool? _explicitNullValueShouldApplyNormalization = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicPropertyValidationRuleUpdate"/> and sets the default values.
         /// </summary>
@@ -39,7 +53,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicPropertyValidationRuleUpdate CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicPropertyValidationRuleUpdate();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicPropertyValidationRuleUpdate(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -62,6 +76,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("ruleArguments", RuleArguments);
             writer.WriteBoolValue("shouldApplyNormalization", ShouldApplyNormalization);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

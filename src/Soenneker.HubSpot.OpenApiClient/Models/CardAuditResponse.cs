@@ -11,21 +11,46 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CardAuditResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("actionType") is null) { _explicitNullValueActionType = default!; _explicitNullProperties?.Remove("actionType"); }
+            else if (parseNode.GetChildNode("actionType") is { } nullNodeActionType && nullNodeActionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionType = null;
+            if (parseNode.GetChildNode("applicationId") is null) { _explicitNullValueApplicationId = default!; _explicitNullProperties?.Remove("applicationId"); }
+            else if (parseNode.GetChildNode("applicationId") is { } nullNodeApplicationId && nullNodeApplicationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApplicationId = null;
+            if (parseNode.GetChildNode("authSource") is null) { _explicitNullValueAuthSource = default!; _explicitNullProperties?.Remove("authSource"); }
+            else if (parseNode.GetChildNode("authSource") is { } nullNodeAuthSource && nullNodeAuthSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthSource = null;
+            if (parseNode.GetChildNode("changedAt") is null) { _explicitNullValueChangedAt = default!; _explicitNullProperties?.Remove("changedAt"); }
+            else if (parseNode.GetChildNode("changedAt") is { } nullNodeChangedAt && nullNodeChangedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChangedAt = null;
+            if (parseNode.GetChildNode("initiatingUserId") is null) { _explicitNullValueInitiatingUserId = default!; _explicitNullProperties?.Remove("initiatingUserId"); }
+            else if (parseNode.GetChildNode("initiatingUserId") is { } nullNodeInitiatingUserId && nullNodeInitiatingUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InitiatingUserId = null;
+            if (parseNode.GetChildNode("objectTypeId") is null) { _explicitNullValueObjectTypeId = default!; _explicitNullProperties?.Remove("objectTypeId"); }
+            else if (parseNode.GetChildNode("objectTypeId") is { } nullNodeObjectTypeId && nullNodeObjectTypeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectTypeId = null;
+        }
+
         /// <summary>The type of action performed, with possible values: CREATE, DELETE, UPDATE.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CardAuditResponseActionType? ActionType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CardAuditResponseActionType? ActionType { get => _explicitNullValueActionType; set { _explicitNullValueActionType = value; AdditionalData?.Remove("actionType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionType"); else _explicitNullProperties?.Remove("actionType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CardAuditResponseActionType? _explicitNullValueActionType = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The ID of the application associated with the card.</summary>
-        public int? ApplicationId { get; set; }
+        public int? ApplicationId { get => _explicitNullValueApplicationId; set { _explicitNullValueApplicationId = value; AdditionalData?.Remove("applicationId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("applicationId"); else _explicitNullProperties?.Remove("applicationId"); } }
+        private int? _explicitNullValueApplicationId = default!;
         /// <summary>The source of authentication for the action, with possible values: APP, EXTERNAL, INTERNAL.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CardAuditResponseAuthSource? AuthSource { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CardAuditResponseAuthSource? AuthSource { get => _explicitNullValueAuthSource; set { _explicitNullValueAuthSource = value; AdditionalData?.Remove("authSource"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authSource"); else _explicitNullProperties?.Remove("authSource"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CardAuditResponseAuthSource? _explicitNullValueAuthSource = default!;
         /// <summary>The timestamp indicating when the change occurred.</summary>
-        public long? ChangedAt { get; set; }
+        public long? ChangedAt { get => _explicitNullValueChangedAt; set { _explicitNullValueChangedAt = value; AdditionalData?.Remove("changedAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("changedAt"); else _explicitNullProperties?.Remove("changedAt"); } }
+        private long? _explicitNullValueChangedAt = default!;
         /// <summary>The ID of the user who initiated the action.</summary>
-        public int? InitiatingUserId { get; set; }
+        public int? InitiatingUserId { get => _explicitNullValueInitiatingUserId; set { _explicitNullValueInitiatingUserId = value; AdditionalData?.Remove("initiatingUserId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initiatingUserId"); else _explicitNullProperties?.Remove("initiatingUserId"); } }
+        private int? _explicitNullValueInitiatingUserId = default!;
         /// <summary>The ID of the card.</summary>
-        public long? ObjectTypeId { get; set; }
+        public long? ObjectTypeId { get => _explicitNullValueObjectTypeId; set { _explicitNullValueObjectTypeId = value; AdditionalData?.Remove("objectTypeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("objectTypeId"); else _explicitNullProperties?.Remove("objectTypeId"); } }
+        private long? _explicitNullValueObjectTypeId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CardAuditResponse"/> and sets the default values.
         /// </summary>
@@ -41,7 +66,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.CardAuditResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.CardAuditResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.CardAuditResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -51,9 +76,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "actionType", n => { ActionType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CardAuditResponseActionType>(); } },
+                { "actionType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CardAuditResponseActionType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueActionType = default; _explicitNullProperties?.Remove("actionType"); AdditionalData["actionType"] = unknown; } else { ActionType = parsed; AdditionalData.Remove("actionType"); } } },
                 { "applicationId", n => { ApplicationId = n.GetIntValue(); } },
-                { "authSource", n => { AuthSource = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CardAuditResponseAuthSource>(); } },
+                { "authSource", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CardAuditResponseAuthSource>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAuthSource = default; _explicitNullProperties?.Remove("authSource"); AdditionalData["authSource"] = unknown; } else { AuthSource = parsed; AdditionalData.Remove("authSource"); } } },
                 { "changedAt", n => { ChangedAt = n.GetLongValue(); } },
                 { "initiatingUserId", n => { InitiatingUserId = n.GetIntValue(); } },
                 { "objectTypeId", n => { ObjectTypeId = n.GetLongValue(); } },
@@ -72,6 +97,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteLongValue("changedAt", ChangedAt);
             writer.WriteIntValue("initiatingUserId", InitiatingUserId);
             writer.WriteLongValue("objectTypeId", ObjectTypeId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,19 +11,33 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class QuickRepliesAttachment : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("quickReplies") is null) { _explicitNullValueQuickReplies = default!; _explicitNullProperties?.Remove("quickReplies"); }
+            else if (parseNode.GetChildNode("quickReplies") is { } nullNodeQuickReplies && nullNodeQuickReplies.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QuickReplies = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An array of QuickReply objects, each representing a predefined option that a user can select.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsQuickReply>? QuickReplies { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsQuickReply>? QuickReplies { get => _explicitNullValueQuickReplies; set { _explicitNullValueQuickReplies = value; AdditionalData?.Remove("quickReplies"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quickReplies"); else _explicitNullProperties?.Remove("quickReplies"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsQuickReply>? _explicitNullValueQuickReplies = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsQuickReply> QuickReplies { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsQuickReply> QuickReplies { get => _explicitNullValueQuickReplies; set { _explicitNullValueQuickReplies = value; AdditionalData?.Remove("quickReplies"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quickReplies"); else _explicitNullProperties?.Remove("quickReplies"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsQuickReply> _explicitNullValueQuickReplies = default!;
 #endif
         /// <summary>A string indicating the type of the component, which is &apos;QUICK_REPLIES&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsQuickRepliesType? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsQuickRepliesType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsQuickRepliesType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.QuickRepliesAttachment"/> and sets the default values.
         /// </summary>
@@ -39,7 +53,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.QuickRepliesAttachment CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.QuickRepliesAttachment();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.QuickRepliesAttachment(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -50,7 +64,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "quickReplies", n => { QuickReplies = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsQuickReply>(global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsQuickReply.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsQuickRepliesType>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsQuickRepliesType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
         /// <summary>
@@ -62,6 +76,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsQuickReply>("quickReplies", QuickReplies);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsQuickRepliesType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

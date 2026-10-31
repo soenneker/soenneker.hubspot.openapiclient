@@ -17,14 +17,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.MarketingEvents.TwoZeroTwoSi
     {
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.marketing.marketingEvents.TwoZeroTwoSixZeroNine.associations.item collection</summary>
         /// <param name="position">The accountId that is associated with this marketing event in the external event application.</param>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Marketing.MarketingEvents.TwoZeroTwoSixZeroNine.Associations.Item.ExternalAccountItemRequestBuilder"/></returns>
-        public global::Soenneker.HubSpot.OpenApiClient.Marketing.MarketingEvents.TwoZeroTwoSixZeroNine.Associations.Item.ExternalAccountItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Marketing.MarketingEvents.TwoZeroTwoSixZeroNine.Associations.Item.WithExternalAccountItemRequestBuilder"/></returns>
+        public global::Soenneker.HubSpot.OpenApiClient.Marketing.MarketingEvents.TwoZeroTwoSixZeroNine.Associations.Item.WithExternalAccountItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("externalAccount%2Did", position);
-                return new global::Soenneker.HubSpot.OpenApiClient.Marketing.MarketingEvents.TwoZeroTwoSixZeroNine.Associations.Item.ExternalAccountItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("externalAccountId", position);
+                return new global::Soenneker.HubSpot.OpenApiClient.Marketing.MarketingEvents.TwoZeroTwoSixZeroNine.Associations.Item.WithExternalAccountItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

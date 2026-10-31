@@ -11,32 +11,51 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicImportMetadata : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("counters") is null) { _explicitNullValueCounters = default!; _explicitNullProperties?.Remove("counters"); }
+            else if (parseNode.GetChildNode("counters") is { } nullNodeCounters && nullNodeCounters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Counters = null;
+            if (parseNode.GetChildNode("fileIds") is null) { _explicitNullValueFileIds = default!; _explicitNullProperties?.Remove("fileIds"); }
+            else if (parseNode.GetChildNode("fileIds") is { } nullNodeFileIds && nullNodeFileIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileIds = null;
+            if (parseNode.GetChildNode("objectLists") is null) { _explicitNullValueObjectLists = default!; _explicitNullProperties?.Remove("objectLists"); }
+            else if (parseNode.GetChildNode("objectLists") is { } nullNodeObjectLists && nullNodeObjectLists.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectLists = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Summarized outcomes of each row a developer attempted to import into HubSpot.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportMetadataCountersProperty2? Counters { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportMetadataCountersProperty2? Counters { get => _explicitNullValueCounters; set { _explicitNullValueCounters = value; AdditionalData?.Remove("counters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("counters"); else _explicitNullProperties?.Remove("counters"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportMetadataCountersProperty2? _explicitNullValueCounters = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportMetadataCountersProperty2 Counters { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportMetadataCountersProperty2 Counters { get => _explicitNullValueCounters; set { _explicitNullValueCounters = value; AdditionalData?.Remove("counters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("counters"); else _explicitNullProperties?.Remove("counters"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportMetadataCountersProperty2 _explicitNullValueCounters = default!;
 #endif
         /// <summary>The IDs of files uploaded in the File Manager API.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? FileIds { get; set; }
+        public List<string>? FileIds { get => _explicitNullValueFileIds; set { _explicitNullValueFileIds = value; AdditionalData?.Remove("fileIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fileIds"); else _explicitNullProperties?.Remove("fileIds"); } }
+        private List<string>? _explicitNullValueFileIds = default!;
 #nullable restore
 #else
-        public List<string> FileIds { get; set; }
+        public List<string> FileIds { get => _explicitNullValueFileIds; set { _explicitNullValueFileIds = value; AdditionalData?.Remove("fileIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fileIds"); else _explicitNullProperties?.Remove("fileIds"); } }
+        private List<string> _explicitNullValueFileIds = default!;
 #endif
         /// <summary>The lists containing the imported objects.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectListRecord>? ObjectLists { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectListRecord>? ObjectLists { get => _explicitNullValueObjectLists; set { _explicitNullValueObjectLists = value; AdditionalData?.Remove("objectLists"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("objectLists"); else _explicitNullProperties?.Remove("objectLists"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectListRecord>? _explicitNullValueObjectLists = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectListRecord> ObjectLists { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectListRecord> ObjectLists { get => _explicitNullValueObjectLists; set { _explicitNullValueObjectLists = value; AdditionalData?.Remove("objectLists"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("objectLists"); else _explicitNullProperties?.Remove("objectLists"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectListRecord> _explicitNullValueObjectLists = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportMetadata"/> and sets the default values.
@@ -53,7 +72,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportMetadata CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportMetadata();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportMetadata(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +97,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportMetadataCountersProperty2>("counters", Counters);
             writer.WriteCollectionOfPrimitiveValues<string>("fileIds", FileIds);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectListRecord>("objectLists", ObjectLists);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

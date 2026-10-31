@@ -11,16 +11,27 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PortalFlagStateBatchPutRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("portalStates") is null) { _explicitNullValuePortalStates = default!; _explicitNullProperties?.Remove("portalStates"); }
+            else if (parseNode.GetChildNode("portalStates") is { } nullNodePortalStates && nullNodePortalStates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PortalStates = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An array of portal flag state entries to be updated. Each entry contains details about the portal ID and the desired flag state.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.BatchPortalEntry>? PortalStates { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.BatchPortalEntry>? PortalStates { get => _explicitNullValuePortalStates; set { _explicitNullValuePortalStates = value; AdditionalData?.Remove("portalStates"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("portalStates"); else _explicitNullProperties?.Remove("portalStates"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.BatchPortalEntry>? _explicitNullValuePortalStates = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.BatchPortalEntry> PortalStates { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.BatchPortalEntry> PortalStates { get => _explicitNullValuePortalStates; set { _explicitNullValuePortalStates = value; AdditionalData?.Remove("portalStates"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("portalStates"); else _explicitNullProperties?.Remove("portalStates"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.BatchPortalEntry> _explicitNullValuePortalStates = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStateBatchPutRequest"/> and sets the default values.
@@ -37,7 +48,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStateBatchPutRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStateBatchPutRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStateBatchPutRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -58,6 +69,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.BatchPortalEntry>("portalStates", PortalStates);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

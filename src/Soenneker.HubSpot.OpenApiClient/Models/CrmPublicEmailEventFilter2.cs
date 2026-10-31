@@ -11,52 +11,85 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CrmPublicEmailEventFilter2 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("appId") is null) { _explicitNullValueAppId = default!; _explicitNullProperties?.Remove("appId"); }
+            else if (parseNode.GetChildNode("appId") is { } nullNodeAppId && nullNodeAppId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppId = null;
+            if (parseNode.GetChildNode("clickUrl") is null) { _explicitNullValueClickUrl = default!; _explicitNullProperties?.Remove("clickUrl"); }
+            else if (parseNode.GetChildNode("clickUrl") is { } nullNodeClickUrl && nullNodeClickUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClickUrl = null;
+            if (parseNode.GetChildNode("emailId") is null) { _explicitNullValueEmailId = default!; _explicitNullProperties?.Remove("emailId"); }
+            else if (parseNode.GetChildNode("emailId") is { } nullNodeEmailId && nullNodeEmailId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailId = null;
+            if (parseNode.GetChildNode("filterType") is null) { _explicitNullValueFilterType = default!; _explicitNullProperties?.Remove("filterType"); }
+            else if (parseNode.GetChildNode("filterType") is { } nullNodeFilterType && nullNodeFilterType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FilterType = null;
+            if (parseNode.GetChildNode("level") is null) { _explicitNullValueLevel = default!; _explicitNullProperties?.Remove("level"); }
+            else if (parseNode.GetChildNode("level") is { } nullNodeLevel && nullNodeLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Level = null;
+            if (parseNode.GetChildNode("operator") is null) { _explicitNullValueOperator = default!; _explicitNullProperties?.Remove("operator"); }
+            else if (parseNode.GetChildNode("operator") is { } nullNodeOperator && nullNodeOperator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Operator = null;
+            if (parseNode.GetChildNode("pruningRefineBy") is null) { _explicitNullValuePruningRefineBy = default!; _explicitNullProperties?.Remove("pruningRefineBy"); }
+            else if (parseNode.GetChildNode("pruningRefineBy") is { } nullNodePruningRefineBy && nullNodePruningRefineBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PruningRefineBy = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A string that identifies the application associated with the email event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AppId { get; set; }
+        public string? AppId { get => _explicitNullValueAppId; set { _explicitNullValueAppId = value; AdditionalData?.Remove("appId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("appId"); else _explicitNullProperties?.Remove("appId"); } }
+        private string? _explicitNullValueAppId = default!;
 #nullable restore
 #else
-        public string AppId { get; set; }
+        public string AppId { get => _explicitNullValueAppId; set { _explicitNullValueAppId = value; AdditionalData?.Remove("appId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("appId"); else _explicitNullProperties?.Remove("appId"); } }
+        private string _explicitNullValueAppId = default!;
 #endif
         /// <summary>A string representing the URL that was clicked in the email event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ClickUrl { get; set; }
+        public string? ClickUrl { get => _explicitNullValueClickUrl; set { _explicitNullValueClickUrl = value; AdditionalData?.Remove("clickUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clickUrl"); else _explicitNullProperties?.Remove("clickUrl"); } }
+        private string? _explicitNullValueClickUrl = default!;
 #nullable restore
 #else
-        public string ClickUrl { get; set; }
+        public string ClickUrl { get => _explicitNullValueClickUrl; set { _explicitNullValueClickUrl = value; AdditionalData?.Remove("clickUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clickUrl"); else _explicitNullProperties?.Remove("clickUrl"); } }
+        private string _explicitNullValueClickUrl = default!;
 #endif
         /// <summary>A string that uniquely identifies the email associated with the event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmailId { get; set; }
+        public string? EmailId { get => _explicitNullValueEmailId; set { _explicitNullValueEmailId = value; AdditionalData?.Remove("emailId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailId"); else _explicitNullProperties?.Remove("emailId"); } }
+        private string? _explicitNullValueEmailId = default!;
 #nullable restore
 #else
-        public string EmailId { get; set; }
+        public string EmailId { get => _explicitNullValueEmailId; set { _explicitNullValueEmailId = value; AdditionalData?.Remove("emailId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailId"); else _explicitNullProperties?.Remove("emailId"); } }
+        private string _explicitNullValueEmailId = default!;
 #endif
         /// <summary>A string that specifies the type of filter. The default value is &apos;EMAIL_EVENT&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmEmailEventFilterType2? FilterType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmEmailEventFilterType2? FilterType { get => _explicitNullValueFilterType; set { _explicitNullValueFilterType = value; AdditionalData?.Remove("filterType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filterType"); else _explicitNullProperties?.Remove("filterType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmEmailEventFilterType2? _explicitNullValueFilterType = default!;
         /// <summary>A string representing the level of the email event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Level { get; set; }
+        public string? Level { get => _explicitNullValueLevel; set { _explicitNullValueLevel = value; AdditionalData?.Remove("level"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("level"); else _explicitNullProperties?.Remove("level"); } }
+        private string? _explicitNullValueLevel = default!;
 #nullable restore
 #else
-        public string Level { get; set; }
+        public string Level { get => _explicitNullValueLevel; set { _explicitNullValueLevel = value; AdditionalData?.Remove("level"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("level"); else _explicitNullProperties?.Remove("level"); } }
+        private string _explicitNullValueLevel = default!;
 #endif
         /// <summary>A string that defines the operation or event type for filtering. Valid values include &apos;LINK_CLICKED&apos;, &apos;MARKED_SPAM&apos;, &apos;OPENED&apos;, &apos;OPENED_BUT_LINK_NOT_CLICKED&apos;, &apos;OPENED_BUT_NOT_REPLIED&apos;, &apos;REPLIED&apos;, &apos;UNSUBSCRIBED&apos;, &apos;BOUNCED&apos;, &apos;RECEIVED&apos;, &apos;RECEIVED_BUT_NOT_OPENED&apos;, &apos;SENT&apos;, &apos;SENT_BUT_LINK_NOT_CLICKED&apos;, and &apos;SENT_BUT_NOT_RECEIVED&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEmailEventFilterOperator2? Operator { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEmailEventFilterOperator2? Operator { get => _explicitNullValueOperator; set { _explicitNullValueOperator = value; AdditionalData?.Remove("operator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator"); else _explicitNullProperties?.Remove("operator"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEmailEventFilterOperator2? _explicitNullValueOperator = default!;
         /// <summary>An object that specifies additional criteria for refining the filter, which can be one of several types such as &apos;PublicNumOccurrencesRefineBy&apos;, &apos;PublicSetOccurrencesRefineBy&apos;, &apos;PublicRelativeComparativeTimestampRefineBy&apos;, &apos;PublicRelativeRangedTimestampRefineBy&apos;, &apos;PublicAbsoluteComparativeTimestampRefineBy&apos;, &apos;PublicAbsoluteRangedTimestampRefineBy&apos;, &apos;PublicAllHistoryRefineBy&apos;, &apos;PublicTimePointOperation&apos;, or &apos;PublicRangedTimeOperation&apos;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEmailEventFilterPruningRefineBy2? PruningRefineBy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEmailEventFilterPruningRefineBy2? PruningRefineBy { get => _explicitNullValuePruningRefineBy; set { _explicitNullValuePruningRefineBy = value; AdditionalData?.Remove("pruningRefineBy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pruningRefineBy"); else _explicitNullProperties?.Remove("pruningRefineBy"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEmailEventFilterPruningRefineBy2? _explicitNullValuePruningRefineBy = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEmailEventFilterPruningRefineBy2 PruningRefineBy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEmailEventFilterPruningRefineBy2 PruningRefineBy { get => _explicitNullValuePruningRefineBy; set { _explicitNullValuePruningRefineBy = value; AdditionalData?.Remove("pruningRefineBy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pruningRefineBy"); else _explicitNullProperties?.Remove("pruningRefineBy"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEmailEventFilterPruningRefineBy2 _explicitNullValuePruningRefineBy = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEmailEventFilter2"/> and sets the default values.
@@ -73,7 +106,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEmailEventFilter2 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEmailEventFilter2();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEmailEventFilter2(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -86,9 +119,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "appId", n => { AppId = n.GetStringValue(); } },
                 { "clickUrl", n => { ClickUrl = n.GetStringValue(); } },
                 { "emailId", n => { EmailId = n.GetStringValue(); } },
-                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmEmailEventFilterType2>(); } },
+                { "filterType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmEmailEventFilterType2>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFilterType = default; _explicitNullProperties?.Remove("filterType"); AdditionalData["filterType"] = unknown; } else { FilterType = parsed; AdditionalData.Remove("filterType"); } } },
                 { "level", n => { Level = n.GetStringValue(); } },
-                { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEmailEventFilterOperator2>(); } },
+                { "operator", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEmailEventFilterOperator2>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueOperator = default; _explicitNullProperties?.Remove("operator"); AdditionalData["operator"] = unknown; } else { Operator = parsed; AdditionalData.Remove("operator"); } } },
                 { "pruningRefineBy", n => { PruningRefineBy = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEmailEventFilterPruningRefineBy2>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEmailEventFilterPruningRefineBy2.CreateFromDiscriminatorValue); } },
             };
         }
@@ -106,6 +139,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("level", Level);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEmailEventFilterOperator2>("operator", Operator);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicEmailEventFilterPruningRefineBy2>("pruningRefineBy", PruningRefineBy);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

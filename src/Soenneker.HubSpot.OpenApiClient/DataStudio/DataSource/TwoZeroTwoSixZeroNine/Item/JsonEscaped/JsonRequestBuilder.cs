@@ -51,7 +51,7 @@ namespace Soenneker.HubSpot.OpenApiClient.DataStudio.DataSource.TwoZeroTwoSixZer
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.DataSourceUpdateResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.DataSourceUpdateResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.DataSourceUpdateResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.DataSourceUpdateResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Update an existing data source in HubSpot Data Studio. This endpoint allows you to fully replace an existing datasource. The schema and the data can be provided in the request.

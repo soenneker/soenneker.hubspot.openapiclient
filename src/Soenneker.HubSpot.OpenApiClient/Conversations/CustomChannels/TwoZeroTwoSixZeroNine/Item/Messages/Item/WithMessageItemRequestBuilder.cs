@@ -49,7 +49,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.CustomChannels.TwoZeroTw
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicConversationsMessage>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicConversationsMessage.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicConversationsMessage>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicConversationsMessage.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Update a message&apos;s status to indicate if it was successfully sent, failed to send, or was read. For failed messages, this can also include the error message for the failure.
@@ -69,7 +69,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.CustomChannels.TwoZeroTw
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPatchRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicConversationsMessage>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicConversationsMessage.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicConversationsMessage>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicConversationsMessage.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get the details for a specific message sent over a custom channel

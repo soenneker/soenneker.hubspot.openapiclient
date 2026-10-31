@@ -48,7 +48,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Events.TwoZeroTwoSixZeroNine.EventDefi
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
-            await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
+            await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Update a specific property of a behavioral event definition in your HubSpot account. This operation allows you to modify the details of an existing property associated with a given event. Use this endpoint to keep your event properties up-to-date with the latest information.
@@ -68,7 +68,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Events.TwoZeroTwoSixZeroNine.EventDefi
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPatchRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.EventsProperty>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.EventsProperty.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.EventsProperty>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.EventsProperty.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Delete a specific property from an event definition in your HubSpot account. This operation is useful when you need to remove obsolete or incorrect properties from an event definition. Ensure that the event and property names are accurately specified to avoid unintended deletions.

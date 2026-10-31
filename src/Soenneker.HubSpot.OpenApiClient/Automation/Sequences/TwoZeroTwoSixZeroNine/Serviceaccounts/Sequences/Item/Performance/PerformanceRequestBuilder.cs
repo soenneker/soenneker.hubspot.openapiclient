@@ -49,7 +49,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Automation.Sequences.TwoZeroTwoSixZero
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequencePerformanceResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequencePerformanceResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequencePerformanceResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequencePerformanceResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve the performance metrics of a specific sequence in your HubSpot account. This endpoint provides detailed insights into the sequence&apos;s effectiveness, including metrics such as opened, clicked, and replied rates. It is useful for analyzing the success of your sequences over time. Please note: the scopes for this endpoint requires user-level access and will not work for existing apps with portal-level access.

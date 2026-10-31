@@ -11,32 +11,51 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TopLevelActions : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("primary") is null) { _explicitNullValuePrimary = default!; _explicitNullProperties?.Remove("primary"); }
+            else if (parseNode.GetChildNode("primary") is { } nullNodePrimary && nullNodePrimary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Primary = null;
+            if (parseNode.GetChildNode("secondary") is null) { _explicitNullValueSecondary = default!; _explicitNullProperties?.Remove("secondary"); }
+            else if (parseNode.GetChildNode("secondary") is { } nullNodeSecondary && nullNodeSecondary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Secondary = null;
+            if (parseNode.GetChildNode("settings") is null) { _explicitNullValueSettings = default!; _explicitNullProperties?.Remove("settings"); }
+            else if (parseNode.GetChildNode("settings") is { } nullNodeSettings && nullNodeSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Settings = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Defines the primary action for a card, which can be either an action hook or an iframe.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.TopLevelActionsPrimary? Primary { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.TopLevelActionsPrimary? Primary { get => _explicitNullValuePrimary; set { _explicitNullValuePrimary = value; AdditionalData?.Remove("primary"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary"); else _explicitNullProperties?.Remove("primary"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.TopLevelActionsPrimary? _explicitNullValuePrimary = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.TopLevelActionsPrimary Primary { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.TopLevelActionsPrimary Primary { get => _explicitNullValuePrimary; set { _explicitNullValuePrimary = value; AdditionalData?.Remove("primary"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary"); else _explicitNullProperties?.Remove("primary"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.TopLevelActionsPrimary _explicitNullValuePrimary = default!;
 #endif
         /// <summary>Specifies a list of secondary actions for a card, each of which can be an action hook or an iframe.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.TopLevelActionsSecondaryItem>? Secondary { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorObjectResultActionsItem>? Secondary { get => _explicitNullValueSecondary; set { _explicitNullValueSecondary = value; AdditionalData?.Remove("secondary"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondary"); else _explicitNullProperties?.Remove("secondary"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorObjectResultActionsItem>? _explicitNullValueSecondary = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.TopLevelActionsSecondaryItem> Secondary { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorObjectResultActionsItem> Secondary { get => _explicitNullValueSecondary; set { _explicitNullValueSecondary = value; AdditionalData?.Remove("secondary"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondary"); else _explicitNullProperties?.Remove("secondary"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorObjectResultActionsItem> _explicitNullValueSecondary = default!;
 #endif
         /// <summary>The settings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.IFrameActionBody? Settings { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.IFrameActionBody? Settings { get => _explicitNullValueSettings; set { _explicitNullValueSettings = value; AdditionalData?.Remove("settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("settings"); else _explicitNullProperties?.Remove("settings"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.IFrameActionBody? _explicitNullValueSettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.IFrameActionBody Settings { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.IFrameActionBody Settings { get => _explicitNullValueSettings; set { _explicitNullValueSettings = value; AdditionalData?.Remove("settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("settings"); else _explicitNullProperties?.Remove("settings"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.IFrameActionBody _explicitNullValueSettings = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.TopLevelActions"/> and sets the default values.
@@ -53,7 +72,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.TopLevelActions CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.TopLevelActions();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.TopLevelActions(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -64,7 +83,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "primary", n => { Primary = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.TopLevelActionsPrimary>(global::Soenneker.HubSpot.OpenApiClient.Models.TopLevelActionsPrimary.CreateFromDiscriminatorValue); } },
-                { "secondary", n => { Secondary = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.TopLevelActionsSecondaryItem>(global::Soenneker.HubSpot.OpenApiClient.Models.TopLevelActionsSecondaryItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "secondary", n => { Secondary = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorObjectResultActionsItem>(global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorObjectResultActionsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "settings", n => { Settings = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.IFrameActionBody>(global::Soenneker.HubSpot.OpenApiClient.Models.IFrameActionBody.CreateFromDiscriminatorValue); } },
             };
         }
@@ -76,8 +95,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.TopLevelActionsPrimary>("primary", Primary);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.TopLevelActionsSecondaryItem>("secondary", Secondary);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.IntegratorObjectResultActionsItem>("secondary", Secondary);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.IFrameActionBody>("settings", Settings);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

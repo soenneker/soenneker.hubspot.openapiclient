@@ -11,35 +11,57 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ExternalLinkDisplayInfo : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("avatar") is null) { _explicitNullValueAvatar = default!; _explicitNullProperties?.Remove("avatar"); }
+            else if (parseNode.GetChildNode("avatar") is { } nullNodeAvatar && nullNodeAvatar.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Avatar = null;
+            if (parseNode.GetChildNode("companyAvatar") is null) { _explicitNullValueCompanyAvatar = default!; _explicitNullProperties?.Remove("companyAvatar"); }
+            else if (parseNode.GetChildNode("companyAvatar") is { } nullNodeCompanyAvatar && nullNodeCompanyAvatar.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CompanyAvatar = null;
+            if (parseNode.GetChildNode("headline") is null) { _explicitNullValueHeadline = default!; _explicitNullProperties?.Remove("headline"); }
+            else if (parseNode.GetChildNode("headline") is { } nullNodeHeadline && nullNodeHeadline.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Headline = null;
+            if (parseNode.GetChildNode("publicDisplayAvatarOption") is null) { _explicitNullValuePublicDisplayAvatarOption = default!; _explicitNullProperties?.Remove("publicDisplayAvatarOption"); }
+            else if (parseNode.GetChildNode("publicDisplayAvatarOption") is { } nullNodePublicDisplayAvatarOption && nullNodePublicDisplayAvatarOption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PublicDisplayAvatarOption = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A string representing the URL of the avatar image to be displayed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Avatar { get; set; }
+        public string? Avatar { get => _explicitNullValueAvatar; set { _explicitNullValueAvatar = value; AdditionalData?.Remove("avatar"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avatar"); else _explicitNullProperties?.Remove("avatar"); } }
+        private string? _explicitNullValueAvatar = default!;
 #nullable restore
 #else
-        public string Avatar { get; set; }
+        public string Avatar { get => _explicitNullValueAvatar; set { _explicitNullValueAvatar = value; AdditionalData?.Remove("avatar"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avatar"); else _explicitNullProperties?.Remove("avatar"); } }
+        private string _explicitNullValueAvatar = default!;
 #endif
         /// <summary>A string representing the URL of the company avatar image to be displayed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CompanyAvatar { get; set; }
+        public string? CompanyAvatar { get => _explicitNullValueCompanyAvatar; set { _explicitNullValueCompanyAvatar = value; AdditionalData?.Remove("companyAvatar"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("companyAvatar"); else _explicitNullProperties?.Remove("companyAvatar"); } }
+        private string? _explicitNullValueCompanyAvatar = default!;
 #nullable restore
 #else
-        public string CompanyAvatar { get; set; }
+        public string CompanyAvatar { get => _explicitNullValueCompanyAvatar; set { _explicitNullValueCompanyAvatar = value; AdditionalData?.Remove("companyAvatar"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("companyAvatar"); else _explicitNullProperties?.Remove("companyAvatar"); } }
+        private string _explicitNullValueCompanyAvatar = default!;
 #endif
         /// <summary>A string representing the headline text to be displayed with the meeting link.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Headline { get; set; }
+        public string? Headline { get => _explicitNullValueHeadline; set { _explicitNullValueHeadline = value; AdditionalData?.Remove("headline"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("headline"); else _explicitNullProperties?.Remove("headline"); } }
+        private string? _explicitNullValueHeadline = default!;
 #nullable restore
 #else
-        public string Headline { get; set; }
+        public string Headline { get => _explicitNullValueHeadline; set { _explicitNullValueHeadline = value; AdditionalData?.Remove("headline"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("headline"); else _explicitNullProperties?.Remove("headline"); } }
+        private string _explicitNullValueHeadline = default!;
 #endif
         /// <summary>A string indicating the avatar display option, with valid values including &apos;PROFILE_IMAGE&apos;, &apos;COMPANY_LOGO&apos;, and &apos;CUSTOM_AVATAR&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkDisplayInfoPublicDisplayAvatarOption? PublicDisplayAvatarOption { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkDisplayInfoPublicDisplayAvatarOption? PublicDisplayAvatarOption { get => _explicitNullValuePublicDisplayAvatarOption; set { _explicitNullValuePublicDisplayAvatarOption = value; AdditionalData?.Remove("publicDisplayAvatarOption"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("publicDisplayAvatarOption"); else _explicitNullProperties?.Remove("publicDisplayAvatarOption"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkDisplayInfoPublicDisplayAvatarOption? _explicitNullValuePublicDisplayAvatarOption = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkDisplayInfo"/> and sets the default values.
         /// </summary>
@@ -55,7 +77,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkDisplayInfo CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkDisplayInfo();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkDisplayInfo(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,7 +90,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "avatar", n => { Avatar = n.GetStringValue(); } },
                 { "companyAvatar", n => { CompanyAvatar = n.GetStringValue(); } },
                 { "headline", n => { Headline = n.GetStringValue(); } },
-                { "publicDisplayAvatarOption", n => { PublicDisplayAvatarOption = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkDisplayInfoPublicDisplayAvatarOption>(); } },
+                { "publicDisplayAvatarOption", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkDisplayInfoPublicDisplayAvatarOption>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePublicDisplayAvatarOption = default; _explicitNullProperties?.Remove("publicDisplayAvatarOption"); AdditionalData["publicDisplayAvatarOption"] = unknown; } else { PublicDisplayAvatarOption = parsed; AdditionalData.Remove("publicDisplayAvatarOption"); } } },
             };
         }
         /// <summary>
@@ -82,6 +104,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("companyAvatar", CompanyAvatar);
             writer.WriteStringValue("headline", Headline);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkDisplayInfoPublicDisplayAvatarOption>("publicDisplayAvatarOption", PublicDisplayAvatarOption);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

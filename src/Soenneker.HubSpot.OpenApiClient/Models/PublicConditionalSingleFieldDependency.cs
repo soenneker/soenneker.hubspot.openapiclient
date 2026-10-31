@@ -11,34 +11,56 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicConditionalSingleFieldDependency : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("controllingFieldName") is null) { _explicitNullValueControllingFieldName = default!; _explicitNullProperties?.Remove("controllingFieldName"); }
+            else if (parseNode.GetChildNode("controllingFieldName") is { } nullNodeControllingFieldName && nullNodeControllingFieldName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ControllingFieldName = null;
+            if (parseNode.GetChildNode("controllingFieldValue") is null) { _explicitNullValueControllingFieldValue = default!; _explicitNullProperties?.Remove("controllingFieldValue"); }
+            else if (parseNode.GetChildNode("controllingFieldValue") is { } nullNodeControllingFieldValue && nullNodeControllingFieldValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ControllingFieldValue = null;
+            if (parseNode.GetChildNode("dependencyType") is null) { _explicitNullValueDependencyType = default!; _explicitNullProperties?.Remove("dependencyType"); }
+            else if (parseNode.GetChildNode("dependencyType") is { } nullNodeDependencyType && nullNodeDependencyType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DependencyType = null;
+            if (parseNode.GetChildNode("dependentFieldNames") is null) { _explicitNullValueDependentFieldNames = default!; _explicitNullProperties?.Remove("dependentFieldNames"); }
+            else if (parseNode.GetChildNode("dependentFieldNames") is { } nullNodeDependentFieldNames && nullNodeDependentFieldNames.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DependentFieldNames = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The name of the field that determines the dependency.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ControllingFieldName { get; set; }
+        public string? ControllingFieldName { get => _explicitNullValueControllingFieldName; set { _explicitNullValueControllingFieldName = value; AdditionalData?.Remove("controllingFieldName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("controllingFieldName"); else _explicitNullProperties?.Remove("controllingFieldName"); } }
+        private string? _explicitNullValueControllingFieldName = default!;
 #nullable restore
 #else
-        public string ControllingFieldName { get; set; }
+        public string ControllingFieldName { get => _explicitNullValueControllingFieldName; set { _explicitNullValueControllingFieldName = value; AdditionalData?.Remove("controllingFieldName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("controllingFieldName"); else _explicitNullProperties?.Remove("controllingFieldName"); } }
+        private string _explicitNullValueControllingFieldName = default!;
 #endif
         /// <summary>The value of the controlling field that triggers the dependency.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ControllingFieldValue { get; set; }
+        public string? ControllingFieldValue { get => _explicitNullValueControllingFieldValue; set { _explicitNullValueControllingFieldValue = value; AdditionalData?.Remove("controllingFieldValue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("controllingFieldValue"); else _explicitNullProperties?.Remove("controllingFieldValue"); } }
+        private string? _explicitNullValueControllingFieldValue = default!;
 #nullable restore
 #else
-        public string ControllingFieldValue { get; set; }
+        public string ControllingFieldValue { get => _explicitNullValueControllingFieldValue; set { _explicitNullValueControllingFieldValue = value; AdditionalData?.Remove("controllingFieldValue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("controllingFieldValue"); else _explicitNullProperties?.Remove("controllingFieldValue"); } }
+        private string _explicitNullValueControllingFieldValue = default!;
 #endif
         /// <summary>The type of dependency, with the default value being CONDITIONAL_SINGLE_FIELD.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ConditionalSingleFieldDependencyType? DependencyType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConditionalSingleFieldDependencyType? DependencyType { get => _explicitNullValueDependencyType; set { _explicitNullValueDependencyType = value; AdditionalData?.Remove("dependencyType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dependencyType"); else _explicitNullProperties?.Remove("dependencyType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ConditionalSingleFieldDependencyType? _explicitNullValueDependencyType = default!;
         /// <summary>An array of strings representing the names of fields that are dependent on the controlling field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? DependentFieldNames { get; set; }
+        public List<string>? DependentFieldNames { get => _explicitNullValueDependentFieldNames; set { _explicitNullValueDependentFieldNames = value; AdditionalData?.Remove("dependentFieldNames"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dependentFieldNames"); else _explicitNullProperties?.Remove("dependentFieldNames"); } }
+        private List<string>? _explicitNullValueDependentFieldNames = default!;
 #nullable restore
 #else
-        public List<string> DependentFieldNames { get; set; }
+        public List<string> DependentFieldNames { get => _explicitNullValueDependentFieldNames; set { _explicitNullValueDependentFieldNames = value; AdditionalData?.Remove("dependentFieldNames"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dependentFieldNames"); else _explicitNullProperties?.Remove("dependentFieldNames"); } }
+        private List<string> _explicitNullValueDependentFieldNames = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicConditionalSingleFieldDependency"/> and sets the default values.
@@ -55,7 +77,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicConditionalSingleFieldDependency CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicConditionalSingleFieldDependency();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicConditionalSingleFieldDependency(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -67,7 +89,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "controllingFieldName", n => { ControllingFieldName = n.GetStringValue(); } },
                 { "controllingFieldValue", n => { ControllingFieldValue = n.GetStringValue(); } },
-                { "dependencyType", n => { DependencyType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConditionalSingleFieldDependencyType>(); } },
+                { "dependencyType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConditionalSingleFieldDependencyType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDependencyType = default; _explicitNullProperties?.Remove("dependencyType"); AdditionalData["dependencyType"] = unknown; } else { DependencyType = parsed; AdditionalData.Remove("dependencyType"); } } },
                 { "dependentFieldNames", n => { DependentFieldNames = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }
@@ -82,6 +104,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("controllingFieldValue", ControllingFieldValue);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConditionalSingleFieldDependencyType>("dependencyType", DependencyType);
             writer.WriteCollectionOfPrimitiveValues<string>("dependentFieldNames", DependentFieldNames);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

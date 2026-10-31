@@ -11,67 +11,113 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicImportResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("createdAt") is null) { _explicitNullValueCreatedAt = default!; _explicitNullProperties?.Remove("createdAt"); }
+            else if (parseNode.GetChildNode("createdAt") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("importName") is null) { _explicitNullValueImportName = default!; _explicitNullProperties?.Remove("importName"); }
+            else if (parseNode.GetChildNode("importName") is { } nullNodeImportName && nullNodeImportName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImportName = null;
+            if (parseNode.GetChildNode("importRequestJson") is null) { _explicitNullValueImportRequestJson = default!; _explicitNullProperties?.Remove("importRequestJson"); }
+            else if (parseNode.GetChildNode("importRequestJson") is { } nullNodeImportRequestJson && nullNodeImportRequestJson.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImportRequestJson = null;
+            if (parseNode.GetChildNode("importSource") is null) { _explicitNullValueImportSource = default!; _explicitNullProperties?.Remove("importSource"); }
+            else if (parseNode.GetChildNode("importSource") is { } nullNodeImportSource && nullNodeImportSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImportSource = null;
+            if (parseNode.GetChildNode("importTemplate") is null) { _explicitNullValueImportTemplate = default!; _explicitNullProperties?.Remove("importTemplate"); }
+            else if (parseNode.GetChildNode("importTemplate") is { } nullNodeImportTemplate && nullNodeImportTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImportTemplate = null;
+            if (parseNode.GetChildNode("mappedObjectTypeIds") is null) { _explicitNullValueMappedObjectTypeIds = default!; _explicitNullProperties?.Remove("mappedObjectTypeIds"); }
+            else if (parseNode.GetChildNode("mappedObjectTypeIds") is { } nullNodeMappedObjectTypeIds && nullNodeMappedObjectTypeIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MappedObjectTypeIds = null;
+            if (parseNode.GetChildNode("metadata") is null) { _explicitNullValueMetadata = default!; _explicitNullProperties?.Remove("metadata"); }
+            else if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("optOutImport") is null) { _explicitNullValueOptOutImport = default!; _explicitNullProperties?.Remove("optOutImport"); }
+            else if (parseNode.GetChildNode("optOutImport") is { } nullNodeOptOutImport && nullNodeOptOutImport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptOutImport = null;
+            if (parseNode.GetChildNode("state") is null) { _explicitNullValueState = default!; _explicitNullProperties?.Remove("state"); }
+            else if (parseNode.GetChildNode("state") is { } nullNodeState && nullNodeState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) State = null;
+            if (parseNode.GetChildNode("updatedAt") is null) { _explicitNullValueUpdatedAt = default!; _explicitNullProperties?.Remove("updatedAt"); }
+            else if (parseNode.GetChildNode("updatedAt") is { } nullNodeUpdatedAt && nullNodeUpdatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdatedAt = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The timestamp when the object was created, in ISO 8601 format.</summary>
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; AdditionalData?.Remove("createdAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createdAt"); else _explicitNullProperties?.Remove("createdAt"); } }
+        private DateTimeOffset? _explicitNullValueCreatedAt = default!;
         /// <summary>The unique identifier for this import.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The user-provided name for this import.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ImportName { get; set; }
+        public string? ImportName { get => _explicitNullValueImportName; set { _explicitNullValueImportName = value; AdditionalData?.Remove("importName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("importName"); else _explicitNullProperties?.Remove("importName"); } }
+        private string? _explicitNullValueImportName = default!;
 #nullable restore
 #else
-        public string ImportName { get; set; }
+        public string ImportName { get => _explicitNullValueImportName; set { _explicitNullValueImportName = value; AdditionalData?.Remove("importName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("importName"); else _explicitNullProperties?.Remove("importName"); } }
+        private string _explicitNullValueImportName = default!;
 #endif
         /// <summary>The complete import request configuration as a JSON object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportRequestJsonProperty2? ImportRequestJson { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportRequestJsonProperty2? ImportRequestJson { get => _explicitNullValueImportRequestJson; set { _explicitNullValueImportRequestJson = value; AdditionalData?.Remove("importRequestJson"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("importRequestJson"); else _explicitNullProperties?.Remove("importRequestJson"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportRequestJsonProperty2? _explicitNullValueImportRequestJson = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportRequestJsonProperty2 ImportRequestJson { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportRequestJsonProperty2 ImportRequestJson { get => _explicitNullValueImportRequestJson; set { _explicitNullValueImportRequestJson = value; AdditionalData?.Remove("importRequestJson"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("importRequestJson"); else _explicitNullProperties?.Remove("importRequestJson"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportRequestJsonProperty2 _explicitNullValueImportRequestJson = default!;
 #endif
         /// <summary>Indicates where/how the import was initiated.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportSource? ImportSource { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportSource? ImportSource { get => _explicitNullValueImportSource; set { _explicitNullValueImportSource = value; AdditionalData?.Remove("importSource"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("importSource"); else _explicitNullProperties?.Remove("importSource"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportSource? _explicitNullValueImportSource = default!;
         /// <summary>The importTemplate property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ImportTemplate? ImportTemplate { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ImportTemplate? ImportTemplate { get => _explicitNullValueImportTemplate; set { _explicitNullValueImportTemplate = value; AdditionalData?.Remove("importTemplate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("importTemplate"); else _explicitNullProperties?.Remove("importTemplate"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ImportTemplate? _explicitNullValueImportTemplate = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ImportTemplate ImportTemplate { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ImportTemplate ImportTemplate { get => _explicitNullValueImportTemplate; set { _explicitNullValueImportTemplate = value; AdditionalData?.Remove("importTemplate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("importTemplate"); else _explicitNullProperties?.Remove("importTemplate"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ImportTemplate _explicitNullValueImportTemplate = default!;
 #endif
         /// <summary>An array of object type IDs that are mapped during the import.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? MappedObjectTypeIds { get; set; }
+        public List<string>? MappedObjectTypeIds { get => _explicitNullValueMappedObjectTypeIds; set { _explicitNullValueMappedObjectTypeIds = value; AdditionalData?.Remove("mappedObjectTypeIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mappedObjectTypeIds"); else _explicitNullProperties?.Remove("mappedObjectTypeIds"); } }
+        private List<string>? _explicitNullValueMappedObjectTypeIds = default!;
 #nullable restore
 #else
-        public List<string> MappedObjectTypeIds { get; set; }
+        public List<string> MappedObjectTypeIds { get => _explicitNullValueMappedObjectTypeIds; set { _explicitNullValueMappedObjectTypeIds = value; AdditionalData?.Remove("mappedObjectTypeIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mappedObjectTypeIds"); else _explicitNullProperties?.Remove("mappedObjectTypeIds"); } }
+        private List<string> _explicitNullValueMappedObjectTypeIds = default!;
 #endif
         /// <summary>The metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportMetadata? Metadata { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportMetadata? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; AdditionalData?.Remove("metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportMetadata? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportMetadata Metadata { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportMetadata Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; AdditionalData?.Remove("metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportMetadata _explicitNullValueMetadata = default!;
 #endif
         /// <summary>Whether or not the import is a list of people disqualified from receiving emails.</summary>
-        public bool? OptOutImport { get; set; }
+        public bool? OptOutImport { get => _explicitNullValueOptOutImport; set { _explicitNullValueOptOutImport = value; AdditionalData?.Remove("optOutImport"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("optOutImport"); else _explicitNullProperties?.Remove("optOutImport"); } }
+        private bool? _explicitNullValueOptOutImport = default!;
         /// <summary>The status of the import.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseState? State { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseState? State { get => _explicitNullValueState; set { _explicitNullValueState = value; AdditionalData?.Remove("state"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state"); else _explicitNullProperties?.Remove("state"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseState? _explicitNullValueState = default!;
         /// <summary>The timestamp when the import record was last updated, formatted as an ISO 8601 instant.</summary>
-        public DateTimeOffset? UpdatedAt { get; set; }
+        public DateTimeOffset? UpdatedAt { get => _explicitNullValueUpdatedAt; set { _explicitNullValueUpdatedAt = value; AdditionalData?.Remove("updatedAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updatedAt"); else _explicitNullProperties?.Remove("updatedAt"); } }
+        private DateTimeOffset? _explicitNullValueUpdatedAt = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponse"/> and sets the default values.
         /// </summary>
@@ -87,7 +133,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -101,12 +147,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "importName", n => { ImportName = n.GetStringValue(); } },
                 { "importRequestJson", n => { ImportRequestJson = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportRequestJsonProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportRequestJsonProperty2.CreateFromDiscriminatorValue); } },
-                { "importSource", n => { ImportSource = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportSource>(); } },
+                { "importSource", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportSource>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueImportSource = default; _explicitNullProperties?.Remove("importSource"); AdditionalData["importSource"] = unknown; } else { ImportSource = parsed; AdditionalData.Remove("importSource"); } } },
                 { "importTemplate", n => { ImportTemplate = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ImportTemplate>(global::Soenneker.HubSpot.OpenApiClient.Models.ImportTemplate.CreateFromDiscriminatorValue); } },
                 { "mappedObjectTypeIds", n => { MappedObjectTypeIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportMetadata>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportMetadata.CreateFromDiscriminatorValue); } },
                 { "optOutImport", n => { OptOutImport = n.GetBoolValue(); } },
-                { "state", n => { State = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseState>(); } },
+                { "state", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseState>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueState = default; _explicitNullProperties?.Remove("state"); AdditionalData["state"] = unknown; } else { State = parsed; AdditionalData.Remove("state"); } } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
             };
         }
@@ -128,6 +174,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteBoolValue("optOutImport", OptOutImport);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseState>("state", State);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,34 +11,56 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CardFetchBody : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("cardType") is null) { _explicitNullValueCardType = default!; _explicitNullProperties?.Remove("cardType"); }
+            else if (parseNode.GetChildNode("cardType") is { } nullNodeCardType && nullNodeCardType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CardType = null;
+            if (parseNode.GetChildNode("objectTypes") is null) { _explicitNullValueObjectTypes = default!; _explicitNullProperties?.Remove("objectTypes"); }
+            else if (parseNode.GetChildNode("objectTypes") is { } nullNodeObjectTypes && nullNodeObjectTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectTypes = null;
+            if (parseNode.GetChildNode("serverlessFunction") is null) { _explicitNullValueServerlessFunction = default!; _explicitNullProperties?.Remove("serverlessFunction"); }
+            else if (parseNode.GetChildNode("serverlessFunction") is { } nullNodeServerlessFunction && nullNodeServerlessFunction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServerlessFunction = null;
+            if (parseNode.GetChildNode("targetUrl") is null) { _explicitNullValueTargetUrl = default!; _explicitNullProperties?.Remove("targetUrl"); }
+            else if (parseNode.GetChildNode("targetUrl") is { } nullNodeTargetUrl && nullNodeTargetUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetUrl = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A deprecated field to determine the type of card returned.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CardFetchBodyCardType? CardType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CardFetchBodyCardType? CardType { get => _explicitNullValueCardType; set { _explicitNullValueCardType = value; AdditionalData?.Remove("cardType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cardType"); else _explicitNullProperties?.Remove("cardType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CardFetchBodyCardType? _explicitNullValueCardType = default!;
         /// <summary>An array of CRM object types where this card should be displayed. HubSpot will call your data fetch URL whenever a user visits a record page of the types defined here.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CardObjectTypeBody>? ObjectTypes { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CardObjectTypeBody>? ObjectTypes { get => _explicitNullValueObjectTypes; set { _explicitNullValueObjectTypes = value; AdditionalData?.Remove("objectTypes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("objectTypes"); else _explicitNullProperties?.Remove("objectTypes"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.CardObjectTypeBody>? _explicitNullValueObjectTypes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CardObjectTypeBody> ObjectTypes { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CardObjectTypeBody> ObjectTypes { get => _explicitNullValueObjectTypes; set { _explicitNullValueObjectTypes = value; AdditionalData?.Remove("objectTypes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("objectTypes"); else _explicitNullProperties?.Remove("objectTypes"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.CardObjectTypeBody> _explicitNullValueObjectTypes = default!;
 #endif
         /// <summary>A deprecated field to specify serverless functionality with the card</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ServerlessFunction { get; set; }
+        public string? ServerlessFunction { get => _explicitNullValueServerlessFunction; set { _explicitNullValueServerlessFunction = value; AdditionalData?.Remove("serverlessFunction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serverlessFunction"); else _explicitNullProperties?.Remove("serverlessFunction"); } }
+        private string? _explicitNullValueServerlessFunction = default!;
 #nullable restore
 #else
-        public string ServerlessFunction { get; set; }
+        public string ServerlessFunction { get => _explicitNullValueServerlessFunction; set { _explicitNullValueServerlessFunction = value; AdditionalData?.Remove("serverlessFunction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serverlessFunction"); else _explicitNullProperties?.Remove("serverlessFunction"); } }
+        private string _explicitNullValueServerlessFunction = default!;
 #endif
         /// <summary>URL to a service endpoints that will respond with card details. HubSpot will call this endpoint each time a user visits a CRM record page where this card should be displayed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TargetUrl { get; set; }
+        public string? TargetUrl { get => _explicitNullValueTargetUrl; set { _explicitNullValueTargetUrl = value; AdditionalData?.Remove("targetUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("targetUrl"); else _explicitNullProperties?.Remove("targetUrl"); } }
+        private string? _explicitNullValueTargetUrl = default!;
 #nullable restore
 #else
-        public string TargetUrl { get; set; }
+        public string TargetUrl { get => _explicitNullValueTargetUrl; set { _explicitNullValueTargetUrl = value; AdditionalData?.Remove("targetUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("targetUrl"); else _explicitNullProperties?.Remove("targetUrl"); } }
+        private string _explicitNullValueTargetUrl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CardFetchBody"/> and sets the default values.
@@ -55,7 +77,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.CardFetchBody CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.CardFetchBody();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.CardFetchBody(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -65,7 +87,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "cardType", n => { CardType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CardFetchBodyCardType>(); } },
+                { "cardType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CardFetchBodyCardType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCardType = default; _explicitNullProperties?.Remove("cardType"); AdditionalData["cardType"] = unknown; } else { CardType = parsed; AdditionalData.Remove("cardType"); } } },
                 { "objectTypes", n => { ObjectTypes = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CardObjectTypeBody>(global::Soenneker.HubSpot.OpenApiClient.Models.CardObjectTypeBody.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "serverlessFunction", n => { ServerlessFunction = n.GetStringValue(); } },
                 { "targetUrl", n => { TargetUrl = n.GetStringValue(); } },
@@ -82,6 +104,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CardObjectTypeBody>("objectTypes", ObjectTypes);
             writer.WriteStringValue("serverlessFunction", ServerlessFunction);
             writer.WriteStringValue("targetUrl", TargetUrl);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

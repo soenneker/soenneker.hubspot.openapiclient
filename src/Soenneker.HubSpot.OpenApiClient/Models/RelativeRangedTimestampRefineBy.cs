@@ -11,28 +11,49 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class RelativeRangedTimestampRefineBy : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("lowerBoundOffset") is null) { _explicitNullValueLowerBoundOffset = default!; _explicitNullProperties?.Remove("lowerBoundOffset"); }
+            else if (parseNode.GetChildNode("lowerBoundOffset") is { } nullNodeLowerBoundOffset && nullNodeLowerBoundOffset.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LowerBoundOffset = null;
+            if (parseNode.GetChildNode("rangeType") is null) { _explicitNullValueRangeType = default!; _explicitNullProperties?.Remove("rangeType"); }
+            else if (parseNode.GetChildNode("rangeType") is { } nullNodeRangeType && nullNodeRangeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RangeType = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("upperBoundOffset") is null) { _explicitNullValueUpperBoundOffset = default!; _explicitNullProperties?.Remove("upperBoundOffset"); }
+            else if (parseNode.GetChildNode("upperBoundOffset") is { } nullNodeUpperBoundOffset && nullNodeUpperBoundOffset.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpperBoundOffset = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The lowerBoundOffset property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffset? LowerBoundOffset { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffset? LowerBoundOffset { get => _explicitNullValueLowerBoundOffset; set { _explicitNullValueLowerBoundOffset = value; AdditionalData?.Remove("lowerBoundOffset"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lowerBoundOffset"); else _explicitNullProperties?.Remove("lowerBoundOffset"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffset? _explicitNullValueLowerBoundOffset = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffset LowerBoundOffset { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffset LowerBoundOffset { get => _explicitNullValueLowerBoundOffset; set { _explicitNullValueLowerBoundOffset = value; AdditionalData?.Remove("lowerBoundOffset"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lowerBoundOffset"); else _explicitNullProperties?.Remove("lowerBoundOffset"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffset _explicitNullValueLowerBoundOffset = default!;
 #endif
         /// <summary>A string indicating the type of range operation, with valid values &apos;BETWEEN&apos; and &apos;NOT_BETWEEN&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.RelativeRangedTimestampRefineByRangeType? RangeType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.RelativeRangedTimestampRefineByRangeType? RangeType { get => _explicitNullValueRangeType; set { _explicitNullValueRangeType = value; AdditionalData?.Remove("rangeType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rangeType"); else _explicitNullProperties?.Remove("rangeType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.RelativeRangedTimestampRefineByRangeType? _explicitNullValueRangeType = default!;
         /// <summary>A string indicating the type of refinement, with a default value of &apos;RelativeRangedTimestampRefineBy&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.RelativeRangedTimestampRefineByType? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.RelativeRangedTimestampRefineByType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.RelativeRangedTimestampRefineByType? _explicitNullValueType = default!;
         /// <summary>The upperBoundOffset property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffset? UpperBoundOffset { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffset? UpperBoundOffset { get => _explicitNullValueUpperBoundOffset; set { _explicitNullValueUpperBoundOffset = value; AdditionalData?.Remove("upperBoundOffset"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upperBoundOffset"); else _explicitNullProperties?.Remove("upperBoundOffset"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffset? _explicitNullValueUpperBoundOffset = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffset UpperBoundOffset { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffset UpperBoundOffset { get => _explicitNullValueUpperBoundOffset; set { _explicitNullValueUpperBoundOffset = value; AdditionalData?.Remove("upperBoundOffset"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upperBoundOffset"); else _explicitNullProperties?.Remove("upperBoundOffset"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffset _explicitNullValueUpperBoundOffset = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.RelativeRangedTimestampRefineBy"/> and sets the default values.
@@ -49,7 +70,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.RelativeRangedTimestampRefineBy CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.RelativeRangedTimestampRefineBy();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.RelativeRangedTimestampRefineBy(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -60,8 +81,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "lowerBoundOffset", n => { LowerBoundOffset = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffset>(global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffset.CreateFromDiscriminatorValue); } },
-                { "rangeType", n => { RangeType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RelativeRangedTimestampRefineByRangeType>(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RelativeRangedTimestampRefineByType>(); } },
+                { "rangeType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RelativeRangedTimestampRefineByRangeType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueRangeType = default; _explicitNullProperties?.Remove("rangeType"); AdditionalData["rangeType"] = unknown; } else { RangeType = parsed; AdditionalData.Remove("rangeType"); } } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RelativeRangedTimestampRefineByType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
                 { "upperBoundOffset", n => { UpperBoundOffset = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffset>(global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffset.CreateFromDiscriminatorValue); } },
             };
         }
@@ -76,6 +97,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RelativeRangedTimestampRefineByRangeType>("rangeType", RangeType);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.RelativeRangedTimestampRefineByType>("type", Type);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.TimeOffset>("upperBoundOffset", UpperBoundOffset);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

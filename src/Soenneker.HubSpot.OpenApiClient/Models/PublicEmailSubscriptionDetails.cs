@@ -11,40 +11,63 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicEmailSubscriptionDetails : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("officeLocationId") is null) { _explicitNullValueOfficeLocationId = default!; _explicitNullProperties?.Remove("officeLocationId"); }
+            else if (parseNode.GetChildNode("officeLocationId") is { } nullNodeOfficeLocationId && nullNodeOfficeLocationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OfficeLocationId = null;
+            if (parseNode.GetChildNode("preferencesGroupId") is null) { _explicitNullValuePreferencesGroupId = default!; _explicitNullProperties?.Remove("preferencesGroupId"); }
+            else if (parseNode.GetChildNode("preferencesGroupId") is { } nullNodePreferencesGroupId && nullNodePreferencesGroupId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreferencesGroupId = null;
+            if (parseNode.GetChildNode("subscriptionId") is null) { _explicitNullValueSubscriptionId = default!; _explicitNullProperties?.Remove("subscriptionId"); }
+            else if (parseNode.GetChildNode("subscriptionId") is { } nullNodeSubscriptionId && nullNodeSubscriptionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionId = null;
+            if (parseNode.GetChildNode("subscriptionName") is null) { _explicitNullValueSubscriptionName = default!; _explicitNullProperties?.Remove("subscriptionName"); }
+            else if (parseNode.GetChildNode("subscriptionName") is { } nullNodeSubscriptionName && nullNodeSubscriptionName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionName = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>ID of the selected office location.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OfficeLocationId { get; set; }
+        public string? OfficeLocationId { get => _explicitNullValueOfficeLocationId; set { _explicitNullValueOfficeLocationId = value; AdditionalData?.Remove("officeLocationId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("officeLocationId"); else _explicitNullProperties?.Remove("officeLocationId"); } }
+        private string? _explicitNullValueOfficeLocationId = default!;
 #nullable restore
 #else
-        public string OfficeLocationId { get; set; }
+        public string OfficeLocationId { get => _explicitNullValueOfficeLocationId; set { _explicitNullValueOfficeLocationId = value; AdditionalData?.Remove("officeLocationId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("officeLocationId"); else _explicitNullProperties?.Remove("officeLocationId"); } }
+        private string _explicitNullValueOfficeLocationId = default!;
 #endif
         /// <summary>The identifier for the preferences group associated with the subscription. It is a string value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PreferencesGroupId { get; set; }
+        public string? PreferencesGroupId { get => _explicitNullValuePreferencesGroupId; set { _explicitNullValuePreferencesGroupId = value; AdditionalData?.Remove("preferencesGroupId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preferencesGroupId"); else _explicitNullProperties?.Remove("preferencesGroupId"); } }
+        private string? _explicitNullValuePreferencesGroupId = default!;
 #nullable restore
 #else
-        public string PreferencesGroupId { get; set; }
+        public string PreferencesGroupId { get => _explicitNullValuePreferencesGroupId; set { _explicitNullValuePreferencesGroupId = value; AdditionalData?.Remove("preferencesGroupId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preferencesGroupId"); else _explicitNullProperties?.Remove("preferencesGroupId"); } }
+        private string _explicitNullValuePreferencesGroupId = default!;
 #endif
         /// <summary>ID of the subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SubscriptionId { get; set; }
+        public string? SubscriptionId { get => _explicitNullValueSubscriptionId; set { _explicitNullValueSubscriptionId = value; AdditionalData?.Remove("subscriptionId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscriptionId"); else _explicitNullProperties?.Remove("subscriptionId"); } }
+        private string? _explicitNullValueSubscriptionId = default!;
 #nullable restore
 #else
-        public string SubscriptionId { get; set; }
+        public string SubscriptionId { get => _explicitNullValueSubscriptionId; set { _explicitNullValueSubscriptionId = value; AdditionalData?.Remove("subscriptionId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscriptionId"); else _explicitNullProperties?.Remove("subscriptionId"); } }
+        private string _explicitNullValueSubscriptionId = default!;
 #endif
         /// <summary>The name of the email subscription. It is a string value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SubscriptionName { get; set; }
+        public string? SubscriptionName { get => _explicitNullValueSubscriptionName; set { _explicitNullValueSubscriptionName = value; AdditionalData?.Remove("subscriptionName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscriptionName"); else _explicitNullProperties?.Remove("subscriptionName"); } }
+        private string? _explicitNullValueSubscriptionName = default!;
 #nullable restore
 #else
-        public string SubscriptionName { get; set; }
+        public string SubscriptionName { get => _explicitNullValueSubscriptionName; set { _explicitNullValueSubscriptionName = value; AdditionalData?.Remove("subscriptionName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscriptionName"); else _explicitNullProperties?.Remove("subscriptionName"); } }
+        private string _explicitNullValueSubscriptionName = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailSubscriptionDetails"/> and sets the default values.
@@ -61,7 +84,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailSubscriptionDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailSubscriptionDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailSubscriptionDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,6 +111,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("preferencesGroupId", PreferencesGroupId);
             writer.WriteStringValue("subscriptionId", SubscriptionId);
             writer.WriteStringValue("subscriptionName", SubscriptionName);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

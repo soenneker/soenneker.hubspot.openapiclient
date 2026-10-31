@@ -11,24 +11,39 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ExternalLinkAvailabilityAndBusyTimes : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("allUsersBusyTimes") is null) { _explicitNullValueAllUsersBusyTimes = default!; _explicitNullProperties?.Remove("allUsersBusyTimes"); }
+            else if (parseNode.GetChildNode("allUsersBusyTimes") is { } nullNodeAllUsersBusyTimes && nullNodeAllUsersBusyTimes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllUsersBusyTimes = null;
+            if (parseNode.GetChildNode("linkAvailability") is null) { _explicitNullValueLinkAvailability = default!; _explicitNullProperties?.Remove("linkAvailability"); }
+            else if (parseNode.GetChildNode("linkAvailability") is { } nullNodeLinkAvailability && nullNodeLinkAvailability.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LinkAvailability = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An array of objects representing the busy times for all users associated with the meeting link. Each object includes the user&apos;s busy time ranges.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalUserBusyTimes>? AllUsersBusyTimes { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalUserBusyTimes>? AllUsersBusyTimes { get => _explicitNullValueAllUsersBusyTimes; set { _explicitNullValueAllUsersBusyTimes = value; AdditionalData?.Remove("allUsersBusyTimes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allUsersBusyTimes"); else _explicitNullProperties?.Remove("allUsersBusyTimes"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalUserBusyTimes>? _explicitNullValueAllUsersBusyTimes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalUserBusyTimes> AllUsersBusyTimes { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalUserBusyTimes> AllUsersBusyTimes { get => _explicitNullValueAllUsersBusyTimes; set { _explicitNullValueAllUsersBusyTimes = value; AdditionalData?.Remove("allUsersBusyTimes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allUsersBusyTimes"); else _explicitNullProperties?.Remove("allUsersBusyTimes"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalUserBusyTimes> _explicitNullValueAllUsersBusyTimes = default!;
 #endif
         /// <summary>The linkAvailability property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailability? LinkAvailability { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailability? LinkAvailability { get => _explicitNullValueLinkAvailability; set { _explicitNullValueLinkAvailability = value; AdditionalData?.Remove("linkAvailability"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("linkAvailability"); else _explicitNullProperties?.Remove("linkAvailability"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailability? _explicitNullValueLinkAvailability = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailability LinkAvailability { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailability LinkAvailability { get => _explicitNullValueLinkAvailability; set { _explicitNullValueLinkAvailability = value; AdditionalData?.Remove("linkAvailability"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("linkAvailability"); else _explicitNullProperties?.Remove("linkAvailability"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailability _explicitNullValueLinkAvailability = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailabilityAndBusyTimes"/> and sets the default values.
@@ -45,7 +60,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailabilityAndBusyTimes CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailabilityAndBusyTimes();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailabilityAndBusyTimes(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +83,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalUserBusyTimes>("allUsersBusyTimes", AllUsersBusyTimes);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailability>("linkAvailability", LinkAvailability);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

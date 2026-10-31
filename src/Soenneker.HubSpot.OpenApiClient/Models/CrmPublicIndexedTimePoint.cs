@@ -11,42 +11,68 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CrmPublicIndexedTimePoint : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("indexReference") is null) { _explicitNullValueIndexReference = default!; _explicitNullProperties?.Remove("indexReference"); }
+            else if (parseNode.GetChildNode("indexReference") is { } nullNodeIndexReference && nullNodeIndexReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IndexReference = null;
+            if (parseNode.GetChildNode("offset") is null) { _explicitNullValueOffset = default!; _explicitNullProperties?.Remove("offset"); }
+            else if (parseNode.GetChildNode("offset") is { } nullNodeOffset && nullNodeOffset.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Offset = null;
+            if (parseNode.GetChildNode("timeType") is null) { _explicitNullValueTimeType = default!; _explicitNullProperties?.Remove("timeType"); }
+            else if (parseNode.GetChildNode("timeType") is { } nullNodeTimeType && nullNodeTimeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeType = null;
+            if (parseNode.GetChildNode("timezoneSource") is null) { _explicitNullValueTimezoneSource = default!; _explicitNullProperties?.Remove("timezoneSource"); }
+            else if (parseNode.GetChildNode("timezoneSource") is { } nullNodeTimezoneSource && nullNodeTimezoneSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimezoneSource = null;
+            if (parseNode.GetChildNode("zoneId") is null) { _explicitNullValueZoneId = default!; _explicitNullProperties?.Remove("zoneId"); }
+            else if (parseNode.GetChildNode("zoneId") is { } nullNodeZoneId && nullNodeZoneId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ZoneId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An object that defines the reference point for the indexed time. It can be one of several types such as &apos;NOW&apos;, &apos;TODAY&apos;, &apos;WEEK&apos;, &apos;FISCAL_QUARTER&apos;, &apos;FISCAL_YEAR&apos;, &apos;YEAR&apos;, &apos;QUARTER&apos;, or &apos;MONTH&apos;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicIndexedTimePointIndexReference? IndexReference { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicIndexedTimePointIndexReference? IndexReference { get => _explicitNullValueIndexReference; set { _explicitNullValueIndexReference = value; AdditionalData?.Remove("indexReference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("indexReference"); else _explicitNullProperties?.Remove("indexReference"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicIndexedTimePointIndexReference? _explicitNullValueIndexReference = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicIndexedTimePointIndexReference IndexReference { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicIndexedTimePointIndexReference IndexReference { get => _explicitNullValueIndexReference; set { _explicitNullValueIndexReference = value; AdditionalData?.Remove("indexReference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("indexReference"); else _explicitNullProperties?.Remove("indexReference"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicIndexedTimePointIndexReference _explicitNullValueIndexReference = default!;
 #endif
         /// <summary>The offset property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicIndexOffset? Offset { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicIndexOffset? Offset { get => _explicitNullValueOffset; set { _explicitNullValueOffset = value; AdditionalData?.Remove("offset"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offset"); else _explicitNullProperties?.Remove("offset"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicIndexOffset? _explicitNullValueOffset = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicIndexOffset Offset { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicIndexOffset Offset { get => _explicitNullValueOffset; set { _explicitNullValueOffset = value; AdditionalData?.Remove("offset"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offset"); else _explicitNullProperties?.Remove("offset"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicIndexOffset _explicitNullValueOffset = default!;
 #endif
         /// <summary>A string indicating the type of time point, which is &apos;INDEXED&apos; for this component.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmIndexedTimeType? TimeType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmIndexedTimeType? TimeType { get => _explicitNullValueTimeType; set { _explicitNullValueTimeType = value; AdditionalData?.Remove("timeType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeType"); else _explicitNullProperties?.Remove("timeType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmIndexedTimeType? _explicitNullValueTimeType = default!;
         /// <summary>A string specifying the source of the timezone information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TimezoneSource { get; set; }
+        public string? TimezoneSource { get => _explicitNullValueTimezoneSource; set { _explicitNullValueTimezoneSource = value; AdditionalData?.Remove("timezoneSource"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timezoneSource"); else _explicitNullProperties?.Remove("timezoneSource"); } }
+        private string? _explicitNullValueTimezoneSource = default!;
 #nullable restore
 #else
-        public string TimezoneSource { get; set; }
+        public string TimezoneSource { get => _explicitNullValueTimezoneSource; set { _explicitNullValueTimezoneSource = value; AdditionalData?.Remove("timezoneSource"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timezoneSource"); else _explicitNullProperties?.Remove("timezoneSource"); } }
+        private string _explicitNullValueTimezoneSource = default!;
 #endif
         /// <summary>A string representing the identifier for the time zone.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ZoneId { get; set; }
+        public string? ZoneId { get => _explicitNullValueZoneId; set { _explicitNullValueZoneId = value; AdditionalData?.Remove("zoneId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("zoneId"); else _explicitNullProperties?.Remove("zoneId"); } }
+        private string? _explicitNullValueZoneId = default!;
 #nullable restore
 #else
-        public string ZoneId { get; set; }
+        public string ZoneId { get => _explicitNullValueZoneId; set { _explicitNullValueZoneId = value; AdditionalData?.Remove("zoneId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("zoneId"); else _explicitNullProperties?.Remove("zoneId"); } }
+        private string _explicitNullValueZoneId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicIndexedTimePoint"/> and sets the default values.
@@ -63,7 +89,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicIndexedTimePoint CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicIndexedTimePoint();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicIndexedTimePoint(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -75,7 +101,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "indexReference", n => { IndexReference = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicIndexedTimePointIndexReference>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicIndexedTimePointIndexReference.CreateFromDiscriminatorValue); } },
                 { "offset", n => { Offset = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicIndexOffset>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicIndexOffset.CreateFromDiscriminatorValue); } },
-                { "timeType", n => { TimeType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmIndexedTimeType>(); } },
+                { "timeType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmIndexedTimeType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTimeType = default; _explicitNullProperties?.Remove("timeType"); AdditionalData["timeType"] = unknown; } else { TimeType = parsed; AdditionalData.Remove("timeType"); } } },
                 { "timezoneSource", n => { TimezoneSource = n.GetStringValue(); } },
                 { "zoneId", n => { ZoneId = n.GetStringValue(); } },
             };
@@ -92,6 +118,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmIndexedTimeType>("timeType", TimeType);
             writer.WriteStringValue("timezoneSource", TimezoneSource);
             writer.WriteStringValue("zoneId", ZoneId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

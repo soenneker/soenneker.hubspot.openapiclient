@@ -11,18 +11,32 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CardObjectTypeBody : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("propertiesToSend") is null) { _explicitNullValuePropertiesToSend = default!; _explicitNullProperties?.Remove("propertiesToSend"); }
+            else if (parseNode.GetChildNode("propertiesToSend") is { } nullNodePropertiesToSend && nullNodePropertiesToSend.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PropertiesToSend = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A CRM object type where this card should be displayed.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CardObjectTypeBodyName? Name { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CardObjectTypeBodyName? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CardObjectTypeBodyName? _explicitNullValueName = default!;
         /// <summary>An array of properties that should be sent to this card&apos;s target URL when the data fetch request is made. Must be valid properties for the corresponding CRM object type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? PropertiesToSend { get; set; }
+        public List<string>? PropertiesToSend { get => _explicitNullValuePropertiesToSend; set { _explicitNullValuePropertiesToSend = value; AdditionalData?.Remove("propertiesToSend"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("propertiesToSend"); else _explicitNullProperties?.Remove("propertiesToSend"); } }
+        private List<string>? _explicitNullValuePropertiesToSend = default!;
 #nullable restore
 #else
-        public List<string> PropertiesToSend { get; set; }
+        public List<string> PropertiesToSend { get => _explicitNullValuePropertiesToSend; set { _explicitNullValuePropertiesToSend = value; AdditionalData?.Remove("propertiesToSend"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("propertiesToSend"); else _explicitNullProperties?.Remove("propertiesToSend"); } }
+        private List<string> _explicitNullValuePropertiesToSend = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CardObjectTypeBody"/> and sets the default values.
@@ -39,7 +53,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.CardObjectTypeBody CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.CardObjectTypeBody();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.CardObjectTypeBody(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -49,7 +63,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "name", n => { Name = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CardObjectTypeBodyName>(); } },
+                { "name", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CardObjectTypeBodyName>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueName = default; _explicitNullProperties?.Remove("name"); AdditionalData["name"] = unknown; } else { Name = parsed; AdditionalData.Remove("name"); } } },
                 { "propertiesToSend", n => { PropertiesToSend = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }
@@ -62,6 +76,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CardObjectTypeBodyName>("name", Name);
             writer.WriteCollectionOfPrimitiveValues<string>("propertiesToSend", PropertiesToSend);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

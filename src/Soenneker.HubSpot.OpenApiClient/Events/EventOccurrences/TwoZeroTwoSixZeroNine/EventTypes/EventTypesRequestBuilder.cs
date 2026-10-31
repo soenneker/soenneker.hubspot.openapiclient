@@ -49,7 +49,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Events.EventOccurrences.TwoZeroTwoSixZ
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.VisibleExternalEventTypeNames>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.VisibleExternalEventTypeNames.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.VisibleExternalEventTypeNames>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.VisibleExternalEventTypeNames.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve a list of event type names. You may use these event types to query the API for event occurrences of a desired type.Note: the `get_types` method is only supported in the Python SDK version `12.0.0-beta.1` or later. 

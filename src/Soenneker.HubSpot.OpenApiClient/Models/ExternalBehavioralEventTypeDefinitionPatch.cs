@@ -11,48 +11,75 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ExternalBehavioralEventTypeDefinitionPatch : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("description") is null) { _explicitNullValueDescription = default!; _explicitNullProperties?.Remove("description"); }
+            else if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("detailTemplate") is null) { _explicitNullValueDetailTemplate = default!; _explicitNullProperties?.Remove("detailTemplate"); }
+            else if (parseNode.GetChildNode("detailTemplate") is { } nullNodeDetailTemplate && nullNodeDetailTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DetailTemplate = null;
+            if (parseNode.GetChildNode("headerTemplate") is null) { _explicitNullValueHeaderTemplate = default!; _explicitNullProperties?.Remove("headerTemplate"); }
+            else if (parseNode.GetChildNode("headerTemplate") is { } nullNodeHeaderTemplate && nullNodeHeaderTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HeaderTemplate = null;
+            if (parseNode.GetChildNode("label") is null) { _explicitNullValueLabel = default!; _explicitNullProperties?.Remove("label"); }
+            else if (parseNode.GetChildNode("label") is { } nullNodeLabel && nullNodeLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Label = null;
+            if (parseNode.GetChildNode("propertyOrder") is null) { _explicitNullValuePropertyOrder = default!; _explicitNullProperties?.Remove("propertyOrder"); }
+            else if (parseNode.GetChildNode("propertyOrder") is { } nullNodePropertyOrder && nullNodePropertyOrder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PropertyOrder = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A description of the event that will be shown as help text in HubSpot.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>The rendering template for the body of the CRM timeline activity card.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DetailTemplate { get; set; }
+        public string? DetailTemplate { get => _explicitNullValueDetailTemplate; set { _explicitNullValueDetailTemplate = value; AdditionalData?.Remove("detailTemplate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("detailTemplate"); else _explicitNullProperties?.Remove("detailTemplate"); } }
+        private string? _explicitNullValueDetailTemplate = default!;
 #nullable restore
 #else
-        public string DetailTemplate { get; set; }
+        public string DetailTemplate { get => _explicitNullValueDetailTemplate; set { _explicitNullValueDetailTemplate = value; AdditionalData?.Remove("detailTemplate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("detailTemplate"); else _explicitNullProperties?.Remove("detailTemplate"); } }
+        private string _explicitNullValueDetailTemplate = default!;
 #endif
         /// <summary>The rendering template for the header of the CRM timeline activity card.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HeaderTemplate { get; set; }
+        public string? HeaderTemplate { get => _explicitNullValueHeaderTemplate; set { _explicitNullValueHeaderTemplate = value; AdditionalData?.Remove("headerTemplate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("headerTemplate"); else _explicitNullProperties?.Remove("headerTemplate"); } }
+        private string? _explicitNullValueHeaderTemplate = default!;
 #nullable restore
 #else
-        public string HeaderTemplate { get; set; }
+        public string HeaderTemplate { get => _explicitNullValueHeaderTemplate; set { _explicitNullValueHeaderTemplate = value; AdditionalData?.Remove("headerTemplate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("headerTemplate"); else _explicitNullProperties?.Remove("headerTemplate"); } }
+        private string _explicitNullValueHeaderTemplate = default!;
 #endif
         /// <summary>Human readable label for the event. Used in HubSpot UI.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Label { get; set; }
+        public string? Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; AdditionalData?.Remove("label"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
+        private string? _explicitNullValueLabel = default!;
 #nullable restore
 #else
-        public string Label { get; set; }
+        public string Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; AdditionalData?.Remove("label"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
+        private string _explicitNullValueLabel = default!;
 #endif
         /// <summary>Specifies the ordering and visibility of event properties when rendered on the CRM timeline activity card.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyPatch>? PropertyOrder { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyPatch>? PropertyOrder { get => _explicitNullValuePropertyOrder; set { _explicitNullValuePropertyOrder = value; AdditionalData?.Remove("propertyOrder"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("propertyOrder"); else _explicitNullProperties?.Remove("propertyOrder"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyPatch>? _explicitNullValuePropertyOrder = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyPatch> PropertyOrder { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyPatch> PropertyOrder { get => _explicitNullValuePropertyOrder; set { _explicitNullValuePropertyOrder = value; AdditionalData?.Remove("propertyOrder"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("propertyOrder"); else _explicitNullProperties?.Remove("propertyOrder"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyPatch> _explicitNullValuePropertyOrder = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventTypeDefinitionPatch"/> and sets the default values.
@@ -69,7 +96,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventTypeDefinitionPatch CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventTypeDefinitionPatch();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventTypeDefinitionPatch(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -98,6 +125,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("headerTemplate", HeaderTemplate);
             writer.WriteStringValue("label", Label);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyPatch>("propertyOrder", PropertyOrder);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

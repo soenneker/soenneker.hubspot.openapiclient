@@ -10,13 +10,13 @@ using System;
 namespace Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroNine.Item.Item.Associations.Default.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \crm\objects\2026-09\{fromObjectType-id}\{fromObject-id}\associations\default\{toObjectType}
+    /// Builds and executes requests for operations under \crm\objects\2026-09\{fromObjectType}\{fromObjectId}\associations\default\{toObjectType}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithToObjectTypeItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.crm.objects.TwoZeroTwoSixZeroNine.item.item.associations.default.item.item collection</summary>
-        /// <param name="position">The unique identifier of the target object to which the association is being created.</param>
+        /// <param name="position">The unique identifier of the target object for the association.</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroNine.Item.Item.Associations.Default.Item.Item.WithToObjectItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroNine.Item.Item.Associations.Default.Item.Item.WithToObjectItemRequestBuilder this[string position]
         {
@@ -32,7 +32,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroNine.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithToObjectTypeItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/crm/objects/2026-09/{fromObjectType%2Did}/{fromObject%2Did}/associations/default/{toObjectType}", pathParameters)
+        public WithToObjectTypeItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/crm/objects/2026-09/{fromObjectType}/{fromObjectId}/associations/default/{toObjectType}", pathParameters)
         {
         }
         /// <summary>
@@ -40,7 +40,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroNine.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithToObjectTypeItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/crm/objects/2026-09/{fromObjectType%2Did}/{fromObject%2Did}/associations/default/{toObjectType}", rawUrl)
+        public WithToObjectTypeItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/crm/objects/2026-09/{fromObjectType}/{fromObjectId}/associations/default/{toObjectType}", rawUrl)
         {
         }
     }

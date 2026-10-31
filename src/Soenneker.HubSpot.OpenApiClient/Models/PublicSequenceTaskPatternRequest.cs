@@ -11,47 +11,79 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicSequenceTaskPatternRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("notes") is null) { _explicitNullValueNotes = default!; _explicitNullProperties?.Remove("notes"); }
+            else if (parseNode.GetChildNode("notes") is { } nullNodeNotes && nullNodeNotes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Notes = null;
+            if (parseNode.GetChildNode("queueId") is null) { _explicitNullValueQueueId = default!; _explicitNullProperties?.Remove("queueId"); }
+            else if (parseNode.GetChildNode("queueId") is { } nullNodeQueueId && nullNodeQueueId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QueueId = null;
+            if (parseNode.GetChildNode("subject") is null) { _explicitNullValueSubject = default!; _explicitNullProperties?.Remove("subject"); }
+            else if (parseNode.GetChildNode("subject") is { } nullNodeSubject && nullNodeSubject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Subject = null;
+            if (parseNode.GetChildNode("taskPriority") is null) { _explicitNullValueTaskPriority = default!; _explicitNullProperties?.Remove("taskPriority"); }
+            else if (parseNode.GetChildNode("taskPriority") is { } nullNodeTaskPriority && nullNodeTaskPriority.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaskPriority = null;
+            if (parseNode.GetChildNode("taskType") is null) { _explicitNullValueTaskType = default!; _explicitNullProperties?.Remove("taskType"); }
+            else if (parseNode.GetChildNode("taskType") is { } nullNodeTaskType && nullNodeTaskType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaskType = null;
+            if (parseNode.GetChildNode("templateId") is null) { _explicitNullValueTemplateId = default!; _explicitNullProperties?.Remove("templateId"); }
+            else if (parseNode.GetChildNode("templateId") is { } nullNodeTemplateId && nullNodeTemplateId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TemplateId = null;
+            if (parseNode.GetChildNode("threadEmailToStepOrder") is null) { _explicitNullValueThreadEmailToStepOrder = default!; _explicitNullProperties?.Remove("threadEmailToStepOrder"); }
+            else if (parseNode.GetChildNode("threadEmailToStepOrder") is { } nullNodeThreadEmailToStepOrder && nullNodeThreadEmailToStepOrder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThreadEmailToStepOrder = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A string containing additional notes or details about the task.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Notes { get; set; }
+        public string? Notes { get => _explicitNullValueNotes; set { _explicitNullValueNotes = value; AdditionalData?.Remove("notes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notes"); else _explicitNullProperties?.Remove("notes"); } }
+        private string? _explicitNullValueNotes = default!;
 #nullable restore
 #else
-        public string Notes { get; set; }
+        public string Notes { get => _explicitNullValueNotes; set { _explicitNullValueNotes = value; AdditionalData?.Remove("notes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notes"); else _explicitNullProperties?.Remove("notes"); } }
+        private string _explicitNullValueNotes = default!;
 #endif
         /// <summary>A string identifier for the queue to which the task belongs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? QueueId { get; set; }
+        public string? QueueId { get => _explicitNullValueQueueId; set { _explicitNullValueQueueId = value; AdditionalData?.Remove("queueId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("queueId"); else _explicitNullProperties?.Remove("queueId"); } }
+        private string? _explicitNullValueQueueId = default!;
 #nullable restore
 #else
-        public string QueueId { get; set; }
+        public string QueueId { get => _explicitNullValueQueueId; set { _explicitNullValueQueueId = value; AdditionalData?.Remove("queueId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("queueId"); else _explicitNullProperties?.Remove("queueId"); } }
+        private string _explicitNullValueQueueId = default!;
 #endif
         /// <summary>A string representing the subject of the task.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Subject { get; set; }
+        public string? Subject { get => _explicitNullValueSubject; set { _explicitNullValueSubject = value; AdditionalData?.Remove("subject"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subject"); else _explicitNullProperties?.Remove("subject"); } }
+        private string? _explicitNullValueSubject = default!;
 #nullable restore
 #else
-        public string Subject { get; set; }
+        public string Subject { get => _explicitNullValueSubject; set { _explicitNullValueSubject = value; AdditionalData?.Remove("subject"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subject"); else _explicitNullProperties?.Remove("subject"); } }
+        private string _explicitNullValueSubject = default!;
 #endif
         /// <summary>The priority level of the task. Valid values include &apos;NONE&apos;, &apos;HIGH&apos;, &apos;MEDIUM&apos;, and &apos;LOW&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceTaskPatternRequestTaskPriority? TaskPriority { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceTaskPatternRequestTaskPriority? TaskPriority { get => _explicitNullValueTaskPriority; set { _explicitNullValueTaskPriority = value; AdditionalData?.Remove("taskPriority"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taskPriority"); else _explicitNullProperties?.Remove("taskPriority"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceTaskPatternRequestTaskPriority? _explicitNullValueTaskPriority = default!;
         /// <summary>The type of task to be performed. Valid values include &apos;CALL&apos;, &apos;MEETING&apos;, &apos;EMAIL&apos;, &apos;TODO&apos;, &apos;LINKED_IN_CONNECT&apos;, and &apos;LINKED_IN_MESSAGE&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceTaskPatternRequestTaskType? TaskType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceTaskPatternRequestTaskType? TaskType { get => _explicitNullValueTaskType; set { _explicitNullValueTaskType = value; AdditionalData?.Remove("taskType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taskType"); else _explicitNullProperties?.Remove("taskType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceTaskPatternRequestTaskType? _explicitNullValueTaskType = default!;
         /// <summary>A string identifier for the template associated with the task.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TemplateId { get; set; }
+        public string? TemplateId { get => _explicitNullValueTemplateId; set { _explicitNullValueTemplateId = value; AdditionalData?.Remove("templateId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("templateId"); else _explicitNullProperties?.Remove("templateId"); } }
+        private string? _explicitNullValueTemplateId = default!;
 #nullable restore
 #else
-        public string TemplateId { get; set; }
+        public string TemplateId { get => _explicitNullValueTemplateId; set { _explicitNullValueTemplateId = value; AdditionalData?.Remove("templateId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("templateId"); else _explicitNullProperties?.Remove("templateId"); } }
+        private string _explicitNullValueTemplateId = default!;
 #endif
         /// <summary>An integer representing the order of the step to which the email should be threaded.</summary>
-        public int? ThreadEmailToStepOrder { get; set; }
+        public int? ThreadEmailToStepOrder { get => _explicitNullValueThreadEmailToStepOrder; set { _explicitNullValueThreadEmailToStepOrder = value; AdditionalData?.Remove("threadEmailToStepOrder"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("threadEmailToStepOrder"); else _explicitNullProperties?.Remove("threadEmailToStepOrder"); } }
+        private int? _explicitNullValueThreadEmailToStepOrder = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceTaskPatternRequest"/> and sets the default values.
         /// </summary>
@@ -67,7 +99,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceTaskPatternRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceTaskPatternRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceTaskPatternRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -80,8 +112,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "notes", n => { Notes = n.GetStringValue(); } },
                 { "queueId", n => { QueueId = n.GetStringValue(); } },
                 { "subject", n => { Subject = n.GetStringValue(); } },
-                { "taskPriority", n => { TaskPriority = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceTaskPatternRequestTaskPriority>(); } },
-                { "taskType", n => { TaskType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceTaskPatternRequestTaskType>(); } },
+                { "taskPriority", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceTaskPatternRequestTaskPriority>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTaskPriority = default; _explicitNullProperties?.Remove("taskPriority"); AdditionalData["taskPriority"] = unknown; } else { TaskPriority = parsed; AdditionalData.Remove("taskPriority"); } } },
+                { "taskType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceTaskPatternRequestTaskType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTaskType = default; _explicitNullProperties?.Remove("taskType"); AdditionalData["taskType"] = unknown; } else { TaskType = parsed; AdditionalData.Remove("taskType"); } } },
                 { "templateId", n => { TemplateId = n.GetStringValue(); } },
                 { "threadEmailToStepOrder", n => { ThreadEmailToStepOrder = n.GetIntValue(); } },
             };
@@ -100,6 +132,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceTaskPatternRequestTaskType>("taskType", TaskType);
             writer.WriteStringValue("templateId", TemplateId);
             writer.WriteIntValue("threadEmailToStepOrder", ThreadEmailToStepOrder);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

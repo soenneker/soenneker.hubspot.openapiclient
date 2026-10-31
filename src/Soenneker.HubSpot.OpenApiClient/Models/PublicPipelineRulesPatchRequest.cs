@@ -11,40 +11,63 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicPipelineRulesPatchRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("approvalStage") is null) { _explicitNullValueApprovalStage = default!; _explicitNullProperties?.Remove("approvalStage"); }
+            else if (parseNode.GetChildNode("approvalStage") is { } nullNodeApprovalStage && nullNodeApprovalStage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApprovalStage = null;
+            if (parseNode.GetChildNode("noBackwardsMovementRule") is null) { _explicitNullValueNoBackwardsMovementRule = default!; _explicitNullProperties?.Remove("noBackwardsMovementRule"); }
+            else if (parseNode.GetChildNode("noBackwardsMovementRule") is { } nullNodeNoBackwardsMovementRule && nullNodeNoBackwardsMovementRule.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NoBackwardsMovementRule = null;
+            if (parseNode.GetChildNode("noSkippingStagesRule") is null) { _explicitNullValueNoSkippingStagesRule = default!; _explicitNullProperties?.Remove("noSkippingStagesRule"); }
+            else if (parseNode.GetChildNode("noSkippingStagesRule") is { } nullNodeNoSkippingStagesRule && nullNodeNoSkippingStagesRule.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NoSkippingStagesRule = null;
+            if (parseNode.GetChildNode("objectCreationRule") is null) { _explicitNullValueObjectCreationRule = default!; _explicitNullProperties?.Remove("objectCreationRule"); }
+            else if (parseNode.GetChildNode("objectCreationRule") is { } nullNodeObjectCreationRule && nullNodeObjectCreationRule.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectCreationRule = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A rule that defines the approval process for a specific pipeline stage. It is defined using the PublicApprovalStageRuleRequest schema.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestApprovalStageProperty2? ApprovalStage { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestApprovalStageProperty2? ApprovalStage { get => _explicitNullValueApprovalStage; set { _explicitNullValueApprovalStage = value; AdditionalData?.Remove("approvalStage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approvalStage"); else _explicitNullProperties?.Remove("approvalStage"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestApprovalStageProperty2? _explicitNullValueApprovalStage = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestApprovalStageProperty2 ApprovalStage { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestApprovalStageProperty2 ApprovalStage { get => _explicitNullValueApprovalStage; set { _explicitNullValueApprovalStage = value; AdditionalData?.Remove("approvalStage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approvalStage"); else _explicitNullProperties?.Remove("approvalStage"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestApprovalStageProperty2 _explicitNullValueApprovalStage = default!;
 #endif
         /// <summary>A rule that prevents moving backwards in the pipeline stages. It is defined using the PublicSequenceValidationRule schema.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestNoBackwardsMovementRuleProperty2? NoBackwardsMovementRule { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestNoBackwardsMovementRuleProperty2? NoBackwardsMovementRule { get => _explicitNullValueNoBackwardsMovementRule; set { _explicitNullValueNoBackwardsMovementRule = value; AdditionalData?.Remove("noBackwardsMovementRule"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("noBackwardsMovementRule"); else _explicitNullProperties?.Remove("noBackwardsMovementRule"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestNoBackwardsMovementRuleProperty2? _explicitNullValueNoBackwardsMovementRule = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestNoBackwardsMovementRuleProperty2 NoBackwardsMovementRule { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestNoBackwardsMovementRuleProperty2 NoBackwardsMovementRule { get => _explicitNullValueNoBackwardsMovementRule; set { _explicitNullValueNoBackwardsMovementRule = value; AdditionalData?.Remove("noBackwardsMovementRule"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("noBackwardsMovementRule"); else _explicitNullProperties?.Remove("noBackwardsMovementRule"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestNoBackwardsMovementRuleProperty2 _explicitNullValueNoBackwardsMovementRule = default!;
 #endif
         /// <summary>A rule that prevents skipping stages in the pipeline. It is defined using the PublicSequenceValidationRule schema.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestNoSkippingStagesRuleProperty2? NoSkippingStagesRule { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestNoSkippingStagesRuleProperty2? NoSkippingStagesRule { get => _explicitNullValueNoSkippingStagesRule; set { _explicitNullValueNoSkippingStagesRule = value; AdditionalData?.Remove("noSkippingStagesRule"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("noSkippingStagesRule"); else _explicitNullProperties?.Remove("noSkippingStagesRule"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestNoSkippingStagesRuleProperty2? _explicitNullValueNoSkippingStagesRule = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestNoSkippingStagesRuleProperty2 NoSkippingStagesRule { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestNoSkippingStagesRuleProperty2 NoSkippingStagesRule { get => _explicitNullValueNoSkippingStagesRule; set { _explicitNullValueNoSkippingStagesRule = value; AdditionalData?.Remove("noSkippingStagesRule"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("noSkippingStagesRule"); else _explicitNullProperties?.Remove("noSkippingStagesRule"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestNoSkippingStagesRuleProperty2 _explicitNullValueNoSkippingStagesRule = default!;
 #endif
         /// <summary>A rule that specifies conditions for object creation within the pipeline. It is defined using the PublicObjectCreationRule schema.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestObjectCreationRuleProperty2? ObjectCreationRule { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestObjectCreationRuleProperty2? ObjectCreationRule { get => _explicitNullValueObjectCreationRule; set { _explicitNullValueObjectCreationRule = value; AdditionalData?.Remove("objectCreationRule"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("objectCreationRule"); else _explicitNullProperties?.Remove("objectCreationRule"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestObjectCreationRuleProperty2? _explicitNullValueObjectCreationRule = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestObjectCreationRuleProperty2 ObjectCreationRule { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestObjectCreationRuleProperty2 ObjectCreationRule { get => _explicitNullValueObjectCreationRule; set { _explicitNullValueObjectCreationRule = value; AdditionalData?.Remove("objectCreationRule"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("objectCreationRule"); else _explicitNullProperties?.Remove("objectCreationRule"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestObjectCreationRuleProperty2 _explicitNullValueObjectCreationRule = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequest"/> and sets the default values.
@@ -61,7 +84,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,6 +111,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestNoBackwardsMovementRuleProperty2>("noBackwardsMovementRule", NoBackwardsMovementRule);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestNoSkippingStagesRuleProperty2>("noSkippingStagesRule", NoSkippingStagesRule);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesPatchRequestObjectCreationRuleProperty2>("objectCreationRule", ObjectCreationRule);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

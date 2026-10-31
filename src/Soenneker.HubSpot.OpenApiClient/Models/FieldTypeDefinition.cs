@@ -11,83 +11,137 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class FieldTypeDefinition : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("description") is null) { _explicitNullValueDescription = default!; _explicitNullProperties?.Remove("description"); }
+            else if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("externalOptions") is null) { _explicitNullValueExternalOptions = default!; _explicitNullProperties?.Remove("externalOptions"); }
+            else if (parseNode.GetChildNode("externalOptions") is { } nullNodeExternalOptions && nullNodeExternalOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalOptions = null;
+            if (parseNode.GetChildNode("externalOptionsReferenceType") is null) { _explicitNullValueExternalOptionsReferenceType = default!; _explicitNullProperties?.Remove("externalOptionsReferenceType"); }
+            else if (parseNode.GetChildNode("externalOptionsReferenceType") is { } nullNodeExternalOptionsReferenceType && nullNodeExternalOptionsReferenceType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalOptionsReferenceType = null;
+            if (parseNode.GetChildNode("fieldType") is null) { _explicitNullValueFieldType = default!; _explicitNullProperties?.Remove("fieldType"); }
+            else if (parseNode.GetChildNode("fieldType") is { } nullNodeFieldType && nullNodeFieldType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldType = null;
+            if (parseNode.GetChildNode("helpText") is null) { _explicitNullValueHelpText = default!; _explicitNullProperties?.Remove("helpText"); }
+            else if (parseNode.GetChildNode("helpText") is { } nullNodeHelpText && nullNodeHelpText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HelpText = null;
+            if (parseNode.GetChildNode("label") is null) { _explicitNullValueLabel = default!; _explicitNullProperties?.Remove("label"); }
+            else if (parseNode.GetChildNode("label") is { } nullNodeLabel && nullNodeLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Label = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("options") is null) { _explicitNullValueOptions = default!; _explicitNullProperties?.Remove("options"); }
+            else if (parseNode.GetChildNode("options") is { } nullNodeOptions && nullNodeOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Options = null;
+            if (parseNode.GetChildNode("optionsUrl") is null) { _explicitNullValueOptionsUrl = default!; _explicitNullProperties?.Remove("optionsUrl"); }
+            else if (parseNode.GetChildNode("optionsUrl") is { } nullNodeOptionsUrl && nullNodeOptionsUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptionsUrl = null;
+            if (parseNode.GetChildNode("referencedObjectType") is null) { _explicitNullValueReferencedObjectType = default!; _explicitNullProperties?.Remove("referencedObjectType"); }
+            else if (parseNode.GetChildNode("referencedObjectType") is { } nullNodeReferencedObjectType && nullNodeReferencedObjectType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReferencedObjectType = null;
+            if (parseNode.GetChildNode("schema") is null) { _explicitNullValueSchema = default!; _explicitNullProperties?.Remove("schema"); }
+            else if (parseNode.GetChildNode("schema") is { } nullNodeSchema && nullNodeSchema.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Schema = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("useChirp") is null) { _explicitNullValueUseChirp = default!; _explicitNullProperties?.Remove("useChirp"); }
+            else if (parseNode.GetChildNode("useChirp") is { } nullNodeUseChirp && nullNodeUseChirp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UseChirp = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A detailed explanation of the field&apos;s purpose and usage.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>Indicates whether the field&apos;s options are sourced externally.</summary>
-        public bool? ExternalOptions { get; set; }
+        public bool? ExternalOptions { get => _explicitNullValueExternalOptions; set { _explicitNullValueExternalOptions = value; AdditionalData?.Remove("externalOptions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalOptions"); else _explicitNullProperties?.Remove("externalOptions"); } }
+        private bool? _explicitNullValueExternalOptions = default!;
         /// <summary>Specifies the type of external reference for options.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExternalOptionsReferenceType { get; set; }
+        public string? ExternalOptionsReferenceType { get => _explicitNullValueExternalOptionsReferenceType; set { _explicitNullValueExternalOptionsReferenceType = value; AdditionalData?.Remove("externalOptionsReferenceType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalOptionsReferenceType"); else _explicitNullProperties?.Remove("externalOptionsReferenceType"); } }
+        private string? _explicitNullValueExternalOptionsReferenceType = default!;
 #nullable restore
 #else
-        public string ExternalOptionsReferenceType { get; set; }
+        public string ExternalOptionsReferenceType { get => _explicitNullValueExternalOptionsReferenceType; set { _explicitNullValueExternalOptionsReferenceType = value; AdditionalData?.Remove("externalOptionsReferenceType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalOptionsReferenceType"); else _explicitNullProperties?.Remove("externalOptionsReferenceType"); } }
+        private string _explicitNullValueExternalOptionsReferenceType = default!;
 #endif
         /// <summary>Describes the field&apos;s type in the UI, with accepted values like booleancheckbox, calculation_equation, checkbox, date, file, html, number, phonenumber, radio, select, text, textarea, unknown.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.FieldTypeDefinitionFieldType? FieldType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.FieldTypeDefinitionFieldType? FieldType { get => _explicitNullValueFieldType; set { _explicitNullValueFieldType = value; AdditionalData?.Remove("fieldType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldType"); else _explicitNullProperties?.Remove("fieldType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.FieldTypeDefinitionFieldType? _explicitNullValueFieldType = default!;
         /// <summary>Additional information or guidance about the field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HelpText { get; set; }
+        public string? HelpText { get => _explicitNullValueHelpText; set { _explicitNullValueHelpText = value; AdditionalData?.Remove("helpText"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("helpText"); else _explicitNullProperties?.Remove("helpText"); } }
+        private string? _explicitNullValueHelpText = default!;
 #nullable restore
 #else
-        public string HelpText { get; set; }
+        public string HelpText { get => _explicitNullValueHelpText; set { _explicitNullValueHelpText = value; AdditionalData?.Remove("helpText"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("helpText"); else _explicitNullProperties?.Remove("helpText"); } }
+        private string _explicitNullValueHelpText = default!;
 #endif
         /// <summary>The user-friendly label for the field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Label { get; set; }
+        public string? Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; AdditionalData?.Remove("label"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
+        private string? _explicitNullValueLabel = default!;
 #nullable restore
 #else
-        public string Label { get; set; }
+        public string Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; AdditionalData?.Remove("label"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
+        private string _explicitNullValueLabel = default!;
 #endif
         /// <summary>The unique identifier for the field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>An array of options available for the field, each represented by an Option object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.Option>? Options { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.Option>? Options { get => _explicitNullValueOptions; set { _explicitNullValueOptions = value; AdditionalData?.Remove("options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("options"); else _explicitNullProperties?.Remove("options"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.Option>? _explicitNullValueOptions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.Option> Options { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.Option> Options { get => _explicitNullValueOptions; set { _explicitNullValueOptions = value; AdditionalData?.Remove("options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("options"); else _explicitNullProperties?.Remove("options"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.Option> _explicitNullValueOptions = default!;
 #endif
         /// <summary>A URL that provides options for the field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OptionsUrl { get; set; }
+        public string? OptionsUrl { get => _explicitNullValueOptionsUrl; set { _explicitNullValueOptionsUrl = value; AdditionalData?.Remove("optionsUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("optionsUrl"); else _explicitNullProperties?.Remove("optionsUrl"); } }
+        private string? _explicitNullValueOptionsUrl = default!;
 #nullable restore
 #else
-        public string OptionsUrl { get; set; }
+        public string OptionsUrl { get => _explicitNullValueOptionsUrl; set { _explicitNullValueOptionsUrl = value; AdditionalData?.Remove("optionsUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("optionsUrl"); else _explicitNullProperties?.Remove("optionsUrl"); } }
+        private string _explicitNullValueOptionsUrl = default!;
 #endif
         /// <summary>Indicates the type of object that the field references, with accepted values like OWNER.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.FieldTypeDefinitionReferencedObjectType? ReferencedObjectType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.FieldTypeDefinitionReferencedObjectType? ReferencedObjectType { get => _explicitNullValueReferencedObjectType; set { _explicitNullValueReferencedObjectType = value; AdditionalData?.Remove("referencedObjectType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("referencedObjectType"); else _explicitNullProperties?.Remove("referencedObjectType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.FieldTypeDefinitionReferencedObjectType? _explicitNullValueReferencedObjectType = default!;
         /// <summary>Defines the structure and constraints of the field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.FieldTypeDefinitionSchema? Schema { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.FieldTypeDefinitionSchema? Schema { get => _explicitNullValueSchema; set { _explicitNullValueSchema = value; AdditionalData?.Remove("schema"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("schema"); else _explicitNullProperties?.Remove("schema"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.FieldTypeDefinitionSchema? _explicitNullValueSchema = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.FieldTypeDefinitionSchema Schema { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.FieldTypeDefinitionSchema Schema { get => _explicitNullValueSchema; set { _explicitNullValueSchema = value; AdditionalData?.Remove("schema"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("schema"); else _explicitNullProperties?.Remove("schema"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.FieldTypeDefinitionSchema _explicitNullValueSchema = default!;
 #endif
         /// <summary>Specifies the data type of the field, with accepted values like bool, date, datetime, enumeration, json, number, object_coordinates, phone_number, string.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.FieldTypeDefinitionType? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.FieldTypeDefinitionType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.FieldTypeDefinitionType? _explicitNullValueType = default!;
         /// <summary>Specifies whether the field uses the Chirp feature.</summary>
-        public bool? UseChirp { get; set; }
+        public bool? UseChirp { get => _explicitNullValueUseChirp; set { _explicitNullValueUseChirp = value; AdditionalData?.Remove("useChirp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("useChirp"); else _explicitNullProperties?.Remove("useChirp"); } }
+        private bool? _explicitNullValueUseChirp = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.FieldTypeDefinition"/> and sets the default values.
         /// </summary>
@@ -103,7 +157,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.FieldTypeDefinition CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.FieldTypeDefinition();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.FieldTypeDefinition(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -116,15 +170,15 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "externalOptions", n => { ExternalOptions = n.GetBoolValue(); } },
                 { "externalOptionsReferenceType", n => { ExternalOptionsReferenceType = n.GetStringValue(); } },
-                { "fieldType", n => { FieldType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FieldTypeDefinitionFieldType>(); } },
+                { "fieldType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FieldTypeDefinitionFieldType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFieldType = default; _explicitNullProperties?.Remove("fieldType"); AdditionalData["fieldType"] = unknown; } else { FieldType = parsed; AdditionalData.Remove("fieldType"); } } },
                 { "helpText", n => { HelpText = n.GetStringValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.Option>(global::Soenneker.HubSpot.OpenApiClient.Models.Option.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "optionsUrl", n => { OptionsUrl = n.GetStringValue(); } },
-                { "referencedObjectType", n => { ReferencedObjectType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FieldTypeDefinitionReferencedObjectType>(); } },
+                { "referencedObjectType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FieldTypeDefinitionReferencedObjectType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueReferencedObjectType = default; _explicitNullProperties?.Remove("referencedObjectType"); AdditionalData["referencedObjectType"] = unknown; } else { ReferencedObjectType = parsed; AdditionalData.Remove("referencedObjectType"); } } },
                 { "schema", n => { Schema = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.FieldTypeDefinitionSchema>(global::Soenneker.HubSpot.OpenApiClient.Models.FieldTypeDefinitionSchema.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FieldTypeDefinitionType>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FieldTypeDefinitionType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
                 { "useChirp", n => { UseChirp = n.GetBoolValue(); } },
             };
         }
@@ -148,6 +202,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.FieldTypeDefinitionSchema>("schema", Schema);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FieldTypeDefinitionType>("type", Type);
             writer.WriteBoolValue("useChirp", UseChirp);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

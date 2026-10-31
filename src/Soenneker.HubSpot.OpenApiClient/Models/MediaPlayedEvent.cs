@@ -11,99 +11,169 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class MediaPlayedEvent : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("contactId") is null) { _explicitNullValueContactId = default!; _explicitNullProperties?.Remove("contactId"); }
+            else if (parseNode.GetChildNode("contactId") is { } nullNodeContactId && nullNodeContactId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactId = null;
+            if (parseNode.GetChildNode("externalPlayContext") is null) { _explicitNullValueExternalPlayContext = default!; _explicitNullProperties?.Remove("externalPlayContext"); }
+            else if (parseNode.GetChildNode("externalPlayContext") is { } nullNodeExternalPlayContext && nullNodeExternalPlayContext.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalPlayContext = null;
+            if (parseNode.GetChildNode("iframeUrl") is null) { _explicitNullValueIframeUrl = default!; _explicitNullProperties?.Remove("iframeUrl"); }
+            else if (parseNode.GetChildNode("iframeUrl") is { } nullNodeIframeUrl && nullNodeIframeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IframeUrl = null;
+            if (parseNode.GetChildNode("mediaBridgeId") is null) { _explicitNullValueMediaBridgeId = default!; _explicitNullProperties?.Remove("mediaBridgeId"); }
+            else if (parseNode.GetChildNode("mediaBridgeId") is { } nullNodeMediaBridgeId && nullNodeMediaBridgeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MediaBridgeId = null;
+            if (parseNode.GetChildNode("mediaBridgeObjectCoordinates") is null) { _explicitNullValueMediaBridgeObjectCoordinates = default!; _explicitNullProperties?.Remove("mediaBridgeObjectCoordinates"); }
+            else if (parseNode.GetChildNode("mediaBridgeObjectCoordinates") is { } nullNodeMediaBridgeObjectCoordinates && nullNodeMediaBridgeObjectCoordinates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MediaBridgeObjectCoordinates = null;
+            if (parseNode.GetChildNode("mediaBridgeObjectTypeId") is null) { _explicitNullValueMediaBridgeObjectTypeId = default!; _explicitNullProperties?.Remove("mediaBridgeObjectTypeId"); }
+            else if (parseNode.GetChildNode("mediaBridgeObjectTypeId") is { } nullNodeMediaBridgeObjectTypeId && nullNodeMediaBridgeObjectTypeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MediaBridgeObjectTypeId = null;
+            if (parseNode.GetChildNode("mediaName") is null) { _explicitNullValueMediaName = default!; _explicitNullProperties?.Remove("mediaName"); }
+            else if (parseNode.GetChildNode("mediaName") is { } nullNodeMediaName && nullNodeMediaName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MediaName = null;
+            if (parseNode.GetChildNode("mediaType") is null) { _explicitNullValueMediaType = default!; _explicitNullProperties?.Remove("mediaType"); }
+            else if (parseNode.GetChildNode("mediaType") is { } nullNodeMediaType && nullNodeMediaType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MediaType = null;
+            if (parseNode.GetChildNode("mediaUrl") is null) { _explicitNullValueMediaUrl = default!; _explicitNullProperties?.Remove("mediaUrl"); }
+            else if (parseNode.GetChildNode("mediaUrl") is { } nullNodeMediaUrl && nullNodeMediaUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MediaUrl = null;
+            if (parseNode.GetChildNode("occurredTimestamp") is null) { _explicitNullValueOccurredTimestamp = default!; _explicitNullProperties?.Remove("occurredTimestamp"); }
+            else if (parseNode.GetChildNode("occurredTimestamp") is { } nullNodeOccurredTimestamp && nullNodeOccurredTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OccurredTimestamp = null;
+            if (parseNode.GetChildNode("pageId") is null) { _explicitNullValuePageId = default!; _explicitNullProperties?.Remove("pageId"); }
+            else if (parseNode.GetChildNode("pageId") is { } nullNodePageId && nullNodePageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PageId = null;
+            if (parseNode.GetChildNode("pageName") is null) { _explicitNullValuePageName = default!; _explicitNullProperties?.Remove("pageName"); }
+            else if (parseNode.GetChildNode("pageName") is { } nullNodePageName && nullNodePageName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PageName = null;
+            if (parseNode.GetChildNode("pageObjectCoordinates") is null) { _explicitNullValuePageObjectCoordinates = default!; _explicitNullProperties?.Remove("pageObjectCoordinates"); }
+            else if (parseNode.GetChildNode("pageObjectCoordinates") is { } nullNodePageObjectCoordinates && nullNodePageObjectCoordinates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PageObjectCoordinates = null;
+            if (parseNode.GetChildNode("pageUrl") is null) { _explicitNullValuePageUrl = default!; _explicitNullProperties?.Remove("pageUrl"); }
+            else if (parseNode.GetChildNode("pageUrl") is { } nullNodePageUrl && nullNodePageUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PageUrl = null;
+            if (parseNode.GetChildNode("portalId") is null) { _explicitNullValuePortalId = default!; _explicitNullProperties?.Remove("portalId"); }
+            else if (parseNode.GetChildNode("portalId") is { } nullNodePortalId && nullNodePortalId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PortalId = null;
+            if (parseNode.GetChildNode("providerId") is null) { _explicitNullValueProviderId = default!; _explicitNullProperties?.Remove("providerId"); }
+            else if (parseNode.GetChildNode("providerId") is { } nullNodeProviderId && nullNodeProviderId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProviderId = null;
+            if (parseNode.GetChildNode("sessionId") is null) { _explicitNullValueSessionId = default!; _explicitNullProperties?.Remove("sessionId"); }
+            else if (parseNode.GetChildNode("sessionId") is { } nullNodeSessionId && nullNodeSessionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SessionId = null;
+            if (parseNode.GetChildNode("state") is null) { _explicitNullValueState = default!; _explicitNullProperties?.Remove("state"); }
+            else if (parseNode.GetChildNode("state") is { } nullNodeState && nullNodeState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) State = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The unique identifier for the contact associated with this media event.</summary>
-        public long? ContactId { get; set; }
+        public long? ContactId { get => _explicitNullValueContactId; set { _explicitNullValueContactId = value; AdditionalData?.Remove("contactId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactId"); else _explicitNullProperties?.Remove("contactId"); } }
+        private long? _explicitNullValueContactId = default!;
         /// <summary>Additional context provided by external systems about the play event.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.MediaPlayedEventExternalPlayContext? ExternalPlayContext { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.MediaPlayedEventExternalPlayContext? ExternalPlayContext { get => _explicitNullValueExternalPlayContext; set { _explicitNullValueExternalPlayContext = value; AdditionalData?.Remove("externalPlayContext"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalPlayContext"); else _explicitNullProperties?.Remove("externalPlayContext"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.MediaPlayedEventExternalPlayContext? _explicitNullValueExternalPlayContext = default!;
         /// <summary>The URL of the iframe where the media was embedded and played.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IframeUrl { get; set; }
+        public string? IframeUrl { get => _explicitNullValueIframeUrl; set { _explicitNullValueIframeUrl = value; AdditionalData?.Remove("iframeUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iframeUrl"); else _explicitNullProperties?.Remove("iframeUrl"); } }
+        private string? _explicitNullValueIframeUrl = default!;
 #nullable restore
 #else
-        public string IframeUrl { get; set; }
+        public string IframeUrl { get => _explicitNullValueIframeUrl; set { _explicitNullValueIframeUrl = value; AdditionalData?.Remove("iframeUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iframeUrl"); else _explicitNullProperties?.Remove("iframeUrl"); } }
+        private string _explicitNullValueIframeUrl = default!;
 #endif
         /// <summary>The unique identifier for the media bridge instance associated with this event.</summary>
-        public long? MediaBridgeId { get; set; }
+        public long? MediaBridgeId { get => _explicitNullValueMediaBridgeId; set { _explicitNullValueMediaBridgeId = value; AdditionalData?.Remove("mediaBridgeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mediaBridgeId"); else _explicitNullProperties?.Remove("mediaBridgeId"); } }
+        private long? _explicitNullValueMediaBridgeId = default!;
         /// <summary>Coordinates that specify the location or context of the media bridge object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MediaBridgeObjectCoordinates { get; set; }
+        public string? MediaBridgeObjectCoordinates { get => _explicitNullValueMediaBridgeObjectCoordinates; set { _explicitNullValueMediaBridgeObjectCoordinates = value; AdditionalData?.Remove("mediaBridgeObjectCoordinates"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mediaBridgeObjectCoordinates"); else _explicitNullProperties?.Remove("mediaBridgeObjectCoordinates"); } }
+        private string? _explicitNullValueMediaBridgeObjectCoordinates = default!;
 #nullable restore
 #else
-        public string MediaBridgeObjectCoordinates { get; set; }
+        public string MediaBridgeObjectCoordinates { get => _explicitNullValueMediaBridgeObjectCoordinates; set { _explicitNullValueMediaBridgeObjectCoordinates = value; AdditionalData?.Remove("mediaBridgeObjectCoordinates"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mediaBridgeObjectCoordinates"); else _explicitNullProperties?.Remove("mediaBridgeObjectCoordinates"); } }
+        private string _explicitNullValueMediaBridgeObjectCoordinates = default!;
 #endif
         /// <summary>The type identifier of the media bridge object involved in the event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MediaBridgeObjectTypeId { get; set; }
+        public string? MediaBridgeObjectTypeId { get => _explicitNullValueMediaBridgeObjectTypeId; set { _explicitNullValueMediaBridgeObjectTypeId = value; AdditionalData?.Remove("mediaBridgeObjectTypeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mediaBridgeObjectTypeId"); else _explicitNullProperties?.Remove("mediaBridgeObjectTypeId"); } }
+        private string? _explicitNullValueMediaBridgeObjectTypeId = default!;
 #nullable restore
 #else
-        public string MediaBridgeObjectTypeId { get; set; }
+        public string MediaBridgeObjectTypeId { get => _explicitNullValueMediaBridgeObjectTypeId; set { _explicitNullValueMediaBridgeObjectTypeId = value; AdditionalData?.Remove("mediaBridgeObjectTypeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mediaBridgeObjectTypeId"); else _explicitNullProperties?.Remove("mediaBridgeObjectTypeId"); } }
+        private string _explicitNullValueMediaBridgeObjectTypeId = default!;
 #endif
         /// <summary>The name of the media content that was played.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MediaName { get; set; }
+        public string? MediaName { get => _explicitNullValueMediaName; set { _explicitNullValueMediaName = value; AdditionalData?.Remove("mediaName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mediaName"); else _explicitNullProperties?.Remove("mediaName"); } }
+        private string? _explicitNullValueMediaName = default!;
 #nullable restore
 #else
-        public string MediaName { get; set; }
+        public string MediaName { get => _explicitNullValueMediaName; set { _explicitNullValueMediaName = value; AdditionalData?.Remove("mediaName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mediaName"); else _explicitNullProperties?.Remove("mediaName"); } }
+        private string _explicitNullValueMediaName = default!;
 #endif
         /// <summary>The type of media that was played, such as video or audio.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.MediaPlayedEventMediaType? MediaType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.MediaPlayedEventMediaType? MediaType { get => _explicitNullValueMediaType; set { _explicitNullValueMediaType = value; AdditionalData?.Remove("mediaType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mediaType"); else _explicitNullProperties?.Remove("mediaType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.MediaPlayedEventMediaType? _explicitNullValueMediaType = default!;
         /// <summary>The URL where the media content is hosted.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MediaUrl { get; set; }
+        public string? MediaUrl { get => _explicitNullValueMediaUrl; set { _explicitNullValueMediaUrl = value; AdditionalData?.Remove("mediaUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mediaUrl"); else _explicitNullProperties?.Remove("mediaUrl"); } }
+        private string? _explicitNullValueMediaUrl = default!;
 #nullable restore
 #else
-        public string MediaUrl { get; set; }
+        public string MediaUrl { get => _explicitNullValueMediaUrl; set { _explicitNullValueMediaUrl = value; AdditionalData?.Remove("mediaUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mediaUrl"); else _explicitNullProperties?.Remove("mediaUrl"); } }
+        private string _explicitNullValueMediaUrl = default!;
 #endif
         /// <summary>A Unix timestamp in milliseconds indicating when the media play event occurred.</summary>
-        public long? OccurredTimestamp { get; set; }
+        public long? OccurredTimestamp { get => _explicitNullValueOccurredTimestamp; set { _explicitNullValueOccurredTimestamp = value; AdditionalData?.Remove("occurredTimestamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("occurredTimestamp"); else _explicitNullProperties?.Remove("occurredTimestamp"); } }
+        private long? _explicitNullValueOccurredTimestamp = default!;
         /// <summary>The unique identifier for the page where the media was played.</summary>
-        public long? PageId { get; set; }
+        public long? PageId { get => _explicitNullValuePageId; set { _explicitNullValuePageId = value; AdditionalData?.Remove("pageId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pageId"); else _explicitNullProperties?.Remove("pageId"); } }
+        private long? _explicitNullValuePageId = default!;
         /// <summary>The name of the page where the media was played.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PageName { get; set; }
+        public string? PageName { get => _explicitNullValuePageName; set { _explicitNullValuePageName = value; AdditionalData?.Remove("pageName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pageName"); else _explicitNullProperties?.Remove("pageName"); } }
+        private string? _explicitNullValuePageName = default!;
 #nullable restore
 #else
-        public string PageName { get; set; }
+        public string PageName { get => _explicitNullValuePageName; set { _explicitNullValuePageName = value; AdditionalData?.Remove("pageName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pageName"); else _explicitNullProperties?.Remove("pageName"); } }
+        private string _explicitNullValuePageName = default!;
 #endif
         /// <summary>Coordinates that specify the location or context of the page object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PageObjectCoordinates { get; set; }
+        public string? PageObjectCoordinates { get => _explicitNullValuePageObjectCoordinates; set { _explicitNullValuePageObjectCoordinates = value; AdditionalData?.Remove("pageObjectCoordinates"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pageObjectCoordinates"); else _explicitNullProperties?.Remove("pageObjectCoordinates"); } }
+        private string? _explicitNullValuePageObjectCoordinates = default!;
 #nullable restore
 #else
-        public string PageObjectCoordinates { get; set; }
+        public string PageObjectCoordinates { get => _explicitNullValuePageObjectCoordinates; set { _explicitNullValuePageObjectCoordinates = value; AdditionalData?.Remove("pageObjectCoordinates"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pageObjectCoordinates"); else _explicitNullProperties?.Remove("pageObjectCoordinates"); } }
+        private string _explicitNullValuePageObjectCoordinates = default!;
 #endif
         /// <summary>The URL of the page where the media was played.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PageUrl { get; set; }
+        public string? PageUrl { get => _explicitNullValuePageUrl; set { _explicitNullValuePageUrl = value; AdditionalData?.Remove("pageUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pageUrl"); else _explicitNullProperties?.Remove("pageUrl"); } }
+        private string? _explicitNullValuePageUrl = default!;
 #nullable restore
 #else
-        public string PageUrl { get; set; }
+        public string PageUrl { get => _explicitNullValuePageUrl; set { _explicitNullValuePageUrl = value; AdditionalData?.Remove("pageUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pageUrl"); else _explicitNullProperties?.Remove("pageUrl"); } }
+        private string _explicitNullValuePageUrl = default!;
 #endif
         /// <summary>The unique identifier of the HubSpot portal where the event occurred.</summary>
-        public int? PortalId { get; set; }
+        public int? PortalId { get => _explicitNullValuePortalId; set { _explicitNullValuePortalId = value; AdditionalData?.Remove("portalId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("portalId"); else _explicitNullProperties?.Remove("portalId"); } }
+        private int? _explicitNullValuePortalId = default!;
         /// <summary>The unique identifier for the media provider.</summary>
-        public int? ProviderId { get; set; }
+        public int? ProviderId { get => _explicitNullValueProviderId; set { _explicitNullValueProviderId = value; AdditionalData?.Remove("providerId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("providerId"); else _explicitNullProperties?.Remove("providerId"); } }
+        private int? _explicitNullValueProviderId = default!;
         /// <summary>The unique identifier for the session during which the media was played.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SessionId { get; set; }
+        public string? SessionId { get => _explicitNullValueSessionId; set { _explicitNullValueSessionId = value; AdditionalData?.Remove("sessionId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sessionId"); else _explicitNullProperties?.Remove("sessionId"); } }
+        private string? _explicitNullValueSessionId = default!;
 #nullable restore
 #else
-        public string SessionId { get; set; }
+        public string SessionId { get => _explicitNullValueSessionId; set { _explicitNullValueSessionId = value; AdditionalData?.Remove("sessionId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sessionId"); else _explicitNullProperties?.Remove("sessionId"); } }
+        private string _explicitNullValueSessionId = default!;
 #endif
         /// <summary>The state of the media play event, such as &apos;started&apos; or &apos;completed&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.MediaPlayedEventState? State { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.MediaPlayedEventState? State { get => _explicitNullValueState; set { _explicitNullValueState = value; AdditionalData?.Remove("state"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state"); else _explicitNullProperties?.Remove("state"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.MediaPlayedEventState? _explicitNullValueState = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.MediaPlayedEvent"/> and sets the default values.
         /// </summary>
@@ -119,7 +189,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.MediaPlayedEvent CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.MediaPlayedEvent();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.MediaPlayedEvent(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -130,13 +200,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "contactId", n => { ContactId = n.GetLongValue(); } },
-                { "externalPlayContext", n => { ExternalPlayContext = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MediaPlayedEventExternalPlayContext>(); } },
+                { "externalPlayContext", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MediaPlayedEventExternalPlayContext>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueExternalPlayContext = default; _explicitNullProperties?.Remove("externalPlayContext"); AdditionalData["externalPlayContext"] = unknown; } else { ExternalPlayContext = parsed; AdditionalData.Remove("externalPlayContext"); } } },
                 { "iframeUrl", n => { IframeUrl = n.GetStringValue(); } },
                 { "mediaBridgeId", n => { MediaBridgeId = n.GetLongValue(); } },
                 { "mediaBridgeObjectCoordinates", n => { MediaBridgeObjectCoordinates = n.GetStringValue(); } },
                 { "mediaBridgeObjectTypeId", n => { MediaBridgeObjectTypeId = n.GetStringValue(); } },
                 { "mediaName", n => { MediaName = n.GetStringValue(); } },
-                { "mediaType", n => { MediaType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MediaPlayedEventMediaType>(); } },
+                { "mediaType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MediaPlayedEventMediaType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMediaType = default; _explicitNullProperties?.Remove("mediaType"); AdditionalData["mediaType"] = unknown; } else { MediaType = parsed; AdditionalData.Remove("mediaType"); } } },
                 { "mediaUrl", n => { MediaUrl = n.GetStringValue(); } },
                 { "occurredTimestamp", n => { OccurredTimestamp = n.GetLongValue(); } },
                 { "pageId", n => { PageId = n.GetLongValue(); } },
@@ -146,7 +216,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "portalId", n => { PortalId = n.GetIntValue(); } },
                 { "providerId", n => { ProviderId = n.GetIntValue(); } },
                 { "sessionId", n => { SessionId = n.GetStringValue(); } },
-                { "state", n => { State = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MediaPlayedEventState>(); } },
+                { "state", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MediaPlayedEventState>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueState = default; _explicitNullProperties?.Remove("state"); AdditionalData["state"] = unknown; } else { State = parsed; AdditionalData.Remove("state"); } } },
             };
         }
         /// <summary>
@@ -174,6 +244,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteIntValue("providerId", ProviderId);
             writer.WriteStringValue("sessionId", SessionId);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MediaPlayedEventState>("state", State);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

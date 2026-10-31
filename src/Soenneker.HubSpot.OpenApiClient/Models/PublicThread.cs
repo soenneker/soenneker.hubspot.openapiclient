@@ -11,80 +11,139 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicThread : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("archived") is null) { _explicitNullValueArchived = default!; _explicitNullProperties?.Remove("archived"); }
+            else if (parseNode.GetChildNode("archived") is { } nullNodeArchived && nullNodeArchived.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Archived = null;
+            if (parseNode.GetChildNode("assignedTo") is null) { _explicitNullValueAssignedTo = default!; _explicitNullProperties?.Remove("assignedTo"); }
+            else if (parseNode.GetChildNode("assignedTo") is { } nullNodeAssignedTo && nullNodeAssignedTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssignedTo = null;
+            if (parseNode.GetChildNode("associatedContactId") is null) { _explicitNullValueAssociatedContactId = default!; _explicitNullProperties?.Remove("associatedContactId"); }
+            else if (parseNode.GetChildNode("associatedContactId") is { } nullNodeAssociatedContactId && nullNodeAssociatedContactId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssociatedContactId = null;
+            if (parseNode.GetChildNode("closedAt") is null) { _explicitNullValueClosedAt = default!; _explicitNullProperties?.Remove("closedAt"); }
+            else if (parseNode.GetChildNode("closedAt") is { } nullNodeClosedAt && nullNodeClosedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClosedAt = null;
+            if (parseNode.GetChildNode("createdAt") is null) { _explicitNullValueCreatedAt = default!; _explicitNullProperties?.Remove("createdAt"); }
+            else if (parseNode.GetChildNode("createdAt") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("inboxId") is null) { _explicitNullValueInboxId = default!; _explicitNullProperties?.Remove("inboxId"); }
+            else if (parseNode.GetChildNode("inboxId") is { } nullNodeInboxId && nullNodeInboxId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InboxId = null;
+            if (parseNode.GetChildNode("latestMessageReceivedTimestamp") is null) { _explicitNullValueLatestMessageReceivedTimestamp = default!; _explicitNullProperties?.Remove("latestMessageReceivedTimestamp"); }
+            else if (parseNode.GetChildNode("latestMessageReceivedTimestamp") is { } nullNodeLatestMessageReceivedTimestamp && nullNodeLatestMessageReceivedTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LatestMessageReceivedTimestamp = null;
+            if (parseNode.GetChildNode("latestMessageSentTimestamp") is null) { _explicitNullValueLatestMessageSentTimestamp = default!; _explicitNullProperties?.Remove("latestMessageSentTimestamp"); }
+            else if (parseNode.GetChildNode("latestMessageSentTimestamp") is { } nullNodeLatestMessageSentTimestamp && nullNodeLatestMessageSentTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LatestMessageSentTimestamp = null;
+            if (parseNode.GetChildNode("latestMessageTimestamp") is null) { _explicitNullValueLatestMessageTimestamp = default!; _explicitNullProperties?.Remove("latestMessageTimestamp"); }
+            else if (parseNode.GetChildNode("latestMessageTimestamp") is { } nullNodeLatestMessageTimestamp && nullNodeLatestMessageTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LatestMessageTimestamp = null;
+            if (parseNode.GetChildNode("originalChannelAccountId") is null) { _explicitNullValueOriginalChannelAccountId = default!; _explicitNullProperties?.Remove("originalChannelAccountId"); }
+            else if (parseNode.GetChildNode("originalChannelAccountId") is { } nullNodeOriginalChannelAccountId && nullNodeOriginalChannelAccountId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginalChannelAccountId = null;
+            if (parseNode.GetChildNode("originalChannelId") is null) { _explicitNullValueOriginalChannelId = default!; _explicitNullProperties?.Remove("originalChannelId"); }
+            else if (parseNode.GetChildNode("originalChannelId") is { } nullNodeOriginalChannelId && nullNodeOriginalChannelId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginalChannelId = null;
+            if (parseNode.GetChildNode("spam") is null) { _explicitNullValueSpam = default!; _explicitNullProperties?.Remove("spam"); }
+            else if (parseNode.GetChildNode("spam") is { } nullNodeSpam && nullNodeSpam.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Spam = null;
+            if (parseNode.GetChildNode("status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("status"); }
+            else if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("threadAssociations") is null) { _explicitNullValueThreadAssociations = default!; _explicitNullProperties?.Remove("threadAssociations"); }
+            else if (parseNode.GetChildNode("threadAssociations") is { } nullNodeThreadAssociations && nullNodeThreadAssociations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThreadAssociations = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A boolean indicating whether the thread is archived.</summary>
-        public bool? Archived { get; set; }
+        public bool? Archived { get => _explicitNullValueArchived; set { _explicitNullValueArchived = value; AdditionalData?.Remove("archived"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("archived"); else _explicitNullProperties?.Remove("archived"); } }
+        private bool? _explicitNullValueArchived = default!;
         /// <summary>The identifier of the user to whom the thread is assigned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AssignedTo { get; set; }
+        public string? AssignedTo { get => _explicitNullValueAssignedTo; set { _explicitNullValueAssignedTo = value; AdditionalData?.Remove("assignedTo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assignedTo"); else _explicitNullProperties?.Remove("assignedTo"); } }
+        private string? _explicitNullValueAssignedTo = default!;
 #nullable restore
 #else
-        public string AssignedTo { get; set; }
+        public string AssignedTo { get => _explicitNullValueAssignedTo; set { _explicitNullValueAssignedTo = value; AdditionalData?.Remove("assignedTo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assignedTo"); else _explicitNullProperties?.Remove("assignedTo"); } }
+        private string _explicitNullValueAssignedTo = default!;
 #endif
         /// <summary>The identifier of the contact associated with the thread.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AssociatedContactId { get; set; }
+        public string? AssociatedContactId { get => _explicitNullValueAssociatedContactId; set { _explicitNullValueAssociatedContactId = value; AdditionalData?.Remove("associatedContactId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("associatedContactId"); else _explicitNullProperties?.Remove("associatedContactId"); } }
+        private string? _explicitNullValueAssociatedContactId = default!;
 #nullable restore
 #else
-        public string AssociatedContactId { get; set; }
+        public string AssociatedContactId { get => _explicitNullValueAssociatedContactId; set { _explicitNullValueAssociatedContactId = value; AdditionalData?.Remove("associatedContactId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("associatedContactId"); else _explicitNullProperties?.Remove("associatedContactId"); } }
+        private string _explicitNullValueAssociatedContactId = default!;
 #endif
         /// <summary>The date and time when the thread was closed, in ISO 8601 format.</summary>
-        public DateTimeOffset? ClosedAt { get; set; }
+        public DateTimeOffset? ClosedAt { get => _explicitNullValueClosedAt; set { _explicitNullValueClosedAt = value; AdditionalData?.Remove("closedAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("closedAt"); else _explicitNullProperties?.Remove("closedAt"); } }
+        private DateTimeOffset? _explicitNullValueClosedAt = default!;
         /// <summary>The date and time when the thread was created, in ISO 8601 format.</summary>
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; AdditionalData?.Remove("createdAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createdAt"); else _explicitNullProperties?.Remove("createdAt"); } }
+        private DateTimeOffset? _explicitNullValueCreatedAt = default!;
         /// <summary>The unique identifier for the conversation thread.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The identifier of the inbox where the thread is located.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InboxId { get; set; }
+        public string? InboxId { get => _explicitNullValueInboxId; set { _explicitNullValueInboxId = value; AdditionalData?.Remove("inboxId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inboxId"); else _explicitNullProperties?.Remove("inboxId"); } }
+        private string? _explicitNullValueInboxId = default!;
 #nullable restore
 #else
-        public string InboxId { get; set; }
+        public string InboxId { get => _explicitNullValueInboxId; set { _explicitNullValueInboxId = value; AdditionalData?.Remove("inboxId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inboxId"); else _explicitNullProperties?.Remove("inboxId"); } }
+        private string _explicitNullValueInboxId = default!;
 #endif
         /// <summary>The date and time when the latest message was received, in ISO 8601 format.</summary>
-        public DateTimeOffset? LatestMessageReceivedTimestamp { get; set; }
+        public DateTimeOffset? LatestMessageReceivedTimestamp { get => _explicitNullValueLatestMessageReceivedTimestamp; set { _explicitNullValueLatestMessageReceivedTimestamp = value; AdditionalData?.Remove("latestMessageReceivedTimestamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("latestMessageReceivedTimestamp"); else _explicitNullProperties?.Remove("latestMessageReceivedTimestamp"); } }
+        private DateTimeOffset? _explicitNullValueLatestMessageReceivedTimestamp = default!;
         /// <summary>The date and time when the latest message was sent, in ISO 8601 format.</summary>
-        public DateTimeOffset? LatestMessageSentTimestamp { get; set; }
+        public DateTimeOffset? LatestMessageSentTimestamp { get => _explicitNullValueLatestMessageSentTimestamp; set { _explicitNullValueLatestMessageSentTimestamp = value; AdditionalData?.Remove("latestMessageSentTimestamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("latestMessageSentTimestamp"); else _explicitNullProperties?.Remove("latestMessageSentTimestamp"); } }
+        private DateTimeOffset? _explicitNullValueLatestMessageSentTimestamp = default!;
         /// <summary>The date and time of the latest message in the thread, in ISO 8601 format.</summary>
-        public DateTimeOffset? LatestMessageTimestamp { get; set; }
+        public DateTimeOffset? LatestMessageTimestamp { get => _explicitNullValueLatestMessageTimestamp; set { _explicitNullValueLatestMessageTimestamp = value; AdditionalData?.Remove("latestMessageTimestamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("latestMessageTimestamp"); else _explicitNullProperties?.Remove("latestMessageTimestamp"); } }
+        private DateTimeOffset? _explicitNullValueLatestMessageTimestamp = default!;
         /// <summary>The identifier of the original channel account associated with the thread.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OriginalChannelAccountId { get; set; }
+        public string? OriginalChannelAccountId { get => _explicitNullValueOriginalChannelAccountId; set { _explicitNullValueOriginalChannelAccountId = value; AdditionalData?.Remove("originalChannelAccountId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("originalChannelAccountId"); else _explicitNullProperties?.Remove("originalChannelAccountId"); } }
+        private string? _explicitNullValueOriginalChannelAccountId = default!;
 #nullable restore
 #else
-        public string OriginalChannelAccountId { get; set; }
+        public string OriginalChannelAccountId { get => _explicitNullValueOriginalChannelAccountId; set { _explicitNullValueOriginalChannelAccountId = value; AdditionalData?.Remove("originalChannelAccountId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("originalChannelAccountId"); else _explicitNullProperties?.Remove("originalChannelAccountId"); } }
+        private string _explicitNullValueOriginalChannelAccountId = default!;
 #endif
         /// <summary>The identifier of the original channel where the thread was initiated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OriginalChannelId { get; set; }
+        public string? OriginalChannelId { get => _explicitNullValueOriginalChannelId; set { _explicitNullValueOriginalChannelId = value; AdditionalData?.Remove("originalChannelId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("originalChannelId"); else _explicitNullProperties?.Remove("originalChannelId"); } }
+        private string? _explicitNullValueOriginalChannelId = default!;
 #nullable restore
 #else
-        public string OriginalChannelId { get; set; }
+        public string OriginalChannelId { get => _explicitNullValueOriginalChannelId; set { _explicitNullValueOriginalChannelId = value; AdditionalData?.Remove("originalChannelId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("originalChannelId"); else _explicitNullProperties?.Remove("originalChannelId"); } }
+        private string _explicitNullValueOriginalChannelId = default!;
 #endif
         /// <summary>A boolean indicating whether the thread is marked as spam.</summary>
-        public bool? Spam { get; set; }
+        public bool? Spam { get => _explicitNullValueSpam; set { _explicitNullValueSpam = value; AdditionalData?.Remove("spam"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spam"); else _explicitNullProperties?.Remove("spam"); } }
+        private bool? _explicitNullValueSpam = default!;
         /// <summary>The current status of the thread. Valid values include &apos;OPEN&apos; and &apos;CLOSED&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadStatus? Status { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadStatus? _explicitNullValueStatus = default!;
         /// <summary>The threadAssociations property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadAssociations? ThreadAssociations { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadAssociations? ThreadAssociations { get => _explicitNullValueThreadAssociations; set { _explicitNullValueThreadAssociations = value; AdditionalData?.Remove("threadAssociations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("threadAssociations"); else _explicitNullProperties?.Remove("threadAssociations"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadAssociations? _explicitNullValueThreadAssociations = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadAssociations ThreadAssociations { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadAssociations ThreadAssociations { get => _explicitNullValueThreadAssociations; set { _explicitNullValueThreadAssociations = value; AdditionalData?.Remove("threadAssociations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("threadAssociations"); else _explicitNullProperties?.Remove("threadAssociations"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadAssociations _explicitNullValueThreadAssociations = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicThread"/> and sets the default values.
@@ -101,7 +160,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicThread CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicThread();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicThread(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -124,7 +183,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "originalChannelAccountId", n => { OriginalChannelAccountId = n.GetStringValue(); } },
                 { "originalChannelId", n => { OriginalChannelId = n.GetStringValue(); } },
                 { "spam", n => { Spam = n.GetBoolValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadStatus>(); } },
+                { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
                 { "threadAssociations", n => { ThreadAssociations = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadAssociations>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadAssociations.CreateFromDiscriminatorValue); } },
             };
         }
@@ -150,6 +209,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteBoolValue("spam", Spam);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadStatus>("status", Status);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicThreadAssociations>("threadAssociations", ThreadAssociations);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

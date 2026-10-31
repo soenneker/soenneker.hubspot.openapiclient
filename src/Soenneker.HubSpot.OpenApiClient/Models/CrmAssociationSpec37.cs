@@ -12,13 +12,26 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CrmAssociationSpec37 : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("associationCategory") is null) { _explicitNullValueAssociationCategory = default!; _explicitNullProperties?.Remove("associationCategory"); }
+            else if (parseNode.GetChildNode("associationCategory") is { } nullNodeAssociationCategory && nullNodeAssociationCategory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssociationCategory = null;
+            if (parseNode.GetChildNode("associationTypeId") is null) { _explicitNullValueAssociationTypeId = default!; _explicitNullProperties?.Remove("associationTypeId"); }
+            else if (parseNode.GetChildNode("associationTypeId") is { } nullNodeAssociationTypeId && nullNodeAssociationTypeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssociationTypeId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The category of the association. Valid values include &apos;HUBSPOT_DEFINED&apos;, &apos;USER_DEFINED&apos;, &apos;INTEGRATOR_DEFINED&apos;, and &apos;WORK&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecAssociationCategory37? AssociationCategory { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecAssociationCategory37? AssociationCategory { get => _explicitNullValueAssociationCategory; set { _explicitNullValueAssociationCategory = value; AdditionalData?.Remove("associationCategory"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("associationCategory"); else _explicitNullProperties?.Remove("associationCategory"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecAssociationCategory37? _explicitNullValueAssociationCategory = default!;
         /// <summary>The unique identifier for the type of association. It is an integer value.</summary>
-        public int? AssociationTypeId { get; set; }
+        public int? AssociationTypeId { get => _explicitNullValueAssociationTypeId; set { _explicitNullValueAssociationTypeId = value; AdditionalData?.Remove("associationTypeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("associationTypeId"); else _explicitNullProperties?.Remove("associationTypeId"); } }
+        private int? _explicitNullValueAssociationTypeId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec37"/> and sets the default values.
         /// </summary>
@@ -34,7 +47,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec37 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec37();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec37(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -44,7 +57,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "associationCategory", n => { AssociationCategory = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecAssociationCategory37>(); } },
+                { "associationCategory", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecAssociationCategory37>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAssociationCategory = default; _explicitNullProperties?.Remove("associationCategory"); AdditionalData["associationCategory"] = unknown; } else { AssociationCategory = parsed; AdditionalData.Remove("associationCategory"); } } },
                 { "associationTypeId", n => { AssociationTypeId = n.GetIntValue(); } },
             };
         }
@@ -57,6 +70,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecAssociationCategory37>("associationCategory", AssociationCategory);
             writer.WriteIntValue("associationTypeId", AssociationTypeId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

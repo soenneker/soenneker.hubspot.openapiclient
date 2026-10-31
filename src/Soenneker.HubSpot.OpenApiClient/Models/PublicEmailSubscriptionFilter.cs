@@ -11,34 +11,56 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicEmailSubscriptionFilter : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("acceptedStatuses") is null) { _explicitNullValueAcceptedStatuses = default!; _explicitNullProperties?.Remove("acceptedStatuses"); }
+            else if (parseNode.GetChildNode("acceptedStatuses") is { } nullNodeAcceptedStatuses && nullNodeAcceptedStatuses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcceptedStatuses = null;
+            if (parseNode.GetChildNode("filterType") is null) { _explicitNullValueFilterType = default!; _explicitNullProperties?.Remove("filterType"); }
+            else if (parseNode.GetChildNode("filterType") is { } nullNodeFilterType && nullNodeFilterType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FilterType = null;
+            if (parseNode.GetChildNode("subscriptionIds") is null) { _explicitNullValueSubscriptionIds = default!; _explicitNullProperties?.Remove("subscriptionIds"); }
+            else if (parseNode.GetChildNode("subscriptionIds") is { } nullNodeSubscriptionIds && nullNodeSubscriptionIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionIds = null;
+            if (parseNode.GetChildNode("subscriptionType") is null) { _explicitNullValueSubscriptionType = default!; _explicitNullProperties?.Remove("subscriptionType"); }
+            else if (parseNode.GetChildNode("subscriptionType") is { } nullNodeSubscriptionType && nullNodeSubscriptionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionType = null;
+        }
+
         /// <summary>An array of strings indicating the statuses that are accepted for the filter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AcceptedStatuses { get; set; }
+        public List<string>? AcceptedStatuses { get => _explicitNullValueAcceptedStatuses; set { _explicitNullValueAcceptedStatuses = value; AdditionalData?.Remove("acceptedStatuses"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acceptedStatuses"); else _explicitNullProperties?.Remove("acceptedStatuses"); } }
+        private List<string>? _explicitNullValueAcceptedStatuses = default!;
 #nullable restore
 #else
-        public List<string> AcceptedStatuses { get; set; }
+        public List<string> AcceptedStatuses { get => _explicitNullValueAcceptedStatuses; set { _explicitNullValueAcceptedStatuses = value; AdditionalData?.Remove("acceptedStatuses"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acceptedStatuses"); else _explicitNullProperties?.Remove("acceptedStatuses"); } }
+        private List<string> _explicitNullValueAcceptedStatuses = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A string indicating the type of filter. The default value is &apos;EMAIL_SUBSCRIPTION&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailSubscriptionFilterType? FilterType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailSubscriptionFilterType? FilterType { get => _explicitNullValueFilterType; set { _explicitNullValueFilterType = value; AdditionalData?.Remove("filterType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filterType"); else _explicitNullProperties?.Remove("filterType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.EmailSubscriptionFilterType? _explicitNullValueFilterType = default!;
         /// <summary>An array of strings representing the IDs of the subscriptions to filter by.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? SubscriptionIds { get; set; }
+        public List<string>? SubscriptionIds { get => _explicitNullValueSubscriptionIds; set { _explicitNullValueSubscriptionIds = value; AdditionalData?.Remove("subscriptionIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscriptionIds"); else _explicitNullProperties?.Remove("subscriptionIds"); } }
+        private List<string>? _explicitNullValueSubscriptionIds = default!;
 #nullable restore
 #else
-        public List<string> SubscriptionIds { get; set; }
+        public List<string> SubscriptionIds { get => _explicitNullValueSubscriptionIds; set { _explicitNullValueSubscriptionIds = value; AdditionalData?.Remove("subscriptionIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscriptionIds"); else _explicitNullProperties?.Remove("subscriptionIds"); } }
+        private List<string> _explicitNullValueSubscriptionIds = default!;
 #endif
         /// <summary>A string representing the type of subscription to filter by.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SubscriptionType { get; set; }
+        public string? SubscriptionType { get => _explicitNullValueSubscriptionType; set { _explicitNullValueSubscriptionType = value; AdditionalData?.Remove("subscriptionType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscriptionType"); else _explicitNullProperties?.Remove("subscriptionType"); } }
+        private string? _explicitNullValueSubscriptionType = default!;
 #nullable restore
 #else
-        public string SubscriptionType { get; set; }
+        public string SubscriptionType { get => _explicitNullValueSubscriptionType; set { _explicitNullValueSubscriptionType = value; AdditionalData?.Remove("subscriptionType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscriptionType"); else _explicitNullProperties?.Remove("subscriptionType"); } }
+        private string _explicitNullValueSubscriptionType = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailSubscriptionFilter"/> and sets the default values.
@@ -55,7 +77,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailSubscriptionFilter CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailSubscriptionFilter();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailSubscriptionFilter(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -66,7 +88,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "acceptedStatuses", n => { AcceptedStatuses = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailSubscriptionFilterType>(); } },
+                { "filterType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailSubscriptionFilterType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFilterType = default; _explicitNullProperties?.Remove("filterType"); AdditionalData["filterType"] = unknown; } else { FilterType = parsed; AdditionalData.Remove("filterType"); } } },
                 { "subscriptionIds", n => { SubscriptionIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "subscriptionType", n => { SubscriptionType = n.GetStringValue(); } },
             };
@@ -82,6 +104,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailSubscriptionFilterType>("filterType", FilterType);
             writer.WriteCollectionOfPrimitiveValues<string>("subscriptionIds", SubscriptionIds);
             writer.WriteStringValue("subscriptionType", SubscriptionType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

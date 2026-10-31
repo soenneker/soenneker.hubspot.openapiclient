@@ -11,56 +11,87 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicSequencePerformanceResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("companyMetrics") is null) { _explicitNullValueCompanyMetrics = default!; _explicitNullProperties?.Remove("companyMetrics"); }
+            else if (parseNode.GetChildNode("companyMetrics") is { } nullNodeCompanyMetrics && nullNodeCompanyMetrics.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CompanyMetrics = null;
+            if (parseNode.GetChildNode("sequenceId") is null) { _explicitNullValueSequenceId = default!; _explicitNullProperties?.Remove("sequenceId"); }
+            else if (parseNode.GetChildNode("sequenceId") is { } nullNodeSequenceId && nullNodeSequenceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SequenceId = null;
+            if (parseNode.GetChildNode("statusByStep") is null) { _explicitNullValueStatusByStep = default!; _explicitNullProperties?.Remove("statusByStep"); }
+            else if (parseNode.GetChildNode("statusByStep") is { } nullNodeStatusByStep && nullNodeStatusByStep.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusByStep = null;
+            if (parseNode.GetChildNode("steps") is null) { _explicitNullValueSteps = default!; _explicitNullProperties?.Remove("steps"); }
+            else if (parseNode.GetChildNode("steps") is { } nullNodeSteps && nullNodeSteps.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Steps = null;
+            if (parseNode.GetChildNode("summary") is null) { _explicitNullValueSummary = default!; _explicitNullProperties?.Remove("summary"); }
+            else if (parseNode.GetChildNode("summary") is { } nullNodeSummary && nullNodeSummary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Summary = null;
+            if (parseNode.GetChildNode("timeline") is null) { _explicitNullValueTimeline = default!; _explicitNullProperties?.Remove("timeline"); }
+            else if (parseNode.GetChildNode("timeline") is { } nullNodeTimeline && nullNodeTimeline.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Timeline = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The companyMetrics property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceCompanyMetricsResponse? CompanyMetrics { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceCompanyMetricsResponse? CompanyMetrics { get => _explicitNullValueCompanyMetrics; set { _explicitNullValueCompanyMetrics = value; AdditionalData?.Remove("companyMetrics"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("companyMetrics"); else _explicitNullProperties?.Remove("companyMetrics"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceCompanyMetricsResponse? _explicitNullValueCompanyMetrics = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceCompanyMetricsResponse CompanyMetrics { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceCompanyMetricsResponse CompanyMetrics { get => _explicitNullValueCompanyMetrics; set { _explicitNullValueCompanyMetrics = value; AdditionalData?.Remove("companyMetrics"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("companyMetrics"); else _explicitNullProperties?.Remove("companyMetrics"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceCompanyMetricsResponse _explicitNullValueCompanyMetrics = default!;
 #endif
         /// <summary>The unique identifier for the sequence, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SequenceId { get; set; }
+        public string? SequenceId { get => _explicitNullValueSequenceId; set { _explicitNullValueSequenceId = value; AdditionalData?.Remove("sequenceId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sequenceId"); else _explicitNullProperties?.Remove("sequenceId"); } }
+        private string? _explicitNullValueSequenceId = default!;
 #nullable restore
 #else
-        public string SequenceId { get; set; }
+        public string SequenceId { get => _explicitNullValueSequenceId; set { _explicitNullValueSequenceId = value; AdditionalData?.Remove("sequenceId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sequenceId"); else _explicitNullProperties?.Remove("sequenceId"); } }
+        private string _explicitNullValueSequenceId = default!;
 #endif
         /// <summary>An array of objects detailing the enrollment status for each step in the sequence, including the count and current step order.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceEnrollmentStatusByStepResponse>? StatusByStep { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceEnrollmentStatusByStepResponse>? StatusByStep { get => _explicitNullValueStatusByStep; set { _explicitNullValueStatusByStep = value; AdditionalData?.Remove("statusByStep"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusByStep"); else _explicitNullProperties?.Remove("statusByStep"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceEnrollmentStatusByStepResponse>? _explicitNullValueStatusByStep = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceEnrollmentStatusByStepResponse> StatusByStep { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceEnrollmentStatusByStepResponse> StatusByStep { get => _explicitNullValueStatusByStep; set { _explicitNullValueStatusByStep = value; AdditionalData?.Remove("statusByStep"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusByStep"); else _explicitNullProperties?.Remove("statusByStep"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceEnrollmentStatusByStepResponse> _explicitNullValueStatusByStep = default!;
 #endif
         /// <summary>An array of objects, each representing the performance metrics for individual steps within the sequence.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepPerformanceResponse>? Steps { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepPerformanceResponse>? Steps { get => _explicitNullValueSteps; set { _explicitNullValueSteps = value; AdditionalData?.Remove("steps"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("steps"); else _explicitNullProperties?.Remove("steps"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepPerformanceResponse>? _explicitNullValueSteps = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepPerformanceResponse> Steps { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepPerformanceResponse> Steps { get => _explicitNullValueSteps; set { _explicitNullValueSteps = value; AdditionalData?.Remove("steps"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("steps"); else _explicitNullProperties?.Remove("steps"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepPerformanceResponse> _explicitNullValueSteps = default!;
 #endif
         /// <summary>The summary property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequencePerformanceSummaryResponse? Summary { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequencePerformanceSummaryResponse? Summary { get => _explicitNullValueSummary; set { _explicitNullValueSummary = value; AdditionalData?.Remove("summary"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("summary"); else _explicitNullProperties?.Remove("summary"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequencePerformanceSummaryResponse? _explicitNullValueSummary = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequencePerformanceSummaryResponse Summary { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequencePerformanceSummaryResponse Summary { get => _explicitNullValueSummary; set { _explicitNullValueSummary = value; AdditionalData?.Remove("summary"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("summary"); else _explicitNullProperties?.Remove("summary"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequencePerformanceSummaryResponse _explicitNullValueSummary = default!;
 #endif
         /// <summary>An array of objects representing points in time with specific performance metrics, such as enrollments and meetings booked.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceTimelinePointResponse>? Timeline { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceTimelinePointResponse>? Timeline { get => _explicitNullValueTimeline; set { _explicitNullValueTimeline = value; AdditionalData?.Remove("timeline"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeline"); else _explicitNullProperties?.Remove("timeline"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceTimelinePointResponse>? _explicitNullValueTimeline = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceTimelinePointResponse> Timeline { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceTimelinePointResponse> Timeline { get => _explicitNullValueTimeline; set { _explicitNullValueTimeline = value; AdditionalData?.Remove("timeline"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeline"); else _explicitNullProperties?.Remove("timeline"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceTimelinePointResponse> _explicitNullValueTimeline = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequencePerformanceResponse"/> and sets the default values.
@@ -77,7 +108,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequencePerformanceResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequencePerformanceResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequencePerformanceResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -108,6 +139,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepPerformanceResponse>("steps", Steps);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequencePerformanceSummaryResponse>("summary", Summary);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceTimelinePointResponse>("timeline", Timeline);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

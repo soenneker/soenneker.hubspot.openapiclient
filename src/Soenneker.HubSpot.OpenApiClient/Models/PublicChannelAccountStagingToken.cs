@@ -11,41 +11,72 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicChannelAccountStagingToken : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("accountName") is null) { _explicitNullValueAccountName = default!; _explicitNullProperties?.Remove("accountName"); }
+            else if (parseNode.GetChildNode("accountName") is { } nullNodeAccountName && nullNodeAccountName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountName = null;
+            if (parseNode.GetChildNode("accountToken") is null) { _explicitNullValueAccountToken = default!; _explicitNullProperties?.Remove("accountToken"); }
+            else if (parseNode.GetChildNode("accountToken") is { } nullNodeAccountToken && nullNodeAccountToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountToken = null;
+            if (parseNode.GetChildNode("createdAt") is null) { _explicitNullValueCreatedAt = default!; _explicitNullProperties?.Remove("createdAt"); }
+            else if (parseNode.GetChildNode("createdAt") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("deliveryIdentifier") is null) { _explicitNullValueDeliveryIdentifier = default!; _explicitNullProperties?.Remove("deliveryIdentifier"); }
+            else if (parseNode.GetChildNode("deliveryIdentifier") is { } nullNodeDeliveryIdentifier && nullNodeDeliveryIdentifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeliveryIdentifier = null;
+            if (parseNode.GetChildNode("genericChannelId") is null) { _explicitNullValueGenericChannelId = default!; _explicitNullProperties?.Remove("genericChannelId"); }
+            else if (parseNode.GetChildNode("genericChannelId") is { } nullNodeGenericChannelId && nullNodeGenericChannelId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GenericChannelId = null;
+            if (parseNode.GetChildNode("inboxId") is null) { _explicitNullValueInboxId = default!; _explicitNullProperties?.Remove("inboxId"); }
+            else if (parseNode.GetChildNode("inboxId") is { } nullNodeInboxId && nullNodeInboxId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InboxId = null;
+            if (parseNode.GetChildNode("userId") is null) { _explicitNullValueUserId = default!; _explicitNullProperties?.Remove("userId"); }
+            else if (parseNode.GetChildNode("userId") is { } nullNodeUserId && nullNodeUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserId = null;
+        }
+
         /// <summary>A string representing the name of the account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountName { get; set; }
+        public string? AccountName { get => _explicitNullValueAccountName; set { _explicitNullValueAccountName = value; AdditionalData?.Remove("accountName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accountName"); else _explicitNullProperties?.Remove("accountName"); } }
+        private string? _explicitNullValueAccountName = default!;
 #nullable restore
 #else
-        public string AccountName { get; set; }
+        public string AccountName { get => _explicitNullValueAccountName; set { _explicitNullValueAccountName = value; AdditionalData?.Remove("accountName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accountName"); else _explicitNullProperties?.Remove("accountName"); } }
+        private string _explicitNullValueAccountName = default!;
 #endif
         /// <summary>A string representing the unique token for the account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountToken { get; set; }
+        public string? AccountToken { get => _explicitNullValueAccountToken; set { _explicitNullValueAccountToken = value; AdditionalData?.Remove("accountToken"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accountToken"); else _explicitNullProperties?.Remove("accountToken"); } }
+        private string? _explicitNullValueAccountToken = default!;
 #nullable restore
 #else
-        public string AccountToken { get; set; }
+        public string AccountToken { get => _explicitNullValueAccountToken; set { _explicitNullValueAccountToken = value; AdditionalData?.Remove("accountToken"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accountToken"); else _explicitNullProperties?.Remove("accountToken"); } }
+        private string _explicitNullValueAccountToken = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The date and time when the token was created, in ISO 8601 format.</summary>
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; AdditionalData?.Remove("createdAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createdAt"); else _explicitNullProperties?.Remove("createdAt"); } }
+        private DateTimeOffset? _explicitNullValueCreatedAt = default!;
         /// <summary>The deliveryIdentifier property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicDeliveryIdentifier? DeliveryIdentifier { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicDeliveryIdentifier? DeliveryIdentifier { get => _explicitNullValueDeliveryIdentifier; set { _explicitNullValueDeliveryIdentifier = value; AdditionalData?.Remove("deliveryIdentifier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deliveryIdentifier"); else _explicitNullProperties?.Remove("deliveryIdentifier"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicDeliveryIdentifier? _explicitNullValueDeliveryIdentifier = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicDeliveryIdentifier DeliveryIdentifier { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicDeliveryIdentifier DeliveryIdentifier { get => _explicitNullValueDeliveryIdentifier; set { _explicitNullValueDeliveryIdentifier = value; AdditionalData?.Remove("deliveryIdentifier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deliveryIdentifier"); else _explicitNullProperties?.Remove("deliveryIdentifier"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicDeliveryIdentifier _explicitNullValueDeliveryIdentifier = default!;
 #endif
         /// <summary>An integer representing the unique identifier of the generic channel.</summary>
-        public int? GenericChannelId { get; set; }
+        public int? GenericChannelId { get => _explicitNullValueGenericChannelId; set { _explicitNullValueGenericChannelId = value; AdditionalData?.Remove("genericChannelId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("genericChannelId"); else _explicitNullProperties?.Remove("genericChannelId"); } }
+        private int? _explicitNullValueGenericChannelId = default!;
         /// <summary>An integer representing the unique identifier of the inbox associated with the account.</summary>
-        public int? InboxId { get; set; }
+        public int? InboxId { get => _explicitNullValueInboxId; set { _explicitNullValueInboxId = value; AdditionalData?.Remove("inboxId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inboxId"); else _explicitNullProperties?.Remove("inboxId"); } }
+        private int? _explicitNullValueInboxId = default!;
         /// <summary>An integer representing the unique identifier of the user associated with the account.</summary>
-        public int? UserId { get; set; }
+        public int? UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; AdditionalData?.Remove("userId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userId"); else _explicitNullProperties?.Remove("userId"); } }
+        private int? _explicitNullValueUserId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelAccountStagingToken"/> and sets the default values.
         /// </summary>
@@ -61,7 +92,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelAccountStagingToken CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelAccountStagingToken();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelAccountStagingToken(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -94,6 +125,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteIntValue("genericChannelId", GenericChannelId);
             writer.WriteIntValue("inboxId", InboxId);
             writer.WriteIntValue("userId", UserId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

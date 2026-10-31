@@ -11,73 +11,144 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class Domain : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("correctCname") is null) { _explicitNullValueCorrectCname = default!; _explicitNullProperties?.Remove("correctCname"); }
+            else if (parseNode.GetChildNode("correctCname") is { } nullNodeCorrectCname && nullNodeCorrectCname.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CorrectCname = null;
+            if (parseNode.GetChildNode("created") is null) { _explicitNullValueCreated = default!; _explicitNullProperties?.Remove("created"); }
+            else if (parseNode.GetChildNode("created") is { } nullNodeCreated && nullNodeCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Created = null;
+            if (parseNode.GetChildNode("domain") is null) { _explicitNullValueDomainProp = default!; _explicitNullProperties?.Remove("domain"); }
+            else if (parseNode.GetChildNode("domain") is { } nullNodeDomainProp && nullNodeDomainProp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DomainProp = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("isResolving") is null) { _explicitNullValueIsResolving = default!; _explicitNullProperties?.Remove("isResolving"); }
+            else if (parseNode.GetChildNode("isResolving") is { } nullNodeIsResolving && nullNodeIsResolving.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsResolving = null;
+            if (parseNode.GetChildNode("isSslEnabled") is null) { _explicitNullValueIsSslEnabled = default!; _explicitNullProperties?.Remove("isSslEnabled"); }
+            else if (parseNode.GetChildNode("isSslEnabled") is { } nullNodeIsSslEnabled && nullNodeIsSslEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsSslEnabled = null;
+            if (parseNode.GetChildNode("isSslOnly") is null) { _explicitNullValueIsSslOnly = default!; _explicitNullProperties?.Remove("isSslOnly"); }
+            else if (parseNode.GetChildNode("isSslOnly") is { } nullNodeIsSslOnly && nullNodeIsSslOnly.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsSslOnly = null;
+            if (parseNode.GetChildNode("isUsedForBlogPost") is null) { _explicitNullValueIsUsedForBlogPost = default!; _explicitNullProperties?.Remove("isUsedForBlogPost"); }
+            else if (parseNode.GetChildNode("isUsedForBlogPost") is { } nullNodeIsUsedForBlogPost && nullNodeIsUsedForBlogPost.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsUsedForBlogPost = null;
+            if (parseNode.GetChildNode("isUsedForEmail") is null) { _explicitNullValueIsUsedForEmail = default!; _explicitNullProperties?.Remove("isUsedForEmail"); }
+            else if (parseNode.GetChildNode("isUsedForEmail") is { } nullNodeIsUsedForEmail && nullNodeIsUsedForEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsUsedForEmail = null;
+            if (parseNode.GetChildNode("isUsedForKnowledge") is null) { _explicitNullValueIsUsedForKnowledge = default!; _explicitNullProperties?.Remove("isUsedForKnowledge"); }
+            else if (parseNode.GetChildNode("isUsedForKnowledge") is { } nullNodeIsUsedForKnowledge && nullNodeIsUsedForKnowledge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsUsedForKnowledge = null;
+            if (parseNode.GetChildNode("isUsedForLandingPage") is null) { _explicitNullValueIsUsedForLandingPage = default!; _explicitNullProperties?.Remove("isUsedForLandingPage"); }
+            else if (parseNode.GetChildNode("isUsedForLandingPage") is { } nullNodeIsUsedForLandingPage && nullNodeIsUsedForLandingPage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsUsedForLandingPage = null;
+            if (parseNode.GetChildNode("isUsedForSitePage") is null) { _explicitNullValueIsUsedForSitePage = default!; _explicitNullProperties?.Remove("isUsedForSitePage"); }
+            else if (parseNode.GetChildNode("isUsedForSitePage") is { } nullNodeIsUsedForSitePage && nullNodeIsUsedForSitePage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsUsedForSitePage = null;
+            if (parseNode.GetChildNode("manuallyMarkedAsResolving") is null) { _explicitNullValueManuallyMarkedAsResolving = default!; _explicitNullProperties?.Remove("manuallyMarkedAsResolving"); }
+            else if (parseNode.GetChildNode("manuallyMarkedAsResolving") is { } nullNodeManuallyMarkedAsResolving && nullNodeManuallyMarkedAsResolving.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ManuallyMarkedAsResolving = null;
+            if (parseNode.GetChildNode("primaryBlogPost") is null) { _explicitNullValuePrimaryBlogPost = default!; _explicitNullProperties?.Remove("primaryBlogPost"); }
+            else if (parseNode.GetChildNode("primaryBlogPost") is { } nullNodePrimaryBlogPost && nullNodePrimaryBlogPost.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimaryBlogPost = null;
+            if (parseNode.GetChildNode("primaryEmail") is null) { _explicitNullValuePrimaryEmail = default!; _explicitNullProperties?.Remove("primaryEmail"); }
+            else if (parseNode.GetChildNode("primaryEmail") is { } nullNodePrimaryEmail && nullNodePrimaryEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimaryEmail = null;
+            if (parseNode.GetChildNode("primaryKnowledge") is null) { _explicitNullValuePrimaryKnowledge = default!; _explicitNullProperties?.Remove("primaryKnowledge"); }
+            else if (parseNode.GetChildNode("primaryKnowledge") is { } nullNodePrimaryKnowledge && nullNodePrimaryKnowledge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimaryKnowledge = null;
+            if (parseNode.GetChildNode("primaryLandingPage") is null) { _explicitNullValuePrimaryLandingPage = default!; _explicitNullProperties?.Remove("primaryLandingPage"); }
+            else if (parseNode.GetChildNode("primaryLandingPage") is { } nullNodePrimaryLandingPage && nullNodePrimaryLandingPage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimaryLandingPage = null;
+            if (parseNode.GetChildNode("primarySitePage") is null) { _explicitNullValuePrimarySitePage = default!; _explicitNullProperties?.Remove("primarySitePage"); }
+            else if (parseNode.GetChildNode("primarySitePage") is { } nullNodePrimarySitePage && nullNodePrimarySitePage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimarySitePage = null;
+            if (parseNode.GetChildNode("secondaryToDomain") is null) { _explicitNullValueSecondaryToDomain = default!; _explicitNullProperties?.Remove("secondaryToDomain"); }
+            else if (parseNode.GetChildNode("secondaryToDomain") is { } nullNodeSecondaryToDomain && nullNodeSecondaryToDomain.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecondaryToDomain = null;
+            if (parseNode.GetChildNode("updated") is null) { _explicitNullValueUpdated = default!; _explicitNullProperties?.Remove("updated"); }
+            else if (parseNode.GetChildNode("updated") is { } nullNodeUpdated && nullNodeUpdated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Updated = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The expected CNAME record for the domain.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CorrectCname { get; set; }
+        public string? CorrectCname { get => _explicitNullValueCorrectCname; set { _explicitNullValueCorrectCname = value; AdditionalData?.Remove("correctCname"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("correctCname"); else _explicitNullProperties?.Remove("correctCname"); } }
+        private string? _explicitNullValueCorrectCname = default!;
 #nullable restore
 #else
-        public string CorrectCname { get; set; }
+        public string CorrectCname { get => _explicitNullValueCorrectCname; set { _explicitNullValueCorrectCname = value; AdditionalData?.Remove("correctCname"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("correctCname"); else _explicitNullProperties?.Remove("correctCname"); } }
+        private string _explicitNullValueCorrectCname = default!;
 #endif
         /// <summary>The date and time when the domain was created.</summary>
-        public DateTimeOffset? Created { get; set; }
+        public DateTimeOffset? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private DateTimeOffset? _explicitNullValueCreated = default!;
         /// <summary>The actual domain or sub-domain. e.g. www.hubspot.com</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DomainProp { get; set; }
+        public string? DomainProp { get => _explicitNullValueDomainProp; set { _explicitNullValueDomainProp = value; AdditionalData?.Remove("domain"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain"); else _explicitNullProperties?.Remove("domain"); } }
+        private string? _explicitNullValueDomainProp = default!;
 #nullable restore
 #else
-        public string DomainProp { get; set; }
+        public string DomainProp { get => _explicitNullValueDomainProp; set { _explicitNullValueDomainProp = value; AdditionalData?.Remove("domain"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain"); else _explicitNullProperties?.Remove("domain"); } }
+        private string _explicitNullValueDomainProp = default!;
 #endif
         /// <summary>The unique ID of this domain.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>Whether the DNS for this domain is optimally configured for use with HubSpot.</summary>
-        public bool? IsResolving { get; set; }
+        public bool? IsResolving { get => _explicitNullValueIsResolving; set { _explicitNullValueIsResolving = value; AdditionalData?.Remove("isResolving"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isResolving"); else _explicitNullProperties?.Remove("isResolving"); } }
+        private bool? _explicitNullValueIsResolving = default!;
         /// <summary>Indicates whether SSL is enabled for the domain.</summary>
-        public bool? IsSslEnabled { get; set; }
+        public bool? IsSslEnabled { get => _explicitNullValueIsSslEnabled; set { _explicitNullValueIsSslEnabled = value; AdditionalData?.Remove("isSslEnabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isSslEnabled"); else _explicitNullProperties?.Remove("isSslEnabled"); } }
+        private bool? _explicitNullValueIsSslEnabled = default!;
         /// <summary>Indicates whether the domain is accessible only via SSL.</summary>
-        public bool? IsSslOnly { get; set; }
+        public bool? IsSslOnly { get => _explicitNullValueIsSslOnly; set { _explicitNullValueIsSslOnly = value; AdditionalData?.Remove("isSslOnly"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isSslOnly"); else _explicitNullProperties?.Remove("isSslOnly"); } }
+        private bool? _explicitNullValueIsSslOnly = default!;
         /// <summary>Whether the domain is used for CMS blog posts.</summary>
-        public bool? IsUsedForBlogPost { get; set; }
+        public bool? IsUsedForBlogPost { get => _explicitNullValueIsUsedForBlogPost; set { _explicitNullValueIsUsedForBlogPost = value; AdditionalData?.Remove("isUsedForBlogPost"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isUsedForBlogPost"); else _explicitNullProperties?.Remove("isUsedForBlogPost"); } }
+        private bool? _explicitNullValueIsUsedForBlogPost = default!;
         /// <summary>Whether the domain is used for CMS email web pages.</summary>
-        public bool? IsUsedForEmail { get; set; }
+        public bool? IsUsedForEmail { get => _explicitNullValueIsUsedForEmail; set { _explicitNullValueIsUsedForEmail = value; AdditionalData?.Remove("isUsedForEmail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isUsedForEmail"); else _explicitNullProperties?.Remove("isUsedForEmail"); } }
+        private bool? _explicitNullValueIsUsedForEmail = default!;
         /// <summary>Whether the domain is used for CMS knowledge pages.</summary>
-        public bool? IsUsedForKnowledge { get; set; }
+        public bool? IsUsedForKnowledge { get => _explicitNullValueIsUsedForKnowledge; set { _explicitNullValueIsUsedForKnowledge = value; AdditionalData?.Remove("isUsedForKnowledge"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isUsedForKnowledge"); else _explicitNullProperties?.Remove("isUsedForKnowledge"); } }
+        private bool? _explicitNullValueIsUsedForKnowledge = default!;
         /// <summary>Whether the domain is used for CMS landing pages.</summary>
-        public bool? IsUsedForLandingPage { get; set; }
+        public bool? IsUsedForLandingPage { get => _explicitNullValueIsUsedForLandingPage; set { _explicitNullValueIsUsedForLandingPage = value; AdditionalData?.Remove("isUsedForLandingPage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isUsedForLandingPage"); else _explicitNullProperties?.Remove("isUsedForLandingPage"); } }
+        private bool? _explicitNullValueIsUsedForLandingPage = default!;
         /// <summary>Whether the domain is used for CMS site pages.</summary>
-        public bool? IsUsedForSitePage { get; set; }
+        public bool? IsUsedForSitePage { get => _explicitNullValueIsUsedForSitePage; set { _explicitNullValueIsUsedForSitePage = value; AdditionalData?.Remove("isUsedForSitePage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isUsedForSitePage"); else _explicitNullProperties?.Remove("isUsedForSitePage"); } }
+        private bool? _explicitNullValueIsUsedForSitePage = default!;
         /// <summary>Indicates whether the domain has been manually marked as resolving.</summary>
-        public bool? ManuallyMarkedAsResolving { get; set; }
+        public bool? ManuallyMarkedAsResolving { get => _explicitNullValueManuallyMarkedAsResolving; set { _explicitNullValueManuallyMarkedAsResolving = value; AdditionalData?.Remove("manuallyMarkedAsResolving"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("manuallyMarkedAsResolving"); else _explicitNullProperties?.Remove("manuallyMarkedAsResolving"); } }
+        private bool? _explicitNullValueManuallyMarkedAsResolving = default!;
         /// <summary>Indicates whether the domain is the primary domain for blog posts.</summary>
-        public bool? PrimaryBlogPost { get; set; }
+        public bool? PrimaryBlogPost { get => _explicitNullValuePrimaryBlogPost; set { _explicitNullValuePrimaryBlogPost = value; AdditionalData?.Remove("primaryBlogPost"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primaryBlogPost"); else _explicitNullProperties?.Remove("primaryBlogPost"); } }
+        private bool? _explicitNullValuePrimaryBlogPost = default!;
         /// <summary>Indicates whether the domain is the primary domain for email pages.</summary>
-        public bool? PrimaryEmail { get; set; }
+        public bool? PrimaryEmail { get => _explicitNullValuePrimaryEmail; set { _explicitNullValuePrimaryEmail = value; AdditionalData?.Remove("primaryEmail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primaryEmail"); else _explicitNullProperties?.Remove("primaryEmail"); } }
+        private bool? _explicitNullValuePrimaryEmail = default!;
         /// <summary>Indicates whether the domain is the primary domain for knowledge pages.</summary>
-        public bool? PrimaryKnowledge { get; set; }
+        public bool? PrimaryKnowledge { get => _explicitNullValuePrimaryKnowledge; set { _explicitNullValuePrimaryKnowledge = value; AdditionalData?.Remove("primaryKnowledge"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primaryKnowledge"); else _explicitNullProperties?.Remove("primaryKnowledge"); } }
+        private bool? _explicitNullValuePrimaryKnowledge = default!;
         /// <summary>Indicates whether the domain is the primary domain for landing pages.</summary>
-        public bool? PrimaryLandingPage { get; set; }
+        public bool? PrimaryLandingPage { get => _explicitNullValuePrimaryLandingPage; set { _explicitNullValuePrimaryLandingPage = value; AdditionalData?.Remove("primaryLandingPage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primaryLandingPage"); else _explicitNullProperties?.Remove("primaryLandingPage"); } }
+        private bool? _explicitNullValuePrimaryLandingPage = default!;
         /// <summary>Indicates whether the domain is the primary domain for site pages.</summary>
-        public bool? PrimarySitePage { get; set; }
+        public bool? PrimarySitePage { get => _explicitNullValuePrimarySitePage; set { _explicitNullValuePrimarySitePage = value; AdditionalData?.Remove("primarySitePage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primarySitePage"); else _explicitNullProperties?.Remove("primarySitePage"); } }
+        private bool? _explicitNullValuePrimarySitePage = default!;
         /// <summary>Specifies the domain to which this domain is secondary.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SecondaryToDomain { get; set; }
+        public string? SecondaryToDomain { get => _explicitNullValueSecondaryToDomain; set { _explicitNullValueSecondaryToDomain = value; AdditionalData?.Remove("secondaryToDomain"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondaryToDomain"); else _explicitNullProperties?.Remove("secondaryToDomain"); } }
+        private string? _explicitNullValueSecondaryToDomain = default!;
 #nullable restore
 #else
-        public string SecondaryToDomain { get; set; }
+        public string SecondaryToDomain { get => _explicitNullValueSecondaryToDomain; set { _explicitNullValueSecondaryToDomain = value; AdditionalData?.Remove("secondaryToDomain"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondaryToDomain"); else _explicitNullProperties?.Remove("secondaryToDomain"); } }
+        private string _explicitNullValueSecondaryToDomain = default!;
 #endif
         /// <summary>The date and time when the domain was last updated.</summary>
-        public DateTimeOffset? Updated { get; set; }
+        public DateTimeOffset? Updated { get => _explicitNullValueUpdated; set { _explicitNullValueUpdated = value; AdditionalData?.Remove("updated"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated"); else _explicitNullProperties?.Remove("updated"); } }
+        private DateTimeOffset? _explicitNullValueUpdated = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Domain"/> and sets the default values.
         /// </summary>
@@ -93,7 +164,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.Domain CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.Domain();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.Domain(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -152,6 +223,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteBoolValue("primarySitePage", PrimarySitePage);
             writer.WriteStringValue("secondaryToDomain", SecondaryToDomain);
             writer.WriteDateTimeOffsetValue("updated", Updated);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,100 +11,157 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicActionDefinition : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("actionUrl") is null) { _explicitNullValueActionUrl = default!; _explicitNullProperties?.Remove("actionUrl"); }
+            else if (parseNode.GetChildNode("actionUrl") is { } nullNodeActionUrl && nullNodeActionUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionUrl = null;
+            if (parseNode.GetChildNode("archivedAt") is null) { _explicitNullValueArchivedAt = default!; _explicitNullProperties?.Remove("archivedAt"); }
+            else if (parseNode.GetChildNode("archivedAt") is { } nullNodeArchivedAt && nullNodeArchivedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ArchivedAt = null;
+            if (parseNode.GetChildNode("executionRules") is null) { _explicitNullValueExecutionRules = default!; _explicitNullProperties?.Remove("executionRules"); }
+            else if (parseNode.GetChildNode("executionRules") is { } nullNodeExecutionRules && nullNodeExecutionRules.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExecutionRules = null;
+            if (parseNode.GetChildNode("functions") is null) { _explicitNullValueFunctions = default!; _explicitNullProperties?.Remove("functions"); }
+            else if (parseNode.GetChildNode("functions") is { } nullNodeFunctions && nullNodeFunctions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Functions = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("inputFieldDependencies") is null) { _explicitNullValueInputFieldDependencies = default!; _explicitNullProperties?.Remove("inputFieldDependencies"); }
+            else if (parseNode.GetChildNode("inputFieldDependencies") is { } nullNodeInputFieldDependencies && nullNodeInputFieldDependencies.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InputFieldDependencies = null;
+            if (parseNode.GetChildNode("inputFields") is null) { _explicitNullValueInputFields = default!; _explicitNullProperties?.Remove("inputFields"); }
+            else if (parseNode.GetChildNode("inputFields") is { } nullNodeInputFields && nullNodeInputFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InputFields = null;
+            if (parseNode.GetChildNode("labels") is null) { _explicitNullValueLabels = default!; _explicitNullProperties?.Remove("labels"); }
+            else if (parseNode.GetChildNode("labels") is { } nullNodeLabels && nullNodeLabels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Labels = null;
+            if (parseNode.GetChildNode("objectRequestOptions") is null) { _explicitNullValueObjectRequestOptions = default!; _explicitNullProperties?.Remove("objectRequestOptions"); }
+            else if (parseNode.GetChildNode("objectRequestOptions") is { } nullNodeObjectRequestOptions && nullNodeObjectRequestOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectRequestOptions = null;
+            if (parseNode.GetChildNode("objectTypes") is null) { _explicitNullValueObjectTypes = default!; _explicitNullProperties?.Remove("objectTypes"); }
+            else if (parseNode.GetChildNode("objectTypes") is { } nullNodeObjectTypes && nullNodeObjectTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectTypes = null;
+            if (parseNode.GetChildNode("outputFields") is null) { _explicitNullValueOutputFields = default!; _explicitNullProperties?.Remove("outputFields"); }
+            else if (parseNode.GetChildNode("outputFields") is { } nullNodeOutputFields && nullNodeOutputFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutputFields = null;
+            if (parseNode.GetChildNode("published") is null) { _explicitNullValuePublished = default!; _explicitNullProperties?.Remove("published"); }
+            else if (parseNode.GetChildNode("published") is { } nullNodePublished && nullNodePublished.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Published = null;
+            if (parseNode.GetChildNode("revisionId") is null) { _explicitNullValueRevisionId = default!; _explicitNullProperties?.Remove("revisionId"); }
+            else if (parseNode.GetChildNode("revisionId") is { } nullNodeRevisionId && nullNodeRevisionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RevisionId = null;
+        }
+
         /// <summary>The URL endpoint where the action is executed. It is a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ActionUrl { get; set; }
+        public string? ActionUrl { get => _explicitNullValueActionUrl; set { _explicitNullValueActionUrl = value; AdditionalData?.Remove("actionUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionUrl"); else _explicitNullProperties?.Remove("actionUrl"); } }
+        private string? _explicitNullValueActionUrl = default!;
 #nullable restore
 #else
-        public string ActionUrl { get; set; }
+        public string ActionUrl { get => _explicitNullValueActionUrl; set { _explicitNullValueActionUrl = value; AdditionalData?.Remove("actionUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionUrl"); else _explicitNullProperties?.Remove("actionUrl"); } }
+        private string _explicitNullValueActionUrl = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A Unix timestamp in milliseconds representing when the action was archived. It is an integer.</summary>
-        public long? ArchivedAt { get; set; }
+        public long? ArchivedAt { get => _explicitNullValueArchivedAt; set { _explicitNullValueArchivedAt = value; AdditionalData?.Remove("archivedAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("archivedAt"); else _explicitNullProperties?.Remove("archivedAt"); } }
+        private long? _explicitNullValueArchivedAt = default!;
         /// <summary>An array of execution translation rules for the action, where each item is a PublicExecutionTranslationRule.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExecutionTranslationRule>? ExecutionRules { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExecutionTranslationRule>? ExecutionRules { get => _explicitNullValueExecutionRules; set { _explicitNullValueExecutionRules = value; AdditionalData?.Remove("executionRules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("executionRules"); else _explicitNullProperties?.Remove("executionRules"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExecutionTranslationRule>? _explicitNullValueExecutionRules = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExecutionTranslationRule> ExecutionRules { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExecutionTranslationRule> ExecutionRules { get => _explicitNullValueExecutionRules; set { _explicitNullValueExecutionRules = value; AdditionalData?.Remove("executionRules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("executionRules"); else _explicitNullProperties?.Remove("executionRules"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExecutionTranslationRule> _explicitNullValueExecutionRules = default!;
 #endif
         /// <summary>An array of function identifiers associated with the action, where each item is a PublicActionFunctionIdentifier.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionFunctionIdentifier>? Functions { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionFunctionIdentifier>? Functions { get => _explicitNullValueFunctions; set { _explicitNullValueFunctions = value; AdditionalData?.Remove("functions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("functions"); else _explicitNullProperties?.Remove("functions"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionFunctionIdentifier>? _explicitNullValueFunctions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionFunctionIdentifier> Functions { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionFunctionIdentifier> Functions { get => _explicitNullValueFunctions; set { _explicitNullValueFunctions = value; AdditionalData?.Remove("functions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("functions"); else _explicitNullProperties?.Remove("functions"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionFunctionIdentifier> _explicitNullValueFunctions = default!;
 #endif
         /// <summary>The unique identifier for the action definition. It is a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>An array of dependencies between input fields, where each item can be a PublicSingleFieldDependency or PublicConditionalSingleFieldDependency.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionInputFieldDependenciesItem>? InputFieldDependencies { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionEggInputFieldDependenciesItem>? InputFieldDependencies { get => _explicitNullValueInputFieldDependencies; set { _explicitNullValueInputFieldDependencies = value; AdditionalData?.Remove("inputFieldDependencies"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputFieldDependencies"); else _explicitNullProperties?.Remove("inputFieldDependencies"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionEggInputFieldDependenciesItem>? _explicitNullValueInputFieldDependencies = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionInputFieldDependenciesItem> InputFieldDependencies { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionEggInputFieldDependenciesItem> InputFieldDependencies { get => _explicitNullValueInputFieldDependencies; set { _explicitNullValueInputFieldDependencies = value; AdditionalData?.Remove("inputFieldDependencies"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputFieldDependencies"); else _explicitNullProperties?.Remove("inputFieldDependencies"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionEggInputFieldDependenciesItem> _explicitNullValueInputFieldDependencies = default!;
 #endif
         /// <summary>An array of input field definitions required for the action. Each item is a PublicInputFieldDefinition object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicInputFieldDefinition>? InputFields { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicInputFieldDefinition>? InputFields { get => _explicitNullValueInputFields; set { _explicitNullValueInputFields = value; AdditionalData?.Remove("inputFields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputFields"); else _explicitNullProperties?.Remove("inputFields"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicInputFieldDefinition>? _explicitNullValueInputFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicInputFieldDefinition> InputFields { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicInputFieldDefinition> InputFields { get => _explicitNullValueInputFields; set { _explicitNullValueInputFields = value; AdditionalData?.Remove("inputFields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputFields"); else _explicitNullProperties?.Remove("inputFields"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicInputFieldDefinition> _explicitNullValueInputFields = default!;
 #endif
         /// <summary>An object containing labels for the action, with each property being a PublicActionLabels object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionLabelsProperty2? Labels { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionLabelsProperty2? Labels { get => _explicitNullValueLabels; set { _explicitNullValueLabels = value; AdditionalData?.Remove("labels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("labels"); else _explicitNullProperties?.Remove("labels"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionLabelsProperty2? _explicitNullValueLabels = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionLabelsProperty2 Labels { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionLabelsProperty2 Labels { get => _explicitNullValueLabels; set { _explicitNullValueLabels = value; AdditionalData?.Remove("labels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("labels"); else _explicitNullProperties?.Remove("labels"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionLabelsProperty2 _explicitNullValueLabels = default!;
 #endif
         /// <summary>The objectRequestOptions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectRequestOptions? ObjectRequestOptions { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectRequestOptions? ObjectRequestOptions { get => _explicitNullValueObjectRequestOptions; set { _explicitNullValueObjectRequestOptions = value; AdditionalData?.Remove("objectRequestOptions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("objectRequestOptions"); else _explicitNullProperties?.Remove("objectRequestOptions"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectRequestOptions? _explicitNullValueObjectRequestOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectRequestOptions ObjectRequestOptions { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectRequestOptions ObjectRequestOptions { get => _explicitNullValueObjectRequestOptions; set { _explicitNullValueObjectRequestOptions = value; AdditionalData?.Remove("objectRequestOptions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("objectRequestOptions"); else _explicitNullProperties?.Remove("objectRequestOptions"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectRequestOptions _explicitNullValueObjectRequestOptions = default!;
 #endif
         /// <summary>An array of strings representing the types of objects associated with the action.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ObjectTypes { get; set; }
+        public List<string>? ObjectTypes { get => _explicitNullValueObjectTypes; set { _explicitNullValueObjectTypes = value; AdditionalData?.Remove("objectTypes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("objectTypes"); else _explicitNullProperties?.Remove("objectTypes"); } }
+        private List<string>? _explicitNullValueObjectTypes = default!;
 #nullable restore
 #else
-        public List<string> ObjectTypes { get; set; }
+        public List<string> ObjectTypes { get => _explicitNullValueObjectTypes; set { _explicitNullValueObjectTypes = value; AdditionalData?.Remove("objectTypes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("objectTypes"); else _explicitNullProperties?.Remove("objectTypes"); } }
+        private List<string> _explicitNullValueObjectTypes = default!;
 #endif
         /// <summary>An array of output field definitions produced by the action. Each item is an OutputFieldDefinition object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.OutputFieldDefinition>? OutputFields { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.OutputFieldDefinition>? OutputFields { get => _explicitNullValueOutputFields; set { _explicitNullValueOutputFields = value; AdditionalData?.Remove("outputFields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outputFields"); else _explicitNullProperties?.Remove("outputFields"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.OutputFieldDefinition>? _explicitNullValueOutputFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.OutputFieldDefinition> OutputFields { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.OutputFieldDefinition> OutputFields { get => _explicitNullValueOutputFields; set { _explicitNullValueOutputFields = value; AdditionalData?.Remove("outputFields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outputFields"); else _explicitNullProperties?.Remove("outputFields"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.OutputFieldDefinition> _explicitNullValueOutputFields = default!;
 #endif
         /// <summary>A boolean indicating whether the action is published and available for use.</summary>
-        public bool? Published { get; set; }
+        public bool? Published { get => _explicitNullValuePublished; set { _explicitNullValuePublished = value; AdditionalData?.Remove("published"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("published"); else _explicitNullProperties?.Remove("published"); } }
+        private bool? _explicitNullValuePublished = default!;
         /// <summary>The unique identifier for the current revision of the action definition. It is a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RevisionId { get; set; }
+        public string? RevisionId { get => _explicitNullValueRevisionId; set { _explicitNullValueRevisionId = value; AdditionalData?.Remove("revisionId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("revisionId"); else _explicitNullProperties?.Remove("revisionId"); } }
+        private string? _explicitNullValueRevisionId = default!;
 #nullable restore
 #else
-        public string RevisionId { get; set; }
+        public string RevisionId { get => _explicitNullValueRevisionId; set { _explicitNullValueRevisionId = value; AdditionalData?.Remove("revisionId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("revisionId"); else _explicitNullProperties?.Remove("revisionId"); } }
+        private string _explicitNullValueRevisionId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinition"/> and sets the default values.
@@ -121,7 +178,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinition CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinition();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinition(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -136,7 +193,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "executionRules", n => { ExecutionRules = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExecutionTranslationRule>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicExecutionTranslationRule.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "functions", n => { Functions = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionFunctionIdentifier>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionFunctionIdentifier.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "inputFieldDependencies", n => { InputFieldDependencies = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionInputFieldDependenciesItem>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionInputFieldDependenciesItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "inputFieldDependencies", n => { InputFieldDependencies = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionEggInputFieldDependenciesItem>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionEggInputFieldDependenciesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "inputFields", n => { InputFields = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicInputFieldDefinition>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicInputFieldDefinition.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "labels", n => { Labels = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionLabelsProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionLabelsProperty2.CreateFromDiscriminatorValue); } },
                 { "objectRequestOptions", n => { ObjectRequestOptions = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectRequestOptions>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectRequestOptions.CreateFromDiscriminatorValue); } },
@@ -158,7 +215,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExecutionTranslationRule>("executionRules", ExecutionRules);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionFunctionIdentifier>("functions", Functions);
             writer.WriteStringValue("id", Id);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionInputFieldDependenciesItem>("inputFieldDependencies", InputFieldDependencies);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionEggInputFieldDependenciesItem>("inputFieldDependencies", InputFieldDependencies);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicInputFieldDefinition>("inputFields", InputFields);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionLabelsProperty2>("labels", Labels);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectRequestOptions>("objectRequestOptions", ObjectRequestOptions);
@@ -166,6 +223,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.OutputFieldDefinition>("outputFields", OutputFields);
             writer.WriteBoolValue("published", Published);
             writer.WriteStringValue("revisionId", RevisionId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

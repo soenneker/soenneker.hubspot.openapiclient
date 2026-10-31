@@ -11,31 +11,55 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AssociationRecordLimitResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("atLimitFromRecordSamples") is null) { _explicitNullValueAtLimitFromRecordSamples = default!; _explicitNullProperties?.Remove("atLimitFromRecordSamples"); }
+            else if (parseNode.GetChildNode("atLimitFromRecordSamples") is { } nullNodeAtLimitFromRecordSamples && nullNodeAtLimitFromRecordSamples.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AtLimitFromRecordSamples = null;
+            if (parseNode.GetChildNode("limit") is null) { _explicitNullValueLimit = default!; _explicitNullProperties?.Remove("limit"); }
+            else if (parseNode.GetChildNode("limit") is { } nullNodeLimit && nullNodeLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Limit = null;
+            if (parseNode.GetChildNode("nearLimitFromRecordSamples") is null) { _explicitNullValueNearLimitFromRecordSamples = default!; _explicitNullProperties?.Remove("nearLimitFromRecordSamples"); }
+            else if (parseNode.GetChildNode("nearLimitFromRecordSamples") is { } nullNodeNearLimitFromRecordSamples && nullNodeNearLimitFromRecordSamples.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NearLimitFromRecordSamples = null;
+            if (parseNode.GetChildNode("totalRecordsAtLimit") is null) { _explicitNullValueTotalRecordsAtLimit = default!; _explicitNullProperties?.Remove("totalRecordsAtLimit"); }
+            else if (parseNode.GetChildNode("totalRecordsAtLimit") is { } nullNodeTotalRecordsAtLimit && nullNodeTotalRecordsAtLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalRecordsAtLimit = null;
+            if (parseNode.GetChildNode("totalRecordsNearLimit") is null) { _explicitNullValueTotalRecordsNearLimit = default!; _explicitNullProperties?.Remove("totalRecordsNearLimit"); }
+            else if (parseNode.GetChildNode("totalRecordsNearLimit") is { } nullNodeTotalRecordsNearLimit && nullNodeTotalRecordsNearLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalRecordsNearLimit = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An array of AtLimitRecordSample objects, each representing a sample record that is at the association limit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.AtLimitRecordSample>? AtLimitFromRecordSamples { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.AtLimitRecordSample>? AtLimitFromRecordSamples { get => _explicitNullValueAtLimitFromRecordSamples; set { _explicitNullValueAtLimitFromRecordSamples = value; AdditionalData?.Remove("atLimitFromRecordSamples"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("atLimitFromRecordSamples"); else _explicitNullProperties?.Remove("atLimitFromRecordSamples"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.AtLimitRecordSample>? _explicitNullValueAtLimitFromRecordSamples = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.AtLimitRecordSample> AtLimitFromRecordSamples { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.AtLimitRecordSample> AtLimitFromRecordSamples { get => _explicitNullValueAtLimitFromRecordSamples; set { _explicitNullValueAtLimitFromRecordSamples = value; AdditionalData?.Remove("atLimitFromRecordSamples"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("atLimitFromRecordSamples"); else _explicitNullProperties?.Remove("atLimitFromRecordSamples"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.AtLimitRecordSample> _explicitNullValueAtLimitFromRecordSamples = default!;
 #endif
         /// <summary>The maximum number of associations allowed for records.</summary>
-        public long? Limit { get; set; }
+        public long? Limit { get => _explicitNullValueLimit; set { _explicitNullValueLimit = value; AdditionalData?.Remove("limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("limit"); else _explicitNullProperties?.Remove("limit"); } }
+        private long? _explicitNullValueLimit = default!;
         /// <summary>An array of NearLimitRecordSample objects, each representing a sample record that is near the association limit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.NearLimitRecordSample>? NearLimitFromRecordSamples { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.NearLimitRecordSample>? NearLimitFromRecordSamples { get => _explicitNullValueNearLimitFromRecordSamples; set { _explicitNullValueNearLimitFromRecordSamples = value; AdditionalData?.Remove("nearLimitFromRecordSamples"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nearLimitFromRecordSamples"); else _explicitNullProperties?.Remove("nearLimitFromRecordSamples"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.NearLimitRecordSample>? _explicitNullValueNearLimitFromRecordSamples = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.NearLimitRecordSample> NearLimitFromRecordSamples { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.NearLimitRecordSample> NearLimitFromRecordSamples { get => _explicitNullValueNearLimitFromRecordSamples; set { _explicitNullValueNearLimitFromRecordSamples = value; AdditionalData?.Remove("nearLimitFromRecordSamples"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nearLimitFromRecordSamples"); else _explicitNullProperties?.Remove("nearLimitFromRecordSamples"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.NearLimitRecordSample> _explicitNullValueNearLimitFromRecordSamples = default!;
 #endif
         /// <summary>The total number of records that have reached their association limit.</summary>
-        public int? TotalRecordsAtLimit { get; set; }
+        public int? TotalRecordsAtLimit { get => _explicitNullValueTotalRecordsAtLimit; set { _explicitNullValueTotalRecordsAtLimit = value; AdditionalData?.Remove("totalRecordsAtLimit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalRecordsAtLimit"); else _explicitNullProperties?.Remove("totalRecordsAtLimit"); } }
+        private int? _explicitNullValueTotalRecordsAtLimit = default!;
         /// <summary>The total number of records that are approaching their association limit.</summary>
-        public int? TotalRecordsNearLimit { get; set; }
+        public int? TotalRecordsNearLimit { get => _explicitNullValueTotalRecordsNearLimit; set { _explicitNullValueTotalRecordsNearLimit = value; AdditionalData?.Remove("totalRecordsNearLimit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalRecordsNearLimit"); else _explicitNullProperties?.Remove("totalRecordsNearLimit"); } }
+        private int? _explicitNullValueTotalRecordsNearLimit = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.AssociationRecordLimitResponse"/> and sets the default values.
         /// </summary>
@@ -51,7 +75,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.AssociationRecordLimitResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.AssociationRecordLimitResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.AssociationRecordLimitResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -80,6 +104,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.NearLimitRecordSample>("nearLimitFromRecordSamples", NearLimitFromRecordSamples);
             writer.WriteIntValue("totalRecordsAtLimit", TotalRecordsAtLimit);
             writer.WriteIntValue("totalRecordsNearLimit", TotalRecordsNearLimit);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

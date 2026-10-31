@@ -42,20 +42,20 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.Conversations.TwoZeroTwo
         /// <summary>
         /// Retrieve a specific message from a conversation thread in your HubSpot account. This endpoint allows you to access the details of a message identified by its messageId within a thread identified by threadId. You can specify certain properties to include in the response.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessage"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponsePublicMessageForwardPagingResultsItem"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessage?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Conversations.Conversations.TwoZeroTwoSixZeroNine.Threads.Item.Messages.Item.WithMessageItemRequestBuilder.WithMessageItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponsePublicMessageForwardPagingResultsItem?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Conversations.Conversations.TwoZeroTwoSixZeroNine.Threads.Item.Messages.Item.WithMessageItemRequestBuilder.WithMessageItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessage> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Conversations.Conversations.TwoZeroTwoSixZeroNine.Threads.Item.Messages.Item.WithMessageItemRequestBuilder.WithMessageItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponsePublicMessageForwardPagingResultsItem> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Conversations.Conversations.TwoZeroTwoSixZeroNine.Threads.Item.Messages.Item.WithMessageItemRequestBuilder.WithMessageItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessage>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicMessage.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponsePublicMessageForwardPagingResultsItem>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponsePublicMessageForwardPagingResultsItem.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve a specific message from a conversation thread in your HubSpot account. This endpoint allows you to access the details of a message identified by its messageId within a thread identified by threadId. You can specify certain properties to include in the response.

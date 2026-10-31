@@ -11,18 +11,32 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicSequenceValidationRule : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("enabledForAllStages") is null) { _explicitNullValueEnabledForAllStages = default!; _explicitNullProperties?.Remove("enabledForAllStages"); }
+            else if (parseNode.GetChildNode("enabledForAllStages") is { } nullNodeEnabledForAllStages && nullNodeEnabledForAllStages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnabledForAllStages = null;
+            if (parseNode.GetChildNode("pipelineStageIds") is null) { _explicitNullValuePipelineStageIds = default!; _explicitNullProperties?.Remove("pipelineStageIds"); }
+            else if (parseNode.GetChildNode("pipelineStageIds") is { } nullNodePipelineStageIds && nullNodePipelineStageIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PipelineStageIds = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A boolean indicating whether the validation rule is enabled for all stages in the pipeline.</summary>
-        public bool? EnabledForAllStages { get; set; }
+        public bool? EnabledForAllStages { get => _explicitNullValueEnabledForAllStages; set { _explicitNullValueEnabledForAllStages = value; AdditionalData?.Remove("enabledForAllStages"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabledForAllStages"); else _explicitNullProperties?.Remove("enabledForAllStages"); } }
+        private bool? _explicitNullValueEnabledForAllStages = default!;
         /// <summary>An array of strings representing the specific pipeline stage IDs for which the validation rule is applicable.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? PipelineStageIds { get; set; }
+        public List<string>? PipelineStageIds { get => _explicitNullValuePipelineStageIds; set { _explicitNullValuePipelineStageIds = value; AdditionalData?.Remove("pipelineStageIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipelineStageIds"); else _explicitNullProperties?.Remove("pipelineStageIds"); } }
+        private List<string>? _explicitNullValuePipelineStageIds = default!;
 #nullable restore
 #else
-        public List<string> PipelineStageIds { get; set; }
+        public List<string> PipelineStageIds { get => _explicitNullValuePipelineStageIds; set { _explicitNullValuePipelineStageIds = value; AdditionalData?.Remove("pipelineStageIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipelineStageIds"); else _explicitNullProperties?.Remove("pipelineStageIds"); } }
+        private List<string> _explicitNullValuePipelineStageIds = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceValidationRule"/> and sets the default values.
@@ -39,7 +53,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceValidationRule CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceValidationRule();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceValidationRule(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -62,6 +76,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("enabledForAllStages", EnabledForAllStages);
             writer.WriteCollectionOfPrimitiveValues<string>("pipelineStageIds", PipelineStageIds);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

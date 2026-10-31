@@ -11,58 +11,92 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicSurveyMonkeyValueFilter : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("filterType") is null) { _explicitNullValueFilterType = default!; _explicitNullProperties?.Remove("filterType"); }
+            else if (parseNode.GetChildNode("filterType") is { } nullNodeFilterType && nullNodeFilterType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FilterType = null;
+            if (parseNode.GetChildNode("operator") is null) { _explicitNullValueOperator = default!; _explicitNullProperties?.Remove("operator"); }
+            else if (parseNode.GetChildNode("operator") is { } nullNodeOperator && nullNodeOperator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Operator = null;
+            if (parseNode.GetChildNode("surveyAnswerColId") is null) { _explicitNullValueSurveyAnswerColId = default!; _explicitNullProperties?.Remove("surveyAnswerColId"); }
+            else if (parseNode.GetChildNode("surveyAnswerColId") is { } nullNodeSurveyAnswerColId && nullNodeSurveyAnswerColId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SurveyAnswerColId = null;
+            if (parseNode.GetChildNode("surveyAnswerRowId") is null) { _explicitNullValueSurveyAnswerRowId = default!; _explicitNullProperties?.Remove("surveyAnswerRowId"); }
+            else if (parseNode.GetChildNode("surveyAnswerRowId") is { } nullNodeSurveyAnswerRowId && nullNodeSurveyAnswerRowId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SurveyAnswerRowId = null;
+            if (parseNode.GetChildNode("surveyId") is null) { _explicitNullValueSurveyId = default!; _explicitNullProperties?.Remove("surveyId"); }
+            else if (parseNode.GetChildNode("surveyId") is { } nullNodeSurveyId && nullNodeSurveyId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SurveyId = null;
+            if (parseNode.GetChildNode("surveyQuestion") is null) { _explicitNullValueSurveyQuestion = default!; _explicitNullProperties?.Remove("surveyQuestion"); }
+            else if (parseNode.GetChildNode("surveyQuestion") is { } nullNodeSurveyQuestion && nullNodeSurveyQuestion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SurveyQuestion = null;
+            if (parseNode.GetChildNode("valueComparison") is null) { _explicitNullValueValueComparison = default!; _explicitNullProperties?.Remove("valueComparison"); }
+            else if (parseNode.GetChildNode("valueComparison") is { } nullNodeValueComparison && nullNodeValueComparison.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ValueComparison = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A string that specifies the type of filter being applied. Default value is &apos;SURVEY_MONKEY_VALUE&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.SurveyMonkeyValueFilterType? FilterType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.SurveyMonkeyValueFilterType? FilterType { get => _explicitNullValueFilterType; set { _explicitNullValueFilterType = value; AdditionalData?.Remove("filterType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filterType"); else _explicitNullProperties?.Remove("filterType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.SurveyMonkeyValueFilterType? _explicitNullValueFilterType = default!;
         /// <summary>A string that specifies the operator used in the filter, determining how the survey data should be evaluated against the specified criteria.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Operator { get; set; }
+        public string? Operator { get => _explicitNullValueOperator; set { _explicitNullValueOperator = value; AdditionalData?.Remove("operator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator"); else _explicitNullProperties?.Remove("operator"); } }
+        private string? _explicitNullValueOperator = default!;
 #nullable restore
 #else
-        public string Operator { get; set; }
+        public string Operator { get => _explicitNullValueOperator; set { _explicitNullValueOperator = value; AdditionalData?.Remove("operator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator"); else _explicitNullProperties?.Remove("operator"); } }
+        private string _explicitNullValueOperator = default!;
 #endif
         /// <summary>A string representing the column identifier for the survey answer being filtered.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SurveyAnswerColId { get; set; }
+        public string? SurveyAnswerColId { get => _explicitNullValueSurveyAnswerColId; set { _explicitNullValueSurveyAnswerColId = value; AdditionalData?.Remove("surveyAnswerColId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("surveyAnswerColId"); else _explicitNullProperties?.Remove("surveyAnswerColId"); } }
+        private string? _explicitNullValueSurveyAnswerColId = default!;
 #nullable restore
 #else
-        public string SurveyAnswerColId { get; set; }
+        public string SurveyAnswerColId { get => _explicitNullValueSurveyAnswerColId; set { _explicitNullValueSurveyAnswerColId = value; AdditionalData?.Remove("surveyAnswerColId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("surveyAnswerColId"); else _explicitNullProperties?.Remove("surveyAnswerColId"); } }
+        private string _explicitNullValueSurveyAnswerColId = default!;
 #endif
         /// <summary>A string representing the row identifier for the survey answer being filtered.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SurveyAnswerRowId { get; set; }
+        public string? SurveyAnswerRowId { get => _explicitNullValueSurveyAnswerRowId; set { _explicitNullValueSurveyAnswerRowId = value; AdditionalData?.Remove("surveyAnswerRowId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("surveyAnswerRowId"); else _explicitNullProperties?.Remove("surveyAnswerRowId"); } }
+        private string? _explicitNullValueSurveyAnswerRowId = default!;
 #nullable restore
 #else
-        public string SurveyAnswerRowId { get; set; }
+        public string SurveyAnswerRowId { get => _explicitNullValueSurveyAnswerRowId; set { _explicitNullValueSurveyAnswerRowId = value; AdditionalData?.Remove("surveyAnswerRowId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("surveyAnswerRowId"); else _explicitNullProperties?.Remove("surveyAnswerRowId"); } }
+        private string _explicitNullValueSurveyAnswerRowId = default!;
 #endif
         /// <summary>A string representing the unique identifier of the SurveyMonkey survey.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SurveyId { get; set; }
+        public string? SurveyId { get => _explicitNullValueSurveyId; set { _explicitNullValueSurveyId = value; AdditionalData?.Remove("surveyId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("surveyId"); else _explicitNullProperties?.Remove("surveyId"); } }
+        private string? _explicitNullValueSurveyId = default!;
 #nullable restore
 #else
-        public string SurveyId { get; set; }
+        public string SurveyId { get => _explicitNullValueSurveyId; set { _explicitNullValueSurveyId = value; AdditionalData?.Remove("surveyId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("surveyId"); else _explicitNullProperties?.Remove("surveyId"); } }
+        private string _explicitNullValueSurveyId = default!;
 #endif
         /// <summary>A string indicating the specific question within the survey that the filter is targeting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SurveyQuestion { get; set; }
+        public string? SurveyQuestion { get => _explicitNullValueSurveyQuestion; set { _explicitNullValueSurveyQuestion = value; AdditionalData?.Remove("surveyQuestion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("surveyQuestion"); else _explicitNullProperties?.Remove("surveyQuestion"); } }
+        private string? _explicitNullValueSurveyQuestion = default!;
 #nullable restore
 #else
-        public string SurveyQuestion { get; set; }
+        public string SurveyQuestion { get => _explicitNullValueSurveyQuestion; set { _explicitNullValueSurveyQuestion = value; AdditionalData?.Remove("surveyQuestion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("surveyQuestion"); else _explicitNullProperties?.Remove("surveyQuestion"); } }
+        private string _explicitNullValueSurveyQuestion = default!;
 #endif
         /// <summary>An object that defines the operation for comparing values, which can be one of several types such as boolean, number, string, date, or enumeration operations.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSurveyMonkeyValueFilterValueComparison? ValueComparison { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSurveyMonkeyValueFilterValueComparison? ValueComparison { get => _explicitNullValueValueComparison; set { _explicitNullValueValueComparison = value; AdditionalData?.Remove("valueComparison"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("valueComparison"); else _explicitNullProperties?.Remove("valueComparison"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicSurveyMonkeyValueFilterValueComparison? _explicitNullValueValueComparison = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSurveyMonkeyValueFilterValueComparison ValueComparison { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSurveyMonkeyValueFilterValueComparison ValueComparison { get => _explicitNullValueValueComparison; set { _explicitNullValueValueComparison = value; AdditionalData?.Remove("valueComparison"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("valueComparison"); else _explicitNullProperties?.Remove("valueComparison"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicSurveyMonkeyValueFilterValueComparison _explicitNullValueValueComparison = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicSurveyMonkeyValueFilter"/> and sets the default values.
@@ -79,7 +113,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicSurveyMonkeyValueFilter CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicSurveyMonkeyValueFilter();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicSurveyMonkeyValueFilter(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -89,7 +123,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SurveyMonkeyValueFilterType>(); } },
+                { "filterType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SurveyMonkeyValueFilterType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFilterType = default; _explicitNullProperties?.Remove("filterType"); AdditionalData["filterType"] = unknown; } else { FilterType = parsed; AdditionalData.Remove("filterType"); } } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
                 { "surveyAnswerColId", n => { SurveyAnswerColId = n.GetStringValue(); } },
                 { "surveyAnswerRowId", n => { SurveyAnswerRowId = n.GetStringValue(); } },
@@ -112,6 +146,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("surveyId", SurveyId);
             writer.WriteStringValue("surveyQuestion", SurveyQuestion);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSurveyMonkeyValueFilterValueComparison>("valueComparison", ValueComparison);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

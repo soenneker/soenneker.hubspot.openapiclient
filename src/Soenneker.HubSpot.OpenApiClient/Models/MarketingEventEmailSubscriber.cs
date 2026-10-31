@@ -11,34 +11,56 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class MarketingEventEmailSubscriber : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("contactProperties") is null) { _explicitNullValueContactProperties = default!; _explicitNullProperties?.Remove("contactProperties"); }
+            else if (parseNode.GetChildNode("contactProperties") is { } nullNodeContactProperties && nullNodeContactProperties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactProperties = null;
+            if (parseNode.GetChildNode("email") is null) { _explicitNullValueEmail = default!; _explicitNullProperties?.Remove("email"); }
+            else if (parseNode.GetChildNode("email") is { } nullNodeEmail && nullNodeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Email = null;
+            if (parseNode.GetChildNode("interactionDateTime") is null) { _explicitNullValueInteractionDateTime = default!; _explicitNullProperties?.Remove("interactionDateTime"); }
+            else if (parseNode.GetChildNode("interactionDateTime") is { } nullNodeInteractionDateTime && nullNodeInteractionDateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InteractionDateTime = null;
+            if (parseNode.GetChildNode("properties") is null) { _explicitNullValueProperties = default!; _explicitNullProperties?.Remove("properties"); }
+            else if (parseNode.GetChildNode("properties") is { } nullNodeProperties && nullNodeProperties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Properties = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The key-value set that contains properties of the contact.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberContactPropertiesProperty2? ContactProperties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberContactPropertiesProperty2? ContactProperties { get => _explicitNullValueContactProperties; set { _explicitNullValueContactProperties = value; AdditionalData?.Remove("contactProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactProperties"); else _explicitNullProperties?.Remove("contactProperties"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberContactPropertiesProperty2? _explicitNullValueContactProperties = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberContactPropertiesProperty2 ContactProperties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberContactPropertiesProperty2 ContactProperties { get => _explicitNullValueContactProperties; set { _explicitNullValueContactProperties = value; AdditionalData?.Remove("contactProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactProperties"); else _explicitNullProperties?.Remove("contactProperties"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberContactPropertiesProperty2 _explicitNullValueContactProperties = default!;
 #endif
         /// <summary>The email address of the contact in HubSpot to associate with the event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Email { get; set; }
+        public string? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; AdditionalData?.Remove("email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        private string? _explicitNullValueEmail = default!;
 #nullable restore
 #else
-        public string Email { get; set; }
+        public string Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; AdditionalData?.Remove("email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        private string _explicitNullValueEmail = default!;
 #endif
         /// <summary>Timestamp in milliseconds at which the contact subscribed to the event.</summary>
-        public long? InteractionDateTime { get; set; }
+        public long? InteractionDateTime { get => _explicitNullValueInteractionDateTime; set { _explicitNullValueInteractionDateTime = value; AdditionalData?.Remove("interactionDateTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interactionDateTime"); else _explicitNullProperties?.Remove("interactionDateTime"); } }
+        private long? _explicitNullValueInteractionDateTime = default!;
         /// <summary>The key-value set that contains properties of the marketing event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberPropertiesProperty2? Properties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberPropertiesProperty2? Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberPropertiesProperty2? _explicitNullValueProperties = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberPropertiesProperty2 Properties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberPropertiesProperty2 Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberPropertiesProperty2 _explicitNullValueProperties = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriber"/> and sets the default values.
@@ -55,7 +77,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriber CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriber();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriber(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -82,6 +104,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("email", Email);
             writer.WriteLongValue("interactionDateTime", InteractionDateTime);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberPropertiesProperty2>("properties", Properties);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

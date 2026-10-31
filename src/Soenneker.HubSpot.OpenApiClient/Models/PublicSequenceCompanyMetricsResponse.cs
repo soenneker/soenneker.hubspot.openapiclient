@@ -11,17 +11,36 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicSequenceCompanyMetricsResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("companiesEngaged") is null) { _explicitNullValueCompaniesEngaged = default!; _explicitNullProperties?.Remove("companiesEngaged"); }
+            else if (parseNode.GetChildNode("companiesEngaged") is { } nullNodeCompaniesEngaged && nullNodeCompaniesEngaged.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CompaniesEngaged = null;
+            if (parseNode.GetChildNode("companiesEnrolled") is null) { _explicitNullValueCompaniesEnrolled = default!; _explicitNullProperties?.Remove("companiesEnrolled"); }
+            else if (parseNode.GetChildNode("companiesEnrolled") is { } nullNodeCompaniesEnrolled && nullNodeCompaniesEnrolled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CompaniesEnrolled = null;
+            if (parseNode.GetChildNode("companiesScheduledMeeting") is null) { _explicitNullValueCompaniesScheduledMeeting = default!; _explicitNullProperties?.Remove("companiesScheduledMeeting"); }
+            else if (parseNode.GetChildNode("companiesScheduledMeeting") is { } nullNodeCompaniesScheduledMeeting && nullNodeCompaniesScheduledMeeting.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CompaniesScheduledMeeting = null;
+            if (parseNode.GetChildNode("contactsEnrolledWithCompanyId") is null) { _explicitNullValueContactsEnrolledWithCompanyId = default!; _explicitNullProperties?.Remove("contactsEnrolledWithCompanyId"); }
+            else if (parseNode.GetChildNode("contactsEnrolledWithCompanyId") is { } nullNodeContactsEnrolledWithCompanyId && nullNodeContactsEnrolledWithCompanyId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactsEnrolledWithCompanyId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The number of companies that have engaged with the sequence. An integer in int64 format.</summary>
-        public long? CompaniesEngaged { get; set; }
+        public long? CompaniesEngaged { get => _explicitNullValueCompaniesEngaged; set { _explicitNullValueCompaniesEngaged = value; AdditionalData?.Remove("companiesEngaged"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("companiesEngaged"); else _explicitNullProperties?.Remove("companiesEngaged"); } }
+        private long? _explicitNullValueCompaniesEngaged = default!;
         /// <summary>The number of companies that have been enrolled in the sequence. An integer in int64 format.</summary>
-        public long? CompaniesEnrolled { get; set; }
+        public long? CompaniesEnrolled { get => _explicitNullValueCompaniesEnrolled; set { _explicitNullValueCompaniesEnrolled = value; AdditionalData?.Remove("companiesEnrolled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("companiesEnrolled"); else _explicitNullProperties?.Remove("companiesEnrolled"); } }
+        private long? _explicitNullValueCompaniesEnrolled = default!;
         /// <summary>The number of companies that have scheduled a meeting as a result of the sequence. An integer in int64 format.</summary>
-        public long? CompaniesScheduledMeeting { get; set; }
+        public long? CompaniesScheduledMeeting { get => _explicitNullValueCompaniesScheduledMeeting; set { _explicitNullValueCompaniesScheduledMeeting = value; AdditionalData?.Remove("companiesScheduledMeeting"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("companiesScheduledMeeting"); else _explicitNullProperties?.Remove("companiesScheduledMeeting"); } }
+        private long? _explicitNullValueCompaniesScheduledMeeting = default!;
         /// <summary>The number of contacts enrolled in the sequence that are associated with a company ID. An integer in int64 format.</summary>
-        public long? ContactsEnrolledWithCompanyId { get; set; }
+        public long? ContactsEnrolledWithCompanyId { get => _explicitNullValueContactsEnrolledWithCompanyId; set { _explicitNullValueContactsEnrolledWithCompanyId = value; AdditionalData?.Remove("contactsEnrolledWithCompanyId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactsEnrolledWithCompanyId"); else _explicitNullProperties?.Remove("contactsEnrolledWithCompanyId"); } }
+        private long? _explicitNullValueContactsEnrolledWithCompanyId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceCompanyMetricsResponse"/> and sets the default values.
         /// </summary>
@@ -37,7 +56,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceCompanyMetricsResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceCompanyMetricsResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceCompanyMetricsResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -64,6 +83,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteLongValue("companiesEnrolled", CompaniesEnrolled);
             writer.WriteLongValue("companiesScheduledMeeting", CompaniesScheduledMeeting);
             writer.WriteLongValue("contactsEnrolledWithCompanyId", ContactsEnrolledWithCompanyId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

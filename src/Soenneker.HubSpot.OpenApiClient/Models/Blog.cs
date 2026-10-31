@@ -11,101 +11,166 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class Blog : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("absoluteUrl") is null) { _explicitNullValueAbsoluteUrl = default!; _explicitNullProperties?.Remove("absoluteUrl"); }
+            else if (parseNode.GetChildNode("absoluteUrl") is { } nullNodeAbsoluteUrl && nullNodeAbsoluteUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AbsoluteUrl = null;
+            if (parseNode.GetChildNode("allowComments") is null) { _explicitNullValueAllowComments = default!; _explicitNullProperties?.Remove("allowComments"); }
+            else if (parseNode.GetChildNode("allowComments") is { } nullNodeAllowComments && nullNodeAllowComments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowComments = null;
+            if (parseNode.GetChildNode("created") is null) { _explicitNullValueCreated = default!; _explicitNullProperties?.Remove("created"); }
+            else if (parseNode.GetChildNode("created") is { } nullNodeCreated && nullNodeCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Created = null;
+            if (parseNode.GetChildNode("deletedAt") is null) { _explicitNullValueDeletedAt = default!; _explicitNullProperties?.Remove("deletedAt"); }
+            else if (parseNode.GetChildNode("deletedAt") is { } nullNodeDeletedAt && nullNodeDeletedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeletedAt = null;
+            if (parseNode.GetChildNode("description") is null) { _explicitNullValueDescription = default!; _explicitNullProperties?.Remove("description"); }
+            else if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("htmlTitle") is null) { _explicitNullValueHtmlTitle = default!; _explicitNullProperties?.Remove("htmlTitle"); }
+            else if (parseNode.GetChildNode("htmlTitle") is { } nullNodeHtmlTitle && nullNodeHtmlTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HtmlTitle = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("language") is null) { _explicitNullValueLanguage = default!; _explicitNullProperties?.Remove("language"); }
+            else if (parseNode.GetChildNode("language") is { } nullNodeLanguage && nullNodeLanguage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Language = null;
+            if (parseNode.GetChildNode("listingPageId") is null) { _explicitNullValueListingPageId = default!; _explicitNullProperties?.Remove("listingPageId"); }
+            else if (parseNode.GetChildNode("listingPageId") is { } nullNodeListingPageId && nullNodeListingPageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ListingPageId = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("publicAccessRules") is null) { _explicitNullValuePublicAccessRules = default!; _explicitNullProperties?.Remove("publicAccessRules"); }
+            else if (parseNode.GetChildNode("publicAccessRules") is { } nullNodePublicAccessRules && nullNodePublicAccessRules.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PublicAccessRules = null;
+            if (parseNode.GetChildNode("publicAccessRulesEnabled") is null) { _explicitNullValuePublicAccessRulesEnabled = default!; _explicitNullProperties?.Remove("publicAccessRulesEnabled"); }
+            else if (parseNode.GetChildNode("publicAccessRulesEnabled") is { } nullNodePublicAccessRulesEnabled && nullNodePublicAccessRulesEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PublicAccessRulesEnabled = null;
+            if (parseNode.GetChildNode("publicTitle") is null) { _explicitNullValuePublicTitle = default!; _explicitNullProperties?.Remove("publicTitle"); }
+            else if (parseNode.GetChildNode("publicTitle") is { } nullNodePublicTitle && nullNodePublicTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PublicTitle = null;
+            if (parseNode.GetChildNode("slug") is null) { _explicitNullValueSlug = default!; _explicitNullProperties?.Remove("slug"); }
+            else if (parseNode.GetChildNode("slug") is { } nullNodeSlug && nullNodeSlug.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Slug = null;
+            if (parseNode.GetChildNode("translatedFromId") is null) { _explicitNullValueTranslatedFromId = default!; _explicitNullProperties?.Remove("translatedFromId"); }
+            else if (parseNode.GetChildNode("translatedFromId") is { } nullNodeTranslatedFromId && nullNodeTranslatedFromId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TranslatedFromId = null;
+            if (parseNode.GetChildNode("updated") is null) { _explicitNullValueUpdated = default!; _explicitNullProperties?.Remove("updated"); }
+            else if (parseNode.GetChildNode("updated") is { } nullNodeUpdated && nullNodeUpdated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Updated = null;
+        }
+
         /// <summary>Blog&apos;s root URL</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AbsoluteUrl { get; set; }
+        public string? AbsoluteUrl { get => _explicitNullValueAbsoluteUrl; set { _explicitNullValueAbsoluteUrl = value; AdditionalData?.Remove("absoluteUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("absoluteUrl"); else _explicitNullProperties?.Remove("absoluteUrl"); } }
+        private string? _explicitNullValueAbsoluteUrl = default!;
 #nullable restore
 #else
-        public string AbsoluteUrl { get; set; }
+        public string AbsoluteUrl { get => _explicitNullValueAbsoluteUrl; set { _explicitNullValueAbsoluteUrl = value; AdditionalData?.Remove("absoluteUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("absoluteUrl"); else _explicitNullProperties?.Remove("absoluteUrl"); } }
+        private string _explicitNullValueAbsoluteUrl = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Boolean determining whether or not this blog allows public comments.</summary>
-        public bool? AllowComments { get; set; }
+        public bool? AllowComments { get => _explicitNullValueAllowComments; set { _explicitNullValueAllowComments = value; AdditionalData?.Remove("allowComments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowComments"); else _explicitNullProperties?.Remove("allowComments"); } }
+        private bool? _explicitNullValueAllowComments = default!;
         /// <summary>The timestamp (ISO8601 format) when this blog was created.</summary>
-        public DateTimeOffset? Created { get; set; }
+        public DateTimeOffset? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private DateTimeOffset? _explicitNullValueCreated = default!;
         /// <summary>The timestamp (ISO8601 format) when this Blog was deleted.</summary>
-        public DateTimeOffset? DeletedAt { get; set; }
+        public DateTimeOffset? DeletedAt { get => _explicitNullValueDeletedAt; set { _explicitNullValueDeletedAt = value; AdditionalData?.Remove("deletedAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deletedAt"); else _explicitNullProperties?.Remove("deletedAt"); } }
+        private DateTimeOffset? _explicitNullValueDeletedAt = default!;
         /// <summary>The Description of this Blog.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>The html title of this Blog.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HtmlTitle { get; set; }
+        public string? HtmlTitle { get => _explicitNullValueHtmlTitle; set { _explicitNullValueHtmlTitle = value; AdditionalData?.Remove("htmlTitle"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("htmlTitle"); else _explicitNullProperties?.Remove("htmlTitle"); } }
+        private string? _explicitNullValueHtmlTitle = default!;
 #nullable restore
 #else
-        public string HtmlTitle { get; set; }
+        public string HtmlTitle { get => _explicitNullValueHtmlTitle; set { _explicitNullValueHtmlTitle = value; AdditionalData?.Remove("htmlTitle"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("htmlTitle"); else _explicitNullProperties?.Remove("htmlTitle"); } }
+        private string _explicitNullValueHtmlTitle = default!;
 #endif
         /// <summary>The unique ID of the Blog.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The explicitly defined language of the Blog. If null, the Blog will default to the language of the Domain.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.BlogLanguage? Language { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.BlogLanguage? Language { get => _explicitNullValueLanguage; set { _explicitNullValueLanguage = value; AdditionalData?.Remove("language"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("language"); else _explicitNullProperties?.Remove("language"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.BlogLanguage? _explicitNullValueLanguage = default!;
         /// <summary>The ID of the listing page associated with the blog.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ListingPageId { get; set; }
+        public string? ListingPageId { get => _explicitNullValueListingPageId; set { _explicitNullValueListingPageId = value; AdditionalData?.Remove("listingPageId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("listingPageId"); else _explicitNullProperties?.Remove("listingPageId"); } }
+        private string? _explicitNullValueListingPageId = default!;
 #nullable restore
 #else
-        public string ListingPageId { get; set; }
+        public string ListingPageId { get => _explicitNullValueListingPageId; set { _explicitNullValueListingPageId = value; AdditionalData?.Remove("listingPageId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("listingPageId"); else _explicitNullProperties?.Remove("listingPageId"); } }
+        private string _explicitNullValueListingPageId = default!;
 #endif
         /// <summary>The internal name of the blog.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>Rules for require member registration to access private content.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.BlogPublicAccessRulesItemProperty>? PublicAccessRules { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.BlogPublicAccessRulesItemProperty>? PublicAccessRules { get => _explicitNullValuePublicAccessRules; set { _explicitNullValuePublicAccessRules = value; AdditionalData?.Remove("publicAccessRules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("publicAccessRules"); else _explicitNullProperties?.Remove("publicAccessRules"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.BlogPublicAccessRulesItemProperty>? _explicitNullValuePublicAccessRules = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.BlogPublicAccessRulesItemProperty> PublicAccessRules { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.BlogPublicAccessRulesItemProperty> PublicAccessRules { get => _explicitNullValuePublicAccessRules; set { _explicitNullValuePublicAccessRules = value; AdditionalData?.Remove("publicAccessRules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("publicAccessRules"); else _explicitNullProperties?.Remove("publicAccessRules"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.BlogPublicAccessRulesItemProperty> _explicitNullValuePublicAccessRules = default!;
 #endif
         /// <summary>Boolean to determine whether or not to respect publicAccessRules.</summary>
-        public bool? PublicAccessRulesEnabled { get; set; }
+        public bool? PublicAccessRulesEnabled { get => _explicitNullValuePublicAccessRulesEnabled; set { _explicitNullValuePublicAccessRulesEnabled = value; AdditionalData?.Remove("publicAccessRulesEnabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("publicAccessRulesEnabled"); else _explicitNullProperties?.Remove("publicAccessRulesEnabled"); } }
+        private bool? _explicitNullValuePublicAccessRulesEnabled = default!;
         /// <summary>The public title of this Blog.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PublicTitle { get; set; }
+        public string? PublicTitle { get => _explicitNullValuePublicTitle; set { _explicitNullValuePublicTitle = value; AdditionalData?.Remove("publicTitle"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("publicTitle"); else _explicitNullProperties?.Remove("publicTitle"); } }
+        private string? _explicitNullValuePublicTitle = default!;
 #nullable restore
 #else
-        public string PublicTitle { get; set; }
+        public string PublicTitle { get => _explicitNullValuePublicTitle; set { _explicitNullValuePublicTitle = value; AdditionalData?.Remove("publicTitle"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("publicTitle"); else _explicitNullProperties?.Remove("publicTitle"); } }
+        private string _explicitNullValuePublicTitle = default!;
 #endif
         /// <summary>The path of the this blog. This field is appended to the domain to construct the url of this blog.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Slug { get; set; }
+        public string? Slug { get => _explicitNullValueSlug; set { _explicitNullValueSlug = value; AdditionalData?.Remove("slug"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("slug"); else _explicitNullProperties?.Remove("slug"); } }
+        private string? _explicitNullValueSlug = default!;
 #nullable restore
 #else
-        public string Slug { get; set; }
+        public string Slug { get => _explicitNullValueSlug; set { _explicitNullValueSlug = value; AdditionalData?.Remove("slug"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("slug"); else _explicitNullProperties?.Remove("slug"); } }
+        private string _explicitNullValueSlug = default!;
 #endif
         /// <summary>ID of the primary Blog this object was translated from.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TranslatedFromId { get; set; }
+        public string? TranslatedFromId { get => _explicitNullValueTranslatedFromId; set { _explicitNullValueTranslatedFromId = value; AdditionalData?.Remove("translatedFromId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("translatedFromId"); else _explicitNullProperties?.Remove("translatedFromId"); } }
+        private string? _explicitNullValueTranslatedFromId = default!;
 #nullable restore
 #else
-        public string TranslatedFromId { get; set; }
+        public string TranslatedFromId { get => _explicitNullValueTranslatedFromId; set { _explicitNullValueTranslatedFromId = value; AdditionalData?.Remove("translatedFromId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("translatedFromId"); else _explicitNullProperties?.Remove("translatedFromId"); } }
+        private string _explicitNullValueTranslatedFromId = default!;
 #endif
         /// <summary>The timestamp (ISO8601 format) when this blog was updated.</summary>
-        public DateTimeOffset? Updated { get; set; }
+        public DateTimeOffset? Updated { get => _explicitNullValueUpdated; set { _explicitNullValueUpdated = value; AdditionalData?.Remove("updated"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated"); else _explicitNullProperties?.Remove("updated"); } }
+        private DateTimeOffset? _explicitNullValueUpdated = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Blog"/> and sets the default values.
         /// </summary>
@@ -121,7 +186,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.Blog CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.Blog();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.Blog(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -138,7 +203,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "htmlTitle", n => { HtmlTitle = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "language", n => { Language = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.BlogLanguage>(); } },
+                { "language", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.BlogLanguage>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueLanguage = default; _explicitNullProperties?.Remove("language"); AdditionalData["language"] = unknown; } else { Language = parsed; AdditionalData.Remove("language"); } } },
                 { "listingPageId", n => { ListingPageId = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "publicAccessRules", n => { PublicAccessRules = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.BlogPublicAccessRulesItemProperty>(global::Soenneker.HubSpot.OpenApiClient.Models.BlogPublicAccessRulesItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -172,6 +237,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("slug", Slug);
             writer.WriteStringValue("translatedFromId", TranslatedFromId);
             writer.WriteDateTimeOffsetValue("updated", Updated);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

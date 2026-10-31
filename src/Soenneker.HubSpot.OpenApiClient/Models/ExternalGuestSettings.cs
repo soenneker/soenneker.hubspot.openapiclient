@@ -11,13 +11,26 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ExternalGuestSettings : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("canAddGuests") is null) { _explicitNullValueCanAddGuests = default!; _explicitNullProperties?.Remove("canAddGuests"); }
+            else if (parseNode.GetChildNode("canAddGuests") is { } nullNodeCanAddGuests && nullNodeCanAddGuests.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanAddGuests = null;
+            if (parseNode.GetChildNode("maxGuestCount") is null) { _explicitNullValueMaxGuestCount = default!; _explicitNullProperties?.Remove("maxGuestCount"); }
+            else if (parseNode.GetChildNode("maxGuestCount") is { } nullNodeMaxGuestCount && nullNodeMaxGuestCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxGuestCount = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A boolean indicating whether guests can be added to the meeting.</summary>
-        public bool? CanAddGuests { get; set; }
+        public bool? CanAddGuests { get => _explicitNullValueCanAddGuests; set { _explicitNullValueCanAddGuests = value; AdditionalData?.Remove("canAddGuests"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canAddGuests"); else _explicitNullProperties?.Remove("canAddGuests"); } }
+        private bool? _explicitNullValueCanAddGuests = default!;
         /// <summary>An integer specifying the maximum number of guests that can be added to the meeting.</summary>
-        public int? MaxGuestCount { get; set; }
+        public int? MaxGuestCount { get => _explicitNullValueMaxGuestCount; set { _explicitNullValueMaxGuestCount = value; AdditionalData?.Remove("maxGuestCount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxGuestCount"); else _explicitNullProperties?.Remove("maxGuestCount"); } }
+        private int? _explicitNullValueMaxGuestCount = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExternalGuestSettings"/> and sets the default values.
         /// </summary>
@@ -33,7 +46,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.ExternalGuestSettings CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.ExternalGuestSettings();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.ExternalGuestSettings(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -56,6 +69,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("canAddGuests", CanAddGuests);
             writer.WriteIntValue("maxGuestCount", MaxGuestCount);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

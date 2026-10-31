@@ -1,8 +1,8 @@
 {
-  "descriptionHash": "FC122203ED460BE1E1F307FA283A26D636014E24C9593DE6BE962FC1ABEBBC82510664F8540BCBDA69CE793FDB3671D721DF579A692E7A7C1C53B3E7169A7FFB",
+  "descriptionHash": "8074087C4F6C212935E4C635C4674F08C478F7FEC8FA00FA7D24662468964FD31EEAAAB0BED915CCFE2F6469CADFAA2E185AF3C432E1BB19A962A71E56959DA8",
   "descriptionLocation": "../../fixed.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.36.1",
+  "kiotaVersion": "1.37.0",
   "clientClassName": "HubSpotOpenApiClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "Soenneker.HubSpot.OpenApiClient",

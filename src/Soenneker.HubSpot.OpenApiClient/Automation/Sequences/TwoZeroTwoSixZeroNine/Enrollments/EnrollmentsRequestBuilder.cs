@@ -57,7 +57,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Automation.Sequences.TwoZeroTwoSixZero
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceEnrollmentLiteResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceEnrollmentLiteResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceEnrollmentLiteResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceEnrollmentLiteResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Enroll a contact into a sequence using the specified sequence ID. This operation requires the user ID to be provided as a query parameter. The request body must include the contact ID, sender email, and sequence ID. This endpoint is useful for automating the enrollment of contacts into predefined sequences for streamlined communication and follow-up processes.

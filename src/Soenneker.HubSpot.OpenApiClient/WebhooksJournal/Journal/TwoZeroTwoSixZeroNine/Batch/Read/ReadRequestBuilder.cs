@@ -36,22 +36,22 @@ namespace Soenneker.HubSpot.OpenApiClient.WebhooksJournal.Journal.TwoZeroTwoSixZ
         /// <summary>
         /// Execute a batch read operation on the webhooks journal for the specified date, 2026-03. This endpoint allows you to retrieve multiple entries from the webhooks journal in a single request, which can be useful for processing large amounts of data efficiently. Ensure that the request body is provided in the required format.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseJournalFetchResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PostWebhooksJournalJournal202609BatchReadSuccessResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseJournalFetchResponse?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.WebhooksJournalBatchInputString body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.WebhooksJournal.Journal.TwoZeroTwoSixZeroNine.Batch.Read.ReadRequestBuilder.ReadRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.PostWebhooksJournalJournal202609BatchReadSuccessResponse?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.WebhooksJournalBatchInputString body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.WebhooksJournal.Journal.TwoZeroTwoSixZeroNine.Batch.Read.ReadRequestBuilder.ReadRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseJournalFetchResponse> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.WebhooksJournalBatchInputString body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.WebhooksJournal.Journal.TwoZeroTwoSixZeroNine.Batch.Read.ReadRequestBuilder.ReadRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.PostWebhooksJournalJournal202609BatchReadSuccessResponse> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.WebhooksJournalBatchInputString body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.WebhooksJournal.Journal.TwoZeroTwoSixZeroNine.Batch.Read.ReadRequestBuilder.ReadRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseJournalFetchResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseJournalFetchResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PostWebhooksJournalJournal202609BatchReadSuccessResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PostWebhooksJournalJournal202609BatchReadSuccessResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Execute a batch read operation on the webhooks journal for the specified date, 2026-03. This endpoint allows you to retrieve multiple entries from the webhooks journal in a single request, which can be useful for processing large amounts of data efficiently. Ensure that the request body is provided in the required format.

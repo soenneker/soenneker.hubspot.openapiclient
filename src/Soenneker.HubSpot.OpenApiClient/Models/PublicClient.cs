@@ -11,13 +11,26 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicClient : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("clientType") is null) { _explicitNullValueClientType = default!; _explicitNullProperties?.Remove("clientType"); }
+            else if (parseNode.GetChildNode("clientType") is { } nullNodeClientType && nullNodeClientType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientType = null;
+            if (parseNode.GetChildNode("integrationAppId") is null) { _explicitNullValueIntegrationAppId = default!; _explicitNullProperties?.Remove("integrationAppId"); }
+            else if (parseNode.GetChildNode("integrationAppId") is { } nullNodeIntegrationAppId && nullNodeIntegrationAppId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntegrationAppId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The type of client interacting with the API. Valid values include &apos;HUBSPOT&apos;, &apos;SYSTEM&apos;, &apos;INTEGRATION&apos;, and &apos;UNKNOWN&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicClientClientType? ClientType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicClientClientType? ClientType { get => _explicitNullValueClientType; set { _explicitNullValueClientType = value; AdditionalData?.Remove("clientType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clientType"); else _explicitNullProperties?.Remove("clientType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicClientClientType? _explicitNullValueClientType = default!;
         /// <summary>An optional identifier for the integration application associated with the client. It is an integer value.</summary>
-        public int? IntegrationAppId { get; set; }
+        public int? IntegrationAppId { get => _explicitNullValueIntegrationAppId; set { _explicitNullValueIntegrationAppId = value; AdditionalData?.Remove("integrationAppId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("integrationAppId"); else _explicitNullProperties?.Remove("integrationAppId"); } }
+        private int? _explicitNullValueIntegrationAppId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicClient"/> and sets the default values.
         /// </summary>
@@ -33,7 +46,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicClient CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicClient();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicClient(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -43,7 +56,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "clientType", n => { ClientType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicClientClientType>(); } },
+                { "clientType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicClientClientType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueClientType = default; _explicitNullProperties?.Remove("clientType"); AdditionalData["clientType"] = unknown; } else { ClientType = parsed; AdditionalData.Remove("clientType"); } } },
                 { "integrationAppId", n => { IntegrationAppId = n.GetIntValue(); } },
             };
         }
@@ -56,6 +69,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicClientClientType>("clientType", ClientType);
             writer.WriteIntValue("integrationAppId", IntegrationAppId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

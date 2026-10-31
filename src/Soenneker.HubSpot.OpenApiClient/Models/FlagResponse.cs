@@ -11,23 +11,43 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class FlagResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("appId") is null) { _explicitNullValueAppId = default!; _explicitNullProperties?.Remove("appId"); }
+            else if (parseNode.GetChildNode("appId") is { } nullNodeAppId && nullNodeAppId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppId = null;
+            if (parseNode.GetChildNode("defaultState") is null) { _explicitNullValueDefaultState = default!; _explicitNullProperties?.Remove("defaultState"); }
+            else if (parseNode.GetChildNode("defaultState") is { } nullNodeDefaultState && nullNodeDefaultState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultState = null;
+            if (parseNode.GetChildNode("flagName") is null) { _explicitNullValueFlagName = default!; _explicitNullProperties?.Remove("flagName"); }
+            else if (parseNode.GetChildNode("flagName") is { } nullNodeFlagName && nullNodeFlagName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FlagName = null;
+            if (parseNode.GetChildNode("overrideState") is null) { _explicitNullValueOverrideState = default!; _explicitNullProperties?.Remove("overrideState"); }
+            else if (parseNode.GetChildNode("overrideState") is { } nullNodeOverrideState && nullNodeOverrideState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverrideState = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The ID of the app</summary>
-        public int? AppId { get; set; }
+        public int? AppId { get => _explicitNullValueAppId; set { _explicitNullValueAppId = value; AdditionalData?.Remove("appId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("appId"); else _explicitNullProperties?.Remove("appId"); } }
+        private int? _explicitNullValueAppId = default!;
         /// <summary>The flag state for any portal that doesn&apos;t have an override value</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.FlagResponseDefaultState? DefaultState { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.FlagResponseDefaultState? DefaultState { get => _explicitNullValueDefaultState; set { _explicitNullValueDefaultState = value; AdditionalData?.Remove("defaultState"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultState"); else _explicitNullProperties?.Remove("defaultState"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.FlagResponseDefaultState? _explicitNullValueDefaultState = default!;
         /// <summary>The name of the flag</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FlagName { get; set; }
+        public string? FlagName { get => _explicitNullValueFlagName; set { _explicitNullValueFlagName = value; AdditionalData?.Remove("flagName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flagName"); else _explicitNullProperties?.Remove("flagName"); } }
+        private string? _explicitNullValueFlagName = default!;
 #nullable restore
 #else
-        public string FlagName { get; set; }
+        public string FlagName { get => _explicitNullValueFlagName; set { _explicitNullValueFlagName = value; AdditionalData?.Remove("flagName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flagName"); else _explicitNullProperties?.Remove("flagName"); } }
+        private string _explicitNullValueFlagName = default!;
 #endif
         /// <summary>An optional flag value that overrides all others for this flag name and app, including portal-level values</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.FlagResponseOverrideState? OverrideState { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.FlagResponseOverrideState? OverrideState { get => _explicitNullValueOverrideState; set { _explicitNullValueOverrideState = value; AdditionalData?.Remove("overrideState"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overrideState"); else _explicitNullProperties?.Remove("overrideState"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.FlagResponseOverrideState? _explicitNullValueOverrideState = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.FlagResponse"/> and sets the default values.
         /// </summary>
@@ -43,7 +63,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.FlagResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.FlagResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.FlagResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -54,9 +74,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "appId", n => { AppId = n.GetIntValue(); } },
-                { "defaultState", n => { DefaultState = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FlagResponseDefaultState>(); } },
+                { "defaultState", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FlagResponseDefaultState>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDefaultState = default; _explicitNullProperties?.Remove("defaultState"); AdditionalData["defaultState"] = unknown; } else { DefaultState = parsed; AdditionalData.Remove("defaultState"); } } },
                 { "flagName", n => { FlagName = n.GetStringValue(); } },
-                { "overrideState", n => { OverrideState = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FlagResponseOverrideState>(); } },
+                { "overrideState", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FlagResponseOverrideState>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueOverrideState = default; _explicitNullProperties?.Remove("overrideState"); AdditionalData["overrideState"] = unknown; } else { OverrideState = parsed; AdditionalData.Remove("overrideState"); } } },
             };
         }
         /// <summary>
@@ -70,6 +90,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FlagResponseDefaultState>("defaultState", DefaultState);
             writer.WriteStringValue("flagName", FlagName);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FlagResponseOverrideState>("overrideState", OverrideState);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

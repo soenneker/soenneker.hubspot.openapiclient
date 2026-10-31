@@ -11,29 +11,50 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CmsAttachToLangPrimaryRequestVNext : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("language") is null) { _explicitNullValueLanguage = default!; _explicitNullProperties?.Remove("language"); }
+            else if (parseNode.GetChildNode("language") is { } nullNodeLanguage && nullNodeLanguage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Language = null;
+            if (parseNode.GetChildNode("primaryId") is null) { _explicitNullValuePrimaryId = default!; _explicitNullProperties?.Remove("primaryId"); }
+            else if (parseNode.GetChildNode("primaryId") is { } nullNodePrimaryId && nullNodePrimaryId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimaryId = null;
+            if (parseNode.GetChildNode("primaryLanguage") is null) { _explicitNullValuePrimaryLanguage = default!; _explicitNullProperties?.Remove("primaryLanguage"); }
+            else if (parseNode.GetChildNode("primaryLanguage") is { } nullNodePrimaryLanguage && nullNodePrimaryLanguage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimaryLanguage = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>ID of the object to add to a multi-language group.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>Designated language of the object to add to a multi-language group.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CmsAttachToLangPrimaryRequestVNextLanguage? Language { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CmsAttachToLangPrimaryRequestVNextLanguage? Language { get => _explicitNullValueLanguage; set { _explicitNullValueLanguage = value; AdditionalData?.Remove("language"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("language"); else _explicitNullProperties?.Remove("language"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CmsAttachToLangPrimaryRequestVNextLanguage? _explicitNullValueLanguage = default!;
         /// <summary>ID of primary language object in multi-language group.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrimaryId { get; set; }
+        public string? PrimaryId { get => _explicitNullValuePrimaryId; set { _explicitNullValuePrimaryId = value; AdditionalData?.Remove("primaryId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primaryId"); else _explicitNullProperties?.Remove("primaryId"); } }
+        private string? _explicitNullValuePrimaryId = default!;
 #nullable restore
 #else
-        public string PrimaryId { get; set; }
+        public string PrimaryId { get => _explicitNullValuePrimaryId; set { _explicitNullValuePrimaryId = value; AdditionalData?.Remove("primaryId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primaryId"); else _explicitNullProperties?.Remove("primaryId"); } }
+        private string _explicitNullValuePrimaryId = default!;
 #endif
         /// <summary>Primary language of the multi-language group.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CmsAttachToLangPrimaryRequestVNextPrimaryLanguage? PrimaryLanguage { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CmsAttachToLangPrimaryRequestVNextPrimaryLanguage? PrimaryLanguage { get => _explicitNullValuePrimaryLanguage; set { _explicitNullValuePrimaryLanguage = value; AdditionalData?.Remove("primaryLanguage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primaryLanguage"); else _explicitNullProperties?.Remove("primaryLanguage"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CmsAttachToLangPrimaryRequestVNextPrimaryLanguage? _explicitNullValuePrimaryLanguage = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CmsAttachToLangPrimaryRequestVNext"/> and sets the default values.
         /// </summary>
@@ -49,7 +70,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.CmsAttachToLangPrimaryRequestVNext CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.CmsAttachToLangPrimaryRequestVNext();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.CmsAttachToLangPrimaryRequestVNext(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -60,9 +81,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "language", n => { Language = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CmsAttachToLangPrimaryRequestVNextLanguage>(); } },
+                { "language", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CmsAttachToLangPrimaryRequestVNextLanguage>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueLanguage = default; _explicitNullProperties?.Remove("language"); AdditionalData["language"] = unknown; } else { Language = parsed; AdditionalData.Remove("language"); } } },
                 { "primaryId", n => { PrimaryId = n.GetStringValue(); } },
-                { "primaryLanguage", n => { PrimaryLanguage = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CmsAttachToLangPrimaryRequestVNextPrimaryLanguage>(); } },
+                { "primaryLanguage", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CmsAttachToLangPrimaryRequestVNextPrimaryLanguage>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePrimaryLanguage = default; _explicitNullProperties?.Remove("primaryLanguage"); AdditionalData["primaryLanguage"] = unknown; } else { PrimaryLanguage = parsed; AdditionalData.Remove("primaryLanguage"); } } },
             };
         }
         /// <summary>
@@ -76,6 +97,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CmsAttachToLangPrimaryRequestVNextLanguage>("language", Language);
             writer.WriteStringValue("primaryId", PrimaryId);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CmsAttachToLangPrimaryRequestVNextPrimaryLanguage>("primaryLanguage", PrimaryLanguage);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

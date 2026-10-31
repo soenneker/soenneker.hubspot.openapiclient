@@ -49,7 +49,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Commerce.PriceBooks.TwoZeroTwoSixZeroN
         {
 #endif
             var requestInfo = ToPostRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Activate a specific price book in your HubSpot account. This operation changes the status of the price book to active, allowing it to be used in transactions and other operations. Ensure that the price book ID is correct before activation.

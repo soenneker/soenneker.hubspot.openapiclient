@@ -11,53 +11,86 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ExternalBookingInfo : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("allUsersBusyTimes") is null) { _explicitNullValueAllUsersBusyTimes = default!; _explicitNullProperties?.Remove("allUsersBusyTimes"); }
+            else if (parseNode.GetChildNode("allUsersBusyTimes") is { } nullNodeAllUsersBusyTimes && nullNodeAllUsersBusyTimes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllUsersBusyTimes = null;
+            if (parseNode.GetChildNode("brandingMetadata") is null) { _explicitNullValueBrandingMetadata = default!; _explicitNullProperties?.Remove("brandingMetadata"); }
+            else if (parseNode.GetChildNode("brandingMetadata") is { } nullNodeBrandingMetadata && nullNodeBrandingMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BrandingMetadata = null;
+            if (parseNode.GetChildNode("customParams") is null) { _explicitNullValueCustomParams = default!; _explicitNullProperties?.Remove("customParams"); }
+            else if (parseNode.GetChildNode("customParams") is { } nullNodeCustomParams && nullNodeCustomParams.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomParams = null;
+            if (parseNode.GetChildNode("isOffline") is null) { _explicitNullValueIsOffline = default!; _explicitNullProperties?.Remove("isOffline"); }
+            else if (parseNode.GetChildNode("isOffline") is { } nullNodeIsOffline && nullNodeIsOffline.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsOffline = null;
+            if (parseNode.GetChildNode("linkAvailability") is null) { _explicitNullValueLinkAvailability = default!; _explicitNullProperties?.Remove("linkAvailability"); }
+            else if (parseNode.GetChildNode("linkAvailability") is { } nullNodeLinkAvailability && nullNodeLinkAvailability.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LinkAvailability = null;
+            if (parseNode.GetChildNode("linkId") is null) { _explicitNullValueLinkId = default!; _explicitNullProperties?.Remove("linkId"); }
+            else if (parseNode.GetChildNode("linkId") is { } nullNodeLinkId && nullNodeLinkId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LinkId = null;
+            if (parseNode.GetChildNode("linkType") is null) { _explicitNullValueLinkType = default!; _explicitNullProperties?.Remove("linkType"); }
+            else if (parseNode.GetChildNode("linkType") is { } nullNodeLinkType && nullNodeLinkType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LinkType = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An array of objects representing the busy times for all users associated with the meeting link.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalUserBusyTimes>? AllUsersBusyTimes { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalUserBusyTimes>? AllUsersBusyTimes { get => _explicitNullValueAllUsersBusyTimes; set { _explicitNullValueAllUsersBusyTimes = value; AdditionalData?.Remove("allUsersBusyTimes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allUsersBusyTimes"); else _explicitNullProperties?.Remove("allUsersBusyTimes"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalUserBusyTimes>? _explicitNullValueAllUsersBusyTimes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalUserBusyTimes> AllUsersBusyTimes { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalUserBusyTimes> AllUsersBusyTimes { get => _explicitNullValueAllUsersBusyTimes; set { _explicitNullValueAllUsersBusyTimes = value; AdditionalData?.Remove("allUsersBusyTimes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allUsersBusyTimes"); else _explicitNullProperties?.Remove("allUsersBusyTimes"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalUserBusyTimes> _explicitNullValueAllUsersBusyTimes = default!;
 #endif
         /// <summary>The brandingMetadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBrandingMetadata? BrandingMetadata { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBrandingMetadata? BrandingMetadata { get => _explicitNullValueBrandingMetadata; set { _explicitNullValueBrandingMetadata = value; AdditionalData?.Remove("brandingMetadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brandingMetadata"); else _explicitNullProperties?.Remove("brandingMetadata"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBrandingMetadata? _explicitNullValueBrandingMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBrandingMetadata BrandingMetadata { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBrandingMetadata BrandingMetadata { get => _explicitNullValueBrandingMetadata; set { _explicitNullValueBrandingMetadata = value; AdditionalData?.Remove("brandingMetadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brandingMetadata"); else _explicitNullProperties?.Remove("brandingMetadata"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBrandingMetadata _explicitNullValueBrandingMetadata = default!;
 #endif
         /// <summary>The customParams property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettings? CustomParams { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettings? CustomParams { get => _explicitNullValueCustomParams; set { _explicitNullValueCustomParams = value; AdditionalData?.Remove("customParams"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customParams"); else _explicitNullProperties?.Remove("customParams"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettings? _explicitNullValueCustomParams = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettings CustomParams { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettings CustomParams { get => _explicitNullValueCustomParams; set { _explicitNullValueCustomParams = value; AdditionalData?.Remove("customParams"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customParams"); else _explicitNullProperties?.Remove("customParams"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettings _explicitNullValueCustomParams = default!;
 #endif
         /// <summary>A boolean indicating whether the meeting link is offline.</summary>
-        public bool? IsOffline { get; set; }
+        public bool? IsOffline { get => _explicitNullValueIsOffline; set { _explicitNullValueIsOffline = value; AdditionalData?.Remove("isOffline"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isOffline"); else _explicitNullProperties?.Remove("isOffline"); } }
+        private bool? _explicitNullValueIsOffline = default!;
         /// <summary>The linkAvailability property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailability? LinkAvailability { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailability? LinkAvailability { get => _explicitNullValueLinkAvailability; set { _explicitNullValueLinkAvailability = value; AdditionalData?.Remove("linkAvailability"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("linkAvailability"); else _explicitNullProperties?.Remove("linkAvailability"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailability? _explicitNullValueLinkAvailability = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailability LinkAvailability { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailability LinkAvailability { get => _explicitNullValueLinkAvailability; set { _explicitNullValueLinkAvailability = value; AdditionalData?.Remove("linkAvailability"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("linkAvailability"); else _explicitNullProperties?.Remove("linkAvailability"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailability _explicitNullValueLinkAvailability = default!;
 #endif
         /// <summary>The unique identifier for the meeting link.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LinkId { get; set; }
+        public string? LinkId { get => _explicitNullValueLinkId; set { _explicitNullValueLinkId = value; AdditionalData?.Remove("linkId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("linkId"); else _explicitNullProperties?.Remove("linkId"); } }
+        private string? _explicitNullValueLinkId = default!;
 #nullable restore
 #else
-        public string LinkId { get; set; }
+        public string LinkId { get => _explicitNullValueLinkId; set { _explicitNullValueLinkId = value; AdditionalData?.Remove("linkId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("linkId"); else _explicitNullProperties?.Remove("linkId"); } }
+        private string _explicitNullValueLinkId = default!;
 #endif
         /// <summary>The type of meeting link. Valid values include &apos;PERSONAL_LINK&apos;, &apos;GROUP_CALENDAR&apos;, and &apos;ROUND_ROBIN_CALENDAR&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBookingInfoLinkType? LinkType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBookingInfoLinkType? LinkType { get => _explicitNullValueLinkType; set { _explicitNullValueLinkType = value; AdditionalData?.Remove("linkType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("linkType"); else _explicitNullProperties?.Remove("linkType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBookingInfoLinkType? _explicitNullValueLinkType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBookingInfo"/> and sets the default values.
         /// </summary>
@@ -73,7 +106,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBookingInfo CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBookingInfo();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBookingInfo(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -89,7 +122,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "isOffline", n => { IsOffline = n.GetBoolValue(); } },
                 { "linkAvailability", n => { LinkAvailability = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailability>(global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailability.CreateFromDiscriminatorValue); } },
                 { "linkId", n => { LinkId = n.GetStringValue(); } },
-                { "linkType", n => { LinkType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBookingInfoLinkType>(); } },
+                { "linkType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBookingInfoLinkType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueLinkType = default; _explicitNullProperties?.Remove("linkType"); AdditionalData["linkType"] = unknown; } else { LinkType = parsed; AdditionalData.Remove("linkType"); } } },
             };
         }
         /// <summary>
@@ -106,6 +139,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailability>("linkAvailability", LinkAvailability);
             writer.WriteStringValue("linkId", LinkId);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBookingInfoLinkType>("linkType", LinkType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

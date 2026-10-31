@@ -11,28 +11,49 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ComboEventRule : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("count") is null) { _explicitNullValueCount = default!; _explicitNullProperties?.Remove("count"); }
+            else if (parseNode.GetChildNode("count") is { } nullNodeCount && nullNodeCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Count = null;
+            if (parseNode.GetChildNode("eventTypeId") is null) { _explicitNullValueEventTypeId = default!; _explicitNullProperties?.Remove("eventTypeId"); }
+            else if (parseNode.GetChildNode("eventTypeId") is { } nullNodeEventTypeId && nullNodeEventTypeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventTypeId = null;
+            if (parseNode.GetChildNode("lookbackWindowDays") is null) { _explicitNullValueLookbackWindowDays = default!; _explicitNullProperties?.Remove("lookbackWindowDays"); }
+            else if (parseNode.GetChildNode("lookbackWindowDays") is { } nullNodeLookbackWindowDays && nullNodeLookbackWindowDays.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LookbackWindowDays = null;
+            if (parseNode.GetChildNode("propertyFilters") is null) { _explicitNullValuePropertyFilters = default!; _explicitNullProperties?.Remove("propertyFilters"); }
+            else if (parseNode.GetChildNode("propertyFilters") is { } nullNodePropertyFilters && nullNodePropertyFilters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PropertyFilters = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An integer specifying the number of times the event must occur for the rule to be satisfied.</summary>
-        public int? Count { get; set; }
+        public int? Count { get => _explicitNullValueCount; set { _explicitNullValueCount = value; AdditionalData?.Remove("count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("count"); else _explicitNullProperties?.Remove("count"); } }
+        private int? _explicitNullValueCount = default!;
         /// <summary>The unique identifier for the type of event this rule applies to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EventTypeId { get; set; }
+        public string? EventTypeId { get => _explicitNullValueEventTypeId; set { _explicitNullValueEventTypeId = value; AdditionalData?.Remove("eventTypeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eventTypeId"); else _explicitNullProperties?.Remove("eventTypeId"); } }
+        private string? _explicitNullValueEventTypeId = default!;
 #nullable restore
 #else
-        public string EventTypeId { get; set; }
+        public string EventTypeId { get => _explicitNullValueEventTypeId; set { _explicitNullValueEventTypeId = value; AdditionalData?.Remove("eventTypeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eventTypeId"); else _explicitNullProperties?.Remove("eventTypeId"); } }
+        private string _explicitNullValueEventTypeId = default!;
 #endif
         /// <summary>An integer representing the number of days to look back when evaluating the rule.</summary>
-        public int? LookbackWindowDays { get; set; }
+        public int? LookbackWindowDays { get => _explicitNullValueLookbackWindowDays; set { _explicitNullValueLookbackWindowDays = value; AdditionalData?.Remove("lookbackWindowDays"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lookbackWindowDays"); else _explicitNullProperties?.Remove("lookbackWindowDays"); } }
+        private int? _explicitNullValueLookbackWindowDays = default!;
         /// <summary>An array of property filters that must be satisfied for the rule to apply. Each filter specifies conditions on event properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyFilter>? PropertyFilters { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyFilter>? PropertyFilters { get => _explicitNullValuePropertyFilters; set { _explicitNullValuePropertyFilters = value; AdditionalData?.Remove("propertyFilters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("propertyFilters"); else _explicitNullProperties?.Remove("propertyFilters"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyFilter>? _explicitNullValuePropertyFilters = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyFilter> PropertyFilters { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyFilter> PropertyFilters { get => _explicitNullValuePropertyFilters; set { _explicitNullValuePropertyFilters = value; AdditionalData?.Remove("propertyFilters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("propertyFilters"); else _explicitNullProperties?.Remove("propertyFilters"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyFilter> _explicitNullValuePropertyFilters = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRule"/> and sets the default values.
@@ -49,7 +70,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRule CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRule();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.ComboEventRule(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -76,6 +97,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("eventTypeId", EventTypeId);
             writer.WriteIntValue("lookbackWindowDays", LookbackWindowDays);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyFilter>("propertyFilters", PropertyFilters);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

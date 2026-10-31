@@ -11,50 +11,80 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CrmPublicAdsSearchFilter : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("adNetwork") is null) { _explicitNullValueAdNetwork = default!; _explicitNullProperties?.Remove("adNetwork"); }
+            else if (parseNode.GetChildNode("adNetwork") is { } nullNodeAdNetwork && nullNodeAdNetwork.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdNetwork = null;
+            if (parseNode.GetChildNode("entityType") is null) { _explicitNullValueEntityType = default!; _explicitNullProperties?.Remove("entityType"); }
+            else if (parseNode.GetChildNode("entityType") is { } nullNodeEntityType && nullNodeEntityType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EntityType = null;
+            if (parseNode.GetChildNode("filterType") is null) { _explicitNullValueFilterType = default!; _explicitNullProperties?.Remove("filterType"); }
+            else if (parseNode.GetChildNode("filterType") is { } nullNodeFilterType && nullNodeFilterType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FilterType = null;
+            if (parseNode.GetChildNode("operator") is null) { _explicitNullValueOperator = default!; _explicitNullProperties?.Remove("operator"); }
+            else if (parseNode.GetChildNode("operator") is { } nullNodeOperator && nullNodeOperator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Operator = null;
+            if (parseNode.GetChildNode("searchTerms") is null) { _explicitNullValueSearchTerms = default!; _explicitNullProperties?.Remove("searchTerms"); }
+            else if (parseNode.GetChildNode("searchTerms") is { } nullNodeSearchTerms && nullNodeSearchTerms.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SearchTerms = null;
+            if (parseNode.GetChildNode("searchTermType") is null) { _explicitNullValueSearchTermType = default!; _explicitNullProperties?.Remove("searchTermType"); }
+            else if (parseNode.GetChildNode("searchTermType") is { } nullNodeSearchTermType && nullNodeSearchTermType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SearchTermType = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A string that specifies the ad network where the search is being conducted.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AdNetwork { get; set; }
+        public string? AdNetwork { get => _explicitNullValueAdNetwork; set { _explicitNullValueAdNetwork = value; AdditionalData?.Remove("adNetwork"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adNetwork"); else _explicitNullProperties?.Remove("adNetwork"); } }
+        private string? _explicitNullValueAdNetwork = default!;
 #nullable restore
 #else
-        public string AdNetwork { get; set; }
+        public string AdNetwork { get => _explicitNullValueAdNetwork; set { _explicitNullValueAdNetwork = value; AdditionalData?.Remove("adNetwork"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adNetwork"); else _explicitNullProperties?.Remove("adNetwork"); } }
+        private string _explicitNullValueAdNetwork = default!;
 #endif
         /// <summary>A string that represents the type of entity being searched for in the ads.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EntityType { get; set; }
+        public string? EntityType { get => _explicitNullValueEntityType; set { _explicitNullValueEntityType = value; AdditionalData?.Remove("entityType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entityType"); else _explicitNullProperties?.Remove("entityType"); } }
+        private string? _explicitNullValueEntityType = default!;
 #nullable restore
 #else
-        public string EntityType { get; set; }
+        public string EntityType { get => _explicitNullValueEntityType; set { _explicitNullValueEntityType = value; AdditionalData?.Remove("entityType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entityType"); else _explicitNullProperties?.Remove("entityType"); } }
+        private string _explicitNullValueEntityType = default!;
 #endif
         /// <summary>A string that specifies the type of filter being applied. The default value is &apos;ADS_SEARCH&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmAdsSearchFilterType? FilterType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmAdsSearchFilterType? FilterType { get => _explicitNullValueFilterType; set { _explicitNullValueFilterType = value; AdditionalData?.Remove("filterType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filterType"); else _explicitNullProperties?.Remove("filterType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmAdsSearchFilterType? _explicitNullValueFilterType = default!;
         /// <summary>A string that defines the operation or condition applied to the search terms.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Operator { get; set; }
+        public string? Operator { get => _explicitNullValueOperator; set { _explicitNullValueOperator = value; AdditionalData?.Remove("operator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator"); else _explicitNullProperties?.Remove("operator"); } }
+        private string? _explicitNullValueOperator = default!;
 #nullable restore
 #else
-        public string Operator { get; set; }
+        public string Operator { get => _explicitNullValueOperator; set { _explicitNullValueOperator = value; AdditionalData?.Remove("operator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator"); else _explicitNullProperties?.Remove("operator"); } }
+        private string _explicitNullValueOperator = default!;
 #endif
         /// <summary>An array of strings containing the search terms used to filter the ads.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? SearchTerms { get; set; }
+        public List<string>? SearchTerms { get => _explicitNullValueSearchTerms; set { _explicitNullValueSearchTerms = value; AdditionalData?.Remove("searchTerms"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("searchTerms"); else _explicitNullProperties?.Remove("searchTerms"); } }
+        private List<string>? _explicitNullValueSearchTerms = default!;
 #nullable restore
 #else
-        public List<string> SearchTerms { get; set; }
+        public List<string> SearchTerms { get => _explicitNullValueSearchTerms; set { _explicitNullValueSearchTerms = value; AdditionalData?.Remove("searchTerms"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("searchTerms"); else _explicitNullProperties?.Remove("searchTerms"); } }
+        private List<string> _explicitNullValueSearchTerms = default!;
 #endif
         /// <summary>A string that indicates the type of search term being used in the filter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SearchTermType { get; set; }
+        public string? SearchTermType { get => _explicitNullValueSearchTermType; set { _explicitNullValueSearchTermType = value; AdditionalData?.Remove("searchTermType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("searchTermType"); else _explicitNullProperties?.Remove("searchTermType"); } }
+        private string? _explicitNullValueSearchTermType = default!;
 #nullable restore
 #else
-        public string SearchTermType { get; set; }
+        public string SearchTermType { get => _explicitNullValueSearchTermType; set { _explicitNullValueSearchTermType = value; AdditionalData?.Remove("searchTermType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("searchTermType"); else _explicitNullProperties?.Remove("searchTermType"); } }
+        private string _explicitNullValueSearchTermType = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAdsSearchFilter"/> and sets the default values.
@@ -71,7 +101,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAdsSearchFilter CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAdsSearchFilter();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAdsSearchFilter(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -83,7 +113,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "adNetwork", n => { AdNetwork = n.GetStringValue(); } },
                 { "entityType", n => { EntityType = n.GetStringValue(); } },
-                { "filterType", n => { FilterType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAdsSearchFilterType>(); } },
+                { "filterType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAdsSearchFilterType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFilterType = default; _explicitNullProperties?.Remove("filterType"); AdditionalData["filterType"] = unknown; } else { FilterType = parsed; AdditionalData.Remove("filterType"); } } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
                 { "searchTermType", n => { SearchTermType = n.GetStringValue(); } },
                 { "searchTerms", n => { SearchTerms = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -102,6 +132,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("operator", Operator);
             writer.WriteCollectionOfPrimitiveValues<string>("searchTerms", SearchTerms);
             writer.WriteStringValue("searchTermType", SearchTermType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

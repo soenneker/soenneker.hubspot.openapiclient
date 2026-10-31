@@ -11,33 +11,68 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicSequenceSettingsResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("createdAt") is null) { _explicitNullValueCreatedAt = default!; _explicitNullProperties?.Remove("createdAt"); }
+            else if (parseNode.GetChildNode("createdAt") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("eligibleFollowUpDays") is null) { _explicitNullValueEligibleFollowUpDays = default!; _explicitNullProperties?.Remove("eligibleFollowUpDays"); }
+            else if (parseNode.GetChildNode("eligibleFollowUpDays") is { } nullNodeEligibleFollowUpDays && nullNodeEligibleFollowUpDays.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EligibleFollowUpDays = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("individualTaskRemindersEnabled") is null) { _explicitNullValueIndividualTaskRemindersEnabled = default!; _explicitNullProperties?.Remove("individualTaskRemindersEnabled"); }
+            else if (parseNode.GetChildNode("individualTaskRemindersEnabled") is { } nullNodeIndividualTaskRemindersEnabled && nullNodeIndividualTaskRemindersEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IndividualTaskRemindersEnabled = null;
+            if (parseNode.GetChildNode("sellingStrategy") is null) { _explicitNullValueSellingStrategy = default!; _explicitNullProperties?.Remove("sellingStrategy"); }
+            else if (parseNode.GetChildNode("sellingStrategy") is { } nullNodeSellingStrategy && nullNodeSellingStrategy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SellingStrategy = null;
+            if (parseNode.GetChildNode("sendWindowEndMinute") is null) { _explicitNullValueSendWindowEndMinute = default!; _explicitNullProperties?.Remove("sendWindowEndMinute"); }
+            else if (parseNode.GetChildNode("sendWindowEndMinute") is { } nullNodeSendWindowEndMinute && nullNodeSendWindowEndMinute.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SendWindowEndMinute = null;
+            if (parseNode.GetChildNode("sendWindowStartMinute") is null) { _explicitNullValueSendWindowStartMinute = default!; _explicitNullProperties?.Remove("sendWindowStartMinute"); }
+            else if (parseNode.GetChildNode("sendWindowStartMinute") is { } nullNodeSendWindowStartMinute && nullNodeSendWindowStartMinute.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SendWindowStartMinute = null;
+            if (parseNode.GetChildNode("taskReminderMinute") is null) { _explicitNullValueTaskReminderMinute = default!; _explicitNullProperties?.Remove("taskReminderMinute"); }
+            else if (parseNode.GetChildNode("taskReminderMinute") is { } nullNodeTaskReminderMinute && nullNodeTaskReminderMinute.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaskReminderMinute = null;
+            if (parseNode.GetChildNode("updatedAt") is null) { _explicitNullValueUpdatedAt = default!; _explicitNullProperties?.Remove("updatedAt"); }
+            else if (parseNode.GetChildNode("updatedAt") is { } nullNodeUpdatedAt && nullNodeUpdatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdatedAt = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The date and time when the sequence settings were created, in ISO 8601 format.</summary>
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; AdditionalData?.Remove("createdAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createdAt"); else _explicitNullProperties?.Remove("createdAt"); } }
+        private DateTimeOffset? _explicitNullValueCreatedAt = default!;
         /// <summary>Specifies the days eligible for follow-ups. Valid values include &apos;EVERYDAY&apos;, &apos;BUSINESS_DAYS&apos;, and &apos;WEEKDAYS_ONLY&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceSettingsResponseEligibleFollowUpDays? EligibleFollowUpDays { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceSettingsResponseEligibleFollowUpDays? EligibleFollowUpDays { get => _explicitNullValueEligibleFollowUpDays; set { _explicitNullValueEligibleFollowUpDays = value; AdditionalData?.Remove("eligibleFollowUpDays"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eligibleFollowUpDays"); else _explicitNullProperties?.Remove("eligibleFollowUpDays"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceSettingsResponseEligibleFollowUpDays? _explicitNullValueEligibleFollowUpDays = default!;
         /// <summary>The unique identifier for the sequence settings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>A boolean indicating whether individual task reminders are enabled.</summary>
-        public bool? IndividualTaskRemindersEnabled { get; set; }
+        public bool? IndividualTaskRemindersEnabled { get => _explicitNullValueIndividualTaskRemindersEnabled; set { _explicitNullValueIndividualTaskRemindersEnabled = value; AdditionalData?.Remove("individualTaskRemindersEnabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("individualTaskRemindersEnabled"); else _explicitNullProperties?.Remove("individualTaskRemindersEnabled"); } }
+        private bool? _explicitNullValueIndividualTaskRemindersEnabled = default!;
         /// <summary>The strategy used for selling, which can be either &apos;LEAD_BASED&apos; or &apos;ACCOUNT_BASED&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceSettingsResponseSellingStrategy? SellingStrategy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceSettingsResponseSellingStrategy? SellingStrategy { get => _explicitNullValueSellingStrategy; set { _explicitNullValueSellingStrategy = value; AdditionalData?.Remove("sellingStrategy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sellingStrategy"); else _explicitNullProperties?.Remove("sellingStrategy"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceSettingsResponseSellingStrategy? _explicitNullValueSellingStrategy = default!;
         /// <summary>The ending minute of the window during which emails can be sent, represented as an integer.</summary>
-        public int? SendWindowEndMinute { get; set; }
+        public int? SendWindowEndMinute { get => _explicitNullValueSendWindowEndMinute; set { _explicitNullValueSendWindowEndMinute = value; AdditionalData?.Remove("sendWindowEndMinute"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sendWindowEndMinute"); else _explicitNullProperties?.Remove("sendWindowEndMinute"); } }
+        private int? _explicitNullValueSendWindowEndMinute = default!;
         /// <summary>The starting minute of the window during which emails can be sent, represented as an integer.</summary>
-        public int? SendWindowStartMinute { get; set; }
+        public int? SendWindowStartMinute { get => _explicitNullValueSendWindowStartMinute; set { _explicitNullValueSendWindowStartMinute = value; AdditionalData?.Remove("sendWindowStartMinute"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sendWindowStartMinute"); else _explicitNullProperties?.Remove("sendWindowStartMinute"); } }
+        private int? _explicitNullValueSendWindowStartMinute = default!;
         /// <summary>The minute at which task reminders are sent, represented as an integer.</summary>
-        public int? TaskReminderMinute { get; set; }
+        public int? TaskReminderMinute { get => _explicitNullValueTaskReminderMinute; set { _explicitNullValueTaskReminderMinute = value; AdditionalData?.Remove("taskReminderMinute"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taskReminderMinute"); else _explicitNullProperties?.Remove("taskReminderMinute"); } }
+        private int? _explicitNullValueTaskReminderMinute = default!;
         /// <summary>The date and time when the sequence settings were last updated, in ISO 8601 format.</summary>
-        public DateTimeOffset? UpdatedAt { get; set; }
+        public DateTimeOffset? UpdatedAt { get => _explicitNullValueUpdatedAt; set { _explicitNullValueUpdatedAt = value; AdditionalData?.Remove("updatedAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updatedAt"); else _explicitNullProperties?.Remove("updatedAt"); } }
+        private DateTimeOffset? _explicitNullValueUpdatedAt = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceSettingsResponse"/> and sets the default values.
         /// </summary>
@@ -53,7 +88,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceSettingsResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceSettingsResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceSettingsResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -64,10 +99,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
-                { "eligibleFollowUpDays", n => { EligibleFollowUpDays = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceSettingsResponseEligibleFollowUpDays>(); } },
+                { "eligibleFollowUpDays", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceSettingsResponseEligibleFollowUpDays>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueEligibleFollowUpDays = default; _explicitNullProperties?.Remove("eligibleFollowUpDays"); AdditionalData["eligibleFollowUpDays"] = unknown; } else { EligibleFollowUpDays = parsed; AdditionalData.Remove("eligibleFollowUpDays"); } } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "individualTaskRemindersEnabled", n => { IndividualTaskRemindersEnabled = n.GetBoolValue(); } },
-                { "sellingStrategy", n => { SellingStrategy = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceSettingsResponseSellingStrategy>(); } },
+                { "sellingStrategy", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceSettingsResponseSellingStrategy>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueSellingStrategy = default; _explicitNullProperties?.Remove("sellingStrategy"); AdditionalData["sellingStrategy"] = unknown; } else { SellingStrategy = parsed; AdditionalData.Remove("sellingStrategy"); } } },
                 { "sendWindowEndMinute", n => { SendWindowEndMinute = n.GetIntValue(); } },
                 { "sendWindowStartMinute", n => { SendWindowStartMinute = n.GetIntValue(); } },
                 { "taskReminderMinute", n => { TaskReminderMinute = n.GetIntValue(); } },
@@ -90,6 +125,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteIntValue("sendWindowStartMinute", SendWindowStartMinute);
             writer.WriteIntValue("taskReminderMinute", TaskReminderMinute);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

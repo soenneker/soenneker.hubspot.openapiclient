@@ -11,33 +11,60 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicBudgetTotals : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("budgetItems") is null) { _explicitNullValueBudgetItems = default!; _explicitNullProperties?.Remove("budgetItems"); }
+            else if (parseNode.GetChildNode("budgetItems") is { } nullNodeBudgetItems && nullNodeBudgetItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BudgetItems = null;
+            if (parseNode.GetChildNode("budgetTotal") is null) { _explicitNullValueBudgetTotal = default!; _explicitNullProperties?.Remove("budgetTotal"); }
+            else if (parseNode.GetChildNode("budgetTotal") is { } nullNodeBudgetTotal && nullNodeBudgetTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BudgetTotal = null;
+            if (parseNode.GetChildNode("currencyCode") is null) { _explicitNullValueCurrencyCode = default!; _explicitNullProperties?.Remove("currencyCode"); }
+            else if (parseNode.GetChildNode("currencyCode") is { } nullNodeCurrencyCode && nullNodeCurrencyCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrencyCode = null;
+            if (parseNode.GetChildNode("remainingBudget") is null) { _explicitNullValueRemainingBudget = default!; _explicitNullProperties?.Remove("remainingBudget"); }
+            else if (parseNode.GetChildNode("remainingBudget") is { } nullNodeRemainingBudget && nullNodeRemainingBudget.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RemainingBudget = null;
+            if (parseNode.GetChildNode("spendItems") is null) { _explicitNullValueSpendItems = default!; _explicitNullProperties?.Remove("spendItems"); }
+            else if (parseNode.GetChildNode("spendItems") is { } nullNodeSpendItems && nullNodeSpendItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SpendItems = null;
+            if (parseNode.GetChildNode("spendTotal") is null) { _explicitNullValueSpendTotal = default!; _explicitNullProperties?.Remove("spendTotal"); }
+            else if (parseNode.GetChildNode("spendTotal") is { } nullNodeSpendTotal && nullNodeSpendTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SpendTotal = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An array of budget items associated with the campaign, each represented by a PublicBudgetItem object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicBudgetItem>? BudgetItems { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicBudgetItem>? BudgetItems { get => _explicitNullValueBudgetItems; set { _explicitNullValueBudgetItems = value; AdditionalData?.Remove("budgetItems"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("budgetItems"); else _explicitNullProperties?.Remove("budgetItems"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicBudgetItem>? _explicitNullValueBudgetItems = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicBudgetItem> BudgetItems { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicBudgetItem> BudgetItems { get => _explicitNullValueBudgetItems; set { _explicitNullValueBudgetItems = value; AdditionalData?.Remove("budgetItems"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("budgetItems"); else _explicitNullProperties?.Remove("budgetItems"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicBudgetItem> _explicitNullValueBudgetItems = default!;
 #endif
         /// <summary>The total amount of the budget allocated for the campaign, expressed as a number.</summary>
-        public double? BudgetTotal { get; set; }
+        public double? BudgetTotal { get => _explicitNullValueBudgetTotal; set { _explicitNullValueBudgetTotal = value; AdditionalData?.Remove("budgetTotal"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("budgetTotal"); else _explicitNullProperties?.Remove("budgetTotal"); } }
+        private double? _explicitNullValueBudgetTotal = default!;
         /// <summary>The currency code used for the budget and spending amounts, represented as a string. Valid values include standard currency codes such as &apos;USD&apos;, &apos;EUR&apos;, &apos;JPY&apos;, etc.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicBudgetTotalsCurrencyCode? CurrencyCode { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicBudgetTotalsCurrencyCode? CurrencyCode { get => _explicitNullValueCurrencyCode; set { _explicitNullValueCurrencyCode = value; AdditionalData?.Remove("currencyCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currencyCode"); else _explicitNullProperties?.Remove("currencyCode"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicBudgetTotalsCurrencyCode? _explicitNullValueCurrencyCode = default!;
         /// <summary>The remaining budget available for the campaign, calculated as the difference between the budgetTotal and spendTotal, expressed as a number.</summary>
-        public double? RemainingBudget { get; set; }
+        public double? RemainingBudget { get => _explicitNullValueRemainingBudget; set { _explicitNullValueRemainingBudget = value; AdditionalData?.Remove("remainingBudget"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("remainingBudget"); else _explicitNullProperties?.Remove("remainingBudget"); } }
+        private double? _explicitNullValueRemainingBudget = default!;
         /// <summary>An array of spend items associated with the campaign, each represented by a PublicSpendItem object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSpendItem>? SpendItems { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSpendItem>? SpendItems { get => _explicitNullValueSpendItems; set { _explicitNullValueSpendItems = value; AdditionalData?.Remove("spendItems"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spendItems"); else _explicitNullProperties?.Remove("spendItems"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSpendItem>? _explicitNullValueSpendItems = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSpendItem> SpendItems { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSpendItem> SpendItems { get => _explicitNullValueSpendItems; set { _explicitNullValueSpendItems = value; AdditionalData?.Remove("spendItems"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spendItems"); else _explicitNullProperties?.Remove("spendItems"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSpendItem> _explicitNullValueSpendItems = default!;
 #endif
         /// <summary>The total amount spent in the campaign, expressed as a number.</summary>
-        public double? SpendTotal { get; set; }
+        public double? SpendTotal { get => _explicitNullValueSpendTotal; set { _explicitNullValueSpendTotal = value; AdditionalData?.Remove("spendTotal"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spendTotal"); else _explicitNullProperties?.Remove("spendTotal"); } }
+        private double? _explicitNullValueSpendTotal = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicBudgetTotals"/> and sets the default values.
         /// </summary>
@@ -53,7 +80,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicBudgetTotals CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicBudgetTotals();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicBudgetTotals(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -65,7 +92,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "budgetItems", n => { BudgetItems = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicBudgetItem>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicBudgetItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "budgetTotal", n => { BudgetTotal = n.GetDoubleValue(); } },
-                { "currencyCode", n => { CurrencyCode = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicBudgetTotalsCurrencyCode>(); } },
+                { "currencyCode", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicBudgetTotalsCurrencyCode>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCurrencyCode = default; _explicitNullProperties?.Remove("currencyCode"); AdditionalData["currencyCode"] = unknown; } else { CurrencyCode = parsed; AdditionalData.Remove("currencyCode"); } } },
                 { "remainingBudget", n => { RemainingBudget = n.GetDoubleValue(); } },
                 { "spendItems", n => { SpendItems = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSpendItem>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicSpendItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "spendTotal", n => { SpendTotal = n.GetDoubleValue(); } },
@@ -84,6 +111,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteDoubleValue("remainingBudget", RemainingBudget);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSpendItem>("spendItems", SpendItems);
             writer.WriteDoubleValue("spendTotal", SpendTotal);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

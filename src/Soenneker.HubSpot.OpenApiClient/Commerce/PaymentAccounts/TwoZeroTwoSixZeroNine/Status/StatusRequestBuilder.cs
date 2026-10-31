@@ -49,7 +49,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Commerce.PaymentAccounts.TwoZeroTwoSix
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentAccountView>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PaymentAccountView.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PaymentAccountView>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PaymentAccountView.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve the status of payment accounts in your HubSpot account. This endpoint provides information about the account&apos;s ability to transact and payout, its enrollment state, when or if it has transacted last, and the types of payment processors it is eligible for. Use this to monitor and manage your payment account&apos;s operational status.

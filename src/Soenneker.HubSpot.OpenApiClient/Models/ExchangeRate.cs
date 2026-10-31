@@ -11,31 +11,63 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ExchangeRate : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("conversionRate") is null) { _explicitNullValueConversionRate = default!; _explicitNullProperties?.Remove("conversionRate"); }
+            else if (parseNode.GetChildNode("conversionRate") is { } nullNodeConversionRate && nullNodeConversionRate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConversionRate = null;
+            if (parseNode.GetChildNode("createdAt") is null) { _explicitNullValueCreatedAt = default!; _explicitNullProperties?.Remove("createdAt"); }
+            else if (parseNode.GetChildNode("createdAt") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("effectiveAt") is null) { _explicitNullValueEffectiveAt = default!; _explicitNullProperties?.Remove("effectiveAt"); }
+            else if (parseNode.GetChildNode("effectiveAt") is { } nullNodeEffectiveAt && nullNodeEffectiveAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EffectiveAt = null;
+            if (parseNode.GetChildNode("fromCurrencyCode") is null) { _explicitNullValueFromCurrencyCode = default!; _explicitNullProperties?.Remove("fromCurrencyCode"); }
+            else if (parseNode.GetChildNode("fromCurrencyCode") is { } nullNodeFromCurrencyCode && nullNodeFromCurrencyCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FromCurrencyCode = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("toCurrencyCode") is null) { _explicitNullValueToCurrencyCode = default!; _explicitNullProperties?.Remove("toCurrencyCode"); }
+            else if (parseNode.GetChildNode("toCurrencyCode") is { } nullNodeToCurrencyCode && nullNodeToCurrencyCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToCurrencyCode = null;
+            if (parseNode.GetChildNode("updatedAt") is null) { _explicitNullValueUpdatedAt = default!; _explicitNullProperties?.Remove("updatedAt"); }
+            else if (parseNode.GetChildNode("updatedAt") is { } nullNodeUpdatedAt && nullNodeUpdatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdatedAt = null;
+            if (parseNode.GetChildNode("visibleInUI") is null) { _explicitNullValueVisibleInUI = default!; _explicitNullProperties?.Remove("visibleInUI"); }
+            else if (parseNode.GetChildNode("visibleInUI") is { } nullNodeVisibleInUI && nullNodeVisibleInUI.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VisibleInUI = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The conversion rate between the to and from currency code of this exchange rate.</summary>
-        public double? ConversionRate { get; set; }
+        public double? ConversionRate { get => _explicitNullValueConversionRate; set { _explicitNullValueConversionRate = value; AdditionalData?.Remove("conversionRate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversionRate"); else _explicitNullProperties?.Remove("conversionRate"); } }
+        private double? _explicitNullValueConversionRate = default!;
         /// <summary>The date the exchange rate was created.</summary>
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; AdditionalData?.Remove("createdAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createdAt"); else _explicitNullProperties?.Remove("createdAt"); } }
+        private DateTimeOffset? _explicitNullValueCreatedAt = default!;
         /// <summary>The date the exchange rate is in effect.</summary>
-        public DateTimeOffset? EffectiveAt { get; set; }
+        public DateTimeOffset? EffectiveAt { get => _explicitNullValueEffectiveAt; set { _explicitNullValueEffectiveAt = value; AdditionalData?.Remove("effectiveAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("effectiveAt"); else _explicitNullProperties?.Remove("effectiveAt"); } }
+        private DateTimeOffset? _explicitNullValueEffectiveAt = default!;
         /// <summary>This represents the three-letter currency code (such as USD for US Dollar) of the currency you are converting from.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExchangeRateFromCurrencyCode? FromCurrencyCode { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExchangeRateFromCurrencyCode? FromCurrencyCode { get => _explicitNullValueFromCurrencyCode; set { _explicitNullValueFromCurrencyCode = value; AdditionalData?.Remove("fromCurrencyCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fromCurrencyCode"); else _explicitNullProperties?.Remove("fromCurrencyCode"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ExchangeRateFromCurrencyCode? _explicitNullValueFromCurrencyCode = default!;
         /// <summary>A unique identifier for the exchange rate</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>This represents the three-letter currency code (such as USD for US Dollar) of the currency you are converting to.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExchangeRateToCurrencyCode? ToCurrencyCode { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExchangeRateToCurrencyCode? ToCurrencyCode { get => _explicitNullValueToCurrencyCode; set { _explicitNullValueToCurrencyCode = value; AdditionalData?.Remove("toCurrencyCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("toCurrencyCode"); else _explicitNullProperties?.Remove("toCurrencyCode"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ExchangeRateToCurrencyCode? _explicitNullValueToCurrencyCode = default!;
         /// <summary>The date the exchange rate was last updated.</summary>
-        public DateTimeOffset? UpdatedAt { get; set; }
+        public DateTimeOffset? UpdatedAt { get => _explicitNullValueUpdatedAt; set { _explicitNullValueUpdatedAt = value; AdditionalData?.Remove("updatedAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updatedAt"); else _explicitNullProperties?.Remove("updatedAt"); } }
+        private DateTimeOffset? _explicitNullValueUpdatedAt = default!;
         /// <summary>This indicates if the exchange rate is shown in the MultiCurrency settings page.</summary>
-        public bool? VisibleInUI { get; set; }
+        public bool? VisibleInUI { get => _explicitNullValueVisibleInUI; set { _explicitNullValueVisibleInUI = value; AdditionalData?.Remove("visibleInUI"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visibleInUI"); else _explicitNullProperties?.Remove("visibleInUI"); } }
+        private bool? _explicitNullValueVisibleInUI = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExchangeRate"/> and sets the default values.
         /// </summary>
@@ -51,7 +83,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.ExchangeRate CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.ExchangeRate();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.ExchangeRate(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -64,9 +96,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "conversionRate", n => { ConversionRate = n.GetDoubleValue(); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "effectiveAt", n => { EffectiveAt = n.GetDateTimeOffsetValue(); } },
-                { "fromCurrencyCode", n => { FromCurrencyCode = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExchangeRateFromCurrencyCode>(); } },
+                { "fromCurrencyCode", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExchangeRateFromCurrencyCode>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFromCurrencyCode = default; _explicitNullProperties?.Remove("fromCurrencyCode"); AdditionalData["fromCurrencyCode"] = unknown; } else { FromCurrencyCode = parsed; AdditionalData.Remove("fromCurrencyCode"); } } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "toCurrencyCode", n => { ToCurrencyCode = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExchangeRateToCurrencyCode>(); } },
+                { "toCurrencyCode", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExchangeRateToCurrencyCode>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueToCurrencyCode = default; _explicitNullProperties?.Remove("toCurrencyCode"); AdditionalData["toCurrencyCode"] = unknown; } else { ToCurrencyCode = parsed; AdditionalData.Remove("toCurrencyCode"); } } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
                 { "visibleInUI", n => { VisibleInUI = n.GetBoolValue(); } },
             };
@@ -86,6 +118,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExchangeRateToCurrencyCode>("toCurrencyCode", ToCurrencyCode);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             writer.WriteBoolValue("visibleInUI", VisibleInUI);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

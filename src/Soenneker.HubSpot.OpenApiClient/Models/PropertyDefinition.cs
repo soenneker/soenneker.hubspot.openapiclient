@@ -11,116 +11,181 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PropertyDefinition : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("calculationExpression") is null) { _explicitNullValueCalculationExpression = default!; _explicitNullProperties?.Remove("calculationExpression"); }
+            else if (parseNode.GetChildNode("calculationExpression") is { } nullNodeCalculationExpression && nullNodeCalculationExpression.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CalculationExpression = null;
+            if (parseNode.GetChildNode("calculationFormula") is null) { _explicitNullValueCalculationFormula = default!; _explicitNullProperties?.Remove("calculationFormula"); }
+            else if (parseNode.GetChildNode("calculationFormula") is { } nullNodeCalculationFormula && nullNodeCalculationFormula.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CalculationFormula = null;
+            if (parseNode.GetChildNode("definitionSource") is null) { _explicitNullValueDefinitionSource = default!; _explicitNullProperties?.Remove("definitionSource"); }
+            else if (parseNode.GetChildNode("definitionSource") is { } nullNodeDefinitionSource && nullNodeDefinitionSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefinitionSource = null;
+            if (parseNode.GetChildNode("extensionData") is null) { _explicitNullValueExtensionData = default!; _explicitNullProperties?.Remove("extensionData"); }
+            else if (parseNode.GetChildNode("extensionData") is { } nullNodeExtensionData && nullNodeExtensionData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExtensionData = null;
+            if (parseNode.GetChildNode("externalOptionsMetaData") is null) { _explicitNullValueExternalOptionsMetaData = default!; _explicitNullProperties?.Remove("externalOptionsMetaData"); }
+            else if (parseNode.GetChildNode("externalOptionsMetaData") is { } nullNodeExternalOptionsMetaData && nullNodeExternalOptionsMetaData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalOptionsMetaData = null;
+            if (parseNode.GetChildNode("fulcrumPortalId") is null) { _explicitNullValueFulcrumPortalId = default!; _explicitNullProperties?.Remove("fulcrumPortalId"); }
+            else if (parseNode.GetChildNode("fulcrumPortalId") is { } nullNodeFulcrumPortalId && nullNodeFulcrumPortalId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FulcrumPortalId = null;
+            if (parseNode.GetChildNode("fulcrumTimestamp") is null) { _explicitNullValueFulcrumTimestamp = default!; _explicitNullProperties?.Remove("fulcrumTimestamp"); }
+            else if (parseNode.GetChildNode("fulcrumTimestamp") is { } nullNodeFulcrumTimestamp && nullNodeFulcrumTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FulcrumTimestamp = null;
+            if (parseNode.GetChildNode("janusGroup") is null) { _explicitNullValueJanusGroup = default!; _explicitNullProperties?.Remove("janusGroup"); }
+            else if (parseNode.GetChildNode("janusGroup") is { } nullNodeJanusGroup && nullNodeJanusGroup.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JanusGroup = null;
+            if (parseNode.GetChildNode("lookupAssociationSpec") is null) { _explicitNullValueLookupAssociationSpec = default!; _explicitNullProperties?.Remove("lookupAssociationSpec"); }
+            else if (parseNode.GetChildNode("lookupAssociationSpec") is { } nullNodeLookupAssociationSpec && nullNodeLookupAssociationSpec.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LookupAssociationSpec = null;
+            if (parseNode.GetChildNode("objectTypeId") is null) { _explicitNullValueObjectTypeId = default!; _explicitNullProperties?.Remove("objectTypeId"); }
+            else if (parseNode.GetChildNode("objectTypeId") is { } nullNodeObjectTypeId && nullNodeObjectTypeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectTypeId = null;
+            if (parseNode.GetChildNode("permission") is null) { _explicitNullValuePermission = default!; _explicitNullProperties?.Remove("permission"); }
+            else if (parseNode.GetChildNode("permission") is { } nullNodePermission && nullNodePermission.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Permission = null;
+            if (parseNode.GetChildNode("property") is null) { _explicitNullValueProperty = default!; _explicitNullProperties?.Remove("property"); }
+            else if (parseNode.GetChildNode("property") is { } nullNodeProperty && nullNodeProperty.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Property = null;
+            if (parseNode.GetChildNode("propertyDefinitionSource") is null) { _explicitNullValuePropertyDefinitionSource = default!; _explicitNullProperties?.Remove("propertyDefinitionSource"); }
+            else if (parseNode.GetChildNode("propertyDefinitionSource") is { } nullNodePropertyDefinitionSource && nullNodePropertyDefinitionSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PropertyDefinitionSource = null;
+            if (parseNode.GetChildNode("propertyRequirements") is null) { _explicitNullValuePropertyRequirements = default!; _explicitNullProperties?.Remove("propertyRequirements"); }
+            else if (parseNode.GetChildNode("propertyRequirements") is { } nullNodePropertyRequirements && nullNodePropertyRequirements.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PropertyRequirements = null;
+            if (parseNode.GetChildNode("rollupExpression") is null) { _explicitNullValueRollupExpression = default!; _explicitNullProperties?.Remove("rollupExpression"); }
+            else if (parseNode.GetChildNode("rollupExpression") is { } nullNodeRollupExpression && nullNodeRollupExpression.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RollupExpression = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An expression used to calculate the property&apos;s value based on other properties or constants.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyDefinitionCalculationExpression? CalculationExpression { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyDefinitionCalculationExpression? CalculationExpression { get => _explicitNullValueCalculationExpression; set { _explicitNullValueCalculationExpression = value; AdditionalData?.Remove("calculationExpression"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calculationExpression"); else _explicitNullProperties?.Remove("calculationExpression"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PropertyDefinitionCalculationExpression? _explicitNullValueCalculationExpression = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyDefinitionCalculationExpression CalculationExpression { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyDefinitionCalculationExpression CalculationExpression { get => _explicitNullValueCalculationExpression; set { _explicitNullValueCalculationExpression = value; AdditionalData?.Remove("calculationExpression"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calculationExpression"); else _explicitNullProperties?.Remove("calculationExpression"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PropertyDefinitionCalculationExpression _explicitNullValueCalculationExpression = default!;
 #endif
         /// <summary>A formula that defines how the property&apos;s value is computed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CalculationFormula { get; set; }
+        public string? CalculationFormula { get => _explicitNullValueCalculationFormula; set { _explicitNullValueCalculationFormula = value; AdditionalData?.Remove("calculationFormula"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calculationFormula"); else _explicitNullProperties?.Remove("calculationFormula"); } }
+        private string? _explicitNullValueCalculationFormula = default!;
 #nullable restore
 #else
-        public string CalculationFormula { get; set; }
+        public string CalculationFormula { get => _explicitNullValueCalculationFormula; set { _explicitNullValueCalculationFormula = value; AdditionalData?.Remove("calculationFormula"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calculationFormula"); else _explicitNullProperties?.Remove("calculationFormula"); } }
+        private string _explicitNullValueCalculationFormula = default!;
 #endif
         /// <summary>The definitionSource property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyDefinitionSource? DefinitionSource { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyDefinitionSource? DefinitionSource { get => _explicitNullValueDefinitionSource; set { _explicitNullValueDefinitionSource = value; AdditionalData?.Remove("definitionSource"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("definitionSource"); else _explicitNullProperties?.Remove("definitionSource"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PropertyDefinitionSource? _explicitNullValueDefinitionSource = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyDefinitionSource DefinitionSource { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyDefinitionSource DefinitionSource { get => _explicitNullValueDefinitionSource; set { _explicitNullValueDefinitionSource = value; AdditionalData?.Remove("definitionSource"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("definitionSource"); else _explicitNullProperties?.Remove("definitionSource"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PropertyDefinitionSource _explicitNullValueDefinitionSource = default!;
 #endif
         /// <summary>The extensionData property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExtensionData? ExtensionData { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExtensionData? ExtensionData { get => _explicitNullValueExtensionData; set { _explicitNullValueExtensionData = value; AdditionalData?.Remove("extensionData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extensionData"); else _explicitNullProperties?.Remove("extensionData"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ExtensionData? _explicitNullValueExtensionData = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExtensionData ExtensionData { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExtensionData ExtensionData { get => _explicitNullValueExtensionData; set { _explicitNullValueExtensionData = value; AdditionalData?.Remove("extensionData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extensionData"); else _explicitNullProperties?.Remove("extensionData"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ExtensionData _explicitNullValueExtensionData = default!;
 #endif
         /// <summary>The externalOptionsMetaData property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalOptionsMetaData? ExternalOptionsMetaData { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalOptionsMetaData? ExternalOptionsMetaData { get => _explicitNullValueExternalOptionsMetaData; set { _explicitNullValueExternalOptionsMetaData = value; AdditionalData?.Remove("externalOptionsMetaData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalOptionsMetaData"); else _explicitNullProperties?.Remove("externalOptionsMetaData"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ExternalOptionsMetaData? _explicitNullValueExternalOptionsMetaData = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalOptionsMetaData ExternalOptionsMetaData { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalOptionsMetaData ExternalOptionsMetaData { get => _explicitNullValueExternalOptionsMetaData; set { _explicitNullValueExternalOptionsMetaData = value; AdditionalData?.Remove("externalOptionsMetaData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalOptionsMetaData"); else _explicitNullProperties?.Remove("externalOptionsMetaData"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ExternalOptionsMetaData _explicitNullValueExternalOptionsMetaData = default!;
 #endif
         /// <summary>An identifier for the portal or account within which this property is used.</summary>
-        public int? FulcrumPortalId { get; set; }
+        public int? FulcrumPortalId { get => _explicitNullValueFulcrumPortalId; set { _explicitNullValueFulcrumPortalId = value; AdditionalData?.Remove("fulcrumPortalId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fulcrumPortalId"); else _explicitNullProperties?.Remove("fulcrumPortalId"); } }
+        private int? _explicitNullValueFulcrumPortalId = default!;
         /// <summary>A timestamp indicating when the property was last updated or synchronized.</summary>
-        public long? FulcrumTimestamp { get; set; }
+        public long? FulcrumTimestamp { get => _explicitNullValueFulcrumTimestamp; set { _explicitNullValueFulcrumTimestamp = value; AdditionalData?.Remove("fulcrumTimestamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fulcrumTimestamp"); else _explicitNullProperties?.Remove("fulcrumTimestamp"); } }
+        private long? _explicitNullValueFulcrumTimestamp = default!;
         /// <summary>The group or category to which this property belongs, potentially used for organizing properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? JanusGroup { get; set; }
+        public string? JanusGroup { get => _explicitNullValueJanusGroup; set { _explicitNullValueJanusGroup = value; AdditionalData?.Remove("janusGroup"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("janusGroup"); else _explicitNullProperties?.Remove("janusGroup"); } }
+        private string? _explicitNullValueJanusGroup = default!;
 #nullable restore
 #else
-        public string JanusGroup { get; set; }
+        public string JanusGroup { get => _explicitNullValueJanusGroup; set { _explicitNullValueJanusGroup = value; AdditionalData?.Remove("janusGroup"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("janusGroup"); else _explicitNullProperties?.Remove("janusGroup"); } }
+        private string _explicitNullValueJanusGroup = default!;
 #endif
         /// <summary>The lookupAssociationSpec property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LookupAssociationSpec? LookupAssociationSpec { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LookupAssociationSpec? LookupAssociationSpec { get => _explicitNullValueLookupAssociationSpec; set { _explicitNullValueLookupAssociationSpec = value; AdditionalData?.Remove("lookupAssociationSpec"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lookupAssociationSpec"); else _explicitNullProperties?.Remove("lookupAssociationSpec"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LookupAssociationSpec? _explicitNullValueLookupAssociationSpec = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LookupAssociationSpec LookupAssociationSpec { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LookupAssociationSpec LookupAssociationSpec { get => _explicitNullValueLookupAssociationSpec; set { _explicitNullValueLookupAssociationSpec = value; AdditionalData?.Remove("lookupAssociationSpec"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lookupAssociationSpec"); else _explicitNullProperties?.Remove("lookupAssociationSpec"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LookupAssociationSpec _explicitNullValueLookupAssociationSpec = default!;
 #endif
         /// <summary>The identifier for the type of object to which this property belongs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ObjectTypeId { get; set; }
+        public string? ObjectTypeId { get => _explicitNullValueObjectTypeId; set { _explicitNullValueObjectTypeId = value; AdditionalData?.Remove("objectTypeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("objectTypeId"); else _explicitNullProperties?.Remove("objectTypeId"); } }
+        private string? _explicitNullValueObjectTypeId = default!;
 #nullable restore
 #else
-        public string ObjectTypeId { get; set; }
+        public string ObjectTypeId { get => _explicitNullValueObjectTypeId; set { _explicitNullValueObjectTypeId = value; AdditionalData?.Remove("objectTypeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("objectTypeId"); else _explicitNullProperties?.Remove("objectTypeId"); } }
+        private string _explicitNullValueObjectTypeId = default!;
 #endif
         /// <summary>The permission property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.FieldLevelPermission? Permission { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.FieldLevelPermission? Permission { get => _explicitNullValuePermission; set { _explicitNullValuePermission = value; AdditionalData?.Remove("permission"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permission"); else _explicitNullProperties?.Remove("permission"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.FieldLevelPermission? _explicitNullValuePermission = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.FieldLevelPermission Permission { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.FieldLevelPermission Permission { get => _explicitNullValuePermission; set { _explicitNullValuePermission = value; AdditionalData?.Remove("permission"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permission"); else _explicitNullProperties?.Remove("permission"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.FieldLevelPermission _explicitNullValuePermission = default!;
 #endif
         /// <summary>A HubSpot property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.Property? Property { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.Property? Property { get => _explicitNullValueProperty; set { _explicitNullValueProperty = value; AdditionalData?.Remove("property"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("property"); else _explicitNullProperties?.Remove("property"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.Property? _explicitNullValueProperty = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.Property Property { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.Property Property { get => _explicitNullValueProperty; set { _explicitNullValueProperty = value; AdditionalData?.Remove("property"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("property"); else _explicitNullProperties?.Remove("property"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.Property _explicitNullValueProperty = default!;
 #endif
         /// <summary>The propertyDefinitionSource property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.DefinitionSource? PropertyDefinitionSource { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.DefinitionSource? PropertyDefinitionSource { get => _explicitNullValuePropertyDefinitionSource; set { _explicitNullValuePropertyDefinitionSource = value; AdditionalData?.Remove("propertyDefinitionSource"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("propertyDefinitionSource"); else _explicitNullProperties?.Remove("propertyDefinitionSource"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.DefinitionSource? _explicitNullValuePropertyDefinitionSource = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.DefinitionSource PropertyDefinitionSource { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.DefinitionSource PropertyDefinitionSource { get => _explicitNullValuePropertyDefinitionSource; set { _explicitNullValuePropertyDefinitionSource = value; AdditionalData?.Remove("propertyDefinitionSource"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("propertyDefinitionSource"); else _explicitNullProperties?.Remove("propertyDefinitionSource"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.DefinitionSource _explicitNullValuePropertyDefinitionSource = default!;
 #endif
         /// <summary>The propertyRequirements property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.DefaultRequirements? PropertyRequirements { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.DefaultRequirements? PropertyRequirements { get => _explicitNullValuePropertyRequirements; set { _explicitNullValuePropertyRequirements = value; AdditionalData?.Remove("propertyRequirements"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("propertyRequirements"); else _explicitNullProperties?.Remove("propertyRequirements"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.DefaultRequirements? _explicitNullValuePropertyRequirements = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.DefaultRequirements PropertyRequirements { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.DefaultRequirements PropertyRequirements { get => _explicitNullValuePropertyRequirements; set { _explicitNullValuePropertyRequirements = value; AdditionalData?.Remove("propertyRequirements"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("propertyRequirements"); else _explicitNullProperties?.Remove("propertyRequirements"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.DefaultRequirements _explicitNullValuePropertyRequirements = default!;
 #endif
         /// <summary>The rollupExpression property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.RollupExpression? RollupExpression { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.RollupExpression? RollupExpression { get => _explicitNullValueRollupExpression; set { _explicitNullValueRollupExpression = value; AdditionalData?.Remove("rollupExpression"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rollupExpression"); else _explicitNullProperties?.Remove("rollupExpression"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.RollupExpression? _explicitNullValueRollupExpression = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.RollupExpression RollupExpression { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.RollupExpression RollupExpression { get => _explicitNullValueRollupExpression; set { _explicitNullValueRollupExpression = value; AdditionalData?.Remove("rollupExpression"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rollupExpression"); else _explicitNullProperties?.Remove("rollupExpression"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.RollupExpression _explicitNullValueRollupExpression = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PropertyDefinition"/> and sets the default values.
@@ -137,7 +202,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PropertyDefinition CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PropertyDefinition();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PropertyDefinition(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -186,6 +251,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.DefinitionSource>("propertyDefinitionSource", PropertyDefinitionSource);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.DefaultRequirements>("propertyRequirements", PropertyRequirements);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.RollupExpression>("rollupExpression", RollupExpression);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

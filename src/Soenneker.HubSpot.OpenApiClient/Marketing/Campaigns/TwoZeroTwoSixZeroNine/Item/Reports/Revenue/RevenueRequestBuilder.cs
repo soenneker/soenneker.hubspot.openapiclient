@@ -49,7 +49,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Marketing.Campaigns.TwoZeroTwoSixZeroN
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.RevenueAttributionAggregate>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.RevenueAttributionAggregate.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.RevenueAttributionAggregate>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.RevenueAttributionAggregate.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Fetch revenue attribution report data for a specific campaign. This endpoint allows you to retrieve detailed revenue attribution metrics, which can be filtered by attribution model and date range. This data is useful for analyzing the financial impact of marketing campaigns.

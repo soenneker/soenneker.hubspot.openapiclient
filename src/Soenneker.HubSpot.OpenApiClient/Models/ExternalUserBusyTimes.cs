@@ -11,26 +11,44 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ExternalUserBusyTimes : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("busyTimes") is null) { _explicitNullValueBusyTimes = default!; _explicitNullProperties?.Remove("busyTimes"); }
+            else if (parseNode.GetChildNode("busyTimes") is { } nullNodeBusyTimes && nullNodeBusyTimes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BusyTimes = null;
+            if (parseNode.GetChildNode("isOffline") is null) { _explicitNullValueIsOffline = default!; _explicitNullProperties?.Remove("isOffline"); }
+            else if (parseNode.GetChildNode("isOffline") is { } nullNodeIsOffline && nullNodeIsOffline.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsOffline = null;
+            if (parseNode.GetChildNode("meetingsUser") is null) { _explicitNullValueMeetingsUser = default!; _explicitNullProperties?.Remove("meetingsUser"); }
+            else if (parseNode.GetChildNode("meetingsUser") is { } nullNodeMeetingsUser && nullNodeMeetingsUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MeetingsUser = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An array of time ranges during which the user is busy. Each time range is represented by an object with start and end times.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalTimeRange>? BusyTimes { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalTimeRange>? BusyTimes { get => _explicitNullValueBusyTimes; set { _explicitNullValueBusyTimes = value; AdditionalData?.Remove("busyTimes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("busyTimes"); else _explicitNullProperties?.Remove("busyTimes"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalTimeRange>? _explicitNullValueBusyTimes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalTimeRange> BusyTimes { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalTimeRange> BusyTimes { get => _explicitNullValueBusyTimes; set { _explicitNullValueBusyTimes = value; AdditionalData?.Remove("busyTimes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("busyTimes"); else _explicitNullProperties?.Remove("busyTimes"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalTimeRange> _explicitNullValueBusyTimes = default!;
 #endif
         /// <summary>A boolean indicating whether the user is currently offline.</summary>
-        public bool? IsOffline { get; set; }
+        public bool? IsOffline { get => _explicitNullValueIsOffline; set { _explicitNullValueIsOffline = value; AdditionalData?.Remove("isOffline"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isOffline"); else _explicitNullProperties?.Remove("isOffline"); } }
+        private bool? _explicitNullValueIsOffline = default!;
         /// <summary>The meetingsUser property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsUser? MeetingsUser { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsUser? MeetingsUser { get => _explicitNullValueMeetingsUser; set { _explicitNullValueMeetingsUser = value; AdditionalData?.Remove("meetingsUser"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meetingsUser"); else _explicitNullProperties?.Remove("meetingsUser"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsUser? _explicitNullValueMeetingsUser = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsUser MeetingsUser { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsUser MeetingsUser { get => _explicitNullValueMeetingsUser; set { _explicitNullValueMeetingsUser = value; AdditionalData?.Remove("meetingsUser"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meetingsUser"); else _explicitNullProperties?.Remove("meetingsUser"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsUser _explicitNullValueMeetingsUser = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExternalUserBusyTimes"/> and sets the default values.
@@ -47,7 +65,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.ExternalUserBusyTimes CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.ExternalUserBusyTimes();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.ExternalUserBusyTimes(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -72,6 +90,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalTimeRange>("busyTimes", BusyTimes);
             writer.WriteBoolValue("isOffline", IsOffline);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsUser>("meetingsUser", MeetingsUser);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

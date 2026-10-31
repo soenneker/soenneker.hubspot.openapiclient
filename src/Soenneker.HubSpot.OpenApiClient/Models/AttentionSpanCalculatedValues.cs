@@ -11,13 +11,26 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AttentionSpanCalculatedValues : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("totalPercentPlayed") is null) { _explicitNullValueTotalPercentPlayed = default!; _explicitNullProperties?.Remove("totalPercentPlayed"); }
+            else if (parseNode.GetChildNode("totalPercentPlayed") is { } nullNodeTotalPercentPlayed && nullNodeTotalPercentPlayed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalPercentPlayed = null;
+            if (parseNode.GetChildNode("totalSecondsPlayed") is null) { _explicitNullValueTotalSecondsPlayed = default!; _explicitNullProperties?.Remove("totalSecondsPlayed"); }
+            else if (parseNode.GetChildNode("totalSecondsPlayed") is { } nullNodeTotalSecondsPlayed && nullNodeTotalSecondsPlayed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalSecondsPlayed = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The percentage of the media content that was played. This is a numerical value indicating how much of the total content was viewed, expressed as a percentage.</summary>
-        public double? TotalPercentPlayed { get; set; }
+        public double? TotalPercentPlayed { get => _explicitNullValueTotalPercentPlayed; set { _explicitNullValueTotalPercentPlayed = value; AdditionalData?.Remove("totalPercentPlayed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalPercentPlayed"); else _explicitNullProperties?.Remove("totalPercentPlayed"); } }
+        private double? _explicitNullValueTotalPercentPlayed = default!;
         /// <summary>The total duration in seconds that the media content was played. This is a numerical value representing the cumulative playtime.</summary>
-        public int? TotalSecondsPlayed { get; set; }
+        public int? TotalSecondsPlayed { get => _explicitNullValueTotalSecondsPlayed; set { _explicitNullValueTotalSecondsPlayed = value; AdditionalData?.Remove("totalSecondsPlayed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalSecondsPlayed"); else _explicitNullProperties?.Remove("totalSecondsPlayed"); } }
+        private int? _explicitNullValueTotalSecondsPlayed = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanCalculatedValues"/> and sets the default values.
         /// </summary>
@@ -33,7 +46,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanCalculatedValues CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanCalculatedValues();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanCalculatedValues(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -56,6 +69,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDoubleValue("totalPercentPlayed", TotalPercentPlayed);
             writer.WriteIntValue("totalSecondsPlayed", TotalSecondsPlayed);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

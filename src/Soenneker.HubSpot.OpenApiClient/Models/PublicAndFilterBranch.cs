@@ -11,34 +11,56 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicAndFilterBranch : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("filterBranches") is null) { _explicitNullValueFilterBranches = default!; _explicitNullProperties?.Remove("filterBranches"); }
+            else if (parseNode.GetChildNode("filterBranches") is { } nullNodeFilterBranches && nullNodeFilterBranches.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FilterBranches = null;
+            if (parseNode.GetChildNode("filterBranchOperator") is null) { _explicitNullValueFilterBranchOperator = default!; _explicitNullProperties?.Remove("filterBranchOperator"); }
+            else if (parseNode.GetChildNode("filterBranchOperator") is { } nullNodeFilterBranchOperator && nullNodeFilterBranchOperator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FilterBranchOperator = null;
+            if (parseNode.GetChildNode("filterBranchType") is null) { _explicitNullValueFilterBranchType = default!; _explicitNullProperties?.Remove("filterBranchType"); }
+            else if (parseNode.GetChildNode("filterBranchType") is { } nullNodeFilterBranchType && nullNodeFilterBranchType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FilterBranchType = null;
+            if (parseNode.GetChildNode("filters") is null) { _explicitNullValueFilters = default!; _explicitNullProperties?.Remove("filters"); }
+            else if (parseNode.GetChildNode("filters") is { } nullNodeFilters && nullNodeFilters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Filters = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An array of nested filter branches. Each item can be a branch of various types, such as &apos;OR&apos;, &apos;AND&apos;, &apos;NOT_ALL&apos;, etc.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranchFilterBranchesItem>? FilterBranches { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranchFilterBranchesItem>? FilterBranches { get => _explicitNullValueFilterBranches; set { _explicitNullValueFilterBranches = value; AdditionalData?.Remove("filterBranches"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filterBranches"); else _explicitNullProperties?.Remove("filterBranches"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranchFilterBranchesItem>? _explicitNullValueFilterBranches = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranchFilterBranchesItem> FilterBranches { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranchFilterBranchesItem> FilterBranches { get => _explicitNullValueFilterBranches; set { _explicitNullValueFilterBranches = value; AdditionalData?.Remove("filterBranches"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filterBranches"); else _explicitNullProperties?.Remove("filterBranches"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranchFilterBranchesItem> _explicitNullValueFilterBranches = default!;
 #endif
         /// <summary>A string representing the operator used within this filter branch.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FilterBranchOperator { get; set; }
+        public string? FilterBranchOperator { get => _explicitNullValueFilterBranchOperator; set { _explicitNullValueFilterBranchOperator = value; AdditionalData?.Remove("filterBranchOperator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filterBranchOperator"); else _explicitNullProperties?.Remove("filterBranchOperator"); } }
+        private string? _explicitNullValueFilterBranchOperator = default!;
 #nullable restore
 #else
-        public string FilterBranchOperator { get; set; }
+        public string FilterBranchOperator { get => _explicitNullValueFilterBranchOperator; set { _explicitNullValueFilterBranchOperator = value; AdditionalData?.Remove("filterBranchOperator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filterBranchOperator"); else _explicitNullProperties?.Remove("filterBranchOperator"); } }
+        private string _explicitNullValueFilterBranchOperator = default!;
 #endif
         /// <summary>A string indicating the type of filter branch. Defaults to &apos;AND&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AndFilterBranchType? FilterBranchType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AndFilterBranchType? FilterBranchType { get => _explicitNullValueFilterBranchType; set { _explicitNullValueFilterBranchType = value; AdditionalData?.Remove("filterBranchType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filterBranchType"); else _explicitNullProperties?.Remove("filterBranchType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.AndFilterBranchType? _explicitNullValueFilterBranchType = default!;
         /// <summary>An array of filters that apply to this branch. Each filter can be of various types, such as property filters, event filters, or subscription filters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranchFiltersItem>? Filters { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranchFiltersItem>? Filters { get => _explicitNullValueFilters; set { _explicitNullValueFilters = value; AdditionalData?.Remove("filters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filters"); else _explicitNullProperties?.Remove("filters"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranchFiltersItem>? _explicitNullValueFilters = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranchFiltersItem> Filters { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranchFiltersItem> Filters { get => _explicitNullValueFilters; set { _explicitNullValueFilters = value; AdditionalData?.Remove("filters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filters"); else _explicitNullProperties?.Remove("filters"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranchFiltersItem> _explicitNullValueFilters = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranch"/> and sets the default values.
@@ -55,7 +77,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranch CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranch();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranch(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -66,7 +88,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "filterBranchOperator", n => { FilterBranchOperator = n.GetStringValue(); } },
-                { "filterBranchType", n => { FilterBranchType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AndFilterBranchType>(); } },
+                { "filterBranchType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AndFilterBranchType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFilterBranchType = default; _explicitNullProperties?.Remove("filterBranchType"); AdditionalData["filterBranchType"] = unknown; } else { FilterBranchType = parsed; AdditionalData.Remove("filterBranchType"); } } },
                 { "filterBranches", n => { FilterBranches = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranchFilterBranchesItem>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranchFilterBranchesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "filters", n => { Filters = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranchFiltersItem>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranchFiltersItem.CreateFromDiscriminatorValue)?.AsList(); } },
             };
@@ -82,6 +104,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("filterBranchOperator", FilterBranchOperator);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AndFilterBranchType>("filterBranchType", FilterBranchType);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAndFilterBranchFiltersItem>("filters", Filters);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

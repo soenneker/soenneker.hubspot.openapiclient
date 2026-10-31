@@ -54,7 +54,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Events.TwoZeroTwoSixZeroNine.EventDefi
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
-            await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
+            await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve the definition of a specific behavioral event in your HubSpot account by providing the event name. This endpoint returns detailed information about the event type, including its properties and associations.
@@ -72,7 +72,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Events.TwoZeroTwoSixZeroNine.EventDefi
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventTypeDefinition>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventTypeDefinition.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventTypeDefinition>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventTypeDefinition.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Update the definition of a specific behavioral event in your HubSpot account. This operation allows you to modify the properties and templates associated with the event. The eventName path parameter identifies the event to be updated.
@@ -92,7 +92,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Events.TwoZeroTwoSixZeroNine.EventDefi
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPatchRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventTypeDefinition>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventTypeDefinition.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventTypeDefinition>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventTypeDefinition.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Delete a specific event definition in your HubSpot account using the event&apos;s unique name. This operation is useful for removing outdated or incorrect event definitions that are no longer needed.

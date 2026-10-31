@@ -11,36 +11,61 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class FilteringMetaData : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("includeHelpdeskRoutableTeamsOnly") is null) { _explicitNullValueIncludeHelpdeskRoutableTeamsOnly = default!; _explicitNullProperties?.Remove("includeHelpdeskRoutableTeamsOnly"); }
+            else if (parseNode.GetChildNode("includeHelpdeskRoutableTeamsOnly") is { } nullNodeIncludeHelpdeskRoutableTeamsOnly && nullNodeIncludeHelpdeskRoutableTeamsOnly.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncludeHelpdeskRoutableTeamsOnly = null;
+            if (parseNode.GetChildNode("includeUnconfirmedUsers") is null) { _explicitNullValueIncludeUnconfirmedUsers = default!; _explicitNullProperties?.Remove("includeUnconfirmedUsers"); }
+            else if (parseNode.GetChildNode("includeUnconfirmedUsers") is { } nullNodeIncludeUnconfirmedUsers && nullNodeIncludeUnconfirmedUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncludeUnconfirmedUsers = null;
+            if (parseNode.GetChildNode("listProcessingTypes") is null) { _explicitNullValueListProcessingTypes = default!; _explicitNullProperties?.Remove("listProcessingTypes"); }
+            else if (parseNode.GetChildNode("listProcessingTypes") is { } nullNodeListProcessingTypes && nullNodeListProcessingTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ListProcessingTypes = null;
+            if (parseNode.GetChildNode("pipelineIds") is null) { _explicitNullValuePipelineIds = default!; _explicitNullProperties?.Remove("pipelineIds"); }
+            else if (parseNode.GetChildNode("pipelineIds") is { } nullNodePipelineIds && nullNodePipelineIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PipelineIds = null;
+            if (parseNode.GetChildNode("teamIds") is null) { _explicitNullValueTeamIds = default!; _explicitNullProperties?.Remove("teamIds"); }
+            else if (parseNode.GetChildNode("teamIds") is { } nullNodeTeamIds && nullNodeTeamIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TeamIds = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A boolean indicating whether to include only teams that are routable by the helpdesk in the results.</summary>
-        public bool? IncludeHelpdeskRoutableTeamsOnly { get; set; }
+        public bool? IncludeHelpdeskRoutableTeamsOnly { get => _explicitNullValueIncludeHelpdeskRoutableTeamsOnly; set { _explicitNullValueIncludeHelpdeskRoutableTeamsOnly = value; AdditionalData?.Remove("includeHelpdeskRoutableTeamsOnly"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("includeHelpdeskRoutableTeamsOnly"); else _explicitNullProperties?.Remove("includeHelpdeskRoutableTeamsOnly"); } }
+        private bool? _explicitNullValueIncludeHelpdeskRoutableTeamsOnly = default!;
         /// <summary>A boolean indicating whether to include users who have not been confirmed in the results.</summary>
-        public bool? IncludeUnconfirmedUsers { get; set; }
+        public bool? IncludeUnconfirmedUsers { get => _explicitNullValueIncludeUnconfirmedUsers; set { _explicitNullValueIncludeUnconfirmedUsers = value; AdditionalData?.Remove("includeUnconfirmedUsers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("includeUnconfirmedUsers"); else _explicitNullProperties?.Remove("includeUnconfirmedUsers"); } }
+        private bool? _explicitNullValueIncludeUnconfirmedUsers = default!;
         /// <summary>An array of strings specifying the types of processing to be included in the list.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ListProcessingTypes { get; set; }
+        public List<string>? ListProcessingTypes { get => _explicitNullValueListProcessingTypes; set { _explicitNullValueListProcessingTypes = value; AdditionalData?.Remove("listProcessingTypes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("listProcessingTypes"); else _explicitNullProperties?.Remove("listProcessingTypes"); } }
+        private List<string>? _explicitNullValueListProcessingTypes = default!;
 #nullable restore
 #else
-        public List<string> ListProcessingTypes { get; set; }
+        public List<string> ListProcessingTypes { get => _explicitNullValueListProcessingTypes; set { _explicitNullValueListProcessingTypes = value; AdditionalData?.Remove("listProcessingTypes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("listProcessingTypes"); else _explicitNullProperties?.Remove("listProcessingTypes"); } }
+        private List<string> _explicitNullValueListProcessingTypes = default!;
 #endif
         /// <summary>An array of strings representing the IDs of pipelines to filter the results by.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? PipelineIds { get; set; }
+        public List<string>? PipelineIds { get => _explicitNullValuePipelineIds; set { _explicitNullValuePipelineIds = value; AdditionalData?.Remove("pipelineIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipelineIds"); else _explicitNullProperties?.Remove("pipelineIds"); } }
+        private List<string>? _explicitNullValuePipelineIds = default!;
 #nullable restore
 #else
-        public List<string> PipelineIds { get; set; }
+        public List<string> PipelineIds { get => _explicitNullValuePipelineIds; set { _explicitNullValuePipelineIds = value; AdditionalData?.Remove("pipelineIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipelineIds"); else _explicitNullProperties?.Remove("pipelineIds"); } }
+        private List<string> _explicitNullValuePipelineIds = default!;
 #endif
         /// <summary>An array of strings representing the IDs of teams to filter the results by.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? TeamIds { get; set; }
+        public List<string>? TeamIds { get => _explicitNullValueTeamIds; set { _explicitNullValueTeamIds = value; AdditionalData?.Remove("teamIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("teamIds"); else _explicitNullProperties?.Remove("teamIds"); } }
+        private List<string>? _explicitNullValueTeamIds = default!;
 #nullable restore
 #else
-        public List<string> TeamIds { get; set; }
+        public List<string> TeamIds { get => _explicitNullValueTeamIds; set { _explicitNullValueTeamIds = value; AdditionalData?.Remove("teamIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("teamIds"); else _explicitNullProperties?.Remove("teamIds"); } }
+        private List<string> _explicitNullValueTeamIds = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.FilteringMetaData"/> and sets the default values.
@@ -57,7 +82,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.FilteringMetaData CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.FilteringMetaData();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.FilteringMetaData(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -86,6 +111,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("listProcessingTypes", ListProcessingTypes);
             writer.WriteCollectionOfPrimitiveValues<string>("pipelineIds", PipelineIds);
             writer.WriteCollectionOfPrimitiveValues<string>("teamIds", TeamIds);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

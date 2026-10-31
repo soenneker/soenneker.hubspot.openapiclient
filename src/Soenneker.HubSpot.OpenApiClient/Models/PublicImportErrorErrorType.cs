@@ -203,6 +203,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         #pragma warning disable CS1591
         LineItemMultipleParentsInRow,
         #pragma warning restore CS1591
+        [EnumMember(Value = "MANY_DUPLICATE_ERRORS")]
+        #pragma warning disable CS1591
+        ManyDuplicateErrors,
+        #pragma warning restore CS1591
         [EnumMember(Value = "MANY_ERRORS_IN_ROW")]
         #pragma warning disable CS1591
         ManyErrorsInRow,

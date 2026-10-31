@@ -11,40 +11,63 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class EmailStatisticsData : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("counters") is null) { _explicitNullValueCounters = default!; _explicitNullProperties?.Remove("counters"); }
+            else if (parseNode.GetChildNode("counters") is { } nullNodeCounters && nullNodeCounters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Counters = null;
+            if (parseNode.GetChildNode("deviceBreakdown") is null) { _explicitNullValueDeviceBreakdown = default!; _explicitNullProperties?.Remove("deviceBreakdown"); }
+            else if (parseNode.GetChildNode("deviceBreakdown") is { } nullNodeDeviceBreakdown && nullNodeDeviceBreakdown.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeviceBreakdown = null;
+            if (parseNode.GetChildNode("qualifierStats") is null) { _explicitNullValueQualifierStats = default!; _explicitNullProperties?.Remove("qualifierStats"); }
+            else if (parseNode.GetChildNode("qualifierStats") is { } nullNodeQualifierStats && nullNodeQualifierStats.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QualifierStats = null;
+            if (parseNode.GetChildNode("ratios") is null) { _explicitNullValueRatios = default!; _explicitNullProperties?.Remove("ratios"); }
+            else if (parseNode.GetChildNode("ratios") is { } nullNodeRatios && nullNodeRatios.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ratios = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Counters like number of `sent`, `open` or `delivered`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsDataCountersProperty2? Counters { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsDataCountersProperty2? Counters { get => _explicitNullValueCounters; set { _explicitNullValueCounters = value; AdditionalData?.Remove("counters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("counters"); else _explicitNullProperties?.Remove("counters"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsDataCountersProperty2? _explicitNullValueCounters = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsDataCountersProperty2 Counters { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsDataCountersProperty2 Counters { get => _explicitNullValueCounters; set { _explicitNullValueCounters = value; AdditionalData?.Remove("counters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("counters"); else _explicitNullProperties?.Remove("counters"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsDataCountersProperty2 _explicitNullValueCounters = default!;
 #endif
         /// <summary>Statistics by device.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsDataDeviceBreakdownProperty2? DeviceBreakdown { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsDataDeviceBreakdownProperty2? DeviceBreakdown { get => _explicitNullValueDeviceBreakdown; set { _explicitNullValueDeviceBreakdown = value; AdditionalData?.Remove("deviceBreakdown"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deviceBreakdown"); else _explicitNullProperties?.Remove("deviceBreakdown"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsDataDeviceBreakdownProperty2? _explicitNullValueDeviceBreakdown = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsDataDeviceBreakdownProperty2 DeviceBreakdown { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsDataDeviceBreakdownProperty2 DeviceBreakdown { get => _explicitNullValueDeviceBreakdown; set { _explicitNullValueDeviceBreakdown = value; AdditionalData?.Remove("deviceBreakdown"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deviceBreakdown"); else _explicitNullProperties?.Remove("deviceBreakdown"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsDataDeviceBreakdownProperty2 _explicitNullValueDeviceBreakdown = default!;
 #endif
         /// <summary>Number of emails that were dropped and bounced.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsDataQualifierStatsProperty2? QualifierStats { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsDataQualifierStatsProperty2? QualifierStats { get => _explicitNullValueQualifierStats; set { _explicitNullValueQualifierStats = value; AdditionalData?.Remove("qualifierStats"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("qualifierStats"); else _explicitNullProperties?.Remove("qualifierStats"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsDataQualifierStatsProperty2? _explicitNullValueQualifierStats = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsDataQualifierStatsProperty2 QualifierStats { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsDataQualifierStatsProperty2 QualifierStats { get => _explicitNullValueQualifierStats; set { _explicitNullValueQualifierStats = value; AdditionalData?.Remove("qualifierStats"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("qualifierStats"); else _explicitNullProperties?.Remove("qualifierStats"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsDataQualifierStatsProperty2 _explicitNullValueQualifierStats = default!;
 #endif
         /// <summary>Ratios like `openratio` or `clickratio`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsDataRatiosProperty2? Ratios { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsDataRatiosProperty2? Ratios { get => _explicitNullValueRatios; set { _explicitNullValueRatios = value; AdditionalData?.Remove("ratios"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ratios"); else _explicitNullProperties?.Remove("ratios"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsDataRatiosProperty2? _explicitNullValueRatios = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsDataRatiosProperty2 Ratios { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsDataRatiosProperty2 Ratios { get => _explicitNullValueRatios; set { _explicitNullValueRatios = value; AdditionalData?.Remove("ratios"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ratios"); else _explicitNullProperties?.Remove("ratios"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsDataRatiosProperty2 _explicitNullValueRatios = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsData"/> and sets the default values.
@@ -61,7 +84,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsData CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsData();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsData(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,6 +111,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsDataDeviceBreakdownProperty2>("deviceBreakdown", DeviceBreakdown);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsDataQualifierStatsProperty2>("qualifierStats", QualifierStats);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsDataRatiosProperty2>("ratios", Ratios);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

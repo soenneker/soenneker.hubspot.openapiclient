@@ -11,22 +11,42 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ObjectSchemaBatchReadRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("includeAssociationDefinitions") is null) { _explicitNullValueIncludeAssociationDefinitions = default!; _explicitNullProperties?.Remove("includeAssociationDefinitions"); }
+            else if (parseNode.GetChildNode("includeAssociationDefinitions") is { } nullNodeIncludeAssociationDefinitions && nullNodeIncludeAssociationDefinitions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncludeAssociationDefinitions = null;
+            if (parseNode.GetChildNode("includeAuditMetadata") is null) { _explicitNullValueIncludeAuditMetadata = default!; _explicitNullProperties?.Remove("includeAuditMetadata"); }
+            else if (parseNode.GetChildNode("includeAuditMetadata") is { } nullNodeIncludeAuditMetadata && nullNodeIncludeAuditMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncludeAuditMetadata = null;
+            if (parseNode.GetChildNode("includePropertyDefinitions") is null) { _explicitNullValueIncludePropertyDefinitions = default!; _explicitNullProperties?.Remove("includePropertyDefinitions"); }
+            else if (parseNode.GetChildNode("includePropertyDefinitions") is { } nullNodeIncludePropertyDefinitions && nullNodeIncludePropertyDefinitions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncludePropertyDefinitions = null;
+            if (parseNode.GetChildNode("inputs") is null) { _explicitNullValueInputs = default!; _explicitNullProperties?.Remove("inputs"); }
+            else if (parseNode.GetChildNode("inputs") is { } nullNodeInputs && nullNodeInputs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Inputs = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Indicates whether to include association definitions in the response.</summary>
-        public bool? IncludeAssociationDefinitions { get; set; }
+        public bool? IncludeAssociationDefinitions { get => _explicitNullValueIncludeAssociationDefinitions; set { _explicitNullValueIncludeAssociationDefinitions = value; AdditionalData?.Remove("includeAssociationDefinitions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("includeAssociationDefinitions"); else _explicitNullProperties?.Remove("includeAssociationDefinitions"); } }
+        private bool? _explicitNullValueIncludeAssociationDefinitions = default!;
         /// <summary>Indicates whether to include audit metadata in the response.</summary>
-        public bool? IncludeAuditMetadata { get; set; }
+        public bool? IncludeAuditMetadata { get => _explicitNullValueIncludeAuditMetadata; set { _explicitNullValueIncludeAuditMetadata = value; AdditionalData?.Remove("includeAuditMetadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("includeAuditMetadata"); else _explicitNullProperties?.Remove("includeAuditMetadata"); } }
+        private bool? _explicitNullValueIncludeAuditMetadata = default!;
         /// <summary>Indicates whether to include property definitions in the response.</summary>
-        public bool? IncludePropertyDefinitions { get; set; }
+        public bool? IncludePropertyDefinitions { get => _explicitNullValueIncludePropertyDefinitions; set { _explicitNullValueIncludePropertyDefinitions = value; AdditionalData?.Remove("includePropertyDefinitions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("includePropertyDefinitions"); else _explicitNullProperties?.Remove("includePropertyDefinitions"); } }
+        private bool? _explicitNullValueIncludePropertyDefinitions = default!;
         /// <summary>An array of strings representing the identifiers of the object schemas to be read.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Inputs { get; set; }
+        public List<string>? Inputs { get => _explicitNullValueInputs; set { _explicitNullValueInputs = value; AdditionalData?.Remove("inputs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputs"); else _explicitNullProperties?.Remove("inputs"); } }
+        private List<string>? _explicitNullValueInputs = default!;
 #nullable restore
 #else
-        public List<string> Inputs { get; set; }
+        public List<string> Inputs { get => _explicitNullValueInputs; set { _explicitNullValueInputs = value; AdditionalData?.Remove("inputs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputs"); else _explicitNullProperties?.Remove("inputs"); } }
+        private List<string> _explicitNullValueInputs = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ObjectSchemaBatchReadRequest"/> and sets the default values.
@@ -43,7 +63,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.ObjectSchemaBatchReadRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.ObjectSchemaBatchReadRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.ObjectSchemaBatchReadRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -70,6 +90,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteBoolValue("includeAuditMetadata", IncludeAuditMetadata);
             writer.WriteBoolValue("includePropertyDefinitions", IncludePropertyDefinitions);
             writer.WriteCollectionOfPrimitiveValues<string>("inputs", Inputs);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,20 +11,37 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicSequenceEnrollmentStatusByStepResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("count") is null) { _explicitNullValueCount = default!; _explicitNullProperties?.Remove("count"); }
+            else if (parseNode.GetChildNode("count") is { } nullNodeCount && nullNodeCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Count = null;
+            if (parseNode.GetChildNode("currentStepOrder") is null) { _explicitNullValueCurrentStepOrder = default!; _explicitNullProperties?.Remove("currentStepOrder"); }
+            else if (parseNode.GetChildNode("currentStepOrder") is { } nullNodeCurrentStepOrder && nullNodeCurrentStepOrder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentStepOrder = null;
+            if (parseNode.GetChildNode("enrollmentStatus") is null) { _explicitNullValueEnrollmentStatus = default!; _explicitNullProperties?.Remove("enrollmentStatus"); }
+            else if (parseNode.GetChildNode("enrollmentStatus") is { } nullNodeEnrollmentStatus && nullNodeEnrollmentStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnrollmentStatus = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An integer in int64 format representing the number of enrollments at the current step.</summary>
-        public long? Count { get; set; }
+        public long? Count { get => _explicitNullValueCount; set { _explicitNullValueCount = value; AdditionalData?.Remove("count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("count"); else _explicitNullProperties?.Remove("count"); } }
+        private long? _explicitNullValueCount = default!;
         /// <summary>An integer indicating the order of the current step in the sequence.</summary>
-        public int? CurrentStepOrder { get; set; }
+        public int? CurrentStepOrder { get => _explicitNullValueCurrentStepOrder; set { _explicitNullValueCurrentStepOrder = value; AdditionalData?.Remove("currentStepOrder"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currentStepOrder"); else _explicitNullProperties?.Remove("currentStepOrder"); } }
+        private int? _explicitNullValueCurrentStepOrder = default!;
         /// <summary>A string representing the status of the enrollment at the current step.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EnrollmentStatus { get; set; }
+        public string? EnrollmentStatus { get => _explicitNullValueEnrollmentStatus; set { _explicitNullValueEnrollmentStatus = value; AdditionalData?.Remove("enrollmentStatus"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enrollmentStatus"); else _explicitNullProperties?.Remove("enrollmentStatus"); } }
+        private string? _explicitNullValueEnrollmentStatus = default!;
 #nullable restore
 #else
-        public string EnrollmentStatus { get; set; }
+        public string EnrollmentStatus { get => _explicitNullValueEnrollmentStatus; set { _explicitNullValueEnrollmentStatus = value; AdditionalData?.Remove("enrollmentStatus"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enrollmentStatus"); else _explicitNullProperties?.Remove("enrollmentStatus"); } }
+        private string _explicitNullValueEnrollmentStatus = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceEnrollmentStatusByStepResponse"/> and sets the default values.
@@ -41,7 +58,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceEnrollmentStatusByStepResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceEnrollmentStatusByStepResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceEnrollmentStatusByStepResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -66,6 +83,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteLongValue("count", Count);
             writer.WriteIntValue("currentStepOrder", CurrentStepOrder);
             writer.WriteStringValue("enrollmentStatus", EnrollmentStatus);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

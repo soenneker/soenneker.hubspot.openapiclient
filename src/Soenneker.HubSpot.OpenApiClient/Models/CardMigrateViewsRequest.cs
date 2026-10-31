@@ -11,19 +11,41 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CardMigrateViewsRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("allowDuplicateAppCardIds") is null) { _explicitNullValueAllowDuplicateAppCardIds = default!; _explicitNullProperties?.Remove("allowDuplicateAppCardIds"); }
+            else if (parseNode.GetChildNode("allowDuplicateAppCardIds") is { } nullNodeAllowDuplicateAppCardIds && nullNodeAllowDuplicateAppCardIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowDuplicateAppCardIds = null;
+            if (parseNode.GetChildNode("appCardId") is null) { _explicitNullValueAppCardId = default!; _explicitNullProperties?.Remove("appCardId"); }
+            else if (parseNode.GetChildNode("appCardId") is { } nullNodeAppCardId && nullNodeAppCardId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppCardId = null;
+            if (parseNode.GetChildNode("helpdeskAppCardId") is null) { _explicitNullValueHelpdeskAppCardId = default!; _explicitNullProperties?.Remove("helpdeskAppCardId"); }
+            else if (parseNode.GetChildNode("helpdeskAppCardId") is { } nullNodeHelpdeskAppCardId && nullNodeHelpdeskAppCardId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HelpdeskAppCardId = null;
+            if (parseNode.GetChildNode("legacyCrmCardId") is null) { _explicitNullValueLegacyCrmCardId = default!; _explicitNullProperties?.Remove("legacyCrmCardId"); }
+            else if (parseNode.GetChildNode("legacyCrmCardId") is { } nullNodeLegacyCrmCardId && nullNodeLegacyCrmCardId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LegacyCrmCardId = null;
+            if (parseNode.GetChildNode("tabAppCardId") is null) { _explicitNullValueTabAppCardId = default!; _explicitNullProperties?.Remove("tabAppCardId"); }
+            else if (parseNode.GetChildNode("tabAppCardId") is { } nullNodeTabAppCardId && nullNodeTabAppCardId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TabAppCardId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A boolean flag indicating whether duplicate app card IDs are allowed during the migration process.</summary>
-        public bool? AllowDuplicateAppCardIds { get; set; }
+        public bool? AllowDuplicateAppCardIds { get => _explicitNullValueAllowDuplicateAppCardIds; set { _explicitNullValueAllowDuplicateAppCardIds = value; AdditionalData?.Remove("allowDuplicateAppCardIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowDuplicateAppCardIds"); else _explicitNullProperties?.Remove("allowDuplicateAppCardIds"); } }
+        private bool? _explicitNullValueAllowDuplicateAppCardIds = default!;
         /// <summary>The unique identifier for the new app card to which views will be migrated. This is an integer in int64 format.</summary>
-        public long? AppCardId { get; set; }
+        public long? AppCardId { get => _explicitNullValueAppCardId; set { _explicitNullValueAppCardId = value; AdditionalData?.Remove("appCardId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("appCardId"); else _explicitNullProperties?.Remove("appCardId"); } }
+        private long? _explicitNullValueAppCardId = default!;
         /// <summary>The unique identifier for the helpdesk app card, if applicable. This is an integer in int64 format.</summary>
-        public long? HelpdeskAppCardId { get; set; }
+        public long? HelpdeskAppCardId { get => _explicitNullValueHelpdeskAppCardId; set { _explicitNullValueHelpdeskAppCardId = value; AdditionalData?.Remove("helpdeskAppCardId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("helpdeskAppCardId"); else _explicitNullProperties?.Remove("helpdeskAppCardId"); } }
+        private long? _explicitNullValueHelpdeskAppCardId = default!;
         /// <summary>The unique identifier for the legacy CRM card. This is an integer in int64 format.</summary>
-        public long? LegacyCrmCardId { get; set; }
+        public long? LegacyCrmCardId { get => _explicitNullValueLegacyCrmCardId; set { _explicitNullValueLegacyCrmCardId = value; AdditionalData?.Remove("legacyCrmCardId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("legacyCrmCardId"); else _explicitNullProperties?.Remove("legacyCrmCardId"); } }
+        private long? _explicitNullValueLegacyCrmCardId = default!;
         /// <summary>The tabAppCardId property</summary>
-        public long? TabAppCardId { get; set; }
+        public long? TabAppCardId { get => _explicitNullValueTabAppCardId; set { _explicitNullValueTabAppCardId = value; AdditionalData?.Remove("tabAppCardId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tabAppCardId"); else _explicitNullProperties?.Remove("tabAppCardId"); } }
+        private long? _explicitNullValueTabAppCardId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CardMigrateViewsRequest"/> and sets the default values.
         /// </summary>
@@ -39,7 +61,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.CardMigrateViewsRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.CardMigrateViewsRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.CardMigrateViewsRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +90,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteLongValue("helpdeskAppCardId", HelpdeskAppCardId);
             writer.WriteLongValue("legacyCrmCardId", LegacyCrmCardId);
             writer.WriteLongValue("tabAppCardId", TabAppCardId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

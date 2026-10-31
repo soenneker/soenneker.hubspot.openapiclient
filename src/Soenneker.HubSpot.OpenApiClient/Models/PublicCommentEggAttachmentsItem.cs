@@ -12,7 +12,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PublicCommentEggAttachmentsItem : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicFileEgg"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -49,17 +54,31 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             var result = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicCommentEggAttachmentsItem();
             if("PublicFileEgg".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.PublicFileEgg = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicFileEgg();
+                
             }
             else if("PublicQuickRepliesEgg".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.PublicQuickRepliesEgg = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicQuickRepliesEgg();
+                
             }
             else if("PublicSocialMediaEgg".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.PublicSocialMediaEgg = new global::Soenneker.HubSpot.OpenApiClient.Models.PublicSocialMediaEgg();
+                
             }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => ((unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject)) && (unionPayload is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject shapeObject0 || (shapeObject0.GetValue() is var shapeMembers1 && (shapeMembers1.ContainsKey("fileId") && shapeMembers1.ContainsKey("type") && (!shapeMembers1.ContainsKey("fileId") || (((shapeMembers1["fileId"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers1.ContainsKey("type") || (((shapeMembers1["type"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)) && ((shapeMembers1["type"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal4 && "FILE".Equals(literal4.GetValue(), global::System.StringComparison.Ordinal))))))))))();
+            bool matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => ((unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject)) && (unionPayload is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject shapeObject0 || (shapeObject0.GetValue() is var shapeMembers1 && (shapeMembers1.ContainsKey("quickReplies") && shapeMembers1.ContainsKey("type") && (!shapeMembers1.ContainsKey("quickReplies") || (((shapeMembers1["quickReplies"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray)))) && (!shapeMembers1.ContainsKey("type") || (((shapeMembers1["type"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)) && ((shapeMembers1["type"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal4 && "QUICK_REPLIES".Equals(literal4.GetValue(), global::System.StringComparison.Ordinal))))))))))();
+            bool matchesUnionBranch2 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => ((unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject)) && (unionPayload is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject shapeObject0 || (shapeObject0.GetValue() is var shapeMembers1 && (shapeMembers1.ContainsKey("socialMetadata") && shapeMembers1.ContainsKey("type") && (!shapeMembers1.ContainsKey("socialMetadata") || (((shapeMembers1["socialMetadata"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject)) && (shapeMembers1["socialMetadata"] is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject shapeObject2 || (shapeObject2.GetValue() is var shapeMembers3 && (shapeMembers3.ContainsKey("mediaType") && (!shapeMembers3.ContainsKey("description") || (((shapeMembers3["description"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers3.ContainsKey("id") || (((shapeMembers3["id"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers3.ContainsKey("mediaTitle") || (((shapeMembers3["mediaTitle"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers3.ContainsKey("mediaType") || (((shapeMembers3["mediaType"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)) && ((shapeMembers3["mediaType"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal10 && "ARTICLE".Equals(literal10.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers3["mediaType"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal11 && "AUDIO".Equals(literal11.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers3["mediaType"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal12 && "CAROUSEL".Equals(literal12.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers3["mediaType"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal13 && "DOCUMENT".Equals(literal13.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers3["mediaType"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal14 && "GIF".Equals(literal14.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers3["mediaType"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal15 && "LINK".Equals(literal15.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers3["mediaType"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal16 && "NONE".Equals(literal16.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers3["mediaType"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal17 && "PHOTO".Equals(literal17.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers3["mediaType"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal18 && "POLL".Equals(literal18.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers3["mediaType"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal19 && "STORY".Equals(literal19.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers3["mediaType"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal20 && "VIDEO".Equals(literal20.GetValue(), global::System.StringComparison.Ordinal))))) && (!shapeMembers3.ContainsKey("mediaUrl") || (((shapeMembers3["mediaUrl"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers3.ContainsKey("mediaUrlString") || (((shapeMembers3["mediaUrlString"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers3.ContainsKey("thumbnailUrl") || (((shapeMembers3["thumbnailUrl"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString))))))))) && (!shapeMembers1.ContainsKey("type") || (((shapeMembers1["type"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)) && ((shapeMembers1["type"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal29 && "SOCIAL_MEDIA_METADATA".Equals(literal29.GetValue(), global::System.StringComparison.Ordinal))))))))))();
+            int matchingUnionBranches = 0;
+            if (matchesUnionBranch0) matchingUnionBranches++;
+            if (matchesUnionBranch1) matchingUnionBranches++;
+            if (matchesUnionBranch2) matchingUnionBranches++;
+            bool noSelectedUnionBranch = result.PublicFileEgg == null && result.PublicQuickRepliesEgg == null && result.PublicSocialMediaEgg == null;
+            if (noSelectedUnionBranch && matchesUnionBranch0 && matchingUnionBranches == 1) result.PublicFileEgg = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicFileEgg(), parseNode);
+            if (noSelectedUnionBranch && matchesUnionBranch1 && matchingUnionBranches == 1) result.PublicQuickRepliesEgg = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicQuickRepliesEgg(), parseNode);
+            if (noSelectedUnionBranch && matchesUnionBranch2 && matchingUnionBranches == 1) result.PublicSocialMediaEgg = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicSocialMediaEgg(), parseNode);
+            if (result.PublicFileEgg == null && result.PublicQuickRepliesEgg == null && result.PublicSocialMediaEgg == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -67,6 +86,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
+            if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawFields) { var fields = new global::System.Collections.Generic.Dictionary<string, global::System.Action<IParseNode>>(); foreach (var entry in rawFields.GetValue()) fields[entry.Key] = _ => { }; return fields; }
+
             if(PublicFileEgg != null)
             {
                 return PublicFileEgg.GetFieldDeserializers();
@@ -87,17 +108,30 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (PublicFileEgg == null && PublicQuickRepliesEgg == null && PublicSocialMediaEgg == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            int selectedUnionBranches = 0;
+            if (PublicFileEgg != null) selectedUnionBranches++;
+            if (PublicQuickRepliesEgg != null) selectedUnionBranches++;
+            if (PublicSocialMediaEgg != null) selectedUnionBranches++;
+            if (PublicFileEgg != null && selectedUnionBranches == 1) { if (PublicFileEgg is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, PublicFileEgg); return; }
+            if (PublicQuickRepliesEgg != null && selectedUnionBranches == 1) { if (PublicQuickRepliesEgg is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, PublicQuickRepliesEgg); return; }
+            if (PublicSocialMediaEgg != null && selectedUnionBranches == 1) { if (PublicSocialMediaEgg is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, PublicSocialMediaEgg); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(PublicFileEgg != null)
             {
+                if (PublicFileEgg is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicFileEgg>(null, PublicFileEgg);
             }
             else if(PublicQuickRepliesEgg != null)
             {
+                if (PublicQuickRepliesEgg is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicQuickRepliesEgg>(null, PublicQuickRepliesEgg);
             }
             else if(PublicSocialMediaEgg != null)
             {
+                if (PublicSocialMediaEgg is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSocialMediaEgg>(null, PublicSocialMediaEgg);
             }
         }

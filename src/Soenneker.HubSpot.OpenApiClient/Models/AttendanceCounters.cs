@@ -11,17 +11,36 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AttendanceCounters : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("attended") is null) { _explicitNullValueAttended = default!; _explicitNullProperties?.Remove("attended"); }
+            else if (parseNode.GetChildNode("attended") is { } nullNodeAttended && nullNodeAttended.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Attended = null;
+            if (parseNode.GetChildNode("cancelled") is null) { _explicitNullValueCancelled = default!; _explicitNullProperties?.Remove("cancelled"); }
+            else if (parseNode.GetChildNode("cancelled") is { } nullNodeCancelled && nullNodeCancelled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cancelled = null;
+            if (parseNode.GetChildNode("noShows") is null) { _explicitNullValueNoShows = default!; _explicitNullProperties?.Remove("noShows"); }
+            else if (parseNode.GetChildNode("noShows") is { } nullNodeNoShows && nullNodeNoShows.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NoShows = null;
+            if (parseNode.GetChildNode("registered") is null) { _explicitNullValueRegistered = default!; _explicitNullProperties?.Remove("registered"); }
+            else if (parseNode.GetChildNode("registered") is { } nullNodeRegistered && nullNodeRegistered.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Registered = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Number of attended contact records of a marketing event</summary>
-        public int? Attended { get; set; }
+        public int? Attended { get => _explicitNullValueAttended; set { _explicitNullValueAttended = value; AdditionalData?.Remove("attended"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attended"); else _explicitNullProperties?.Remove("attended"); } }
+        private int? _explicitNullValueAttended = default!;
         /// <summary>Number of cancelled contact records of a marketing event</summary>
-        public int? Cancelled { get; set; }
+        public int? Cancelled { get => _explicitNullValueCancelled; set { _explicitNullValueCancelled = value; AdditionalData?.Remove("cancelled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancelled"); else _explicitNullProperties?.Remove("cancelled"); } }
+        private int? _explicitNullValueCancelled = default!;
         /// <summary>Number of no-show contact records of a marketing event</summary>
-        public int? NoShows { get; set; }
+        public int? NoShows { get => _explicitNullValueNoShows; set { _explicitNullValueNoShows = value; AdditionalData?.Remove("noShows"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("noShows"); else _explicitNullProperties?.Remove("noShows"); } }
+        private int? _explicitNullValueNoShows = default!;
         /// <summary>Number of registered contact records of a marketing event</summary>
-        public int? Registered { get; set; }
+        public int? Registered { get => _explicitNullValueRegistered; set { _explicitNullValueRegistered = value; AdditionalData?.Remove("registered"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("registered"); else _explicitNullProperties?.Remove("registered"); } }
+        private int? _explicitNullValueRegistered = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.AttendanceCounters"/> and sets the default values.
         /// </summary>
@@ -37,7 +56,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.AttendanceCounters CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.AttendanceCounters();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.AttendanceCounters(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -64,6 +83,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteIntValue("cancelled", Cancelled);
             writer.WriteIntValue("noShows", NoShows);
             writer.WriteIntValue("registered", Registered);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

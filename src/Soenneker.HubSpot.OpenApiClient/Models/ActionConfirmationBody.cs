@@ -11,32 +11,51 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ActionConfirmationBody : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("cancelButtonLabel") is null) { _explicitNullValueCancelButtonLabel = default!; _explicitNullProperties?.Remove("cancelButtonLabel"); }
+            else if (parseNode.GetChildNode("cancelButtonLabel") is { } nullNodeCancelButtonLabel && nullNodeCancelButtonLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CancelButtonLabel = null;
+            if (parseNode.GetChildNode("confirmButtonLabel") is null) { _explicitNullValueConfirmButtonLabel = default!; _explicitNullProperties?.Remove("confirmButtonLabel"); }
+            else if (parseNode.GetChildNode("confirmButtonLabel") is { } nullNodeConfirmButtonLabel && nullNodeConfirmButtonLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfirmButtonLabel = null;
+            if (parseNode.GetChildNode("prompt") is null) { _explicitNullValuePrompt = default!; _explicitNullProperties?.Remove("prompt"); }
+            else if (parseNode.GetChildNode("prompt") is { } nullNodePrompt && nullNodePrompt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Prompt = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The label for the button that cancels the action.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CancelButtonLabel { get; set; }
+        public string? CancelButtonLabel { get => _explicitNullValueCancelButtonLabel; set { _explicitNullValueCancelButtonLabel = value; AdditionalData?.Remove("cancelButtonLabel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancelButtonLabel"); else _explicitNullProperties?.Remove("cancelButtonLabel"); } }
+        private string? _explicitNullValueCancelButtonLabel = default!;
 #nullable restore
 #else
-        public string CancelButtonLabel { get; set; }
+        public string CancelButtonLabel { get => _explicitNullValueCancelButtonLabel; set { _explicitNullValueCancelButtonLabel = value; AdditionalData?.Remove("cancelButtonLabel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancelButtonLabel"); else _explicitNullProperties?.Remove("cancelButtonLabel"); } }
+        private string _explicitNullValueCancelButtonLabel = default!;
 #endif
         /// <summary>The label for the button that confirms the action.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConfirmButtonLabel { get; set; }
+        public string? ConfirmButtonLabel { get => _explicitNullValueConfirmButtonLabel; set { _explicitNullValueConfirmButtonLabel = value; AdditionalData?.Remove("confirmButtonLabel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confirmButtonLabel"); else _explicitNullProperties?.Remove("confirmButtonLabel"); } }
+        private string? _explicitNullValueConfirmButtonLabel = default!;
 #nullable restore
 #else
-        public string ConfirmButtonLabel { get; set; }
+        public string ConfirmButtonLabel { get => _explicitNullValueConfirmButtonLabel; set { _explicitNullValueConfirmButtonLabel = value; AdditionalData?.Remove("confirmButtonLabel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confirmButtonLabel"); else _explicitNullProperties?.Remove("confirmButtonLabel"); } }
+        private string _explicitNullValueConfirmButtonLabel = default!;
 #endif
         /// <summary>The message displayed to the user to confirm the action.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Prompt { get; set; }
+        public string? Prompt { get => _explicitNullValuePrompt; set { _explicitNullValuePrompt = value; AdditionalData?.Remove("prompt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prompt"); else _explicitNullProperties?.Remove("prompt"); } }
+        private string? _explicitNullValuePrompt = default!;
 #nullable restore
 #else
-        public string Prompt { get; set; }
+        public string Prompt { get => _explicitNullValuePrompt; set { _explicitNullValuePrompt = value; AdditionalData?.Remove("prompt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prompt"); else _explicitNullProperties?.Remove("prompt"); } }
+        private string _explicitNullValuePrompt = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ActionConfirmationBody"/> and sets the default values.
@@ -53,7 +72,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.ActionConfirmationBody CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.ActionConfirmationBody();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.ActionConfirmationBody(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +97,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("cancelButtonLabel", CancelButtonLabel);
             writer.WriteStringValue("confirmButtonLabel", ConfirmButtonLabel);
             writer.WriteStringValue("prompt", Prompt);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

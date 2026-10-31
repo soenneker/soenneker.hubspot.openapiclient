@@ -11,95 +11,167 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CrmPropertyCreate : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("calculationFormula") is null) { _explicitNullValueCalculationFormula = default!; _explicitNullProperties?.Remove("calculationFormula"); }
+            else if (parseNode.GetChildNode("calculationFormula") is { } nullNodeCalculationFormula && nullNodeCalculationFormula.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CalculationFormula = null;
+            if (parseNode.GetChildNode("currencyPropertyName") is null) { _explicitNullValueCurrencyPropertyName = default!; _explicitNullProperties?.Remove("currencyPropertyName"); }
+            else if (parseNode.GetChildNode("currencyPropertyName") is { } nullNodeCurrencyPropertyName && nullNodeCurrencyPropertyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrencyPropertyName = null;
+            if (parseNode.GetChildNode("dataSensitivity") is null) { _explicitNullValueDataSensitivity = default!; _explicitNullProperties?.Remove("dataSensitivity"); }
+            else if (parseNode.GetChildNode("dataSensitivity") is { } nullNodeDataSensitivity && nullNodeDataSensitivity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DataSensitivity = null;
+            if (parseNode.GetChildNode("description") is null) { _explicitNullValueDescription = default!; _explicitNullProperties?.Remove("description"); }
+            else if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("displayOrder") is null) { _explicitNullValueDisplayOrder = default!; _explicitNullProperties?.Remove("displayOrder"); }
+            else if (parseNode.GetChildNode("displayOrder") is { } nullNodeDisplayOrder && nullNodeDisplayOrder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayOrder = null;
+            if (parseNode.GetChildNode("externalOptions") is null) { _explicitNullValueExternalOptions = default!; _explicitNullProperties?.Remove("externalOptions"); }
+            else if (parseNode.GetChildNode("externalOptions") is { } nullNodeExternalOptions && nullNodeExternalOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalOptions = null;
+            if (parseNode.GetChildNode("fieldType") is null) { _explicitNullValueFieldType = default!; _explicitNullProperties?.Remove("fieldType"); }
+            else if (parseNode.GetChildNode("fieldType") is { } nullNodeFieldType && nullNodeFieldType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldType = null;
+            if (parseNode.GetChildNode("formField") is null) { _explicitNullValueFormField = default!; _explicitNullProperties?.Remove("formField"); }
+            else if (parseNode.GetChildNode("formField") is { } nullNodeFormField && nullNodeFormField.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FormField = null;
+            if (parseNode.GetChildNode("groupName") is null) { _explicitNullValueGroupName = default!; _explicitNullProperties?.Remove("groupName"); }
+            else if (parseNode.GetChildNode("groupName") is { } nullNodeGroupName && nullNodeGroupName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GroupName = null;
+            if (parseNode.GetChildNode("hasUniqueValue") is null) { _explicitNullValueHasUniqueValue = default!; _explicitNullProperties?.Remove("hasUniqueValue"); }
+            else if (parseNode.GetChildNode("hasUniqueValue") is { } nullNodeHasUniqueValue && nullNodeHasUniqueValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasUniqueValue = null;
+            if (parseNode.GetChildNode("hidden") is null) { _explicitNullValueHidden = default!; _explicitNullProperties?.Remove("hidden"); }
+            else if (parseNode.GetChildNode("hidden") is { } nullNodeHidden && nullNodeHidden.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Hidden = null;
+            if (parseNode.GetChildNode("label") is null) { _explicitNullValueLabel = default!; _explicitNullProperties?.Remove("label"); }
+            else if (parseNode.GetChildNode("label") is { } nullNodeLabel && nullNodeLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Label = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("numberDisplayHint") is null) { _explicitNullValueNumberDisplayHint = default!; _explicitNullProperties?.Remove("numberDisplayHint"); }
+            else if (parseNode.GetChildNode("numberDisplayHint") is { } nullNodeNumberDisplayHint && nullNodeNumberDisplayHint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumberDisplayHint = null;
+            if (parseNode.GetChildNode("options") is null) { _explicitNullValueOptions = default!; _explicitNullProperties?.Remove("options"); }
+            else if (parseNode.GetChildNode("options") is { } nullNodeOptions && nullNodeOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Options = null;
+            if (parseNode.GetChildNode("referencedObjectType") is null) { _explicitNullValueReferencedObjectType = default!; _explicitNullProperties?.Remove("referencedObjectType"); }
+            else if (parseNode.GetChildNode("referencedObjectType") is { } nullNodeReferencedObjectType && nullNodeReferencedObjectType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReferencedObjectType = null;
+            if (parseNode.GetChildNode("showCurrencySymbol") is null) { _explicitNullValueShowCurrencySymbol = default!; _explicitNullProperties?.Remove("showCurrencySymbol"); }
+            else if (parseNode.GetChildNode("showCurrencySymbol") is { } nullNodeShowCurrencySymbol && nullNodeShowCurrencySymbol.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShowCurrencySymbol = null;
+            if (parseNode.GetChildNode("textDisplayHint") is null) { _explicitNullValueTextDisplayHint = default!; _explicitNullProperties?.Remove("textDisplayHint"); }
+            else if (parseNode.GetChildNode("textDisplayHint") is { } nullNodeTextDisplayHint && nullNodeTextDisplayHint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextDisplayHint = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Represents a formula that is used to compute a calculated property.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CalculationFormula { get; set; }
+        public string? CalculationFormula { get => _explicitNullValueCalculationFormula; set { _explicitNullValueCalculationFormula = value; AdditionalData?.Remove("calculationFormula"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calculationFormula"); else _explicitNullProperties?.Remove("calculationFormula"); } }
+        private string? _explicitNullValueCalculationFormula = default!;
 #nullable restore
 #else
-        public string CalculationFormula { get; set; }
+        public string CalculationFormula { get => _explicitNullValueCalculationFormula; set { _explicitNullValueCalculationFormula = value; AdditionalData?.Remove("calculationFormula"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calculationFormula"); else _explicitNullProperties?.Remove("calculationFormula"); } }
+        private string _explicitNullValueCalculationFormula = default!;
 #endif
         /// <summary>A string representing the name of the currency property.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CurrencyPropertyName { get; set; }
+        public string? CurrencyPropertyName { get => _explicitNullValueCurrencyPropertyName; set { _explicitNullValueCurrencyPropertyName = value; AdditionalData?.Remove("currencyPropertyName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currencyPropertyName"); else _explicitNullProperties?.Remove("currencyPropertyName"); } }
+        private string? _explicitNullValueCurrencyPropertyName = default!;
 #nullable restore
 #else
-        public string CurrencyPropertyName { get; set; }
+        public string CurrencyPropertyName { get => _explicitNullValueCurrencyPropertyName; set { _explicitNullValueCurrencyPropertyName = value; AdditionalData?.Remove("currencyPropertyName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currencyPropertyName"); else _explicitNullProperties?.Remove("currencyPropertyName"); } }
+        private string _explicitNullValueCurrencyPropertyName = default!;
 #endif
         /// <summary>Indicates the sensitivity level of the property, with options: highly_sensitive, non_sensitive, or sensitive.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreateDataSensitivity? DataSensitivity { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreateDataSensitivity? DataSensitivity { get => _explicitNullValueDataSensitivity; set { _explicitNullValueDataSensitivity = value; AdditionalData?.Remove("dataSensitivity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dataSensitivity"); else _explicitNullProperties?.Remove("dataSensitivity"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreateDataSensitivity? _explicitNullValueDataSensitivity = default!;
         /// <summary>A description of the property that will be shown as help text in HubSpot.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>Properties are displayed in order starting with the lowest positive integer value. Values of -1 will cause the property to be displayed after any positive values.</summary>
-        public int? DisplayOrder { get; set; }
+        public int? DisplayOrder { get => _explicitNullValueDisplayOrder; set { _explicitNullValueDisplayOrder = value; AdditionalData?.Remove("displayOrder"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayOrder"); else _explicitNullProperties?.Remove("displayOrder"); } }
+        private int? _explicitNullValueDisplayOrder = default!;
         /// <summary>Applicable only for &apos;enumeration&apos; type properties.  Should be set to true in conjunction with a &apos;referencedObjectType&apos; of &apos;OWNER&apos;.  Otherwise false.</summary>
-        public bool? ExternalOptions { get; set; }
+        public bool? ExternalOptions { get => _explicitNullValueExternalOptions; set { _explicitNullValueExternalOptions = value; AdditionalData?.Remove("externalOptions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalOptions"); else _explicitNullProperties?.Remove("externalOptions"); } }
+        private bool? _explicitNullValueExternalOptions = default!;
         /// <summary>Controls how the property appears in HubSpot.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreateFieldType? FieldType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreateFieldType? FieldType { get => _explicitNullValueFieldType; set { _explicitNullValueFieldType = value; AdditionalData?.Remove("fieldType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldType"); else _explicitNullProperties?.Remove("fieldType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreateFieldType? _explicitNullValueFieldType = default!;
         /// <summary>Whether or not the property can be used in a HubSpot form.</summary>
-        public bool? FormField { get; set; }
+        public bool? FormField { get => _explicitNullValueFormField; set { _explicitNullValueFormField = value; AdditionalData?.Remove("formField"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("formField"); else _explicitNullProperties?.Remove("formField"); } }
+        private bool? _explicitNullValueFormField = default!;
         /// <summary>The name of the property group the property belongs to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GroupName { get; set; }
+        public string? GroupName { get => _explicitNullValueGroupName; set { _explicitNullValueGroupName = value; AdditionalData?.Remove("groupName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("groupName"); else _explicitNullProperties?.Remove("groupName"); } }
+        private string? _explicitNullValueGroupName = default!;
 #nullable restore
 #else
-        public string GroupName { get; set; }
+        public string GroupName { get => _explicitNullValueGroupName; set { _explicitNullValueGroupName = value; AdditionalData?.Remove("groupName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("groupName"); else _explicitNullProperties?.Remove("groupName"); } }
+        private string _explicitNullValueGroupName = default!;
 #endif
         /// <summary>Whether or not the property&apos;s value must be unique. Once set, this can&apos;t be changed.</summary>
-        public bool? HasUniqueValue { get; set; }
+        public bool? HasUniqueValue { get => _explicitNullValueHasUniqueValue; set { _explicitNullValueHasUniqueValue = value; AdditionalData?.Remove("hasUniqueValue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hasUniqueValue"); else _explicitNullProperties?.Remove("hasUniqueValue"); } }
+        private bool? _explicitNullValueHasUniqueValue = default!;
         /// <summary>If true, the property won&apos;t be visible and can&apos;t be used in HubSpot.</summary>
-        public bool? Hidden { get; set; }
+        public bool? Hidden { get => _explicitNullValueHidden; set { _explicitNullValueHidden = value; AdditionalData?.Remove("hidden"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hidden"); else _explicitNullProperties?.Remove("hidden"); } }
+        private bool? _explicitNullValueHidden = default!;
         /// <summary>A human-readable property label that will be shown in HubSpot.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Label { get; set; }
+        public string? Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; AdditionalData?.Remove("label"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
+        private string? _explicitNullValueLabel = default!;
 #nullable restore
 #else
-        public string Label { get; set; }
+        public string Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; AdditionalData?.Remove("label"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
+        private string _explicitNullValueLabel = default!;
 #endif
         /// <summary>The internal property name, which must be used when referencing the property via the API.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>A string providing a hint on how to display numbers. Valid values include &apos;unformatted&apos;, &apos;formatted&apos;, &apos;currency&apos;, &apos;percentage&apos;, &apos;duration&apos;, &apos;probability&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreateNumberDisplayHint? NumberDisplayHint { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreateNumberDisplayHint? NumberDisplayHint { get => _explicitNullValueNumberDisplayHint; set { _explicitNullValueNumberDisplayHint = value; AdditionalData?.Remove("numberDisplayHint"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("numberDisplayHint"); else _explicitNullProperties?.Remove("numberDisplayHint"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreateNumberDisplayHint? _explicitNullValueNumberDisplayHint = default!;
         /// <summary>A list of valid options for the property. This field is required for enumerated properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmOptionInput>? Options { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmOptionInput>? Options { get => _explicitNullValueOptions; set { _explicitNullValueOptions = value; AdditionalData?.Remove("options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("options"); else _explicitNullProperties?.Remove("options"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmOptionInput>? _explicitNullValueOptions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmOptionInput> Options { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmOptionInput> Options { get => _explicitNullValueOptions; set { _explicitNullValueOptions = value; AdditionalData?.Remove("options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("options"); else _explicitNullProperties?.Remove("options"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmOptionInput> _explicitNullValueOptions = default!;
 #endif
         /// <summary>Should be set to &apos;OWNER&apos; when &apos;externalOptions&apos; is true, which causes the property to dynamically pull option values from the current HubSpot users.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReferencedObjectType { get; set; }
+        public string? ReferencedObjectType { get => _explicitNullValueReferencedObjectType; set { _explicitNullValueReferencedObjectType = value; AdditionalData?.Remove("referencedObjectType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("referencedObjectType"); else _explicitNullProperties?.Remove("referencedObjectType"); } }
+        private string? _explicitNullValueReferencedObjectType = default!;
 #nullable restore
 #else
-        public string ReferencedObjectType { get; set; }
+        public string ReferencedObjectType { get => _explicitNullValueReferencedObjectType; set { _explicitNullValueReferencedObjectType = value; AdditionalData?.Remove("referencedObjectType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("referencedObjectType"); else _explicitNullProperties?.Remove("referencedObjectType"); } }
+        private string _explicitNullValueReferencedObjectType = default!;
 #endif
         /// <summary>A boolean indicating whether to show the currency symbol for currency fields.</summary>
-        public bool? ShowCurrencySymbol { get; set; }
+        public bool? ShowCurrencySymbol { get => _explicitNullValueShowCurrencySymbol; set { _explicitNullValueShowCurrencySymbol = value; AdditionalData?.Remove("showCurrencySymbol"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("showCurrencySymbol"); else _explicitNullProperties?.Remove("showCurrencySymbol"); } }
+        private bool? _explicitNullValueShowCurrencySymbol = default!;
         /// <summary>A string providing a hint on how to display text. Valid values include &apos;unformatted_single_line&apos;, &apos;multi_line&apos;, &apos;email&apos;, &apos;phone_number&apos;, &apos;domain_name&apos;, &apos;ip_address&apos;, &apos;physical_address&apos;, &apos;postal_code&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreateTextDisplayHint? TextDisplayHint { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreateTextDisplayHint? TextDisplayHint { get => _explicitNullValueTextDisplayHint; set { _explicitNullValueTextDisplayHint = value; AdditionalData?.Remove("textDisplayHint"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("textDisplayHint"); else _explicitNullProperties?.Remove("textDisplayHint"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreateTextDisplayHint? _explicitNullValueTextDisplayHint = default!;
         /// <summary>The data type of the property.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreateType? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreateType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreateType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreate"/> and sets the default values.
         /// </summary>
@@ -115,7 +187,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreate CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreate();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreate(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -127,23 +199,23 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "calculationFormula", n => { CalculationFormula = n.GetStringValue(); } },
                 { "currencyPropertyName", n => { CurrencyPropertyName = n.GetStringValue(); } },
-                { "dataSensitivity", n => { DataSensitivity = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreateDataSensitivity>(); } },
+                { "dataSensitivity", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreateDataSensitivity>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDataSensitivity = default; _explicitNullProperties?.Remove("dataSensitivity"); AdditionalData["dataSensitivity"] = unknown; } else { DataSensitivity = parsed; AdditionalData.Remove("dataSensitivity"); } } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "displayOrder", n => { DisplayOrder = n.GetIntValue(); } },
                 { "externalOptions", n => { ExternalOptions = n.GetBoolValue(); } },
-                { "fieldType", n => { FieldType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreateFieldType>(); } },
+                { "fieldType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreateFieldType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFieldType = default; _explicitNullProperties?.Remove("fieldType"); AdditionalData["fieldType"] = unknown; } else { FieldType = parsed; AdditionalData.Remove("fieldType"); } } },
                 { "formField", n => { FormField = n.GetBoolValue(); } },
                 { "groupName", n => { GroupName = n.GetStringValue(); } },
                 { "hasUniqueValue", n => { HasUniqueValue = n.GetBoolValue(); } },
                 { "hidden", n => { Hidden = n.GetBoolValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "numberDisplayHint", n => { NumberDisplayHint = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreateNumberDisplayHint>(); } },
+                { "numberDisplayHint", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreateNumberDisplayHint>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueNumberDisplayHint = default; _explicitNullProperties?.Remove("numberDisplayHint"); AdditionalData["numberDisplayHint"] = unknown; } else { NumberDisplayHint = parsed; AdditionalData.Remove("numberDisplayHint"); } } },
                 { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmOptionInput>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmOptionInput.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "referencedObjectType", n => { ReferencedObjectType = n.GetStringValue(); } },
                 { "showCurrencySymbol", n => { ShowCurrencySymbol = n.GetBoolValue(); } },
-                { "textDisplayHint", n => { TextDisplayHint = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreateTextDisplayHint>(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreateType>(); } },
+                { "textDisplayHint", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreateTextDisplayHint>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTextDisplayHint = default; _explicitNullProperties?.Remove("textDisplayHint"); AdditionalData["textDisplayHint"] = unknown; } else { TextDisplayHint = parsed; AdditionalData.Remove("textDisplayHint"); } } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreateType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
         /// <summary>
@@ -172,6 +244,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteBoolValue("showCurrencySymbol", ShowCurrencySymbol);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreateTextDisplayHint>("textDisplayHint", TextDisplayHint);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyCreateType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

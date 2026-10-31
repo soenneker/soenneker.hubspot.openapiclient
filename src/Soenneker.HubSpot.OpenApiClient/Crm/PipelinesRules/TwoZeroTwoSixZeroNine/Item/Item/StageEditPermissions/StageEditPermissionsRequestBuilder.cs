@@ -49,7 +49,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.PipelinesRules.TwoZeroTwoSixZeroNi
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineStagePermissions>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineStagePermissions.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineStagePermissions>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineStagePermissions.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Update the stage edit permissions for a specific pipeline in your HubSpot account. This endpoint allows you to modify which users or teams have access to edit stages within a specified pipeline. It is useful for managing access control and ensuring that only authorized personnel can make changes to the pipeline stages.
@@ -69,7 +69,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.PipelinesRules.TwoZeroTwoSixZeroNi
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineStagePermissions>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineStagePermissions.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineStagePermissions>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineStagePermissions.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve the stage edit permissions for a specific pipeline in your HubSpot account. This endpoint allows you to view the permissions set for editing stages within a given pipeline, identified by its object type and pipeline ID. This can be useful for managing access and ensuring that only authorized users can modify pipeline stages.

@@ -11,36 +11,61 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ExternalMeetingsUser : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("calendarProvider") is null) { _explicitNullValueCalendarProvider = default!; _explicitNullProperties?.Remove("calendarProvider"); }
+            else if (parseNode.GetChildNode("calendarProvider") is { } nullNodeCalendarProvider && nullNodeCalendarProvider.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CalendarProvider = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("isSalesStarter") is null) { _explicitNullValueIsSalesStarter = default!; _explicitNullProperties?.Remove("isSalesStarter"); }
+            else if (parseNode.GetChildNode("isSalesStarter") is { } nullNodeIsSalesStarter && nullNodeIsSalesStarter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsSalesStarter = null;
+            if (parseNode.GetChildNode("userId") is null) { _explicitNullValueUserId = default!; _explicitNullProperties?.Remove("userId"); }
+            else if (parseNode.GetChildNode("userId") is { } nullNodeUserId && nullNodeUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserId = null;
+            if (parseNode.GetChildNode("userProfile") is null) { _explicitNullValueUserProfile = default!; _explicitNullProperties?.Remove("userProfile"); }
+            else if (parseNode.GetChildNode("userProfile") is { } nullNodeUserProfile && nullNodeUserProfile.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserProfile = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The calendar service provider used by the user. Valid values include &apos;GOOGLE&apos;, &apos;OFFICE365&apos;, &apos;EXCHANGE&apos;, and &apos;UNKNOWN&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsUserCalendarProvider? CalendarProvider { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsUserCalendarProvider? CalendarProvider { get => _explicitNullValueCalendarProvider; set { _explicitNullValueCalendarProvider = value; AdditionalData?.Remove("calendarProvider"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calendarProvider"); else _explicitNullProperties?.Remove("calendarProvider"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsUserCalendarProvider? _explicitNullValueCalendarProvider = default!;
         /// <summary>The unique identifier for the meetings user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>A boolean indicating whether the user is a sales starter.</summary>
-        public bool? IsSalesStarter { get; set; }
+        public bool? IsSalesStarter { get => _explicitNullValueIsSalesStarter; set { _explicitNullValueIsSalesStarter = value; AdditionalData?.Remove("isSalesStarter"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isSalesStarter"); else _explicitNullProperties?.Remove("isSalesStarter"); } }
+        private bool? _explicitNullValueIsSalesStarter = default!;
         /// <summary>The unique identifier for the user associated with the meetings service.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserId { get; set; }
+        public string? UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; AdditionalData?.Remove("userId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userId"); else _explicitNullProperties?.Remove("userId"); } }
+        private string? _explicitNullValueUserId = default!;
 #nullable restore
 #else
-        public string UserId { get; set; }
+        public string UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; AdditionalData?.Remove("userId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userId"); else _explicitNullProperties?.Remove("userId"); } }
+        private string _explicitNullValueUserId = default!;
 #endif
         /// <summary>The userProfile property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalUserProfile? UserProfile { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalUserProfile? UserProfile { get => _explicitNullValueUserProfile; set { _explicitNullValueUserProfile = value; AdditionalData?.Remove("userProfile"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userProfile"); else _explicitNullProperties?.Remove("userProfile"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ExternalUserProfile? _explicitNullValueUserProfile = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalUserProfile UserProfile { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalUserProfile UserProfile { get => _explicitNullValueUserProfile; set { _explicitNullValueUserProfile = value; AdditionalData?.Remove("userProfile"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userProfile"); else _explicitNullProperties?.Remove("userProfile"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ExternalUserProfile _explicitNullValueUserProfile = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsUser"/> and sets the default values.
@@ -57,7 +82,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsUser CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsUser();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsUser(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -67,7 +92,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "calendarProvider", n => { CalendarProvider = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsUserCalendarProvider>(); } },
+                { "calendarProvider", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsUserCalendarProvider>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCalendarProvider = default; _explicitNullProperties?.Remove("calendarProvider"); AdditionalData["calendarProvider"] = unknown; } else { CalendarProvider = parsed; AdditionalData.Remove("calendarProvider"); } } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "isSalesStarter", n => { IsSalesStarter = n.GetBoolValue(); } },
                 { "userId", n => { UserId = n.GetStringValue(); } },
@@ -86,6 +111,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteBoolValue("isSalesStarter", IsSalesStarter);
             writer.WriteStringValue("userId", UserId);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalUserProfile>("userProfile", UserProfile);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

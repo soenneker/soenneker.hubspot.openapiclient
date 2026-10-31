@@ -64,7 +64,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Events.TwoZeroTwoSixZeroNine.EventDefi
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.EventsProperty>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.EventsProperty.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.EventsProperty>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.EventsProperty.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Create a new property for a specified event definition in your HubSpot account. This endpoint allows you to define custom properties associated with a particular event, enhancing the tracking and analysis of behavioral events. The request must include a JSON body with the necessary property details.

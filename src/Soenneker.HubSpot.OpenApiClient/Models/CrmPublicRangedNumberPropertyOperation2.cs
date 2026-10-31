@@ -11,25 +11,48 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CrmPublicRangedNumberPropertyOperation2 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("includeObjectsWithNoValueSet") is null) { _explicitNullValueIncludeObjectsWithNoValueSet = default!; _explicitNullProperties?.Remove("includeObjectsWithNoValueSet"); }
+            else if (parseNode.GetChildNode("includeObjectsWithNoValueSet") is { } nullNodeIncludeObjectsWithNoValueSet && nullNodeIncludeObjectsWithNoValueSet.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncludeObjectsWithNoValueSet = null;
+            if (parseNode.GetChildNode("lowerBound") is null) { _explicitNullValueLowerBound = default!; _explicitNullProperties?.Remove("lowerBound"); }
+            else if (parseNode.GetChildNode("lowerBound") is { } nullNodeLowerBound && nullNodeLowerBound.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LowerBound = null;
+            if (parseNode.GetChildNode("operationType") is null) { _explicitNullValueOperationType = default!; _explicitNullProperties?.Remove("operationType"); }
+            else if (parseNode.GetChildNode("operationType") is { } nullNodeOperationType && nullNodeOperationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OperationType = null;
+            if (parseNode.GetChildNode("operator") is null) { _explicitNullValueOperator = default!; _explicitNullProperties?.Remove("operator"); }
+            else if (parseNode.GetChildNode("operator") is { } nullNodeOperator && nullNodeOperator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Operator = null;
+            if (parseNode.GetChildNode("upperBound") is null) { _explicitNullValueUpperBound = default!; _explicitNullProperties?.Remove("upperBound"); }
+            else if (parseNode.GetChildNode("upperBound") is { } nullNodeUpperBound && nullNodeUpperBound.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpperBound = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A boolean indicating whether to include objects that do not have a value set.</summary>
-        public bool? IncludeObjectsWithNoValueSet { get; set; }
+        public bool? IncludeObjectsWithNoValueSet { get => _explicitNullValueIncludeObjectsWithNoValueSet; set { _explicitNullValueIncludeObjectsWithNoValueSet = value; AdditionalData?.Remove("includeObjectsWithNoValueSet"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("includeObjectsWithNoValueSet"); else _explicitNullProperties?.Remove("includeObjectsWithNoValueSet"); } }
+        private bool? _explicitNullValueIncludeObjectsWithNoValueSet = default!;
         /// <summary>An integer representing the lower bound of the range.</summary>
-        public long? LowerBound { get; set; }
+        public long? LowerBound { get => _explicitNullValueLowerBound; set { _explicitNullValueLowerBound = value; AdditionalData?.Remove("lowerBound"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lowerBound"); else _explicitNullProperties?.Remove("lowerBound"); } }
+        private long? _explicitNullValueLowerBound = default!;
         /// <summary>A string that specifies the type of operation. The default value is &apos;RANGED_NUMBER&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmNumberRangedOperationType2? OperationType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmNumberRangedOperationType2? OperationType { get => _explicitNullValueOperationType; set { _explicitNullValueOperationType = value; AdditionalData?.Remove("operationType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operationType"); else _explicitNullProperties?.Remove("operationType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmNumberRangedOperationType2? _explicitNullValueOperationType = default!;
         /// <summary>A string representing the operator used in the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Operator { get; set; }
+        public string? Operator { get => _explicitNullValueOperator; set { _explicitNullValueOperator = value; AdditionalData?.Remove("operator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator"); else _explicitNullProperties?.Remove("operator"); } }
+        private string? _explicitNullValueOperator = default!;
 #nullable restore
 #else
-        public string Operator { get; set; }
+        public string Operator { get => _explicitNullValueOperator; set { _explicitNullValueOperator = value; AdditionalData?.Remove("operator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator"); else _explicitNullProperties?.Remove("operator"); } }
+        private string _explicitNullValueOperator = default!;
 #endif
         /// <summary>An integer representing the upper bound of the range.</summary>
-        public long? UpperBound { get; set; }
+        public long? UpperBound { get => _explicitNullValueUpperBound; set { _explicitNullValueUpperBound = value; AdditionalData?.Remove("upperBound"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upperBound"); else _explicitNullProperties?.Remove("upperBound"); } }
+        private long? _explicitNullValueUpperBound = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedNumberPropertyOperation2"/> and sets the default values.
         /// </summary>
@@ -45,7 +68,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedNumberPropertyOperation2 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedNumberPropertyOperation2();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicRangedNumberPropertyOperation2(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -57,7 +80,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "includeObjectsWithNoValueSet", n => { IncludeObjectsWithNoValueSet = n.GetBoolValue(); } },
                 { "lowerBound", n => { LowerBound = n.GetLongValue(); } },
-                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmNumberRangedOperationType2>(); } },
+                { "operationType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmNumberRangedOperationType2>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueOperationType = default; _explicitNullProperties?.Remove("operationType"); AdditionalData["operationType"] = unknown; } else { OperationType = parsed; AdditionalData.Remove("operationType"); } } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
                 { "upperBound", n => { UpperBound = n.GetLongValue(); } },
             };
@@ -74,6 +97,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmNumberRangedOperationType2>("operationType", OperationType);
             writer.WriteStringValue("operator", Operator);
             writer.WriteLongValue("upperBound", UpperBound);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

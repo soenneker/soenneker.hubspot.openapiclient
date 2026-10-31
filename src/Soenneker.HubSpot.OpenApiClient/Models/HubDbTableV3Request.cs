@@ -11,49 +11,84 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class HubDbTableV3Request : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("allowChildTables") is null) { _explicitNullValueAllowChildTables = default!; _explicitNullProperties?.Remove("allowChildTables"); }
+            else if (parseNode.GetChildNode("allowChildTables") is { } nullNodeAllowChildTables && nullNodeAllowChildTables.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowChildTables = null;
+            if (parseNode.GetChildNode("allowPublicApiAccess") is null) { _explicitNullValueAllowPublicApiAccess = default!; _explicitNullProperties?.Remove("allowPublicApiAccess"); }
+            else if (parseNode.GetChildNode("allowPublicApiAccess") is { } nullNodeAllowPublicApiAccess && nullNodeAllowPublicApiAccess.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowPublicApiAccess = null;
+            if (parseNode.GetChildNode("columns") is null) { _explicitNullValueColumns = default!; _explicitNullProperties?.Remove("columns"); }
+            else if (parseNode.GetChildNode("columns") is { } nullNodeColumns && nullNodeColumns.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Columns = null;
+            if (parseNode.GetChildNode("dynamicMetaTags") is null) { _explicitNullValueDynamicMetaTags = default!; _explicitNullProperties?.Remove("dynamicMetaTags"); }
+            else if (parseNode.GetChildNode("dynamicMetaTags") is { } nullNodeDynamicMetaTags && nullNodeDynamicMetaTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DynamicMetaTags = null;
+            if (parseNode.GetChildNode("enableChildTablePages") is null) { _explicitNullValueEnableChildTablePages = default!; _explicitNullProperties?.Remove("enableChildTablePages"); }
+            else if (parseNode.GetChildNode("enableChildTablePages") is { } nullNodeEnableChildTablePages && nullNodeEnableChildTablePages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableChildTablePages = null;
+            if (parseNode.GetChildNode("label") is null) { _explicitNullValueLabel = default!; _explicitNullProperties?.Remove("label"); }
+            else if (parseNode.GetChildNode("label") is { } nullNodeLabel && nullNodeLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Label = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("useForPages") is null) { _explicitNullValueUseForPages = default!; _explicitNullProperties?.Remove("useForPages"); }
+            else if (parseNode.GetChildNode("useForPages") is { } nullNodeUseForPages && nullNodeUseForPages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UseForPages = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Specifies whether child tables can be created</summary>
-        public bool? AllowChildTables { get; set; }
+        public bool? AllowChildTables { get => _explicitNullValueAllowChildTables; set { _explicitNullValueAllowChildTables = value; AdditionalData?.Remove("allowChildTables"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowChildTables"); else _explicitNullProperties?.Remove("allowChildTables"); } }
+        private bool? _explicitNullValueAllowChildTables = default!;
         /// <summary>Specifies whether the table can be read by public without authorization</summary>
-        public bool? AllowPublicApiAccess { get; set; }
+        public bool? AllowPublicApiAccess { get => _explicitNullValueAllowPublicApiAccess; set { _explicitNullValueAllowPublicApiAccess = value; AdditionalData?.Remove("allowPublicApiAccess"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowPublicApiAccess"); else _explicitNullProperties?.Remove("allowPublicApiAccess"); } }
+        private bool? _explicitNullValueAllowPublicApiAccess = default!;
         /// <summary>List of columns in the table</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ColumnRequest>? Columns { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ColumnRequest>? Columns { get => _explicitNullValueColumns; set { _explicitNullValueColumns = value; AdditionalData?.Remove("columns"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("columns"); else _explicitNullProperties?.Remove("columns"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.ColumnRequest>? _explicitNullValueColumns = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ColumnRequest> Columns { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ColumnRequest> Columns { get => _explicitNullValueColumns; set { _explicitNullValueColumns = value; AdditionalData?.Remove("columns"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("columns"); else _explicitNullProperties?.Remove("columns"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.ColumnRequest> _explicitNullValueColumns = default!;
 #endif
         /// <summary>Specifies the key value pairs of the [metadata fields](https://developers.hubspot.com/docs/cms/guides/dynamic-pages/hubdb#dynamic-pages) with the associated column IDs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3RequestDynamicMetaTagsProperty2? DynamicMetaTags { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3RequestDynamicMetaTagsProperty2? DynamicMetaTags { get => _explicitNullValueDynamicMetaTags; set { _explicitNullValueDynamicMetaTags = value; AdditionalData?.Remove("dynamicMetaTags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dynamicMetaTags"); else _explicitNullProperties?.Remove("dynamicMetaTags"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3RequestDynamicMetaTagsProperty2? _explicitNullValueDynamicMetaTags = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3RequestDynamicMetaTagsProperty2 DynamicMetaTags { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3RequestDynamicMetaTagsProperty2 DynamicMetaTags { get => _explicitNullValueDynamicMetaTags; set { _explicitNullValueDynamicMetaTags = value; AdditionalData?.Remove("dynamicMetaTags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dynamicMetaTags"); else _explicitNullProperties?.Remove("dynamicMetaTags"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3RequestDynamicMetaTagsProperty2 _explicitNullValueDynamicMetaTags = default!;
 #endif
         /// <summary>Specifies creation of multi-level dynamic pages using child tables</summary>
-        public bool? EnableChildTablePages { get; set; }
+        public bool? EnableChildTablePages { get => _explicitNullValueEnableChildTablePages; set { _explicitNullValueEnableChildTablePages = value; AdditionalData?.Remove("enableChildTablePages"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enableChildTablePages"); else _explicitNullProperties?.Remove("enableChildTablePages"); } }
+        private bool? _explicitNullValueEnableChildTablePages = default!;
         /// <summary>Label of the table</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Label { get; set; }
+        public string? Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; AdditionalData?.Remove("label"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
+        private string? _explicitNullValueLabel = default!;
 #nullable restore
 #else
-        public string Label { get; set; }
+        public string Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; AdditionalData?.Remove("label"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
+        private string _explicitNullValueLabel = default!;
 #endif
         /// <summary>Name of the table</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>Specifies whether the table can be used for creation of dynamic pages</summary>
-        public bool? UseForPages { get; set; }
+        public bool? UseForPages { get => _explicitNullValueUseForPages; set { _explicitNullValueUseForPages = value; AdditionalData?.Remove("useForPages"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("useForPages"); else _explicitNullProperties?.Remove("useForPages"); } }
+        private bool? _explicitNullValueUseForPages = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3Request"/> and sets the default values.
         /// </summary>
@@ -69,7 +104,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3Request CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3Request();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableV3Request(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -104,6 +139,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("label", Label);
             writer.WriteStringValue("name", Name);
             writer.WriteBoolValue("useForPages", UseForPages);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

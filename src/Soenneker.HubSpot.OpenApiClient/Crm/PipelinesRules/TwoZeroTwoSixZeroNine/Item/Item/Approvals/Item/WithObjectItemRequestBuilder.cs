@@ -49,7 +49,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.PipelinesRules.TwoZeroTwoSixZeroNi
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectApprovalStatus>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectApprovalStatus.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectApprovalStatus>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectApprovalStatus.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve the approval status of a specific object within a pipeline. This endpoint is useful for checking the current approval state of an object, which can be critical in workflows that require validation or authorization steps.

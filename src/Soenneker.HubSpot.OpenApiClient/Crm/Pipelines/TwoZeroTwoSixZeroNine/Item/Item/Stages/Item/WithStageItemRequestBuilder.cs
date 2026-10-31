@@ -54,7 +54,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Pipelines.TwoZeroTwoSixZeroNine.It
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
-            await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
+            await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve details of a specific stage within a pipeline for a given object type in HubSpot. This endpoint is useful for accessing information about a particular stage, such as its label, display order, and metadata, which can be used for managing or analyzing pipeline stages.
@@ -72,7 +72,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Pipelines.TwoZeroTwoSixZeroNine.It
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStage>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStage.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStage>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStage.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Update a specific stage within a pipeline in your HubSpot account. This endpoint allows you to modify the properties of an existing pipeline stage, such as its label, display order, and metadata. Use this to keep your pipeline stages up-to-date with your business processes.
@@ -92,7 +92,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Pipelines.TwoZeroTwoSixZeroNine.It
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPatchRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStage>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStage.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStage>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStage.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Update a specific stage within a pipeline for a given object type in HubSpot. This endpoint allows you to modify the details of a stage, such as its label, display order, and metadata. Use this to keep your pipeline stages up-to-date and aligned with your business processes.
@@ -112,7 +112,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Pipelines.TwoZeroTwoSixZeroNine.It
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStage>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStage.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStage>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStage.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Delete a specific stage from a pipeline in your HubSpot account. This operation is useful for managing and maintaining your pipeline stages by removing those that are no longer needed. Ensure that any references to the stage are handled appropriately before deletion.

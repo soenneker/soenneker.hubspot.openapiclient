@@ -11,15 +11,31 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicSequenceTimelinePointResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("enrolledAt") is null) { _explicitNullValueEnrolledAt = default!; _explicitNullProperties?.Remove("enrolledAt"); }
+            else if (parseNode.GetChildNode("enrolledAt") is { } nullNodeEnrolledAt && nullNodeEnrolledAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnrolledAt = null;
+            if (parseNode.GetChildNode("enrollments") is null) { _explicitNullValueEnrollments = default!; _explicitNullProperties?.Remove("enrollments"); }
+            else if (parseNode.GetChildNode("enrollments") is { } nullNodeEnrollments && nullNodeEnrollments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enrollments = null;
+            if (parseNode.GetChildNode("meetingsBooked") is null) { _explicitNullValueMeetingsBooked = default!; _explicitNullProperties?.Remove("meetingsBooked"); }
+            else if (parseNode.GetChildNode("meetingsBooked") is { } nullNodeMeetingsBooked && nullNodeMeetingsBooked.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MeetingsBooked = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The time at which the enrollment occurred, represented as a Unix timestamp in milliseconds.</summary>
-        public long? EnrolledAt { get; set; }
+        public long? EnrolledAt { get => _explicitNullValueEnrolledAt; set { _explicitNullValueEnrolledAt = value; AdditionalData?.Remove("enrolledAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enrolledAt"); else _explicitNullProperties?.Remove("enrolledAt"); } }
+        private long? _explicitNullValueEnrolledAt = default!;
         /// <summary>The total number of enrollments recorded at this point in the sequence timeline. Represented as an integer.</summary>
-        public long? Enrollments { get; set; }
+        public long? Enrollments { get => _explicitNullValueEnrollments; set { _explicitNullValueEnrollments = value; AdditionalData?.Remove("enrollments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enrollments"); else _explicitNullProperties?.Remove("enrollments"); } }
+        private long? _explicitNullValueEnrollments = default!;
         /// <summary>The number of meetings booked at this point in the sequence timeline. Represented as an integer.</summary>
-        public long? MeetingsBooked { get; set; }
+        public long? MeetingsBooked { get => _explicitNullValueMeetingsBooked; set { _explicitNullValueMeetingsBooked = value; AdditionalData?.Remove("meetingsBooked"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meetingsBooked"); else _explicitNullProperties?.Remove("meetingsBooked"); } }
+        private long? _explicitNullValueMeetingsBooked = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceTimelinePointResponse"/> and sets the default values.
         /// </summary>
@@ -35,7 +51,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceTimelinePointResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceTimelinePointResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceTimelinePointResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -60,6 +76,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteLongValue("enrolledAt", EnrolledAt);
             writer.WriteLongValue("enrollments", Enrollments);
             writer.WriteLongValue("meetingsBooked", MeetingsBooked);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

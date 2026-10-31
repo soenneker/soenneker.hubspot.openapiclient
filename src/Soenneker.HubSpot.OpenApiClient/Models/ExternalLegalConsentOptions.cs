@@ -11,71 +11,115 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ExternalLegalConsentOptions : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("communicationConsentCheckboxes") is null) { _explicitNullValueCommunicationConsentCheckboxes = default!; _explicitNullProperties?.Remove("communicationConsentCheckboxes"); }
+            else if (parseNode.GetChildNode("communicationConsentCheckboxes") is { } nullNodeCommunicationConsentCheckboxes && nullNodeCommunicationConsentCheckboxes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommunicationConsentCheckboxes = null;
+            if (parseNode.GetChildNode("communicationConsentText") is null) { _explicitNullValueCommunicationConsentText = default!; _explicitNullProperties?.Remove("communicationConsentText"); }
+            else if (parseNode.GetChildNode("communicationConsentText") is { } nullNodeCommunicationConsentText && nullNodeCommunicationConsentText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommunicationConsentText = null;
+            if (parseNode.GetChildNode("isLegitimateInterest") is null) { _explicitNullValueIsLegitimateInterest = default!; _explicitNullProperties?.Remove("isLegitimateInterest"); }
+            else if (parseNode.GetChildNode("isLegitimateInterest") is { } nullNodeIsLegitimateInterest && nullNodeIsLegitimateInterest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsLegitimateInterest = null;
+            if (parseNode.GetChildNode("legitimateInterestLegalBasis") is null) { _explicitNullValueLegitimateInterestLegalBasis = default!; _explicitNullProperties?.Remove("legitimateInterestLegalBasis"); }
+            else if (parseNode.GetChildNode("legitimateInterestLegalBasis") is { } nullNodeLegitimateInterestLegalBasis && nullNodeLegitimateInterestLegalBasis.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LegitimateInterestLegalBasis = null;
+            if (parseNode.GetChildNode("legitimateInterestSubscriptionTypes") is null) { _explicitNullValueLegitimateInterestSubscriptionTypes = default!; _explicitNullProperties?.Remove("legitimateInterestSubscriptionTypes"); }
+            else if (parseNode.GetChildNode("legitimateInterestSubscriptionTypes") is { } nullNodeLegitimateInterestSubscriptionTypes && nullNodeLegitimateInterestSubscriptionTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LegitimateInterestSubscriptionTypes = null;
+            if (parseNode.GetChildNode("privacyPolicyText") is null) { _explicitNullValuePrivacyPolicyText = default!; _explicitNullProperties?.Remove("privacyPolicyText"); }
+            else if (parseNode.GetChildNode("privacyPolicyText") is { } nullNodePrivacyPolicyText && nullNodePrivacyPolicyText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrivacyPolicyText = null;
+            if (parseNode.GetChildNode("processingConsentCheckboxLabel") is null) { _explicitNullValueProcessingConsentCheckboxLabel = default!; _explicitNullProperties?.Remove("processingConsentCheckboxLabel"); }
+            else if (parseNode.GetChildNode("processingConsentCheckboxLabel") is { } nullNodeProcessingConsentCheckboxLabel && nullNodeProcessingConsentCheckboxLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProcessingConsentCheckboxLabel = null;
+            if (parseNode.GetChildNode("processingConsentFooterText") is null) { _explicitNullValueProcessingConsentFooterText = default!; _explicitNullProperties?.Remove("processingConsentFooterText"); }
+            else if (parseNode.GetChildNode("processingConsentFooterText") is { } nullNodeProcessingConsentFooterText && nullNodeProcessingConsentFooterText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProcessingConsentFooterText = null;
+            if (parseNode.GetChildNode("processingConsentText") is null) { _explicitNullValueProcessingConsentText = default!; _explicitNullProperties?.Remove("processingConsentText"); }
+            else if (parseNode.GetChildNode("processingConsentText") is { } nullNodeProcessingConsentText && nullNodeProcessingConsentText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProcessingConsentText = null;
+            if (parseNode.GetChildNode("processingConsentType") is null) { _explicitNullValueProcessingConsentType = default!; _explicitNullProperties?.Remove("processingConsentType"); }
+            else if (parseNode.GetChildNode("processingConsentType") is { } nullNodeProcessingConsentType && nullNodeProcessingConsentType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProcessingConsentType = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An array of communication consent checkboxes, each defined by an ExternalCommunicationConsentCheckbox object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCommunicationConsentCheckbox>? CommunicationConsentCheckboxes { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCommunicationConsentCheckbox>? CommunicationConsentCheckboxes { get => _explicitNullValueCommunicationConsentCheckboxes; set { _explicitNullValueCommunicationConsentCheckboxes = value; AdditionalData?.Remove("communicationConsentCheckboxes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("communicationConsentCheckboxes"); else _explicitNullProperties?.Remove("communicationConsentCheckboxes"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCommunicationConsentCheckbox>? _explicitNullValueCommunicationConsentCheckboxes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCommunicationConsentCheckbox> CommunicationConsentCheckboxes { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCommunicationConsentCheckbox> CommunicationConsentCheckboxes { get => _explicitNullValueCommunicationConsentCheckboxes; set { _explicitNullValueCommunicationConsentCheckboxes = value; AdditionalData?.Remove("communicationConsentCheckboxes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("communicationConsentCheckboxes"); else _explicitNullProperties?.Remove("communicationConsentCheckboxes"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCommunicationConsentCheckbox> _explicitNullValueCommunicationConsentCheckboxes = default!;
 #endif
         /// <summary>A string containing the text for communication consent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CommunicationConsentText { get; set; }
+        public string? CommunicationConsentText { get => _explicitNullValueCommunicationConsentText; set { _explicitNullValueCommunicationConsentText = value; AdditionalData?.Remove("communicationConsentText"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("communicationConsentText"); else _explicitNullProperties?.Remove("communicationConsentText"); } }
+        private string? _explicitNullValueCommunicationConsentText = default!;
 #nullable restore
 #else
-        public string CommunicationConsentText { get; set; }
+        public string CommunicationConsentText { get => _explicitNullValueCommunicationConsentText; set { _explicitNullValueCommunicationConsentText = value; AdditionalData?.Remove("communicationConsentText"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("communicationConsentText"); else _explicitNullProperties?.Remove("communicationConsentText"); } }
+        private string _explicitNullValueCommunicationConsentText = default!;
 #endif
         /// <summary>A boolean indicating whether legitimate interest is applicable.</summary>
-        public bool? IsLegitimateInterest { get; set; }
+        public bool? IsLegitimateInterest { get => _explicitNullValueIsLegitimateInterest; set { _explicitNullValueIsLegitimateInterest = value; AdditionalData?.Remove("isLegitimateInterest"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isLegitimateInterest"); else _explicitNullProperties?.Remove("isLegitimateInterest"); } }
+        private bool? _explicitNullValueIsLegitimateInterest = default!;
         /// <summary>A string indicating the legal basis for legitimate interest. Valid values include &apos;LEGITIMATE_INTEREST_PQL&apos;, &apos;LEGITIMATE_INTEREST_CLIENT&apos;, &apos;PERFORMANCE_OF_CONTRACT&apos;, &apos;CONSENT_WITH_NOTICE&apos;, &apos;NON_GDPR&apos;, &apos;PROCESS_AND_STORE&apos;, and &apos;LEGITIMATE_INTEREST_OTHER&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentOptionsLegitimateInterestLegalBasis? LegitimateInterestLegalBasis { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentOptionsLegitimateInterestLegalBasis? LegitimateInterestLegalBasis { get => _explicitNullValueLegitimateInterestLegalBasis; set { _explicitNullValueLegitimateInterestLegalBasis = value; AdditionalData?.Remove("legitimateInterestLegalBasis"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("legitimateInterestLegalBasis"); else _explicitNullProperties?.Remove("legitimateInterestLegalBasis"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentOptionsLegitimateInterestLegalBasis? _explicitNullValueLegitimateInterestLegalBasis = default!;
         /// <summary>An array of integers representing the subscription types that fall under legitimate interest.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<long?>? LegitimateInterestSubscriptionTypes { get; set; }
+        public List<long?>? LegitimateInterestSubscriptionTypes { get => _explicitNullValueLegitimateInterestSubscriptionTypes; set { _explicitNullValueLegitimateInterestSubscriptionTypes = value; AdditionalData?.Remove("legitimateInterestSubscriptionTypes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("legitimateInterestSubscriptionTypes"); else _explicitNullProperties?.Remove("legitimateInterestSubscriptionTypes"); } }
+        private List<long?>? _explicitNullValueLegitimateInterestSubscriptionTypes = default!;
 #nullable restore
 #else
-        public List<long?> LegitimateInterestSubscriptionTypes { get; set; }
+        public List<long?> LegitimateInterestSubscriptionTypes { get => _explicitNullValueLegitimateInterestSubscriptionTypes; set { _explicitNullValueLegitimateInterestSubscriptionTypes = value; AdditionalData?.Remove("legitimateInterestSubscriptionTypes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("legitimateInterestSubscriptionTypes"); else _explicitNullProperties?.Remove("legitimateInterestSubscriptionTypes"); } }
+        private List<long?> _explicitNullValueLegitimateInterestSubscriptionTypes = default!;
 #endif
         /// <summary>A string containing the text for the privacy policy.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrivacyPolicyText { get; set; }
+        public string? PrivacyPolicyText { get => _explicitNullValuePrivacyPolicyText; set { _explicitNullValuePrivacyPolicyText = value; AdditionalData?.Remove("privacyPolicyText"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("privacyPolicyText"); else _explicitNullProperties?.Remove("privacyPolicyText"); } }
+        private string? _explicitNullValuePrivacyPolicyText = default!;
 #nullable restore
 #else
-        public string PrivacyPolicyText { get; set; }
+        public string PrivacyPolicyText { get => _explicitNullValuePrivacyPolicyText; set { _explicitNullValuePrivacyPolicyText = value; AdditionalData?.Remove("privacyPolicyText"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("privacyPolicyText"); else _explicitNullProperties?.Remove("privacyPolicyText"); } }
+        private string _explicitNullValuePrivacyPolicyText = default!;
 #endif
         /// <summary>A string representing the label for the processing consent checkbox.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProcessingConsentCheckboxLabel { get; set; }
+        public string? ProcessingConsentCheckboxLabel { get => _explicitNullValueProcessingConsentCheckboxLabel; set { _explicitNullValueProcessingConsentCheckboxLabel = value; AdditionalData?.Remove("processingConsentCheckboxLabel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("processingConsentCheckboxLabel"); else _explicitNullProperties?.Remove("processingConsentCheckboxLabel"); } }
+        private string? _explicitNullValueProcessingConsentCheckboxLabel = default!;
 #nullable restore
 #else
-        public string ProcessingConsentCheckboxLabel { get; set; }
+        public string ProcessingConsentCheckboxLabel { get => _explicitNullValueProcessingConsentCheckboxLabel; set { _explicitNullValueProcessingConsentCheckboxLabel = value; AdditionalData?.Remove("processingConsentCheckboxLabel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("processingConsentCheckboxLabel"); else _explicitNullProperties?.Remove("processingConsentCheckboxLabel"); } }
+        private string _explicitNullValueProcessingConsentCheckboxLabel = default!;
 #endif
         /// <summary>A string containing the footer text for processing consent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProcessingConsentFooterText { get; set; }
+        public string? ProcessingConsentFooterText { get => _explicitNullValueProcessingConsentFooterText; set { _explicitNullValueProcessingConsentFooterText = value; AdditionalData?.Remove("processingConsentFooterText"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("processingConsentFooterText"); else _explicitNullProperties?.Remove("processingConsentFooterText"); } }
+        private string? _explicitNullValueProcessingConsentFooterText = default!;
 #nullable restore
 #else
-        public string ProcessingConsentFooterText { get; set; }
+        public string ProcessingConsentFooterText { get => _explicitNullValueProcessingConsentFooterText; set { _explicitNullValueProcessingConsentFooterText = value; AdditionalData?.Remove("processingConsentFooterText"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("processingConsentFooterText"); else _explicitNullProperties?.Remove("processingConsentFooterText"); } }
+        private string _explicitNullValueProcessingConsentFooterText = default!;
 #endif
         /// <summary>A string containing the text for processing consent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProcessingConsentText { get; set; }
+        public string? ProcessingConsentText { get => _explicitNullValueProcessingConsentText; set { _explicitNullValueProcessingConsentText = value; AdditionalData?.Remove("processingConsentText"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("processingConsentText"); else _explicitNullProperties?.Remove("processingConsentText"); } }
+        private string? _explicitNullValueProcessingConsentText = default!;
 #nullable restore
 #else
-        public string ProcessingConsentText { get; set; }
+        public string ProcessingConsentText { get => _explicitNullValueProcessingConsentText; set { _explicitNullValueProcessingConsentText = value; AdditionalData?.Remove("processingConsentText"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("processingConsentText"); else _explicitNullProperties?.Remove("processingConsentText"); } }
+        private string _explicitNullValueProcessingConsentText = default!;
 #endif
         /// <summary>A string indicating the type of processing consent. Valid values are &apos;IMPLICIT&apos; and &apos;REQUIRED_CHECKBOX&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentOptionsProcessingConsentType? ProcessingConsentType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentOptionsProcessingConsentType? ProcessingConsentType { get => _explicitNullValueProcessingConsentType; set { _explicitNullValueProcessingConsentType = value; AdditionalData?.Remove("processingConsentType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("processingConsentType"); else _explicitNullProperties?.Remove("processingConsentType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentOptionsProcessingConsentType? _explicitNullValueProcessingConsentType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentOptions"/> and sets the default values.
         /// </summary>
@@ -91,7 +135,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentOptions CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentOptions();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentOptions(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -104,13 +148,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "communicationConsentCheckboxes", n => { CommunicationConsentCheckboxes = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCommunicationConsentCheckbox>(global::Soenneker.HubSpot.OpenApiClient.Models.ExternalCommunicationConsentCheckbox.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "communicationConsentText", n => { CommunicationConsentText = n.GetStringValue(); } },
                 { "isLegitimateInterest", n => { IsLegitimateInterest = n.GetBoolValue(); } },
-                { "legitimateInterestLegalBasis", n => { LegitimateInterestLegalBasis = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentOptionsLegitimateInterestLegalBasis>(); } },
+                { "legitimateInterestLegalBasis", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentOptionsLegitimateInterestLegalBasis>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueLegitimateInterestLegalBasis = default; _explicitNullProperties?.Remove("legitimateInterestLegalBasis"); AdditionalData["legitimateInterestLegalBasis"] = unknown; } else { LegitimateInterestLegalBasis = parsed; AdditionalData.Remove("legitimateInterestLegalBasis"); } } },
                 { "legitimateInterestSubscriptionTypes", n => { LegitimateInterestSubscriptionTypes = n.GetCollectionOfPrimitiveValues<long?>()?.AsList(); } },
                 { "privacyPolicyText", n => { PrivacyPolicyText = n.GetStringValue(); } },
                 { "processingConsentCheckboxLabel", n => { ProcessingConsentCheckboxLabel = n.GetStringValue(); } },
                 { "processingConsentFooterText", n => { ProcessingConsentFooterText = n.GetStringValue(); } },
                 { "processingConsentText", n => { ProcessingConsentText = n.GetStringValue(); } },
-                { "processingConsentType", n => { ProcessingConsentType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentOptionsProcessingConsentType>(); } },
+                { "processingConsentType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentOptionsProcessingConsentType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueProcessingConsentType = default; _explicitNullProperties?.Remove("processingConsentType"); AdditionalData["processingConsentType"] = unknown; } else { ProcessingConsentType = parsed; AdditionalData.Remove("processingConsentType"); } } },
             };
         }
         /// <summary>
@@ -130,6 +174,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("processingConsentFooterText", ProcessingConsentFooterText);
             writer.WriteStringValue("processingConsentText", ProcessingConsentText);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentOptionsProcessingConsentType>("processingConsentType", ProcessingConsentType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

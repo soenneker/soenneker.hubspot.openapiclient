@@ -179,6 +179,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         #pragma warning disable CS1591
         RecipientFatigueSuppressed,
         #pragma warning restore CS1591
+        [EnumMember(Value = "RECIPIENT_SEND_LIMIT_EXCEEDED")]
+        #pragma warning disable CS1591
+        RecipientSendLimitExceeded,
+        #pragma warning restore CS1591
         [EnumMember(Value = "SENT")]
         #pragma warning disable CS1591
         Sent,

@@ -11,15 +11,31 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class DateTimeObject : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("dateOnly") is null) { _explicitNullValueDateOnly = default!; _explicitNullProperties?.Remove("dateOnly"); }
+            else if (parseNode.GetChildNode("dateOnly") is { } nullNodeDateOnly && nullNodeDateOnly.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateOnly = null;
+            if (parseNode.GetChildNode("timeZoneShift") is null) { _explicitNullValueTimeZoneShift = default!; _explicitNullProperties?.Remove("timeZoneShift"); }
+            else if (parseNode.GetChildNode("timeZoneShift") is { } nullNodeTimeZoneShift && nullNodeTimeZoneShift.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeZoneShift = null;
+            if (parseNode.GetChildNode("value") is null) { _explicitNullValueValue = default!; _explicitNullProperties?.Remove("value"); }
+            else if (parseNode.GetChildNode("value") is { } nullNodeValue && nullNodeValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Value = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Indicates whether the DateTime value represents only a date without a time component.</summary>
-        public bool? DateOnly { get; set; }
+        public bool? DateOnly { get => _explicitNullValueDateOnly; set { _explicitNullValueDateOnly = value; AdditionalData?.Remove("dateOnly"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dateOnly"); else _explicitNullProperties?.Remove("dateOnly"); } }
+        private bool? _explicitNullValueDateOnly = default!;
         /// <summary>The integer value representing the shift in minutes from UTC for the DateTime value.</summary>
-        public int? TimeZoneShift { get; set; }
+        public int? TimeZoneShift { get => _explicitNullValueTimeZoneShift; set { _explicitNullValueTimeZoneShift = value; AdditionalData?.Remove("timeZoneShift"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeZoneShift"); else _explicitNullProperties?.Remove("timeZoneShift"); } }
+        private int? _explicitNullValueTimeZoneShift = default!;
         /// <summary>The integer value representing a specific point in time.</summary>
-        public long? Value { get; set; }
+        public long? Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; AdditionalData?.Remove("value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
+        private long? _explicitNullValueValue = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.DateTimeObject"/> and sets the default values.
         /// </summary>
@@ -35,7 +51,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.DateTimeObject CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.DateTimeObject();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.DateTimeObject(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -60,6 +76,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteBoolValue("dateOnly", DateOnly);
             writer.WriteIntValue("timeZoneShift", TimeZoneShift);
             writer.WriteLongValue("value", Value);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

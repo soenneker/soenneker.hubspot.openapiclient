@@ -11,24 +11,39 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TeamUpdateRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("parentTeamId") is null) { _explicitNullValueParentTeamId = default!; _explicitNullProperties?.Remove("parentTeamId"); }
+            else if (parseNode.GetChildNode("parentTeamId") is { } nullNodeParentTeamId && nullNodeParentTeamId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParentTeamId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An object representing the new name for the team.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.TeamUpdateRequestNameProperty2? Name { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.TeamUpdateRequestNameProperty2? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.TeamUpdateRequestNameProperty2? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.TeamUpdateRequestNameProperty2 Name { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.TeamUpdateRequestNameProperty2 Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.TeamUpdateRequestNameProperty2 _explicitNullValueName = default!;
 #endif
         /// <summary>An object representing the ID of the parent team to which this team will be associated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.TeamUpdateRequestParentTeamIdProperty2? ParentTeamId { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.TeamUpdateRequestParentTeamIdProperty2? ParentTeamId { get => _explicitNullValueParentTeamId; set { _explicitNullValueParentTeamId = value; AdditionalData?.Remove("parentTeamId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parentTeamId"); else _explicitNullProperties?.Remove("parentTeamId"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.TeamUpdateRequestParentTeamIdProperty2? _explicitNullValueParentTeamId = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.TeamUpdateRequestParentTeamIdProperty2 ParentTeamId { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.TeamUpdateRequestParentTeamIdProperty2 ParentTeamId { get => _explicitNullValueParentTeamId; set { _explicitNullValueParentTeamId = value; AdditionalData?.Remove("parentTeamId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parentTeamId"); else _explicitNullProperties?.Remove("parentTeamId"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.TeamUpdateRequestParentTeamIdProperty2 _explicitNullValueParentTeamId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.TeamUpdateRequest"/> and sets the default values.
@@ -45,7 +60,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.TeamUpdateRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.TeamUpdateRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.TeamUpdateRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +83,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.TeamUpdateRequestNameProperty2>("name", Name);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.TeamUpdateRequestParentTeamIdProperty2>("parentTeamId", ParentTeamId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

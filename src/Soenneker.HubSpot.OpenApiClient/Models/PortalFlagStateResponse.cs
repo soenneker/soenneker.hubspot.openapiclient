@@ -11,23 +11,43 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PortalFlagStateResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("appId") is null) { _explicitNullValueAppId = default!; _explicitNullProperties?.Remove("appId"); }
+            else if (parseNode.GetChildNode("appId") is { } nullNodeAppId && nullNodeAppId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppId = null;
+            if (parseNode.GetChildNode("flagName") is null) { _explicitNullValueFlagName = default!; _explicitNullProperties?.Remove("flagName"); }
+            else if (parseNode.GetChildNode("flagName") is { } nullNodeFlagName && nullNodeFlagName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FlagName = null;
+            if (parseNode.GetChildNode("flagState") is null) { _explicitNullValueFlagState = default!; _explicitNullProperties?.Remove("flagState"); }
+            else if (parseNode.GetChildNode("flagState") is { } nullNodeFlagState && nullNodeFlagState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FlagState = null;
+            if (parseNode.GetChildNode("portalId") is null) { _explicitNullValuePortalId = default!; _explicitNullProperties?.Remove("portalId"); }
+            else if (parseNode.GetChildNode("portalId") is { } nullNodePortalId && nullNodePortalId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PortalId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The ID of the app</summary>
-        public int? AppId { get; set; }
+        public int? AppId { get => _explicitNullValueAppId; set { _explicitNullValueAppId = value; AdditionalData?.Remove("appId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("appId"); else _explicitNullProperties?.Remove("appId"); } }
+        private int? _explicitNullValueAppId = default!;
         /// <summary>The name of the flag</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FlagName { get; set; }
+        public string? FlagName { get => _explicitNullValueFlagName; set { _explicitNullValueFlagName = value; AdditionalData?.Remove("flagName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flagName"); else _explicitNullProperties?.Remove("flagName"); } }
+        private string? _explicitNullValueFlagName = default!;
 #nullable restore
 #else
-        public string FlagName { get; set; }
+        public string FlagName { get => _explicitNullValueFlagName; set { _explicitNullValueFlagName = value; AdditionalData?.Remove("flagName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flagName"); else _explicitNullProperties?.Remove("flagName"); } }
+        private string _explicitNullValueFlagName = default!;
 #endif
         /// <summary>The state of the flag for this portal</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStateResponseFlagState? FlagState { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStateResponseFlagState? FlagState { get => _explicitNullValueFlagState; set { _explicitNullValueFlagState = value; AdditionalData?.Remove("flagState"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flagState"); else _explicitNullProperties?.Remove("flagState"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStateResponseFlagState? _explicitNullValueFlagState = default!;
         /// <summary>The ID of the portal</summary>
-        public int? PortalId { get; set; }
+        public int? PortalId { get => _explicitNullValuePortalId; set { _explicitNullValuePortalId = value; AdditionalData?.Remove("portalId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("portalId"); else _explicitNullProperties?.Remove("portalId"); } }
+        private int? _explicitNullValuePortalId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStateResponse"/> and sets the default values.
         /// </summary>
@@ -43,7 +63,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStateResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStateResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStateResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -55,7 +75,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "appId", n => { AppId = n.GetIntValue(); } },
                 { "flagName", n => { FlagName = n.GetStringValue(); } },
-                { "flagState", n => { FlagState = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStateResponseFlagState>(); } },
+                { "flagState", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStateResponseFlagState>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFlagState = default; _explicitNullProperties?.Remove("flagState"); AdditionalData["flagState"] = unknown; } else { FlagState = parsed; AdditionalData.Remove("flagState"); } } },
                 { "portalId", n => { PortalId = n.GetIntValue(); } },
             };
         }
@@ -70,6 +90,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("flagName", FlagName);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PortalFlagStateResponseFlagState>("flagState", FlagState);
             writer.WriteIntValue("portalId", PortalId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

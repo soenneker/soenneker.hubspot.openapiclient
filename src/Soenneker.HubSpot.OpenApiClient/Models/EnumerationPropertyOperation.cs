@@ -11,62 +11,102 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class EnumerationPropertyOperation : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("defaultValue") is null) { _explicitNullValueDefaultValue = default!; _explicitNullProperties?.Remove("defaultValue"); }
+            else if (parseNode.GetChildNode("defaultValue") is { } nullNodeDefaultValue && nullNodeDefaultValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultValue = null;
+            if (parseNode.GetChildNode("includeObjectsWithNoValueSet") is null) { _explicitNullValueIncludeObjectsWithNoValueSet = default!; _explicitNullProperties?.Remove("includeObjectsWithNoValueSet"); }
+            else if (parseNode.GetChildNode("includeObjectsWithNoValueSet") is { } nullNodeIncludeObjectsWithNoValueSet && nullNodeIncludeObjectsWithNoValueSet.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncludeObjectsWithNoValueSet = null;
+            if (parseNode.GetChildNode("operationType") is null) { _explicitNullValueOperationType = default!; _explicitNullProperties?.Remove("operationType"); }
+            else if (parseNode.GetChildNode("operationType") is { } nullNodeOperationType && nullNodeOperationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OperationType = null;
+            if (parseNode.GetChildNode("operator") is null) { _explicitNullValueOperator = default!; _explicitNullProperties?.Remove("operator"); }
+            else if (parseNode.GetChildNode("operator") is { } nullNodeOperator && nullNodeOperator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Operator = null;
+            if (parseNode.GetChildNode("operatorName") is null) { _explicitNullValueOperatorName = default!; _explicitNullProperties?.Remove("operatorName"); }
+            else if (parseNode.GetChildNode("operatorName") is { } nullNodeOperatorName && nullNodeOperatorName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OperatorName = null;
+            if (parseNode.GetChildNode("propertyAspect") is null) { _explicitNullValuePropertyAspect = default!; _explicitNullProperties?.Remove("propertyAspect"); }
+            else if (parseNode.GetChildNode("propertyAspect") is { } nullNodePropertyAspect && nullNodePropertyAspect.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PropertyAspect = null;
+            if (parseNode.GetChildNode("propertyType") is null) { _explicitNullValuePropertyType = default!; _explicitNullProperties?.Remove("propertyType"); }
+            else if (parseNode.GetChildNode("propertyType") is { } nullNodePropertyType && nullNodePropertyType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PropertyType = null;
+            if (parseNode.GetChildNode("renderSpec") is null) { _explicitNullValueRenderSpec = default!; _explicitNullProperties?.Remove("renderSpec"); }
+            else if (parseNode.GetChildNode("renderSpec") is { } nullNodeRenderSpec && nullNodeRenderSpec.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RenderSpec = null;
+            if (parseNode.GetChildNode("values") is null) { _explicitNullValueValues = default!; _explicitNullProperties?.Remove("values"); }
+            else if (parseNode.GetChildNode("values") is { } nullNodeValues && nullNodeValues.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Values = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A string representing the default value for the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultValue { get; set; }
+        public string? DefaultValue { get => _explicitNullValueDefaultValue; set { _explicitNullValueDefaultValue = value; AdditionalData?.Remove("defaultValue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultValue"); else _explicitNullProperties?.Remove("defaultValue"); } }
+        private string? _explicitNullValueDefaultValue = default!;
 #nullable restore
 #else
-        public string DefaultValue { get; set; }
+        public string DefaultValue { get => _explicitNullValueDefaultValue; set { _explicitNullValueDefaultValue = value; AdditionalData?.Remove("defaultValue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultValue"); else _explicitNullProperties?.Remove("defaultValue"); } }
+        private string _explicitNullValueDefaultValue = default!;
 #endif
         /// <summary>A boolean indicating whether to include objects that have no value set for the property.</summary>
-        public bool? IncludeObjectsWithNoValueSet { get; set; }
+        public bool? IncludeObjectsWithNoValueSet { get => _explicitNullValueIncludeObjectsWithNoValueSet; set { _explicitNullValueIncludeObjectsWithNoValueSet = value; AdditionalData?.Remove("includeObjectsWithNoValueSet"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("includeObjectsWithNoValueSet"); else _explicitNullProperties?.Remove("includeObjectsWithNoValueSet"); } }
+        private bool? _explicitNullValueIncludeObjectsWithNoValueSet = default!;
         /// <summary>A string indicating the type of operation being performed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OperationType { get; set; }
+        public string? OperationType { get => _explicitNullValueOperationType; set { _explicitNullValueOperationType = value; AdditionalData?.Remove("operationType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operationType"); else _explicitNullProperties?.Remove("operationType"); } }
+        private string? _explicitNullValueOperationType = default!;
 #nullable restore
 #else
-        public string OperationType { get; set; }
+        public string OperationType { get => _explicitNullValueOperationType; set { _explicitNullValueOperationType = value; AdditionalData?.Remove("operationType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operationType"); else _explicitNullProperties?.Remove("operationType"); } }
+        private string _explicitNullValueOperationType = default!;
 #endif
         /// <summary>A string specifying the operation to perform, with valid values including &apos;IS_ANY_OF&apos;, &apos;IS_NONE_OF&apos;, &apos;IS_EXACTLY&apos;, &apos;IS_NOT_EXACTLY&apos;, &apos;CONTAINS_ALL&apos;, &apos;DOES_NOT_CONTAIN_ALL&apos;, &apos;HAS_EVER_BEEN_ANY_OF&apos;, &apos;HAS_NEVER_BEEN_ANY_OF&apos;, &apos;HAS_EVER_BEEN_EXACTLY&apos;, &apos;HAS_NEVER_BEEN_EXACTLY&apos;, &apos;HAS_EVER_CONTAINED_ALL&apos;, and &apos;HAS_NEVER_CONTAINED_ALL&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EnumerationPropertyOperationOperator? Operator { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EnumerationPropertyOperationOperator? Operator { get => _explicitNullValueOperator; set { _explicitNullValueOperator = value; AdditionalData?.Remove("operator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator"); else _explicitNullProperties?.Remove("operator"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.EnumerationPropertyOperationOperator? _explicitNullValueOperator = default!;
         /// <summary>A string representing the name of the operator used in the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OperatorName { get; set; }
+        public string? OperatorName { get => _explicitNullValueOperatorName; set { _explicitNullValueOperatorName = value; AdditionalData?.Remove("operatorName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operatorName"); else _explicitNullProperties?.Remove("operatorName"); } }
+        private string? _explicitNullValueOperatorName = default!;
 #nullable restore
 #else
-        public string OperatorName { get; set; }
+        public string OperatorName { get => _explicitNullValueOperatorName; set { _explicitNullValueOperatorName = value; AdditionalData?.Remove("operatorName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operatorName"); else _explicitNullProperties?.Remove("operatorName"); } }
+        private string _explicitNullValueOperatorName = default!;
 #endif
         /// <summary>The propertyAspect property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyAspect? PropertyAspect { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyAspect? PropertyAspect { get => _explicitNullValuePropertyAspect; set { _explicitNullValuePropertyAspect = value; AdditionalData?.Remove("propertyAspect"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("propertyAspect"); else _explicitNullProperties?.Remove("propertyAspect"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PropertyAspect? _explicitNullValuePropertyAspect = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyAspect PropertyAspect { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyAspect PropertyAspect { get => _explicitNullValuePropertyAspect; set { _explicitNullValuePropertyAspect = value; AdditionalData?.Remove("propertyAspect"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("propertyAspect"); else _explicitNullProperties?.Remove("propertyAspect"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PropertyAspect _explicitNullValuePropertyAspect = default!;
 #endif
         /// <summary>A string indicating the type of property, which is &apos;enumeration&apos; for this operation.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EnumerationPropertyType? PropertyType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EnumerationPropertyType? PropertyType { get => _explicitNullValuePropertyType; set { _explicitNullValuePropertyType = value; AdditionalData?.Remove("propertyType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("propertyType"); else _explicitNullProperties?.Remove("propertyType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.EnumerationPropertyType? _explicitNullValuePropertyType = default!;
         /// <summary>A string that specifies the rendering specifications for the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RenderSpec { get; set; }
+        public string? RenderSpec { get => _explicitNullValueRenderSpec; set { _explicitNullValueRenderSpec = value; AdditionalData?.Remove("renderSpec"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("renderSpec"); else _explicitNullProperties?.Remove("renderSpec"); } }
+        private string? _explicitNullValueRenderSpec = default!;
 #nullable restore
 #else
-        public string RenderSpec { get; set; }
+        public string RenderSpec { get => _explicitNullValueRenderSpec; set { _explicitNullValueRenderSpec = value; AdditionalData?.Remove("renderSpec"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("renderSpec"); else _explicitNullProperties?.Remove("renderSpec"); } }
+        private string _explicitNullValueRenderSpec = default!;
 #endif
         /// <summary>An array of strings representing the values to be used in the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Values { get; set; }
+        public List<string>? Values { get => _explicitNullValueValues; set { _explicitNullValueValues = value; AdditionalData?.Remove("values"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("values"); else _explicitNullProperties?.Remove("values"); } }
+        private List<string>? _explicitNullValueValues = default!;
 #nullable restore
 #else
-        public List<string> Values { get; set; }
+        public List<string> Values { get => _explicitNullValueValues; set { _explicitNullValueValues = value; AdditionalData?.Remove("values"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("values"); else _explicitNullProperties?.Remove("values"); } }
+        private List<string> _explicitNullValueValues = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.EnumerationPropertyOperation"/> and sets the default values.
@@ -83,7 +123,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.EnumerationPropertyOperation CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.EnumerationPropertyOperation();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.EnumerationPropertyOperation(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -96,10 +136,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "defaultValue", n => { DefaultValue = n.GetStringValue(); } },
                 { "includeObjectsWithNoValueSet", n => { IncludeObjectsWithNoValueSet = n.GetBoolValue(); } },
                 { "operationType", n => { OperationType = n.GetStringValue(); } },
-                { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EnumerationPropertyOperationOperator>(); } },
+                { "operator", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EnumerationPropertyOperationOperator>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueOperator = default; _explicitNullProperties?.Remove("operator"); AdditionalData["operator"] = unknown; } else { Operator = parsed; AdditionalData.Remove("operator"); } } },
                 { "operatorName", n => { OperatorName = n.GetStringValue(); } },
                 { "propertyAspect", n => { PropertyAspect = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyAspect>(global::Soenneker.HubSpot.OpenApiClient.Models.PropertyAspect.CreateFromDiscriminatorValue); } },
-                { "propertyType", n => { PropertyType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EnumerationPropertyType>(); } },
+                { "propertyType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EnumerationPropertyType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePropertyType = default; _explicitNullProperties?.Remove("propertyType"); AdditionalData["propertyType"] = unknown; } else { PropertyType = parsed; AdditionalData.Remove("propertyType"); } } },
                 { "renderSpec", n => { RenderSpec = n.GetStringValue(); } },
                 { "values", n => { Values = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
@@ -120,6 +160,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EnumerationPropertyType>("propertyType", PropertyType);
             writer.WriteStringValue("renderSpec", RenderSpec);
             writer.WriteCollectionOfPrimitiveValues<string>("values", Values);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,66 +11,104 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ListCreateRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("customProperties") is null) { _explicitNullValueCustomProperties = default!; _explicitNullProperties?.Remove("customProperties"); }
+            else if (parseNode.GetChildNode("customProperties") is { } nullNodeCustomProperties && nullNodeCustomProperties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomProperties = null;
+            if (parseNode.GetChildNode("filterBranch") is null) { _explicitNullValueFilterBranch = default!; _explicitNullProperties?.Remove("filterBranch"); }
+            else if (parseNode.GetChildNode("filterBranch") is { } nullNodeFilterBranch && nullNodeFilterBranch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FilterBranch = null;
+            if (parseNode.GetChildNode("listFolderId") is null) { _explicitNullValueListFolderId = default!; _explicitNullProperties?.Remove("listFolderId"); }
+            else if (parseNode.GetChildNode("listFolderId") is { } nullNodeListFolderId && nullNodeListFolderId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ListFolderId = null;
+            if (parseNode.GetChildNode("listPermissions") is null) { _explicitNullValueListPermissions = default!; _explicitNullProperties?.Remove("listPermissions"); }
+            else if (parseNode.GetChildNode("listPermissions") is { } nullNodeListPermissions && nullNodeListPermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ListPermissions = null;
+            if (parseNode.GetChildNode("membershipSettings") is null) { _explicitNullValueMembershipSettings = default!; _explicitNullProperties?.Remove("membershipSettings"); }
+            else if (parseNode.GetChildNode("membershipSettings") is { } nullNodeMembershipSettings && nullNodeMembershipSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MembershipSettings = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("objectTypeId") is null) { _explicitNullValueObjectTypeId = default!; _explicitNullProperties?.Remove("objectTypeId"); }
+            else if (parseNode.GetChildNode("objectTypeId") is { } nullNodeObjectTypeId && nullNodeObjectTypeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectTypeId = null;
+            if (parseNode.GetChildNode("processingType") is null) { _explicitNullValueProcessingType = default!; _explicitNullProperties?.Remove("processingType"); }
+            else if (parseNode.GetChildNode("processingType") is { } nullNodeProcessingType && nullNodeProcessingType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProcessingType = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An object containing custom properties for the list. These properties allow for additional customization of the list.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequestCustomPropertiesProperty2? CustomProperties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequestCustomPropertiesProperty2? CustomProperties { get => _explicitNullValueCustomProperties; set { _explicitNullValueCustomProperties = value; AdditionalData?.Remove("customProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customProperties"); else _explicitNullProperties?.Remove("customProperties"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequestCustomPropertiesProperty2? _explicitNullValueCustomProperties = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequestCustomPropertiesProperty2 CustomProperties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequestCustomPropertiesProperty2 CustomProperties { get => _explicitNullValueCustomProperties; set { _explicitNullValueCustomProperties = value; AdditionalData?.Remove("customProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customProperties"); else _explicitNullProperties?.Remove("customProperties"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequestCustomPropertiesProperty2 _explicitNullValueCustomProperties = default!;
 #endif
         /// <summary>An object that defines the filter criteria for the list. It determines which records are included in the list based on specified conditions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequestFilterBranch? FilterBranch { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequestFilterBranch? FilterBranch { get => _explicitNullValueFilterBranch; set { _explicitNullValueFilterBranch = value; AdditionalData?.Remove("filterBranch"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filterBranch"); else _explicitNullProperties?.Remove("filterBranch"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequestFilterBranch? _explicitNullValueFilterBranch = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequestFilterBranch FilterBranch { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequestFilterBranch FilterBranch { get => _explicitNullValueFilterBranch; set { _explicitNullValueFilterBranch = value; AdditionalData?.Remove("filterBranch"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filterBranch"); else _explicitNullProperties?.Remove("filterBranch"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequestFilterBranch _explicitNullValueFilterBranch = default!;
 #endif
         /// <summary>A string representing the ID of the folder where the list will be stored. This helps in organizing lists into folders.</summary>
-        public int? ListFolderId { get; set; }
+        public int? ListFolderId { get => _explicitNullValueListFolderId; set { _explicitNullValueListFolderId = value; AdditionalData?.Remove("listFolderId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("listFolderId"); else _explicitNullProperties?.Remove("listFolderId"); } }
+        private int? _explicitNullValueListFolderId = default!;
         /// <summary>The listPermissions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicListPermissions? ListPermissions { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicListPermissions? ListPermissions { get => _explicitNullValueListPermissions; set { _explicitNullValueListPermissions = value; AdditionalData?.Remove("listPermissions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("listPermissions"); else _explicitNullProperties?.Remove("listPermissions"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicListPermissions? _explicitNullValueListPermissions = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicListPermissions ListPermissions { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicListPermissions ListPermissions { get => _explicitNullValueListPermissions; set { _explicitNullValueListPermissions = value; AdditionalData?.Remove("listPermissions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("listPermissions"); else _explicitNullProperties?.Remove("listPermissions"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicListPermissions _explicitNullValueListPermissions = default!;
 #endif
         /// <summary>The membershipSettings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicMembershipSettings? MembershipSettings { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicMembershipSettings? MembershipSettings { get => _explicitNullValueMembershipSettings; set { _explicitNullValueMembershipSettings = value; AdditionalData?.Remove("membershipSettings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("membershipSettings"); else _explicitNullProperties?.Remove("membershipSettings"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicMembershipSettings? _explicitNullValueMembershipSettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicMembershipSettings MembershipSettings { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicMembershipSettings MembershipSettings { get => _explicitNullValueMembershipSettings; set { _explicitNullValueMembershipSettings = value; AdditionalData?.Remove("membershipSettings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("membershipSettings"); else _explicitNullProperties?.Remove("membershipSettings"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicMembershipSettings _explicitNullValueMembershipSettings = default!;
 #endif
         /// <summary>A string representing the name of the list. This is used to identify the list within the system.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>A string indicating the type of objects that the list will contain. This helps in categorizing the list based on the object type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ObjectTypeId { get; set; }
+        public string? ObjectTypeId { get => _explicitNullValueObjectTypeId; set { _explicitNullValueObjectTypeId = value; AdditionalData?.Remove("objectTypeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("objectTypeId"); else _explicitNullProperties?.Remove("objectTypeId"); } }
+        private string? _explicitNullValueObjectTypeId = default!;
 #nullable restore
 #else
-        public string ObjectTypeId { get; set; }
+        public string ObjectTypeId { get => _explicitNullValueObjectTypeId; set { _explicitNullValueObjectTypeId = value; AdditionalData?.Remove("objectTypeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("objectTypeId"); else _explicitNullProperties?.Remove("objectTypeId"); } }
+        private string _explicitNullValueObjectTypeId = default!;
 #endif
         /// <summary>A string that specifies the processing type of the list. It defines how the list is processed within the system.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProcessingType { get; set; }
+        public string? ProcessingType { get => _explicitNullValueProcessingType; set { _explicitNullValueProcessingType = value; AdditionalData?.Remove("processingType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("processingType"); else _explicitNullProperties?.Remove("processingType"); } }
+        private string? _explicitNullValueProcessingType = default!;
 #nullable restore
 #else
-        public string ProcessingType { get; set; }
+        public string ProcessingType { get => _explicitNullValueProcessingType; set { _explicitNullValueProcessingType = value; AdditionalData?.Remove("processingType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("processingType"); else _explicitNullProperties?.Remove("processingType"); } }
+        private string _explicitNullValueProcessingType = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequest"/> and sets the default values.
@@ -87,7 +125,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -122,6 +160,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("objectTypeId", ObjectTypeId);
             writer.WriteStringValue("processingType", ProcessingType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

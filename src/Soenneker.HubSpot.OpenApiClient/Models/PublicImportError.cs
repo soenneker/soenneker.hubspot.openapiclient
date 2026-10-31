@@ -11,80 +11,131 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicImportError : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("createdAt") is null) { _explicitNullValueCreatedAt = default!; _explicitNullProperties?.Remove("createdAt"); }
+            else if (parseNode.GetChildNode("createdAt") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("errorMessage") is null) { _explicitNullValueErrorMessage = default!; _explicitNullProperties?.Remove("errorMessage"); }
+            else if (parseNode.GetChildNode("errorMessage") is { } nullNodeErrorMessage && nullNodeErrorMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorMessage = null;
+            if (parseNode.GetChildNode("errorType") is null) { _explicitNullValueErrorType = default!; _explicitNullProperties?.Remove("errorType"); }
+            else if (parseNode.GetChildNode("errorType") is { } nullNodeErrorType && nullNodeErrorType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorType = null;
+            if (parseNode.GetChildNode("extraContext") is null) { _explicitNullValueExtraContext = default!; _explicitNullProperties?.Remove("extraContext"); }
+            else if (parseNode.GetChildNode("extraContext") is { } nullNodeExtraContext && nullNodeExtraContext.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExtraContext = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("invalidPropertyValue") is null) { _explicitNullValueInvalidPropertyValue = default!; _explicitNullProperties?.Remove("invalidPropertyValue"); }
+            else if (parseNode.GetChildNode("invalidPropertyValue") is { } nullNodeInvalidPropertyValue && nullNodeInvalidPropertyValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvalidPropertyValue = null;
+            if (parseNode.GetChildNode("invalidValue") is null) { _explicitNullValueInvalidValue = default!; _explicitNullProperties?.Remove("invalidValue"); }
+            else if (parseNode.GetChildNode("invalidValue") is { } nullNodeInvalidValue && nullNodeInvalidValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvalidValue = null;
+            if (parseNode.GetChildNode("invalidValueToDisplay") is null) { _explicitNullValueInvalidValueToDisplay = default!; _explicitNullProperties?.Remove("invalidValueToDisplay"); }
+            else if (parseNode.GetChildNode("invalidValueToDisplay") is { } nullNodeInvalidValueToDisplay && nullNodeInvalidValueToDisplay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvalidValueToDisplay = null;
+            if (parseNode.GetChildNode("knownColumnNumber") is null) { _explicitNullValueKnownColumnNumber = default!; _explicitNullProperties?.Remove("knownColumnNumber"); }
+            else if (parseNode.GetChildNode("knownColumnNumber") is { } nullNodeKnownColumnNumber && nullNodeKnownColumnNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) KnownColumnNumber = null;
+            if (parseNode.GetChildNode("objectType") is null) { _explicitNullValueObjectType = default!; _explicitNullProperties?.Remove("objectType"); }
+            else if (parseNode.GetChildNode("objectType") is { } nullNodeObjectType && nullNodeObjectType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectType = null;
+            if (parseNode.GetChildNode("objectTypeId") is null) { _explicitNullValueObjectTypeId = default!; _explicitNullProperties?.Remove("objectTypeId"); }
+            else if (parseNode.GetChildNode("objectTypeId") is { } nullNodeObjectTypeId && nullNodeObjectTypeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectTypeId = null;
+            if (parseNode.GetChildNode("sourceData") is null) { _explicitNullValueSourceData = default!; _explicitNullProperties?.Remove("sourceData"); }
+            else if (parseNode.GetChildNode("sourceData") is { } nullNodeSourceData && nullNodeSourceData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceData = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The epoch millisecond timestamp when this error was recorded.</summary>
-        public long? CreatedAt { get; set; }
+        public long? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; AdditionalData?.Remove("createdAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createdAt"); else _explicitNullProperties?.Remove("createdAt"); } }
+        private long? _explicitNullValueCreatedAt = default!;
         /// <summary>A human-readable error message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ErrorMessage { get; set; }
+        public string? ErrorMessage { get => _explicitNullValueErrorMessage; set { _explicitNullValueErrorMessage = value; AdditionalData?.Remove("errorMessage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errorMessage"); else _explicitNullProperties?.Remove("errorMessage"); } }
+        private string? _explicitNullValueErrorMessage = default!;
 #nullable restore
 #else
-        public string ErrorMessage { get; set; }
+        public string ErrorMessage { get => _explicitNullValueErrorMessage; set { _explicitNullValueErrorMessage = value; AdditionalData?.Remove("errorMessage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errorMessage"); else _explicitNullProperties?.Remove("errorMessage"); } }
+        private string _explicitNullValueErrorMessage = default!;
 #endif
         /// <summary>The classification of what went wrong during import processing.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportErrorErrorType? ErrorType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportErrorErrorType? ErrorType { get => _explicitNullValueErrorType; set { _explicitNullValueErrorType = value; AdditionalData?.Remove("errorType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errorType"); else _explicitNullProperties?.Remove("errorType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportErrorErrorType? _explicitNullValueErrorType = default!;
         /// <summary>Additional human-readable context about the error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExtraContext { get; set; }
+        public string? ExtraContext { get => _explicitNullValueExtraContext; set { _explicitNullValueExtraContext = value; AdditionalData?.Remove("extraContext"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extraContext"); else _explicitNullProperties?.Remove("extraContext"); } }
+        private string? _explicitNullValueExtraContext = default!;
 #nullable restore
 #else
-        public string ExtraContext { get; set; }
+        public string ExtraContext { get => _explicitNullValueExtraContext; set { _explicitNullValueExtraContext = value; AdditionalData?.Remove("extraContext"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extraContext"); else _explicitNullProperties?.Remove("extraContext"); } }
+        private string _explicitNullValueExtraContext = default!;
 #endif
         /// <summary>A unique, stable identifier for this specific error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>Represents a single custom property of a marketing event, storing its name, value, metadata (like source, timestamp, and sensitivity), and related audit information for tracking changes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyValue? InvalidPropertyValue { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyValue? InvalidPropertyValue { get => _explicitNullValueInvalidPropertyValue; set { _explicitNullValueInvalidPropertyValue = value; AdditionalData?.Remove("invalidPropertyValue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invalidPropertyValue"); else _explicitNullProperties?.Remove("invalidPropertyValue"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PropertyValue? _explicitNullValueInvalidPropertyValue = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyValue InvalidPropertyValue { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PropertyValue InvalidPropertyValue { get => _explicitNullValueInvalidPropertyValue; set { _explicitNullValueInvalidPropertyValue = value; AdditionalData?.Remove("invalidPropertyValue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invalidPropertyValue"); else _explicitNullProperties?.Remove("invalidPropertyValue"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PropertyValue _explicitNullValueInvalidPropertyValue = default!;
 #endif
         /// <summary>The raw string value from the import file that caused the validation failure.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InvalidValue { get; set; }
+        public string? InvalidValue { get => _explicitNullValueInvalidValue; set { _explicitNullValueInvalidValue = value; AdditionalData?.Remove("invalidValue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invalidValue"); else _explicitNullProperties?.Remove("invalidValue"); } }
+        private string? _explicitNullValueInvalidValue = default!;
 #nullable restore
 #else
-        public string InvalidValue { get; set; }
+        public string InvalidValue { get => _explicitNullValueInvalidValue; set { _explicitNullValueInvalidValue = value; AdditionalData?.Remove("invalidValue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invalidValue"); else _explicitNullProperties?.Remove("invalidValue"); } }
+        private string _explicitNullValueInvalidValue = default!;
 #endif
         /// <summary>A convenience accessor that returns either the value from `invalidPropertyValue` or `invalidValue`, whichever is present (preferring the property value).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InvalidValueToDisplay { get; set; }
+        public string? InvalidValueToDisplay { get => _explicitNullValueInvalidValueToDisplay; set { _explicitNullValueInvalidValueToDisplay = value; AdditionalData?.Remove("invalidValueToDisplay"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invalidValueToDisplay"); else _explicitNullProperties?.Remove("invalidValueToDisplay"); } }
+        private string? _explicitNullValueInvalidValueToDisplay = default!;
 #nullable restore
 #else
-        public string InvalidValueToDisplay { get; set; }
+        public string InvalidValueToDisplay { get => _explicitNullValueInvalidValueToDisplay; set { _explicitNullValueInvalidValueToDisplay = value; AdditionalData?.Remove("invalidValueToDisplay"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invalidValueToDisplay"); else _explicitNullProperties?.Remove("invalidValueToDisplay"); } }
+        private string _explicitNullValueInvalidValueToDisplay = default!;
 #endif
         /// <summary>The zero-based column index in the import file where the error occurred</summary>
-        public int? KnownColumnNumber { get; set; }
+        public int? KnownColumnNumber { get => _explicitNullValueKnownColumnNumber; set { _explicitNullValueKnownColumnNumber = value; AdditionalData?.Remove("knownColumnNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("knownColumnNumber"); else _explicitNullProperties?.Remove("knownColumnNumber"); } }
+        private int? _explicitNullValueKnownColumnNumber = default!;
         /// <summary>The CRM object type affected by this error.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportErrorObjectType? ObjectType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportErrorObjectType? ObjectType { get => _explicitNullValueObjectType; set { _explicitNullValueObjectType = value; AdditionalData?.Remove("objectType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("objectType"); else _explicitNullProperties?.Remove("objectType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportErrorObjectType? _explicitNullValueObjectType = default!;
         /// <summary>The modern object type identifier for the CRM object affected by this error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ObjectTypeId { get; set; }
+        public string? ObjectTypeId { get => _explicitNullValueObjectTypeId; set { _explicitNullValueObjectTypeId = value; AdditionalData?.Remove("objectTypeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("objectTypeId"); else _explicitNullProperties?.Remove("objectTypeId"); } }
+        private string? _explicitNullValueObjectTypeId = default!;
 #nullable restore
 #else
-        public string ObjectTypeId { get; set; }
+        public string ObjectTypeId { get => _explicitNullValueObjectTypeId; set { _explicitNullValueObjectTypeId = value; AdditionalData?.Remove("objectTypeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("objectTypeId"); else _explicitNullProperties?.Remove("objectTypeId"); } }
+        private string _explicitNullValueObjectTypeId = default!;
 #endif
         /// <summary>The sourceData property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ImportRowCore? SourceData { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ImportRowCore? SourceData { get => _explicitNullValueSourceData; set { _explicitNullValueSourceData = value; AdditionalData?.Remove("sourceData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceData"); else _explicitNullProperties?.Remove("sourceData"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ImportRowCore? _explicitNullValueSourceData = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ImportRowCore SourceData { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ImportRowCore SourceData { get => _explicitNullValueSourceData; set { _explicitNullValueSourceData = value; AdditionalData?.Remove("sourceData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceData"); else _explicitNullProperties?.Remove("sourceData"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ImportRowCore _explicitNullValueSourceData = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportError"/> and sets the default values.
@@ -101,7 +152,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportError CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportError();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportError(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -113,14 +164,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "createdAt", n => { CreatedAt = n.GetLongValue(); } },
                 { "errorMessage", n => { ErrorMessage = n.GetStringValue(); } },
-                { "errorType", n => { ErrorType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportErrorErrorType>(); } },
+                { "errorType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportErrorErrorType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueErrorType = default; _explicitNullProperties?.Remove("errorType"); AdditionalData["errorType"] = unknown; } else { ErrorType = parsed; AdditionalData.Remove("errorType"); } } },
                 { "extraContext", n => { ExtraContext = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "invalidPropertyValue", n => { InvalidPropertyValue = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyValue>(global::Soenneker.HubSpot.OpenApiClient.Models.PropertyValue.CreateFromDiscriminatorValue); } },
                 { "invalidValue", n => { InvalidValue = n.GetStringValue(); } },
                 { "invalidValueToDisplay", n => { InvalidValueToDisplay = n.GetStringValue(); } },
                 { "knownColumnNumber", n => { KnownColumnNumber = n.GetIntValue(); } },
-                { "objectType", n => { ObjectType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportErrorObjectType>(); } },
+                { "objectType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportErrorObjectType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObjectType = default; _explicitNullProperties?.Remove("objectType"); AdditionalData["objectType"] = unknown; } else { ObjectType = parsed; AdditionalData.Remove("objectType"); } } },
                 { "objectTypeId", n => { ObjectTypeId = n.GetStringValue(); } },
                 { "sourceData", n => { SourceData = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ImportRowCore>(global::Soenneker.HubSpot.OpenApiClient.Models.ImportRowCore.CreateFromDiscriminatorValue); } },
             };
@@ -144,6 +195,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportErrorObjectType>("objectType", ObjectType);
             writer.WriteStringValue("objectTypeId", ObjectTypeId);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ImportRowCore>("sourceData", SourceData);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

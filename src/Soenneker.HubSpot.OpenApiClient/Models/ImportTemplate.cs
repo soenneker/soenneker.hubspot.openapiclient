@@ -11,13 +11,26 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ImportTemplate : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("templateId") is null) { _explicitNullValueTemplateId = default!; _explicitNullProperties?.Remove("templateId"); }
+            else if (parseNode.GetChildNode("templateId") is { } nullNodeTemplateId && nullNodeTemplateId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TemplateId = null;
+            if (parseNode.GetChildNode("templateType") is null) { _explicitNullValueTemplateType = default!; _explicitNullProperties?.Remove("templateType"); }
+            else if (parseNode.GetChildNode("templateType") is { } nullNodeTemplateType && nullNodeTemplateType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TemplateType = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The unique identifier for the specific saved template or previous import being referenced.</summary>
-        public long? TemplateId { get; set; }
+        public long? TemplateId { get => _explicitNullValueTemplateId; set { _explicitNullValueTemplateId = value; AdditionalData?.Remove("templateId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("templateId"); else _explicitNullProperties?.Remove("templateId"); } }
+        private long? _explicitNullValueTemplateId = default!;
         /// <summary>The classification of what type of template this represents, and what is its origin or purpose.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ImportTemplateTemplateType? TemplateType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ImportTemplateTemplateType? TemplateType { get => _explicitNullValueTemplateType; set { _explicitNullValueTemplateType = value; AdditionalData?.Remove("templateType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("templateType"); else _explicitNullProperties?.Remove("templateType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ImportTemplateTemplateType? _explicitNullValueTemplateType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ImportTemplate"/> and sets the default values.
         /// </summary>
@@ -33,7 +46,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.ImportTemplate CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.ImportTemplate();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.ImportTemplate(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -44,7 +57,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "templateId", n => { TemplateId = n.GetLongValue(); } },
-                { "templateType", n => { TemplateType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ImportTemplateTemplateType>(); } },
+                { "templateType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ImportTemplateTemplateType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTemplateType = default; _explicitNullProperties?.Remove("templateType"); AdditionalData["templateType"] = unknown; } else { TemplateType = parsed; AdditionalData.Remove("templateType"); } } },
             };
         }
         /// <summary>
@@ -56,6 +69,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteLongValue("templateId", TemplateId);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ImportTemplateTemplateType>("templateType", TemplateType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

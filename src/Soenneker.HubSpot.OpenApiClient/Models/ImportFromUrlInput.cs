@@ -11,58 +11,100 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ImportFromUrlInput : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("access") is null) { _explicitNullValueAccess = default!; _explicitNullProperties?.Remove("access"); }
+            else if (parseNode.GetChildNode("access") is { } nullNodeAccess && nullNodeAccess.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Access = null;
+            if (parseNode.GetChildNode("duplicateValidationScope") is null) { _explicitNullValueDuplicateValidationScope = default!; _explicitNullProperties?.Remove("duplicateValidationScope"); }
+            else if (parseNode.GetChildNode("duplicateValidationScope") is { } nullNodeDuplicateValidationScope && nullNodeDuplicateValidationScope.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuplicateValidationScope = null;
+            if (parseNode.GetChildNode("duplicateValidationStrategy") is null) { _explicitNullValueDuplicateValidationStrategy = default!; _explicitNullProperties?.Remove("duplicateValidationStrategy"); }
+            else if (parseNode.GetChildNode("duplicateValidationStrategy") is { } nullNodeDuplicateValidationStrategy && nullNodeDuplicateValidationStrategy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuplicateValidationStrategy = null;
+            if (parseNode.GetChildNode("expiresAt") is null) { _explicitNullValueExpiresAt = default!; _explicitNullProperties?.Remove("expiresAt"); }
+            else if (parseNode.GetChildNode("expiresAt") is { } nullNodeExpiresAt && nullNodeExpiresAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpiresAt = null;
+            if (parseNode.GetChildNode("folderId") is null) { _explicitNullValueFolderId = default!; _explicitNullProperties?.Remove("folderId"); }
+            else if (parseNode.GetChildNode("folderId") is { } nullNodeFolderId && nullNodeFolderId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FolderId = null;
+            if (parseNode.GetChildNode("folderPath") is null) { _explicitNullValueFolderPath = default!; _explicitNullProperties?.Remove("folderPath"); }
+            else if (parseNode.GetChildNode("folderPath") is { } nullNodeFolderPath && nullNodeFolderPath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FolderPath = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("overwrite") is null) { _explicitNullValueOverwrite = default!; _explicitNullProperties?.Remove("overwrite"); }
+            else if (parseNode.GetChildNode("overwrite") is { } nullNodeOverwrite && nullNodeOverwrite.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Overwrite = null;
+            if (parseNode.GetChildNode("ttl") is null) { _explicitNullValueTtl = default!; _explicitNullProperties?.Remove("ttl"); }
+            else if (parseNode.GetChildNode("ttl") is { } nullNodeTtl && nullNodeTtl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ttl = null;
+            if (parseNode.GetChildNode("url") is null) { _explicitNullValueUrl = default!; _explicitNullProperties?.Remove("url"); }
+            else if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+        }
+
         /// <summary>Specifies the access level of the file. Valid values include &apos;PUBLIC_INDEXABLE&apos;, &apos;PUBLIC_NOT_INDEXABLE&apos;, &apos;HIDDEN_INDEXABLE&apos;, &apos;HIDDEN_NOT_INDEXABLE&apos;, &apos;HIDDEN_PRIVATE&apos;, &apos;PRIVATE&apos;, &apos;HIDDEN_SENSITIVE&apos;, and &apos;SENSITIVE&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlInputAccess? Access { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlInputAccess? Access { get => _explicitNullValueAccess; set { _explicitNullValueAccess = value; AdditionalData?.Remove("access"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("access"); else _explicitNullProperties?.Remove("access"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlInputAccess? _explicitNullValueAccess = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Optional: Specifies the scope for duplicate validation. Valid values include &apos;ENTIRE_PORTAL&apos; and &apos;EXACT_FOLDER&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlInputDuplicateValidationScope? DuplicateValidationScope { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlInputDuplicateValidationScope? DuplicateValidationScope { get => _explicitNullValueDuplicateValidationScope; set { _explicitNullValueDuplicateValidationScope = value; AdditionalData?.Remove("duplicateValidationScope"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duplicateValidationScope"); else _explicitNullProperties?.Remove("duplicateValidationScope"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlInputDuplicateValidationScope? _explicitNullValueDuplicateValidationScope = default!;
         /// <summary>Defines the strategy for handling duplicate files. Valid values are &apos;NONE&apos;, &apos;REJECT&apos;, and &apos;RETURN_EXISTING&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlInputDuplicateValidationStrategy? DuplicateValidationStrategy { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlInputDuplicateValidationStrategy? DuplicateValidationStrategy { get => _explicitNullValueDuplicateValidationStrategy; set { _explicitNullValueDuplicateValidationStrategy = value; AdditionalData?.Remove("duplicateValidationStrategy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duplicateValidationStrategy"); else _explicitNullProperties?.Remove("duplicateValidationStrategy"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlInputDuplicateValidationStrategy? _explicitNullValueDuplicateValidationStrategy = default!;
         /// <summary>Optional: Epoch time when the file will expire, in ISO 8601 format. Do not set if the file should live indefinitely</summary>
-        public DateTimeOffset? ExpiresAt { get; set; }
+        public DateTimeOffset? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; AdditionalData?.Remove("expiresAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expiresAt"); else _explicitNullProperties?.Remove("expiresAt"); } }
+        private DateTimeOffset? _explicitNullValueExpiresAt = default!;
         /// <summary>The ID of the folder where the file will be stored. This or folderPath must be set</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FolderId { get; set; }
+        public string? FolderId { get => _explicitNullValueFolderId; set { _explicitNullValueFolderId = value; AdditionalData?.Remove("folderId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("folderId"); else _explicitNullProperties?.Remove("folderId"); } }
+        private string? _explicitNullValueFolderId = default!;
 #nullable restore
 #else
-        public string FolderId { get; set; }
+        public string FolderId { get => _explicitNullValueFolderId; set { _explicitNullValueFolderId = value; AdditionalData?.Remove("folderId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("folderId"); else _explicitNullProperties?.Remove("folderId"); } }
+        private string _explicitNullValueFolderId = default!;
 #endif
         /// <summary>The path of the folder where the file will be stored. This or FolderId must be set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FolderPath { get; set; }
+        public string? FolderPath { get => _explicitNullValueFolderPath; set { _explicitNullValueFolderPath = value; AdditionalData?.Remove("folderPath"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("folderPath"); else _explicitNullProperties?.Remove("folderPath"); } }
+        private string? _explicitNullValueFolderPath = default!;
 #nullable restore
 #else
-        public string FolderPath { get; set; }
+        public string FolderPath { get => _explicitNullValueFolderPath; set { _explicitNullValueFolderPath = value; AdditionalData?.Remove("folderPath"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("folderPath"); else _explicitNullProperties?.Remove("folderPath"); } }
+        private string _explicitNullValueFolderPath = default!;
 #endif
         /// <summary>The name of the file to be imported.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>Optional  boolean indicating whether to overwrite an existing file at the same location.</summary>
-        public bool? Overwrite { get; set; }
+        public bool? Overwrite { get => _explicitNullValueOverwrite; set { _explicitNullValueOverwrite = value; AdditionalData?.Remove("overwrite"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overwrite"); else _explicitNullProperties?.Remove("overwrite"); } }
+        private bool? _explicitNullValueOverwrite = default!;
         /// <summary>Deprecated Do Not use. Optional: String representing the time-to-live for the file, same a expiresAt but takes a Period String.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Ttl { get; set; }
+        public string? Ttl { get => _explicitNullValueTtl; set { _explicitNullValueTtl = value; AdditionalData?.Remove("ttl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ttl"); else _explicitNullProperties?.Remove("ttl"); } }
+        private string? _explicitNullValueTtl = default!;
 #nullable restore
 #else
-        public string Ttl { get; set; }
+        public string Ttl { get => _explicitNullValueTtl; set { _explicitNullValueTtl = value; AdditionalData?.Remove("ttl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ttl"); else _explicitNullProperties?.Remove("ttl"); } }
+        private string _explicitNullValueTtl = default!;
 #endif
         /// <summary>The URL from which the file will be imported.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get; set; }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get; set; }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlInput"/> and sets the default values.
@@ -79,7 +121,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlInput CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlInput();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlInput(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -89,9 +131,9 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "access", n => { Access = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlInputAccess>(); } },
-                { "duplicateValidationScope", n => { DuplicateValidationScope = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlInputDuplicateValidationScope>(); } },
-                { "duplicateValidationStrategy", n => { DuplicateValidationStrategy = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlInputDuplicateValidationStrategy>(); } },
+                { "access", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlInputAccess>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAccess = default; _explicitNullProperties?.Remove("access"); AdditionalData["access"] = unknown; } else { Access = parsed; AdditionalData.Remove("access"); } } },
+                { "duplicateValidationScope", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlInputDuplicateValidationScope>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDuplicateValidationScope = default; _explicitNullProperties?.Remove("duplicateValidationScope"); AdditionalData["duplicateValidationScope"] = unknown; } else { DuplicateValidationScope = parsed; AdditionalData.Remove("duplicateValidationScope"); } } },
+                { "duplicateValidationStrategy", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlInputDuplicateValidationStrategy>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDuplicateValidationStrategy = default; _explicitNullProperties?.Remove("duplicateValidationStrategy"); AdditionalData["duplicateValidationStrategy"] = unknown; } else { DuplicateValidationStrategy = parsed; AdditionalData.Remove("duplicateValidationStrategy"); } } },
                 { "expiresAt", n => { ExpiresAt = n.GetDateTimeOffsetValue(); } },
                 { "folderId", n => { FolderId = n.GetStringValue(); } },
                 { "folderPath", n => { FolderPath = n.GetStringValue(); } },
@@ -118,6 +160,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteBoolValue("overwrite", Overwrite);
             writer.WriteStringValue("ttl", Ttl);
             writer.WriteStringValue("url", Url);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

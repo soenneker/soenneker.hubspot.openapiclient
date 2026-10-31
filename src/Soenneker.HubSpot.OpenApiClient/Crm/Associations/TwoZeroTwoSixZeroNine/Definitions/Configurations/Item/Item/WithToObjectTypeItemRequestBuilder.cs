@@ -55,7 +55,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Associations.TwoZeroTwoSixZeroNine
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CrmCollectionResponsePublicAssociationDefinitionUserConfigurationNoPaging>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CrmCollectionResponsePublicAssociationDefinitionUserConfigurationNoPaging.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CrmCollectionResponsePublicAssociationDefinitionUserConfigurationNoPaging>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CrmCollectionResponsePublicAssociationDefinitionUserConfigurationNoPaging.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve the configuration details for associations between two specified CRM object types. Use this endpoint to understand limits that have been set for specific association types.

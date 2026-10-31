@@ -11,23 +11,43 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CalculatedPropertyLimitResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("byObjectType") is null) { _explicitNullValueByObjectType = default!; _explicitNullProperties?.Remove("byObjectType"); }
+            else if (parseNode.GetChildNode("byObjectType") is { } nullNodeByObjectType && nullNodeByObjectType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ByObjectType = null;
+            if (parseNode.GetChildNode("overallLimit") is null) { _explicitNullValueOverallLimit = default!; _explicitNullProperties?.Remove("overallLimit"); }
+            else if (parseNode.GetChildNode("overallLimit") is { } nullNodeOverallLimit && nullNodeOverallLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverallLimit = null;
+            if (parseNode.GetChildNode("overallPercentage") is null) { _explicitNullValueOverallPercentage = default!; _explicitNullProperties?.Remove("overallPercentage"); }
+            else if (parseNode.GetChildNode("overallPercentage") is { } nullNodeOverallPercentage && nullNodeOverallPercentage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverallPercentage = null;
+            if (parseNode.GetChildNode("overallUsage") is null) { _explicitNullValueOverallUsage = default!; _explicitNullProperties?.Remove("overallUsage"); }
+            else if (parseNode.GetChildNode("overallUsage") is { } nullNodeOverallUsage && nullNodeOverallUsage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverallUsage = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An array detailing the usage of calculated properties by object type, with each entry providing specific usage information for an object type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.UsageForObjectType>? ByObjectType { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.UsageForObjectType>? ByObjectType { get => _explicitNullValueByObjectType; set { _explicitNullValueByObjectType = value; AdditionalData?.Remove("byObjectType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("byObjectType"); else _explicitNullProperties?.Remove("byObjectType"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.UsageForObjectType>? _explicitNullValueByObjectType = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.UsageForObjectType> ByObjectType { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.UsageForObjectType> ByObjectType { get => _explicitNullValueByObjectType; set { _explicitNullValueByObjectType = value; AdditionalData?.Remove("byObjectType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("byObjectType"); else _explicitNullProperties?.Remove("byObjectType"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.UsageForObjectType> _explicitNullValueByObjectType = default!;
 #endif
         /// <summary>The maximum number of calculated properties allowed.</summary>
-        public long? OverallLimit { get; set; }
+        public long? OverallLimit { get => _explicitNullValueOverallLimit; set { _explicitNullValueOverallLimit = value; AdditionalData?.Remove("overallLimit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overallLimit"); else _explicitNullProperties?.Remove("overallLimit"); } }
+        private long? _explicitNullValueOverallLimit = default!;
         /// <summary>The percentage of the overall limit that is currently being used for calculated properties.</summary>
-        public double? OverallPercentage { get; set; }
+        public double? OverallPercentage { get => _explicitNullValueOverallPercentage; set { _explicitNullValueOverallPercentage = value; AdditionalData?.Remove("overallPercentage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overallPercentage"); else _explicitNullProperties?.Remove("overallPercentage"); } }
+        private double? _explicitNullValueOverallPercentage = default!;
         /// <summary>The total number of calculated properties currently in use.</summary>
-        public long? OverallUsage { get; set; }
+        public long? OverallUsage { get => _explicitNullValueOverallUsage; set { _explicitNullValueOverallUsage = value; AdditionalData?.Remove("overallUsage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overallUsage"); else _explicitNullProperties?.Remove("overallUsage"); } }
+        private long? _explicitNullValueOverallUsage = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CalculatedPropertyLimitResponse"/> and sets the default values.
         /// </summary>
@@ -43,7 +63,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.CalculatedPropertyLimitResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.CalculatedPropertyLimitResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.CalculatedPropertyLimitResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -70,6 +90,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteLongValue("overallLimit", OverallLimit);
             writer.WriteDoubleValue("overallPercentage", OverallPercentage);
             writer.WriteLongValue("overallUsage", OverallUsage);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

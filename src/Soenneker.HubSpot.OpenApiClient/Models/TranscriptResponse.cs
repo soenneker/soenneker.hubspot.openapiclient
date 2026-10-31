@@ -11,33 +11,60 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TranscriptResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("createdAt") is null) { _explicitNullValueCreatedAt = default!; _explicitNullProperties?.Remove("createdAt"); }
+            else if (parseNode.GetChildNode("createdAt") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("engagementId") is null) { _explicitNullValueEngagementId = default!; _explicitNullProperties?.Remove("engagementId"); }
+            else if (parseNode.GetChildNode("engagementId") is { } nullNodeEngagementId && nullNodeEngagementId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EngagementId = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("transcriptSource") is null) { _explicitNullValueTranscriptSource = default!; _explicitNullProperties?.Remove("transcriptSource"); }
+            else if (parseNode.GetChildNode("transcriptSource") is { } nullNodeTranscriptSource && nullNodeTranscriptSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TranscriptSource = null;
+            if (parseNode.GetChildNode("transcriptUtterances") is null) { _explicitNullValueTranscriptUtterances = default!; _explicitNullProperties?.Remove("transcriptUtterances"); }
+            else if (parseNode.GetChildNode("transcriptUtterances") is { } nullNodeTranscriptUtterances && nullNodeTranscriptUtterances.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TranscriptUtterances = null;
+            if (parseNode.GetChildNode("updatedAt") is null) { _explicitNullValueUpdatedAt = default!; _explicitNullProperties?.Remove("updatedAt"); }
+            else if (parseNode.GetChildNode("updatedAt") is { } nullNodeUpdatedAt && nullNodeUpdatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdatedAt = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The date and time when this transcript was created, in ISO 8601 date-time format.</summary>
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; AdditionalData?.Remove("createdAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createdAt"); else _explicitNullProperties?.Remove("createdAt"); } }
+        private DateTimeOffset? _explicitNullValueCreatedAt = default!;
         /// <summary>The unique identifier for the engagement associated with this transcript. It is an integer in int64 format.</summary>
-        public long? EngagementId { get; set; }
+        public long? EngagementId { get => _explicitNullValueEngagementId; set { _explicitNullValueEngagementId = value; AdditionalData?.Remove("engagementId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("engagementId"); else _explicitNullProperties?.Remove("engagementId"); } }
+        private long? _explicitNullValueEngagementId = default!;
         /// <summary>The unique identifier for this transcript, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>Indicates the origin of the transcript, which can be either &apos;HUBSPOT_GENERATED&apos; or &apos;INTEGRATOR_GENERATED&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.TranscriptResponseTranscriptSource? TranscriptSource { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.TranscriptResponseTranscriptSource? TranscriptSource { get => _explicitNullValueTranscriptSource; set { _explicitNullValueTranscriptSource = value; AdditionalData?.Remove("transcriptSource"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transcriptSource"); else _explicitNullProperties?.Remove("transcriptSource"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.TranscriptResponseTranscriptSource? _explicitNullValueTranscriptSource = default!;
         /// <summary>An array of utterances that make up the transcript. Each utterance contains details such as text, timing, and speaker information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.TranscriptUtterance>? TranscriptUtterances { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.TranscriptUtterance>? TranscriptUtterances { get => _explicitNullValueTranscriptUtterances; set { _explicitNullValueTranscriptUtterances = value; AdditionalData?.Remove("transcriptUtterances"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transcriptUtterances"); else _explicitNullProperties?.Remove("transcriptUtterances"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.TranscriptUtterance>? _explicitNullValueTranscriptUtterances = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.TranscriptUtterance> TranscriptUtterances { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.TranscriptUtterance> TranscriptUtterances { get => _explicitNullValueTranscriptUtterances; set { _explicitNullValueTranscriptUtterances = value; AdditionalData?.Remove("transcriptUtterances"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transcriptUtterances"); else _explicitNullProperties?.Remove("transcriptUtterances"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.TranscriptUtterance> _explicitNullValueTranscriptUtterances = default!;
 #endif
         /// <summary>The date and time when this transcript was last updated, in ISO 8601 date-time format.</summary>
-        public DateTimeOffset? UpdatedAt { get; set; }
+        public DateTimeOffset? UpdatedAt { get => _explicitNullValueUpdatedAt; set { _explicitNullValueUpdatedAt = value; AdditionalData?.Remove("updatedAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updatedAt"); else _explicitNullProperties?.Remove("updatedAt"); } }
+        private DateTimeOffset? _explicitNullValueUpdatedAt = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.TranscriptResponse"/> and sets the default values.
         /// </summary>
@@ -53,7 +80,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.TranscriptResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.TranscriptResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.TranscriptResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -66,7 +93,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "engagementId", n => { EngagementId = n.GetLongValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "transcriptSource", n => { TranscriptSource = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TranscriptResponseTranscriptSource>(); } },
+                { "transcriptSource", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TranscriptResponseTranscriptSource>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTranscriptSource = default; _explicitNullProperties?.Remove("transcriptSource"); AdditionalData["transcriptSource"] = unknown; } else { TranscriptSource = parsed; AdditionalData.Remove("transcriptSource"); } } },
                 { "transcriptUtterances", n => { TranscriptUtterances = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.TranscriptUtterance>(global::Soenneker.HubSpot.OpenApiClient.Models.TranscriptUtterance.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
             };
@@ -84,6 +111,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TranscriptResponseTranscriptSource>("transcriptSource", TranscriptSource);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.TranscriptUtterance>("transcriptUtterances", TranscriptUtterances);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

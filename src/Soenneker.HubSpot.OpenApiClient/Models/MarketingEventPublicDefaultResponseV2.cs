@@ -11,85 +11,142 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class MarketingEventPublicDefaultResponseV2 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("appInfo") is null) { _explicitNullValueAppInfo = default!; _explicitNullProperties?.Remove("appInfo"); }
+            else if (parseNode.GetChildNode("appInfo") is { } nullNodeAppInfo && nullNodeAppInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppInfo = null;
+            if (parseNode.GetChildNode("createdAt") is null) { _explicitNullValueCreatedAt = default!; _explicitNullProperties?.Remove("createdAt"); }
+            else if (parseNode.GetChildNode("createdAt") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("customProperties") is null) { _explicitNullValueCustomProperties = default!; _explicitNullProperties?.Remove("customProperties"); }
+            else if (parseNode.GetChildNode("customProperties") is { } nullNodeCustomProperties && nullNodeCustomProperties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomProperties = null;
+            if (parseNode.GetChildNode("endDateTime") is null) { _explicitNullValueEndDateTime = default!; _explicitNullProperties?.Remove("endDateTime"); }
+            else if (parseNode.GetChildNode("endDateTime") is { } nullNodeEndDateTime && nullNodeEndDateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndDateTime = null;
+            if (parseNode.GetChildNode("eventCancelled") is null) { _explicitNullValueEventCancelled = default!; _explicitNullProperties?.Remove("eventCancelled"); }
+            else if (parseNode.GetChildNode("eventCancelled") is { } nullNodeEventCancelled && nullNodeEventCancelled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventCancelled = null;
+            if (parseNode.GetChildNode("eventCompleted") is null) { _explicitNullValueEventCompleted = default!; _explicitNullProperties?.Remove("eventCompleted"); }
+            else if (parseNode.GetChildNode("eventCompleted") is { } nullNodeEventCompleted && nullNodeEventCompleted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventCompleted = null;
+            if (parseNode.GetChildNode("eventDescription") is null) { _explicitNullValueEventDescription = default!; _explicitNullProperties?.Remove("eventDescription"); }
+            else if (parseNode.GetChildNode("eventDescription") is { } nullNodeEventDescription && nullNodeEventDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventDescription = null;
+            if (parseNode.GetChildNode("eventName") is null) { _explicitNullValueEventName = default!; _explicitNullProperties?.Remove("eventName"); }
+            else if (parseNode.GetChildNode("eventName") is { } nullNodeEventName && nullNodeEventName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventName = null;
+            if (parseNode.GetChildNode("eventOrganizer") is null) { _explicitNullValueEventOrganizer = default!; _explicitNullProperties?.Remove("eventOrganizer"); }
+            else if (parseNode.GetChildNode("eventOrganizer") is { } nullNodeEventOrganizer && nullNodeEventOrganizer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventOrganizer = null;
+            if (parseNode.GetChildNode("eventType") is null) { _explicitNullValueEventType = default!; _explicitNullProperties?.Remove("eventType"); }
+            else if (parseNode.GetChildNode("eventType") is { } nullNodeEventType && nullNodeEventType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventType = null;
+            if (parseNode.GetChildNode("eventUrl") is null) { _explicitNullValueEventUrl = default!; _explicitNullProperties?.Remove("eventUrl"); }
+            else if (parseNode.GetChildNode("eventUrl") is { } nullNodeEventUrl && nullNodeEventUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventUrl = null;
+            if (parseNode.GetChildNode("objectId") is null) { _explicitNullValueObjectId = default!; _explicitNullProperties?.Remove("objectId"); }
+            else if (parseNode.GetChildNode("objectId") is { } nullNodeObjectId && nullNodeObjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectId = null;
+            if (parseNode.GetChildNode("startDateTime") is null) { _explicitNullValueStartDateTime = default!; _explicitNullProperties?.Remove("startDateTime"); }
+            else if (parseNode.GetChildNode("startDateTime") is { } nullNodeStartDateTime && nullNodeStartDateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartDateTime = null;
+            if (parseNode.GetChildNode("updatedAt") is null) { _explicitNullValueUpdatedAt = default!; _explicitNullProperties?.Remove("updatedAt"); }
+            else if (parseNode.GetChildNode("updatedAt") is { } nullNodeUpdatedAt && nullNodeUpdatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdatedAt = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The appInfo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AppInfo? AppInfo { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AppInfo? AppInfo { get => _explicitNullValueAppInfo; set { _explicitNullValueAppInfo = value; AdditionalData?.Remove("appInfo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("appInfo"); else _explicitNullProperties?.Remove("appInfo"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.AppInfo? _explicitNullValueAppInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AppInfo AppInfo { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AppInfo AppInfo { get => _explicitNullValueAppInfo; set { _explicitNullValueAppInfo = value; AdditionalData?.Remove("appInfo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("appInfo"); else _explicitNullProperties?.Remove("appInfo"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.AppInfo _explicitNullValueAppInfo = default!;
 #endif
         /// <summary>The creation date and time of the marketing event</summary>
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; AdditionalData?.Remove("createdAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createdAt"); else _explicitNullProperties?.Remove("createdAt"); } }
+        private DateTimeOffset? _explicitNullValueCreatedAt = default!;
         /// <summary>An array of custom properties associated with the marketing event, each represented by a CrmPropertyWrapper object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyWrapper>? CustomProperties { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyWrapper>? CustomProperties { get => _explicitNullValueCustomProperties; set { _explicitNullValueCustomProperties = value; AdditionalData?.Remove("customProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customProperties"); else _explicitNullProperties?.Remove("customProperties"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyWrapper>? _explicitNullValueCustomProperties = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyWrapper> CustomProperties { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyWrapper> CustomProperties { get => _explicitNullValueCustomProperties; set { _explicitNullValueCustomProperties = value; AdditionalData?.Remove("customProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customProperties"); else _explicitNullProperties?.Remove("customProperties"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPropertyWrapper> _explicitNullValueCustomProperties = default!;
 #endif
         /// <summary>The end date and time of the marketing event</summary>
-        public DateTimeOffset? EndDateTime { get; set; }
+        public DateTimeOffset? EndDateTime { get => _explicitNullValueEndDateTime; set { _explicitNullValueEndDateTime = value; AdditionalData?.Remove("endDateTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endDateTime"); else _explicitNullProperties?.Remove("endDateTime"); } }
+        private DateTimeOffset? _explicitNullValueEndDateTime = default!;
         /// <summary>Indicates if the marketing event has been cancelled</summary>
-        public bool? EventCancelled { get; set; }
+        public bool? EventCancelled { get => _explicitNullValueEventCancelled; set { _explicitNullValueEventCancelled = value; AdditionalData?.Remove("eventCancelled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eventCancelled"); else _explicitNullProperties?.Remove("eventCancelled"); } }
+        private bool? _explicitNullValueEventCancelled = default!;
         /// <summary>Indicates if the marketing event has been completed</summary>
-        public bool? EventCompleted { get; set; }
+        public bool? EventCompleted { get => _explicitNullValueEventCompleted; set { _explicitNullValueEventCompleted = value; AdditionalData?.Remove("eventCompleted"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eventCompleted"); else _explicitNullProperties?.Remove("eventCompleted"); } }
+        private bool? _explicitNullValueEventCompleted = default!;
         /// <summary>The description of the marketing event</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EventDescription { get; set; }
+        public string? EventDescription { get => _explicitNullValueEventDescription; set { _explicitNullValueEventDescription = value; AdditionalData?.Remove("eventDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eventDescription"); else _explicitNullProperties?.Remove("eventDescription"); } }
+        private string? _explicitNullValueEventDescription = default!;
 #nullable restore
 #else
-        public string EventDescription { get; set; }
+        public string EventDescription { get => _explicitNullValueEventDescription; set { _explicitNullValueEventDescription = value; AdditionalData?.Remove("eventDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eventDescription"); else _explicitNullProperties?.Remove("eventDescription"); } }
+        private string _explicitNullValueEventDescription = default!;
 #endif
         /// <summary>The name of the marketing event</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EventName { get; set; }
+        public string? EventName { get => _explicitNullValueEventName; set { _explicitNullValueEventName = value; AdditionalData?.Remove("eventName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eventName"); else _explicitNullProperties?.Remove("eventName"); } }
+        private string? _explicitNullValueEventName = default!;
 #nullable restore
 #else
-        public string EventName { get; set; }
+        public string EventName { get => _explicitNullValueEventName; set { _explicitNullValueEventName = value; AdditionalData?.Remove("eventName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eventName"); else _explicitNullProperties?.Remove("eventName"); } }
+        private string _explicitNullValueEventName = default!;
 #endif
         /// <summary>The name of the organizer of the marketing event</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EventOrganizer { get; set; }
+        public string? EventOrganizer { get => _explicitNullValueEventOrganizer; set { _explicitNullValueEventOrganizer = value; AdditionalData?.Remove("eventOrganizer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eventOrganizer"); else _explicitNullProperties?.Remove("eventOrganizer"); } }
+        private string? _explicitNullValueEventOrganizer = default!;
 #nullable restore
 #else
-        public string EventOrganizer { get; set; }
+        public string EventOrganizer { get => _explicitNullValueEventOrganizer; set { _explicitNullValueEventOrganizer = value; AdditionalData?.Remove("eventOrganizer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eventOrganizer"); else _explicitNullProperties?.Remove("eventOrganizer"); } }
+        private string _explicitNullValueEventOrganizer = default!;
 #endif
         /// <summary>The type of the marketing event</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EventType { get; set; }
+        public string? EventType { get => _explicitNullValueEventType; set { _explicitNullValueEventType = value; AdditionalData?.Remove("eventType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eventType"); else _explicitNullProperties?.Remove("eventType"); } }
+        private string? _explicitNullValueEventType = default!;
 #nullable restore
 #else
-        public string EventType { get; set; }
+        public string EventType { get => _explicitNullValueEventType; set { _explicitNullValueEventType = value; AdditionalData?.Remove("eventType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eventType"); else _explicitNullProperties?.Remove("eventType"); } }
+        private string _explicitNullValueEventType = default!;
 #endif
         /// <summary>A URL in the external event application where the marketing event can be managed</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EventUrl { get; set; }
+        public string? EventUrl { get => _explicitNullValueEventUrl; set { _explicitNullValueEventUrl = value; AdditionalData?.Remove("eventUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eventUrl"); else _explicitNullProperties?.Remove("eventUrl"); } }
+        private string? _explicitNullValueEventUrl = default!;
 #nullable restore
 #else
-        public string EventUrl { get; set; }
+        public string EventUrl { get => _explicitNullValueEventUrl; set { _explicitNullValueEventUrl = value; AdditionalData?.Remove("eventUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eventUrl"); else _explicitNullProperties?.Remove("eventUrl"); } }
+        private string _explicitNullValueEventUrl = default!;
 #endif
         /// <summary>The internal ID of the marketing event in HubSpot</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ObjectId { get; set; }
+        public string? ObjectId { get => _explicitNullValueObjectId; set { _explicitNullValueObjectId = value; AdditionalData?.Remove("objectId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("objectId"); else _explicitNullProperties?.Remove("objectId"); } }
+        private string? _explicitNullValueObjectId = default!;
 #nullable restore
 #else
-        public string ObjectId { get; set; }
+        public string ObjectId { get => _explicitNullValueObjectId; set { _explicitNullValueObjectId = value; AdditionalData?.Remove("objectId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("objectId"); else _explicitNullProperties?.Remove("objectId"); } }
+        private string _explicitNullValueObjectId = default!;
 #endif
         /// <summary>The start date and time of the marketing event</summary>
-        public DateTimeOffset? StartDateTime { get; set; }
+        public DateTimeOffset? StartDateTime { get => _explicitNullValueStartDateTime; set { _explicitNullValueStartDateTime = value; AdditionalData?.Remove("startDateTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startDateTime"); else _explicitNullProperties?.Remove("startDateTime"); } }
+        private DateTimeOffset? _explicitNullValueStartDateTime = default!;
         /// <summary>The update date and time of the marketing event</summary>
-        public DateTimeOffset? UpdatedAt { get; set; }
+        public DateTimeOffset? UpdatedAt { get => _explicitNullValueUpdatedAt; set { _explicitNullValueUpdatedAt = value; AdditionalData?.Remove("updatedAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updatedAt"); else _explicitNullProperties?.Remove("updatedAt"); } }
+        private DateTimeOffset? _explicitNullValueUpdatedAt = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventPublicDefaultResponseV2"/> and sets the default values.
         /// </summary>
@@ -105,7 +162,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventPublicDefaultResponseV2 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventPublicDefaultResponseV2();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventPublicDefaultResponseV2(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -152,6 +209,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("objectId", ObjectId);
             writer.WriteDateTimeOffsetValue("startDateTime", StartDateTime);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,97 +11,164 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class SignedAccessToken : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("appId") is null) { _explicitNullValueAppId = default!; _explicitNullProperties?.Remove("appId"); }
+            else if (parseNode.GetChildNode("appId") is { } nullNodeAppId && nullNodeAppId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppId = null;
+            if (parseNode.GetChildNode("appInstallId") is null) { _explicitNullValueAppInstallId = default!; _explicitNullProperties?.Remove("appInstallId"); }
+            else if (parseNode.GetChildNode("appInstallId") is { } nullNodeAppInstallId && nullNodeAppInstallId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppInstallId = null;
+            if (parseNode.GetChildNode("audience") is null) { _explicitNullValueAudience = default!; _explicitNullProperties?.Remove("audience"); }
+            else if (parseNode.GetChildNode("audience") is { } nullNodeAudience && nullNodeAudience.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Audience = null;
+            if (parseNode.GetChildNode("expiresAt") is null) { _explicitNullValueExpiresAt = default!; _explicitNullProperties?.Remove("expiresAt"); }
+            else if (parseNode.GetChildNode("expiresAt") is { } nullNodeExpiresAt && nullNodeExpiresAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpiresAt = null;
+            if (parseNode.GetChildNode("hubId") is null) { _explicitNullValueHubId = default!; _explicitNullProperties?.Remove("hubId"); }
+            else if (parseNode.GetChildNode("hubId") is { } nullNodeHubId && nullNodeHubId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HubId = null;
+            if (parseNode.GetChildNode("hublet") is null) { _explicitNullValueHublet = default!; _explicitNullProperties?.Remove("hublet"); }
+            else if (parseNode.GetChildNode("hublet") is { } nullNodeHublet && nullNodeHublet.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Hublet = null;
+            if (parseNode.GetChildNode("installingUserId") is null) { _explicitNullValueInstallingUserId = default!; _explicitNullProperties?.Remove("installingUserId"); }
+            else if (parseNode.GetChildNode("installingUserId") is { } nullNodeInstallingUserId && nullNodeInstallingUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InstallingUserId = null;
+            if (parseNode.GetChildNode("isPrivateDistribution") is null) { _explicitNullValueIsPrivateDistribution = default!; _explicitNullProperties?.Remove("isPrivateDistribution"); }
+            else if (parseNode.GetChildNode("isPrivateDistribution") is { } nullNodeIsPrivateDistribution && nullNodeIsPrivateDistribution.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsPrivateDistribution = null;
+            if (parseNode.GetChildNode("isServiceAccount") is null) { _explicitNullValueIsServiceAccount = default!; _explicitNullProperties?.Remove("isServiceAccount"); }
+            else if (parseNode.GetChildNode("isServiceAccount") is { } nullNodeIsServiceAccount && nullNodeIsServiceAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsServiceAccount = null;
+            if (parseNode.GetChildNode("isUserLevel") is null) { _explicitNullValueIsUserLevel = default!; _explicitNullProperties?.Remove("isUserLevel"); }
+            else if (parseNode.GetChildNode("isUserLevel") is { } nullNodeIsUserLevel && nullNodeIsUserLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsUserLevel = null;
+            if (parseNode.GetChildNode("newSignature") is null) { _explicitNullValueNewSignature = default!; _explicitNullProperties?.Remove("newSignature"); }
+            else if (parseNode.GetChildNode("newSignature") is { } nullNodeNewSignature && nullNodeNewSignature.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewSignature = null;
+            if (parseNode.GetChildNode("scopes") is null) { _explicitNullValueScopes = default!; _explicitNullProperties?.Remove("scopes"); }
+            else if (parseNode.GetChildNode("scopes") is { } nullNodeScopes && nullNodeScopes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Scopes = null;
+            if (parseNode.GetChildNode("scopeToScopeGroupPks") is null) { _explicitNullValueScopeToScopeGroupPks = default!; _explicitNullProperties?.Remove("scopeToScopeGroupPks"); }
+            else if (parseNode.GetChildNode("scopeToScopeGroupPks") is { } nullNodeScopeToScopeGroupPks && nullNodeScopeToScopeGroupPks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScopeToScopeGroupPks = null;
+            if (parseNode.GetChildNode("signature") is null) { _explicitNullValueSignature = default!; _explicitNullProperties?.Remove("signature"); }
+            else if (parseNode.GetChildNode("signature") is { } nullNodeSignature && nullNodeSignature.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Signature = null;
+            if (parseNode.GetChildNode("trialScopes") is null) { _explicitNullValueTrialScopes = default!; _explicitNullProperties?.Remove("trialScopes"); }
+            else if (parseNode.GetChildNode("trialScopes") is { } nullNodeTrialScopes && nullNodeTrialScopes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrialScopes = null;
+            if (parseNode.GetChildNode("trialScopeToScopeGroupPks") is null) { _explicitNullValueTrialScopeToScopeGroupPks = default!; _explicitNullProperties?.Remove("trialScopeToScopeGroupPks"); }
+            else if (parseNode.GetChildNode("trialScopeToScopeGroupPks") is { } nullNodeTrialScopeToScopeGroupPks && nullNodeTrialScopeToScopeGroupPks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrialScopeToScopeGroupPks = null;
+            if (parseNode.GetChildNode("userId") is null) { _explicitNullValueUserId = default!; _explicitNullProperties?.Remove("userId"); }
+            else if (parseNode.GetChildNode("userId") is { } nullNodeUserId && nullNodeUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An integer identifying the application that issued the token.</summary>
-        public int? AppId { get; set; }
+        public int? AppId { get => _explicitNullValueAppId; set { _explicitNullValueAppId = value; AdditionalData?.Remove("appId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("appId"); else _explicitNullProperties?.Remove("appId"); } }
+        private int? _explicitNullValueAppId = default!;
         /// <summary>A string identifying the installation instance of the application associated with the token.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AppInstallId { get; set; }
+        public string? AppInstallId { get => _explicitNullValueAppInstallId; set { _explicitNullValueAppInstallId = value; AdditionalData?.Remove("appInstallId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("appInstallId"); else _explicitNullProperties?.Remove("appInstallId"); } }
+        private string? _explicitNullValueAppInstallId = default!;
 #nullable restore
 #else
-        public string AppInstallId { get; set; }
+        public string AppInstallId { get => _explicitNullValueAppInstallId; set { _explicitNullValueAppInstallId = value; AdditionalData?.Remove("appInstallId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("appInstallId"); else _explicitNullProperties?.Remove("appInstallId"); } }
+        private string _explicitNullValueAppInstallId = default!;
 #endif
         /// <summary>A string representing the intended audience for the token.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Audience { get; set; }
+        public string? Audience { get => _explicitNullValueAudience; set { _explicitNullValueAudience = value; AdditionalData?.Remove("audience"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audience"); else _explicitNullProperties?.Remove("audience"); } }
+        private string? _explicitNullValueAudience = default!;
 #nullable restore
 #else
-        public string Audience { get; set; }
+        public string Audience { get => _explicitNullValueAudience; set { _explicitNullValueAudience = value; AdditionalData?.Remove("audience"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audience"); else _explicitNullProperties?.Remove("audience"); } }
+        private string _explicitNullValueAudience = default!;
 #endif
         /// <summary>An integer representing the expiration time of the token, in Unix timestamp format.</summary>
-        public long? ExpiresAt { get; set; }
+        public long? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; AdditionalData?.Remove("expiresAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expiresAt"); else _explicitNullProperties?.Remove("expiresAt"); } }
+        private long? _explicitNullValueExpiresAt = default!;
         /// <summary>An integer identifying the HubSpot account associated with the token.</summary>
-        public int? HubId { get; set; }
+        public int? HubId { get => _explicitNullValueHubId; set { _explicitNullValueHubId = value; AdditionalData?.Remove("hubId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hubId"); else _explicitNullProperties?.Remove("hubId"); } }
+        private int? _explicitNullValueHubId = default!;
         /// <summary>A string indicating the specific HubSpot region or cluster.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Hublet { get; set; }
+        public string? Hublet { get => _explicitNullValueHublet; set { _explicitNullValueHublet = value; AdditionalData?.Remove("hublet"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hublet"); else _explicitNullProperties?.Remove("hublet"); } }
+        private string? _explicitNullValueHublet = default!;
 #nullable restore
 #else
-        public string Hublet { get; set; }
+        public string Hublet { get => _explicitNullValueHublet; set { _explicitNullValueHublet = value; AdditionalData?.Remove("hublet"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hublet"); else _explicitNullProperties?.Remove("hublet"); } }
+        private string _explicitNullValueHublet = default!;
 #endif
         /// <summary>An integer identifying the user who installed the application associated with the token.</summary>
-        public int? InstallingUserId { get; set; }
+        public int? InstallingUserId { get => _explicitNullValueInstallingUserId; set { _explicitNullValueInstallingUserId = value; AdditionalData?.Remove("installingUserId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("installingUserId"); else _explicitNullProperties?.Remove("installingUserId"); } }
+        private int? _explicitNullValueInstallingUserId = default!;
         /// <summary>A boolean indicating whether the token is for a private distribution of the application.</summary>
-        public bool? IsPrivateDistribution { get; set; }
+        public bool? IsPrivateDistribution { get => _explicitNullValueIsPrivateDistribution; set { _explicitNullValueIsPrivateDistribution = value; AdditionalData?.Remove("isPrivateDistribution"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isPrivateDistribution"); else _explicitNullProperties?.Remove("isPrivateDistribution"); } }
+        private bool? _explicitNullValueIsPrivateDistribution = default!;
         /// <summary>A boolean indicating whether the token is for a service account.</summary>
-        public bool? IsServiceAccount { get; set; }
+        public bool? IsServiceAccount { get => _explicitNullValueIsServiceAccount; set { _explicitNullValueIsServiceAccount = value; AdditionalData?.Remove("isServiceAccount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isServiceAccount"); else _explicitNullProperties?.Remove("isServiceAccount"); } }
+        private bool? _explicitNullValueIsServiceAccount = default!;
         /// <summary>A boolean indicating whether the token is associated with a user-level scope.</summary>
-        public bool? IsUserLevel { get; set; }
+        public bool? IsUserLevel { get => _explicitNullValueIsUserLevel; set { _explicitNullValueIsUserLevel = value; AdditionalData?.Remove("isUserLevel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isUserLevel"); else _explicitNullProperties?.Remove("isUserLevel"); } }
+        private bool? _explicitNullValueIsUserLevel = default!;
         /// <summary>A string representing a new cryptographic signature for the token.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NewSignature { get; set; }
+        public string? NewSignature { get => _explicitNullValueNewSignature; set { _explicitNullValueNewSignature = value; AdditionalData?.Remove("newSignature"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newSignature"); else _explicitNullProperties?.Remove("newSignature"); } }
+        private string? _explicitNullValueNewSignature = default!;
 #nullable restore
 #else
-        public string NewSignature { get; set; }
+        public string NewSignature { get => _explicitNullValueNewSignature; set { _explicitNullValueNewSignature = value; AdditionalData?.Remove("newSignature"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newSignature"); else _explicitNullProperties?.Remove("newSignature"); } }
+        private string _explicitNullValueNewSignature = default!;
 #endif
         /// <summary>A string detailing the permissions granted by the token.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Scopes { get; set; }
+        public string? Scopes { get => _explicitNullValueScopes; set { _explicitNullValueScopes = value; AdditionalData?.Remove("scopes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scopes"); else _explicitNullProperties?.Remove("scopes"); } }
+        private string? _explicitNullValueScopes = default!;
 #nullable restore
 #else
-        public string Scopes { get; set; }
+        public string Scopes { get => _explicitNullValueScopes; set { _explicitNullValueScopes = value; AdditionalData?.Remove("scopes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scopes"); else _explicitNullProperties?.Remove("scopes"); } }
+        private string _explicitNullValueScopes = default!;
 #endif
         /// <summary>A string mapping scopes to their respective scope group primary keys.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ScopeToScopeGroupPks { get; set; }
+        public string? ScopeToScopeGroupPks { get => _explicitNullValueScopeToScopeGroupPks; set { _explicitNullValueScopeToScopeGroupPks = value; AdditionalData?.Remove("scopeToScopeGroupPks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scopeToScopeGroupPks"); else _explicitNullProperties?.Remove("scopeToScopeGroupPks"); } }
+        private string? _explicitNullValueScopeToScopeGroupPks = default!;
 #nullable restore
 #else
-        public string ScopeToScopeGroupPks { get; set; }
+        public string ScopeToScopeGroupPks { get => _explicitNullValueScopeToScopeGroupPks; set { _explicitNullValueScopeToScopeGroupPks = value; AdditionalData?.Remove("scopeToScopeGroupPks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scopeToScopeGroupPks"); else _explicitNullProperties?.Remove("scopeToScopeGroupPks"); } }
+        private string _explicitNullValueScopeToScopeGroupPks = default!;
 #endif
         /// <summary>A string representing the cryptographic signature of the token.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Signature { get; set; }
+        public string? Signature { get => _explicitNullValueSignature; set { _explicitNullValueSignature = value; AdditionalData?.Remove("signature"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signature"); else _explicitNullProperties?.Remove("signature"); } }
+        private string? _explicitNullValueSignature = default!;
 #nullable restore
 #else
-        public string Signature { get; set; }
+        public string Signature { get => _explicitNullValueSignature; set { _explicitNullValueSignature = value; AdditionalData?.Remove("signature"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signature"); else _explicitNullProperties?.Remove("signature"); } }
+        private string _explicitNullValueSignature = default!;
 #endif
         /// <summary>A string detailing the trial permissions granted by the token.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TrialScopes { get; set; }
+        public string? TrialScopes { get => _explicitNullValueTrialScopes; set { _explicitNullValueTrialScopes = value; AdditionalData?.Remove("trialScopes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trialScopes"); else _explicitNullProperties?.Remove("trialScopes"); } }
+        private string? _explicitNullValueTrialScopes = default!;
 #nullable restore
 #else
-        public string TrialScopes { get; set; }
+        public string TrialScopes { get => _explicitNullValueTrialScopes; set { _explicitNullValueTrialScopes = value; AdditionalData?.Remove("trialScopes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trialScopes"); else _explicitNullProperties?.Remove("trialScopes"); } }
+        private string _explicitNullValueTrialScopes = default!;
 #endif
         /// <summary>A string mapping trial scopes to their respective scope group primary keys.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TrialScopeToScopeGroupPks { get; set; }
+        public string? TrialScopeToScopeGroupPks { get => _explicitNullValueTrialScopeToScopeGroupPks; set { _explicitNullValueTrialScopeToScopeGroupPks = value; AdditionalData?.Remove("trialScopeToScopeGroupPks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trialScopeToScopeGroupPks"); else _explicitNullProperties?.Remove("trialScopeToScopeGroupPks"); } }
+        private string? _explicitNullValueTrialScopeToScopeGroupPks = default!;
 #nullable restore
 #else
-        public string TrialScopeToScopeGroupPks { get; set; }
+        public string TrialScopeToScopeGroupPks { get => _explicitNullValueTrialScopeToScopeGroupPks; set { _explicitNullValueTrialScopeToScopeGroupPks = value; AdditionalData?.Remove("trialScopeToScopeGroupPks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trialScopeToScopeGroupPks"); else _explicitNullProperties?.Remove("trialScopeToScopeGroupPks"); } }
+        private string _explicitNullValueTrialScopeToScopeGroupPks = default!;
 #endif
         /// <summary>An integer identifying the user associated with the token.</summary>
-        public int? UserId { get; set; }
+        public int? UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; AdditionalData?.Remove("userId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userId"); else _explicitNullProperties?.Remove("userId"); } }
+        private int? _explicitNullValueUserId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.SignedAccessToken"/> and sets the default values.
         /// </summary>
@@ -117,7 +184,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.SignedAccessToken CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.SignedAccessToken();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.SignedAccessToken(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -170,6 +237,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("trialScopes", TrialScopes);
             writer.WriteStringValue("trialScopeToScopeGroupPks", TrialScopeToScopeGroupPks);
             writer.WriteIntValue("userId", UserId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

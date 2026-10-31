@@ -11,24 +11,39 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicListPermissions : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("teamsWithEditAccess") is null) { _explicitNullValueTeamsWithEditAccess = default!; _explicitNullProperties?.Remove("teamsWithEditAccess"); }
+            else if (parseNode.GetChildNode("teamsWithEditAccess") is { } nullNodeTeamsWithEditAccess && nullNodeTeamsWithEditAccess.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TeamsWithEditAccess = null;
+            if (parseNode.GetChildNode("usersWithEditAccess") is null) { _explicitNullValueUsersWithEditAccess = default!; _explicitNullProperties?.Remove("usersWithEditAccess"); }
+            else if (parseNode.GetChildNode("usersWithEditAccess") is { } nullNodeUsersWithEditAccess && nullNodeUsersWithEditAccess.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UsersWithEditAccess = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An array of integers representing the IDs of teams that have edit access to the list.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? TeamsWithEditAccess { get; set; }
+        public List<int?>? TeamsWithEditAccess { get => _explicitNullValueTeamsWithEditAccess; set { _explicitNullValueTeamsWithEditAccess = value; AdditionalData?.Remove("teamsWithEditAccess"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("teamsWithEditAccess"); else _explicitNullProperties?.Remove("teamsWithEditAccess"); } }
+        private List<int?>? _explicitNullValueTeamsWithEditAccess = default!;
 #nullable restore
 #else
-        public List<int?> TeamsWithEditAccess { get; set; }
+        public List<int?> TeamsWithEditAccess { get => _explicitNullValueTeamsWithEditAccess; set { _explicitNullValueTeamsWithEditAccess = value; AdditionalData?.Remove("teamsWithEditAccess"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("teamsWithEditAccess"); else _explicitNullProperties?.Remove("teamsWithEditAccess"); } }
+        private List<int?> _explicitNullValueTeamsWithEditAccess = default!;
 #endif
         /// <summary>An array of integers representing the IDs of users that have edit access to the list.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? UsersWithEditAccess { get; set; }
+        public List<int?>? UsersWithEditAccess { get => _explicitNullValueUsersWithEditAccess; set { _explicitNullValueUsersWithEditAccess = value; AdditionalData?.Remove("usersWithEditAccess"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usersWithEditAccess"); else _explicitNullProperties?.Remove("usersWithEditAccess"); } }
+        private List<int?>? _explicitNullValueUsersWithEditAccess = default!;
 #nullable restore
 #else
-        public List<int?> UsersWithEditAccess { get; set; }
+        public List<int?> UsersWithEditAccess { get => _explicitNullValueUsersWithEditAccess; set { _explicitNullValueUsersWithEditAccess = value; AdditionalData?.Remove("usersWithEditAccess"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usersWithEditAccess"); else _explicitNullProperties?.Remove("usersWithEditAccess"); } }
+        private List<int?> _explicitNullValueUsersWithEditAccess = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicListPermissions"/> and sets the default values.
@@ -45,7 +60,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicListPermissions CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicListPermissions();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicListPermissions(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +83,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<int?>("teamsWithEditAccess", TeamsWithEditAccess);
             writer.WriteCollectionOfPrimitiveValues<int?>("usersWithEditAccess", UsersWithEditAccess);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

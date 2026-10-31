@@ -11,32 +11,51 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AggregateEmailStatistics : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("aggregate") is null) { _explicitNullValueAggregate = default!; _explicitNullProperties?.Remove("aggregate"); }
+            else if (parseNode.GetChildNode("aggregate") is { } nullNodeAggregate && nullNodeAggregate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Aggregate = null;
+            if (parseNode.GetChildNode("campaignAggregations") is null) { _explicitNullValueCampaignAggregations = default!; _explicitNullProperties?.Remove("campaignAggregations"); }
+            else if (parseNode.GetChildNode("campaignAggregations") is { } nullNodeCampaignAggregations && nullNodeCampaignAggregations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CampaignAggregations = null;
+            if (parseNode.GetChildNode("emails") is null) { _explicitNullValueEmails = default!; _explicitNullProperties?.Remove("emails"); }
+            else if (parseNode.GetChildNode("emails") is { } nullNodeEmails && nullNodeEmails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Emails = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The aggregate property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsData? Aggregate { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsData? Aggregate { get => _explicitNullValueAggregate; set { _explicitNullValueAggregate = value; AdditionalData?.Remove("aggregate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aggregate"); else _explicitNullProperties?.Remove("aggregate"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsData? _explicitNullValueAggregate = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsData Aggregate { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsData Aggregate { get => _explicitNullValueAggregate; set { _explicitNullValueAggregate = value; AdditionalData?.Remove("aggregate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aggregate"); else _explicitNullProperties?.Remove("aggregate"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsData _explicitNullValueAggregate = default!;
 #endif
         /// <summary>The aggregated statistics per campaign.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AggregateEmailStatisticsCampaignAggregationsProperty2? CampaignAggregations { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AggregateEmailStatisticsCampaignAggregationsProperty2? CampaignAggregations { get => _explicitNullValueCampaignAggregations; set { _explicitNullValueCampaignAggregations = value; AdditionalData?.Remove("campaignAggregations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("campaignAggregations"); else _explicitNullProperties?.Remove("campaignAggregations"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.AggregateEmailStatisticsCampaignAggregationsProperty2? _explicitNullValueCampaignAggregations = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AggregateEmailStatisticsCampaignAggregationsProperty2 CampaignAggregations { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AggregateEmailStatisticsCampaignAggregationsProperty2 CampaignAggregations { get => _explicitNullValueCampaignAggregations; set { _explicitNullValueCampaignAggregations = value; AdditionalData?.Remove("campaignAggregations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("campaignAggregations"); else _explicitNullProperties?.Remove("campaignAggregations"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.AggregateEmailStatisticsCampaignAggregationsProperty2 _explicitNullValueCampaignAggregations = default!;
 #endif
         /// <summary>List of email IDs that were sent during the time span.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<long?>? Emails { get; set; }
+        public List<long?>? Emails { get => _explicitNullValueEmails; set { _explicitNullValueEmails = value; AdditionalData?.Remove("emails"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emails"); else _explicitNullProperties?.Remove("emails"); } }
+        private List<long?>? _explicitNullValueEmails = default!;
 #nullable restore
 #else
-        public List<long?> Emails { get; set; }
+        public List<long?> Emails { get => _explicitNullValueEmails; set { _explicitNullValueEmails = value; AdditionalData?.Remove("emails"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emails"); else _explicitNullProperties?.Remove("emails"); } }
+        private List<long?> _explicitNullValueEmails = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.AggregateEmailStatistics"/> and sets the default values.
@@ -53,7 +72,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.AggregateEmailStatistics CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.AggregateEmailStatistics();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.AggregateEmailStatistics(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +97,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailStatisticsData>("aggregate", Aggregate);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.AggregateEmailStatisticsCampaignAggregationsProperty2>("campaignAggregations", CampaignAggregations);
             writer.WriteCollectionOfPrimitiveValues<long?>("emails", Emails);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

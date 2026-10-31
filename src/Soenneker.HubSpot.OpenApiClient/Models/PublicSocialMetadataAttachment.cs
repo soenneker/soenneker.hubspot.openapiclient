@@ -11,19 +11,33 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicSocialMetadataAttachment : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("socialMetadata") is null) { _explicitNullValueSocialMetadata = default!; _explicitNullProperties?.Remove("socialMetadata"); }
+            else if (parseNode.GetChildNode("socialMetadata") is { } nullNodeSocialMetadata && nullNodeSocialMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SocialMetadata = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The socialMetadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.SocialMetadata? SocialMetadata { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.SocialMetadata? SocialMetadata { get => _explicitNullValueSocialMetadata; set { _explicitNullValueSocialMetadata = value; AdditionalData?.Remove("socialMetadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("socialMetadata"); else _explicitNullProperties?.Remove("socialMetadata"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.SocialMetadata? _explicitNullValueSocialMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.SocialMetadata SocialMetadata { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.SocialMetadata SocialMetadata { get => _explicitNullValueSocialMetadata; set { _explicitNullValueSocialMetadata = value; AdditionalData?.Remove("socialMetadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("socialMetadata"); else _explicitNullProperties?.Remove("socialMetadata"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.SocialMetadata _explicitNullValueSocialMetadata = default!;
 #endif
         /// <summary>A string that specifies the type of the component. The default value is &apos;SOCIAL_MEDIA_METADATA&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.SocialMediaMetadataType? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.SocialMediaMetadataType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.SocialMediaMetadataType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicSocialMetadataAttachment"/> and sets the default values.
         /// </summary>
@@ -39,7 +53,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicSocialMetadataAttachment CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicSocialMetadataAttachment();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicSocialMetadataAttachment(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -50,7 +64,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "socialMetadata", n => { SocialMetadata = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.SocialMetadata>(global::Soenneker.HubSpot.OpenApiClient.Models.SocialMetadata.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SocialMediaMetadataType>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SocialMediaMetadataType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
         /// <summary>
@@ -62,6 +76,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.SocialMetadata>("socialMetadata", SocialMetadata);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SocialMediaMetadataType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

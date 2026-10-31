@@ -11,24 +11,39 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicPipelineRulesUpdateRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("approvalStage") is null) { _explicitNullValueApprovalStage = default!; _explicitNullProperties?.Remove("approvalStage"); }
+            else if (parseNode.GetChildNode("approvalStage") is { } nullNodeApprovalStage && nullNodeApprovalStage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApprovalStage = null;
+            if (parseNode.GetChildNode("governanceValidationRules") is null) { _explicitNullValueGovernanceValidationRules = default!; _explicitNullProperties?.Remove("governanceValidationRules"); }
+            else if (parseNode.GetChildNode("governanceValidationRules") is { } nullNodeGovernanceValidationRules && nullNodeGovernanceValidationRules.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GovernanceValidationRules = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The approvalStage property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicApprovalStageRuleRequest? ApprovalStage { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicApprovalStageRuleRequest? ApprovalStage { get => _explicitNullValueApprovalStage; set { _explicitNullValueApprovalStage = value; AdditionalData?.Remove("approvalStage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approvalStage"); else _explicitNullProperties?.Remove("approvalStage"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicApprovalStageRuleRequest? _explicitNullValueApprovalStage = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicApprovalStageRuleRequest ApprovalStage { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicApprovalStageRuleRequest ApprovalStage { get => _explicitNullValueApprovalStage; set { _explicitNullValueApprovalStage = value; AdditionalData?.Remove("approvalStage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approvalStage"); else _explicitNullProperties?.Remove("approvalStage"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicApprovalStageRuleRequest _explicitNullValueApprovalStage = default!;
 #endif
         /// <summary>The governanceValidationRules property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicGovernanceValidationRules? GovernanceValidationRules { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicGovernanceValidationRules? GovernanceValidationRules { get => _explicitNullValueGovernanceValidationRules; set { _explicitNullValueGovernanceValidationRules = value; AdditionalData?.Remove("governanceValidationRules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("governanceValidationRules"); else _explicitNullProperties?.Remove("governanceValidationRules"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicGovernanceValidationRules? _explicitNullValueGovernanceValidationRules = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicGovernanceValidationRules GovernanceValidationRules { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicGovernanceValidationRules GovernanceValidationRules { get => _explicitNullValueGovernanceValidationRules; set { _explicitNullValueGovernanceValidationRules = value; AdditionalData?.Remove("governanceValidationRules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("governanceValidationRules"); else _explicitNullProperties?.Remove("governanceValidationRules"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicGovernanceValidationRules _explicitNullValueGovernanceValidationRules = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesUpdateRequest"/> and sets the default values.
@@ -45,7 +60,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesUpdateRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesUpdateRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicPipelineRulesUpdateRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +83,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicApprovalStageRuleRequest>("approvalStage", ApprovalStage);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicGovernanceValidationRules>("governanceValidationRules", GovernanceValidationRules);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

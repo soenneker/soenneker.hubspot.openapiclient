@@ -62,7 +62,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Events.TwoZeroTwoSixZeroNine.EventDefi
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalExternalBehavioralEventTypeDefinition>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalExternalBehavioralEventTypeDefinition.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalExternalBehavioralEventTypeDefinition>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CollectionResponseWithTotalExternalBehavioralEventTypeDefinition.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Create a new behavioral event definition in your HubSpot account. This endpoint allows you to define the structure and properties of a new behavioral event, which can then be used to track specific user actions or behaviors. The request body must include the necessary event details and property definitions.
@@ -82,7 +82,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Events.TwoZeroTwoSixZeroNine.EventDefi
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventTypeDefinition>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventTypeDefinition.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventTypeDefinition>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ExternalBehavioralEventTypeDefinition.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve a list of event definitions available in your HubSpot account. This endpoint allows you to search and filter event definitions based on various criteria, such as search strings and pagination options. It is useful for managing and understanding the different event types that are tracked within your account.

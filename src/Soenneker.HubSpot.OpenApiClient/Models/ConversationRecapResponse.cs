@@ -11,64 +11,99 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ConversationRecapResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("actionItems") is null) { _explicitNullValueActionItems = default!; _explicitNullProperties?.Remove("actionItems"); }
+            else if (parseNode.GetChildNode("actionItems") is { } nullNodeActionItems && nullNodeActionItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionItems = null;
+            if (parseNode.GetChildNode("callStats") is null) { _explicitNullValueCallStats = default!; _explicitNullProperties?.Remove("callStats"); }
+            else if (parseNode.GetChildNode("callStats") is { } nullNodeCallStats && nullNodeCallStats.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallStats = null;
+            if (parseNode.GetChildNode("notes") is null) { _explicitNullValueNotes = default!; _explicitNullProperties?.Remove("notes"); }
+            else if (parseNode.GetChildNode("notes") is { } nullNodeNotes && nullNodeNotes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Notes = null;
+            if (parseNode.GetChildNode("participants") is null) { _explicitNullValueParticipants = default!; _explicitNullProperties?.Remove("participants"); }
+            else if (parseNode.GetChildNode("participants") is { } nullNodeParticipants && nullNodeParticipants.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Participants = null;
+            if (parseNode.GetChildNode("questionsAsked") is null) { _explicitNullValueQuestionsAsked = default!; _explicitNullProperties?.Remove("questionsAsked"); }
+            else if (parseNode.GetChildNode("questionsAsked") is { } nullNodeQuestionsAsked && nullNodeQuestionsAsked.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QuestionsAsked = null;
+            if (parseNode.GetChildNode("recordingUrl") is null) { _explicitNullValueRecordingUrl = default!; _explicitNullProperties?.Remove("recordingUrl"); }
+            else if (parseNode.GetChildNode("recordingUrl") is { } nullNodeRecordingUrl && nullNodeRecordingUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecordingUrl = null;
+            if (parseNode.GetChildNode("summary") is null) { _explicitNullValueSummary = default!; _explicitNullProperties?.Remove("summary"); }
+            else if (parseNode.GetChildNode("summary") is { } nullNodeSummary && nullNodeSummary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Summary = null;
+        }
+
         /// <summary>The actionItems property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapActionItemsResult? ActionItems { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapActionItemsResult? ActionItems { get => _explicitNullValueActionItems; set { _explicitNullValueActionItems = value; AdditionalData?.Remove("actionItems"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionItems"); else _explicitNullProperties?.Remove("actionItems"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapActionItemsResult? _explicitNullValueActionItems = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapActionItemsResult ActionItems { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapActionItemsResult ActionItems { get => _explicitNullValueActionItems; set { _explicitNullValueActionItems = value; AdditionalData?.Remove("actionItems"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionItems"); else _explicitNullProperties?.Remove("actionItems"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapActionItemsResult _explicitNullValueActionItems = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The callStats property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapCallStatsResult? CallStats { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapCallStatsResult? CallStats { get => _explicitNullValueCallStats; set { _explicitNullValueCallStats = value; AdditionalData?.Remove("callStats"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callStats"); else _explicitNullProperties?.Remove("callStats"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapCallStatsResult? _explicitNullValueCallStats = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapCallStatsResult CallStats { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapCallStatsResult CallStats { get => _explicitNullValueCallStats; set { _explicitNullValueCallStats = value; AdditionalData?.Remove("callStats"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callStats"); else _explicitNullProperties?.Remove("callStats"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapCallStatsResult _explicitNullValueCallStats = default!;
 #endif
         /// <summary>The notes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapNotesResult? Notes { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapNotesResult? Notes { get => _explicitNullValueNotes; set { _explicitNullValueNotes = value; AdditionalData?.Remove("notes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notes"); else _explicitNullProperties?.Remove("notes"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapNotesResult? _explicitNullValueNotes = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapNotesResult Notes { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapNotesResult Notes { get => _explicitNullValueNotes; set { _explicitNullValueNotes = value; AdditionalData?.Remove("notes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notes"); else _explicitNullProperties?.Remove("notes"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapNotesResult _explicitNullValueNotes = default!;
 #endif
         /// <summary>The participants property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapParticipantsResult? Participants { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapParticipantsResult? Participants { get => _explicitNullValueParticipants; set { _explicitNullValueParticipants = value; AdditionalData?.Remove("participants"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participants"); else _explicitNullProperties?.Remove("participants"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapParticipantsResult? _explicitNullValueParticipants = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapParticipantsResult Participants { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapParticipantsResult Participants { get => _explicitNullValueParticipants; set { _explicitNullValueParticipants = value; AdditionalData?.Remove("participants"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participants"); else _explicitNullProperties?.Remove("participants"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapParticipantsResult _explicitNullValueParticipants = default!;
 #endif
         /// <summary>The questionsAsked property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapQuestionsAskedResult? QuestionsAsked { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapQuestionsAskedResult? QuestionsAsked { get => _explicitNullValueQuestionsAsked; set { _explicitNullValueQuestionsAsked = value; AdditionalData?.Remove("questionsAsked"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("questionsAsked"); else _explicitNullProperties?.Remove("questionsAsked"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapQuestionsAskedResult? _explicitNullValueQuestionsAsked = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapQuestionsAskedResult QuestionsAsked { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapQuestionsAskedResult QuestionsAsked { get => _explicitNullValueQuestionsAsked; set { _explicitNullValueQuestionsAsked = value; AdditionalData?.Remove("questionsAsked"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("questionsAsked"); else _explicitNullProperties?.Remove("questionsAsked"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapQuestionsAskedResult _explicitNullValueQuestionsAsked = default!;
 #endif
         /// <summary>The recordingUrl property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapRecordingUrlResult? RecordingUrl { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapRecordingUrlResult? RecordingUrl { get => _explicitNullValueRecordingUrl; set { _explicitNullValueRecordingUrl = value; AdditionalData?.Remove("recordingUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recordingUrl"); else _explicitNullProperties?.Remove("recordingUrl"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapRecordingUrlResult? _explicitNullValueRecordingUrl = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapRecordingUrlResult RecordingUrl { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapRecordingUrlResult RecordingUrl { get => _explicitNullValueRecordingUrl; set { _explicitNullValueRecordingUrl = value; AdditionalData?.Remove("recordingUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recordingUrl"); else _explicitNullProperties?.Remove("recordingUrl"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapRecordingUrlResult _explicitNullValueRecordingUrl = default!;
 #endif
         /// <summary>The summary property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapSummaryResult? Summary { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapSummaryResult? Summary { get => _explicitNullValueSummary; set { _explicitNullValueSummary = value; AdditionalData?.Remove("summary"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("summary"); else _explicitNullProperties?.Remove("summary"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapSummaryResult? _explicitNullValueSummary = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapSummaryResult Summary { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapSummaryResult Summary { get => _explicitNullValueSummary; set { _explicitNullValueSummary = value; AdditionalData?.Remove("summary"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("summary"); else _explicitNullProperties?.Remove("summary"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapSummaryResult _explicitNullValueSummary = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapResponse"/> and sets the default values.
@@ -85,7 +120,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -118,6 +153,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapQuestionsAskedResult>("questionsAsked", QuestionsAsked);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapRecordingUrlResult>("recordingUrl", RecordingUrl);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapSummaryResult>("summary", Summary);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

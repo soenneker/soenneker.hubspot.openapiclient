@@ -11,30 +11,62 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicEmailTestingDetails : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("abSampleSizeDefault") is null) { _explicitNullValueAbSampleSizeDefault = default!; _explicitNullProperties?.Remove("abSampleSizeDefault"); }
+            else if (parseNode.GetChildNode("abSampleSizeDefault") is { } nullNodeAbSampleSizeDefault && nullNodeAbSampleSizeDefault.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AbSampleSizeDefault = null;
+            if (parseNode.GetChildNode("abSamplingDefault") is null) { _explicitNullValueAbSamplingDefault = default!; _explicitNullProperties?.Remove("abSamplingDefault"); }
+            else if (parseNode.GetChildNode("abSamplingDefault") is { } nullNodeAbSamplingDefault && nullNodeAbSamplingDefault.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AbSamplingDefault = null;
+            if (parseNode.GetChildNode("abStatus") is null) { _explicitNullValueAbStatus = default!; _explicitNullProperties?.Remove("abStatus"); }
+            else if (parseNode.GetChildNode("abStatus") is { } nullNodeAbStatus && nullNodeAbStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AbStatus = null;
+            if (parseNode.GetChildNode("abSuccessMetric") is null) { _explicitNullValueAbSuccessMetric = default!; _explicitNullProperties?.Remove("abSuccessMetric"); }
+            else if (parseNode.GetChildNode("abSuccessMetric") is { } nullNodeAbSuccessMetric && nullNodeAbSuccessMetric.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AbSuccessMetric = null;
+            if (parseNode.GetChildNode("abTestPercentage") is null) { _explicitNullValueAbTestPercentage = default!; _explicitNullProperties?.Remove("abTestPercentage"); }
+            else if (parseNode.GetChildNode("abTestPercentage") is { } nullNodeAbTestPercentage && nullNodeAbTestPercentage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AbTestPercentage = null;
+            if (parseNode.GetChildNode("hoursToWait") is null) { _explicitNullValueHoursToWait = default!; _explicitNullProperties?.Remove("hoursToWait"); }
+            else if (parseNode.GetChildNode("hoursToWait") is { } nullNodeHoursToWait && nullNodeHoursToWait.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HoursToWait = null;
+            if (parseNode.GetChildNode("isAbVariation") is null) { _explicitNullValueIsAbVariation = default!; _explicitNullProperties?.Remove("isAbVariation"); }
+            else if (parseNode.GetChildNode("isAbVariation") is { } nullNodeIsAbVariation && nullNodeIsAbVariation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAbVariation = null;
+            if (parseNode.GetChildNode("testId") is null) { _explicitNullValueTestId = default!; _explicitNullProperties?.Remove("testId"); }
+            else if (parseNode.GetChildNode("testId") is { } nullNodeTestId && nullNodeTestId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TestId = null;
+        }
+
         /// <summary>Version of the email that should be sent if there are too few recipients to conduct an AB test.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetailsAbSampleSizeDefault? AbSampleSizeDefault { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetailsAbSampleSizeDefault? AbSampleSizeDefault { get => _explicitNullValueAbSampleSizeDefault; set { _explicitNullValueAbSampleSizeDefault = value; AdditionalData?.Remove("abSampleSizeDefault"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("abSampleSizeDefault"); else _explicitNullProperties?.Remove("abSampleSizeDefault"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetailsAbSampleSizeDefault? _explicitNullValueAbSampleSizeDefault = default!;
         /// <summary>Version of the email that should be sent if the results are inconclusive after the test period, master or variant.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetailsAbSamplingDefault? AbSamplingDefault { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetailsAbSamplingDefault? AbSamplingDefault { get => _explicitNullValueAbSamplingDefault; set { _explicitNullValueAbSamplingDefault = value; AdditionalData?.Remove("abSamplingDefault"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("abSamplingDefault"); else _explicitNullProperties?.Remove("abSamplingDefault"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetailsAbSamplingDefault? _explicitNullValueAbSamplingDefault = default!;
         /// <summary>Status of the AB test.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetailsAbStatus? AbStatus { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetailsAbStatus? AbStatus { get => _explicitNullValueAbStatus; set { _explicitNullValueAbStatus = value; AdditionalData?.Remove("abStatus"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("abStatus"); else _explicitNullProperties?.Remove("abStatus"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetailsAbStatus? _explicitNullValueAbStatus = default!;
         /// <summary>Metric to determine the version that will be sent to the remaining contacts.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetailsAbSuccessMetric? AbSuccessMetric { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetailsAbSuccessMetric? AbSuccessMetric { get => _explicitNullValueAbSuccessMetric; set { _explicitNullValueAbSuccessMetric = value; AdditionalData?.Remove("abSuccessMetric"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("abSuccessMetric"); else _explicitNullProperties?.Remove("abSuccessMetric"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetailsAbSuccessMetric? _explicitNullValueAbSuccessMetric = default!;
         /// <summary>The size of your test group.</summary>
-        public int? AbTestPercentage { get; set; }
+        public int? AbTestPercentage { get => _explicitNullValueAbTestPercentage; set { _explicitNullValueAbTestPercentage = value; AdditionalData?.Remove("abTestPercentage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("abTestPercentage"); else _explicitNullProperties?.Remove("abTestPercentage"); } }
+        private int? _explicitNullValueAbTestPercentage = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Time limit on gathering test results. After this time is up, the winning version will be sent to the remaining contacts.</summary>
-        public int? HoursToWait { get; set; }
+        public int? HoursToWait { get => _explicitNullValueHoursToWait; set { _explicitNullValueHoursToWait = value; AdditionalData?.Remove("hoursToWait"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hoursToWait"); else _explicitNullProperties?.Remove("hoursToWait"); } }
+        private int? _explicitNullValueHoursToWait = default!;
         /// <summary>A boolean indicating whether the email is an A/B test variation.</summary>
-        public bool? IsAbVariation { get; set; }
+        public bool? IsAbVariation { get => _explicitNullValueIsAbVariation; set { _explicitNullValueIsAbVariation = value; AdditionalData?.Remove("isAbVariation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isAbVariation"); else _explicitNullProperties?.Remove("isAbVariation"); } }
+        private bool? _explicitNullValueIsAbVariation = default!;
         /// <summary>The ID of the AB test.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TestId { get; set; }
+        public string? TestId { get => _explicitNullValueTestId; set { _explicitNullValueTestId = value; AdditionalData?.Remove("testId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("testId"); else _explicitNullProperties?.Remove("testId"); } }
+        private string? _explicitNullValueTestId = default!;
 #nullable restore
 #else
-        public string TestId { get; set; }
+        public string TestId { get => _explicitNullValueTestId; set { _explicitNullValueTestId = value; AdditionalData?.Remove("testId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("testId"); else _explicitNullProperties?.Remove("testId"); } }
+        private string _explicitNullValueTestId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetails"/> and sets the default values.
@@ -51,7 +83,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -61,10 +93,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "abSampleSizeDefault", n => { AbSampleSizeDefault = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetailsAbSampleSizeDefault>(); } },
-                { "abSamplingDefault", n => { AbSamplingDefault = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetailsAbSamplingDefault>(); } },
-                { "abStatus", n => { AbStatus = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetailsAbStatus>(); } },
-                { "abSuccessMetric", n => { AbSuccessMetric = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetailsAbSuccessMetric>(); } },
+                { "abSampleSizeDefault", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetailsAbSampleSizeDefault>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAbSampleSizeDefault = default; _explicitNullProperties?.Remove("abSampleSizeDefault"); AdditionalData["abSampleSizeDefault"] = unknown; } else { AbSampleSizeDefault = parsed; AdditionalData.Remove("abSampleSizeDefault"); } } },
+                { "abSamplingDefault", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetailsAbSamplingDefault>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAbSamplingDefault = default; _explicitNullProperties?.Remove("abSamplingDefault"); AdditionalData["abSamplingDefault"] = unknown; } else { AbSamplingDefault = parsed; AdditionalData.Remove("abSamplingDefault"); } } },
+                { "abStatus", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetailsAbStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAbStatus = default; _explicitNullProperties?.Remove("abStatus"); AdditionalData["abStatus"] = unknown; } else { AbStatus = parsed; AdditionalData.Remove("abStatus"); } } },
+                { "abSuccessMetric", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetailsAbSuccessMetric>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAbSuccessMetric = default; _explicitNullProperties?.Remove("abSuccessMetric"); AdditionalData["abSuccessMetric"] = unknown; } else { AbSuccessMetric = parsed; AdditionalData.Remove("abSuccessMetric"); } } },
                 { "abTestPercentage", n => { AbTestPercentage = n.GetIntValue(); } },
                 { "hoursToWait", n => { HoursToWait = n.GetIntValue(); } },
                 { "isAbVariation", n => { IsAbVariation = n.GetBoolValue(); } },
@@ -86,6 +118,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteIntValue("hoursToWait", HoursToWait);
             writer.WriteBoolValue("isAbVariation", IsAbVariation);
             writer.WriteStringValue("testId", TestId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,13 +11,26 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class FlagPutRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("defaultState") is null) { _explicitNullValueDefaultState = default!; _explicitNullProperties?.Remove("defaultState"); }
+            else if (parseNode.GetChildNode("defaultState") is { } nullNodeDefaultState && nullNodeDefaultState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultState = null;
+            if (parseNode.GetChildNode("overrideState") is null) { _explicitNullValueOverrideState = default!; _explicitNullProperties?.Remove("overrideState"); }
+            else if (parseNode.GetChildNode("overrideState") is { } nullNodeOverrideState && nullNodeOverrideState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverrideState = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The state that the flag should have if there are no overrides for a particular portal</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.FlagPutRequestDefaultState? DefaultState { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.FlagPutRequestDefaultState? DefaultState { get => _explicitNullValueDefaultState; set { _explicitNullValueDefaultState = value; AdditionalData?.Remove("defaultState"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultState"); else _explicitNullProperties?.Remove("defaultState"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.FlagPutRequestDefaultState? _explicitNullValueDefaultState = default!;
         /// <summary>A flag value that supercedes all other overrides, including portal-level values. Mostly used for things like emergency overrides</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.FlagPutRequestOverrideState? OverrideState { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.FlagPutRequestOverrideState? OverrideState { get => _explicitNullValueOverrideState; set { _explicitNullValueOverrideState = value; AdditionalData?.Remove("overrideState"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overrideState"); else _explicitNullProperties?.Remove("overrideState"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.FlagPutRequestOverrideState? _explicitNullValueOverrideState = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.FlagPutRequest"/> and sets the default values.
         /// </summary>
@@ -33,7 +46,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.FlagPutRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.FlagPutRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.FlagPutRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -43,8 +56,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "defaultState", n => { DefaultState = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FlagPutRequestDefaultState>(); } },
-                { "overrideState", n => { OverrideState = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FlagPutRequestOverrideState>(); } },
+                { "defaultState", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FlagPutRequestDefaultState>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDefaultState = default; _explicitNullProperties?.Remove("defaultState"); AdditionalData["defaultState"] = unknown; } else { DefaultState = parsed; AdditionalData.Remove("defaultState"); } } },
+                { "overrideState", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FlagPutRequestOverrideState>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueOverrideState = default; _explicitNullProperties?.Remove("overrideState"); AdditionalData["overrideState"] = unknown; } else { OverrideState = parsed; AdditionalData.Remove("overrideState"); } } },
             };
         }
         /// <summary>
@@ -56,6 +69,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FlagPutRequestDefaultState>("defaultState", DefaultState);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FlagPutRequestOverrideState>("overrideState", OverrideState);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

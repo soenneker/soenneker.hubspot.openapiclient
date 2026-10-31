@@ -11,46 +11,86 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicSequenceStepRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("actionType") is null) { _explicitNullValueActionType = default!; _explicitNullProperties?.Remove("actionType"); }
+            else if (parseNode.GetChildNode("actionType") is { } nullNodeActionType && nullNodeActionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionType = null;
+            if (parseNode.GetChildNode("branchNumber") is null) { _explicitNullValueBranchNumber = default!; _explicitNullProperties?.Remove("branchNumber"); }
+            else if (parseNode.GetChildNode("branchNumber") is { } nullNodeBranchNumber && nullNodeBranchNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BranchNumber = null;
+            if (parseNode.GetChildNode("delayMillis") is null) { _explicitNullValueDelayMillis = default!; _explicitNullProperties?.Remove("delayMillis"); }
+            else if (parseNode.GetChildNode("delayMillis") is { } nullNodeDelayMillis && nullNodeDelayMillis.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DelayMillis = null;
+            if (parseNode.GetChildNode("delayMillisMax") is null) { _explicitNullValueDelayMillisMax = default!; _explicitNullProperties?.Remove("delayMillisMax"); }
+            else if (parseNode.GetChildNode("delayMillisMax") is { } nullNodeDelayMillisMax && nullNodeDelayMillisMax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DelayMillisMax = null;
+            if (parseNode.GetChildNode("delayMillisMin") is null) { _explicitNullValueDelayMillisMin = default!; _explicitNullProperties?.Remove("delayMillisMin"); }
+            else if (parseNode.GetChildNode("delayMillisMin") is { } nullNodeDelayMillisMin && nullNodeDelayMillisMin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DelayMillisMin = null;
+            if (parseNode.GetChildNode("dynamic") is null) { _explicitNullValueDynamic = default!; _explicitNullProperties?.Remove("dynamic"); }
+            else if (parseNode.GetChildNode("dynamic") is { } nullNodeDynamic && nullNodeDynamic.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Dynamic = null;
+            if (parseNode.GetChildNode("emailPattern") is null) { _explicitNullValueEmailPattern = default!; _explicitNullProperties?.Remove("emailPattern"); }
+            else if (parseNode.GetChildNode("emailPattern") is { } nullNodeEmailPattern && nullNodeEmailPattern.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailPattern = null;
+            if (parseNode.GetChildNode("stepOrder") is null) { _explicitNullValueStepOrder = default!; _explicitNullProperties?.Remove("stepOrder"); }
+            else if (parseNode.GetChildNode("stepOrder") is { } nullNodeStepOrder && nullNodeStepOrder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StepOrder = null;
+            if (parseNode.GetChildNode("taskPattern") is null) { _explicitNullValueTaskPattern = default!; _explicitNullProperties?.Remove("taskPattern"); }
+            else if (parseNode.GetChildNode("taskPattern") is { } nullNodeTaskPattern && nullNodeTaskPattern.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaskPattern = null;
+            if (parseNode.GetChildNode("variants") is null) { _explicitNullValueVariants = default!; _explicitNullProperties?.Remove("variants"); }
+            else if (parseNode.GetChildNode("variants") is { } nullNodeVariants && nullNodeVariants.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Variants = null;
+        }
+
         /// <summary>A string indicating the type of action to be performed in this step. Valid values include &apos;EMAIL&apos;, &apos;TASK&apos;, and &apos;FINISH_ENROLLMENT&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepRequestActionType? ActionType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepRequestActionType? ActionType { get => _explicitNullValueActionType; set { _explicitNullValueActionType = value; AdditionalData?.Remove("actionType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionType"); else _explicitNullProperties?.Remove("actionType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepRequestActionType? _explicitNullValueActionType = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An integer representing the branch number of this step, used for branching logic in sequences.</summary>
-        public int? BranchNumber { get; set; }
+        public int? BranchNumber { get => _explicitNullValueBranchNumber; set { _explicitNullValueBranchNumber = value; AdditionalData?.Remove("branchNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("branchNumber"); else _explicitNullProperties?.Remove("branchNumber"); } }
+        private int? _explicitNullValueBranchNumber = default!;
         /// <summary>An integer representing the delay in milliseconds before this step is executed.</summary>
-        public long? DelayMillis { get; set; }
+        public long? DelayMillis { get => _explicitNullValueDelayMillis; set { _explicitNullValueDelayMillis = value; AdditionalData?.Remove("delayMillis"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("delayMillis"); else _explicitNullProperties?.Remove("delayMillis"); } }
+        private long? _explicitNullValueDelayMillis = default!;
         /// <summary>An integer specifying the maximum delay in milliseconds for this step.</summary>
-        public long? DelayMillisMax { get; set; }
+        public long? DelayMillisMax { get => _explicitNullValueDelayMillisMax; set { _explicitNullValueDelayMillisMax = value; AdditionalData?.Remove("delayMillisMax"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("delayMillisMax"); else _explicitNullProperties?.Remove("delayMillisMax"); } }
+        private long? _explicitNullValueDelayMillisMax = default!;
         /// <summary>An integer specifying the minimum delay in milliseconds for this step.</summary>
-        public long? DelayMillisMin { get; set; }
+        public long? DelayMillisMin { get => _explicitNullValueDelayMillisMin; set { _explicitNullValueDelayMillisMin = value; AdditionalData?.Remove("delayMillisMin"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("delayMillisMin"); else _explicitNullProperties?.Remove("delayMillisMin"); } }
+        private long? _explicitNullValueDelayMillisMin = default!;
         /// <summary>A boolean indicating whether the step is dynamic, allowing for conditional execution based on certain criteria.</summary>
-        public bool? Dynamic { get; set; }
+        public bool? Dynamic { get => _explicitNullValueDynamic; set { _explicitNullValueDynamic = value; AdditionalData?.Remove("dynamic"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dynamic"); else _explicitNullProperties?.Remove("dynamic"); } }
+        private bool? _explicitNullValueDynamic = default!;
         /// <summary>The emailPattern property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceEmailPatternRequest? EmailPattern { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceEmailPatternRequest? EmailPattern { get => _explicitNullValueEmailPattern; set { _explicitNullValueEmailPattern = value; AdditionalData?.Remove("emailPattern"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailPattern"); else _explicitNullProperties?.Remove("emailPattern"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceEmailPatternRequest? _explicitNullValueEmailPattern = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceEmailPatternRequest EmailPattern { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceEmailPatternRequest EmailPattern { get => _explicitNullValueEmailPattern; set { _explicitNullValueEmailPattern = value; AdditionalData?.Remove("emailPattern"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailPattern"); else _explicitNullProperties?.Remove("emailPattern"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceEmailPatternRequest _explicitNullValueEmailPattern = default!;
 #endif
         /// <summary>An integer indicating the order of the step within the sequence.</summary>
-        public int? StepOrder { get; set; }
+        public int? StepOrder { get => _explicitNullValueStepOrder; set { _explicitNullValueStepOrder = value; AdditionalData?.Remove("stepOrder"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stepOrder"); else _explicitNullProperties?.Remove("stepOrder"); } }
+        private int? _explicitNullValueStepOrder = default!;
         /// <summary>The taskPattern property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceTaskPatternRequest? TaskPattern { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceTaskPatternRequest? TaskPattern { get => _explicitNullValueTaskPattern; set { _explicitNullValueTaskPattern = value; AdditionalData?.Remove("taskPattern"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taskPattern"); else _explicitNullProperties?.Remove("taskPattern"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceTaskPatternRequest? _explicitNullValueTaskPattern = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceTaskPatternRequest TaskPattern { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceTaskPatternRequest TaskPattern { get => _explicitNullValueTaskPattern; set { _explicitNullValueTaskPattern = value; AdditionalData?.Remove("taskPattern"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taskPattern"); else _explicitNullProperties?.Remove("taskPattern"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceTaskPatternRequest _explicitNullValueTaskPattern = default!;
 #endif
         /// <summary>An array of PublicSequenceStepVariantRequest objects, each representing a variant of this step.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepVariantRequest>? Variants { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepVariantRequest>? Variants { get => _explicitNullValueVariants; set { _explicitNullValueVariants = value; AdditionalData?.Remove("variants"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variants"); else _explicitNullProperties?.Remove("variants"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepVariantRequest>? _explicitNullValueVariants = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepVariantRequest> Variants { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepVariantRequest> Variants { get => _explicitNullValueVariants; set { _explicitNullValueVariants = value; AdditionalData?.Remove("variants"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variants"); else _explicitNullProperties?.Remove("variants"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepVariantRequest> _explicitNullValueVariants = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepRequest"/> and sets the default values.
@@ -67,7 +107,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -77,7 +117,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "actionType", n => { ActionType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepRequestActionType>(); } },
+                { "actionType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepRequestActionType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueActionType = default; _explicitNullProperties?.Remove("actionType"); AdditionalData["actionType"] = unknown; } else { ActionType = parsed; AdditionalData.Remove("actionType"); } } },
                 { "branchNumber", n => { BranchNumber = n.GetIntValue(); } },
                 { "delayMillis", n => { DelayMillis = n.GetLongValue(); } },
                 { "delayMillisMax", n => { DelayMillisMax = n.GetLongValue(); } },
@@ -106,6 +146,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteIntValue("stepOrder", StepOrder);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceTaskPatternRequest>("taskPattern", TaskPattern);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepVariantRequest>("variants", Variants);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

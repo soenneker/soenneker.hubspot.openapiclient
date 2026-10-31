@@ -11,110 +11,182 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ExternalMeetingsLinkSettings : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("availability") is null) { _explicitNullValueAvailability = default!; _explicitNullProperties?.Remove("availability"); }
+            else if (parseNode.GetChildNode("availability") is { } nullNodeAvailability && nullNodeAvailability.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Availability = null;
+            if (parseNode.GetChildNode("customAvailabilityEndDate") is null) { _explicitNullValueCustomAvailabilityEndDate = default!; _explicitNullProperties?.Remove("customAvailabilityEndDate"); }
+            else if (parseNode.GetChildNode("customAvailabilityEndDate") is { } nullNodeCustomAvailabilityEndDate && nullNodeCustomAvailabilityEndDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomAvailabilityEndDate = null;
+            if (parseNode.GetChildNode("customAvailabilityStartDate") is null) { _explicitNullValueCustomAvailabilityStartDate = default!; _explicitNullProperties?.Remove("customAvailabilityStartDate"); }
+            else if (parseNode.GetChildNode("customAvailabilityStartDate") is { } nullNodeCustomAvailabilityStartDate && nullNodeCustomAvailabilityStartDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomAvailabilityStartDate = null;
+            if (parseNode.GetChildNode("displayInfo") is null) { _explicitNullValueDisplayInfo = default!; _explicitNullProperties?.Remove("displayInfo"); }
+            else if (parseNode.GetChildNode("displayInfo") is { } nullNodeDisplayInfo && nullNodeDisplayInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayInfo = null;
+            if (parseNode.GetChildNode("durations") is null) { _explicitNullValueDurations = default!; _explicitNullProperties?.Remove("durations"); }
+            else if (parseNode.GetChildNode("durations") is { } nullNodeDurations && nullNodeDurations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Durations = null;
+            if (parseNode.GetChildNode("formFields") is null) { _explicitNullValueFormFields = default!; _explicitNullProperties?.Remove("formFields"); }
+            else if (parseNode.GetChildNode("formFields") is { } nullNodeFormFields && nullNodeFormFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FormFields = null;
+            if (parseNode.GetChildNode("guestSettings") is null) { _explicitNullValueGuestSettings = default!; _explicitNullProperties?.Remove("guestSettings"); }
+            else if (parseNode.GetChildNode("guestSettings") is { } nullNodeGuestSettings && nullNodeGuestSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GuestSettings = null;
+            if (parseNode.GetChildNode("language") is null) { _explicitNullValueLanguage = default!; _explicitNullProperties?.Remove("language"); }
+            else if (parseNode.GetChildNode("language") is { } nullNodeLanguage && nullNodeLanguage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Language = null;
+            if (parseNode.GetChildNode("legalConsentEnabled") is null) { _explicitNullValueLegalConsentEnabled = default!; _explicitNullProperties?.Remove("legalConsentEnabled"); }
+            else if (parseNode.GetChildNode("legalConsentEnabled") is { } nullNodeLegalConsentEnabled && nullNodeLegalConsentEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LegalConsentEnabled = null;
+            if (parseNode.GetChildNode("legalConsentOptions") is null) { _explicitNullValueLegalConsentOptions = default!; _explicitNullProperties?.Remove("legalConsentOptions"); }
+            else if (parseNode.GetChildNode("legalConsentOptions") is { } nullNodeLegalConsentOptions && nullNodeLegalConsentOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LegalConsentOptions = null;
+            if (parseNode.GetChildNode("locale") is null) { _explicitNullValueLocale = default!; _explicitNullProperties?.Remove("locale"); }
+            else if (parseNode.GetChildNode("locale") is { } nullNodeLocale && nullNodeLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locale = null;
+            if (parseNode.GetChildNode("location") is null) { _explicitNullValueLocation = default!; _explicitNullProperties?.Remove("location"); }
+            else if (parseNode.GetChildNode("location") is { } nullNodeLocation && nullNodeLocation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Location = null;
+            if (parseNode.GetChildNode("meetingBufferTime") is null) { _explicitNullValueMeetingBufferTime = default!; _explicitNullProperties?.Remove("meetingBufferTime"); }
+            else if (parseNode.GetChildNode("meetingBufferTime") is { } nullNodeMeetingBufferTime && nullNodeMeetingBufferTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MeetingBufferTime = null;
+            if (parseNode.GetChildNode("ownerPrioritized") is null) { _explicitNullValueOwnerPrioritized = default!; _explicitNullProperties?.Remove("ownerPrioritized"); }
+            else if (parseNode.GetChildNode("ownerPrioritized") is { } nullNodeOwnerPrioritized && nullNodeOwnerPrioritized.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OwnerPrioritized = null;
+            if (parseNode.GetChildNode("redirectUrl") is null) { _explicitNullValueRedirectUrl = default!; _explicitNullProperties?.Remove("redirectUrl"); }
+            else if (parseNode.GetChildNode("redirectUrl") is { } nullNodeRedirectUrl && nullNodeRedirectUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RedirectUrl = null;
+            if (parseNode.GetChildNode("startTimeIncrementMinutes") is null) { _explicitNullValueStartTimeIncrementMinutes = default!; _explicitNullProperties?.Remove("startTimeIncrementMinutes"); }
+            else if (parseNode.GetChildNode("startTimeIncrementMinutes") is { } nullNodeStartTimeIncrementMinutes && nullNodeStartTimeIncrementMinutes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartTimeIncrementMinutes = null;
+            if (parseNode.GetChildNode("weeksToAdvertise") is null) { _explicitNullValueWeeksToAdvertise = default!; _explicitNullProperties?.Remove("weeksToAdvertise"); }
+            else if (parseNode.GetChildNode("weeksToAdvertise") is { } nullNodeWeeksToAdvertise && nullNodeWeeksToAdvertise.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WeeksToAdvertise = null;
+            if (parseNode.GetChildNode("welcomeScreenInfo") is null) { _explicitNullValueWelcomeScreenInfo = default!; _explicitNullProperties?.Remove("welcomeScreenInfo"); }
+            else if (parseNode.GetChildNode("welcomeScreenInfo") is { } nullNodeWelcomeScreenInfo && nullNodeWelcomeScreenInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WelcomeScreenInfo = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An object representing the availability settings for the meeting link, with additional properties for closed ranges.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettingsAvailabilityProperty2? Availability { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettingsAvailabilityProperty2? Availability { get => _explicitNullValueAvailability; set { _explicitNullValueAvailability = value; AdditionalData?.Remove("availability"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("availability"); else _explicitNullProperties?.Remove("availability"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettingsAvailabilityProperty2? _explicitNullValueAvailability = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettingsAvailabilityProperty2 Availability { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettingsAvailabilityProperty2 Availability { get => _explicitNullValueAvailability; set { _explicitNullValueAvailability = value; AdditionalData?.Remove("availability"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("availability"); else _explicitNullProperties?.Remove("availability"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettingsAvailabilityProperty2 _explicitNullValueAvailability = default!;
 #endif
         /// <summary>An integer representing the custom availability end date as a Unix timestamp in milliseconds.</summary>
-        public long? CustomAvailabilityEndDate { get; set; }
+        public long? CustomAvailabilityEndDate { get => _explicitNullValueCustomAvailabilityEndDate; set { _explicitNullValueCustomAvailabilityEndDate = value; AdditionalData?.Remove("customAvailabilityEndDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customAvailabilityEndDate"); else _explicitNullProperties?.Remove("customAvailabilityEndDate"); } }
+        private long? _explicitNullValueCustomAvailabilityEndDate = default!;
         /// <summary>An integer representing the custom availability start date as a Unix timestamp in milliseconds.</summary>
-        public long? CustomAvailabilityStartDate { get; set; }
+        public long? CustomAvailabilityStartDate { get => _explicitNullValueCustomAvailabilityStartDate; set { _explicitNullValueCustomAvailabilityStartDate = value; AdditionalData?.Remove("customAvailabilityStartDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customAvailabilityStartDate"); else _explicitNullProperties?.Remove("customAvailabilityStartDate"); } }
+        private long? _explicitNullValueCustomAvailabilityStartDate = default!;
         /// <summary>The displayInfo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkDisplayInfo? DisplayInfo { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkDisplayInfo? DisplayInfo { get => _explicitNullValueDisplayInfo; set { _explicitNullValueDisplayInfo = value; AdditionalData?.Remove("displayInfo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayInfo"); else _explicitNullProperties?.Remove("displayInfo"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkDisplayInfo? _explicitNullValueDisplayInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkDisplayInfo DisplayInfo { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkDisplayInfo DisplayInfo { get => _explicitNullValueDisplayInfo; set { _explicitNullValueDisplayInfo = value; AdditionalData?.Remove("displayInfo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayInfo"); else _explicitNullProperties?.Remove("displayInfo"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkDisplayInfo _explicitNullValueDisplayInfo = default!;
 #endif
         /// <summary>An array of integers representing the possible durations for meetings in milliseconds.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<long?>? Durations { get; set; }
+        public List<long?>? Durations { get => _explicitNullValueDurations; set { _explicitNullValueDurations = value; AdditionalData?.Remove("durations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("durations"); else _explicitNullProperties?.Remove("durations"); } }
+        private List<long?>? _explicitNullValueDurations = default!;
 #nullable restore
 #else
-        public List<long?> Durations { get; set; }
+        public List<long?> Durations { get => _explicitNullValueDurations; set { _explicitNullValueDurations = value; AdditionalData?.Remove("durations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("durations"); else _explicitNullProperties?.Remove("durations"); } }
+        private List<long?> _explicitNullValueDurations = default!;
 #endif
         /// <summary>An array of form fields that are included in the meeting link form.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkFormField>? FormFields { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkFormField>? FormFields { get => _explicitNullValueFormFields; set { _explicitNullValueFormFields = value; AdditionalData?.Remove("formFields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("formFields"); else _explicitNullProperties?.Remove("formFields"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkFormField>? _explicitNullValueFormFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkFormField> FormFields { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkFormField> FormFields { get => _explicitNullValueFormFields; set { _explicitNullValueFormFields = value; AdditionalData?.Remove("formFields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("formFields"); else _explicitNullProperties?.Remove("formFields"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkFormField> _explicitNullValueFormFields = default!;
 #endif
         /// <summary>The guestSettings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalGuestSettings? GuestSettings { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalGuestSettings? GuestSettings { get => _explicitNullValueGuestSettings; set { _explicitNullValueGuestSettings = value; AdditionalData?.Remove("guestSettings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guestSettings"); else _explicitNullProperties?.Remove("guestSettings"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ExternalGuestSettings? _explicitNullValueGuestSettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalGuestSettings GuestSettings { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalGuestSettings GuestSettings { get => _explicitNullValueGuestSettings; set { _explicitNullValueGuestSettings = value; AdditionalData?.Remove("guestSettings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guestSettings"); else _explicitNullProperties?.Remove("guestSettings"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ExternalGuestSettings _explicitNullValueGuestSettings = default!;
 #endif
         /// <summary>A string representing the language setting for the meeting link.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Language { get; set; }
+        public string? Language { get => _explicitNullValueLanguage; set { _explicitNullValueLanguage = value; AdditionalData?.Remove("language"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("language"); else _explicitNullProperties?.Remove("language"); } }
+        private string? _explicitNullValueLanguage = default!;
 #nullable restore
 #else
-        public string Language { get; set; }
+        public string Language { get => _explicitNullValueLanguage; set { _explicitNullValueLanguage = value; AdditionalData?.Remove("language"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("language"); else _explicitNullProperties?.Remove("language"); } }
+        private string _explicitNullValueLanguage = default!;
 #endif
         /// <summary>A boolean indicating whether legal consent is required for the meeting link.</summary>
-        public bool? LegalConsentEnabled { get; set; }
+        public bool? LegalConsentEnabled { get => _explicitNullValueLegalConsentEnabled; set { _explicitNullValueLegalConsentEnabled = value; AdditionalData?.Remove("legalConsentEnabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("legalConsentEnabled"); else _explicitNullProperties?.Remove("legalConsentEnabled"); } }
+        private bool? _explicitNullValueLegalConsentEnabled = default!;
         /// <summary>The legalConsentOptions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentOptions? LegalConsentOptions { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentOptions? LegalConsentOptions { get => _explicitNullValueLegalConsentOptions; set { _explicitNullValueLegalConsentOptions = value; AdditionalData?.Remove("legalConsentOptions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("legalConsentOptions"); else _explicitNullProperties?.Remove("legalConsentOptions"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentOptions? _explicitNullValueLegalConsentOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentOptions LegalConsentOptions { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentOptions LegalConsentOptions { get => _explicitNullValueLegalConsentOptions; set { _explicitNullValueLegalConsentOptions = value; AdditionalData?.Remove("legalConsentOptions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("legalConsentOptions"); else _explicitNullProperties?.Remove("legalConsentOptions"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLegalConsentOptions _explicitNullValueLegalConsentOptions = default!;
 #endif
         /// <summary>A string representing the locale setting for the meeting link.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Locale { get; set; }
+        public string? Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; AdditionalData?.Remove("locale"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locale"); else _explicitNullProperties?.Remove("locale"); } }
+        private string? _explicitNullValueLocale = default!;
 #nullable restore
 #else
-        public string Locale { get; set; }
+        public string Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; AdditionalData?.Remove("locale"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locale"); else _explicitNullProperties?.Remove("locale"); } }
+        private string _explicitNullValueLocale = default!;
 #endif
         /// <summary>A string representing the location information for the meeting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Location { get; set; }
+        public string? Location { get => _explicitNullValueLocation; set { _explicitNullValueLocation = value; AdditionalData?.Remove("location"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("location"); else _explicitNullProperties?.Remove("location"); } }
+        private string? _explicitNullValueLocation = default!;
 #nullable restore
 #else
-        public string Location { get; set; }
+        public string Location { get => _explicitNullValueLocation; set { _explicitNullValueLocation = value; AdditionalData?.Remove("location"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("location"); else _explicitNullProperties?.Remove("location"); } }
+        private string _explicitNullValueLocation = default!;
 #endif
         /// <summary>An integer representing the buffer time between meetings in milliseconds.</summary>
-        public long? MeetingBufferTime { get; set; }
+        public long? MeetingBufferTime { get => _explicitNullValueMeetingBufferTime; set { _explicitNullValueMeetingBufferTime = value; AdditionalData?.Remove("meetingBufferTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meetingBufferTime"); else _explicitNullProperties?.Remove("meetingBufferTime"); } }
+        private long? _explicitNullValueMeetingBufferTime = default!;
         /// <summary>A boolean indicating whether the meeting owner is prioritized in scheduling.</summary>
-        public bool? OwnerPrioritized { get; set; }
+        public bool? OwnerPrioritized { get => _explicitNullValueOwnerPrioritized; set { _explicitNullValueOwnerPrioritized = value; AdditionalData?.Remove("ownerPrioritized"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ownerPrioritized"); else _explicitNullProperties?.Remove("ownerPrioritized"); } }
+        private bool? _explicitNullValueOwnerPrioritized = default!;
         /// <summary>A string representing the URL to which users are redirected after booking a meeting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RedirectUrl { get; set; }
+        public string? RedirectUrl { get => _explicitNullValueRedirectUrl; set { _explicitNullValueRedirectUrl = value; AdditionalData?.Remove("redirectUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redirectUrl"); else _explicitNullProperties?.Remove("redirectUrl"); } }
+        private string? _explicitNullValueRedirectUrl = default!;
 #nullable restore
 #else
-        public string RedirectUrl { get; set; }
+        public string RedirectUrl { get => _explicitNullValueRedirectUrl; set { _explicitNullValueRedirectUrl = value; AdditionalData?.Remove("redirectUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redirectUrl"); else _explicitNullProperties?.Remove("redirectUrl"); } }
+        private string _explicitNullValueRedirectUrl = default!;
 #endif
         /// <summary>A string indicating the increment for start times, with valid values including &apos;MEETING_DURATION&apos;, &apos;FIVE&apos;, &apos;TEN&apos;, &apos;FIFTEEN&apos;, &apos;TWENTY&apos;, &apos;THIRTY&apos;, &apos;FORTY_FIVE&apos;, &apos;SIXTY&apos;, &apos;NINETY&apos;, and &apos;ONE_HUNDRED_TWENTY&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettingsStartTimeIncrementMinutes? StartTimeIncrementMinutes { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettingsStartTimeIncrementMinutes? StartTimeIncrementMinutes { get => _explicitNullValueStartTimeIncrementMinutes; set { _explicitNullValueStartTimeIncrementMinutes = value; AdditionalData?.Remove("startTimeIncrementMinutes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startTimeIncrementMinutes"); else _explicitNullProperties?.Remove("startTimeIncrementMinutes"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettingsStartTimeIncrementMinutes? _explicitNullValueStartTimeIncrementMinutes = default!;
         /// <summary>An integer representing the number of weeks to advertise the meeting link.</summary>
-        public int? WeeksToAdvertise { get; set; }
+        public int? WeeksToAdvertise { get => _explicitNullValueWeeksToAdvertise; set { _explicitNullValueWeeksToAdvertise = value; AdditionalData?.Remove("weeksToAdvertise"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weeksToAdvertise"); else _explicitNullProperties?.Remove("weeksToAdvertise"); } }
+        private int? _explicitNullValueWeeksToAdvertise = default!;
         /// <summary>The welcomeScreenInfo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsWelcomeScreenInfo? WelcomeScreenInfo { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsWelcomeScreenInfo? WelcomeScreenInfo { get => _explicitNullValueWelcomeScreenInfo; set { _explicitNullValueWelcomeScreenInfo = value; AdditionalData?.Remove("welcomeScreenInfo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("welcomeScreenInfo"); else _explicitNullProperties?.Remove("welcomeScreenInfo"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsWelcomeScreenInfo? _explicitNullValueWelcomeScreenInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsWelcomeScreenInfo WelcomeScreenInfo { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsWelcomeScreenInfo WelcomeScreenInfo { get => _explicitNullValueWelcomeScreenInfo; set { _explicitNullValueWelcomeScreenInfo = value; AdditionalData?.Remove("welcomeScreenInfo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("welcomeScreenInfo"); else _explicitNullProperties?.Remove("welcomeScreenInfo"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsWelcomeScreenInfo _explicitNullValueWelcomeScreenInfo = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettings"/> and sets the default values.
@@ -131,7 +203,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettings CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettings();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettings(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -156,7 +228,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "meetingBufferTime", n => { MeetingBufferTime = n.GetLongValue(); } },
                 { "ownerPrioritized", n => { OwnerPrioritized = n.GetBoolValue(); } },
                 { "redirectUrl", n => { RedirectUrl = n.GetStringValue(); } },
-                { "startTimeIncrementMinutes", n => { StartTimeIncrementMinutes = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettingsStartTimeIncrementMinutes>(); } },
+                { "startTimeIncrementMinutes", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettingsStartTimeIncrementMinutes>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStartTimeIncrementMinutes = default; _explicitNullProperties?.Remove("startTimeIncrementMinutes"); AdditionalData["startTimeIncrementMinutes"] = unknown; } else { StartTimeIncrementMinutes = parsed; AdditionalData.Remove("startTimeIncrementMinutes"); } } },
                 { "weeksToAdvertise", n => { WeeksToAdvertise = n.GetIntValue(); } },
                 { "welcomeScreenInfo", n => { WelcomeScreenInfo = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsWelcomeScreenInfo>(global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsWelcomeScreenInfo.CreateFromDiscriminatorValue); } },
             };
@@ -186,6 +258,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsLinkSettingsStartTimeIncrementMinutes>("startTimeIncrementMinutes", StartTimeIncrementMinutes);
             writer.WriteIntValue("weeksToAdvertise", WeeksToAdvertise);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalMeetingsWelcomeScreenInfo>("welcomeScreenInfo", WelcomeScreenInfo);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

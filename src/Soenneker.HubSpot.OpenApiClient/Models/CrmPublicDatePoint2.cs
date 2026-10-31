@@ -11,40 +11,79 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CrmPublicDatePoint2 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("day") is null) { _explicitNullValueDay = default!; _explicitNullProperties?.Remove("day"); }
+            else if (parseNode.GetChildNode("day") is { } nullNodeDay && nullNodeDay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Day = null;
+            if (parseNode.GetChildNode("hour") is null) { _explicitNullValueHour = default!; _explicitNullProperties?.Remove("hour"); }
+            else if (parseNode.GetChildNode("hour") is { } nullNodeHour && nullNodeHour.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Hour = null;
+            if (parseNode.GetChildNode("millisecond") is null) { _explicitNullValueMillisecond = default!; _explicitNullProperties?.Remove("millisecond"); }
+            else if (parseNode.GetChildNode("millisecond") is { } nullNodeMillisecond && nullNodeMillisecond.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Millisecond = null;
+            if (parseNode.GetChildNode("minute") is null) { _explicitNullValueMinute = default!; _explicitNullProperties?.Remove("minute"); }
+            else if (parseNode.GetChildNode("minute") is { } nullNodeMinute && nullNodeMinute.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Minute = null;
+            if (parseNode.GetChildNode("month") is null) { _explicitNullValueMonth = default!; _explicitNullProperties?.Remove("month"); }
+            else if (parseNode.GetChildNode("month") is { } nullNodeMonth && nullNodeMonth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Month = null;
+            if (parseNode.GetChildNode("second") is null) { _explicitNullValueSecond = default!; _explicitNullProperties?.Remove("second"); }
+            else if (parseNode.GetChildNode("second") is { } nullNodeSecond && nullNodeSecond.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Second = null;
+            if (parseNode.GetChildNode("timeType") is null) { _explicitNullValueTimeType = default!; _explicitNullProperties?.Remove("timeType"); }
+            else if (parseNode.GetChildNode("timeType") is { } nullNodeTimeType && nullNodeTimeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeType = null;
+            if (parseNode.GetChildNode("timezoneSource") is null) { _explicitNullValueTimezoneSource = default!; _explicitNullProperties?.Remove("timezoneSource"); }
+            else if (parseNode.GetChildNode("timezoneSource") is { } nullNodeTimezoneSource && nullNodeTimezoneSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimezoneSource = null;
+            if (parseNode.GetChildNode("year") is null) { _explicitNullValueYear = default!; _explicitNullProperties?.Remove("year"); }
+            else if (parseNode.GetChildNode("year") is { } nullNodeYear && nullNodeYear.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Year = null;
+            if (parseNode.GetChildNode("zoneId") is null) { _explicitNullValueZoneId = default!; _explicitNullProperties?.Remove("zoneId"); }
+            else if (parseNode.GetChildNode("zoneId") is { } nullNodeZoneId && nullNodeZoneId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ZoneId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An integer representing the day component of the date.</summary>
-        public int? Day { get; set; }
+        public int? Day { get => _explicitNullValueDay; set { _explicitNullValueDay = value; AdditionalData?.Remove("day"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("day"); else _explicitNullProperties?.Remove("day"); } }
+        private int? _explicitNullValueDay = default!;
         /// <summary>An integer representing the hour component of the time.</summary>
-        public int? Hour { get; set; }
+        public int? Hour { get => _explicitNullValueHour; set { _explicitNullValueHour = value; AdditionalData?.Remove("hour"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hour"); else _explicitNullProperties?.Remove("hour"); } }
+        private int? _explicitNullValueHour = default!;
         /// <summary>An integer representing the millisecond component of the time.</summary>
-        public int? Millisecond { get; set; }
+        public int? Millisecond { get => _explicitNullValueMillisecond; set { _explicitNullValueMillisecond = value; AdditionalData?.Remove("millisecond"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("millisecond"); else _explicitNullProperties?.Remove("millisecond"); } }
+        private int? _explicitNullValueMillisecond = default!;
         /// <summary>An integer representing the minute component of the time.</summary>
-        public int? Minute { get; set; }
+        public int? Minute { get => _explicitNullValueMinute; set { _explicitNullValueMinute = value; AdditionalData?.Remove("minute"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minute"); else _explicitNullProperties?.Remove("minute"); } }
+        private int? _explicitNullValueMinute = default!;
         /// <summary>An integer representing the month component of the date.</summary>
-        public int? Month { get; set; }
+        public int? Month { get => _explicitNullValueMonth; set { _explicitNullValueMonth = value; AdditionalData?.Remove("month"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("month"); else _explicitNullProperties?.Remove("month"); } }
+        private int? _explicitNullValueMonth = default!;
         /// <summary>An integer representing the second component of the time.</summary>
-        public int? Second { get; set; }
+        public int? Second { get => _explicitNullValueSecond; set { _explicitNullValueSecond = value; AdditionalData?.Remove("second"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("second"); else _explicitNullProperties?.Remove("second"); } }
+        private int? _explicitNullValueSecond = default!;
         /// <summary>A string indicating the type of time representation.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmDateTimeType2? TimeType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmDateTimeType2? TimeType { get => _explicitNullValueTimeType; set { _explicitNullValueTimeType = value; AdditionalData?.Remove("timeType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeType"); else _explicitNullProperties?.Remove("timeType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmDateTimeType2? _explicitNullValueTimeType = default!;
         /// <summary>A string specifying the source of the timezone information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TimezoneSource { get; set; }
+        public string? TimezoneSource { get => _explicitNullValueTimezoneSource; set { _explicitNullValueTimezoneSource = value; AdditionalData?.Remove("timezoneSource"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timezoneSource"); else _explicitNullProperties?.Remove("timezoneSource"); } }
+        private string? _explicitNullValueTimezoneSource = default!;
 #nullable restore
 #else
-        public string TimezoneSource { get; set; }
+        public string TimezoneSource { get => _explicitNullValueTimezoneSource; set { _explicitNullValueTimezoneSource = value; AdditionalData?.Remove("timezoneSource"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timezoneSource"); else _explicitNullProperties?.Remove("timezoneSource"); } }
+        private string _explicitNullValueTimezoneSource = default!;
 #endif
         /// <summary>An integer representing the year component of the date.</summary>
-        public int? Year { get; set; }
+        public int? Year { get => _explicitNullValueYear; set { _explicitNullValueYear = value; AdditionalData?.Remove("year"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("year"); else _explicitNullProperties?.Remove("year"); } }
+        private int? _explicitNullValueYear = default!;
         /// <summary>A string representing the identifier for the timezone.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ZoneId { get; set; }
+        public string? ZoneId { get => _explicitNullValueZoneId; set { _explicitNullValueZoneId = value; AdditionalData?.Remove("zoneId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("zoneId"); else _explicitNullProperties?.Remove("zoneId"); } }
+        private string? _explicitNullValueZoneId = default!;
 #nullable restore
 #else
-        public string ZoneId { get; set; }
+        public string ZoneId { get => _explicitNullValueZoneId; set { _explicitNullValueZoneId = value; AdditionalData?.Remove("zoneId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("zoneId"); else _explicitNullProperties?.Remove("zoneId"); } }
+        private string _explicitNullValueZoneId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicDatePoint2"/> and sets the default values.
@@ -61,7 +100,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicDatePoint2 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicDatePoint2();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicDatePoint2(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -77,7 +116,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "minute", n => { Minute = n.GetIntValue(); } },
                 { "month", n => { Month = n.GetIntValue(); } },
                 { "second", n => { Second = n.GetIntValue(); } },
-                { "timeType", n => { TimeType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmDateTimeType2>(); } },
+                { "timeType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmDateTimeType2>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTimeType = default; _explicitNullProperties?.Remove("timeType"); AdditionalData["timeType"] = unknown; } else { TimeType = parsed; AdditionalData.Remove("timeType"); } } },
                 { "timezoneSource", n => { TimezoneSource = n.GetStringValue(); } },
                 { "year", n => { Year = n.GetIntValue(); } },
                 { "zoneId", n => { ZoneId = n.GetStringValue(); } },
@@ -100,6 +139,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("timezoneSource", TimezoneSource);
             writer.WriteIntValue("year", Year);
             writer.WriteStringValue("zoneId", ZoneId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

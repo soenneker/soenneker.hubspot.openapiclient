@@ -49,7 +49,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.CustomChannels.TwoZeroTw
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicChannelAccount>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicChannelAccount.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicChannelAccount>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicChannelAccount.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// This API is used to update the name of the channel account and it&apos;s isAuthorized status. Setting to isAuthorized flag to False disables the channel account.
@@ -69,7 +69,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Conversations.CustomChannels.TwoZeroTw
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPatchRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicChannelAccount>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicChannelAccount.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicChannelAccount>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicChannelAccount.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve the details for a specific channel account. This contains all the metadata about your channel account, including its channel, associated inbox id, and delivery identifier information.

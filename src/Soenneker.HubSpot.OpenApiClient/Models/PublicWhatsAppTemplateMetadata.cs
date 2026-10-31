@@ -11,33 +11,60 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicWhatsAppTemplateMetadata : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("contentId") is null) { _explicitNullValueContentId = default!; _explicitNullProperties?.Remove("contentId"); }
+            else if (parseNode.GetChildNode("contentId") is { } nullNodeContentId && nullNodeContentId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContentId = null;
+            if (parseNode.GetChildNode("crmObjectIds") is null) { _explicitNullValueCrmObjectIds = default!; _explicitNullProperties?.Remove("crmObjectIds"); }
+            else if (parseNode.GetChildNode("crmObjectIds") is { } nullNodeCrmObjectIds && nullNodeCrmObjectIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CrmObjectIds = null;
+            if (parseNode.GetChildNode("mappedTemplateId") is null) { _explicitNullValueMappedTemplateId = default!; _explicitNullProperties?.Remove("mappedTemplateId"); }
+            else if (parseNode.GetChildNode("mappedTemplateId") is { } nullNodeMappedTemplateId && nullNodeMappedTemplateId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MappedTemplateId = null;
+            if (parseNode.GetChildNode("parameters") is null) { _explicitNullValueParameters = default!; _explicitNullProperties?.Remove("parameters"); }
+            else if (parseNode.GetChildNode("parameters") is { } nullNodeParameters && nullNodeParameters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameters = null;
+            if (parseNode.GetChildNode("rootMicId") is null) { _explicitNullValueRootMicId = default!; _explicitNullProperties?.Remove("rootMicId"); }
+            else if (parseNode.GetChildNode("rootMicId") is { } nullNodeRootMicId && nullNodeRootMicId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RootMicId = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An integer representing the ID of the content associated with the template. This is a 64-bit integer.</summary>
-        public long? ContentId { get; set; }
+        public long? ContentId { get => _explicitNullValueContentId; set { _explicitNullValueContentId = value; AdditionalData?.Remove("contentId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contentId"); else _explicitNullProperties?.Remove("contentId"); } }
+        private long? _explicitNullValueContentId = default!;
         /// <summary>An object that maps CRM object names to their respective IDs, where each ID is a 64-bit integer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadataCrmObjectIdsProperty2? CrmObjectIds { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadataCrmObjectIdsProperty2? CrmObjectIds { get => _explicitNullValueCrmObjectIds; set { _explicitNullValueCrmObjectIds = value; AdditionalData?.Remove("crmObjectIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crmObjectIds"); else _explicitNullProperties?.Remove("crmObjectIds"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadataCrmObjectIdsProperty2? _explicitNullValueCrmObjectIds = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadataCrmObjectIdsProperty2 CrmObjectIds { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadataCrmObjectIdsProperty2 CrmObjectIds { get => _explicitNullValueCrmObjectIds; set { _explicitNullValueCrmObjectIds = value; AdditionalData?.Remove("crmObjectIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crmObjectIds"); else _explicitNullProperties?.Remove("crmObjectIds"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadataCrmObjectIdsProperty2 _explicitNullValueCrmObjectIds = default!;
 #endif
         /// <summary>An integer representing the ID of the mapped template. This is a 64-bit integer.</summary>
-        public long? MappedTemplateId { get; set; }
+        public long? MappedTemplateId { get => _explicitNullValueMappedTemplateId; set { _explicitNullValueMappedTemplateId = value; AdditionalData?.Remove("mappedTemplateId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mappedTemplateId"); else _explicitNullProperties?.Remove("mappedTemplateId"); } }
+        private long? _explicitNullValueMappedTemplateId = default!;
         /// <summary>An object containing key-value pairs where each key is a parameter name and each value is a string representing the parameter value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadataParametersProperty2? Parameters { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadataParametersProperty2? Parameters { get => _explicitNullValueParameters; set { _explicitNullValueParameters = value; AdditionalData?.Remove("parameters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parameters"); else _explicitNullProperties?.Remove("parameters"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadataParametersProperty2? _explicitNullValueParameters = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadataParametersProperty2 Parameters { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadataParametersProperty2 Parameters { get => _explicitNullValueParameters; set { _explicitNullValueParameters = value; AdditionalData?.Remove("parameters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parameters"); else _explicitNullProperties?.Remove("parameters"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadataParametersProperty2 _explicitNullValueParameters = default!;
 #endif
         /// <summary>An integer representing the root MIC ID associated with the template. This is a 64-bit integer.</summary>
-        public long? RootMicId { get; set; }
+        public long? RootMicId { get => _explicitNullValueRootMicId; set { _explicitNullValueRootMicId = value; AdditionalData?.Remove("rootMicId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rootMicId"); else _explicitNullProperties?.Remove("rootMicId"); } }
+        private long? _explicitNullValueRootMicId = default!;
         /// <summary>A string representing the type of the metadata, which is always &apos;WHATSAPP_TEMPLATE_METADATA&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.WhatsappTemplateMetadataType? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.WhatsappTemplateMetadataType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.WhatsappTemplateMetadataType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadata"/> and sets the default values.
         /// </summary>
@@ -53,7 +80,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadata CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadata();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadata(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,7 +95,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "mappedTemplateId", n => { MappedTemplateId = n.GetLongValue(); } },
                 { "parameters", n => { Parameters = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadataParametersProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadataParametersProperty2.CreateFromDiscriminatorValue); } },
                 { "rootMicId", n => { RootMicId = n.GetLongValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.WhatsappTemplateMetadataType>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.WhatsappTemplateMetadataType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
         /// <summary>
@@ -84,6 +111,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicWhatsAppTemplateMetadataParametersProperty2>("parameters", Parameters);
             writer.WriteLongValue("rootMicId", RootMicId);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.WhatsappTemplateMetadataType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

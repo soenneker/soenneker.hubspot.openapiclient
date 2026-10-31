@@ -11,19 +11,33 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ExternalEmailReminderSchedule : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("reminders") is null) { _explicitNullValueReminders = default!; _explicitNullProperties?.Remove("reminders"); }
+            else if (parseNode.GetChildNode("reminders") is { } nullNodeReminders && nullNodeReminders.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reminders = null;
+            if (parseNode.GetChildNode("shouldIncludeInviteDescription") is null) { _explicitNullValueShouldIncludeInviteDescription = default!; _explicitNullProperties?.Remove("shouldIncludeInviteDescription"); }
+            else if (parseNode.GetChildNode("shouldIncludeInviteDescription") is { } nullNodeShouldIncludeInviteDescription && nullNodeShouldIncludeInviteDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShouldIncludeInviteDescription = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An array of ExternalReminder objects that specify the timing and frequency of the email reminders.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalReminder>? Reminders { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalReminder>? Reminders { get => _explicitNullValueReminders; set { _explicitNullValueReminders = value; AdditionalData?.Remove("reminders"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reminders"); else _explicitNullProperties?.Remove("reminders"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalReminder>? _explicitNullValueReminders = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalReminder> Reminders { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalReminder> Reminders { get => _explicitNullValueReminders; set { _explicitNullValueReminders = value; AdditionalData?.Remove("reminders"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reminders"); else _explicitNullProperties?.Remove("reminders"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalReminder> _explicitNullValueReminders = default!;
 #endif
         /// <summary>A boolean indicating whether the invite description should be included in the email reminder.</summary>
-        public bool? ShouldIncludeInviteDescription { get; set; }
+        public bool? ShouldIncludeInviteDescription { get => _explicitNullValueShouldIncludeInviteDescription; set { _explicitNullValueShouldIncludeInviteDescription = value; AdditionalData?.Remove("shouldIncludeInviteDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shouldIncludeInviteDescription"); else _explicitNullProperties?.Remove("shouldIncludeInviteDescription"); } }
+        private bool? _explicitNullValueShouldIncludeInviteDescription = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExternalEmailReminderSchedule"/> and sets the default values.
         /// </summary>
@@ -39,7 +53,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.ExternalEmailReminderSchedule CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.ExternalEmailReminderSchedule();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.ExternalEmailReminderSchedule(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -62,6 +76,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalReminder>("reminders", Reminders);
             writer.WriteBoolValue("shouldIncludeInviteDescription", ShouldIncludeInviteDescription);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

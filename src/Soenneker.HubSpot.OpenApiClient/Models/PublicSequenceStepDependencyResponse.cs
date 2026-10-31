@@ -11,43 +11,77 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicSequenceStepDependencyResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("createdAt") is null) { _explicitNullValueCreatedAt = default!; _explicitNullProperties?.Remove("createdAt"); }
+            else if (parseNode.GetChildNode("createdAt") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("dependencyType") is null) { _explicitNullValueDependencyType = default!; _explicitNullProperties?.Remove("dependencyType"); }
+            else if (parseNode.GetChildNode("dependencyType") is { } nullNodeDependencyType && nullNodeDependencyType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DependencyType = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("reliesOnSequenceStepId") is null) { _explicitNullValueReliesOnSequenceStepId = default!; _explicitNullProperties?.Remove("reliesOnSequenceStepId"); }
+            else if (parseNode.GetChildNode("reliesOnSequenceStepId") is { } nullNodeReliesOnSequenceStepId && nullNodeReliesOnSequenceStepId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReliesOnSequenceStepId = null;
+            if (parseNode.GetChildNode("reliesOnStepOrder") is null) { _explicitNullValueReliesOnStepOrder = default!; _explicitNullProperties?.Remove("reliesOnStepOrder"); }
+            else if (parseNode.GetChildNode("reliesOnStepOrder") is { } nullNodeReliesOnStepOrder && nullNodeReliesOnStepOrder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReliesOnStepOrder = null;
+            if (parseNode.GetChildNode("requiredBySequenceStepId") is null) { _explicitNullValueRequiredBySequenceStepId = default!; _explicitNullProperties?.Remove("requiredBySequenceStepId"); }
+            else if (parseNode.GetChildNode("requiredBySequenceStepId") is { } nullNodeRequiredBySequenceStepId && nullNodeRequiredBySequenceStepId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequiredBySequenceStepId = null;
+            if (parseNode.GetChildNode("requiredByStepOrder") is null) { _explicitNullValueRequiredByStepOrder = default!; _explicitNullProperties?.Remove("requiredByStepOrder"); }
+            else if (parseNode.GetChildNode("requiredByStepOrder") is { } nullNodeRequiredByStepOrder && nullNodeRequiredByStepOrder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequiredByStepOrder = null;
+            if (parseNode.GetChildNode("updatedAt") is null) { _explicitNullValueUpdatedAt = default!; _explicitNullProperties?.Remove("updatedAt"); }
+            else if (parseNode.GetChildNode("updatedAt") is { } nullNodeUpdatedAt && nullNodeUpdatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdatedAt = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The date and time when this dependency was created, in ISO 8601 format.</summary>
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; AdditionalData?.Remove("createdAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createdAt"); else _explicitNullProperties?.Remove("createdAt"); } }
+        private DateTimeOffset? _explicitNullValueCreatedAt = default!;
         /// <summary>The type of dependency, which can be either &apos;TASK_COMPLETION&apos; or &apos;MANUAL_PAUSE&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepDependencyResponseDependencyType? DependencyType { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepDependencyResponseDependencyType? DependencyType { get => _explicitNullValueDependencyType; set { _explicitNullValueDependencyType = value; AdditionalData?.Remove("dependencyType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dependencyType"); else _explicitNullProperties?.Remove("dependencyType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepDependencyResponseDependencyType? _explicitNullValueDependencyType = default!;
         /// <summary>The unique identifier for this dependency.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The unique identifier of the sequence step that this dependency relies on.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReliesOnSequenceStepId { get; set; }
+        public string? ReliesOnSequenceStepId { get => _explicitNullValueReliesOnSequenceStepId; set { _explicitNullValueReliesOnSequenceStepId = value; AdditionalData?.Remove("reliesOnSequenceStepId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reliesOnSequenceStepId"); else _explicitNullProperties?.Remove("reliesOnSequenceStepId"); } }
+        private string? _explicitNullValueReliesOnSequenceStepId = default!;
 #nullable restore
 #else
-        public string ReliesOnSequenceStepId { get; set; }
+        public string ReliesOnSequenceStepId { get => _explicitNullValueReliesOnSequenceStepId; set { _explicitNullValueReliesOnSequenceStepId = value; AdditionalData?.Remove("reliesOnSequenceStepId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reliesOnSequenceStepId"); else _explicitNullProperties?.Remove("reliesOnSequenceStepId"); } }
+        private string _explicitNullValueReliesOnSequenceStepId = default!;
 #endif
         /// <summary>The order number of the step that this dependency relies on.</summary>
-        public int? ReliesOnStepOrder { get; set; }
+        public int? ReliesOnStepOrder { get => _explicitNullValueReliesOnStepOrder; set { _explicitNullValueReliesOnStepOrder = value; AdditionalData?.Remove("reliesOnStepOrder"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reliesOnStepOrder"); else _explicitNullProperties?.Remove("reliesOnStepOrder"); } }
+        private int? _explicitNullValueReliesOnStepOrder = default!;
         /// <summary>The unique identifier of the sequence step that requires this dependency.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RequiredBySequenceStepId { get; set; }
+        public string? RequiredBySequenceStepId { get => _explicitNullValueRequiredBySequenceStepId; set { _explicitNullValueRequiredBySequenceStepId = value; AdditionalData?.Remove("requiredBySequenceStepId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requiredBySequenceStepId"); else _explicitNullProperties?.Remove("requiredBySequenceStepId"); } }
+        private string? _explicitNullValueRequiredBySequenceStepId = default!;
 #nullable restore
 #else
-        public string RequiredBySequenceStepId { get; set; }
+        public string RequiredBySequenceStepId { get => _explicitNullValueRequiredBySequenceStepId; set { _explicitNullValueRequiredBySequenceStepId = value; AdditionalData?.Remove("requiredBySequenceStepId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requiredBySequenceStepId"); else _explicitNullProperties?.Remove("requiredBySequenceStepId"); } }
+        private string _explicitNullValueRequiredBySequenceStepId = default!;
 #endif
         /// <summary>The order number of the step that requires this dependency.</summary>
-        public int? RequiredByStepOrder { get; set; }
+        public int? RequiredByStepOrder { get => _explicitNullValueRequiredByStepOrder; set { _explicitNullValueRequiredByStepOrder = value; AdditionalData?.Remove("requiredByStepOrder"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requiredByStepOrder"); else _explicitNullProperties?.Remove("requiredByStepOrder"); } }
+        private int? _explicitNullValueRequiredByStepOrder = default!;
         /// <summary>The date and time when this dependency was last updated, in ISO 8601 format.</summary>
-        public DateTimeOffset? UpdatedAt { get; set; }
+        public DateTimeOffset? UpdatedAt { get => _explicitNullValueUpdatedAt; set { _explicitNullValueUpdatedAt = value; AdditionalData?.Remove("updatedAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updatedAt"); else _explicitNullProperties?.Remove("updatedAt"); } }
+        private DateTimeOffset? _explicitNullValueUpdatedAt = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepDependencyResponse"/> and sets the default values.
         /// </summary>
@@ -63,7 +97,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepDependencyResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepDependencyResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepDependencyResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -74,7 +108,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
-                { "dependencyType", n => { DependencyType = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepDependencyResponseDependencyType>(); } },
+                { "dependencyType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceStepDependencyResponseDependencyType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDependencyType = default; _explicitNullProperties?.Remove("dependencyType"); AdditionalData["dependencyType"] = unknown; } else { DependencyType = parsed; AdditionalData.Remove("dependencyType"); } } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "reliesOnSequenceStepId", n => { ReliesOnSequenceStepId = n.GetStringValue(); } },
                 { "reliesOnStepOrder", n => { ReliesOnStepOrder = n.GetIntValue(); } },
@@ -98,6 +132,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("requiredBySequenceStepId", RequiredBySequenceStepId);
             writer.WriteIntValue("requiredByStepOrder", RequiredByStepOrder);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

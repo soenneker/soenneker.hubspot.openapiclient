@@ -11,48 +11,75 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ExternalSettings : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("createMeetingUrl") is null) { _explicitNullValueCreateMeetingUrl = default!; _explicitNullProperties?.Remove("createMeetingUrl"); }
+            else if (parseNode.GetChildNode("createMeetingUrl") is { } nullNodeCreateMeetingUrl && nullNodeCreateMeetingUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateMeetingUrl = null;
+            if (parseNode.GetChildNode("deleteMeetingUrl") is null) { _explicitNullValueDeleteMeetingUrl = default!; _explicitNullProperties?.Remove("deleteMeetingUrl"); }
+            else if (parseNode.GetChildNode("deleteMeetingUrl") is { } nullNodeDeleteMeetingUrl && nullNodeDeleteMeetingUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeleteMeetingUrl = null;
+            if (parseNode.GetChildNode("fetchAccountsUri") is null) { _explicitNullValueFetchAccountsUri = default!; _explicitNullProperties?.Remove("fetchAccountsUri"); }
+            else if (parseNode.GetChildNode("fetchAccountsUri") is { } nullNodeFetchAccountsUri && nullNodeFetchAccountsUri.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FetchAccountsUri = null;
+            if (parseNode.GetChildNode("updateMeetingUrl") is null) { _explicitNullValueUpdateMeetingUrl = default!; _explicitNullProperties?.Remove("updateMeetingUrl"); }
+            else if (parseNode.GetChildNode("updateMeetingUrl") is { } nullNodeUpdateMeetingUrl && nullNodeUpdateMeetingUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdateMeetingUrl = null;
+            if (parseNode.GetChildNode("userVerifyUrl") is null) { _explicitNullValueUserVerifyUrl = default!; _explicitNullProperties?.Remove("userVerifyUrl"); }
+            else if (parseNode.GetChildNode("userVerifyUrl") is { } nullNodeUserVerifyUrl && nullNodeUserVerifyUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserVerifyUrl = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A string representing the URL used to create a new meeting. This property is required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CreateMeetingUrl { get; set; }
+        public string? CreateMeetingUrl { get => _explicitNullValueCreateMeetingUrl; set { _explicitNullValueCreateMeetingUrl = value; AdditionalData?.Remove("createMeetingUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createMeetingUrl"); else _explicitNullProperties?.Remove("createMeetingUrl"); } }
+        private string? _explicitNullValueCreateMeetingUrl = default!;
 #nullable restore
 #else
-        public string CreateMeetingUrl { get; set; }
+        public string CreateMeetingUrl { get => _explicitNullValueCreateMeetingUrl; set { _explicitNullValueCreateMeetingUrl = value; AdditionalData?.Remove("createMeetingUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createMeetingUrl"); else _explicitNullProperties?.Remove("createMeetingUrl"); } }
+        private string _explicitNullValueCreateMeetingUrl = default!;
 #endif
         /// <summary>A string representing the URL used to delete a meeting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DeleteMeetingUrl { get; set; }
+        public string? DeleteMeetingUrl { get => _explicitNullValueDeleteMeetingUrl; set { _explicitNullValueDeleteMeetingUrl = value; AdditionalData?.Remove("deleteMeetingUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deleteMeetingUrl"); else _explicitNullProperties?.Remove("deleteMeetingUrl"); } }
+        private string? _explicitNullValueDeleteMeetingUrl = default!;
 #nullable restore
 #else
-        public string DeleteMeetingUrl { get; set; }
+        public string DeleteMeetingUrl { get => _explicitNullValueDeleteMeetingUrl; set { _explicitNullValueDeleteMeetingUrl = value; AdditionalData?.Remove("deleteMeetingUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deleteMeetingUrl"); else _explicitNullProperties?.Remove("deleteMeetingUrl"); } }
+        private string _explicitNullValueDeleteMeetingUrl = default!;
 #endif
         /// <summary>A string representing the URI used to fetch account information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FetchAccountsUri { get; set; }
+        public string? FetchAccountsUri { get => _explicitNullValueFetchAccountsUri; set { _explicitNullValueFetchAccountsUri = value; AdditionalData?.Remove("fetchAccountsUri"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fetchAccountsUri"); else _explicitNullProperties?.Remove("fetchAccountsUri"); } }
+        private string? _explicitNullValueFetchAccountsUri = default!;
 #nullable restore
 #else
-        public string FetchAccountsUri { get; set; }
+        public string FetchAccountsUri { get => _explicitNullValueFetchAccountsUri; set { _explicitNullValueFetchAccountsUri = value; AdditionalData?.Remove("fetchAccountsUri"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fetchAccountsUri"); else _explicitNullProperties?.Remove("fetchAccountsUri"); } }
+        private string _explicitNullValueFetchAccountsUri = default!;
 #endif
         /// <summary>A string representing the URL used to update an existing meeting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UpdateMeetingUrl { get; set; }
+        public string? UpdateMeetingUrl { get => _explicitNullValueUpdateMeetingUrl; set { _explicitNullValueUpdateMeetingUrl = value; AdditionalData?.Remove("updateMeetingUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updateMeetingUrl"); else _explicitNullProperties?.Remove("updateMeetingUrl"); } }
+        private string? _explicitNullValueUpdateMeetingUrl = default!;
 #nullable restore
 #else
-        public string UpdateMeetingUrl { get; set; }
+        public string UpdateMeetingUrl { get => _explicitNullValueUpdateMeetingUrl; set { _explicitNullValueUpdateMeetingUrl = value; AdditionalData?.Remove("updateMeetingUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updateMeetingUrl"); else _explicitNullProperties?.Remove("updateMeetingUrl"); } }
+        private string _explicitNullValueUpdateMeetingUrl = default!;
 #endif
         /// <summary>A string representing the URL used to verify a user&apos;s identity.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserVerifyUrl { get; set; }
+        public string? UserVerifyUrl { get => _explicitNullValueUserVerifyUrl; set { _explicitNullValueUserVerifyUrl = value; AdditionalData?.Remove("userVerifyUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userVerifyUrl"); else _explicitNullProperties?.Remove("userVerifyUrl"); } }
+        private string? _explicitNullValueUserVerifyUrl = default!;
 #nullable restore
 #else
-        public string UserVerifyUrl { get; set; }
+        public string UserVerifyUrl { get => _explicitNullValueUserVerifyUrl; set { _explicitNullValueUserVerifyUrl = value; AdditionalData?.Remove("userVerifyUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userVerifyUrl"); else _explicitNullProperties?.Remove("userVerifyUrl"); } }
+        private string _explicitNullValueUserVerifyUrl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExternalSettings"/> and sets the default values.
@@ -69,7 +96,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.ExternalSettings CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.ExternalSettings();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.ExternalSettings(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -98,6 +125,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("fetchAccountsUri", FetchAccountsUri);
             writer.WriteStringValue("updateMeetingUrl", UpdateMeetingUrl);
             writer.WriteStringValue("userVerifyUrl", UserVerifyUrl);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

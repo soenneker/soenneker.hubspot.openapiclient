@@ -11,28 +11,49 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class LookupAssociationSpec : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("associationSpec") is null) { _explicitNullValueAssociationSpec = default!; _explicitNullProperties?.Remove("associationSpec"); }
+            else if (parseNode.GetChildNode("associationSpec") is { } nullNodeAssociationSpec && nullNodeAssociationSpec.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssociationSpec = null;
+            if (parseNode.GetChildNode("cardinality") is null) { _explicitNullValueCardinality = default!; _explicitNullProperties?.Remove("cardinality"); }
+            else if (parseNode.GetChildNode("cardinality") is { } nullNodeCardinality && nullNodeCardinality.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cardinality = null;
+            if (parseNode.GetChildNode("maxToObjectIds") is null) { _explicitNullValueMaxToObjectIds = default!; _explicitNullProperties?.Remove("maxToObjectIds"); }
+            else if (parseNode.GetChildNode("maxToObjectIds") is { } nullNodeMaxToObjectIds && nullNodeMaxToObjectIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxToObjectIds = null;
+            if (parseNode.GetChildNode("toObjectTypeId") is null) { _explicitNullValueToObjectTypeId = default!; _explicitNullProperties?.Remove("toObjectTypeId"); }
+            else if (parseNode.GetChildNode("toObjectTypeId") is { } nullNodeToObjectTypeId && nullNodeToObjectTypeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToObjectTypeId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Defines the type, direction, and details of the relationship between two CRM objects.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AssociationSpec? AssociationSpec { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AssociationSpec? AssociationSpec { get => _explicitNullValueAssociationSpec; set { _explicitNullValueAssociationSpec = value; AdditionalData?.Remove("associationSpec"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("associationSpec"); else _explicitNullProperties?.Remove("associationSpec"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.AssociationSpec? _explicitNullValueAssociationSpec = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AssociationSpec AssociationSpec { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AssociationSpec AssociationSpec { get => _explicitNullValueAssociationSpec; set { _explicitNullValueAssociationSpec = value; AdditionalData?.Remove("associationSpec"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("associationSpec"); else _explicitNullProperties?.Remove("associationSpec"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.AssociationSpec _explicitNullValueAssociationSpec = default!;
 #endif
         /// <summary>Specifies the nature of the association in terms of its cardinality, such as one-to-one or one-to-many.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LookupAssociationSpecCardinality? Cardinality { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LookupAssociationSpecCardinality? Cardinality { get => _explicitNullValueCardinality; set { _explicitNullValueCardinality = value; AdditionalData?.Remove("cardinality"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cardinality"); else _explicitNullProperties?.Remove("cardinality"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LookupAssociationSpecCardinality? _explicitNullValueCardinality = default!;
         /// <summary>An integer indicating the maximum number of target object IDs that can be associated. This sets a limit on how many associations can be made to the target object type.</summary>
-        public int? MaxToObjectIds { get; set; }
+        public int? MaxToObjectIds { get => _explicitNullValueMaxToObjectIds; set { _explicitNullValueMaxToObjectIds = value; AdditionalData?.Remove("maxToObjectIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxToObjectIds"); else _explicitNullProperties?.Remove("maxToObjectIds"); } }
+        private int? _explicitNullValueMaxToObjectIds = default!;
         /// <summary>A string representing the unique identifier of the target object type to which the association is made.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ToObjectTypeId { get; set; }
+        public string? ToObjectTypeId { get => _explicitNullValueToObjectTypeId; set { _explicitNullValueToObjectTypeId = value; AdditionalData?.Remove("toObjectTypeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("toObjectTypeId"); else _explicitNullProperties?.Remove("toObjectTypeId"); } }
+        private string? _explicitNullValueToObjectTypeId = default!;
 #nullable restore
 #else
-        public string ToObjectTypeId { get; set; }
+        public string ToObjectTypeId { get => _explicitNullValueToObjectTypeId; set { _explicitNullValueToObjectTypeId = value; AdditionalData?.Remove("toObjectTypeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("toObjectTypeId"); else _explicitNullProperties?.Remove("toObjectTypeId"); } }
+        private string _explicitNullValueToObjectTypeId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.LookupAssociationSpec"/> and sets the default values.
@@ -49,7 +70,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.LookupAssociationSpec CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.LookupAssociationSpec();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.LookupAssociationSpec(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -60,7 +81,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "associationSpec", n => { AssociationSpec = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.AssociationSpec>(global::Soenneker.HubSpot.OpenApiClient.Models.AssociationSpec.CreateFromDiscriminatorValue); } },
-                { "cardinality", n => { Cardinality = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.LookupAssociationSpecCardinality>(); } },
+                { "cardinality", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.LookupAssociationSpecCardinality>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCardinality = default; _explicitNullProperties?.Remove("cardinality"); AdditionalData["cardinality"] = unknown; } else { Cardinality = parsed; AdditionalData.Remove("cardinality"); } } },
                 { "maxToObjectIds", n => { MaxToObjectIds = n.GetIntValue(); } },
                 { "toObjectTypeId", n => { ToObjectTypeId = n.GetStringValue(); } },
             };
@@ -76,6 +97,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.LookupAssociationSpecCardinality>("cardinality", Cardinality);
             writer.WriteIntValue("maxToObjectIds", MaxToObjectIds);
             writer.WriteStringValue("toObjectTypeId", ToObjectTypeId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

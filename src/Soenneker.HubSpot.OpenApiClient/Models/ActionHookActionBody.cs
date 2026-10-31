@@ -11,44 +11,73 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ActionHookActionBody : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("confirmation") is null) { _explicitNullValueConfirmation = default!; _explicitNullProperties?.Remove("confirmation"); }
+            else if (parseNode.GetChildNode("confirmation") is { } nullNodeConfirmation && nullNodeConfirmation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Confirmation = null;
+            if (parseNode.GetChildNode("httpMethod") is null) { _explicitNullValueHttpMethod = default!; _explicitNullProperties?.Remove("httpMethod"); }
+            else if (parseNode.GetChildNode("httpMethod") is { } nullNodeHttpMethod && nullNodeHttpMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HttpMethod = null;
+            if (parseNode.GetChildNode("label") is null) { _explicitNullValueLabel = default!; _explicitNullProperties?.Remove("label"); }
+            else if (parseNode.GetChildNode("label") is { } nullNodeLabel && nullNodeLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Label = null;
+            if (parseNode.GetChildNode("propertyNamesIncluded") is null) { _explicitNullValuePropertyNamesIncluded = default!; _explicitNullProperties?.Remove("propertyNamesIncluded"); }
+            else if (parseNode.GetChildNode("propertyNamesIncluded") is { } nullNodePropertyNamesIncluded && nullNodePropertyNamesIncluded.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PropertyNamesIncluded = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("url") is null) { _explicitNullValueUrl = default!; _explicitNullProperties?.Remove("url"); }
+            else if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The confirmation property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ActionConfirmationBody? Confirmation { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ActionConfirmationBody? Confirmation { get => _explicitNullValueConfirmation; set { _explicitNullValueConfirmation = value; AdditionalData?.Remove("confirmation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confirmation"); else _explicitNullProperties?.Remove("confirmation"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ActionConfirmationBody? _explicitNullValueConfirmation = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ActionConfirmationBody Confirmation { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ActionConfirmationBody Confirmation { get => _explicitNullValueConfirmation; set { _explicitNullValueConfirmation = value; AdditionalData?.Remove("confirmation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confirmation"); else _explicitNullProperties?.Remove("confirmation"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ActionConfirmationBody _explicitNullValueConfirmation = default!;
 #endif
         /// <summary>The HTTP method to be used when making the call, which can be set to GET, POST, PUT, DELETE, or PATCH. If using GET or DELETE</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ActionHookActionBodyHttpMethod? HttpMethod { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ActionHookActionBodyHttpMethod? HttpMethod { get => _explicitNullValueHttpMethod; set { _explicitNullValueHttpMethod = value; AdditionalData?.Remove("httpMethod"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("httpMethod"); else _explicitNullProperties?.Remove("httpMethod"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ActionHookActionBodyHttpMethod? _explicitNullValueHttpMethod = default!;
         /// <summary>The label for this property as you&apos;d like it displayed to users.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Label { get; set; }
+        public string? Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; AdditionalData?.Remove("label"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
+        private string? _explicitNullValueLabel = default!;
 #nullable restore
 #else
-        public string Label { get; set; }
+        public string Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; AdditionalData?.Remove("label"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
+        private string _explicitNullValueLabel = default!;
 #endif
         /// <summary>A list of property names that will be included on the action. See the documentation for more information</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? PropertyNamesIncluded { get; set; }
+        public List<string>? PropertyNamesIncluded { get => _explicitNullValuePropertyNamesIncluded; set { _explicitNullValuePropertyNamesIncluded = value; AdditionalData?.Remove("propertyNamesIncluded"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("propertyNamesIncluded"); else _explicitNullProperties?.Remove("propertyNamesIncluded"); } }
+        private List<string>? _explicitNullValuePropertyNamesIncluded = default!;
 #nullable restore
 #else
-        public List<string> PropertyNamesIncluded { get; set; }
+        public List<string> PropertyNamesIncluded { get => _explicitNullValuePropertyNamesIncluded; set { _explicitNullValuePropertyNamesIncluded = value; AdditionalData?.Remove("propertyNamesIncluded"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("propertyNamesIncluded"); else _explicitNullProperties?.Remove("propertyNamesIncluded"); } }
+        private List<string> _explicitNullValuePropertyNamesIncluded = default!;
 #endif
         /// <summary>The type of status.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ActionHookType? Type { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ActionHookType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ActionHookType? _explicitNullValueType = default!;
         /// <summary>The URL endpoint that will be called when the action is triggered.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get; set; }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get; set; }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ActionHookActionBody"/> and sets the default values.
@@ -65,7 +94,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.ActionHookActionBody CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.ActionHookActionBody();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.ActionHookActionBody(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -76,10 +105,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "confirmation", n => { Confirmation = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionConfirmationBody>(global::Soenneker.HubSpot.OpenApiClient.Models.ActionConfirmationBody.CreateFromDiscriminatorValue); } },
-                { "httpMethod", n => { HttpMethod = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionHookActionBodyHttpMethod>(); } },
+                { "httpMethod", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionHookActionBodyHttpMethod>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueHttpMethod = default; _explicitNullProperties?.Remove("httpMethod"); AdditionalData["httpMethod"] = unknown; } else { HttpMethod = parsed; AdditionalData.Remove("httpMethod"); } } },
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "propertyNamesIncluded", n => { PropertyNamesIncluded = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionHookType>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionHookType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
         }
@@ -96,6 +125,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("propertyNamesIncluded", PropertyNamesIncluded);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionHookType>("type", Type);
             writer.WriteStringValue("url", Url);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

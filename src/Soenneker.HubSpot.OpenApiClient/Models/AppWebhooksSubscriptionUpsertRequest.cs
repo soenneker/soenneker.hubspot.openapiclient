@@ -12,7 +12,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AppWebhooksSubscriptionUpsertRequest : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksAppLifecycleEventSubscriptionUpsertRequest"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -65,25 +70,45 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             var result = new global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksSubscriptionUpsertRequest();
             if("AppWebhooksAppLifecycleEventSubscriptionUpsertRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.AppWebhooksAppLifecycleEventSubscriptionUpsertRequest = new global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksAppLifecycleEventSubscriptionUpsertRequest();
+                
             }
             else if("AppWebhooksAssociationSubscriptionUpsertRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.AppWebhooksAssociationSubscriptionUpsertRequest = new global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksAssociationSubscriptionUpsertRequest();
+                
             }
             else if("AppWebhooksGdprPrivacyDeletionSubscriptionUpsertRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.AppWebhooksGdprPrivacyDeletionSubscriptionUpsertRequest = new global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksGdprPrivacyDeletionSubscriptionUpsertRequest();
+                
             }
             else if("AppWebhooksListMembershipSubscriptionUpsertRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.AppWebhooksListMembershipSubscriptionUpsertRequest = new global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksListMembershipSubscriptionUpsertRequest();
+                
             }
             else if("AppWebhooksObjectSubscriptionUpsertRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.AppWebhooksObjectSubscriptionUpsertRequest = new global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksObjectSubscriptionUpsertRequest();
+                
             }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => ((unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject)) && (unionPayload is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject shapeObject0 || (shapeObject0.GetValue() is var shapeMembers1 && (shapeMembers1.ContainsKey("actions") && shapeMembers1.ContainsKey("objectIds") && shapeMembers1.ContainsKey("objectTypeId") && shapeMembers1.ContainsKey("portalId") && shapeMembers1.ContainsKey("properties") && shapeMembers1.ContainsKey("subscriptionType") && (!shapeMembers1.ContainsKey("actions") || (((shapeMembers1["actions"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray)))) && (!shapeMembers1.ContainsKey("objectIds") || (((shapeMembers1["objectIds"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray)))) && (!shapeMembers1.ContainsKey("objectTypeId") || (((shapeMembers1["objectTypeId"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers1.ContainsKey("portalId") || ((((shapeMembers1["portalId"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedInteger or global::Microsoft.Kiota.Abstractions.Serialization.UntypedLong || (shapeMembers1["portalId"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedDouble integral8 && integral8.GetValue() % 1 == 0) || (shapeMembers1["portalId"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedDecimal integral9 && integral9.GetValue() % 1 == 0) || (shapeMembers1["portalId"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedFloat integral10 && integral10.GetValue() % 1 == 0)))))) && (!shapeMembers1.ContainsKey("properties") || (((shapeMembers1["properties"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray)))) && (!shapeMembers1.ContainsKey("subscriptionType") || (((shapeMembers1["subscriptionType"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)) && ((shapeMembers1["subscriptionType"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal15 && "OBJECT".Equals(literal15.GetValue(), global::System.StringComparison.Ordinal))))))))))();
+            bool matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => ((unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject)) && (unionPayload is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject shapeObject0 || (shapeObject0.GetValue() is var shapeMembers1 && (shapeMembers1.ContainsKey("actions") && shapeMembers1.ContainsKey("associatedObjectTypeIds") && shapeMembers1.ContainsKey("objectIds") && shapeMembers1.ContainsKey("objectTypeId") && shapeMembers1.ContainsKey("portalId") && shapeMembers1.ContainsKey("subscriptionType") && (!shapeMembers1.ContainsKey("actions") || (((shapeMembers1["actions"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray)))) && (!shapeMembers1.ContainsKey("associatedObjectTypeIds") || (((shapeMembers1["associatedObjectTypeIds"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray)))) && (!shapeMembers1.ContainsKey("objectIds") || (((shapeMembers1["objectIds"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray)))) && (!shapeMembers1.ContainsKey("objectTypeId") || (((shapeMembers1["objectTypeId"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers1.ContainsKey("portalId") || ((((shapeMembers1["portalId"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedInteger or global::Microsoft.Kiota.Abstractions.Serialization.UntypedLong || (shapeMembers1["portalId"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedDouble integral10 && integral10.GetValue() % 1 == 0) || (shapeMembers1["portalId"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedDecimal integral11 && integral11.GetValue() % 1 == 0) || (shapeMembers1["portalId"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedFloat integral12 && integral12.GetValue() % 1 == 0)))))) && (!shapeMembers1.ContainsKey("subscriptionType") || (((shapeMembers1["subscriptionType"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)) && ((shapeMembers1["subscriptionType"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal15 && "ASSOCIATION".Equals(literal15.GetValue(), global::System.StringComparison.Ordinal))))))))))();
+            bool matchesUnionBranch2 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => ((unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject)) && (unionPayload is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject shapeObject0 || (shapeObject0.GetValue() is var shapeMembers1 && (shapeMembers1.ContainsKey("eventTypeId") && shapeMembers1.ContainsKey("properties") && shapeMembers1.ContainsKey("subscriptionType") && (!shapeMembers1.ContainsKey("eventTypeId") || (((shapeMembers1["eventTypeId"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers1.ContainsKey("properties") || (((shapeMembers1["properties"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray)))) && (!shapeMembers1.ContainsKey("subscriptionType") || (((shapeMembers1["subscriptionType"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)) && ((shapeMembers1["subscriptionType"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal6 && "APP_LIFECYCLE_EVENT".Equals(literal6.GetValue(), global::System.StringComparison.Ordinal))))))))))();
+            bool matchesUnionBranch3 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => ((unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject)) && (unionPayload is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject shapeObject0 || (shapeObject0.GetValue() is var shapeMembers1 && (shapeMembers1.ContainsKey("actions") && shapeMembers1.ContainsKey("listIds") && shapeMembers1.ContainsKey("objectIds") && shapeMembers1.ContainsKey("portalId") && shapeMembers1.ContainsKey("subscriptionType") && (!shapeMembers1.ContainsKey("actions") || (((shapeMembers1["actions"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray)))) && (!shapeMembers1.ContainsKey("listIds") || (((shapeMembers1["listIds"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray)))) && (!shapeMembers1.ContainsKey("objectIds") || (((shapeMembers1["objectIds"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray)))) && (!shapeMembers1.ContainsKey("portalId") || ((((shapeMembers1["portalId"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedInteger or global::Microsoft.Kiota.Abstractions.Serialization.UntypedLong || (shapeMembers1["portalId"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedDouble integral8 && integral8.GetValue() % 1 == 0) || (shapeMembers1["portalId"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedDecimal integral9 && integral9.GetValue() % 1 == 0) || (shapeMembers1["portalId"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedFloat integral10 && integral10.GetValue() % 1 == 0)))))) && (!shapeMembers1.ContainsKey("subscriptionType") || (((shapeMembers1["subscriptionType"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)) && ((shapeMembers1["subscriptionType"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal13 && "LIST_MEMBERSHIP".Equals(literal13.GetValue(), global::System.StringComparison.Ordinal))))))))))();
+            bool matchesUnionBranch4 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => ((unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject)) && (unionPayload is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject shapeObject0 || (shapeObject0.GetValue() is var shapeMembers1 && (shapeMembers1.ContainsKey("actions") && shapeMembers1.ContainsKey("objectTypeId") && shapeMembers1.ContainsKey("portalId") && shapeMembers1.ContainsKey("subscriptionType") && (!shapeMembers1.ContainsKey("actions") || (((shapeMembers1["actions"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray)))) && (!shapeMembers1.ContainsKey("objectTypeId") || (((shapeMembers1["objectTypeId"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers1.ContainsKey("portalId") || ((((shapeMembers1["portalId"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedInteger or global::Microsoft.Kiota.Abstractions.Serialization.UntypedLong || (shapeMembers1["portalId"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedDouble integral6 && integral6.GetValue() % 1 == 0) || (shapeMembers1["portalId"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedDecimal integral7 && integral7.GetValue() % 1 == 0) || (shapeMembers1["portalId"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedFloat integral8 && integral8.GetValue() % 1 == 0)))))) && (!shapeMembers1.ContainsKey("subscriptionType") || (((shapeMembers1["subscriptionType"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)) && ((shapeMembers1["subscriptionType"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal11 && "GDPR_PRIVACY_DELETION".Equals(literal11.GetValue(), global::System.StringComparison.Ordinal))))))))))();
+            int matchingUnionBranches = 0;
+            if (matchesUnionBranch0) matchingUnionBranches++;
+            if (matchesUnionBranch1) matchingUnionBranches++;
+            if (matchesUnionBranch2) matchingUnionBranches++;
+            if (matchesUnionBranch3) matchingUnionBranches++;
+            if (matchesUnionBranch4) matchingUnionBranches++;
+            bool noSelectedUnionBranch = result.AppWebhooksAppLifecycleEventSubscriptionUpsertRequest == null && result.AppWebhooksAssociationSubscriptionUpsertRequest == null && result.AppWebhooksGdprPrivacyDeletionSubscriptionUpsertRequest == null && result.AppWebhooksListMembershipSubscriptionUpsertRequest == null && result.AppWebhooksObjectSubscriptionUpsertRequest == null;
+            if (noSelectedUnionBranch && matchesUnionBranch0 && matchingUnionBranches == 1) result.AppWebhooksObjectSubscriptionUpsertRequest = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksObjectSubscriptionUpsertRequest(), parseNode);
+            if (noSelectedUnionBranch && matchesUnionBranch1 && matchingUnionBranches == 1) result.AppWebhooksAssociationSubscriptionUpsertRequest = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksAssociationSubscriptionUpsertRequest(), parseNode);
+            if (noSelectedUnionBranch && matchesUnionBranch2 && matchingUnionBranches == 1) result.AppWebhooksAppLifecycleEventSubscriptionUpsertRequest = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksAppLifecycleEventSubscriptionUpsertRequest(), parseNode);
+            if (noSelectedUnionBranch && matchesUnionBranch3 && matchingUnionBranches == 1) result.AppWebhooksListMembershipSubscriptionUpsertRequest = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksListMembershipSubscriptionUpsertRequest(), parseNode);
+            if (noSelectedUnionBranch && matchesUnionBranch4 && matchingUnionBranches == 1) result.AppWebhooksGdprPrivacyDeletionSubscriptionUpsertRequest = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksGdprPrivacyDeletionSubscriptionUpsertRequest(), parseNode);
+            if (result.AppWebhooksAppLifecycleEventSubscriptionUpsertRequest == null && result.AppWebhooksAssociationSubscriptionUpsertRequest == null && result.AppWebhooksGdprPrivacyDeletionSubscriptionUpsertRequest == null && result.AppWebhooksListMembershipSubscriptionUpsertRequest == null && result.AppWebhooksObjectSubscriptionUpsertRequest == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -91,6 +116,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
+            if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawFields) { var fields = new global::System.Collections.Generic.Dictionary<string, global::System.Action<IParseNode>>(); foreach (var entry in rawFields.GetValue()) fields[entry.Key] = _ => { }; return fields; }
+
             if(AppWebhooksAppLifecycleEventSubscriptionUpsertRequest != null)
             {
                 return AppWebhooksAppLifecycleEventSubscriptionUpsertRequest.GetFieldDeserializers();
@@ -119,25 +146,44 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (AppWebhooksAppLifecycleEventSubscriptionUpsertRequest == null && AppWebhooksAssociationSubscriptionUpsertRequest == null && AppWebhooksGdprPrivacyDeletionSubscriptionUpsertRequest == null && AppWebhooksListMembershipSubscriptionUpsertRequest == null && AppWebhooksObjectSubscriptionUpsertRequest == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            int selectedUnionBranches = 0;
+            if (AppWebhooksAppLifecycleEventSubscriptionUpsertRequest != null) selectedUnionBranches++;
+            if (AppWebhooksAssociationSubscriptionUpsertRequest != null) selectedUnionBranches++;
+            if (AppWebhooksGdprPrivacyDeletionSubscriptionUpsertRequest != null) selectedUnionBranches++;
+            if (AppWebhooksListMembershipSubscriptionUpsertRequest != null) selectedUnionBranches++;
+            if (AppWebhooksObjectSubscriptionUpsertRequest != null) selectedUnionBranches++;
+            if (AppWebhooksAppLifecycleEventSubscriptionUpsertRequest != null && selectedUnionBranches == 1) { if (AppWebhooksAppLifecycleEventSubscriptionUpsertRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, AppWebhooksAppLifecycleEventSubscriptionUpsertRequest); return; }
+            if (AppWebhooksAssociationSubscriptionUpsertRequest != null && selectedUnionBranches == 1) { if (AppWebhooksAssociationSubscriptionUpsertRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, AppWebhooksAssociationSubscriptionUpsertRequest); return; }
+            if (AppWebhooksGdprPrivacyDeletionSubscriptionUpsertRequest != null && selectedUnionBranches == 1) { if (AppWebhooksGdprPrivacyDeletionSubscriptionUpsertRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, AppWebhooksGdprPrivacyDeletionSubscriptionUpsertRequest); return; }
+            if (AppWebhooksListMembershipSubscriptionUpsertRequest != null && selectedUnionBranches == 1) { if (AppWebhooksListMembershipSubscriptionUpsertRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, AppWebhooksListMembershipSubscriptionUpsertRequest); return; }
+            if (AppWebhooksObjectSubscriptionUpsertRequest != null && selectedUnionBranches == 1) { if (AppWebhooksObjectSubscriptionUpsertRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, AppWebhooksObjectSubscriptionUpsertRequest); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(AppWebhooksAppLifecycleEventSubscriptionUpsertRequest != null)
             {
+                if (AppWebhooksAppLifecycleEventSubscriptionUpsertRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksAppLifecycleEventSubscriptionUpsertRequest>(null, AppWebhooksAppLifecycleEventSubscriptionUpsertRequest);
             }
             else if(AppWebhooksAssociationSubscriptionUpsertRequest != null)
             {
+                if (AppWebhooksAssociationSubscriptionUpsertRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksAssociationSubscriptionUpsertRequest>(null, AppWebhooksAssociationSubscriptionUpsertRequest);
             }
             else if(AppWebhooksGdprPrivacyDeletionSubscriptionUpsertRequest != null)
             {
+                if (AppWebhooksGdprPrivacyDeletionSubscriptionUpsertRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksGdprPrivacyDeletionSubscriptionUpsertRequest>(null, AppWebhooksGdprPrivacyDeletionSubscriptionUpsertRequest);
             }
             else if(AppWebhooksListMembershipSubscriptionUpsertRequest != null)
             {
+                if (AppWebhooksListMembershipSubscriptionUpsertRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksListMembershipSubscriptionUpsertRequest>(null, AppWebhooksListMembershipSubscriptionUpsertRequest);
             }
             else if(AppWebhooksObjectSubscriptionUpsertRequest != null)
             {
+                if (AppWebhooksObjectSubscriptionUpsertRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksObjectSubscriptionUpsertRequest>(null, AppWebhooksObjectSubscriptionUpsertRequest);
             }
         }

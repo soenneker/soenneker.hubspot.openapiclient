@@ -11,62 +11,102 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CrmObjectSchemasObjectTypeDefinitionPatch : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("allowsSensitiveProperties") is null) { _explicitNullValueAllowsSensitiveProperties = default!; _explicitNullProperties?.Remove("allowsSensitiveProperties"); }
+            else if (parseNode.GetChildNode("allowsSensitiveProperties") is { } nullNodeAllowsSensitiveProperties && nullNodeAllowsSensitiveProperties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowsSensitiveProperties = null;
+            if (parseNode.GetChildNode("clearDescription") is null) { _explicitNullValueClearDescription = default!; _explicitNullProperties?.Remove("clearDescription"); }
+            else if (parseNode.GetChildNode("clearDescription") is { } nullNodeClearDescription && nullNodeClearDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClearDescription = null;
+            if (parseNode.GetChildNode("description") is null) { _explicitNullValueDescription = default!; _explicitNullProperties?.Remove("description"); }
+            else if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("labels") is null) { _explicitNullValueLabels = default!; _explicitNullProperties?.Remove("labels"); }
+            else if (parseNode.GetChildNode("labels") is { } nullNodeLabels && nullNodeLabels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Labels = null;
+            if (parseNode.GetChildNode("primaryDisplayProperty") is null) { _explicitNullValuePrimaryDisplayProperty = default!; _explicitNullProperties?.Remove("primaryDisplayProperty"); }
+            else if (parseNode.GetChildNode("primaryDisplayProperty") is { } nullNodePrimaryDisplayProperty && nullNodePrimaryDisplayProperty.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimaryDisplayProperty = null;
+            if (parseNode.GetChildNode("requiredProperties") is null) { _explicitNullValueRequiredProperties = default!; _explicitNullProperties?.Remove("requiredProperties"); }
+            else if (parseNode.GetChildNode("requiredProperties") is { } nullNodeRequiredProperties && nullNodeRequiredProperties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequiredProperties = null;
+            if (parseNode.GetChildNode("restorable") is null) { _explicitNullValueRestorable = default!; _explicitNullProperties?.Remove("restorable"); }
+            else if (parseNode.GetChildNode("restorable") is { } nullNodeRestorable && nullNodeRestorable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Restorable = null;
+            if (parseNode.GetChildNode("searchableProperties") is null) { _explicitNullValueSearchableProperties = default!; _explicitNullProperties?.Remove("searchableProperties"); }
+            else if (parseNode.GetChildNode("searchableProperties") is { } nullNodeSearchableProperties && nullNodeSearchableProperties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SearchableProperties = null;
+            if (parseNode.GetChildNode("secondaryDisplayProperties") is null) { _explicitNullValueSecondaryDisplayProperties = default!; _explicitNullProperties?.Remove("secondaryDisplayProperties"); }
+            else if (parseNode.GetChildNode("secondaryDisplayProperties") is { } nullNodeSecondaryDisplayProperties && nullNodeSecondaryDisplayProperties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecondaryDisplayProperties = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Determines if the object type can include properties that are marked as sensitive.</summary>
-        public bool? AllowsSensitiveProperties { get; set; }
+        public bool? AllowsSensitiveProperties { get => _explicitNullValueAllowsSensitiveProperties; set { _explicitNullValueAllowsSensitiveProperties = value; AdditionalData?.Remove("allowsSensitiveProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowsSensitiveProperties"); else _explicitNullProperties?.Remove("allowsSensitiveProperties"); } }
+        private bool? _explicitNullValueAllowsSensitiveProperties = default!;
         /// <summary>Indicates whether the description of the object type should be cleared.</summary>
-        public bool? ClearDescription { get; set; }
+        public bool? ClearDescription { get => _explicitNullValueClearDescription; set { _explicitNullValueClearDescription = value; AdditionalData?.Remove("clearDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clearDescription"); else _explicitNullProperties?.Remove("clearDescription"); } }
+        private bool? _explicitNullValueClearDescription = default!;
         /// <summary>A brief explanation of the object type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>The labels property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectSchemasObjectTypeDefinitionLabels? Labels { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectSchemasObjectTypeDefinitionLabels? Labels { get => _explicitNullValueLabels; set { _explicitNullValueLabels = value; AdditionalData?.Remove("labels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("labels"); else _explicitNullProperties?.Remove("labels"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectSchemasObjectTypeDefinitionLabels? _explicitNullValueLabels = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectSchemasObjectTypeDefinitionLabels Labels { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectSchemasObjectTypeDefinitionLabels Labels { get => _explicitNullValueLabels; set { _explicitNullValueLabels = value; AdditionalData?.Remove("labels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("labels"); else _explicitNullProperties?.Remove("labels"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectSchemasObjectTypeDefinitionLabels _explicitNullValueLabels = default!;
 #endif
         /// <summary>The name of the primary property for this object. This will be displayed as primary on the HubSpot record page for this object type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrimaryDisplayProperty { get; set; }
+        public string? PrimaryDisplayProperty { get => _explicitNullValuePrimaryDisplayProperty; set { _explicitNullValuePrimaryDisplayProperty = value; AdditionalData?.Remove("primaryDisplayProperty"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primaryDisplayProperty"); else _explicitNullProperties?.Remove("primaryDisplayProperty"); } }
+        private string? _explicitNullValuePrimaryDisplayProperty = default!;
 #nullable restore
 #else
-        public string PrimaryDisplayProperty { get; set; }
+        public string PrimaryDisplayProperty { get => _explicitNullValuePrimaryDisplayProperty; set { _explicitNullValuePrimaryDisplayProperty = value; AdditionalData?.Remove("primaryDisplayProperty"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primaryDisplayProperty"); else _explicitNullProperties?.Remove("primaryDisplayProperty"); } }
+        private string _explicitNullValuePrimaryDisplayProperty = default!;
 #endif
         /// <summary>The names of properties that should be **required** when creating an object of this type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? RequiredProperties { get; set; }
+        public List<string>? RequiredProperties { get => _explicitNullValueRequiredProperties; set { _explicitNullValueRequiredProperties = value; AdditionalData?.Remove("requiredProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requiredProperties"); else _explicitNullProperties?.Remove("requiredProperties"); } }
+        private List<string>? _explicitNullValueRequiredProperties = default!;
 #nullable restore
 #else
-        public List<string> RequiredProperties { get; set; }
+        public List<string> RequiredProperties { get => _explicitNullValueRequiredProperties; set { _explicitNullValueRequiredProperties = value; AdditionalData?.Remove("requiredProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requiredProperties"); else _explicitNullProperties?.Remove("requiredProperties"); } }
+        private List<string> _explicitNullValueRequiredProperties = default!;
 #endif
         /// <summary>Specifies if the object type can be restored after being deleted.</summary>
-        public bool? Restorable { get; set; }
+        public bool? Restorable { get => _explicitNullValueRestorable; set { _explicitNullValueRestorable = value; AdditionalData?.Remove("restorable"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("restorable"); else _explicitNullProperties?.Remove("restorable"); } }
+        private bool? _explicitNullValueRestorable = default!;
         /// <summary>Names of properties that will be indexed for this object type in by HubSpot&apos;s product search.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? SearchableProperties { get; set; }
+        public List<string>? SearchableProperties { get => _explicitNullValueSearchableProperties; set { _explicitNullValueSearchableProperties = value; AdditionalData?.Remove("searchableProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("searchableProperties"); else _explicitNullProperties?.Remove("searchableProperties"); } }
+        private List<string>? _explicitNullValueSearchableProperties = default!;
 #nullable restore
 #else
-        public List<string> SearchableProperties { get; set; }
+        public List<string> SearchableProperties { get => _explicitNullValueSearchableProperties; set { _explicitNullValueSearchableProperties = value; AdditionalData?.Remove("searchableProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("searchableProperties"); else _explicitNullProperties?.Remove("searchableProperties"); } }
+        private List<string> _explicitNullValueSearchableProperties = default!;
 #endif
         /// <summary>The names of secondary properties for this object. These will be displayed as secondary on the HubSpot record page for this object type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? SecondaryDisplayProperties { get; set; }
+        public List<string>? SecondaryDisplayProperties { get => _explicitNullValueSecondaryDisplayProperties; set { _explicitNullValueSecondaryDisplayProperties = value; AdditionalData?.Remove("secondaryDisplayProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondaryDisplayProperties"); else _explicitNullProperties?.Remove("secondaryDisplayProperties"); } }
+        private List<string>? _explicitNullValueSecondaryDisplayProperties = default!;
 #nullable restore
 #else
-        public List<string> SecondaryDisplayProperties { get; set; }
+        public List<string> SecondaryDisplayProperties { get => _explicitNullValueSecondaryDisplayProperties; set { _explicitNullValueSecondaryDisplayProperties = value; AdditionalData?.Remove("secondaryDisplayProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondaryDisplayProperties"); else _explicitNullProperties?.Remove("secondaryDisplayProperties"); } }
+        private List<string> _explicitNullValueSecondaryDisplayProperties = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectSchemasObjectTypeDefinitionPatch"/> and sets the default values.
@@ -83,7 +123,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectSchemasObjectTypeDefinitionPatch CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectSchemasObjectTypeDefinitionPatch();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.CrmObjectSchemasObjectTypeDefinitionPatch(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -120,6 +160,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteBoolValue("restorable", Restorable);
             writer.WriteCollectionOfPrimitiveValues<string>("searchableProperties", SearchableProperties);
             writer.WriteCollectionOfPrimitiveValues<string>("secondaryDisplayProperties", SecondaryDisplayProperties);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

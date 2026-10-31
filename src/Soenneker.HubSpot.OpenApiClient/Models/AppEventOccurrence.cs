@@ -11,90 +11,140 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AppEventOccurrence : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("domain") is null) { _explicitNullValueDomain = default!; _explicitNullProperties?.Remove("domain"); }
+            else if (parseNode.GetChildNode("domain") is { } nullNodeDomain && nullNodeDomain.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Domain = null;
+            if (parseNode.GetChildNode("email") is null) { _explicitNullValueEmail = default!; _explicitNullProperties?.Remove("email"); }
+            else if (parseNode.GetChildNode("email") is { } nullNodeEmail && nullNodeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Email = null;
+            if (parseNode.GetChildNode("eventTypeName") is null) { _explicitNullValueEventTypeName = default!; _explicitNullProperties?.Remove("eventTypeName"); }
+            else if (parseNode.GetChildNode("eventTypeName") is { } nullNodeEventTypeName && nullNodeEventTypeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventTypeName = null;
+            if (parseNode.GetChildNode("extraData") is null) { _explicitNullValueExtraData = default!; _explicitNullProperties?.Remove("extraData"); }
+            else if (parseNode.GetChildNode("extraData") is { } nullNodeExtraData && nullNodeExtraData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExtraData = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("objectId") is null) { _explicitNullValueObjectId = default!; _explicitNullProperties?.Remove("objectId"); }
+            else if (parseNode.GetChildNode("objectId") is { } nullNodeObjectId && nullNodeObjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectId = null;
+            if (parseNode.GetChildNode("objectTypeFullyQualifiedName") is null) { _explicitNullValueObjectTypeFullyQualifiedName = default!; _explicitNullProperties?.Remove("objectTypeFullyQualifiedName"); }
+            else if (parseNode.GetChildNode("objectTypeFullyQualifiedName") is { } nullNodeObjectTypeFullyQualifiedName && nullNodeObjectTypeFullyQualifiedName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectTypeFullyQualifiedName = null;
+            if (parseNode.GetChildNode("properties") is null) { _explicitNullValueProperties = default!; _explicitNullProperties?.Remove("properties"); }
+            else if (parseNode.GetChildNode("properties") is { } nullNodeProperties && nullNodeProperties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Properties = null;
+            if (parseNode.GetChildNode("timelineIFrame") is null) { _explicitNullValueTimelineIFrame = default!; _explicitNullProperties?.Remove("timelineIFrame"); }
+            else if (parseNode.GetChildNode("timelineIFrame") is { } nullNodeTimelineIFrame && nullNodeTimelineIFrame.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimelineIFrame = null;
+            if (parseNode.GetChildNode("timestamp") is null) { _explicitNullValueTimestamp = default!; _explicitNullProperties?.Remove("timestamp"); }
+            else if (parseNode.GetChildNode("timestamp") is { } nullNodeTimestamp && nullNodeTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Timestamp = null;
+            if (parseNode.GetChildNode("utk") is null) { _explicitNullValueUtk = default!; _explicitNullProperties?.Remove("utk"); }
+            else if (parseNode.GetChildNode("utk") is { } nullNodeUtk && nullNodeUtk.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Utk = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The domain associated with the event occurrence, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Domain { get; set; }
+        public string? Domain { get => _explicitNullValueDomain; set { _explicitNullValueDomain = value; AdditionalData?.Remove("domain"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain"); else _explicitNullProperties?.Remove("domain"); } }
+        private string? _explicitNullValueDomain = default!;
 #nullable restore
 #else
-        public string Domain { get; set; }
+        public string Domain { get => _explicitNullValueDomain; set { _explicitNullValueDomain = value; AdditionalData?.Remove("domain"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain"); else _explicitNullProperties?.Remove("domain"); } }
+        private string _explicitNullValueDomain = default!;
 #endif
         /// <summary>The email address associated with the event occurrence, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Email { get; set; }
+        public string? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; AdditionalData?.Remove("email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        private string? _explicitNullValueEmail = default!;
 #nullable restore
 #else
-        public string Email { get; set; }
+        public string Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; AdditionalData?.Remove("email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        private string _explicitNullValueEmail = default!;
 #endif
         /// <summary>The name of the event type, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EventTypeName { get; set; }
+        public string? EventTypeName { get => _explicitNullValueEventTypeName; set { _explicitNullValueEventTypeName = value; AdditionalData?.Remove("eventTypeName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eventTypeName"); else _explicitNullProperties?.Remove("eventTypeName"); } }
+        private string? _explicitNullValueEventTypeName = default!;
 #nullable restore
 #else
-        public string EventTypeName { get; set; }
+        public string EventTypeName { get => _explicitNullValueEventTypeName; set { _explicitNullValueEventTypeName = value; AdditionalData?.Remove("eventTypeName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eventTypeName"); else _explicitNullProperties?.Remove("eventTypeName"); } }
+        private string _explicitNullValueEventTypeName = default!;
 #endif
         /// <summary>An object containing additional data related to the event occurrence.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AppEventOccurrenceExtraDataProperty2? ExtraData { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AppEventOccurrenceExtraDataProperty2? ExtraData { get => _explicitNullValueExtraData; set { _explicitNullValueExtraData = value; AdditionalData?.Remove("extraData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extraData"); else _explicitNullProperties?.Remove("extraData"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.AppEventOccurrenceExtraDataProperty2? _explicitNullValueExtraData = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AppEventOccurrenceExtraDataProperty2 ExtraData { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AppEventOccurrenceExtraDataProperty2 ExtraData { get => _explicitNullValueExtraData; set { _explicitNullValueExtraData = value; AdditionalData?.Remove("extraData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extraData"); else _explicitNullProperties?.Remove("extraData"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.AppEventOccurrenceExtraDataProperty2 _explicitNullValueExtraData = default!;
 #endif
         /// <summary>The unique identifier for this event occurrence, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The unique identifier of the object related to the event, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ObjectId { get; set; }
+        public string? ObjectId { get => _explicitNullValueObjectId; set { _explicitNullValueObjectId = value; AdditionalData?.Remove("objectId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("objectId"); else _explicitNullProperties?.Remove("objectId"); } }
+        private string? _explicitNullValueObjectId = default!;
 #nullable restore
 #else
-        public string ObjectId { get; set; }
+        public string ObjectId { get => _explicitNullValueObjectId; set { _explicitNullValueObjectId = value; AdditionalData?.Remove("objectId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("objectId"); else _explicitNullProperties?.Remove("objectId"); } }
+        private string _explicitNullValueObjectId = default!;
 #endif
         /// <summary>The fully qualified name of the object type associated with the event, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ObjectTypeFullyQualifiedName { get; set; }
+        public string? ObjectTypeFullyQualifiedName { get => _explicitNullValueObjectTypeFullyQualifiedName; set { _explicitNullValueObjectTypeFullyQualifiedName = value; AdditionalData?.Remove("objectTypeFullyQualifiedName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("objectTypeFullyQualifiedName"); else _explicitNullProperties?.Remove("objectTypeFullyQualifiedName"); } }
+        private string? _explicitNullValueObjectTypeFullyQualifiedName = default!;
 #nullable restore
 #else
-        public string ObjectTypeFullyQualifiedName { get; set; }
+        public string ObjectTypeFullyQualifiedName { get => _explicitNullValueObjectTypeFullyQualifiedName; set { _explicitNullValueObjectTypeFullyQualifiedName = value; AdditionalData?.Remove("objectTypeFullyQualifiedName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("objectTypeFullyQualifiedName"); else _explicitNullProperties?.Remove("objectTypeFullyQualifiedName"); } }
+        private string _explicitNullValueObjectTypeFullyQualifiedName = default!;
 #endif
         /// <summary>A map of custom property names to their values, represented as an object with string values.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AppEventOccurrencePropertiesProperty2? Properties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AppEventOccurrencePropertiesProperty2? Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.AppEventOccurrencePropertiesProperty2? _explicitNullValueProperties = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AppEventOccurrencePropertiesProperty2 Properties { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AppEventOccurrencePropertiesProperty2 Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.AppEventOccurrencePropertiesProperty2 _explicitNullValueProperties = default!;
 #endif
         /// <summary>The timelineIFrame property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.TimelineEventIFrame? TimelineIFrame { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.TimelineEventIFrame? TimelineIFrame { get => _explicitNullValueTimelineIFrame; set { _explicitNullValueTimelineIFrame = value; AdditionalData?.Remove("timelineIFrame"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timelineIFrame"); else _explicitNullProperties?.Remove("timelineIFrame"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.TimelineEventIFrame? _explicitNullValueTimelineIFrame = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.TimelineEventIFrame TimelineIFrame { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.TimelineEventIFrame TimelineIFrame { get => _explicitNullValueTimelineIFrame; set { _explicitNullValueTimelineIFrame = value; AdditionalData?.Remove("timelineIFrame"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timelineIFrame"); else _explicitNullProperties?.Remove("timelineIFrame"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.TimelineEventIFrame _explicitNullValueTimelineIFrame = default!;
 #endif
         /// <summary>The date and time when the event occurred, represented in ISO 8601 format.</summary>
-        public DateTimeOffset? Timestamp { get; set; }
+        public DateTimeOffset? Timestamp { get => _explicitNullValueTimestamp; set { _explicitNullValueTimestamp = value; AdditionalData?.Remove("timestamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timestamp"); else _explicitNullProperties?.Remove("timestamp"); } }
+        private DateTimeOffset? _explicitNullValueTimestamp = default!;
         /// <summary>The user token key (utk) associated with the event, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Utk { get; set; }
+        public string? Utk { get => _explicitNullValueUtk; set { _explicitNullValueUtk = value; AdditionalData?.Remove("utk"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("utk"); else _explicitNullProperties?.Remove("utk"); } }
+        private string? _explicitNullValueUtk = default!;
 #nullable restore
 #else
-        public string Utk { get; set; }
+        public string Utk { get => _explicitNullValueUtk; set { _explicitNullValueUtk = value; AdditionalData?.Remove("utk"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("utk"); else _explicitNullProperties?.Remove("utk"); } }
+        private string _explicitNullValueUtk = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.AppEventOccurrence"/> and sets the default values.
@@ -111,7 +161,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.AppEventOccurrence CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.AppEventOccurrence();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.AppEventOccurrence(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -152,6 +202,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.TimelineEventIFrame>("timelineIFrame", TimelineIFrame);
             writer.WriteDateTimeOffsetValue("timestamp", Timestamp);
             writer.WriteStringValue("utk", Utk);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

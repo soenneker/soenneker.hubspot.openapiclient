@@ -12,24 +12,39 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CrmMultiAssociatedObjectWithLabel21 : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("associationTypes") is null) { _explicitNullValueAssociationTypes = default!; _explicitNullProperties?.Remove("associationTypes"); }
+            else if (parseNode.GetChildNode("associationTypes") is { } nullNodeAssociationTypes && nullNodeAssociationTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssociationTypes = null;
+            if (parseNode.GetChildNode("toObjectId") is null) { _explicitNullValueToObjectId = default!; _explicitNullProperties?.Remove("toObjectId"); }
+            else if (parseNode.GetChildNode("toObjectId") is { } nullNodeToObjectId && nullNodeToObjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToObjectId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An array of association specifications with labels, detailing the types of associations between the objects.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecWithLabel22>? AssociationTypes { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecWithLabel22>? AssociationTypes { get => _explicitNullValueAssociationTypes; set { _explicitNullValueAssociationTypes = value; AdditionalData?.Remove("associationTypes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("associationTypes"); else _explicitNullProperties?.Remove("associationTypes"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecWithLabel22>? _explicitNullValueAssociationTypes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecWithLabel22> AssociationTypes { get; set; }
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecWithLabel22> AssociationTypes { get => _explicitNullValueAssociationTypes; set { _explicitNullValueAssociationTypes = value; AdditionalData?.Remove("associationTypes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("associationTypes"); else _explicitNullProperties?.Remove("associationTypes"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecWithLabel22> _explicitNullValueAssociationTypes = default!;
 #endif
         /// <summary>The unique identifier of the target object to which associations are made. It is a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ToObjectId { get; set; }
+        public string? ToObjectId { get => _explicitNullValueToObjectId; set { _explicitNullValueToObjectId = value; AdditionalData?.Remove("toObjectId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("toObjectId"); else _explicitNullProperties?.Remove("toObjectId"); } }
+        private string? _explicitNullValueToObjectId = default!;
 #nullable restore
 #else
-        public string ToObjectId { get; set; }
+        public string ToObjectId { get => _explicitNullValueToObjectId; set { _explicitNullValueToObjectId = value; AdditionalData?.Remove("toObjectId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("toObjectId"); else _explicitNullProperties?.Remove("toObjectId"); } }
+        private string _explicitNullValueToObjectId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmMultiAssociatedObjectWithLabel21"/> and sets the default values.
@@ -46,7 +61,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.CrmMultiAssociatedObjectWithLabel21 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.CrmMultiAssociatedObjectWithLabel21();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.CrmMultiAssociatedObjectWithLabel21(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +84,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecWithLabel22>("associationTypes", AssociationTypes);
             writer.WriteStringValue("toObjectId", ToObjectId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

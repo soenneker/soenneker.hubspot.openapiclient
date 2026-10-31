@@ -11,44 +11,73 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TranscriptUtterance : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("endTimeMillis") is null) { _explicitNullValueEndTimeMillis = default!; _explicitNullProperties?.Remove("endTimeMillis"); }
+            else if (parseNode.GetChildNode("endTimeMillis") is { } nullNodeEndTimeMillis && nullNodeEndTimeMillis.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndTimeMillis = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("languageCode") is null) { _explicitNullValueLanguageCode = default!; _explicitNullProperties?.Remove("languageCode"); }
+            else if (parseNode.GetChildNode("languageCode") is { } nullNodeLanguageCode && nullNodeLanguageCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LanguageCode = null;
+            if (parseNode.GetChildNode("speaker") is null) { _explicitNullValueSpeaker = default!; _explicitNullProperties?.Remove("speaker"); }
+            else if (parseNode.GetChildNode("speaker") is { } nullNodeSpeaker && nullNodeSpeaker.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Speaker = null;
+            if (parseNode.GetChildNode("startTimeMillis") is null) { _explicitNullValueStartTimeMillis = default!; _explicitNullProperties?.Remove("startTimeMillis"); }
+            else if (parseNode.GetChildNode("startTimeMillis") is { } nullNodeStartTimeMillis && nullNodeStartTimeMillis.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartTimeMillis = null;
+            if (parseNode.GetChildNode("text") is null) { _explicitNullValueText = default!; _explicitNullProperties?.Remove("text"); }
+            else if (parseNode.GetChildNode("text") is { } nullNodeText && nullNodeText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Text = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The end time of the utterance, given as a Unix timestamp in milliseconds. It marks when the utterance ended.</summary>
-        public long? EndTimeMillis { get; set; }
+        public long? EndTimeMillis { get => _explicitNullValueEndTimeMillis; set { _explicitNullValueEndTimeMillis = value; AdditionalData?.Remove("endTimeMillis"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endTimeMillis"); else _explicitNullProperties?.Remove("endTimeMillis"); } }
+        private long? _explicitNullValueEndTimeMillis = default!;
         /// <summary>A unique identifier for the utterance, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The language code of the utterance, represented as a string. This indicates the language in which the text was spoken.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LanguageCode { get; set; }
+        public string? LanguageCode { get => _explicitNullValueLanguageCode; set { _explicitNullValueLanguageCode = value; AdditionalData?.Remove("languageCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("languageCode"); else _explicitNullProperties?.Remove("languageCode"); } }
+        private string? _explicitNullValueLanguageCode = default!;
 #nullable restore
 #else
-        public string LanguageCode { get; set; }
+        public string LanguageCode { get => _explicitNullValueLanguageCode; set { _explicitNullValueLanguageCode = value; AdditionalData?.Remove("languageCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("languageCode"); else _explicitNullProperties?.Remove("languageCode"); } }
+        private string _explicitNullValueLanguageCode = default!;
 #endif
         /// <summary>The speaker property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.Speaker? Speaker { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.Speaker? Speaker { get => _explicitNullValueSpeaker; set { _explicitNullValueSpeaker = value; AdditionalData?.Remove("speaker"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("speaker"); else _explicitNullProperties?.Remove("speaker"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.Speaker? _explicitNullValueSpeaker = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.Speaker Speaker { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.Speaker Speaker { get => _explicitNullValueSpeaker; set { _explicitNullValueSpeaker = value; AdditionalData?.Remove("speaker"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("speaker"); else _explicitNullProperties?.Remove("speaker"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.Speaker _explicitNullValueSpeaker = default!;
 #endif
         /// <summary>The start time of the utterance, given as a Unix timestamp in milliseconds. It marks when the utterance began.</summary>
-        public long? StartTimeMillis { get; set; }
+        public long? StartTimeMillis { get => _explicitNullValueStartTimeMillis; set { _explicitNullValueStartTimeMillis = value; AdditionalData?.Remove("startTimeMillis"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startTimeMillis"); else _explicitNullProperties?.Remove("startTimeMillis"); } }
+        private long? _explicitNullValueStartTimeMillis = default!;
         /// <summary>The spoken text of the utterance. It is a string representing the actual words spoken.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Text { get; set; }
+        public string? Text { get => _explicitNullValueText; set { _explicitNullValueText = value; AdditionalData?.Remove("text"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text"); else _explicitNullProperties?.Remove("text"); } }
+        private string? _explicitNullValueText = default!;
 #nullable restore
 #else
-        public string Text { get; set; }
+        public string Text { get => _explicitNullValueText; set { _explicitNullValueText = value; AdditionalData?.Remove("text"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text"); else _explicitNullProperties?.Remove("text"); } }
+        private string _explicitNullValueText = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.TranscriptUtterance"/> and sets the default values.
@@ -65,7 +94,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.TranscriptUtterance CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.TranscriptUtterance();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.TranscriptUtterance(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -96,6 +125,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.Speaker>("speaker", Speaker);
             writer.WriteLongValue("startTimeMillis", StartTimeMillis);
             writer.WriteStringValue("text", Text);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

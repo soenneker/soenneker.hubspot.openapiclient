@@ -11,26 +11,44 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicListConversionResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("convertedAt") is null) { _explicitNullValueConvertedAt = default!; _explicitNullProperties?.Remove("convertedAt"); }
+            else if (parseNode.GetChildNode("convertedAt") is { } nullNodeConvertedAt && nullNodeConvertedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConvertedAt = null;
+            if (parseNode.GetChildNode("listId") is null) { _explicitNullValueListId = default!; _explicitNullProperties?.Remove("listId"); }
+            else if (parseNode.GetChildNode("listId") is { } nullNodeListId && nullNodeListId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ListId = null;
+            if (parseNode.GetChildNode("requestedConversionTime") is null) { _explicitNullValueRequestedConversionTime = default!; _explicitNullProperties?.Remove("requestedConversionTime"); }
+            else if (parseNode.GetChildNode("requestedConversionTime") is { } nullNodeRequestedConversionTime && nullNodeRequestedConversionTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestedConversionTime = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A string in date-time format indicating when the conversion was completed.</summary>
-        public DateTimeOffset? ConvertedAt { get; set; }
+        public DateTimeOffset? ConvertedAt { get => _explicitNullValueConvertedAt; set { _explicitNullValueConvertedAt = value; AdditionalData?.Remove("convertedAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("convertedAt"); else _explicitNullProperties?.Remove("convertedAt"); } }
+        private DateTimeOffset? _explicitNullValueConvertedAt = default!;
         /// <summary>A string representing the unique identifier of the list that is being converted.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ListId { get; set; }
+        public string? ListId { get => _explicitNullValueListId; set { _explicitNullValueListId = value; AdditionalData?.Remove("listId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("listId"); else _explicitNullProperties?.Remove("listId"); } }
+        private string? _explicitNullValueListId = default!;
 #nullable restore
 #else
-        public string ListId { get; set; }
+        public string ListId { get => _explicitNullValueListId; set { _explicitNullValueListId = value; AdditionalData?.Remove("listId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("listId"); else _explicitNullProperties?.Remove("listId"); } }
+        private string _explicitNullValueListId = default!;
 #endif
         /// <summary>A string in date-time format indicating when the conversion was requested.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionResponseRequestedConversionTime? RequestedConversionTime { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionResponseRequestedConversionTime? RequestedConversionTime { get => _explicitNullValueRequestedConversionTime; set { _explicitNullValueRequestedConversionTime = value; AdditionalData?.Remove("requestedConversionTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestedConversionTime"); else _explicitNullProperties?.Remove("requestedConversionTime"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionResponseRequestedConversionTime? _explicitNullValueRequestedConversionTime = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionResponseRequestedConversionTime RequestedConversionTime { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionResponseRequestedConversionTime RequestedConversionTime { get => _explicitNullValueRequestedConversionTime; set { _explicitNullValueRequestedConversionTime = value; AdditionalData?.Remove("requestedConversionTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestedConversionTime"); else _explicitNullProperties?.Remove("requestedConversionTime"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionResponseRequestedConversionTime _explicitNullValueRequestedConversionTime = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionResponse"/> and sets the default values.
@@ -47,7 +65,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -72,6 +90,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("convertedAt", ConvertedAt);
             writer.WriteStringValue("listId", ListId);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicListConversionResponseRequestedConversionTime>("requestedConversionTime", RequestedConversionTime);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

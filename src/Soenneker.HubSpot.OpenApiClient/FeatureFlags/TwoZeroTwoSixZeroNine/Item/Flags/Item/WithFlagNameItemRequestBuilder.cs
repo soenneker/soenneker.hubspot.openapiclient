@@ -55,7 +55,7 @@ namespace Soenneker.HubSpot.OpenApiClient.FeatureFlags.TwoZeroTwoSixZeroNine.Ite
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.FlagResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.FlagResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.FlagResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.FlagResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve the current status of the app&apos;s feature flags. No request body is included.
@@ -73,7 +73,7 @@ namespace Soenneker.HubSpot.OpenApiClient.FeatureFlags.TwoZeroTwoSixZeroNine.Ite
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.FlagResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.FlagResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.FlagResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.FlagResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Set a feature flag for an app. For example, update the `hs-hide-crm-cards` flag&apos;s `defaultState` to `ON` to hide classic CRM cards from new installs.
@@ -93,7 +93,7 @@ namespace Soenneker.HubSpot.OpenApiClient.FeatureFlags.TwoZeroTwoSixZeroNine.Ite
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.FlagResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.FlagResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.FlagResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.FlagResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Delete a feature flag in an app.  For example, delete the `hs-release-app-cards` flag after all accounts have been migrated.

@@ -11,31 +11,55 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ConversationRecapCallStatsResult : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("durationMs") is null) { _explicitNullValueDurationMs = default!; _explicitNullProperties?.Remove("durationMs"); }
+            else if (parseNode.GetChildNode("durationMs") is { } nullNodeDurationMs && nullNodeDurationMs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DurationMs = null;
+            if (parseNode.GetChildNode("error") is null) { _explicitNullValueError = default!; _explicitNullProperties?.Remove("error"); }
+            else if (parseNode.GetChildNode("error") is { } nullNodeError && nullNodeError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Error = null;
+            if (parseNode.GetChildNode("hasTranscript") is null) { _explicitNullValueHasTranscript = default!; _explicitNullProperties?.Remove("hasTranscript"); }
+            else if (parseNode.GetChildNode("hasTranscript") is { } nullNodeHasTranscript && nullNodeHasTranscript.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasTranscript = null;
+            if (parseNode.GetChildNode("ownerTalkTimePercentage") is null) { _explicitNullValueOwnerTalkTimePercentage = default!; _explicitNullProperties?.Remove("ownerTalkTimePercentage"); }
+            else if (parseNode.GetChildNode("ownerTalkTimePercentage") is { } nullNodeOwnerTalkTimePercentage && nullNodeOwnerTalkTimePercentage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OwnerTalkTimePercentage = null;
+            if (parseNode.GetChildNode("status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("status"); }
+            else if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The length of the recorded conversation in milliseconds.</summary>
-        public long? DurationMs { get; set; }
+        public long? DurationMs { get => _explicitNullValueDurationMs; set { _explicitNullValueDurationMs = value; AdditionalData?.Remove("durationMs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("durationMs"); else _explicitNullProperties?.Remove("durationMs"); } }
+        private long? _explicitNullValueDurationMs = default!;
         /// <summary>Ye olde error</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerStandardError? Error { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerStandardError? Error { get => _explicitNullValueError; set { _explicitNullValueError = value; AdditionalData?.Remove("error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerStandardError? _explicitNullValueError = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerStandardError Error { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerStandardError Error { get => _explicitNullValueError; set { _explicitNullValueError = value; AdditionalData?.Remove("error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerStandardError _explicitNullValueError = default!;
 #endif
         /// <summary>Whether a transcript for a conversation is found.</summary>
-        public bool? HasTranscript { get; set; }
+        public bool? HasTranscript { get => _explicitNullValueHasTranscript; set { _explicitNullValueHasTranscript = value; AdditionalData?.Remove("hasTranscript"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hasTranscript"); else _explicitNullProperties?.Remove("hasTranscript"); } }
+        private bool? _explicitNullValueHasTranscript = default!;
         /// <summary>The percentage of talk-time attributed to the owner participant.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OwnerTalkTimePercentage { get; set; }
+        public string? OwnerTalkTimePercentage { get => _explicitNullValueOwnerTalkTimePercentage; set { _explicitNullValueOwnerTalkTimePercentage = value; AdditionalData?.Remove("ownerTalkTimePercentage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ownerTalkTimePercentage"); else _explicitNullProperties?.Remove("ownerTalkTimePercentage"); } }
+        private string? _explicitNullValueOwnerTalkTimePercentage = default!;
 #nullable restore
 #else
-        public string OwnerTalkTimePercentage { get; set; }
+        public string OwnerTalkTimePercentage { get => _explicitNullValueOwnerTalkTimePercentage; set { _explicitNullValueOwnerTalkTimePercentage = value; AdditionalData?.Remove("ownerTalkTimePercentage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ownerTalkTimePercentage"); else _explicitNullProperties?.Remove("ownerTalkTimePercentage"); } }
+        private string _explicitNullValueOwnerTalkTimePercentage = default!;
 #endif
         /// <summary>The status of fetching call stats. Either SUCCEEDED, NOT_FOUND, or FAILED.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapCallStatsResultStatus? Status { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapCallStatsResultStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapCallStatsResultStatus? _explicitNullValueStatus = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapCallStatsResult"/> and sets the default values.
         /// </summary>
@@ -51,7 +75,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapCallStatsResult CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapCallStatsResult();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapCallStatsResult(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -65,7 +89,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "error", n => { Error = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerStandardError>(global::Soenneker.HubSpot.OpenApiClient.Models.NotetakerStandardError.CreateFromDiscriminatorValue); } },
                 { "hasTranscript", n => { HasTranscript = n.GetBoolValue(); } },
                 { "ownerTalkTimePercentage", n => { OwnerTalkTimePercentage = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapCallStatsResultStatus>(); } },
+                { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapCallStatsResultStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
             };
         }
         /// <summary>
@@ -80,6 +104,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteBoolValue("hasTranscript", HasTranscript);
             writer.WriteStringValue("ownerTalkTimePercentage", OwnerTalkTimePercentage);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationRecapCallStatsResultStatus>("status", Status);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

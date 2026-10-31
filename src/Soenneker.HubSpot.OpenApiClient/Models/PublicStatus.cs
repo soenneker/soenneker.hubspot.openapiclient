@@ -11,55 +11,99 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublicStatus : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("businessUnitId") is null) { _explicitNullValueBusinessUnitId = default!; _explicitNullProperties?.Remove("businessUnitId"); }
+            else if (parseNode.GetChildNode("businessUnitId") is { } nullNodeBusinessUnitId && nullNodeBusinessUnitId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BusinessUnitId = null;
+            if (parseNode.GetChildNode("channel") is null) { _explicitNullValueChannel = default!; _explicitNullProperties?.Remove("channel"); }
+            else if (parseNode.GetChildNode("channel") is { } nullNodeChannel && nullNodeChannel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Channel = null;
+            if (parseNode.GetChildNode("legalBasis") is null) { _explicitNullValueLegalBasis = default!; _explicitNullProperties?.Remove("legalBasis"); }
+            else if (parseNode.GetChildNode("legalBasis") is { } nullNodeLegalBasis && nullNodeLegalBasis.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LegalBasis = null;
+            if (parseNode.GetChildNode("legalBasisExplanation") is null) { _explicitNullValueLegalBasisExplanation = default!; _explicitNullProperties?.Remove("legalBasisExplanation"); }
+            else if (parseNode.GetChildNode("legalBasisExplanation") is { } nullNodeLegalBasisExplanation && nullNodeLegalBasisExplanation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LegalBasisExplanation = null;
+            if (parseNode.GetChildNode("setStatusSuccessReason") is null) { _explicitNullValueSetStatusSuccessReason = default!; _explicitNullProperties?.Remove("setStatusSuccessReason"); }
+            else if (parseNode.GetChildNode("setStatusSuccessReason") is { } nullNodeSetStatusSuccessReason && nullNodeSetStatusSuccessReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SetStatusSuccessReason = null;
+            if (parseNode.GetChildNode("source") is null) { _explicitNullValueSource = default!; _explicitNullProperties?.Remove("source"); }
+            else if (parseNode.GetChildNode("source") is { } nullNodeSource && nullNodeSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Source = null;
+            if (parseNode.GetChildNode("status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("status"); }
+            else if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("subscriberIdString") is null) { _explicitNullValueSubscriberIdString = default!; _explicitNullProperties?.Remove("subscriberIdString"); }
+            else if (parseNode.GetChildNode("subscriberIdString") is { } nullNodeSubscriberIdString && nullNodeSubscriberIdString.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriberIdString = null;
+            if (parseNode.GetChildNode("subscriptionId") is null) { _explicitNullValueSubscriptionId = default!; _explicitNullProperties?.Remove("subscriptionId"); }
+            else if (parseNode.GetChildNode("subscriptionId") is { } nullNodeSubscriptionId && nullNodeSubscriptionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionId = null;
+            if (parseNode.GetChildNode("subscriptionName") is null) { _explicitNullValueSubscriptionName = default!; _explicitNullProperties?.Remove("subscriptionName"); }
+            else if (parseNode.GetChildNode("subscriptionName") is { } nullNodeSubscriptionName && nullNodeSubscriptionName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionName = null;
+            if (parseNode.GetChildNode("timestamp") is null) { _explicitNullValueTimestamp = default!; _explicitNullProperties?.Remove("timestamp"); }
+            else if (parseNode.GetChildNode("timestamp") is { } nullNodeTimestamp && nullNodeTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Timestamp = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The ID of the business unit associated with the subscription.</summary>
-        public long? BusinessUnitId { get; set; }
+        public long? BusinessUnitId { get => _explicitNullValueBusinessUnitId; set { _explicitNullValueBusinessUnitId = value; AdditionalData?.Remove("businessUnitId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("businessUnitId"); else _explicitNullProperties?.Remove("businessUnitId"); } }
+        private long? _explicitNullValueBusinessUnitId = default!;
         /// <summary>The type of communication channel, with &apos;EMAIL&apos; as the only supported option.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailChannel? Channel { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.EmailChannel? Channel { get => _explicitNullValueChannel; set { _explicitNullValueChannel = value; AdditionalData?.Remove("channel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel"); else _explicitNullProperties?.Remove("channel"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.EmailChannel? _explicitNullValueChannel = default!;
         /// <summary>The legal basis for communication, with options including &apos;LEGITIMATE_INTEREST_PQL&apos;, &apos;LEGITIMATE_INTEREST_CLIENT&apos;, &apos;PERFORMANCE_OF_CONTRACT&apos;, &apos;CONSENT_WITH_NOTICE&apos;, &apos;NON_GDPR&apos;, &apos;PROCESS_AND_STORE&apos;, and &apos;LEGITIMATE_INTEREST_OTHER&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusLegalBasis? LegalBasis { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusLegalBasis? LegalBasis { get => _explicitNullValueLegalBasis; set { _explicitNullValueLegalBasis = value; AdditionalData?.Remove("legalBasis"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("legalBasis"); else _explicitNullProperties?.Remove("legalBasis"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusLegalBasis? _explicitNullValueLegalBasis = default!;
         /// <summary>An explanation for the legal basis used for communication.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LegalBasisExplanation { get; set; }
+        public string? LegalBasisExplanation { get => _explicitNullValueLegalBasisExplanation; set { _explicitNullValueLegalBasisExplanation = value; AdditionalData?.Remove("legalBasisExplanation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("legalBasisExplanation"); else _explicitNullProperties?.Remove("legalBasisExplanation"); } }
+        private string? _explicitNullValueLegalBasisExplanation = default!;
 #nullable restore
 #else
-        public string LegalBasisExplanation { get; set; }
+        public string LegalBasisExplanation { get => _explicitNullValueLegalBasisExplanation; set { _explicitNullValueLegalBasisExplanation = value; AdditionalData?.Remove("legalBasisExplanation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("legalBasisExplanation"); else _explicitNullProperties?.Remove("legalBasisExplanation"); } }
+        private string _explicitNullValueLegalBasisExplanation = default!;
 #endif
         /// <summary>The reason for the successful change in subscription status, such as &apos;RESUBSCRIBE_OCCURRED&apos; or &apos;NO_STATUS_CHANGE&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusSetStatusSuccessReason? SetStatusSuccessReason { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusSetStatusSuccessReason? SetStatusSuccessReason { get => _explicitNullValueSetStatusSuccessReason; set { _explicitNullValueSetStatusSuccessReason = value; AdditionalData?.Remove("setStatusSuccessReason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("setStatusSuccessReason"); else _explicitNullProperties?.Remove("setStatusSuccessReason"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusSetStatusSuccessReason? _explicitNullValueSetStatusSuccessReason = default!;
         /// <summary>The origin or method through which the subscription status was set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Source { get; set; }
+        public string? Source { get => _explicitNullValueSource; set { _explicitNullValueSource = value; AdditionalData?.Remove("source"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source"); else _explicitNullProperties?.Remove("source"); } }
+        private string? _explicitNullValueSource = default!;
 #nullable restore
 #else
-        public string Source { get; set; }
+        public string Source { get => _explicitNullValueSource; set { _explicitNullValueSource = value; AdditionalData?.Remove("source"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source"); else _explicitNullProperties?.Remove("source"); } }
+        private string _explicitNullValueSource = default!;
 #endif
         /// <summary>The current subscription status of the contact, which can be &apos;SUBSCRIBED&apos;, &apos;UNSUBSCRIBED&apos;, or &apos;NOT_SPECIFIED&apos;.</summary>
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusStatus? Status { get; set; }
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusStatus? _explicitNullValueStatus = default!;
         /// <summary>The contact&apos;s email address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SubscriberIdString { get; set; }
+        public string? SubscriberIdString { get => _explicitNullValueSubscriberIdString; set { _explicitNullValueSubscriberIdString = value; AdditionalData?.Remove("subscriberIdString"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscriberIdString"); else _explicitNullProperties?.Remove("subscriberIdString"); } }
+        private string? _explicitNullValueSubscriberIdString = default!;
 #nullable restore
 #else
-        public string SubscriberIdString { get; set; }
+        public string SubscriberIdString { get => _explicitNullValueSubscriberIdString; set { _explicitNullValueSubscriberIdString = value; AdditionalData?.Remove("subscriberIdString"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscriberIdString"); else _explicitNullProperties?.Remove("subscriberIdString"); } }
+        private string _explicitNullValueSubscriberIdString = default!;
 #endif
         /// <summary>The unique identifier of the subscription.</summary>
-        public long? SubscriptionId { get; set; }
+        public long? SubscriptionId { get => _explicitNullValueSubscriptionId; set { _explicitNullValueSubscriptionId = value; AdditionalData?.Remove("subscriptionId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscriptionId"); else _explicitNullProperties?.Remove("subscriptionId"); } }
+        private long? _explicitNullValueSubscriptionId = default!;
         /// <summary>The name of the subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SubscriptionName { get; set; }
+        public string? SubscriptionName { get => _explicitNullValueSubscriptionName; set { _explicitNullValueSubscriptionName = value; AdditionalData?.Remove("subscriptionName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscriptionName"); else _explicitNullProperties?.Remove("subscriptionName"); } }
+        private string? _explicitNullValueSubscriptionName = default!;
 #nullable restore
 #else
-        public string SubscriptionName { get; set; }
+        public string SubscriptionName { get => _explicitNullValueSubscriptionName; set { _explicitNullValueSubscriptionName = value; AdditionalData?.Remove("subscriptionName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscriptionName"); else _explicitNullProperties?.Remove("subscriptionName"); } }
+        private string _explicitNullValueSubscriptionName = default!;
 #endif
         /// <summary>The date and time when the subscription status was last updated.</summary>
-        public DateTimeOffset? Timestamp { get; set; }
+        public DateTimeOffset? Timestamp { get => _explicitNullValueTimestamp; set { _explicitNullValueTimestamp = value; AdditionalData?.Remove("timestamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timestamp"); else _explicitNullProperties?.Remove("timestamp"); } }
+        private DateTimeOffset? _explicitNullValueTimestamp = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatus"/> and sets the default values.
         /// </summary>
@@ -75,7 +119,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public static global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatus CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatus();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatus(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -86,12 +130,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "businessUnitId", n => { BusinessUnitId = n.GetLongValue(); } },
-                { "channel", n => { Channel = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailChannel>(); } },
-                { "legalBasis", n => { LegalBasis = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusLegalBasis>(); } },
+                { "channel", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.EmailChannel>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueChannel = default; _explicitNullProperties?.Remove("channel"); AdditionalData["channel"] = unknown; } else { Channel = parsed; AdditionalData.Remove("channel"); } } },
+                { "legalBasis", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusLegalBasis>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueLegalBasis = default; _explicitNullProperties?.Remove("legalBasis"); AdditionalData["legalBasis"] = unknown; } else { LegalBasis = parsed; AdditionalData.Remove("legalBasis"); } } },
                 { "legalBasisExplanation", n => { LegalBasisExplanation = n.GetStringValue(); } },
-                { "setStatusSuccessReason", n => { SetStatusSuccessReason = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusSetStatusSuccessReason>(); } },
+                { "setStatusSuccessReason", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusSetStatusSuccessReason>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueSetStatusSuccessReason = default; _explicitNullProperties?.Remove("setStatusSuccessReason"); AdditionalData["setStatusSuccessReason"] = unknown; } else { SetStatusSuccessReason = parsed; AdditionalData.Remove("setStatusSuccessReason"); } } },
                 { "source", n => { Source = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusStatus>(); } },
+                { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatusStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
                 { "subscriberIdString", n => { SubscriberIdString = n.GetStringValue(); } },
                 { "subscriptionId", n => { SubscriptionId = n.GetLongValue(); } },
                 { "subscriptionName", n => { SubscriptionName = n.GetStringValue(); } },
@@ -116,6 +160,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteLongValue("subscriptionId", SubscriptionId);
             writer.WriteStringValue("subscriptionName", SubscriptionName);
             writer.WriteDateTimeOffsetValue("timestamp", Timestamp);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
