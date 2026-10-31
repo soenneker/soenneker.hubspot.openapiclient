@@ -70,6 +70,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "positionalSubExpressions", n => { PositionalSubExpressions = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteValueInputsItem>(global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteValueInputsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "propertyName", n => { PropertyName = n.GetStringValue(); } },
                 { "value", n => { Value = n.GetDoubleValue(); } },
+
             };
         }
         /// <summary>

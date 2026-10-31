@@ -75,6 +75,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "propertyName", n => { PropertyName = n.GetStringValue(); } },
                 { "stringToCheck", n => { StringToCheck = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteValueInputsItem>(global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteValueInputsItem.CreateFromDiscriminatorValue); } },
                 { "value", n => { Value = n.GetBoolValue(); } },
+
             };
         }
         /// <summary>

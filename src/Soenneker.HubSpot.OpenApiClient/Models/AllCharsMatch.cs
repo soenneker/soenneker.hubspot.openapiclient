@@ -70,6 +70,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "operator", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.AllCharsMatchOperator>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueOperatorValue = default; _explicitNullProperties?.Remove("operator"); AdditionalData["operator"] = unknown; } else { OperatorValue = parsed; AdditionalData.Remove("operator"); } } },
                 { "propertyName", n => { PropertyName = n.GetStringValue(); } },
                 { "value", n => { Value = n.GetBoolValue(); } },
+
             };
         }
         /// <summary>
