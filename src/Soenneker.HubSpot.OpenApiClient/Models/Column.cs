@@ -106,22 +106,22 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Foreign ids</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByIdProperty2? ForeignIdsById { get => _explicitNullValueForeignIdsById; set { _explicitNullValueForeignIdsById = value; AdditionalData?.Remove("foreignIdsById"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("foreignIdsById"); else _explicitNullProperties?.Remove("foreignIdsById"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByIdProperty2? _explicitNullValueForeignIdsById = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsById? ForeignIdsById { get => _explicitNullValueForeignIdsById; set { _explicitNullValueForeignIdsById = value; AdditionalData?.Remove("foreignIdsById"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("foreignIdsById"); else _explicitNullProperties?.Remove("foreignIdsById"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsById? _explicitNullValueForeignIdsById = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByIdProperty2 ForeignIdsById { get => _explicitNullValueForeignIdsById; set { _explicitNullValueForeignIdsById = value; AdditionalData?.Remove("foreignIdsById"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("foreignIdsById"); else _explicitNullProperties?.Remove("foreignIdsById"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByIdProperty2 _explicitNullValueForeignIdsById = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsById ForeignIdsById { get => _explicitNullValueForeignIdsById; set { _explicitNullValueForeignIdsById = value; AdditionalData?.Remove("foreignIdsById"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("foreignIdsById"); else _explicitNullProperties?.Remove("foreignIdsById"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsById _explicitNullValueForeignIdsById = default!;
 #endif
         /// <summary>Foreign ids by name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByNameProperty2? ForeignIdsByName { get => _explicitNullValueForeignIdsByName; set { _explicitNullValueForeignIdsByName = value; AdditionalData?.Remove("foreignIdsByName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("foreignIdsByName"); else _explicitNullProperties?.Remove("foreignIdsByName"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByNameProperty2? _explicitNullValueForeignIdsByName = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByName? ForeignIdsByName { get => _explicitNullValueForeignIdsByName; set { _explicitNullValueForeignIdsByName = value; AdditionalData?.Remove("foreignIdsByName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("foreignIdsByName"); else _explicitNullProperties?.Remove("foreignIdsByName"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByName? _explicitNullValueForeignIdsByName = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByNameProperty2 ForeignIdsByName { get => _explicitNullValueForeignIdsByName; set { _explicitNullValueForeignIdsByName = value; AdditionalData?.Remove("foreignIdsByName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("foreignIdsByName"); else _explicitNullProperties?.Remove("foreignIdsByName"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByNameProperty2 _explicitNullValueForeignIdsByName = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByName ForeignIdsByName { get => _explicitNullValueForeignIdsByName; set { _explicitNullValueForeignIdsByName = value; AdditionalData?.Remove("foreignIdsByName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("foreignIdsByName"); else _explicitNullProperties?.Remove("foreignIdsByName"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByName _explicitNullValueForeignIdsByName = default!;
 #endif
         /// <summary>Foreign table id referenced</summary>
         public long? ForeignTableId { get => _explicitNullValueForeignTableId; set { _explicitNullValueForeignTableId = value; AdditionalData?.Remove("foreignTableId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("foreignTableId"); else _explicitNullProperties?.Remove("foreignTableId"); } }
@@ -223,8 +223,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "foreignColumnId", n => { ForeignColumnId = n.GetIntValue(); } },
                 { "foreignIds", n => { ForeignIds = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ForeignId>(global::Soenneker.HubSpot.OpenApiClient.Models.ForeignId.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "foreignIdsById", n => { ForeignIdsById = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByIdProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByIdProperty2.CreateFromDiscriminatorValue); } },
-                { "foreignIdsByName", n => { ForeignIdsByName = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByNameProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByNameProperty2.CreateFromDiscriminatorValue); } },
+                { "foreignIdsById", n => { ForeignIdsById = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsById>(global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsById.CreateFromDiscriminatorValue); } },
+                { "foreignIdsByName", n => { ForeignIdsByName = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByName>(global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByName.CreateFromDiscriminatorValue); } },
                 { "foreignTableId", n => { ForeignTableId = n.GetLongValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
@@ -252,8 +252,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteIntValue("foreignColumnId", ForeignColumnId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ForeignId>("foreignIds", ForeignIds);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByIdProperty2>("foreignIdsById", ForeignIdsById);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByNameProperty2>("foreignIdsByName", ForeignIdsByName);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsById>("foreignIdsById", ForeignIdsById);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ColumnForeignIdsByName>("foreignIdsByName", ForeignIdsByName);
             writer.WriteLongValue("foreignTableId", ForeignTableId);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("label", Label);

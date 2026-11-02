@@ -50,7 +50,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The date and time when this object was archived, in ISO 8601 format.</summary>
         public DateTimeOffset? ArchivedAt { get => _explicitNullValueArchivedAt; set { _explicitNullValueArchivedAt = value; AdditionalData?.Remove("archivedAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("archivedAt"); else _explicitNullProperties?.Remove("archivedAt"); } }
         private DateTimeOffset? _explicitNullValueArchivedAt = default!;
-        /// <summary>A map of associated object types to their respective associated IDs.</summary>
+        /// <summary>A map of associated object types to their respective collection of associated IDs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectWithAssociations8Associations? Associations { get => _explicitNullValueAssociations; set { _explicitNullValueAssociations = value; AdditionalData?.Remove("associations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("associations"); else _explicitNullProperties?.Remove("associations"); } }
@@ -83,7 +83,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string ObjectWriteTraceId { get => _explicitNullValueObjectWriteTraceId; set { _explicitNullValueObjectWriteTraceId = value; AdditionalData?.Remove("objectWriteTraceId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("objectWriteTraceId"); else _explicitNullProperties?.Remove("objectWriteTraceId"); } }
         private string _explicitNullValueObjectWriteTraceId = default!;
 #endif
-        /// <summary>A map of property names to their current values for this object.</summary>
+        /// <summary>A map of property names to their current values for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectWithAssociations8Properties? Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
@@ -93,7 +93,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectWithAssociations8Properties Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
         private global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectWithAssociations8Properties _explicitNullValueProperties = default!;
 #endif
-        /// <summary>A map of property names to their values along with a history of changes, including timestamps.</summary>
+        /// <summary>A map of property names to their values along with a history of changes, represented as arrays of values with timestamps.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectWithAssociations8PropertiesWithHistory? PropertiesWithHistory { get => _explicitNullValuePropertiesWithHistory; set { _explicitNullValuePropertiesWithHistory = value; AdditionalData?.Remove("propertiesWithHistory"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("propertiesWithHistory"); else _explicitNullProperties?.Remove("propertiesWithHistory"); } }
@@ -116,7 +116,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string _explicitNullValueUrl = default!;
 #endif
-        /// <summary>A list of warnings associated with this object, each containing a category, message, and context.</summary>
+        /// <summary>An array of warnings related to the object, each containing a category, message, and context.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectWarning8>? Warnings { get => _explicitNullValueWarnings; set { _explicitNullValueWarnings = value; AdditionalData?.Remove("warnings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warnings"); else _explicitNullProperties?.Remove("warnings"); } }

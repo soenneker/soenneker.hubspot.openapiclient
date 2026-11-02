@@ -45,12 +45,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object containing additional properties for the stage. Each property is a key-value pair where both key and value are strings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageInputMetadataProperty2? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; AdditionalData?.Remove("metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageInputMetadataProperty2? _explicitNullValueMetadata = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageInputMetadata? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; AdditionalData?.Remove("metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageInputMetadata? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageInputMetadataProperty2 Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; AdditionalData?.Remove("metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageInputMetadataProperty2 _explicitNullValueMetadata = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageInputMetadata Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; AdditionalData?.Remove("metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageInputMetadata _explicitNullValueMetadata = default!;
 #endif
         /// <summary>A string that uniquely identifies the stage within the pipeline.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -89,7 +89,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "displayOrder", n => { DisplayOrder = n.GetIntValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageInputMetadataProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageInputMetadataProperty2.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageInputMetadata>(global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageInputMetadata.CreateFromDiscriminatorValue); } },
                 { "stageId", n => { StageId = n.GetStringValue(); } },
             };
         }
@@ -102,7 +102,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("displayOrder", DisplayOrder);
             writer.WriteStringValue("label", Label);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageInputMetadataProperty2>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageInputMetadata>("metadata", Metadata);
             writer.WriteStringValue("stageId", StageId);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

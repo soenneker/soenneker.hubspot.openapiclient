@@ -67,12 +67,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An array of attachments included with the message, which can be files, locations, contacts, or other supported types.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicConversationsMessageAttachmentsItem>? Attachments { get => _explicitNullValueAttachments; set { _explicitNullValueAttachments = value; AdditionalData?.Remove("attachments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attachments"); else _explicitNullProperties?.Remove("attachments"); } }
-        private List<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicConversationsMessageAttachmentsItem>? _explicitNullValueAttachments = default!;
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessageAttachmentsItem>? Attachments { get => _explicitNullValueAttachments; set { _explicitNullValueAttachments = value; AdditionalData?.Remove("attachments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attachments"); else _explicitNullProperties?.Remove("attachments"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessageAttachmentsItem>? _explicitNullValueAttachments = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicConversationsMessageAttachmentsItem> Attachments { get => _explicitNullValueAttachments; set { _explicitNullValueAttachments = value; AdditionalData?.Remove("attachments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attachments"); else _explicitNullProperties?.Remove("attachments"); } }
-        private List<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicConversationsMessageAttachmentsItem> _explicitNullValueAttachments = default!;
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessageAttachmentsItem> Attachments { get => _explicitNullValueAttachments; set { _explicitNullValueAttachments = value; AdditionalData?.Remove("attachments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attachments"); else _explicitNullProperties?.Remove("attachments"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessageAttachmentsItem> _explicitNullValueAttachments = default!;
 #endif
         /// <summary>The identifier of the channel account associated with the message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -245,7 +245,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "archived", n => { Archived = n.GetBoolValue(); } },
-                { "attachments", n => { Attachments = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicConversationsMessageAttachmentsItem>(global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicConversationsMessageAttachmentsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "attachments", n => { Attachments = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessageAttachmentsItem>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessageAttachmentsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "channelAccountId", n => { ChannelAccountId = n.GetStringValue(); } },
                 { "channelId", n => { ChannelId = n.GetStringValue(); } },
                 { "client", n => { Client = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicClient>(global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicClient.CreateFromDiscriminatorValue); } },
@@ -274,7 +274,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("archived", Archived);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicConversationsMessageAttachmentsItem>("attachments", Attachments);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicConversationsMessageAttachmentsItem>("attachments", Attachments);
             writer.WriteStringValue("channelAccountId", ChannelAccountId);
             writer.WriteStringValue("channelId", ChannelId);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ConversationsPublicClient>("client", Client);

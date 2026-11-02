@@ -63,12 +63,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>A map of custom property names to their values for this price book.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookResponseCustomPropertiesProperty2? CustomProperties { get => _explicitNullValueCustomProperties; set { _explicitNullValueCustomProperties = value; AdditionalData?.Remove("customProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customProperties"); else _explicitNullProperties?.Remove("customProperties"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookResponseCustomPropertiesProperty2? _explicitNullValueCustomProperties = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookResponseCustomProperties? CustomProperties { get => _explicitNullValueCustomProperties; set { _explicitNullValueCustomProperties = value; AdditionalData?.Remove("customProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customProperties"); else _explicitNullProperties?.Remove("customProperties"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookResponseCustomProperties? _explicitNullValueCustomProperties = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookResponseCustomPropertiesProperty2 CustomProperties { get => _explicitNullValueCustomProperties; set { _explicitNullValueCustomProperties = value; AdditionalData?.Remove("customProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customProperties"); else _explicitNullProperties?.Remove("customProperties"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookResponseCustomPropertiesProperty2 _explicitNullValueCustomProperties = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookResponseCustomProperties CustomProperties { get => _explicitNullValueCustomProperties; set { _explicitNullValueCustomProperties = value; AdditionalData?.Remove("customProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customProperties"); else _explicitNullProperties?.Remove("customProperties"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookResponseCustomProperties _explicitNullValueCustomProperties = default!;
 #endif
         /// <summary>A description of the price book.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -146,7 +146,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "autoAssignmentEnabled", n => { AutoAssignmentEnabled = n.GetBoolValue(); } },
                 { "countOfIncludedProducts", n => { CountOfIncludedProducts = n.GetIntValue(); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
-                { "customProperties", n => { CustomProperties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookResponseCustomPropertiesProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookResponseCustomPropertiesProperty2.CreateFromDiscriminatorValue); } },
+                { "customProperties", n => { CustomProperties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookResponseCustomProperties>(global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookResponseCustomProperties.CreateFromDiscriminatorValue); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
@@ -167,7 +167,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteBoolValue("autoAssignmentEnabled", AutoAssignmentEnabled);
             writer.WriteIntValue("countOfIncludedProducts", CountOfIncludedProducts);
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookResponseCustomPropertiesProperty2>("customProperties", CustomProperties);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookResponseCustomProperties>("customProperties", CustomProperties);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("name", Name);

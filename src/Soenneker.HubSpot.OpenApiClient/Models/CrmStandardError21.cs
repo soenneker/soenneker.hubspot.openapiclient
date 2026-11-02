@@ -38,7 +38,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A string specifying the category of the error.</summary>
+        /// <summary>A string indicating the category of the error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Category { get => _explicitNullValueCategory; set { _explicitNullValueCategory = value; AdditionalData?.Remove("category"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("category"); else _explicitNullProperties?.Remove("category"); } }
@@ -48,7 +48,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Category { get => _explicitNullValueCategory; set { _explicitNullValueCategory = value; AdditionalData?.Remove("category"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("category"); else _explicitNullProperties?.Remove("category"); } }
         private string _explicitNullValueCategory = default!;
 #endif
-        /// <summary>An object containing additional context about the error, where each key is a context name and each value is an array of strings.</summary>
+        /// <summary>An object containing additional context about the error, where each key maps to an array of strings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError21Context? Context { get => _explicitNullValueContext; set { _explicitNullValueContext = value; AdditionalData?.Remove("context"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("context"); else _explicitNullProperties?.Remove("context"); } }
@@ -61,14 +61,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An array of ErrorDetail objects providing further information about the error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmErrorDetail25>? Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; AdditionalData?.Remove("errors"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
-        private List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmErrorDetail25>? _explicitNullValueErrors = default!;
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmErrorDetail26>? Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; AdditionalData?.Remove("errors"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmErrorDetail26>? _explicitNullValueErrors = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmErrorDetail25> Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; AdditionalData?.Remove("errors"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
-        private List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmErrorDetail25> _explicitNullValueErrors = default!;
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmErrorDetail26> Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; AdditionalData?.Remove("errors"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmErrorDetail26> _explicitNullValueErrors = default!;
 #endif
-        /// <summary>A string representing the unique identifier for the error.</summary>
+        /// <summary>A string that uniquely identifies this error instance.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
@@ -78,7 +78,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
-        /// <summary>An object mapping link names to associated URIs that contain documentation or remediation steps related to the error.</summary>
+        /// <summary>An object mapping link names to associated URIs that contain documentation or recommended remediation steps for the error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError21Links? Links { get => _explicitNullValueLinks; set { _explicitNullValueLinks = value; AdditionalData?.Remove("links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("links"); else _explicitNullProperties?.Remove("links"); } }
@@ -98,7 +98,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; AdditionalData?.Remove("message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
         private string _explicitNullValueMessage = default!;
 #endif
-        /// <summary>A string indicating the status of the error.</summary>
+        /// <summary>A string representing the status of the error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
@@ -108,7 +108,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private string _explicitNullValueStatus = default!;
 #endif
-        /// <summary>An object providing additional categorization for the error.</summary>
+        /// <summary>An object that provides more specific details about the error category.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError21SubCategory? SubCategory { get => _explicitNullValueSubCategory; set { _explicitNullValueSubCategory = value; AdditionalData?.Remove("subCategory"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subCategory"); else _explicitNullProperties?.Remove("subCategory"); } }
@@ -145,7 +145,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "category", n => { Category = n.GetStringValue(); } },
                 { "context", n => { Context = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError21Context>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError21Context.CreateFromDiscriminatorValue); } },
-                { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmErrorDetail25>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmErrorDetail25.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmErrorDetail26>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmErrorDetail26.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "links", n => { Links = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError21Links>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError21Links.CreateFromDiscriminatorValue); } },
                 { "message", n => { Message = n.GetStringValue(); } },
@@ -162,7 +162,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("category", Category);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError21Context>("context", Context);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmErrorDetail25>("errors", Errors);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmErrorDetail26>("errors", Errors);
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError21Links>("links", Links);
             writer.WriteStringValue("message", Message);

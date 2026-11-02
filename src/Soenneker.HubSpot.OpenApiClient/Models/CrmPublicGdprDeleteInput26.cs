@@ -26,7 +26,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The name of a property whose values are unique for this object</summary>
+        /// <summary>A string representing the name of a property used to uniquely identify the object, such as &apos;email&apos;. This property is optional.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? IdProperty { get => _explicitNullValueIdProperty; set { _explicitNullValueIdProperty = value; AdditionalData?.Remove("idProperty"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("idProperty"); else _explicitNullProperties?.Remove("idProperty"); } }
@@ -36,7 +36,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string IdProperty { get => _explicitNullValueIdProperty; set { _explicitNullValueIdProperty = value; AdditionalData?.Remove("idProperty"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("idProperty"); else _explicitNullProperties?.Remove("idProperty"); } }
         private string _explicitNullValueIdProperty = default!;
 #endif
-        /// <summary>The unique identifier of the object to be deleted. This is a required field and must be provided as a string.</summary>
+        /// <summary>A string representing the unique identifier of the object to be deleted. This property is required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ObjectId { get => _explicitNullValueObjectId; set { _explicitNullValueObjectId = value; AdditionalData?.Remove("objectId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("objectId"); else _explicitNullProperties?.Remove("objectId"); } }

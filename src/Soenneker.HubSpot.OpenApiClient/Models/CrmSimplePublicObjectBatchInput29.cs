@@ -50,7 +50,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string IdProperty { get => _explicitNullValueIdProperty; set { _explicitNullValueIdProperty = value; AdditionalData?.Remove("idProperty"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("idProperty"); else _explicitNullProperties?.Remove("idProperty"); } }
         private string _explicitNullValueIdProperty = default!;
 #endif
-        /// <summary>A string used to trace the write operations for the objects in the batch, useful for debugging and tracking changes.</summary>
+        /// <summary>A string used to trace the write operations for the object. This is optional and can be used for debugging or tracking purposes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ObjectWriteTraceId { get => _explicitNullValueObjectWriteTraceId; set { _explicitNullValueObjectWriteTraceId = value; AdditionalData?.Remove("objectWriteTraceId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("objectWriteTraceId"); else _explicitNullProperties?.Remove("objectWriteTraceId"); } }
@@ -60,7 +60,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string ObjectWriteTraceId { get => _explicitNullValueObjectWriteTraceId; set { _explicitNullValueObjectWriteTraceId = value; AdditionalData?.Remove("objectWriteTraceId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("objectWriteTraceId"); else _explicitNullProperties?.Remove("objectWriteTraceId"); } }
         private string _explicitNullValueObjectWriteTraceId = default!;
 #endif
-        /// <summary>An object containing key-value pairs where each key is a property name and each value is the property&apos;s value. This is used to define the attributes of the CRM objects in the batch.</summary>
+        /// <summary>An object containing key-value pairs where the key is the property name and the value is the property value. This is used to define the properties of the CRM objects.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectBatchInput29Properties? Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }

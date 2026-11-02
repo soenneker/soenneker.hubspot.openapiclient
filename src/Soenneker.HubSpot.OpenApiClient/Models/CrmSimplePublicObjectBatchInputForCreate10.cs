@@ -28,7 +28,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>An array of associations to be created for the objects. Each association specifies the relationship between objects, using the PublicAssociationsForObject schema.</summary>
+        /// <summary>An array of associations that define the relationships between the CRM objects being created and other objects. Each association is specified using the PublicAssociationsForObject schema.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationsForObject10>? Associations { get => _explicitNullValueAssociations; set { _explicitNullValueAssociations = value; AdditionalData?.Remove("associations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("associations"); else _explicitNullProperties?.Remove("associations"); } }
@@ -38,7 +38,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationsForObject10> Associations { get => _explicitNullValueAssociations; set { _explicitNullValueAssociations = value; AdditionalData?.Remove("associations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("associations"); else _explicitNullProperties?.Remove("associations"); } }
         private List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationsForObject10> _explicitNullValueAssociations = default!;
 #endif
-        /// <summary>A unique identifier for tracing the creation request.</summary>
+        /// <summary>An identifier used for tracing the creation or update request of the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ObjectWriteTraceId { get => _explicitNullValueObjectWriteTraceId; set { _explicitNullValueObjectWriteTraceId = value; AdditionalData?.Remove("objectWriteTraceId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("objectWriteTraceId"); else _explicitNullProperties?.Remove("objectWriteTraceId"); } }
@@ -48,7 +48,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string ObjectWriteTraceId { get => _explicitNullValueObjectWriteTraceId; set { _explicitNullValueObjectWriteTraceId = value; AdditionalData?.Remove("objectWriteTraceId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("objectWriteTraceId"); else _explicitNullProperties?.Remove("objectWriteTraceId"); } }
         private string _explicitNullValueObjectWriteTraceId = default!;
 #endif
-        /// <summary>Key-value pairs representing the properties of the object.</summary>
+        /// <summary>Key value pairs representing the properties of the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectBatchInputForCreate10Properties? Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }

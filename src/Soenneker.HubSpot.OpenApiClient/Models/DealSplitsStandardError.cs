@@ -51,12 +51,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Context about the error condition</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsStandardErrorContextProperty2? Context { get => _explicitNullValueContext; set { _explicitNullValueContext = value; AdditionalData?.Remove("context"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("context"); else _explicitNullProperties?.Remove("context"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsStandardErrorContextProperty2? _explicitNullValueContext = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsStandardErrorContext? Context { get => _explicitNullValueContext; set { _explicitNullValueContext = value; AdditionalData?.Remove("context"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("context"); else _explicitNullProperties?.Remove("context"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsStandardErrorContext? _explicitNullValueContext = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsStandardErrorContextProperty2 Context { get => _explicitNullValueContext; set { _explicitNullValueContext = value; AdditionalData?.Remove("context"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("context"); else _explicitNullProperties?.Remove("context"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsStandardErrorContextProperty2 _explicitNullValueContext = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsStandardErrorContext Context { get => _explicitNullValueContext; set { _explicitNullValueContext = value; AdditionalData?.Remove("context"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("context"); else _explicitNullProperties?.Remove("context"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsStandardErrorContext _explicitNullValueContext = default!;
 #endif
         /// <summary>An array of ErrorDetail objects that provide further information about the error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -81,12 +81,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>A map of link names to associated URIs containing documentation about the error or recommended remediation steps</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsStandardErrorLinksProperty2? Links { get => _explicitNullValueLinks; set { _explicitNullValueLinks = value; AdditionalData?.Remove("links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("links"); else _explicitNullProperties?.Remove("links"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsStandardErrorLinksProperty2? _explicitNullValueLinks = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsStandardErrorLinks? Links { get => _explicitNullValueLinks; set { _explicitNullValueLinks = value; AdditionalData?.Remove("links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("links"); else _explicitNullProperties?.Remove("links"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsStandardErrorLinks? _explicitNullValueLinks = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsStandardErrorLinksProperty2 Links { get => _explicitNullValueLinks; set { _explicitNullValueLinks = value; AdditionalData?.Remove("links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("links"); else _explicitNullProperties?.Remove("links"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsStandardErrorLinksProperty2 _explicitNullValueLinks = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsStandardErrorLinks Links { get => _explicitNullValueLinks; set { _explicitNullValueLinks = value; AdditionalData?.Remove("links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("links"); else _explicitNullProperties?.Remove("links"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsStandardErrorLinks _explicitNullValueLinks = default!;
 #endif
         /// <summary>The error message</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -111,12 +111,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>A specific category that contains more specific detail about the error</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsStandardErrorSubCategoryProperty2? SubCategory { get => _explicitNullValueSubCategory; set { _explicitNullValueSubCategory = value; AdditionalData?.Remove("subCategory"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subCategory"); else _explicitNullProperties?.Remove("subCategory"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsStandardErrorSubCategoryProperty2? _explicitNullValueSubCategory = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsStandardErrorSubCategory? SubCategory { get => _explicitNullValueSubCategory; set { _explicitNullValueSubCategory = value; AdditionalData?.Remove("subCategory"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subCategory"); else _explicitNullProperties?.Remove("subCategory"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsStandardErrorSubCategory? _explicitNullValueSubCategory = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsStandardErrorSubCategoryProperty2 SubCategory { get => _explicitNullValueSubCategory; set { _explicitNullValueSubCategory = value; AdditionalData?.Remove("subCategory"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subCategory"); else _explicitNullProperties?.Remove("subCategory"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsStandardErrorSubCategoryProperty2 _explicitNullValueSubCategory = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsStandardErrorSubCategory SubCategory { get => _explicitNullValueSubCategory; set { _explicitNullValueSubCategory = value; AdditionalData?.Remove("subCategory"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subCategory"); else _explicitNullProperties?.Remove("subCategory"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsStandardErrorSubCategory _explicitNullValueSubCategory = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsStandardError"/> and sets the default values.
@@ -144,13 +144,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "category", n => { Category = n.GetStringValue(); } },
-                { "context", n => { Context = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsStandardErrorContextProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsStandardErrorContextProperty2.CreateFromDiscriminatorValue); } },
+                { "context", n => { Context = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsStandardErrorContext>(global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsStandardErrorContext.CreateFromDiscriminatorValue); } },
                 { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsErrorDetail>(global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsErrorDetail.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsStandardErrorLinksProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsStandardErrorLinksProperty2.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsStandardErrorLinks>(global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsStandardErrorLinks.CreateFromDiscriminatorValue); } },
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
-                { "subCategory", n => { SubCategory = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsStandardErrorSubCategoryProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsStandardErrorSubCategoryProperty2.CreateFromDiscriminatorValue); } },
+                { "subCategory", n => { SubCategory = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsStandardErrorSubCategory>(global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsStandardErrorSubCategory.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -161,13 +161,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("category", Category);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsStandardErrorContextProperty2>("context", Context);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsStandardErrorContext>("context", Context);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsErrorDetail>("errors", Errors);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsStandardErrorLinksProperty2>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsStandardErrorLinks>("links", Links);
             writer.WriteStringValue("message", Message);
             writer.WriteStringValue("status", Status);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsStandardErrorSubCategoryProperty2>("subCategory", SubCategory);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsStandardErrorSubCategory>("subCategory", SubCategory);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

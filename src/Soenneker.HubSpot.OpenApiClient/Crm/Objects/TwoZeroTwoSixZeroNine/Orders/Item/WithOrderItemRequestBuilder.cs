@@ -59,40 +59,40 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroNine.Orde
         /// <summary>
         /// Read an object identified by `objectId`. By default, `objectId` refers to the internal object ID, but it can be any unique property value specified by the `idProperty` query parameter. You can control the response content using the `properties` query parameter.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectWithAssociations26"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectWithAssociations24"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectWithAssociations26?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroNine.Orders.Item.WithOrderItemRequestBuilder.WithOrderItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectWithAssociations24?> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroNine.Orders.Item.WithOrderItemRequestBuilder.WithOrderItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectWithAssociations26> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroNine.Orders.Item.WithOrderItemRequestBuilder.WithOrderItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectWithAssociations24> GetAsync(Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroNine.Orders.Item.WithOrderItemRequestBuilder.WithOrderItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectWithAssociations26>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectWithAssociations26.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectWithAssociations24>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectWithAssociations24.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Perform a partial update of an object identified by `{objectId}`. The `{objectId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query parameter. Provided property values will be overwritten, while read-only and non-existent properties will be ignored. Properties can be cleared by passing an empty string.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject26"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject25"/></returns>
         /// <param name="body">Represents the input required to update a CRM object, containing an object with property names and their corresponding values.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject26?> PatchAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectInput25 body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroNine.Orders.Item.WithOrderItemRequestBuilder.WithOrderItemRequestBuilderPatchQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject25?> PatchAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectInput23 body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroNine.Orders.Item.WithOrderItemRequestBuilder.WithOrderItemRequestBuilderPatchQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject26> PatchAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectInput25 body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroNine.Orders.Item.WithOrderItemRequestBuilder.WithOrderItemRequestBuilderPatchQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject25> PatchAsync(global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectInput23 body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroNine.Orders.Item.WithOrderItemRequestBuilder.WithOrderItemRequestBuilderPatchQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPatchRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject26>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject26.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject25>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject25.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Move an Object identified by `{objectId}` to the recycling bin. This operation allows you to archive a specific CRM object by its type and unique identifier, effectively removing it from active use while retaining the option to restore it later if needed.
@@ -139,11 +139,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroNine.Orde
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPatchRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectInput25 body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroNine.Orders.Item.WithOrderItemRequestBuilder.WithOrderItemRequestBuilderPatchQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectInput23 body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroNine.Orders.Item.WithOrderItemRequestBuilder.WithOrderItemRequestBuilderPatchQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPatchRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectInput25 body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroNine.Orders.Item.WithOrderItemRequestBuilder.WithOrderItemRequestBuilderPatchQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectInput23 body, Action<RequestConfiguration<global::Soenneker.HubSpot.OpenApiClient.Crm.Objects.TwoZeroTwoSixZeroNine.Orders.Item.WithOrderItemRequestBuilder.WithOrderItemRequestBuilderPatchQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     /// <summary>
-    /// An object mapping link names to URIs that provide documentation or remediation steps related to the error.
+    /// URLs linking to documentation or resources associated with the error.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CrmStandardError27Links : IAdditionalDataHolder, IParsable

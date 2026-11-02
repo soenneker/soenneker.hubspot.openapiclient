@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     /// <summary>
-    /// An object containing key-value pairs where keys are property names and values are property values for the CRM object. Each property is represented as a string.
+    /// An object containing key-value pairs where keys are property names and values are the corresponding property values. This is used to define the attributes of each CRM object in the batch.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CrmSimplePublicObjectBatchInput25Properties : IAdditionalDataHolder, IParsable

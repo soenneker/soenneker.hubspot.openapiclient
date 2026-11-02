@@ -31,12 +31,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object where each key is a duration and the value is an availability object for that duration. This provides detailed availability information for each specified meeting duration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailabilityLinkAvailabilityByDurationProperty2? LinkAvailabilityByDuration { get => _explicitNullValueLinkAvailabilityByDuration; set { _explicitNullValueLinkAvailabilityByDuration = value; AdditionalData?.Remove("linkAvailabilityByDuration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("linkAvailabilityByDuration"); else _explicitNullProperties?.Remove("linkAvailabilityByDuration"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailabilityLinkAvailabilityByDurationProperty2? _explicitNullValueLinkAvailabilityByDuration = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailabilityLinkAvailabilityByDuration? LinkAvailabilityByDuration { get => _explicitNullValueLinkAvailabilityByDuration; set { _explicitNullValueLinkAvailabilityByDuration = value; AdditionalData?.Remove("linkAvailabilityByDuration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("linkAvailabilityByDuration"); else _explicitNullProperties?.Remove("linkAvailabilityByDuration"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailabilityLinkAvailabilityByDuration? _explicitNullValueLinkAvailabilityByDuration = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailabilityLinkAvailabilityByDurationProperty2 LinkAvailabilityByDuration { get => _explicitNullValueLinkAvailabilityByDuration; set { _explicitNullValueLinkAvailabilityByDuration = value; AdditionalData?.Remove("linkAvailabilityByDuration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("linkAvailabilityByDuration"); else _explicitNullProperties?.Remove("linkAvailabilityByDuration"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailabilityLinkAvailabilityByDurationProperty2 _explicitNullValueLinkAvailabilityByDuration = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailabilityLinkAvailabilityByDuration LinkAvailabilityByDuration { get => _explicitNullValueLinkAvailabilityByDuration; set { _explicitNullValueLinkAvailabilityByDuration = value; AdditionalData?.Remove("linkAvailabilityByDuration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("linkAvailabilityByDuration"); else _explicitNullProperties?.Remove("linkAvailabilityByDuration"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailabilityLinkAvailabilityByDuration _explicitNullValueLinkAvailabilityByDuration = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailability"/> and sets the default values.
@@ -64,7 +64,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "hasMore", n => { HasMore = n.GetBoolValue(); } },
-                { "linkAvailabilityByDuration", n => { LinkAvailabilityByDuration = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailabilityLinkAvailabilityByDurationProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailabilityLinkAvailabilityByDurationProperty2.CreateFromDiscriminatorValue); } },
+                { "linkAvailabilityByDuration", n => { LinkAvailabilityByDuration = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailabilityLinkAvailabilityByDuration>(global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailabilityLinkAvailabilityByDuration.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -75,7 +75,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("hasMore", HasMore);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailabilityLinkAvailabilityByDurationProperty2>("linkAvailabilityByDuration", LinkAvailabilityByDuration);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExternalLinkAvailabilityLinkAvailabilityByDuration>("linkAvailabilityByDuration", LinkAvailabilityByDuration);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

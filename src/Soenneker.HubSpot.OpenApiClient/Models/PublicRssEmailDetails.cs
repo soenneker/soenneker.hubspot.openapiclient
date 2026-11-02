@@ -81,12 +81,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object representing the timing configuration for the RSS email. The specific properties of this object are not detailed in the specification.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetailsTimingProperty2? Timing { get => _explicitNullValueTiming; set { _explicitNullValueTiming = value; AdditionalData?.Remove("timing"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timing"); else _explicitNullProperties?.Remove("timing"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetailsTimingProperty2? _explicitNullValueTiming = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetailsTiming? Timing { get => _explicitNullValueTiming; set { _explicitNullValueTiming = value; AdditionalData?.Remove("timing"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timing"); else _explicitNullProperties?.Remove("timing"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetailsTiming? _explicitNullValueTiming = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetailsTimingProperty2 Timing { get => _explicitNullValueTiming; set { _explicitNullValueTiming = value; AdditionalData?.Remove("timing"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timing"); else _explicitNullProperties?.Remove("timing"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetailsTimingProperty2 _explicitNullValueTiming = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetailsTiming Timing { get => _explicitNullValueTiming; set { _explicitNullValueTiming = value; AdditionalData?.Remove("timing"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timing"); else _explicitNullProperties?.Remove("timing"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetailsTiming _explicitNullValueTiming = default!;
 #endif
         /// <summary>The URL of the RSS feed to be used in the email. It is a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -132,7 +132,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "hubspotBlogId", n => { HubspotBlogId = n.GetStringValue(); } },
                 { "maxEntries", n => { MaxEntries = n.GetIntValue(); } },
                 { "rssEntryTemplate", n => { RssEntryTemplate = n.GetStringValue(); } },
-                { "timing", n => { Timing = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetailsTimingProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetailsTimingProperty2.CreateFromDiscriminatorValue); } },
+                { "timing", n => { Timing = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetailsTiming>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetailsTiming.CreateFromDiscriminatorValue); } },
                 { "url", n => { Url = n.GetStringValue(); } },
                 { "useHeadlineAsSubject", n => { UseHeadlineAsSubject = n.GetBoolValue(); } },
             };
@@ -150,7 +150,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("hubspotBlogId", HubspotBlogId);
             writer.WriteIntValue("maxEntries", MaxEntries);
             writer.WriteStringValue("rssEntryTemplate", RssEntryTemplate);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetailsTimingProperty2>("timing", Timing);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicRssEmailDetailsTiming>("timing", Timing);
             writer.WriteStringValue("url", Url);
             writer.WriteBoolValue("useHeadlineAsSubject", UseHeadlineAsSubject);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

@@ -26,7 +26,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>An array of associations that link this object to other objects. Each association is defined by a PublicAssociationsForObject schema.</summary>
+        /// <summary>An array of associations that link this object to other objects. Each association is defined by a &apos;PublicAssociationsForObject&apos; schema.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationsForObject12>? Associations { get => _explicitNullValueAssociations; set { _explicitNullValueAssociations = value; AdditionalData?.Remove("associations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("associations"); else _explicitNullProperties?.Remove("associations"); } }
@@ -36,7 +36,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationsForObject12> Associations { get => _explicitNullValueAssociations; set { _explicitNullValueAssociations = value; AdditionalData?.Remove("associations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("associations"); else _explicitNullProperties?.Remove("associations"); } }
         private List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationsForObject12> _explicitNullValueAssociations = default!;
 #endif
-        /// <summary>Key-value pairs for setting properties for the new object.</summary>
+        /// <summary>An object containing key-value pairs where keys are property names and values are the corresponding property values. Each property is a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectInputForCreate12Properties? Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }

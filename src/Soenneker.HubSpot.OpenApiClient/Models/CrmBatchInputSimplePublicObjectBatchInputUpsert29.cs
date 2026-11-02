@@ -24,7 +24,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>An array of SimplePublicObjectBatchInputUpsert objects. Each object in the array contains the properties and identifiers needed for the upsert operation.</summary>
+        /// <summary>An array of objects, each containing the data for a CRM object to be created or updated. Each object must include properties and may include an objectWriteTraceId, id, and idProperty.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectBatchInputUpsert29>? Inputs { get => _explicitNullValueInputs; set { _explicitNullValueInputs = value; AdditionalData?.Remove("inputs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputs"); else _explicitNullProperties?.Remove("inputs"); } }

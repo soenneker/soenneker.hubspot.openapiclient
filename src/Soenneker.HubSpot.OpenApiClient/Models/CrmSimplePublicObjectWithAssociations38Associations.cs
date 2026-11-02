@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     /// <summary>
-    /// A map of associated object types to their associated IDs, representing the relationships this object has with others.
+    /// A list defining relationships with other objects.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CrmSimplePublicObjectWithAssociations38Associations : IAdditionalDataHolder, IParsable

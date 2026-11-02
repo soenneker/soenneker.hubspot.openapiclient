@@ -28,7 +28,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>An array of associations that define the relationships between the CRM objects being created and other objects. Each association is represented by a &apos;PublicAssociationsForObject&apos; object.</summary>
+        /// <summary>An array of associations for the CRM objects. Each association is defined by a &apos;PublicAssociationsForObject&apos; object, which specifies the target object and the types of associations.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationsForObject3>? Associations { get => _explicitNullValueAssociations; set { _explicitNullValueAssociations = value; AdditionalData?.Remove("associations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("associations"); else _explicitNullProperties?.Remove("associations"); } }
@@ -38,7 +38,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationsForObject3> Associations { get => _explicitNullValueAssociations; set { _explicitNullValueAssociations = value; AdditionalData?.Remove("associations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("associations"); else _explicitNullProperties?.Remove("associations"); } }
         private List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationsForObject3> _explicitNullValueAssociations = default!;
 #endif
-        /// <summary>A string used to trace the write operations for the objects being created. This can be used for debugging and tracking purposes.</summary>
+        /// <summary>A string identifier used to trace the write operation for the objects being created.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ObjectWriteTraceId { get => _explicitNullValueObjectWriteTraceId; set { _explicitNullValueObjectWriteTraceId = value; AdditionalData?.Remove("objectWriteTraceId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("objectWriteTraceId"); else _explicitNullProperties?.Remove("objectWriteTraceId"); } }
@@ -48,7 +48,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string ObjectWriteTraceId { get => _explicitNullValueObjectWriteTraceId; set { _explicitNullValueObjectWriteTraceId = value; AdditionalData?.Remove("objectWriteTraceId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("objectWriteTraceId"); else _explicitNullProperties?.Remove("objectWriteTraceId"); } }
         private string _explicitNullValueObjectWriteTraceId = default!;
 #endif
-        /// <summary>An object containing key-value pairs where keys are property names and values are the corresponding property values for the CRM objects being created.</summary>
+        /// <summary>An object containing key-value pairs where keys are property names and values are the corresponding property values for the CRM objects. Each property value is a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectBatchInputForCreate3Properties? Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }

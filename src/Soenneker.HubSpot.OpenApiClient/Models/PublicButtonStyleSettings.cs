@@ -30,12 +30,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object representing the background color of the button.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicButtonStyleSettingsBackgroundColorProperty2? BackgroundColor { get => _explicitNullValueBackgroundColor; set { _explicitNullValueBackgroundColor = value; AdditionalData?.Remove("backgroundColor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("backgroundColor"); else _explicitNullProperties?.Remove("backgroundColor"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicButtonStyleSettingsBackgroundColorProperty2? _explicitNullValueBackgroundColor = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicButtonStyleSettingsBackgroundColor? BackgroundColor { get => _explicitNullValueBackgroundColor; set { _explicitNullValueBackgroundColor = value; AdditionalData?.Remove("backgroundColor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("backgroundColor"); else _explicitNullProperties?.Remove("backgroundColor"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicButtonStyleSettingsBackgroundColor? _explicitNullValueBackgroundColor = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicButtonStyleSettingsBackgroundColorProperty2 BackgroundColor { get => _explicitNullValueBackgroundColor; set { _explicitNullValueBackgroundColor = value; AdditionalData?.Remove("backgroundColor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("backgroundColor"); else _explicitNullProperties?.Remove("backgroundColor"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicButtonStyleSettingsBackgroundColorProperty2 _explicitNullValueBackgroundColor = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicButtonStyleSettingsBackgroundColor BackgroundColor { get => _explicitNullValueBackgroundColor; set { _explicitNullValueBackgroundColor = value; AdditionalData?.Remove("backgroundColor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("backgroundColor"); else _explicitNullProperties?.Remove("backgroundColor"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicButtonStyleSettingsBackgroundColor _explicitNullValueBackgroundColor = default!;
 #endif
         /// <summary>An integer specifying the radius of the button&apos;s corners.</summary>
         public int? CornerRadius { get => _explicitNullValueCornerRadius; set { _explicitNullValueCornerRadius = value; AdditionalData?.Remove("cornerRadius"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cornerRadius"); else _explicitNullProperties?.Remove("cornerRadius"); } }
@@ -75,7 +75,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "backgroundColor", n => { BackgroundColor = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicButtonStyleSettingsBackgroundColorProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicButtonStyleSettingsBackgroundColorProperty2.CreateFromDiscriminatorValue); } },
+                { "backgroundColor", n => { BackgroundColor = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicButtonStyleSettingsBackgroundColor>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicButtonStyleSettingsBackgroundColor.CreateFromDiscriminatorValue); } },
                 { "cornerRadius", n => { CornerRadius = n.GetIntValue(); } },
                 { "fontStyle", n => { FontStyle = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicFontStyle>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicFontStyle.CreateFromDiscriminatorValue); } },
             };
@@ -87,7 +87,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicButtonStyleSettingsBackgroundColorProperty2>("backgroundColor", BackgroundColor);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicButtonStyleSettingsBackgroundColor>("backgroundColor", BackgroundColor);
             writer.WriteIntValue("cornerRadius", CornerRadius);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicFontStyle>("fontStyle", FontStyle);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

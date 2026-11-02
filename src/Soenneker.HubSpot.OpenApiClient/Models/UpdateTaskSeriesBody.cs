@@ -28,12 +28,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>A map of additional property names to their values, represented as key-value pairs where both keys and values are strings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.UpdateTaskSeriesBodyPropertiesProperty2? Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.UpdateTaskSeriesBodyPropertiesProperty2? _explicitNullValueProperties = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.UpdateTaskSeriesBodyProperties? Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.UpdateTaskSeriesBodyProperties? _explicitNullValueProperties = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.UpdateTaskSeriesBodyPropertiesProperty2 Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.UpdateTaskSeriesBodyPropertiesProperty2 _explicitNullValueProperties = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.UpdateTaskSeriesBodyProperties Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.UpdateTaskSeriesBodyProperties _explicitNullValueProperties = default!;
 #endif
         /// <summary>The series property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -70,7 +70,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.UpdateTaskSeriesBodyPropertiesProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.UpdateTaskSeriesBodyPropertiesProperty2.CreateFromDiscriminatorValue); } },
+                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.UpdateTaskSeriesBodyProperties>(global::Soenneker.HubSpot.OpenApiClient.Models.UpdateTaskSeriesBodyProperties.CreateFromDiscriminatorValue); } },
                 { "series", n => { Series = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTaskSeries>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicTaskSeries.CreateFromDiscriminatorValue); } },
             };
         }
@@ -81,7 +81,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.UpdateTaskSeriesBodyPropertiesProperty2>("properties", Properties);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.UpdateTaskSeriesBodyProperties>("properties", Properties);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTaskSeries>("series", Series);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

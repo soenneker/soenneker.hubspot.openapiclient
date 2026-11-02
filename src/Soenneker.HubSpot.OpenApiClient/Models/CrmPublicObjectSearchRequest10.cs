@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A string representing the paging cursor token for pagination. It is used to retrieve the next set of results after the current page.</summary>
+        /// <summary>A paging cursor token for retrieving subsequent pages.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? After { get => _explicitNullValueAfter; set { _explicitNullValueAfter = value; AdditionalData?.Remove("after"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("after"); else _explicitNullProperties?.Remove("after"); } }
@@ -44,7 +44,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string After { get => _explicitNullValueAfter; set { _explicitNullValueAfter = value; AdditionalData?.Remove("after"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("after"); else _explicitNullProperties?.Remove("after"); } }
         private string _explicitNullValueAfter = default!;
 #endif
-        /// <summary>An array of filter groups used to define the search criteria. Each filter group contains filters that determine which CRM objects are included in the search results.</summary>
+        /// <summary>Up to 6 groups of filters defining additional query criteria.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup10>? FilterGroups { get => _explicitNullValueFilterGroups; set { _explicitNullValueFilterGroups = value; AdditionalData?.Remove("filterGroups"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filterGroups"); else _explicitNullProperties?.Remove("filterGroups"); } }
@@ -54,10 +54,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup10> FilterGroups { get => _explicitNullValueFilterGroups; set { _explicitNullValueFilterGroups = value; AdditionalData?.Remove("filterGroups"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filterGroups"); else _explicitNullProperties?.Remove("filterGroups"); } }
         private List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup10> _explicitNullValueFilterGroups = default!;
 #endif
-        /// <summary>An integer indicating the maximum number of results to return per page. This property controls the pagination of the search results.</summary>
+        /// <summary>The maximum results to return, up to 200 objects.</summary>
         public int? Limit { get => _explicitNullValueLimit; set { _explicitNullValueLimit = value; AdditionalData?.Remove("limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("limit"); else _explicitNullProperties?.Remove("limit"); } }
         private int? _explicitNullValueLimit = default!;
-        /// <summary>An array of strings specifying the properties of the CRM objects to be returned in the search results. If a specified property is not present on the objects, it will be ignored.</summary>
+        /// <summary>A list of property names to include in the response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
@@ -67,7 +67,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public List<string> Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
         private List<string> _explicitNullValueProperties = default!;
 #endif
-        /// <summary>A string representing a search query to filter the CRM objects. This is an optional field that can be used to perform a text-based search.</summary>
+        /// <summary>The search query string, up to 3000 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Query { get => _explicitNullValueQuery; set { _explicitNullValueQuery = value; AdditionalData?.Remove("query"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("query"); else _explicitNullProperties?.Remove("query"); } }
@@ -77,7 +77,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Query { get => _explicitNullValueQuery; set { _explicitNullValueQuery = value; AdditionalData?.Remove("query"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("query"); else _explicitNullProperties?.Remove("query"); } }
         private string _explicitNullValueQuery = default!;
 #endif
-        /// <summary>An array of strings specifying the sorting order of the search results. Each string represents a property by which the results should be sorted.</summary>
+        /// <summary>Specifies sorting order based on object properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Sorts { get => _explicitNullValueSorts; set { _explicitNullValueSorts = value; AdditionalData?.Remove("sorts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sorts"); else _explicitNullProperties?.Remove("sorts"); } }

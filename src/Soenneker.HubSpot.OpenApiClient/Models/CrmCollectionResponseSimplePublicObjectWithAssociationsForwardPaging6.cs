@@ -29,14 +29,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging7? Paging { get => _explicitNullValuePaging; set { _explicitNullValuePaging = value; AdditionalData?.Remove("paging"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paging"); else _explicitNullProperties?.Remove("paging"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging7? _explicitNullValuePaging = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging8? Paging { get => _explicitNullValuePaging; set { _explicitNullValuePaging = value; AdditionalData?.Remove("paging"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paging"); else _explicitNullProperties?.Remove("paging"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging8? _explicitNullValuePaging = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging7 Paging { get => _explicitNullValuePaging; set { _explicitNullValuePaging = value; AdditionalData?.Remove("paging"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paging"); else _explicitNullProperties?.Remove("paging"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging7 _explicitNullValuePaging = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging8 Paging { get => _explicitNullValuePaging; set { _explicitNullValuePaging = value; AdditionalData?.Remove("paging"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paging"); else _explicitNullProperties?.Remove("paging"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging8 _explicitNullValuePaging = default!;
 #endif
-        /// <summary>An array of simple public objects with associations. Each object includes its properties and associated data.</summary>
+        /// <summary>An array of SimplePublicObjectWithAssociations, each representing a public object with its associated data.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectWithAssociations6>? Results { get => _explicitNullValueResults; set { _explicitNullValueResults = value; AdditionalData?.Remove("results"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("results"); else _explicitNullProperties?.Remove("results"); } }
@@ -71,7 +71,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "paging", n => { Paging = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging7>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging7.CreateFromDiscriminatorValue); } },
+                { "paging", n => { Paging = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging8>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging8.CreateFromDiscriminatorValue); } },
                 { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectWithAssociations6>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectWithAssociations6.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -82,7 +82,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging7>("paging", Paging);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging8>("paging", Paging);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectWithAssociations6>("results", Results);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

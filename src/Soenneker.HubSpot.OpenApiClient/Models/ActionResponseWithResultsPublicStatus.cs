@@ -53,12 +53,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Contains URLs related to the response, such as documentation or resources.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsPublicStatusLinksProperty2? Links { get => _explicitNullValueLinks; set { _explicitNullValueLinks = value; AdditionalData?.Remove("links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("links"); else _explicitNullProperties?.Remove("links"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsPublicStatusLinksProperty2? _explicitNullValueLinks = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsPublicStatusLinks? Links { get => _explicitNullValueLinks; set { _explicitNullValueLinks = value; AdditionalData?.Remove("links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("links"); else _explicitNullProperties?.Remove("links"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsPublicStatusLinks? _explicitNullValueLinks = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsPublicStatusLinksProperty2 Links { get => _explicitNullValueLinks; set { _explicitNullValueLinks = value; AdditionalData?.Remove("links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("links"); else _explicitNullProperties?.Remove("links"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsPublicStatusLinksProperty2 _explicitNullValueLinks = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsPublicStatusLinks Links { get => _explicitNullValueLinks; set { _explicitNullValueLinks = value; AdditionalData?.Remove("links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("links"); else _explicitNullProperties?.Remove("links"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsPublicStatusLinks _explicitNullValueLinks = default!;
 #endif
         /// <summary>The number of errors that occurred during the operation.</summary>
         public int? NumErrors { get => _explicitNullValueNumErrors; set { _explicitNullValueNumErrors = value; AdditionalData?.Remove("numErrors"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("numErrors"); else _explicitNullProperties?.Remove("numErrors"); } }
@@ -109,7 +109,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "completedAt", n => { CompletedAt = n.GetDateTimeOffsetValue(); } },
                 { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CommunicationPreferencesStandardError>(global::Soenneker.HubSpot.OpenApiClient.Models.CommunicationPreferencesStandardError.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsPublicStatusLinksProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsPublicStatusLinksProperty2.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsPublicStatusLinks>(global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsPublicStatusLinks.CreateFromDiscriminatorValue); } },
                 { "numErrors", n => { NumErrors = n.GetIntValue(); } },
                 { "requestedAt", n => { RequestedAt = n.GetDateTimeOffsetValue(); } },
                 { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatus>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatus.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -126,7 +126,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDateTimeOffsetValue("completedAt", CompletedAt);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CommunicationPreferencesStandardError>("errors", Errors);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsPublicStatusLinksProperty2>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ActionResponseWithResultsPublicStatusLinks>("links", Links);
             writer.WriteIntValue("numErrors", NumErrors);
             writer.WriteDateTimeOffsetValue("requestedAt", RequestedAt);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicStatus>("results", Results);

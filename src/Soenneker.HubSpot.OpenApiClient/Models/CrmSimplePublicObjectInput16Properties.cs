@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     /// <summary>
-    /// An object containing key-value pairs where each key is a property name and the value is the property value. All properties are represented as strings.
+    /// An object containing key-value pairs representing the properties of the CRM object to be updated. Each key is a property name, and each value is the new value for that property. All properties are expected to be strings.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CrmSimplePublicObjectInput16Properties : IAdditionalDataHolder, IParsable

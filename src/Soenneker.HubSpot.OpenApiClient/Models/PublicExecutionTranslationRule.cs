@@ -28,12 +28,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Defines the conditions that must be met for the execution rule to apply.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicExecutionTranslationRuleConditionsProperty2? Conditions { get => _explicitNullValueConditions; set { _explicitNullValueConditions = value; AdditionalData?.Remove("conditions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conditions"); else _explicitNullProperties?.Remove("conditions"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicExecutionTranslationRuleConditionsProperty2? _explicitNullValueConditions = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicExecutionTranslationRuleConditions? Conditions { get => _explicitNullValueConditions; set { _explicitNullValueConditions = value; AdditionalData?.Remove("conditions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conditions"); else _explicitNullProperties?.Remove("conditions"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicExecutionTranslationRuleConditions? _explicitNullValueConditions = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicExecutionTranslationRuleConditionsProperty2 Conditions { get => _explicitNullValueConditions; set { _explicitNullValueConditions = value; AdditionalData?.Remove("conditions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conditions"); else _explicitNullProperties?.Remove("conditions"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicExecutionTranslationRuleConditionsProperty2 _explicitNullValueConditions = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicExecutionTranslationRuleConditions Conditions { get => _explicitNullValueConditions; set { _explicitNullValueConditions = value; AdditionalData?.Remove("conditions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conditions"); else _explicitNullProperties?.Remove("conditions"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicExecutionTranslationRuleConditions _explicitNullValueConditions = default!;
 #endif
         /// <summary>Specifies the name of the label associated with the execution rule.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -70,7 +70,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "conditions", n => { Conditions = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExecutionTranslationRuleConditionsProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicExecutionTranslationRuleConditionsProperty2.CreateFromDiscriminatorValue); } },
+                { "conditions", n => { Conditions = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExecutionTranslationRuleConditions>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicExecutionTranslationRuleConditions.CreateFromDiscriminatorValue); } },
                 { "labelName", n => { LabelName = n.GetStringValue(); } },
             };
         }
@@ -81,7 +81,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExecutionTranslationRuleConditionsProperty2>("conditions", Conditions);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicExecutionTranslationRuleConditions>("conditions", Conditions);
             writer.WriteStringValue("labelName", LabelName);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

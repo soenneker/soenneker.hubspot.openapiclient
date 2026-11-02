@@ -43,22 +43,22 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An array of errors that occurred during the batch process. Each item in the array is a reference to a StandardError schema.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError25>? Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; AdditionalData?.Remove("errors"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
-        private List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError25>? _explicitNullValueErrors = default!;
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError24>? Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; AdditionalData?.Remove("errors"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError24>? _explicitNullValueErrors = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError25> Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; AdditionalData?.Remove("errors"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
-        private List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError25> _explicitNullValueErrors = default!;
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError24> Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; AdditionalData?.Remove("errors"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError24> _explicitNullValueErrors = default!;
 #endif
         /// <summary>An object containing additional links related to the batch process. Each key-value pair represents a link name and its URL.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseRecordIdWithMembershipsWithErrorsLinksProperty2? Links { get => _explicitNullValueLinks; set { _explicitNullValueLinks = value; AdditionalData?.Remove("links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("links"); else _explicitNullProperties?.Remove("links"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseRecordIdWithMembershipsWithErrorsLinksProperty2? _explicitNullValueLinks = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseRecordIdWithMembershipsWithErrorsLinks? Links { get => _explicitNullValueLinks; set { _explicitNullValueLinks = value; AdditionalData?.Remove("links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("links"); else _explicitNullProperties?.Remove("links"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseRecordIdWithMembershipsWithErrorsLinks? _explicitNullValueLinks = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseRecordIdWithMembershipsWithErrorsLinksProperty2 Links { get => _explicitNullValueLinks; set { _explicitNullValueLinks = value; AdditionalData?.Remove("links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("links"); else _explicitNullProperties?.Remove("links"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseRecordIdWithMembershipsWithErrorsLinksProperty2 _explicitNullValueLinks = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseRecordIdWithMembershipsWithErrorsLinks Links { get => _explicitNullValueLinks; set { _explicitNullValueLinks = value; AdditionalData?.Remove("links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("links"); else _explicitNullProperties?.Remove("links"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseRecordIdWithMembershipsWithErrorsLinks _explicitNullValueLinks = default!;
 #endif
         /// <summary>The total number of errors encountered during the batch process.</summary>
         public int? NumErrors { get => _explicitNullValueNumErrors; set { _explicitNullValueNumErrors = value; AdditionalData?.Remove("numErrors"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("numErrors"); else _explicitNullProperties?.Remove("numErrors"); } }
@@ -108,8 +108,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "completedAt", n => { CompletedAt = n.GetDateTimeOffsetValue(); } },
-                { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError25>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError25.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseRecordIdWithMembershipsWithErrorsLinksProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseRecordIdWithMembershipsWithErrorsLinksProperty2.CreateFromDiscriminatorValue); } },
+                { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError24>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError24.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseRecordIdWithMembershipsWithErrorsLinks>(global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseRecordIdWithMembershipsWithErrorsLinks.CreateFromDiscriminatorValue); } },
                 { "numErrors", n => { NumErrors = n.GetIntValue(); } },
                 { "requestedAt", n => { RequestedAt = n.GetDateTimeOffsetValue(); } },
                 { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.RecordIdWithMemberships>(global::Soenneker.HubSpot.OpenApiClient.Models.RecordIdWithMemberships.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -125,8 +125,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDateTimeOffsetValue("completedAt", CompletedAt);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError25>("errors", Errors);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseRecordIdWithMembershipsWithErrorsLinksProperty2>("links", Links);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmStandardError24>("errors", Errors);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseRecordIdWithMembershipsWithErrorsLinks>("links", Links);
             writer.WriteIntValue("numErrors", NumErrors);
             writer.WriteDateTimeOffsetValue("requestedAt", RequestedAt);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.RecordIdWithMemberships>("results", Results);

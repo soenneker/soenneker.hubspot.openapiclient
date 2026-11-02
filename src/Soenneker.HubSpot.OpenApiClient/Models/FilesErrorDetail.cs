@@ -45,12 +45,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Context about the error condition, represented as an object with additional properties that are arrays of strings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.FilesErrorDetailContextProperty2? Context { get => _explicitNullValueContext; set { _explicitNullValueContext = value; AdditionalData?.Remove("context"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("context"); else _explicitNullProperties?.Remove("context"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.FilesErrorDetailContextProperty2? _explicitNullValueContext = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.FilesErrorDetailContext? Context { get => _explicitNullValueContext; set { _explicitNullValueContext = value; AdditionalData?.Remove("context"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("context"); else _explicitNullProperties?.Remove("context"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.FilesErrorDetailContext? _explicitNullValueContext = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.FilesErrorDetailContextProperty2 Context { get => _explicitNullValueContext; set { _explicitNullValueContext = value; AdditionalData?.Remove("context"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("context"); else _explicitNullProperties?.Remove("context"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.FilesErrorDetailContextProperty2 _explicitNullValueContext = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.FilesErrorDetailContext Context { get => _explicitNullValueContext; set { _explicitNullValueContext = value; AdditionalData?.Remove("context"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("context"); else _explicitNullProperties?.Remove("context"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.FilesErrorDetailContext _explicitNullValueContext = default!;
 #endif
         /// <summary>The name of the field or parameter in which the error was found.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -108,7 +108,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "code", n => { Code = n.GetStringValue(); } },
-                { "context", n => { Context = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.FilesErrorDetailContextProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.FilesErrorDetailContextProperty2.CreateFromDiscriminatorValue); } },
+                { "context", n => { Context = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.FilesErrorDetailContext>(global::Soenneker.HubSpot.OpenApiClient.Models.FilesErrorDetailContext.CreateFromDiscriminatorValue); } },
                 { "in", n => { In = n.GetStringValue(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "subCategory", n => { SubCategory = n.GetStringValue(); } },
@@ -122,7 +122,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("code", Code);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.FilesErrorDetailContextProperty2>("context", Context);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.FilesErrorDetailContext>("context", Context);
             writer.WriteStringValue("in", In);
             writer.WriteStringValue("message", Message);
             writer.WriteStringValue("subCategory", SubCategory);

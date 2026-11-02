@@ -40,7 +40,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string IdProperty { get => _explicitNullValueIdProperty; set { _explicitNullValueIdProperty = value; AdditionalData?.Remove("idProperty"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("idProperty"); else _explicitNullProperties?.Remove("idProperty"); } }
         private string _explicitNullValueIdProperty = default!;
 #endif
-        /// <summary>An array of SimplePublicObjectId objects, each representing the ID of an object to be read.</summary>
+        /// <summary>An array of SimplePublicObjectId objects, each representing an object to be read. Each object must have an &apos;id&apos; property.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectId35>? Inputs { get => _explicitNullValueInputs; set { _explicitNullValueInputs = value; AdditionalData?.Remove("inputs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputs"); else _explicitNullProperties?.Remove("inputs"); } }

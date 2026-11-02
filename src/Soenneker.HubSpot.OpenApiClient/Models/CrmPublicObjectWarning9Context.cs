@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     /// <summary>
-    /// An object containing additional context about the warning, with string values for each context key.
+    /// An object providing additional context about the warning, with string properties.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CrmPublicObjectWarning9Context : IAdditionalDataHolder, IParsable

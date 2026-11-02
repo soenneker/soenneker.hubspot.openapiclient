@@ -30,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A string representing the name of a property whose values are unique for this object type. This is optional and can be used to identify objects by a unique property value instead of the internal ID.</summary>
+        /// <summary>When using a custom unique value property to retrieve records, the name of the property. Do not include this parameter if retrieving by record ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? IdProperty { get => _explicitNullValueIdProperty; set { _explicitNullValueIdProperty = value; AdditionalData?.Remove("idProperty"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("idProperty"); else _explicitNullProperties?.Remove("idProperty"); } }
@@ -40,7 +40,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string IdProperty { get => _explicitNullValueIdProperty; set { _explicitNullValueIdProperty = value; AdditionalData?.Remove("idProperty"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("idProperty"); else _explicitNullProperties?.Remove("idProperty"); } }
         private string _explicitNullValueIdProperty = default!;
 #endif
-        /// <summary>An array of SimplePublicObjectId objects, each containing an ID of the object to be read. These IDs are used to identify the objects for which the properties and historical values are requested.</summary>
+        /// <summary>An array of SimplePublicObjectId objects, each containing an ID of an object to be read.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectId6>? Inputs { get => _explicitNullValueInputs; set { _explicitNullValueInputs = value; AdditionalData?.Remove("inputs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputs"); else _explicitNullProperties?.Remove("inputs"); } }
@@ -50,7 +50,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectId6> Inputs { get => _explicitNullValueInputs; set { _explicitNullValueInputs = value; AdditionalData?.Remove("inputs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputs"); else _explicitNullProperties?.Remove("inputs"); } }
         private List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObjectId6> _explicitNullValueInputs = default!;
 #endif
-        /// <summary>An array of strings representing the properties to be returned for each object. If any specified properties are not present on the requested objects, they will be ignored.</summary>
+        /// <summary>An array of strings representing the properties to be returned in the response for each object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
@@ -60,7 +60,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public List<string> Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
         private List<string> _explicitNullValueProperties = default!;
 #endif
-        /// <summary>An array of strings representing the properties to be returned along with their history of previous values. If any specified properties are not present on the requested objects, they will be ignored.</summary>
+        /// <summary>An array of strings indicating the properties to be returned along with their history of previous values for each object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? PropertiesWithHistory { get => _explicitNullValuePropertiesWithHistory; set { _explicitNullValuePropertiesWithHistory = value; AdditionalData?.Remove("propertiesWithHistory"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("propertiesWithHistory"); else _explicitNullProperties?.Remove("propertiesWithHistory"); } }

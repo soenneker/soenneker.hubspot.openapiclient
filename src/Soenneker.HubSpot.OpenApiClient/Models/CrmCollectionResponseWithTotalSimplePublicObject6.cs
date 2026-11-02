@@ -38,7 +38,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPaging7 Paging { get => _explicitNullValuePaging; set { _explicitNullValuePaging = value; AdditionalData?.Remove("paging"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paging"); else _explicitNullProperties?.Remove("paging"); } }
         private global::Soenneker.HubSpot.OpenApiClient.Models.CrmPaging7 _explicitNullValuePaging = default!;
 #endif
-        /// <summary>An array of SimplePublicObject items, each representing an individual object in the collection.</summary>
+        /// <summary>An array containing the simple public objects returned in the current response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject6>? Results { get => _explicitNullValueResults; set { _explicitNullValueResults = value; AdditionalData?.Remove("results"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("results"); else _explicitNullProperties?.Remove("results"); } }

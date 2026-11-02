@@ -38,12 +38,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object containing key-value pairs of the campaign properties to be updated. Each key is a property name, and each value is the new value for that property, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignBatchUpdateItemPropertiesProperty2? Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignBatchUpdateItemPropertiesProperty2? _explicitNullValueProperties = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignBatchUpdateItemProperties? Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignBatchUpdateItemProperties? _explicitNullValueProperties = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignBatchUpdateItemPropertiesProperty2 Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignBatchUpdateItemPropertiesProperty2 _explicitNullValueProperties = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignBatchUpdateItemProperties Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignBatchUpdateItemProperties _explicitNullValueProperties = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignBatchUpdateItem"/> and sets the default values.
@@ -71,7 +71,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignBatchUpdateItemPropertiesProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignBatchUpdateItemPropertiesProperty2.CreateFromDiscriminatorValue); } },
+                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignBatchUpdateItemProperties>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignBatchUpdateItemProperties.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -82,7 +82,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignBatchUpdateItemPropertiesProperty2>("properties", Properties);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignBatchUpdateItemProperties>("properties", Properties);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -36,12 +36,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>A map of asset types to their respective collections of campaign assets, represented by CollectionResponsePublicCampaignAsset objects.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignWithAssetsAssetsProperty2? Assets { get => _explicitNullValueAssets; set { _explicitNullValueAssets = value; AdditionalData?.Remove("assets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assets"); else _explicitNullProperties?.Remove("assets"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignWithAssetsAssetsProperty2? _explicitNullValueAssets = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignWithAssetsAssets? Assets { get => _explicitNullValueAssets; set { _explicitNullValueAssets = value; AdditionalData?.Remove("assets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assets"); else _explicitNullProperties?.Remove("assets"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignWithAssetsAssets? _explicitNullValueAssets = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignWithAssetsAssetsProperty2 Assets { get => _explicitNullValueAssets; set { _explicitNullValueAssets = value; AdditionalData?.Remove("assets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assets"); else _explicitNullProperties?.Remove("assets"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignWithAssetsAssetsProperty2 _explicitNullValueAssets = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignWithAssetsAssets Assets { get => _explicitNullValueAssets; set { _explicitNullValueAssets = value; AdditionalData?.Remove("assets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assets"); else _explicitNullProperties?.Remove("assets"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignWithAssetsAssets _explicitNullValueAssets = default!;
 #endif
         /// <summary>An array of business units associated with the campaign, each represented by a PublicBusinessUnit object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -69,12 +69,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>A map of custom property names to their values, where each value is a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignWithAssetsPropertiesProperty2? Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignWithAssetsPropertiesProperty2? _explicitNullValueProperties = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignWithAssetsProperties? Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignWithAssetsProperties? _explicitNullValueProperties = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignWithAssetsPropertiesProperty2 Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignWithAssetsPropertiesProperty2 _explicitNullValueProperties = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignWithAssetsProperties Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignWithAssetsProperties _explicitNullValueProperties = default!;
 #endif
         /// <summary>The date and time when the campaign was last updated, in ISO 8601 format.</summary>
         public DateTimeOffset? UpdatedAt { get => _explicitNullValueUpdatedAt; set { _explicitNullValueUpdatedAt = value; AdditionalData?.Remove("updatedAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updatedAt"); else _explicitNullProperties?.Remove("updatedAt"); } }
@@ -104,11 +104,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "assets", n => { Assets = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignWithAssetsAssetsProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignWithAssetsAssetsProperty2.CreateFromDiscriminatorValue); } },
+                { "assets", n => { Assets = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignWithAssetsAssets>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignWithAssetsAssets.CreateFromDiscriminatorValue); } },
                 { "businessUnits", n => { BusinessUnits = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPublicBusinessUnit>(global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPublicBusinessUnit.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignWithAssetsPropertiesProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignWithAssetsPropertiesProperty2.CreateFromDiscriminatorValue); } },
+                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignWithAssetsProperties>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignWithAssetsProperties.CreateFromDiscriminatorValue); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
             };
         }
@@ -119,11 +119,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignWithAssetsAssetsProperty2>("assets", Assets);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignWithAssetsAssets>("assets", Assets);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingPublicBusinessUnit>("businessUnits", BusinessUnits);
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignWithAssetsPropertiesProperty2>("properties", Properties);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignWithAssetsProperties>("properties", Properties);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

@@ -28,12 +28,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Contains the properties of the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ObjectFieldSchemaPropertiesProperty2? Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.ObjectFieldSchemaPropertiesProperty2? _explicitNullValueProperties = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ObjectFieldSchemaProperties? Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ObjectFieldSchemaProperties? _explicitNullValueProperties = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ObjectFieldSchemaPropertiesProperty2 Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.ObjectFieldSchemaPropertiesProperty2 _explicitNullValueProperties = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ObjectFieldSchemaProperties Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ObjectFieldSchemaProperties _explicitNullValueProperties = default!;
 #endif
         /// <summary>Specifies the type of the field, which is &apos;OBJECT&apos; by default.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.ObjectValueType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
@@ -63,7 +63,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ObjectFieldSchemaPropertiesProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.ObjectFieldSchemaPropertiesProperty2.CreateFromDiscriminatorValue); } },
+                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ObjectFieldSchemaProperties>(global::Soenneker.HubSpot.OpenApiClient.Models.ObjectFieldSchemaProperties.CreateFromDiscriminatorValue); } },
                 { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ObjectValueType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
@@ -74,7 +74,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ObjectFieldSchemaPropertiesProperty2>("properties", Properties);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ObjectFieldSchemaProperties>("properties", Properties);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ObjectValueType>("type", Type);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

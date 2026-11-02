@@ -157,12 +157,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>List of stylesheets to attach to this page. These stylesheets are attached to just this page. Order of precedence is bottom to top, just like in the HTML.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PageAttachedStylesheetsItemProperty2>? AttachedStylesheets { get => _explicitNullValueAttachedStylesheets; set { _explicitNullValueAttachedStylesheets = value; AdditionalData?.Remove("attachedStylesheets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attachedStylesheets"); else _explicitNullProperties?.Remove("attachedStylesheets"); } }
-        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PageAttachedStylesheetsItemProperty2>? _explicitNullValueAttachedStylesheets = default!;
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PageAttachedStylesheetsItem>? AttachedStylesheets { get => _explicitNullValueAttachedStylesheets; set { _explicitNullValueAttachedStylesheets = value; AdditionalData?.Remove("attachedStylesheets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attachedStylesheets"); else _explicitNullProperties?.Remove("attachedStylesheets"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PageAttachedStylesheetsItem>? _explicitNullValueAttachedStylesheets = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PageAttachedStylesheetsItemProperty2> AttachedStylesheets { get => _explicitNullValueAttachedStylesheets; set { _explicitNullValueAttachedStylesheets = value; AdditionalData?.Remove("attachedStylesheets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attachedStylesheets"); else _explicitNullProperties?.Remove("attachedStylesheets"); } }
-        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PageAttachedStylesheetsItemProperty2> _explicitNullValueAttachedStylesheets = default!;
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.PageAttachedStylesheetsItem> AttachedStylesheets { get => _explicitNullValueAttachedStylesheets; set { _explicitNullValueAttachedStylesheets = value; AdditionalData?.Remove("attachedStylesheets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attachedStylesheets"); else _explicitNullProperties?.Remove("attachedStylesheets"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.PageAttachedStylesheetsItem> _explicitNullValueAttachedStylesheets = default!;
 #endif
         /// <summary>The name of the user that updated this page.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -337,12 +337,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>A structure detailing the layout sections of the page.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PageLayoutSectionsProperty2? LayoutSections { get => _explicitNullValueLayoutSections; set { _explicitNullValueLayoutSections = value; AdditionalData?.Remove("layoutSections"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("layoutSections"); else _explicitNullProperties?.Remove("layoutSections"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PageLayoutSectionsProperty2? _explicitNullValueLayoutSections = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PageLayoutSections? LayoutSections { get => _explicitNullValueLayoutSections; set { _explicitNullValueLayoutSections = value; AdditionalData?.Remove("layoutSections"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("layoutSections"); else _explicitNullProperties?.Remove("layoutSections"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PageLayoutSections? _explicitNullValueLayoutSections = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PageLayoutSectionsProperty2 LayoutSections { get => _explicitNullValueLayoutSections; set { _explicitNullValueLayoutSections = value; AdditionalData?.Remove("layoutSections"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("layoutSections"); else _explicitNullProperties?.Remove("layoutSections"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PageLayoutSectionsProperty2 _explicitNullValueLayoutSections = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PageLayoutSections LayoutSections { get => _explicitNullValueLayoutSections; set { _explicitNullValueLayoutSections = value; AdditionalData?.Remove("layoutSections"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("layoutSections"); else _explicitNullProperties?.Remove("layoutSections"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PageLayoutSections _explicitNullValueLayoutSections = default!;
 #endif
         /// <summary>Optional override to set the URL to be used in the rel=canonical link tag on the page.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -478,12 +478,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>A collection of settings specific to the theme applied to the page.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PageThemeSettingsValuesProperty2? ThemeSettingsValues { get => _explicitNullValueThemeSettingsValues; set { _explicitNullValueThemeSettingsValues = value; AdditionalData?.Remove("themeSettingsValues"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("themeSettingsValues"); else _explicitNullProperties?.Remove("themeSettingsValues"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PageThemeSettingsValuesProperty2? _explicitNullValueThemeSettingsValues = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PageThemeSettingsValues? ThemeSettingsValues { get => _explicitNullValueThemeSettingsValues; set { _explicitNullValueThemeSettingsValues = value; AdditionalData?.Remove("themeSettingsValues"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("themeSettingsValues"); else _explicitNullProperties?.Remove("themeSettingsValues"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PageThemeSettingsValues? _explicitNullValueThemeSettingsValues = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PageThemeSettingsValuesProperty2 ThemeSettingsValues { get => _explicitNullValueThemeSettingsValues; set { _explicitNullValueThemeSettingsValues = value; AdditionalData?.Remove("themeSettingsValues"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("themeSettingsValues"); else _explicitNullProperties?.Remove("themeSettingsValues"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PageThemeSettingsValuesProperty2 _explicitNullValueThemeSettingsValues = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PageThemeSettingsValues ThemeSettingsValues { get => _explicitNullValueThemeSettingsValues; set { _explicitNullValueThemeSettingsValues = value; AdditionalData?.Remove("themeSettingsValues"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("themeSettingsValues"); else _explicitNullProperties?.Remove("themeSettingsValues"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PageThemeSettingsValues _explicitNullValueThemeSettingsValues = default!;
 #endif
         /// <summary>ID of the primary page this object was translated from.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -498,12 +498,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>A map of translations for the page, each associated with a specific language variation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PageTranslationsProperty2? Translations { get => _explicitNullValueTranslations; set { _explicitNullValueTranslations = value; AdditionalData?.Remove("translations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("translations"); else _explicitNullProperties?.Remove("translations"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PageTranslationsProperty2? _explicitNullValueTranslations = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PageTranslations? Translations { get => _explicitNullValueTranslations; set { _explicitNullValueTranslations = value; AdditionalData?.Remove("translations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("translations"); else _explicitNullProperties?.Remove("translations"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PageTranslations? _explicitNullValueTranslations = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PageTranslationsProperty2 Translations { get => _explicitNullValueTranslations; set { _explicitNullValueTranslations = value; AdditionalData?.Remove("translations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("translations"); else _explicitNullProperties?.Remove("translations"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PageTranslationsProperty2 _explicitNullValueTranslations = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PageTranslations Translations { get => _explicitNullValueTranslations; set { _explicitNullValueTranslations = value; AdditionalData?.Remove("translations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("translations"); else _explicitNullProperties?.Remove("translations"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PageTranslations _explicitNullValueTranslations = default!;
 #endif
         /// <summary>The timestamp indicating when the page was last updated.</summary>
         public DateTimeOffset? Updated { get => _explicitNullValueUpdated; set { _explicitNullValueUpdated = value; AdditionalData?.Remove("updated"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated"); else _explicitNullProperties?.Remove("updated"); } }
@@ -534,22 +534,22 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>A data structure containing the data for all the modules inside the containers for this page. This will only be populated if the page has widget containers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PageWidgetContainersProperty2? WidgetContainers { get => _explicitNullValueWidgetContainers; set { _explicitNullValueWidgetContainers = value; AdditionalData?.Remove("widgetContainers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("widgetContainers"); else _explicitNullProperties?.Remove("widgetContainers"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PageWidgetContainersProperty2? _explicitNullValueWidgetContainers = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PageWidgetContainers? WidgetContainers { get => _explicitNullValueWidgetContainers; set { _explicitNullValueWidgetContainers = value; AdditionalData?.Remove("widgetContainers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("widgetContainers"); else _explicitNullProperties?.Remove("widgetContainers"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PageWidgetContainers? _explicitNullValueWidgetContainers = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PageWidgetContainersProperty2 WidgetContainers { get => _explicitNullValueWidgetContainers; set { _explicitNullValueWidgetContainers = value; AdditionalData?.Remove("widgetContainers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("widgetContainers"); else _explicitNullProperties?.Remove("widgetContainers"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PageWidgetContainersProperty2 _explicitNullValueWidgetContainers = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PageWidgetContainers WidgetContainers { get => _explicitNullValueWidgetContainers; set { _explicitNullValueWidgetContainers = value; AdditionalData?.Remove("widgetContainers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("widgetContainers"); else _explicitNullProperties?.Remove("widgetContainers"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PageWidgetContainers _explicitNullValueWidgetContainers = default!;
 #endif
         /// <summary>A data structure containing the data for all the modules for this page.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PageWidgetsProperty2? Widgets { get => _explicitNullValueWidgets; set { _explicitNullValueWidgets = value; AdditionalData?.Remove("widgets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("widgets"); else _explicitNullProperties?.Remove("widgets"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PageWidgetsProperty2? _explicitNullValueWidgets = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PageWidgets? Widgets { get => _explicitNullValueWidgets; set { _explicitNullValueWidgets = value; AdditionalData?.Remove("widgets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("widgets"); else _explicitNullProperties?.Remove("widgets"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PageWidgets? _explicitNullValueWidgets = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PageWidgetsProperty2 Widgets { get => _explicitNullValueWidgets; set { _explicitNullValueWidgets = value; AdditionalData?.Remove("widgets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("widgets"); else _explicitNullProperties?.Remove("widgets"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PageWidgetsProperty2 _explicitNullValueWidgets = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PageWidgets Widgets { get => _explicitNullValueWidgets; set { _explicitNullValueWidgets = value; AdditionalData?.Remove("widgets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("widgets"); else _explicitNullProperties?.Remove("widgets"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PageWidgets _explicitNullValueWidgets = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.Page"/> and sets the default values.
@@ -580,7 +580,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "abTestId", n => { AbTestId = n.GetStringValue(); } },
                 { "archivedAt", n => { ArchivedAt = n.GetDateTimeOffsetValue(); } },
                 { "archivedInDashboard", n => { ArchivedInDashboard = n.GetBoolValue(); } },
-                { "attachedStylesheets", n => { AttachedStylesheets = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PageAttachedStylesheetsItemProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PageAttachedStylesheetsItemProperty2.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "attachedStylesheets", n => { AttachedStylesheets = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PageAttachedStylesheetsItem>(global::Soenneker.HubSpot.OpenApiClient.Models.PageAttachedStylesheetsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "authorName", n => { AuthorName = n.GetStringValue(); } },
                 { "campaign", n => { Campaign = n.GetStringValue(); } },
                 { "categoryId", n => { CategoryId = n.GetIntValue(); } },
@@ -605,7 +605,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "includeDefaultCustomCss", n => { IncludeDefaultCustomCss = n.GetBoolValue(); } },
                 { "language", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PageLanguage>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueLanguage = default; _explicitNullProperties?.Remove("language"); AdditionalData["language"] = unknown; } else { Language = parsed; AdditionalData.Remove("language"); } } },
-                { "layoutSections", n => { LayoutSections = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PageLayoutSectionsProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PageLayoutSectionsProperty2.CreateFromDiscriminatorValue); } },
+                { "layoutSections", n => { LayoutSections = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PageLayoutSections>(global::Soenneker.HubSpot.OpenApiClient.Models.PageLayoutSections.CreateFromDiscriminatorValue); } },
                 { "linkRelCanonicalUrl", n => { LinkRelCanonicalUrl = n.GetStringValue(); } },
                 { "mabExperimentId", n => { MabExperimentId = n.GetStringValue(); } },
                 { "metaDescription", n => { MetaDescription = n.GetStringValue(); } },
@@ -624,15 +624,15 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "state", n => { State = n.GetStringValue(); } },
                 { "subcategory", n => { Subcategory = n.GetStringValue(); } },
                 { "templatePath", n => { TemplatePath = n.GetStringValue(); } },
-                { "themeSettingsValues", n => { ThemeSettingsValues = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PageThemeSettingsValuesProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PageThemeSettingsValuesProperty2.CreateFromDiscriminatorValue); } },
+                { "themeSettingsValues", n => { ThemeSettingsValues = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PageThemeSettingsValues>(global::Soenneker.HubSpot.OpenApiClient.Models.PageThemeSettingsValues.CreateFromDiscriminatorValue); } },
                 { "translatedFromId", n => { TranslatedFromId = n.GetStringValue(); } },
-                { "translations", n => { Translations = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PageTranslationsProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PageTranslationsProperty2.CreateFromDiscriminatorValue); } },
+                { "translations", n => { Translations = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PageTranslations>(global::Soenneker.HubSpot.OpenApiClient.Models.PageTranslations.CreateFromDiscriminatorValue); } },
                 { "updated", n => { Updated = n.GetDateTimeOffsetValue(); } },
                 { "updatedById", n => { UpdatedById = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
                 { "useFeaturedImage", n => { UseFeaturedImage = n.GetBoolValue(); } },
-                { "widgetContainers", n => { WidgetContainers = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PageWidgetContainersProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PageWidgetContainersProperty2.CreateFromDiscriminatorValue); } },
-                { "widgets", n => { Widgets = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PageWidgetsProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PageWidgetsProperty2.CreateFromDiscriminatorValue); } },
+                { "widgetContainers", n => { WidgetContainers = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PageWidgetContainers>(global::Soenneker.HubSpot.OpenApiClient.Models.PageWidgetContainers.CreateFromDiscriminatorValue); } },
+                { "widgets", n => { Widgets = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PageWidgets>(global::Soenneker.HubSpot.OpenApiClient.Models.PageWidgets.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -646,7 +646,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("abTestId", AbTestId);
             writer.WriteDateTimeOffsetValue("archivedAt", ArchivedAt);
             writer.WriteBoolValue("archivedInDashboard", ArchivedInDashboard);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PageAttachedStylesheetsItemProperty2>("attachedStylesheets", AttachedStylesheets);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PageAttachedStylesheetsItem>("attachedStylesheets", AttachedStylesheets);
             writer.WriteStringValue("authorName", AuthorName);
             writer.WriteStringValue("campaign", Campaign);
             writer.WriteIntValue("categoryId", CategoryId);
@@ -671,7 +671,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("includeDefaultCustomCss", IncludeDefaultCustomCss);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PageLanguage>("language", Language);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PageLayoutSectionsProperty2>("layoutSections", LayoutSections);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PageLayoutSections>("layoutSections", LayoutSections);
             writer.WriteStringValue("linkRelCanonicalUrl", LinkRelCanonicalUrl);
             writer.WriteStringValue("mabExperimentId", MabExperimentId);
             writer.WriteStringValue("metaDescription", MetaDescription);
@@ -690,15 +690,15 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("state", State);
             writer.WriteStringValue("subcategory", Subcategory);
             writer.WriteStringValue("templatePath", TemplatePath);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PageThemeSettingsValuesProperty2>("themeSettingsValues", ThemeSettingsValues);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PageThemeSettingsValues>("themeSettingsValues", ThemeSettingsValues);
             writer.WriteStringValue("translatedFromId", TranslatedFromId);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PageTranslationsProperty2>("translations", Translations);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PageTranslations>("translations", Translations);
             writer.WriteDateTimeOffsetValue("updated", Updated);
             writer.WriteStringValue("updatedById", UpdatedById);
             writer.WriteStringValue("url", Url);
             writer.WriteBoolValue("useFeaturedImage", UseFeaturedImage);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PageWidgetContainersProperty2>("widgetContainers", WidgetContainers);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PageWidgetsProperty2>("widgets", Widgets);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PageWidgetContainers>("widgetContainers", WidgetContainers);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PageWidgets>("widgets", Widgets);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

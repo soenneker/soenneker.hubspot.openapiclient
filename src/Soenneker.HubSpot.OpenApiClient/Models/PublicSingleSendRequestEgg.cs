@@ -32,22 +32,22 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The contactProperties field is a map of contact property values. Each contact property value contains a name and value property. Each property will get set on the contact record and will be visible in the template under {{ contact.NAME }}. Use these properties when you want to set a contact property while you’re sending the email. For example, when sending a receipt you may want to set a last_paid_date property, as the sending of the receipt will have information about the last payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEggContactPropertiesProperty2? ContactProperties { get => _explicitNullValueContactProperties; set { _explicitNullValueContactProperties = value; AdditionalData?.Remove("contactProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactProperties"); else _explicitNullProperties?.Remove("contactProperties"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEggContactPropertiesProperty2? _explicitNullValueContactProperties = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEggContactProperties? ContactProperties { get => _explicitNullValueContactProperties; set { _explicitNullValueContactProperties = value; AdditionalData?.Remove("contactProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactProperties"); else _explicitNullProperties?.Remove("contactProperties"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEggContactProperties? _explicitNullValueContactProperties = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEggContactPropertiesProperty2 ContactProperties { get => _explicitNullValueContactProperties; set { _explicitNullValueContactProperties = value; AdditionalData?.Remove("contactProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactProperties"); else _explicitNullProperties?.Remove("contactProperties"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEggContactPropertiesProperty2 _explicitNullValueContactProperties = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEggContactProperties ContactProperties { get => _explicitNullValueContactProperties; set { _explicitNullValueContactProperties = value; AdditionalData?.Remove("contactProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactProperties"); else _explicitNullProperties?.Remove("contactProperties"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEggContactProperties _explicitNullValueContactProperties = default!;
 #endif
         /// <summary>The customProperties field is a map of property values. Each property value contains a name and value property. Each property will be visible in the template under {{ custom.NAME }}.Note: Custom properties do not currently support arrays. To provide a listing in an email, one workaround is to build an HTML list (either with tables or ul) and specify it as a custom property.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEggCustomPropertiesProperty2? CustomProperties { get => _explicitNullValueCustomProperties; set { _explicitNullValueCustomProperties = value; AdditionalData?.Remove("customProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customProperties"); else _explicitNullProperties?.Remove("customProperties"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEggCustomPropertiesProperty2? _explicitNullValueCustomProperties = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEggCustomProperties? CustomProperties { get => _explicitNullValueCustomProperties; set { _explicitNullValueCustomProperties = value; AdditionalData?.Remove("customProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customProperties"); else _explicitNullProperties?.Remove("customProperties"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEggCustomProperties? _explicitNullValueCustomProperties = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEggCustomPropertiesProperty2 CustomProperties { get => _explicitNullValueCustomProperties; set { _explicitNullValueCustomProperties = value; AdditionalData?.Remove("customProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customProperties"); else _explicitNullProperties?.Remove("customProperties"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEggCustomPropertiesProperty2 _explicitNullValueCustomProperties = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEggCustomProperties CustomProperties { get => _explicitNullValueCustomProperties; set { _explicitNullValueCustomProperties = value; AdditionalData?.Remove("customProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customProperties"); else _explicitNullProperties?.Remove("customProperties"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEggCustomProperties _explicitNullValueCustomProperties = default!;
 #endif
         /// <summary>The content ID for the email, which can be found in email tool UI.</summary>
         public long? EmailId { get => _explicitNullValueEmailId; set { _explicitNullValueEmailId = value; AdditionalData?.Remove("emailId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailId"); else _explicitNullProperties?.Remove("emailId"); } }
@@ -87,8 +87,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "contactProperties", n => { ContactProperties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEggContactPropertiesProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEggContactPropertiesProperty2.CreateFromDiscriminatorValue); } },
-                { "customProperties", n => { CustomProperties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEggCustomPropertiesProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEggCustomPropertiesProperty2.CreateFromDiscriminatorValue); } },
+                { "contactProperties", n => { ContactProperties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEggContactProperties>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEggContactProperties.CreateFromDiscriminatorValue); } },
+                { "customProperties", n => { CustomProperties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEggCustomProperties>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEggCustomProperties.CreateFromDiscriminatorValue); } },
                 { "emailId", n => { EmailId = n.GetLongValue(); } },
                 { "message", n => { Message = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendEmail>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendEmail.CreateFromDiscriminatorValue); } },
             };
@@ -100,8 +100,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEggContactPropertiesProperty2>("contactProperties", ContactProperties);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEggCustomPropertiesProperty2>("customProperties", CustomProperties);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEggContactProperties>("contactProperties", ContactProperties);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendRequestEggCustomProperties>("customProperties", CustomProperties);
             writer.WriteLongValue("emailId", EmailId);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSingleSendEmail>("message", Message);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

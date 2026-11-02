@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>The operator that defines how the property value should be compared to the filter&apos;s value(s). Valid operators include &apos;EQ&apos;, &apos;NEQ&apos;, &apos;LT&apos;, &apos;LTE&apos;, &apos;GT&apos;, &apos;GTE&apos;, &apos;BETWEEN&apos;, &apos;IN&apos;, &apos;NOT_IN&apos;, &apos;HAS_PROPERTY&apos;, &apos;NOT_HAS_PROPERTY&apos;, &apos;CONTAINS_TOKEN&apos;, and &apos;NOT_CONTAINS_TOKEN&apos;.</summary>
+    /// <summary>The operator that defines the type of comparison to be made. Valid values include &apos;EQ&apos;, &apos;NEQ&apos;, &apos;LT&apos;, &apos;LTE&apos;, &apos;GT&apos;, &apos;GTE&apos;, &apos;BETWEEN&apos;, &apos;IN&apos;, &apos;NOT_IN&apos;, &apos;HAS_PROPERTY&apos;, &apos;NOT_HAS_PROPERTY&apos;, &apos;CONTAINS_TOKEN&apos;, and &apos;NOT_CONTAINS_TOKEN&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum CrmFilterOperator27
     {

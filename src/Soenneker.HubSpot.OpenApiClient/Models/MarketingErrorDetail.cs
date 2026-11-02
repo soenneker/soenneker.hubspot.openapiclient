@@ -45,12 +45,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Context about the error condition, provided as an object where each key is a context name and the value is an array of strings providing additional information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingErrorDetailContextProperty6? Context { get => _explicitNullValueContext; set { _explicitNullValueContext = value; AdditionalData?.Remove("context"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("context"); else _explicitNullProperties?.Remove("context"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.MarketingErrorDetailContextProperty6? _explicitNullValueContext = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingErrorDetailContext? Context { get => _explicitNullValueContext; set { _explicitNullValueContext = value; AdditionalData?.Remove("context"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("context"); else _explicitNullProperties?.Remove("context"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.MarketingErrorDetailContext? _explicitNullValueContext = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingErrorDetailContextProperty6 Context { get => _explicitNullValueContext; set { _explicitNullValueContext = value; AdditionalData?.Remove("context"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("context"); else _explicitNullProperties?.Remove("context"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.MarketingErrorDetailContextProperty6 _explicitNullValueContext = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingErrorDetailContext Context { get => _explicitNullValueContext; set { _explicitNullValueContext = value; AdditionalData?.Remove("context"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("context"); else _explicitNullProperties?.Remove("context"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.MarketingErrorDetailContext _explicitNullValueContext = default!;
 #endif
         /// <summary>The name of the field or parameter in which the error was found. This is a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -108,7 +108,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "code", n => { Code = n.GetStringValue(); } },
-                { "context", n => { Context = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingErrorDetailContextProperty6>(global::Soenneker.HubSpot.OpenApiClient.Models.MarketingErrorDetailContextProperty6.CreateFromDiscriminatorValue); } },
+                { "context", n => { Context = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingErrorDetailContext>(global::Soenneker.HubSpot.OpenApiClient.Models.MarketingErrorDetailContext.CreateFromDiscriminatorValue); } },
                 { "in", n => { In = n.GetStringValue(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "subCategory", n => { SubCategory = n.GetStringValue(); } },
@@ -122,7 +122,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("code", Code);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingErrorDetailContextProperty6>("context", Context);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingErrorDetailContext>("context", Context);
             writer.WriteStringValue("in", In);
             writer.WriteStringValue("message", Message);
             writer.WriteStringValue("subCategory", SubCategory);

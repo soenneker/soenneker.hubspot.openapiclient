@@ -26,10 +26,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The category of the association, such as &quot;HUBSPOT_DEFINED&quot;.</summary>
+        /// <summary>The category of the association, indicating its origin or purpose. Valid values include &apos;HUBSPOT_DEFINED&apos;, &apos;USER_DEFINED&apos;, &apos;INTEGRATOR_DEFINED&apos;, and &apos;WORK&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecAssociationCategory25? AssociationCategory { get => _explicitNullValueAssociationCategory; set { _explicitNullValueAssociationCategory = value; AdditionalData?.Remove("associationCategory"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("associationCategory"); else _explicitNullProperties?.Remove("associationCategory"); } }
         private global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecAssociationCategory25? _explicitNullValueAssociationCategory = default!;
-        /// <summary>The ID representing the specific type of association.</summary>
+        /// <summary>An integer representing the specific type of association within the defined category.</summary>
         public int? AssociationTypeId { get => _explicitNullValueAssociationTypeId; set { _explicitNullValueAssociationTypeId = value; AdditionalData?.Remove("associationTypeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("associationTypeId"); else _explicitNullProperties?.Remove("associationTypeId"); } }
         private int? _explicitNullValueAssociationTypeId = default!;
         /// <summary>

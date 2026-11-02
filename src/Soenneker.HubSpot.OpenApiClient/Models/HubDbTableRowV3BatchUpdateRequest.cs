@@ -72,12 +72,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>List of key value pairs with the column name and column value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableRowV3BatchUpdateRequestValuesProperty2? Values { get => _explicitNullValueValues; set { _explicitNullValueValues = value; AdditionalData?.Remove("values"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("values"); else _explicitNullProperties?.Remove("values"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableRowV3BatchUpdateRequestValuesProperty2? _explicitNullValueValues = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableRowV3BatchUpdateRequestValues? Values { get => _explicitNullValueValues; set { _explicitNullValueValues = value; AdditionalData?.Remove("values"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("values"); else _explicitNullProperties?.Remove("values"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableRowV3BatchUpdateRequestValues? _explicitNullValueValues = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableRowV3BatchUpdateRequestValuesProperty2 Values { get => _explicitNullValueValues; set { _explicitNullValueValues = value; AdditionalData?.Remove("values"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("values"); else _explicitNullProperties?.Remove("values"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableRowV3BatchUpdateRequestValuesProperty2 _explicitNullValueValues = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableRowV3BatchUpdateRequestValues Values { get => _explicitNullValueValues; set { _explicitNullValueValues = value; AdditionalData?.Remove("values"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("values"); else _explicitNullProperties?.Remove("values"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableRowV3BatchUpdateRequestValues _explicitNullValueValues = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableRowV3BatchUpdateRequest"/> and sets the default values.
@@ -109,7 +109,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "path", n => { Path = n.GetStringValue(); } },
-                { "values", n => { Values = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableRowV3BatchUpdateRequestValuesProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableRowV3BatchUpdateRequestValuesProperty2.CreateFromDiscriminatorValue); } },
+                { "values", n => { Values = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableRowV3BatchUpdateRequestValues>(global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableRowV3BatchUpdateRequestValues.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -124,7 +124,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("path", Path);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableRowV3BatchUpdateRequestValuesProperty2>("values", Values);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableRowV3BatchUpdateRequestValues>("values", Values);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

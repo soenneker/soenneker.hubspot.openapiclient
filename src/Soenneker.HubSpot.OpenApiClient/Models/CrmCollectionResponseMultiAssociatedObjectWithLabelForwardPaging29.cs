@@ -29,12 +29,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging37? Paging { get => _explicitNullValuePaging; set { _explicitNullValuePaging = value; AdditionalData?.Remove("paging"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paging"); else _explicitNullProperties?.Remove("paging"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging37? _explicitNullValuePaging = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging36? Paging { get => _explicitNullValuePaging; set { _explicitNullValuePaging = value; AdditionalData?.Remove("paging"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paging"); else _explicitNullProperties?.Remove("paging"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging36? _explicitNullValuePaging = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging37 Paging { get => _explicitNullValuePaging; set { _explicitNullValuePaging = value; AdditionalData?.Remove("paging"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paging"); else _explicitNullProperties?.Remove("paging"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging37 _explicitNullValuePaging = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging36 Paging { get => _explicitNullValuePaging; set { _explicitNullValuePaging = value; AdditionalData?.Remove("paging"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paging"); else _explicitNullProperties?.Remove("paging"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging36 _explicitNullValuePaging = default!;
 #endif
         /// <summary>An array of multi-associated objects with labels, each containing association details and the associated object ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -71,7 +71,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "paging", n => { Paging = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging37>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging37.CreateFromDiscriminatorValue); } },
+                { "paging", n => { Paging = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging36>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging36.CreateFromDiscriminatorValue); } },
                 { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmMultiAssociatedObjectWithLabel29>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmMultiAssociatedObjectWithLabel29.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -82,7 +82,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging37>("paging", Paging);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmForwardPaging36>("paging", Paging);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmMultiAssociatedObjectWithLabel29>("results", Results);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

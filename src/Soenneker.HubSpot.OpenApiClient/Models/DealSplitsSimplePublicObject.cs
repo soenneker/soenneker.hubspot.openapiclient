@@ -72,22 +72,22 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>A map of property names to their values, where each value is a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsSimplePublicObjectPropertiesProperty2? Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsSimplePublicObjectPropertiesProperty2? _explicitNullValueProperties = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsSimplePublicObjectProperties? Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsSimplePublicObjectProperties? _explicitNullValueProperties = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsSimplePublicObjectPropertiesProperty2 Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsSimplePublicObjectPropertiesProperty2 _explicitNullValueProperties = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsSimplePublicObjectProperties Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsSimplePublicObjectProperties _explicitNullValueProperties = default!;
 #endif
         /// <summary>A map of property names to arrays of historical values, each containing a value and its associated timestamp.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsSimplePublicObjectPropertiesWithHistoryProperty2? PropertiesWithHistory { get => _explicitNullValuePropertiesWithHistory; set { _explicitNullValuePropertiesWithHistory = value; AdditionalData?.Remove("propertiesWithHistory"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("propertiesWithHistory"); else _explicitNullProperties?.Remove("propertiesWithHistory"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsSimplePublicObjectPropertiesWithHistoryProperty2? _explicitNullValuePropertiesWithHistory = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsSimplePublicObjectPropertiesWithHistory? PropertiesWithHistory { get => _explicitNullValuePropertiesWithHistory; set { _explicitNullValuePropertiesWithHistory = value; AdditionalData?.Remove("propertiesWithHistory"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("propertiesWithHistory"); else _explicitNullProperties?.Remove("propertiesWithHistory"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsSimplePublicObjectPropertiesWithHistory? _explicitNullValuePropertiesWithHistory = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsSimplePublicObjectPropertiesWithHistoryProperty2 PropertiesWithHistory { get => _explicitNullValuePropertiesWithHistory; set { _explicitNullValuePropertiesWithHistory = value; AdditionalData?.Remove("propertiesWithHistory"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("propertiesWithHistory"); else _explicitNullProperties?.Remove("propertiesWithHistory"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsSimplePublicObjectPropertiesWithHistoryProperty2 _explicitNullValuePropertiesWithHistory = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsSimplePublicObjectPropertiesWithHistory PropertiesWithHistory { get => _explicitNullValuePropertiesWithHistory; set { _explicitNullValuePropertiesWithHistory = value; AdditionalData?.Remove("propertiesWithHistory"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("propertiesWithHistory"); else _explicitNullProperties?.Remove("propertiesWithHistory"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsSimplePublicObjectPropertiesWithHistory _explicitNullValuePropertiesWithHistory = default!;
 #endif
         /// <summary>The date and time when this object was last updated, in ISO 8601 format.</summary>
         public DateTimeOffset? UpdatedAt { get => _explicitNullValueUpdatedAt; set { _explicitNullValueUpdatedAt = value; AdditionalData?.Remove("updatedAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updatedAt"); else _explicitNullProperties?.Remove("updatedAt"); } }
@@ -132,8 +132,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "objectWriteTraceId", n => { ObjectWriteTraceId = n.GetStringValue(); } },
-                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsSimplePublicObjectPropertiesProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsSimplePublicObjectPropertiesProperty2.CreateFromDiscriminatorValue); } },
-                { "propertiesWithHistory", n => { PropertiesWithHistory = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsSimplePublicObjectPropertiesWithHistoryProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsSimplePublicObjectPropertiesWithHistoryProperty2.CreateFromDiscriminatorValue); } },
+                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsSimplePublicObjectProperties>(global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsSimplePublicObjectProperties.CreateFromDiscriminatorValue); } },
+                { "propertiesWithHistory", n => { PropertiesWithHistory = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsSimplePublicObjectPropertiesWithHistory>(global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsSimplePublicObjectPropertiesWithHistory.CreateFromDiscriminatorValue); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
@@ -150,8 +150,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("objectWriteTraceId", ObjectWriteTraceId);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsSimplePublicObjectPropertiesProperty2>("properties", Properties);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsSimplePublicObjectPropertiesWithHistoryProperty2>("propertiesWithHistory", PropertiesWithHistory);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsSimplePublicObjectProperties>("properties", Properties);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.DealSplitsSimplePublicObjectPropertiesWithHistory>("propertiesWithHistory", PropertiesWithHistory);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             writer.WriteStringValue("url", Url);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

@@ -50,12 +50,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>A map of asset types to be cloned, where each key is an asset type and the value is an array of asset identifiers. It is an object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignCloneInputAssetsToCloneProperty2? AssetsToClone { get => _explicitNullValueAssetsToClone; set { _explicitNullValueAssetsToClone = value; AdditionalData?.Remove("assetsToClone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assetsToClone"); else _explicitNullProperties?.Remove("assetsToClone"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignCloneInputAssetsToCloneProperty2? _explicitNullValueAssetsToClone = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignCloneInputAssetsToClone? AssetsToClone { get => _explicitNullValueAssetsToClone; set { _explicitNullValueAssetsToClone = value; AdditionalData?.Remove("assetsToClone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assetsToClone"); else _explicitNullProperties?.Remove("assetsToClone"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignCloneInputAssetsToClone? _explicitNullValueAssetsToClone = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignCloneInputAssetsToCloneProperty2 AssetsToClone { get => _explicitNullValueAssetsToClone; set { _explicitNullValueAssetsToClone = value; AdditionalData?.Remove("assetsToClone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assetsToClone"); else _explicitNullProperties?.Remove("assetsToClone"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignCloneInputAssetsToCloneProperty2 _explicitNullValueAssetsToClone = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignCloneInputAssetsToClone AssetsToClone { get => _explicitNullValueAssetsToClone; set { _explicitNullValueAssetsToClone = value; AdditionalData?.Remove("assetsToClone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assetsToClone"); else _explicitNullProperties?.Remove("assetsToClone"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignCloneInputAssetsToClone _explicitNullValueAssetsToClone = default!;
 #endif
         /// <summary>The target audience for the cloned campaign. It is a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -167,7 +167,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "assetsToClone", n => { AssetsToClone = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignCloneInputAssetsToCloneProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignCloneInputAssetsToCloneProperty2.CreateFromDiscriminatorValue); } },
+                { "assetsToClone", n => { AssetsToClone = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignCloneInputAssetsToClone>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignCloneInputAssetsToClone.CreateFromDiscriminatorValue); } },
                 { "audience", n => { Audience = n.GetStringValue(); } },
                 { "currencyCode", n => { CurrencyCode = n.GetStringValue(); } },
                 { "endDate", n => { EndDate = n.GetStringValue(); } },
@@ -189,7 +189,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignCloneInputAssetsToCloneProperty2>("assetsToClone", AssetsToClone);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignCloneInputAssetsToClone>("assetsToClone", AssetsToClone);
             writer.WriteStringValue("audience", Audience);
             writer.WriteStringValue("currencyCode", CurrencyCode);
             writer.WriteStringValue("endDate", EndDate);

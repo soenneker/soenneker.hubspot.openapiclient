@@ -26,7 +26,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A string token used to identify the starting point for retrieving the previous page of results.</summary>
+        /// <summary>A string token that indicates the position of the last item on the previous page. It is used to retrieve the previous set of results in a paginated list.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Before { get => _explicitNullValueBefore; set { _explicitNullValueBefore = value; AdditionalData?.Remove("before"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("before"); else _explicitNullProperties?.Remove("before"); } }
@@ -36,7 +36,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Before { get => _explicitNullValueBefore; set { _explicitNullValueBefore = value; AdditionalData?.Remove("before"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("before"); else _explicitNullProperties?.Remove("before"); } }
         private string _explicitNullValueBefore = default!;
 #endif
-        /// <summary>A string containing the URL link to access the previous page of results.</summary>
+        /// <summary>A string URL that provides a direct link to the previous page of results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Link { get => _explicitNullValueLink; set { _explicitNullValueLink = value; AdditionalData?.Remove("link"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link"); else _explicitNullProperties?.Remove("link"); } }

@@ -30,12 +30,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The indexed fields in HubSpot.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.IndexedDataFieldsProperty2? Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; AdditionalData?.Remove("fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.IndexedDataFieldsProperty2? _explicitNullValueFields = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.IndexedDataFields? Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; AdditionalData?.Remove("fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.IndexedDataFields? _explicitNullValueFields = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.IndexedDataFieldsProperty2 Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; AdditionalData?.Remove("fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.IndexedDataFieldsProperty2 _explicitNullValueFields = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.IndexedDataFields Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; AdditionalData?.Remove("fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.IndexedDataFields _explicitNullValueFields = default!;
 #endif
         /// <summary>The ID of the document in HubSpot.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -75,7 +75,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "fields", n => { Fields = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.IndexedDataFieldsProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.IndexedDataFieldsProperty2.CreateFromDiscriminatorValue); } },
+                { "fields", n => { Fields = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.IndexedDataFields>(global::Soenneker.HubSpot.OpenApiClient.Models.IndexedDataFields.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.IndexedDataType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
@@ -87,7 +87,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.IndexedDataFieldsProperty2>("fields", Fields);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.IndexedDataFields>("fields", Fields);
             writer.WriteStringValue("id", Id);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.IndexedDataType>("type", Type);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

@@ -31,22 +31,22 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPaging23? Paging { get => _explicitNullValuePaging; set { _explicitNullValuePaging = value; AdditionalData?.Remove("paging"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paging"); else _explicitNullProperties?.Remove("paging"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmPaging23? _explicitNullValuePaging = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPaging24? Paging { get => _explicitNullValuePaging; set { _explicitNullValuePaging = value; AdditionalData?.Remove("paging"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paging"); else _explicitNullProperties?.Remove("paging"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmPaging24? _explicitNullValuePaging = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPaging23 Paging { get => _explicitNullValuePaging; set { _explicitNullValuePaging = value; AdditionalData?.Remove("paging"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paging"); else _explicitNullProperties?.Remove("paging"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmPaging23 _explicitNullValuePaging = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPaging24 Paging { get => _explicitNullValuePaging; set { _explicitNullValuePaging = value; AdditionalData?.Remove("paging"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paging"); else _explicitNullProperties?.Remove("paging"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmPaging24 _explicitNullValuePaging = default!;
 #endif
-        /// <summary>An array of SimplePublicObject items, each representing a public object in the collection.</summary>
+        /// <summary>An array of SimplePublicObject items, each representing an individual object in the collection.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject22>? Results { get => _explicitNullValueResults; set { _explicitNullValueResults = value; AdditionalData?.Remove("results"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("results"); else _explicitNullProperties?.Remove("results"); } }
-        private List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject22>? _explicitNullValueResults = default!;
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject23>? Results { get => _explicitNullValueResults; set { _explicitNullValueResults = value; AdditionalData?.Remove("results"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("results"); else _explicitNullProperties?.Remove("results"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject23>? _explicitNullValueResults = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject22> Results { get => _explicitNullValueResults; set { _explicitNullValueResults = value; AdditionalData?.Remove("results"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("results"); else _explicitNullProperties?.Remove("results"); } }
-        private List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject22> _explicitNullValueResults = default!;
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject23> Results { get => _explicitNullValueResults; set { _explicitNullValueResults = value; AdditionalData?.Remove("results"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("results"); else _explicitNullProperties?.Remove("results"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject23> _explicitNullValueResults = default!;
 #endif
         /// <summary>The number of available results</summary>
         public int? Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; AdditionalData?.Remove("total"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
@@ -76,8 +76,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "paging", n => { Paging = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPaging23>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPaging23.CreateFromDiscriminatorValue); } },
-                { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject22>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject22.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "paging", n => { Paging = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPaging24>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPaging24.CreateFromDiscriminatorValue); } },
+                { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject23>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject23.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "total", n => { Total = n.GetIntValue(); } },
             };
         }
@@ -88,8 +88,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPaging23>("paging", Paging);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject22>("results", Results);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPaging24>("paging", Paging);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmSimplePublicObject23>("results", Results);
             writer.WriteIntValue("total", Total);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

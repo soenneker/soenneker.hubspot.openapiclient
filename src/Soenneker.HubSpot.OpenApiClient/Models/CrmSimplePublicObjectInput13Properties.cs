@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     /// <summary>
-    /// A map of property names to their values, where each property is represented as a string.
+    /// An object containing key-value pairs where each key is a property name and each value is the property&apos;s value. All properties are represented as strings.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CrmSimplePublicObjectInput13Properties : IAdditionalDataHolder, IParsable

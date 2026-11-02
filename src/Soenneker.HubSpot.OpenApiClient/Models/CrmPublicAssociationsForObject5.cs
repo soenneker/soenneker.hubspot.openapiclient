@@ -29,22 +29,22 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Contains the Id of a Public Object</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId5? To { get => _explicitNullValueTo; set { _explicitNullValueTo = value; AdditionalData?.Remove("to"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("to"); else _explicitNullProperties?.Remove("to"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId5? _explicitNullValueTo = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId6? To { get => _explicitNullValueTo; set { _explicitNullValueTo = value; AdditionalData?.Remove("to"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("to"); else _explicitNullProperties?.Remove("to"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId6? _explicitNullValueTo = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId5 To { get => _explicitNullValueTo; set { _explicitNullValueTo = value; AdditionalData?.Remove("to"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("to"); else _explicitNullProperties?.Remove("to"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId5 _explicitNullValueTo = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId6 To { get => _explicitNullValueTo; set { _explicitNullValueTo = value; AdditionalData?.Remove("to"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("to"); else _explicitNullProperties?.Remove("to"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId6 _explicitNullValueTo = default!;
 #endif
-        /// <summary>An array of association specifications, each defining the type of association between the objects. Each item in the array is a reference to the &apos;AssociationSpec&apos; schema.</summary>
+        /// <summary>An array of association specifications, each detailing the type of association between the objects. Each item in the array specifies the category and type ID of the association.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec6>? Types { get => _explicitNullValueTypes; set { _explicitNullValueTypes = value; AdditionalData?.Remove("types"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("types"); else _explicitNullProperties?.Remove("types"); } }
-        private List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec6>? _explicitNullValueTypes = default!;
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec7>? Types { get => _explicitNullValueTypes; set { _explicitNullValueTypes = value; AdditionalData?.Remove("types"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("types"); else _explicitNullProperties?.Remove("types"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec7>? _explicitNullValueTypes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec6> Types { get => _explicitNullValueTypes; set { _explicitNullValueTypes = value; AdditionalData?.Remove("types"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("types"); else _explicitNullProperties?.Remove("types"); } }
-        private List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec6> _explicitNullValueTypes = default!;
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec7> Types { get => _explicitNullValueTypes; set { _explicitNullValueTypes = value; AdditionalData?.Remove("types"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("types"); else _explicitNullProperties?.Remove("types"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec7> _explicitNullValueTypes = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicAssociationsForObject5"/> and sets the default values.
@@ -71,8 +71,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "to", n => { To = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId5>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId5.CreateFromDiscriminatorValue); } },
-                { "types", n => { Types = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec6>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec6.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "to", n => { To = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId6>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId6.CreateFromDiscriminatorValue); } },
+                { "types", n => { Types = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec7>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec7.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -82,8 +82,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId5>("to", To);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec6>("types", Types);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicObjectId6>("to", To);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpec7>("types", Types);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

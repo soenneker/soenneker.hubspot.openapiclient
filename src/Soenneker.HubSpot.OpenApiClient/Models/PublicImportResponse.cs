@@ -69,12 +69,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The complete import request configuration as a JSON object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportRequestJsonProperty2? ImportRequestJson { get => _explicitNullValueImportRequestJson; set { _explicitNullValueImportRequestJson = value; AdditionalData?.Remove("importRequestJson"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("importRequestJson"); else _explicitNullProperties?.Remove("importRequestJson"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportRequestJsonProperty2? _explicitNullValueImportRequestJson = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportRequestJson? ImportRequestJson { get => _explicitNullValueImportRequestJson; set { _explicitNullValueImportRequestJson = value; AdditionalData?.Remove("importRequestJson"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("importRequestJson"); else _explicitNullProperties?.Remove("importRequestJson"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportRequestJson? _explicitNullValueImportRequestJson = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportRequestJsonProperty2 ImportRequestJson { get => _explicitNullValueImportRequestJson; set { _explicitNullValueImportRequestJson = value; AdditionalData?.Remove("importRequestJson"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("importRequestJson"); else _explicitNullProperties?.Remove("importRequestJson"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportRequestJsonProperty2 _explicitNullValueImportRequestJson = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportRequestJson ImportRequestJson { get => _explicitNullValueImportRequestJson; set { _explicitNullValueImportRequestJson = value; AdditionalData?.Remove("importRequestJson"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("importRequestJson"); else _explicitNullProperties?.Remove("importRequestJson"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportRequestJson _explicitNullValueImportRequestJson = default!;
 #endif
         /// <summary>Indicates where/how the import was initiated.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportSource? ImportSource { get => _explicitNullValueImportSource; set { _explicitNullValueImportSource = value; AdditionalData?.Remove("importSource"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("importSource"); else _explicitNullProperties?.Remove("importSource"); } }
@@ -146,7 +146,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "importName", n => { ImportName = n.GetStringValue(); } },
-                { "importRequestJson", n => { ImportRequestJson = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportRequestJsonProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportRequestJsonProperty2.CreateFromDiscriminatorValue); } },
+                { "importRequestJson", n => { ImportRequestJson = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportRequestJson>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportRequestJson.CreateFromDiscriminatorValue); } },
                 { "importSource", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportSource>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueImportSource = default; _explicitNullProperties?.Remove("importSource"); AdditionalData["importSource"] = unknown; } else { ImportSource = parsed; AdditionalData.Remove("importSource"); } } },
                 { "importTemplate", n => { ImportTemplate = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ImportTemplate>(global::Soenneker.HubSpot.OpenApiClient.Models.ImportTemplate.CreateFromDiscriminatorValue); } },
                 { "mappedObjectTypeIds", n => { MappedObjectTypeIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -166,7 +166,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("importName", ImportName);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportRequestJsonProperty2>("importRequestJson", ImportRequestJson);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportRequestJson>("importRequestJson", ImportRequestJson);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicImportResponseImportSource>("importSource", ImportSource);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ImportTemplate>("importTemplate", ImportTemplate);
             writer.WriteCollectionOfPrimitiveValues<string>("mappedObjectTypeIds", MappedObjectTypeIds);

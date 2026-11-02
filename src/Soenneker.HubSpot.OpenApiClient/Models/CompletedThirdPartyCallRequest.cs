@@ -53,12 +53,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Contains additional properties related to the engagement.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequestEngagementPropertiesProperty2? EngagementProperties { get => _explicitNullValueEngagementProperties; set { _explicitNullValueEngagementProperties = value; AdditionalData?.Remove("engagementProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("engagementProperties"); else _explicitNullProperties?.Remove("engagementProperties"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequestEngagementPropertiesProperty2? _explicitNullValueEngagementProperties = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequestEngagementProperties? EngagementProperties { get => _explicitNullValueEngagementProperties; set { _explicitNullValueEngagementProperties = value; AdditionalData?.Remove("engagementProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("engagementProperties"); else _explicitNullProperties?.Remove("engagementProperties"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequestEngagementProperties? _explicitNullValueEngagementProperties = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequestEngagementPropertiesProperty2 EngagementProperties { get => _explicitNullValueEngagementProperties; set { _explicitNullValueEngagementProperties = value; AdditionalData?.Remove("engagementProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("engagementProperties"); else _explicitNullProperties?.Remove("engagementProperties"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequestEngagementPropertiesProperty2 _explicitNullValueEngagementProperties = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequestEngagementProperties EngagementProperties { get => _explicitNullValueEngagementProperties; set { _explicitNullValueEngagementProperties = value; AdditionalData?.Remove("engagementProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("engagementProperties"); else _explicitNullProperties?.Remove("engagementProperties"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequestEngagementProperties _explicitNullValueEngagementProperties = default!;
 #endif
         /// <summary>The unique identifier for the call from an external system.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -134,7 +134,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "callStartedTimestamp", n => { CallStartedTimestamp = n.GetDateTimeOffsetValue(); } },
                 { "createEngagement", n => { CreateEngagement = n.GetBoolValue(); } },
                 { "durationSeconds", n => { DurationSeconds = n.GetIntValue(); } },
-                { "engagementProperties", n => { EngagementProperties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequestEngagementPropertiesProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequestEngagementPropertiesProperty2.CreateFromDiscriminatorValue); } },
+                { "engagementProperties", n => { EngagementProperties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequestEngagementProperties>(global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequestEngagementProperties.CreateFromDiscriminatorValue); } },
                 { "externalCallId", n => { ExternalCallId = n.GetStringValue(); } },
                 { "finalCallStatus", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequestFinalCallStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFinalCallStatus = default; _explicitNullProperties?.Remove("finalCallStatus"); AdditionalData["finalCallStatus"] = unknown; } else { FinalCallStatus = parsed; AdditionalData.Remove("finalCallStatus"); } } },
                 { "fromNumber", n => { FromNumber = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.FormattedPhoneNumber>(global::Soenneker.HubSpot.OpenApiClient.Models.FormattedPhoneNumber.CreateFromDiscriminatorValue); } },
@@ -153,7 +153,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("callStartedTimestamp", CallStartedTimestamp);
             writer.WriteBoolValue("createEngagement", CreateEngagement);
             writer.WriteIntValue("durationSeconds", DurationSeconds);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequestEngagementPropertiesProperty2>("engagementProperties", EngagementProperties);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequestEngagementProperties>("engagementProperties", EngagementProperties);
             writer.WriteStringValue("externalCallId", ExternalCallId);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CompletedThirdPartyCallRequestFinalCallStatus>("finalCallStatus", FinalCallStatus);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.FormattedPhoneNumber>("fromNumber", FromNumber);

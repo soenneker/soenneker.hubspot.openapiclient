@@ -33,12 +33,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The key-value set of the properties of the contact</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventSubscriberPropertiesProperty2? Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventSubscriberPropertiesProperty2? _explicitNullValueProperties = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventSubscriberProperties? Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventSubscriberProperties? _explicitNullValueProperties = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventSubscriberPropertiesProperty2 Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventSubscriberPropertiesProperty2 _explicitNullValueProperties = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventSubscriberProperties Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventSubscriberProperties _explicitNullValueProperties = default!;
 #endif
         /// <summary>The ID of the contact in HubSpot</summary>
         public long? Vid { get => _explicitNullValueVid; set { _explicitNullValueVid = value; AdditionalData?.Remove("vid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vid"); else _explicitNullProperties?.Remove("vid"); } }
@@ -69,7 +69,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "interactionDateTime", n => { InteractionDateTime = n.GetLongValue(); } },
-                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventSubscriberPropertiesProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventSubscriberPropertiesProperty2.CreateFromDiscriminatorValue); } },
+                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventSubscriberProperties>(global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventSubscriberProperties.CreateFromDiscriminatorValue); } },
                 { "vid", n => { Vid = n.GetLongValue(); } },
             };
         }
@@ -81,7 +81,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteLongValue("interactionDateTime", InteractionDateTime);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventSubscriberPropertiesProperty2>("properties", Properties);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventSubscriberProperties>("properties", Properties);
             writer.WriteLongValue("vid", Vid);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

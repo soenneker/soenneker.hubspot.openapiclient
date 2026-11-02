@@ -76,12 +76,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object containing additional data related to the event occurrence.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AppEventOccurrenceExtraDataProperty2? ExtraData { get => _explicitNullValueExtraData; set { _explicitNullValueExtraData = value; AdditionalData?.Remove("extraData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extraData"); else _explicitNullProperties?.Remove("extraData"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.AppEventOccurrenceExtraDataProperty2? _explicitNullValueExtraData = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AppEventOccurrenceExtraData? ExtraData { get => _explicitNullValueExtraData; set { _explicitNullValueExtraData = value; AdditionalData?.Remove("extraData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extraData"); else _explicitNullProperties?.Remove("extraData"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.AppEventOccurrenceExtraData? _explicitNullValueExtraData = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AppEventOccurrenceExtraDataProperty2 ExtraData { get => _explicitNullValueExtraData; set { _explicitNullValueExtraData = value; AdditionalData?.Remove("extraData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extraData"); else _explicitNullProperties?.Remove("extraData"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.AppEventOccurrenceExtraDataProperty2 _explicitNullValueExtraData = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AppEventOccurrenceExtraData ExtraData { get => _explicitNullValueExtraData; set { _explicitNullValueExtraData = value; AdditionalData?.Remove("extraData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extraData"); else _explicitNullProperties?.Remove("extraData"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.AppEventOccurrenceExtraData _explicitNullValueExtraData = default!;
 #endif
         /// <summary>The unique identifier for this event occurrence, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -116,12 +116,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>A map of custom property names to their values, represented as an object with string values.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AppEventOccurrencePropertiesProperty2? Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.AppEventOccurrencePropertiesProperty2? _explicitNullValueProperties = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AppEventOccurrenceProperties? Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.AppEventOccurrenceProperties? _explicitNullValueProperties = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AppEventOccurrencePropertiesProperty2 Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.AppEventOccurrencePropertiesProperty2 _explicitNullValueProperties = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AppEventOccurrenceProperties Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.AppEventOccurrenceProperties _explicitNullValueProperties = default!;
 #endif
         /// <summary>The timelineIFrame property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -174,11 +174,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "domain", n => { Domain = n.GetStringValue(); } },
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "eventTypeName", n => { EventTypeName = n.GetStringValue(); } },
-                { "extraData", n => { ExtraData = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.AppEventOccurrenceExtraDataProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.AppEventOccurrenceExtraDataProperty2.CreateFromDiscriminatorValue); } },
+                { "extraData", n => { ExtraData = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.AppEventOccurrenceExtraData>(global::Soenneker.HubSpot.OpenApiClient.Models.AppEventOccurrenceExtraData.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "objectId", n => { ObjectId = n.GetStringValue(); } },
                 { "objectTypeFullyQualifiedName", n => { ObjectTypeFullyQualifiedName = n.GetStringValue(); } },
-                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.AppEventOccurrencePropertiesProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.AppEventOccurrencePropertiesProperty2.CreateFromDiscriminatorValue); } },
+                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.AppEventOccurrenceProperties>(global::Soenneker.HubSpot.OpenApiClient.Models.AppEventOccurrenceProperties.CreateFromDiscriminatorValue); } },
                 { "timelineIFrame", n => { TimelineIFrame = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.TimelineEventIFrame>(global::Soenneker.HubSpot.OpenApiClient.Models.TimelineEventIFrame.CreateFromDiscriminatorValue); } },
                 { "timestamp", n => { Timestamp = n.GetDateTimeOffsetValue(); } },
                 { "utk", n => { Utk = n.GetStringValue(); } },
@@ -194,11 +194,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("domain", Domain);
             writer.WriteStringValue("email", Email);
             writer.WriteStringValue("eventTypeName", EventTypeName);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.AppEventOccurrenceExtraDataProperty2>("extraData", ExtraData);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.AppEventOccurrenceExtraData>("extraData", ExtraData);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("objectId", ObjectId);
             writer.WriteStringValue("objectTypeFullyQualifiedName", ObjectTypeFullyQualifiedName);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.AppEventOccurrencePropertiesProperty2>("properties", Properties);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.AppEventOccurrenceProperties>("properties", Properties);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.TimelineEventIFrame>("timelineIFrame", TimelineIFrame);
             writer.WriteDateTimeOffsetValue("timestamp", Timestamp);
             writer.WriteStringValue("utk", Utk);

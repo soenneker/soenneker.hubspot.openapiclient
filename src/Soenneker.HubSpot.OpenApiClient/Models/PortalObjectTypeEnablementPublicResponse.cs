@@ -26,12 +26,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>A map of objectTypeId to whether that object type is enabled or not</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PortalObjectTypeEnablementPublicResponseEnablementByObjectTypeIdProperty2? EnablementByObjectTypeId { get => _explicitNullValueEnablementByObjectTypeId; set { _explicitNullValueEnablementByObjectTypeId = value; AdditionalData?.Remove("enablementByObjectTypeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enablementByObjectTypeId"); else _explicitNullProperties?.Remove("enablementByObjectTypeId"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PortalObjectTypeEnablementPublicResponseEnablementByObjectTypeIdProperty2? _explicitNullValueEnablementByObjectTypeId = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PortalObjectTypeEnablementPublicResponseEnablementByObjectTypeId? EnablementByObjectTypeId { get => _explicitNullValueEnablementByObjectTypeId; set { _explicitNullValueEnablementByObjectTypeId = value; AdditionalData?.Remove("enablementByObjectTypeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enablementByObjectTypeId"); else _explicitNullProperties?.Remove("enablementByObjectTypeId"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PortalObjectTypeEnablementPublicResponseEnablementByObjectTypeId? _explicitNullValueEnablementByObjectTypeId = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PortalObjectTypeEnablementPublicResponseEnablementByObjectTypeIdProperty2 EnablementByObjectTypeId { get => _explicitNullValueEnablementByObjectTypeId; set { _explicitNullValueEnablementByObjectTypeId = value; AdditionalData?.Remove("enablementByObjectTypeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enablementByObjectTypeId"); else _explicitNullProperties?.Remove("enablementByObjectTypeId"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PortalObjectTypeEnablementPublicResponseEnablementByObjectTypeIdProperty2 _explicitNullValueEnablementByObjectTypeId = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PortalObjectTypeEnablementPublicResponseEnablementByObjectTypeId EnablementByObjectTypeId { get => _explicitNullValueEnablementByObjectTypeId; set { _explicitNullValueEnablementByObjectTypeId = value; AdditionalData?.Remove("enablementByObjectTypeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enablementByObjectTypeId"); else _explicitNullProperties?.Remove("enablementByObjectTypeId"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PortalObjectTypeEnablementPublicResponseEnablementByObjectTypeId _explicitNullValueEnablementByObjectTypeId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PortalObjectTypeEnablementPublicResponse"/> and sets the default values.
@@ -58,7 +58,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "enablementByObjectTypeId", n => { EnablementByObjectTypeId = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PortalObjectTypeEnablementPublicResponseEnablementByObjectTypeIdProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PortalObjectTypeEnablementPublicResponseEnablementByObjectTypeIdProperty2.CreateFromDiscriminatorValue); } },
+                { "enablementByObjectTypeId", n => { EnablementByObjectTypeId = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PortalObjectTypeEnablementPublicResponseEnablementByObjectTypeId>(global::Soenneker.HubSpot.OpenApiClient.Models.PortalObjectTypeEnablementPublicResponseEnablementByObjectTypeId.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -68,7 +68,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PortalObjectTypeEnablementPublicResponseEnablementByObjectTypeIdProperty2>("enablementByObjectTypeId", EnablementByObjectTypeId);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PortalObjectTypeEnablementPublicResponseEnablementByObjectTypeId>("enablementByObjectTypeId", EnablementByObjectTypeId);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

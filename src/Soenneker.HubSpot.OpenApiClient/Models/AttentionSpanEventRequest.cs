@@ -156,12 +156,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>A map of raw data key-value pairs providing additional context about the event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequestRawDataMapProperty2? RawDataMap { get => _explicitNullValueRawDataMap; set { _explicitNullValueRawDataMap = value; AdditionalData?.Remove("rawDataMap"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rawDataMap"); else _explicitNullProperties?.Remove("rawDataMap"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequestRawDataMapProperty2? _explicitNullValueRawDataMap = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequestRawDataMap? RawDataMap { get => _explicitNullValueRawDataMap; set { _explicitNullValueRawDataMap = value; AdditionalData?.Remove("rawDataMap"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rawDataMap"); else _explicitNullProperties?.Remove("rawDataMap"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequestRawDataMap? _explicitNullValueRawDataMap = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequestRawDataMapProperty2 RawDataMap { get => _explicitNullValueRawDataMap; set { _explicitNullValueRawDataMap = value; AdditionalData?.Remove("rawDataMap"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rawDataMap"); else _explicitNullProperties?.Remove("rawDataMap"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequestRawDataMapProperty2 _explicitNullValueRawDataMap = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequestRawDataMap RawDataMap { get => _explicitNullValueRawDataMap; set { _explicitNullValueRawDataMap = value; AdditionalData?.Remove("rawDataMap"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rawDataMap"); else _explicitNullProperties?.Remove("rawDataMap"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequestRawDataMap _explicitNullValueRawDataMap = default!;
 #endif
         /// <summary>A raw data string containing additional information about the event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -222,7 +222,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "pageId", n => { PageId = n.GetLongValue(); } },
                 { "pageName", n => { PageName = n.GetStringValue(); } },
                 { "pageUrl", n => { PageUrl = n.GetStringValue(); } },
-                { "rawDataMap", n => { RawDataMap = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequestRawDataMapProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequestRawDataMapProperty2.CreateFromDiscriminatorValue); } },
+                { "rawDataMap", n => { RawDataMap = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequestRawDataMap>(global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequestRawDataMap.CreateFromDiscriminatorValue); } },
                 { "rawDataString", n => { RawDataString = n.GetStringValue(); } },
                 { "sessionId", n => { SessionId = n.GetStringValue(); } },
             };
@@ -248,7 +248,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteLongValue("pageId", PageId);
             writer.WriteStringValue("pageName", PageName);
             writer.WriteStringValue("pageUrl", PageUrl);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequestRawDataMapProperty2>("rawDataMap", RawDataMap);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.AttentionSpanEventRequestRawDataMap>("rawDataMap", RawDataMap);
             writer.WriteStringValue("rawDataString", RawDataString);
             writer.WriteStringValue("sessionId", SessionId);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

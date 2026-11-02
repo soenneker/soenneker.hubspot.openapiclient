@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     /// <summary>
-    /// A map of property names to their values, including historical values with timestamps.
+    /// A map of the object&apos;s property names to their values, including historical data with timestamps.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CrmSimplePublicObjectWithAssociations27PropertiesWithHistory : IAdditionalDataHolder, IParsable

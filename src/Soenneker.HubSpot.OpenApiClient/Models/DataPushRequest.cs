@@ -26,12 +26,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Data </summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.DataPushRequestDataItemProperty2>? Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
-        private List<global::Soenneker.HubSpot.OpenApiClient.Models.DataPushRequestDataItemProperty2>? _explicitNullValueData = default!;
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.DataPushRequestDataItem>? Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.DataPushRequestDataItem>? _explicitNullValueData = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.DataPushRequestDataItemProperty2> Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
-        private List<global::Soenneker.HubSpot.OpenApiClient.Models.DataPushRequestDataItemProperty2> _explicitNullValueData = default!;
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.DataPushRequestDataItem> Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.DataPushRequestDataItem> _explicitNullValueData = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.DataPushRequest"/> and sets the default values.
@@ -58,7 +58,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "data", n => { Data = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.DataPushRequestDataItemProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.DataPushRequestDataItemProperty2.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "data", n => { Data = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.DataPushRequestDataItem>(global::Soenneker.HubSpot.OpenApiClient.Models.DataPushRequestDataItem.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -68,7 +68,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.DataPushRequestDataItemProperty2>("data", Data);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.DataPushRequestDataItem>("data", Data);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

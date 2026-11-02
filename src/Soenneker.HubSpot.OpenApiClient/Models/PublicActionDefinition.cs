@@ -113,12 +113,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object containing labels for the action, with each property being a PublicActionLabels object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionLabelsProperty2? Labels { get => _explicitNullValueLabels; set { _explicitNullValueLabels = value; AdditionalData?.Remove("labels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("labels"); else _explicitNullProperties?.Remove("labels"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionLabelsProperty2? _explicitNullValueLabels = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionLabels? Labels { get => _explicitNullValueLabels; set { _explicitNullValueLabels = value; AdditionalData?.Remove("labels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("labels"); else _explicitNullProperties?.Remove("labels"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionLabels? _explicitNullValueLabels = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionLabelsProperty2 Labels { get => _explicitNullValueLabels; set { _explicitNullValueLabels = value; AdditionalData?.Remove("labels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("labels"); else _explicitNullProperties?.Remove("labels"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionLabelsProperty2 _explicitNullValueLabels = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionLabels Labels { get => _explicitNullValueLabels; set { _explicitNullValueLabels = value; AdditionalData?.Remove("labels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("labels"); else _explicitNullProperties?.Remove("labels"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionLabels _explicitNullValueLabels = default!;
 #endif
         /// <summary>The objectRequestOptions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -195,7 +195,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "inputFieldDependencies", n => { InputFieldDependencies = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionEggInputFieldDependenciesItem>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionEggInputFieldDependenciesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "inputFields", n => { InputFields = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicInputFieldDefinition>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicInputFieldDefinition.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "labels", n => { Labels = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionLabelsProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionLabelsProperty2.CreateFromDiscriminatorValue); } },
+                { "labels", n => { Labels = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionLabels>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionLabels.CreateFromDiscriminatorValue); } },
                 { "objectRequestOptions", n => { ObjectRequestOptions = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectRequestOptions>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectRequestOptions.CreateFromDiscriminatorValue); } },
                 { "objectTypes", n => { ObjectTypes = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "outputFields", n => { OutputFields = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.OutputFieldDefinition>(global::Soenneker.HubSpot.OpenApiClient.Models.OutputFieldDefinition.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -217,7 +217,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionEggInputFieldDependenciesItem>("inputFieldDependencies", InputFieldDependencies);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicInputFieldDefinition>("inputFields", InputFields);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionLabelsProperty2>("labels", Labels);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicActionDefinitionLabels>("labels", Labels);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicObjectRequestOptions>("objectRequestOptions", ObjectRequestOptions);
             writer.WriteCollectionOfPrimitiveValues<string>("objectTypes", ObjectTypes);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.OutputFieldDefinition>("outputFields", OutputFields);

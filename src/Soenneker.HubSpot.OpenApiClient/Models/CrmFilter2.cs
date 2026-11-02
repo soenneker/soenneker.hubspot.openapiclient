@@ -32,7 +32,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The upper bound value for range-based filter operations. It is a string.</summary>
+        /// <summary>An optional string value used for range-based filters to specify the upper limit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? HighValue { get => _explicitNullValueHighValue; set { _explicitNullValueHighValue = value; AdditionalData?.Remove("highValue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("highValue"); else _explicitNullProperties?.Remove("highValue"); } }
@@ -42,10 +42,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string HighValue { get => _explicitNullValueHighValue; set { _explicitNullValueHighValue = value; AdditionalData?.Remove("highValue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("highValue"); else _explicitNullProperties?.Remove("highValue"); } }
         private string _explicitNullValueHighValue = default!;
 #endif
-        /// <summary>The operator used to compare the property value against the filter value(s). Valid operators include &apos;EQ&apos;, &apos;NEQ&apos;, &apos;LT&apos;, &apos;LTE&apos;, &apos;GT&apos;, &apos;GTE&apos;, &apos;BETWEEN&apos;, &apos;IN&apos;, &apos;NOT_IN&apos;, &apos;HAS_PROPERTY&apos;, &apos;NOT_HAS_PROPERTY&apos;, &apos;CONTAINS_TOKEN&apos;, and &apos;NOT_CONTAINS_TOKEN&apos;.</summary>
+        /// <summary>The operator that defines the type of comparison to be made. Valid values include &apos;EQ&apos;, &apos;NEQ&apos;, &apos;LT&apos;, &apos;LTE&apos;, &apos;GT&apos;, &apos;GTE&apos;, &apos;BETWEEN&apos;, &apos;IN&apos;, &apos;NOT_IN&apos;, &apos;HAS_PROPERTY&apos;, &apos;NOT_HAS_PROPERTY&apos;, &apos;CONTAINS_TOKEN&apos;, and &apos;NOT_CONTAINS_TOKEN&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterOperator2? Operator { get => _explicitNullValueOperator; set { _explicitNullValueOperator = value; AdditionalData?.Remove("operator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator"); else _explicitNullProperties?.Remove("operator"); } }
         private global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterOperator2? _explicitNullValueOperator = default!;
-        /// <summary>The name of the property on which the filter is applied. It is a string.</summary>
+        /// <summary>The name of the property to filter by. This is a string value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PropertyName { get => _explicitNullValuePropertyName; set { _explicitNullValuePropertyName = value; AdditionalData?.Remove("propertyName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("propertyName"); else _explicitNullProperties?.Remove("propertyName"); } }
@@ -55,7 +55,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string PropertyName { get => _explicitNullValuePropertyName; set { _explicitNullValuePropertyName = value; AdditionalData?.Remove("propertyName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("propertyName"); else _explicitNullProperties?.Remove("propertyName"); } }
         private string _explicitNullValuePropertyName = default!;
 #endif
-        /// <summary>The specific value to be used in the filter condition. It is a string.</summary>
+        /// <summary>The specific value to filter for the given property. This is a string value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; AdditionalData?.Remove("value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
@@ -65,7 +65,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; AdditionalData?.Remove("value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
         private string _explicitNullValueValue = default!;
 #endif
-        /// <summary>An array of string values used for filters that require multiple values, such as &apos;IN&apos; or &apos;NOT_IN&apos; operators.</summary>
+        /// <summary>An array of string values used for filters that involve multiple possible matches, such as &apos;IN&apos; or &apos;NOT_IN&apos; operators.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Values { get => _explicitNullValueValues; set { _explicitNullValueValues = value; AdditionalData?.Remove("values"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("values"); else _explicitNullProperties?.Remove("values"); } }

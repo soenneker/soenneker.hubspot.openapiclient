@@ -32,12 +32,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The key-value set that contains properties of the contact.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberContactPropertiesProperty2? ContactProperties { get => _explicitNullValueContactProperties; set { _explicitNullValueContactProperties = value; AdditionalData?.Remove("contactProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactProperties"); else _explicitNullProperties?.Remove("contactProperties"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberContactPropertiesProperty2? _explicitNullValueContactProperties = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberContactProperties? ContactProperties { get => _explicitNullValueContactProperties; set { _explicitNullValueContactProperties = value; AdditionalData?.Remove("contactProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactProperties"); else _explicitNullProperties?.Remove("contactProperties"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberContactProperties? _explicitNullValueContactProperties = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberContactPropertiesProperty2 ContactProperties { get => _explicitNullValueContactProperties; set { _explicitNullValueContactProperties = value; AdditionalData?.Remove("contactProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactProperties"); else _explicitNullProperties?.Remove("contactProperties"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberContactPropertiesProperty2 _explicitNullValueContactProperties = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberContactProperties ContactProperties { get => _explicitNullValueContactProperties; set { _explicitNullValueContactProperties = value; AdditionalData?.Remove("contactProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactProperties"); else _explicitNullProperties?.Remove("contactProperties"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberContactProperties _explicitNullValueContactProperties = default!;
 #endif
         /// <summary>The email address of the contact in HubSpot to associate with the event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,12 +55,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The key-value set that contains properties of the marketing event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberPropertiesProperty2? Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberPropertiesProperty2? _explicitNullValueProperties = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberProperties? Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberProperties? _explicitNullValueProperties = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberPropertiesProperty2 Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberPropertiesProperty2 _explicitNullValueProperties = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberProperties Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberProperties _explicitNullValueProperties = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriber"/> and sets the default values.
@@ -87,10 +87,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "contactProperties", n => { ContactProperties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberContactPropertiesProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberContactPropertiesProperty2.CreateFromDiscriminatorValue); } },
+                { "contactProperties", n => { ContactProperties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberContactProperties>(global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberContactProperties.CreateFromDiscriminatorValue); } },
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "interactionDateTime", n => { InteractionDateTime = n.GetLongValue(); } },
-                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberPropertiesProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberPropertiesProperty2.CreateFromDiscriminatorValue); } },
+                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberProperties>(global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberProperties.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -100,10 +100,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberContactPropertiesProperty2>("contactProperties", ContactProperties);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberContactProperties>("contactProperties", ContactProperties);
             writer.WriteStringValue("email", Email);
             writer.WriteLongValue("interactionDateTime", InteractionDateTime);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberPropertiesProperty2>("properties", Properties);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.MarketingEventEmailSubscriberProperties>("properties", Properties);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

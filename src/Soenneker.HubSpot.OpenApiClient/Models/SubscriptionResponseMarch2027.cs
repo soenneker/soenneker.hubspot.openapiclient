@@ -54,12 +54,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The actionOverrides property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponseMarch2027ActionOverridesProperty2? ActionOverrides { get => _explicitNullValueActionOverrides; set { _explicitNullValueActionOverrides = value; AdditionalData?.Remove("actionOverrides"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionOverrides"); else _explicitNullProperties?.Remove("actionOverrides"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponseMarch2027ActionOverridesProperty2? _explicitNullValueActionOverrides = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponseMarch2027ActionOverrides? ActionOverrides { get => _explicitNullValueActionOverrides; set { _explicitNullValueActionOverrides = value; AdditionalData?.Remove("actionOverrides"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionOverrides"); else _explicitNullProperties?.Remove("actionOverrides"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponseMarch2027ActionOverrides? _explicitNullValueActionOverrides = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponseMarch2027ActionOverridesProperty2 ActionOverrides { get => _explicitNullValueActionOverrides; set { _explicitNullValueActionOverrides = value; AdditionalData?.Remove("actionOverrides"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionOverrides"); else _explicitNullProperties?.Remove("actionOverrides"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponseMarch2027ActionOverridesProperty2 _explicitNullValueActionOverrides = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponseMarch2027ActionOverrides ActionOverrides { get => _explicitNullValueActionOverrides; set { _explicitNullValueActionOverrides = value; AdditionalData?.Remove("actionOverrides"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionOverrides"); else _explicitNullProperties?.Remove("actionOverrides"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponseMarch2027ActionOverrides _explicitNullValueActionOverrides = default!;
 #endif
         /// <summary>The actions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -175,7 +175,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "actionOverrides", n => { ActionOverrides = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponseMarch2027ActionOverridesProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponseMarch2027ActionOverridesProperty2.CreateFromDiscriminatorValue); } },
+                { "actionOverrides", n => { ActionOverrides = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponseMarch2027ActionOverrides>(global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponseMarch2027ActionOverrides.CreateFromDiscriminatorValue); } },
                 { "actions", n => { Actions = n.GetCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponseMarch2027ActionsItem>()?.AsList(); } },
                 { "appId", n => { AppId = n.GetLongValue(); } },
                 { "associatedObjectTypeIds", n => { AssociatedObjectTypeIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -200,7 +200,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponseMarch2027ActionOverridesProperty2>("actionOverrides", ActionOverrides);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponseMarch2027ActionOverrides>("actionOverrides", ActionOverrides);
             writer.WriteCollectionOfEnumValues<global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponseMarch2027ActionsItem>("actions", Actions);
             writer.WriteLongValue("appId", AppId);
             writer.WriteCollectionOfPrimitiveValues<string>("associatedObjectTypeIds", AssociatedObjectTypeIds);

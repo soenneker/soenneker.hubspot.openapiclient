@@ -39,32 +39,32 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object specifying the frequency at which billing occurs for the price book item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestBillingFrequencyProperty2? BillingFrequency { get => _explicitNullValueBillingFrequency; set { _explicitNullValueBillingFrequency = value; AdditionalData?.Remove("billingFrequency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billingFrequency"); else _explicitNullProperties?.Remove("billingFrequency"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestBillingFrequencyProperty2? _explicitNullValueBillingFrequency = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestBillingFrequency? BillingFrequency { get => _explicitNullValueBillingFrequency; set { _explicitNullValueBillingFrequency = value; AdditionalData?.Remove("billingFrequency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billingFrequency"); else _explicitNullProperties?.Remove("billingFrequency"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestBillingFrequency? _explicitNullValueBillingFrequency = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestBillingFrequencyProperty2 BillingFrequency { get => _explicitNullValueBillingFrequency; set { _explicitNullValueBillingFrequency = value; AdditionalData?.Remove("billingFrequency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billingFrequency"); else _explicitNullProperties?.Remove("billingFrequency"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestBillingFrequencyProperty2 _explicitNullValueBillingFrequency = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestBillingFrequency BillingFrequency { get => _explicitNullValueBillingFrequency; set { _explicitNullValueBillingFrequency = value; AdditionalData?.Remove("billingFrequency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billingFrequency"); else _explicitNullProperties?.Remove("billingFrequency"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestBillingFrequency _explicitNullValueBillingFrequency = default!;
 #endif
         /// <summary>An object specifying the period over which billing occurs for the price book item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestBillingPeriodProperty2? BillingPeriod { get => _explicitNullValueBillingPeriod; set { _explicitNullValueBillingPeriod = value; AdditionalData?.Remove("billingPeriod"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billingPeriod"); else _explicitNullProperties?.Remove("billingPeriod"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestBillingPeriodProperty2? _explicitNullValueBillingPeriod = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestBillingPeriod? BillingPeriod { get => _explicitNullValueBillingPeriod; set { _explicitNullValueBillingPeriod = value; AdditionalData?.Remove("billingPeriod"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billingPeriod"); else _explicitNullProperties?.Remove("billingPeriod"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestBillingPeriod? _explicitNullValueBillingPeriod = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestBillingPeriodProperty2 BillingPeriod { get => _explicitNullValueBillingPeriod; set { _explicitNullValueBillingPeriod = value; AdditionalData?.Remove("billingPeriod"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billingPeriod"); else _explicitNullProperties?.Remove("billingPeriod"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestBillingPeriodProperty2 _explicitNullValueBillingPeriod = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestBillingPeriod BillingPeriod { get => _explicitNullValueBillingPeriod; set { _explicitNullValueBillingPeriod = value; AdditionalData?.Remove("billingPeriod"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billingPeriod"); else _explicitNullProperties?.Remove("billingPeriod"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestBillingPeriod _explicitNullValueBillingPeriod = default!;
 #endif
         /// <summary>A map of custom property names to their values, allowing for additional customization of the price book item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestCustomPropertiesProperty2? CustomProperties { get => _explicitNullValueCustomProperties; set { _explicitNullValueCustomProperties = value; AdditionalData?.Remove("customProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customProperties"); else _explicitNullProperties?.Remove("customProperties"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestCustomPropertiesProperty2? _explicitNullValueCustomProperties = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestCustomProperties? CustomProperties { get => _explicitNullValueCustomProperties; set { _explicitNullValueCustomProperties = value; AdditionalData?.Remove("customProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customProperties"); else _explicitNullProperties?.Remove("customProperties"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestCustomProperties? _explicitNullValueCustomProperties = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestCustomPropertiesProperty2 CustomProperties { get => _explicitNullValueCustomProperties; set { _explicitNullValueCustomProperties = value; AdditionalData?.Remove("customProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customProperties"); else _explicitNullProperties?.Remove("customProperties"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestCustomPropertiesProperty2 _explicitNullValueCustomProperties = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestCustomProperties CustomProperties { get => _explicitNullValueCustomProperties; set { _explicitNullValueCustomProperties = value; AdditionalData?.Remove("customProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customProperties"); else _explicitNullProperties?.Remove("customProperties"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestCustomProperties _explicitNullValueCustomProperties = default!;
 #endif
         /// <summary>The pricing property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -79,12 +79,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object indicating the current status of the price book item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestStatusProperty2? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestStatusProperty2? _explicitNullValueStatus = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestStatus? _explicitNullValueStatus = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestStatusProperty2 Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestStatusProperty2 _explicitNullValueStatus = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestStatus Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestStatus _explicitNullValueStatus = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequest"/> and sets the default values.
@@ -112,11 +112,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "archived", n => { Archived = n.GetBoolValue(); } },
-                { "billingFrequency", n => { BillingFrequency = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestBillingFrequencyProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestBillingFrequencyProperty2.CreateFromDiscriminatorValue); } },
-                { "billingPeriod", n => { BillingPeriod = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestBillingPeriodProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestBillingPeriodProperty2.CreateFromDiscriminatorValue); } },
-                { "customProperties", n => { CustomProperties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestCustomPropertiesProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestCustomPropertiesProperty2.CreateFromDiscriminatorValue); } },
+                { "billingFrequency", n => { BillingFrequency = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestBillingFrequency>(global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestBillingFrequency.CreateFromDiscriminatorValue); } },
+                { "billingPeriod", n => { BillingPeriod = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestBillingPeriod>(global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestBillingPeriod.CreateFromDiscriminatorValue); } },
+                { "customProperties", n => { CustomProperties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestCustomProperties>(global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestCustomProperties.CreateFromDiscriminatorValue); } },
                 { "pricing", n => { Pricing = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PricingUpdateRequest>(global::Soenneker.HubSpot.OpenApiClient.Models.PricingUpdateRequest.CreateFromDiscriminatorValue); } },
-                { "status", n => { Status = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestStatusProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestStatusProperty2.CreateFromDiscriminatorValue); } },
+                { "status", n => { Status = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestStatus>(global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestStatus.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -127,11 +127,11 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("archived", Archived);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestBillingFrequencyProperty2>("billingFrequency", BillingFrequency);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestBillingPeriodProperty2>("billingPeriod", BillingPeriod);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestCustomPropertiesProperty2>("customProperties", CustomProperties);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestBillingFrequency>("billingFrequency", BillingFrequency);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestBillingPeriod>("billingPeriod", BillingPeriod);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestCustomProperties>("customProperties", CustomProperties);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PricingUpdateRequest>("pricing", Pricing);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestStatusProperty2>("status", Status);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookItemUpdateRequestStatus>("status", Status);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

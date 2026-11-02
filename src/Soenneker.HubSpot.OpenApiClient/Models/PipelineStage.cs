@@ -74,12 +74,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object containing additional metadata for the stage, with string values for each property.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageMetadataProperty2? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; AdditionalData?.Remove("metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageMetadataProperty2? _explicitNullValueMetadata = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageMetadata? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; AdditionalData?.Remove("metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageMetadata? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageMetadataProperty2 Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; AdditionalData?.Remove("metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageMetadataProperty2 _explicitNullValueMetadata = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageMetadata Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; AdditionalData?.Remove("metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageMetadata _explicitNullValueMetadata = default!;
 #endif
         /// <summary>The date and time when the stage was last updated, in ISO 8601 format.</summary>
         public DateTimeOffset? UpdatedAt { get => _explicitNullValueUpdatedAt; set { _explicitNullValueUpdatedAt = value; AdditionalData?.Remove("updatedAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updatedAt"); else _explicitNullProperties?.Remove("updatedAt"); } }
@@ -118,7 +118,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "displayOrder", n => { DisplayOrder = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageMetadataProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageMetadataProperty2.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageMetadata>(global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageMetadata.CreateFromDiscriminatorValue); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
                 { "writePermissions", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageWritePermissions>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueWritePermissions = default; _explicitNullProperties?.Remove("writePermissions"); AdditionalData["writePermissions"] = unknown; } else { WritePermissions = parsed; AdditionalData.Remove("writePermissions"); } } },
             };
@@ -136,7 +136,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteIntValue("displayOrder", DisplayOrder);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("label", Label);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageMetadataProperty2>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageMetadata>("metadata", Metadata);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PipelineStageWritePermissions>("writePermissions", WritePermissions);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

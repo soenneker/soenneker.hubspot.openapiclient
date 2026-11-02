@@ -40,12 +40,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object containing custom properties for the list. These properties allow for additional customization of the list.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequestCustomPropertiesProperty2? CustomProperties { get => _explicitNullValueCustomProperties; set { _explicitNullValueCustomProperties = value; AdditionalData?.Remove("customProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customProperties"); else _explicitNullProperties?.Remove("customProperties"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequestCustomPropertiesProperty2? _explicitNullValueCustomProperties = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequestCustomProperties? CustomProperties { get => _explicitNullValueCustomProperties; set { _explicitNullValueCustomProperties = value; AdditionalData?.Remove("customProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customProperties"); else _explicitNullProperties?.Remove("customProperties"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequestCustomProperties? _explicitNullValueCustomProperties = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequestCustomPropertiesProperty2 CustomProperties { get => _explicitNullValueCustomProperties; set { _explicitNullValueCustomProperties = value; AdditionalData?.Remove("customProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customProperties"); else _explicitNullProperties?.Remove("customProperties"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequestCustomPropertiesProperty2 _explicitNullValueCustomProperties = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequestCustomProperties CustomProperties { get => _explicitNullValueCustomProperties; set { _explicitNullValueCustomProperties = value; AdditionalData?.Remove("customProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customProperties"); else _explicitNullProperties?.Remove("customProperties"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequestCustomProperties _explicitNullValueCustomProperties = default!;
 #endif
         /// <summary>An object that defines the filter criteria for the list. It determines which records are included in the list based on specified conditions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -135,7 +135,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "customProperties", n => { CustomProperties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequestCustomPropertiesProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequestCustomPropertiesProperty2.CreateFromDiscriminatorValue); } },
+                { "customProperties", n => { CustomProperties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequestCustomProperties>(global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequestCustomProperties.CreateFromDiscriminatorValue); } },
                 { "filterBranch", n => { FilterBranch = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequestFilterBranch>(global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequestFilterBranch.CreateFromDiscriminatorValue); } },
                 { "listFolderId", n => { ListFolderId = n.GetIntValue(); } },
                 { "listPermissions", n => { ListPermissions = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicListPermissions>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicListPermissions.CreateFromDiscriminatorValue); } },
@@ -152,7 +152,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequestCustomPropertiesProperty2>("customProperties", CustomProperties);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequestCustomProperties>("customProperties", CustomProperties);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ListCreateRequestFilterBranch>("filterBranch", FilterBranch);
             writer.WriteIntValue("listFolderId", ListFolderId);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicListPermissions>("listPermissions", ListPermissions);

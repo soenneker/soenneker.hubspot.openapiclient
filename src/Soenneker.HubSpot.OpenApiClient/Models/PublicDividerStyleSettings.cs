@@ -30,12 +30,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object representing the color settings of the divider.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicDividerStyleSettingsColorProperty2? Color { get => _explicitNullValueColor; set { _explicitNullValueColor = value; AdditionalData?.Remove("color"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("color"); else _explicitNullProperties?.Remove("color"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicDividerStyleSettingsColorProperty2? _explicitNullValueColor = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicDividerStyleSettingsColor? Color { get => _explicitNullValueColor; set { _explicitNullValueColor = value; AdditionalData?.Remove("color"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("color"); else _explicitNullProperties?.Remove("color"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicDividerStyleSettingsColor? _explicitNullValueColor = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicDividerStyleSettingsColorProperty2 Color { get => _explicitNullValueColor; set { _explicitNullValueColor = value; AdditionalData?.Remove("color"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("color"); else _explicitNullProperties?.Remove("color"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicDividerStyleSettingsColorProperty2 _explicitNullValueColor = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicDividerStyleSettingsColor Color { get => _explicitNullValueColor; set { _explicitNullValueColor = value; AdditionalData?.Remove("color"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("color"); else _explicitNullProperties?.Remove("color"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicDividerStyleSettingsColor _explicitNullValueColor = default!;
 #endif
         /// <summary>An integer representing the height of the divider.</summary>
         public int? Height { get => _explicitNullValueHeight; set { _explicitNullValueHeight = value; AdditionalData?.Remove("height"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("height"); else _explicitNullProperties?.Remove("height"); } }
@@ -75,7 +75,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "color", n => { Color = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicDividerStyleSettingsColorProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicDividerStyleSettingsColorProperty2.CreateFromDiscriminatorValue); } },
+                { "color", n => { Color = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicDividerStyleSettingsColor>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicDividerStyleSettingsColor.CreateFromDiscriminatorValue); } },
                 { "height", n => { Height = n.GetIntValue(); } },
                 { "lineType", n => { LineType = n.GetStringValue(); } },
             };
@@ -87,7 +87,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicDividerStyleSettingsColorProperty2>("color", Color);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicDividerStyleSettingsColor>("color", Color);
             writer.WriteIntValue("height", Height);
             writer.WriteStringValue("lineType", LineType);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

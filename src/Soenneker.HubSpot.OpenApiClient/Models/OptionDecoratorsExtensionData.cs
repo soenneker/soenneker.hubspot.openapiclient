@@ -28,12 +28,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An array containing the option decorators. Each decorator provides additional configuration or styling options for media elements.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionDataOptionDecoratorsProperty2? OptionDecorators { get => _explicitNullValueOptionDecorators; set { _explicitNullValueOptionDecorators = value; AdditionalData?.Remove("optionDecorators"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("optionDecorators"); else _explicitNullProperties?.Remove("optionDecorators"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionDataOptionDecoratorsProperty2? _explicitNullValueOptionDecorators = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionDataOptionDecorators? OptionDecorators { get => _explicitNullValueOptionDecorators; set { _explicitNullValueOptionDecorators = value; AdditionalData?.Remove("optionDecorators"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("optionDecorators"); else _explicitNullProperties?.Remove("optionDecorators"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionDataOptionDecorators? _explicitNullValueOptionDecorators = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionDataOptionDecoratorsProperty2 OptionDecorators { get => _explicitNullValueOptionDecorators; set { _explicitNullValueOptionDecorators = value; AdditionalData?.Remove("optionDecorators"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("optionDecorators"); else _explicitNullProperties?.Remove("optionDecorators"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionDataOptionDecoratorsProperty2 _explicitNullValueOptionDecorators = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionDataOptionDecorators OptionDecorators { get => _explicitNullValueOptionDecorators; set { _explicitNullValueOptionDecorators = value; AdditionalData?.Remove("optionDecorators"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("optionDecorators"); else _explicitNullProperties?.Remove("optionDecorators"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionDataOptionDecorators _explicitNullValueOptionDecorators = default!;
 #endif
         /// <summary>A string representing the style applied to the option decorators. This property defines how the decorators should be visually presented.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionDataOptionDecoratorStyle? OptionDecoratorStyle { get => _explicitNullValueOptionDecoratorStyle; set { _explicitNullValueOptionDecoratorStyle = value; AdditionalData?.Remove("optionDecoratorStyle"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("optionDecoratorStyle"); else _explicitNullProperties?.Remove("optionDecoratorStyle"); } }
@@ -64,7 +64,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "optionDecoratorStyle", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionDataOptionDecoratorStyle>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueOptionDecoratorStyle = default; _explicitNullProperties?.Remove("optionDecoratorStyle"); AdditionalData["optionDecoratorStyle"] = unknown; } else { OptionDecoratorStyle = parsed; AdditionalData.Remove("optionDecoratorStyle"); } } },
-                { "optionDecorators", n => { OptionDecorators = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionDataOptionDecoratorsProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionDataOptionDecoratorsProperty2.CreateFromDiscriminatorValue); } },
+                { "optionDecorators", n => { OptionDecorators = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionDataOptionDecorators>(global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionDataOptionDecorators.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -74,7 +74,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionDataOptionDecoratorsProperty2>("optionDecorators", OptionDecorators);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionDataOptionDecorators>("optionDecorators", OptionDecorators);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionDataOptionDecoratorStyle>("optionDecoratorStyle", OptionDecoratorStyle);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

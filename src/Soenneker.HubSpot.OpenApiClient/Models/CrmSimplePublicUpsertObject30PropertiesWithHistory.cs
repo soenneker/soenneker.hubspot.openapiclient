@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     /// <summary>
-    /// An object containing property names mapped to arrays of their historical values, each represented by a ValueWithTimestamp object.
+    /// A map of property names to arrays of their historical values, each with a timestamp.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CrmSimplePublicUpsertObject30PropertiesWithHistory : IAdditionalDataHolder, IParsable

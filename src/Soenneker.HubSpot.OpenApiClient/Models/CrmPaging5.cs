@@ -29,22 +29,22 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Specifies the paging information needed to retrieve the next set of results in a paginated API response</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmNextPage5? Next { get => _explicitNullValueNext; set { _explicitNullValueNext = value; AdditionalData?.Remove("next"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next"); else _explicitNullProperties?.Remove("next"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmNextPage5? _explicitNullValueNext = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmNextPage6? Next { get => _explicitNullValueNext; set { _explicitNullValueNext = value; AdditionalData?.Remove("next"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next"); else _explicitNullProperties?.Remove("next"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmNextPage6? _explicitNullValueNext = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmNextPage5 Next { get => _explicitNullValueNext; set { _explicitNullValueNext = value; AdditionalData?.Remove("next"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next"); else _explicitNullProperties?.Remove("next"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmNextPage5 _explicitNullValueNext = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmNextPage6 Next { get => _explicitNullValueNext; set { _explicitNullValueNext = value; AdditionalData?.Remove("next"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next"); else _explicitNullProperties?.Remove("next"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmNextPage6 _explicitNullValueNext = default!;
 #endif
         /// <summary>specifies the paging information needed to retrieve the previous set of results in a paginated API response</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPreviousPage5? Prev { get => _explicitNullValuePrev; set { _explicitNullValuePrev = value; AdditionalData?.Remove("prev"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prev"); else _explicitNullProperties?.Remove("prev"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmPreviousPage5? _explicitNullValuePrev = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPreviousPage6? Prev { get => _explicitNullValuePrev; set { _explicitNullValuePrev = value; AdditionalData?.Remove("prev"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prev"); else _explicitNullProperties?.Remove("prev"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmPreviousPage6? _explicitNullValuePrev = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPreviousPage5 Prev { get => _explicitNullValuePrev; set { _explicitNullValuePrev = value; AdditionalData?.Remove("prev"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prev"); else _explicitNullProperties?.Remove("prev"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmPreviousPage5 _explicitNullValuePrev = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPreviousPage6 Prev { get => _explicitNullValuePrev; set { _explicitNullValuePrev = value; AdditionalData?.Remove("prev"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prev"); else _explicitNullProperties?.Remove("prev"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.CrmPreviousPage6 _explicitNullValuePrev = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.CrmPaging5"/> and sets the default values.
@@ -71,8 +71,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "next", n => { Next = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmNextPage5>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmNextPage5.CreateFromDiscriminatorValue); } },
-                { "prev", n => { Prev = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPreviousPage5>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPreviousPage5.CreateFromDiscriminatorValue); } },
+                { "next", n => { Next = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmNextPage6>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmNextPage6.CreateFromDiscriminatorValue); } },
+                { "prev", n => { Prev = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPreviousPage6>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPreviousPage6.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -82,8 +82,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmNextPage5>("next", Next);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPreviousPage5>("prev", Prev);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmNextPage6>("next", Next);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPreviousPage6>("prev", Prev);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

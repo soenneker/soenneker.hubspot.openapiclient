@@ -32,22 +32,22 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An array of filter groups, where each group contains multiple filters. This allows for complex filtering logic by combining multiple filters together.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup15>? FilterGroups { get => _explicitNullValueFilterGroups; set { _explicitNullValueFilterGroups = value; AdditionalData?.Remove("filterGroups"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filterGroups"); else _explicitNullProperties?.Remove("filterGroups"); } }
-        private List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup15>? _explicitNullValueFilterGroups = default!;
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup13>? FilterGroups { get => _explicitNullValueFilterGroups; set { _explicitNullValueFilterGroups = value; AdditionalData?.Remove("filterGroups"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filterGroups"); else _explicitNullProperties?.Remove("filterGroups"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup13>? _explicitNullValueFilterGroups = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup15> FilterGroups { get => _explicitNullValueFilterGroups; set { _explicitNullValueFilterGroups = value; AdditionalData?.Remove("filterGroups"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filterGroups"); else _explicitNullProperties?.Remove("filterGroups"); } }
-        private List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup15> _explicitNullValueFilterGroups = default!;
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup13> FilterGroups { get => _explicitNullValueFilterGroups; set { _explicitNullValueFilterGroups = value; AdditionalData?.Remove("filterGroups"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filterGroups"); else _explicitNullProperties?.Remove("filterGroups"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup13> _explicitNullValueFilterGroups = default!;
 #endif
         /// <summary>An array of filter objects used to specify the criteria for the search. Each filter defines a property, an operator, and a value to filter by.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilter15>? Filters { get => _explicitNullValueFilters; set { _explicitNullValueFilters = value; AdditionalData?.Remove("filters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filters"); else _explicitNullProperties?.Remove("filters"); } }
-        private List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilter15>? _explicitNullValueFilters = default!;
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilter13>? Filters { get => _explicitNullValueFilters; set { _explicitNullValueFilters = value; AdditionalData?.Remove("filters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filters"); else _explicitNullProperties?.Remove("filters"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilter13>? _explicitNullValueFilters = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilter15> Filters { get => _explicitNullValueFilters; set { _explicitNullValueFilters = value; AdditionalData?.Remove("filters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filters"); else _explicitNullProperties?.Remove("filters"); } }
-        private List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilter15> _explicitNullValueFilters = default!;
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilter13> Filters { get => _explicitNullValueFilters; set { _explicitNullValueFilters = value; AdditionalData?.Remove("filters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filters"); else _explicitNullProperties?.Remove("filters"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilter13> _explicitNullValueFilters = default!;
 #endif
         /// <summary>The search query string, to filter CRM records.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -94,8 +94,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "filterGroups", n => { FilterGroups = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup15>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup15.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "filters", n => { Filters = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilter15>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilter15.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "filterGroups", n => { FilterGroups = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup13>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup13.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "filters", n => { Filters = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilter13>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilter13.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "query", n => { Query = n.GetStringValue(); } },
                 { "sorts", n => { Sorts = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
@@ -107,8 +107,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup15>("filterGroups", FilterGroups);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilter15>("filters", Filters);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilterGroup13>("filterGroups", FilterGroups);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CrmFilter13>("filters", Filters);
             writer.WriteStringValue("query", Query);
             writer.WriteCollectionOfPrimitiveValues<string>("sorts", Sorts);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

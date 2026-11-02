@@ -43,12 +43,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object representing the price details. The specific structure of this object is not detailed in the specification.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PriceUpdateEntryPriceProperty2? Price { get => _explicitNullValuePrice; set { _explicitNullValuePrice = value; AdditionalData?.Remove("price"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("price"); else _explicitNullProperties?.Remove("price"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PriceUpdateEntryPriceProperty2? _explicitNullValuePrice = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PriceUpdateEntryPrice? Price { get => _explicitNullValuePrice; set { _explicitNullValuePrice = value; AdditionalData?.Remove("price"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("price"); else _explicitNullProperties?.Remove("price"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PriceUpdateEntryPrice? _explicitNullValuePrice = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PriceUpdateEntryPriceProperty2 Price { get => _explicitNullValuePrice; set { _explicitNullValuePrice = value; AdditionalData?.Remove("price"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("price"); else _explicitNullProperties?.Remove("price"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PriceUpdateEntryPriceProperty2 _explicitNullValuePrice = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PriceUpdateEntryPrice Price { get => _explicitNullValuePrice; set { _explicitNullValuePrice = value; AdditionalData?.Remove("price"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("price"); else _explicitNullProperties?.Remove("price"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PriceUpdateEntryPrice _explicitNullValuePrice = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PriceUpdateEntry"/> and sets the default values.
@@ -77,7 +77,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             {
                 { "currencyCode", n => { CurrencyCode = n.GetStringValue(); } },
                 { "maxQuantity", n => { MaxQuantity = n.GetIntValue(); } },
-                { "price", n => { Price = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PriceUpdateEntryPriceProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PriceUpdateEntryPriceProperty2.CreateFromDiscriminatorValue); } },
+                { "price", n => { Price = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PriceUpdateEntryPrice>(global::Soenneker.HubSpot.OpenApiClient.Models.PriceUpdateEntryPrice.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -89,7 +89,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("currencyCode", CurrencyCode);
             writer.WriteIntValue("maxQuantity", MaxQuantity);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PriceUpdateEntryPriceProperty2>("price", Price);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PriceUpdateEntryPrice>("price", Price);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

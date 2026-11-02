@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     /// <summary>
-    /// An object containing additional context about the error, represented as a map of string keys to arrays of strings.
+    /// An object containing context about the error condition, with additional properties as arrays of strings.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CrmStandardError19Context : IAdditionalDataHolder, IParsable

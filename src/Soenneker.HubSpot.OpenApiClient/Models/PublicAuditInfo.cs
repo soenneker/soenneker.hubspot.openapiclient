@@ -74,12 +74,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object containing the raw data associated with the action. This can include detailed information about the state before and after the action.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditInfoRawObjectProperty2? RawObject { get => _explicitNullValueRawObject; set { _explicitNullValueRawObject = value; AdditionalData?.Remove("rawObject"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rawObject"); else _explicitNullProperties?.Remove("rawObject"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditInfoRawObjectProperty2? _explicitNullValueRawObject = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditInfoRawObject? RawObject { get => _explicitNullValueRawObject; set { _explicitNullValueRawObject = value; AdditionalData?.Remove("rawObject"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rawObject"); else _explicitNullProperties?.Remove("rawObject"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditInfoRawObject? _explicitNullValueRawObject = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditInfoRawObjectProperty2 RawObject { get => _explicitNullValueRawObject; set { _explicitNullValueRawObject = value; AdditionalData?.Remove("rawObject"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rawObject"); else _explicitNullProperties?.Remove("rawObject"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditInfoRawObjectProperty2 _explicitNullValueRawObject = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditInfoRawObject RawObject { get => _explicitNullValueRawObject; set { _explicitNullValueRawObject = value; AdditionalData?.Remove("rawObject"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rawObject"); else _explicitNullProperties?.Remove("rawObject"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditInfoRawObject _explicitNullValueRawObject = default!;
 #endif
         /// <summary>The date and time when the action occurred, in ISO 8601 format.</summary>
         public DateTimeOffset? Timestamp { get => _explicitNullValueTimestamp; set { _explicitNullValueTimestamp = value; AdditionalData?.Remove("timestamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timestamp"); else _explicitNullProperties?.Remove("timestamp"); } }
@@ -114,7 +114,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "identifier", n => { Identifier = n.GetStringValue(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "portalId", n => { PortalId = n.GetIntValue(); } },
-                { "rawObject", n => { RawObject = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditInfoRawObjectProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditInfoRawObjectProperty2.CreateFromDiscriminatorValue); } },
+                { "rawObject", n => { RawObject = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditInfoRawObject>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditInfoRawObject.CreateFromDiscriminatorValue); } },
                 { "timestamp", n => { Timestamp = n.GetDateTimeOffsetValue(); } },
             };
         }
@@ -130,7 +130,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("identifier", Identifier);
             writer.WriteStringValue("message", Message);
             writer.WriteIntValue("portalId", PortalId);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditInfoRawObjectProperty2>("rawObject", RawObject);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicAuditInfoRawObject>("rawObject", RawObject);
             writer.WriteDateTimeOffsetValue("timestamp", Timestamp);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

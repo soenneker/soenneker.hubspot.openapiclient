@@ -32,10 +32,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The category of the association. Valid values include &apos;HUBSPOT_DEFINED&apos;, &apos;USER_DEFINED&apos;, &apos;INTEGRATOR_DEFINED&apos;, and &apos;WORK&apos;.</summary>
+        /// <summary>The category of the association, which can be &apos;HUBSPOT_DEFINED&apos;, &apos;USER_DEFINED&apos;, &apos;INTEGRATOR_DEFINED&apos;, or &apos;WORK&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecWithLabelCategory9? Category { get => _explicitNullValueCategory; set { _explicitNullValueCategory = value; AdditionalData?.Remove("category"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("category"); else _explicitNullProperties?.Remove("category"); } }
         private global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecWithLabelCategory9? _explicitNullValueCategory = default!;
-        /// <summary>A string representing the type ID of the object from which the association originates.</summary>
+        /// <summary>A string representing the object type ID from which the association originates.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FromObjectTypeId { get => _explicitNullValueFromObjectTypeId; set { _explicitNullValueFromObjectTypeId = value; AdditionalData?.Remove("fromObjectTypeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fromObjectTypeId"); else _explicitNullProperties?.Remove("fromObjectTypeId"); } }
@@ -45,7 +45,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string FromObjectTypeId { get => _explicitNullValueFromObjectTypeId; set { _explicitNullValueFromObjectTypeId = value; AdditionalData?.Remove("fromObjectTypeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fromObjectTypeId"); else _explicitNullProperties?.Remove("fromObjectTypeId"); } }
         private string _explicitNullValueFromObjectTypeId = default!;
 #endif
-        /// <summary>A string representing the label for the association.</summary>
+        /// <summary>A string representing the label for the association, providing a human-readable description.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; AdditionalData?.Remove("label"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
@@ -55,7 +55,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; AdditionalData?.Remove("label"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
         private string _explicitNullValueLabel = default!;
 #endif
-        /// <summary>A string representing the type ID of the object to which the association is directed.</summary>
+        /// <summary>A string representing the object type ID to which the association points.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ToObjectTypeId { get => _explicitNullValueToObjectTypeId; set { _explicitNullValueToObjectTypeId = value; AdditionalData?.Remove("toObjectTypeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("toObjectTypeId"); else _explicitNullProperties?.Remove("toObjectTypeId"); } }

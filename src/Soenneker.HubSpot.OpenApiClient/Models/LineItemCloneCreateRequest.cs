@@ -86,142 +86,142 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object indicating whether the buyer can select the quantity of the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestAllowBuyerSelectedQuantityProperty2? AllowBuyerSelectedQuantity { get => _explicitNullValueAllowBuyerSelectedQuantity; set { _explicitNullValueAllowBuyerSelectedQuantity = value; AdditionalData?.Remove("allowBuyerSelectedQuantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowBuyerSelectedQuantity"); else _explicitNullProperties?.Remove("allowBuyerSelectedQuantity"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestAllowBuyerSelectedQuantityProperty2? _explicitNullValueAllowBuyerSelectedQuantity = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestAllowBuyerSelectedQuantity? AllowBuyerSelectedQuantity { get => _explicitNullValueAllowBuyerSelectedQuantity; set { _explicitNullValueAllowBuyerSelectedQuantity = value; AdditionalData?.Remove("allowBuyerSelectedQuantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowBuyerSelectedQuantity"); else _explicitNullProperties?.Remove("allowBuyerSelectedQuantity"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestAllowBuyerSelectedQuantity? _explicitNullValueAllowBuyerSelectedQuantity = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestAllowBuyerSelectedQuantityProperty2 AllowBuyerSelectedQuantity { get => _explicitNullValueAllowBuyerSelectedQuantity; set { _explicitNullValueAllowBuyerSelectedQuantity = value; AdditionalData?.Remove("allowBuyerSelectedQuantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowBuyerSelectedQuantity"); else _explicitNullProperties?.Remove("allowBuyerSelectedQuantity"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestAllowBuyerSelectedQuantityProperty2 _explicitNullValueAllowBuyerSelectedQuantity = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestAllowBuyerSelectedQuantity AllowBuyerSelectedQuantity { get => _explicitNullValueAllowBuyerSelectedQuantity; set { _explicitNullValueAllowBuyerSelectedQuantity = value; AdditionalData?.Remove("allowBuyerSelectedQuantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowBuyerSelectedQuantity"); else _explicitNullProperties?.Remove("allowBuyerSelectedQuantity"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestAllowBuyerSelectedQuantity _explicitNullValueAllowBuyerSelectedQuantity = default!;
 #endif
         /// <summary>An object representing the anchor date for the billing cycle of the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBillingCycleAnchorDateProperty2? BillingCycleAnchorDate { get => _explicitNullValueBillingCycleAnchorDate; set { _explicitNullValueBillingCycleAnchorDate = value; AdditionalData?.Remove("billingCycleAnchorDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billingCycleAnchorDate"); else _explicitNullProperties?.Remove("billingCycleAnchorDate"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBillingCycleAnchorDateProperty2? _explicitNullValueBillingCycleAnchorDate = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBillingCycleAnchorDate? BillingCycleAnchorDate { get => _explicitNullValueBillingCycleAnchorDate; set { _explicitNullValueBillingCycleAnchorDate = value; AdditionalData?.Remove("billingCycleAnchorDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billingCycleAnchorDate"); else _explicitNullProperties?.Remove("billingCycleAnchorDate"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBillingCycleAnchorDate? _explicitNullValueBillingCycleAnchorDate = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBillingCycleAnchorDateProperty2 BillingCycleAnchorDate { get => _explicitNullValueBillingCycleAnchorDate; set { _explicitNullValueBillingCycleAnchorDate = value; AdditionalData?.Remove("billingCycleAnchorDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billingCycleAnchorDate"); else _explicitNullProperties?.Remove("billingCycleAnchorDate"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBillingCycleAnchorDateProperty2 _explicitNullValueBillingCycleAnchorDate = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBillingCycleAnchorDate BillingCycleAnchorDate { get => _explicitNullValueBillingCycleAnchorDate; set { _explicitNullValueBillingCycleAnchorDate = value; AdditionalData?.Remove("billingCycleAnchorDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billingCycleAnchorDate"); else _explicitNullProperties?.Remove("billingCycleAnchorDate"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBillingCycleAnchorDate _explicitNullValueBillingCycleAnchorDate = default!;
 #endif
         /// <summary>An object representing the number of days to delay the start of billing for the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBillingStartDelayDaysProperty2? BillingStartDelayDays { get => _explicitNullValueBillingStartDelayDays; set { _explicitNullValueBillingStartDelayDays = value; AdditionalData?.Remove("billingStartDelayDays"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billingStartDelayDays"); else _explicitNullProperties?.Remove("billingStartDelayDays"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBillingStartDelayDaysProperty2? _explicitNullValueBillingStartDelayDays = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBillingStartDelayDays? BillingStartDelayDays { get => _explicitNullValueBillingStartDelayDays; set { _explicitNullValueBillingStartDelayDays = value; AdditionalData?.Remove("billingStartDelayDays"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billingStartDelayDays"); else _explicitNullProperties?.Remove("billingStartDelayDays"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBillingStartDelayDays? _explicitNullValueBillingStartDelayDays = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBillingStartDelayDaysProperty2 BillingStartDelayDays { get => _explicitNullValueBillingStartDelayDays; set { _explicitNullValueBillingStartDelayDays = value; AdditionalData?.Remove("billingStartDelayDays"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billingStartDelayDays"); else _explicitNullProperties?.Remove("billingStartDelayDays"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBillingStartDelayDaysProperty2 _explicitNullValueBillingStartDelayDays = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBillingStartDelayDays BillingStartDelayDays { get => _explicitNullValueBillingStartDelayDays; set { _explicitNullValueBillingStartDelayDays = value; AdditionalData?.Remove("billingStartDelayDays"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billingStartDelayDays"); else _explicitNullProperties?.Remove("billingStartDelayDays"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBillingStartDelayDays _explicitNullValueBillingStartDelayDays = default!;
 #endif
         /// <summary>An object representing the number of months to delay the start of billing for the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBillingStartDelayMonthsProperty2? BillingStartDelayMonths { get => _explicitNullValueBillingStartDelayMonths; set { _explicitNullValueBillingStartDelayMonths = value; AdditionalData?.Remove("billingStartDelayMonths"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billingStartDelayMonths"); else _explicitNullProperties?.Remove("billingStartDelayMonths"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBillingStartDelayMonthsProperty2? _explicitNullValueBillingStartDelayMonths = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBillingStartDelayMonths? BillingStartDelayMonths { get => _explicitNullValueBillingStartDelayMonths; set { _explicitNullValueBillingStartDelayMonths = value; AdditionalData?.Remove("billingStartDelayMonths"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billingStartDelayMonths"); else _explicitNullProperties?.Remove("billingStartDelayMonths"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBillingStartDelayMonths? _explicitNullValueBillingStartDelayMonths = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBillingStartDelayMonthsProperty2 BillingStartDelayMonths { get => _explicitNullValueBillingStartDelayMonths; set { _explicitNullValueBillingStartDelayMonths = value; AdditionalData?.Remove("billingStartDelayMonths"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billingStartDelayMonths"); else _explicitNullProperties?.Remove("billingStartDelayMonths"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBillingStartDelayMonthsProperty2 _explicitNullValueBillingStartDelayMonths = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBillingStartDelayMonths BillingStartDelayMonths { get => _explicitNullValueBillingStartDelayMonths; set { _explicitNullValueBillingStartDelayMonths = value; AdditionalData?.Remove("billingStartDelayMonths"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billingStartDelayMonths"); else _explicitNullProperties?.Remove("billingStartDelayMonths"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBillingStartDelayMonths _explicitNullValueBillingStartDelayMonths = default!;
 #endif
         /// <summary>An object representing the maximum quantity the buyer can select for the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBuyerSelectedQuantityMaxProperty2? BuyerSelectedQuantityMax { get => _explicitNullValueBuyerSelectedQuantityMax; set { _explicitNullValueBuyerSelectedQuantityMax = value; AdditionalData?.Remove("buyerSelectedQuantityMax"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buyerSelectedQuantityMax"); else _explicitNullProperties?.Remove("buyerSelectedQuantityMax"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBuyerSelectedQuantityMaxProperty2? _explicitNullValueBuyerSelectedQuantityMax = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBuyerSelectedQuantityMax? BuyerSelectedQuantityMax { get => _explicitNullValueBuyerSelectedQuantityMax; set { _explicitNullValueBuyerSelectedQuantityMax = value; AdditionalData?.Remove("buyerSelectedQuantityMax"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buyerSelectedQuantityMax"); else _explicitNullProperties?.Remove("buyerSelectedQuantityMax"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBuyerSelectedQuantityMax? _explicitNullValueBuyerSelectedQuantityMax = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBuyerSelectedQuantityMaxProperty2 BuyerSelectedQuantityMax { get => _explicitNullValueBuyerSelectedQuantityMax; set { _explicitNullValueBuyerSelectedQuantityMax = value; AdditionalData?.Remove("buyerSelectedQuantityMax"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buyerSelectedQuantityMax"); else _explicitNullProperties?.Remove("buyerSelectedQuantityMax"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBuyerSelectedQuantityMaxProperty2 _explicitNullValueBuyerSelectedQuantityMax = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBuyerSelectedQuantityMax BuyerSelectedQuantityMax { get => _explicitNullValueBuyerSelectedQuantityMax; set { _explicitNullValueBuyerSelectedQuantityMax = value; AdditionalData?.Remove("buyerSelectedQuantityMax"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buyerSelectedQuantityMax"); else _explicitNullProperties?.Remove("buyerSelectedQuantityMax"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBuyerSelectedQuantityMax _explicitNullValueBuyerSelectedQuantityMax = default!;
 #endif
         /// <summary>An object representing the minimum quantity the buyer can select for the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBuyerSelectedQuantityMinProperty2? BuyerSelectedQuantityMin { get => _explicitNullValueBuyerSelectedQuantityMin; set { _explicitNullValueBuyerSelectedQuantityMin = value; AdditionalData?.Remove("buyerSelectedQuantityMin"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buyerSelectedQuantityMin"); else _explicitNullProperties?.Remove("buyerSelectedQuantityMin"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBuyerSelectedQuantityMinProperty2? _explicitNullValueBuyerSelectedQuantityMin = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBuyerSelectedQuantityMin? BuyerSelectedQuantityMin { get => _explicitNullValueBuyerSelectedQuantityMin; set { _explicitNullValueBuyerSelectedQuantityMin = value; AdditionalData?.Remove("buyerSelectedQuantityMin"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buyerSelectedQuantityMin"); else _explicitNullProperties?.Remove("buyerSelectedQuantityMin"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBuyerSelectedQuantityMin? _explicitNullValueBuyerSelectedQuantityMin = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBuyerSelectedQuantityMinProperty2 BuyerSelectedQuantityMin { get => _explicitNullValueBuyerSelectedQuantityMin; set { _explicitNullValueBuyerSelectedQuantityMin = value; AdditionalData?.Remove("buyerSelectedQuantityMin"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buyerSelectedQuantityMin"); else _explicitNullProperties?.Remove("buyerSelectedQuantityMin"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBuyerSelectedQuantityMinProperty2 _explicitNullValueBuyerSelectedQuantityMin = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBuyerSelectedQuantityMin BuyerSelectedQuantityMin { get => _explicitNullValueBuyerSelectedQuantityMin; set { _explicitNullValueBuyerSelectedQuantityMin = value; AdditionalData?.Remove("buyerSelectedQuantityMin"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buyerSelectedQuantityMin"); else _explicitNullProperties?.Remove("buyerSelectedQuantityMin"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBuyerSelectedQuantityMin _explicitNullValueBuyerSelectedQuantityMin = default!;
 #endif
         /// <summary>An object representing the description of the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestDescriptionProperty2? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestDescriptionProperty2? _explicitNullValueDescription = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestDescription? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestDescription? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestDescriptionProperty2 Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestDescriptionProperty2 _explicitNullValueDescription = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestDescription Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestDescription _explicitNullValueDescription = default!;
 #endif
         /// <summary>An object representing the discount applied to the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestDiscountProperty2? Discount { get => _explicitNullValueDiscount; set { _explicitNullValueDiscount = value; AdditionalData?.Remove("discount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discount"); else _explicitNullProperties?.Remove("discount"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestDiscountProperty2? _explicitNullValueDiscount = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestDiscount? Discount { get => _explicitNullValueDiscount; set { _explicitNullValueDiscount = value; AdditionalData?.Remove("discount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discount"); else _explicitNullProperties?.Remove("discount"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestDiscount? _explicitNullValueDiscount = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestDiscountProperty2 Discount { get => _explicitNullValueDiscount; set { _explicitNullValueDiscount = value; AdditionalData?.Remove("discount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discount"); else _explicitNullProperties?.Remove("discount"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestDiscountProperty2 _explicitNullValueDiscount = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestDiscount Discount { get => _explicitNullValueDiscount; set { _explicitNullValueDiscount = value; AdditionalData?.Remove("discount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discount"); else _explicitNullProperties?.Remove("discount"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestDiscount _explicitNullValueDiscount = default!;
 #endif
         /// <summary>An object representing the discount percentage applied to the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestDiscountPercentageProperty2? DiscountPercentage { get => _explicitNullValueDiscountPercentage; set { _explicitNullValueDiscountPercentage = value; AdditionalData?.Remove("discountPercentage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discountPercentage"); else _explicitNullProperties?.Remove("discountPercentage"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestDiscountPercentageProperty2? _explicitNullValueDiscountPercentage = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestDiscountPercentage? DiscountPercentage { get => _explicitNullValueDiscountPercentage; set { _explicitNullValueDiscountPercentage = value; AdditionalData?.Remove("discountPercentage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discountPercentage"); else _explicitNullProperties?.Remove("discountPercentage"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestDiscountPercentage? _explicitNullValueDiscountPercentage = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestDiscountPercentageProperty2 DiscountPercentage { get => _explicitNullValueDiscountPercentage; set { _explicitNullValueDiscountPercentage = value; AdditionalData?.Remove("discountPercentage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discountPercentage"); else _explicitNullProperties?.Remove("discountPercentage"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestDiscountPercentageProperty2 _explicitNullValueDiscountPercentage = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestDiscountPercentage DiscountPercentage { get => _explicitNullValueDiscountPercentage; set { _explicitNullValueDiscountPercentage = value; AdditionalData?.Remove("discountPercentage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discountPercentage"); else _explicitNullProperties?.Remove("discountPercentage"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestDiscountPercentage _explicitNullValueDiscountPercentage = default!;
 #endif
         /// <summary>An object representing an external identifier for the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestExternalIdProperty2? ExternalId { get => _explicitNullValueExternalId; set { _explicitNullValueExternalId = value; AdditionalData?.Remove("externalId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalId"); else _explicitNullProperties?.Remove("externalId"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestExternalIdProperty2? _explicitNullValueExternalId = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestExternalId? ExternalId { get => _explicitNullValueExternalId; set { _explicitNullValueExternalId = value; AdditionalData?.Remove("externalId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalId"); else _explicitNullProperties?.Remove("externalId"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestExternalId? _explicitNullValueExternalId = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestExternalIdProperty2 ExternalId { get => _explicitNullValueExternalId; set { _explicitNullValueExternalId = value; AdditionalData?.Remove("externalId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalId"); else _explicitNullProperties?.Remove("externalId"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestExternalIdProperty2 _explicitNullValueExternalId = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestExternalId ExternalId { get => _explicitNullValueExternalId; set { _explicitNullValueExternalId = value; AdditionalData?.Remove("externalId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalId"); else _explicitNullProperties?.Remove("externalId"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestExternalId _explicitNullValueExternalId = default!;
 #endif
         /// <summary>An object representing the images associated with the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestImagesProperty2? Images { get => _explicitNullValueImages; set { _explicitNullValueImages = value; AdditionalData?.Remove("images"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("images"); else _explicitNullProperties?.Remove("images"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestImagesProperty2? _explicitNullValueImages = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestImages? Images { get => _explicitNullValueImages; set { _explicitNullValueImages = value; AdditionalData?.Remove("images"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("images"); else _explicitNullProperties?.Remove("images"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestImages? _explicitNullValueImages = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestImagesProperty2 Images { get => _explicitNullValueImages; set { _explicitNullValueImages = value; AdditionalData?.Remove("images"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("images"); else _explicitNullProperties?.Remove("images"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestImagesProperty2 _explicitNullValueImages = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestImages Images { get => _explicitNullValueImages; set { _explicitNullValueImages = value; AdditionalData?.Remove("images"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("images"); else _explicitNullProperties?.Remove("images"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestImages _explicitNullValueImages = default!;
 #endif
         /// <summary>An object indicating whether the price of the line item is editable.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestIsEditablePriceProperty2? IsEditablePrice { get => _explicitNullValueIsEditablePrice; set { _explicitNullValueIsEditablePrice = value; AdditionalData?.Remove("isEditablePrice"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isEditablePrice"); else _explicitNullProperties?.Remove("isEditablePrice"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestIsEditablePriceProperty2? _explicitNullValueIsEditablePrice = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestIsEditablePrice? IsEditablePrice { get => _explicitNullValueIsEditablePrice; set { _explicitNullValueIsEditablePrice = value; AdditionalData?.Remove("isEditablePrice"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isEditablePrice"); else _explicitNullProperties?.Remove("isEditablePrice"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestIsEditablePrice? _explicitNullValueIsEditablePrice = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestIsEditablePriceProperty2 IsEditablePrice { get => _explicitNullValueIsEditablePrice; set { _explicitNullValueIsEditablePrice = value; AdditionalData?.Remove("isEditablePrice"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isEditablePrice"); else _explicitNullProperties?.Remove("isEditablePrice"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestIsEditablePriceProperty2 _explicitNullValueIsEditablePrice = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestIsEditablePrice IsEditablePrice { get => _explicitNullValueIsEditablePrice; set { _explicitNullValueIsEditablePrice = value; AdditionalData?.Remove("isEditablePrice"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isEditablePrice"); else _explicitNullProperties?.Remove("isEditablePrice"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestIsEditablePrice _explicitNullValueIsEditablePrice = default!;
 #endif
         /// <summary>An object indicating whether the line item is optional.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestIsOptionalProperty2? IsOptional { get => _explicitNullValueIsOptional; set { _explicitNullValueIsOptional = value; AdditionalData?.Remove("isOptional"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isOptional"); else _explicitNullProperties?.Remove("isOptional"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestIsOptionalProperty2? _explicitNullValueIsOptional = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestIsOptional? IsOptional { get => _explicitNullValueIsOptional; set { _explicitNullValueIsOptional = value; AdditionalData?.Remove("isOptional"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isOptional"); else _explicitNullProperties?.Remove("isOptional"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestIsOptional? _explicitNullValueIsOptional = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestIsOptionalProperty2 IsOptional { get => _explicitNullValueIsOptional; set { _explicitNullValueIsOptional = value; AdditionalData?.Remove("isOptional"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isOptional"); else _explicitNullProperties?.Remove("isOptional"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestIsOptionalProperty2 _explicitNullValueIsOptional = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestIsOptional IsOptional { get => _explicitNullValueIsOptional; set { _explicitNullValueIsOptional = value; AdditionalData?.Remove("isOptional"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isOptional"); else _explicitNullProperties?.Remove("isOptional"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestIsOptional _explicitNullValueIsOptional = default!;
 #endif
         /// <summary>An object representing the currency code for the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestLineItemCurrencyCodeProperty2? LineItemCurrencyCode { get => _explicitNullValueLineItemCurrencyCode; set { _explicitNullValueLineItemCurrencyCode = value; AdditionalData?.Remove("lineItemCurrencyCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lineItemCurrencyCode"); else _explicitNullProperties?.Remove("lineItemCurrencyCode"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestLineItemCurrencyCodeProperty2? _explicitNullValueLineItemCurrencyCode = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestLineItemCurrencyCode? LineItemCurrencyCode { get => _explicitNullValueLineItemCurrencyCode; set { _explicitNullValueLineItemCurrencyCode = value; AdditionalData?.Remove("lineItemCurrencyCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lineItemCurrencyCode"); else _explicitNullProperties?.Remove("lineItemCurrencyCode"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestLineItemCurrencyCode? _explicitNullValueLineItemCurrencyCode = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestLineItemCurrencyCodeProperty2 LineItemCurrencyCode { get => _explicitNullValueLineItemCurrencyCode; set { _explicitNullValueLineItemCurrencyCode = value; AdditionalData?.Remove("lineItemCurrencyCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lineItemCurrencyCode"); else _explicitNullProperties?.Remove("lineItemCurrencyCode"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestLineItemCurrencyCodeProperty2 _explicitNullValueLineItemCurrencyCode = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestLineItemCurrencyCode LineItemCurrencyCode { get => _explicitNullValueLineItemCurrencyCode; set { _explicitNullValueLineItemCurrencyCode = value; AdditionalData?.Remove("lineItemCurrencyCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lineItemCurrencyCode"); else _explicitNullProperties?.Remove("lineItemCurrencyCode"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestLineItemCurrencyCode _explicitNullValueLineItemCurrencyCode = default!;
 #endif
         /// <summary>A string indicating the mode of the line item creation, which is &apos;CLONE&apos; for this component.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.CloneMode? Mode { get => _explicitNullValueMode; set { _explicitNullValueMode = value; AdditionalData?.Remove("mode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mode"); else _explicitNullProperties?.Remove("mode"); } }
@@ -229,122 +229,122 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object representing the name of the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestNameProperty2? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestNameProperty2? _explicitNullValueName = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestName? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestName? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestNameProperty2 Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestNameProperty2 _explicitNullValueName = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestName Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestName _explicitNullValueName = default!;
 #endif
         /// <summary>An object representing the position of the line item on the quote.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestPositionOnQuoteProperty2? PositionOnQuote { get => _explicitNullValuePositionOnQuote; set { _explicitNullValuePositionOnQuote = value; AdditionalData?.Remove("positionOnQuote"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("positionOnQuote"); else _explicitNullProperties?.Remove("positionOnQuote"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestPositionOnQuoteProperty2? _explicitNullValuePositionOnQuote = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestPositionOnQuote? PositionOnQuote { get => _explicitNullValuePositionOnQuote; set { _explicitNullValuePositionOnQuote = value; AdditionalData?.Remove("positionOnQuote"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("positionOnQuote"); else _explicitNullProperties?.Remove("positionOnQuote"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestPositionOnQuote? _explicitNullValuePositionOnQuote = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestPositionOnQuoteProperty2 PositionOnQuote { get => _explicitNullValuePositionOnQuote; set { _explicitNullValuePositionOnQuote = value; AdditionalData?.Remove("positionOnQuote"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("positionOnQuote"); else _explicitNullProperties?.Remove("positionOnQuote"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestPositionOnQuoteProperty2 _explicitNullValuePositionOnQuote = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestPositionOnQuote PositionOnQuote { get => _explicitNullValuePositionOnQuote; set { _explicitNullValuePositionOnQuote = value; AdditionalData?.Remove("positionOnQuote"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("positionOnQuote"); else _explicitNullProperties?.Remove("positionOnQuote"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestPositionOnQuote _explicitNullValuePositionOnQuote = default!;
 #endif
         /// <summary>An object representing the price book ID associated with the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestPriceBookIdProperty2? PriceBookId { get => _explicitNullValuePriceBookId; set { _explicitNullValuePriceBookId = value; AdditionalData?.Remove("priceBookId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priceBookId"); else _explicitNullProperties?.Remove("priceBookId"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestPriceBookIdProperty2? _explicitNullValuePriceBookId = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestPriceBookId? PriceBookId { get => _explicitNullValuePriceBookId; set { _explicitNullValuePriceBookId = value; AdditionalData?.Remove("priceBookId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priceBookId"); else _explicitNullProperties?.Remove("priceBookId"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestPriceBookId? _explicitNullValuePriceBookId = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestPriceBookIdProperty2 PriceBookId { get => _explicitNullValuePriceBookId; set { _explicitNullValuePriceBookId = value; AdditionalData?.Remove("priceBookId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priceBookId"); else _explicitNullProperties?.Remove("priceBookId"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestPriceBookIdProperty2 _explicitNullValuePriceBookId = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestPriceBookId PriceBookId { get => _explicitNullValuePriceBookId; set { _explicitNullValuePriceBookId = value; AdditionalData?.Remove("priceBookId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priceBookId"); else _explicitNullProperties?.Remove("priceBookId"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestPriceBookId _explicitNullValuePriceBookId = default!;
 #endif
         /// <summary>An object representing the pricing details of the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestPricingProperty2? Pricing { get => _explicitNullValuePricing; set { _explicitNullValuePricing = value; AdditionalData?.Remove("pricing"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pricing"); else _explicitNullProperties?.Remove("pricing"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestPricingProperty2? _explicitNullValuePricing = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestPricing? Pricing { get => _explicitNullValuePricing; set { _explicitNullValuePricing = value; AdditionalData?.Remove("pricing"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pricing"); else _explicitNullProperties?.Remove("pricing"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestPricing? _explicitNullValuePricing = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestPricingProperty2 Pricing { get => _explicitNullValuePricing; set { _explicitNullValuePricing = value; AdditionalData?.Remove("pricing"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pricing"); else _explicitNullProperties?.Remove("pricing"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestPricingProperty2 _explicitNullValuePricing = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestPricing Pricing { get => _explicitNullValuePricing; set { _explicitNullValuePricing = value; AdditionalData?.Remove("pricing"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pricing"); else _explicitNullProperties?.Remove("pricing"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestPricing _explicitNullValuePricing = default!;
 #endif
         /// <summary>An object representing the type of product for the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestProductTypeProperty2? ProductType { get => _explicitNullValueProductType; set { _explicitNullValueProductType = value; AdditionalData?.Remove("productType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("productType"); else _explicitNullProperties?.Remove("productType"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestProductTypeProperty2? _explicitNullValueProductType = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestProductType? ProductType { get => _explicitNullValueProductType; set { _explicitNullValueProductType = value; AdditionalData?.Remove("productType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("productType"); else _explicitNullProperties?.Remove("productType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestProductType? _explicitNullValueProductType = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestProductTypeProperty2 ProductType { get => _explicitNullValueProductType; set { _explicitNullValueProductType = value; AdditionalData?.Remove("productType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("productType"); else _explicitNullProperties?.Remove("productType"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestProductTypeProperty2 _explicitNullValueProductType = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestProductType ProductType { get => _explicitNullValueProductType; set { _explicitNullValueProductType = value; AdditionalData?.Remove("productType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("productType"); else _explicitNullProperties?.Remove("productType"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestProductType _explicitNullValueProductType = default!;
 #endif
         /// <summary>An object representing the quantity of the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestQuantityProperty2? Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; AdditionalData?.Remove("quantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quantity"); else _explicitNullProperties?.Remove("quantity"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestQuantityProperty2? _explicitNullValueQuantity = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestQuantity? Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; AdditionalData?.Remove("quantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quantity"); else _explicitNullProperties?.Remove("quantity"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestQuantity? _explicitNullValueQuantity = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestQuantityProperty2 Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; AdditionalData?.Remove("quantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quantity"); else _explicitNullProperties?.Remove("quantity"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestQuantityProperty2 _explicitNullValueQuantity = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestQuantity Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; AdditionalData?.Remove("quantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quantity"); else _explicitNullProperties?.Remove("quantity"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestQuantity _explicitNullValueQuantity = default!;
 #endif
         /// <summary>An object representing the end date for recurring billing of the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingEndDateProperty2? RecurringBillingEndDate { get => _explicitNullValueRecurringBillingEndDate; set { _explicitNullValueRecurringBillingEndDate = value; AdditionalData?.Remove("recurringBillingEndDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurringBillingEndDate"); else _explicitNullProperties?.Remove("recurringBillingEndDate"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingEndDateProperty2? _explicitNullValueRecurringBillingEndDate = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingEndDate? RecurringBillingEndDate { get => _explicitNullValueRecurringBillingEndDate; set { _explicitNullValueRecurringBillingEndDate = value; AdditionalData?.Remove("recurringBillingEndDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurringBillingEndDate"); else _explicitNullProperties?.Remove("recurringBillingEndDate"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingEndDate? _explicitNullValueRecurringBillingEndDate = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingEndDateProperty2 RecurringBillingEndDate { get => _explicitNullValueRecurringBillingEndDate; set { _explicitNullValueRecurringBillingEndDate = value; AdditionalData?.Remove("recurringBillingEndDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurringBillingEndDate"); else _explicitNullProperties?.Remove("recurringBillingEndDate"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingEndDateProperty2 _explicitNullValueRecurringBillingEndDate = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingEndDate RecurringBillingEndDate { get => _explicitNullValueRecurringBillingEndDate; set { _explicitNullValueRecurringBillingEndDate = value; AdditionalData?.Remove("recurringBillingEndDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurringBillingEndDate"); else _explicitNullProperties?.Remove("recurringBillingEndDate"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingEndDate _explicitNullValueRecurringBillingEndDate = default!;
 #endif
         /// <summary>An object representing the frequency of recurring billing for the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingFrequencyProperty2? RecurringBillingFrequency { get => _explicitNullValueRecurringBillingFrequency; set { _explicitNullValueRecurringBillingFrequency = value; AdditionalData?.Remove("recurringBillingFrequency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurringBillingFrequency"); else _explicitNullProperties?.Remove("recurringBillingFrequency"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingFrequencyProperty2? _explicitNullValueRecurringBillingFrequency = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingFrequency? RecurringBillingFrequency { get => _explicitNullValueRecurringBillingFrequency; set { _explicitNullValueRecurringBillingFrequency = value; AdditionalData?.Remove("recurringBillingFrequency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurringBillingFrequency"); else _explicitNullProperties?.Remove("recurringBillingFrequency"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingFrequency? _explicitNullValueRecurringBillingFrequency = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingFrequencyProperty2 RecurringBillingFrequency { get => _explicitNullValueRecurringBillingFrequency; set { _explicitNullValueRecurringBillingFrequency = value; AdditionalData?.Remove("recurringBillingFrequency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurringBillingFrequency"); else _explicitNullProperties?.Remove("recurringBillingFrequency"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingFrequencyProperty2 _explicitNullValueRecurringBillingFrequency = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingFrequency RecurringBillingFrequency { get => _explicitNullValueRecurringBillingFrequency; set { _explicitNullValueRecurringBillingFrequency = value; AdditionalData?.Remove("recurringBillingFrequency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurringBillingFrequency"); else _explicitNullProperties?.Remove("recurringBillingFrequency"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingFrequency _explicitNullValueRecurringBillingFrequency = default!;
 #endif
         /// <summary>An object representing the billing period for recurring billing of the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingPeriodProperty2? RecurringBillingPeriod { get => _explicitNullValueRecurringBillingPeriod; set { _explicitNullValueRecurringBillingPeriod = value; AdditionalData?.Remove("recurringBillingPeriod"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurringBillingPeriod"); else _explicitNullProperties?.Remove("recurringBillingPeriod"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingPeriodProperty2? _explicitNullValueRecurringBillingPeriod = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingPeriod? RecurringBillingPeriod { get => _explicitNullValueRecurringBillingPeriod; set { _explicitNullValueRecurringBillingPeriod = value; AdditionalData?.Remove("recurringBillingPeriod"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurringBillingPeriod"); else _explicitNullProperties?.Remove("recurringBillingPeriod"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingPeriod? _explicitNullValueRecurringBillingPeriod = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingPeriodProperty2 RecurringBillingPeriod { get => _explicitNullValueRecurringBillingPeriod; set { _explicitNullValueRecurringBillingPeriod = value; AdditionalData?.Remove("recurringBillingPeriod"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurringBillingPeriod"); else _explicitNullProperties?.Remove("recurringBillingPeriod"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingPeriodProperty2 _explicitNullValueRecurringBillingPeriod = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingPeriod RecurringBillingPeriod { get => _explicitNullValueRecurringBillingPeriod; set { _explicitNullValueRecurringBillingPeriod = value; AdditionalData?.Remove("recurringBillingPeriod"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurringBillingPeriod"); else _explicitNullProperties?.Remove("recurringBillingPeriod"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingPeriod _explicitNullValueRecurringBillingPeriod = default!;
 #endif
         /// <summary>An object representing the start date for recurring billing of the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingStartDateProperty2? RecurringBillingStartDate { get => _explicitNullValueRecurringBillingStartDate; set { _explicitNullValueRecurringBillingStartDate = value; AdditionalData?.Remove("recurringBillingStartDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurringBillingStartDate"); else _explicitNullProperties?.Remove("recurringBillingStartDate"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingStartDateProperty2? _explicitNullValueRecurringBillingStartDate = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingStartDate? RecurringBillingStartDate { get => _explicitNullValueRecurringBillingStartDate; set { _explicitNullValueRecurringBillingStartDate = value; AdditionalData?.Remove("recurringBillingStartDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurringBillingStartDate"); else _explicitNullProperties?.Remove("recurringBillingStartDate"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingStartDate? _explicitNullValueRecurringBillingStartDate = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingStartDateProperty2 RecurringBillingStartDate { get => _explicitNullValueRecurringBillingStartDate; set { _explicitNullValueRecurringBillingStartDate = value; AdditionalData?.Remove("recurringBillingStartDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurringBillingStartDate"); else _explicitNullProperties?.Remove("recurringBillingStartDate"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingStartDateProperty2 _explicitNullValueRecurringBillingStartDate = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingStartDate RecurringBillingStartDate { get => _explicitNullValueRecurringBillingStartDate; set { _explicitNullValueRecurringBillingStartDate = value; AdditionalData?.Remove("recurringBillingStartDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurringBillingStartDate"); else _explicitNullProperties?.Remove("recurringBillingStartDate"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingStartDate _explicitNullValueRecurringBillingStartDate = default!;
 #endif
         /// <summary>An object representing the rich text description of the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRichTextDescriptionProperty2? RichTextDescription { get => _explicitNullValueRichTextDescription; set { _explicitNullValueRichTextDescription = value; AdditionalData?.Remove("richTextDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("richTextDescription"); else _explicitNullProperties?.Remove("richTextDescription"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRichTextDescriptionProperty2? _explicitNullValueRichTextDescription = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRichTextDescription? RichTextDescription { get => _explicitNullValueRichTextDescription; set { _explicitNullValueRichTextDescription = value; AdditionalData?.Remove("richTextDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("richTextDescription"); else _explicitNullProperties?.Remove("richTextDescription"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRichTextDescription? _explicitNullValueRichTextDescription = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRichTextDescriptionProperty2 RichTextDescription { get => _explicitNullValueRichTextDescription; set { _explicitNullValueRichTextDescription = value; AdditionalData?.Remove("richTextDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("richTextDescription"); else _explicitNullProperties?.Remove("richTextDescription"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRichTextDescriptionProperty2 _explicitNullValueRichTextDescription = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRichTextDescription RichTextDescription { get => _explicitNullValueRichTextDescription; set { _explicitNullValueRichTextDescription = value; AdditionalData?.Remove("richTextDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("richTextDescription"); else _explicitNullProperties?.Remove("richTextDescription"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRichTextDescription _explicitNullValueRichTextDescription = default!;
 #endif
         /// <summary>An object representing the stock keeping unit (SKU) of the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestSkuProperty2? Sku { get => _explicitNullValueSku; set { _explicitNullValueSku = value; AdditionalData?.Remove("sku"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sku"); else _explicitNullProperties?.Remove("sku"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestSkuProperty2? _explicitNullValueSku = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestSku? Sku { get => _explicitNullValueSku; set { _explicitNullValueSku = value; AdditionalData?.Remove("sku"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sku"); else _explicitNullProperties?.Remove("sku"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestSku? _explicitNullValueSku = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestSkuProperty2 Sku { get => _explicitNullValueSku; set { _explicitNullValueSku = value; AdditionalData?.Remove("sku"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sku"); else _explicitNullProperties?.Remove("sku"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestSkuProperty2 _explicitNullValueSku = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestSku Sku { get => _explicitNullValueSku; set { _explicitNullValueSku = value; AdditionalData?.Remove("sku"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sku"); else _explicitNullProperties?.Remove("sku"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestSku _explicitNullValueSku = default!;
 #endif
         /// <summary>A string representing the ID of the source line item being cloned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -359,32 +359,32 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object representing the tax category of the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestTaxCategoryProperty2? TaxCategory { get => _explicitNullValueTaxCategory; set { _explicitNullValueTaxCategory = value; AdditionalData?.Remove("taxCategory"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taxCategory"); else _explicitNullProperties?.Remove("taxCategory"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestTaxCategoryProperty2? _explicitNullValueTaxCategory = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestTaxCategory? TaxCategory { get => _explicitNullValueTaxCategory; set { _explicitNullValueTaxCategory = value; AdditionalData?.Remove("taxCategory"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taxCategory"); else _explicitNullProperties?.Remove("taxCategory"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestTaxCategory? _explicitNullValueTaxCategory = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestTaxCategoryProperty2 TaxCategory { get => _explicitNullValueTaxCategory; set { _explicitNullValueTaxCategory = value; AdditionalData?.Remove("taxCategory"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taxCategory"); else _explicitNullProperties?.Remove("taxCategory"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestTaxCategoryProperty2 _explicitNullValueTaxCategory = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestTaxCategory TaxCategory { get => _explicitNullValueTaxCategory; set { _explicitNullValueTaxCategory = value; AdditionalData?.Remove("taxCategory"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taxCategory"); else _explicitNullProperties?.Remove("taxCategory"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestTaxCategory _explicitNullValueTaxCategory = default!;
 #endif
         /// <summary>An object representing the tax rate group ID for the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestTaxRateGroupIdProperty2? TaxRateGroupId { get => _explicitNullValueTaxRateGroupId; set { _explicitNullValueTaxRateGroupId = value; AdditionalData?.Remove("taxRateGroupId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taxRateGroupId"); else _explicitNullProperties?.Remove("taxRateGroupId"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestTaxRateGroupIdProperty2? _explicitNullValueTaxRateGroupId = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestTaxRateGroupId? TaxRateGroupId { get => _explicitNullValueTaxRateGroupId; set { _explicitNullValueTaxRateGroupId = value; AdditionalData?.Remove("taxRateGroupId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taxRateGroupId"); else _explicitNullProperties?.Remove("taxRateGroupId"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestTaxRateGroupId? _explicitNullValueTaxRateGroupId = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestTaxRateGroupIdProperty2 TaxRateGroupId { get => _explicitNullValueTaxRateGroupId; set { _explicitNullValueTaxRateGroupId = value; AdditionalData?.Remove("taxRateGroupId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taxRateGroupId"); else _explicitNullProperties?.Remove("taxRateGroupId"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestTaxRateGroupIdProperty2 _explicitNullValueTaxRateGroupId = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestTaxRateGroupId TaxRateGroupId { get => _explicitNullValueTaxRateGroupId; set { _explicitNullValueTaxRateGroupId = value; AdditionalData?.Remove("taxRateGroupId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taxRateGroupId"); else _explicitNullProperties?.Remove("taxRateGroupId"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestTaxRateGroupId _explicitNullValueTaxRateGroupId = default!;
 #endif
         /// <summary>An object representing the variant ID of the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestVariantIdProperty2? VariantId { get => _explicitNullValueVariantId; set { _explicitNullValueVariantId = value; AdditionalData?.Remove("variantId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variantId"); else _explicitNullProperties?.Remove("variantId"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestVariantIdProperty2? _explicitNullValueVariantId = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestVariantId? VariantId { get => _explicitNullValueVariantId; set { _explicitNullValueVariantId = value; AdditionalData?.Remove("variantId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variantId"); else _explicitNullProperties?.Remove("variantId"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestVariantId? _explicitNullValueVariantId = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestVariantIdProperty2 VariantId { get => _explicitNullValueVariantId; set { _explicitNullValueVariantId = value; AdditionalData?.Remove("variantId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variantId"); else _explicitNullProperties?.Remove("variantId"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestVariantIdProperty2 _explicitNullValueVariantId = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestVariantId VariantId { get => _explicitNullValueVariantId; set { _explicitNullValueVariantId = value; AdditionalData?.Remove("variantId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variantId"); else _explicitNullProperties?.Remove("variantId"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestVariantId _explicitNullValueVariantId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequest"/> and sets the default values.
@@ -411,37 +411,37 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "allowBuyerSelectedQuantity", n => { AllowBuyerSelectedQuantity = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestAllowBuyerSelectedQuantityProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestAllowBuyerSelectedQuantityProperty2.CreateFromDiscriminatorValue); } },
-                { "billingCycleAnchorDate", n => { BillingCycleAnchorDate = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBillingCycleAnchorDateProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBillingCycleAnchorDateProperty2.CreateFromDiscriminatorValue); } },
-                { "billingStartDelayDays", n => { BillingStartDelayDays = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBillingStartDelayDaysProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBillingStartDelayDaysProperty2.CreateFromDiscriminatorValue); } },
-                { "billingStartDelayMonths", n => { BillingStartDelayMonths = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBillingStartDelayMonthsProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBillingStartDelayMonthsProperty2.CreateFromDiscriminatorValue); } },
-                { "buyerSelectedQuantityMax", n => { BuyerSelectedQuantityMax = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBuyerSelectedQuantityMaxProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBuyerSelectedQuantityMaxProperty2.CreateFromDiscriminatorValue); } },
-                { "buyerSelectedQuantityMin", n => { BuyerSelectedQuantityMin = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBuyerSelectedQuantityMinProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBuyerSelectedQuantityMinProperty2.CreateFromDiscriminatorValue); } },
-                { "description", n => { Description = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestDescriptionProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestDescriptionProperty2.CreateFromDiscriminatorValue); } },
-                { "discount", n => { Discount = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestDiscountProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestDiscountProperty2.CreateFromDiscriminatorValue); } },
-                { "discountPercentage", n => { DiscountPercentage = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestDiscountPercentageProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestDiscountPercentageProperty2.CreateFromDiscriminatorValue); } },
-                { "externalId", n => { ExternalId = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestExternalIdProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestExternalIdProperty2.CreateFromDiscriminatorValue); } },
-                { "images", n => { Images = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestImagesProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestImagesProperty2.CreateFromDiscriminatorValue); } },
-                { "isEditablePrice", n => { IsEditablePrice = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestIsEditablePriceProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestIsEditablePriceProperty2.CreateFromDiscriminatorValue); } },
-                { "isOptional", n => { IsOptional = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestIsOptionalProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestIsOptionalProperty2.CreateFromDiscriminatorValue); } },
-                { "lineItemCurrencyCode", n => { LineItemCurrencyCode = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestLineItemCurrencyCodeProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestLineItemCurrencyCodeProperty2.CreateFromDiscriminatorValue); } },
+                { "allowBuyerSelectedQuantity", n => { AllowBuyerSelectedQuantity = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestAllowBuyerSelectedQuantity>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestAllowBuyerSelectedQuantity.CreateFromDiscriminatorValue); } },
+                { "billingCycleAnchorDate", n => { BillingCycleAnchorDate = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBillingCycleAnchorDate>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBillingCycleAnchorDate.CreateFromDiscriminatorValue); } },
+                { "billingStartDelayDays", n => { BillingStartDelayDays = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBillingStartDelayDays>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBillingStartDelayDays.CreateFromDiscriminatorValue); } },
+                { "billingStartDelayMonths", n => { BillingStartDelayMonths = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBillingStartDelayMonths>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBillingStartDelayMonths.CreateFromDiscriminatorValue); } },
+                { "buyerSelectedQuantityMax", n => { BuyerSelectedQuantityMax = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBuyerSelectedQuantityMax>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBuyerSelectedQuantityMax.CreateFromDiscriminatorValue); } },
+                { "buyerSelectedQuantityMin", n => { BuyerSelectedQuantityMin = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBuyerSelectedQuantityMin>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBuyerSelectedQuantityMin.CreateFromDiscriminatorValue); } },
+                { "description", n => { Description = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestDescription>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestDescription.CreateFromDiscriminatorValue); } },
+                { "discount", n => { Discount = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestDiscount>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestDiscount.CreateFromDiscriminatorValue); } },
+                { "discountPercentage", n => { DiscountPercentage = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestDiscountPercentage>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestDiscountPercentage.CreateFromDiscriminatorValue); } },
+                { "externalId", n => { ExternalId = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestExternalId>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestExternalId.CreateFromDiscriminatorValue); } },
+                { "images", n => { Images = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestImages>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestImages.CreateFromDiscriminatorValue); } },
+                { "isEditablePrice", n => { IsEditablePrice = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestIsEditablePrice>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestIsEditablePrice.CreateFromDiscriminatorValue); } },
+                { "isOptional", n => { IsOptional = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestIsOptional>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestIsOptional.CreateFromDiscriminatorValue); } },
+                { "lineItemCurrencyCode", n => { LineItemCurrencyCode = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestLineItemCurrencyCode>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestLineItemCurrencyCode.CreateFromDiscriminatorValue); } },
                 { "mode", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CloneMode>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMode = default; _explicitNullProperties?.Remove("mode"); AdditionalData["mode"] = unknown; } else { Mode = parsed; AdditionalData.Remove("mode"); } } },
-                { "name", n => { Name = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestNameProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestNameProperty2.CreateFromDiscriminatorValue); } },
-                { "positionOnQuote", n => { PositionOnQuote = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestPositionOnQuoteProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestPositionOnQuoteProperty2.CreateFromDiscriminatorValue); } },
-                { "priceBookId", n => { PriceBookId = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestPriceBookIdProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestPriceBookIdProperty2.CreateFromDiscriminatorValue); } },
-                { "pricing", n => { Pricing = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestPricingProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestPricingProperty2.CreateFromDiscriminatorValue); } },
-                { "productType", n => { ProductType = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestProductTypeProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestProductTypeProperty2.CreateFromDiscriminatorValue); } },
-                { "quantity", n => { Quantity = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestQuantityProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestQuantityProperty2.CreateFromDiscriminatorValue); } },
-                { "recurringBillingEndDate", n => { RecurringBillingEndDate = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingEndDateProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingEndDateProperty2.CreateFromDiscriminatorValue); } },
-                { "recurringBillingFrequency", n => { RecurringBillingFrequency = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingFrequencyProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingFrequencyProperty2.CreateFromDiscriminatorValue); } },
-                { "recurringBillingPeriod", n => { RecurringBillingPeriod = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingPeriodProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingPeriodProperty2.CreateFromDiscriminatorValue); } },
-                { "recurringBillingStartDate", n => { RecurringBillingStartDate = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingStartDateProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingStartDateProperty2.CreateFromDiscriminatorValue); } },
-                { "richTextDescription", n => { RichTextDescription = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRichTextDescriptionProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRichTextDescriptionProperty2.CreateFromDiscriminatorValue); } },
-                { "sku", n => { Sku = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestSkuProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestSkuProperty2.CreateFromDiscriminatorValue); } },
+                { "name", n => { Name = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestName>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestName.CreateFromDiscriminatorValue); } },
+                { "positionOnQuote", n => { PositionOnQuote = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestPositionOnQuote>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestPositionOnQuote.CreateFromDiscriminatorValue); } },
+                { "priceBookId", n => { PriceBookId = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestPriceBookId>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestPriceBookId.CreateFromDiscriminatorValue); } },
+                { "pricing", n => { Pricing = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestPricing>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestPricing.CreateFromDiscriminatorValue); } },
+                { "productType", n => { ProductType = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestProductType>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestProductType.CreateFromDiscriminatorValue); } },
+                { "quantity", n => { Quantity = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestQuantity>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestQuantity.CreateFromDiscriminatorValue); } },
+                { "recurringBillingEndDate", n => { RecurringBillingEndDate = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingEndDate>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingEndDate.CreateFromDiscriminatorValue); } },
+                { "recurringBillingFrequency", n => { RecurringBillingFrequency = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingFrequency>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingFrequency.CreateFromDiscriminatorValue); } },
+                { "recurringBillingPeriod", n => { RecurringBillingPeriod = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingPeriod>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingPeriod.CreateFromDiscriminatorValue); } },
+                { "recurringBillingStartDate", n => { RecurringBillingStartDate = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingStartDate>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingStartDate.CreateFromDiscriminatorValue); } },
+                { "richTextDescription", n => { RichTextDescription = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRichTextDescription>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRichTextDescription.CreateFromDiscriminatorValue); } },
+                { "sku", n => { Sku = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestSku>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestSku.CreateFromDiscriminatorValue); } },
                 { "sourceLineItemId", n => { SourceLineItemId = n.GetStringValue(); } },
-                { "taxCategory", n => { TaxCategory = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestTaxCategoryProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestTaxCategoryProperty2.CreateFromDiscriminatorValue); } },
-                { "taxRateGroupId", n => { TaxRateGroupId = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestTaxRateGroupIdProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestTaxRateGroupIdProperty2.CreateFromDiscriminatorValue); } },
-                { "variantId", n => { VariantId = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestVariantIdProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestVariantIdProperty2.CreateFromDiscriminatorValue); } },
+                { "taxCategory", n => { TaxCategory = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestTaxCategory>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestTaxCategory.CreateFromDiscriminatorValue); } },
+                { "taxRateGroupId", n => { TaxRateGroupId = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestTaxRateGroupId>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestTaxRateGroupId.CreateFromDiscriminatorValue); } },
+                { "variantId", n => { VariantId = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestVariantId>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestVariantId.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -451,37 +451,37 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestAllowBuyerSelectedQuantityProperty2>("allowBuyerSelectedQuantity", AllowBuyerSelectedQuantity);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBillingCycleAnchorDateProperty2>("billingCycleAnchorDate", BillingCycleAnchorDate);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBillingStartDelayDaysProperty2>("billingStartDelayDays", BillingStartDelayDays);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBillingStartDelayMonthsProperty2>("billingStartDelayMonths", BillingStartDelayMonths);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBuyerSelectedQuantityMaxProperty2>("buyerSelectedQuantityMax", BuyerSelectedQuantityMax);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBuyerSelectedQuantityMinProperty2>("buyerSelectedQuantityMin", BuyerSelectedQuantityMin);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestDescriptionProperty2>("description", Description);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestDiscountProperty2>("discount", Discount);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestDiscountPercentageProperty2>("discountPercentage", DiscountPercentage);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestExternalIdProperty2>("externalId", ExternalId);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestImagesProperty2>("images", Images);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestIsEditablePriceProperty2>("isEditablePrice", IsEditablePrice);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestIsOptionalProperty2>("isOptional", IsOptional);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestLineItemCurrencyCodeProperty2>("lineItemCurrencyCode", LineItemCurrencyCode);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestAllowBuyerSelectedQuantity>("allowBuyerSelectedQuantity", AllowBuyerSelectedQuantity);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBillingCycleAnchorDate>("billingCycleAnchorDate", BillingCycleAnchorDate);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBillingStartDelayDays>("billingStartDelayDays", BillingStartDelayDays);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBillingStartDelayMonths>("billingStartDelayMonths", BillingStartDelayMonths);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBuyerSelectedQuantityMax>("buyerSelectedQuantityMax", BuyerSelectedQuantityMax);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestBuyerSelectedQuantityMin>("buyerSelectedQuantityMin", BuyerSelectedQuantityMin);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestDescription>("description", Description);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestDiscount>("discount", Discount);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestDiscountPercentage>("discountPercentage", DiscountPercentage);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestExternalId>("externalId", ExternalId);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestImages>("images", Images);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestIsEditablePrice>("isEditablePrice", IsEditablePrice);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestIsOptional>("isOptional", IsOptional);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestLineItemCurrencyCode>("lineItemCurrencyCode", LineItemCurrencyCode);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CloneMode>("mode", Mode);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestNameProperty2>("name", Name);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestPositionOnQuoteProperty2>("positionOnQuote", PositionOnQuote);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestPriceBookIdProperty2>("priceBookId", PriceBookId);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestPricingProperty2>("pricing", Pricing);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestProductTypeProperty2>("productType", ProductType);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestQuantityProperty2>("quantity", Quantity);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingEndDateProperty2>("recurringBillingEndDate", RecurringBillingEndDate);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingFrequencyProperty2>("recurringBillingFrequency", RecurringBillingFrequency);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingPeriodProperty2>("recurringBillingPeriod", RecurringBillingPeriod);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingStartDateProperty2>("recurringBillingStartDate", RecurringBillingStartDate);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRichTextDescriptionProperty2>("richTextDescription", RichTextDescription);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestSkuProperty2>("sku", Sku);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestName>("name", Name);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestPositionOnQuote>("positionOnQuote", PositionOnQuote);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestPriceBookId>("priceBookId", PriceBookId);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestPricing>("pricing", Pricing);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestProductType>("productType", ProductType);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestQuantity>("quantity", Quantity);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingEndDate>("recurringBillingEndDate", RecurringBillingEndDate);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingFrequency>("recurringBillingFrequency", RecurringBillingFrequency);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingPeriod>("recurringBillingPeriod", RecurringBillingPeriod);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRecurringBillingStartDate>("recurringBillingStartDate", RecurringBillingStartDate);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestRichTextDescription>("richTextDescription", RichTextDescription);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestSku>("sku", Sku);
             writer.WriteStringValue("sourceLineItemId", SourceLineItemId);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestTaxCategoryProperty2>("taxCategory", TaxCategory);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestTaxRateGroupIdProperty2>("taxRateGroupId", TaxRateGroupId);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestVariantIdProperty2>("variantId", VariantId);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestTaxCategory>("taxCategory", TaxCategory);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestTaxRateGroupId>("taxRateGroupId", TaxRateGroupId);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemCloneCreateRequestVariantId>("variantId", VariantId);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

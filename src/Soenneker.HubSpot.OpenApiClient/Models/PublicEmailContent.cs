@@ -40,12 +40,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object containing flexible area configurations, where each key is an area identifier and the value is an object with area properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentFlexAreasProperty2? FlexAreas { get => _explicitNullValueFlexAreas; set { _explicitNullValueFlexAreas = value; AdditionalData?.Remove("flexAreas"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flexAreas"); else _explicitNullProperties?.Remove("flexAreas"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentFlexAreasProperty2? _explicitNullValueFlexAreas = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentFlexAreas? FlexAreas { get => _explicitNullValueFlexAreas; set { _explicitNullValueFlexAreas = value; AdditionalData?.Remove("flexAreas"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flexAreas"); else _explicitNullProperties?.Remove("flexAreas"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentFlexAreas? _explicitNullValueFlexAreas = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentFlexAreasProperty2 FlexAreas { get => _explicitNullValueFlexAreas; set { _explicitNullValueFlexAreas = value; AdditionalData?.Remove("flexAreas"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flexAreas"); else _explicitNullProperties?.Remove("flexAreas"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentFlexAreasProperty2 _explicitNullValueFlexAreas = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentFlexAreas FlexAreas { get => _explicitNullValueFlexAreas; set { _explicitNullValueFlexAreas = value; AdditionalData?.Remove("flexAreas"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flexAreas"); else _explicitNullProperties?.Remove("flexAreas"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentFlexAreas _explicitNullValueFlexAreas = default!;
 #endif
         /// <summary>A string containing the plain text version of the email content.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -60,12 +60,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object containing smart field configurations, where each key is a field identifier and the value is a SmartEmailField object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentSmartFieldsProperty2? SmartFields { get => _explicitNullValueSmartFields; set { _explicitNullValueSmartFields = value; AdditionalData?.Remove("smartFields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smartFields"); else _explicitNullProperties?.Remove("smartFields"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentSmartFieldsProperty2? _explicitNullValueSmartFields = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentSmartFields? SmartFields { get => _explicitNullValueSmartFields; set { _explicitNullValueSmartFields = value; AdditionalData?.Remove("smartFields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smartFields"); else _explicitNullProperties?.Remove("smartFields"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentSmartFields? _explicitNullValueSmartFields = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentSmartFieldsProperty2 SmartFields { get => _explicitNullValueSmartFields; set { _explicitNullValueSmartFields = value; AdditionalData?.Remove("smartFields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smartFields"); else _explicitNullProperties?.Remove("smartFields"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentSmartFieldsProperty2 _explicitNullValueSmartFields = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentSmartFields SmartFields { get => _explicitNullValueSmartFields; set { _explicitNullValueSmartFields = value; AdditionalData?.Remove("smartFields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smartFields"); else _explicitNullProperties?.Remove("smartFields"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentSmartFields _explicitNullValueSmartFields = default!;
 #endif
         /// <summary>The styleSettings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -90,32 +90,32 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object containing theme settings values, where each key is a setting identifier and the value is an object with setting properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentThemeSettingsValuesProperty2? ThemeSettingsValues { get => _explicitNullValueThemeSettingsValues; set { _explicitNullValueThemeSettingsValues = value; AdditionalData?.Remove("themeSettingsValues"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("themeSettingsValues"); else _explicitNullProperties?.Remove("themeSettingsValues"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentThemeSettingsValuesProperty2? _explicitNullValueThemeSettingsValues = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentThemeSettingsValues? ThemeSettingsValues { get => _explicitNullValueThemeSettingsValues; set { _explicitNullValueThemeSettingsValues = value; AdditionalData?.Remove("themeSettingsValues"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("themeSettingsValues"); else _explicitNullProperties?.Remove("themeSettingsValues"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentThemeSettingsValues? _explicitNullValueThemeSettingsValues = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentThemeSettingsValuesProperty2 ThemeSettingsValues { get => _explicitNullValueThemeSettingsValues; set { _explicitNullValueThemeSettingsValues = value; AdditionalData?.Remove("themeSettingsValues"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("themeSettingsValues"); else _explicitNullProperties?.Remove("themeSettingsValues"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentThemeSettingsValuesProperty2 _explicitNullValueThemeSettingsValues = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentThemeSettingsValues ThemeSettingsValues { get => _explicitNullValueThemeSettingsValues; set { _explicitNullValueThemeSettingsValues = value; AdditionalData?.Remove("themeSettingsValues"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("themeSettingsValues"); else _explicitNullProperties?.Remove("themeSettingsValues"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentThemeSettingsValues _explicitNullValueThemeSettingsValues = default!;
 #endif
         /// <summary>An object containing widget container configurations, where each key is a container identifier and the value is an object with container properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgetContainersProperty2? WidgetContainers { get => _explicitNullValueWidgetContainers; set { _explicitNullValueWidgetContainers = value; AdditionalData?.Remove("widgetContainers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("widgetContainers"); else _explicitNullProperties?.Remove("widgetContainers"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgetContainersProperty2? _explicitNullValueWidgetContainers = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgetContainers? WidgetContainers { get => _explicitNullValueWidgetContainers; set { _explicitNullValueWidgetContainers = value; AdditionalData?.Remove("widgetContainers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("widgetContainers"); else _explicitNullProperties?.Remove("widgetContainers"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgetContainers? _explicitNullValueWidgetContainers = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgetContainersProperty2 WidgetContainers { get => _explicitNullValueWidgetContainers; set { _explicitNullValueWidgetContainers = value; AdditionalData?.Remove("widgetContainers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("widgetContainers"); else _explicitNullProperties?.Remove("widgetContainers"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgetContainersProperty2 _explicitNullValueWidgetContainers = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgetContainers WidgetContainers { get => _explicitNullValueWidgetContainers; set { _explicitNullValueWidgetContainers = value; AdditionalData?.Remove("widgetContainers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("widgetContainers"); else _explicitNullProperties?.Remove("widgetContainers"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgetContainers _explicitNullValueWidgetContainers = default!;
 #endif
         /// <summary>An object containing widget configurations, where each key is a widget identifier and the value is an object with widget properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgetsProperty2? Widgets { get => _explicitNullValueWidgets; set { _explicitNullValueWidgets = value; AdditionalData?.Remove("widgets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("widgets"); else _explicitNullProperties?.Remove("widgets"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgetsProperty2? _explicitNullValueWidgets = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgets? Widgets { get => _explicitNullValueWidgets; set { _explicitNullValueWidgets = value; AdditionalData?.Remove("widgets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("widgets"); else _explicitNullProperties?.Remove("widgets"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgets? _explicitNullValueWidgets = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgetsProperty2 Widgets { get => _explicitNullValueWidgets; set { _explicitNullValueWidgets = value; AdditionalData?.Remove("widgets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("widgets"); else _explicitNullProperties?.Remove("widgets"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgetsProperty2 _explicitNullValueWidgets = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgets Widgets { get => _explicitNullValueWidgets; set { _explicitNullValueWidgets = value; AdditionalData?.Remove("widgets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("widgets"); else _explicitNullProperties?.Remove("widgets"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgets _explicitNullValueWidgets = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContent"/> and sets the default values.
@@ -142,14 +142,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "flexAreas", n => { FlexAreas = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentFlexAreasProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentFlexAreasProperty2.CreateFromDiscriminatorValue); } },
+                { "flexAreas", n => { FlexAreas = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentFlexAreas>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentFlexAreas.CreateFromDiscriminatorValue); } },
                 { "plainTextVersion", n => { PlainTextVersion = n.GetStringValue(); } },
-                { "smartFields", n => { SmartFields = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentSmartFieldsProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentSmartFieldsProperty2.CreateFromDiscriminatorValue); } },
+                { "smartFields", n => { SmartFields = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentSmartFields>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentSmartFields.CreateFromDiscriminatorValue); } },
                 { "styleSettings", n => { StyleSettings = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailStyleSettings>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailStyleSettings.CreateFromDiscriminatorValue); } },
                 { "templatePath", n => { TemplatePath = n.GetStringValue(); } },
-                { "themeSettingsValues", n => { ThemeSettingsValues = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentThemeSettingsValuesProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentThemeSettingsValuesProperty2.CreateFromDiscriminatorValue); } },
-                { "widgetContainers", n => { WidgetContainers = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgetContainersProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgetContainersProperty2.CreateFromDiscriminatorValue); } },
-                { "widgets", n => { Widgets = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgetsProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgetsProperty2.CreateFromDiscriminatorValue); } },
+                { "themeSettingsValues", n => { ThemeSettingsValues = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentThemeSettingsValues>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentThemeSettingsValues.CreateFromDiscriminatorValue); } },
+                { "widgetContainers", n => { WidgetContainers = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgetContainers>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgetContainers.CreateFromDiscriminatorValue); } },
+                { "widgets", n => { Widgets = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgets>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgets.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -159,14 +159,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentFlexAreasProperty2>("flexAreas", FlexAreas);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentFlexAreas>("flexAreas", FlexAreas);
             writer.WriteStringValue("plainTextVersion", PlainTextVersion);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentSmartFieldsProperty2>("smartFields", SmartFields);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentSmartFields>("smartFields", SmartFields);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailStyleSettings>("styleSettings", StyleSettings);
             writer.WriteStringValue("templatePath", TemplatePath);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentThemeSettingsValuesProperty2>("themeSettingsValues", ThemeSettingsValues);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgetContainersProperty2>("widgetContainers", WidgetContainers);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgetsProperty2>("widgets", Widgets);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentThemeSettingsValues>("themeSettingsValues", ThemeSettingsValues);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgetContainers>("widgetContainers", WidgetContainers);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailContentWidgets>("widgets", Widgets);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

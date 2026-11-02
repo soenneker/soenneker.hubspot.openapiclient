@@ -60,12 +60,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>List of key value pairs with the column name and column value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableRowV3RequestValuesProperty2? Values { get => _explicitNullValueValues; set { _explicitNullValueValues = value; AdditionalData?.Remove("values"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("values"); else _explicitNullProperties?.Remove("values"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableRowV3RequestValuesProperty2? _explicitNullValueValues = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableRowV3RequestValues? Values { get => _explicitNullValueValues; set { _explicitNullValueValues = value; AdditionalData?.Remove("values"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("values"); else _explicitNullProperties?.Remove("values"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableRowV3RequestValues? _explicitNullValueValues = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableRowV3RequestValuesProperty2 Values { get => _explicitNullValueValues; set { _explicitNullValueValues = value; AdditionalData?.Remove("values"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("values"); else _explicitNullProperties?.Remove("values"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableRowV3RequestValuesProperty2 _explicitNullValueValues = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableRowV3RequestValues Values { get => _explicitNullValueValues; set { _explicitNullValueValues = value; AdditionalData?.Remove("values"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("values"); else _explicitNullProperties?.Remove("values"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableRowV3RequestValues _explicitNullValueValues = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableRowV3Request"/> and sets the default values.
@@ -96,7 +96,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "displayIndex", n => { DisplayIndex = n.GetIntValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "path", n => { Path = n.GetStringValue(); } },
-                { "values", n => { Values = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableRowV3RequestValuesProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableRowV3RequestValuesProperty2.CreateFromDiscriminatorValue); } },
+                { "values", n => { Values = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableRowV3RequestValues>(global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableRowV3RequestValues.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -110,7 +110,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteIntValue("displayIndex", DisplayIndex);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("path", Path);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableRowV3RequestValuesProperty2>("values", Values);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.HubDbTableRowV3RequestValues>("values", Values);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

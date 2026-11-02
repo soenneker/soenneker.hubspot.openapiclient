@@ -40,12 +40,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>Initial data of the datasource</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.JsonDataRequestDataItemProperty2>? Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
-        private List<global::Soenneker.HubSpot.OpenApiClient.Models.JsonDataRequestDataItemProperty2>? _explicitNullValueData = default!;
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.JsonDataRequestDataItem>? Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.JsonDataRequestDataItem>? _explicitNullValueData = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.JsonDataRequestDataItemProperty2> Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
-        private List<global::Soenneker.HubSpot.OpenApiClient.Models.JsonDataRequestDataItemProperty2> _explicitNullValueData = default!;
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.JsonDataRequestDataItem> Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.JsonDataRequestDataItem> _explicitNullValueData = default!;
 #endif
         /// <summary>Optional column-name which is used for identifying records of a datasource. This is required for updating single records of a datasource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -83,7 +83,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "columns", n => { Columns = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.FileColumn>(global::Soenneker.HubSpot.OpenApiClient.Models.FileColumn.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "data", n => { Data = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.JsonDataRequestDataItemProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.JsonDataRequestDataItemProperty2.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "data", n => { Data = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.JsonDataRequestDataItem>(global::Soenneker.HubSpot.OpenApiClient.Models.JsonDataRequestDataItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "recordId", n => { RecordId = n.GetStringValue(); } },
             };
         }
@@ -95,7 +95,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.FileColumn>("columns", Columns);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.JsonDataRequestDataItemProperty2>("data", Data);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.JsonDataRequestDataItem>("data", Data);
             writer.WriteStringValue("recordId", RecordId);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

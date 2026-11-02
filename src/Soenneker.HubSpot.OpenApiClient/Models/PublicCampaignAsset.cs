@@ -40,12 +40,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>A collection of performance metrics for the campaign asset, represented as a map where each key is a metric name and each value is a number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignAssetMetricsProperty2? Metrics { get => _explicitNullValueMetrics; set { _explicitNullValueMetrics = value; AdditionalData?.Remove("metrics"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metrics"); else _explicitNullProperties?.Remove("metrics"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignAssetMetricsProperty2? _explicitNullValueMetrics = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignAssetMetrics? Metrics { get => _explicitNullValueMetrics; set { _explicitNullValueMetrics = value; AdditionalData?.Remove("metrics"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metrics"); else _explicitNullProperties?.Remove("metrics"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignAssetMetrics? _explicitNullValueMetrics = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignAssetMetricsProperty2 Metrics { get => _explicitNullValueMetrics; set { _explicitNullValueMetrics = value; AdditionalData?.Remove("metrics"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metrics"); else _explicitNullProperties?.Remove("metrics"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignAssetMetricsProperty2 _explicitNullValueMetrics = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignAssetMetrics Metrics { get => _explicitNullValueMetrics; set { _explicitNullValueMetrics = value; AdditionalData?.Remove("metrics"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metrics"); else _explicitNullProperties?.Remove("metrics"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignAssetMetrics _explicitNullValueMetrics = default!;
 #endif
         /// <summary>The name of the campaign asset, represented as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -83,7 +83,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "metrics", n => { Metrics = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignAssetMetricsProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignAssetMetricsProperty2.CreateFromDiscriminatorValue); } },
+                { "metrics", n => { Metrics = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignAssetMetrics>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignAssetMetrics.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
             };
         }
@@ -95,7 +95,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignAssetMetricsProperty2>("metrics", Metrics);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCampaignAssetMetrics>("metrics", Metrics);
             writer.WriteStringValue("name", Name);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

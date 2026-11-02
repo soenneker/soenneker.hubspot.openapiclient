@@ -28,22 +28,22 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object representing the new name for the team.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.TeamUpdateRequestNameProperty2? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.TeamUpdateRequestNameProperty2? _explicitNullValueName = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.TeamUpdateRequestName? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.TeamUpdateRequestName? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.TeamUpdateRequestNameProperty2 Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.TeamUpdateRequestNameProperty2 _explicitNullValueName = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.TeamUpdateRequestName Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.TeamUpdateRequestName _explicitNullValueName = default!;
 #endif
         /// <summary>An object representing the ID of the parent team to which this team will be associated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.TeamUpdateRequestParentTeamIdProperty2? ParentTeamId { get => _explicitNullValueParentTeamId; set { _explicitNullValueParentTeamId = value; AdditionalData?.Remove("parentTeamId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parentTeamId"); else _explicitNullProperties?.Remove("parentTeamId"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.TeamUpdateRequestParentTeamIdProperty2? _explicitNullValueParentTeamId = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.TeamUpdateRequestParentTeamId? ParentTeamId { get => _explicitNullValueParentTeamId; set { _explicitNullValueParentTeamId = value; AdditionalData?.Remove("parentTeamId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parentTeamId"); else _explicitNullProperties?.Remove("parentTeamId"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.TeamUpdateRequestParentTeamId? _explicitNullValueParentTeamId = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.TeamUpdateRequestParentTeamIdProperty2 ParentTeamId { get => _explicitNullValueParentTeamId; set { _explicitNullValueParentTeamId = value; AdditionalData?.Remove("parentTeamId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parentTeamId"); else _explicitNullProperties?.Remove("parentTeamId"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.TeamUpdateRequestParentTeamIdProperty2 _explicitNullValueParentTeamId = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.TeamUpdateRequestParentTeamId ParentTeamId { get => _explicitNullValueParentTeamId; set { _explicitNullValueParentTeamId = value; AdditionalData?.Remove("parentTeamId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parentTeamId"); else _explicitNullProperties?.Remove("parentTeamId"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.TeamUpdateRequestParentTeamId _explicitNullValueParentTeamId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.TeamUpdateRequest"/> and sets the default values.
@@ -70,8 +70,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "name", n => { Name = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.TeamUpdateRequestNameProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.TeamUpdateRequestNameProperty2.CreateFromDiscriminatorValue); } },
-                { "parentTeamId", n => { ParentTeamId = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.TeamUpdateRequestParentTeamIdProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.TeamUpdateRequestParentTeamIdProperty2.CreateFromDiscriminatorValue); } },
+                { "name", n => { Name = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.TeamUpdateRequestName>(global::Soenneker.HubSpot.OpenApiClient.Models.TeamUpdateRequestName.CreateFromDiscriminatorValue); } },
+                { "parentTeamId", n => { ParentTeamId = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.TeamUpdateRequestParentTeamId>(global::Soenneker.HubSpot.OpenApiClient.Models.TeamUpdateRequestParentTeamId.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -81,8 +81,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.TeamUpdateRequestNameProperty2>("name", Name);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.TeamUpdateRequestParentTeamIdProperty2>("parentTeamId", ParentTeamId);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.TeamUpdateRequestName>("name", Name);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.TeamUpdateRequestParentTeamId>("parentTeamId", ParentTeamId);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

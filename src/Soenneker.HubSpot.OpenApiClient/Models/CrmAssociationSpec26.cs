@@ -26,10 +26,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The category of the association, indicating its origin or purpose. Valid values include &apos;HUBSPOT_DEFINED&apos;, &apos;USER_DEFINED&apos;, &apos;INTEGRATOR_DEFINED&apos;, and &apos;WORK&apos;.</summary>
+        /// <summary>A string indicating the category of the association. Valid values include &apos;HUBSPOT_DEFINED&apos;, &apos;USER_DEFINED&apos;, &apos;INTEGRATOR_DEFINED&apos;, and &apos;WORK&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecAssociationCategory26? AssociationCategory { get => _explicitNullValueAssociationCategory; set { _explicitNullValueAssociationCategory = value; AdditionalData?.Remove("associationCategory"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("associationCategory"); else _explicitNullProperties?.Remove("associationCategory"); } }
         private global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecAssociationCategory26? _explicitNullValueAssociationCategory = default!;
-        /// <summary>An integer representing the specific type of association within the defined category.</summary>
+        /// <summary>An integer representing the unique identifier for the type of association.</summary>
         public int? AssociationTypeId { get => _explicitNullValueAssociationTypeId; set { _explicitNullValueAssociationTypeId = value; AdditionalData?.Remove("associationTypeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("associationTypeId"); else _explicitNullProperties?.Remove("associationTypeId"); } }
         private int? _explicitNullValueAssociationTypeId = default!;
         /// <summary>

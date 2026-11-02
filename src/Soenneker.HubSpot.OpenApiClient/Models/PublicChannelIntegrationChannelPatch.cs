@@ -36,62 +36,62 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object that defines the capabilities of the channel. This can include various properties that describe what the channel can do.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchCapabilitiesProperty2? Capabilities { get => _explicitNullValueCapabilities; set { _explicitNullValueCapabilities = value; AdditionalData?.Remove("capabilities"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("capabilities"); else _explicitNullProperties?.Remove("capabilities"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchCapabilitiesProperty2? _explicitNullValueCapabilities = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchCapabilities? Capabilities { get => _explicitNullValueCapabilities; set { _explicitNullValueCapabilities = value; AdditionalData?.Remove("capabilities"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("capabilities"); else _explicitNullProperties?.Remove("capabilities"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchCapabilities? _explicitNullValueCapabilities = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchCapabilitiesProperty2 Capabilities { get => _explicitNullValueCapabilities; set { _explicitNullValueCapabilities = value; AdditionalData?.Remove("capabilities"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("capabilities"); else _explicitNullProperties?.Remove("capabilities"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchCapabilitiesProperty2 _explicitNullValueCapabilities = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchCapabilities Capabilities { get => _explicitNullValueCapabilities; set { _explicitNullValueCapabilities = value; AdditionalData?.Remove("capabilities"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("capabilities"); else _explicitNullProperties?.Remove("capabilities"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchCapabilities _explicitNullValueCapabilities = default!;
 #endif
         /// <summary>An object representing the URL used to redirect for channel account connection.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchChannelAccountConnectionRedirectUrlProperty2? ChannelAccountConnectionRedirectUrl { get => _explicitNullValueChannelAccountConnectionRedirectUrl; set { _explicitNullValueChannelAccountConnectionRedirectUrl = value; AdditionalData?.Remove("channelAccountConnectionRedirectUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channelAccountConnectionRedirectUrl"); else _explicitNullProperties?.Remove("channelAccountConnectionRedirectUrl"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchChannelAccountConnectionRedirectUrlProperty2? _explicitNullValueChannelAccountConnectionRedirectUrl = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchChannelAccountConnectionRedirectUrl? ChannelAccountConnectionRedirectUrl { get => _explicitNullValueChannelAccountConnectionRedirectUrl; set { _explicitNullValueChannelAccountConnectionRedirectUrl = value; AdditionalData?.Remove("channelAccountConnectionRedirectUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channelAccountConnectionRedirectUrl"); else _explicitNullProperties?.Remove("channelAccountConnectionRedirectUrl"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchChannelAccountConnectionRedirectUrl? _explicitNullValueChannelAccountConnectionRedirectUrl = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchChannelAccountConnectionRedirectUrlProperty2 ChannelAccountConnectionRedirectUrl { get => _explicitNullValueChannelAccountConnectionRedirectUrl; set { _explicitNullValueChannelAccountConnectionRedirectUrl = value; AdditionalData?.Remove("channelAccountConnectionRedirectUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channelAccountConnectionRedirectUrl"); else _explicitNullProperties?.Remove("channelAccountConnectionRedirectUrl"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchChannelAccountConnectionRedirectUrlProperty2 _explicitNullValueChannelAccountConnectionRedirectUrl = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchChannelAccountConnectionRedirectUrl ChannelAccountConnectionRedirectUrl { get => _explicitNullValueChannelAccountConnectionRedirectUrl; set { _explicitNullValueChannelAccountConnectionRedirectUrl = value; AdditionalData?.Remove("channelAccountConnectionRedirectUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channelAccountConnectionRedirectUrl"); else _explicitNullProperties?.Remove("channelAccountConnectionRedirectUrl"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchChannelAccountConnectionRedirectUrl _explicitNullValueChannelAccountConnectionRedirectUrl = default!;
 #endif
         /// <summary>An object containing the description of the channel.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchChannelDescriptionProperty2? ChannelDescription { get => _explicitNullValueChannelDescription; set { _explicitNullValueChannelDescription = value; AdditionalData?.Remove("channelDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channelDescription"); else _explicitNullProperties?.Remove("channelDescription"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchChannelDescriptionProperty2? _explicitNullValueChannelDescription = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchChannelDescription? ChannelDescription { get => _explicitNullValueChannelDescription; set { _explicitNullValueChannelDescription = value; AdditionalData?.Remove("channelDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channelDescription"); else _explicitNullProperties?.Remove("channelDescription"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchChannelDescription? _explicitNullValueChannelDescription = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchChannelDescriptionProperty2 ChannelDescription { get => _explicitNullValueChannelDescription; set { _explicitNullValueChannelDescription = value; AdditionalData?.Remove("channelDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channelDescription"); else _explicitNullProperties?.Remove("channelDescription"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchChannelDescriptionProperty2 _explicitNullValueChannelDescription = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchChannelDescription ChannelDescription { get => _explicitNullValueChannelDescription; set { _explicitNullValueChannelDescription = value; AdditionalData?.Remove("channelDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channelDescription"); else _explicitNullProperties?.Remove("channelDescription"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchChannelDescription _explicitNullValueChannelDescription = default!;
 #endif
         /// <summary>An object representing the URL of the channel&apos;s logo.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchChannelLogoUrlProperty2? ChannelLogoUrl { get => _explicitNullValueChannelLogoUrl; set { _explicitNullValueChannelLogoUrl = value; AdditionalData?.Remove("channelLogoUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channelLogoUrl"); else _explicitNullProperties?.Remove("channelLogoUrl"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchChannelLogoUrlProperty2? _explicitNullValueChannelLogoUrl = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchChannelLogoUrl? ChannelLogoUrl { get => _explicitNullValueChannelLogoUrl; set { _explicitNullValueChannelLogoUrl = value; AdditionalData?.Remove("channelLogoUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channelLogoUrl"); else _explicitNullProperties?.Remove("channelLogoUrl"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchChannelLogoUrl? _explicitNullValueChannelLogoUrl = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchChannelLogoUrlProperty2 ChannelLogoUrl { get => _explicitNullValueChannelLogoUrl; set { _explicitNullValueChannelLogoUrl = value; AdditionalData?.Remove("channelLogoUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channelLogoUrl"); else _explicitNullProperties?.Remove("channelLogoUrl"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchChannelLogoUrlProperty2 _explicitNullValueChannelLogoUrl = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchChannelLogoUrl ChannelLogoUrl { get => _explicitNullValueChannelLogoUrl; set { _explicitNullValueChannelLogoUrl = value; AdditionalData?.Remove("channelLogoUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channelLogoUrl"); else _explicitNullProperties?.Remove("channelLogoUrl"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchChannelLogoUrl _explicitNullValueChannelLogoUrl = default!;
 #endif
         /// <summary>An object representing the name of the channel.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchNameProperty2? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchNameProperty2? _explicitNullValueName = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchName? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchName? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchNameProperty2 Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchNameProperty2 _explicitNullValueName = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchName Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchName _explicitNullValueName = default!;
 #endif
         /// <summary>An object representing the URL for the webhook associated with the channel.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchWebhookUrlProperty2? WebhookUrl { get => _explicitNullValueWebhookUrl; set { _explicitNullValueWebhookUrl = value; AdditionalData?.Remove("webhookUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webhookUrl"); else _explicitNullProperties?.Remove("webhookUrl"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchWebhookUrlProperty2? _explicitNullValueWebhookUrl = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchWebhookUrl? WebhookUrl { get => _explicitNullValueWebhookUrl; set { _explicitNullValueWebhookUrl = value; AdditionalData?.Remove("webhookUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webhookUrl"); else _explicitNullProperties?.Remove("webhookUrl"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchWebhookUrl? _explicitNullValueWebhookUrl = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchWebhookUrlProperty2 WebhookUrl { get => _explicitNullValueWebhookUrl; set { _explicitNullValueWebhookUrl = value; AdditionalData?.Remove("webhookUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webhookUrl"); else _explicitNullProperties?.Remove("webhookUrl"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchWebhookUrlProperty2 _explicitNullValueWebhookUrl = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchWebhookUrl WebhookUrl { get => _explicitNullValueWebhookUrl; set { _explicitNullValueWebhookUrl = value; AdditionalData?.Remove("webhookUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webhookUrl"); else _explicitNullProperties?.Remove("webhookUrl"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchWebhookUrl _explicitNullValueWebhookUrl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatch"/> and sets the default values.
@@ -118,12 +118,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "capabilities", n => { Capabilities = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchCapabilitiesProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchCapabilitiesProperty2.CreateFromDiscriminatorValue); } },
-                { "channelAccountConnectionRedirectUrl", n => { ChannelAccountConnectionRedirectUrl = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchChannelAccountConnectionRedirectUrlProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchChannelAccountConnectionRedirectUrlProperty2.CreateFromDiscriminatorValue); } },
-                { "channelDescription", n => { ChannelDescription = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchChannelDescriptionProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchChannelDescriptionProperty2.CreateFromDiscriminatorValue); } },
-                { "channelLogoUrl", n => { ChannelLogoUrl = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchChannelLogoUrlProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchChannelLogoUrlProperty2.CreateFromDiscriminatorValue); } },
-                { "name", n => { Name = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchNameProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchNameProperty2.CreateFromDiscriminatorValue); } },
-                { "webhookUrl", n => { WebhookUrl = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchWebhookUrlProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchWebhookUrlProperty2.CreateFromDiscriminatorValue); } },
+                { "capabilities", n => { Capabilities = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchCapabilities>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchCapabilities.CreateFromDiscriminatorValue); } },
+                { "channelAccountConnectionRedirectUrl", n => { ChannelAccountConnectionRedirectUrl = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchChannelAccountConnectionRedirectUrl>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchChannelAccountConnectionRedirectUrl.CreateFromDiscriminatorValue); } },
+                { "channelDescription", n => { ChannelDescription = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchChannelDescription>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchChannelDescription.CreateFromDiscriminatorValue); } },
+                { "channelLogoUrl", n => { ChannelLogoUrl = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchChannelLogoUrl>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchChannelLogoUrl.CreateFromDiscriminatorValue); } },
+                { "name", n => { Name = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchName>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchName.CreateFromDiscriminatorValue); } },
+                { "webhookUrl", n => { WebhookUrl = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchWebhookUrl>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchWebhookUrl.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -133,12 +133,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchCapabilitiesProperty2>("capabilities", Capabilities);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchChannelAccountConnectionRedirectUrlProperty2>("channelAccountConnectionRedirectUrl", ChannelAccountConnectionRedirectUrl);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchChannelDescriptionProperty2>("channelDescription", ChannelDescription);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchChannelLogoUrlProperty2>("channelLogoUrl", ChannelLogoUrl);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchNameProperty2>("name", Name);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchWebhookUrlProperty2>("webhookUrl", WebhookUrl);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchCapabilities>("capabilities", Capabilities);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchChannelAccountConnectionRedirectUrl>("channelAccountConnectionRedirectUrl", ChannelAccountConnectionRedirectUrl);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchChannelDescription>("channelDescription", ChannelDescription);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchChannelLogoUrl>("channelLogoUrl", ChannelLogoUrl);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchName>("name", Name);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicChannelIntegrationChannelPatchWebhookUrl>("webhookUrl", WebhookUrl);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -60,12 +60,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An object containing additional properties related to the forecast submission event, where each property is a key-value pair with string values.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ForecastSubmissionEventPropertiesProperty2? Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.ForecastSubmissionEventPropertiesProperty2? _explicitNullValueProperties = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ForecastSubmissionEventProperties? Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ForecastSubmissionEventProperties? _explicitNullValueProperties = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ForecastSubmissionEventPropertiesProperty2 Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.ForecastSubmissionEventPropertiesProperty2 _explicitNullValueProperties = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ForecastSubmissionEventProperties Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ForecastSubmissionEventProperties _explicitNullValueProperties = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.ForecastSubmissionEvent"/> and sets the default values.
@@ -96,7 +96,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "objectId", n => { ObjectId = n.GetStringValue(); } },
                 { "objectType", n => { ObjectType = n.GetStringValue(); } },
                 { "occurredAt", n => { OccurredAt = n.GetDateTimeOffsetValue(); } },
-                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ForecastSubmissionEventPropertiesProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.ForecastSubmissionEventPropertiesProperty2.CreateFromDiscriminatorValue); } },
+                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ForecastSubmissionEventProperties>(global::Soenneker.HubSpot.OpenApiClient.Models.ForecastSubmissionEventProperties.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -110,7 +110,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteStringValue("objectId", ObjectId);
             writer.WriteStringValue("objectType", ObjectType);
             writer.WriteDateTimeOffsetValue("occurredAt", OccurredAt);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ForecastSubmissionEventPropertiesProperty2>("properties", Properties);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ForecastSubmissionEventProperties>("properties", Properties);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

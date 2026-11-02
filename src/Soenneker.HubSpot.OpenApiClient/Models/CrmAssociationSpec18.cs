@@ -29,7 +29,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>The category of the association. Valid values include &apos;HUBSPOT_DEFINED&apos;, &apos;USER_DEFINED&apos;, &apos;INTEGRATOR_DEFINED&apos;, and &apos;WORK&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecAssociationCategory18? AssociationCategory { get => _explicitNullValueAssociationCategory; set { _explicitNullValueAssociationCategory = value; AdditionalData?.Remove("associationCategory"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("associationCategory"); else _explicitNullProperties?.Remove("associationCategory"); } }
         private global::Soenneker.HubSpot.OpenApiClient.Models.CrmAssociationSpecAssociationCategory18? _explicitNullValueAssociationCategory = default!;
-        /// <summary>The unique identifier for the type of association. This is an integer value.</summary>
+        /// <summary>An integer representing the unique identifier for the type of association.</summary>
         public int? AssociationTypeId { get => _explicitNullValueAssociationTypeId; set { _explicitNullValueAssociationTypeId = value; AdditionalData?.Remove("associationTypeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("associationTypeId"); else _explicitNullProperties?.Remove("associationTypeId"); } }
         private int? _explicitNullValueAssociationTypeId = default!;
         /// <summary>

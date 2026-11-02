@@ -46,12 +46,12 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>A map that holds the status of various extensions. The keys are extension identifiers, and the values represent the status of each extension.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExtensionDataExtensionStatusMapProperty2? ExtensionStatusMap { get => _explicitNullValueExtensionStatusMap; set { _explicitNullValueExtensionStatusMap = value; AdditionalData?.Remove("extensionStatusMap"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extensionStatusMap"); else _explicitNullProperties?.Remove("extensionStatusMap"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.ExtensionDataExtensionStatusMapProperty2? _explicitNullValueExtensionStatusMap = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExtensionDataExtensionStatusMap? ExtensionStatusMap { get => _explicitNullValueExtensionStatusMap; set { _explicitNullValueExtensionStatusMap = value; AdditionalData?.Remove("extensionStatusMap"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extensionStatusMap"); else _explicitNullProperties?.Remove("extensionStatusMap"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ExtensionDataExtensionStatusMap? _explicitNullValueExtensionStatusMap = default!;
 #nullable restore
 #else
-        public global::Soenneker.HubSpot.OpenApiClient.Models.ExtensionDataExtensionStatusMapProperty2 ExtensionStatusMap { get => _explicitNullValueExtensionStatusMap; set { _explicitNullValueExtensionStatusMap = value; AdditionalData?.Remove("extensionStatusMap"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extensionStatusMap"); else _explicitNullProperties?.Remove("extensionStatusMap"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.ExtensionDataExtensionStatusMapProperty2 _explicitNullValueExtensionStatusMap = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.ExtensionDataExtensionStatusMap ExtensionStatusMap { get => _explicitNullValueExtensionStatusMap; set { _explicitNullValueExtensionStatusMap = value; AdditionalData?.Remove("extensionStatusMap"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extensionStatusMap"); else _explicitNullProperties?.Remove("extensionStatusMap"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.ExtensionDataExtensionStatusMap _explicitNullValueExtensionStatusMap = default!;
 #endif
         /// <summary>The optionDecoratorsExtensionData property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -119,7 +119,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "caseChangeTestExtensionData", n => { CaseChangeTestExtensionData = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CaseChangeTestExtensionData>(global::Soenneker.HubSpot.OpenApiClient.Models.CaseChangeTestExtensionData.CreateFromDiscriminatorValue); } },
-                { "extensionStatusMap", n => { ExtensionStatusMap = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExtensionDataExtensionStatusMapProperty2>(global::Soenneker.HubSpot.OpenApiClient.Models.ExtensionDataExtensionStatusMapProperty2.CreateFromDiscriminatorValue); } },
+                { "extensionStatusMap", n => { ExtensionStatusMap = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExtensionDataExtensionStatusMap>(global::Soenneker.HubSpot.OpenApiClient.Models.ExtensionDataExtensionStatusMap.CreateFromDiscriminatorValue); } },
                 { "optionDecoratorsExtensionData", n => { OptionDecoratorsExtensionData = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionData>(global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionData.CreateFromDiscriminatorValue); } },
                 { "requiredPropertiesExtensionData", n => { RequiredPropertiesExtensionData = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.RequiredPropertiesExtensionData>(global::Soenneker.HubSpot.OpenApiClient.Models.RequiredPropertiesExtensionData.CreateFromDiscriminatorValue); } },
                 { "softRequiredPropertiesExtensionData", n => { SoftRequiredPropertiesExtensionData = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.SoftRequiredPropertiesExtensionData>(global::Soenneker.HubSpot.OpenApiClient.Models.SoftRequiredPropertiesExtensionData.CreateFromDiscriminatorValue); } },
@@ -134,7 +134,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CaseChangeTestExtensionData>("caseChangeTestExtensionData", CaseChangeTestExtensionData);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExtensionDataExtensionStatusMapProperty2>("extensionStatusMap", ExtensionStatusMap);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.ExtensionDataExtensionStatusMap>("extensionStatusMap", ExtensionStatusMap);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.OptionDecoratorsExtensionData>("optionDecoratorsExtensionData", OptionDecoratorsExtensionData);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.RequiredPropertiesExtensionData>("requiredPropertiesExtensionData", RequiredPropertiesExtensionData);
             writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.SoftRequiredPropertiesExtensionData>("softRequiredPropertiesExtensionData", SoftRequiredPropertiesExtensionData);
