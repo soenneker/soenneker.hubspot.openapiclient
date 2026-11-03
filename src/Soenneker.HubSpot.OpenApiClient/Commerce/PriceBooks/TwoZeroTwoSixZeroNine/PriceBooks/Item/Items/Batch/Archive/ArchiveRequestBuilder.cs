@@ -36,21 +36,22 @@ namespace Soenneker.HubSpot.OpenApiClient.Commerce.PriceBooks.TwoZeroTwoSixZeroN
         /// <summary>
         /// Archive multiple items within a specified price book in a single batch operation. This endpoint is useful for managing large sets of price book items that need to be archived simultaneously, streamlining the process and reducing the number of individual requests.
         /// </summary>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseSimplePublicObjectIdWithErrors"/></returns>
         /// <param name="body">Represents a batch input payload containing a list of simple public object IDs. This component is used when performing batch operations on multiple objects within HubSpot.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.BatchInputSimplePublicObjectId body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseSimplePublicObjectIdWithErrors?> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.BatchInputSimplePublicObjectId body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.BatchInputSimplePublicObjectId body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseSimplePublicObjectIdWithErrors> PostAsync(global::Soenneker.HubSpot.OpenApiClient.Models.BatchInputSimplePublicObjectId body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseSimplePublicObjectIdWithErrors>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseSimplePublicObjectIdWithErrors.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Archive multiple items within a specified price book in a single batch operation. This endpoint is useful for managing large sets of price book items that need to be archived simultaneously, streamlining the process and reducing the number of individual requests.
@@ -70,6 +71,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Commerce.PriceBooks.TwoZeroTwoSixZeroN
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
+            requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
             return requestInfo;
         }
