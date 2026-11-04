@@ -9,7 +9,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class AppWebhooksCollectionResponseSubscriptionResponseMarch2027NoPaging : IAdditionalDataHolder, IParsable
+    public partial class AppWebhooksCollectionResponseSubscriptionResponseNoPaging : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
         // Track explicitly assigned nulls separately from absent properties.
@@ -23,32 +23,32 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The results property</summary>
+        /// <summary>An array of SubscriptionResponse objects, each representing a subscription&apos;s details such as actions, appId, createdAt, and other relevant properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksSubscriptionResponseMarch2027>? Results { get => _explicitNullValueResults; set { _explicitNullValueResults = value; AdditionalData?.Remove("results"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("results"); else _explicitNullProperties?.Remove("results"); } }
-        private List<global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksSubscriptionResponseMarch2027>? _explicitNullValueResults = default!;
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponse1>? Results { get => _explicitNullValueResults; set { _explicitNullValueResults = value; AdditionalData?.Remove("results"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("results"); else _explicitNullProperties?.Remove("results"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponse1>? _explicitNullValueResults = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksSubscriptionResponseMarch2027> Results { get => _explicitNullValueResults; set { _explicitNullValueResults = value; AdditionalData?.Remove("results"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("results"); else _explicitNullProperties?.Remove("results"); } }
-        private List<global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksSubscriptionResponseMarch2027> _explicitNullValueResults = default!;
+        public List<global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponse1> Results { get => _explicitNullValueResults; set { _explicitNullValueResults = value; AdditionalData?.Remove("results"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("results"); else _explicitNullProperties?.Remove("results"); } }
+        private List<global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponse1> _explicitNullValueResults = default!;
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksCollectionResponseSubscriptionResponseMarch2027NoPaging"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksCollectionResponseSubscriptionResponseNoPaging"/> and sets the default values.
         /// </summary>
-        public AppWebhooksCollectionResponseSubscriptionResponseMarch2027NoPaging()
+        public AppWebhooksCollectionResponseSubscriptionResponseNoPaging()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksCollectionResponseSubscriptionResponseMarch2027NoPaging"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksCollectionResponseSubscriptionResponseNoPaging"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksCollectionResponseSubscriptionResponseMarch2027NoPaging CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksCollectionResponseSubscriptionResponseNoPaging CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksCollectionResponseSubscriptionResponseMarch2027NoPaging(), parseNode);
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksCollectionResponseSubscriptionResponseNoPaging(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -58,7 +58,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksSubscriptionResponseMarch2027>(global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksSubscriptionResponseMarch2027.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponse1>(global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponse1.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -68,7 +68,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.AppWebhooksSubscriptionResponseMarch2027>("results", Results);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.SubscriptionResponse1>("results", Results);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

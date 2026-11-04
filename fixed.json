@@ -334155,7 +334155,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CollectionResponseSubscriptionResponseMarch2027NoPaging"
+                  "$ref": "#/components/schemas/CollectionResponseSubscriptionResponseNoPaging"
                 },
                 "example": null
               }
@@ -336093,7 +336093,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AppWebhooksCollectionResponseSubscriptionResponseMarch2027NoPaging"
+                  "$ref": "#/components/schemas/AppWebhooksCollectionResponseSubscriptionResponseNoPaging"
                 },
                 "example": null
               }
@@ -629651,7 +629651,7 @@
         },
         "example": null
       },
-      "CollectionResponseSubscriptionResponseMarch2027NoPaging": {
+      "CollectionResponseSubscriptionResponseNoPaging": {
         "required": [
           "results"
         ],
@@ -629660,8 +629660,9 @@
           "results": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/SubscriptionResponseMarch2027"
+              "$ref": "#/components/schemas/SubscriptionResponse"
             },
+            "description": "An array of subscription responses, where each item contains details about a specific subscription. Each item follows the SubscriptionResponse schema.",
             "example": null
           }
         },
@@ -630345,111 +630346,6 @@
           "updatedAt": {
             "type": "string",
             "description": "The date and time when the subscription was last updated, in ISO 8601 format.",
-            "format": "date-time",
-            "example": null
-          }
-        },
-        "example": null
-      },
-      "SubscriptionResponseMarch2027": {
-        "required": [
-          "actions",
-          "appId",
-          "createdAt",
-          "id",
-          "objectTypeId",
-          "subscriptionType",
-          "updatedAt"
-        ],
-        "type": "object",
-        "properties": {
-          "actionOverrides": {
-            "$ref": "#/components/schemas/SubscriptionResponseMarch2027ActionOverrides"
-          },
-          "actions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/SubscriptionResponseMarch2027ActionsItem"
-            },
-            "example": null
-          },
-          "appId": {
-            "type": "integer",
-            "format": "int64",
-            "example": null
-          },
-          "associatedObjectTypeIds": {
-            "type": "array",
-            "items": {
-              "type": "string",
-              "example": null
-            },
-            "example": null
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date-time",
-            "example": null
-          },
-          "createdBy": {
-            "type": "integer",
-            "format": "int64",
-            "example": null
-          },
-          "deletedAt": {
-            "type": "string",
-            "format": "date-time",
-            "example": null
-          },
-          "id": {
-            "type": "integer",
-            "format": "int64",
-            "example": null
-          },
-          "includeSensitivePropertiesChanged": {
-            "type": "boolean",
-            "example": null
-          },
-          "listIds": {
-            "type": "array",
-            "items": {
-              "type": "integer",
-              "format": "int64",
-              "example": null
-            },
-            "example": null
-          },
-          "objectIds": {
-            "type": "array",
-            "items": {
-              "type": "integer",
-              "format": "int64",
-              "example": null
-            },
-            "example": null
-          },
-          "objectTypeId": {
-            "type": "string",
-            "example": null
-          },
-          "portalId": {
-            "type": "integer",
-            "format": "int64",
-            "example": null
-          },
-          "properties": {
-            "type": "array",
-            "items": {
-              "type": "string",
-              "example": null
-            },
-            "example": null
-          },
-          "subscriptionType": {
-            "$ref": "#/components/schemas/SubscriptionResponseMarch2027SubscriptionType"
-          },
-          "updatedAt": {
-            "type": "string",
             "format": "date-time",
             "example": null
           }
@@ -631252,125 +631148,6 @@
           ]
         }
       },
-      "SubscriptionResponseMarch2027ActionsItem": {
-        "enum": [
-          "CREATE",
-          "UPDATE",
-          "DELETE",
-          "MERGE",
-          "RESTORE",
-          "ASSOCIATION_ADDED",
-          "ASSOCIATION_REMOVED",
-          "SNAPSHOT",
-          "APP_INSTALL",
-          "APP_UNINSTALL",
-          "ADDED_TO_LIST",
-          "REMOVED_FROM_LIST",
-          "GDPR_DELETE"
-        ],
-        "type": "string",
-        "example": null,
-        "x-ms-enum": {
-          "name": "SubscriptionResponseMarch2027ActionsItem",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "CREATE",
-              "name": "Create"
-            },
-            {
-              "value": "UPDATE",
-              "name": "Update"
-            },
-            {
-              "value": "DELETE",
-              "name": "Delete"
-            },
-            {
-              "value": "MERGE",
-              "name": "Merge"
-            },
-            {
-              "value": "RESTORE",
-              "name": "Restore"
-            },
-            {
-              "value": "ASSOCIATION_ADDED",
-              "name": "AssociationAdded"
-            },
-            {
-              "value": "ASSOCIATION_REMOVED",
-              "name": "AssociationRemoved"
-            },
-            {
-              "value": "SNAPSHOT",
-              "name": "Snapshot"
-            },
-            {
-              "value": "APP_INSTALL",
-              "name": "AppInstall"
-            },
-            {
-              "value": "APP_UNINSTALL",
-              "name": "AppUninstall"
-            },
-            {
-              "value": "ADDED_TO_LIST",
-              "name": "AddedToList"
-            },
-            {
-              "value": "REMOVED_FROM_LIST",
-              "name": "RemovedFromList"
-            },
-            {
-              "value": "GDPR_DELETE",
-              "name": "GdprDelete"
-            }
-          ]
-        }
-      },
-      "SubscriptionResponseMarch2027SubscriptionType": {
-        "enum": [
-          "APP_LIFECYCLE_EVENT",
-          "ASSOCIATION",
-          "EVENT",
-          "GDPR_PRIVACY_DELETION",
-          "LIST_MEMBERSHIP",
-          "OBJECT"
-        ],
-        "type": "string",
-        "example": null,
-        "x-ms-enum": {
-          "name": "SubscriptionResponseMarch2027SubscriptionType",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "APP_LIFECYCLE_EVENT",
-              "name": "AppLifecycleEvent"
-            },
-            {
-              "value": "ASSOCIATION",
-              "name": "Association"
-            },
-            {
-              "value": "EVENT",
-              "name": "EventValue"
-            },
-            {
-              "value": "GDPR_PRIVACY_DELETION",
-              "name": "GdprPrivacyDeletion"
-            },
-            {
-              "value": "LIST_MEMBERSHIP",
-              "name": "ListMembership"
-            },
-            {
-              "value": "OBJECT",
-              "name": "ObjectValue"
-            }
-          ]
-        }
-      },
       "PostWebhooksJournalJournal202609BatchReadSuccessResponse": {
         "anyOf": [
           {
@@ -631749,7 +631526,7 @@
         },
         "example": null
       },
-      "AppWebhooksCollectionResponseSubscriptionResponseMarch2027NoPaging": {
+      "AppWebhooksCollectionResponseSubscriptionResponseNoPaging": {
         "required": [
           "results"
         ],
@@ -631758,8 +631535,9 @@
           "results": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/AppWebhooksSubscriptionResponseMarch2027"
+              "$ref": "#/components/schemas/SubscriptionResponse1"
             },
+            "description": "An array of SubscriptionResponse objects, each representing a subscription\u0027s details such as actions, appId, createdAt, and other relevant properties.",
             "example": null
           }
         },
@@ -632512,111 +632290,6 @@
           "updatedAt": {
             "type": "string",
             "description": "The date and time when the subscription was last updated, in ISO 8601 format.",
-            "format": "date-time",
-            "example": null
-          }
-        },
-        "example": null
-      },
-      "AppWebhooksSubscriptionResponseMarch2027": {
-        "required": [
-          "actions",
-          "appId",
-          "createdAt",
-          "id",
-          "objectTypeId",
-          "subscriptionType",
-          "updatedAt"
-        ],
-        "type": "object",
-        "properties": {
-          "actionOverrides": {
-            "$ref": "#/components/schemas/AppWebhooksSubscriptionResponseMarch2027ActionOverrides"
-          },
-          "actions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/AppWebhooksSubscriptionResponseMarch2027ActionsItem"
-            },
-            "example": null
-          },
-          "appId": {
-            "type": "integer",
-            "format": "int64",
-            "example": null
-          },
-          "associatedObjectTypeIds": {
-            "type": "array",
-            "items": {
-              "type": "string",
-              "example": null
-            },
-            "example": null
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date-time",
-            "example": null
-          },
-          "createdBy": {
-            "type": "integer",
-            "format": "int64",
-            "example": null
-          },
-          "deletedAt": {
-            "type": "string",
-            "format": "date-time",
-            "example": null
-          },
-          "id": {
-            "type": "integer",
-            "format": "int64",
-            "example": null
-          },
-          "includeSensitivePropertiesChanged": {
-            "type": "boolean",
-            "example": null
-          },
-          "listIds": {
-            "type": "array",
-            "items": {
-              "type": "integer",
-              "format": "int64",
-              "example": null
-            },
-            "example": null
-          },
-          "objectIds": {
-            "type": "array",
-            "items": {
-              "type": "integer",
-              "format": "int64",
-              "example": null
-            },
-            "example": null
-          },
-          "objectTypeId": {
-            "type": "string",
-            "example": null
-          },
-          "portalId": {
-            "type": "integer",
-            "format": "int64",
-            "example": null
-          },
-          "properties": {
-            "type": "array",
-            "items": {
-              "type": "string",
-              "example": null
-            },
-            "example": null
-          },
-          "subscriptionType": {
-            "$ref": "#/components/schemas/AppWebhooksSubscriptionResponseMarch2027SubscriptionType"
-          },
-          "updatedAt": {
-            "type": "string",
             "format": "date-time",
             "example": null
           }
@@ -633996,125 +633669,6 @@
             {
               "value": "ticket.restore",
               "name": "TicketRestore"
-            }
-          ]
-        }
-      },
-      "AppWebhooksSubscriptionResponseMarch2027ActionsItem": {
-        "enum": [
-          "CREATE",
-          "UPDATE",
-          "DELETE",
-          "MERGE",
-          "RESTORE",
-          "ASSOCIATION_ADDED",
-          "ASSOCIATION_REMOVED",
-          "SNAPSHOT",
-          "APP_INSTALL",
-          "APP_UNINSTALL",
-          "ADDED_TO_LIST",
-          "REMOVED_FROM_LIST",
-          "GDPR_DELETE"
-        ],
-        "type": "string",
-        "example": null,
-        "x-ms-enum": {
-          "name": "SubscriptionResponseMarch2027ActionsItem",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "CREATE",
-              "name": "Create"
-            },
-            {
-              "value": "UPDATE",
-              "name": "Update"
-            },
-            {
-              "value": "DELETE",
-              "name": "Delete"
-            },
-            {
-              "value": "MERGE",
-              "name": "Merge"
-            },
-            {
-              "value": "RESTORE",
-              "name": "Restore"
-            },
-            {
-              "value": "ASSOCIATION_ADDED",
-              "name": "AssociationAdded"
-            },
-            {
-              "value": "ASSOCIATION_REMOVED",
-              "name": "AssociationRemoved"
-            },
-            {
-              "value": "SNAPSHOT",
-              "name": "Snapshot"
-            },
-            {
-              "value": "APP_INSTALL",
-              "name": "AppInstall"
-            },
-            {
-              "value": "APP_UNINSTALL",
-              "name": "AppUninstall"
-            },
-            {
-              "value": "ADDED_TO_LIST",
-              "name": "AddedToList"
-            },
-            {
-              "value": "REMOVED_FROM_LIST",
-              "name": "RemovedFromList"
-            },
-            {
-              "value": "GDPR_DELETE",
-              "name": "GdprDelete"
-            }
-          ]
-        }
-      },
-      "AppWebhooksSubscriptionResponseMarch2027SubscriptionType": {
-        "enum": [
-          "APP_LIFECYCLE_EVENT",
-          "ASSOCIATION",
-          "EVENT",
-          "GDPR_PRIVACY_DELETION",
-          "LIST_MEMBERSHIP",
-          "OBJECT"
-        ],
-        "type": "string",
-        "example": null,
-        "x-ms-enum": {
-          "name": "SubscriptionResponseMarch2027SubscriptionType",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "APP_LIFECYCLE_EVENT",
-              "name": "AppLifecycleEvent"
-            },
-            {
-              "value": "ASSOCIATION",
-              "name": "Association"
-            },
-            {
-              "value": "EVENT",
-              "name": "EventValue"
-            },
-            {
-              "value": "GDPR_PRIVACY_DELETION",
-              "name": "GdprPrivacyDeletion"
-            },
-            {
-              "value": "LIST_MEMBERSHIP",
-              "name": "ListMembership"
-            },
-            {
-              "value": "OBJECT",
-              "name": "ObjectValue"
             }
           ]
         }
@@ -647431,13 +646985,6 @@
         "description": "An object containing overrides for actions, where each key is an action and the value is an ActionOverrideRequest object.",
         "example": null
       },
-      "SubscriptionResponseMarch2027ActionOverrides": {
-        "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/ActionOverrideRequest"
-        },
-        "example": null
-      },
       "AppWebhooksBatchResponseJournalFetchResponseLinks": {
         "type": "object",
         "additionalProperties": {
@@ -647534,13 +647081,6 @@
       "AppWebhooksStandardErrorSubCategory": {
         "type": "object",
         "description": "An object providing more specific categorization of the error.",
-        "example": null
-      },
-      "AppWebhooksSubscriptionResponseMarch2027ActionOverrides": {
-        "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/AppWebhooksActionOverrideRequest"
-        },
         "example": null
       },
       "SubscriptionResponse1ActionOverrides": {
@@ -786989,13 +786529,6 @@
             "description": "An object containing overrides for actions, where each key is an action and the value is an ActionOverrideRequest object.",
             "example": null
           },
-          "SubscriptionResponseMarch2027ActionOverrides": {
-            "type": "object",
-            "additionalProperties": {
-              "$ref": "#/components/schemas/ActionOverrideRequest"
-            },
-            "example": null
-          },
           "GetWebhooksJournalSubscriptions202609FiltersSubscriptionSubscriptionId200Response": {
             "type": "array",
             "items": {
@@ -787135,13 +786668,6 @@
           "StandardErrorSubCategory": {
             "type": "object",
             "description": "An object providing more specific categorization of the error.",
-            "example": null
-          },
-          "SubscriptionResponseMarch2027ActionOverrides": {
-            "type": "object",
-            "additionalProperties": {
-              "$ref": "#/components/schemas/ActionOverrideRequest"
-            },
             "example": null
           },
           "SubscriptionResponse1ActionOverrides": {
@@ -805020,13 +804546,6 @@
       "description": "An object containing overrides for actions, where each key is an action and the value is an ActionOverrideRequest object.",
       "example": null
     },
-    "SubscriptionResponseMarch2027ActionOverridesProperty": {
-      "type": "object",
-      "additionalProperties": {
-        "$ref": "#/components/schemas/ActionOverrideRequest"
-      },
-      "example": null
-    },
     "GetWebhooksJournalSubscriptions202609FiltersSubscriptionSubscriptionIdWebhooksJournalSubscriptions202603FiltersSubscriptionSubscriptionId200ResponseSchema": {
       "type": "array",
       "items": {
@@ -805130,13 +804649,6 @@
     "AppWebhooksStandardErrorSubCategoryProperty": {
       "type": "object",
       "description": "An object providing more specific categorization of the error.",
-      "example": null
-    },
-    "AppWebhooksSubscriptionResponseMarch2027ActionOverridesProperty": {
-      "type": "object",
-      "additionalProperties": {
-        "$ref": "#/components/schemas/AppWebhooksActionOverrideRequest"
-      },
       "example": null
     },
     "SubscriptionResponse1ActionOverridesProperty": {

@@ -37,8 +37,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         private global::Soenneker.HubSpot.OpenApiClient.Models.SetContainsStringOperator? _explicitNullValueOperatorValue = default!;
         public string? PropertyName { get => _explicitNullValuePropertyName; set { _explicitNullValuePropertyName = value; AdditionalData?.Remove("propertyName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("propertyName"); else _explicitNullProperties?.Remove("propertyName"); } }
         private string? _explicitNullValuePropertyName = default!;
-        public global::Soenneker.HubSpot.OpenApiClient.Models.IfChainStringDefaultExpression? StringToCheck { get => _explicitNullValueStringToCheck; set { _explicitNullValueStringToCheck = value; AdditionalData?.Remove("stringToCheck"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stringToCheck"); else _explicitNullProperties?.Remove("stringToCheck"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.IfChainStringDefaultExpression? _explicitNullValueStringToCheck = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.BeginsWithStringToCheck? StringToCheck { get => _explicitNullValueStringToCheck; set { _explicitNullValueStringToCheck = value; AdditionalData?.Remove("stringToCheck"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stringToCheck"); else _explicitNullProperties?.Remove("stringToCheck"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.BeginsWithStringToCheck? _explicitNullValueStringToCheck = default!;
         public bool? Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; AdditionalData?.Remove("value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
         private bool? _explicitNullValueValue = default!;
 #nullable restore
@@ -73,7 +73,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
                 { "inputs", n => { Inputs = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteValueInputsItem>(global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteValueInputsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "operator", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SetContainsStringOperator>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueOperatorValue = default; _explicitNullProperties?.Remove("operator"); AdditionalData["operator"] = unknown; } else { OperatorValue = parsed; AdditionalData.Remove("operator"); } } },
                 { "propertyName", n => { PropertyName = n.GetStringValue(); } },
-                { "stringToCheck", n => { StringToCheck = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.IfChainStringDefaultExpression>(global::Soenneker.HubSpot.OpenApiClient.Models.IfChainStringDefaultExpression.CreateFromDiscriminatorValue); } },
+                { "stringToCheck", n => { StringToCheck = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.BeginsWithStringToCheck>(global::Soenneker.HubSpot.OpenApiClient.Models.BeginsWithStringToCheck.CreateFromDiscriminatorValue); } },
                 { "value", n => { Value = n.GetBoolValue(); } },
 
             };
@@ -88,7 +88,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteValueInputsItem>("inputs", Inputs);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.SetContainsStringOperator>("operator", OperatorValue);
             writer.WriteStringValue("propertyName", PropertyName);
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.IfChainStringDefaultExpression>("stringToCheck", StringToCheck);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.BeginsWithStringToCheck>("stringToCheck", StringToCheck);
             writer.WriteBoolValue("value", Value);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
