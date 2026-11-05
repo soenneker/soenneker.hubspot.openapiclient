@@ -33,8 +33,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 
         // Restore fields omitted by the generator's model-depth limit.
 #nullable enable
-        public global::Soenneker.HubSpot.OpenApiClient.Models.BeginsWithStringToCheck? CheckExpression { get => _explicitNullValueCheckExpression; set { _explicitNullValueCheckExpression = value; AdditionalData?.Remove("checkExpression"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checkExpression"); else _explicitNullProperties?.Remove("checkExpression"); } }
-        private global::Soenneker.HubSpot.OpenApiClient.Models.BeginsWithStringToCheck? _explicitNullValueCheckExpression = default!;
+        public global::Soenneker.HubSpot.OpenApiClient.Models.IfChainStringDefaultExpression? CheckExpression { get => _explicitNullValueCheckExpression; set { _explicitNullValueCheckExpression = value; AdditionalData?.Remove("checkExpression"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checkExpression"); else _explicitNullProperties?.Remove("checkExpression"); } }
+        private global::Soenneker.HubSpot.OpenApiClient.Models.IfChainStringDefaultExpression? _explicitNullValueCheckExpression = default!;
         public bool? EnclosedInParentheses { get => _explicitNullValueEnclosedInParentheses; set { _explicitNullValueEnclosedInParentheses = value; AdditionalData?.Remove("enclosedInParentheses"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enclosedInParentheses"); else _explicitNullProperties?.Remove("enclosedInParentheses"); } }
         private bool? _explicitNullValueEnclosedInParentheses = default!;
         public global::System.Collections.Generic.List<global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteValueInputsItem>? Inputs { get => _explicitNullValueInputs; set { _explicitNullValueInputs = value; AdditionalData?.Remove("inputs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputs"); else _explicitNullProperties?.Remove("inputs"); } }
@@ -74,7 +74,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "checkExpression", n => { CheckExpression = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.BeginsWithStringToCheck>(global::Soenneker.HubSpot.OpenApiClient.Models.BeginsWithStringToCheck.CreateFromDiscriminatorValue); } },
+                { "checkExpression", n => { CheckExpression = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.IfChainStringDefaultExpression>(global::Soenneker.HubSpot.OpenApiClient.Models.IfChainStringDefaultExpression.CreateFromDiscriminatorValue); } },
                 { "enclosedInParentheses", n => { EnclosedInParentheses = n.GetBoolValue(); } },
                 { "inputs", n => { Inputs = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteValueInputsItem>(global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteValueInputsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "operator", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ValidateWhenOperator>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueOperatorValue = default; _explicitNullProperties?.Remove("operator"); AdditionalData["operator"] = unknown; } else { OperatorValue = parsed; AdditionalData.Remove("operator"); } } },
@@ -90,7 +90,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.BeginsWithStringToCheck>("checkExpression", CheckExpression);
+            writer.WriteObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.IfChainStringDefaultExpression>("checkExpression", CheckExpression);
             writer.WriteBoolValue("enclosedInParentheses", EnclosedInParentheses);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteValueInputsItem>("inputs", Inputs);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ValidateWhenOperator>("operator", OperatorValue);
