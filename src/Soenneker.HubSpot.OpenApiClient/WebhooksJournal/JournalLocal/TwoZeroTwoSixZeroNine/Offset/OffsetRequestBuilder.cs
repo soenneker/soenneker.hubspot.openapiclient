@@ -16,7 +16,7 @@ namespace Soenneker.HubSpot.OpenApiClient.WebhooksJournal.JournalLocal.TwoZeroTw
     public partial class OffsetRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.webhooksJournal.journalLocal.TwoZeroTwoSixZeroNine.offset.item collection</summary>
-        /// <param name="position">The offset from which to start retrieving the next batch of webhook journal entries. This is a string value that indicates the starting point for fetching entries.</param>
+        /// <param name="position">The `currentOffset` of the last entry you processed. The entry after this offset is returned.</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.WebhooksJournal.JournalLocal.TwoZeroTwoSixZeroNine.Offset.Item.WithOffsetItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.WebhooksJournal.JournalLocal.TwoZeroTwoSixZeroNine.Offset.Item.WithOffsetItemRequestBuilder this[string position]
         {

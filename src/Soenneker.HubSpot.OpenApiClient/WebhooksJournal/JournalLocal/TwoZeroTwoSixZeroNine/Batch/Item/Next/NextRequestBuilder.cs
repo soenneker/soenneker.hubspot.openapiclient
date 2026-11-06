@@ -16,7 +16,7 @@ namespace Soenneker.HubSpot.OpenApiClient.WebhooksJournal.JournalLocal.TwoZeroTw
     public partial class NextRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.webhooksJournal.journalLocal.TwoZeroTwoSixZeroNine.batch.item.next.item collection</summary>
-        /// <param name="position">An integer specifying the number of journal entries to retrieve. Must be at least 1.</param>
+        /// <param name="position">The number of entries to return, from 1 to 100.</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.WebhooksJournal.JournalLocal.TwoZeroTwoSixZeroNine.Batch.Item.Next.Item.WithCountItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.WebhooksJournal.JournalLocal.TwoZeroTwoSixZeroNine.Batch.Item.Next.Item.WithCountItemRequestBuilder this[int position]
         {

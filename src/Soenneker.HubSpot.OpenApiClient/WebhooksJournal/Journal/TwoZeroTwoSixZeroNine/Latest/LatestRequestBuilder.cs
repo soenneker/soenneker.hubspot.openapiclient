@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.WebhooksJournal.Journal.TwoZeroTwoSixZ
         {
         }
         /// <summary>
-        /// Retrieve the latest entries from the webhooks journal for the specified portal. This endpoint is useful for accessing the most recent webhook events and their statuses, allowing you to monitor and debug webhook activity effectively.
+        /// Retrieve the most recent entry in your app&apos;s journal. Use `installPortalId` to limit it to one account.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.JournalFetchResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.HubSpot.OpenApiClient.WebhooksJournal.Journal.TwoZeroTwoSixZ
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.JournalFetchResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.JournalFetchResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieve the latest entries from the webhooks journal for the specified portal. This endpoint is useful for accessing the most recent webhook events and their statuses, allowing you to monitor and debug webhook activity effectively.
+        /// Retrieve the most recent entry in your app&apos;s journal. Use `installPortalId` to limit it to one account.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -80,7 +80,7 @@ namespace Soenneker.HubSpot.OpenApiClient.WebhooksJournal.Journal.TwoZeroTwoSixZ
             return new global::Soenneker.HubSpot.OpenApiClient.WebhooksJournal.Journal.TwoZeroTwoSixZeroNine.Latest.LatestRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Retrieve the latest entries from the webhooks journal for the specified portal. This endpoint is useful for accessing the most recent webhook events and their statuses, allowing you to monitor and debug webhook activity effectively.
+        /// Retrieve the most recent entry in your app&apos;s journal. Use `installPortalId` to limit it to one account.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class LatestRequestBuilderGetQueryParameters 

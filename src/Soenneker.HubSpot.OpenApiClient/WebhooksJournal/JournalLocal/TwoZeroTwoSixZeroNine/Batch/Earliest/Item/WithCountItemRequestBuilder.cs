@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.WebhooksJournal.JournalLocal.TwoZeroTw
         {
         }
         /// <summary>
-        /// Retrieve the earliest batch of webhook journal entries. This endpoint is useful for accessing the oldest available data in the webhook journal, allowing users to process or analyze historical webhook events. The number of entries to fetch is specified by the &apos;count&apos; path parameter.
+        /// Retrieve the oldest entries still available in your app&apos;s journal, up to `count`.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseJournalFetchResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.HubSpot.OpenApiClient.WebhooksJournal.JournalLocal.TwoZeroTw
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseJournalFetchResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseJournalFetchResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieve the earliest batch of webhook journal entries. This endpoint is useful for accessing the oldest available data in the webhook journal, allowing users to process or analyze historical webhook events. The number of entries to fetch is specified by the &apos;count&apos; path parameter.
+        /// Retrieve the oldest entries still available in your app&apos;s journal, up to `count`.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -80,7 +80,7 @@ namespace Soenneker.HubSpot.OpenApiClient.WebhooksJournal.JournalLocal.TwoZeroTw
             return new global::Soenneker.HubSpot.OpenApiClient.WebhooksJournal.JournalLocal.TwoZeroTwoSixZeroNine.Batch.Earliest.Item.WithCountItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Retrieve the earliest batch of webhook journal entries. This endpoint is useful for accessing the oldest available data in the webhook journal, allowing users to process or analyze historical webhook events. The number of entries to fetch is specified by the &apos;count&apos; path parameter.
+        /// Retrieve the oldest entries still available in your app&apos;s journal, up to `count`.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithCountItemRequestBuilderGetQueryParameters 

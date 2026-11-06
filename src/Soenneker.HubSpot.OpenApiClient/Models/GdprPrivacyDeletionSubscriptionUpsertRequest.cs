@@ -27,7 +27,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
             else if (parseNode.GetChildNode("subscriptionType") is { } nullNodeSubscriptionType && nullNodeSubscriptionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionType = null;
         }
 
-        /// <summary>An array of actions that can trigger the subscription, such as &apos;CREATE&apos;, &apos;UPDATE&apos;, &apos;DELETE&apos;, and &apos;GDPR_DELETE&apos;.</summary>
+        /// <summary>The actions to track. The only valid action is `GDPR_DELETE`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HubSpot.OpenApiClient.Models.GdprPrivacyDeletionSubscriptionUpsertRequestActionsItem?>? Actions { get => _explicitNullValueActions; set { _explicitNullValueActions = value; AdditionalData?.Remove("actions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actions"); else _explicitNullProperties?.Remove("actions"); } }

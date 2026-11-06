@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.WebhooksJournal.Journal.TwoZeroTwoSixZ
             get => new global::Soenneker.HubSpot.OpenApiClient.WebhooksJournal.Journal.TwoZeroTwoSixZeroNine.Batch.Read.ReadRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.webhooksJournal.journal.TwoZeroTwoSixZeroNine.batch.item collection</summary>
-        /// <param name="position">The offset from which to start fetching the journal entries. This is a string value.</param>
+        /// <param name="position">The `currentOffset` of the last entry you processed. Entries after this offset are returned. If the offset has expired or doesn&apos;t exist, the batch is empty.</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.WebhooksJournal.Journal.TwoZeroTwoSixZeroNine.Batch.Item.WithOffsetItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.WebhooksJournal.Journal.TwoZeroTwoSixZeroNine.Batch.Item.WithOffsetItemRequestBuilder this[string position]
         {

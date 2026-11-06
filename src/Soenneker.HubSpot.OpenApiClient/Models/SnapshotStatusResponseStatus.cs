@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
-    /// <summary>The current status of the snapshot. Valid values include &apos;PENDING&apos;, &apos;IN_PROGRESS&apos;, &apos;COMPLETED&apos;, &apos;FAILED&apos;, and &apos;EXPIRED&apos;.</summary>
+    /// <summary>The current status of the snapshot: `PENDING`, `IN_PROGRESS`, `SUCCESS`, `FAILED`, or `EXPIRED`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum SnapshotStatusResponseStatus
     {

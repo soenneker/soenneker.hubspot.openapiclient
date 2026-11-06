@@ -45,7 +45,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>An integer representing the unique identifier of the HubSpot portal associated with the CRM object snapshot. It is in int64 format.</summary>
         public long? PortalId { get => _explicitNullValuePortalId; set { _explicitNullValuePortalId = value; AdditionalData?.Remove("portalId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("portalId"); else _explicitNullProperties?.Remove("portalId"); } }
         private long? _explicitNullValuePortalId = default!;
-        /// <summary>A string in UUID format representing the status identifier of the snapshot operation.</summary>
+        /// <summary>The ID for tracking this snapshot. Pass it to the status endpoint to check progress.</summary>
         public Guid? SnapshotStatusId { get => _explicitNullValueSnapshotStatusId; set { _explicitNullValueSnapshotStatusId = value; AdditionalData?.Remove("snapshotStatusId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("snapshotStatusId"); else _explicitNullProperties?.Remove("snapshotStatusId"); } }
         private Guid? _explicitNullValueSnapshotStatusId = default!;
         /// <summary>

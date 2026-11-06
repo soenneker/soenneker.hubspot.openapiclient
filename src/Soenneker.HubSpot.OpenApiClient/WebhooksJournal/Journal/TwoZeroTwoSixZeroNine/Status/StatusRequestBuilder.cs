@@ -16,7 +16,7 @@ namespace Soenneker.HubSpot.OpenApiClient.WebhooksJournal.Journal.TwoZeroTwoSixZ
     public partial class StatusRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.webhooksJournal.journal.TwoZeroTwoSixZeroNine.status.item collection</summary>
-        /// <param name="position">The unique identifier (UUID) of the webhook journal status to retrieve.</param>
+        /// <param name="position">The `snapshotStatusId` returned when the snapshot was requested.</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.WebhooksJournal.Journal.TwoZeroTwoSixZeroNine.Status.Item.WithStatusItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.WebhooksJournal.Journal.TwoZeroTwoSixZeroNine.Status.Item.WithStatusItemRequestBuilder this[Guid position]
         {

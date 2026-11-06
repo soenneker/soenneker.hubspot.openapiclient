@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.WebhooksJournal.Journal.TwoZeroTwoSixZ
         {
         }
         /// <summary>
-        /// Retrieve the next set of entries from the webhooks journal starting from a specified offset. This endpoint is useful for paginating through journal entries to process or analyze webhook events sequentially.
+        /// Retrieve the entry that follows the given offset. Fails with a `404` if the offset has expired or doesn&apos;t exist.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.JournalFetchResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.HubSpot.OpenApiClient.WebhooksJournal.Journal.TwoZeroTwoSixZ
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.JournalFetchResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.JournalFetchResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieve the next set of entries from the webhooks journal starting from a specified offset. This endpoint is useful for paginating through journal entries to process or analyze webhook events sequentially.
+        /// Retrieve the entry that follows the given offset. Fails with a `404` if the offset has expired or doesn&apos;t exist.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -80,12 +80,12 @@ namespace Soenneker.HubSpot.OpenApiClient.WebhooksJournal.Journal.TwoZeroTwoSixZ
             return new global::Soenneker.HubSpot.OpenApiClient.WebhooksJournal.Journal.TwoZeroTwoSixZeroNine.Offset.Item.Next.NextRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Retrieve the next set of entries from the webhooks journal starting from a specified offset. This endpoint is useful for paginating through journal entries to process or analyze webhook events sequentially.
+        /// Retrieve the entry that follows the given offset. Fails with a `404` if the offset has expired or doesn&apos;t exist.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class NextRequestBuilderGetQueryParameters 
         {
-            /// <summary>The ID of the portal where the webhook is installed. This is an integer value.</summary>
+            /// <summary>The ID of an account that has installed your app. When set, only entries for that account are returned.</summary>
             [QueryParameter("installPortalId")]
             public int? InstallPortalId { get; set; }
         }

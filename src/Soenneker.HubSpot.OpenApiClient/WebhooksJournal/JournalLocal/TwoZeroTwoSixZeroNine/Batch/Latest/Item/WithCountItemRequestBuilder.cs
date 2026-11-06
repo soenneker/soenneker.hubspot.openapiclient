@@ -34,7 +34,7 @@ namespace Soenneker.HubSpot.OpenApiClient.WebhooksJournal.JournalLocal.TwoZeroTw
         {
         }
         /// <summary>
-        /// Retrieve the latest batch of webhook journal entries. This endpoint allows you to specify the number of entries to fetch, providing a way to access the most recent webhook events processed by your HubSpot account.
+        /// Retrieve the most recent entries in your app&apos;s journal, up to `count`. Entries are returned oldest first.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseJournalFetchResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.HubSpot.OpenApiClient.WebhooksJournal.JournalLocal.TwoZeroTw
             return await RequestAdapter.SendAsync<global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseJournalFetchResponse>(requestInfo, global::Soenneker.HubSpot.OpenApiClient.Models.BatchResponseJournalFetchResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieve the latest batch of webhook journal entries. This endpoint allows you to specify the number of entries to fetch, providing a way to access the most recent webhook events processed by your HubSpot account.
+        /// Retrieve the most recent entries in your app&apos;s journal, up to `count`. Entries are returned oldest first.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -80,12 +80,12 @@ namespace Soenneker.HubSpot.OpenApiClient.WebhooksJournal.JournalLocal.TwoZeroTw
             return new global::Soenneker.HubSpot.OpenApiClient.WebhooksJournal.JournalLocal.TwoZeroTwoSixZeroNine.Batch.Latest.Item.WithCountItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Retrieve the latest batch of webhook journal entries. This endpoint allows you to specify the number of entries to fetch, providing a way to access the most recent webhook events processed by your HubSpot account.
+        /// Retrieve the most recent entries in your app&apos;s journal, up to `count`. Entries are returned oldest first.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithCountItemRequestBuilderGetQueryParameters 
         {
-            /// <summary>The ID of the portal installation. This parameter is optional and can be used to filter results by a specific portal.</summary>
+            /// <summary>The ID of an account that has installed your app. When set, only entries for that account are returned.</summary>
             [QueryParameter("installPortalId")]
             public int? InstallPortalId { get; set; }
         }

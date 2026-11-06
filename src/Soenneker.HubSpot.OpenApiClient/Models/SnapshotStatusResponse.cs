@@ -33,7 +33,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The timestamp when the snapshot was completed, represented as an integer in int64 format. This field may be null if the snapshot is not yet completed.</summary>
+        /// <summary>When the snapshot finished, in milliseconds since the Unix epoch. Absent until the snapshot finishes.</summary>
         public long? CompletedAt { get => _explicitNullValueCompletedAt; set { _explicitNullValueCompletedAt = value; AdditionalData?.Remove("completedAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("completedAt"); else _explicitNullProperties?.Remove("completedAt"); } }
         private long? _explicitNullValueCompletedAt = default!;
         /// <summary>An optional code indicating the error that occurred, if any. Possible values are &apos;TIMEOUT&apos;, &apos;VALIDATION_ERROR&apos;, &apos;INTERNAL_ERROR&apos;, and &apos;PERMISSION_DENIED&apos;.</summary>
@@ -42,7 +42,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>A unique identifier for the snapshot, represented as a UUID.</summary>
         public Guid? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private Guid? _explicitNullValueId = default!;
-        /// <summary>The timestamp when the snapshot was initiated, represented as an integer in int64 format.</summary>
+        /// <summary>When the snapshot was requested, in milliseconds since the Unix epoch.</summary>
         public long? InitiatedAt { get => _explicitNullValueInitiatedAt; set { _explicitNullValueInitiatedAt = value; AdditionalData?.Remove("initiatedAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initiatedAt"); else _explicitNullProperties?.Remove("initiatedAt"); } }
         private long? _explicitNullValueInitiatedAt = default!;
         /// <summary>A descriptive message providing additional information about the snapshot status or error.</summary>
@@ -55,7 +55,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; AdditionalData?.Remove("message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
         private string _explicitNullValueMessage = default!;
 #endif
-        /// <summary>The current status of the snapshot. Valid values include &apos;PENDING&apos;, &apos;IN_PROGRESS&apos;, &apos;COMPLETED&apos;, &apos;FAILED&apos;, and &apos;EXPIRED&apos;.</summary>
+        /// <summary>The current status of the snapshot: `PENDING`, `IN_PROGRESS`, `SUCCESS`, `FAILED`, or `EXPIRED`.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.SnapshotStatusResponseStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private global::Soenneker.HubSpot.OpenApiClient.Models.SnapshotStatusResponseStatus? _explicitNullValueStatus = default!;
         /// <summary>

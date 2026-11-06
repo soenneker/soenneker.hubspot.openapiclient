@@ -16,7 +16,7 @@ namespace Soenneker.HubSpot.OpenApiClient.WebhooksJournal.JournalLocal.TwoZeroTw
     public partial class LatestRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.HubSpot.OpenApiClient.webhooksJournal.journalLocal.TwoZeroTwoSixZeroNine.batch.latest.item collection</summary>
-        /// <param name="position">The number of journal entries to retrieve. Must be an integer with a minimum value of 1.</param>
+        /// <param name="position">The number of entries to return, from 1 to 100.</param>
         /// <returns>A <see cref="global::Soenneker.HubSpot.OpenApiClient.WebhooksJournal.JournalLocal.TwoZeroTwoSixZeroNine.Batch.Latest.Item.WithCountItemRequestBuilder"/></returns>
         public global::Soenneker.HubSpot.OpenApiClient.WebhooksJournal.JournalLocal.TwoZeroTwoSixZeroNine.Batch.Latest.Item.WithCountItemRequestBuilder this[int position]
         {
