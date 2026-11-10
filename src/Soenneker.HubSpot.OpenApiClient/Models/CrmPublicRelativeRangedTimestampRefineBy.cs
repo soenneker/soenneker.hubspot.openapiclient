@@ -7,10 +7,11 @@ using System.IO;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>
+    /// Represents a refinement filter for timestamp-based criteria within a relative range. It is used in scenarios where filtering by a time range relative to the current time is necessary.
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public partial class CrmPublicRelativeRangedTimestampRefineBy : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
     , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
         // Track explicitly assigned nulls separately from absent properties.
         private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
@@ -29,7 +30,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The lowerBoundOffset property</summary>
+        /// <summary>The PublicTimeOffset component represents a time offset used in various operations within the API. It is used to specify a direction, unit, and amount of time to offset, typically in contexts where relative time calculations are needed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimeOffset? LowerBoundOffset { get => _explicitNullValueLowerBoundOffset; set { _explicitNullValueLowerBoundOffset = value; AdditionalData?.Remove("lowerBoundOffset"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lowerBoundOffset"); else _explicitNullProperties?.Remove("lowerBoundOffset"); } }
@@ -52,7 +53,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <summary>A string that specifies the type of refine operation. The default value is &apos;RELATIVE_RANGED&apos;.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmRelativeRangedType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.HubSpot.OpenApiClient.Models.CrmRelativeRangedType? _explicitNullValueType = default!;
-        /// <summary>The upperBoundOffset property</summary>
+        /// <summary>The PublicTimeOffset component represents a time offset used in various operations within the API. It is used to specify a direction, unit, and amount of time to offset, typically in contexts where relative time calculations are needed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimeOffset? UpperBoundOffset { get => _explicitNullValueUpperBoundOffset; set { _explicitNullValueUpperBoundOffset = value; AdditionalData?.Remove("upperBoundOffset"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upperBoundOffset"); else _explicitNullProperties?.Remove("upperBoundOffset"); } }

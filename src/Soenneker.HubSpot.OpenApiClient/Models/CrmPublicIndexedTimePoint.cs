@@ -7,10 +7,11 @@ using System.IO;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>
+    /// Represents a specific point in time indexed by a reference, used within the API to define time-related operations or filters. It is utilized in contexts where a time point needs to be specified relative to a known index, such as &apos;now&apos; or &apos;today&apos;.
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public partial class CrmPublicIndexedTimePoint : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
     , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
         // Track explicitly assigned nulls separately from absent properties.
         private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
@@ -41,7 +42,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicIndexedTimePointIndexReference IndexReference { get => _explicitNullValueIndexReference; set { _explicitNullValueIndexReference = value; AdditionalData?.Remove("indexReference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("indexReference"); else _explicitNullProperties?.Remove("indexReference"); } }
         private global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicIndexedTimePointIndexReference _explicitNullValueIndexReference = default!;
 #endif
-        /// <summary>The offset property</summary>
+        /// <summary>The PublicIndexOffset component represents a set of time offsets used in various time-related operations within the API. It is utilized to specify adjustments in time units such as years, months, days, etc., and can be used in contexts where time manipulation is required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicIndexOffset? Offset { get => _explicitNullValueOffset; set { _explicitNullValueOffset = value; AdditionalData?.Remove("offset"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offset"); else _explicitNullProperties?.Remove("offset"); } }

@@ -7,10 +7,11 @@ using System.IO;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>
+    /// Represents a refinement criterion for timestamp-based filters in a relative comparative manner. This component is used to specify conditions for filtering data based on relative time comparisons.
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public partial class CrmPublicRelativeComparativeTimestampRefineBy : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
     , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
         // Track explicitly assigned nulls separately from absent properties.
         private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
@@ -37,7 +38,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string Comparison { get => _explicitNullValueComparison; set { _explicitNullValueComparison = value; AdditionalData?.Remove("comparison"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comparison"); else _explicitNullProperties?.Remove("comparison"); } }
         private string _explicitNullValueComparison = default!;
 #endif
-        /// <summary>The timeOffset property</summary>
+        /// <summary>The PublicTimeOffset component represents a time offset used in various operations within the API. It is used to specify a direction, unit, and amount of time to offset, typically in contexts where relative time calculations are needed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicTimeOffset? TimeOffset { get => _explicitNullValueTimeOffset; set { _explicitNullValueTimeOffset = value; AdditionalData?.Remove("timeOffset"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeOffset"); else _explicitNullProperties?.Remove("timeOffset"); } }
