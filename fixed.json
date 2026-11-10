@@ -648718,17 +648718,44 @@
               "content": ""
             }
           }
+        },
+        "x-hubspot-app-availability": {
+          "cms.domains.read": {
+            "portal": [
+              "public",
+              "private"
+            ],
+            "developer": true
+          },
+          "cms.domains.write": {
+            "portal": [
+              "public",
+              "private"
+            ],
+            "developer": false
+          },
+          "cms.knowledge_base.settings.read": {
+            "portal": [
+              "public",
+              "private"
+            ],
+            "developer": false
+          },
+          "cms.knowledge_base.settings.write": {
+            "portal": [
+              "public",
+              "private"
+            ],
+            "developer": false
+          },
+          "content": {
+            "portal": [
+              "public",
+              "private"
+            ],
+            "developer": false
+          }
         }
-      },
-      "cms_private_apps": {
-        "type": "apiKey",
-        "name": "private-app",
-        "in": "header"
-      },
-      "cms_private_apps_legacy": {
-        "type": "apiKey",
-        "name": "private-app-legacy",
-        "in": "header"
       },
       "cms_developer_hapikey_5": {
         "type": "apiKey",
@@ -648901,12 +648928,12 @@
           }
         }
       },
-      "cms_private_apps_2": {
+      "cms_private_apps": {
         "type": "apiKey",
         "name": "private-app",
         "in": "header"
       },
-      "cms_private_apps_legacy_2": {
+      "cms_private_apps_legacy": {
         "type": "apiKey",
         "name": "private-app-legacy",
         "in": "header"
@@ -648992,12 +649019,12 @@
           }
         }
       },
-      "cms_private_apps_3": {
+      "cms_private_apps_2": {
         "type": "apiKey",
         "name": "private-app",
         "in": "header"
       },
-      "cms_private_apps_legacy_3": {
+      "cms_private_apps_legacy_2": {
         "type": "apiKey",
         "name": "private-app-legacy",
         "in": "header"
@@ -649045,12 +649072,12 @@
           }
         }
       },
-      "cms_private_apps_4": {
+      "cms_private_apps_3": {
         "type": "apiKey",
         "name": "private-app",
         "in": "header"
       },
-      "cms_private_apps_legacy_4": {
+      "cms_private_apps_legacy_3": {
         "type": "apiKey",
         "name": "private-app-legacy",
         "in": "header"
