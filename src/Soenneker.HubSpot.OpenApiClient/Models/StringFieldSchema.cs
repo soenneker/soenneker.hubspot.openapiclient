@@ -17,6 +17,8 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
+            if (parseNode.GetChildNode("allowedObjectTypeIds") is null) { _explicitNullValueAllowedObjectTypeIds = default!; _explicitNullProperties?.Remove("allowedObjectTypeIds"); }
+            else if (parseNode.GetChildNode("allowedObjectTypeIds") is { } nullNodeAllowedObjectTypeIds && nullNodeAllowedObjectTypeIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedObjectTypeIds = null;
             if (parseNode.GetChildNode("format") is null) { _explicitNullValueFormat = default!; _explicitNullProperties?.Remove("format"); }
             else if (parseNode.GetChildNode("format") is { } nullNodeFormat && nullNodeFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Format = null;
             if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
@@ -25,6 +27,16 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The allowedObjectTypeIds property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? AllowedObjectTypeIds { get => _explicitNullValueAllowedObjectTypeIds; set { _explicitNullValueAllowedObjectTypeIds = value; AdditionalData?.Remove("allowedObjectTypeIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowedObjectTypeIds"); else _explicitNullProperties?.Remove("allowedObjectTypeIds"); } }
+        private List<string>? _explicitNullValueAllowedObjectTypeIds = default!;
+#nullable restore
+#else
+        public List<string> AllowedObjectTypeIds { get => _explicitNullValueAllowedObjectTypeIds; set { _explicitNullValueAllowedObjectTypeIds = value; AdditionalData?.Remove("allowedObjectTypeIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowedObjectTypeIds"); else _explicitNullProperties?.Remove("allowedObjectTypeIds"); } }
+        private List<string> _explicitNullValueAllowedObjectTypeIds = default!;
+#endif
         /// <summary>Specifies the format of the string, with accepted values: DATE, DATE_TIME, OBJECT_COORDINATE, TIME, URI.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.StringFieldSchemaFormat? Format { get => _explicitNullValueFormat; set { _explicitNullValueFormat = value; AdditionalData?.Remove("format"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("format"); else _explicitNullProperties?.Remove("format"); } }
         private global::Soenneker.HubSpot.OpenApiClient.Models.StringFieldSchemaFormat? _explicitNullValueFormat = default!;
@@ -56,6 +68,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "allowedObjectTypeIds", n => { AllowedObjectTypeIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "format", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.StringFieldSchemaFormat>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFormat = default; _explicitNullProperties?.Remove("format"); AdditionalData["format"] = unknown; } else { Format = parsed; AdditionalData.Remove("format"); } } },
                 { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.StringValueType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
@@ -67,6 +80,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteCollectionOfPrimitiveValues<string>("allowedObjectTypeIds", AllowedObjectTypeIds);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.StringFieldSchemaFormat>("format", Format);
             writer.WriteEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.StringValueType>("type", Type);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

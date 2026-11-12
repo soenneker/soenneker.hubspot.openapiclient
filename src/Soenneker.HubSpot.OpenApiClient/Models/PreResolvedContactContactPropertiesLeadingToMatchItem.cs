@@ -684,6 +684,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         #pragma warning disable CS1591
         HsFullNameOrEmail,
         #pragma warning restore CS1591
+        [EnumMember(Value = "hs_geocode_mapping_id")]
+        #pragma warning disable CS1591
+        HsGeocodeMappingId,
+        #pragma warning restore CS1591
         [EnumMember(Value = "hs_geohash_1")]
         #pragma warning disable CS1591
         HsGeohash1,

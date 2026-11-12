@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     /// <summary>
-    /// An object containing links related to the error, such as documentation URLs or support contact pages.
+    /// Error links.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class StandardErrorLinksProperty2 : IAdditionalDataHolder, IParsable

@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
     /// <summary>
-    /// Identifies the subcategory of the error, providing more specific context within the main category.
+    /// Error subcategory.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class StandardErrorSubCategoryProperty2 : IAdditionalDataHolder, IParsable

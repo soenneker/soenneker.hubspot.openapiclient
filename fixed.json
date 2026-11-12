@@ -2825,7 +2825,7 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/CollectionResponseWithTotalBlogAuthorForwardPaging"
                 },
@@ -2838,6 +2838,11 @@
           }
         },
         "security": [
+          {
+            "cms_oauth2": [
+              "cms.blogs.blog_posts.read"
+            ]
+          },
           {
             "cms_oauth2": [
               "content"
@@ -2859,7 +2864,7 @@
         "operationId": "CmsPostCmsBlogs202609AuthorsCreate",
         "requestBody": {
           "content": {
-            "*/*": {
+            "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/BlogAuthor"
               },
@@ -2882,7 +2887,7 @@
               }
             },
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/BlogAuthor"
                 },
@@ -2906,7 +2911,7 @@
               }
             },
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/BlogAuthor"
                 },
@@ -2940,7 +2945,7 @@
         "operationId": "CmsPostCmsBlogs202609AuthorsBatchArchiveArchiveBatch",
         "requestBody": {
           "content": {
-            "*/*": {
+            "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/BatchInputString"
               },
@@ -2953,8 +2958,31 @@
           "204": {
             "description": "No content"
           },
+          "207": {
+            "description": "multiple statuses",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BatchResponseBlogAuthorWithErrors"
+                },
+                "example": null
+              }
+            }
+          },
           "default": {
             "$ref": "#/components/responses/cms_Error"
+          },
+          "200": {
+            "description": "multiple statuses",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BatchResponseBlogAuthorWithErrors"
+                },
+                "example": null
+              }
+            },
+            "x-client-success-response-status": "207"
           }
         },
         "security": [
@@ -2981,7 +3009,7 @@
         "operationId": "CmsPostCmsBlogs202609AuthorsBatchCreateCreateBatch",
         "requestBody": {
           "content": {
-            "*/*": {
+            "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/BatchInputBlogAuthor"
               },
@@ -2994,14 +3022,13 @@
           "201": {
             "description": "successful operation",
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
+                  "$ref": "#/components/schemas/PostCmsBlogs202609AuthorsBatchCreateCreateBatchSuccessResponse"
                 },
                 "example": null,
                 "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/CmsPostCmsBlogs202609AuthorsBatchCreateCreateBatch201MediaResponseSchema"
+                  "$ref": "#/components/schemas/BatchResponseBlogAuthor"
                 }
               }
             }
@@ -3009,14 +3036,13 @@
           "207": {
             "description": "multiple statuses",
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
+                  "$ref": "#/components/schemas/PostCmsBlogs202609AuthorsBatchCreateCreateBatchSuccessResponse"
                 },
                 "example": null,
                 "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/CmsPostCmsBlogs202609AuthorsBatchCreateCreateBatch207MediaResponseSchema"
+                  "$ref": "#/components/schemas/BatchResponseBlogAuthorWithErrors"
                 }
               }
             }
@@ -3027,14 +3053,13 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
+                  "$ref": "#/components/schemas/PostCmsBlogs202609AuthorsBatchCreateCreateBatchSuccessResponse"
                 },
                 "example": null,
                 "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/CmsPostCmsBlogs202609AuthorsBatchCreateCreateBatch200MediaResponseSchema"
+                  "$ref": "#/components/schemas/BatchResponseBlogAuthor"
                 }
               }
             },
@@ -3076,7 +3101,7 @@
         ],
         "requestBody": {
           "content": {
-            "*/*": {
+            "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/BatchInputString"
               },
@@ -3089,14 +3114,13 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
+                  "$ref": "#/components/schemas/PostCmsBlogs202609AuthorsBatchCreateCreateBatchSuccessResponse"
                 },
                 "example": null,
                 "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/CmsPostCmsBlogs202609AuthorsBatchReadReadBatch200MediaResponseSchema"
+                  "$ref": "#/components/schemas/BatchResponseBlogAuthor"
                 }
               }
             }
@@ -3104,14 +3128,13 @@
           "207": {
             "description": "multiple statuses",
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
+                  "$ref": "#/components/schemas/PostCmsBlogs202609AuthorsBatchCreateCreateBatchSuccessResponse"
                 },
                 "example": null,
                 "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/CmsPostCmsBlogs202609AuthorsBatchReadReadBatch207MediaResponseSchema"
+                  "$ref": "#/components/schemas/BatchResponseBlogAuthorWithErrors"
                 }
               }
             }
@@ -3121,6 +3144,11 @@
           }
         },
         "security": [
+          {
+            "cms_oauth2": [
+              "cms.blogs.blog_posts.read"
+            ]
+          },
           {
             "cms_oauth2": [
               "content"
@@ -3155,7 +3183,7 @@
         ],
         "requestBody": {
           "content": {
-            "*/*": {
+            "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/BatchInputJsonNode"
               },
@@ -3168,14 +3196,13 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
+                  "$ref": "#/components/schemas/PostCmsBlogs202609AuthorsBatchCreateCreateBatchSuccessResponse"
                 },
                 "example": null,
                 "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/CmsPostCmsBlogs202609AuthorsBatchUpdateUpdateBatch200MediaResponseSchema"
+                  "$ref": "#/components/schemas/BatchResponseBlogAuthor"
                 }
               }
             }
@@ -3183,14 +3210,13 @@
           "207": {
             "description": "multiple statuses",
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
+                  "$ref": "#/components/schemas/PostCmsBlogs202609AuthorsBatchCreateCreateBatchSuccessResponse"
                 },
                 "example": null,
                 "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/CmsPostCmsBlogs202609AuthorsBatchUpdateUpdateBatch207MediaResponseSchema"
+                  "$ref": "#/components/schemas/BatchResponseBlogAuthorWithErrors"
                 }
               }
             }
@@ -3223,7 +3249,7 @@
         "operationId": "CmsPostCmsBlogs202609AuthorsMultiLanguageAttachToLangGroupAttachToLangGroup",
         "requestBody": {
           "content": {
-            "*/*": {
+            "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/AttachToLangPrimaryRequestVNext"
               },
@@ -3261,7 +3287,7 @@
         "operationId": "CmsPostCmsBlogs202609AuthorsMultiLanguageCreateLanguageVariationCreateLangVariation",
         "requestBody": {
           "content": {
-            "*/*": {
+            "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/BlogAuthorCloneRequestVNext"
               },
@@ -3274,7 +3300,7 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/BlogAuthor"
                 },
@@ -3310,7 +3336,7 @@
         "operationId": "CmsPostCmsBlogs202609AuthorsMultiLanguageDetachFromLangGroupDetachFromLangGroup",
         "requestBody": {
           "content": {
-            "*/*": {
+            "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/DetachFromLangGroupRequestVNext"
               },
@@ -3348,7 +3374,7 @@
         "operationId": "CmsPutCmsBlogs202609AuthorsMultiLanguageSetNewLangPrimarySetLangPrimary",
         "requestBody": {
           "content": {
-            "*/*": {
+            "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/SetNewLanguagePrimaryRequestVNext"
               },
@@ -3389,7 +3415,7 @@
         "operationId": "CmsPostCmsBlogs202609AuthorsMultiLanguageUpdateLanguagesUpdateLangs",
         "requestBody": {
           "content": {
-            "*/*": {
+            "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/UpdateLanguagesRequestVNext"
               },
@@ -3459,7 +3485,7 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/BlogAuthor"
                 },
@@ -3472,6 +3498,11 @@
           }
         },
         "security": [
+          {
+            "cms_oauth2": [
+              "cms.blogs.blog_posts.read"
+            ]
+          },
           {
             "cms_oauth2": [
               "content"
@@ -3563,7 +3594,7 @@
         ],
         "requestBody": {
           "content": {
-            "*/*": {
+            "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/BlogAuthor"
               },
@@ -3576,7 +3607,7 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/BlogAuthor"
                 },
@@ -13780,9 +13811,9 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CmsGetCmsBlogs202609AuthorsCursorCmsBlogsV3AuthorsCursor200MediaResponseSchema"
+                  "$ref": "#/components/schemas/CmsGetCmsBlogs202609AuthorsCursorCmsBlogsV3AuthorsCursor200ResponseSchema"
                 },
                 "examples": {
                   "example": {
@@ -13797,6 +13828,11 @@
           }
         },
         "security": [
+          {
+            "cms_oauth2_7": [
+              "cms.blogs.blog_posts.read"
+            ]
+          },
           {
             "cms_oauth2_7": [
               "content"
@@ -13934,9 +13970,9 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CmsGetCmsBlogs202609AuthorsCursorQueryCmsBlogsV3AuthorsCursorQuery200MediaResponseSchema"
+                  "$ref": "#/components/schemas/CmsGetCmsBlogs202609AuthorsCursorQueryCmsBlogsV3AuthorsCursorQuery200ResponseSchema"
                 },
                 "examples": {
                   "example": {
@@ -13951,6 +13987,11 @@
           }
         },
         "security": [
+          {
+            "cms_oauth2_7": [
+              "cms.blogs.blog_posts.read"
+            ]
+          },
           {
             "cms_oauth2_7": [
               "content"
@@ -14088,7 +14129,7 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/CollectionResponseWithTotalBlogPostForwardPaging"
                 },
@@ -14101,6 +14142,11 @@
           }
         },
         "security": [
+          {
+            "cms_oauth2_7": [
+              "cms.blogs.blog_posts.read"
+            ]
+          },
           {
             "cms_oauth2_7": [
               "content"
@@ -14122,7 +14168,7 @@
         "operationId": "CmsPostCmsBlogs202609PostsCreate",
         "requestBody": {
           "content": {
-            "*/*": {
+            "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/BlogPost"
               },
@@ -14145,7 +14191,7 @@
               }
             },
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/BlogPost"
                 },
@@ -14169,7 +14215,7 @@
               }
             },
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/BlogPost"
                 },
@@ -14203,7 +14249,7 @@
         "operationId": "CmsPostCmsBlogs202609PostsBatchArchiveArchive",
         "requestBody": {
           "content": {
-            "*/*": {
+            "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/CmsBatchInputString3"
               },
@@ -14216,8 +14262,31 @@
           "204": {
             "description": "No content"
           },
+          "207": {
+            "description": "multiple statuses",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BatchResponseBlogPostWithErrors"
+                },
+                "example": null
+              }
+            }
+          },
           "default": {
             "$ref": "#/components/responses/cms_Error_7"
+          },
+          "200": {
+            "description": "multiple statuses",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BatchResponseBlogPostWithErrors"
+                },
+                "example": null
+              }
+            },
+            "x-client-success-response-status": "207"
           }
         },
         "security": [
@@ -14244,7 +14313,7 @@
         "operationId": "CmsPostCmsBlogs202609PostsBatchCreateCreate",
         "requestBody": {
           "content": {
-            "*/*": {
+            "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/BatchInputBlogPost"
               },
@@ -14257,14 +14326,13 @@
           "201": {
             "description": "successful operation",
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
+                  "$ref": "#/components/schemas/PostCmsBlogs202609PostsBatchCreateCreateSuccessResponse"
                 },
                 "example": null,
                 "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/CmsPostCmsBlogs202609PostsBatchCreateCreate201MediaResponseSchema"
+                  "$ref": "#/components/schemas/BatchResponseBlogPost"
                 }
               }
             }
@@ -14272,14 +14340,13 @@
           "207": {
             "description": "multiple statuses",
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
+                  "$ref": "#/components/schemas/PostCmsBlogs202609PostsBatchCreateCreateSuccessResponse"
                 },
                 "example": null,
                 "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/CmsPostCmsBlogs202609PostsBatchCreateCreate207MediaResponseSchema"
+                  "$ref": "#/components/schemas/BatchResponseBlogPostWithErrors"
                 }
               }
             }
@@ -14290,14 +14357,13 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
+                  "$ref": "#/components/schemas/PostCmsBlogs202609PostsBatchCreateCreateSuccessResponse"
                 },
                 "example": null,
                 "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/CmsPostCmsBlogs202609PostsBatchCreateCreate200MediaResponseSchema"
+                  "$ref": "#/components/schemas/BatchResponseBlogPost"
                 }
               }
             },
@@ -14339,7 +14405,7 @@
         ],
         "requestBody": {
           "content": {
-            "*/*": {
+            "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/CmsBatchInputString3"
               },
@@ -14352,14 +14418,13 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
+                  "$ref": "#/components/schemas/PostCmsBlogs202609PostsBatchCreateCreateSuccessResponse"
                 },
                 "example": null,
                 "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/CmsPostCmsBlogs202609PostsBatchReadRead200MediaResponseSchema"
+                  "$ref": "#/components/schemas/BatchResponseBlogPost"
                 }
               }
             }
@@ -14367,14 +14432,13 @@
           "207": {
             "description": "multiple statuses",
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
+                  "$ref": "#/components/schemas/PostCmsBlogs202609PostsBatchCreateCreateSuccessResponse"
                 },
                 "example": null,
                 "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/CmsPostCmsBlogs202609PostsBatchReadRead207MediaResponseSchema"
+                  "$ref": "#/components/schemas/BatchResponseBlogPostWithErrors"
                 }
               }
             }
@@ -14384,6 +14448,11 @@
           }
         },
         "security": [
+          {
+            "cms_oauth2_7": [
+              "cms.blogs.blog_posts.read"
+            ]
+          },
           {
             "cms_oauth2_7": [
               "content"
@@ -14418,7 +14487,7 @@
         ],
         "requestBody": {
           "content": {
-            "*/*": {
+            "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/CmsBatchInputJsonNode2"
               },
@@ -14431,14 +14500,13 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
+                  "$ref": "#/components/schemas/PostCmsBlogs202609PostsBatchCreateCreateSuccessResponse"
                 },
                 "example": null,
                 "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/CmsPostCmsBlogs202609PostsBatchUpdateUpdate200MediaResponseSchema"
+                  "$ref": "#/components/schemas/BatchResponseBlogPost"
                 }
               }
             }
@@ -14446,14 +14514,13 @@
           "207": {
             "description": "multiple statuses",
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
+                  "$ref": "#/components/schemas/PostCmsBlogs202609PostsBatchCreateCreateSuccessResponse"
                 },
                 "example": null,
                 "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/CmsPostCmsBlogs202609PostsBatchUpdateUpdate207MediaResponseSchema"
+                  "$ref": "#/components/schemas/BatchResponseBlogPostWithErrors"
                 }
               }
             }
@@ -14486,7 +14553,7 @@
         "operationId": "CmsPostCmsBlogs202609PostsCloneClone",
         "requestBody": {
           "content": {
-            "*/*": {
+            "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/CmsContentCloneRequestVNext"
               },
@@ -14499,7 +14566,7 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/BlogPost"
                 },
@@ -14649,9 +14716,9 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CmsGetCmsBlogs202609PostsCursorCmsBlogsV3PostsCursor200MediaResponseSchema"
+                  "$ref": "#/components/schemas/CmsGetCmsBlogs202609PostsCursorCmsBlogsV3PostsCursor200ResponseSchema"
                 },
                 "examples": {
                   "example": {
@@ -14666,6 +14733,11 @@
           }
         },
         "security": [
+          {
+            "cms_oauth2_7": [
+              "cms.blogs.blog_posts.read"
+            ]
+          },
           {
             "cms_oauth2_7": [
               "content"
@@ -14803,9 +14875,9 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CmsGetCmsBlogs202609PostsCursorQueryCmsBlogsV3PostsCursorQuery200MediaResponseSchema"
+                  "$ref": "#/components/schemas/CmsGetCmsBlogs202609PostsCursorQueryCmsBlogsV3PostsCursorQuery200ResponseSchema"
                 },
                 "examples": {
                   "example": {
@@ -14820,6 +14892,11 @@
           }
         },
         "security": [
+          {
+            "cms_oauth2_7": [
+              "cms.blogs.blog_posts.read"
+            ]
+          },
           {
             "cms_oauth2_7": [
               "content"
@@ -14843,7 +14920,7 @@
         "operationId": "CmsPostCmsBlogs202609PostsMultiLanguageAttachToLangGroupAttachToLangGroup",
         "requestBody": {
           "content": {
-            "*/*": {
+            "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/CmsAttachToLangPrimaryRequestVNext3"
               },
@@ -14881,7 +14958,7 @@
         "operationId": "CmsPostCmsBlogs202609PostsMultiLanguageCreateLanguageVariationCreateLangVariation",
         "requestBody": {
           "content": {
-            "*/*": {
+            "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/BlogPostLanguageCloneRequestVNext"
               },
@@ -14894,7 +14971,7 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/BlogPost"
                 },
@@ -14930,7 +15007,7 @@
         "operationId": "CmsPostCmsBlogs202609PostsMultiLanguageDetachFromLangGroupDetachFromLangGroup",
         "requestBody": {
           "content": {
-            "*/*": {
+            "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/CmsDetachFromLangGroupRequestVNext3"
               },
@@ -14968,7 +15045,7 @@
         "operationId": "CmsPutCmsBlogs202609PostsMultiLanguageSetNewLangPrimarySetLangPrimary",
         "requestBody": {
           "content": {
-            "*/*": {
+            "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/CmsSetNewLanguagePrimaryRequestVNext3"
               },
@@ -15009,7 +15086,7 @@
         "operationId": "CmsPostCmsBlogs202609PostsMultiLanguageUpdateLanguagesUpdateLangs",
         "requestBody": {
           "content": {
-            "*/*": {
+            "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/CmsUpdateLanguagesRequestVNext3"
               },
@@ -15047,7 +15124,7 @@
         "operationId": "CmsPostCmsBlogs202609PostsScheduleSchedule",
         "requestBody": {
           "content": {
-            "*/*": {
+            "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/CmsContentScheduleRequestVNext"
               },
@@ -15120,7 +15197,7 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/BlogPost"
                 },
@@ -15133,6 +15210,11 @@
           }
         },
         "security": [
+          {
+            "cms_oauth2_7": [
+              "cms.blogs.blog_posts.read"
+            ]
+          },
           {
             "cms_oauth2_7": [
               "content"
@@ -15224,7 +15306,7 @@
         ],
         "requestBody": {
           "content": {
-            "*/*": {
+            "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/BlogPost"
               },
@@ -15237,7 +15319,7 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/BlogPost"
                 },
@@ -15287,7 +15369,7 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/BlogPost"
                 },
@@ -15300,6 +15382,11 @@
           }
         },
         "security": [
+          {
+            "cms_oauth2_7": [
+              "cms.blogs.blog_posts.read"
+            ]
+          },
           {
             "cms_oauth2_7": [
               "content"
@@ -15333,7 +15420,7 @@
         ],
         "requestBody": {
           "content": {
-            "*/*": {
+            "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/BlogPost"
               },
@@ -15346,7 +15433,7 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/BlogPost"
                 },
@@ -15508,7 +15595,7 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/CollectionResponseWithTotalBlogPostVersion"
                 },
@@ -15521,6 +15608,11 @@
           }
         },
         "security": [
+          {
+            "cms_oauth2_7": [
+              "cms.blogs.blog_posts.read"
+            ]
+          },
           {
             "cms_oauth2_7": [
               "content"
@@ -15568,7 +15660,7 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/BlogPostVersion"
                 },
@@ -15581,6 +15673,11 @@
           }
         },
         "security": [
+          {
+            "cms_oauth2_7": [
+              "cms.blogs.blog_posts.read"
+            ]
+          },
           {
             "cms_oauth2_7": [
               "content"
@@ -15628,7 +15725,7 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/BlogPost"
                 },
@@ -15689,7 +15786,7 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/BlogPost"
                 },
@@ -15839,9 +15936,9 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CmsGetCmsBlogs202609TagsCursorCmsBlogsV3TagsCursor200MediaResponseSchema"
+                  "$ref": "#/components/schemas/CmsGetCmsBlogs202609TagsCursorCmsBlogsV3TagsCursor200ResponseSchema"
                 },
                 "examples": {
                   "example": {
@@ -15856,6 +15953,11 @@
           }
         },
         "security": [
+          {
+            "cms_oauth2_7": [
+              "cms.blogs.blog_posts.read"
+            ]
+          },
           {
             "cms_oauth2_7": [
               "content"
@@ -15993,9 +16095,9 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CmsGetCmsBlogs202609TagsCursorQueryCmsBlogsV3TagsCursorQuery200MediaResponseSchema"
+                  "$ref": "#/components/schemas/CmsGetCmsBlogs202609TagsCursorQueryCmsBlogsV3TagsCursorQuery200ResponseSchema"
                 },
                 "examples": {
                   "example": {
@@ -16010,6 +16112,11 @@
           }
         },
         "security": [
+          {
+            "cms_oauth2_7": [
+              "cms.blogs.blog_posts.read"
+            ]
+          },
           {
             "cms_oauth2_7": [
               "content"
@@ -17038,7 +17145,7 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/CollectionResponseWithTotalTagForwardPaging"
                 },
@@ -17051,6 +17158,11 @@
           }
         },
         "security": [
+          {
+            "cms_oauth2_10": [
+              "cms.blogs.blog_posts.read"
+            ]
+          },
           {
             "cms_oauth2_10": [
               "content"
@@ -17072,7 +17184,7 @@
         "operationId": "CmsPostCmsBlogs202609TagsCreate",
         "requestBody": {
           "content": {
-            "*/*": {
+            "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/Tag"
               },
@@ -17095,7 +17207,7 @@
               }
             },
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Tag"
                 },
@@ -17119,7 +17231,7 @@
               }
             },
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Tag"
                 },
@@ -17153,7 +17265,7 @@
         "operationId": "CmsPostCmsBlogs202609TagsBatchArchiveArchiveBatch",
         "requestBody": {
           "content": {
-            "*/*": {
+            "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/CmsBatchInputString4"
               },
@@ -17166,8 +17278,31 @@
           "204": {
             "description": "No content"
           },
+          "207": {
+            "description": "multiple statuses",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BatchResponseTagWithErrors"
+                },
+                "example": null
+              }
+            }
+          },
           "default": {
             "$ref": "#/components/responses/cms_Error_10"
+          },
+          "200": {
+            "description": "multiple statuses",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BatchResponseTagWithErrors"
+                },
+                "example": null
+              }
+            },
+            "x-client-success-response-status": "207"
           }
         },
         "security": [
@@ -17194,7 +17329,7 @@
         "operationId": "CmsPostCmsBlogs202609TagsBatchCreateCreateBatch",
         "requestBody": {
           "content": {
-            "*/*": {
+            "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/BatchInputTag"
               },
@@ -17207,14 +17342,13 @@
           "201": {
             "description": "successful operation",
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
+                  "$ref": "#/components/schemas/PostCmsBlogs202609TagsBatchCreateCreateBatchSuccessResponse"
                 },
                 "example": null,
                 "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/CmsPostCmsBlogs202609TagsBatchCreateCreateBatch201MediaResponseSchema"
+                  "$ref": "#/components/schemas/BatchResponseTag"
                 }
               }
             }
@@ -17222,14 +17356,13 @@
           "207": {
             "description": "multiple statuses",
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
+                  "$ref": "#/components/schemas/PostCmsBlogs202609TagsBatchCreateCreateBatchSuccessResponse"
                 },
                 "example": null,
                 "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/CmsPostCmsBlogs202609TagsBatchCreateCreateBatch207MediaResponseSchema"
+                  "$ref": "#/components/schemas/BatchResponseTagWithErrors"
                 }
               }
             }
@@ -17240,14 +17373,13 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
+                  "$ref": "#/components/schemas/PostCmsBlogs202609TagsBatchCreateCreateBatchSuccessResponse"
                 },
                 "example": null,
                 "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/CmsPostCmsBlogs202609TagsBatchCreateCreateBatch200MediaResponseSchema"
+                  "$ref": "#/components/schemas/BatchResponseTag"
                 }
               }
             },
@@ -17289,7 +17421,7 @@
         ],
         "requestBody": {
           "content": {
-            "*/*": {
+            "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/CmsBatchInputString4"
               },
@@ -17302,14 +17434,13 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
+                  "$ref": "#/components/schemas/PostCmsBlogs202609TagsBatchCreateCreateBatchSuccessResponse"
                 },
                 "example": null,
                 "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/CmsPostCmsBlogs202609TagsBatchReadReadBatch200MediaResponseSchema"
+                  "$ref": "#/components/schemas/BatchResponseTag"
                 }
               }
             }
@@ -17317,14 +17448,13 @@
           "207": {
             "description": "multiple statuses",
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
+                  "$ref": "#/components/schemas/PostCmsBlogs202609TagsBatchCreateCreateBatchSuccessResponse"
                 },
                 "example": null,
                 "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/CmsPostCmsBlogs202609TagsBatchReadReadBatch207MediaResponseSchema"
+                  "$ref": "#/components/schemas/BatchResponseTagWithErrors"
                 }
               }
             }
@@ -17334,6 +17464,11 @@
           }
         },
         "security": [
+          {
+            "cms_oauth2_10": [
+              "cms.blogs.blog_posts.read"
+            ]
+          },
           {
             "cms_oauth2_10": [
               "content"
@@ -17368,7 +17503,7 @@
         ],
         "requestBody": {
           "content": {
-            "*/*": {
+            "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/CmsBatchInputJsonNode3"
               },
@@ -17381,14 +17516,13 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
+                  "$ref": "#/components/schemas/PostCmsBlogs202609TagsBatchCreateCreateBatchSuccessResponse"
                 },
                 "example": null,
                 "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/CmsPostCmsBlogs202609TagsBatchUpdateUpdateBatch200MediaResponseSchema"
+                  "$ref": "#/components/schemas/BatchResponseTag"
                 }
               }
             }
@@ -17396,14 +17530,13 @@
           "207": {
             "description": "multiple statuses",
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
+                  "$ref": "#/components/schemas/PostCmsBlogs202609TagsBatchCreateCreateBatchSuccessResponse"
                 },
                 "example": null,
                 "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/CmsPostCmsBlogs202609TagsBatchUpdateUpdateBatch207MediaResponseSchema"
+                  "$ref": "#/components/schemas/BatchResponseTagWithErrors"
                 }
               }
             }
@@ -17436,7 +17569,7 @@
         "operationId": "CmsPostCmsBlogs202609TagsMultiLanguageAttachToLangGroupAttachToLangGroup",
         "requestBody": {
           "content": {
-            "*/*": {
+            "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/CmsAttachToLangPrimaryRequestVNext4"
               },
@@ -17474,7 +17607,7 @@
         "operationId": "CmsPostCmsBlogs202609TagsMultiLanguageCreateLanguageVariationCreateLangVariation",
         "requestBody": {
           "content": {
-            "*/*": {
+            "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/TagCloneRequestVNext"
               },
@@ -17487,7 +17620,7 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Tag"
                 },
@@ -17523,7 +17656,7 @@
         "operationId": "CmsPostCmsBlogs202609TagsMultiLanguageDetachFromLangGroupDetachFromLangGroup",
         "requestBody": {
           "content": {
-            "*/*": {
+            "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/CmsDetachFromLangGroupRequestVNext4"
               },
@@ -17561,7 +17694,7 @@
         "operationId": "CmsPutCmsBlogs202609TagsMultiLanguageSetNewLangPrimarySetLangPrimary",
         "requestBody": {
           "content": {
-            "*/*": {
+            "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/CmsSetNewLanguagePrimaryRequestVNext4"
               },
@@ -17602,7 +17735,7 @@
         "operationId": "CmsPostCmsBlogs202609TagsMultiLanguageUpdateLanguagesUpdateLangs",
         "requestBody": {
           "content": {
-            "*/*": {
+            "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/CmsUpdateLanguagesRequestVNext4"
               },
@@ -17672,7 +17805,7 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Tag"
                 },
@@ -17685,6 +17818,11 @@
           }
         },
         "security": [
+          {
+            "cms_oauth2_10": [
+              "cms.blogs.blog_posts.read"
+            ]
+          },
           {
             "cms_oauth2_10": [
               "content"
@@ -17776,7 +17914,7 @@
         ],
         "requestBody": {
           "content": {
-            "*/*": {
+            "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/Tag"
               },
@@ -17789,7 +17927,7 @@
           "200": {
             "description": "successful operation",
             "content": {
-              "*/*": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Tag"
                 },
@@ -273742,12 +273880,12 @@
           },
           {
             "crm_object_schemas_oauth2": [
-              "crm.objects.custom.read"
+              "crm.objects.custom.highly_sensitive.read.v2"
             ]
           },
           {
             "crm_object_schemas_oauth2": [
-              "crm.objects.custom.highly_sensitive.read.v2"
+              "crm.objects.custom.read"
             ]
           }
         ],
@@ -273891,12 +274029,17 @@
           },
           {
             "crm_object_schemas_oauth2": [
+              "crm.objects.custom.highly_sensitive.read.v2"
+            ]
+          },
+          {
+            "crm_object_schemas_oauth2": [
               "crm.objects.custom.read"
             ]
           },
           {
             "crm_object_schemas_oauth2": [
-              "crm.objects.custom.highly_sensitive.read.v2"
+              "oauth"
             ]
           }
         ],
@@ -273989,12 +274132,17 @@
           },
           {
             "crm_object_schemas_oauth2": [
+              "crm.objects.custom.highly_sensitive.read.v2"
+            ]
+          },
+          {
+            "crm_object_schemas_oauth2": [
               "crm.objects.custom.read"
             ]
           },
           {
             "crm_object_schemas_oauth2": [
-              "crm.objects.custom.highly_sensitive.read.v2"
+              "oauth"
             ]
           }
         ],
@@ -339711,6 +339859,14 @@
         ],
         "type": "object",
         "properties": {
+          "allowedObjectTypeIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "example": null
+            },
+            "example": null
+          },
           "format": {
             "$ref": "#/components/schemas/StringFieldSchemaFormat"
           },
@@ -344220,6 +344376,108 @@
         },
         "example": null
       },
+      "BatchResponseBlogAuthor": {
+        "required": [
+          "completedAt",
+          "results",
+          "startedAt",
+          "status"
+        ],
+        "type": "object",
+        "properties": {
+          "completedAt": {
+            "type": "string",
+            "description": "Time of batch operation completion.",
+            "format": "date-time",
+            "example": null
+          },
+          "links": {
+            "$ref": "#/components/schemas/BatchResponseBlogAuthorLinks"
+          },
+          "requestedAt": {
+            "type": "string",
+            "description": "Time of batch operation request.",
+            "format": "date-time",
+            "example": null
+          },
+          "results": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BlogAuthor"
+            },
+            "description": "Results of batch operation.",
+            "example": null
+          },
+          "startedAt": {
+            "type": "string",
+            "description": "Time of batch operation start.",
+            "format": "date-time",
+            "example": null
+          },
+          "status": {
+            "$ref": "#/components/schemas/BatchResponseBlogAuthorStatus"
+          }
+        },
+        "example": null
+      },
+      "BatchResponseBlogAuthorWithErrors": {
+        "required": [
+          "completedAt",
+          "results",
+          "startedAt",
+          "status"
+        ],
+        "type": "object",
+        "properties": {
+          "completedAt": {
+            "type": "string",
+            "description": "Time of batch operation completion.",
+            "format": "date-time",
+            "example": null
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StandardError"
+            },
+            "description": "Errors in batch operation.",
+            "example": null
+          },
+          "links": {
+            "$ref": "#/components/schemas/BatchResponseBlogAuthorWithErrorsLinks"
+          },
+          "numErrors": {
+            "type": "integer",
+            "description": "Number of errors.",
+            "format": "int32",
+            "example": null
+          },
+          "requestedAt": {
+            "type": "string",
+            "description": "Time of batch operation request.",
+            "format": "date-time",
+            "example": null
+          },
+          "results": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BlogAuthor"
+            },
+            "description": "Results of batch operation.",
+            "example": null
+          },
+          "startedAt": {
+            "type": "string",
+            "description": "Time of batch operation start.",
+            "format": "date-time",
+            "example": null
+          },
+          "status": {
+            "$ref": "#/components/schemas/BatchResponseBlogAuthorWithErrorsStatus"
+          }
+        },
+        "example": null
+      },
       "BlogAuthor": {
         "required": [
           "avatar",
@@ -344535,6 +344793,58 @@
             "example": null
           }
         },
+        "example": null
+      },
+      "StandardError": {
+        "required": [
+          "category",
+          "context",
+          "errors",
+          "links",
+          "message",
+          "status"
+        ],
+        "type": "object",
+        "properties": {
+          "category": {
+            "type": "string",
+            "description": "Error category.",
+            "example": null
+          },
+          "context": {
+            "$ref": "#/components/schemas/StandardErrorContextProperty2"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CmsErrorDetail"
+            },
+            "description": "List of error details.",
+            "example": null
+          },
+          "id": {
+            "type": "string",
+            "description": "Error ID.",
+            "example": null
+          },
+          "links": {
+            "$ref": "#/components/schemas/StandardErrorLinksProperty2"
+          },
+          "message": {
+            "type": "string",
+            "description": "Error message.",
+            "example": null
+          },
+          "status": {
+            "type": "string",
+            "description": "Error status.",
+            "example": null
+          },
+          "subCategory": {
+            "$ref": "#/components/schemas/StandardErrorSubCategoryProperty2"
+          }
+        },
+        "description": "Ye olde error",
         "example": null
       },
       "UpdateLanguagesRequestVNext": {
@@ -353493,6 +353803,72 @@
           ]
         }
       },
+      "BatchResponseBlogAuthorStatus": {
+        "enum": [
+          "CANCELED",
+          "COMPLETE",
+          "PENDING",
+          "PROCESSING"
+        ],
+        "type": "string",
+        "description": "Status of batch operation.",
+        "example": null,
+        "x-ms-enum": {
+          "name": "BatchResponseBlogAuthorStatus",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "CANCELED",
+              "name": "Canceled"
+            },
+            {
+              "value": "COMPLETE",
+              "name": "Complete"
+            },
+            {
+              "value": "PENDING",
+              "name": "Pending"
+            },
+            {
+              "value": "PROCESSING",
+              "name": "Processing"
+            }
+          ]
+        }
+      },
+      "BatchResponseBlogAuthorWithErrorsStatus": {
+        "enum": [
+          "CANCELED",
+          "COMPLETE",
+          "PENDING",
+          "PROCESSING"
+        ],
+        "type": "string",
+        "description": "Status of batch operation.",
+        "example": null,
+        "x-ms-enum": {
+          "name": "BatchResponseBlogAuthorWithErrorsStatus",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "CANCELED",
+              "name": "Canceled"
+            },
+            {
+              "value": "COMPLETE",
+              "name": "Complete"
+            },
+            {
+              "value": "PENDING",
+              "name": "Pending"
+            },
+            {
+              "value": "PROCESSING",
+              "name": "Processing"
+            }
+          ]
+        }
+      },
       "BlogAuthorLanguage": {
         "enum": [
           "aa",
@@ -362427,6 +362803,16 @@
             }
           ]
         }
+      },
+      "PostCmsBlogs202609AuthorsBatchCreateCreateBatchSuccessResponse": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/BatchResponseBlogAuthor"
+          },
+          {
+            "$ref": "#/components/schemas/BatchResponseBlogAuthorWithErrors"
+          }
+        ]
       },
       "CmsAttachToLangPrimaryRequestVNext": {
         "required": [
@@ -381723,7 +382109,7 @@
           "errors": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/StandardError"
+              "$ref": "#/components/schemas/CmsStandardError"
             },
             "description": "An array of StandardError objects detailing any errors encountered during the batch operation.",
             "example": null
@@ -382708,7 +383094,7 @@
         },
         "example": null
       },
-      "StandardError": {
+      "CmsStandardError": {
         "required": [
           "category",
           "context",
@@ -382725,7 +383111,7 @@
             "example": null
           },
           "context": {
-            "$ref": "#/components/schemas/StandardErrorContextProperty2"
+            "$ref": "#/components/schemas/CmsStandardErrorContext"
           },
           "errors": {
             "type": "array",
@@ -382741,7 +383127,7 @@
             "example": null
           },
           "links": {
-            "$ref": "#/components/schemas/StandardErrorLinksProperty2"
+            "$ref": "#/components/schemas/CmsStandardErrorLinks"
           },
           "message": {
             "type": "string",
@@ -382754,7 +383140,7 @@
             "example": null
           },
           "subCategory": {
-            "$ref": "#/components/schemas/StandardErrorSubCategoryProperty2"
+            "$ref": "#/components/schemas/CmsStandardErrorSubCategory"
           }
         },
         "description": "Ye olde error",
@@ -408570,7 +408956,7 @@
           "errors": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CmsStandardError"
+              "$ref": "#/components/schemas/CmsStandardError2"
             },
             "description": "Errors in batch operation.",
             "example": null
@@ -408672,7 +409058,7 @@
           "errors": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CmsStandardError"
+              "$ref": "#/components/schemas/CmsStandardError2"
             },
             "description": "Errors in batch operation.",
             "example": null
@@ -409915,7 +410301,7 @@
         },
         "example": null
       },
-      "CmsStandardError": {
+      "CmsStandardError2": {
         "required": [
           "category",
           "context",
@@ -409932,7 +410318,7 @@
             "example": null
           },
           "context": {
-            "$ref": "#/components/schemas/CmsStandardErrorContext"
+            "$ref": "#/components/schemas/CmsStandardError2Context"
           },
           "errors": {
             "type": "array",
@@ -409948,7 +410334,7 @@
             "example": null
           },
           "links": {
-            "$ref": "#/components/schemas/CmsStandardErrorLinks"
+            "$ref": "#/components/schemas/CmsStandardError2Links"
           },
           "message": {
             "type": "string",
@@ -409961,7 +410347,7 @@
             "example": null
           },
           "subCategory": {
-            "$ref": "#/components/schemas/CmsStandardErrorSubCategory"
+            "$ref": "#/components/schemas/CmsStandardError2SubCategory"
           }
         },
         "description": "Ye olde error",
@@ -428833,6 +429219,108 @@
         },
         "example": null
       },
+      "BatchResponseBlogPost": {
+        "required": [
+          "completedAt",
+          "results",
+          "startedAt",
+          "status"
+        ],
+        "type": "object",
+        "properties": {
+          "completedAt": {
+            "type": "string",
+            "description": "Time of batch operation completion.",
+            "format": "date-time",
+            "example": null
+          },
+          "links": {
+            "$ref": "#/components/schemas/BatchResponseBlogPostLinks"
+          },
+          "requestedAt": {
+            "type": "string",
+            "description": "Time of batch operation request.",
+            "format": "date-time",
+            "example": null
+          },
+          "results": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BlogPost"
+            },
+            "description": "Results of batch operation.",
+            "example": null
+          },
+          "startedAt": {
+            "type": "string",
+            "description": "Time of batch operation start.",
+            "format": "date-time",
+            "example": null
+          },
+          "status": {
+            "$ref": "#/components/schemas/BatchResponseBlogPostStatus"
+          }
+        },
+        "example": null
+      },
+      "BatchResponseBlogPostWithErrors": {
+        "required": [
+          "completedAt",
+          "results",
+          "startedAt",
+          "status"
+        ],
+        "type": "object",
+        "properties": {
+          "completedAt": {
+            "type": "string",
+            "description": "Time of batch operation completion.",
+            "format": "date-time",
+            "example": null
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CmsStandardError3"
+            },
+            "description": "Errors in batch operation.",
+            "example": null
+          },
+          "links": {
+            "$ref": "#/components/schemas/BatchResponseBlogPostWithErrorsLinks"
+          },
+          "numErrors": {
+            "type": "integer",
+            "description": "Number of errors.",
+            "format": "int32",
+            "example": null
+          },
+          "requestedAt": {
+            "type": "string",
+            "description": "Time of batch operation request.",
+            "format": "date-time",
+            "example": null
+          },
+          "results": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BlogPost"
+            },
+            "description": "Results of batch operation.",
+            "example": null
+          },
+          "startedAt": {
+            "type": "string",
+            "description": "Time of batch operation start.",
+            "format": "date-time",
+            "example": null
+          },
+          "status": {
+            "$ref": "#/components/schemas/BatchResponseBlogPostWithErrorsStatus"
+          }
+        },
+        "example": null
+      },
       "BlogPost": {
         "required": [
           "abStatus",
@@ -429927,6 +430415,58 @@
             "example": null
           }
         },
+        "example": null
+      },
+      "CmsStandardError3": {
+        "required": [
+          "category",
+          "context",
+          "errors",
+          "links",
+          "message",
+          "status"
+        ],
+        "type": "object",
+        "properties": {
+          "category": {
+            "type": "string",
+            "description": "Error category.",
+            "example": null
+          },
+          "context": {
+            "$ref": "#/components/schemas/CmsStandardError3Context"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CmsErrorDetail7"
+            },
+            "description": "List of error details.",
+            "example": null
+          },
+          "id": {
+            "type": "string",
+            "description": "Error ID.",
+            "example": null
+          },
+          "links": {
+            "$ref": "#/components/schemas/CmsStandardError3Links"
+          },
+          "message": {
+            "type": "string",
+            "description": "Error message.",
+            "example": null
+          },
+          "status": {
+            "type": "string",
+            "description": "Error status.",
+            "example": null
+          },
+          "subCategory": {
+            "$ref": "#/components/schemas/CmsStandardError3SubCategory"
+          }
+        },
+        "description": "Ye olde error",
         "example": null
       },
       "CmsStyles": {
@@ -439020,6 +439560,72 @@
             {
               "value": "zu-za",
               "name": "ZuZa"
+            }
+          ]
+        }
+      },
+      "BatchResponseBlogPostStatus": {
+        "enum": [
+          "CANCELED",
+          "COMPLETE",
+          "PENDING",
+          "PROCESSING"
+        ],
+        "type": "string",
+        "description": "Status of batch operation.",
+        "example": null,
+        "x-ms-enum": {
+          "name": "BatchResponseBlogPostStatus",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "CANCELED",
+              "name": "Canceled"
+            },
+            {
+              "value": "COMPLETE",
+              "name": "Complete"
+            },
+            {
+              "value": "PENDING",
+              "name": "Pending"
+            },
+            {
+              "value": "PROCESSING",
+              "name": "Processing"
+            }
+          ]
+        }
+      },
+      "BatchResponseBlogPostWithErrorsStatus": {
+        "enum": [
+          "CANCELED",
+          "COMPLETE",
+          "PENDING",
+          "PROCESSING"
+        ],
+        "type": "string",
+        "description": "Status of batch operation.",
+        "example": null,
+        "x-ms-enum": {
+          "name": "BatchResponseBlogPostWithErrorsStatus",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "CANCELED",
+              "name": "Canceled"
+            },
+            {
+              "value": "COMPLETE",
+              "name": "Complete"
+            },
+            {
+              "value": "PENDING",
+              "name": "Pending"
+            },
+            {
+              "value": "PROCESSING",
+              "name": "Processing"
             }
           ]
         }
@@ -448548,6 +449154,16 @@
             }
           ]
         }
+      },
+      "PostCmsBlogs202609PostsBatchCreateCreateSuccessResponse": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/BatchResponseBlogPost"
+          },
+          {
+            "$ref": "#/components/schemas/BatchResponseBlogPostWithErrors"
+          }
+        ]
       },
       "ContentSearchResult": {
         "required": [
@@ -458301,6 +458917,108 @@
         },
         "example": null
       },
+      "BatchResponseTag": {
+        "required": [
+          "completedAt",
+          "results",
+          "startedAt",
+          "status"
+        ],
+        "type": "object",
+        "properties": {
+          "completedAt": {
+            "type": "string",
+            "description": "Time of batch operation completion.",
+            "format": "date-time",
+            "example": null
+          },
+          "links": {
+            "$ref": "#/components/schemas/BatchResponseTagLinks"
+          },
+          "requestedAt": {
+            "type": "string",
+            "description": "Time of batch operation request.",
+            "format": "date-time",
+            "example": null
+          },
+          "results": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Tag"
+            },
+            "description": "Results of batch operation.",
+            "example": null
+          },
+          "startedAt": {
+            "type": "string",
+            "description": "Time of batch operation start.",
+            "format": "date-time",
+            "example": null
+          },
+          "status": {
+            "$ref": "#/components/schemas/BatchResponseTagStatus"
+          }
+        },
+        "example": null
+      },
+      "BatchResponseTagWithErrors": {
+        "required": [
+          "completedAt",
+          "results",
+          "startedAt",
+          "status"
+        ],
+        "type": "object",
+        "properties": {
+          "completedAt": {
+            "type": "string",
+            "description": "Time of batch operation completion.",
+            "format": "date-time",
+            "example": null
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CmsStandardError4"
+            },
+            "description": "Errors in batch operation.",
+            "example": null
+          },
+          "links": {
+            "$ref": "#/components/schemas/BatchResponseTagWithErrorsLinks"
+          },
+          "numErrors": {
+            "type": "integer",
+            "description": "Number of errors.",
+            "format": "int32",
+            "example": null
+          },
+          "requestedAt": {
+            "type": "string",
+            "description": "Time of batch operation request.",
+            "format": "date-time",
+            "example": null
+          },
+          "results": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Tag"
+            },
+            "description": "Results of batch operation.",
+            "example": null
+          },
+          "startedAt": {
+            "type": "string",
+            "description": "Time of batch operation start.",
+            "format": "date-time",
+            "example": null
+          },
+          "status": {
+            "$ref": "#/components/schemas/BatchResponseTagWithErrorsStatus"
+          }
+        },
+        "example": null
+      },
       "CollectionResponseWithTotalTagForwardPaging": {
         "required": [
           "results",
@@ -458471,6 +459189,58 @@
             "example": null
           }
         },
+        "example": null
+      },
+      "CmsStandardError4": {
+        "required": [
+          "category",
+          "context",
+          "errors",
+          "links",
+          "message",
+          "status"
+        ],
+        "type": "object",
+        "properties": {
+          "category": {
+            "type": "string",
+            "description": "Error category.",
+            "example": null
+          },
+          "context": {
+            "$ref": "#/components/schemas/CmsStandardError4Context"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CmsErrorDetail10"
+            },
+            "description": "List of error details.",
+            "example": null
+          },
+          "id": {
+            "type": "string",
+            "description": "Error ID.",
+            "example": null
+          },
+          "links": {
+            "$ref": "#/components/schemas/CmsStandardError4Links"
+          },
+          "message": {
+            "type": "string",
+            "description": "Error message.",
+            "example": null
+          },
+          "status": {
+            "type": "string",
+            "description": "Error status.",
+            "example": null
+          },
+          "subCategory": {
+            "$ref": "#/components/schemas/CmsStandardError4SubCategory"
+          }
+        },
+        "description": "Ye olde error",
         "example": null
       },
       "Tag": {
@@ -467522,6 +468292,72 @@
           ]
         }
       },
+      "BatchResponseTagStatus": {
+        "enum": [
+          "CANCELED",
+          "COMPLETE",
+          "PENDING",
+          "PROCESSING"
+        ],
+        "type": "string",
+        "description": "Status of batch operation.",
+        "example": null,
+        "x-ms-enum": {
+          "name": "BatchResponseTagStatus",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "CANCELED",
+              "name": "Canceled"
+            },
+            {
+              "value": "COMPLETE",
+              "name": "Complete"
+            },
+            {
+              "value": "PENDING",
+              "name": "Pending"
+            },
+            {
+              "value": "PROCESSING",
+              "name": "Processing"
+            }
+          ]
+        }
+      },
+      "BatchResponseTagWithErrorsStatus": {
+        "enum": [
+          "CANCELED",
+          "COMPLETE",
+          "PENDING",
+          "PROCESSING"
+        ],
+        "type": "string",
+        "description": "Status of batch operation.",
+        "example": null,
+        "x-ms-enum": {
+          "name": "BatchResponseTagWithErrorsStatus",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "CANCELED",
+              "name": "Canceled"
+            },
+            {
+              "value": "COMPLETE",
+              "name": "Complete"
+            },
+            {
+              "value": "PENDING",
+              "name": "Pending"
+            },
+            {
+              "value": "PROCESSING",
+              "name": "Processing"
+            }
+          ]
+        }
+      },
       "TagLanguage": {
         "enum": [
           "aa",
@@ -476456,6 +477292,16 @@
             }
           ]
         }
+      },
+      "PostCmsBlogs202609TagsBatchCreateCreateBatchSuccessResponse": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/BatchResponseTag"
+          },
+          {
+            "$ref": "#/components/schemas/BatchResponseTagWithErrors"
+          }
+        ]
       },
       "UrlMappingsError": {
         "required": [
@@ -488678,6 +489524,7 @@
           "hs_first_outreach_date",
           "hs_first_subscription_create_date",
           "hs_full_name_or_email",
+          "hs_geocode_mapping_id",
           "hs_geohash_1",
           "hs_geohash_2",
           "hs_geohash_3",
@@ -489611,6 +490458,10 @@
             {
               "value": "hs_full_name_or_email",
               "name": "HsFullNameOrEmail"
+            },
+            {
+              "value": "hs_geocode_mapping_id",
+              "name": "HsGeocodeMappingId"
             },
             {
               "value": "hs_geohash_1",
@@ -633831,27 +634682,27 @@
         "type": "string",
         "example": null
       },
-      "CmsGetCmsBlogs202609AuthorsCursorCmsBlogsV3AuthorsCursor200MediaResponseSchema": {
+      "CmsGetCmsBlogs202609AuthorsCursorCmsBlogsV3AuthorsCursor200ResponseSchema": {
         "type": "object",
         "example": null
       },
-      "CmsGetCmsBlogs202609AuthorsCursorQueryCmsBlogsV3AuthorsCursorQuery200MediaResponseSchema": {
+      "CmsGetCmsBlogs202609AuthorsCursorQueryCmsBlogsV3AuthorsCursorQuery200ResponseSchema": {
         "type": "object",
         "example": null
       },
-      "CmsGetCmsBlogs202609PostsCursorCmsBlogsV3PostsCursor200MediaResponseSchema": {
+      "CmsGetCmsBlogs202609PostsCursorCmsBlogsV3PostsCursor200ResponseSchema": {
         "type": "object",
         "example": null
       },
-      "CmsGetCmsBlogs202609PostsCursorQueryCmsBlogsV3PostsCursorQuery200MediaResponseSchema": {
+      "CmsGetCmsBlogs202609PostsCursorQueryCmsBlogsV3PostsCursorQuery200ResponseSchema": {
         "type": "object",
         "example": null
       },
-      "CmsGetCmsBlogs202609TagsCursorCmsBlogsV3TagsCursor200MediaResponseSchema": {
+      "CmsGetCmsBlogs202609TagsCursorCmsBlogsV3TagsCursor200ResponseSchema": {
         "type": "object",
         "example": null
       },
-      "CmsGetCmsBlogs202609TagsCursorQueryCmsBlogsV3TagsCursorQuery200MediaResponseSchema": {
+      "CmsGetCmsBlogs202609TagsCursorQueryCmsBlogsV3TagsCursorQuery200ResponseSchema": {
         "type": "object",
         "example": null
       },
@@ -634323,6 +635174,24 @@
         "type": "object",
         "example": null
       },
+      "BatchResponseBlogAuthorLinks": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string",
+          "example": null
+        },
+        "description": "Links associated with batch operation.",
+        "example": null
+      },
+      "BatchResponseBlogAuthorWithErrorsLinks": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string",
+          "example": null
+        },
+        "description": "Links associated with batch operation.",
+        "example": null
+      },
       "CmsErrorContext": {
         "type": "object",
         "additionalProperties": {
@@ -634357,6 +635226,33 @@
         },
         "description": "Context about the error condition",
         "example": "{missingScopes=[scope1, scope2]}"
+      },
+      "StandardErrorContextProperty2": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "example": null
+          },
+          "example": null
+        },
+        "description": "Error context.",
+        "example": null
+      },
+      "StandardErrorLinksProperty2": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string",
+          "example": null
+        },
+        "description": "Error links.",
+        "example": null
+      },
+      "StandardErrorSubCategoryProperty2": {
+        "type": "object",
+        "description": "Error subcategory.",
+        "example": null
       },
       "UpdateLanguagesRequestVNextLanguages": {
         "type": "object",
@@ -634601,7 +635497,7 @@
         "description": "Specifies the key value pairs of the [metadata fields](https://developers.hubspot.com/docs/cms/guides/dynamic-pages/hubdb#dynamic-pages) with the associated column IDs.",
         "example": null
       },
-      "StandardErrorContextProperty2": {
+      "CmsStandardErrorContext": {
         "type": "object",
         "additionalProperties": {
           "type": "array",
@@ -634614,7 +635510,7 @@
         "description": "An object containing context-specific information pertinent to the error.",
         "example": null
       },
-      "StandardErrorLinksProperty2": {
+      "CmsStandardErrorLinks": {
         "type": "object",
         "additionalProperties": {
           "type": "string",
@@ -634623,7 +635519,7 @@
         "description": "An object containing links related to the error, such as documentation URLs or support contact pages.",
         "example": null
       },
-      "StandardErrorSubCategoryProperty2": {
+      "CmsStandardErrorSubCategory": {
         "type": "object",
         "description": "Identifies the subcategory of the error, providing more specific context within the main category.",
         "example": null
@@ -634880,7 +635776,7 @@
         "description": "A data structure containing the data for all the modules for this page.",
         "example": null
       },
-      "CmsStandardErrorContext": {
+      "CmsStandardError2Context": {
         "type": "object",
         "additionalProperties": {
           "type": "array",
@@ -634893,7 +635789,7 @@
         "description": "Error context.",
         "example": null
       },
-      "CmsStandardErrorLinks": {
+      "CmsStandardError2Links": {
         "type": "object",
         "additionalProperties": {
           "type": "string",
@@ -634902,7 +635798,7 @@
         "description": "Error links.",
         "example": null
       },
-      "CmsStandardErrorSubCategory": {
+      "CmsStandardError2SubCategory": {
         "type": "object",
         "description": "Error subcategory.",
         "example": null
@@ -634925,6 +635821,24 @@
       },
       "CmsBatchInputJsonNode2InputsItem": {
         "type": "object",
+        "example": null
+      },
+      "BatchResponseBlogPostLinks": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string",
+          "example": null
+        },
+        "description": "Links associated with batch operation.",
+        "example": null
+      },
+      "BatchResponseBlogPostWithErrorsLinks": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string",
+          "example": null
+        },
+        "description": "Links associated with batch operation.",
         "example": null
       },
       "BlogPostAttachedStylesheetsItem": {
@@ -635023,6 +635937,33 @@
           "$ref": "#/components/schemas/CmsLayoutSectionParamsAdditionalProperties"
         },
         "description": "Additional parameters for the layout section, typically used for configuration.",
+        "example": null
+      },
+      "CmsStandardError3Context": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "example": null
+          },
+          "example": null
+        },
+        "description": "Error context.",
+        "example": null
+      },
+      "CmsStandardError3Links": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string",
+          "example": null
+        },
+        "description": "Error links.",
+        "example": null
+      },
+      "CmsStandardError3SubCategory": {
+        "type": "object",
+        "description": "Error subcategory.",
         "example": null
       },
       "CmsStylesBreakpointStyles": {
@@ -635150,6 +636091,24 @@
         "type": "object",
         "example": null
       },
+      "BatchResponseTagLinks": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string",
+          "example": null
+        },
+        "description": "Links associated with batch operation.",
+        "example": null
+      },
+      "BatchResponseTagWithErrorsLinks": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string",
+          "example": null
+        },
+        "description": "Links associated with batch operation.",
+        "example": null
+      },
       "CmsError10Context": {
         "type": "object",
         "additionalProperties": {
@@ -635184,6 +636143,33 @@
         },
         "description": "Context about the error condition",
         "example": "{missingScopes=[scope1, scope2]}"
+      },
+      "CmsStandardError4Context": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "example": null
+          },
+          "example": null
+        },
+        "description": "Error context.",
+        "example": null
+      },
+      "CmsStandardError4Links": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string",
+          "example": null
+        },
+        "description": "Error links.",
+        "example": null
+      },
+      "CmsStandardError4SubCategory": {
+        "type": "object",
+        "description": "Error subcategory.",
+        "example": null
       },
       "CmsUpdateLanguagesRequestVNext4Languages": {
         "type": "object",
@@ -648766,20 +649752,27 @@
             "authorizationUrl": "https://app.hubspot.com/oauth/authorize",
             "tokenUrl": "https://api.hubapi.com/oauth/v1/token",
             "scopes": {
+              "cms.blogs.blog_posts.read": "",
               "content": ""
             }
           }
+        },
+        "x-hubspot-app-availability": {
+          "cms.blogs.blog_posts.read": {
+            "user": [
+              "public",
+              "private"
+            ],
+            "developer": false
+          },
+          "content": {
+            "portal": [
+              "public",
+              "private"
+            ],
+            "developer": false
+          }
         }
-      },
-      "private_apps": {
-        "type": "apiKey",
-        "name": "private-app",
-        "in": "header"
-      },
-      "private_apps_legacy": {
-        "type": "apiKey",
-        "name": "private-app-legacy",
-        "in": "header"
       },
       "cms_developer_hapikey_2": {
         "type": "apiKey",
@@ -649057,20 +650050,27 @@
             "authorizationUrl": "https://app.hubspot.com/oauth/authorize",
             "tokenUrl": "https://api.hubapi.com/oauth/v1/token",
             "scopes": {
+              "cms.blogs.blog_posts.read": "",
               "content": ""
             }
           }
+        },
+        "x-hubspot-app-availability": {
+          "cms.blogs.blog_posts.read": {
+            "user": [
+              "public",
+              "private"
+            ],
+            "developer": false
+          },
+          "content": {
+            "portal": [
+              "public",
+              "private"
+            ],
+            "developer": false
+          }
         }
-      },
-      "cms_private_apps": {
-        "type": "apiKey",
-        "name": "private-app",
-        "in": "header"
-      },
-      "cms_private_apps_legacy": {
-        "type": "apiKey",
-        "name": "private-app-legacy",
-        "in": "header"
       },
       "cms_developer_hapikey_8": {
         "type": "apiKey",
@@ -649148,20 +650148,27 @@
             "authorizationUrl": "https://app.hubspot.com/oauth/authorize",
             "tokenUrl": "https://api.hubapi.com/oauth/v1/token",
             "scopes": {
+              "cms.blogs.blog_posts.read": "",
               "content": ""
             }
           }
+        },
+        "x-hubspot-app-availability": {
+          "cms.blogs.blog_posts.read": {
+            "user": [
+              "public",
+              "private"
+            ],
+            "developer": false
+          },
+          "content": {
+            "portal": [
+              "public",
+              "private"
+            ],
+            "developer": false
+          }
         }
-      },
-      "cms_private_apps_2": {
-        "type": "apiKey",
-        "name": "private-app",
-        "in": "header"
-      },
-      "cms_private_apps_legacy_2": {
-        "type": "apiKey",
-        "name": "private-app-legacy",
-        "in": "header"
       },
       "url_mappings_developer_hapikey": {
         "type": "apiKey",
@@ -649204,17 +650211,16 @@
               "content": ""
             }
           }
+        },
+        "x-hubspot-app-availability": {
+          "content": {
+            "portal": [
+              "public",
+              "private"
+            ],
+            "developer": false
+          }
         }
-      },
-      "cms_private_apps_3": {
-        "type": "apiKey",
-        "name": "private-app",
-        "in": "header"
-      },
-      "cms_private_apps_legacy_3": {
-        "type": "apiKey",
-        "name": "private-app-legacy",
-        "in": "header"
       },
       "commerce_developer_hapikey": {
         "type": "apiKey",
@@ -649510,12 +650516,12 @@
           }
         }
       },
-      "visitor_identification_private_apps": {
+      "private_apps": {
         "type": "apiKey",
         "name": "private-app",
         "in": "header"
       },
-      "visitor_identification_private_apps_legacy": {
+      "private_apps_legacy": {
         "type": "apiKey",
         "name": "private-app-legacy",
         "in": "header"
@@ -688601,20 +689607,92 @@
               "crm.objects.custom.sensitive.write.v2": "",
               "crm.objects.custom.write": "",
               "crm.schemas.custom.read": "",
-              "crm.schemas.custom.write": ""
+              "crm.schemas.custom.write": "",
+              "oauth": ""
             }
           }
+        },
+        "x-hubspot-app-availability": {
+          "crm.objects.custom.highly_sensitive.read.v2": {
+            "portal": [
+              "private"
+            ],
+            "developer": false
+          },
+          "crm.objects.custom.highly_sensitive.write.v2": {
+            "portal": [
+              "private"
+            ],
+            "developer": false
+          },
+          "crm.objects.custom.read": {
+            "portal": [
+              "public",
+              "private"
+            ],
+            "user": [
+              "public",
+              "private"
+            ],
+            "developer": true
+          },
+          "crm.objects.custom.sensitive.read.v2": {
+            "portal": [
+              "private"
+            ],
+            "developer": false
+          },
+          "crm.objects.custom.sensitive.write.v2": {
+            "portal": [
+              "private"
+            ],
+            "developer": false
+          },
+          "crm.objects.custom.write": {
+            "portal": [
+              "public",
+              "private"
+            ],
+            "user": [
+              "public",
+              "private"
+            ],
+            "developer": true
+          },
+          "crm.schemas.custom.read": {
+            "portal": [
+              "public",
+              "private"
+            ],
+            "user": [
+              "public",
+              "private"
+            ],
+            "developer": true
+          },
+          "crm.schemas.custom.write": {
+            "portal": [
+              "public",
+              "private"
+            ],
+            "user": [
+              "public",
+              "private"
+            ],
+            "developer": true
+          },
+          "oauth": {
+            "portal": [
+              "public",
+              "private"
+            ],
+            "user": [
+              "public",
+              "private"
+            ],
+            "developer": false
+          }
         }
-      },
-      "crm_object_schemas_private_apps": {
-        "type": "apiKey",
-        "name": "private-app",
-        "in": "header"
-      },
-      "crm_object_schemas_private_apps_legacy": {
-        "type": "apiKey",
-        "name": "private-app-legacy",
-        "in": "header"
       },
       "crm_developer_hapikey_49": {
         "type": "apiKey",
@@ -695945,160 +697023,6 @@
           "dataHub": "FREE"
         },
         "x-client-unused-schemas": {
-          "BatchResponseBlogAuthor": {
-            "required": [
-              "completedAt",
-              "results",
-              "startedAt",
-              "status"
-            ],
-            "type": "object",
-            "properties": {
-              "completedAt": {
-                "type": "string",
-                "description": "Time of batch operation completion.",
-                "format": "date-time",
-                "example": null
-              },
-              "links": {
-                "$ref": "#/components/schemas/BatchResponseBlogAuthorLinksProperty"
-              },
-              "requestedAt": {
-                "type": "string",
-                "description": "Time of batch operation request.",
-                "format": "date-time",
-                "example": null
-              },
-              "results": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/BlogAuthor"
-                },
-                "description": "Results of batch operation.",
-                "example": null
-              },
-              "startedAt": {
-                "type": "string",
-                "description": "Time of batch operation start.",
-                "format": "date-time",
-                "example": null
-              },
-              "status": {
-                "$ref": "#/components/schemas/BatchResponseBlogAuthorStatus"
-              }
-            },
-            "example": null
-          },
-          "BatchResponseBlogAuthorWithErrors": {
-            "required": [
-              "completedAt",
-              "results",
-              "startedAt",
-              "status"
-            ],
-            "type": "object",
-            "properties": {
-              "completedAt": {
-                "type": "string",
-                "description": "Time of batch operation completion.",
-                "format": "date-time",
-                "example": null
-              },
-              "errors": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/StandardError"
-                },
-                "description": "Errors in batch operation.",
-                "example": null
-              },
-              "links": {
-                "$ref": "#/components/schemas/BatchResponseBlogAuthorWithErrorsLinksProperty"
-              },
-              "numErrors": {
-                "type": "integer",
-                "description": "Number of errors.",
-                "format": "int32",
-                "example": null
-              },
-              "requestedAt": {
-                "type": "string",
-                "description": "Time of batch operation request.",
-                "format": "date-time",
-                "example": null
-              },
-              "results": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/BlogAuthor"
-                },
-                "description": "Results of batch operation.",
-                "example": null
-              },
-              "startedAt": {
-                "type": "string",
-                "description": "Time of batch operation start.",
-                "format": "date-time",
-                "example": null
-              },
-              "status": {
-                "$ref": "#/components/schemas/BatchResponseBlogAuthorWithErrorsStatus"
-              }
-            },
-            "example": null
-          },
-          "StandardError": {
-            "required": [
-              "category",
-              "context",
-              "errors",
-              "links",
-              "message",
-              "status"
-            ],
-            "type": "object",
-            "properties": {
-              "category": {
-                "type": "string",
-                "description": "Error category.",
-                "example": null
-              },
-              "context": {
-                "$ref": "#/components/schemas/StandardErrorContextProperty"
-              },
-              "errors": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/ErrorDetail"
-                },
-                "description": "List of error details.",
-                "example": null
-              },
-              "id": {
-                "type": "string",
-                "description": "Error ID.",
-                "example": null
-              },
-              "links": {
-                "$ref": "#/components/schemas/StandardErrorLinksProperty"
-              },
-              "message": {
-                "type": "string",
-                "description": "Error message.",
-                "example": null
-              },
-              "status": {
-                "type": "string",
-                "description": "Error status.",
-                "example": null
-              },
-              "subCategory": {
-                "$ref": "#/components/schemas/StandardErrorSubCategoryProperty"
-              }
-            },
-            "description": "Ye olde error",
-            "example": null
-          },
           "BatchInputJsonNodeInputsItem": {
             "type": "object",
             "example": null
@@ -696194,117 +697118,6 @@
           "ExamplePayload": {
             "type": "object",
             "description": "Placeholder schema for path example refs"
-          },
-          "BatchResponseBlogAuthorLinksProperty": {
-            "type": "object",
-            "additionalProperties": {
-              "type": "string",
-              "example": null
-            },
-            "description": "Links associated with batch operation.",
-            "example": null
-          },
-          "BatchResponseBlogAuthorWithErrorsLinksProperty": {
-            "type": "object",
-            "additionalProperties": {
-              "type": "string",
-              "example": null
-            },
-            "description": "Links associated with batch operation.",
-            "example": null
-          },
-          "StandardErrorContextProperty": {
-            "type": "object",
-            "additionalProperties": {
-              "type": "array",
-              "items": {
-                "type": "string",
-                "example": null
-              },
-              "example": null
-            },
-            "description": "Error context.",
-            "example": null
-          },
-          "StandardErrorLinksProperty": {
-            "type": "object",
-            "additionalProperties": {
-              "type": "string",
-              "example": null
-            },
-            "description": "Error links.",
-            "example": null
-          },
-          "StandardErrorSubCategoryProperty": {
-            "type": "object",
-            "description": "Error subcategory.",
-            "example": null
-          },
-          "BatchResponseBlogAuthorStatus": {
-            "enum": [
-              "CANCELED",
-              "COMPLETE",
-              "PENDING",
-              "PROCESSING"
-            ],
-            "type": "string",
-            "description": "Status of batch operation.",
-            "example": null,
-            "x-ms-enum": {
-              "name": "BatchResponseBlogAuthorStatus",
-              "modelAsString": false,
-              "values": [
-                {
-                  "value": "CANCELED",
-                  "name": "Canceled"
-                },
-                {
-                  "value": "COMPLETE",
-                  "name": "Complete"
-                },
-                {
-                  "value": "PENDING",
-                  "name": "Pending"
-                },
-                {
-                  "value": "PROCESSING",
-                  "name": "Processing"
-                }
-              ]
-            }
-          },
-          "BatchResponseBlogAuthorWithErrorsStatus": {
-            "enum": [
-              "CANCELED",
-              "COMPLETE",
-              "PENDING",
-              "PROCESSING"
-            ],
-            "type": "string",
-            "description": "Status of batch operation.",
-            "example": null,
-            "x-ms-enum": {
-              "name": "BatchResponseBlogAuthorWithErrorsStatus",
-              "modelAsString": false,
-              "values": [
-                {
-                  "value": "CANCELED",
-                  "name": "Canceled"
-                },
-                {
-                  "value": "COMPLETE",
-                  "name": "Complete"
-                },
-                {
-                  "value": "PENDING",
-                  "name": "Pending"
-                },
-                {
-                  "value": "PROCESSING",
-                  "name": "Processing"
-                }
-              ]
-            }
           },
           "UpdateLanguagesRequestVNextLanguagesAdditionalProperties": {
             "enum": [
@@ -700772,6 +701585,26 @@
                 }
               ]
             }
+          },
+          "PostCmsBlogs202609AuthorsBatchReadReadBatchSuccessResponse": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/BatchResponseBlogAuthor"
+              },
+              {
+                "$ref": "#/components/schemas/BatchResponseBlogAuthorWithErrors"
+              }
+            ]
+          },
+          "PostCmsBlogs202609AuthorsBatchUpdateUpdateBatchSuccessResponse": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/BatchResponseBlogAuthor"
+              },
+              {
+                "$ref": "#/components/schemas/BatchResponseBlogAuthorWithErrors"
+              }
+            ]
           }
         }
       }
@@ -749399,108 +750232,6 @@
           "dataHub": "FREE"
         },
         "x-client-unused-schemas": {
-          "BatchResponseBlogPost": {
-            "required": [
-              "completedAt",
-              "results",
-              "startedAt",
-              "status"
-            ],
-            "type": "object",
-            "properties": {
-              "completedAt": {
-                "type": "string",
-                "description": "Time of batch operation completion.",
-                "format": "date-time",
-                "example": null
-              },
-              "links": {
-                "$ref": "#/components/schemas/BatchResponseBlogPostLinksProperty"
-              },
-              "requestedAt": {
-                "type": "string",
-                "description": "Time of batch operation request.",
-                "format": "date-time",
-                "example": null
-              },
-              "results": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/BlogPost"
-                },
-                "description": "Results of batch operation.",
-                "example": null
-              },
-              "startedAt": {
-                "type": "string",
-                "description": "Time of batch operation start.",
-                "format": "date-time",
-                "example": null
-              },
-              "status": {
-                "$ref": "#/components/schemas/BatchResponseBlogPostStatus"
-              }
-            },
-            "example": null
-          },
-          "BatchResponseBlogPostWithErrors": {
-            "required": [
-              "completedAt",
-              "results",
-              "startedAt",
-              "status"
-            ],
-            "type": "object",
-            "properties": {
-              "completedAt": {
-                "type": "string",
-                "description": "Time of batch operation completion.",
-                "format": "date-time",
-                "example": null
-              },
-              "errors": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/StandardError"
-                },
-                "description": "Errors in batch operation.",
-                "example": null
-              },
-              "links": {
-                "$ref": "#/components/schemas/BatchResponseBlogPostWithErrorsLinksProperty"
-              },
-              "numErrors": {
-                "type": "integer",
-                "description": "Number of errors.",
-                "format": "int32",
-                "example": null
-              },
-              "requestedAt": {
-                "type": "string",
-                "description": "Time of batch operation request.",
-                "format": "date-time",
-                "example": null
-              },
-              "results": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/BlogPost"
-                },
-                "description": "Results of batch operation.",
-                "example": null
-              },
-              "startedAt": {
-                "type": "string",
-                "description": "Time of batch operation start.",
-                "format": "date-time",
-                "example": null
-              },
-              "status": {
-                "$ref": "#/components/schemas/BatchResponseBlogPostWithErrorsStatus"
-              }
-            },
-            "example": null
-          },
           "CursorPagedResultBlogAuthorLong": {
             "type": "object",
             "example": null
@@ -749515,58 +750246,6 @@
           },
           "PublicAccessRule": {
             "type": "object",
-            "example": null
-          },
-          "StandardError": {
-            "required": [
-              "category",
-              "context",
-              "errors",
-              "links",
-              "message",
-              "status"
-            ],
-            "type": "object",
-            "properties": {
-              "category": {
-                "type": "string",
-                "description": "Error category.",
-                "example": null
-              },
-              "context": {
-                "$ref": "#/components/schemas/StandardErrorContextProperty"
-              },
-              "errors": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/ErrorDetail"
-                },
-                "description": "List of error details.",
-                "example": null
-              },
-              "id": {
-                "type": "string",
-                "description": "Error ID.",
-                "example": null
-              },
-              "links": {
-                "$ref": "#/components/schemas/StandardErrorLinksProperty"
-              },
-              "message": {
-                "type": "string",
-                "description": "Error message.",
-                "example": null
-              },
-              "status": {
-                "type": "string",
-                "description": "Error status.",
-                "example": null
-              },
-              "subCategory": {
-                "$ref": "#/components/schemas/StandardErrorSubCategoryProperty"
-              }
-            },
-            "description": "Ye olde error",
             "example": null
           },
           "BatchInputJsonNodeInputsItem": {
@@ -749748,51 +750427,6 @@
             "type": "object",
             "description": "Placeholder schema for path example refs"
           },
-          "BatchResponseBlogPostLinksProperty": {
-            "type": "object",
-            "additionalProperties": {
-              "type": "string",
-              "example": null
-            },
-            "description": "Links associated with batch operation.",
-            "example": null
-          },
-          "BatchResponseBlogPostWithErrorsLinksProperty": {
-            "type": "object",
-            "additionalProperties": {
-              "type": "string",
-              "example": null
-            },
-            "description": "Links associated with batch operation.",
-            "example": null
-          },
-          "StandardErrorContextProperty": {
-            "type": "object",
-            "additionalProperties": {
-              "type": "array",
-              "items": {
-                "type": "string",
-                "example": null
-              },
-              "example": null
-            },
-            "description": "Error context.",
-            "example": null
-          },
-          "StandardErrorLinksProperty": {
-            "type": "object",
-            "additionalProperties": {
-              "type": "string",
-              "example": null
-            },
-            "description": "Error links.",
-            "example": null
-          },
-          "StandardErrorSubCategoryProperty": {
-            "type": "object",
-            "description": "Error subcategory.",
-            "example": null
-          },
           "BlogPostAttachedStylesheetsItemAdditionalPropertiesProperty": {
             "type": "object",
             "example": null
@@ -749812,72 +750446,6 @@
           "LayoutSectionParamsAdditionalPropertiesProperty": {
             "type": "object",
             "example": null
-          },
-          "BatchResponseBlogPostStatus": {
-            "enum": [
-              "CANCELED",
-              "COMPLETE",
-              "PENDING",
-              "PROCESSING"
-            ],
-            "type": "string",
-            "description": "Status of batch operation.",
-            "example": null,
-            "x-ms-enum": {
-              "name": "BatchResponseBlogPostStatus",
-              "modelAsString": false,
-              "values": [
-                {
-                  "value": "CANCELED",
-                  "name": "Canceled"
-                },
-                {
-                  "value": "COMPLETE",
-                  "name": "Complete"
-                },
-                {
-                  "value": "PENDING",
-                  "name": "Pending"
-                },
-                {
-                  "value": "PROCESSING",
-                  "name": "Processing"
-                }
-              ]
-            }
-          },
-          "BatchResponseBlogPostWithErrorsStatus": {
-            "enum": [
-              "CANCELED",
-              "COMPLETE",
-              "PENDING",
-              "PROCESSING"
-            ],
-            "type": "string",
-            "description": "Status of batch operation.",
-            "example": null,
-            "x-ms-enum": {
-              "name": "BatchResponseBlogPostWithErrorsStatus",
-              "modelAsString": false,
-              "values": [
-                {
-                  "value": "CANCELED",
-                  "name": "Canceled"
-                },
-                {
-                  "value": "COMPLETE",
-                  "name": "Complete"
-                },
-                {
-                  "value": "PENDING",
-                  "name": "Pending"
-                },
-                {
-                  "value": "PROCESSING",
-                  "name": "Processing"
-                }
-              ]
-            }
           },
           "UpdateLanguagesRequestVNextLanguagesAdditionalProperties": {
             "enum": [
@@ -754345,6 +754913,26 @@
                 }
               ]
             }
+          },
+          "PostCmsBlogs202609PostsBatchReadReadSuccessResponse": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/BatchResponseBlogPost"
+              },
+              {
+                "$ref": "#/components/schemas/BatchResponseBlogPostWithErrors"
+              }
+            ]
+          },
+          "PostCmsBlogs202609PostsBatchUpdateUpdateSuccessResponse": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/BatchResponseBlogPost"
+              },
+              {
+                "$ref": "#/components/schemas/BatchResponseBlogPostWithErrors"
+              }
+            ]
           }
         }
       }
@@ -754525,108 +755113,6 @@
           "dataHub": "FREE"
         },
         "x-client-unused-schemas": {
-          "BatchResponseTag": {
-            "required": [
-              "completedAt",
-              "results",
-              "startedAt",
-              "status"
-            ],
-            "type": "object",
-            "properties": {
-              "completedAt": {
-                "type": "string",
-                "description": "Time of batch operation completion.",
-                "format": "date-time",
-                "example": null
-              },
-              "links": {
-                "$ref": "#/components/schemas/BatchResponseTagLinksProperty"
-              },
-              "requestedAt": {
-                "type": "string",
-                "description": "Time of batch operation request.",
-                "format": "date-time",
-                "example": null
-              },
-              "results": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/Tag"
-                },
-                "description": "Results of batch operation.",
-                "example": null
-              },
-              "startedAt": {
-                "type": "string",
-                "description": "Time of batch operation start.",
-                "format": "date-time",
-                "example": null
-              },
-              "status": {
-                "$ref": "#/components/schemas/BatchResponseTagStatus"
-              }
-            },
-            "example": null
-          },
-          "BatchResponseTagWithErrors": {
-            "required": [
-              "completedAt",
-              "results",
-              "startedAt",
-              "status"
-            ],
-            "type": "object",
-            "properties": {
-              "completedAt": {
-                "type": "string",
-                "description": "Time of batch operation completion.",
-                "format": "date-time",
-                "example": null
-              },
-              "errors": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/StandardError"
-                },
-                "description": "Errors in batch operation.",
-                "example": null
-              },
-              "links": {
-                "$ref": "#/components/schemas/BatchResponseTagWithErrorsLinksProperty"
-              },
-              "numErrors": {
-                "type": "integer",
-                "description": "Number of errors.",
-                "format": "int32",
-                "example": null
-              },
-              "requestedAt": {
-                "type": "string",
-                "description": "Time of batch operation request.",
-                "format": "date-time",
-                "example": null
-              },
-              "results": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/Tag"
-                },
-                "description": "Results of batch operation.",
-                "example": null
-              },
-              "startedAt": {
-                "type": "string",
-                "description": "Time of batch operation start.",
-                "format": "date-time",
-                "example": null
-              },
-              "status": {
-                "$ref": "#/components/schemas/BatchResponseTagWithErrorsStatus"
-              }
-            },
-            "example": null
-          },
           "CursorPagedResultBlogAuthorLong": {
             "type": "object",
             "example": null
@@ -754637,58 +755123,6 @@
           },
           "CursorPagedResultTagLong": {
             "type": "object",
-            "example": null
-          },
-          "StandardError": {
-            "required": [
-              "category",
-              "context",
-              "errors",
-              "links",
-              "message",
-              "status"
-            ],
-            "type": "object",
-            "properties": {
-              "category": {
-                "type": "string",
-                "description": "Error category.",
-                "example": null
-              },
-              "context": {
-                "$ref": "#/components/schemas/StandardErrorContextProperty"
-              },
-              "errors": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/ErrorDetail"
-                },
-                "description": "List of error details.",
-                "example": null
-              },
-              "id": {
-                "type": "string",
-                "description": "Error ID.",
-                "example": null
-              },
-              "links": {
-                "$ref": "#/components/schemas/StandardErrorLinksProperty"
-              },
-              "message": {
-                "type": "string",
-                "description": "Error message.",
-                "example": null
-              },
-              "status": {
-                "type": "string",
-                "description": "Error status.",
-                "example": null
-              },
-              "subCategory": {
-                "$ref": "#/components/schemas/StandardErrorSubCategoryProperty"
-              }
-            },
-            "description": "Ye olde error",
             "example": null
           },
           "BatchInputJsonNodeInputsItem": {
@@ -754786,117 +755220,6 @@
           "ExamplePayload": {
             "type": "object",
             "description": "Placeholder schema for path example refs"
-          },
-          "BatchResponseTagLinksProperty": {
-            "type": "object",
-            "additionalProperties": {
-              "type": "string",
-              "example": null
-            },
-            "description": "Links associated with batch operation.",
-            "example": null
-          },
-          "BatchResponseTagWithErrorsLinksProperty": {
-            "type": "object",
-            "additionalProperties": {
-              "type": "string",
-              "example": null
-            },
-            "description": "Links associated with batch operation.",
-            "example": null
-          },
-          "StandardErrorContextProperty": {
-            "type": "object",
-            "additionalProperties": {
-              "type": "array",
-              "items": {
-                "type": "string",
-                "example": null
-              },
-              "example": null
-            },
-            "description": "Error context.",
-            "example": null
-          },
-          "StandardErrorLinksProperty": {
-            "type": "object",
-            "additionalProperties": {
-              "type": "string",
-              "example": null
-            },
-            "description": "Error links.",
-            "example": null
-          },
-          "StandardErrorSubCategoryProperty": {
-            "type": "object",
-            "description": "Error subcategory.",
-            "example": null
-          },
-          "BatchResponseTagStatus": {
-            "enum": [
-              "CANCELED",
-              "COMPLETE",
-              "PENDING",
-              "PROCESSING"
-            ],
-            "type": "string",
-            "description": "Status of batch operation.",
-            "example": null,
-            "x-ms-enum": {
-              "name": "BatchResponseTagStatus",
-              "modelAsString": false,
-              "values": [
-                {
-                  "value": "CANCELED",
-                  "name": "Canceled"
-                },
-                {
-                  "value": "COMPLETE",
-                  "name": "Complete"
-                },
-                {
-                  "value": "PENDING",
-                  "name": "Pending"
-                },
-                {
-                  "value": "PROCESSING",
-                  "name": "Processing"
-                }
-              ]
-            }
-          },
-          "BatchResponseTagWithErrorsStatus": {
-            "enum": [
-              "CANCELED",
-              "COMPLETE",
-              "PENDING",
-              "PROCESSING"
-            ],
-            "type": "string",
-            "description": "Status of batch operation.",
-            "example": null,
-            "x-ms-enum": {
-              "name": "BatchResponseTagWithErrorsStatus",
-              "modelAsString": false,
-              "values": [
-                {
-                  "value": "CANCELED",
-                  "name": "Canceled"
-                },
-                {
-                  "value": "COMPLETE",
-                  "name": "Complete"
-                },
-                {
-                  "value": "PENDING",
-                  "name": "Pending"
-                },
-                {
-                  "value": "PROCESSING",
-                  "name": "Processing"
-                }
-              ]
-            }
           },
           "UpdateLanguagesRequestVNextLanguagesAdditionalProperties": {
             "enum": [
@@ -759364,6 +759687,26 @@
                 }
               ]
             }
+          },
+          "PostCmsBlogs202609TagsBatchReadReadBatchSuccessResponse": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/BatchResponseTag"
+              },
+              {
+                "$ref": "#/components/schemas/BatchResponseTagWithErrors"
+              }
+            ]
+          },
+          "PostCmsBlogs202609TagsBatchUpdateUpdateBatchSuccessResponse": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/BatchResponseTag"
+              },
+              {
+                "$ref": "#/components/schemas/BatchResponseTagWithErrors"
+              }
+            ]
           }
         }
       }
@@ -787133,6 +787476,24 @@
       "type": "object",
       "example": null
     },
+    "BatchResponseBlogAuthorLinksProperty": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "example": null
+      },
+      "description": "Links associated with batch operation.",
+      "example": null
+    },
+    "BatchResponseBlogAuthorWithErrorsLinksProperty": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "example": null
+      },
+      "description": "Links associated with batch operation.",
+      "example": null
+    },
     "CmsErrorContextProperty": {
       "type": "object",
       "additionalProperties": {
@@ -787167,6 +787528,33 @@
       },
       "description": "Context about the error condition",
       "example": "{missingScopes=[scope1, scope2]}"
+    },
+    "StandardErrorContextProperty": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "example": null
+        },
+        "example": null
+      },
+      "description": "Error context.",
+      "example": null
+    },
+    "StandardErrorLinksProperty": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "example": null
+      },
+      "description": "Error links.",
+      "example": null
+    },
+    "StandardErrorSubCategoryProperty": {
+      "type": "object",
+      "description": "Error subcategory.",
+      "example": null
     },
     "UpdateLanguagesRequestVNextLanguagesProperty": {
       "type": "object",
@@ -787411,7 +787799,7 @@
       "description": "Specifies the key value pairs of the [metadata fields](https://developers.hubspot.com/docs/cms/guides/dynamic-pages/hubdb#dynamic-pages) with the associated column IDs.",
       "example": null
     },
-    "StandardErrorContextProperty": {
+    "CmsStandardErrorContextProperty": {
       "type": "object",
       "additionalProperties": {
         "type": "array",
@@ -787424,7 +787812,7 @@
       "description": "An object containing context-specific information pertinent to the error.",
       "example": null
     },
-    "StandardErrorLinksProperty": {
+    "CmsStandardErrorLinksProperty": {
       "type": "object",
       "additionalProperties": {
         "type": "string",
@@ -787433,7 +787821,7 @@
       "description": "An object containing links related to the error, such as documentation URLs or support contact pages.",
       "example": null
     },
-    "StandardErrorSubCategoryProperty": {
+    "CmsStandardErrorSubCategoryProperty": {
       "type": "object",
       "description": "Identifies the subcategory of the error, providing more specific context within the main category.",
       "example": null
@@ -787702,7 +788090,7 @@
       "description": "A data structure containing the data for all the modules for this page.",
       "example": null
     },
-    "CmsStandardErrorContextProperty": {
+    "CmsStandardErrorContextProperty2": {
       "type": "object",
       "additionalProperties": {
         "type": "array",
@@ -787715,7 +788103,7 @@
       "description": "Error context.",
       "example": null
     },
-    "CmsStandardErrorLinksProperty": {
+    "CmsStandardErrorLinksProperty2": {
       "type": "object",
       "additionalProperties": {
         "type": "string",
@@ -787724,7 +788112,7 @@
       "description": "Error links.",
       "example": null
     },
-    "CmsStandardErrorSubCategoryProperty": {
+    "CmsStandardErrorSubCategoryProperty2": {
       "type": "object",
       "description": "Error subcategory.",
       "example": null
@@ -787765,32 +788153,50 @@
       "type": "object",
       "example": null
     },
-    "GetCmsBlogs202609AuthorsCursorCmsBlogsV3AuthorsCursor200MediaResponse": {
+    "GetCmsBlogs202609AuthorsCursorCmsBlogsV3AuthorsCursor200Response": {
       "type": "object",
       "example": null
     },
-    "GetCmsBlogs202609AuthorsCursorQueryCmsBlogsV3AuthorsCursorQuery200MediaResponse": {
+    "GetCmsBlogs202609AuthorsCursorQueryCmsBlogsV3AuthorsCursorQuery200Response": {
       "type": "object",
       "example": null
     },
-    "GetCmsBlogs202609PostsCursorCmsBlogsV3PostsCursor200MediaResponse": {
+    "GetCmsBlogs202609PostsCursorCmsBlogsV3PostsCursor200Response": {
       "type": "object",
       "example": null
     },
-    "GetCmsBlogs202609PostsCursorQueryCmsBlogsV3PostsCursorQuery200MediaResponse": {
+    "GetCmsBlogs202609PostsCursorQueryCmsBlogsV3PostsCursorQuery200Response": {
       "type": "object",
       "example": null
     },
-    "GetCmsBlogs202609TagsCursorCmsBlogsV3TagsCursor200MediaResponse": {
+    "GetCmsBlogs202609TagsCursorCmsBlogsV3TagsCursor200Response": {
       "type": "object",
       "example": null
     },
-    "GetCmsBlogs202609TagsCursorQueryCmsBlogsV3TagsCursorQuery200MediaResponse": {
+    "GetCmsBlogs202609TagsCursorQueryCmsBlogsV3TagsCursorQuery200Response": {
       "type": "object",
       "example": null
     },
     "CmsBatchInputJsonNodeInputsItemProperty2": {
       "type": "object",
+      "example": null
+    },
+    "BatchResponseBlogPostLinksProperty": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "example": null
+      },
+      "description": "Links associated with batch operation.",
+      "example": null
+    },
+    "BatchResponseBlogPostWithErrorsLinksProperty": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "example": null
+      },
+      "description": "Links associated with batch operation.",
       "example": null
     },
     "BlogPostAttachedStylesheetsItemProperty": {
@@ -787889,6 +788295,33 @@
         "$ref": "#/components/schemas/CmsLayoutSectionParamsPropertyAdditionalPropertiesProperty"
       },
       "description": "Additional parameters for the layout section, typically used for configuration.",
+      "example": null
+    },
+    "CmsStandardErrorContextProperty3": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "example": null
+        },
+        "example": null
+      },
+      "description": "Error context.",
+      "example": null
+    },
+    "CmsStandardErrorLinksProperty3": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "example": null
+      },
+      "description": "Error links.",
+      "example": null
+    },
+    "CmsStandardErrorSubCategoryProperty3": {
+      "type": "object",
+      "description": "Error subcategory.",
       "example": null
     },
     "CmsStylesBreakpointStylesProperty": {
@@ -788032,32 +788465,50 @@
       "description": "A map of link names to associated URIs containing documentation about the error or recommended remediation steps",
       "example": null
     },
-    "CmsGetCmsBlogs202609AuthorsCursorCmsBlogsV3AuthorsCursor200MediaResponse": {
+    "CmsGetCmsBlogs202609AuthorsCursorCmsBlogsV3AuthorsCursor200Response": {
       "type": "object",
       "example": null
     },
-    "CmsGetCmsBlogs202609AuthorsCursorQueryCmsBlogsV3AuthorsCursorQuery200MediaResponse": {
+    "CmsGetCmsBlogs202609AuthorsCursorQueryCmsBlogsV3AuthorsCursorQuery200Response": {
       "type": "object",
       "example": null
     },
-    "CmsGetCmsBlogs202609PostsCursorCmsBlogsV3PostsCursor200MediaResponse": {
+    "CmsGetCmsBlogs202609PostsCursorCmsBlogsV3PostsCursor200Response": {
       "type": "object",
       "example": null
     },
-    "CmsGetCmsBlogs202609PostsCursorQueryCmsBlogsV3PostsCursorQuery200MediaResponse": {
+    "CmsGetCmsBlogs202609PostsCursorQueryCmsBlogsV3PostsCursorQuery200Response": {
       "type": "object",
       "example": null
     },
-    "CmsGetCmsBlogs202609TagsCursorCmsBlogsV3TagsCursor200MediaResponse": {
+    "CmsGetCmsBlogs202609TagsCursorCmsBlogsV3TagsCursor200Response": {
       "type": "object",
       "example": null
     },
-    "CmsGetCmsBlogs202609TagsCursorQueryCmsBlogsV3TagsCursorQuery200MediaResponse": {
+    "CmsGetCmsBlogs202609TagsCursorQueryCmsBlogsV3TagsCursorQuery200Response": {
       "type": "object",
       "example": null
     },
     "CmsBatchInputJsonNodeInputsItemProperty3": {
       "type": "object",
+      "example": null
+    },
+    "BatchResponseTagLinksProperty": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "example": null
+      },
+      "description": "Links associated with batch operation.",
+      "example": null
+    },
+    "BatchResponseTagWithErrorsLinksProperty": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "example": null
+      },
+      "description": "Links associated with batch operation.",
       "example": null
     },
     "CmsErrorContextProperty10": {
@@ -788094,6 +788545,33 @@
       },
       "description": "Context about the error condition",
       "example": "{missingScopes=[scope1, scope2]}"
+    },
+    "CmsStandardErrorContextProperty4": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "example": null
+        },
+        "example": null
+      },
+      "description": "Error context.",
+      "example": null
+    },
+    "CmsStandardErrorLinksProperty4": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "example": null
+      },
+      "description": "Error links.",
+      "example": null
+    },
+    "CmsStandardErrorSubCategoryProperty4": {
+      "type": "object",
+      "description": "Error subcategory.",
+      "example": null
     },
     "CmsUpdateLanguagesRequestVNextLanguagesProperty4": {
       "type": "object",
@@ -804693,90 +805171,6 @@
       "type": "string",
       "example": null
     },
-    "CmsPostCmsBlogs202609AuthorsBatchCreateCreateBatch201MediaResponse": {
-      "type": "string",
-      "format": "binary"
-    },
-    "CmsPostCmsBlogs202609AuthorsBatchCreateCreateBatch207MediaResponse": {
-      "type": "string",
-      "format": "binary"
-    },
-    "CmsPostCmsBlogs202609AuthorsBatchCreateCreateBatch200MediaResponse": {
-      "type": "string",
-      "format": "binary"
-    },
-    "CmsPostCmsBlogs202609AuthorsBatchReadReadBatch200MediaResponse": {
-      "type": "string",
-      "format": "binary"
-    },
-    "CmsPostCmsBlogs202609AuthorsBatchReadReadBatch207MediaResponse": {
-      "type": "string",
-      "format": "binary"
-    },
-    "CmsPostCmsBlogs202609AuthorsBatchUpdateUpdateBatch200MediaResponse": {
-      "type": "string",
-      "format": "binary"
-    },
-    "CmsPostCmsBlogs202609AuthorsBatchUpdateUpdateBatch207MediaResponse": {
-      "type": "string",
-      "format": "binary"
-    },
-    "CmsPostCmsBlogs202609PostsBatchCreateCreate201MediaResponse": {
-      "type": "string",
-      "format": "binary"
-    },
-    "CmsPostCmsBlogs202609PostsBatchCreateCreate207MediaResponse": {
-      "type": "string",
-      "format": "binary"
-    },
-    "CmsPostCmsBlogs202609PostsBatchCreateCreate200MediaResponse": {
-      "type": "string",
-      "format": "binary"
-    },
-    "CmsPostCmsBlogs202609PostsBatchReadRead200MediaResponse": {
-      "type": "string",
-      "format": "binary"
-    },
-    "CmsPostCmsBlogs202609PostsBatchReadRead207MediaResponse": {
-      "type": "string",
-      "format": "binary"
-    },
-    "CmsPostCmsBlogs202609PostsBatchUpdateUpdate200MediaResponse": {
-      "type": "string",
-      "format": "binary"
-    },
-    "CmsPostCmsBlogs202609PostsBatchUpdateUpdate207MediaResponse": {
-      "type": "string",
-      "format": "binary"
-    },
-    "CmsPostCmsBlogs202609TagsBatchCreateCreateBatch201MediaResponse": {
-      "type": "string",
-      "format": "binary"
-    },
-    "CmsPostCmsBlogs202609TagsBatchCreateCreateBatch207MediaResponse": {
-      "type": "string",
-      "format": "binary"
-    },
-    "CmsPostCmsBlogs202609TagsBatchCreateCreateBatch200MediaResponse": {
-      "type": "string",
-      "format": "binary"
-    },
-    "CmsPostCmsBlogs202609TagsBatchReadReadBatch200MediaResponse": {
-      "type": "string",
-      "format": "binary"
-    },
-    "CmsPostCmsBlogs202609TagsBatchReadReadBatch207MediaResponse": {
-      "type": "string",
-      "format": "binary"
-    },
-    "CmsPostCmsBlogs202609TagsBatchUpdateUpdateBatch200MediaResponse": {
-      "type": "string",
-      "format": "binary"
-    },
-    "CmsPostCmsBlogs202609TagsBatchUpdateUpdateBatch207MediaResponse": {
-      "type": "string",
-      "format": "binary"
-    },
     "MetaGetMetaNetworkOrigins202609IpRangesSimpleMetaNetworkOrigins202609BetaIpRangesSimple200PlainResponse": {
       "type": "string",
       "example": null
@@ -804800,90 +805194,6 @@
     "PublicPutPublicApiVersioningTest202609WidgetsWidgetId200Response": {
       "type": "string",
       "example": null
-    },
-    "CmsPostCmsBlogs202609AuthorsBatchCreateCreateBatch201MediaResponseSchema": {
-      "type": "string",
-      "format": "binary"
-    },
-    "CmsPostCmsBlogs202609AuthorsBatchCreateCreateBatch207MediaResponseSchema": {
-      "type": "string",
-      "format": "binary"
-    },
-    "CmsPostCmsBlogs202609AuthorsBatchCreateCreateBatch200MediaResponseSchema": {
-      "type": "string",
-      "format": "binary"
-    },
-    "CmsPostCmsBlogs202609AuthorsBatchReadReadBatch200MediaResponseSchema": {
-      "type": "string",
-      "format": "binary"
-    },
-    "CmsPostCmsBlogs202609AuthorsBatchReadReadBatch207MediaResponseSchema": {
-      "type": "string",
-      "format": "binary"
-    },
-    "CmsPostCmsBlogs202609AuthorsBatchUpdateUpdateBatch200MediaResponseSchema": {
-      "type": "string",
-      "format": "binary"
-    },
-    "CmsPostCmsBlogs202609AuthorsBatchUpdateUpdateBatch207MediaResponseSchema": {
-      "type": "string",
-      "format": "binary"
-    },
-    "CmsPostCmsBlogs202609PostsBatchCreateCreate201MediaResponseSchema": {
-      "type": "string",
-      "format": "binary"
-    },
-    "CmsPostCmsBlogs202609PostsBatchCreateCreate207MediaResponseSchema": {
-      "type": "string",
-      "format": "binary"
-    },
-    "CmsPostCmsBlogs202609PostsBatchCreateCreate200MediaResponseSchema": {
-      "type": "string",
-      "format": "binary"
-    },
-    "CmsPostCmsBlogs202609PostsBatchReadRead200MediaResponseSchema": {
-      "type": "string",
-      "format": "binary"
-    },
-    "CmsPostCmsBlogs202609PostsBatchReadRead207MediaResponseSchema": {
-      "type": "string",
-      "format": "binary"
-    },
-    "CmsPostCmsBlogs202609PostsBatchUpdateUpdate200MediaResponseSchema": {
-      "type": "string",
-      "format": "binary"
-    },
-    "CmsPostCmsBlogs202609PostsBatchUpdateUpdate207MediaResponseSchema": {
-      "type": "string",
-      "format": "binary"
-    },
-    "CmsPostCmsBlogs202609TagsBatchCreateCreateBatch201MediaResponseSchema": {
-      "type": "string",
-      "format": "binary"
-    },
-    "CmsPostCmsBlogs202609TagsBatchCreateCreateBatch207MediaResponseSchema": {
-      "type": "string",
-      "format": "binary"
-    },
-    "CmsPostCmsBlogs202609TagsBatchCreateCreateBatch200MediaResponseSchema": {
-      "type": "string",
-      "format": "binary"
-    },
-    "CmsPostCmsBlogs202609TagsBatchReadReadBatch200MediaResponseSchema": {
-      "type": "string",
-      "format": "binary"
-    },
-    "CmsPostCmsBlogs202609TagsBatchReadReadBatch207MediaResponseSchema": {
-      "type": "string",
-      "format": "binary"
-    },
-    "CmsPostCmsBlogs202609TagsBatchUpdateUpdateBatch200MediaResponseSchema": {
-      "type": "string",
-      "format": "binary"
-    },
-    "CmsPostCmsBlogs202609TagsBatchUpdateUpdateBatch207MediaResponseSchema": {
-      "type": "string",
-      "format": "binary"
     },
     "PublicActionLabelsInputFieldOptionLabelsPropertyAdditionalPropertiesProperty": {
       "type": "object",
