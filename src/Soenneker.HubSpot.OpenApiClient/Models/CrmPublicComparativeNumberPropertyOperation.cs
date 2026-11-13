@@ -7,10 +7,11 @@ using System.IO;
 using System;
 namespace Soenneker.HubSpot.OpenApiClient.Models
 {
+    /// <summary>
+    /// The PublicComparativeNumberPropertyOperation component is used to define operations that compare numerical properties within HubSpot. It is typically used in scenarios where numerical comparisons are needed to filter or evaluate data.
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public partial class CrmPublicComparativeNumberPropertyOperation : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
     , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
         // Track explicitly assigned nulls separately from absent properties.
         private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
@@ -31,7 +32,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The comparisonPropertyName property</summary>
+        /// <summary>The name of the property to be compared, represented as a string. This property is required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ComparisonPropertyName { get => _explicitNullValueComparisonPropertyName; set { _explicitNullValueComparisonPropertyName = value; AdditionalData?.Remove("comparisonPropertyName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comparisonPropertyName"); else _explicitNullProperties?.Remove("comparisonPropertyName"); } }
@@ -41,7 +42,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string ComparisonPropertyName { get => _explicitNullValueComparisonPropertyName; set { _explicitNullValueComparisonPropertyName = value; AdditionalData?.Remove("comparisonPropertyName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comparisonPropertyName"); else _explicitNullProperties?.Remove("comparisonPropertyName"); } }
         private string _explicitNullValueComparisonPropertyName = default!;
 #endif
-        /// <summary>The defaultComparisonValue property</summary>
+        /// <summary>The default value used for comparison if no specific value is provided. This is an optional string value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DefaultComparisonValue { get => _explicitNullValueDefaultComparisonValue; set { _explicitNullValueDefaultComparisonValue = value; AdditionalData?.Remove("defaultComparisonValue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultComparisonValue"); else _explicitNullProperties?.Remove("defaultComparisonValue"); } }
@@ -51,13 +52,13 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         public string DefaultComparisonValue { get => _explicitNullValueDefaultComparisonValue; set { _explicitNullValueDefaultComparisonValue = value; AdditionalData?.Remove("defaultComparisonValue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultComparisonValue"); else _explicitNullProperties?.Remove("defaultComparisonValue"); } }
         private string _explicitNullValueDefaultComparisonValue = default!;
 #endif
-        /// <summary>The includeObjectsWithNoValueSet property</summary>
+        /// <summary>A required boolean that determines whether objects without a set value for the comparison property should be included in the operation.</summary>
         public bool? IncludeObjectsWithNoValueSet { get => _explicitNullValueIncludeObjectsWithNoValueSet; set { _explicitNullValueIncludeObjectsWithNoValueSet = value; AdditionalData?.Remove("includeObjectsWithNoValueSet"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("includeObjectsWithNoValueSet"); else _explicitNullProperties?.Remove("includeObjectsWithNoValueSet"); } }
         private bool? _explicitNullValueIncludeObjectsWithNoValueSet = default!;
-        /// <summary>The operationType property</summary>
+        /// <summary>A required string that defines the type of operation being performed.</summary>
         public global::Soenneker.HubSpot.OpenApiClient.Models.CrmComparativeNumberOperationType? OperationType { get => _explicitNullValueOperationType; set { _explicitNullValueOperationType = value; AdditionalData?.Remove("operationType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operationType"); else _explicitNullProperties?.Remove("operationType"); } }
         private global::Soenneker.HubSpot.OpenApiClient.Models.CrmComparativeNumberOperationType? _explicitNullValueOperationType = default!;
-        /// <summary>The operator property</summary>
+        /// <summary>A required string that specifies the comparison operator to be used, such as &apos;greater than&apos; or &apos;less than&apos;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Operator { get => _explicitNullValueOperator; set { _explicitNullValueOperator = value; AdditionalData?.Remove("operator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator"); else _explicitNullProperties?.Remove("operator"); } }
