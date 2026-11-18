@@ -97,7 +97,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "callerIdType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ContactCallerIdType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCallerIdType = default; _explicitNullProperties?.Remove("callerIdType"); AdditionalData["callerIdType"] = unknown; } else { CallerIdType = parsed; AdditionalData.Remove("callerIdType"); } } },
                 { "email", n => { Email = n.GetStringValue(); } },

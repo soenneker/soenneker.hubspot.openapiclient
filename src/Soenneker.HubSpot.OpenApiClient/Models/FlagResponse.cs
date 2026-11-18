@@ -71,7 +71,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "appId", n => { AppId = n.GetIntValue(); } },
                 { "defaultState", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.FlagResponseDefaultState>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDefaultState = default; _explicitNullProperties?.Remove("defaultState"); AdditionalData["defaultState"] = unknown; } else { DefaultState = parsed; AdditionalData.Remove("defaultState"); } } },

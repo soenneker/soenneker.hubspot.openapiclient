@@ -92,7 +92,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "actions", n => { Actions = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CardActions>(global::Soenneker.HubSpot.OpenApiClient.Models.CardActions.CreateFromDiscriminatorValue); } },
                 { "display", n => { Display = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CardDisplayBody>(global::Soenneker.HubSpot.OpenApiClient.Models.CardDisplayBody.CreateFromDiscriminatorValue); } },

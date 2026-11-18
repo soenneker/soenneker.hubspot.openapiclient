@@ -83,7 +83,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "property", n => { Property = n.GetStringValue(); } },
                 { "referenceType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PropertyReferencedTimeReferenceType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueReferenceType = default; _explicitNullProperties?.Remove("referenceType"); AdditionalData["referenceType"] = unknown; } else { ReferenceType = parsed; AdditionalData.Remove("referenceType"); } } },

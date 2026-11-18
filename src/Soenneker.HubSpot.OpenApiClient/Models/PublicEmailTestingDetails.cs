@@ -91,7 +91,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(8)
             {
                 { "abSampleSizeDefault", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetailsAbSampleSizeDefault>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAbSampleSizeDefault = default; _explicitNullProperties?.Remove("abSampleSizeDefault"); AdditionalData["abSampleSizeDefault"] = unknown; } else { AbSampleSizeDefault = parsed; AdditionalData.Remove("abSampleSizeDefault"); } } },
                 { "abSamplingDefault", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailTestingDetailsAbSamplingDefault>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAbSamplingDefault = default; _explicitNullProperties?.Remove("abSamplingDefault"); AdditionalData["abSamplingDefault"] = unknown; } else { AbSamplingDefault = parsed; AdditionalData.Remove("abSamplingDefault"); } } },

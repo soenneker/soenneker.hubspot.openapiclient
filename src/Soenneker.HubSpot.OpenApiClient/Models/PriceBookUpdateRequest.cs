@@ -92,7 +92,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "customProperties", n => { CustomProperties = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookUpdateRequestCustomProperties>(global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookUpdateRequestCustomProperties.CreateFromDiscriminatorValue); } },
                 { "description", n => { Description = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookUpdateRequestDescription>(global::Soenneker.HubSpot.OpenApiClient.Models.PriceBookUpdateRequestDescription.CreateFromDiscriminatorValue); } },

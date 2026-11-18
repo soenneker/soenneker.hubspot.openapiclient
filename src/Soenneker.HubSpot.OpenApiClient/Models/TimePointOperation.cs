@@ -153,7 +153,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(12)
             {
                 { "defaultValue", n => { DefaultValue = n.GetStringValue(); } },
                 { "endpointBehavior", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.TimePointOperationEndpointBehavior>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueEndpointBehavior = default; _explicitNullProperties?.Remove("endpointBehavior"); AdditionalData["endpointBehavior"] = unknown; } else { EndpointBehavior = parsed; AdditionalData.Remove("endpointBehavior"); } } },

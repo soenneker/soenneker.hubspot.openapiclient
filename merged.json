@@ -146362,6 +146362,11 @@
         "security": [
           {
             "crm_oauth2_24": [
+              "crm.objects.contacts.import"
+            ]
+          },
+          {
+            "crm_oauth2_24": [
               "crm.import"
             ]
           }
@@ -146457,6 +146462,11 @@
           }
         },
         "security": [
+          {
+            "crm_oauth2_24": [
+              "crm.objects.contacts.import"
+            ]
+          },
           {
             "crm_oauth2_24": [
               "crm.import"
@@ -146596,6 +146606,11 @@
           }
         },
         "security": [
+          {
+            "crm_oauth2_24": [
+              "crm.objects.contacts.import"
+            ]
+          },
           {
             "crm_oauth2_24": [
               "crm.import"
@@ -390381,6 +390396,35 @@
         "example": null,
         "x-hubspot-sub-type-impl": true
       },
+      "SetDifferenceString": {
+        "title": "SET_DIFFERENCE_STRING",
+        "required": [
+          "operator"
+        ],
+        "type": "object",
+        "properties": {
+          "inputs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AbsoluteValueInputsItem"
+            },
+            "example": null
+          },
+          "operator": {
+            "$ref": "#/components/schemas/SetDifferenceStringOperator"
+          },
+          "propertyName": {
+            "type": "string",
+            "example": null
+          },
+          "value": {
+            "type": "string",
+            "example": null
+          }
+        },
+        "example": null,
+        "x-hubspot-sub-type-impl": true
+      },
       "SetEqualsStrings": {
         "title": "SET_EQUALS_STRINGS",
         "required": [
@@ -390408,6 +390452,35 @@
           },
           "value": {
             "type": "boolean",
+            "example": null
+          }
+        },
+        "example": null,
+        "x-hubspot-sub-type-impl": true
+      },
+      "SetUnionString": {
+        "title": "SET_UNION_STRING",
+        "required": [
+          "operator"
+        ],
+        "type": "object",
+        "properties": {
+          "inputs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AbsoluteValueInputsItem"
+            },
+            "example": null
+          },
+          "operator": {
+            "$ref": "#/components/schemas/SetUnionStringOperator"
+          },
+          "propertyName": {
+            "type": "string",
+            "example": null
+          },
+          "value": {
+            "type": "string",
             "example": null
           }
         },
@@ -391348,6 +391421,12 @@
             "$ref": "#/components/schemas/SetEqualsStrings"
           },
           {
+            "$ref": "#/components/schemas/SetUnionString"
+          },
+          {
+            "$ref": "#/components/schemas/SetDifferenceString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -391532,6 +391611,8 @@
             "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
             "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
             "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+            "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+            "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
             "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
             "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
             "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -391639,6 +391720,8 @@
             "SetContainsString": "#/components/schemas/SetContainsString",
             "SetContainsAnyString": "#/components/schemas/SetContainsAnyString",
             "SetEqualsStrings": "#/components/schemas/SetEqualsStrings",
+            "SetUnionString": "#/components/schemas/SetUnionString",
+            "SetDifferenceString": "#/components/schemas/SetDifferenceString",
             "IsEngagementType": "#/components/schemas/IsEngagementType",
             "FormatFullName": "#/components/schemas/FormatFullName",
             "FormatPhoneNumber": "#/components/schemas/FormatPhoneNumber",
@@ -391893,6 +391976,12 @@
             "$ref": "#/components/schemas/SetEqualsStrings"
           },
           {
+            "$ref": "#/components/schemas/SetUnionString"
+          },
+          {
+            "$ref": "#/components/schemas/SetDifferenceString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -392078,6 +392167,8 @@
             "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
             "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
             "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+            "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+            "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
             "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
             "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
             "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -392185,6 +392276,8 @@
             "SetContainsString": "#/components/schemas/SetContainsString",
             "SetContainsAnyString": "#/components/schemas/SetContainsAnyString",
             "SetEqualsStrings": "#/components/schemas/SetEqualsStrings",
+            "SetUnionString": "#/components/schemas/SetUnionString",
+            "SetDifferenceString": "#/components/schemas/SetDifferenceString",
             "IsEngagementType": "#/components/schemas/IsEngagementType",
             "FormatFullName": "#/components/schemas/FormatFullName",
             "FormatPhoneNumber": "#/components/schemas/FormatPhoneNumber",
@@ -392439,6 +392532,12 @@
             "$ref": "#/components/schemas/SetEqualsStrings"
           },
           {
+            "$ref": "#/components/schemas/SetUnionString"
+          },
+          {
+            "$ref": "#/components/schemas/SetDifferenceString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -392624,6 +392723,8 @@
             "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
             "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
             "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+            "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+            "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
             "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
             "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
             "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -392731,6 +392832,8 @@
             "SetContainsString": "#/components/schemas/SetContainsString",
             "SetContainsAnyString": "#/components/schemas/SetContainsAnyString",
             "SetEqualsStrings": "#/components/schemas/SetEqualsStrings",
+            "SetUnionString": "#/components/schemas/SetUnionString",
+            "SetDifferenceString": "#/components/schemas/SetDifferenceString",
             "IsEngagementType": "#/components/schemas/IsEngagementType",
             "FormatFullName": "#/components/schemas/FormatFullName",
             "FormatPhoneNumber": "#/components/schemas/FormatPhoneNumber",
@@ -392985,6 +393088,12 @@
             "$ref": "#/components/schemas/SetEqualsStrings"
           },
           {
+            "$ref": "#/components/schemas/SetUnionString"
+          },
+          {
+            "$ref": "#/components/schemas/SetDifferenceString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -393170,6 +393279,8 @@
             "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
             "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
             "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+            "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+            "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
             "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
             "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
             "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -393277,6 +393388,8 @@
             "SetContainsString": "#/components/schemas/SetContainsString",
             "SetContainsAnyString": "#/components/schemas/SetContainsAnyString",
             "SetEqualsStrings": "#/components/schemas/SetEqualsStrings",
+            "SetUnionString": "#/components/schemas/SetUnionString",
+            "SetDifferenceString": "#/components/schemas/SetDifferenceString",
             "IsEngagementType": "#/components/schemas/IsEngagementType",
             "FormatFullName": "#/components/schemas/FormatFullName",
             "FormatPhoneNumber": "#/components/schemas/FormatPhoneNumber",
@@ -393531,6 +393644,12 @@
             "$ref": "#/components/schemas/SetEqualsStrings"
           },
           {
+            "$ref": "#/components/schemas/SetUnionString"
+          },
+          {
+            "$ref": "#/components/schemas/SetDifferenceString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -393716,6 +393835,8 @@
             "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
             "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
             "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+            "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+            "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
             "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
             "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
             "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -393823,6 +393944,8 @@
             "SetContainsString": "#/components/schemas/SetContainsString",
             "SetContainsAnyString": "#/components/schemas/SetContainsAnyString",
             "SetEqualsStrings": "#/components/schemas/SetEqualsStrings",
+            "SetUnionString": "#/components/schemas/SetUnionString",
+            "SetDifferenceString": "#/components/schemas/SetDifferenceString",
             "IsEngagementType": "#/components/schemas/IsEngagementType",
             "FormatFullName": "#/components/schemas/FormatFullName",
             "FormatPhoneNumber": "#/components/schemas/FormatPhoneNumber",
@@ -394077,6 +394200,12 @@
             "$ref": "#/components/schemas/SetEqualsStrings"
           },
           {
+            "$ref": "#/components/schemas/SetUnionString"
+          },
+          {
+            "$ref": "#/components/schemas/SetDifferenceString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -394262,6 +394391,8 @@
             "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
             "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
             "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+            "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+            "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
             "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
             "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
             "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -394369,6 +394500,8 @@
             "SetContainsString": "#/components/schemas/SetContainsString",
             "SetContainsAnyString": "#/components/schemas/SetContainsAnyString",
             "SetEqualsStrings": "#/components/schemas/SetEqualsStrings",
+            "SetUnionString": "#/components/schemas/SetUnionString",
+            "SetDifferenceString": "#/components/schemas/SetDifferenceString",
             "IsEngagementType": "#/components/schemas/IsEngagementType",
             "FormatFullName": "#/components/schemas/FormatFullName",
             "FormatPhoneNumber": "#/components/schemas/FormatPhoneNumber",
@@ -394623,6 +394756,12 @@
             "$ref": "#/components/schemas/SetEqualsStrings"
           },
           {
+            "$ref": "#/components/schemas/SetUnionString"
+          },
+          {
+            "$ref": "#/components/schemas/SetDifferenceString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -394808,6 +394947,8 @@
             "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
             "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
             "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+            "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+            "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
             "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
             "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
             "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -394915,6 +395056,8 @@
             "SetContainsString": "#/components/schemas/SetContainsString",
             "SetContainsAnyString": "#/components/schemas/SetContainsAnyString",
             "SetEqualsStrings": "#/components/schemas/SetEqualsStrings",
+            "SetUnionString": "#/components/schemas/SetUnionString",
+            "SetDifferenceString": "#/components/schemas/SetDifferenceString",
             "IsEngagementType": "#/components/schemas/IsEngagementType",
             "FormatFullName": "#/components/schemas/FormatFullName",
             "FormatPhoneNumber": "#/components/schemas/FormatPhoneNumber",
@@ -395169,6 +395312,12 @@
             "$ref": "#/components/schemas/SetEqualsStrings"
           },
           {
+            "$ref": "#/components/schemas/SetUnionString"
+          },
+          {
+            "$ref": "#/components/schemas/SetDifferenceString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -395354,6 +395503,8 @@
             "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
             "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
             "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+            "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+            "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
             "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
             "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
             "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -395461,6 +395612,8 @@
             "SetContainsString": "#/components/schemas/SetContainsString",
             "SetContainsAnyString": "#/components/schemas/SetContainsAnyString",
             "SetEqualsStrings": "#/components/schemas/SetEqualsStrings",
+            "SetUnionString": "#/components/schemas/SetUnionString",
+            "SetDifferenceString": "#/components/schemas/SetDifferenceString",
             "IsEngagementType": "#/components/schemas/IsEngagementType",
             "FormatFullName": "#/components/schemas/FormatFullName",
             "FormatPhoneNumber": "#/components/schemas/FormatPhoneNumber",
@@ -395715,6 +395868,12 @@
             "$ref": "#/components/schemas/SetEqualsStrings"
           },
           {
+            "$ref": "#/components/schemas/SetUnionString"
+          },
+          {
+            "$ref": "#/components/schemas/SetDifferenceString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -395900,6 +396059,8 @@
             "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
             "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
             "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+            "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+            "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
             "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
             "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
             "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -396007,6 +396168,8 @@
             "SetContainsString": "#/components/schemas/SetContainsString",
             "SetContainsAnyString": "#/components/schemas/SetContainsAnyString",
             "SetEqualsStrings": "#/components/schemas/SetEqualsStrings",
+            "SetUnionString": "#/components/schemas/SetUnionString",
+            "SetDifferenceString": "#/components/schemas/SetDifferenceString",
             "IsEngagementType": "#/components/schemas/IsEngagementType",
             "FormatFullName": "#/components/schemas/FormatFullName",
             "FormatPhoneNumber": "#/components/schemas/FormatPhoneNumber",
@@ -396261,6 +396424,12 @@
             "$ref": "#/components/schemas/SetEqualsStrings"
           },
           {
+            "$ref": "#/components/schemas/SetUnionString"
+          },
+          {
+            "$ref": "#/components/schemas/SetDifferenceString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -396446,6 +396615,8 @@
             "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
             "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
             "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+            "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+            "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
             "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
             "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
             "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -396553,6 +396724,8 @@
             "SetContainsString": "#/components/schemas/SetContainsString",
             "SetContainsAnyString": "#/components/schemas/SetContainsAnyString",
             "SetEqualsStrings": "#/components/schemas/SetEqualsStrings",
+            "SetUnionString": "#/components/schemas/SetUnionString",
+            "SetDifferenceString": "#/components/schemas/SetDifferenceString",
             "IsEngagementType": "#/components/schemas/IsEngagementType",
             "FormatFullName": "#/components/schemas/FormatFullName",
             "FormatPhoneNumber": "#/components/schemas/FormatPhoneNumber",
@@ -396807,6 +396980,12 @@
             "$ref": "#/components/schemas/SetEqualsStrings"
           },
           {
+            "$ref": "#/components/schemas/SetUnionString"
+          },
+          {
+            "$ref": "#/components/schemas/SetDifferenceString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -396992,6 +397171,8 @@
             "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
             "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
             "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+            "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+            "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
             "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
             "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
             "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -397099,6 +397280,8 @@
             "SetContainsString": "#/components/schemas/SetContainsString",
             "SetContainsAnyString": "#/components/schemas/SetContainsAnyString",
             "SetEqualsStrings": "#/components/schemas/SetEqualsStrings",
+            "SetUnionString": "#/components/schemas/SetUnionString",
+            "SetDifferenceString": "#/components/schemas/SetDifferenceString",
             "IsEngagementType": "#/components/schemas/IsEngagementType",
             "FormatFullName": "#/components/schemas/FormatFullName",
             "FormatPhoneNumber": "#/components/schemas/FormatPhoneNumber",
@@ -397353,6 +397536,12 @@
             "$ref": "#/components/schemas/SetEqualsStrings"
           },
           {
+            "$ref": "#/components/schemas/SetUnionString"
+          },
+          {
+            "$ref": "#/components/schemas/SetDifferenceString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -397538,6 +397727,8 @@
             "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
             "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
             "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+            "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+            "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
             "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
             "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
             "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -397645,6 +397836,8 @@
             "SetContainsString": "#/components/schemas/SetContainsString",
             "SetContainsAnyString": "#/components/schemas/SetContainsAnyString",
             "SetEqualsStrings": "#/components/schemas/SetEqualsStrings",
+            "SetUnionString": "#/components/schemas/SetUnionString",
+            "SetDifferenceString": "#/components/schemas/SetDifferenceString",
             "IsEngagementType": "#/components/schemas/IsEngagementType",
             "FormatFullName": "#/components/schemas/FormatFullName",
             "FormatPhoneNumber": "#/components/schemas/FormatPhoneNumber",
@@ -397899,6 +398092,12 @@
             "$ref": "#/components/schemas/SetEqualsStrings"
           },
           {
+            "$ref": "#/components/schemas/SetUnionString"
+          },
+          {
+            "$ref": "#/components/schemas/SetDifferenceString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -398084,6 +398283,8 @@
             "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
             "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
             "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+            "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+            "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
             "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
             "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
             "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -398191,6 +398392,8 @@
             "SetContainsString": "#/components/schemas/SetContainsString",
             "SetContainsAnyString": "#/components/schemas/SetContainsAnyString",
             "SetEqualsStrings": "#/components/schemas/SetEqualsStrings",
+            "SetUnionString": "#/components/schemas/SetUnionString",
+            "SetDifferenceString": "#/components/schemas/SetDifferenceString",
             "IsEngagementType": "#/components/schemas/IsEngagementType",
             "FormatFullName": "#/components/schemas/FormatFullName",
             "FormatPhoneNumber": "#/components/schemas/FormatPhoneNumber",
@@ -398445,6 +398648,12 @@
             "$ref": "#/components/schemas/SetEqualsStrings"
           },
           {
+            "$ref": "#/components/schemas/SetUnionString"
+          },
+          {
+            "$ref": "#/components/schemas/SetDifferenceString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -398630,6 +398839,8 @@
             "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
             "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
             "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+            "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+            "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
             "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
             "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
             "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -398737,6 +398948,8 @@
             "SetContainsString": "#/components/schemas/SetContainsString",
             "SetContainsAnyString": "#/components/schemas/SetContainsAnyString",
             "SetEqualsStrings": "#/components/schemas/SetEqualsStrings",
+            "SetUnionString": "#/components/schemas/SetUnionString",
+            "SetDifferenceString": "#/components/schemas/SetDifferenceString",
             "IsEngagementType": "#/components/schemas/IsEngagementType",
             "FormatFullName": "#/components/schemas/FormatFullName",
             "FormatPhoneNumber": "#/components/schemas/FormatPhoneNumber",
@@ -398991,6 +399204,12 @@
             "$ref": "#/components/schemas/SetEqualsStrings"
           },
           {
+            "$ref": "#/components/schemas/SetUnionString"
+          },
+          {
+            "$ref": "#/components/schemas/SetDifferenceString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -399176,6 +399395,8 @@
             "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
             "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
             "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+            "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+            "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
             "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
             "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
             "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -399283,6 +399504,8 @@
             "SetContainsString": "#/components/schemas/SetContainsString",
             "SetContainsAnyString": "#/components/schemas/SetContainsAnyString",
             "SetEqualsStrings": "#/components/schemas/SetEqualsStrings",
+            "SetUnionString": "#/components/schemas/SetUnionString",
+            "SetDifferenceString": "#/components/schemas/SetDifferenceString",
             "IsEngagementType": "#/components/schemas/IsEngagementType",
             "FormatFullName": "#/components/schemas/FormatFullName",
             "FormatPhoneNumber": "#/components/schemas/FormatPhoneNumber",
@@ -399537,6 +399760,12 @@
             "$ref": "#/components/schemas/SetEqualsStrings"
           },
           {
+            "$ref": "#/components/schemas/SetUnionString"
+          },
+          {
+            "$ref": "#/components/schemas/SetDifferenceString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -399722,6 +399951,8 @@
             "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
             "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
             "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+            "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+            "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
             "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
             "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
             "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -399829,6 +400060,8 @@
             "SetContainsString": "#/components/schemas/SetContainsString",
             "SetContainsAnyString": "#/components/schemas/SetContainsAnyString",
             "SetEqualsStrings": "#/components/schemas/SetEqualsStrings",
+            "SetUnionString": "#/components/schemas/SetUnionString",
+            "SetDifferenceString": "#/components/schemas/SetDifferenceString",
             "IsEngagementType": "#/components/schemas/IsEngagementType",
             "FormatFullName": "#/components/schemas/FormatFullName",
             "FormatPhoneNumber": "#/components/schemas/FormatPhoneNumber",
@@ -400083,6 +400316,12 @@
             "$ref": "#/components/schemas/SetEqualsStrings"
           },
           {
+            "$ref": "#/components/schemas/SetUnionString"
+          },
+          {
+            "$ref": "#/components/schemas/SetDifferenceString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -400268,6 +400507,8 @@
             "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
             "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
             "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+            "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+            "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
             "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
             "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
             "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -400375,6 +400616,8 @@
             "SetContainsString": "#/components/schemas/SetContainsString",
             "SetContainsAnyString": "#/components/schemas/SetContainsAnyString",
             "SetEqualsStrings": "#/components/schemas/SetEqualsStrings",
+            "SetUnionString": "#/components/schemas/SetUnionString",
+            "SetDifferenceString": "#/components/schemas/SetDifferenceString",
             "IsEngagementType": "#/components/schemas/IsEngagementType",
             "FormatFullName": "#/components/schemas/FormatFullName",
             "FormatPhoneNumber": "#/components/schemas/FormatPhoneNumber",
@@ -400629,6 +400872,12 @@
             "$ref": "#/components/schemas/SetEqualsStrings"
           },
           {
+            "$ref": "#/components/schemas/SetUnionString"
+          },
+          {
+            "$ref": "#/components/schemas/SetDifferenceString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -400814,6 +401063,8 @@
             "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
             "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
             "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+            "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+            "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
             "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
             "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
             "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -400921,6 +401172,8 @@
             "SetContainsString": "#/components/schemas/SetContainsString",
             "SetContainsAnyString": "#/components/schemas/SetContainsAnyString",
             "SetEqualsStrings": "#/components/schemas/SetEqualsStrings",
+            "SetUnionString": "#/components/schemas/SetUnionString",
+            "SetDifferenceString": "#/components/schemas/SetDifferenceString",
             "IsEngagementType": "#/components/schemas/IsEngagementType",
             "FormatFullName": "#/components/schemas/FormatFullName",
             "FormatPhoneNumber": "#/components/schemas/FormatPhoneNumber",
@@ -401175,6 +401428,12 @@
             "$ref": "#/components/schemas/SetEqualsStrings"
           },
           {
+            "$ref": "#/components/schemas/SetUnionString"
+          },
+          {
+            "$ref": "#/components/schemas/SetDifferenceString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -401360,6 +401619,8 @@
             "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
             "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
             "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+            "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+            "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
             "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
             "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
             "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -401467,6 +401728,8 @@
             "SetContainsString": "#/components/schemas/SetContainsString",
             "SetContainsAnyString": "#/components/schemas/SetContainsAnyString",
             "SetEqualsStrings": "#/components/schemas/SetEqualsStrings",
+            "SetUnionString": "#/components/schemas/SetUnionString",
+            "SetDifferenceString": "#/components/schemas/SetDifferenceString",
             "IsEngagementType": "#/components/schemas/IsEngagementType",
             "FormatFullName": "#/components/schemas/FormatFullName",
             "FormatPhoneNumber": "#/components/schemas/FormatPhoneNumber",
@@ -401721,6 +401984,12 @@
             "$ref": "#/components/schemas/SetEqualsStrings"
           },
           {
+            "$ref": "#/components/schemas/SetUnionString"
+          },
+          {
+            "$ref": "#/components/schemas/SetDifferenceString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -401906,6 +402175,8 @@
             "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
             "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
             "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+            "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+            "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
             "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
             "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
             "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -402013,6 +402284,8 @@
             "SetContainsString": "#/components/schemas/SetContainsString",
             "SetContainsAnyString": "#/components/schemas/SetContainsAnyString",
             "SetEqualsStrings": "#/components/schemas/SetEqualsStrings",
+            "SetUnionString": "#/components/schemas/SetUnionString",
+            "SetDifferenceString": "#/components/schemas/SetDifferenceString",
             "IsEngagementType": "#/components/schemas/IsEngagementType",
             "FormatFullName": "#/components/schemas/FormatFullName",
             "FormatPhoneNumber": "#/components/schemas/FormatPhoneNumber",
@@ -402267,6 +402540,12 @@
             "$ref": "#/components/schemas/SetEqualsStrings"
           },
           {
+            "$ref": "#/components/schemas/SetUnionString"
+          },
+          {
+            "$ref": "#/components/schemas/SetDifferenceString"
+          },
+          {
             "$ref": "#/components/schemas/IsEngagementType"
           },
           {
@@ -402452,6 +402731,8 @@
             "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
             "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
             "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+            "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+            "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
             "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
             "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
             "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -402559,6 +402840,8 @@
             "SetContainsString": "#/components/schemas/SetContainsString",
             "SetContainsAnyString": "#/components/schemas/SetContainsAnyString",
             "SetEqualsStrings": "#/components/schemas/SetEqualsStrings",
+            "SetUnionString": "#/components/schemas/SetUnionString",
+            "SetDifferenceString": "#/components/schemas/SetDifferenceString",
             "IsEngagementType": "#/components/schemas/IsEngagementType",
             "FormatFullName": "#/components/schemas/FormatFullName",
             "FormatPhoneNumber": "#/components/schemas/FormatPhoneNumber",
@@ -407214,6 +407497,23 @@
           ]
         }
       },
+      "SetDifferenceStringOperator": {
+        "enum": [
+          "SET_DIFFERENCE_STRING"
+        ],
+        "type": "string",
+        "example": null,
+        "x-ms-enum": {
+          "name": "SetDifferenceStringOperator",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "SET_DIFFERENCE_STRING",
+              "name": "SetDifferenceString"
+            }
+          ]
+        }
+      },
       "SetEqualsStringsOperator": {
         "enum": [
           "SET_EQUALS_STRINGS"
@@ -407227,6 +407527,23 @@
             {
               "value": "SET_EQUALS_STRINGS",
               "name": "SetEqualsStrings"
+            }
+          ]
+        }
+      },
+      "SetUnionStringOperator": {
+        "enum": [
+          "SET_UNION_STRING"
+        ],
+        "type": "string",
+        "example": null,
+        "x-ms-enum": {
+          "name": "SetUnionStringOperator",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "SET_UNION_STRING",
+              "name": "SetUnionString"
             }
           ]
         }
@@ -671477,7 +671794,8 @@
             "authorizationUrl": "https://app.hubspot.com/oauth/authorize",
             "tokenUrl": "https://api.hubapi.com/oauth/v1/token",
             "scopes": {
-              "crm.import": ""
+              "crm.import": "",
+              "crm.objects.contacts.import": ""
             }
           }
         },
@@ -671488,6 +671806,12 @@
               "private"
             ],
             "developer": true
+          },
+          "crm.objects.contacts.import": {
+            "user": [
+              "public"
+            ],
+            "developer": false
           }
         }
       },
@@ -708944,6 +709268,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -709129,6 +709459,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -709382,6 +709714,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -709567,6 +709905,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -709820,6 +710160,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -710005,6 +710351,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -710258,6 +710606,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -710443,6 +710797,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -710696,6 +711052,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -710881,6 +711243,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -711134,6 +711498,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -711319,6 +711689,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -711572,6 +711944,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -711757,6 +712135,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -712010,6 +712390,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -712195,6 +712581,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -712448,6 +712836,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -712633,6 +713027,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -712886,6 +713282,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -713071,6 +713473,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -713324,6 +713728,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -713509,6 +713919,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -713762,6 +714174,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -713947,6 +714365,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -714200,6 +714620,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -714385,6 +714811,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -714638,6 +715066,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -714823,6 +715257,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -715076,6 +715512,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -715261,6 +715703,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -715514,6 +715958,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -715699,6 +716149,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -715952,6 +716404,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -716137,6 +716595,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -716390,6 +716850,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -716575,6 +717041,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -716828,6 +717296,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -717013,6 +717487,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -717266,6 +717742,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -717451,6 +717933,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -717704,6 +718188,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -717889,6 +718379,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -718142,6 +718634,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -718327,6 +718825,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -718580,6 +719080,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -718765,6 +719271,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -719018,6 +719526,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -719203,6 +719717,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -719456,6 +719972,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -719641,6 +720163,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -719894,6 +720418,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -720079,6 +720609,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -720332,6 +720864,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -720517,6 +721055,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -720770,6 +721310,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -720955,6 +721501,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -721208,6 +721756,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -721393,6 +721947,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -721646,6 +722202,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -721831,6 +722393,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -722084,6 +722648,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -722269,6 +722839,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -722522,6 +723094,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -722707,6 +723285,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -722960,6 +723540,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -723145,6 +723731,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -723398,6 +723986,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -723583,6 +724177,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -723836,6 +724432,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -724021,6 +724623,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -724274,6 +724878,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -724459,6 +725069,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -724712,6 +725324,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -724897,6 +725515,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -725150,6 +725770,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -725335,6 +725961,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -725588,6 +726216,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -725773,6 +726407,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -726026,6 +726662,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -726211,6 +726853,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -726464,6 +727108,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -726649,6 +727299,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -726902,6 +727554,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -727087,6 +727745,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -727340,6 +728000,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -727525,6 +728191,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -727778,6 +728446,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -727963,6 +728637,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -728216,6 +728892,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -728401,6 +729083,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -728654,6 +729338,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -728839,6 +729529,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -729092,6 +729784,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -729277,6 +729975,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -729530,6 +730230,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -729715,6 +730421,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -729968,6 +730676,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -730153,6 +730867,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -730406,6 +731122,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -730591,6 +731313,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -730844,6 +731568,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -731029,6 +731759,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -731282,6 +732014,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -731467,6 +732205,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -731720,6 +732460,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -731905,6 +732651,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -732158,6 +732906,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -732343,6 +733097,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -732596,6 +733352,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -732781,6 +733543,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -733034,6 +733798,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -733219,6 +733989,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -733472,6 +734244,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -733657,6 +734435,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -733910,6 +734690,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -734095,6 +734881,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -734348,6 +735136,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -734533,6 +735327,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -734786,6 +735582,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -734971,6 +735773,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -735224,6 +736028,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -735409,6 +736219,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -735662,6 +736474,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -735847,6 +736665,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -736100,6 +736920,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -736285,6 +737111,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -736538,6 +737366,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -736723,6 +737557,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -736976,6 +737812,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -737161,6 +738003,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -737414,6 +738258,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -737599,6 +738449,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -737852,6 +738704,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -738037,6 +738895,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -738290,6 +739150,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -738475,6 +739341,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -738728,6 +739596,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -738913,6 +739787,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -739166,6 +740042,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -739351,6 +740233,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -739604,6 +740488,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -739789,6 +740679,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -740042,6 +740934,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -740227,6 +741125,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -740480,6 +741380,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -740665,6 +741571,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -740918,6 +741826,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -741103,6 +742017,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -741356,6 +742272,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -741541,6 +742463,454 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
+                "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
+                "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
+                "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
+                "FORMAT_SEARCHABLE_PHONE_NUMBER": "#/components/schemas/FormatSearchablePhoneNumber",
+                "ABSOLUTE_VALUE": "#/components/schemas/AbsoluteValue",
+                "SQUARE_ROOT": "#/components/schemas/SquareRoot",
+                "POWER": "#/components/schemas/Power",
+                "SUBSTRING": "#/components/schemas/Substring",
+                "EULER": "#/components/schemas/Euler",
+                "STRING_LENGTH": "#/components/schemas/StringLength",
+                "IS_BLANK": "#/components/schemas/IsBlank",
+                "ADD_TIME": "#/components/schemas/AddTime",
+                "SUBTRACT_TIME": "#/components/schemas/SubtractTime",
+                "REGEX_MATCHES": "#/components/schemas/RegexMatches",
+                "IS_VALID_ISO_PERIOD": "#/components/schemas/IsValidIsoPeriod",
+                "IS_MONTH_BASED_ISO_PERIOD": "#/components/schemas/IsMonthBasedIsoPeriod",
+                "IS_DAY_BASED_ISO_PERIOD": "#/components/schemas/IsDayBasedIsoPeriod",
+                "IS_MULTIPLE_OF": "#/components/schemas/IsMultipleOf",
+                "VALIDATE_WHEN": "#/components/schemas/ValidateWhen",
+                "COALESCE_STRING": "#/components/schemas/CoalesceString",
+                "COALESCE_NUMBER": "#/components/schemas/CoalesceNumber",
+                "COALESCE_BOOLEAN": "#/components/schemas/CoalesceBoolean",
+                "GET_START_TIME": "#/components/schemas/GetStartTime",
+                "SHIFT_DATE": "#/components/schemas/ShiftDate",
+                "PORTAL_TIMEZONE": "#/components/schemas/PortalTimezone",
+                "ANY_CHARS_MATCH": "#/components/schemas/AnyCharsMatch",
+                "ALL_CHARS_MATCH": "#/components/schemas/AllCharsMatch",
+                "REMOVE_MATCHING_CHARS": "#/components/schemas/RemoveMatchingChars",
+                "KEEP_MATCHING_CHARS": "#/components/schemas/KeepMatchingChars",
+                "TRIM_OUTER_CHARS": "#/components/schemas/TrimOuterChars",
+                "TRIM_LEADING_CHARS": "#/components/schemas/TrimLeadingChars",
+                "TRIM_TRAILING_CHARS": "#/components/schemas/TrimTrailingChars",
+                "REPLACE_MATCHING_CHARS": "#/components/schemas/ReplaceMatchingChars",
+                "COLLAPSE_MATCHING_CHARS": "#/components/schemas/CollapseMatchingChars",
+                "COUNT_MATCHING_CHARS": "#/components/schemas/CountMatchingChars",
+                "HS_INTERNAL_NORMALIZED_DOMAIN": "#/components/schemas/HsInternalNormalizedDomain",
+                "HS_INTERNAL_NORMALIZED_EMAIL": "#/components/schemas/HsInternalNormalizedEmail"
+              }
+            }
+          },
+          "SetDifferenceStringInputsItem": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/ConstantBoolean"
+              },
+              {
+                "$ref": "#/components/schemas/ConstantNumber"
+              },
+              {
+                "$ref": "#/components/schemas/ConstantString"
+              },
+              {
+                "$ref": "#/components/schemas/BooleanPropertyVariable"
+              },
+              {
+                "$ref": "#/components/schemas/StringPropertyVariable"
+              },
+              {
+                "$ref": "#/components/schemas/NumberPropertyVariable"
+              },
+              {
+                "$ref": "#/components/schemas/TimestampOfPropertyVariable"
+              },
+              {
+                "$ref": "#/components/schemas/BooleanTargetPropertyVariable"
+              },
+              {
+                "$ref": "#/components/schemas/StringTargetPropertyVariable"
+              },
+              {
+                "$ref": "#/components/schemas/NumberTargetPropertyVariable"
+              },
+              {
+                "$ref": "#/components/schemas/TimestampOfTargetPropertyVariable"
+              },
+              {
+                "$ref": "#/components/schemas/AddNumbers"
+              },
+              {
+                "$ref": "#/components/schemas/SubtractNumbers"
+              },
+              {
+                "$ref": "#/components/schemas/MultiplyNumbers"
+              },
+              {
+                "$ref": "#/components/schemas/DivideNumbers"
+              },
+              {
+                "$ref": "#/components/schemas/RoundDownNumbers"
+              },
+              {
+                "$ref": "#/components/schemas/RoundUpNumbers"
+              },
+              {
+                "$ref": "#/components/schemas/RoundNearestNumbers"
+              },
+              {
+                "$ref": "#/components/schemas/UpperCase"
+              },
+              {
+                "$ref": "#/components/schemas/LowerCase"
+              },
+              {
+                "$ref": "#/components/schemas/UrlEncode"
+              },
+              {
+                "$ref": "#/components/schemas/ConcatStrings"
+              },
+              {
+                "$ref": "#/components/schemas/Contains"
+              },
+              {
+                "$ref": "#/components/schemas/BeginsWith"
+              },
+              {
+                "$ref": "#/components/schemas/NumberToString"
+              },
+              {
+                "$ref": "#/components/schemas/ParseNumber"
+              },
+              {
+                "$ref": "#/components/schemas/FetchExchangeRate"
+              },
+              {
+                "$ref": "#/components/schemas/FetchCurrencyDecimalPlaces"
+              },
+              {
+                "$ref": "#/components/schemas/FetchSingleCurrencyPortalCurrency"
+              },
+              {
+                "$ref": "#/components/schemas/FetchPortalHomeCurrency"
+              },
+              {
+                "$ref": "#/components/schemas/IsPortalEnabledCurrency"
+              },
+              {
+                "$ref": "#/components/schemas/IsPortalMulticurrencyEnabled"
+              },
+              {
+                "$ref": "#/components/schemas/DatedExchangeRate"
+              },
+              {
+                "$ref": "#/components/schemas/PipelineProbability"
+              },
+              {
+                "$ref": "#/components/schemas/MaxNumbers"
+              },
+              {
+                "$ref": "#/components/schemas/MinNumbers"
+              },
+              {
+                "$ref": "#/components/schemas/LessThan"
+              },
+              {
+                "$ref": "#/components/schemas/LessThanOrEqual"
+              },
+              {
+                "$ref": "#/components/schemas/MoreThan"
+              },
+              {
+                "$ref": "#/components/schemas/MoreThanOrEqual"
+              },
+              {
+                "$ref": "#/components/schemas/NumberEquals"
+              },
+              {
+                "$ref": "#/components/schemas/StringEquals"
+              },
+              {
+                "$ref": "#/components/schemas/IsPipelineStageClosed"
+              },
+              {
+                "$ref": "#/components/schemas/Not"
+              },
+              {
+                "$ref": "#/components/schemas/Date"
+              },
+              {
+                "$ref": "#/components/schemas/Month"
+              },
+              {
+                "$ref": "#/components/schemas/Year"
+              },
+              {
+                "$ref": "#/components/schemas/Now"
+              },
+              {
+                "$ref": "#/components/schemas/TimeBetween"
+              },
+              {
+                "$ref": "#/components/schemas/TimeBetweenSkipWeekends"
+              },
+              {
+                "$ref": "#/components/schemas/PeriodToMonths"
+              },
+              {
+                "$ref": "#/components/schemas/PeriodToWeeks"
+              },
+              {
+                "$ref": "#/components/schemas/And"
+              },
+              {
+                "$ref": "#/components/schemas/Or"
+              },
+              {
+                "$ref": "#/components/schemas/Xor"
+              },
+              {
+                "$ref": "#/components/schemas/IfString"
+              },
+              {
+                "$ref": "#/components/schemas/IfNumber"
+              },
+              {
+                "$ref": "#/components/schemas/IfBoolean"
+              },
+              {
+                "$ref": "#/components/schemas/IsPresent"
+              },
+              {
+                "$ref": "#/components/schemas/IfChainString"
+              },
+              {
+                "$ref": "#/components/schemas/IfChainNumber"
+              },
+              {
+                "$ref": "#/components/schemas/IfChainBoolean"
+              },
+              {
+                "$ref": "#/components/schemas/HasEmailReply"
+              },
+              {
+                "$ref": "#/components/schemas/HasPlainTextEmailReply"
+              },
+              {
+                "$ref": "#/components/schemas/ExtractMostRecentEmailReplyHtml"
+              },
+              {
+                "$ref": "#/components/schemas/ExtractMostRecentEmailReplyText"
+              },
+              {
+                "$ref": "#/components/schemas/ExtractMostRecentPlainTextEmailReply"
+              },
+              {
+                "$ref": "#/components/schemas/SetContainsString"
+              },
+              {
+                "$ref": "#/components/schemas/SetContainsAnyString"
+              },
+              {
+                "$ref": "#/components/schemas/SetEqualsStrings"
+              },
+              {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
+                "$ref": "#/components/schemas/IsEngagementType"
+              },
+              {
+                "$ref": "#/components/schemas/FormatFullName"
+              },
+              {
+                "$ref": "#/components/schemas/FormatPhoneNumber"
+              },
+              {
+                "$ref": "#/components/schemas/FormatSearchablePhoneNumber"
+              },
+              {
+                "$ref": "#/components/schemas/AbsoluteValue"
+              },
+              {
+                "$ref": "#/components/schemas/SquareRoot"
+              },
+              {
+                "$ref": "#/components/schemas/Power"
+              },
+              {
+                "$ref": "#/components/schemas/Substring"
+              },
+              {
+                "$ref": "#/components/schemas/Euler"
+              },
+              {
+                "$ref": "#/components/schemas/StringLength"
+              },
+              {
+                "$ref": "#/components/schemas/IsBlank"
+              },
+              {
+                "$ref": "#/components/schemas/AddTime"
+              },
+              {
+                "$ref": "#/components/schemas/SubtractTime"
+              },
+              {
+                "$ref": "#/components/schemas/RegexMatches"
+              },
+              {
+                "$ref": "#/components/schemas/IsValidIsoPeriod"
+              },
+              {
+                "$ref": "#/components/schemas/IsMonthBasedIsoPeriod"
+              },
+              {
+                "$ref": "#/components/schemas/IsDayBasedIsoPeriod"
+              },
+              {
+                "$ref": "#/components/schemas/IsMultipleOf"
+              },
+              {
+                "$ref": "#/components/schemas/ValidateWhen"
+              },
+              {
+                "$ref": "#/components/schemas/CoalesceString"
+              },
+              {
+                "$ref": "#/components/schemas/CoalesceNumber"
+              },
+              {
+                "$ref": "#/components/schemas/CoalesceBoolean"
+              },
+              {
+                "$ref": "#/components/schemas/GetStartTime"
+              },
+              {
+                "$ref": "#/components/schemas/ShiftDate"
+              },
+              {
+                "$ref": "#/components/schemas/PortalTimezone"
+              },
+              {
+                "$ref": "#/components/schemas/AnyCharsMatch"
+              },
+              {
+                "$ref": "#/components/schemas/AllCharsMatch"
+              },
+              {
+                "$ref": "#/components/schemas/RemoveMatchingChars"
+              },
+              {
+                "$ref": "#/components/schemas/KeepMatchingChars"
+              },
+              {
+                "$ref": "#/components/schemas/TrimOuterChars"
+              },
+              {
+                "$ref": "#/components/schemas/TrimLeadingChars"
+              },
+              {
+                "$ref": "#/components/schemas/TrimTrailingChars"
+              },
+              {
+                "$ref": "#/components/schemas/ReplaceMatchingChars"
+              },
+              {
+                "$ref": "#/components/schemas/CollapseMatchingChars"
+              },
+              {
+                "$ref": "#/components/schemas/CountMatchingChars"
+              },
+              {
+                "$ref": "#/components/schemas/HsInternalNormalizedDomain"
+              },
+              {
+                "$ref": "#/components/schemas/HsInternalNormalizedEmail"
+              }
+            ],
+            "example": null,
+            "discriminator": {
+              "propertyName": "operator",
+              "mapping": {
+                "CONSTANT_BOOLEAN": "#/components/schemas/ConstantBoolean",
+                "CONSTANT_NUMBER": "#/components/schemas/ConstantNumber",
+                "CONSTANT_STRING": "#/components/schemas/ConstantString",
+                "BOOLEAN_PROPERTY_VARIABLE": "#/components/schemas/BooleanPropertyVariable",
+                "STRING_PROPERTY_VARIABLE": "#/components/schemas/StringPropertyVariable",
+                "NUMBER_PROPERTY_VARIABLE": "#/components/schemas/NumberPropertyVariable",
+                "TIMESTAMP_OF_PROPERTY_VARIABLE": "#/components/schemas/TimestampOfPropertyVariable",
+                "BOOLEAN_TARGET_PROPERTY_VARIABLE": "#/components/schemas/BooleanTargetPropertyVariable",
+                "STRING_TARGET_PROPERTY_VARIABLE": "#/components/schemas/StringTargetPropertyVariable",
+                "NUMBER_TARGET_PROPERTY_VARIABLE": "#/components/schemas/NumberTargetPropertyVariable",
+                "TIMESTAMP_OF_TARGET_PROPERTY_VARIABLE": "#/components/schemas/TimestampOfTargetPropertyVariable",
+                "ADD_NUMBERS": "#/components/schemas/AddNumbers",
+                "SUBTRACT_NUMBERS": "#/components/schemas/SubtractNumbers",
+                "MULTIPLY_NUMBERS": "#/components/schemas/MultiplyNumbers",
+                "DIVIDE_NUMBERS": "#/components/schemas/DivideNumbers",
+                "ROUND_DOWN": "#/components/schemas/RoundDownNumbers",
+                "ROUND_UP": "#/components/schemas/RoundUpNumbers",
+                "ROUND_NEAREST": "#/components/schemas/RoundNearestNumbers",
+                "UPPER_CASE": "#/components/schemas/UpperCase",
+                "LOWER_CASE": "#/components/schemas/LowerCase",
+                "URL_ENCODE": "#/components/schemas/UrlEncode",
+                "CONCAT_STRINGS": "#/components/schemas/ConcatStrings",
+                "CONTAINS": "#/components/schemas/Contains",
+                "BEGINS_WITH": "#/components/schemas/BeginsWith",
+                "NUMBER_TO_STRING": "#/components/schemas/NumberToString",
+                "PARSE_NUMBER": "#/components/schemas/ParseNumber",
+                "FETCH_EXCHANGE_RATE": "#/components/schemas/FetchExchangeRate",
+                "FETCH_CURRENCY_DECIMAL_PLACES": "#/components/schemas/FetchCurrencyDecimalPlaces",
+                "FETCH_SINGLE_CURRENCY_PORTAL_CURRENCY": "#/components/schemas/FetchSingleCurrencyPortalCurrency",
+                "FETCH_PORTAL_HOME_CURRENCY": "#/components/schemas/FetchPortalHomeCurrency",
+                "IS_PORTAL_ENABLED_CURRENCY": "#/components/schemas/IsPortalEnabledCurrency",
+                "IS_PORTAL_MULTICURRENCY_ENABLED": "#/components/schemas/IsPortalMulticurrencyEnabled",
+                "DATED_EXCHANGE_RATE": "#/components/schemas/DatedExchangeRate",
+                "PIPELINE_PROBABILITY": "#/components/schemas/PipelineProbability",
+                "MAX_NUMBERS": "#/components/schemas/MaxNumbers",
+                "MIN_NUMBERS": "#/components/schemas/MinNumbers",
+                "LESS_THAN": "#/components/schemas/LessThan",
+                "LESS_THAN_OR_EQUAL": "#/components/schemas/LessThanOrEqual",
+                "MORE_THAN": "#/components/schemas/MoreThan",
+                "MORE_THAN_OR_EQUAL": "#/components/schemas/MoreThanOrEqual",
+                "NUMBER_EQUALS": "#/components/schemas/NumberEquals",
+                "STRING_EQUALS": "#/components/schemas/StringEquals",
+                "IS_PIPELINE_STAGE_CLOSED": "#/components/schemas/IsPipelineStageClosed",
+                "NOT": "#/components/schemas/Not",
+                "DATE": "#/components/schemas/Date",
+                "MONTH": "#/components/schemas/Month",
+                "YEAR": "#/components/schemas/Year",
+                "NOW": "#/components/schemas/Now",
+                "TIME_BETWEEN": "#/components/schemas/TimeBetween",
+                "TIME_BETWEEN_SKIP_WEEKENDS": "#/components/schemas/TimeBetweenSkipWeekends",
+                "PERIOD_TO_MONTHS": "#/components/schemas/PeriodToMonths",
+                "PERIOD_TO_WEEKS": "#/components/schemas/PeriodToWeeks",
+                "AND": "#/components/schemas/And",
+                "OR": "#/components/schemas/Or",
+                "XOR": "#/components/schemas/Xor",
+                "IF_STRING": "#/components/schemas/IfString",
+                "IF_NUMBER": "#/components/schemas/IfNumber",
+                "IF_BOOLEAN": "#/components/schemas/IfBoolean",
+                "IS_PRESENT": "#/components/schemas/IsPresent",
+                "IF_CHAIN_STRING": "#/components/schemas/IfChainString",
+                "IF_CHAIN_NUMBER": "#/components/schemas/IfChainNumber",
+                "IF_CHAIN_BOOLEAN": "#/components/schemas/IfChainBoolean",
+                "HAS_EMAIL_REPLY": "#/components/schemas/HasEmailReply",
+                "HAS_PLAIN_TEXT_EMAIL_REPLY": "#/components/schemas/HasPlainTextEmailReply",
+                "EXTRACT_MOST_RECENT_EMAIL_REPLY_HTML": "#/components/schemas/ExtractMostRecentEmailReplyHtml",
+                "EXTRACT_MOST_RECENT_EMAIL_REPLY_TEXT": "#/components/schemas/ExtractMostRecentEmailReplyText",
+                "EXTRACT_MOST_RECENT_PLAIN_TEXT_EMAIL_REPLY": "#/components/schemas/ExtractMostRecentPlainTextEmailReply",
+                "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
+                "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
+                "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -741794,6 +743164,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -741979,6 +743355,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -742232,6 +743610,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -742417,6 +743801,454 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
+                "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
+                "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
+                "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
+                "FORMAT_SEARCHABLE_PHONE_NUMBER": "#/components/schemas/FormatSearchablePhoneNumber",
+                "ABSOLUTE_VALUE": "#/components/schemas/AbsoluteValue",
+                "SQUARE_ROOT": "#/components/schemas/SquareRoot",
+                "POWER": "#/components/schemas/Power",
+                "SUBSTRING": "#/components/schemas/Substring",
+                "EULER": "#/components/schemas/Euler",
+                "STRING_LENGTH": "#/components/schemas/StringLength",
+                "IS_BLANK": "#/components/schemas/IsBlank",
+                "ADD_TIME": "#/components/schemas/AddTime",
+                "SUBTRACT_TIME": "#/components/schemas/SubtractTime",
+                "REGEX_MATCHES": "#/components/schemas/RegexMatches",
+                "IS_VALID_ISO_PERIOD": "#/components/schemas/IsValidIsoPeriod",
+                "IS_MONTH_BASED_ISO_PERIOD": "#/components/schemas/IsMonthBasedIsoPeriod",
+                "IS_DAY_BASED_ISO_PERIOD": "#/components/schemas/IsDayBasedIsoPeriod",
+                "IS_MULTIPLE_OF": "#/components/schemas/IsMultipleOf",
+                "VALIDATE_WHEN": "#/components/schemas/ValidateWhen",
+                "COALESCE_STRING": "#/components/schemas/CoalesceString",
+                "COALESCE_NUMBER": "#/components/schemas/CoalesceNumber",
+                "COALESCE_BOOLEAN": "#/components/schemas/CoalesceBoolean",
+                "GET_START_TIME": "#/components/schemas/GetStartTime",
+                "SHIFT_DATE": "#/components/schemas/ShiftDate",
+                "PORTAL_TIMEZONE": "#/components/schemas/PortalTimezone",
+                "ANY_CHARS_MATCH": "#/components/schemas/AnyCharsMatch",
+                "ALL_CHARS_MATCH": "#/components/schemas/AllCharsMatch",
+                "REMOVE_MATCHING_CHARS": "#/components/schemas/RemoveMatchingChars",
+                "KEEP_MATCHING_CHARS": "#/components/schemas/KeepMatchingChars",
+                "TRIM_OUTER_CHARS": "#/components/schemas/TrimOuterChars",
+                "TRIM_LEADING_CHARS": "#/components/schemas/TrimLeadingChars",
+                "TRIM_TRAILING_CHARS": "#/components/schemas/TrimTrailingChars",
+                "REPLACE_MATCHING_CHARS": "#/components/schemas/ReplaceMatchingChars",
+                "COLLAPSE_MATCHING_CHARS": "#/components/schemas/CollapseMatchingChars",
+                "COUNT_MATCHING_CHARS": "#/components/schemas/CountMatchingChars",
+                "HS_INTERNAL_NORMALIZED_DOMAIN": "#/components/schemas/HsInternalNormalizedDomain",
+                "HS_INTERNAL_NORMALIZED_EMAIL": "#/components/schemas/HsInternalNormalizedEmail"
+              }
+            }
+          },
+          "SetUnionStringInputsItem": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/ConstantBoolean"
+              },
+              {
+                "$ref": "#/components/schemas/ConstantNumber"
+              },
+              {
+                "$ref": "#/components/schemas/ConstantString"
+              },
+              {
+                "$ref": "#/components/schemas/BooleanPropertyVariable"
+              },
+              {
+                "$ref": "#/components/schemas/StringPropertyVariable"
+              },
+              {
+                "$ref": "#/components/schemas/NumberPropertyVariable"
+              },
+              {
+                "$ref": "#/components/schemas/TimestampOfPropertyVariable"
+              },
+              {
+                "$ref": "#/components/schemas/BooleanTargetPropertyVariable"
+              },
+              {
+                "$ref": "#/components/schemas/StringTargetPropertyVariable"
+              },
+              {
+                "$ref": "#/components/schemas/NumberTargetPropertyVariable"
+              },
+              {
+                "$ref": "#/components/schemas/TimestampOfTargetPropertyVariable"
+              },
+              {
+                "$ref": "#/components/schemas/AddNumbers"
+              },
+              {
+                "$ref": "#/components/schemas/SubtractNumbers"
+              },
+              {
+                "$ref": "#/components/schemas/MultiplyNumbers"
+              },
+              {
+                "$ref": "#/components/schemas/DivideNumbers"
+              },
+              {
+                "$ref": "#/components/schemas/RoundDownNumbers"
+              },
+              {
+                "$ref": "#/components/schemas/RoundUpNumbers"
+              },
+              {
+                "$ref": "#/components/schemas/RoundNearestNumbers"
+              },
+              {
+                "$ref": "#/components/schemas/UpperCase"
+              },
+              {
+                "$ref": "#/components/schemas/LowerCase"
+              },
+              {
+                "$ref": "#/components/schemas/UrlEncode"
+              },
+              {
+                "$ref": "#/components/schemas/ConcatStrings"
+              },
+              {
+                "$ref": "#/components/schemas/Contains"
+              },
+              {
+                "$ref": "#/components/schemas/BeginsWith"
+              },
+              {
+                "$ref": "#/components/schemas/NumberToString"
+              },
+              {
+                "$ref": "#/components/schemas/ParseNumber"
+              },
+              {
+                "$ref": "#/components/schemas/FetchExchangeRate"
+              },
+              {
+                "$ref": "#/components/schemas/FetchCurrencyDecimalPlaces"
+              },
+              {
+                "$ref": "#/components/schemas/FetchSingleCurrencyPortalCurrency"
+              },
+              {
+                "$ref": "#/components/schemas/FetchPortalHomeCurrency"
+              },
+              {
+                "$ref": "#/components/schemas/IsPortalEnabledCurrency"
+              },
+              {
+                "$ref": "#/components/schemas/IsPortalMulticurrencyEnabled"
+              },
+              {
+                "$ref": "#/components/schemas/DatedExchangeRate"
+              },
+              {
+                "$ref": "#/components/schemas/PipelineProbability"
+              },
+              {
+                "$ref": "#/components/schemas/MaxNumbers"
+              },
+              {
+                "$ref": "#/components/schemas/MinNumbers"
+              },
+              {
+                "$ref": "#/components/schemas/LessThan"
+              },
+              {
+                "$ref": "#/components/schemas/LessThanOrEqual"
+              },
+              {
+                "$ref": "#/components/schemas/MoreThan"
+              },
+              {
+                "$ref": "#/components/schemas/MoreThanOrEqual"
+              },
+              {
+                "$ref": "#/components/schemas/NumberEquals"
+              },
+              {
+                "$ref": "#/components/schemas/StringEquals"
+              },
+              {
+                "$ref": "#/components/schemas/IsPipelineStageClosed"
+              },
+              {
+                "$ref": "#/components/schemas/Not"
+              },
+              {
+                "$ref": "#/components/schemas/Date"
+              },
+              {
+                "$ref": "#/components/schemas/Month"
+              },
+              {
+                "$ref": "#/components/schemas/Year"
+              },
+              {
+                "$ref": "#/components/schemas/Now"
+              },
+              {
+                "$ref": "#/components/schemas/TimeBetween"
+              },
+              {
+                "$ref": "#/components/schemas/TimeBetweenSkipWeekends"
+              },
+              {
+                "$ref": "#/components/schemas/PeriodToMonths"
+              },
+              {
+                "$ref": "#/components/schemas/PeriodToWeeks"
+              },
+              {
+                "$ref": "#/components/schemas/And"
+              },
+              {
+                "$ref": "#/components/schemas/Or"
+              },
+              {
+                "$ref": "#/components/schemas/Xor"
+              },
+              {
+                "$ref": "#/components/schemas/IfString"
+              },
+              {
+                "$ref": "#/components/schemas/IfNumber"
+              },
+              {
+                "$ref": "#/components/schemas/IfBoolean"
+              },
+              {
+                "$ref": "#/components/schemas/IsPresent"
+              },
+              {
+                "$ref": "#/components/schemas/IfChainString"
+              },
+              {
+                "$ref": "#/components/schemas/IfChainNumber"
+              },
+              {
+                "$ref": "#/components/schemas/IfChainBoolean"
+              },
+              {
+                "$ref": "#/components/schemas/HasEmailReply"
+              },
+              {
+                "$ref": "#/components/schemas/HasPlainTextEmailReply"
+              },
+              {
+                "$ref": "#/components/schemas/ExtractMostRecentEmailReplyHtml"
+              },
+              {
+                "$ref": "#/components/schemas/ExtractMostRecentEmailReplyText"
+              },
+              {
+                "$ref": "#/components/schemas/ExtractMostRecentPlainTextEmailReply"
+              },
+              {
+                "$ref": "#/components/schemas/SetContainsString"
+              },
+              {
+                "$ref": "#/components/schemas/SetContainsAnyString"
+              },
+              {
+                "$ref": "#/components/schemas/SetEqualsStrings"
+              },
+              {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
+                "$ref": "#/components/schemas/IsEngagementType"
+              },
+              {
+                "$ref": "#/components/schemas/FormatFullName"
+              },
+              {
+                "$ref": "#/components/schemas/FormatPhoneNumber"
+              },
+              {
+                "$ref": "#/components/schemas/FormatSearchablePhoneNumber"
+              },
+              {
+                "$ref": "#/components/schemas/AbsoluteValue"
+              },
+              {
+                "$ref": "#/components/schemas/SquareRoot"
+              },
+              {
+                "$ref": "#/components/schemas/Power"
+              },
+              {
+                "$ref": "#/components/schemas/Substring"
+              },
+              {
+                "$ref": "#/components/schemas/Euler"
+              },
+              {
+                "$ref": "#/components/schemas/StringLength"
+              },
+              {
+                "$ref": "#/components/schemas/IsBlank"
+              },
+              {
+                "$ref": "#/components/schemas/AddTime"
+              },
+              {
+                "$ref": "#/components/schemas/SubtractTime"
+              },
+              {
+                "$ref": "#/components/schemas/RegexMatches"
+              },
+              {
+                "$ref": "#/components/schemas/IsValidIsoPeriod"
+              },
+              {
+                "$ref": "#/components/schemas/IsMonthBasedIsoPeriod"
+              },
+              {
+                "$ref": "#/components/schemas/IsDayBasedIsoPeriod"
+              },
+              {
+                "$ref": "#/components/schemas/IsMultipleOf"
+              },
+              {
+                "$ref": "#/components/schemas/ValidateWhen"
+              },
+              {
+                "$ref": "#/components/schemas/CoalesceString"
+              },
+              {
+                "$ref": "#/components/schemas/CoalesceNumber"
+              },
+              {
+                "$ref": "#/components/schemas/CoalesceBoolean"
+              },
+              {
+                "$ref": "#/components/schemas/GetStartTime"
+              },
+              {
+                "$ref": "#/components/schemas/ShiftDate"
+              },
+              {
+                "$ref": "#/components/schemas/PortalTimezone"
+              },
+              {
+                "$ref": "#/components/schemas/AnyCharsMatch"
+              },
+              {
+                "$ref": "#/components/schemas/AllCharsMatch"
+              },
+              {
+                "$ref": "#/components/schemas/RemoveMatchingChars"
+              },
+              {
+                "$ref": "#/components/schemas/KeepMatchingChars"
+              },
+              {
+                "$ref": "#/components/schemas/TrimOuterChars"
+              },
+              {
+                "$ref": "#/components/schemas/TrimLeadingChars"
+              },
+              {
+                "$ref": "#/components/schemas/TrimTrailingChars"
+              },
+              {
+                "$ref": "#/components/schemas/ReplaceMatchingChars"
+              },
+              {
+                "$ref": "#/components/schemas/CollapseMatchingChars"
+              },
+              {
+                "$ref": "#/components/schemas/CountMatchingChars"
+              },
+              {
+                "$ref": "#/components/schemas/HsInternalNormalizedDomain"
+              },
+              {
+                "$ref": "#/components/schemas/HsInternalNormalizedEmail"
+              }
+            ],
+            "example": null,
+            "discriminator": {
+              "propertyName": "operator",
+              "mapping": {
+                "CONSTANT_BOOLEAN": "#/components/schemas/ConstantBoolean",
+                "CONSTANT_NUMBER": "#/components/schemas/ConstantNumber",
+                "CONSTANT_STRING": "#/components/schemas/ConstantString",
+                "BOOLEAN_PROPERTY_VARIABLE": "#/components/schemas/BooleanPropertyVariable",
+                "STRING_PROPERTY_VARIABLE": "#/components/schemas/StringPropertyVariable",
+                "NUMBER_PROPERTY_VARIABLE": "#/components/schemas/NumberPropertyVariable",
+                "TIMESTAMP_OF_PROPERTY_VARIABLE": "#/components/schemas/TimestampOfPropertyVariable",
+                "BOOLEAN_TARGET_PROPERTY_VARIABLE": "#/components/schemas/BooleanTargetPropertyVariable",
+                "STRING_TARGET_PROPERTY_VARIABLE": "#/components/schemas/StringTargetPropertyVariable",
+                "NUMBER_TARGET_PROPERTY_VARIABLE": "#/components/schemas/NumberTargetPropertyVariable",
+                "TIMESTAMP_OF_TARGET_PROPERTY_VARIABLE": "#/components/schemas/TimestampOfTargetPropertyVariable",
+                "ADD_NUMBERS": "#/components/schemas/AddNumbers",
+                "SUBTRACT_NUMBERS": "#/components/schemas/SubtractNumbers",
+                "MULTIPLY_NUMBERS": "#/components/schemas/MultiplyNumbers",
+                "DIVIDE_NUMBERS": "#/components/schemas/DivideNumbers",
+                "ROUND_DOWN": "#/components/schemas/RoundDownNumbers",
+                "ROUND_UP": "#/components/schemas/RoundUpNumbers",
+                "ROUND_NEAREST": "#/components/schemas/RoundNearestNumbers",
+                "UPPER_CASE": "#/components/schemas/UpperCase",
+                "LOWER_CASE": "#/components/schemas/LowerCase",
+                "URL_ENCODE": "#/components/schemas/UrlEncode",
+                "CONCAT_STRINGS": "#/components/schemas/ConcatStrings",
+                "CONTAINS": "#/components/schemas/Contains",
+                "BEGINS_WITH": "#/components/schemas/BeginsWith",
+                "NUMBER_TO_STRING": "#/components/schemas/NumberToString",
+                "PARSE_NUMBER": "#/components/schemas/ParseNumber",
+                "FETCH_EXCHANGE_RATE": "#/components/schemas/FetchExchangeRate",
+                "FETCH_CURRENCY_DECIMAL_PLACES": "#/components/schemas/FetchCurrencyDecimalPlaces",
+                "FETCH_SINGLE_CURRENCY_PORTAL_CURRENCY": "#/components/schemas/FetchSingleCurrencyPortalCurrency",
+                "FETCH_PORTAL_HOME_CURRENCY": "#/components/schemas/FetchPortalHomeCurrency",
+                "IS_PORTAL_ENABLED_CURRENCY": "#/components/schemas/IsPortalEnabledCurrency",
+                "IS_PORTAL_MULTICURRENCY_ENABLED": "#/components/schemas/IsPortalMulticurrencyEnabled",
+                "DATED_EXCHANGE_RATE": "#/components/schemas/DatedExchangeRate",
+                "PIPELINE_PROBABILITY": "#/components/schemas/PipelineProbability",
+                "MAX_NUMBERS": "#/components/schemas/MaxNumbers",
+                "MIN_NUMBERS": "#/components/schemas/MinNumbers",
+                "LESS_THAN": "#/components/schemas/LessThan",
+                "LESS_THAN_OR_EQUAL": "#/components/schemas/LessThanOrEqual",
+                "MORE_THAN": "#/components/schemas/MoreThan",
+                "MORE_THAN_OR_EQUAL": "#/components/schemas/MoreThanOrEqual",
+                "NUMBER_EQUALS": "#/components/schemas/NumberEquals",
+                "STRING_EQUALS": "#/components/schemas/StringEquals",
+                "IS_PIPELINE_STAGE_CLOSED": "#/components/schemas/IsPipelineStageClosed",
+                "NOT": "#/components/schemas/Not",
+                "DATE": "#/components/schemas/Date",
+                "MONTH": "#/components/schemas/Month",
+                "YEAR": "#/components/schemas/Year",
+                "NOW": "#/components/schemas/Now",
+                "TIME_BETWEEN": "#/components/schemas/TimeBetween",
+                "TIME_BETWEEN_SKIP_WEEKENDS": "#/components/schemas/TimeBetweenSkipWeekends",
+                "PERIOD_TO_MONTHS": "#/components/schemas/PeriodToMonths",
+                "PERIOD_TO_WEEKS": "#/components/schemas/PeriodToWeeks",
+                "AND": "#/components/schemas/And",
+                "OR": "#/components/schemas/Or",
+                "XOR": "#/components/schemas/Xor",
+                "IF_STRING": "#/components/schemas/IfString",
+                "IF_NUMBER": "#/components/schemas/IfNumber",
+                "IF_BOOLEAN": "#/components/schemas/IfBoolean",
+                "IS_PRESENT": "#/components/schemas/IsPresent",
+                "IF_CHAIN_STRING": "#/components/schemas/IfChainString",
+                "IF_CHAIN_NUMBER": "#/components/schemas/IfChainNumber",
+                "IF_CHAIN_BOOLEAN": "#/components/schemas/IfChainBoolean",
+                "HAS_EMAIL_REPLY": "#/components/schemas/HasEmailReply",
+                "HAS_PLAIN_TEXT_EMAIL_REPLY": "#/components/schemas/HasPlainTextEmailReply",
+                "EXTRACT_MOST_RECENT_EMAIL_REPLY_HTML": "#/components/schemas/ExtractMostRecentEmailReplyHtml",
+                "EXTRACT_MOST_RECENT_EMAIL_REPLY_TEXT": "#/components/schemas/ExtractMostRecentEmailReplyText",
+                "EXTRACT_MOST_RECENT_PLAIN_TEXT_EMAIL_REPLY": "#/components/schemas/ExtractMostRecentPlainTextEmailReply",
+                "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
+                "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
+                "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -742670,6 +744502,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -742855,6 +744693,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -743108,6 +744948,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -743293,6 +745139,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -743546,6 +745394,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -743731,6 +745585,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -743984,6 +745840,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -744169,6 +746031,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -744422,6 +746286,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -744607,6 +746477,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -744860,6 +746732,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -745045,6 +746923,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -745298,6 +747178,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -745483,6 +747369,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -745736,6 +747624,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -745921,6 +747815,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -746174,6 +748070,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -746359,6 +748261,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -746612,6 +748516,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -746797,6 +748707,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -747050,6 +748962,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -747235,6 +749153,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -747488,6 +749408,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -747673,6 +749599,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -747926,6 +749854,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -748111,6 +750045,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -748364,6 +750300,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -748549,6 +750491,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -748802,6 +750746,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -748987,6 +750937,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -749240,6 +751192,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -749425,6 +751383,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",
@@ -749678,6 +751638,12 @@
                 "$ref": "#/components/schemas/SetEqualsStrings"
               },
               {
+                "$ref": "#/components/schemas/SetUnionString"
+              },
+              {
+                "$ref": "#/components/schemas/SetDifferenceString"
+              },
+              {
                 "$ref": "#/components/schemas/IsEngagementType"
               },
               {
@@ -749863,6 +751829,8 @@
                 "SET_CONTAINS_STRING": "#/components/schemas/SetContainsString",
                 "SET_CONTAINS_ANY_STRING": "#/components/schemas/SetContainsAnyString",
                 "SET_EQUALS_STRINGS": "#/components/schemas/SetEqualsStrings",
+                "SET_UNION_STRING": "#/components/schemas/SetUnionString",
+                "SET_DIFFERENCE_STRING": "#/components/schemas/SetDifferenceString",
                 "IS_ENGAGEMENT_TYPE": "#/components/schemas/IsEngagementType",
                 "FORMAT_FULL_NAME": "#/components/schemas/FormatFullName",
                 "FORMAT_PHONE_NUMBER": "#/components/schemas/FormatPhoneNumber",

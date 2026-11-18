@@ -96,7 +96,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(9)
             {
                 { "eligibleFollowUpDays", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicSequenceSettingsRequestEligibleFollowUpDays>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueEligibleFollowUpDays = default; _explicitNullProperties?.Remove("eligibleFollowUpDays"); AdditionalData["eligibleFollowUpDays"] = unknown; } else { EligibleFollowUpDays = parsed; AdditionalData.Remove("eligibleFollowUpDays"); } } },
                 { "individualTaskRemindersEnabled", n => { IndividualTaskRemindersEnabled = n.GetBoolValue(); } },

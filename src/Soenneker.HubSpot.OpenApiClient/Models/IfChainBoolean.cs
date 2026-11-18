@@ -119,7 +119,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(8)
             {
                 { "conditions", n => { Conditions = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteValueInputsItem>(global::Soenneker.HubSpot.OpenApiClient.Models.AbsoluteValueInputsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "defaultExpression", n => { DefaultExpression = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.IfChainBooleanDefaultExpression>(global::Soenneker.HubSpot.OpenApiClient.Models.IfChainBooleanDefaultExpression.CreateFromDiscriminatorValue); } },

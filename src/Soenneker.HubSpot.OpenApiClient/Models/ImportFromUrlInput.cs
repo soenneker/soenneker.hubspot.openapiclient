@@ -129,7 +129,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(10)
             {
                 { "access", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlInputAccess>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAccess = default; _explicitNullProperties?.Remove("access"); AdditionalData["access"] = unknown; } else { Access = parsed; AdditionalData.Remove("access"); } } },
                 { "duplicateValidationScope", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.ImportFromUrlInputDuplicateValidationScope>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDuplicateValidationScope = default; _explicitNullProperties?.Remove("duplicateValidationScope"); AdditionalData["duplicateValidationScope"] = unknown; } else { DuplicateValidationScope = parsed; AdditionalData.Remove("duplicateValidationScope"); } } },

@@ -409,7 +409,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(31)
             {
                 { "allowBuyerSelectedQuantity", n => { AllowBuyerSelectedQuantity = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestAllowBuyerSelectedQuantity>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestAllowBuyerSelectedQuantity.CreateFromDiscriminatorValue); } },
                 { "billingCycleAnchorDate", n => { BillingCycleAnchorDate = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBillingCycleAnchorDate>(global::Soenneker.HubSpot.OpenApiClient.Models.LineItemFromProductCreateRequestBillingCycleAnchorDate.CreateFromDiscriminatorValue); } },

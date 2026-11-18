@@ -94,7 +94,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(7)
             {
                 { "fiscalYearStart", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicCalendarDatePropertyOperationFiscalYearStart>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFiscalYearStart = default; _explicitNullProperties?.Remove("fiscalYearStart"); AdditionalData["fiscalYearStart"] = unknown; } else { FiscalYearStart = parsed; AdditionalData.Remove("fiscalYearStart"); } } },
                 { "includeObjectsWithNoValueSet", n => { IncludeObjectsWithNoValueSet = n.GetBoolValue(); } },

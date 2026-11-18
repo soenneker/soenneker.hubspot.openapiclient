@@ -98,7 +98,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "indexReference", n => { IndexReference = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicIndexedTimePointIndexReference2>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicIndexedTimePointIndexReference2.CreateFromDiscriminatorValue); } },
                 { "offset", n => { Offset = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicIndexOffset2>(global::Soenneker.HubSpot.OpenApiClient.Models.CrmPublicIndexOffset2.CreateFromDiscriminatorValue); } },

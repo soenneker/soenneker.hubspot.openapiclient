@@ -574,7 +574,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(57)
             {
                 { "abStatus", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PageAbStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAbStatus = default; _explicitNullProperties?.Remove("abStatus"); AdditionalData["abStatus"] = unknown; } else { AbStatus = parsed; AdditionalData.Remove("abStatus"); } } },
                 { "abTestId", n => { AbTestId = n.GetStringValue(); } },

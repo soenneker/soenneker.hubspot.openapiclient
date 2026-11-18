@@ -90,7 +90,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "contactIds", n => { ContactIds = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailRecipients>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailRecipients.CreateFromDiscriminatorValue); } },
                 { "contactIlsLists", n => { ContactIlsLists = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailRecipients>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicEmailRecipients.CreateFromDiscriminatorValue); } },

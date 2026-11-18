@@ -86,7 +86,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "lowerBoundOffset", n => { LowerBoundOffset = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicTimeOffset>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicTimeOffset.CreateFromDiscriminatorValue); } },
                 { "rangeType", n => { RangeType = n.GetStringValue(); } },

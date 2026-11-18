@@ -197,7 +197,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(18)
             {
                 { "contactId", n => { ContactId = n.GetLongValue(); } },
                 { "externalPlayContext", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.MediaPlayedEventExternalPlayContext>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueExternalPlayContext = default; _explicitNullProperties?.Remove("externalPlayContext"); AdditionalData["externalPlayContext"] = unknown; } else { ExternalPlayContext = parsed; AdditionalData.Remove("externalPlayContext"); } } },

@@ -85,7 +85,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "attachments", n => { Attachments = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.PublicCommentEggAttachmentsItem>(global::Soenneker.HubSpot.OpenApiClient.Models.PublicCommentEggAttachmentsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "richText", n => { RichText = n.GetStringValue(); } },

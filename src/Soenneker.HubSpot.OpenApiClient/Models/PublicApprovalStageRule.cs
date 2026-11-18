@@ -97,7 +97,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "approvalComment", n => { ApprovalComment = n.GetStringValue(); } },
                 { "approvalMode", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.PublicApprovalStageRuleApprovalMode>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueApprovalMode = default; _explicitNullProperties?.Remove("approvalMode"); AdditionalData["approvalMode"] = unknown; } else { ApprovalMode = parsed; AdditionalData.Remove("approvalMode"); } } },

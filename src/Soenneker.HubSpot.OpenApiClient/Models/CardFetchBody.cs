@@ -85,7 +85,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "cardType", n => { var parsed = n.GetEnumValue<global::Soenneker.HubSpot.OpenApiClient.Models.CardFetchBodyCardType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCardType = default; _explicitNullProperties?.Remove("cardType"); AdditionalData["cardType"] = unknown; } else { CardType = parsed; AdditionalData.Remove("cardType"); } } },
                 { "objectTypes", n => { ObjectTypes = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.CardObjectTypeBody>(global::Soenneker.HubSpot.OpenApiClient.Models.CardObjectTypeBody.CreateFromDiscriminatorValue)?.AsList(); } },

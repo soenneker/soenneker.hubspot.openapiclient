@@ -83,7 +83,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "atLimitFromRecordSamples", n => { AtLimitFromRecordSamples = n.GetCollectionOfObjectValues<global::Soenneker.HubSpot.OpenApiClient.Models.AtLimitRecordSample>(global::Soenneker.HubSpot.OpenApiClient.Models.AtLimitRecordSample.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "limit", n => { Limit = n.GetLongValue(); } },

@@ -114,7 +114,7 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(7)
             {
                 { "elseExpression", n => { ElseExpression = n.GetObjectValue<global::Soenneker.HubSpot.OpenApiClient.Models.IfStringElseExpression>(global::Soenneker.HubSpot.OpenApiClient.Models.IfStringElseExpression.CreateFromDiscriminatorValue); } },
                 { "enclosedInParentheses", n => { EnclosedInParentheses = n.GetBoolValue(); } },
