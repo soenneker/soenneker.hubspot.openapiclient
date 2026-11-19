@@ -764,6 +764,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         #pragma warning disable CS1591
         HsIntentSignalsEnabled,
         #pragma warning restore CS1591
+        [EnumMember(Value = "hs_internal_normalized_email")]
+        #pragma warning disable CS1591
+        HsInternalNormalizedEmail,
+        #pragma warning restore CS1591
         [EnumMember(Value = "hs_ip_timezone")]
         #pragma warning disable CS1591
         HsIpTimezone,
