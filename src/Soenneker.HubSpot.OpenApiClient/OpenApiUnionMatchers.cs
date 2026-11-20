@@ -584,36 +584,36 @@ internal static bool? MatchSchema59801(global::Microsoft.Kiota.Abstractions.Seri
 internal static bool? MatchSchema59835(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema59835(node, 0, ref remaining); }
 internal static bool? MatchSchema59848(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema59848(node, 0, ref remaining); }
 internal static bool? MatchSchema59858(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema59858(node, 0, ref remaining); }
-internal static bool? MatchSchema59873(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema59873(node, 0, ref remaining); }
-internal static bool? MatchSchema59883(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema59883(node, 0, ref remaining); }
-internal static bool? MatchSchema59906(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema59906(node, 0, ref remaining); }
-internal static bool? MatchSchema59914(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema59914(node, 0, ref remaining); }
-internal static bool? MatchSchema60203(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema60203(node, 0, ref remaining); }
-internal static bool? MatchSchema60336(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema60336(node, 0, ref remaining); }
-internal static bool? MatchSchema60347(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema60347(node, 0, ref remaining); }
-internal static bool? MatchSchema60486(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema60486(node, 0, ref remaining); }
-internal static bool? MatchSchema61515(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema61515(node, 0, ref remaining); }
-internal static bool? MatchSchema61525(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema61525(node, 0, ref remaining); }
-internal static bool? MatchSchema61550(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema61550(node, 0, ref remaining); }
-internal static bool? MatchSchema61603(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema61603(node, 0, ref remaining); }
-internal static bool? MatchSchema61611(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema61611(node, 0, ref remaining); }
-internal static bool? MatchSchema61619(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema61619(node, 0, ref remaining); }
-internal static bool? MatchSchema61629(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema61629(node, 0, ref remaining); }
-internal static bool? MatchSchema61702(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema61702(node, 0, ref remaining); }
-internal static bool? MatchSchema61712(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema61712(node, 0, ref remaining); }
-internal static bool? MatchSchema61722(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema61722(node, 0, ref remaining); }
-internal static bool? MatchSchema61749(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema61749(node, 0, ref remaining); }
-internal static bool? MatchSchema61755(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema61755(node, 0, ref remaining); }
-internal static bool? MatchSchema62666(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema62666(node, 0, ref remaining); }
-internal static bool? MatchSchema62676(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema62676(node, 0, ref remaining); }
-internal static bool? MatchSchema62686(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema62686(node, 0, ref remaining); }
-internal static bool? MatchSchema62696(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema62696(node, 0, ref remaining); }
-internal static bool? MatchSchema62859(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema62859(node, 0, ref remaining); }
-internal static bool? MatchSchema63023(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema63023(node, 0, ref remaining); }
-internal static bool? MatchSchema63129(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema63129(node, 0, ref remaining); }
-internal static bool? MatchSchema63155(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema63155(node, 0, ref remaining); }
-internal static bool? MatchSchema63166(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema63166(node, 0, ref remaining); }
-internal static bool? MatchSchema63176(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema63176(node, 0, ref remaining); }
+internal static bool? MatchSchema59874(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema59874(node, 0, ref remaining); }
+internal static bool? MatchSchema59884(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema59884(node, 0, ref remaining); }
+internal static bool? MatchSchema59907(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema59907(node, 0, ref remaining); }
+internal static bool? MatchSchema59915(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema59915(node, 0, ref remaining); }
+internal static bool? MatchSchema60204(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema60204(node, 0, ref remaining); }
+internal static bool? MatchSchema60337(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema60337(node, 0, ref remaining); }
+internal static bool? MatchSchema60348(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema60348(node, 0, ref remaining); }
+internal static bool? MatchSchema60487(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema60487(node, 0, ref remaining); }
+internal static bool? MatchSchema61516(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema61516(node, 0, ref remaining); }
+internal static bool? MatchSchema61526(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema61526(node, 0, ref remaining); }
+internal static bool? MatchSchema61551(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema61551(node, 0, ref remaining); }
+internal static bool? MatchSchema61604(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema61604(node, 0, ref remaining); }
+internal static bool? MatchSchema61612(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema61612(node, 0, ref remaining); }
+internal static bool? MatchSchema61620(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema61620(node, 0, ref remaining); }
+internal static bool? MatchSchema61630(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema61630(node, 0, ref remaining); }
+internal static bool? MatchSchema61703(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema61703(node, 0, ref remaining); }
+internal static bool? MatchSchema61713(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema61713(node, 0, ref remaining); }
+internal static bool? MatchSchema61723(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema61723(node, 0, ref remaining); }
+internal static bool? MatchSchema61750(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema61750(node, 0, ref remaining); }
+internal static bool? MatchSchema61756(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema61756(node, 0, ref remaining); }
+internal static bool? MatchSchema62667(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema62667(node, 0, ref remaining); }
+internal static bool? MatchSchema62677(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema62677(node, 0, ref remaining); }
+internal static bool? MatchSchema62687(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema62687(node, 0, ref remaining); }
+internal static bool? MatchSchema62697(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema62697(node, 0, ref remaining); }
+internal static bool? MatchSchema62860(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema62860(node, 0, ref remaining); }
+internal static bool? MatchSchema63024(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema63024(node, 0, ref remaining); }
+internal static bool? MatchSchema63130(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema63130(node, 0, ref remaining); }
+internal static bool? MatchSchema63156(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema63156(node, 0, ref remaining); }
+internal static bool? MatchSchema63167(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema63167(node, 0, ref remaining); }
+internal static bool? MatchSchema63177(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) { int remaining = 10000; return MatchSchema63177(node, 0, ref remaining); }
 private static bool IsNumber(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) => node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedInteger or global::Microsoft.Kiota.Abstractions.Serialization.UntypedLong or global::Microsoft.Kiota.Abstractions.Serialization.UntypedFloat or global::Microsoft.Kiota.Abstractions.Serialization.UntypedDouble or global::Microsoft.Kiota.Abstractions.Serialization.UntypedDecimal;
 private static int StringLength(string text) { int count = 0; for (int i = 0; i < text.Length; i++, count++) if (char.IsHighSurrogate(text[i]) && i + 1 < text.Length && char.IsLowSurrogate(text[i + 1])) i++; return count; }
 private static bool? All(params bool?[] values) { bool? result = true; foreach (var item in values) result &= item; return result; }
@@ -784,7 +784,7 @@ return result;
 private static bool? MatchSchema47(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
-{ result &= (One(MatchSchema20745(node, depth + 1, ref remaining),MatchSchema20756(node, depth + 1, ref remaining),MatchSchema20764(node, depth + 1, ref remaining),MatchSchema7769(node, depth + 1, ref remaining),MatchSchema59906(node, depth + 1, ref remaining),MatchSchema49914(node, depth + 1, ref remaining),MatchSchema61603(node, depth + 1, ref remaining),MatchSchema7777(node, depth + 1, ref remaining),MatchSchema59914(node, depth + 1, ref remaining),MatchSchema49928(node, depth + 1, ref remaining),MatchSchema61611(node, depth + 1, ref remaining),MatchSchema356(node, depth + 1, ref remaining),MatchSchema60336(node, depth + 1, ref remaining),MatchSchema49750(node, depth + 1, ref remaining),MatchSchema39997(node, depth + 1, ref remaining),MatchSchema59018(node, depth + 1, ref remaining),MatchSchema59038(node, depth + 1, ref remaining),MatchSchema59028(node, depth + 1, ref remaining),MatchSchema62666(node, depth + 1, ref remaining),MatchSchema48632(node, depth + 1, ref remaining),MatchSchema62676(node, depth + 1, ref remaining),MatchSchema20709(node, depth + 1, ref remaining),MatchSchema20861(node, depth + 1, ref remaining),MatchSchema4690(node, depth + 1, ref remaining),MatchSchema49936(node, depth + 1, ref remaining),MatchSchema51340(node, depth + 1, ref remaining),MatchSchema43843(node, depth + 1, ref remaining),MatchSchema43833(node, depth + 1, ref remaining),MatchSchema43861(node, depth + 1, ref remaining),MatchSchema43853(node, depth + 1, ref remaining),MatchSchema47940(node, depth + 1, ref remaining),MatchSchema47950(node, depth + 1, ref remaining),MatchSchema39807(node, depth + 1, ref remaining),MatchSchema51677(node, depth + 1, ref remaining),MatchSchema49331(node, depth + 1, ref remaining),MatchSchema49660(node, depth + 1, ref remaining),MatchSchema48171(node, depth + 1, ref remaining),MatchSchema48181(node, depth + 1, ref remaining),MatchSchema49691(node, depth + 1, ref remaining),MatchSchema49701(node, depth + 1, ref remaining),MatchSchema49877(node, depth + 1, ref remaining),MatchSchema59848(node, depth + 1, ref remaining),MatchSchema47930(node, depth + 1, ref remaining),MatchSchema49787(node, depth + 1, ref remaining),MatchSchema39715(node, depth + 1, ref remaining),MatchSchema49670(node, depth + 1, ref remaining),MatchSchema63166(node, depth + 1, ref remaining),MatchSchema49847(node, depth + 1, ref remaining),MatchSchema61515(node, depth + 1, ref remaining),MatchSchema61525(node, depth + 1, ref remaining),MatchSchema51629(node, depth + 1, ref remaining),MatchSchema51639(node, depth + 1, ref remaining),MatchSchema580(node, depth + 1, ref remaining),MatchSchema50257(node, depth + 1, ref remaining),MatchSchema63155(node, depth + 1, ref remaining),MatchSchema47263(node, depth + 1, ref remaining),MatchSchema47006(node, depth + 1, ref remaining),MatchSchema46335(node, depth + 1, ref remaining),MatchSchema47958(node, depth + 1, ref remaining),MatchSchema46868(node, depth + 1, ref remaining),MatchSchema46730(node, depth + 1, ref remaining),MatchSchema46592(node, depth + 1, ref remaining),MatchSchema46025(node, depth + 1, ref remaining),MatchSchema46035(node, depth + 1, ref remaining),MatchSchema43753(node, depth + 1, ref remaining),MatchSchema43763(node, depth + 1, ref remaining),MatchSchema43773(node, depth + 1, ref remaining),MatchSchema59265(node, depth + 1, ref remaining),MatchSchema59132(node, depth + 1, ref remaining),MatchSchema59408(node, depth + 1, ref remaining),MatchSchema59438(node, depth + 1, ref remaining),MatchSchema59398(node, depth + 1, ref remaining),MatchSchema47902(node, depth + 1, ref remaining),MatchSchema44476(node, depth + 1, ref remaining),MatchSchema44486(node, depth + 1, ref remaining),MatchSchema44506(node, depth + 1, ref remaining),MatchSchema40(node, depth + 1, ref remaining),MatchSchema59801(node, depth + 1, ref remaining),MatchSchema52134(node, depth + 1, ref remaining),MatchSchema60203(node, depth + 1, ref remaining),MatchSchema42298(node, depth + 1, ref remaining),MatchSchema59873(node, depth + 1, ref remaining),MatchSchema47882(node, depth + 1, ref remaining),MatchSchema367(node, depth + 1, ref remaining),MatchSchema60347(node, depth + 1, ref remaining),MatchSchema58527(node, depth + 1, ref remaining),MatchSchema48099(node, depth + 1, ref remaining),MatchSchema47910(node, depth + 1, ref remaining),MatchSchema47892(node, depth + 1, ref remaining),MatchSchema47920(node, depth + 1, ref remaining),MatchSchema62859(node, depth + 1, ref remaining),MatchSchema19634(node, depth + 1, ref remaining),MatchSchema19624(node, depth + 1, ref remaining),MatchSchema19614(node, depth + 1, ref remaining),MatchSchema45991(node, depth + 1, ref remaining),MatchSchema59638(node, depth + 1, ref remaining),MatchSchema51790(node, depth + 1, ref remaining),MatchSchema604(node, depth + 1, ref remaining),MatchSchema524(node, depth + 1, ref remaining),MatchSchema58583(node, depth + 1, ref remaining),MatchSchema48138(node, depth + 1, ref remaining),MatchSchema61712(node, depth + 1, ref remaining),MatchSchema61702(node, depth + 1, ref remaining),MatchSchema61722(node, depth + 1, ref remaining),MatchSchema58593(node, depth + 1, ref remaining),MatchSchema19644(node, depth + 1, ref remaining),MatchSchema22448(node, depth + 1, ref remaining),MatchSchema46045(node, depth + 1, ref remaining),MatchSchema46055(node, depth + 1, ref remaining),MatchSchema62686(node, depth + 1, ref remaining),MatchSchema62696(node, depth + 1, ref remaining),MatchSchema48109(node, depth + 1, ref remaining),MatchSchema49777(node, depth + 1, ref remaining),MatchSchema41084(node, depth + 1, ref remaining),MatchSchema48089(node, depth + 1, ref remaining),MatchSchema61619(node, depth + 1, ref remaining),MatchSchema44496(node, depth + 1, ref remaining))); if (result == false) return false; }
+{ result &= (One(MatchSchema20745(node, depth + 1, ref remaining),MatchSchema20756(node, depth + 1, ref remaining),MatchSchema20764(node, depth + 1, ref remaining),MatchSchema7769(node, depth + 1, ref remaining),MatchSchema59907(node, depth + 1, ref remaining),MatchSchema49914(node, depth + 1, ref remaining),MatchSchema61604(node, depth + 1, ref remaining),MatchSchema7777(node, depth + 1, ref remaining),MatchSchema59915(node, depth + 1, ref remaining),MatchSchema49928(node, depth + 1, ref remaining),MatchSchema61612(node, depth + 1, ref remaining),MatchSchema356(node, depth + 1, ref remaining),MatchSchema60337(node, depth + 1, ref remaining),MatchSchema49750(node, depth + 1, ref remaining),MatchSchema39997(node, depth + 1, ref remaining),MatchSchema59018(node, depth + 1, ref remaining),MatchSchema59038(node, depth + 1, ref remaining),MatchSchema59028(node, depth + 1, ref remaining),MatchSchema62667(node, depth + 1, ref remaining),MatchSchema48632(node, depth + 1, ref remaining),MatchSchema62677(node, depth + 1, ref remaining),MatchSchema20709(node, depth + 1, ref remaining),MatchSchema20861(node, depth + 1, ref remaining),MatchSchema4690(node, depth + 1, ref remaining),MatchSchema49936(node, depth + 1, ref remaining),MatchSchema51340(node, depth + 1, ref remaining),MatchSchema43843(node, depth + 1, ref remaining),MatchSchema43833(node, depth + 1, ref remaining),MatchSchema43861(node, depth + 1, ref remaining),MatchSchema43853(node, depth + 1, ref remaining),MatchSchema47940(node, depth + 1, ref remaining),MatchSchema47950(node, depth + 1, ref remaining),MatchSchema39807(node, depth + 1, ref remaining),MatchSchema51677(node, depth + 1, ref remaining),MatchSchema49331(node, depth + 1, ref remaining),MatchSchema49660(node, depth + 1, ref remaining),MatchSchema48171(node, depth + 1, ref remaining),MatchSchema48181(node, depth + 1, ref remaining),MatchSchema49691(node, depth + 1, ref remaining),MatchSchema49701(node, depth + 1, ref remaining),MatchSchema49877(node, depth + 1, ref remaining),MatchSchema59848(node, depth + 1, ref remaining),MatchSchema47930(node, depth + 1, ref remaining),MatchSchema49787(node, depth + 1, ref remaining),MatchSchema39715(node, depth + 1, ref remaining),MatchSchema49670(node, depth + 1, ref remaining),MatchSchema63167(node, depth + 1, ref remaining),MatchSchema49847(node, depth + 1, ref remaining),MatchSchema61516(node, depth + 1, ref remaining),MatchSchema61526(node, depth + 1, ref remaining),MatchSchema51629(node, depth + 1, ref remaining),MatchSchema51639(node, depth + 1, ref remaining),MatchSchema580(node, depth + 1, ref remaining),MatchSchema50257(node, depth + 1, ref remaining),MatchSchema63156(node, depth + 1, ref remaining),MatchSchema47263(node, depth + 1, ref remaining),MatchSchema47006(node, depth + 1, ref remaining),MatchSchema46335(node, depth + 1, ref remaining),MatchSchema47958(node, depth + 1, ref remaining),MatchSchema46868(node, depth + 1, ref remaining),MatchSchema46730(node, depth + 1, ref remaining),MatchSchema46592(node, depth + 1, ref remaining),MatchSchema46025(node, depth + 1, ref remaining),MatchSchema46035(node, depth + 1, ref remaining),MatchSchema43753(node, depth + 1, ref remaining),MatchSchema43763(node, depth + 1, ref remaining),MatchSchema43773(node, depth + 1, ref remaining),MatchSchema59265(node, depth + 1, ref remaining),MatchSchema59132(node, depth + 1, ref remaining),MatchSchema59408(node, depth + 1, ref remaining),MatchSchema59438(node, depth + 1, ref remaining),MatchSchema59398(node, depth + 1, ref remaining),MatchSchema47902(node, depth + 1, ref remaining),MatchSchema44476(node, depth + 1, ref remaining),MatchSchema44486(node, depth + 1, ref remaining),MatchSchema44506(node, depth + 1, ref remaining),MatchSchema40(node, depth + 1, ref remaining),MatchSchema59801(node, depth + 1, ref remaining),MatchSchema52134(node, depth + 1, ref remaining),MatchSchema60204(node, depth + 1, ref remaining),MatchSchema42298(node, depth + 1, ref remaining),MatchSchema59874(node, depth + 1, ref remaining),MatchSchema47882(node, depth + 1, ref remaining),MatchSchema367(node, depth + 1, ref remaining),MatchSchema60348(node, depth + 1, ref remaining),MatchSchema58527(node, depth + 1, ref remaining),MatchSchema48099(node, depth + 1, ref remaining),MatchSchema47910(node, depth + 1, ref remaining),MatchSchema47892(node, depth + 1, ref remaining),MatchSchema47920(node, depth + 1, ref remaining),MatchSchema62860(node, depth + 1, ref remaining),MatchSchema19634(node, depth + 1, ref remaining),MatchSchema19624(node, depth + 1, ref remaining),MatchSchema19614(node, depth + 1, ref remaining),MatchSchema45991(node, depth + 1, ref remaining),MatchSchema59638(node, depth + 1, ref remaining),MatchSchema51790(node, depth + 1, ref remaining),MatchSchema604(node, depth + 1, ref remaining),MatchSchema524(node, depth + 1, ref remaining),MatchSchema58583(node, depth + 1, ref remaining),MatchSchema48138(node, depth + 1, ref remaining),MatchSchema61713(node, depth + 1, ref remaining),MatchSchema61703(node, depth + 1, ref remaining),MatchSchema61723(node, depth + 1, ref remaining),MatchSchema58593(node, depth + 1, ref remaining),MatchSchema19644(node, depth + 1, ref remaining),MatchSchema22448(node, depth + 1, ref remaining),MatchSchema46045(node, depth + 1, ref remaining),MatchSchema46055(node, depth + 1, ref remaining),MatchSchema62687(node, depth + 1, ref remaining),MatchSchema62697(node, depth + 1, ref remaining),MatchSchema48109(node, depth + 1, ref remaining),MatchSchema49777(node, depth + 1, ref remaining),MatchSchema41084(node, depth + 1, ref remaining),MatchSchema48089(node, depth + 1, ref remaining),MatchSchema61620(node, depth + 1, ref remaining),MatchSchema44496(node, depth + 1, ref remaining))); if (result == false) return false; }
 return result;
 }
 
@@ -1121,7 +1121,7 @@ return result;
 private static bool? MatchSchema378(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
-{ result &= (One(MatchSchema20745(node, depth + 1, ref remaining),MatchSchema20756(node, depth + 1, ref remaining),MatchSchema20764(node, depth + 1, ref remaining),MatchSchema7769(node, depth + 1, ref remaining),MatchSchema59906(node, depth + 1, ref remaining),MatchSchema49914(node, depth + 1, ref remaining),MatchSchema61603(node, depth + 1, ref remaining),MatchSchema7777(node, depth + 1, ref remaining),MatchSchema59914(node, depth + 1, ref remaining),MatchSchema49928(node, depth + 1, ref remaining),MatchSchema61611(node, depth + 1, ref remaining),MatchSchema356(node, depth + 1, ref remaining),MatchSchema60336(node, depth + 1, ref remaining),MatchSchema49750(node, depth + 1, ref remaining),MatchSchema39997(node, depth + 1, ref remaining),MatchSchema59018(node, depth + 1, ref remaining),MatchSchema59038(node, depth + 1, ref remaining),MatchSchema59028(node, depth + 1, ref remaining),MatchSchema62666(node, depth + 1, ref remaining),MatchSchema48632(node, depth + 1, ref remaining),MatchSchema62676(node, depth + 1, ref remaining),MatchSchema20709(node, depth + 1, ref remaining),MatchSchema20861(node, depth + 1, ref remaining),MatchSchema4690(node, depth + 1, ref remaining),MatchSchema49936(node, depth + 1, ref remaining),MatchSchema51340(node, depth + 1, ref remaining),MatchSchema43843(node, depth + 1, ref remaining),MatchSchema43833(node, depth + 1, ref remaining),MatchSchema43861(node, depth + 1, ref remaining),MatchSchema43853(node, depth + 1, ref remaining),MatchSchema47940(node, depth + 1, ref remaining),MatchSchema47950(node, depth + 1, ref remaining),MatchSchema39807(node, depth + 1, ref remaining),MatchSchema51677(node, depth + 1, ref remaining),MatchSchema49331(node, depth + 1, ref remaining),MatchSchema49660(node, depth + 1, ref remaining),MatchSchema48171(node, depth + 1, ref remaining),MatchSchema48181(node, depth + 1, ref remaining),MatchSchema49691(node, depth + 1, ref remaining),MatchSchema49701(node, depth + 1, ref remaining),MatchSchema49877(node, depth + 1, ref remaining),MatchSchema59848(node, depth + 1, ref remaining),MatchSchema47930(node, depth + 1, ref remaining),MatchSchema49787(node, depth + 1, ref remaining),MatchSchema39715(node, depth + 1, ref remaining),MatchSchema49670(node, depth + 1, ref remaining),MatchSchema63166(node, depth + 1, ref remaining),MatchSchema49847(node, depth + 1, ref remaining),MatchSchema61515(node, depth + 1, ref remaining),MatchSchema61525(node, depth + 1, ref remaining),MatchSchema51629(node, depth + 1, ref remaining),MatchSchema51639(node, depth + 1, ref remaining),MatchSchema580(node, depth + 1, ref remaining),MatchSchema50257(node, depth + 1, ref remaining),MatchSchema63155(node, depth + 1, ref remaining),MatchSchema47263(node, depth + 1, ref remaining),MatchSchema47006(node, depth + 1, ref remaining),MatchSchema46335(node, depth + 1, ref remaining),MatchSchema47958(node, depth + 1, ref remaining),MatchSchema46868(node, depth + 1, ref remaining),MatchSchema46730(node, depth + 1, ref remaining),MatchSchema46592(node, depth + 1, ref remaining),MatchSchema46025(node, depth + 1, ref remaining),MatchSchema46035(node, depth + 1, ref remaining),MatchSchema43753(node, depth + 1, ref remaining),MatchSchema43763(node, depth + 1, ref remaining),MatchSchema43773(node, depth + 1, ref remaining),MatchSchema59265(node, depth + 1, ref remaining),MatchSchema59132(node, depth + 1, ref remaining),MatchSchema59408(node, depth + 1, ref remaining),MatchSchema59438(node, depth + 1, ref remaining),MatchSchema59398(node, depth + 1, ref remaining),MatchSchema47902(node, depth + 1, ref remaining),MatchSchema44476(node, depth + 1, ref remaining),MatchSchema44486(node, depth + 1, ref remaining),MatchSchema44506(node, depth + 1, ref remaining),MatchSchema40(node, depth + 1, ref remaining),MatchSchema59801(node, depth + 1, ref remaining),MatchSchema52134(node, depth + 1, ref remaining),MatchSchema60203(node, depth + 1, ref remaining),MatchSchema42298(node, depth + 1, ref remaining),MatchSchema59873(node, depth + 1, ref remaining),MatchSchema47882(node, depth + 1, ref remaining),MatchSchema367(node, depth + 1, ref remaining),MatchSchema60347(node, depth + 1, ref remaining),MatchSchema58527(node, depth + 1, ref remaining),MatchSchema48099(node, depth + 1, ref remaining),MatchSchema47910(node, depth + 1, ref remaining),MatchSchema47892(node, depth + 1, ref remaining),MatchSchema47920(node, depth + 1, ref remaining),MatchSchema62859(node, depth + 1, ref remaining),MatchSchema19634(node, depth + 1, ref remaining),MatchSchema19624(node, depth + 1, ref remaining),MatchSchema19614(node, depth + 1, ref remaining),MatchSchema45991(node, depth + 1, ref remaining),MatchSchema59638(node, depth + 1, ref remaining),MatchSchema51790(node, depth + 1, ref remaining),MatchSchema604(node, depth + 1, ref remaining),MatchSchema524(node, depth + 1, ref remaining),MatchSchema58583(node, depth + 1, ref remaining),MatchSchema48138(node, depth + 1, ref remaining),MatchSchema61712(node, depth + 1, ref remaining),MatchSchema61702(node, depth + 1, ref remaining),MatchSchema61722(node, depth + 1, ref remaining),MatchSchema58593(node, depth + 1, ref remaining),MatchSchema19644(node, depth + 1, ref remaining),MatchSchema22448(node, depth + 1, ref remaining),MatchSchema46045(node, depth + 1, ref remaining),MatchSchema46055(node, depth + 1, ref remaining),MatchSchema62686(node, depth + 1, ref remaining),MatchSchema62696(node, depth + 1, ref remaining),MatchSchema48109(node, depth + 1, ref remaining),MatchSchema49777(node, depth + 1, ref remaining),MatchSchema41084(node, depth + 1, ref remaining),MatchSchema48089(node, depth + 1, ref remaining),MatchSchema61619(node, depth + 1, ref remaining),MatchSchema44496(node, depth + 1, ref remaining))); if (result == false) return false; }
+{ result &= (One(MatchSchema20745(node, depth + 1, ref remaining),MatchSchema20756(node, depth + 1, ref remaining),MatchSchema20764(node, depth + 1, ref remaining),MatchSchema7769(node, depth + 1, ref remaining),MatchSchema59907(node, depth + 1, ref remaining),MatchSchema49914(node, depth + 1, ref remaining),MatchSchema61604(node, depth + 1, ref remaining),MatchSchema7777(node, depth + 1, ref remaining),MatchSchema59915(node, depth + 1, ref remaining),MatchSchema49928(node, depth + 1, ref remaining),MatchSchema61612(node, depth + 1, ref remaining),MatchSchema356(node, depth + 1, ref remaining),MatchSchema60337(node, depth + 1, ref remaining),MatchSchema49750(node, depth + 1, ref remaining),MatchSchema39997(node, depth + 1, ref remaining),MatchSchema59018(node, depth + 1, ref remaining),MatchSchema59038(node, depth + 1, ref remaining),MatchSchema59028(node, depth + 1, ref remaining),MatchSchema62667(node, depth + 1, ref remaining),MatchSchema48632(node, depth + 1, ref remaining),MatchSchema62677(node, depth + 1, ref remaining),MatchSchema20709(node, depth + 1, ref remaining),MatchSchema20861(node, depth + 1, ref remaining),MatchSchema4690(node, depth + 1, ref remaining),MatchSchema49936(node, depth + 1, ref remaining),MatchSchema51340(node, depth + 1, ref remaining),MatchSchema43843(node, depth + 1, ref remaining),MatchSchema43833(node, depth + 1, ref remaining),MatchSchema43861(node, depth + 1, ref remaining),MatchSchema43853(node, depth + 1, ref remaining),MatchSchema47940(node, depth + 1, ref remaining),MatchSchema47950(node, depth + 1, ref remaining),MatchSchema39807(node, depth + 1, ref remaining),MatchSchema51677(node, depth + 1, ref remaining),MatchSchema49331(node, depth + 1, ref remaining),MatchSchema49660(node, depth + 1, ref remaining),MatchSchema48171(node, depth + 1, ref remaining),MatchSchema48181(node, depth + 1, ref remaining),MatchSchema49691(node, depth + 1, ref remaining),MatchSchema49701(node, depth + 1, ref remaining),MatchSchema49877(node, depth + 1, ref remaining),MatchSchema59848(node, depth + 1, ref remaining),MatchSchema47930(node, depth + 1, ref remaining),MatchSchema49787(node, depth + 1, ref remaining),MatchSchema39715(node, depth + 1, ref remaining),MatchSchema49670(node, depth + 1, ref remaining),MatchSchema63167(node, depth + 1, ref remaining),MatchSchema49847(node, depth + 1, ref remaining),MatchSchema61516(node, depth + 1, ref remaining),MatchSchema61526(node, depth + 1, ref remaining),MatchSchema51629(node, depth + 1, ref remaining),MatchSchema51639(node, depth + 1, ref remaining),MatchSchema580(node, depth + 1, ref remaining),MatchSchema50257(node, depth + 1, ref remaining),MatchSchema63156(node, depth + 1, ref remaining),MatchSchema47263(node, depth + 1, ref remaining),MatchSchema47006(node, depth + 1, ref remaining),MatchSchema46335(node, depth + 1, ref remaining),MatchSchema47958(node, depth + 1, ref remaining),MatchSchema46868(node, depth + 1, ref remaining),MatchSchema46730(node, depth + 1, ref remaining),MatchSchema46592(node, depth + 1, ref remaining),MatchSchema46025(node, depth + 1, ref remaining),MatchSchema46035(node, depth + 1, ref remaining),MatchSchema43753(node, depth + 1, ref remaining),MatchSchema43763(node, depth + 1, ref remaining),MatchSchema43773(node, depth + 1, ref remaining),MatchSchema59265(node, depth + 1, ref remaining),MatchSchema59132(node, depth + 1, ref remaining),MatchSchema59408(node, depth + 1, ref remaining),MatchSchema59438(node, depth + 1, ref remaining),MatchSchema59398(node, depth + 1, ref remaining),MatchSchema47902(node, depth + 1, ref remaining),MatchSchema44476(node, depth + 1, ref remaining),MatchSchema44486(node, depth + 1, ref remaining),MatchSchema44506(node, depth + 1, ref remaining),MatchSchema40(node, depth + 1, ref remaining),MatchSchema59801(node, depth + 1, ref remaining),MatchSchema52134(node, depth + 1, ref remaining),MatchSchema60204(node, depth + 1, ref remaining),MatchSchema42298(node, depth + 1, ref remaining),MatchSchema59874(node, depth + 1, ref remaining),MatchSchema47882(node, depth + 1, ref remaining),MatchSchema367(node, depth + 1, ref remaining),MatchSchema60348(node, depth + 1, ref remaining),MatchSchema58527(node, depth + 1, ref remaining),MatchSchema48099(node, depth + 1, ref remaining),MatchSchema47910(node, depth + 1, ref remaining),MatchSchema47892(node, depth + 1, ref remaining),MatchSchema47920(node, depth + 1, ref remaining),MatchSchema62860(node, depth + 1, ref remaining),MatchSchema19634(node, depth + 1, ref remaining),MatchSchema19624(node, depth + 1, ref remaining),MatchSchema19614(node, depth + 1, ref remaining),MatchSchema45991(node, depth + 1, ref remaining),MatchSchema59638(node, depth + 1, ref remaining),MatchSchema51790(node, depth + 1, ref remaining),MatchSchema604(node, depth + 1, ref remaining),MatchSchema524(node, depth + 1, ref remaining),MatchSchema58583(node, depth + 1, ref remaining),MatchSchema48138(node, depth + 1, ref remaining),MatchSchema61713(node, depth + 1, ref remaining),MatchSchema61703(node, depth + 1, ref remaining),MatchSchema61723(node, depth + 1, ref remaining),MatchSchema58593(node, depth + 1, ref remaining),MatchSchema19644(node, depth + 1, ref remaining),MatchSchema22448(node, depth + 1, ref remaining),MatchSchema46045(node, depth + 1, ref remaining),MatchSchema46055(node, depth + 1, ref remaining),MatchSchema62687(node, depth + 1, ref remaining),MatchSchema62697(node, depth + 1, ref remaining),MatchSchema48109(node, depth + 1, ref remaining),MatchSchema49777(node, depth + 1, ref remaining),MatchSchema41084(node, depth + 1, ref remaining),MatchSchema48089(node, depth + 1, ref remaining),MatchSchema61620(node, depth + 1, ref remaining),MatchSchema44496(node, depth + 1, ref remaining))); if (result == false) return false; }
 return result;
 }
 
@@ -1371,7 +1371,7 @@ return result;
 private static bool? MatchSchema569(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
-{ result &= (One(MatchSchema58556(node, depth + 1, ref remaining),MatchSchema58569(node, depth + 1, ref remaining),MatchSchema13(node, depth + 1, ref remaining),MatchSchema26(node, depth + 1, ref remaining),MatchSchema534(node, depth + 1, ref remaining),MatchSchema61550(node, depth + 1, ref remaining),MatchSchema58439(node, depth + 1, ref remaining))); if (result == false) return false; }
+{ result &= (One(MatchSchema58556(node, depth + 1, ref remaining),MatchSchema58569(node, depth + 1, ref remaining),MatchSchema13(node, depth + 1, ref remaining),MatchSchema26(node, depth + 1, ref remaining),MatchSchema534(node, depth + 1, ref remaining),MatchSchema61551(node, depth + 1, ref remaining),MatchSchema58439(node, depth + 1, ref remaining))); if (result == false) return false; }
 return result;
 }
 
@@ -2473,7 +2473,7 @@ if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj
 { result &= (fields.ContainsKey("id")); if (result == false) return false; }
 { result &= (!fields.ContainsKey("active") ? (bool?)true : MatchSchema992(fields["active"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("createdAt") ? (bool?)true : MatchSchema993(fields["createdAt"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("eventType") ? (bool?)true : MatchSchema60135(fields["eventType"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("eventType") ? (bool?)true : MatchSchema60136(fields["eventType"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("eventTypeName") ? (bool?)true : MatchSchema995(fields["eventTypeName"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("id") ? (bool?)true : MatchSchema996(fields["id"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("objectTypeId") ? (bool?)true : MatchSchema997(fields["objectTypeId"], depth + 1, ref remaining)); if (result == false) return false; }
@@ -2548,7 +2548,7 @@ return result;
 private static bool? MatchSchema1041(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
-{ result &= (One(MatchSchema47737(node, depth + 1, ref remaining),MatchSchema48614(node, depth + 1, ref remaining),MatchSchema40030(node, depth + 1, ref remaining),MatchSchema59858(node, depth + 1, ref remaining),MatchSchema7766(node, depth + 1, ref remaining),MatchSchema1037(node, depth + 1, ref remaining),MatchSchema49992(node, depth + 1, ref remaining),MatchSchema61749(node, depth + 1, ref remaining))); if (result == false) return false; }
+{ result &= (One(MatchSchema47737(node, depth + 1, ref remaining),MatchSchema48614(node, depth + 1, ref remaining),MatchSchema40030(node, depth + 1, ref remaining),MatchSchema59858(node, depth + 1, ref remaining),MatchSchema7766(node, depth + 1, ref remaining),MatchSchema1037(node, depth + 1, ref remaining),MatchSchema49992(node, depth + 1, ref remaining),MatchSchema61750(node, depth + 1, ref remaining))); if (result == false) return false; }
 return result;
 }
 
@@ -3952,7 +3952,7 @@ if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray); if (result == false) return false; }
 if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray itemsArray) foreach (var item in itemsArray.GetValue()) {
-{ result &= (MatchSchema63109(item, depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (MatchSchema63110(item, depth + 1, ref remaining)); if (result == false) return false; }
 }
 return result;
 }
@@ -6803,7 +6803,7 @@ if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray); if (result == false) return false; }
 if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray itemsArray) foreach (var item in itemsArray.GetValue()) {
-{ result &= (MatchSchema60493(item, depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (MatchSchema60494(item, depth + 1, ref remaining)); if (result == false) return false; }
 }
 return result;
 }
@@ -6904,7 +6904,7 @@ if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray); if (result == false) return false; }
 if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray itemsArray) foreach (var item in itemsArray.GetValue()) {
-{ result &= (MatchSchema60493(item, depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (MatchSchema60494(item, depth + 1, ref remaining)); if (result == false) return false; }
 }
 return result;
 }
@@ -7001,7 +7001,7 @@ return result;
 private static bool? MatchSchema4701(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
-{ result &= (One(MatchSchema20745(node, depth + 1, ref remaining),MatchSchema20756(node, depth + 1, ref remaining),MatchSchema20764(node, depth + 1, ref remaining),MatchSchema7769(node, depth + 1, ref remaining),MatchSchema59906(node, depth + 1, ref remaining),MatchSchema49914(node, depth + 1, ref remaining),MatchSchema61603(node, depth + 1, ref remaining),MatchSchema7777(node, depth + 1, ref remaining),MatchSchema59914(node, depth + 1, ref remaining),MatchSchema49928(node, depth + 1, ref remaining),MatchSchema61611(node, depth + 1, ref remaining),MatchSchema356(node, depth + 1, ref remaining),MatchSchema60336(node, depth + 1, ref remaining),MatchSchema49750(node, depth + 1, ref remaining),MatchSchema39997(node, depth + 1, ref remaining),MatchSchema59018(node, depth + 1, ref remaining),MatchSchema59038(node, depth + 1, ref remaining),MatchSchema59028(node, depth + 1, ref remaining),MatchSchema62666(node, depth + 1, ref remaining),MatchSchema48632(node, depth + 1, ref remaining),MatchSchema62676(node, depth + 1, ref remaining),MatchSchema20709(node, depth + 1, ref remaining),MatchSchema20861(node, depth + 1, ref remaining),MatchSchema4690(node, depth + 1, ref remaining),MatchSchema49936(node, depth + 1, ref remaining),MatchSchema51340(node, depth + 1, ref remaining),MatchSchema43843(node, depth + 1, ref remaining),MatchSchema43833(node, depth + 1, ref remaining),MatchSchema43861(node, depth + 1, ref remaining),MatchSchema43853(node, depth + 1, ref remaining),MatchSchema47940(node, depth + 1, ref remaining),MatchSchema47950(node, depth + 1, ref remaining),MatchSchema39807(node, depth + 1, ref remaining),MatchSchema51677(node, depth + 1, ref remaining),MatchSchema49331(node, depth + 1, ref remaining),MatchSchema49660(node, depth + 1, ref remaining),MatchSchema48171(node, depth + 1, ref remaining),MatchSchema48181(node, depth + 1, ref remaining),MatchSchema49691(node, depth + 1, ref remaining),MatchSchema49701(node, depth + 1, ref remaining),MatchSchema49877(node, depth + 1, ref remaining),MatchSchema59848(node, depth + 1, ref remaining),MatchSchema47930(node, depth + 1, ref remaining),MatchSchema49787(node, depth + 1, ref remaining),MatchSchema39715(node, depth + 1, ref remaining),MatchSchema49670(node, depth + 1, ref remaining),MatchSchema63166(node, depth + 1, ref remaining),MatchSchema49847(node, depth + 1, ref remaining),MatchSchema61515(node, depth + 1, ref remaining),MatchSchema61525(node, depth + 1, ref remaining),MatchSchema51629(node, depth + 1, ref remaining),MatchSchema51639(node, depth + 1, ref remaining),MatchSchema580(node, depth + 1, ref remaining),MatchSchema50257(node, depth + 1, ref remaining),MatchSchema63155(node, depth + 1, ref remaining),MatchSchema47263(node, depth + 1, ref remaining),MatchSchema47006(node, depth + 1, ref remaining),MatchSchema46335(node, depth + 1, ref remaining),MatchSchema47958(node, depth + 1, ref remaining),MatchSchema46868(node, depth + 1, ref remaining),MatchSchema46730(node, depth + 1, ref remaining),MatchSchema46592(node, depth + 1, ref remaining),MatchSchema46025(node, depth + 1, ref remaining),MatchSchema46035(node, depth + 1, ref remaining),MatchSchema43753(node, depth + 1, ref remaining),MatchSchema43763(node, depth + 1, ref remaining),MatchSchema43773(node, depth + 1, ref remaining),MatchSchema59265(node, depth + 1, ref remaining),MatchSchema59132(node, depth + 1, ref remaining),MatchSchema59408(node, depth + 1, ref remaining),MatchSchema59438(node, depth + 1, ref remaining),MatchSchema59398(node, depth + 1, ref remaining),MatchSchema47902(node, depth + 1, ref remaining),MatchSchema44476(node, depth + 1, ref remaining),MatchSchema44486(node, depth + 1, ref remaining),MatchSchema44506(node, depth + 1, ref remaining),MatchSchema40(node, depth + 1, ref remaining),MatchSchema59801(node, depth + 1, ref remaining),MatchSchema52134(node, depth + 1, ref remaining),MatchSchema60203(node, depth + 1, ref remaining),MatchSchema42298(node, depth + 1, ref remaining),MatchSchema59873(node, depth + 1, ref remaining),MatchSchema47882(node, depth + 1, ref remaining),MatchSchema367(node, depth + 1, ref remaining),MatchSchema60347(node, depth + 1, ref remaining),MatchSchema58527(node, depth + 1, ref remaining),MatchSchema48099(node, depth + 1, ref remaining),MatchSchema47910(node, depth + 1, ref remaining),MatchSchema47892(node, depth + 1, ref remaining),MatchSchema47920(node, depth + 1, ref remaining),MatchSchema62859(node, depth + 1, ref remaining),MatchSchema19634(node, depth + 1, ref remaining),MatchSchema19624(node, depth + 1, ref remaining),MatchSchema19614(node, depth + 1, ref remaining),MatchSchema45991(node, depth + 1, ref remaining),MatchSchema59638(node, depth + 1, ref remaining),MatchSchema51790(node, depth + 1, ref remaining),MatchSchema604(node, depth + 1, ref remaining),MatchSchema524(node, depth + 1, ref remaining),MatchSchema58583(node, depth + 1, ref remaining),MatchSchema48138(node, depth + 1, ref remaining),MatchSchema61712(node, depth + 1, ref remaining),MatchSchema61702(node, depth + 1, ref remaining),MatchSchema61722(node, depth + 1, ref remaining),MatchSchema58593(node, depth + 1, ref remaining),MatchSchema19644(node, depth + 1, ref remaining),MatchSchema22448(node, depth + 1, ref remaining),MatchSchema46045(node, depth + 1, ref remaining),MatchSchema46055(node, depth + 1, ref remaining),MatchSchema62686(node, depth + 1, ref remaining),MatchSchema62696(node, depth + 1, ref remaining),MatchSchema48109(node, depth + 1, ref remaining),MatchSchema49777(node, depth + 1, ref remaining),MatchSchema41084(node, depth + 1, ref remaining),MatchSchema48089(node, depth + 1, ref remaining),MatchSchema61619(node, depth + 1, ref remaining),MatchSchema44496(node, depth + 1, ref remaining))); if (result == false) return false; }
+{ result &= (One(MatchSchema20745(node, depth + 1, ref remaining),MatchSchema20756(node, depth + 1, ref remaining),MatchSchema20764(node, depth + 1, ref remaining),MatchSchema7769(node, depth + 1, ref remaining),MatchSchema59907(node, depth + 1, ref remaining),MatchSchema49914(node, depth + 1, ref remaining),MatchSchema61604(node, depth + 1, ref remaining),MatchSchema7777(node, depth + 1, ref remaining),MatchSchema59915(node, depth + 1, ref remaining),MatchSchema49928(node, depth + 1, ref remaining),MatchSchema61612(node, depth + 1, ref remaining),MatchSchema356(node, depth + 1, ref remaining),MatchSchema60337(node, depth + 1, ref remaining),MatchSchema49750(node, depth + 1, ref remaining),MatchSchema39997(node, depth + 1, ref remaining),MatchSchema59018(node, depth + 1, ref remaining),MatchSchema59038(node, depth + 1, ref remaining),MatchSchema59028(node, depth + 1, ref remaining),MatchSchema62667(node, depth + 1, ref remaining),MatchSchema48632(node, depth + 1, ref remaining),MatchSchema62677(node, depth + 1, ref remaining),MatchSchema20709(node, depth + 1, ref remaining),MatchSchema20861(node, depth + 1, ref remaining),MatchSchema4690(node, depth + 1, ref remaining),MatchSchema49936(node, depth + 1, ref remaining),MatchSchema51340(node, depth + 1, ref remaining),MatchSchema43843(node, depth + 1, ref remaining),MatchSchema43833(node, depth + 1, ref remaining),MatchSchema43861(node, depth + 1, ref remaining),MatchSchema43853(node, depth + 1, ref remaining),MatchSchema47940(node, depth + 1, ref remaining),MatchSchema47950(node, depth + 1, ref remaining),MatchSchema39807(node, depth + 1, ref remaining),MatchSchema51677(node, depth + 1, ref remaining),MatchSchema49331(node, depth + 1, ref remaining),MatchSchema49660(node, depth + 1, ref remaining),MatchSchema48171(node, depth + 1, ref remaining),MatchSchema48181(node, depth + 1, ref remaining),MatchSchema49691(node, depth + 1, ref remaining),MatchSchema49701(node, depth + 1, ref remaining),MatchSchema49877(node, depth + 1, ref remaining),MatchSchema59848(node, depth + 1, ref remaining),MatchSchema47930(node, depth + 1, ref remaining),MatchSchema49787(node, depth + 1, ref remaining),MatchSchema39715(node, depth + 1, ref remaining),MatchSchema49670(node, depth + 1, ref remaining),MatchSchema63167(node, depth + 1, ref remaining),MatchSchema49847(node, depth + 1, ref remaining),MatchSchema61516(node, depth + 1, ref remaining),MatchSchema61526(node, depth + 1, ref remaining),MatchSchema51629(node, depth + 1, ref remaining),MatchSchema51639(node, depth + 1, ref remaining),MatchSchema580(node, depth + 1, ref remaining),MatchSchema50257(node, depth + 1, ref remaining),MatchSchema63156(node, depth + 1, ref remaining),MatchSchema47263(node, depth + 1, ref remaining),MatchSchema47006(node, depth + 1, ref remaining),MatchSchema46335(node, depth + 1, ref remaining),MatchSchema47958(node, depth + 1, ref remaining),MatchSchema46868(node, depth + 1, ref remaining),MatchSchema46730(node, depth + 1, ref remaining),MatchSchema46592(node, depth + 1, ref remaining),MatchSchema46025(node, depth + 1, ref remaining),MatchSchema46035(node, depth + 1, ref remaining),MatchSchema43753(node, depth + 1, ref remaining),MatchSchema43763(node, depth + 1, ref remaining),MatchSchema43773(node, depth + 1, ref remaining),MatchSchema59265(node, depth + 1, ref remaining),MatchSchema59132(node, depth + 1, ref remaining),MatchSchema59408(node, depth + 1, ref remaining),MatchSchema59438(node, depth + 1, ref remaining),MatchSchema59398(node, depth + 1, ref remaining),MatchSchema47902(node, depth + 1, ref remaining),MatchSchema44476(node, depth + 1, ref remaining),MatchSchema44486(node, depth + 1, ref remaining),MatchSchema44506(node, depth + 1, ref remaining),MatchSchema40(node, depth + 1, ref remaining),MatchSchema59801(node, depth + 1, ref remaining),MatchSchema52134(node, depth + 1, ref remaining),MatchSchema60204(node, depth + 1, ref remaining),MatchSchema42298(node, depth + 1, ref remaining),MatchSchema59874(node, depth + 1, ref remaining),MatchSchema47882(node, depth + 1, ref remaining),MatchSchema367(node, depth + 1, ref remaining),MatchSchema60348(node, depth + 1, ref remaining),MatchSchema58527(node, depth + 1, ref remaining),MatchSchema48099(node, depth + 1, ref remaining),MatchSchema47910(node, depth + 1, ref remaining),MatchSchema47892(node, depth + 1, ref remaining),MatchSchema47920(node, depth + 1, ref remaining),MatchSchema62860(node, depth + 1, ref remaining),MatchSchema19634(node, depth + 1, ref remaining),MatchSchema19624(node, depth + 1, ref remaining),MatchSchema19614(node, depth + 1, ref remaining),MatchSchema45991(node, depth + 1, ref remaining),MatchSchema59638(node, depth + 1, ref remaining),MatchSchema51790(node, depth + 1, ref remaining),MatchSchema604(node, depth + 1, ref remaining),MatchSchema524(node, depth + 1, ref remaining),MatchSchema58583(node, depth + 1, ref remaining),MatchSchema48138(node, depth + 1, ref remaining),MatchSchema61713(node, depth + 1, ref remaining),MatchSchema61703(node, depth + 1, ref remaining),MatchSchema61723(node, depth + 1, ref remaining),MatchSchema58593(node, depth + 1, ref remaining),MatchSchema19644(node, depth + 1, ref remaining),MatchSchema22448(node, depth + 1, ref remaining),MatchSchema46045(node, depth + 1, ref remaining),MatchSchema46055(node, depth + 1, ref remaining),MatchSchema62687(node, depth + 1, ref remaining),MatchSchema62697(node, depth + 1, ref remaining),MatchSchema48109(node, depth + 1, ref remaining),MatchSchema49777(node, depth + 1, ref remaining),MatchSchema41084(node, depth + 1, ref remaining),MatchSchema48089(node, depth + 1, ref remaining),MatchSchema61620(node, depth + 1, ref remaining),MatchSchema44496(node, depth + 1, ref remaining))); if (result == false) return false; }
 return result;
 }
 
@@ -11800,7 +11800,7 @@ return result;
 private static bool? MatchSchema20872(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
-{ result &= (One(MatchSchema20745(node, depth + 1, ref remaining),MatchSchema20756(node, depth + 1, ref remaining),MatchSchema20764(node, depth + 1, ref remaining),MatchSchema7769(node, depth + 1, ref remaining),MatchSchema59906(node, depth + 1, ref remaining),MatchSchema49914(node, depth + 1, ref remaining),MatchSchema61603(node, depth + 1, ref remaining),MatchSchema7777(node, depth + 1, ref remaining),MatchSchema59914(node, depth + 1, ref remaining),MatchSchema49928(node, depth + 1, ref remaining),MatchSchema61611(node, depth + 1, ref remaining),MatchSchema356(node, depth + 1, ref remaining),MatchSchema60336(node, depth + 1, ref remaining),MatchSchema49750(node, depth + 1, ref remaining),MatchSchema39997(node, depth + 1, ref remaining),MatchSchema59018(node, depth + 1, ref remaining),MatchSchema59038(node, depth + 1, ref remaining),MatchSchema59028(node, depth + 1, ref remaining),MatchSchema62666(node, depth + 1, ref remaining),MatchSchema48632(node, depth + 1, ref remaining),MatchSchema62676(node, depth + 1, ref remaining),MatchSchema20709(node, depth + 1, ref remaining),MatchSchema20861(node, depth + 1, ref remaining),MatchSchema4690(node, depth + 1, ref remaining),MatchSchema49936(node, depth + 1, ref remaining),MatchSchema51340(node, depth + 1, ref remaining),MatchSchema43843(node, depth + 1, ref remaining),MatchSchema43833(node, depth + 1, ref remaining),MatchSchema43861(node, depth + 1, ref remaining),MatchSchema43853(node, depth + 1, ref remaining),MatchSchema47940(node, depth + 1, ref remaining),MatchSchema47950(node, depth + 1, ref remaining),MatchSchema39807(node, depth + 1, ref remaining),MatchSchema51677(node, depth + 1, ref remaining),MatchSchema49331(node, depth + 1, ref remaining),MatchSchema49660(node, depth + 1, ref remaining),MatchSchema48171(node, depth + 1, ref remaining),MatchSchema48181(node, depth + 1, ref remaining),MatchSchema49691(node, depth + 1, ref remaining),MatchSchema49701(node, depth + 1, ref remaining),MatchSchema49877(node, depth + 1, ref remaining),MatchSchema59848(node, depth + 1, ref remaining),MatchSchema47930(node, depth + 1, ref remaining),MatchSchema49787(node, depth + 1, ref remaining),MatchSchema39715(node, depth + 1, ref remaining),MatchSchema49670(node, depth + 1, ref remaining),MatchSchema63166(node, depth + 1, ref remaining),MatchSchema49847(node, depth + 1, ref remaining),MatchSchema61515(node, depth + 1, ref remaining),MatchSchema61525(node, depth + 1, ref remaining),MatchSchema51629(node, depth + 1, ref remaining),MatchSchema51639(node, depth + 1, ref remaining),MatchSchema580(node, depth + 1, ref remaining),MatchSchema50257(node, depth + 1, ref remaining),MatchSchema63155(node, depth + 1, ref remaining),MatchSchema47263(node, depth + 1, ref remaining),MatchSchema47006(node, depth + 1, ref remaining),MatchSchema46335(node, depth + 1, ref remaining),MatchSchema47958(node, depth + 1, ref remaining),MatchSchema46868(node, depth + 1, ref remaining),MatchSchema46730(node, depth + 1, ref remaining),MatchSchema46592(node, depth + 1, ref remaining),MatchSchema46025(node, depth + 1, ref remaining),MatchSchema46035(node, depth + 1, ref remaining),MatchSchema43753(node, depth + 1, ref remaining),MatchSchema43763(node, depth + 1, ref remaining),MatchSchema43773(node, depth + 1, ref remaining),MatchSchema59265(node, depth + 1, ref remaining),MatchSchema59132(node, depth + 1, ref remaining),MatchSchema59408(node, depth + 1, ref remaining),MatchSchema59438(node, depth + 1, ref remaining),MatchSchema59398(node, depth + 1, ref remaining),MatchSchema47902(node, depth + 1, ref remaining),MatchSchema44476(node, depth + 1, ref remaining),MatchSchema44486(node, depth + 1, ref remaining),MatchSchema44506(node, depth + 1, ref remaining),MatchSchema40(node, depth + 1, ref remaining),MatchSchema59801(node, depth + 1, ref remaining),MatchSchema52134(node, depth + 1, ref remaining),MatchSchema60203(node, depth + 1, ref remaining),MatchSchema42298(node, depth + 1, ref remaining),MatchSchema59873(node, depth + 1, ref remaining),MatchSchema47882(node, depth + 1, ref remaining),MatchSchema367(node, depth + 1, ref remaining),MatchSchema60347(node, depth + 1, ref remaining),MatchSchema58527(node, depth + 1, ref remaining),MatchSchema48099(node, depth + 1, ref remaining),MatchSchema47910(node, depth + 1, ref remaining),MatchSchema47892(node, depth + 1, ref remaining),MatchSchema47920(node, depth + 1, ref remaining),MatchSchema62859(node, depth + 1, ref remaining),MatchSchema19634(node, depth + 1, ref remaining),MatchSchema19624(node, depth + 1, ref remaining),MatchSchema19614(node, depth + 1, ref remaining),MatchSchema45991(node, depth + 1, ref remaining),MatchSchema59638(node, depth + 1, ref remaining),MatchSchema51790(node, depth + 1, ref remaining),MatchSchema604(node, depth + 1, ref remaining),MatchSchema524(node, depth + 1, ref remaining),MatchSchema58583(node, depth + 1, ref remaining),MatchSchema48138(node, depth + 1, ref remaining),MatchSchema61712(node, depth + 1, ref remaining),MatchSchema61702(node, depth + 1, ref remaining),MatchSchema61722(node, depth + 1, ref remaining),MatchSchema58593(node, depth + 1, ref remaining),MatchSchema19644(node, depth + 1, ref remaining),MatchSchema22448(node, depth + 1, ref remaining),MatchSchema46045(node, depth + 1, ref remaining),MatchSchema46055(node, depth + 1, ref remaining),MatchSchema62686(node, depth + 1, ref remaining),MatchSchema62696(node, depth + 1, ref remaining),MatchSchema48109(node, depth + 1, ref remaining),MatchSchema49777(node, depth + 1, ref remaining),MatchSchema41084(node, depth + 1, ref remaining),MatchSchema48089(node, depth + 1, ref remaining),MatchSchema61619(node, depth + 1, ref remaining),MatchSchema44496(node, depth + 1, ref remaining))); if (result == false) return false; }
+{ result &= (One(MatchSchema20745(node, depth + 1, ref remaining),MatchSchema20756(node, depth + 1, ref remaining),MatchSchema20764(node, depth + 1, ref remaining),MatchSchema7769(node, depth + 1, ref remaining),MatchSchema59907(node, depth + 1, ref remaining),MatchSchema49914(node, depth + 1, ref remaining),MatchSchema61604(node, depth + 1, ref remaining),MatchSchema7777(node, depth + 1, ref remaining),MatchSchema59915(node, depth + 1, ref remaining),MatchSchema49928(node, depth + 1, ref remaining),MatchSchema61612(node, depth + 1, ref remaining),MatchSchema356(node, depth + 1, ref remaining),MatchSchema60337(node, depth + 1, ref remaining),MatchSchema49750(node, depth + 1, ref remaining),MatchSchema39997(node, depth + 1, ref remaining),MatchSchema59018(node, depth + 1, ref remaining),MatchSchema59038(node, depth + 1, ref remaining),MatchSchema59028(node, depth + 1, ref remaining),MatchSchema62667(node, depth + 1, ref remaining),MatchSchema48632(node, depth + 1, ref remaining),MatchSchema62677(node, depth + 1, ref remaining),MatchSchema20709(node, depth + 1, ref remaining),MatchSchema20861(node, depth + 1, ref remaining),MatchSchema4690(node, depth + 1, ref remaining),MatchSchema49936(node, depth + 1, ref remaining),MatchSchema51340(node, depth + 1, ref remaining),MatchSchema43843(node, depth + 1, ref remaining),MatchSchema43833(node, depth + 1, ref remaining),MatchSchema43861(node, depth + 1, ref remaining),MatchSchema43853(node, depth + 1, ref remaining),MatchSchema47940(node, depth + 1, ref remaining),MatchSchema47950(node, depth + 1, ref remaining),MatchSchema39807(node, depth + 1, ref remaining),MatchSchema51677(node, depth + 1, ref remaining),MatchSchema49331(node, depth + 1, ref remaining),MatchSchema49660(node, depth + 1, ref remaining),MatchSchema48171(node, depth + 1, ref remaining),MatchSchema48181(node, depth + 1, ref remaining),MatchSchema49691(node, depth + 1, ref remaining),MatchSchema49701(node, depth + 1, ref remaining),MatchSchema49877(node, depth + 1, ref remaining),MatchSchema59848(node, depth + 1, ref remaining),MatchSchema47930(node, depth + 1, ref remaining),MatchSchema49787(node, depth + 1, ref remaining),MatchSchema39715(node, depth + 1, ref remaining),MatchSchema49670(node, depth + 1, ref remaining),MatchSchema63167(node, depth + 1, ref remaining),MatchSchema49847(node, depth + 1, ref remaining),MatchSchema61516(node, depth + 1, ref remaining),MatchSchema61526(node, depth + 1, ref remaining),MatchSchema51629(node, depth + 1, ref remaining),MatchSchema51639(node, depth + 1, ref remaining),MatchSchema580(node, depth + 1, ref remaining),MatchSchema50257(node, depth + 1, ref remaining),MatchSchema63156(node, depth + 1, ref remaining),MatchSchema47263(node, depth + 1, ref remaining),MatchSchema47006(node, depth + 1, ref remaining),MatchSchema46335(node, depth + 1, ref remaining),MatchSchema47958(node, depth + 1, ref remaining),MatchSchema46868(node, depth + 1, ref remaining),MatchSchema46730(node, depth + 1, ref remaining),MatchSchema46592(node, depth + 1, ref remaining),MatchSchema46025(node, depth + 1, ref remaining),MatchSchema46035(node, depth + 1, ref remaining),MatchSchema43753(node, depth + 1, ref remaining),MatchSchema43763(node, depth + 1, ref remaining),MatchSchema43773(node, depth + 1, ref remaining),MatchSchema59265(node, depth + 1, ref remaining),MatchSchema59132(node, depth + 1, ref remaining),MatchSchema59408(node, depth + 1, ref remaining),MatchSchema59438(node, depth + 1, ref remaining),MatchSchema59398(node, depth + 1, ref remaining),MatchSchema47902(node, depth + 1, ref remaining),MatchSchema44476(node, depth + 1, ref remaining),MatchSchema44486(node, depth + 1, ref remaining),MatchSchema44506(node, depth + 1, ref remaining),MatchSchema40(node, depth + 1, ref remaining),MatchSchema59801(node, depth + 1, ref remaining),MatchSchema52134(node, depth + 1, ref remaining),MatchSchema60204(node, depth + 1, ref remaining),MatchSchema42298(node, depth + 1, ref remaining),MatchSchema59874(node, depth + 1, ref remaining),MatchSchema47882(node, depth + 1, ref remaining),MatchSchema367(node, depth + 1, ref remaining),MatchSchema60348(node, depth + 1, ref remaining),MatchSchema58527(node, depth + 1, ref remaining),MatchSchema48099(node, depth + 1, ref remaining),MatchSchema47910(node, depth + 1, ref remaining),MatchSchema47892(node, depth + 1, ref remaining),MatchSchema47920(node, depth + 1, ref remaining),MatchSchema62860(node, depth + 1, ref remaining),MatchSchema19634(node, depth + 1, ref remaining),MatchSchema19624(node, depth + 1, ref remaining),MatchSchema19614(node, depth + 1, ref remaining),MatchSchema45991(node, depth + 1, ref remaining),MatchSchema59638(node, depth + 1, ref remaining),MatchSchema51790(node, depth + 1, ref remaining),MatchSchema604(node, depth + 1, ref remaining),MatchSchema524(node, depth + 1, ref remaining),MatchSchema58583(node, depth + 1, ref remaining),MatchSchema48138(node, depth + 1, ref remaining),MatchSchema61713(node, depth + 1, ref remaining),MatchSchema61703(node, depth + 1, ref remaining),MatchSchema61723(node, depth + 1, ref remaining),MatchSchema58593(node, depth + 1, ref remaining),MatchSchema19644(node, depth + 1, ref remaining),MatchSchema22448(node, depth + 1, ref remaining),MatchSchema46045(node, depth + 1, ref remaining),MatchSchema46055(node, depth + 1, ref remaining),MatchSchema62687(node, depth + 1, ref remaining),MatchSchema62697(node, depth + 1, ref remaining),MatchSchema48109(node, depth + 1, ref remaining),MatchSchema49777(node, depth + 1, ref remaining),MatchSchema41084(node, depth + 1, ref remaining),MatchSchema48089(node, depth + 1, ref remaining),MatchSchema61620(node, depth + 1, ref remaining),MatchSchema44496(node, depth + 1, ref remaining))); if (result == false) return false; }
 return result;
 }
 
@@ -56756,14 +56756,14 @@ return result;
 private static bool? MatchSchema46345(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
-{ result &= (One(MatchSchema20745(node, depth + 1, ref remaining),MatchSchema20756(node, depth + 1, ref remaining),MatchSchema20764(node, depth + 1, ref remaining),MatchSchema7769(node, depth + 1, ref remaining),MatchSchema59906(node, depth + 1, ref remaining),MatchSchema49914(node, depth + 1, ref remaining),MatchSchema61603(node, depth + 1, ref remaining),MatchSchema7777(node, depth + 1, ref remaining),MatchSchema59914(node, depth + 1, ref remaining),MatchSchema49928(node, depth + 1, ref remaining),MatchSchema61611(node, depth + 1, ref remaining),MatchSchema356(node, depth + 1, ref remaining),MatchSchema60336(node, depth + 1, ref remaining),MatchSchema49750(node, depth + 1, ref remaining),MatchSchema39997(node, depth + 1, ref remaining),MatchSchema59018(node, depth + 1, ref remaining),MatchSchema59038(node, depth + 1, ref remaining),MatchSchema59028(node, depth + 1, ref remaining),MatchSchema62666(node, depth + 1, ref remaining),MatchSchema48632(node, depth + 1, ref remaining),MatchSchema62676(node, depth + 1, ref remaining),MatchSchema20709(node, depth + 1, ref remaining),MatchSchema20861(node, depth + 1, ref remaining),MatchSchema4690(node, depth + 1, ref remaining),MatchSchema49936(node, depth + 1, ref remaining),MatchSchema51340(node, depth + 1, ref remaining),MatchSchema43843(node, depth + 1, ref remaining),MatchSchema43833(node, depth + 1, ref remaining),MatchSchema43861(node, depth + 1, ref remaining),MatchSchema43853(node, depth + 1, ref remaining),MatchSchema47940(node, depth + 1, ref remaining),MatchSchema47950(node, depth + 1, ref remaining),MatchSchema39807(node, depth + 1, ref remaining),MatchSchema51677(node, depth + 1, ref remaining),MatchSchema49331(node, depth + 1, ref remaining),MatchSchema49660(node, depth + 1, ref remaining),MatchSchema48171(node, depth + 1, ref remaining),MatchSchema48181(node, depth + 1, ref remaining),MatchSchema49691(node, depth + 1, ref remaining),MatchSchema49701(node, depth + 1, ref remaining),MatchSchema49877(node, depth + 1, ref remaining),MatchSchema59848(node, depth + 1, ref remaining),MatchSchema47930(node, depth + 1, ref remaining),MatchSchema49787(node, depth + 1, ref remaining),MatchSchema39715(node, depth + 1, ref remaining),MatchSchema49670(node, depth + 1, ref remaining),MatchSchema63166(node, depth + 1, ref remaining),MatchSchema49847(node, depth + 1, ref remaining),MatchSchema61515(node, depth + 1, ref remaining),MatchSchema61525(node, depth + 1, ref remaining),MatchSchema51629(node, depth + 1, ref remaining),MatchSchema51639(node, depth + 1, ref remaining),MatchSchema580(node, depth + 1, ref remaining),MatchSchema50257(node, depth + 1, ref remaining),MatchSchema63155(node, depth + 1, ref remaining),MatchSchema47263(node, depth + 1, ref remaining),MatchSchema47006(node, depth + 1, ref remaining),MatchSchema46335(node, depth + 1, ref remaining),MatchSchema47958(node, depth + 1, ref remaining),MatchSchema46868(node, depth + 1, ref remaining),MatchSchema46730(node, depth + 1, ref remaining),MatchSchema46592(node, depth + 1, ref remaining),MatchSchema46025(node, depth + 1, ref remaining),MatchSchema46035(node, depth + 1, ref remaining),MatchSchema43753(node, depth + 1, ref remaining),MatchSchema43763(node, depth + 1, ref remaining),MatchSchema43773(node, depth + 1, ref remaining),MatchSchema59265(node, depth + 1, ref remaining),MatchSchema59132(node, depth + 1, ref remaining),MatchSchema59408(node, depth + 1, ref remaining),MatchSchema59438(node, depth + 1, ref remaining),MatchSchema59398(node, depth + 1, ref remaining),MatchSchema47902(node, depth + 1, ref remaining),MatchSchema44476(node, depth + 1, ref remaining),MatchSchema44486(node, depth + 1, ref remaining),MatchSchema44506(node, depth + 1, ref remaining),MatchSchema40(node, depth + 1, ref remaining),MatchSchema59801(node, depth + 1, ref remaining),MatchSchema52134(node, depth + 1, ref remaining),MatchSchema60203(node, depth + 1, ref remaining),MatchSchema42298(node, depth + 1, ref remaining),MatchSchema59873(node, depth + 1, ref remaining),MatchSchema47882(node, depth + 1, ref remaining),MatchSchema367(node, depth + 1, ref remaining),MatchSchema60347(node, depth + 1, ref remaining),MatchSchema58527(node, depth + 1, ref remaining),MatchSchema48099(node, depth + 1, ref remaining),MatchSchema47910(node, depth + 1, ref remaining),MatchSchema47892(node, depth + 1, ref remaining),MatchSchema47920(node, depth + 1, ref remaining),MatchSchema62859(node, depth + 1, ref remaining),MatchSchema19634(node, depth + 1, ref remaining),MatchSchema19624(node, depth + 1, ref remaining),MatchSchema19614(node, depth + 1, ref remaining),MatchSchema45991(node, depth + 1, ref remaining),MatchSchema59638(node, depth + 1, ref remaining),MatchSchema51790(node, depth + 1, ref remaining),MatchSchema604(node, depth + 1, ref remaining),MatchSchema524(node, depth + 1, ref remaining),MatchSchema58583(node, depth + 1, ref remaining),MatchSchema48138(node, depth + 1, ref remaining),MatchSchema61712(node, depth + 1, ref remaining),MatchSchema61702(node, depth + 1, ref remaining),MatchSchema61722(node, depth + 1, ref remaining),MatchSchema58593(node, depth + 1, ref remaining),MatchSchema19644(node, depth + 1, ref remaining),MatchSchema22448(node, depth + 1, ref remaining),MatchSchema46045(node, depth + 1, ref remaining),MatchSchema46055(node, depth + 1, ref remaining),MatchSchema62686(node, depth + 1, ref remaining),MatchSchema62696(node, depth + 1, ref remaining),MatchSchema48109(node, depth + 1, ref remaining),MatchSchema49777(node, depth + 1, ref remaining),MatchSchema41084(node, depth + 1, ref remaining),MatchSchema48089(node, depth + 1, ref remaining),MatchSchema61619(node, depth + 1, ref remaining),MatchSchema44496(node, depth + 1, ref remaining))); if (result == false) return false; }
+{ result &= (One(MatchSchema20745(node, depth + 1, ref remaining),MatchSchema20756(node, depth + 1, ref remaining),MatchSchema20764(node, depth + 1, ref remaining),MatchSchema7769(node, depth + 1, ref remaining),MatchSchema59907(node, depth + 1, ref remaining),MatchSchema49914(node, depth + 1, ref remaining),MatchSchema61604(node, depth + 1, ref remaining),MatchSchema7777(node, depth + 1, ref remaining),MatchSchema59915(node, depth + 1, ref remaining),MatchSchema49928(node, depth + 1, ref remaining),MatchSchema61612(node, depth + 1, ref remaining),MatchSchema356(node, depth + 1, ref remaining),MatchSchema60337(node, depth + 1, ref remaining),MatchSchema49750(node, depth + 1, ref remaining),MatchSchema39997(node, depth + 1, ref remaining),MatchSchema59018(node, depth + 1, ref remaining),MatchSchema59038(node, depth + 1, ref remaining),MatchSchema59028(node, depth + 1, ref remaining),MatchSchema62667(node, depth + 1, ref remaining),MatchSchema48632(node, depth + 1, ref remaining),MatchSchema62677(node, depth + 1, ref remaining),MatchSchema20709(node, depth + 1, ref remaining),MatchSchema20861(node, depth + 1, ref remaining),MatchSchema4690(node, depth + 1, ref remaining),MatchSchema49936(node, depth + 1, ref remaining),MatchSchema51340(node, depth + 1, ref remaining),MatchSchema43843(node, depth + 1, ref remaining),MatchSchema43833(node, depth + 1, ref remaining),MatchSchema43861(node, depth + 1, ref remaining),MatchSchema43853(node, depth + 1, ref remaining),MatchSchema47940(node, depth + 1, ref remaining),MatchSchema47950(node, depth + 1, ref remaining),MatchSchema39807(node, depth + 1, ref remaining),MatchSchema51677(node, depth + 1, ref remaining),MatchSchema49331(node, depth + 1, ref remaining),MatchSchema49660(node, depth + 1, ref remaining),MatchSchema48171(node, depth + 1, ref remaining),MatchSchema48181(node, depth + 1, ref remaining),MatchSchema49691(node, depth + 1, ref remaining),MatchSchema49701(node, depth + 1, ref remaining),MatchSchema49877(node, depth + 1, ref remaining),MatchSchema59848(node, depth + 1, ref remaining),MatchSchema47930(node, depth + 1, ref remaining),MatchSchema49787(node, depth + 1, ref remaining),MatchSchema39715(node, depth + 1, ref remaining),MatchSchema49670(node, depth + 1, ref remaining),MatchSchema63167(node, depth + 1, ref remaining),MatchSchema49847(node, depth + 1, ref remaining),MatchSchema61516(node, depth + 1, ref remaining),MatchSchema61526(node, depth + 1, ref remaining),MatchSchema51629(node, depth + 1, ref remaining),MatchSchema51639(node, depth + 1, ref remaining),MatchSchema580(node, depth + 1, ref remaining),MatchSchema50257(node, depth + 1, ref remaining),MatchSchema63156(node, depth + 1, ref remaining),MatchSchema47263(node, depth + 1, ref remaining),MatchSchema47006(node, depth + 1, ref remaining),MatchSchema46335(node, depth + 1, ref remaining),MatchSchema47958(node, depth + 1, ref remaining),MatchSchema46868(node, depth + 1, ref remaining),MatchSchema46730(node, depth + 1, ref remaining),MatchSchema46592(node, depth + 1, ref remaining),MatchSchema46025(node, depth + 1, ref remaining),MatchSchema46035(node, depth + 1, ref remaining),MatchSchema43753(node, depth + 1, ref remaining),MatchSchema43763(node, depth + 1, ref remaining),MatchSchema43773(node, depth + 1, ref remaining),MatchSchema59265(node, depth + 1, ref remaining),MatchSchema59132(node, depth + 1, ref remaining),MatchSchema59408(node, depth + 1, ref remaining),MatchSchema59438(node, depth + 1, ref remaining),MatchSchema59398(node, depth + 1, ref remaining),MatchSchema47902(node, depth + 1, ref remaining),MatchSchema44476(node, depth + 1, ref remaining),MatchSchema44486(node, depth + 1, ref remaining),MatchSchema44506(node, depth + 1, ref remaining),MatchSchema40(node, depth + 1, ref remaining),MatchSchema59801(node, depth + 1, ref remaining),MatchSchema52134(node, depth + 1, ref remaining),MatchSchema60204(node, depth + 1, ref remaining),MatchSchema42298(node, depth + 1, ref remaining),MatchSchema59874(node, depth + 1, ref remaining),MatchSchema47882(node, depth + 1, ref remaining),MatchSchema367(node, depth + 1, ref remaining),MatchSchema60348(node, depth + 1, ref remaining),MatchSchema58527(node, depth + 1, ref remaining),MatchSchema48099(node, depth + 1, ref remaining),MatchSchema47910(node, depth + 1, ref remaining),MatchSchema47892(node, depth + 1, ref remaining),MatchSchema47920(node, depth + 1, ref remaining),MatchSchema62860(node, depth + 1, ref remaining),MatchSchema19634(node, depth + 1, ref remaining),MatchSchema19624(node, depth + 1, ref remaining),MatchSchema19614(node, depth + 1, ref remaining),MatchSchema45991(node, depth + 1, ref remaining),MatchSchema59638(node, depth + 1, ref remaining),MatchSchema51790(node, depth + 1, ref remaining),MatchSchema604(node, depth + 1, ref remaining),MatchSchema524(node, depth + 1, ref remaining),MatchSchema58583(node, depth + 1, ref remaining),MatchSchema48138(node, depth + 1, ref remaining),MatchSchema61713(node, depth + 1, ref remaining),MatchSchema61703(node, depth + 1, ref remaining),MatchSchema61723(node, depth + 1, ref remaining),MatchSchema58593(node, depth + 1, ref remaining),MatchSchema19644(node, depth + 1, ref remaining),MatchSchema22448(node, depth + 1, ref remaining),MatchSchema46045(node, depth + 1, ref remaining),MatchSchema46055(node, depth + 1, ref remaining),MatchSchema62687(node, depth + 1, ref remaining),MatchSchema62697(node, depth + 1, ref remaining),MatchSchema48109(node, depth + 1, ref remaining),MatchSchema49777(node, depth + 1, ref remaining),MatchSchema41084(node, depth + 1, ref remaining),MatchSchema48089(node, depth + 1, ref remaining),MatchSchema61620(node, depth + 1, ref remaining),MatchSchema44496(node, depth + 1, ref remaining))); if (result == false) return false; }
 return result;
 }
 
 private static bool? MatchSchema46467(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
-{ result &= (One(MatchSchema20745(node, depth + 1, ref remaining),MatchSchema20756(node, depth + 1, ref remaining),MatchSchema20764(node, depth + 1, ref remaining),MatchSchema7769(node, depth + 1, ref remaining),MatchSchema59906(node, depth + 1, ref remaining),MatchSchema49914(node, depth + 1, ref remaining),MatchSchema61603(node, depth + 1, ref remaining),MatchSchema7777(node, depth + 1, ref remaining),MatchSchema59914(node, depth + 1, ref remaining),MatchSchema49928(node, depth + 1, ref remaining),MatchSchema61611(node, depth + 1, ref remaining),MatchSchema356(node, depth + 1, ref remaining),MatchSchema60336(node, depth + 1, ref remaining),MatchSchema49750(node, depth + 1, ref remaining),MatchSchema39997(node, depth + 1, ref remaining),MatchSchema59018(node, depth + 1, ref remaining),MatchSchema59038(node, depth + 1, ref remaining),MatchSchema59028(node, depth + 1, ref remaining),MatchSchema62666(node, depth + 1, ref remaining),MatchSchema48632(node, depth + 1, ref remaining),MatchSchema62676(node, depth + 1, ref remaining),MatchSchema20709(node, depth + 1, ref remaining),MatchSchema20861(node, depth + 1, ref remaining),MatchSchema4690(node, depth + 1, ref remaining),MatchSchema49936(node, depth + 1, ref remaining),MatchSchema51340(node, depth + 1, ref remaining),MatchSchema43843(node, depth + 1, ref remaining),MatchSchema43833(node, depth + 1, ref remaining),MatchSchema43861(node, depth + 1, ref remaining),MatchSchema43853(node, depth + 1, ref remaining),MatchSchema47940(node, depth + 1, ref remaining),MatchSchema47950(node, depth + 1, ref remaining),MatchSchema39807(node, depth + 1, ref remaining),MatchSchema51677(node, depth + 1, ref remaining),MatchSchema49331(node, depth + 1, ref remaining),MatchSchema49660(node, depth + 1, ref remaining),MatchSchema48171(node, depth + 1, ref remaining),MatchSchema48181(node, depth + 1, ref remaining),MatchSchema49691(node, depth + 1, ref remaining),MatchSchema49701(node, depth + 1, ref remaining),MatchSchema49877(node, depth + 1, ref remaining),MatchSchema59848(node, depth + 1, ref remaining),MatchSchema47930(node, depth + 1, ref remaining),MatchSchema49787(node, depth + 1, ref remaining),MatchSchema39715(node, depth + 1, ref remaining),MatchSchema49670(node, depth + 1, ref remaining),MatchSchema63166(node, depth + 1, ref remaining),MatchSchema49847(node, depth + 1, ref remaining),MatchSchema61515(node, depth + 1, ref remaining),MatchSchema61525(node, depth + 1, ref remaining),MatchSchema51629(node, depth + 1, ref remaining),MatchSchema51639(node, depth + 1, ref remaining),MatchSchema580(node, depth + 1, ref remaining),MatchSchema50257(node, depth + 1, ref remaining),MatchSchema63155(node, depth + 1, ref remaining),MatchSchema47263(node, depth + 1, ref remaining),MatchSchema47006(node, depth + 1, ref remaining),MatchSchema46335(node, depth + 1, ref remaining),MatchSchema47958(node, depth + 1, ref remaining),MatchSchema46868(node, depth + 1, ref remaining),MatchSchema46730(node, depth + 1, ref remaining),MatchSchema46592(node, depth + 1, ref remaining),MatchSchema46025(node, depth + 1, ref remaining),MatchSchema46035(node, depth + 1, ref remaining),MatchSchema43753(node, depth + 1, ref remaining),MatchSchema43763(node, depth + 1, ref remaining),MatchSchema43773(node, depth + 1, ref remaining),MatchSchema59265(node, depth + 1, ref remaining),MatchSchema59132(node, depth + 1, ref remaining),MatchSchema59408(node, depth + 1, ref remaining),MatchSchema59438(node, depth + 1, ref remaining),MatchSchema59398(node, depth + 1, ref remaining),MatchSchema47902(node, depth + 1, ref remaining),MatchSchema44476(node, depth + 1, ref remaining),MatchSchema44486(node, depth + 1, ref remaining),MatchSchema44506(node, depth + 1, ref remaining),MatchSchema40(node, depth + 1, ref remaining),MatchSchema59801(node, depth + 1, ref remaining),MatchSchema52134(node, depth + 1, ref remaining),MatchSchema60203(node, depth + 1, ref remaining),MatchSchema42298(node, depth + 1, ref remaining),MatchSchema59873(node, depth + 1, ref remaining),MatchSchema47882(node, depth + 1, ref remaining),MatchSchema367(node, depth + 1, ref remaining),MatchSchema60347(node, depth + 1, ref remaining),MatchSchema58527(node, depth + 1, ref remaining),MatchSchema48099(node, depth + 1, ref remaining),MatchSchema47910(node, depth + 1, ref remaining),MatchSchema47892(node, depth + 1, ref remaining),MatchSchema47920(node, depth + 1, ref remaining),MatchSchema62859(node, depth + 1, ref remaining),MatchSchema19634(node, depth + 1, ref remaining),MatchSchema19624(node, depth + 1, ref remaining),MatchSchema19614(node, depth + 1, ref remaining),MatchSchema45991(node, depth + 1, ref remaining),MatchSchema59638(node, depth + 1, ref remaining),MatchSchema51790(node, depth + 1, ref remaining),MatchSchema604(node, depth + 1, ref remaining),MatchSchema524(node, depth + 1, ref remaining),MatchSchema58583(node, depth + 1, ref remaining),MatchSchema48138(node, depth + 1, ref remaining),MatchSchema61712(node, depth + 1, ref remaining),MatchSchema61702(node, depth + 1, ref remaining),MatchSchema61722(node, depth + 1, ref remaining),MatchSchema58593(node, depth + 1, ref remaining),MatchSchema19644(node, depth + 1, ref remaining),MatchSchema22448(node, depth + 1, ref remaining),MatchSchema46045(node, depth + 1, ref remaining),MatchSchema46055(node, depth + 1, ref remaining),MatchSchema62686(node, depth + 1, ref remaining),MatchSchema62696(node, depth + 1, ref remaining),MatchSchema48109(node, depth + 1, ref remaining),MatchSchema49777(node, depth + 1, ref remaining),MatchSchema41084(node, depth + 1, ref remaining),MatchSchema48089(node, depth + 1, ref remaining),MatchSchema61619(node, depth + 1, ref remaining),MatchSchema44496(node, depth + 1, ref remaining))); if (result == false) return false; }
+{ result &= (One(MatchSchema20745(node, depth + 1, ref remaining),MatchSchema20756(node, depth + 1, ref remaining),MatchSchema20764(node, depth + 1, ref remaining),MatchSchema7769(node, depth + 1, ref remaining),MatchSchema59907(node, depth + 1, ref remaining),MatchSchema49914(node, depth + 1, ref remaining),MatchSchema61604(node, depth + 1, ref remaining),MatchSchema7777(node, depth + 1, ref remaining),MatchSchema59915(node, depth + 1, ref remaining),MatchSchema49928(node, depth + 1, ref remaining),MatchSchema61612(node, depth + 1, ref remaining),MatchSchema356(node, depth + 1, ref remaining),MatchSchema60337(node, depth + 1, ref remaining),MatchSchema49750(node, depth + 1, ref remaining),MatchSchema39997(node, depth + 1, ref remaining),MatchSchema59018(node, depth + 1, ref remaining),MatchSchema59038(node, depth + 1, ref remaining),MatchSchema59028(node, depth + 1, ref remaining),MatchSchema62667(node, depth + 1, ref remaining),MatchSchema48632(node, depth + 1, ref remaining),MatchSchema62677(node, depth + 1, ref remaining),MatchSchema20709(node, depth + 1, ref remaining),MatchSchema20861(node, depth + 1, ref remaining),MatchSchema4690(node, depth + 1, ref remaining),MatchSchema49936(node, depth + 1, ref remaining),MatchSchema51340(node, depth + 1, ref remaining),MatchSchema43843(node, depth + 1, ref remaining),MatchSchema43833(node, depth + 1, ref remaining),MatchSchema43861(node, depth + 1, ref remaining),MatchSchema43853(node, depth + 1, ref remaining),MatchSchema47940(node, depth + 1, ref remaining),MatchSchema47950(node, depth + 1, ref remaining),MatchSchema39807(node, depth + 1, ref remaining),MatchSchema51677(node, depth + 1, ref remaining),MatchSchema49331(node, depth + 1, ref remaining),MatchSchema49660(node, depth + 1, ref remaining),MatchSchema48171(node, depth + 1, ref remaining),MatchSchema48181(node, depth + 1, ref remaining),MatchSchema49691(node, depth + 1, ref remaining),MatchSchema49701(node, depth + 1, ref remaining),MatchSchema49877(node, depth + 1, ref remaining),MatchSchema59848(node, depth + 1, ref remaining),MatchSchema47930(node, depth + 1, ref remaining),MatchSchema49787(node, depth + 1, ref remaining),MatchSchema39715(node, depth + 1, ref remaining),MatchSchema49670(node, depth + 1, ref remaining),MatchSchema63167(node, depth + 1, ref remaining),MatchSchema49847(node, depth + 1, ref remaining),MatchSchema61516(node, depth + 1, ref remaining),MatchSchema61526(node, depth + 1, ref remaining),MatchSchema51629(node, depth + 1, ref remaining),MatchSchema51639(node, depth + 1, ref remaining),MatchSchema580(node, depth + 1, ref remaining),MatchSchema50257(node, depth + 1, ref remaining),MatchSchema63156(node, depth + 1, ref remaining),MatchSchema47263(node, depth + 1, ref remaining),MatchSchema47006(node, depth + 1, ref remaining),MatchSchema46335(node, depth + 1, ref remaining),MatchSchema47958(node, depth + 1, ref remaining),MatchSchema46868(node, depth + 1, ref remaining),MatchSchema46730(node, depth + 1, ref remaining),MatchSchema46592(node, depth + 1, ref remaining),MatchSchema46025(node, depth + 1, ref remaining),MatchSchema46035(node, depth + 1, ref remaining),MatchSchema43753(node, depth + 1, ref remaining),MatchSchema43763(node, depth + 1, ref remaining),MatchSchema43773(node, depth + 1, ref remaining),MatchSchema59265(node, depth + 1, ref remaining),MatchSchema59132(node, depth + 1, ref remaining),MatchSchema59408(node, depth + 1, ref remaining),MatchSchema59438(node, depth + 1, ref remaining),MatchSchema59398(node, depth + 1, ref remaining),MatchSchema47902(node, depth + 1, ref remaining),MatchSchema44476(node, depth + 1, ref remaining),MatchSchema44486(node, depth + 1, ref remaining),MatchSchema44506(node, depth + 1, ref remaining),MatchSchema40(node, depth + 1, ref remaining),MatchSchema59801(node, depth + 1, ref remaining),MatchSchema52134(node, depth + 1, ref remaining),MatchSchema60204(node, depth + 1, ref remaining),MatchSchema42298(node, depth + 1, ref remaining),MatchSchema59874(node, depth + 1, ref remaining),MatchSchema47882(node, depth + 1, ref remaining),MatchSchema367(node, depth + 1, ref remaining),MatchSchema60348(node, depth + 1, ref remaining),MatchSchema58527(node, depth + 1, ref remaining),MatchSchema48099(node, depth + 1, ref remaining),MatchSchema47910(node, depth + 1, ref remaining),MatchSchema47892(node, depth + 1, ref remaining),MatchSchema47920(node, depth + 1, ref remaining),MatchSchema62860(node, depth + 1, ref remaining),MatchSchema19634(node, depth + 1, ref remaining),MatchSchema19624(node, depth + 1, ref remaining),MatchSchema19614(node, depth + 1, ref remaining),MatchSchema45991(node, depth + 1, ref remaining),MatchSchema59638(node, depth + 1, ref remaining),MatchSchema51790(node, depth + 1, ref remaining),MatchSchema604(node, depth + 1, ref remaining),MatchSchema524(node, depth + 1, ref remaining),MatchSchema58583(node, depth + 1, ref remaining),MatchSchema48138(node, depth + 1, ref remaining),MatchSchema61713(node, depth + 1, ref remaining),MatchSchema61703(node, depth + 1, ref remaining),MatchSchema61723(node, depth + 1, ref remaining),MatchSchema58593(node, depth + 1, ref remaining),MatchSchema19644(node, depth + 1, ref remaining),MatchSchema22448(node, depth + 1, ref remaining),MatchSchema46045(node, depth + 1, ref remaining),MatchSchema46055(node, depth + 1, ref remaining),MatchSchema62687(node, depth + 1, ref remaining),MatchSchema62697(node, depth + 1, ref remaining),MatchSchema48109(node, depth + 1, ref remaining),MatchSchema49777(node, depth + 1, ref remaining),MatchSchema41084(node, depth + 1, ref remaining),MatchSchema48089(node, depth + 1, ref remaining),MatchSchema61620(node, depth + 1, ref remaining),MatchSchema44496(node, depth + 1, ref remaining))); if (result == false) return false; }
 return result;
 }
 
@@ -56852,7 +56852,7 @@ return result;
 private static bool? MatchSchema46605(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
-{ result &= (One(MatchSchema20745(node, depth + 1, ref remaining),MatchSchema20756(node, depth + 1, ref remaining),MatchSchema20764(node, depth + 1, ref remaining),MatchSchema7769(node, depth + 1, ref remaining),MatchSchema59906(node, depth + 1, ref remaining),MatchSchema49914(node, depth + 1, ref remaining),MatchSchema61603(node, depth + 1, ref remaining),MatchSchema7777(node, depth + 1, ref remaining),MatchSchema59914(node, depth + 1, ref remaining),MatchSchema49928(node, depth + 1, ref remaining),MatchSchema61611(node, depth + 1, ref remaining),MatchSchema356(node, depth + 1, ref remaining),MatchSchema60336(node, depth + 1, ref remaining),MatchSchema49750(node, depth + 1, ref remaining),MatchSchema39997(node, depth + 1, ref remaining),MatchSchema59018(node, depth + 1, ref remaining),MatchSchema59038(node, depth + 1, ref remaining),MatchSchema59028(node, depth + 1, ref remaining),MatchSchema62666(node, depth + 1, ref remaining),MatchSchema48632(node, depth + 1, ref remaining),MatchSchema62676(node, depth + 1, ref remaining),MatchSchema20709(node, depth + 1, ref remaining),MatchSchema20861(node, depth + 1, ref remaining),MatchSchema4690(node, depth + 1, ref remaining),MatchSchema49936(node, depth + 1, ref remaining),MatchSchema51340(node, depth + 1, ref remaining),MatchSchema43843(node, depth + 1, ref remaining),MatchSchema43833(node, depth + 1, ref remaining),MatchSchema43861(node, depth + 1, ref remaining),MatchSchema43853(node, depth + 1, ref remaining),MatchSchema47940(node, depth + 1, ref remaining),MatchSchema47950(node, depth + 1, ref remaining),MatchSchema39807(node, depth + 1, ref remaining),MatchSchema51677(node, depth + 1, ref remaining),MatchSchema49331(node, depth + 1, ref remaining),MatchSchema49660(node, depth + 1, ref remaining),MatchSchema48171(node, depth + 1, ref remaining),MatchSchema48181(node, depth + 1, ref remaining),MatchSchema49691(node, depth + 1, ref remaining),MatchSchema49701(node, depth + 1, ref remaining),MatchSchema49877(node, depth + 1, ref remaining),MatchSchema59848(node, depth + 1, ref remaining),MatchSchema47930(node, depth + 1, ref remaining),MatchSchema49787(node, depth + 1, ref remaining),MatchSchema39715(node, depth + 1, ref remaining),MatchSchema49670(node, depth + 1, ref remaining),MatchSchema63166(node, depth + 1, ref remaining),MatchSchema49847(node, depth + 1, ref remaining),MatchSchema61515(node, depth + 1, ref remaining),MatchSchema61525(node, depth + 1, ref remaining),MatchSchema51629(node, depth + 1, ref remaining),MatchSchema51639(node, depth + 1, ref remaining),MatchSchema580(node, depth + 1, ref remaining),MatchSchema50257(node, depth + 1, ref remaining),MatchSchema63155(node, depth + 1, ref remaining),MatchSchema47263(node, depth + 1, ref remaining),MatchSchema47006(node, depth + 1, ref remaining),MatchSchema46335(node, depth + 1, ref remaining),MatchSchema47958(node, depth + 1, ref remaining),MatchSchema46868(node, depth + 1, ref remaining),MatchSchema46730(node, depth + 1, ref remaining),MatchSchema46592(node, depth + 1, ref remaining),MatchSchema46025(node, depth + 1, ref remaining),MatchSchema46035(node, depth + 1, ref remaining),MatchSchema43753(node, depth + 1, ref remaining),MatchSchema43763(node, depth + 1, ref remaining),MatchSchema43773(node, depth + 1, ref remaining),MatchSchema59265(node, depth + 1, ref remaining),MatchSchema59132(node, depth + 1, ref remaining),MatchSchema59408(node, depth + 1, ref remaining),MatchSchema59438(node, depth + 1, ref remaining),MatchSchema59398(node, depth + 1, ref remaining),MatchSchema47902(node, depth + 1, ref remaining),MatchSchema44476(node, depth + 1, ref remaining),MatchSchema44486(node, depth + 1, ref remaining),MatchSchema44506(node, depth + 1, ref remaining),MatchSchema40(node, depth + 1, ref remaining),MatchSchema59801(node, depth + 1, ref remaining),MatchSchema52134(node, depth + 1, ref remaining),MatchSchema60203(node, depth + 1, ref remaining),MatchSchema42298(node, depth + 1, ref remaining),MatchSchema59873(node, depth + 1, ref remaining),MatchSchema47882(node, depth + 1, ref remaining),MatchSchema367(node, depth + 1, ref remaining),MatchSchema60347(node, depth + 1, ref remaining),MatchSchema58527(node, depth + 1, ref remaining),MatchSchema48099(node, depth + 1, ref remaining),MatchSchema47910(node, depth + 1, ref remaining),MatchSchema47892(node, depth + 1, ref remaining),MatchSchema47920(node, depth + 1, ref remaining),MatchSchema62859(node, depth + 1, ref remaining),MatchSchema19634(node, depth + 1, ref remaining),MatchSchema19624(node, depth + 1, ref remaining),MatchSchema19614(node, depth + 1, ref remaining),MatchSchema45991(node, depth + 1, ref remaining),MatchSchema59638(node, depth + 1, ref remaining),MatchSchema51790(node, depth + 1, ref remaining),MatchSchema604(node, depth + 1, ref remaining),MatchSchema524(node, depth + 1, ref remaining),MatchSchema58583(node, depth + 1, ref remaining),MatchSchema48138(node, depth + 1, ref remaining),MatchSchema61712(node, depth + 1, ref remaining),MatchSchema61702(node, depth + 1, ref remaining),MatchSchema61722(node, depth + 1, ref remaining),MatchSchema58593(node, depth + 1, ref remaining),MatchSchema19644(node, depth + 1, ref remaining),MatchSchema22448(node, depth + 1, ref remaining),MatchSchema46045(node, depth + 1, ref remaining),MatchSchema46055(node, depth + 1, ref remaining),MatchSchema62686(node, depth + 1, ref remaining),MatchSchema62696(node, depth + 1, ref remaining),MatchSchema48109(node, depth + 1, ref remaining),MatchSchema49777(node, depth + 1, ref remaining),MatchSchema41084(node, depth + 1, ref remaining),MatchSchema48089(node, depth + 1, ref remaining),MatchSchema61619(node, depth + 1, ref remaining),MatchSchema44496(node, depth + 1, ref remaining))); if (result == false) return false; }
+{ result &= (One(MatchSchema20745(node, depth + 1, ref remaining),MatchSchema20756(node, depth + 1, ref remaining),MatchSchema20764(node, depth + 1, ref remaining),MatchSchema7769(node, depth + 1, ref remaining),MatchSchema59907(node, depth + 1, ref remaining),MatchSchema49914(node, depth + 1, ref remaining),MatchSchema61604(node, depth + 1, ref remaining),MatchSchema7777(node, depth + 1, ref remaining),MatchSchema59915(node, depth + 1, ref remaining),MatchSchema49928(node, depth + 1, ref remaining),MatchSchema61612(node, depth + 1, ref remaining),MatchSchema356(node, depth + 1, ref remaining),MatchSchema60337(node, depth + 1, ref remaining),MatchSchema49750(node, depth + 1, ref remaining),MatchSchema39997(node, depth + 1, ref remaining),MatchSchema59018(node, depth + 1, ref remaining),MatchSchema59038(node, depth + 1, ref remaining),MatchSchema59028(node, depth + 1, ref remaining),MatchSchema62667(node, depth + 1, ref remaining),MatchSchema48632(node, depth + 1, ref remaining),MatchSchema62677(node, depth + 1, ref remaining),MatchSchema20709(node, depth + 1, ref remaining),MatchSchema20861(node, depth + 1, ref remaining),MatchSchema4690(node, depth + 1, ref remaining),MatchSchema49936(node, depth + 1, ref remaining),MatchSchema51340(node, depth + 1, ref remaining),MatchSchema43843(node, depth + 1, ref remaining),MatchSchema43833(node, depth + 1, ref remaining),MatchSchema43861(node, depth + 1, ref remaining),MatchSchema43853(node, depth + 1, ref remaining),MatchSchema47940(node, depth + 1, ref remaining),MatchSchema47950(node, depth + 1, ref remaining),MatchSchema39807(node, depth + 1, ref remaining),MatchSchema51677(node, depth + 1, ref remaining),MatchSchema49331(node, depth + 1, ref remaining),MatchSchema49660(node, depth + 1, ref remaining),MatchSchema48171(node, depth + 1, ref remaining),MatchSchema48181(node, depth + 1, ref remaining),MatchSchema49691(node, depth + 1, ref remaining),MatchSchema49701(node, depth + 1, ref remaining),MatchSchema49877(node, depth + 1, ref remaining),MatchSchema59848(node, depth + 1, ref remaining),MatchSchema47930(node, depth + 1, ref remaining),MatchSchema49787(node, depth + 1, ref remaining),MatchSchema39715(node, depth + 1, ref remaining),MatchSchema49670(node, depth + 1, ref remaining),MatchSchema63167(node, depth + 1, ref remaining),MatchSchema49847(node, depth + 1, ref remaining),MatchSchema61516(node, depth + 1, ref remaining),MatchSchema61526(node, depth + 1, ref remaining),MatchSchema51629(node, depth + 1, ref remaining),MatchSchema51639(node, depth + 1, ref remaining),MatchSchema580(node, depth + 1, ref remaining),MatchSchema50257(node, depth + 1, ref remaining),MatchSchema63156(node, depth + 1, ref remaining),MatchSchema47263(node, depth + 1, ref remaining),MatchSchema47006(node, depth + 1, ref remaining),MatchSchema46335(node, depth + 1, ref remaining),MatchSchema47958(node, depth + 1, ref remaining),MatchSchema46868(node, depth + 1, ref remaining),MatchSchema46730(node, depth + 1, ref remaining),MatchSchema46592(node, depth + 1, ref remaining),MatchSchema46025(node, depth + 1, ref remaining),MatchSchema46035(node, depth + 1, ref remaining),MatchSchema43753(node, depth + 1, ref remaining),MatchSchema43763(node, depth + 1, ref remaining),MatchSchema43773(node, depth + 1, ref remaining),MatchSchema59265(node, depth + 1, ref remaining),MatchSchema59132(node, depth + 1, ref remaining),MatchSchema59408(node, depth + 1, ref remaining),MatchSchema59438(node, depth + 1, ref remaining),MatchSchema59398(node, depth + 1, ref remaining),MatchSchema47902(node, depth + 1, ref remaining),MatchSchema44476(node, depth + 1, ref remaining),MatchSchema44486(node, depth + 1, ref remaining),MatchSchema44506(node, depth + 1, ref remaining),MatchSchema40(node, depth + 1, ref remaining),MatchSchema59801(node, depth + 1, ref remaining),MatchSchema52134(node, depth + 1, ref remaining),MatchSchema60204(node, depth + 1, ref remaining),MatchSchema42298(node, depth + 1, ref remaining),MatchSchema59874(node, depth + 1, ref remaining),MatchSchema47882(node, depth + 1, ref remaining),MatchSchema367(node, depth + 1, ref remaining),MatchSchema60348(node, depth + 1, ref remaining),MatchSchema58527(node, depth + 1, ref remaining),MatchSchema48099(node, depth + 1, ref remaining),MatchSchema47910(node, depth + 1, ref remaining),MatchSchema47892(node, depth + 1, ref remaining),MatchSchema47920(node, depth + 1, ref remaining),MatchSchema62860(node, depth + 1, ref remaining),MatchSchema19634(node, depth + 1, ref remaining),MatchSchema19624(node, depth + 1, ref remaining),MatchSchema19614(node, depth + 1, ref remaining),MatchSchema45991(node, depth + 1, ref remaining),MatchSchema59638(node, depth + 1, ref remaining),MatchSchema51790(node, depth + 1, ref remaining),MatchSchema604(node, depth + 1, ref remaining),MatchSchema524(node, depth + 1, ref remaining),MatchSchema58583(node, depth + 1, ref remaining),MatchSchema48138(node, depth + 1, ref remaining),MatchSchema61713(node, depth + 1, ref remaining),MatchSchema61703(node, depth + 1, ref remaining),MatchSchema61723(node, depth + 1, ref remaining),MatchSchema58593(node, depth + 1, ref remaining),MatchSchema19644(node, depth + 1, ref remaining),MatchSchema22448(node, depth + 1, ref remaining),MatchSchema46045(node, depth + 1, ref remaining),MatchSchema46055(node, depth + 1, ref remaining),MatchSchema62687(node, depth + 1, ref remaining),MatchSchema62697(node, depth + 1, ref remaining),MatchSchema48109(node, depth + 1, ref remaining),MatchSchema49777(node, depth + 1, ref remaining),MatchSchema41084(node, depth + 1, ref remaining),MatchSchema48089(node, depth + 1, ref remaining),MatchSchema61620(node, depth + 1, ref remaining),MatchSchema44496(node, depth + 1, ref remaining))); if (result == false) return false; }
 return result;
 }
 
@@ -56941,7 +56941,7 @@ return result;
 private static bool? MatchSchema46743(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
-{ result &= (One(MatchSchema20745(node, depth + 1, ref remaining),MatchSchema20756(node, depth + 1, ref remaining),MatchSchema20764(node, depth + 1, ref remaining),MatchSchema7769(node, depth + 1, ref remaining),MatchSchema59906(node, depth + 1, ref remaining),MatchSchema49914(node, depth + 1, ref remaining),MatchSchema61603(node, depth + 1, ref remaining),MatchSchema7777(node, depth + 1, ref remaining),MatchSchema59914(node, depth + 1, ref remaining),MatchSchema49928(node, depth + 1, ref remaining),MatchSchema61611(node, depth + 1, ref remaining),MatchSchema356(node, depth + 1, ref remaining),MatchSchema60336(node, depth + 1, ref remaining),MatchSchema49750(node, depth + 1, ref remaining),MatchSchema39997(node, depth + 1, ref remaining),MatchSchema59018(node, depth + 1, ref remaining),MatchSchema59038(node, depth + 1, ref remaining),MatchSchema59028(node, depth + 1, ref remaining),MatchSchema62666(node, depth + 1, ref remaining),MatchSchema48632(node, depth + 1, ref remaining),MatchSchema62676(node, depth + 1, ref remaining),MatchSchema20709(node, depth + 1, ref remaining),MatchSchema20861(node, depth + 1, ref remaining),MatchSchema4690(node, depth + 1, ref remaining),MatchSchema49936(node, depth + 1, ref remaining),MatchSchema51340(node, depth + 1, ref remaining),MatchSchema43843(node, depth + 1, ref remaining),MatchSchema43833(node, depth + 1, ref remaining),MatchSchema43861(node, depth + 1, ref remaining),MatchSchema43853(node, depth + 1, ref remaining),MatchSchema47940(node, depth + 1, ref remaining),MatchSchema47950(node, depth + 1, ref remaining),MatchSchema39807(node, depth + 1, ref remaining),MatchSchema51677(node, depth + 1, ref remaining),MatchSchema49331(node, depth + 1, ref remaining),MatchSchema49660(node, depth + 1, ref remaining),MatchSchema48171(node, depth + 1, ref remaining),MatchSchema48181(node, depth + 1, ref remaining),MatchSchema49691(node, depth + 1, ref remaining),MatchSchema49701(node, depth + 1, ref remaining),MatchSchema49877(node, depth + 1, ref remaining),MatchSchema59848(node, depth + 1, ref remaining),MatchSchema47930(node, depth + 1, ref remaining),MatchSchema49787(node, depth + 1, ref remaining),MatchSchema39715(node, depth + 1, ref remaining),MatchSchema49670(node, depth + 1, ref remaining),MatchSchema63166(node, depth + 1, ref remaining),MatchSchema49847(node, depth + 1, ref remaining),MatchSchema61515(node, depth + 1, ref remaining),MatchSchema61525(node, depth + 1, ref remaining),MatchSchema51629(node, depth + 1, ref remaining),MatchSchema51639(node, depth + 1, ref remaining),MatchSchema580(node, depth + 1, ref remaining),MatchSchema50257(node, depth + 1, ref remaining),MatchSchema63155(node, depth + 1, ref remaining),MatchSchema47263(node, depth + 1, ref remaining),MatchSchema47006(node, depth + 1, ref remaining),MatchSchema46335(node, depth + 1, ref remaining),MatchSchema47958(node, depth + 1, ref remaining),MatchSchema46868(node, depth + 1, ref remaining),MatchSchema46730(node, depth + 1, ref remaining),MatchSchema46592(node, depth + 1, ref remaining),MatchSchema46025(node, depth + 1, ref remaining),MatchSchema46035(node, depth + 1, ref remaining),MatchSchema43753(node, depth + 1, ref remaining),MatchSchema43763(node, depth + 1, ref remaining),MatchSchema43773(node, depth + 1, ref remaining),MatchSchema59265(node, depth + 1, ref remaining),MatchSchema59132(node, depth + 1, ref remaining),MatchSchema59408(node, depth + 1, ref remaining),MatchSchema59438(node, depth + 1, ref remaining),MatchSchema59398(node, depth + 1, ref remaining),MatchSchema47902(node, depth + 1, ref remaining),MatchSchema44476(node, depth + 1, ref remaining),MatchSchema44486(node, depth + 1, ref remaining),MatchSchema44506(node, depth + 1, ref remaining),MatchSchema40(node, depth + 1, ref remaining),MatchSchema59801(node, depth + 1, ref remaining),MatchSchema52134(node, depth + 1, ref remaining),MatchSchema60203(node, depth + 1, ref remaining),MatchSchema42298(node, depth + 1, ref remaining),MatchSchema59873(node, depth + 1, ref remaining),MatchSchema47882(node, depth + 1, ref remaining),MatchSchema367(node, depth + 1, ref remaining),MatchSchema60347(node, depth + 1, ref remaining),MatchSchema58527(node, depth + 1, ref remaining),MatchSchema48099(node, depth + 1, ref remaining),MatchSchema47910(node, depth + 1, ref remaining),MatchSchema47892(node, depth + 1, ref remaining),MatchSchema47920(node, depth + 1, ref remaining),MatchSchema62859(node, depth + 1, ref remaining),MatchSchema19634(node, depth + 1, ref remaining),MatchSchema19624(node, depth + 1, ref remaining),MatchSchema19614(node, depth + 1, ref remaining),MatchSchema45991(node, depth + 1, ref remaining),MatchSchema59638(node, depth + 1, ref remaining),MatchSchema51790(node, depth + 1, ref remaining),MatchSchema604(node, depth + 1, ref remaining),MatchSchema524(node, depth + 1, ref remaining),MatchSchema58583(node, depth + 1, ref remaining),MatchSchema48138(node, depth + 1, ref remaining),MatchSchema61712(node, depth + 1, ref remaining),MatchSchema61702(node, depth + 1, ref remaining),MatchSchema61722(node, depth + 1, ref remaining),MatchSchema58593(node, depth + 1, ref remaining),MatchSchema19644(node, depth + 1, ref remaining),MatchSchema22448(node, depth + 1, ref remaining),MatchSchema46045(node, depth + 1, ref remaining),MatchSchema46055(node, depth + 1, ref remaining),MatchSchema62686(node, depth + 1, ref remaining),MatchSchema62696(node, depth + 1, ref remaining),MatchSchema48109(node, depth + 1, ref remaining),MatchSchema49777(node, depth + 1, ref remaining),MatchSchema41084(node, depth + 1, ref remaining),MatchSchema48089(node, depth + 1, ref remaining),MatchSchema61619(node, depth + 1, ref remaining),MatchSchema44496(node, depth + 1, ref remaining))); if (result == false) return false; }
+{ result &= (One(MatchSchema20745(node, depth + 1, ref remaining),MatchSchema20756(node, depth + 1, ref remaining),MatchSchema20764(node, depth + 1, ref remaining),MatchSchema7769(node, depth + 1, ref remaining),MatchSchema59907(node, depth + 1, ref remaining),MatchSchema49914(node, depth + 1, ref remaining),MatchSchema61604(node, depth + 1, ref remaining),MatchSchema7777(node, depth + 1, ref remaining),MatchSchema59915(node, depth + 1, ref remaining),MatchSchema49928(node, depth + 1, ref remaining),MatchSchema61612(node, depth + 1, ref remaining),MatchSchema356(node, depth + 1, ref remaining),MatchSchema60337(node, depth + 1, ref remaining),MatchSchema49750(node, depth + 1, ref remaining),MatchSchema39997(node, depth + 1, ref remaining),MatchSchema59018(node, depth + 1, ref remaining),MatchSchema59038(node, depth + 1, ref remaining),MatchSchema59028(node, depth + 1, ref remaining),MatchSchema62667(node, depth + 1, ref remaining),MatchSchema48632(node, depth + 1, ref remaining),MatchSchema62677(node, depth + 1, ref remaining),MatchSchema20709(node, depth + 1, ref remaining),MatchSchema20861(node, depth + 1, ref remaining),MatchSchema4690(node, depth + 1, ref remaining),MatchSchema49936(node, depth + 1, ref remaining),MatchSchema51340(node, depth + 1, ref remaining),MatchSchema43843(node, depth + 1, ref remaining),MatchSchema43833(node, depth + 1, ref remaining),MatchSchema43861(node, depth + 1, ref remaining),MatchSchema43853(node, depth + 1, ref remaining),MatchSchema47940(node, depth + 1, ref remaining),MatchSchema47950(node, depth + 1, ref remaining),MatchSchema39807(node, depth + 1, ref remaining),MatchSchema51677(node, depth + 1, ref remaining),MatchSchema49331(node, depth + 1, ref remaining),MatchSchema49660(node, depth + 1, ref remaining),MatchSchema48171(node, depth + 1, ref remaining),MatchSchema48181(node, depth + 1, ref remaining),MatchSchema49691(node, depth + 1, ref remaining),MatchSchema49701(node, depth + 1, ref remaining),MatchSchema49877(node, depth + 1, ref remaining),MatchSchema59848(node, depth + 1, ref remaining),MatchSchema47930(node, depth + 1, ref remaining),MatchSchema49787(node, depth + 1, ref remaining),MatchSchema39715(node, depth + 1, ref remaining),MatchSchema49670(node, depth + 1, ref remaining),MatchSchema63167(node, depth + 1, ref remaining),MatchSchema49847(node, depth + 1, ref remaining),MatchSchema61516(node, depth + 1, ref remaining),MatchSchema61526(node, depth + 1, ref remaining),MatchSchema51629(node, depth + 1, ref remaining),MatchSchema51639(node, depth + 1, ref remaining),MatchSchema580(node, depth + 1, ref remaining),MatchSchema50257(node, depth + 1, ref remaining),MatchSchema63156(node, depth + 1, ref remaining),MatchSchema47263(node, depth + 1, ref remaining),MatchSchema47006(node, depth + 1, ref remaining),MatchSchema46335(node, depth + 1, ref remaining),MatchSchema47958(node, depth + 1, ref remaining),MatchSchema46868(node, depth + 1, ref remaining),MatchSchema46730(node, depth + 1, ref remaining),MatchSchema46592(node, depth + 1, ref remaining),MatchSchema46025(node, depth + 1, ref remaining),MatchSchema46035(node, depth + 1, ref remaining),MatchSchema43753(node, depth + 1, ref remaining),MatchSchema43763(node, depth + 1, ref remaining),MatchSchema43773(node, depth + 1, ref remaining),MatchSchema59265(node, depth + 1, ref remaining),MatchSchema59132(node, depth + 1, ref remaining),MatchSchema59408(node, depth + 1, ref remaining),MatchSchema59438(node, depth + 1, ref remaining),MatchSchema59398(node, depth + 1, ref remaining),MatchSchema47902(node, depth + 1, ref remaining),MatchSchema44476(node, depth + 1, ref remaining),MatchSchema44486(node, depth + 1, ref remaining),MatchSchema44506(node, depth + 1, ref remaining),MatchSchema40(node, depth + 1, ref remaining),MatchSchema59801(node, depth + 1, ref remaining),MatchSchema52134(node, depth + 1, ref remaining),MatchSchema60204(node, depth + 1, ref remaining),MatchSchema42298(node, depth + 1, ref remaining),MatchSchema59874(node, depth + 1, ref remaining),MatchSchema47882(node, depth + 1, ref remaining),MatchSchema367(node, depth + 1, ref remaining),MatchSchema60348(node, depth + 1, ref remaining),MatchSchema58527(node, depth + 1, ref remaining),MatchSchema48099(node, depth + 1, ref remaining),MatchSchema47910(node, depth + 1, ref remaining),MatchSchema47892(node, depth + 1, ref remaining),MatchSchema47920(node, depth + 1, ref remaining),MatchSchema62860(node, depth + 1, ref remaining),MatchSchema19634(node, depth + 1, ref remaining),MatchSchema19624(node, depth + 1, ref remaining),MatchSchema19614(node, depth + 1, ref remaining),MatchSchema45991(node, depth + 1, ref remaining),MatchSchema59638(node, depth + 1, ref remaining),MatchSchema51790(node, depth + 1, ref remaining),MatchSchema604(node, depth + 1, ref remaining),MatchSchema524(node, depth + 1, ref remaining),MatchSchema58583(node, depth + 1, ref remaining),MatchSchema48138(node, depth + 1, ref remaining),MatchSchema61713(node, depth + 1, ref remaining),MatchSchema61703(node, depth + 1, ref remaining),MatchSchema61723(node, depth + 1, ref remaining),MatchSchema58593(node, depth + 1, ref remaining),MatchSchema19644(node, depth + 1, ref remaining),MatchSchema22448(node, depth + 1, ref remaining),MatchSchema46045(node, depth + 1, ref remaining),MatchSchema46055(node, depth + 1, ref remaining),MatchSchema62687(node, depth + 1, ref remaining),MatchSchema62697(node, depth + 1, ref remaining),MatchSchema48109(node, depth + 1, ref remaining),MatchSchema49777(node, depth + 1, ref remaining),MatchSchema41084(node, depth + 1, ref remaining),MatchSchema48089(node, depth + 1, ref remaining),MatchSchema61620(node, depth + 1, ref remaining),MatchSchema44496(node, depth + 1, ref remaining))); if (result == false) return false; }
 return result;
 }
 
@@ -57030,7 +57030,7 @@ return result;
 private static bool? MatchSchema46881(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
-{ result &= (One(MatchSchema20745(node, depth + 1, ref remaining),MatchSchema20756(node, depth + 1, ref remaining),MatchSchema20764(node, depth + 1, ref remaining),MatchSchema7769(node, depth + 1, ref remaining),MatchSchema59906(node, depth + 1, ref remaining),MatchSchema49914(node, depth + 1, ref remaining),MatchSchema61603(node, depth + 1, ref remaining),MatchSchema7777(node, depth + 1, ref remaining),MatchSchema59914(node, depth + 1, ref remaining),MatchSchema49928(node, depth + 1, ref remaining),MatchSchema61611(node, depth + 1, ref remaining),MatchSchema356(node, depth + 1, ref remaining),MatchSchema60336(node, depth + 1, ref remaining),MatchSchema49750(node, depth + 1, ref remaining),MatchSchema39997(node, depth + 1, ref remaining),MatchSchema59018(node, depth + 1, ref remaining),MatchSchema59038(node, depth + 1, ref remaining),MatchSchema59028(node, depth + 1, ref remaining),MatchSchema62666(node, depth + 1, ref remaining),MatchSchema48632(node, depth + 1, ref remaining),MatchSchema62676(node, depth + 1, ref remaining),MatchSchema20709(node, depth + 1, ref remaining),MatchSchema20861(node, depth + 1, ref remaining),MatchSchema4690(node, depth + 1, ref remaining),MatchSchema49936(node, depth + 1, ref remaining),MatchSchema51340(node, depth + 1, ref remaining),MatchSchema43843(node, depth + 1, ref remaining),MatchSchema43833(node, depth + 1, ref remaining),MatchSchema43861(node, depth + 1, ref remaining),MatchSchema43853(node, depth + 1, ref remaining),MatchSchema47940(node, depth + 1, ref remaining),MatchSchema47950(node, depth + 1, ref remaining),MatchSchema39807(node, depth + 1, ref remaining),MatchSchema51677(node, depth + 1, ref remaining),MatchSchema49331(node, depth + 1, ref remaining),MatchSchema49660(node, depth + 1, ref remaining),MatchSchema48171(node, depth + 1, ref remaining),MatchSchema48181(node, depth + 1, ref remaining),MatchSchema49691(node, depth + 1, ref remaining),MatchSchema49701(node, depth + 1, ref remaining),MatchSchema49877(node, depth + 1, ref remaining),MatchSchema59848(node, depth + 1, ref remaining),MatchSchema47930(node, depth + 1, ref remaining),MatchSchema49787(node, depth + 1, ref remaining),MatchSchema39715(node, depth + 1, ref remaining),MatchSchema49670(node, depth + 1, ref remaining),MatchSchema63166(node, depth + 1, ref remaining),MatchSchema49847(node, depth + 1, ref remaining),MatchSchema61515(node, depth + 1, ref remaining),MatchSchema61525(node, depth + 1, ref remaining),MatchSchema51629(node, depth + 1, ref remaining),MatchSchema51639(node, depth + 1, ref remaining),MatchSchema580(node, depth + 1, ref remaining),MatchSchema50257(node, depth + 1, ref remaining),MatchSchema63155(node, depth + 1, ref remaining),MatchSchema47263(node, depth + 1, ref remaining),MatchSchema47006(node, depth + 1, ref remaining),MatchSchema46335(node, depth + 1, ref remaining),MatchSchema47958(node, depth + 1, ref remaining),MatchSchema46868(node, depth + 1, ref remaining),MatchSchema46730(node, depth + 1, ref remaining),MatchSchema46592(node, depth + 1, ref remaining),MatchSchema46025(node, depth + 1, ref remaining),MatchSchema46035(node, depth + 1, ref remaining),MatchSchema43753(node, depth + 1, ref remaining),MatchSchema43763(node, depth + 1, ref remaining),MatchSchema43773(node, depth + 1, ref remaining),MatchSchema59265(node, depth + 1, ref remaining),MatchSchema59132(node, depth + 1, ref remaining),MatchSchema59408(node, depth + 1, ref remaining),MatchSchema59438(node, depth + 1, ref remaining),MatchSchema59398(node, depth + 1, ref remaining),MatchSchema47902(node, depth + 1, ref remaining),MatchSchema44476(node, depth + 1, ref remaining),MatchSchema44486(node, depth + 1, ref remaining),MatchSchema44506(node, depth + 1, ref remaining),MatchSchema40(node, depth + 1, ref remaining),MatchSchema59801(node, depth + 1, ref remaining),MatchSchema52134(node, depth + 1, ref remaining),MatchSchema60203(node, depth + 1, ref remaining),MatchSchema42298(node, depth + 1, ref remaining),MatchSchema59873(node, depth + 1, ref remaining),MatchSchema47882(node, depth + 1, ref remaining),MatchSchema367(node, depth + 1, ref remaining),MatchSchema60347(node, depth + 1, ref remaining),MatchSchema58527(node, depth + 1, ref remaining),MatchSchema48099(node, depth + 1, ref remaining),MatchSchema47910(node, depth + 1, ref remaining),MatchSchema47892(node, depth + 1, ref remaining),MatchSchema47920(node, depth + 1, ref remaining),MatchSchema62859(node, depth + 1, ref remaining),MatchSchema19634(node, depth + 1, ref remaining),MatchSchema19624(node, depth + 1, ref remaining),MatchSchema19614(node, depth + 1, ref remaining),MatchSchema45991(node, depth + 1, ref remaining),MatchSchema59638(node, depth + 1, ref remaining),MatchSchema51790(node, depth + 1, ref remaining),MatchSchema604(node, depth + 1, ref remaining),MatchSchema524(node, depth + 1, ref remaining),MatchSchema58583(node, depth + 1, ref remaining),MatchSchema48138(node, depth + 1, ref remaining),MatchSchema61712(node, depth + 1, ref remaining),MatchSchema61702(node, depth + 1, ref remaining),MatchSchema61722(node, depth + 1, ref remaining),MatchSchema58593(node, depth + 1, ref remaining),MatchSchema19644(node, depth + 1, ref remaining),MatchSchema22448(node, depth + 1, ref remaining),MatchSchema46045(node, depth + 1, ref remaining),MatchSchema46055(node, depth + 1, ref remaining),MatchSchema62686(node, depth + 1, ref remaining),MatchSchema62696(node, depth + 1, ref remaining),MatchSchema48109(node, depth + 1, ref remaining),MatchSchema49777(node, depth + 1, ref remaining),MatchSchema41084(node, depth + 1, ref remaining),MatchSchema48089(node, depth + 1, ref remaining),MatchSchema61619(node, depth + 1, ref remaining),MatchSchema44496(node, depth + 1, ref remaining))); if (result == false) return false; }
+{ result &= (One(MatchSchema20745(node, depth + 1, ref remaining),MatchSchema20756(node, depth + 1, ref remaining),MatchSchema20764(node, depth + 1, ref remaining),MatchSchema7769(node, depth + 1, ref remaining),MatchSchema59907(node, depth + 1, ref remaining),MatchSchema49914(node, depth + 1, ref remaining),MatchSchema61604(node, depth + 1, ref remaining),MatchSchema7777(node, depth + 1, ref remaining),MatchSchema59915(node, depth + 1, ref remaining),MatchSchema49928(node, depth + 1, ref remaining),MatchSchema61612(node, depth + 1, ref remaining),MatchSchema356(node, depth + 1, ref remaining),MatchSchema60337(node, depth + 1, ref remaining),MatchSchema49750(node, depth + 1, ref remaining),MatchSchema39997(node, depth + 1, ref remaining),MatchSchema59018(node, depth + 1, ref remaining),MatchSchema59038(node, depth + 1, ref remaining),MatchSchema59028(node, depth + 1, ref remaining),MatchSchema62667(node, depth + 1, ref remaining),MatchSchema48632(node, depth + 1, ref remaining),MatchSchema62677(node, depth + 1, ref remaining),MatchSchema20709(node, depth + 1, ref remaining),MatchSchema20861(node, depth + 1, ref remaining),MatchSchema4690(node, depth + 1, ref remaining),MatchSchema49936(node, depth + 1, ref remaining),MatchSchema51340(node, depth + 1, ref remaining),MatchSchema43843(node, depth + 1, ref remaining),MatchSchema43833(node, depth + 1, ref remaining),MatchSchema43861(node, depth + 1, ref remaining),MatchSchema43853(node, depth + 1, ref remaining),MatchSchema47940(node, depth + 1, ref remaining),MatchSchema47950(node, depth + 1, ref remaining),MatchSchema39807(node, depth + 1, ref remaining),MatchSchema51677(node, depth + 1, ref remaining),MatchSchema49331(node, depth + 1, ref remaining),MatchSchema49660(node, depth + 1, ref remaining),MatchSchema48171(node, depth + 1, ref remaining),MatchSchema48181(node, depth + 1, ref remaining),MatchSchema49691(node, depth + 1, ref remaining),MatchSchema49701(node, depth + 1, ref remaining),MatchSchema49877(node, depth + 1, ref remaining),MatchSchema59848(node, depth + 1, ref remaining),MatchSchema47930(node, depth + 1, ref remaining),MatchSchema49787(node, depth + 1, ref remaining),MatchSchema39715(node, depth + 1, ref remaining),MatchSchema49670(node, depth + 1, ref remaining),MatchSchema63167(node, depth + 1, ref remaining),MatchSchema49847(node, depth + 1, ref remaining),MatchSchema61516(node, depth + 1, ref remaining),MatchSchema61526(node, depth + 1, ref remaining),MatchSchema51629(node, depth + 1, ref remaining),MatchSchema51639(node, depth + 1, ref remaining),MatchSchema580(node, depth + 1, ref remaining),MatchSchema50257(node, depth + 1, ref remaining),MatchSchema63156(node, depth + 1, ref remaining),MatchSchema47263(node, depth + 1, ref remaining),MatchSchema47006(node, depth + 1, ref remaining),MatchSchema46335(node, depth + 1, ref remaining),MatchSchema47958(node, depth + 1, ref remaining),MatchSchema46868(node, depth + 1, ref remaining),MatchSchema46730(node, depth + 1, ref remaining),MatchSchema46592(node, depth + 1, ref remaining),MatchSchema46025(node, depth + 1, ref remaining),MatchSchema46035(node, depth + 1, ref remaining),MatchSchema43753(node, depth + 1, ref remaining),MatchSchema43763(node, depth + 1, ref remaining),MatchSchema43773(node, depth + 1, ref remaining),MatchSchema59265(node, depth + 1, ref remaining),MatchSchema59132(node, depth + 1, ref remaining),MatchSchema59408(node, depth + 1, ref remaining),MatchSchema59438(node, depth + 1, ref remaining),MatchSchema59398(node, depth + 1, ref remaining),MatchSchema47902(node, depth + 1, ref remaining),MatchSchema44476(node, depth + 1, ref remaining),MatchSchema44486(node, depth + 1, ref remaining),MatchSchema44506(node, depth + 1, ref remaining),MatchSchema40(node, depth + 1, ref remaining),MatchSchema59801(node, depth + 1, ref remaining),MatchSchema52134(node, depth + 1, ref remaining),MatchSchema60204(node, depth + 1, ref remaining),MatchSchema42298(node, depth + 1, ref remaining),MatchSchema59874(node, depth + 1, ref remaining),MatchSchema47882(node, depth + 1, ref remaining),MatchSchema367(node, depth + 1, ref remaining),MatchSchema60348(node, depth + 1, ref remaining),MatchSchema58527(node, depth + 1, ref remaining),MatchSchema48099(node, depth + 1, ref remaining),MatchSchema47910(node, depth + 1, ref remaining),MatchSchema47892(node, depth + 1, ref remaining),MatchSchema47920(node, depth + 1, ref remaining),MatchSchema62860(node, depth + 1, ref remaining),MatchSchema19634(node, depth + 1, ref remaining),MatchSchema19624(node, depth + 1, ref remaining),MatchSchema19614(node, depth + 1, ref remaining),MatchSchema45991(node, depth + 1, ref remaining),MatchSchema59638(node, depth + 1, ref remaining),MatchSchema51790(node, depth + 1, ref remaining),MatchSchema604(node, depth + 1, ref remaining),MatchSchema524(node, depth + 1, ref remaining),MatchSchema58583(node, depth + 1, ref remaining),MatchSchema48138(node, depth + 1, ref remaining),MatchSchema61713(node, depth + 1, ref remaining),MatchSchema61703(node, depth + 1, ref remaining),MatchSchema61723(node, depth + 1, ref remaining),MatchSchema58593(node, depth + 1, ref remaining),MatchSchema19644(node, depth + 1, ref remaining),MatchSchema22448(node, depth + 1, ref remaining),MatchSchema46045(node, depth + 1, ref remaining),MatchSchema46055(node, depth + 1, ref remaining),MatchSchema62687(node, depth + 1, ref remaining),MatchSchema62697(node, depth + 1, ref remaining),MatchSchema48109(node, depth + 1, ref remaining),MatchSchema49777(node, depth + 1, ref remaining),MatchSchema41084(node, depth + 1, ref remaining),MatchSchema48089(node, depth + 1, ref remaining),MatchSchema61620(node, depth + 1, ref remaining),MatchSchema44496(node, depth + 1, ref remaining))); if (result == false) return false; }
 return result;
 }
 
@@ -57097,14 +57097,14 @@ return result;
 private static bool? MatchSchema47016(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
-{ result &= (One(MatchSchema20745(node, depth + 1, ref remaining),MatchSchema20756(node, depth + 1, ref remaining),MatchSchema20764(node, depth + 1, ref remaining),MatchSchema7769(node, depth + 1, ref remaining),MatchSchema59906(node, depth + 1, ref remaining),MatchSchema49914(node, depth + 1, ref remaining),MatchSchema61603(node, depth + 1, ref remaining),MatchSchema7777(node, depth + 1, ref remaining),MatchSchema59914(node, depth + 1, ref remaining),MatchSchema49928(node, depth + 1, ref remaining),MatchSchema61611(node, depth + 1, ref remaining),MatchSchema356(node, depth + 1, ref remaining),MatchSchema60336(node, depth + 1, ref remaining),MatchSchema49750(node, depth + 1, ref remaining),MatchSchema39997(node, depth + 1, ref remaining),MatchSchema59018(node, depth + 1, ref remaining),MatchSchema59038(node, depth + 1, ref remaining),MatchSchema59028(node, depth + 1, ref remaining),MatchSchema62666(node, depth + 1, ref remaining),MatchSchema48632(node, depth + 1, ref remaining),MatchSchema62676(node, depth + 1, ref remaining),MatchSchema20709(node, depth + 1, ref remaining),MatchSchema20861(node, depth + 1, ref remaining),MatchSchema4690(node, depth + 1, ref remaining),MatchSchema49936(node, depth + 1, ref remaining),MatchSchema51340(node, depth + 1, ref remaining),MatchSchema43843(node, depth + 1, ref remaining),MatchSchema43833(node, depth + 1, ref remaining),MatchSchema43861(node, depth + 1, ref remaining),MatchSchema43853(node, depth + 1, ref remaining),MatchSchema47940(node, depth + 1, ref remaining),MatchSchema47950(node, depth + 1, ref remaining),MatchSchema39807(node, depth + 1, ref remaining),MatchSchema51677(node, depth + 1, ref remaining),MatchSchema49331(node, depth + 1, ref remaining),MatchSchema49660(node, depth + 1, ref remaining),MatchSchema48171(node, depth + 1, ref remaining),MatchSchema48181(node, depth + 1, ref remaining),MatchSchema49691(node, depth + 1, ref remaining),MatchSchema49701(node, depth + 1, ref remaining),MatchSchema49877(node, depth + 1, ref remaining),MatchSchema59848(node, depth + 1, ref remaining),MatchSchema47930(node, depth + 1, ref remaining),MatchSchema49787(node, depth + 1, ref remaining),MatchSchema39715(node, depth + 1, ref remaining),MatchSchema49670(node, depth + 1, ref remaining),MatchSchema63166(node, depth + 1, ref remaining),MatchSchema49847(node, depth + 1, ref remaining),MatchSchema61515(node, depth + 1, ref remaining),MatchSchema61525(node, depth + 1, ref remaining),MatchSchema51629(node, depth + 1, ref remaining),MatchSchema51639(node, depth + 1, ref remaining),MatchSchema580(node, depth + 1, ref remaining),MatchSchema50257(node, depth + 1, ref remaining),MatchSchema63155(node, depth + 1, ref remaining),MatchSchema47263(node, depth + 1, ref remaining),MatchSchema47006(node, depth + 1, ref remaining),MatchSchema46335(node, depth + 1, ref remaining),MatchSchema47958(node, depth + 1, ref remaining),MatchSchema46868(node, depth + 1, ref remaining),MatchSchema46730(node, depth + 1, ref remaining),MatchSchema46592(node, depth + 1, ref remaining),MatchSchema46025(node, depth + 1, ref remaining),MatchSchema46035(node, depth + 1, ref remaining),MatchSchema43753(node, depth + 1, ref remaining),MatchSchema43763(node, depth + 1, ref remaining),MatchSchema43773(node, depth + 1, ref remaining),MatchSchema59265(node, depth + 1, ref remaining),MatchSchema59132(node, depth + 1, ref remaining),MatchSchema59408(node, depth + 1, ref remaining),MatchSchema59438(node, depth + 1, ref remaining),MatchSchema59398(node, depth + 1, ref remaining),MatchSchema47902(node, depth + 1, ref remaining),MatchSchema44476(node, depth + 1, ref remaining),MatchSchema44486(node, depth + 1, ref remaining),MatchSchema44506(node, depth + 1, ref remaining),MatchSchema40(node, depth + 1, ref remaining),MatchSchema59801(node, depth + 1, ref remaining),MatchSchema52134(node, depth + 1, ref remaining),MatchSchema60203(node, depth + 1, ref remaining),MatchSchema42298(node, depth + 1, ref remaining),MatchSchema59873(node, depth + 1, ref remaining),MatchSchema47882(node, depth + 1, ref remaining),MatchSchema367(node, depth + 1, ref remaining),MatchSchema60347(node, depth + 1, ref remaining),MatchSchema58527(node, depth + 1, ref remaining),MatchSchema48099(node, depth + 1, ref remaining),MatchSchema47910(node, depth + 1, ref remaining),MatchSchema47892(node, depth + 1, ref remaining),MatchSchema47920(node, depth + 1, ref remaining),MatchSchema62859(node, depth + 1, ref remaining),MatchSchema19634(node, depth + 1, ref remaining),MatchSchema19624(node, depth + 1, ref remaining),MatchSchema19614(node, depth + 1, ref remaining),MatchSchema45991(node, depth + 1, ref remaining),MatchSchema59638(node, depth + 1, ref remaining),MatchSchema51790(node, depth + 1, ref remaining),MatchSchema604(node, depth + 1, ref remaining),MatchSchema524(node, depth + 1, ref remaining),MatchSchema58583(node, depth + 1, ref remaining),MatchSchema48138(node, depth + 1, ref remaining),MatchSchema61712(node, depth + 1, ref remaining),MatchSchema61702(node, depth + 1, ref remaining),MatchSchema61722(node, depth + 1, ref remaining),MatchSchema58593(node, depth + 1, ref remaining),MatchSchema19644(node, depth + 1, ref remaining),MatchSchema22448(node, depth + 1, ref remaining),MatchSchema46045(node, depth + 1, ref remaining),MatchSchema46055(node, depth + 1, ref remaining),MatchSchema62686(node, depth + 1, ref remaining),MatchSchema62696(node, depth + 1, ref remaining),MatchSchema48109(node, depth + 1, ref remaining),MatchSchema49777(node, depth + 1, ref remaining),MatchSchema41084(node, depth + 1, ref remaining),MatchSchema48089(node, depth + 1, ref remaining),MatchSchema61619(node, depth + 1, ref remaining),MatchSchema44496(node, depth + 1, ref remaining))); if (result == false) return false; }
+{ result &= (One(MatchSchema20745(node, depth + 1, ref remaining),MatchSchema20756(node, depth + 1, ref remaining),MatchSchema20764(node, depth + 1, ref remaining),MatchSchema7769(node, depth + 1, ref remaining),MatchSchema59907(node, depth + 1, ref remaining),MatchSchema49914(node, depth + 1, ref remaining),MatchSchema61604(node, depth + 1, ref remaining),MatchSchema7777(node, depth + 1, ref remaining),MatchSchema59915(node, depth + 1, ref remaining),MatchSchema49928(node, depth + 1, ref remaining),MatchSchema61612(node, depth + 1, ref remaining),MatchSchema356(node, depth + 1, ref remaining),MatchSchema60337(node, depth + 1, ref remaining),MatchSchema49750(node, depth + 1, ref remaining),MatchSchema39997(node, depth + 1, ref remaining),MatchSchema59018(node, depth + 1, ref remaining),MatchSchema59038(node, depth + 1, ref remaining),MatchSchema59028(node, depth + 1, ref remaining),MatchSchema62667(node, depth + 1, ref remaining),MatchSchema48632(node, depth + 1, ref remaining),MatchSchema62677(node, depth + 1, ref remaining),MatchSchema20709(node, depth + 1, ref remaining),MatchSchema20861(node, depth + 1, ref remaining),MatchSchema4690(node, depth + 1, ref remaining),MatchSchema49936(node, depth + 1, ref remaining),MatchSchema51340(node, depth + 1, ref remaining),MatchSchema43843(node, depth + 1, ref remaining),MatchSchema43833(node, depth + 1, ref remaining),MatchSchema43861(node, depth + 1, ref remaining),MatchSchema43853(node, depth + 1, ref remaining),MatchSchema47940(node, depth + 1, ref remaining),MatchSchema47950(node, depth + 1, ref remaining),MatchSchema39807(node, depth + 1, ref remaining),MatchSchema51677(node, depth + 1, ref remaining),MatchSchema49331(node, depth + 1, ref remaining),MatchSchema49660(node, depth + 1, ref remaining),MatchSchema48171(node, depth + 1, ref remaining),MatchSchema48181(node, depth + 1, ref remaining),MatchSchema49691(node, depth + 1, ref remaining),MatchSchema49701(node, depth + 1, ref remaining),MatchSchema49877(node, depth + 1, ref remaining),MatchSchema59848(node, depth + 1, ref remaining),MatchSchema47930(node, depth + 1, ref remaining),MatchSchema49787(node, depth + 1, ref remaining),MatchSchema39715(node, depth + 1, ref remaining),MatchSchema49670(node, depth + 1, ref remaining),MatchSchema63167(node, depth + 1, ref remaining),MatchSchema49847(node, depth + 1, ref remaining),MatchSchema61516(node, depth + 1, ref remaining),MatchSchema61526(node, depth + 1, ref remaining),MatchSchema51629(node, depth + 1, ref remaining),MatchSchema51639(node, depth + 1, ref remaining),MatchSchema580(node, depth + 1, ref remaining),MatchSchema50257(node, depth + 1, ref remaining),MatchSchema63156(node, depth + 1, ref remaining),MatchSchema47263(node, depth + 1, ref remaining),MatchSchema47006(node, depth + 1, ref remaining),MatchSchema46335(node, depth + 1, ref remaining),MatchSchema47958(node, depth + 1, ref remaining),MatchSchema46868(node, depth + 1, ref remaining),MatchSchema46730(node, depth + 1, ref remaining),MatchSchema46592(node, depth + 1, ref remaining),MatchSchema46025(node, depth + 1, ref remaining),MatchSchema46035(node, depth + 1, ref remaining),MatchSchema43753(node, depth + 1, ref remaining),MatchSchema43763(node, depth + 1, ref remaining),MatchSchema43773(node, depth + 1, ref remaining),MatchSchema59265(node, depth + 1, ref remaining),MatchSchema59132(node, depth + 1, ref remaining),MatchSchema59408(node, depth + 1, ref remaining),MatchSchema59438(node, depth + 1, ref remaining),MatchSchema59398(node, depth + 1, ref remaining),MatchSchema47902(node, depth + 1, ref remaining),MatchSchema44476(node, depth + 1, ref remaining),MatchSchema44486(node, depth + 1, ref remaining),MatchSchema44506(node, depth + 1, ref remaining),MatchSchema40(node, depth + 1, ref remaining),MatchSchema59801(node, depth + 1, ref remaining),MatchSchema52134(node, depth + 1, ref remaining),MatchSchema60204(node, depth + 1, ref remaining),MatchSchema42298(node, depth + 1, ref remaining),MatchSchema59874(node, depth + 1, ref remaining),MatchSchema47882(node, depth + 1, ref remaining),MatchSchema367(node, depth + 1, ref remaining),MatchSchema60348(node, depth + 1, ref remaining),MatchSchema58527(node, depth + 1, ref remaining),MatchSchema48099(node, depth + 1, ref remaining),MatchSchema47910(node, depth + 1, ref remaining),MatchSchema47892(node, depth + 1, ref remaining),MatchSchema47920(node, depth + 1, ref remaining),MatchSchema62860(node, depth + 1, ref remaining),MatchSchema19634(node, depth + 1, ref remaining),MatchSchema19624(node, depth + 1, ref remaining),MatchSchema19614(node, depth + 1, ref remaining),MatchSchema45991(node, depth + 1, ref remaining),MatchSchema59638(node, depth + 1, ref remaining),MatchSchema51790(node, depth + 1, ref remaining),MatchSchema604(node, depth + 1, ref remaining),MatchSchema524(node, depth + 1, ref remaining),MatchSchema58583(node, depth + 1, ref remaining),MatchSchema48138(node, depth + 1, ref remaining),MatchSchema61713(node, depth + 1, ref remaining),MatchSchema61703(node, depth + 1, ref remaining),MatchSchema61723(node, depth + 1, ref remaining),MatchSchema58593(node, depth + 1, ref remaining),MatchSchema19644(node, depth + 1, ref remaining),MatchSchema22448(node, depth + 1, ref remaining),MatchSchema46045(node, depth + 1, ref remaining),MatchSchema46055(node, depth + 1, ref remaining),MatchSchema62687(node, depth + 1, ref remaining),MatchSchema62697(node, depth + 1, ref remaining),MatchSchema48109(node, depth + 1, ref remaining),MatchSchema49777(node, depth + 1, ref remaining),MatchSchema41084(node, depth + 1, ref remaining),MatchSchema48089(node, depth + 1, ref remaining),MatchSchema61620(node, depth + 1, ref remaining),MatchSchema44496(node, depth + 1, ref remaining))); if (result == false) return false; }
 return result;
 }
 
 private static bool? MatchSchema47138(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
-{ result &= (One(MatchSchema20745(node, depth + 1, ref remaining),MatchSchema20756(node, depth + 1, ref remaining),MatchSchema20764(node, depth + 1, ref remaining),MatchSchema7769(node, depth + 1, ref remaining),MatchSchema59906(node, depth + 1, ref remaining),MatchSchema49914(node, depth + 1, ref remaining),MatchSchema61603(node, depth + 1, ref remaining),MatchSchema7777(node, depth + 1, ref remaining),MatchSchema59914(node, depth + 1, ref remaining),MatchSchema49928(node, depth + 1, ref remaining),MatchSchema61611(node, depth + 1, ref remaining),MatchSchema356(node, depth + 1, ref remaining),MatchSchema60336(node, depth + 1, ref remaining),MatchSchema49750(node, depth + 1, ref remaining),MatchSchema39997(node, depth + 1, ref remaining),MatchSchema59018(node, depth + 1, ref remaining),MatchSchema59038(node, depth + 1, ref remaining),MatchSchema59028(node, depth + 1, ref remaining),MatchSchema62666(node, depth + 1, ref remaining),MatchSchema48632(node, depth + 1, ref remaining),MatchSchema62676(node, depth + 1, ref remaining),MatchSchema20709(node, depth + 1, ref remaining),MatchSchema20861(node, depth + 1, ref remaining),MatchSchema4690(node, depth + 1, ref remaining),MatchSchema49936(node, depth + 1, ref remaining),MatchSchema51340(node, depth + 1, ref remaining),MatchSchema43843(node, depth + 1, ref remaining),MatchSchema43833(node, depth + 1, ref remaining),MatchSchema43861(node, depth + 1, ref remaining),MatchSchema43853(node, depth + 1, ref remaining),MatchSchema47940(node, depth + 1, ref remaining),MatchSchema47950(node, depth + 1, ref remaining),MatchSchema39807(node, depth + 1, ref remaining),MatchSchema51677(node, depth + 1, ref remaining),MatchSchema49331(node, depth + 1, ref remaining),MatchSchema49660(node, depth + 1, ref remaining),MatchSchema48171(node, depth + 1, ref remaining),MatchSchema48181(node, depth + 1, ref remaining),MatchSchema49691(node, depth + 1, ref remaining),MatchSchema49701(node, depth + 1, ref remaining),MatchSchema49877(node, depth + 1, ref remaining),MatchSchema59848(node, depth + 1, ref remaining),MatchSchema47930(node, depth + 1, ref remaining),MatchSchema49787(node, depth + 1, ref remaining),MatchSchema39715(node, depth + 1, ref remaining),MatchSchema49670(node, depth + 1, ref remaining),MatchSchema63166(node, depth + 1, ref remaining),MatchSchema49847(node, depth + 1, ref remaining),MatchSchema61515(node, depth + 1, ref remaining),MatchSchema61525(node, depth + 1, ref remaining),MatchSchema51629(node, depth + 1, ref remaining),MatchSchema51639(node, depth + 1, ref remaining),MatchSchema580(node, depth + 1, ref remaining),MatchSchema50257(node, depth + 1, ref remaining),MatchSchema63155(node, depth + 1, ref remaining),MatchSchema47263(node, depth + 1, ref remaining),MatchSchema47006(node, depth + 1, ref remaining),MatchSchema46335(node, depth + 1, ref remaining),MatchSchema47958(node, depth + 1, ref remaining),MatchSchema46868(node, depth + 1, ref remaining),MatchSchema46730(node, depth + 1, ref remaining),MatchSchema46592(node, depth + 1, ref remaining),MatchSchema46025(node, depth + 1, ref remaining),MatchSchema46035(node, depth + 1, ref remaining),MatchSchema43753(node, depth + 1, ref remaining),MatchSchema43763(node, depth + 1, ref remaining),MatchSchema43773(node, depth + 1, ref remaining),MatchSchema59265(node, depth + 1, ref remaining),MatchSchema59132(node, depth + 1, ref remaining),MatchSchema59408(node, depth + 1, ref remaining),MatchSchema59438(node, depth + 1, ref remaining),MatchSchema59398(node, depth + 1, ref remaining),MatchSchema47902(node, depth + 1, ref remaining),MatchSchema44476(node, depth + 1, ref remaining),MatchSchema44486(node, depth + 1, ref remaining),MatchSchema44506(node, depth + 1, ref remaining),MatchSchema40(node, depth + 1, ref remaining),MatchSchema59801(node, depth + 1, ref remaining),MatchSchema52134(node, depth + 1, ref remaining),MatchSchema60203(node, depth + 1, ref remaining),MatchSchema42298(node, depth + 1, ref remaining),MatchSchema59873(node, depth + 1, ref remaining),MatchSchema47882(node, depth + 1, ref remaining),MatchSchema367(node, depth + 1, ref remaining),MatchSchema60347(node, depth + 1, ref remaining),MatchSchema58527(node, depth + 1, ref remaining),MatchSchema48099(node, depth + 1, ref remaining),MatchSchema47910(node, depth + 1, ref remaining),MatchSchema47892(node, depth + 1, ref remaining),MatchSchema47920(node, depth + 1, ref remaining),MatchSchema62859(node, depth + 1, ref remaining),MatchSchema19634(node, depth + 1, ref remaining),MatchSchema19624(node, depth + 1, ref remaining),MatchSchema19614(node, depth + 1, ref remaining),MatchSchema45991(node, depth + 1, ref remaining),MatchSchema59638(node, depth + 1, ref remaining),MatchSchema51790(node, depth + 1, ref remaining),MatchSchema604(node, depth + 1, ref remaining),MatchSchema524(node, depth + 1, ref remaining),MatchSchema58583(node, depth + 1, ref remaining),MatchSchema48138(node, depth + 1, ref remaining),MatchSchema61712(node, depth + 1, ref remaining),MatchSchema61702(node, depth + 1, ref remaining),MatchSchema61722(node, depth + 1, ref remaining),MatchSchema58593(node, depth + 1, ref remaining),MatchSchema19644(node, depth + 1, ref remaining),MatchSchema22448(node, depth + 1, ref remaining),MatchSchema46045(node, depth + 1, ref remaining),MatchSchema46055(node, depth + 1, ref remaining),MatchSchema62686(node, depth + 1, ref remaining),MatchSchema62696(node, depth + 1, ref remaining),MatchSchema48109(node, depth + 1, ref remaining),MatchSchema49777(node, depth + 1, ref remaining),MatchSchema41084(node, depth + 1, ref remaining),MatchSchema48089(node, depth + 1, ref remaining),MatchSchema61619(node, depth + 1, ref remaining),MatchSchema44496(node, depth + 1, ref remaining))); if (result == false) return false; }
+{ result &= (One(MatchSchema20745(node, depth + 1, ref remaining),MatchSchema20756(node, depth + 1, ref remaining),MatchSchema20764(node, depth + 1, ref remaining),MatchSchema7769(node, depth + 1, ref remaining),MatchSchema59907(node, depth + 1, ref remaining),MatchSchema49914(node, depth + 1, ref remaining),MatchSchema61604(node, depth + 1, ref remaining),MatchSchema7777(node, depth + 1, ref remaining),MatchSchema59915(node, depth + 1, ref remaining),MatchSchema49928(node, depth + 1, ref remaining),MatchSchema61612(node, depth + 1, ref remaining),MatchSchema356(node, depth + 1, ref remaining),MatchSchema60337(node, depth + 1, ref remaining),MatchSchema49750(node, depth + 1, ref remaining),MatchSchema39997(node, depth + 1, ref remaining),MatchSchema59018(node, depth + 1, ref remaining),MatchSchema59038(node, depth + 1, ref remaining),MatchSchema59028(node, depth + 1, ref remaining),MatchSchema62667(node, depth + 1, ref remaining),MatchSchema48632(node, depth + 1, ref remaining),MatchSchema62677(node, depth + 1, ref remaining),MatchSchema20709(node, depth + 1, ref remaining),MatchSchema20861(node, depth + 1, ref remaining),MatchSchema4690(node, depth + 1, ref remaining),MatchSchema49936(node, depth + 1, ref remaining),MatchSchema51340(node, depth + 1, ref remaining),MatchSchema43843(node, depth + 1, ref remaining),MatchSchema43833(node, depth + 1, ref remaining),MatchSchema43861(node, depth + 1, ref remaining),MatchSchema43853(node, depth + 1, ref remaining),MatchSchema47940(node, depth + 1, ref remaining),MatchSchema47950(node, depth + 1, ref remaining),MatchSchema39807(node, depth + 1, ref remaining),MatchSchema51677(node, depth + 1, ref remaining),MatchSchema49331(node, depth + 1, ref remaining),MatchSchema49660(node, depth + 1, ref remaining),MatchSchema48171(node, depth + 1, ref remaining),MatchSchema48181(node, depth + 1, ref remaining),MatchSchema49691(node, depth + 1, ref remaining),MatchSchema49701(node, depth + 1, ref remaining),MatchSchema49877(node, depth + 1, ref remaining),MatchSchema59848(node, depth + 1, ref remaining),MatchSchema47930(node, depth + 1, ref remaining),MatchSchema49787(node, depth + 1, ref remaining),MatchSchema39715(node, depth + 1, ref remaining),MatchSchema49670(node, depth + 1, ref remaining),MatchSchema63167(node, depth + 1, ref remaining),MatchSchema49847(node, depth + 1, ref remaining),MatchSchema61516(node, depth + 1, ref remaining),MatchSchema61526(node, depth + 1, ref remaining),MatchSchema51629(node, depth + 1, ref remaining),MatchSchema51639(node, depth + 1, ref remaining),MatchSchema580(node, depth + 1, ref remaining),MatchSchema50257(node, depth + 1, ref remaining),MatchSchema63156(node, depth + 1, ref remaining),MatchSchema47263(node, depth + 1, ref remaining),MatchSchema47006(node, depth + 1, ref remaining),MatchSchema46335(node, depth + 1, ref remaining),MatchSchema47958(node, depth + 1, ref remaining),MatchSchema46868(node, depth + 1, ref remaining),MatchSchema46730(node, depth + 1, ref remaining),MatchSchema46592(node, depth + 1, ref remaining),MatchSchema46025(node, depth + 1, ref remaining),MatchSchema46035(node, depth + 1, ref remaining),MatchSchema43753(node, depth + 1, ref remaining),MatchSchema43763(node, depth + 1, ref remaining),MatchSchema43773(node, depth + 1, ref remaining),MatchSchema59265(node, depth + 1, ref remaining),MatchSchema59132(node, depth + 1, ref remaining),MatchSchema59408(node, depth + 1, ref remaining),MatchSchema59438(node, depth + 1, ref remaining),MatchSchema59398(node, depth + 1, ref remaining),MatchSchema47902(node, depth + 1, ref remaining),MatchSchema44476(node, depth + 1, ref remaining),MatchSchema44486(node, depth + 1, ref remaining),MatchSchema44506(node, depth + 1, ref remaining),MatchSchema40(node, depth + 1, ref remaining),MatchSchema59801(node, depth + 1, ref remaining),MatchSchema52134(node, depth + 1, ref remaining),MatchSchema60204(node, depth + 1, ref remaining),MatchSchema42298(node, depth + 1, ref remaining),MatchSchema59874(node, depth + 1, ref remaining),MatchSchema47882(node, depth + 1, ref remaining),MatchSchema367(node, depth + 1, ref remaining),MatchSchema60348(node, depth + 1, ref remaining),MatchSchema58527(node, depth + 1, ref remaining),MatchSchema48099(node, depth + 1, ref remaining),MatchSchema47910(node, depth + 1, ref remaining),MatchSchema47892(node, depth + 1, ref remaining),MatchSchema47920(node, depth + 1, ref remaining),MatchSchema62860(node, depth + 1, ref remaining),MatchSchema19634(node, depth + 1, ref remaining),MatchSchema19624(node, depth + 1, ref remaining),MatchSchema19614(node, depth + 1, ref remaining),MatchSchema45991(node, depth + 1, ref remaining),MatchSchema59638(node, depth + 1, ref remaining),MatchSchema51790(node, depth + 1, ref remaining),MatchSchema604(node, depth + 1, ref remaining),MatchSchema524(node, depth + 1, ref remaining),MatchSchema58583(node, depth + 1, ref remaining),MatchSchema48138(node, depth + 1, ref remaining),MatchSchema61713(node, depth + 1, ref remaining),MatchSchema61703(node, depth + 1, ref remaining),MatchSchema61723(node, depth + 1, ref remaining),MatchSchema58593(node, depth + 1, ref remaining),MatchSchema19644(node, depth + 1, ref remaining),MatchSchema22448(node, depth + 1, ref remaining),MatchSchema46045(node, depth + 1, ref remaining),MatchSchema46055(node, depth + 1, ref remaining),MatchSchema62687(node, depth + 1, ref remaining),MatchSchema62697(node, depth + 1, ref remaining),MatchSchema48109(node, depth + 1, ref remaining),MatchSchema49777(node, depth + 1, ref remaining),MatchSchema41084(node, depth + 1, ref remaining),MatchSchema48089(node, depth + 1, ref remaining),MatchSchema61620(node, depth + 1, ref remaining),MatchSchema44496(node, depth + 1, ref remaining))); if (result == false) return false; }
 return result;
 }
 
@@ -57171,14 +57171,14 @@ return result;
 private static bool? MatchSchema47273(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
-{ result &= (One(MatchSchema20745(node, depth + 1, ref remaining),MatchSchema20756(node, depth + 1, ref remaining),MatchSchema20764(node, depth + 1, ref remaining),MatchSchema7769(node, depth + 1, ref remaining),MatchSchema59906(node, depth + 1, ref remaining),MatchSchema49914(node, depth + 1, ref remaining),MatchSchema61603(node, depth + 1, ref remaining),MatchSchema7777(node, depth + 1, ref remaining),MatchSchema59914(node, depth + 1, ref remaining),MatchSchema49928(node, depth + 1, ref remaining),MatchSchema61611(node, depth + 1, ref remaining),MatchSchema356(node, depth + 1, ref remaining),MatchSchema60336(node, depth + 1, ref remaining),MatchSchema49750(node, depth + 1, ref remaining),MatchSchema39997(node, depth + 1, ref remaining),MatchSchema59018(node, depth + 1, ref remaining),MatchSchema59038(node, depth + 1, ref remaining),MatchSchema59028(node, depth + 1, ref remaining),MatchSchema62666(node, depth + 1, ref remaining),MatchSchema48632(node, depth + 1, ref remaining),MatchSchema62676(node, depth + 1, ref remaining),MatchSchema20709(node, depth + 1, ref remaining),MatchSchema20861(node, depth + 1, ref remaining),MatchSchema4690(node, depth + 1, ref remaining),MatchSchema49936(node, depth + 1, ref remaining),MatchSchema51340(node, depth + 1, ref remaining),MatchSchema43843(node, depth + 1, ref remaining),MatchSchema43833(node, depth + 1, ref remaining),MatchSchema43861(node, depth + 1, ref remaining),MatchSchema43853(node, depth + 1, ref remaining),MatchSchema47940(node, depth + 1, ref remaining),MatchSchema47950(node, depth + 1, ref remaining),MatchSchema39807(node, depth + 1, ref remaining),MatchSchema51677(node, depth + 1, ref remaining),MatchSchema49331(node, depth + 1, ref remaining),MatchSchema49660(node, depth + 1, ref remaining),MatchSchema48171(node, depth + 1, ref remaining),MatchSchema48181(node, depth + 1, ref remaining),MatchSchema49691(node, depth + 1, ref remaining),MatchSchema49701(node, depth + 1, ref remaining),MatchSchema49877(node, depth + 1, ref remaining),MatchSchema59848(node, depth + 1, ref remaining),MatchSchema47930(node, depth + 1, ref remaining),MatchSchema49787(node, depth + 1, ref remaining),MatchSchema39715(node, depth + 1, ref remaining),MatchSchema49670(node, depth + 1, ref remaining),MatchSchema63166(node, depth + 1, ref remaining),MatchSchema49847(node, depth + 1, ref remaining),MatchSchema61515(node, depth + 1, ref remaining),MatchSchema61525(node, depth + 1, ref remaining),MatchSchema51629(node, depth + 1, ref remaining),MatchSchema51639(node, depth + 1, ref remaining),MatchSchema580(node, depth + 1, ref remaining),MatchSchema50257(node, depth + 1, ref remaining),MatchSchema63155(node, depth + 1, ref remaining),MatchSchema47263(node, depth + 1, ref remaining),MatchSchema47006(node, depth + 1, ref remaining),MatchSchema46335(node, depth + 1, ref remaining),MatchSchema47958(node, depth + 1, ref remaining),MatchSchema46868(node, depth + 1, ref remaining),MatchSchema46730(node, depth + 1, ref remaining),MatchSchema46592(node, depth + 1, ref remaining),MatchSchema46025(node, depth + 1, ref remaining),MatchSchema46035(node, depth + 1, ref remaining),MatchSchema43753(node, depth + 1, ref remaining),MatchSchema43763(node, depth + 1, ref remaining),MatchSchema43773(node, depth + 1, ref remaining),MatchSchema59265(node, depth + 1, ref remaining),MatchSchema59132(node, depth + 1, ref remaining),MatchSchema59408(node, depth + 1, ref remaining),MatchSchema59438(node, depth + 1, ref remaining),MatchSchema59398(node, depth + 1, ref remaining),MatchSchema47902(node, depth + 1, ref remaining),MatchSchema44476(node, depth + 1, ref remaining),MatchSchema44486(node, depth + 1, ref remaining),MatchSchema44506(node, depth + 1, ref remaining),MatchSchema40(node, depth + 1, ref remaining),MatchSchema59801(node, depth + 1, ref remaining),MatchSchema52134(node, depth + 1, ref remaining),MatchSchema60203(node, depth + 1, ref remaining),MatchSchema42298(node, depth + 1, ref remaining),MatchSchema59873(node, depth + 1, ref remaining),MatchSchema47882(node, depth + 1, ref remaining),MatchSchema367(node, depth + 1, ref remaining),MatchSchema60347(node, depth + 1, ref remaining),MatchSchema58527(node, depth + 1, ref remaining),MatchSchema48099(node, depth + 1, ref remaining),MatchSchema47910(node, depth + 1, ref remaining),MatchSchema47892(node, depth + 1, ref remaining),MatchSchema47920(node, depth + 1, ref remaining),MatchSchema62859(node, depth + 1, ref remaining),MatchSchema19634(node, depth + 1, ref remaining),MatchSchema19624(node, depth + 1, ref remaining),MatchSchema19614(node, depth + 1, ref remaining),MatchSchema45991(node, depth + 1, ref remaining),MatchSchema59638(node, depth + 1, ref remaining),MatchSchema51790(node, depth + 1, ref remaining),MatchSchema604(node, depth + 1, ref remaining),MatchSchema524(node, depth + 1, ref remaining),MatchSchema58583(node, depth + 1, ref remaining),MatchSchema48138(node, depth + 1, ref remaining),MatchSchema61712(node, depth + 1, ref remaining),MatchSchema61702(node, depth + 1, ref remaining),MatchSchema61722(node, depth + 1, ref remaining),MatchSchema58593(node, depth + 1, ref remaining),MatchSchema19644(node, depth + 1, ref remaining),MatchSchema22448(node, depth + 1, ref remaining),MatchSchema46045(node, depth + 1, ref remaining),MatchSchema46055(node, depth + 1, ref remaining),MatchSchema62686(node, depth + 1, ref remaining),MatchSchema62696(node, depth + 1, ref remaining),MatchSchema48109(node, depth + 1, ref remaining),MatchSchema49777(node, depth + 1, ref remaining),MatchSchema41084(node, depth + 1, ref remaining),MatchSchema48089(node, depth + 1, ref remaining),MatchSchema61619(node, depth + 1, ref remaining),MatchSchema44496(node, depth + 1, ref remaining))); if (result == false) return false; }
+{ result &= (One(MatchSchema20745(node, depth + 1, ref remaining),MatchSchema20756(node, depth + 1, ref remaining),MatchSchema20764(node, depth + 1, ref remaining),MatchSchema7769(node, depth + 1, ref remaining),MatchSchema59907(node, depth + 1, ref remaining),MatchSchema49914(node, depth + 1, ref remaining),MatchSchema61604(node, depth + 1, ref remaining),MatchSchema7777(node, depth + 1, ref remaining),MatchSchema59915(node, depth + 1, ref remaining),MatchSchema49928(node, depth + 1, ref remaining),MatchSchema61612(node, depth + 1, ref remaining),MatchSchema356(node, depth + 1, ref remaining),MatchSchema60337(node, depth + 1, ref remaining),MatchSchema49750(node, depth + 1, ref remaining),MatchSchema39997(node, depth + 1, ref remaining),MatchSchema59018(node, depth + 1, ref remaining),MatchSchema59038(node, depth + 1, ref remaining),MatchSchema59028(node, depth + 1, ref remaining),MatchSchema62667(node, depth + 1, ref remaining),MatchSchema48632(node, depth + 1, ref remaining),MatchSchema62677(node, depth + 1, ref remaining),MatchSchema20709(node, depth + 1, ref remaining),MatchSchema20861(node, depth + 1, ref remaining),MatchSchema4690(node, depth + 1, ref remaining),MatchSchema49936(node, depth + 1, ref remaining),MatchSchema51340(node, depth + 1, ref remaining),MatchSchema43843(node, depth + 1, ref remaining),MatchSchema43833(node, depth + 1, ref remaining),MatchSchema43861(node, depth + 1, ref remaining),MatchSchema43853(node, depth + 1, ref remaining),MatchSchema47940(node, depth + 1, ref remaining),MatchSchema47950(node, depth + 1, ref remaining),MatchSchema39807(node, depth + 1, ref remaining),MatchSchema51677(node, depth + 1, ref remaining),MatchSchema49331(node, depth + 1, ref remaining),MatchSchema49660(node, depth + 1, ref remaining),MatchSchema48171(node, depth + 1, ref remaining),MatchSchema48181(node, depth + 1, ref remaining),MatchSchema49691(node, depth + 1, ref remaining),MatchSchema49701(node, depth + 1, ref remaining),MatchSchema49877(node, depth + 1, ref remaining),MatchSchema59848(node, depth + 1, ref remaining),MatchSchema47930(node, depth + 1, ref remaining),MatchSchema49787(node, depth + 1, ref remaining),MatchSchema39715(node, depth + 1, ref remaining),MatchSchema49670(node, depth + 1, ref remaining),MatchSchema63167(node, depth + 1, ref remaining),MatchSchema49847(node, depth + 1, ref remaining),MatchSchema61516(node, depth + 1, ref remaining),MatchSchema61526(node, depth + 1, ref remaining),MatchSchema51629(node, depth + 1, ref remaining),MatchSchema51639(node, depth + 1, ref remaining),MatchSchema580(node, depth + 1, ref remaining),MatchSchema50257(node, depth + 1, ref remaining),MatchSchema63156(node, depth + 1, ref remaining),MatchSchema47263(node, depth + 1, ref remaining),MatchSchema47006(node, depth + 1, ref remaining),MatchSchema46335(node, depth + 1, ref remaining),MatchSchema47958(node, depth + 1, ref remaining),MatchSchema46868(node, depth + 1, ref remaining),MatchSchema46730(node, depth + 1, ref remaining),MatchSchema46592(node, depth + 1, ref remaining),MatchSchema46025(node, depth + 1, ref remaining),MatchSchema46035(node, depth + 1, ref remaining),MatchSchema43753(node, depth + 1, ref remaining),MatchSchema43763(node, depth + 1, ref remaining),MatchSchema43773(node, depth + 1, ref remaining),MatchSchema59265(node, depth + 1, ref remaining),MatchSchema59132(node, depth + 1, ref remaining),MatchSchema59408(node, depth + 1, ref remaining),MatchSchema59438(node, depth + 1, ref remaining),MatchSchema59398(node, depth + 1, ref remaining),MatchSchema47902(node, depth + 1, ref remaining),MatchSchema44476(node, depth + 1, ref remaining),MatchSchema44486(node, depth + 1, ref remaining),MatchSchema44506(node, depth + 1, ref remaining),MatchSchema40(node, depth + 1, ref remaining),MatchSchema59801(node, depth + 1, ref remaining),MatchSchema52134(node, depth + 1, ref remaining),MatchSchema60204(node, depth + 1, ref remaining),MatchSchema42298(node, depth + 1, ref remaining),MatchSchema59874(node, depth + 1, ref remaining),MatchSchema47882(node, depth + 1, ref remaining),MatchSchema367(node, depth + 1, ref remaining),MatchSchema60348(node, depth + 1, ref remaining),MatchSchema58527(node, depth + 1, ref remaining),MatchSchema48099(node, depth + 1, ref remaining),MatchSchema47910(node, depth + 1, ref remaining),MatchSchema47892(node, depth + 1, ref remaining),MatchSchema47920(node, depth + 1, ref remaining),MatchSchema62860(node, depth + 1, ref remaining),MatchSchema19634(node, depth + 1, ref remaining),MatchSchema19624(node, depth + 1, ref remaining),MatchSchema19614(node, depth + 1, ref remaining),MatchSchema45991(node, depth + 1, ref remaining),MatchSchema59638(node, depth + 1, ref remaining),MatchSchema51790(node, depth + 1, ref remaining),MatchSchema604(node, depth + 1, ref remaining),MatchSchema524(node, depth + 1, ref remaining),MatchSchema58583(node, depth + 1, ref remaining),MatchSchema48138(node, depth + 1, ref remaining),MatchSchema61713(node, depth + 1, ref remaining),MatchSchema61703(node, depth + 1, ref remaining),MatchSchema61723(node, depth + 1, ref remaining),MatchSchema58593(node, depth + 1, ref remaining),MatchSchema19644(node, depth + 1, ref remaining),MatchSchema22448(node, depth + 1, ref remaining),MatchSchema46045(node, depth + 1, ref remaining),MatchSchema46055(node, depth + 1, ref remaining),MatchSchema62687(node, depth + 1, ref remaining),MatchSchema62697(node, depth + 1, ref remaining),MatchSchema48109(node, depth + 1, ref remaining),MatchSchema49777(node, depth + 1, ref remaining),MatchSchema41084(node, depth + 1, ref remaining),MatchSchema48089(node, depth + 1, ref remaining),MatchSchema61620(node, depth + 1, ref remaining),MatchSchema44496(node, depth + 1, ref remaining))); if (result == false) return false; }
 return result;
 }
 
 private static bool? MatchSchema47395(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
-{ result &= (One(MatchSchema20745(node, depth + 1, ref remaining),MatchSchema20756(node, depth + 1, ref remaining),MatchSchema20764(node, depth + 1, ref remaining),MatchSchema7769(node, depth + 1, ref remaining),MatchSchema59906(node, depth + 1, ref remaining),MatchSchema49914(node, depth + 1, ref remaining),MatchSchema61603(node, depth + 1, ref remaining),MatchSchema7777(node, depth + 1, ref remaining),MatchSchema59914(node, depth + 1, ref remaining),MatchSchema49928(node, depth + 1, ref remaining),MatchSchema61611(node, depth + 1, ref remaining),MatchSchema356(node, depth + 1, ref remaining),MatchSchema60336(node, depth + 1, ref remaining),MatchSchema49750(node, depth + 1, ref remaining),MatchSchema39997(node, depth + 1, ref remaining),MatchSchema59018(node, depth + 1, ref remaining),MatchSchema59038(node, depth + 1, ref remaining),MatchSchema59028(node, depth + 1, ref remaining),MatchSchema62666(node, depth + 1, ref remaining),MatchSchema48632(node, depth + 1, ref remaining),MatchSchema62676(node, depth + 1, ref remaining),MatchSchema20709(node, depth + 1, ref remaining),MatchSchema20861(node, depth + 1, ref remaining),MatchSchema4690(node, depth + 1, ref remaining),MatchSchema49936(node, depth + 1, ref remaining),MatchSchema51340(node, depth + 1, ref remaining),MatchSchema43843(node, depth + 1, ref remaining),MatchSchema43833(node, depth + 1, ref remaining),MatchSchema43861(node, depth + 1, ref remaining),MatchSchema43853(node, depth + 1, ref remaining),MatchSchema47940(node, depth + 1, ref remaining),MatchSchema47950(node, depth + 1, ref remaining),MatchSchema39807(node, depth + 1, ref remaining),MatchSchema51677(node, depth + 1, ref remaining),MatchSchema49331(node, depth + 1, ref remaining),MatchSchema49660(node, depth + 1, ref remaining),MatchSchema48171(node, depth + 1, ref remaining),MatchSchema48181(node, depth + 1, ref remaining),MatchSchema49691(node, depth + 1, ref remaining),MatchSchema49701(node, depth + 1, ref remaining),MatchSchema49877(node, depth + 1, ref remaining),MatchSchema59848(node, depth + 1, ref remaining),MatchSchema47930(node, depth + 1, ref remaining),MatchSchema49787(node, depth + 1, ref remaining),MatchSchema39715(node, depth + 1, ref remaining),MatchSchema49670(node, depth + 1, ref remaining),MatchSchema63166(node, depth + 1, ref remaining),MatchSchema49847(node, depth + 1, ref remaining),MatchSchema61515(node, depth + 1, ref remaining),MatchSchema61525(node, depth + 1, ref remaining),MatchSchema51629(node, depth + 1, ref remaining),MatchSchema51639(node, depth + 1, ref remaining),MatchSchema580(node, depth + 1, ref remaining),MatchSchema50257(node, depth + 1, ref remaining),MatchSchema63155(node, depth + 1, ref remaining),MatchSchema47263(node, depth + 1, ref remaining),MatchSchema47006(node, depth + 1, ref remaining),MatchSchema46335(node, depth + 1, ref remaining),MatchSchema47958(node, depth + 1, ref remaining),MatchSchema46868(node, depth + 1, ref remaining),MatchSchema46730(node, depth + 1, ref remaining),MatchSchema46592(node, depth + 1, ref remaining),MatchSchema46025(node, depth + 1, ref remaining),MatchSchema46035(node, depth + 1, ref remaining),MatchSchema43753(node, depth + 1, ref remaining),MatchSchema43763(node, depth + 1, ref remaining),MatchSchema43773(node, depth + 1, ref remaining),MatchSchema59265(node, depth + 1, ref remaining),MatchSchema59132(node, depth + 1, ref remaining),MatchSchema59408(node, depth + 1, ref remaining),MatchSchema59438(node, depth + 1, ref remaining),MatchSchema59398(node, depth + 1, ref remaining),MatchSchema47902(node, depth + 1, ref remaining),MatchSchema44476(node, depth + 1, ref remaining),MatchSchema44486(node, depth + 1, ref remaining),MatchSchema44506(node, depth + 1, ref remaining),MatchSchema40(node, depth + 1, ref remaining),MatchSchema59801(node, depth + 1, ref remaining),MatchSchema52134(node, depth + 1, ref remaining),MatchSchema60203(node, depth + 1, ref remaining),MatchSchema42298(node, depth + 1, ref remaining),MatchSchema59873(node, depth + 1, ref remaining),MatchSchema47882(node, depth + 1, ref remaining),MatchSchema367(node, depth + 1, ref remaining),MatchSchema60347(node, depth + 1, ref remaining),MatchSchema58527(node, depth + 1, ref remaining),MatchSchema48099(node, depth + 1, ref remaining),MatchSchema47910(node, depth + 1, ref remaining),MatchSchema47892(node, depth + 1, ref remaining),MatchSchema47920(node, depth + 1, ref remaining),MatchSchema62859(node, depth + 1, ref remaining),MatchSchema19634(node, depth + 1, ref remaining),MatchSchema19624(node, depth + 1, ref remaining),MatchSchema19614(node, depth + 1, ref remaining),MatchSchema45991(node, depth + 1, ref remaining),MatchSchema59638(node, depth + 1, ref remaining),MatchSchema51790(node, depth + 1, ref remaining),MatchSchema604(node, depth + 1, ref remaining),MatchSchema524(node, depth + 1, ref remaining),MatchSchema58583(node, depth + 1, ref remaining),MatchSchema48138(node, depth + 1, ref remaining),MatchSchema61712(node, depth + 1, ref remaining),MatchSchema61702(node, depth + 1, ref remaining),MatchSchema61722(node, depth + 1, ref remaining),MatchSchema58593(node, depth + 1, ref remaining),MatchSchema19644(node, depth + 1, ref remaining),MatchSchema22448(node, depth + 1, ref remaining),MatchSchema46045(node, depth + 1, ref remaining),MatchSchema46055(node, depth + 1, ref remaining),MatchSchema62686(node, depth + 1, ref remaining),MatchSchema62696(node, depth + 1, ref remaining),MatchSchema48109(node, depth + 1, ref remaining),MatchSchema49777(node, depth + 1, ref remaining),MatchSchema41084(node, depth + 1, ref remaining),MatchSchema48089(node, depth + 1, ref remaining),MatchSchema61619(node, depth + 1, ref remaining),MatchSchema44496(node, depth + 1, ref remaining))); if (result == false) return false; }
+{ result &= (One(MatchSchema20745(node, depth + 1, ref remaining),MatchSchema20756(node, depth + 1, ref remaining),MatchSchema20764(node, depth + 1, ref remaining),MatchSchema7769(node, depth + 1, ref remaining),MatchSchema59907(node, depth + 1, ref remaining),MatchSchema49914(node, depth + 1, ref remaining),MatchSchema61604(node, depth + 1, ref remaining),MatchSchema7777(node, depth + 1, ref remaining),MatchSchema59915(node, depth + 1, ref remaining),MatchSchema49928(node, depth + 1, ref remaining),MatchSchema61612(node, depth + 1, ref remaining),MatchSchema356(node, depth + 1, ref remaining),MatchSchema60337(node, depth + 1, ref remaining),MatchSchema49750(node, depth + 1, ref remaining),MatchSchema39997(node, depth + 1, ref remaining),MatchSchema59018(node, depth + 1, ref remaining),MatchSchema59038(node, depth + 1, ref remaining),MatchSchema59028(node, depth + 1, ref remaining),MatchSchema62667(node, depth + 1, ref remaining),MatchSchema48632(node, depth + 1, ref remaining),MatchSchema62677(node, depth + 1, ref remaining),MatchSchema20709(node, depth + 1, ref remaining),MatchSchema20861(node, depth + 1, ref remaining),MatchSchema4690(node, depth + 1, ref remaining),MatchSchema49936(node, depth + 1, ref remaining),MatchSchema51340(node, depth + 1, ref remaining),MatchSchema43843(node, depth + 1, ref remaining),MatchSchema43833(node, depth + 1, ref remaining),MatchSchema43861(node, depth + 1, ref remaining),MatchSchema43853(node, depth + 1, ref remaining),MatchSchema47940(node, depth + 1, ref remaining),MatchSchema47950(node, depth + 1, ref remaining),MatchSchema39807(node, depth + 1, ref remaining),MatchSchema51677(node, depth + 1, ref remaining),MatchSchema49331(node, depth + 1, ref remaining),MatchSchema49660(node, depth + 1, ref remaining),MatchSchema48171(node, depth + 1, ref remaining),MatchSchema48181(node, depth + 1, ref remaining),MatchSchema49691(node, depth + 1, ref remaining),MatchSchema49701(node, depth + 1, ref remaining),MatchSchema49877(node, depth + 1, ref remaining),MatchSchema59848(node, depth + 1, ref remaining),MatchSchema47930(node, depth + 1, ref remaining),MatchSchema49787(node, depth + 1, ref remaining),MatchSchema39715(node, depth + 1, ref remaining),MatchSchema49670(node, depth + 1, ref remaining),MatchSchema63167(node, depth + 1, ref remaining),MatchSchema49847(node, depth + 1, ref remaining),MatchSchema61516(node, depth + 1, ref remaining),MatchSchema61526(node, depth + 1, ref remaining),MatchSchema51629(node, depth + 1, ref remaining),MatchSchema51639(node, depth + 1, ref remaining),MatchSchema580(node, depth + 1, ref remaining),MatchSchema50257(node, depth + 1, ref remaining),MatchSchema63156(node, depth + 1, ref remaining),MatchSchema47263(node, depth + 1, ref remaining),MatchSchema47006(node, depth + 1, ref remaining),MatchSchema46335(node, depth + 1, ref remaining),MatchSchema47958(node, depth + 1, ref remaining),MatchSchema46868(node, depth + 1, ref remaining),MatchSchema46730(node, depth + 1, ref remaining),MatchSchema46592(node, depth + 1, ref remaining),MatchSchema46025(node, depth + 1, ref remaining),MatchSchema46035(node, depth + 1, ref remaining),MatchSchema43753(node, depth + 1, ref remaining),MatchSchema43763(node, depth + 1, ref remaining),MatchSchema43773(node, depth + 1, ref remaining),MatchSchema59265(node, depth + 1, ref remaining),MatchSchema59132(node, depth + 1, ref remaining),MatchSchema59408(node, depth + 1, ref remaining),MatchSchema59438(node, depth + 1, ref remaining),MatchSchema59398(node, depth + 1, ref remaining),MatchSchema47902(node, depth + 1, ref remaining),MatchSchema44476(node, depth + 1, ref remaining),MatchSchema44486(node, depth + 1, ref remaining),MatchSchema44506(node, depth + 1, ref remaining),MatchSchema40(node, depth + 1, ref remaining),MatchSchema59801(node, depth + 1, ref remaining),MatchSchema52134(node, depth + 1, ref remaining),MatchSchema60204(node, depth + 1, ref remaining),MatchSchema42298(node, depth + 1, ref remaining),MatchSchema59874(node, depth + 1, ref remaining),MatchSchema47882(node, depth + 1, ref remaining),MatchSchema367(node, depth + 1, ref remaining),MatchSchema60348(node, depth + 1, ref remaining),MatchSchema58527(node, depth + 1, ref remaining),MatchSchema48099(node, depth + 1, ref remaining),MatchSchema47910(node, depth + 1, ref remaining),MatchSchema47892(node, depth + 1, ref remaining),MatchSchema47920(node, depth + 1, ref remaining),MatchSchema62860(node, depth + 1, ref remaining),MatchSchema19634(node, depth + 1, ref remaining),MatchSchema19624(node, depth + 1, ref remaining),MatchSchema19614(node, depth + 1, ref remaining),MatchSchema45991(node, depth + 1, ref remaining),MatchSchema59638(node, depth + 1, ref remaining),MatchSchema51790(node, depth + 1, ref remaining),MatchSchema604(node, depth + 1, ref remaining),MatchSchema524(node, depth + 1, ref remaining),MatchSchema58583(node, depth + 1, ref remaining),MatchSchema48138(node, depth + 1, ref remaining),MatchSchema61713(node, depth + 1, ref remaining),MatchSchema61703(node, depth + 1, ref remaining),MatchSchema61723(node, depth + 1, ref remaining),MatchSchema58593(node, depth + 1, ref remaining),MatchSchema19644(node, depth + 1, ref remaining),MatchSchema22448(node, depth + 1, ref remaining),MatchSchema46045(node, depth + 1, ref remaining),MatchSchema46055(node, depth + 1, ref remaining),MatchSchema62687(node, depth + 1, ref remaining),MatchSchema62697(node, depth + 1, ref remaining),MatchSchema48109(node, depth + 1, ref remaining),MatchSchema49777(node, depth + 1, ref remaining),MatchSchema41084(node, depth + 1, ref remaining),MatchSchema48089(node, depth + 1, ref remaining),MatchSchema61620(node, depth + 1, ref remaining),MatchSchema44496(node, depth + 1, ref remaining))); if (result == false) return false; }
 return result;
 }
 
@@ -57339,7 +57339,7 @@ return result;
 private static bool? MatchSchema47716(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
-{ result &= (One(MatchSchema49855(node, depth + 1, ref remaining),MatchSchema61629(node, depth + 1, ref remaining),MatchSchema63129(node, depth + 1, ref remaining),MatchSchema49680(node, depth + 1, ref remaining),MatchSchema58360(node, depth + 1, ref remaining),MatchSchema44284(node, depth + 1, ref remaining),MatchSchema63176(node, depth + 1, ref remaining),MatchSchema44296(node, depth + 1, ref remaining))); if (result == false) return false; }
+{ result &= (One(MatchSchema49855(node, depth + 1, ref remaining),MatchSchema61630(node, depth + 1, ref remaining),MatchSchema63130(node, depth + 1, ref remaining),MatchSchema49680(node, depth + 1, ref remaining),MatchSchema58360(node, depth + 1, ref remaining),MatchSchema44284(node, depth + 1, ref remaining),MatchSchema63177(node, depth + 1, ref remaining),MatchSchema44296(node, depth + 1, ref remaining))); if (result == false) return false; }
 return result;
 }
 
@@ -57853,7 +57853,7 @@ return result;
 private static bool? MatchSchema47964(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
-{ result &= (One(MatchSchema20745(node, depth + 1, ref remaining),MatchSchema20756(node, depth + 1, ref remaining),MatchSchema20764(node, depth + 1, ref remaining),MatchSchema7769(node, depth + 1, ref remaining),MatchSchema59906(node, depth + 1, ref remaining),MatchSchema49914(node, depth + 1, ref remaining),MatchSchema61603(node, depth + 1, ref remaining),MatchSchema7777(node, depth + 1, ref remaining),MatchSchema59914(node, depth + 1, ref remaining),MatchSchema49928(node, depth + 1, ref remaining),MatchSchema61611(node, depth + 1, ref remaining),MatchSchema356(node, depth + 1, ref remaining),MatchSchema60336(node, depth + 1, ref remaining),MatchSchema49750(node, depth + 1, ref remaining),MatchSchema39997(node, depth + 1, ref remaining),MatchSchema59018(node, depth + 1, ref remaining),MatchSchema59038(node, depth + 1, ref remaining),MatchSchema59028(node, depth + 1, ref remaining),MatchSchema62666(node, depth + 1, ref remaining),MatchSchema48632(node, depth + 1, ref remaining),MatchSchema62676(node, depth + 1, ref remaining),MatchSchema20709(node, depth + 1, ref remaining),MatchSchema20861(node, depth + 1, ref remaining),MatchSchema4690(node, depth + 1, ref remaining),MatchSchema49936(node, depth + 1, ref remaining),MatchSchema51340(node, depth + 1, ref remaining),MatchSchema43843(node, depth + 1, ref remaining),MatchSchema43833(node, depth + 1, ref remaining),MatchSchema43861(node, depth + 1, ref remaining),MatchSchema43853(node, depth + 1, ref remaining),MatchSchema47940(node, depth + 1, ref remaining),MatchSchema47950(node, depth + 1, ref remaining),MatchSchema39807(node, depth + 1, ref remaining),MatchSchema51677(node, depth + 1, ref remaining),MatchSchema49331(node, depth + 1, ref remaining),MatchSchema49660(node, depth + 1, ref remaining),MatchSchema48171(node, depth + 1, ref remaining),MatchSchema48181(node, depth + 1, ref remaining),MatchSchema49691(node, depth + 1, ref remaining),MatchSchema49701(node, depth + 1, ref remaining),MatchSchema49877(node, depth + 1, ref remaining),MatchSchema59848(node, depth + 1, ref remaining),MatchSchema47930(node, depth + 1, ref remaining),MatchSchema49787(node, depth + 1, ref remaining),MatchSchema39715(node, depth + 1, ref remaining),MatchSchema49670(node, depth + 1, ref remaining),MatchSchema63166(node, depth + 1, ref remaining),MatchSchema49847(node, depth + 1, ref remaining),MatchSchema61515(node, depth + 1, ref remaining),MatchSchema61525(node, depth + 1, ref remaining),MatchSchema51629(node, depth + 1, ref remaining),MatchSchema51639(node, depth + 1, ref remaining),MatchSchema580(node, depth + 1, ref remaining),MatchSchema50257(node, depth + 1, ref remaining),MatchSchema63155(node, depth + 1, ref remaining),MatchSchema47263(node, depth + 1, ref remaining),MatchSchema47006(node, depth + 1, ref remaining),MatchSchema46335(node, depth + 1, ref remaining),MatchSchema47958(node, depth + 1, ref remaining),MatchSchema46868(node, depth + 1, ref remaining),MatchSchema46730(node, depth + 1, ref remaining),MatchSchema46592(node, depth + 1, ref remaining),MatchSchema46025(node, depth + 1, ref remaining),MatchSchema46035(node, depth + 1, ref remaining),MatchSchema43753(node, depth + 1, ref remaining),MatchSchema43763(node, depth + 1, ref remaining),MatchSchema43773(node, depth + 1, ref remaining),MatchSchema59265(node, depth + 1, ref remaining),MatchSchema59132(node, depth + 1, ref remaining),MatchSchema59408(node, depth + 1, ref remaining),MatchSchema59438(node, depth + 1, ref remaining),MatchSchema59398(node, depth + 1, ref remaining),MatchSchema47902(node, depth + 1, ref remaining),MatchSchema44476(node, depth + 1, ref remaining),MatchSchema44486(node, depth + 1, ref remaining),MatchSchema44506(node, depth + 1, ref remaining),MatchSchema40(node, depth + 1, ref remaining),MatchSchema59801(node, depth + 1, ref remaining),MatchSchema52134(node, depth + 1, ref remaining),MatchSchema60203(node, depth + 1, ref remaining),MatchSchema42298(node, depth + 1, ref remaining),MatchSchema59873(node, depth + 1, ref remaining),MatchSchema47882(node, depth + 1, ref remaining),MatchSchema367(node, depth + 1, ref remaining),MatchSchema60347(node, depth + 1, ref remaining),MatchSchema58527(node, depth + 1, ref remaining),MatchSchema48099(node, depth + 1, ref remaining),MatchSchema47910(node, depth + 1, ref remaining),MatchSchema47892(node, depth + 1, ref remaining),MatchSchema47920(node, depth + 1, ref remaining),MatchSchema62859(node, depth + 1, ref remaining),MatchSchema19634(node, depth + 1, ref remaining),MatchSchema19624(node, depth + 1, ref remaining),MatchSchema19614(node, depth + 1, ref remaining),MatchSchema45991(node, depth + 1, ref remaining),MatchSchema59638(node, depth + 1, ref remaining),MatchSchema51790(node, depth + 1, ref remaining),MatchSchema604(node, depth + 1, ref remaining),MatchSchema524(node, depth + 1, ref remaining),MatchSchema58583(node, depth + 1, ref remaining),MatchSchema48138(node, depth + 1, ref remaining),MatchSchema61712(node, depth + 1, ref remaining),MatchSchema61702(node, depth + 1, ref remaining),MatchSchema61722(node, depth + 1, ref remaining),MatchSchema58593(node, depth + 1, ref remaining),MatchSchema19644(node, depth + 1, ref remaining),MatchSchema22448(node, depth + 1, ref remaining),MatchSchema46045(node, depth + 1, ref remaining),MatchSchema46055(node, depth + 1, ref remaining),MatchSchema62686(node, depth + 1, ref remaining),MatchSchema62696(node, depth + 1, ref remaining),MatchSchema48109(node, depth + 1, ref remaining),MatchSchema49777(node, depth + 1, ref remaining),MatchSchema41084(node, depth + 1, ref remaining),MatchSchema48089(node, depth + 1, ref remaining),MatchSchema61619(node, depth + 1, ref remaining),MatchSchema44496(node, depth + 1, ref remaining))); if (result == false) return false; }
+{ result &= (One(MatchSchema20745(node, depth + 1, ref remaining),MatchSchema20756(node, depth + 1, ref remaining),MatchSchema20764(node, depth + 1, ref remaining),MatchSchema7769(node, depth + 1, ref remaining),MatchSchema59907(node, depth + 1, ref remaining),MatchSchema49914(node, depth + 1, ref remaining),MatchSchema61604(node, depth + 1, ref remaining),MatchSchema7777(node, depth + 1, ref remaining),MatchSchema59915(node, depth + 1, ref remaining),MatchSchema49928(node, depth + 1, ref remaining),MatchSchema61612(node, depth + 1, ref remaining),MatchSchema356(node, depth + 1, ref remaining),MatchSchema60337(node, depth + 1, ref remaining),MatchSchema49750(node, depth + 1, ref remaining),MatchSchema39997(node, depth + 1, ref remaining),MatchSchema59018(node, depth + 1, ref remaining),MatchSchema59038(node, depth + 1, ref remaining),MatchSchema59028(node, depth + 1, ref remaining),MatchSchema62667(node, depth + 1, ref remaining),MatchSchema48632(node, depth + 1, ref remaining),MatchSchema62677(node, depth + 1, ref remaining),MatchSchema20709(node, depth + 1, ref remaining),MatchSchema20861(node, depth + 1, ref remaining),MatchSchema4690(node, depth + 1, ref remaining),MatchSchema49936(node, depth + 1, ref remaining),MatchSchema51340(node, depth + 1, ref remaining),MatchSchema43843(node, depth + 1, ref remaining),MatchSchema43833(node, depth + 1, ref remaining),MatchSchema43861(node, depth + 1, ref remaining),MatchSchema43853(node, depth + 1, ref remaining),MatchSchema47940(node, depth + 1, ref remaining),MatchSchema47950(node, depth + 1, ref remaining),MatchSchema39807(node, depth + 1, ref remaining),MatchSchema51677(node, depth + 1, ref remaining),MatchSchema49331(node, depth + 1, ref remaining),MatchSchema49660(node, depth + 1, ref remaining),MatchSchema48171(node, depth + 1, ref remaining),MatchSchema48181(node, depth + 1, ref remaining),MatchSchema49691(node, depth + 1, ref remaining),MatchSchema49701(node, depth + 1, ref remaining),MatchSchema49877(node, depth + 1, ref remaining),MatchSchema59848(node, depth + 1, ref remaining),MatchSchema47930(node, depth + 1, ref remaining),MatchSchema49787(node, depth + 1, ref remaining),MatchSchema39715(node, depth + 1, ref remaining),MatchSchema49670(node, depth + 1, ref remaining),MatchSchema63167(node, depth + 1, ref remaining),MatchSchema49847(node, depth + 1, ref remaining),MatchSchema61516(node, depth + 1, ref remaining),MatchSchema61526(node, depth + 1, ref remaining),MatchSchema51629(node, depth + 1, ref remaining),MatchSchema51639(node, depth + 1, ref remaining),MatchSchema580(node, depth + 1, ref remaining),MatchSchema50257(node, depth + 1, ref remaining),MatchSchema63156(node, depth + 1, ref remaining),MatchSchema47263(node, depth + 1, ref remaining),MatchSchema47006(node, depth + 1, ref remaining),MatchSchema46335(node, depth + 1, ref remaining),MatchSchema47958(node, depth + 1, ref remaining),MatchSchema46868(node, depth + 1, ref remaining),MatchSchema46730(node, depth + 1, ref remaining),MatchSchema46592(node, depth + 1, ref remaining),MatchSchema46025(node, depth + 1, ref remaining),MatchSchema46035(node, depth + 1, ref remaining),MatchSchema43753(node, depth + 1, ref remaining),MatchSchema43763(node, depth + 1, ref remaining),MatchSchema43773(node, depth + 1, ref remaining),MatchSchema59265(node, depth + 1, ref remaining),MatchSchema59132(node, depth + 1, ref remaining),MatchSchema59408(node, depth + 1, ref remaining),MatchSchema59438(node, depth + 1, ref remaining),MatchSchema59398(node, depth + 1, ref remaining),MatchSchema47902(node, depth + 1, ref remaining),MatchSchema44476(node, depth + 1, ref remaining),MatchSchema44486(node, depth + 1, ref remaining),MatchSchema44506(node, depth + 1, ref remaining),MatchSchema40(node, depth + 1, ref remaining),MatchSchema59801(node, depth + 1, ref remaining),MatchSchema52134(node, depth + 1, ref remaining),MatchSchema60204(node, depth + 1, ref remaining),MatchSchema42298(node, depth + 1, ref remaining),MatchSchema59874(node, depth + 1, ref remaining),MatchSchema47882(node, depth + 1, ref remaining),MatchSchema367(node, depth + 1, ref remaining),MatchSchema60348(node, depth + 1, ref remaining),MatchSchema58527(node, depth + 1, ref remaining),MatchSchema48099(node, depth + 1, ref remaining),MatchSchema47910(node, depth + 1, ref remaining),MatchSchema47892(node, depth + 1, ref remaining),MatchSchema47920(node, depth + 1, ref remaining),MatchSchema62860(node, depth + 1, ref remaining),MatchSchema19634(node, depth + 1, ref remaining),MatchSchema19624(node, depth + 1, ref remaining),MatchSchema19614(node, depth + 1, ref remaining),MatchSchema45991(node, depth + 1, ref remaining),MatchSchema59638(node, depth + 1, ref remaining),MatchSchema51790(node, depth + 1, ref remaining),MatchSchema604(node, depth + 1, ref remaining),MatchSchema524(node, depth + 1, ref remaining),MatchSchema58583(node, depth + 1, ref remaining),MatchSchema48138(node, depth + 1, ref remaining),MatchSchema61713(node, depth + 1, ref remaining),MatchSchema61703(node, depth + 1, ref remaining),MatchSchema61723(node, depth + 1, ref remaining),MatchSchema58593(node, depth + 1, ref remaining),MatchSchema19644(node, depth + 1, ref remaining),MatchSchema22448(node, depth + 1, ref remaining),MatchSchema46045(node, depth + 1, ref remaining),MatchSchema46055(node, depth + 1, ref remaining),MatchSchema62687(node, depth + 1, ref remaining),MatchSchema62697(node, depth + 1, ref remaining),MatchSchema48109(node, depth + 1, ref remaining),MatchSchema49777(node, depth + 1, ref remaining),MatchSchema41084(node, depth + 1, ref remaining),MatchSchema48089(node, depth + 1, ref remaining),MatchSchema61620(node, depth + 1, ref remaining),MatchSchema44496(node, depth + 1, ref remaining))); if (result == false) return false; }
 return result;
 }
 
@@ -58122,7 +58122,7 @@ if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj
 { result &= (!fields.ContainsKey("params") ? (bool?)true : MatchSchema48166(fields["params"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("rowMetaData") ? (bool?)true : MatchSchema48158(fields["rowMetaData"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("rows") ? (bool?)true : MatchSchema48160(fields["rows"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("styles") ? (bool?)true : MatchSchema59931(fields["styles"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("styles") ? (bool?)true : MatchSchema59932(fields["styles"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("type") ? (bool?)true : MatchSchema48163(fields["type"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("w") ? (bool?)true : MatchSchema48164(fields["w"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("x") ? (bool?)true : MatchSchema48165(fields["x"], depth + 1, ref remaining)); if (result == false) return false; }
@@ -60777,7 +60777,7 @@ return result;
 private static bool? MatchSchema49742(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
-{ result &= (One(MatchSchema58556(node, depth + 1, ref remaining),MatchSchema58569(node, depth + 1, ref remaining),MatchSchema13(node, depth + 1, ref remaining),MatchSchema26(node, depth + 1, ref remaining),MatchSchema534(node, depth + 1, ref remaining),MatchSchema61550(node, depth + 1, ref remaining),MatchSchema58439(node, depth + 1, ref remaining))); if (result == false) return false; }
+{ result &= (One(MatchSchema58556(node, depth + 1, ref remaining),MatchSchema58569(node, depth + 1, ref remaining),MatchSchema13(node, depth + 1, ref remaining),MatchSchema26(node, depth + 1, ref remaining),MatchSchema534(node, depth + 1, ref remaining),MatchSchema61551(node, depth + 1, ref remaining),MatchSchema58439(node, depth + 1, ref remaining))); if (result == false) return false; }
 return result;
 }
 
@@ -63952,7 +63952,7 @@ return result;
 private static bool? MatchSchema53758(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
-{ result &= (One(MatchSchema506(node, depth + 1, ref remaining),MatchSchema7788(node, depth + 1, ref remaining),MatchSchema47748(node, depth + 1, ref remaining),MatchSchema60486(node, depth + 1, ref remaining),MatchSchema63023(node, depth + 1, ref remaining),MatchSchema40038(node, depth + 1, ref remaining),MatchSchema48594(node, depth + 1, ref remaining))); if (result == false) return false; }
+{ result &= (One(MatchSchema506(node, depth + 1, ref remaining),MatchSchema7788(node, depth + 1, ref remaining),MatchSchema47748(node, depth + 1, ref remaining),MatchSchema60487(node, depth + 1, ref remaining),MatchSchema63024(node, depth + 1, ref remaining),MatchSchema40038(node, depth + 1, ref remaining),MatchSchema48594(node, depth + 1, ref remaining))); if (result == false) return false; }
 return result;
 }
 
@@ -66444,7 +66444,7 @@ if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj
 { result &= (!fields.ContainsKey("associatedObjectType") ? (bool?)true : MatchSchema56241(fields["associatedObjectType"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("exportInternalValuesOptions") ? (bool?)true : MatchSchema56243(fields["exportInternalValuesOptions"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("exportName") ? (bool?)true : MatchSchema56245(fields["exportName"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("exportType") ? (bool?)true : MatchSchema63016(fields["exportType"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("exportType") ? (bool?)true : MatchSchema63017(fields["exportType"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("format") ? (bool?)true : MatchSchema56260(fields["format"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("includeLabeledAssociations") ? (bool?)true : MatchSchema56248(fields["includeLabeledAssociations"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("includePrimaryDisplayPropertyForAssociatedObjects") ? (bool?)true : MatchSchema56249(fields["includePrimaryDisplayPropertyForAssociatedObjects"], depth + 1, ref remaining)); if (result == false) return false; }
@@ -68077,7 +68077,7 @@ if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj
 { result &= (!fields.ContainsKey("operationType") ? (bool?)true : MatchSchema57314(fields["operationType"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema57315(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("propertyParser") ? (bool?)true : MatchSchema57316(fields["propertyParser"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("type") ? (bool?)true : MatchSchema61590(fields["type"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("type") ? (bool?)true : MatchSchema61591(fields["type"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("upperBoundEndpointBehavior") ? (bool?)true : MatchSchema57318(fields["upperBoundEndpointBehavior"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("upperBoundTimePoint") ? (bool?)true : MatchSchema57328(fields["upperBoundTimePoint"], depth + 1, ref remaining)); if (result == false) return false; }
 }
@@ -68780,7 +68780,7 @@ if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj
 { result &= (fields.ContainsKey("operator")); if (result == false) return false; }
 { result &= (fields.ContainsKey("value")); if (result == false) return false; }
 { result &= (!fields.ContainsKey("includeObjectsWithNoValueSet") ? (bool?)true : MatchSchema57863(fields["includeObjectsWithNoValueSet"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("operationType") ? (bool?)true : MatchSchema59922(fields["operationType"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("operationType") ? (bool?)true : MatchSchema59923(fields["operationType"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema57865(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("value") ? (bool?)true : MatchSchema57866(fields["value"], depth + 1, ref remaining)); if (result == false) return false; }
 }
@@ -68816,7 +68816,7 @@ if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj
 { result &= (fields.ContainsKey("filterType")); if (result == false) return false; }
 { result &= (fields.ContainsKey("operator")); if (result == false) return false; }
 { result &= (fields.ContainsKey("surveyId")); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("filterType") ? (bool?)true : MatchSchema60480(fields["filterType"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("filterType") ? (bool?)true : MatchSchema60481(fields["filterType"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema57878(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("surveyId") ? (bool?)true : MatchSchema57879(fields["surveyId"], depth + 1, ref remaining)); if (result == false) return false; }
 }
@@ -68847,7 +68847,7 @@ if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj
 { result &= (fields.ContainsKey("surveyId")); if (result == false) return false; }
 { result &= (fields.ContainsKey("surveyQuestion")); if (result == false) return false; }
 { result &= (fields.ContainsKey("valueComparison")); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("filterType") ? (bool?)true : MatchSchema60483(fields["filterType"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("filterType") ? (bool?)true : MatchSchema60484(fields["filterType"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema57883(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("surveyAnswerColId") ? (bool?)true : MatchSchema57884(fields["surveyAnswerColId"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("surveyAnswerRowId") ? (bool?)true : MatchSchema57885(fields["surveyAnswerRowId"], depth + 1, ref remaining)); if (result == false) return false; }
@@ -68926,7 +68926,7 @@ if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj
 { result &= (!fields.ContainsKey("recipients") ? (bool?)true : MatchSchema58047(fields["recipients"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("senders") ? (bool?)true : MatchSchema58049(fields["senders"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("toInboxId") ? (bool?)true : MatchSchema58051(fields["toInboxId"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("type") ? (bool?)true : MatchSchema61503(fields["type"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("type") ? (bool?)true : MatchSchema61504(fields["type"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("updatedAt") ? (bool?)true : MatchSchema58053(fields["updatedAt"], depth + 1, ref remaining)); if (result == false) return false; }
 }
 return result;
@@ -69032,7 +69032,7 @@ if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj
 { result &= (!fields.ContainsKey("newStatus") ? (bool?)true : MatchSchema58073(fields["newStatus"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("recipients") ? (bool?)true : MatchSchema58067(fields["recipients"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("senders") ? (bool?)true : MatchSchema58069(fields["senders"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("type") ? (bool?)true : MatchSchema61506(fields["type"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("type") ? (bool?)true : MatchSchema61507(fields["type"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("updatedAt") ? (bool?)true : MatchSchema58072(fields["updatedAt"], depth + 1, ref remaining)); if (result == false) return false; }
 }
 return result;
@@ -69159,7 +69159,7 @@ if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj
 { result &= (fields.ContainsKey("type")); if (result == false) return false; }
 { result &= (!fields.ContainsKey("endpointBehavior") ? (bool?)true : MatchSchema58092(fields["endpointBehavior"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("includeObjectsWithNoValueSet") ? (bool?)true : MatchSchema58093(fields["includeObjectsWithNoValueSet"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("operationType") ? (bool?)true : MatchSchema61587(fields["operationType"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("operationType") ? (bool?)true : MatchSchema61588(fields["operationType"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema58095(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("propertyParser") ? (bool?)true : MatchSchema58096(fields["propertyParser"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("timePoint") ? (bool?)true : MatchSchema58099(fields["timePoint"], depth + 1, ref remaining)); if (result == false) return false; }
@@ -69219,7 +69219,7 @@ if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj
 { result &= (!fields.ContainsKey("hour") ? (bool?)true : MatchSchema58109(fields["hour"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("millisecond") ? (bool?)true : MatchSchema58110(fields["millisecond"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("minute") ? (bool?)true : MatchSchema58111(fields["minute"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("referenceType") ? (bool?)true : MatchSchema61636(fields["referenceType"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("referenceType") ? (bool?)true : MatchSchema61637(fields["referenceType"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("second") ? (bool?)true : MatchSchema58113(fields["second"], depth + 1, ref remaining)); if (result == false) return false; }
 }
 return result;
@@ -69263,7 +69263,7 @@ if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj
 { result &= (!fields.ContainsKey("coalescingRefineBy") ? (bool?)true : MatchSchema58158(fields["coalescingRefineBy"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("eventTypeId") ? (bool?)true : MatchSchema58117(fields["eventTypeId"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("filterLines") ? (bool?)true : MatchSchema58118(fields["filterLines"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("filterType") ? (bool?)true : MatchSchema61746(fields["filterType"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("filterType") ? (bool?)true : MatchSchema61747(fields["filterType"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("pruningRefineBy") ? (bool?)true : MatchSchema58168(fields["pruningRefineBy"], depth + 1, ref remaining)); if (result == false) return false; }
 }
 return result;
@@ -69300,7 +69300,7 @@ if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj
 { result &= (!fields.ContainsKey("coalescingRefineBy") ? (bool?)true : MatchSchema58134(fields["coalescingRefineBy"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("eventTypeId") ? (bool?)true : MatchSchema58125(fields["eventTypeId"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("filterBranchOperator") ? (bool?)true : MatchSchema58126(fields["filterBranchOperator"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("filterBranchType") ? (bool?)true : MatchSchema61743(fields["filterBranchType"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("filterBranchType") ? (bool?)true : MatchSchema61744(fields["filterBranchType"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("filterBranches") ? (bool?)true : MatchSchema58128(fields["filterBranches"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("filters") ? (bool?)true : MatchSchema58130(fields["filters"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema58144(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
@@ -69388,7 +69388,7 @@ bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
 if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
 { result &= (fields.ContainsKey("type")); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("type") ? (bool?)true : MatchSchema61758(fields["type"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("type") ? (bool?)true : MatchSchema61759(fields["type"], depth + 1, ref remaining)); if (result == false) return false; }
 }
 return result;
 }
@@ -69400,7 +69400,7 @@ bool? result = true;
 if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
 { result &= (fields.ContainsKey("filterType")); if (result == false) return false; }
 { result &= (fields.ContainsKey("operator")); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("filterType") ? (bool?)true : MatchSchema63126(fields["filterType"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("filterType") ? (bool?)true : MatchSchema63127(fields["filterType"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema58210(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("webinarId") ? (bool?)true : MatchSchema58211(fields["webinarId"], depth + 1, ref remaining)); if (result == false) return false; }
 }
@@ -69432,7 +69432,7 @@ if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj
 { result &= (!fields.ContainsKey("hour") ? (bool?)true : MatchSchema58228(fields["hour"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("millisecond") ? (bool?)true : MatchSchema58229(fields["millisecond"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("minute") ? (bool?)true : MatchSchema58230(fields["minute"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("referenceType") ? (bool?)true : MatchSchema63146(fields["referenceType"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("referenceType") ? (bool?)true : MatchSchema63147(fields["referenceType"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("second") ? (bool?)true : MatchSchema58232(fields["second"], depth + 1, ref remaining)); if (result == false) return false; }
 }
 return result;
@@ -69511,7 +69511,7 @@ if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj
 { result &= (!fields.ContainsKey("richText") ? (bool?)true : MatchSchema58254(fields["richText"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("senders") ? (bool?)true : MatchSchema58255(fields["senders"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("text") ? (bool?)true : MatchSchema58257(fields["text"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("type") ? (bool?)true : MatchSchema63149(fields["type"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("type") ? (bool?)true : MatchSchema63150(fields["type"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("updatedAt") ? (bool?)true : MatchSchema58259(fields["updatedAt"], depth + 1, ref remaining)); if (result == false) return false; }
 }
 return result;
@@ -69620,7 +69620,7 @@ if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj
 { result &= (!fields.ContainsKey("mappedTemplateId") ? (bool?)true : MatchSchema58264(fields["mappedTemplateId"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("parameters") ? (bool?)true : MatchSchema58270(fields["parameters"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("rootMicId") ? (bool?)true : MatchSchema58266(fields["rootMicId"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("type") ? (bool?)true : MatchSchema63152(fields["type"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("type") ? (bool?)true : MatchSchema63153(fields["type"], depth + 1, ref remaining)); if (result == false) return false; }
 }
 return result;
 }
@@ -69791,7 +69791,7 @@ if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj
 { result &= (!fields.ContainsKey("millisecond") ? (bool?)true : MatchSchema58298(fields["millisecond"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("minute") ? (bool?)true : MatchSchema58299(fields["minute"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("month") ? (bool?)true : MatchSchema58300(fields["month"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("referenceType") ? (bool?)true : MatchSchema63185(fields["referenceType"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("referenceType") ? (bool?)true : MatchSchema63186(fields["referenceType"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("second") ? (bool?)true : MatchSchema58302(fields["second"], depth + 1, ref remaining)); if (result == false) return false; }
 }
 return result;
@@ -70625,7 +70625,7 @@ if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj
 { result &= (fields.ContainsKey("timeOffset")); if (result == false) return false; }
 { result &= (fields.ContainsKey("type")); if (result == false) return false; }
 { result &= (!fields.ContainsKey("comparison") ? (bool?)true : MatchSchema58561(fields["comparison"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("timeOffset") ? (bool?)true : MatchSchema61535(fields["timeOffset"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("timeOffset") ? (bool?)true : MatchSchema61536(fields["timeOffset"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("type") ? (bool?)true : MatchSchema58565(fields["type"], depth + 1, ref remaining)); if (result == false) return false; }
 }
 return result;
@@ -70671,10 +70671,10 @@ if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj
 { result &= (fields.ContainsKey("rangeType")); if (result == false) return false; }
 { result &= (fields.ContainsKey("type")); if (result == false) return false; }
 { result &= (fields.ContainsKey("upperBoundOffset")); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("lowerBoundOffset") ? (bool?)true : MatchSchema61535(fields["lowerBoundOffset"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("lowerBoundOffset") ? (bool?)true : MatchSchema61536(fields["lowerBoundOffset"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("rangeType") ? (bool?)true : MatchSchema58575(fields["rangeType"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("type") ? (bool?)true : MatchSchema58579(fields["type"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("upperBoundOffset") ? (bool?)true : MatchSchema61535(fields["upperBoundOffset"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("upperBoundOffset") ? (bool?)true : MatchSchema61536(fields["upperBoundOffset"], depth + 1, ref remaining)); if (result == false) return false; }
 }
 return result;
 }
@@ -71208,7 +71208,7 @@ if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj
 { result &= (fields.ContainsKey("cssClass")); if (result == false) return false; }
 { result &= (fields.ContainsKey("styles")); if (result == false) return false; }
 { result &= (!fields.ContainsKey("cssClass") ? (bool?)true : MatchSchema59050(fields["cssClass"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("styles") ? (bool?)true : MatchSchema59931(fields["styles"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("styles") ? (bool?)true : MatchSchema59932(fields["styles"], depth + 1, ref remaining)); if (result == false) return false; }
 }
 return result;
 }
@@ -71273,7 +71273,7 @@ return result;
 private static bool? MatchSchema59143(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
-{ result &= (One(MatchSchema20745(node, depth + 1, ref remaining),MatchSchema20756(node, depth + 1, ref remaining),MatchSchema20764(node, depth + 1, ref remaining),MatchSchema7769(node, depth + 1, ref remaining),MatchSchema59906(node, depth + 1, ref remaining),MatchSchema49914(node, depth + 1, ref remaining),MatchSchema61603(node, depth + 1, ref remaining),MatchSchema7777(node, depth + 1, ref remaining),MatchSchema59914(node, depth + 1, ref remaining),MatchSchema49928(node, depth + 1, ref remaining),MatchSchema61611(node, depth + 1, ref remaining),MatchSchema356(node, depth + 1, ref remaining),MatchSchema60336(node, depth + 1, ref remaining),MatchSchema49750(node, depth + 1, ref remaining),MatchSchema39997(node, depth + 1, ref remaining),MatchSchema59018(node, depth + 1, ref remaining),MatchSchema59038(node, depth + 1, ref remaining),MatchSchema59028(node, depth + 1, ref remaining),MatchSchema62666(node, depth + 1, ref remaining),MatchSchema48632(node, depth + 1, ref remaining),MatchSchema62676(node, depth + 1, ref remaining),MatchSchema20709(node, depth + 1, ref remaining),MatchSchema20861(node, depth + 1, ref remaining),MatchSchema4690(node, depth + 1, ref remaining),MatchSchema49936(node, depth + 1, ref remaining),MatchSchema51340(node, depth + 1, ref remaining),MatchSchema43843(node, depth + 1, ref remaining),MatchSchema43833(node, depth + 1, ref remaining),MatchSchema43861(node, depth + 1, ref remaining),MatchSchema43853(node, depth + 1, ref remaining),MatchSchema47940(node, depth + 1, ref remaining),MatchSchema47950(node, depth + 1, ref remaining),MatchSchema39807(node, depth + 1, ref remaining),MatchSchema51677(node, depth + 1, ref remaining),MatchSchema49331(node, depth + 1, ref remaining),MatchSchema49660(node, depth + 1, ref remaining),MatchSchema48171(node, depth + 1, ref remaining),MatchSchema48181(node, depth + 1, ref remaining),MatchSchema49691(node, depth + 1, ref remaining),MatchSchema49701(node, depth + 1, ref remaining),MatchSchema49877(node, depth + 1, ref remaining),MatchSchema59848(node, depth + 1, ref remaining),MatchSchema47930(node, depth + 1, ref remaining),MatchSchema49787(node, depth + 1, ref remaining),MatchSchema39715(node, depth + 1, ref remaining),MatchSchema49670(node, depth + 1, ref remaining),MatchSchema63166(node, depth + 1, ref remaining),MatchSchema49847(node, depth + 1, ref remaining),MatchSchema61515(node, depth + 1, ref remaining),MatchSchema61525(node, depth + 1, ref remaining),MatchSchema51629(node, depth + 1, ref remaining),MatchSchema51639(node, depth + 1, ref remaining),MatchSchema580(node, depth + 1, ref remaining),MatchSchema50257(node, depth + 1, ref remaining),MatchSchema63155(node, depth + 1, ref remaining),MatchSchema47263(node, depth + 1, ref remaining),MatchSchema47006(node, depth + 1, ref remaining),MatchSchema46335(node, depth + 1, ref remaining),MatchSchema47958(node, depth + 1, ref remaining),MatchSchema46868(node, depth + 1, ref remaining),MatchSchema46730(node, depth + 1, ref remaining),MatchSchema46592(node, depth + 1, ref remaining),MatchSchema46025(node, depth + 1, ref remaining),MatchSchema46035(node, depth + 1, ref remaining),MatchSchema43753(node, depth + 1, ref remaining),MatchSchema43763(node, depth + 1, ref remaining),MatchSchema43773(node, depth + 1, ref remaining),MatchSchema59265(node, depth + 1, ref remaining),MatchSchema59132(node, depth + 1, ref remaining),MatchSchema59408(node, depth + 1, ref remaining),MatchSchema59438(node, depth + 1, ref remaining),MatchSchema59398(node, depth + 1, ref remaining),MatchSchema47902(node, depth + 1, ref remaining),MatchSchema44476(node, depth + 1, ref remaining),MatchSchema44486(node, depth + 1, ref remaining),MatchSchema44506(node, depth + 1, ref remaining),MatchSchema40(node, depth + 1, ref remaining),MatchSchema59801(node, depth + 1, ref remaining),MatchSchema52134(node, depth + 1, ref remaining),MatchSchema60203(node, depth + 1, ref remaining),MatchSchema42298(node, depth + 1, ref remaining),MatchSchema59873(node, depth + 1, ref remaining),MatchSchema47882(node, depth + 1, ref remaining),MatchSchema367(node, depth + 1, ref remaining),MatchSchema60347(node, depth + 1, ref remaining),MatchSchema58527(node, depth + 1, ref remaining),MatchSchema48099(node, depth + 1, ref remaining),MatchSchema47910(node, depth + 1, ref remaining),MatchSchema47892(node, depth + 1, ref remaining),MatchSchema47920(node, depth + 1, ref remaining),MatchSchema62859(node, depth + 1, ref remaining),MatchSchema19634(node, depth + 1, ref remaining),MatchSchema19624(node, depth + 1, ref remaining),MatchSchema19614(node, depth + 1, ref remaining),MatchSchema45991(node, depth + 1, ref remaining),MatchSchema59638(node, depth + 1, ref remaining),MatchSchema51790(node, depth + 1, ref remaining),MatchSchema604(node, depth + 1, ref remaining),MatchSchema524(node, depth + 1, ref remaining),MatchSchema58583(node, depth + 1, ref remaining),MatchSchema48138(node, depth + 1, ref remaining),MatchSchema61712(node, depth + 1, ref remaining),MatchSchema61702(node, depth + 1, ref remaining),MatchSchema61722(node, depth + 1, ref remaining),MatchSchema58593(node, depth + 1, ref remaining),MatchSchema19644(node, depth + 1, ref remaining),MatchSchema22448(node, depth + 1, ref remaining),MatchSchema46045(node, depth + 1, ref remaining),MatchSchema46055(node, depth + 1, ref remaining),MatchSchema62686(node, depth + 1, ref remaining),MatchSchema62696(node, depth + 1, ref remaining),MatchSchema48109(node, depth + 1, ref remaining),MatchSchema49777(node, depth + 1, ref remaining),MatchSchema41084(node, depth + 1, ref remaining),MatchSchema48089(node, depth + 1, ref remaining),MatchSchema61619(node, depth + 1, ref remaining),MatchSchema44496(node, depth + 1, ref remaining))); if (result == false) return false; }
+{ result &= (One(MatchSchema20745(node, depth + 1, ref remaining),MatchSchema20756(node, depth + 1, ref remaining),MatchSchema20764(node, depth + 1, ref remaining),MatchSchema7769(node, depth + 1, ref remaining),MatchSchema59907(node, depth + 1, ref remaining),MatchSchema49914(node, depth + 1, ref remaining),MatchSchema61604(node, depth + 1, ref remaining),MatchSchema7777(node, depth + 1, ref remaining),MatchSchema59915(node, depth + 1, ref remaining),MatchSchema49928(node, depth + 1, ref remaining),MatchSchema61612(node, depth + 1, ref remaining),MatchSchema356(node, depth + 1, ref remaining),MatchSchema60337(node, depth + 1, ref remaining),MatchSchema49750(node, depth + 1, ref remaining),MatchSchema39997(node, depth + 1, ref remaining),MatchSchema59018(node, depth + 1, ref remaining),MatchSchema59038(node, depth + 1, ref remaining),MatchSchema59028(node, depth + 1, ref remaining),MatchSchema62667(node, depth + 1, ref remaining),MatchSchema48632(node, depth + 1, ref remaining),MatchSchema62677(node, depth + 1, ref remaining),MatchSchema20709(node, depth + 1, ref remaining),MatchSchema20861(node, depth + 1, ref remaining),MatchSchema4690(node, depth + 1, ref remaining),MatchSchema49936(node, depth + 1, ref remaining),MatchSchema51340(node, depth + 1, ref remaining),MatchSchema43843(node, depth + 1, ref remaining),MatchSchema43833(node, depth + 1, ref remaining),MatchSchema43861(node, depth + 1, ref remaining),MatchSchema43853(node, depth + 1, ref remaining),MatchSchema47940(node, depth + 1, ref remaining),MatchSchema47950(node, depth + 1, ref remaining),MatchSchema39807(node, depth + 1, ref remaining),MatchSchema51677(node, depth + 1, ref remaining),MatchSchema49331(node, depth + 1, ref remaining),MatchSchema49660(node, depth + 1, ref remaining),MatchSchema48171(node, depth + 1, ref remaining),MatchSchema48181(node, depth + 1, ref remaining),MatchSchema49691(node, depth + 1, ref remaining),MatchSchema49701(node, depth + 1, ref remaining),MatchSchema49877(node, depth + 1, ref remaining),MatchSchema59848(node, depth + 1, ref remaining),MatchSchema47930(node, depth + 1, ref remaining),MatchSchema49787(node, depth + 1, ref remaining),MatchSchema39715(node, depth + 1, ref remaining),MatchSchema49670(node, depth + 1, ref remaining),MatchSchema63167(node, depth + 1, ref remaining),MatchSchema49847(node, depth + 1, ref remaining),MatchSchema61516(node, depth + 1, ref remaining),MatchSchema61526(node, depth + 1, ref remaining),MatchSchema51629(node, depth + 1, ref remaining),MatchSchema51639(node, depth + 1, ref remaining),MatchSchema580(node, depth + 1, ref remaining),MatchSchema50257(node, depth + 1, ref remaining),MatchSchema63156(node, depth + 1, ref remaining),MatchSchema47263(node, depth + 1, ref remaining),MatchSchema47006(node, depth + 1, ref remaining),MatchSchema46335(node, depth + 1, ref remaining),MatchSchema47958(node, depth + 1, ref remaining),MatchSchema46868(node, depth + 1, ref remaining),MatchSchema46730(node, depth + 1, ref remaining),MatchSchema46592(node, depth + 1, ref remaining),MatchSchema46025(node, depth + 1, ref remaining),MatchSchema46035(node, depth + 1, ref remaining),MatchSchema43753(node, depth + 1, ref remaining),MatchSchema43763(node, depth + 1, ref remaining),MatchSchema43773(node, depth + 1, ref remaining),MatchSchema59265(node, depth + 1, ref remaining),MatchSchema59132(node, depth + 1, ref remaining),MatchSchema59408(node, depth + 1, ref remaining),MatchSchema59438(node, depth + 1, ref remaining),MatchSchema59398(node, depth + 1, ref remaining),MatchSchema47902(node, depth + 1, ref remaining),MatchSchema44476(node, depth + 1, ref remaining),MatchSchema44486(node, depth + 1, ref remaining),MatchSchema44506(node, depth + 1, ref remaining),MatchSchema40(node, depth + 1, ref remaining),MatchSchema59801(node, depth + 1, ref remaining),MatchSchema52134(node, depth + 1, ref remaining),MatchSchema60204(node, depth + 1, ref remaining),MatchSchema42298(node, depth + 1, ref remaining),MatchSchema59874(node, depth + 1, ref remaining),MatchSchema47882(node, depth + 1, ref remaining),MatchSchema367(node, depth + 1, ref remaining),MatchSchema60348(node, depth + 1, ref remaining),MatchSchema58527(node, depth + 1, ref remaining),MatchSchema48099(node, depth + 1, ref remaining),MatchSchema47910(node, depth + 1, ref remaining),MatchSchema47892(node, depth + 1, ref remaining),MatchSchema47920(node, depth + 1, ref remaining),MatchSchema62860(node, depth + 1, ref remaining),MatchSchema19634(node, depth + 1, ref remaining),MatchSchema19624(node, depth + 1, ref remaining),MatchSchema19614(node, depth + 1, ref remaining),MatchSchema45991(node, depth + 1, ref remaining),MatchSchema59638(node, depth + 1, ref remaining),MatchSchema51790(node, depth + 1, ref remaining),MatchSchema604(node, depth + 1, ref remaining),MatchSchema524(node, depth + 1, ref remaining),MatchSchema58583(node, depth + 1, ref remaining),MatchSchema48138(node, depth + 1, ref remaining),MatchSchema61713(node, depth + 1, ref remaining),MatchSchema61703(node, depth + 1, ref remaining),MatchSchema61723(node, depth + 1, ref remaining),MatchSchema58593(node, depth + 1, ref remaining),MatchSchema19644(node, depth + 1, ref remaining),MatchSchema22448(node, depth + 1, ref remaining),MatchSchema46045(node, depth + 1, ref remaining),MatchSchema46055(node, depth + 1, ref remaining),MatchSchema62687(node, depth + 1, ref remaining),MatchSchema62697(node, depth + 1, ref remaining),MatchSchema48109(node, depth + 1, ref remaining),MatchSchema49777(node, depth + 1, ref remaining),MatchSchema41084(node, depth + 1, ref remaining),MatchSchema48089(node, depth + 1, ref remaining),MatchSchema61620(node, depth + 1, ref remaining),MatchSchema44496(node, depth + 1, ref remaining))); if (result == false) return false; }
 return result;
 }
 
@@ -71330,7 +71330,7 @@ return result;
 private static bool? MatchSchema59276(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
-{ result &= (One(MatchSchema20745(node, depth + 1, ref remaining),MatchSchema20756(node, depth + 1, ref remaining),MatchSchema20764(node, depth + 1, ref remaining),MatchSchema7769(node, depth + 1, ref remaining),MatchSchema59906(node, depth + 1, ref remaining),MatchSchema49914(node, depth + 1, ref remaining),MatchSchema61603(node, depth + 1, ref remaining),MatchSchema7777(node, depth + 1, ref remaining),MatchSchema59914(node, depth + 1, ref remaining),MatchSchema49928(node, depth + 1, ref remaining),MatchSchema61611(node, depth + 1, ref remaining),MatchSchema356(node, depth + 1, ref remaining),MatchSchema60336(node, depth + 1, ref remaining),MatchSchema49750(node, depth + 1, ref remaining),MatchSchema39997(node, depth + 1, ref remaining),MatchSchema59018(node, depth + 1, ref remaining),MatchSchema59038(node, depth + 1, ref remaining),MatchSchema59028(node, depth + 1, ref remaining),MatchSchema62666(node, depth + 1, ref remaining),MatchSchema48632(node, depth + 1, ref remaining),MatchSchema62676(node, depth + 1, ref remaining),MatchSchema20709(node, depth + 1, ref remaining),MatchSchema20861(node, depth + 1, ref remaining),MatchSchema4690(node, depth + 1, ref remaining),MatchSchema49936(node, depth + 1, ref remaining),MatchSchema51340(node, depth + 1, ref remaining),MatchSchema43843(node, depth + 1, ref remaining),MatchSchema43833(node, depth + 1, ref remaining),MatchSchema43861(node, depth + 1, ref remaining),MatchSchema43853(node, depth + 1, ref remaining),MatchSchema47940(node, depth + 1, ref remaining),MatchSchema47950(node, depth + 1, ref remaining),MatchSchema39807(node, depth + 1, ref remaining),MatchSchema51677(node, depth + 1, ref remaining),MatchSchema49331(node, depth + 1, ref remaining),MatchSchema49660(node, depth + 1, ref remaining),MatchSchema48171(node, depth + 1, ref remaining),MatchSchema48181(node, depth + 1, ref remaining),MatchSchema49691(node, depth + 1, ref remaining),MatchSchema49701(node, depth + 1, ref remaining),MatchSchema49877(node, depth + 1, ref remaining),MatchSchema59848(node, depth + 1, ref remaining),MatchSchema47930(node, depth + 1, ref remaining),MatchSchema49787(node, depth + 1, ref remaining),MatchSchema39715(node, depth + 1, ref remaining),MatchSchema49670(node, depth + 1, ref remaining),MatchSchema63166(node, depth + 1, ref remaining),MatchSchema49847(node, depth + 1, ref remaining),MatchSchema61515(node, depth + 1, ref remaining),MatchSchema61525(node, depth + 1, ref remaining),MatchSchema51629(node, depth + 1, ref remaining),MatchSchema51639(node, depth + 1, ref remaining),MatchSchema580(node, depth + 1, ref remaining),MatchSchema50257(node, depth + 1, ref remaining),MatchSchema63155(node, depth + 1, ref remaining),MatchSchema47263(node, depth + 1, ref remaining),MatchSchema47006(node, depth + 1, ref remaining),MatchSchema46335(node, depth + 1, ref remaining),MatchSchema47958(node, depth + 1, ref remaining),MatchSchema46868(node, depth + 1, ref remaining),MatchSchema46730(node, depth + 1, ref remaining),MatchSchema46592(node, depth + 1, ref remaining),MatchSchema46025(node, depth + 1, ref remaining),MatchSchema46035(node, depth + 1, ref remaining),MatchSchema43753(node, depth + 1, ref remaining),MatchSchema43763(node, depth + 1, ref remaining),MatchSchema43773(node, depth + 1, ref remaining),MatchSchema59265(node, depth + 1, ref remaining),MatchSchema59132(node, depth + 1, ref remaining),MatchSchema59408(node, depth + 1, ref remaining),MatchSchema59438(node, depth + 1, ref remaining),MatchSchema59398(node, depth + 1, ref remaining),MatchSchema47902(node, depth + 1, ref remaining),MatchSchema44476(node, depth + 1, ref remaining),MatchSchema44486(node, depth + 1, ref remaining),MatchSchema44506(node, depth + 1, ref remaining),MatchSchema40(node, depth + 1, ref remaining),MatchSchema59801(node, depth + 1, ref remaining),MatchSchema52134(node, depth + 1, ref remaining),MatchSchema60203(node, depth + 1, ref remaining),MatchSchema42298(node, depth + 1, ref remaining),MatchSchema59873(node, depth + 1, ref remaining),MatchSchema47882(node, depth + 1, ref remaining),MatchSchema367(node, depth + 1, ref remaining),MatchSchema60347(node, depth + 1, ref remaining),MatchSchema58527(node, depth + 1, ref remaining),MatchSchema48099(node, depth + 1, ref remaining),MatchSchema47910(node, depth + 1, ref remaining),MatchSchema47892(node, depth + 1, ref remaining),MatchSchema47920(node, depth + 1, ref remaining),MatchSchema62859(node, depth + 1, ref remaining),MatchSchema19634(node, depth + 1, ref remaining),MatchSchema19624(node, depth + 1, ref remaining),MatchSchema19614(node, depth + 1, ref remaining),MatchSchema45991(node, depth + 1, ref remaining),MatchSchema59638(node, depth + 1, ref remaining),MatchSchema51790(node, depth + 1, ref remaining),MatchSchema604(node, depth + 1, ref remaining),MatchSchema524(node, depth + 1, ref remaining),MatchSchema58583(node, depth + 1, ref remaining),MatchSchema48138(node, depth + 1, ref remaining),MatchSchema61712(node, depth + 1, ref remaining),MatchSchema61702(node, depth + 1, ref remaining),MatchSchema61722(node, depth + 1, ref remaining),MatchSchema58593(node, depth + 1, ref remaining),MatchSchema19644(node, depth + 1, ref remaining),MatchSchema22448(node, depth + 1, ref remaining),MatchSchema46045(node, depth + 1, ref remaining),MatchSchema46055(node, depth + 1, ref remaining),MatchSchema62686(node, depth + 1, ref remaining),MatchSchema62696(node, depth + 1, ref remaining),MatchSchema48109(node, depth + 1, ref remaining),MatchSchema49777(node, depth + 1, ref remaining),MatchSchema41084(node, depth + 1, ref remaining),MatchSchema48089(node, depth + 1, ref remaining),MatchSchema61619(node, depth + 1, ref remaining),MatchSchema44496(node, depth + 1, ref remaining))); if (result == false) return false; }
+{ result &= (One(MatchSchema20745(node, depth + 1, ref remaining),MatchSchema20756(node, depth + 1, ref remaining),MatchSchema20764(node, depth + 1, ref remaining),MatchSchema7769(node, depth + 1, ref remaining),MatchSchema59907(node, depth + 1, ref remaining),MatchSchema49914(node, depth + 1, ref remaining),MatchSchema61604(node, depth + 1, ref remaining),MatchSchema7777(node, depth + 1, ref remaining),MatchSchema59915(node, depth + 1, ref remaining),MatchSchema49928(node, depth + 1, ref remaining),MatchSchema61612(node, depth + 1, ref remaining),MatchSchema356(node, depth + 1, ref remaining),MatchSchema60337(node, depth + 1, ref remaining),MatchSchema49750(node, depth + 1, ref remaining),MatchSchema39997(node, depth + 1, ref remaining),MatchSchema59018(node, depth + 1, ref remaining),MatchSchema59038(node, depth + 1, ref remaining),MatchSchema59028(node, depth + 1, ref remaining),MatchSchema62667(node, depth + 1, ref remaining),MatchSchema48632(node, depth + 1, ref remaining),MatchSchema62677(node, depth + 1, ref remaining),MatchSchema20709(node, depth + 1, ref remaining),MatchSchema20861(node, depth + 1, ref remaining),MatchSchema4690(node, depth + 1, ref remaining),MatchSchema49936(node, depth + 1, ref remaining),MatchSchema51340(node, depth + 1, ref remaining),MatchSchema43843(node, depth + 1, ref remaining),MatchSchema43833(node, depth + 1, ref remaining),MatchSchema43861(node, depth + 1, ref remaining),MatchSchema43853(node, depth + 1, ref remaining),MatchSchema47940(node, depth + 1, ref remaining),MatchSchema47950(node, depth + 1, ref remaining),MatchSchema39807(node, depth + 1, ref remaining),MatchSchema51677(node, depth + 1, ref remaining),MatchSchema49331(node, depth + 1, ref remaining),MatchSchema49660(node, depth + 1, ref remaining),MatchSchema48171(node, depth + 1, ref remaining),MatchSchema48181(node, depth + 1, ref remaining),MatchSchema49691(node, depth + 1, ref remaining),MatchSchema49701(node, depth + 1, ref remaining),MatchSchema49877(node, depth + 1, ref remaining),MatchSchema59848(node, depth + 1, ref remaining),MatchSchema47930(node, depth + 1, ref remaining),MatchSchema49787(node, depth + 1, ref remaining),MatchSchema39715(node, depth + 1, ref remaining),MatchSchema49670(node, depth + 1, ref remaining),MatchSchema63167(node, depth + 1, ref remaining),MatchSchema49847(node, depth + 1, ref remaining),MatchSchema61516(node, depth + 1, ref remaining),MatchSchema61526(node, depth + 1, ref remaining),MatchSchema51629(node, depth + 1, ref remaining),MatchSchema51639(node, depth + 1, ref remaining),MatchSchema580(node, depth + 1, ref remaining),MatchSchema50257(node, depth + 1, ref remaining),MatchSchema63156(node, depth + 1, ref remaining),MatchSchema47263(node, depth + 1, ref remaining),MatchSchema47006(node, depth + 1, ref remaining),MatchSchema46335(node, depth + 1, ref remaining),MatchSchema47958(node, depth + 1, ref remaining),MatchSchema46868(node, depth + 1, ref remaining),MatchSchema46730(node, depth + 1, ref remaining),MatchSchema46592(node, depth + 1, ref remaining),MatchSchema46025(node, depth + 1, ref remaining),MatchSchema46035(node, depth + 1, ref remaining),MatchSchema43753(node, depth + 1, ref remaining),MatchSchema43763(node, depth + 1, ref remaining),MatchSchema43773(node, depth + 1, ref remaining),MatchSchema59265(node, depth + 1, ref remaining),MatchSchema59132(node, depth + 1, ref remaining),MatchSchema59408(node, depth + 1, ref remaining),MatchSchema59438(node, depth + 1, ref remaining),MatchSchema59398(node, depth + 1, ref remaining),MatchSchema47902(node, depth + 1, ref remaining),MatchSchema44476(node, depth + 1, ref remaining),MatchSchema44486(node, depth + 1, ref remaining),MatchSchema44506(node, depth + 1, ref remaining),MatchSchema40(node, depth + 1, ref remaining),MatchSchema59801(node, depth + 1, ref remaining),MatchSchema52134(node, depth + 1, ref remaining),MatchSchema60204(node, depth + 1, ref remaining),MatchSchema42298(node, depth + 1, ref remaining),MatchSchema59874(node, depth + 1, ref remaining),MatchSchema47882(node, depth + 1, ref remaining),MatchSchema367(node, depth + 1, ref remaining),MatchSchema60348(node, depth + 1, ref remaining),MatchSchema58527(node, depth + 1, ref remaining),MatchSchema48099(node, depth + 1, ref remaining),MatchSchema47910(node, depth + 1, ref remaining),MatchSchema47892(node, depth + 1, ref remaining),MatchSchema47920(node, depth + 1, ref remaining),MatchSchema62860(node, depth + 1, ref remaining),MatchSchema19634(node, depth + 1, ref remaining),MatchSchema19624(node, depth + 1, ref remaining),MatchSchema19614(node, depth + 1, ref remaining),MatchSchema45991(node, depth + 1, ref remaining),MatchSchema59638(node, depth + 1, ref remaining),MatchSchema51790(node, depth + 1, ref remaining),MatchSchema604(node, depth + 1, ref remaining),MatchSchema524(node, depth + 1, ref remaining),MatchSchema58583(node, depth + 1, ref remaining),MatchSchema48138(node, depth + 1, ref remaining),MatchSchema61713(node, depth + 1, ref remaining),MatchSchema61703(node, depth + 1, ref remaining),MatchSchema61723(node, depth + 1, ref remaining),MatchSchema58593(node, depth + 1, ref remaining),MatchSchema19644(node, depth + 1, ref remaining),MatchSchema22448(node, depth + 1, ref remaining),MatchSchema46045(node, depth + 1, ref remaining),MatchSchema46055(node, depth + 1, ref remaining),MatchSchema62687(node, depth + 1, ref remaining),MatchSchema62697(node, depth + 1, ref remaining),MatchSchema48109(node, depth + 1, ref remaining),MatchSchema49777(node, depth + 1, ref remaining),MatchSchema41084(node, depth + 1, ref remaining),MatchSchema48089(node, depth + 1, ref remaining),MatchSchema61620(node, depth + 1, ref remaining),MatchSchema44496(node, depth + 1, ref remaining))); if (result == false) return false; }
 return result;
 }
 
@@ -72401,7 +72401,7 @@ if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj
 { result &= (fields.ContainsKey("type")); if (result == false) return false; }
 { result &= (!fields.ContainsKey("allowedObjectTypeIds") ? (bool?)true : MatchSchema59860(fields["allowedObjectTypeIds"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("format") ? (bool?)true : MatchSchema59864(fields["format"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("type") ? (bool?)true : MatchSchema59928(fields["type"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("type") ? (bool?)true : MatchSchema59929(fields["type"], depth + 1, ref remaining)); if (result == false) return false; }
 }
 return result;
 }
@@ -72432,6 +72432,7 @@ bool? enumMatch = false;
 { enumMatch |= ((node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "DATE_TIME".Equals(text.GetValue(), global::System.StringComparison.Ordinal))); }
 { enumMatch |= ((node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "MONTH_AND_DAY".Equals(text.GetValue(), global::System.StringComparison.Ordinal))); }
 { enumMatch |= ((node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "OBJECT_COORDINATE".Equals(text.GetValue(), global::System.StringComparison.Ordinal))); }
+{ enumMatch |= ((node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "OBJECT_PROPERTY".Equals(text.GetValue(), global::System.StringComparison.Ordinal))); }
 { enumMatch |= ((node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "OBJECT_TYPE".Equals(text.GetValue(), global::System.StringComparison.Ordinal))); }
 { enumMatch |= ((node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "TIME".Equals(text.GetValue(), global::System.StringComparison.Ordinal))); }
 { enumMatch |= ((node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "URI".Equals(text.GetValue(), global::System.StringComparison.Ordinal))); }
@@ -72439,21 +72440,21 @@ bool? enumMatch = false;
 return result;
 }
 
-private static bool? MatchSchema59873(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema59874(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
 if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
 { result &= (fields.ContainsKey("operator")); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("inputs") ? (bool?)true : MatchSchema59875(fields["inputs"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema59880(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("propertyName") ? (bool?)true : MatchSchema59878(fields["propertyName"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("value") ? (bool?)true : MatchSchema59879(fields["value"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("inputs") ? (bool?)true : MatchSchema59876(fields["inputs"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema59881(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("propertyName") ? (bool?)true : MatchSchema59879(fields["propertyName"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("value") ? (bool?)true : MatchSchema59880(fields["value"], depth + 1, ref remaining)); if (result == false) return false; }
 }
 return result;
 }
 
-private static bool? MatchSchema59875(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema59876(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray); if (result == false) return false; }
@@ -72463,21 +72464,21 @@ if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray item
 return result;
 }
 
-private static bool? MatchSchema59878(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema59879(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 return result;
 }
 
-private static bool? MatchSchema59879(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema59880(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedInteger or global::Microsoft.Kiota.Abstractions.Serialization.UntypedLong or global::Microsoft.Kiota.Abstractions.Serialization.UntypedFloat or global::Microsoft.Kiota.Abstractions.Serialization.UntypedDouble or global::Microsoft.Kiota.Abstractions.Serialization.UntypedDecimal); if (result == false) return false; }
 return result;
 }
 
-private static bool? MatchSchema59880(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema59881(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
@@ -72487,7 +72488,7 @@ bool? enumMatch = false;
 return result;
 }
 
-private static bool? MatchSchema59883(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema59884(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
@@ -72498,48 +72499,41 @@ if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj
 { result &= (fields.ContainsKey("operatorName")); if (result == false) return false; }
 { result &= (fields.ContainsKey("propertyType")); if (result == false) return false; }
 { result &= (fields.ContainsKey("value")); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("defaultValue") ? (bool?)true : MatchSchema59885(fields["defaultValue"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("includeObjectsWithNoValueSet") ? (bool?)true : MatchSchema59886(fields["includeObjectsWithNoValueSet"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("operationType") ? (bool?)true : MatchSchema59887(fields["operationType"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema59894(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("operatorName") ? (bool?)true : MatchSchema59889(fields["operatorName"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("defaultValue") ? (bool?)true : MatchSchema59886(fields["defaultValue"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("includeObjectsWithNoValueSet") ? (bool?)true : MatchSchema59887(fields["includeObjectsWithNoValueSet"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("operationType") ? (bool?)true : MatchSchema59888(fields["operationType"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema59895(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("operatorName") ? (bool?)true : MatchSchema59890(fields["operatorName"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("propertyAspect") ? (bool?)true : MatchSchema52858(fields["propertyAspect"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("propertyType") ? (bool?)true : MatchSchema59925(fields["propertyType"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("renderSpec") ? (bool?)true : MatchSchema59892(fields["renderSpec"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("value") ? (bool?)true : MatchSchema59893(fields["value"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("propertyType") ? (bool?)true : MatchSchema59926(fields["propertyType"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("renderSpec") ? (bool?)true : MatchSchema59893(fields["renderSpec"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("value") ? (bool?)true : MatchSchema59894(fields["value"], depth + 1, ref remaining)); if (result == false) return false; }
 }
-return result;
-}
-
-private static bool? MatchSchema59885(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
-if (depth > 64 || --remaining < 0) return null;
-bool? result = true;
-{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 return result;
 }
 
 private static bool? MatchSchema59886(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
-{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedBoolean); if (result == false) return false; }
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 return result;
 }
 
 private static bool? MatchSchema59887(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
-{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedBoolean); if (result == false) return false; }
 return result;
 }
 
-private static bool? MatchSchema59889(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema59888(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 return result;
 }
 
-private static bool? MatchSchema59892(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema59890(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
@@ -72554,6 +72548,13 @@ return result;
 }
 
 private static bool? MatchSchema59894(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
+return result;
+}
+
+private static bool? MatchSchema59895(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
@@ -72572,23 +72573,16 @@ bool? enumMatch = false;
 return result;
 }
 
-private static bool? MatchSchema59906(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema59907(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
 if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
 { result &= (fields.ContainsKey("operator")); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema59911(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("propertyName") ? (bool?)true : MatchSchema59909(fields["propertyName"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("value") ? (bool?)true : MatchSchema59910(fields["value"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema59912(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("propertyName") ? (bool?)true : MatchSchema59910(fields["propertyName"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("value") ? (bool?)true : MatchSchema59911(fields["value"], depth + 1, ref remaining)); if (result == false) return false; }
 }
-return result;
-}
-
-private static bool? MatchSchema59909(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
-if (depth > 64 || --remaining < 0) return null;
-bool? result = true;
-{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 return result;
 }
 
@@ -72603,29 +72597,29 @@ private static bool? MatchSchema59911(global::Microsoft.Kiota.Abstractions.Seria
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
+return result;
+}
+
+private static bool? MatchSchema59912(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 bool? enumMatch = false;
 { enumMatch |= ((node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "STRING_PROPERTY_VARIABLE".Equals(text.GetValue(), global::System.StringComparison.Ordinal))); }
 { result &= (enumMatch); if (result == false) return false; }
 return result;
 }
 
-private static bool? MatchSchema59914(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema59915(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
 if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
 { result &= (fields.ContainsKey("operator")); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema59919(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("propertyName") ? (bool?)true : MatchSchema59917(fields["propertyName"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("value") ? (bool?)true : MatchSchema59918(fields["value"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema59920(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("propertyName") ? (bool?)true : MatchSchema59918(fields["propertyName"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("value") ? (bool?)true : MatchSchema59919(fields["value"], depth + 1, ref remaining)); if (result == false) return false; }
 }
-return result;
-}
-
-private static bool? MatchSchema59917(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
-if (depth > 64 || --remaining < 0) return null;
-bool? result = true;
-{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 return result;
 }
 
@@ -72640,13 +72634,20 @@ private static bool? MatchSchema59919(global::Microsoft.Kiota.Abstractions.Seria
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
+return result;
+}
+
+private static bool? MatchSchema59920(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 bool? enumMatch = false;
 { enumMatch |= ((node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "STRING_TARGET_PROPERTY_VARIABLE".Equals(text.GetValue(), global::System.StringComparison.Ordinal))); }
 { result &= (enumMatch); if (result == false) return false; }
 return result;
 }
 
-private static bool? MatchSchema59922(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema59923(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
@@ -72656,7 +72657,7 @@ bool? enumMatch = false;
 return result;
 }
 
-private static bool? MatchSchema59925(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema59926(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
@@ -72666,7 +72667,7 @@ bool? enumMatch = false;
 return result;
 }
 
-private static bool? MatchSchema59928(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema59929(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
@@ -72676,7 +72677,7 @@ bool? enumMatch = false;
 return result;
 }
 
-private static bool? MatchSchema59931(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema59932(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
@@ -72691,30 +72692,30 @@ if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj
 { result &= (!fields.ContainsKey("backgroundColor") ? (bool?)true : MatchSchema58819(fields["backgroundColor"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("backgroundGradient") ? (bool?)true : MatchSchema46001(fields["backgroundGradient"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("backgroundImage") ? (bool?)true : MatchSchema3464(fields["backgroundImage"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("breakpointStyles") ? (bool?)true : MatchSchema59941(fields["breakpointStyles"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("flexboxPositioning") ? (bool?)true : MatchSchema59943(fields["flexboxPositioning"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("forceFullWidthSection") ? (bool?)true : MatchSchema59938(fields["forceFullWidthSection"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("maxWidthSectionCentering") ? (bool?)true : MatchSchema59939(fields["maxWidthSectionCentering"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("verticalAlignment") ? (bool?)true : MatchSchema59954(fields["verticalAlignment"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("breakpointStyles") ? (bool?)true : MatchSchema59942(fields["breakpointStyles"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("flexboxPositioning") ? (bool?)true : MatchSchema59944(fields["flexboxPositioning"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("forceFullWidthSection") ? (bool?)true : MatchSchema59939(fields["forceFullWidthSection"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("maxWidthSectionCentering") ? (bool?)true : MatchSchema59940(fields["maxWidthSectionCentering"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("verticalAlignment") ? (bool?)true : MatchSchema59955(fields["verticalAlignment"], depth + 1, ref remaining)); if (result == false) return false; }
 }
-return result;
-}
-
-private static bool? MatchSchema59938(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
-if (depth > 64 || --remaining < 0) return null;
-bool? result = true;
-{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedBoolean); if (result == false) return false; }
 return result;
 }
 
 private static bool? MatchSchema59939(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedBoolean); if (result == false) return false; }
+return result;
+}
+
+private static bool? MatchSchema59940(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
 { result &= (Number(node) is decimal integer ? integer % 1 == 0 : IsNumber(node) ? (bool?)null : false); if (result == false) return false; }
 return result;
 }
 
-private static bool? MatchSchema59941(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema59942(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
@@ -72726,7 +72727,7 @@ foreach (var field in fields) {
 return result;
 }
 
-private static bool? MatchSchema59943(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema59944(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
@@ -72744,7 +72745,7 @@ bool? enumMatch = false;
 return result;
 }
 
-private static bool? MatchSchema59954(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema59955(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
@@ -72756,7 +72757,7 @@ bool? enumMatch = false;
 return result;
 }
 
-private static bool? MatchSchema60135(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema60136(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
@@ -72813,23 +72814,23 @@ bool? enumMatch = false;
 return result;
 }
 
-private static bool? MatchSchema60203(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema60204(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
 if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
 { result &= (fields.ContainsKey("operator")); if (result == false) return false; }
 { result &= (fields.ContainsKey("stringToCheck")); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("inputs") ? (bool?)true : MatchSchema60205(fields["inputs"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema60211(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("propertyName") ? (bool?)true : MatchSchema60208(fields["propertyName"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("stringToCheck") ? (bool?)true : MatchSchema60214(fields["stringToCheck"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("value") ? (bool?)true : MatchSchema60210(fields["value"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("inputs") ? (bool?)true : MatchSchema60206(fields["inputs"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema60212(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("propertyName") ? (bool?)true : MatchSchema60209(fields["propertyName"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("stringToCheck") ? (bool?)true : MatchSchema60215(fields["stringToCheck"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("value") ? (bool?)true : MatchSchema60211(fields["value"], depth + 1, ref remaining)); if (result == false) return false; }
 }
 return result;
 }
 
-private static bool? MatchSchema60205(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema60206(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray); if (result == false) return false; }
@@ -72839,14 +72840,7 @@ if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray item
 return result;
 }
 
-private static bool? MatchSchema60208(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
-if (depth > 64 || --remaining < 0) return null;
-bool? result = true;
-{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
-return result;
-}
-
-private static bool? MatchSchema60210(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema60209(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
@@ -72857,43 +72851,50 @@ private static bool? MatchSchema60211(global::Microsoft.Kiota.Abstractions.Seria
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
+return result;
+}
+
+private static bool? MatchSchema60212(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 bool? enumMatch = false;
 { enumMatch |= ((node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "SUBSTRING".Equals(text.GetValue(), global::System.StringComparison.Ordinal))); }
 { result &= (enumMatch); if (result == false) return false; }
 return result;
 }
 
-private static bool? MatchSchema60214(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema60215(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
-{ result &= (One(MatchSchema20745(node, depth + 1, ref remaining),MatchSchema20756(node, depth + 1, ref remaining),MatchSchema20764(node, depth + 1, ref remaining),MatchSchema7769(node, depth + 1, ref remaining),MatchSchema59906(node, depth + 1, ref remaining),MatchSchema49914(node, depth + 1, ref remaining),MatchSchema61603(node, depth + 1, ref remaining),MatchSchema7777(node, depth + 1, ref remaining),MatchSchema59914(node, depth + 1, ref remaining),MatchSchema49928(node, depth + 1, ref remaining),MatchSchema61611(node, depth + 1, ref remaining),MatchSchema356(node, depth + 1, ref remaining),MatchSchema60336(node, depth + 1, ref remaining),MatchSchema49750(node, depth + 1, ref remaining),MatchSchema39997(node, depth + 1, ref remaining),MatchSchema59018(node, depth + 1, ref remaining),MatchSchema59038(node, depth + 1, ref remaining),MatchSchema59028(node, depth + 1, ref remaining),MatchSchema62666(node, depth + 1, ref remaining),MatchSchema48632(node, depth + 1, ref remaining),MatchSchema62676(node, depth + 1, ref remaining),MatchSchema20709(node, depth + 1, ref remaining),MatchSchema20861(node, depth + 1, ref remaining),MatchSchema4690(node, depth + 1, ref remaining),MatchSchema49936(node, depth + 1, ref remaining),MatchSchema51340(node, depth + 1, ref remaining),MatchSchema43843(node, depth + 1, ref remaining),MatchSchema43833(node, depth + 1, ref remaining),MatchSchema43861(node, depth + 1, ref remaining),MatchSchema43853(node, depth + 1, ref remaining),MatchSchema47940(node, depth + 1, ref remaining),MatchSchema47950(node, depth + 1, ref remaining),MatchSchema39807(node, depth + 1, ref remaining),MatchSchema51677(node, depth + 1, ref remaining),MatchSchema49331(node, depth + 1, ref remaining),MatchSchema49660(node, depth + 1, ref remaining),MatchSchema48171(node, depth + 1, ref remaining),MatchSchema48181(node, depth + 1, ref remaining),MatchSchema49691(node, depth + 1, ref remaining),MatchSchema49701(node, depth + 1, ref remaining),MatchSchema49877(node, depth + 1, ref remaining),MatchSchema59848(node, depth + 1, ref remaining),MatchSchema47930(node, depth + 1, ref remaining),MatchSchema49787(node, depth + 1, ref remaining),MatchSchema39715(node, depth + 1, ref remaining),MatchSchema49670(node, depth + 1, ref remaining),MatchSchema63166(node, depth + 1, ref remaining),MatchSchema49847(node, depth + 1, ref remaining),MatchSchema61515(node, depth + 1, ref remaining),MatchSchema61525(node, depth + 1, ref remaining),MatchSchema51629(node, depth + 1, ref remaining),MatchSchema51639(node, depth + 1, ref remaining),MatchSchema580(node, depth + 1, ref remaining),MatchSchema50257(node, depth + 1, ref remaining),MatchSchema63155(node, depth + 1, ref remaining),MatchSchema47263(node, depth + 1, ref remaining),MatchSchema47006(node, depth + 1, ref remaining),MatchSchema46335(node, depth + 1, ref remaining),MatchSchema47958(node, depth + 1, ref remaining),MatchSchema46868(node, depth + 1, ref remaining),MatchSchema46730(node, depth + 1, ref remaining),MatchSchema46592(node, depth + 1, ref remaining),MatchSchema46025(node, depth + 1, ref remaining),MatchSchema46035(node, depth + 1, ref remaining),MatchSchema43753(node, depth + 1, ref remaining),MatchSchema43763(node, depth + 1, ref remaining),MatchSchema43773(node, depth + 1, ref remaining),MatchSchema59265(node, depth + 1, ref remaining),MatchSchema59132(node, depth + 1, ref remaining),MatchSchema59408(node, depth + 1, ref remaining),MatchSchema59438(node, depth + 1, ref remaining),MatchSchema59398(node, depth + 1, ref remaining),MatchSchema47902(node, depth + 1, ref remaining),MatchSchema44476(node, depth + 1, ref remaining),MatchSchema44486(node, depth + 1, ref remaining),MatchSchema44506(node, depth + 1, ref remaining),MatchSchema40(node, depth + 1, ref remaining),MatchSchema59801(node, depth + 1, ref remaining),MatchSchema52134(node, depth + 1, ref remaining),MatchSchema60203(node, depth + 1, ref remaining),MatchSchema42298(node, depth + 1, ref remaining),MatchSchema59873(node, depth + 1, ref remaining),MatchSchema47882(node, depth + 1, ref remaining),MatchSchema367(node, depth + 1, ref remaining),MatchSchema60347(node, depth + 1, ref remaining),MatchSchema58527(node, depth + 1, ref remaining),MatchSchema48099(node, depth + 1, ref remaining),MatchSchema47910(node, depth + 1, ref remaining),MatchSchema47892(node, depth + 1, ref remaining),MatchSchema47920(node, depth + 1, ref remaining),MatchSchema62859(node, depth + 1, ref remaining),MatchSchema19634(node, depth + 1, ref remaining),MatchSchema19624(node, depth + 1, ref remaining),MatchSchema19614(node, depth + 1, ref remaining),MatchSchema45991(node, depth + 1, ref remaining),MatchSchema59638(node, depth + 1, ref remaining),MatchSchema51790(node, depth + 1, ref remaining),MatchSchema604(node, depth + 1, ref remaining),MatchSchema524(node, depth + 1, ref remaining),MatchSchema58583(node, depth + 1, ref remaining),MatchSchema48138(node, depth + 1, ref remaining),MatchSchema61712(node, depth + 1, ref remaining),MatchSchema61702(node, depth + 1, ref remaining),MatchSchema61722(node, depth + 1, ref remaining),MatchSchema58593(node, depth + 1, ref remaining),MatchSchema19644(node, depth + 1, ref remaining),MatchSchema22448(node, depth + 1, ref remaining),MatchSchema46045(node, depth + 1, ref remaining),MatchSchema46055(node, depth + 1, ref remaining),MatchSchema62686(node, depth + 1, ref remaining),MatchSchema62696(node, depth + 1, ref remaining),MatchSchema48109(node, depth + 1, ref remaining),MatchSchema49777(node, depth + 1, ref remaining),MatchSchema41084(node, depth + 1, ref remaining),MatchSchema48089(node, depth + 1, ref remaining),MatchSchema61619(node, depth + 1, ref remaining),MatchSchema44496(node, depth + 1, ref remaining))); if (result == false) return false; }
+{ result &= (One(MatchSchema20745(node, depth + 1, ref remaining),MatchSchema20756(node, depth + 1, ref remaining),MatchSchema20764(node, depth + 1, ref remaining),MatchSchema7769(node, depth + 1, ref remaining),MatchSchema59907(node, depth + 1, ref remaining),MatchSchema49914(node, depth + 1, ref remaining),MatchSchema61604(node, depth + 1, ref remaining),MatchSchema7777(node, depth + 1, ref remaining),MatchSchema59915(node, depth + 1, ref remaining),MatchSchema49928(node, depth + 1, ref remaining),MatchSchema61612(node, depth + 1, ref remaining),MatchSchema356(node, depth + 1, ref remaining),MatchSchema60337(node, depth + 1, ref remaining),MatchSchema49750(node, depth + 1, ref remaining),MatchSchema39997(node, depth + 1, ref remaining),MatchSchema59018(node, depth + 1, ref remaining),MatchSchema59038(node, depth + 1, ref remaining),MatchSchema59028(node, depth + 1, ref remaining),MatchSchema62667(node, depth + 1, ref remaining),MatchSchema48632(node, depth + 1, ref remaining),MatchSchema62677(node, depth + 1, ref remaining),MatchSchema20709(node, depth + 1, ref remaining),MatchSchema20861(node, depth + 1, ref remaining),MatchSchema4690(node, depth + 1, ref remaining),MatchSchema49936(node, depth + 1, ref remaining),MatchSchema51340(node, depth + 1, ref remaining),MatchSchema43843(node, depth + 1, ref remaining),MatchSchema43833(node, depth + 1, ref remaining),MatchSchema43861(node, depth + 1, ref remaining),MatchSchema43853(node, depth + 1, ref remaining),MatchSchema47940(node, depth + 1, ref remaining),MatchSchema47950(node, depth + 1, ref remaining),MatchSchema39807(node, depth + 1, ref remaining),MatchSchema51677(node, depth + 1, ref remaining),MatchSchema49331(node, depth + 1, ref remaining),MatchSchema49660(node, depth + 1, ref remaining),MatchSchema48171(node, depth + 1, ref remaining),MatchSchema48181(node, depth + 1, ref remaining),MatchSchema49691(node, depth + 1, ref remaining),MatchSchema49701(node, depth + 1, ref remaining),MatchSchema49877(node, depth + 1, ref remaining),MatchSchema59848(node, depth + 1, ref remaining),MatchSchema47930(node, depth + 1, ref remaining),MatchSchema49787(node, depth + 1, ref remaining),MatchSchema39715(node, depth + 1, ref remaining),MatchSchema49670(node, depth + 1, ref remaining),MatchSchema63167(node, depth + 1, ref remaining),MatchSchema49847(node, depth + 1, ref remaining),MatchSchema61516(node, depth + 1, ref remaining),MatchSchema61526(node, depth + 1, ref remaining),MatchSchema51629(node, depth + 1, ref remaining),MatchSchema51639(node, depth + 1, ref remaining),MatchSchema580(node, depth + 1, ref remaining),MatchSchema50257(node, depth + 1, ref remaining),MatchSchema63156(node, depth + 1, ref remaining),MatchSchema47263(node, depth + 1, ref remaining),MatchSchema47006(node, depth + 1, ref remaining),MatchSchema46335(node, depth + 1, ref remaining),MatchSchema47958(node, depth + 1, ref remaining),MatchSchema46868(node, depth + 1, ref remaining),MatchSchema46730(node, depth + 1, ref remaining),MatchSchema46592(node, depth + 1, ref remaining),MatchSchema46025(node, depth + 1, ref remaining),MatchSchema46035(node, depth + 1, ref remaining),MatchSchema43753(node, depth + 1, ref remaining),MatchSchema43763(node, depth + 1, ref remaining),MatchSchema43773(node, depth + 1, ref remaining),MatchSchema59265(node, depth + 1, ref remaining),MatchSchema59132(node, depth + 1, ref remaining),MatchSchema59408(node, depth + 1, ref remaining),MatchSchema59438(node, depth + 1, ref remaining),MatchSchema59398(node, depth + 1, ref remaining),MatchSchema47902(node, depth + 1, ref remaining),MatchSchema44476(node, depth + 1, ref remaining),MatchSchema44486(node, depth + 1, ref remaining),MatchSchema44506(node, depth + 1, ref remaining),MatchSchema40(node, depth + 1, ref remaining),MatchSchema59801(node, depth + 1, ref remaining),MatchSchema52134(node, depth + 1, ref remaining),MatchSchema60204(node, depth + 1, ref remaining),MatchSchema42298(node, depth + 1, ref remaining),MatchSchema59874(node, depth + 1, ref remaining),MatchSchema47882(node, depth + 1, ref remaining),MatchSchema367(node, depth + 1, ref remaining),MatchSchema60348(node, depth + 1, ref remaining),MatchSchema58527(node, depth + 1, ref remaining),MatchSchema48099(node, depth + 1, ref remaining),MatchSchema47910(node, depth + 1, ref remaining),MatchSchema47892(node, depth + 1, ref remaining),MatchSchema47920(node, depth + 1, ref remaining),MatchSchema62860(node, depth + 1, ref remaining),MatchSchema19634(node, depth + 1, ref remaining),MatchSchema19624(node, depth + 1, ref remaining),MatchSchema19614(node, depth + 1, ref remaining),MatchSchema45991(node, depth + 1, ref remaining),MatchSchema59638(node, depth + 1, ref remaining),MatchSchema51790(node, depth + 1, ref remaining),MatchSchema604(node, depth + 1, ref remaining),MatchSchema524(node, depth + 1, ref remaining),MatchSchema58583(node, depth + 1, ref remaining),MatchSchema48138(node, depth + 1, ref remaining),MatchSchema61713(node, depth + 1, ref remaining),MatchSchema61703(node, depth + 1, ref remaining),MatchSchema61723(node, depth + 1, ref remaining),MatchSchema58593(node, depth + 1, ref remaining),MatchSchema19644(node, depth + 1, ref remaining),MatchSchema22448(node, depth + 1, ref remaining),MatchSchema46045(node, depth + 1, ref remaining),MatchSchema46055(node, depth + 1, ref remaining),MatchSchema62687(node, depth + 1, ref remaining),MatchSchema62697(node, depth + 1, ref remaining),MatchSchema48109(node, depth + 1, ref remaining),MatchSchema49777(node, depth + 1, ref remaining),MatchSchema41084(node, depth + 1, ref remaining),MatchSchema48089(node, depth + 1, ref remaining),MatchSchema61620(node, depth + 1, ref remaining),MatchSchema44496(node, depth + 1, ref remaining))); if (result == false) return false; }
 return result;
 }
 
-private static bool? MatchSchema60336(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema60337(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
 if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
 { result &= (fields.ContainsKey("enclosedInParentheses")); if (result == false) return false; }
 { result &= (fields.ContainsKey("operator")); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("enclosedInParentheses") ? (bool?)true : MatchSchema60338(fields["enclosedInParentheses"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("inputs") ? (bool?)true : MatchSchema60339(fields["inputs"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema60344(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("propertyName") ? (bool?)true : MatchSchema60342(fields["propertyName"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("value") ? (bool?)true : MatchSchema60343(fields["value"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("enclosedInParentheses") ? (bool?)true : MatchSchema60339(fields["enclosedInParentheses"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("inputs") ? (bool?)true : MatchSchema60340(fields["inputs"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema60345(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("propertyName") ? (bool?)true : MatchSchema60343(fields["propertyName"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("value") ? (bool?)true : MatchSchema60344(fields["value"], depth + 1, ref remaining)); if (result == false) return false; }
 }
 return result;
 }
 
-private static bool? MatchSchema60338(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema60339(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedBoolean); if (result == false) return false; }
 return result;
 }
 
-private static bool? MatchSchema60339(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema60340(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray); if (result == false) return false; }
@@ -72903,21 +72904,21 @@ if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray item
 return result;
 }
 
-private static bool? MatchSchema60342(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema60343(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 return result;
 }
 
-private static bool? MatchSchema60343(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema60344(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedInteger or global::Microsoft.Kiota.Abstractions.Serialization.UntypedLong or global::Microsoft.Kiota.Abstractions.Serialization.UntypedFloat or global::Microsoft.Kiota.Abstractions.Serialization.UntypedDouble or global::Microsoft.Kiota.Abstractions.Serialization.UntypedDecimal); if (result == false) return false; }
 return result;
 }
 
-private static bool? MatchSchema60344(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema60345(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
@@ -72927,23 +72928,23 @@ bool? enumMatch = false;
 return result;
 }
 
-private static bool? MatchSchema60347(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema60348(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
 if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
 { result &= (fields.ContainsKey("operator")); if (result == false) return false; }
 { result &= (fields.ContainsKey("stringToCheck")); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("inputs") ? (bool?)true : MatchSchema60349(fields["inputs"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema60355(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("propertyName") ? (bool?)true : MatchSchema60352(fields["propertyName"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("stringToCheck") ? (bool?)true : MatchSchema60358(fields["stringToCheck"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("value") ? (bool?)true : MatchSchema60354(fields["value"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("inputs") ? (bool?)true : MatchSchema60350(fields["inputs"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema60356(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("propertyName") ? (bool?)true : MatchSchema60353(fields["propertyName"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("stringToCheck") ? (bool?)true : MatchSchema60359(fields["stringToCheck"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("value") ? (bool?)true : MatchSchema60355(fields["value"], depth + 1, ref remaining)); if (result == false) return false; }
 }
 return result;
 }
 
-private static bool? MatchSchema60349(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema60350(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray); if (result == false) return false; }
@@ -72953,21 +72954,21 @@ if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray item
 return result;
 }
 
-private static bool? MatchSchema60352(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema60353(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 return result;
 }
 
-private static bool? MatchSchema60354(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema60355(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedInteger or global::Microsoft.Kiota.Abstractions.Serialization.UntypedLong or global::Microsoft.Kiota.Abstractions.Serialization.UntypedFloat or global::Microsoft.Kiota.Abstractions.Serialization.UntypedDouble or global::Microsoft.Kiota.Abstractions.Serialization.UntypedDecimal); if (result == false) return false; }
 return result;
 }
 
-private static bool? MatchSchema60355(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema60356(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
@@ -72977,14 +72978,14 @@ bool? enumMatch = false;
 return result;
 }
 
-private static bool? MatchSchema60358(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema60359(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
-{ result &= (One(MatchSchema20745(node, depth + 1, ref remaining),MatchSchema20756(node, depth + 1, ref remaining),MatchSchema20764(node, depth + 1, ref remaining),MatchSchema7769(node, depth + 1, ref remaining),MatchSchema59906(node, depth + 1, ref remaining),MatchSchema49914(node, depth + 1, ref remaining),MatchSchema61603(node, depth + 1, ref remaining),MatchSchema7777(node, depth + 1, ref remaining),MatchSchema59914(node, depth + 1, ref remaining),MatchSchema49928(node, depth + 1, ref remaining),MatchSchema61611(node, depth + 1, ref remaining),MatchSchema356(node, depth + 1, ref remaining),MatchSchema60336(node, depth + 1, ref remaining),MatchSchema49750(node, depth + 1, ref remaining),MatchSchema39997(node, depth + 1, ref remaining),MatchSchema59018(node, depth + 1, ref remaining),MatchSchema59038(node, depth + 1, ref remaining),MatchSchema59028(node, depth + 1, ref remaining),MatchSchema62666(node, depth + 1, ref remaining),MatchSchema48632(node, depth + 1, ref remaining),MatchSchema62676(node, depth + 1, ref remaining),MatchSchema20709(node, depth + 1, ref remaining),MatchSchema20861(node, depth + 1, ref remaining),MatchSchema4690(node, depth + 1, ref remaining),MatchSchema49936(node, depth + 1, ref remaining),MatchSchema51340(node, depth + 1, ref remaining),MatchSchema43843(node, depth + 1, ref remaining),MatchSchema43833(node, depth + 1, ref remaining),MatchSchema43861(node, depth + 1, ref remaining),MatchSchema43853(node, depth + 1, ref remaining),MatchSchema47940(node, depth + 1, ref remaining),MatchSchema47950(node, depth + 1, ref remaining),MatchSchema39807(node, depth + 1, ref remaining),MatchSchema51677(node, depth + 1, ref remaining),MatchSchema49331(node, depth + 1, ref remaining),MatchSchema49660(node, depth + 1, ref remaining),MatchSchema48171(node, depth + 1, ref remaining),MatchSchema48181(node, depth + 1, ref remaining),MatchSchema49691(node, depth + 1, ref remaining),MatchSchema49701(node, depth + 1, ref remaining),MatchSchema49877(node, depth + 1, ref remaining),MatchSchema59848(node, depth + 1, ref remaining),MatchSchema47930(node, depth + 1, ref remaining),MatchSchema49787(node, depth + 1, ref remaining),MatchSchema39715(node, depth + 1, ref remaining),MatchSchema49670(node, depth + 1, ref remaining),MatchSchema63166(node, depth + 1, ref remaining),MatchSchema49847(node, depth + 1, ref remaining),MatchSchema61515(node, depth + 1, ref remaining),MatchSchema61525(node, depth + 1, ref remaining),MatchSchema51629(node, depth + 1, ref remaining),MatchSchema51639(node, depth + 1, ref remaining),MatchSchema580(node, depth + 1, ref remaining),MatchSchema50257(node, depth + 1, ref remaining),MatchSchema63155(node, depth + 1, ref remaining),MatchSchema47263(node, depth + 1, ref remaining),MatchSchema47006(node, depth + 1, ref remaining),MatchSchema46335(node, depth + 1, ref remaining),MatchSchema47958(node, depth + 1, ref remaining),MatchSchema46868(node, depth + 1, ref remaining),MatchSchema46730(node, depth + 1, ref remaining),MatchSchema46592(node, depth + 1, ref remaining),MatchSchema46025(node, depth + 1, ref remaining),MatchSchema46035(node, depth + 1, ref remaining),MatchSchema43753(node, depth + 1, ref remaining),MatchSchema43763(node, depth + 1, ref remaining),MatchSchema43773(node, depth + 1, ref remaining),MatchSchema59265(node, depth + 1, ref remaining),MatchSchema59132(node, depth + 1, ref remaining),MatchSchema59408(node, depth + 1, ref remaining),MatchSchema59438(node, depth + 1, ref remaining),MatchSchema59398(node, depth + 1, ref remaining),MatchSchema47902(node, depth + 1, ref remaining),MatchSchema44476(node, depth + 1, ref remaining),MatchSchema44486(node, depth + 1, ref remaining),MatchSchema44506(node, depth + 1, ref remaining),MatchSchema40(node, depth + 1, ref remaining),MatchSchema59801(node, depth + 1, ref remaining),MatchSchema52134(node, depth + 1, ref remaining),MatchSchema60203(node, depth + 1, ref remaining),MatchSchema42298(node, depth + 1, ref remaining),MatchSchema59873(node, depth + 1, ref remaining),MatchSchema47882(node, depth + 1, ref remaining),MatchSchema367(node, depth + 1, ref remaining),MatchSchema60347(node, depth + 1, ref remaining),MatchSchema58527(node, depth + 1, ref remaining),MatchSchema48099(node, depth + 1, ref remaining),MatchSchema47910(node, depth + 1, ref remaining),MatchSchema47892(node, depth + 1, ref remaining),MatchSchema47920(node, depth + 1, ref remaining),MatchSchema62859(node, depth + 1, ref remaining),MatchSchema19634(node, depth + 1, ref remaining),MatchSchema19624(node, depth + 1, ref remaining),MatchSchema19614(node, depth + 1, ref remaining),MatchSchema45991(node, depth + 1, ref remaining),MatchSchema59638(node, depth + 1, ref remaining),MatchSchema51790(node, depth + 1, ref remaining),MatchSchema604(node, depth + 1, ref remaining),MatchSchema524(node, depth + 1, ref remaining),MatchSchema58583(node, depth + 1, ref remaining),MatchSchema48138(node, depth + 1, ref remaining),MatchSchema61712(node, depth + 1, ref remaining),MatchSchema61702(node, depth + 1, ref remaining),MatchSchema61722(node, depth + 1, ref remaining),MatchSchema58593(node, depth + 1, ref remaining),MatchSchema19644(node, depth + 1, ref remaining),MatchSchema22448(node, depth + 1, ref remaining),MatchSchema46045(node, depth + 1, ref remaining),MatchSchema46055(node, depth + 1, ref remaining),MatchSchema62686(node, depth + 1, ref remaining),MatchSchema62696(node, depth + 1, ref remaining),MatchSchema48109(node, depth + 1, ref remaining),MatchSchema49777(node, depth + 1, ref remaining),MatchSchema41084(node, depth + 1, ref remaining),MatchSchema48089(node, depth + 1, ref remaining),MatchSchema61619(node, depth + 1, ref remaining),MatchSchema44496(node, depth + 1, ref remaining))); if (result == false) return false; }
+{ result &= (One(MatchSchema20745(node, depth + 1, ref remaining),MatchSchema20756(node, depth + 1, ref remaining),MatchSchema20764(node, depth + 1, ref remaining),MatchSchema7769(node, depth + 1, ref remaining),MatchSchema59907(node, depth + 1, ref remaining),MatchSchema49914(node, depth + 1, ref remaining),MatchSchema61604(node, depth + 1, ref remaining),MatchSchema7777(node, depth + 1, ref remaining),MatchSchema59915(node, depth + 1, ref remaining),MatchSchema49928(node, depth + 1, ref remaining),MatchSchema61612(node, depth + 1, ref remaining),MatchSchema356(node, depth + 1, ref remaining),MatchSchema60337(node, depth + 1, ref remaining),MatchSchema49750(node, depth + 1, ref remaining),MatchSchema39997(node, depth + 1, ref remaining),MatchSchema59018(node, depth + 1, ref remaining),MatchSchema59038(node, depth + 1, ref remaining),MatchSchema59028(node, depth + 1, ref remaining),MatchSchema62667(node, depth + 1, ref remaining),MatchSchema48632(node, depth + 1, ref remaining),MatchSchema62677(node, depth + 1, ref remaining),MatchSchema20709(node, depth + 1, ref remaining),MatchSchema20861(node, depth + 1, ref remaining),MatchSchema4690(node, depth + 1, ref remaining),MatchSchema49936(node, depth + 1, ref remaining),MatchSchema51340(node, depth + 1, ref remaining),MatchSchema43843(node, depth + 1, ref remaining),MatchSchema43833(node, depth + 1, ref remaining),MatchSchema43861(node, depth + 1, ref remaining),MatchSchema43853(node, depth + 1, ref remaining),MatchSchema47940(node, depth + 1, ref remaining),MatchSchema47950(node, depth + 1, ref remaining),MatchSchema39807(node, depth + 1, ref remaining),MatchSchema51677(node, depth + 1, ref remaining),MatchSchema49331(node, depth + 1, ref remaining),MatchSchema49660(node, depth + 1, ref remaining),MatchSchema48171(node, depth + 1, ref remaining),MatchSchema48181(node, depth + 1, ref remaining),MatchSchema49691(node, depth + 1, ref remaining),MatchSchema49701(node, depth + 1, ref remaining),MatchSchema49877(node, depth + 1, ref remaining),MatchSchema59848(node, depth + 1, ref remaining),MatchSchema47930(node, depth + 1, ref remaining),MatchSchema49787(node, depth + 1, ref remaining),MatchSchema39715(node, depth + 1, ref remaining),MatchSchema49670(node, depth + 1, ref remaining),MatchSchema63167(node, depth + 1, ref remaining),MatchSchema49847(node, depth + 1, ref remaining),MatchSchema61516(node, depth + 1, ref remaining),MatchSchema61526(node, depth + 1, ref remaining),MatchSchema51629(node, depth + 1, ref remaining),MatchSchema51639(node, depth + 1, ref remaining),MatchSchema580(node, depth + 1, ref remaining),MatchSchema50257(node, depth + 1, ref remaining),MatchSchema63156(node, depth + 1, ref remaining),MatchSchema47263(node, depth + 1, ref remaining),MatchSchema47006(node, depth + 1, ref remaining),MatchSchema46335(node, depth + 1, ref remaining),MatchSchema47958(node, depth + 1, ref remaining),MatchSchema46868(node, depth + 1, ref remaining),MatchSchema46730(node, depth + 1, ref remaining),MatchSchema46592(node, depth + 1, ref remaining),MatchSchema46025(node, depth + 1, ref remaining),MatchSchema46035(node, depth + 1, ref remaining),MatchSchema43753(node, depth + 1, ref remaining),MatchSchema43763(node, depth + 1, ref remaining),MatchSchema43773(node, depth + 1, ref remaining),MatchSchema59265(node, depth + 1, ref remaining),MatchSchema59132(node, depth + 1, ref remaining),MatchSchema59408(node, depth + 1, ref remaining),MatchSchema59438(node, depth + 1, ref remaining),MatchSchema59398(node, depth + 1, ref remaining),MatchSchema47902(node, depth + 1, ref remaining),MatchSchema44476(node, depth + 1, ref remaining),MatchSchema44486(node, depth + 1, ref remaining),MatchSchema44506(node, depth + 1, ref remaining),MatchSchema40(node, depth + 1, ref remaining),MatchSchema59801(node, depth + 1, ref remaining),MatchSchema52134(node, depth + 1, ref remaining),MatchSchema60204(node, depth + 1, ref remaining),MatchSchema42298(node, depth + 1, ref remaining),MatchSchema59874(node, depth + 1, ref remaining),MatchSchema47882(node, depth + 1, ref remaining),MatchSchema367(node, depth + 1, ref remaining),MatchSchema60348(node, depth + 1, ref remaining),MatchSchema58527(node, depth + 1, ref remaining),MatchSchema48099(node, depth + 1, ref remaining),MatchSchema47910(node, depth + 1, ref remaining),MatchSchema47892(node, depth + 1, ref remaining),MatchSchema47920(node, depth + 1, ref remaining),MatchSchema62860(node, depth + 1, ref remaining),MatchSchema19634(node, depth + 1, ref remaining),MatchSchema19624(node, depth + 1, ref remaining),MatchSchema19614(node, depth + 1, ref remaining),MatchSchema45991(node, depth + 1, ref remaining),MatchSchema59638(node, depth + 1, ref remaining),MatchSchema51790(node, depth + 1, ref remaining),MatchSchema604(node, depth + 1, ref remaining),MatchSchema524(node, depth + 1, ref remaining),MatchSchema58583(node, depth + 1, ref remaining),MatchSchema48138(node, depth + 1, ref remaining),MatchSchema61713(node, depth + 1, ref remaining),MatchSchema61703(node, depth + 1, ref remaining),MatchSchema61723(node, depth + 1, ref remaining),MatchSchema58593(node, depth + 1, ref remaining),MatchSchema19644(node, depth + 1, ref remaining),MatchSchema22448(node, depth + 1, ref remaining),MatchSchema46045(node, depth + 1, ref remaining),MatchSchema46055(node, depth + 1, ref remaining),MatchSchema62687(node, depth + 1, ref remaining),MatchSchema62697(node, depth + 1, ref remaining),MatchSchema48109(node, depth + 1, ref remaining),MatchSchema49777(node, depth + 1, ref remaining),MatchSchema41084(node, depth + 1, ref remaining),MatchSchema48089(node, depth + 1, ref remaining),MatchSchema61620(node, depth + 1, ref remaining),MatchSchema44496(node, depth + 1, ref remaining))); if (result == false) return false; }
 return result;
 }
 
-private static bool? MatchSchema60480(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema60481(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
@@ -72994,7 +72995,7 @@ bool? enumMatch = false;
 return result;
 }
 
-private static bool? MatchSchema60483(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema60484(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
@@ -73004,27 +73005,27 @@ bool? enumMatch = false;
 return result;
 }
 
-private static bool? MatchSchema60486(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema60487(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
 if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
 { result &= (fields.ContainsKey("id")); if (result == false) return false; }
 { result &= (fields.ContainsKey("type")); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("id") ? (bool?)true : MatchSchema60488(fields["id"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("type") ? (bool?)true : MatchSchema60490(fields["type"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("id") ? (bool?)true : MatchSchema60489(fields["id"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("type") ? (bool?)true : MatchSchema60491(fields["type"], depth + 1, ref remaining)); if (result == false) return false; }
 }
 return result;
 }
 
-private static bool? MatchSchema60488(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema60489(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 return result;
 }
 
-private static bool? MatchSchema60490(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema60491(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
@@ -73034,7 +73035,7 @@ bool? enumMatch = false;
 return result;
 }
 
-private static bool? MatchSchema60493(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema60494(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
@@ -73047,22 +73048,15 @@ if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj
 { result &= (fields.ContainsKey("slug")); if (result == false) return false; }
 { result &= (fields.ContainsKey("translatedFromId")); if (result == false) return false; }
 { result &= (fields.ContainsKey("updated")); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("created") ? (bool?)true : MatchSchema60495(fields["created"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("deletedAt") ? (bool?)true : MatchSchema60496(fields["deletedAt"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("id") ? (bool?)true : MatchSchema60497(fields["id"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("language") ? (bool?)true : MatchSchema60510(fields["language"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("name") ? (bool?)true : MatchSchema60499(fields["name"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("slug") ? (bool?)true : MatchSchema60500(fields["slug"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("translatedFromId") ? (bool?)true : MatchSchema60501(fields["translatedFromId"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("updated") ? (bool?)true : MatchSchema60502(fields["updated"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("created") ? (bool?)true : MatchSchema60496(fields["created"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("deletedAt") ? (bool?)true : MatchSchema60497(fields["deletedAt"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("id") ? (bool?)true : MatchSchema60498(fields["id"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("language") ? (bool?)true : MatchSchema60511(fields["language"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("name") ? (bool?)true : MatchSchema60500(fields["name"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("slug") ? (bool?)true : MatchSchema60501(fields["slug"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("translatedFromId") ? (bool?)true : MatchSchema60502(fields["translatedFromId"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("updated") ? (bool?)true : MatchSchema60503(fields["updated"], depth + 1, ref remaining)); if (result == false) return false; }
 }
-return result;
-}
-
-private static bool? MatchSchema60495(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
-if (depth > 64 || --remaining < 0) return null;
-bool? result = true;
-{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 return result;
 }
 
@@ -73080,7 +73074,7 @@ bool? result = true;
 return result;
 }
 
-private static bool? MatchSchema60499(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema60498(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
@@ -73097,20 +73091,27 @@ return result;
 private static bool? MatchSchema60501(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
-{ result &= (Number(node) is decimal integer ? integer % 1 == 0 : IsNumber(node) ? (bool?)null : false); if (result == false) return false; }
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 return result;
 }
 
 private static bool? MatchSchema60502(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
+{ result &= (Number(node) is decimal integer ? integer % 1 == 0 : IsNumber(node) ? (bool?)null : false); if (result == false) return false; }
+return result;
+}
+
+private static bool? MatchSchema60503(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 return result;
 }
 
-private static bool? MatchSchema60510(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) => null;
+private static bool? MatchSchema60511(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) => null;
 
-private static bool? MatchSchema61503(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema61504(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
@@ -73120,7 +73121,7 @@ bool? enumMatch = false;
 return result;
 }
 
-private static bool? MatchSchema61506(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema61507(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
@@ -73130,21 +73131,21 @@ bool? enumMatch = false;
 return result;
 }
 
-private static bool? MatchSchema61515(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema61516(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
 if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
 { result &= (fields.ContainsKey("operator")); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("inputs") ? (bool?)true : MatchSchema61517(fields["inputs"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema61522(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("propertyName") ? (bool?)true : MatchSchema61520(fields["propertyName"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("value") ? (bool?)true : MatchSchema61521(fields["value"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("inputs") ? (bool?)true : MatchSchema61518(fields["inputs"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema61523(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("propertyName") ? (bool?)true : MatchSchema61521(fields["propertyName"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("value") ? (bool?)true : MatchSchema61522(fields["value"], depth + 1, ref remaining)); if (result == false) return false; }
 }
 return result;
 }
 
-private static bool? MatchSchema61517(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema61518(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray); if (result == false) return false; }
@@ -73154,21 +73155,21 @@ if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray item
 return result;
 }
 
-private static bool? MatchSchema61520(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema61521(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 return result;
 }
 
-private static bool? MatchSchema61521(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema61522(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedInteger or global::Microsoft.Kiota.Abstractions.Serialization.UntypedLong or global::Microsoft.Kiota.Abstractions.Serialization.UntypedFloat or global::Microsoft.Kiota.Abstractions.Serialization.UntypedDouble or global::Microsoft.Kiota.Abstractions.Serialization.UntypedDecimal); if (result == false) return false; }
 return result;
 }
 
-private static bool? MatchSchema61522(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema61523(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
@@ -73178,21 +73179,21 @@ bool? enumMatch = false;
 return result;
 }
 
-private static bool? MatchSchema61525(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema61526(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
 if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
 { result &= (fields.ContainsKey("operator")); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("inputs") ? (bool?)true : MatchSchema61527(fields["inputs"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema61532(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("propertyName") ? (bool?)true : MatchSchema61530(fields["propertyName"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("value") ? (bool?)true : MatchSchema61531(fields["value"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("inputs") ? (bool?)true : MatchSchema61528(fields["inputs"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema61533(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("propertyName") ? (bool?)true : MatchSchema61531(fields["propertyName"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("value") ? (bool?)true : MatchSchema61532(fields["value"], depth + 1, ref remaining)); if (result == false) return false; }
 }
 return result;
 }
 
-private static bool? MatchSchema61527(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema61528(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray); if (result == false) return false; }
@@ -73202,21 +73203,21 @@ if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray item
 return result;
 }
 
-private static bool? MatchSchema61530(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema61531(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 return result;
 }
 
-private static bool? MatchSchema61531(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema61532(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedInteger or global::Microsoft.Kiota.Abstractions.Serialization.UntypedLong or global::Microsoft.Kiota.Abstractions.Serialization.UntypedFloat or global::Microsoft.Kiota.Abstractions.Serialization.UntypedDouble or global::Microsoft.Kiota.Abstractions.Serialization.UntypedDecimal); if (result == false) return false; }
 return result;
 }
 
-private static bool? MatchSchema61532(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema61533(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
@@ -73226,7 +73227,7 @@ bool? enumMatch = false;
 return result;
 }
 
-private static bool? MatchSchema61535(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema61536(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
@@ -73234,21 +73235,21 @@ if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj
 { result &= (fields.ContainsKey("amount")); if (result == false) return false; }
 { result &= (fields.ContainsKey("offsetDirection")); if (result == false) return false; }
 { result &= (fields.ContainsKey("timeUnit")); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("amount") ? (bool?)true : MatchSchema61537(fields["amount"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("offsetDirection") ? (bool?)true : MatchSchema61540(fields["offsetDirection"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("timeUnit") ? (bool?)true : MatchSchema61544(fields["timeUnit"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("amount") ? (bool?)true : MatchSchema61538(fields["amount"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("offsetDirection") ? (bool?)true : MatchSchema61541(fields["offsetDirection"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("timeUnit") ? (bool?)true : MatchSchema61545(fields["timeUnit"], depth + 1, ref remaining)); if (result == false) return false; }
 }
 return result;
 }
 
-private static bool? MatchSchema61537(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema61538(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (Number(node) is decimal integer ? integer % 1 == 0 : IsNumber(node) ? (bool?)null : false); if (result == false) return false; }
 return result;
 }
 
-private static bool? MatchSchema61540(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema61541(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
@@ -73259,7 +73260,7 @@ bool? enumMatch = false;
 return result;
 }
 
-private static bool? MatchSchema61544(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema61545(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
@@ -73272,7 +73273,7 @@ bool? enumMatch = false;
 return result;
 }
 
-private static bool? MatchSchema61550(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema61551(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
@@ -73286,58 +73287,51 @@ if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj
 { result &= (fields.ContainsKey("propertyType")); if (result == false) return false; }
 { result &= (fields.ContainsKey("timePoint")); if (result == false) return false; }
 { result &= (fields.ContainsKey("type")); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("defaultValue") ? (bool?)true : MatchSchema61552(fields["defaultValue"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("endpointBehavior") ? (bool?)true : MatchSchema61564(fields["endpointBehavior"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("includeObjectsWithNoValueSet") ? (bool?)true : MatchSchema61554(fields["includeObjectsWithNoValueSet"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("operationType") ? (bool?)true : MatchSchema61555(fields["operationType"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema61568(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("operatorName") ? (bool?)true : MatchSchema61557(fields["operatorName"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("defaultValue") ? (bool?)true : MatchSchema61553(fields["defaultValue"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("endpointBehavior") ? (bool?)true : MatchSchema61565(fields["endpointBehavior"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("includeObjectsWithNoValueSet") ? (bool?)true : MatchSchema61555(fields["includeObjectsWithNoValueSet"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("operationType") ? (bool?)true : MatchSchema61556(fields["operationType"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema61569(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("operatorName") ? (bool?)true : MatchSchema61558(fields["operatorName"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("propertyAspect") ? (bool?)true : MatchSchema52858(fields["propertyAspect"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("propertyParser") ? (bool?)true : MatchSchema61572(fields["propertyParser"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("propertyType") ? (bool?)true : MatchSchema61600(fields["propertyType"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("renderSpec") ? (bool?)true : MatchSchema61561(fields["renderSpec"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("timePoint") ? (bool?)true : MatchSchema61579(fields["timePoint"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("type") ? (bool?)true : MatchSchema61563(fields["type"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("propertyParser") ? (bool?)true : MatchSchema61573(fields["propertyParser"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("propertyType") ? (bool?)true : MatchSchema61601(fields["propertyType"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("renderSpec") ? (bool?)true : MatchSchema61562(fields["renderSpec"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("timePoint") ? (bool?)true : MatchSchema61580(fields["timePoint"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("type") ? (bool?)true : MatchSchema61564(fields["type"], depth + 1, ref remaining)); if (result == false) return false; }
 }
 return result;
 }
 
-private static bool? MatchSchema61552(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema61553(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
-return result;
-}
-
-private static bool? MatchSchema61554(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
-if (depth > 64 || --remaining < 0) return null;
-bool? result = true;
-{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedBoolean); if (result == false) return false; }
 return result;
 }
 
 private static bool? MatchSchema61555(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
-{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedBoolean); if (result == false) return false; }
 return result;
 }
 
-private static bool? MatchSchema61557(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema61556(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 return result;
 }
 
-private static bool? MatchSchema61561(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema61558(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 return result;
 }
 
-private static bool? MatchSchema61563(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema61562(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
@@ -73348,6 +73342,13 @@ private static bool? MatchSchema61564(global::Microsoft.Kiota.Abstractions.Seria
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
+return result;
+}
+
+private static bool? MatchSchema61565(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 bool? enumMatch = false;
 { enumMatch |= ((node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "EXCLUSIVE".Equals(text.GetValue(), global::System.StringComparison.Ordinal))); }
 { enumMatch |= ((node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "INCLUSIVE".Equals(text.GetValue(), global::System.StringComparison.Ordinal))); }
@@ -73355,7 +73356,7 @@ bool? enumMatch = false;
 return result;
 }
 
-private static bool? MatchSchema61568(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema61569(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
@@ -73366,7 +73367,7 @@ bool? enumMatch = false;
 return result;
 }
 
-private static bool? MatchSchema61572(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema61573(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
@@ -73380,14 +73381,14 @@ bool? enumMatch = false;
 return result;
 }
 
-private static bool? MatchSchema61579(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema61580(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (One(MatchSchema39728(node, depth + 1, ref remaining),MatchSchema47708(node, depth + 1, ref remaining),MatchSchema53346(node, depth + 1, ref remaining))); if (result == false) return false; }
 return result;
 }
 
-private static bool? MatchSchema61587(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema61588(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
@@ -73397,7 +73398,7 @@ bool? enumMatch = false;
 return result;
 }
 
-private static bool? MatchSchema61590(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema61591(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
@@ -73407,7 +73408,7 @@ bool? enumMatch = false;
 return result;
 }
 
-private static bool? MatchSchema61600(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema61601(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
@@ -73417,23 +73418,16 @@ bool? enumMatch = false;
 return result;
 }
 
-private static bool? MatchSchema61603(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema61604(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
 if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
 { result &= (fields.ContainsKey("operator")); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema61608(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("propertyName") ? (bool?)true : MatchSchema61606(fields["propertyName"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("value") ? (bool?)true : MatchSchema61607(fields["value"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema61609(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("propertyName") ? (bool?)true : MatchSchema61607(fields["propertyName"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("value") ? (bool?)true : MatchSchema61608(fields["value"], depth + 1, ref remaining)); if (result == false) return false; }
 }
-return result;
-}
-
-private static bool? MatchSchema61606(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
-if (depth > 64 || --remaining < 0) return null;
-bool? result = true;
-{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 return result;
 }
 
@@ -73448,29 +73442,29 @@ private static bool? MatchSchema61608(global::Microsoft.Kiota.Abstractions.Seria
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
+return result;
+}
+
+private static bool? MatchSchema61609(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 bool? enumMatch = false;
 { enumMatch |= ((node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "TIMESTAMP_OF_PROPERTY_VARIABLE".Equals(text.GetValue(), global::System.StringComparison.Ordinal))); }
 { result &= (enumMatch); if (result == false) return false; }
 return result;
 }
 
-private static bool? MatchSchema61611(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema61612(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
 if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
 { result &= (fields.ContainsKey("operator")); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema61616(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("propertyName") ? (bool?)true : MatchSchema61614(fields["propertyName"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("value") ? (bool?)true : MatchSchema61615(fields["value"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema61617(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("propertyName") ? (bool?)true : MatchSchema61615(fields["propertyName"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("value") ? (bool?)true : MatchSchema61616(fields["value"], depth + 1, ref remaining)); if (result == false) return false; }
 }
-return result;
-}
-
-private static bool? MatchSchema61614(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
-if (depth > 64 || --remaining < 0) return null;
-bool? result = true;
-{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 return result;
 }
 
@@ -73485,40 +73479,40 @@ private static bool? MatchSchema61616(global::Microsoft.Kiota.Abstractions.Seria
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
+return result;
+}
+
+private static bool? MatchSchema61617(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 bool? enumMatch = false;
 { enumMatch |= ((node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "TIMESTAMP_OF_TARGET_PROPERTY_VARIABLE".Equals(text.GetValue(), global::System.StringComparison.Ordinal))); }
 { result &= (enumMatch); if (result == false) return false; }
 return result;
 }
 
-private static bool? MatchSchema61619(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema61620(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
 if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
 { result &= (fields.ContainsKey("operator")); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("inputs") ? (bool?)true : MatchSchema61621(fields["inputs"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema61626(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("propertyName") ? (bool?)true : MatchSchema61624(fields["propertyName"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("value") ? (bool?)true : MatchSchema61625(fields["value"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("inputs") ? (bool?)true : MatchSchema61622(fields["inputs"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema61627(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("propertyName") ? (bool?)true : MatchSchema61625(fields["propertyName"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("value") ? (bool?)true : MatchSchema61626(fields["value"], depth + 1, ref remaining)); if (result == false) return false; }
 }
 return result;
 }
 
-private static bool? MatchSchema61621(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema61622(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray); if (result == false) return false; }
 if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray itemsArray) foreach (var item in itemsArray.GetValue()) {
 { result &= (MatchSchema47(item, depth + 1, ref remaining)); if (result == false) return false; }
 }
-return result;
-}
-
-private static bool? MatchSchema61624(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
-if (depth > 64 || --remaining < 0) return null;
-bool? result = true;
-{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 return result;
 }
 
@@ -73533,31 +73527,31 @@ private static bool? MatchSchema61626(global::Microsoft.Kiota.Abstractions.Seria
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
+return result;
+}
+
+private static bool? MatchSchema61627(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 bool? enumMatch = false;
 { enumMatch |= ((node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "TITLE_CASE".Equals(text.GetValue(), global::System.StringComparison.Ordinal))); }
 { result &= (enumMatch); if (result == false) return false; }
 return result;
 }
 
-private static bool? MatchSchema61629(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema61630(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
 if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
 { result &= (fields.ContainsKey("referenceType")); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("hour") ? (bool?)true : MatchSchema61631(fields["hour"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("millisecond") ? (bool?)true : MatchSchema61632(fields["millisecond"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("minute") ? (bool?)true : MatchSchema61633(fields["minute"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("hour") ? (bool?)true : MatchSchema61632(fields["hour"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("millisecond") ? (bool?)true : MatchSchema61633(fields["millisecond"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("minute") ? (bool?)true : MatchSchema61634(fields["minute"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("referenceType") ? (bool?)true : MatchSchema42584(fields["referenceType"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("second") ? (bool?)true : MatchSchema61635(fields["second"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("second") ? (bool?)true : MatchSchema61636(fields["second"], depth + 1, ref remaining)); if (result == false) return false; }
 }
-return result;
-}
-
-private static bool? MatchSchema61631(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
-if (depth > 64 || --remaining < 0) return null;
-bool? result = true;
-{ result &= (Number(node) is decimal integer ? integer % 1 == 0 : IsNumber(node) ? (bool?)null : false); if (result == false) return false; }
 return result;
 }
 
@@ -73575,7 +73569,7 @@ bool? result = true;
 return result;
 }
 
-private static bool? MatchSchema61635(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema61634(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (Number(node) is decimal integer ? integer % 1 == 0 : IsNumber(node) ? (bool?)null : false); if (result == false) return false; }
@@ -73585,6 +73579,13 @@ return result;
 private static bool? MatchSchema61636(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
+{ result &= (Number(node) is decimal integer ? integer % 1 == 0 : IsNumber(node) ? (bool?)null : false); if (result == false) return false; }
+return result;
+}
+
+private static bool? MatchSchema61637(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 bool? enumMatch = false;
 { enumMatch |= ((node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "TODAY".Equals(text.GetValue(), global::System.StringComparison.Ordinal))); }
@@ -73592,34 +73593,27 @@ bool? enumMatch = false;
 return result;
 }
 
-private static bool? MatchSchema61702(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema61703(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
 if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
 { result &= (fields.ContainsKey("operator")); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("inputs") ? (bool?)true : MatchSchema61704(fields["inputs"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema61709(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("propertyName") ? (bool?)true : MatchSchema61707(fields["propertyName"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("value") ? (bool?)true : MatchSchema61708(fields["value"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("inputs") ? (bool?)true : MatchSchema61705(fields["inputs"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema61710(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("propertyName") ? (bool?)true : MatchSchema61708(fields["propertyName"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("value") ? (bool?)true : MatchSchema61709(fields["value"], depth + 1, ref remaining)); if (result == false) return false; }
 }
 return result;
 }
 
-private static bool? MatchSchema61704(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema61705(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray); if (result == false) return false; }
 if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray itemsArray) foreach (var item in itemsArray.GetValue()) {
 { result &= (MatchSchema47(item, depth + 1, ref remaining)); if (result == false) return false; }
 }
-return result;
-}
-
-private static bool? MatchSchema61707(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
-if (depth > 64 || --remaining < 0) return null;
-bool? result = true;
-{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 return result;
 }
 
@@ -73634,40 +73628,40 @@ private static bool? MatchSchema61709(global::Microsoft.Kiota.Abstractions.Seria
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
+return result;
+}
+
+private static bool? MatchSchema61710(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 bool? enumMatch = false;
 { enumMatch |= ((node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "TRIM_LEADING_CHARS".Equals(text.GetValue(), global::System.StringComparison.Ordinal))); }
 { result &= (enumMatch); if (result == false) return false; }
 return result;
 }
 
-private static bool? MatchSchema61712(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema61713(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
 if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
 { result &= (fields.ContainsKey("operator")); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("inputs") ? (bool?)true : MatchSchema61714(fields["inputs"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema61719(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("propertyName") ? (bool?)true : MatchSchema61717(fields["propertyName"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("value") ? (bool?)true : MatchSchema61718(fields["value"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("inputs") ? (bool?)true : MatchSchema61715(fields["inputs"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema61720(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("propertyName") ? (bool?)true : MatchSchema61718(fields["propertyName"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("value") ? (bool?)true : MatchSchema61719(fields["value"], depth + 1, ref remaining)); if (result == false) return false; }
 }
 return result;
 }
 
-private static bool? MatchSchema61714(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema61715(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray); if (result == false) return false; }
 if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray itemsArray) foreach (var item in itemsArray.GetValue()) {
 { result &= (MatchSchema47(item, depth + 1, ref remaining)); if (result == false) return false; }
 }
-return result;
-}
-
-private static bool? MatchSchema61717(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
-if (depth > 64 || --remaining < 0) return null;
-bool? result = true;
-{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 return result;
 }
 
@@ -73682,40 +73676,40 @@ private static bool? MatchSchema61719(global::Microsoft.Kiota.Abstractions.Seria
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
+return result;
+}
+
+private static bool? MatchSchema61720(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 bool? enumMatch = false;
 { enumMatch |= ((node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "TRIM_OUTER_CHARS".Equals(text.GetValue(), global::System.StringComparison.Ordinal))); }
 { result &= (enumMatch); if (result == false) return false; }
 return result;
 }
 
-private static bool? MatchSchema61722(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema61723(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
 if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
 { result &= (fields.ContainsKey("operator")); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("inputs") ? (bool?)true : MatchSchema61724(fields["inputs"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema61729(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("propertyName") ? (bool?)true : MatchSchema61727(fields["propertyName"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("value") ? (bool?)true : MatchSchema61728(fields["value"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("inputs") ? (bool?)true : MatchSchema61725(fields["inputs"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema61730(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("propertyName") ? (bool?)true : MatchSchema61728(fields["propertyName"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("value") ? (bool?)true : MatchSchema61729(fields["value"], depth + 1, ref remaining)); if (result == false) return false; }
 }
 return result;
 }
 
-private static bool? MatchSchema61724(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema61725(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray); if (result == false) return false; }
 if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray itemsArray) foreach (var item in itemsArray.GetValue()) {
 { result &= (MatchSchema47(item, depth + 1, ref remaining)); if (result == false) return false; }
 }
-return result;
-}
-
-private static bool? MatchSchema61727(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
-if (depth > 64 || --remaining < 0) return null;
-bool? result = true;
-{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 return result;
 }
 
@@ -73730,13 +73724,20 @@ private static bool? MatchSchema61729(global::Microsoft.Kiota.Abstractions.Seria
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
+return result;
+}
+
+private static bool? MatchSchema61730(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 bool? enumMatch = false;
 { enumMatch |= ((node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "TRIM_TRAILING_CHARS".Equals(text.GetValue(), global::System.StringComparison.Ordinal))); }
 { result &= (enumMatch); if (result == false) return false; }
 return result;
 }
 
-private static bool? MatchSchema61743(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema61744(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
@@ -73746,7 +73747,7 @@ bool? enumMatch = false;
 return result;
 }
 
-private static bool? MatchSchema61746(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema61747(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
@@ -73756,18 +73757,18 @@ bool? enumMatch = false;
 return result;
 }
 
-private static bool? MatchSchema61749(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema61750(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
 if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
 { result &= (fields.ContainsKey("type")); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("type") ? (bool?)true : MatchSchema61752(fields["type"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("type") ? (bool?)true : MatchSchema61753(fields["type"], depth + 1, ref remaining)); if (result == false) return false; }
 }
 return result;
 }
 
-private static bool? MatchSchema61752(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema61753(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
@@ -73777,7 +73778,7 @@ bool? enumMatch = false;
 return result;
 }
 
-private static bool? MatchSchema61755(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema61756(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
@@ -73788,7 +73789,7 @@ if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj
 return result;
 }
 
-private static bool? MatchSchema61758(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema61759(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
@@ -73798,34 +73799,27 @@ bool? enumMatch = false;
 return result;
 }
 
-private static bool? MatchSchema62666(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema62667(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
 if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
 { result &= (fields.ContainsKey("operator")); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("inputs") ? (bool?)true : MatchSchema62668(fields["inputs"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema62673(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("propertyName") ? (bool?)true : MatchSchema62671(fields["propertyName"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("value") ? (bool?)true : MatchSchema62672(fields["value"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("inputs") ? (bool?)true : MatchSchema62669(fields["inputs"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema62674(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("propertyName") ? (bool?)true : MatchSchema62672(fields["propertyName"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("value") ? (bool?)true : MatchSchema62673(fields["value"], depth + 1, ref remaining)); if (result == false) return false; }
 }
 return result;
 }
 
-private static bool? MatchSchema62668(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema62669(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray); if (result == false) return false; }
 if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray itemsArray) foreach (var item in itemsArray.GetValue()) {
 { result &= (MatchSchema47(item, depth + 1, ref remaining)); if (result == false) return false; }
 }
-return result;
-}
-
-private static bool? MatchSchema62671(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
-if (depth > 64 || --remaining < 0) return null;
-bool? result = true;
-{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 return result;
 }
 
@@ -73840,40 +73834,40 @@ private static bool? MatchSchema62673(global::Microsoft.Kiota.Abstractions.Seria
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
+return result;
+}
+
+private static bool? MatchSchema62674(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 bool? enumMatch = false;
 { enumMatch |= ((node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "UPPER_CASE".Equals(text.GetValue(), global::System.StringComparison.Ordinal))); }
 { result &= (enumMatch); if (result == false) return false; }
 return result;
 }
 
-private static bool? MatchSchema62676(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema62677(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
 if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
 { result &= (fields.ContainsKey("operator")); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("inputs") ? (bool?)true : MatchSchema62678(fields["inputs"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema62683(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("propertyName") ? (bool?)true : MatchSchema62681(fields["propertyName"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("value") ? (bool?)true : MatchSchema62682(fields["value"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("inputs") ? (bool?)true : MatchSchema62679(fields["inputs"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema62684(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("propertyName") ? (bool?)true : MatchSchema62682(fields["propertyName"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("value") ? (bool?)true : MatchSchema62683(fields["value"], depth + 1, ref remaining)); if (result == false) return false; }
 }
 return result;
 }
 
-private static bool? MatchSchema62678(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema62679(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray); if (result == false) return false; }
 if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray itemsArray) foreach (var item in itemsArray.GetValue()) {
 { result &= (MatchSchema47(item, depth + 1, ref remaining)); if (result == false) return false; }
 }
-return result;
-}
-
-private static bool? MatchSchema62681(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
-if (depth > 64 || --remaining < 0) return null;
-bool? result = true;
-{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 return result;
 }
 
@@ -73888,40 +73882,40 @@ private static bool? MatchSchema62683(global::Microsoft.Kiota.Abstractions.Seria
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
+return result;
+}
+
+private static bool? MatchSchema62684(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 bool? enumMatch = false;
 { enumMatch |= ((node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "URL_ENCODE".Equals(text.GetValue(), global::System.StringComparison.Ordinal))); }
 { result &= (enumMatch); if (result == false) return false; }
 return result;
 }
 
-private static bool? MatchSchema62686(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema62687(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
 if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
 { result &= (fields.ContainsKey("operator")); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("inputs") ? (bool?)true : MatchSchema62688(fields["inputs"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema62693(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("propertyName") ? (bool?)true : MatchSchema62691(fields["propertyName"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("value") ? (bool?)true : MatchSchema62692(fields["value"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("inputs") ? (bool?)true : MatchSchema62689(fields["inputs"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema62694(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("propertyName") ? (bool?)true : MatchSchema62692(fields["propertyName"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("value") ? (bool?)true : MatchSchema62693(fields["value"], depth + 1, ref remaining)); if (result == false) return false; }
 }
 return result;
 }
 
-private static bool? MatchSchema62688(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema62689(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray); if (result == false) return false; }
 if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray itemsArray) foreach (var item in itemsArray.GetValue()) {
 { result &= (MatchSchema47(item, depth + 1, ref remaining)); if (result == false) return false; }
 }
-return result;
-}
-
-private static bool? MatchSchema62691(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
-if (depth > 64 || --remaining < 0) return null;
-bool? result = true;
-{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 return result;
 }
 
@@ -73936,40 +73930,40 @@ private static bool? MatchSchema62693(global::Microsoft.Kiota.Abstractions.Seria
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
+return result;
+}
+
+private static bool? MatchSchema62694(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 bool? enumMatch = false;
 { enumMatch |= ((node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "URL_EXTRACT_DOMAIN".Equals(text.GetValue(), global::System.StringComparison.Ordinal))); }
 { result &= (enumMatch); if (result == false) return false; }
 return result;
 }
 
-private static bool? MatchSchema62696(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema62697(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
 if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
 { result &= (fields.ContainsKey("operator")); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("inputs") ? (bool?)true : MatchSchema62698(fields["inputs"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema62703(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("propertyName") ? (bool?)true : MatchSchema62701(fields["propertyName"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("value") ? (bool?)true : MatchSchema62702(fields["value"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("inputs") ? (bool?)true : MatchSchema62699(fields["inputs"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema62704(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("propertyName") ? (bool?)true : MatchSchema62702(fields["propertyName"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("value") ? (bool?)true : MatchSchema62703(fields["value"], depth + 1, ref remaining)); if (result == false) return false; }
 }
 return result;
 }
 
-private static bool? MatchSchema62698(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema62699(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray); if (result == false) return false; }
 if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray itemsArray) foreach (var item in itemsArray.GetValue()) {
 { result &= (MatchSchema47(item, depth + 1, ref remaining)); if (result == false) return false; }
 }
-return result;
-}
-
-private static bool? MatchSchema62701(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
-if (depth > 64 || --remaining < 0) return null;
-bool? result = true;
-{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 return result;
 }
 
@@ -73984,13 +73978,20 @@ private static bool? MatchSchema62703(global::Microsoft.Kiota.Abstractions.Seria
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
+return result;
+}
+
+private static bool? MatchSchema62704(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 bool? enumMatch = false;
 { enumMatch |= ((node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "URL_EXTRACT_HOST".Equals(text.GetValue(), global::System.StringComparison.Ordinal))); }
 { result &= (enumMatch); if (result == false) return false; }
 return result;
 }
 
-private static bool? MatchSchema62859(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema62860(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
@@ -73998,24 +73999,24 @@ if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj
 { result &= (fields.ContainsKey("checkExpression")); if (result == false) return false; }
 { result &= (fields.ContainsKey("enclosedInParentheses")); if (result == false) return false; }
 { result &= (fields.ContainsKey("operator")); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("checkExpression") ? (bool?)true : MatchSchema62868(fields["checkExpression"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("enclosedInParentheses") ? (bool?)true : MatchSchema62862(fields["enclosedInParentheses"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("inputs") ? (bool?)true : MatchSchema62863(fields["inputs"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema62990(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("propertyName") ? (bool?)true : MatchSchema62866(fields["propertyName"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("value") ? (bool?)true : MatchSchema62867(fields["value"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("checkExpression") ? (bool?)true : MatchSchema62869(fields["checkExpression"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("enclosedInParentheses") ? (bool?)true : MatchSchema62863(fields["enclosedInParentheses"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("inputs") ? (bool?)true : MatchSchema62864(fields["inputs"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema62991(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("propertyName") ? (bool?)true : MatchSchema62867(fields["propertyName"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("value") ? (bool?)true : MatchSchema62868(fields["value"], depth + 1, ref remaining)); if (result == false) return false; }
 }
 return result;
 }
 
-private static bool? MatchSchema62862(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema62863(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedBoolean); if (result == false) return false; }
 return result;
 }
 
-private static bool? MatchSchema62863(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema62864(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray); if (result == false) return false; }
@@ -74025,28 +74026,28 @@ if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray item
 return result;
 }
 
-private static bool? MatchSchema62866(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema62867(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 return result;
 }
 
-private static bool? MatchSchema62867(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema62868(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedBoolean); if (result == false) return false; }
 return result;
 }
 
-private static bool? MatchSchema62868(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema62869(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
-{ result &= (One(MatchSchema20745(node, depth + 1, ref remaining),MatchSchema20756(node, depth + 1, ref remaining),MatchSchema20764(node, depth + 1, ref remaining),MatchSchema7769(node, depth + 1, ref remaining),MatchSchema59906(node, depth + 1, ref remaining),MatchSchema49914(node, depth + 1, ref remaining),MatchSchema61603(node, depth + 1, ref remaining),MatchSchema7777(node, depth + 1, ref remaining),MatchSchema59914(node, depth + 1, ref remaining),MatchSchema49928(node, depth + 1, ref remaining),MatchSchema61611(node, depth + 1, ref remaining),MatchSchema356(node, depth + 1, ref remaining),MatchSchema60336(node, depth + 1, ref remaining),MatchSchema49750(node, depth + 1, ref remaining),MatchSchema39997(node, depth + 1, ref remaining),MatchSchema59018(node, depth + 1, ref remaining),MatchSchema59038(node, depth + 1, ref remaining),MatchSchema59028(node, depth + 1, ref remaining),MatchSchema62666(node, depth + 1, ref remaining),MatchSchema48632(node, depth + 1, ref remaining),MatchSchema62676(node, depth + 1, ref remaining),MatchSchema20709(node, depth + 1, ref remaining),MatchSchema20861(node, depth + 1, ref remaining),MatchSchema4690(node, depth + 1, ref remaining),MatchSchema49936(node, depth + 1, ref remaining),MatchSchema51340(node, depth + 1, ref remaining),MatchSchema43843(node, depth + 1, ref remaining),MatchSchema43833(node, depth + 1, ref remaining),MatchSchema43861(node, depth + 1, ref remaining),MatchSchema43853(node, depth + 1, ref remaining),MatchSchema47940(node, depth + 1, ref remaining),MatchSchema47950(node, depth + 1, ref remaining),MatchSchema39807(node, depth + 1, ref remaining),MatchSchema51677(node, depth + 1, ref remaining),MatchSchema49331(node, depth + 1, ref remaining),MatchSchema49660(node, depth + 1, ref remaining),MatchSchema48171(node, depth + 1, ref remaining),MatchSchema48181(node, depth + 1, ref remaining),MatchSchema49691(node, depth + 1, ref remaining),MatchSchema49701(node, depth + 1, ref remaining),MatchSchema49877(node, depth + 1, ref remaining),MatchSchema59848(node, depth + 1, ref remaining),MatchSchema47930(node, depth + 1, ref remaining),MatchSchema49787(node, depth + 1, ref remaining),MatchSchema39715(node, depth + 1, ref remaining),MatchSchema49670(node, depth + 1, ref remaining),MatchSchema63166(node, depth + 1, ref remaining),MatchSchema49847(node, depth + 1, ref remaining),MatchSchema61515(node, depth + 1, ref remaining),MatchSchema61525(node, depth + 1, ref remaining),MatchSchema51629(node, depth + 1, ref remaining),MatchSchema51639(node, depth + 1, ref remaining),MatchSchema580(node, depth + 1, ref remaining),MatchSchema50257(node, depth + 1, ref remaining),MatchSchema63155(node, depth + 1, ref remaining),MatchSchema47263(node, depth + 1, ref remaining),MatchSchema47006(node, depth + 1, ref remaining),MatchSchema46335(node, depth + 1, ref remaining),MatchSchema47958(node, depth + 1, ref remaining),MatchSchema46868(node, depth + 1, ref remaining),MatchSchema46730(node, depth + 1, ref remaining),MatchSchema46592(node, depth + 1, ref remaining),MatchSchema46025(node, depth + 1, ref remaining),MatchSchema46035(node, depth + 1, ref remaining),MatchSchema43753(node, depth + 1, ref remaining),MatchSchema43763(node, depth + 1, ref remaining),MatchSchema43773(node, depth + 1, ref remaining),MatchSchema59265(node, depth + 1, ref remaining),MatchSchema59132(node, depth + 1, ref remaining),MatchSchema59408(node, depth + 1, ref remaining),MatchSchema59438(node, depth + 1, ref remaining),MatchSchema59398(node, depth + 1, ref remaining),MatchSchema47902(node, depth + 1, ref remaining),MatchSchema44476(node, depth + 1, ref remaining),MatchSchema44486(node, depth + 1, ref remaining),MatchSchema44506(node, depth + 1, ref remaining),MatchSchema40(node, depth + 1, ref remaining),MatchSchema59801(node, depth + 1, ref remaining),MatchSchema52134(node, depth + 1, ref remaining),MatchSchema60203(node, depth + 1, ref remaining),MatchSchema42298(node, depth + 1, ref remaining),MatchSchema59873(node, depth + 1, ref remaining),MatchSchema47882(node, depth + 1, ref remaining),MatchSchema367(node, depth + 1, ref remaining),MatchSchema60347(node, depth + 1, ref remaining),MatchSchema58527(node, depth + 1, ref remaining),MatchSchema48099(node, depth + 1, ref remaining),MatchSchema47910(node, depth + 1, ref remaining),MatchSchema47892(node, depth + 1, ref remaining),MatchSchema47920(node, depth + 1, ref remaining),MatchSchema62859(node, depth + 1, ref remaining),MatchSchema19634(node, depth + 1, ref remaining),MatchSchema19624(node, depth + 1, ref remaining),MatchSchema19614(node, depth + 1, ref remaining),MatchSchema45991(node, depth + 1, ref remaining),MatchSchema59638(node, depth + 1, ref remaining),MatchSchema51790(node, depth + 1, ref remaining),MatchSchema604(node, depth + 1, ref remaining),MatchSchema524(node, depth + 1, ref remaining),MatchSchema58583(node, depth + 1, ref remaining),MatchSchema48138(node, depth + 1, ref remaining),MatchSchema61712(node, depth + 1, ref remaining),MatchSchema61702(node, depth + 1, ref remaining),MatchSchema61722(node, depth + 1, ref remaining),MatchSchema58593(node, depth + 1, ref remaining),MatchSchema19644(node, depth + 1, ref remaining),MatchSchema22448(node, depth + 1, ref remaining),MatchSchema46045(node, depth + 1, ref remaining),MatchSchema46055(node, depth + 1, ref remaining),MatchSchema62686(node, depth + 1, ref remaining),MatchSchema62696(node, depth + 1, ref remaining),MatchSchema48109(node, depth + 1, ref remaining),MatchSchema49777(node, depth + 1, ref remaining),MatchSchema41084(node, depth + 1, ref remaining),MatchSchema48089(node, depth + 1, ref remaining),MatchSchema61619(node, depth + 1, ref remaining),MatchSchema44496(node, depth + 1, ref remaining))); if (result == false) return false; }
+{ result &= (One(MatchSchema20745(node, depth + 1, ref remaining),MatchSchema20756(node, depth + 1, ref remaining),MatchSchema20764(node, depth + 1, ref remaining),MatchSchema7769(node, depth + 1, ref remaining),MatchSchema59907(node, depth + 1, ref remaining),MatchSchema49914(node, depth + 1, ref remaining),MatchSchema61604(node, depth + 1, ref remaining),MatchSchema7777(node, depth + 1, ref remaining),MatchSchema59915(node, depth + 1, ref remaining),MatchSchema49928(node, depth + 1, ref remaining),MatchSchema61612(node, depth + 1, ref remaining),MatchSchema356(node, depth + 1, ref remaining),MatchSchema60337(node, depth + 1, ref remaining),MatchSchema49750(node, depth + 1, ref remaining),MatchSchema39997(node, depth + 1, ref remaining),MatchSchema59018(node, depth + 1, ref remaining),MatchSchema59038(node, depth + 1, ref remaining),MatchSchema59028(node, depth + 1, ref remaining),MatchSchema62667(node, depth + 1, ref remaining),MatchSchema48632(node, depth + 1, ref remaining),MatchSchema62677(node, depth + 1, ref remaining),MatchSchema20709(node, depth + 1, ref remaining),MatchSchema20861(node, depth + 1, ref remaining),MatchSchema4690(node, depth + 1, ref remaining),MatchSchema49936(node, depth + 1, ref remaining),MatchSchema51340(node, depth + 1, ref remaining),MatchSchema43843(node, depth + 1, ref remaining),MatchSchema43833(node, depth + 1, ref remaining),MatchSchema43861(node, depth + 1, ref remaining),MatchSchema43853(node, depth + 1, ref remaining),MatchSchema47940(node, depth + 1, ref remaining),MatchSchema47950(node, depth + 1, ref remaining),MatchSchema39807(node, depth + 1, ref remaining),MatchSchema51677(node, depth + 1, ref remaining),MatchSchema49331(node, depth + 1, ref remaining),MatchSchema49660(node, depth + 1, ref remaining),MatchSchema48171(node, depth + 1, ref remaining),MatchSchema48181(node, depth + 1, ref remaining),MatchSchema49691(node, depth + 1, ref remaining),MatchSchema49701(node, depth + 1, ref remaining),MatchSchema49877(node, depth + 1, ref remaining),MatchSchema59848(node, depth + 1, ref remaining),MatchSchema47930(node, depth + 1, ref remaining),MatchSchema49787(node, depth + 1, ref remaining),MatchSchema39715(node, depth + 1, ref remaining),MatchSchema49670(node, depth + 1, ref remaining),MatchSchema63167(node, depth + 1, ref remaining),MatchSchema49847(node, depth + 1, ref remaining),MatchSchema61516(node, depth + 1, ref remaining),MatchSchema61526(node, depth + 1, ref remaining),MatchSchema51629(node, depth + 1, ref remaining),MatchSchema51639(node, depth + 1, ref remaining),MatchSchema580(node, depth + 1, ref remaining),MatchSchema50257(node, depth + 1, ref remaining),MatchSchema63156(node, depth + 1, ref remaining),MatchSchema47263(node, depth + 1, ref remaining),MatchSchema47006(node, depth + 1, ref remaining),MatchSchema46335(node, depth + 1, ref remaining),MatchSchema47958(node, depth + 1, ref remaining),MatchSchema46868(node, depth + 1, ref remaining),MatchSchema46730(node, depth + 1, ref remaining),MatchSchema46592(node, depth + 1, ref remaining),MatchSchema46025(node, depth + 1, ref remaining),MatchSchema46035(node, depth + 1, ref remaining),MatchSchema43753(node, depth + 1, ref remaining),MatchSchema43763(node, depth + 1, ref remaining),MatchSchema43773(node, depth + 1, ref remaining),MatchSchema59265(node, depth + 1, ref remaining),MatchSchema59132(node, depth + 1, ref remaining),MatchSchema59408(node, depth + 1, ref remaining),MatchSchema59438(node, depth + 1, ref remaining),MatchSchema59398(node, depth + 1, ref remaining),MatchSchema47902(node, depth + 1, ref remaining),MatchSchema44476(node, depth + 1, ref remaining),MatchSchema44486(node, depth + 1, ref remaining),MatchSchema44506(node, depth + 1, ref remaining),MatchSchema40(node, depth + 1, ref remaining),MatchSchema59801(node, depth + 1, ref remaining),MatchSchema52134(node, depth + 1, ref remaining),MatchSchema60204(node, depth + 1, ref remaining),MatchSchema42298(node, depth + 1, ref remaining),MatchSchema59874(node, depth + 1, ref remaining),MatchSchema47882(node, depth + 1, ref remaining),MatchSchema367(node, depth + 1, ref remaining),MatchSchema60348(node, depth + 1, ref remaining),MatchSchema58527(node, depth + 1, ref remaining),MatchSchema48099(node, depth + 1, ref remaining),MatchSchema47910(node, depth + 1, ref remaining),MatchSchema47892(node, depth + 1, ref remaining),MatchSchema47920(node, depth + 1, ref remaining),MatchSchema62860(node, depth + 1, ref remaining),MatchSchema19634(node, depth + 1, ref remaining),MatchSchema19624(node, depth + 1, ref remaining),MatchSchema19614(node, depth + 1, ref remaining),MatchSchema45991(node, depth + 1, ref remaining),MatchSchema59638(node, depth + 1, ref remaining),MatchSchema51790(node, depth + 1, ref remaining),MatchSchema604(node, depth + 1, ref remaining),MatchSchema524(node, depth + 1, ref remaining),MatchSchema58583(node, depth + 1, ref remaining),MatchSchema48138(node, depth + 1, ref remaining),MatchSchema61713(node, depth + 1, ref remaining),MatchSchema61703(node, depth + 1, ref remaining),MatchSchema61723(node, depth + 1, ref remaining),MatchSchema58593(node, depth + 1, ref remaining),MatchSchema19644(node, depth + 1, ref remaining),MatchSchema22448(node, depth + 1, ref remaining),MatchSchema46045(node, depth + 1, ref remaining),MatchSchema46055(node, depth + 1, ref remaining),MatchSchema62687(node, depth + 1, ref remaining),MatchSchema62697(node, depth + 1, ref remaining),MatchSchema48109(node, depth + 1, ref remaining),MatchSchema49777(node, depth + 1, ref remaining),MatchSchema41084(node, depth + 1, ref remaining),MatchSchema48089(node, depth + 1, ref remaining),MatchSchema61620(node, depth + 1, ref remaining),MatchSchema44496(node, depth + 1, ref remaining))); if (result == false) return false; }
 return result;
 }
 
-private static bool? MatchSchema62990(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema62991(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
@@ -74056,7 +74057,7 @@ bool? enumMatch = false;
 return result;
 }
 
-private static bool? MatchSchema63016(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema63017(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
@@ -74066,26 +74067,19 @@ bool? enumMatch = false;
 return result;
 }
 
-private static bool? MatchSchema63023(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema63024(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
 if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
 { result &= (fields.ContainsKey("id")); if (result == false) return false; }
 { result &= (fields.ContainsKey("type")); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("avatar") ? (bool?)true : MatchSchema63025(fields["avatar"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("email") ? (bool?)true : MatchSchema63026(fields["email"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("id") ? (bool?)true : MatchSchema63027(fields["id"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("name") ? (bool?)true : MatchSchema63028(fields["name"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("type") ? (bool?)true : MatchSchema63057(fields["type"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("avatar") ? (bool?)true : MatchSchema63026(fields["avatar"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("email") ? (bool?)true : MatchSchema63027(fields["email"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("id") ? (bool?)true : MatchSchema63028(fields["id"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("name") ? (bool?)true : MatchSchema63029(fields["name"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("type") ? (bool?)true : MatchSchema63058(fields["type"], depth + 1, ref remaining)); if (result == false) return false; }
 }
-return result;
-}
-
-private static bool? MatchSchema63025(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
-if (depth > 64 || --remaining < 0) return null;
-bool? result = true;
-{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 return result;
 }
 
@@ -74110,7 +74104,14 @@ bool? result = true;
 return result;
 }
 
-private static bool? MatchSchema63057(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema63029(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
+return result;
+}
+
+private static bool? MatchSchema63058(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
@@ -74120,29 +74121,22 @@ bool? enumMatch = false;
 return result;
 }
 
-private static bool? MatchSchema63091(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema63092(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
 if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
 { result &= (fields.ContainsKey("message")); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("code") ? (bool?)true : MatchSchema63093(fields["code"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("context") ? (bool?)true : MatchSchema63098(fields["context"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("in") ? (bool?)true : MatchSchema63095(fields["in"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("message") ? (bool?)true : MatchSchema63096(fields["message"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("subCategory") ? (bool?)true : MatchSchema63097(fields["subCategory"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("code") ? (bool?)true : MatchSchema63094(fields["code"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("context") ? (bool?)true : MatchSchema63099(fields["context"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("in") ? (bool?)true : MatchSchema63096(fields["in"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("message") ? (bool?)true : MatchSchema63097(fields["message"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("subCategory") ? (bool?)true : MatchSchema63098(fields["subCategory"], depth + 1, ref remaining)); if (result == false) return false; }
 }
 return result;
 }
 
-private static bool? MatchSchema63093(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
-if (depth > 64 || --remaining < 0) return null;
-bool? result = true;
-{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
-return result;
-}
-
-private static bool? MatchSchema63095(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema63094(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
@@ -74166,21 +74160,18 @@ return result;
 private static bool? MatchSchema63098(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
-{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
-if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
-foreach (var field in fields) {
-{ result &= (MatchSchema63099(field.Value, depth + 1, ref remaining)); if (result == false) return false; }
-}
-}
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 return result;
 }
 
 private static bool? MatchSchema63099(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
-{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray); if (result == false) return false; }
-if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray itemsArray) foreach (var item in itemsArray.GetValue()) {
-{ result &= (MatchSchema63100(item, depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
+if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
+foreach (var field in fields) {
+{ result &= (MatchSchema63100(field.Value, depth + 1, ref remaining)); if (result == false) return false; }
+}
 }
 return result;
 }
@@ -74188,11 +74179,21 @@ return result;
 private static bool? MatchSchema63100(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray); if (result == false) return false; }
+if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray itemsArray) foreach (var item in itemsArray.GetValue()) {
+{ result &= (MatchSchema63101(item, depth + 1, ref remaining)); if (result == false) return false; }
+}
+return result;
+}
+
+private static bool? MatchSchema63101(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 return result;
 }
 
-private static bool? MatchSchema63109(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema63110(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
@@ -74203,43 +74204,36 @@ if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj
 { result &= (fields.ContainsKey("links")); if (result == false) return false; }
 { result &= (fields.ContainsKey("message")); if (result == false) return false; }
 { result &= (fields.ContainsKey("status")); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("category") ? (bool?)true : MatchSchema63111(fields["category"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("context") ? (bool?)true : MatchSchema63120(fields["context"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("errors") ? (bool?)true : MatchSchema63113(fields["errors"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("id") ? (bool?)true : MatchSchema63115(fields["id"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("links") ? (bool?)true : MatchSchema63123(fields["links"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("message") ? (bool?)true : MatchSchema63117(fields["message"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("status") ? (bool?)true : MatchSchema63118(fields["status"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("subCategory") ? (bool?)true : MatchSchema63125(fields["subCategory"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("category") ? (bool?)true : MatchSchema63112(fields["category"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("context") ? (bool?)true : MatchSchema63121(fields["context"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("errors") ? (bool?)true : MatchSchema63114(fields["errors"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("id") ? (bool?)true : MatchSchema63116(fields["id"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("links") ? (bool?)true : MatchSchema63124(fields["links"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("message") ? (bool?)true : MatchSchema63118(fields["message"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("status") ? (bool?)true : MatchSchema63119(fields["status"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("subCategory") ? (bool?)true : MatchSchema63126(fields["subCategory"], depth + 1, ref remaining)); if (result == false) return false; }
 }
 return result;
 }
 
-private static bool? MatchSchema63111(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema63112(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 return result;
 }
 
-private static bool? MatchSchema63113(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema63114(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray); if (result == false) return false; }
 if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray itemsArray) foreach (var item in itemsArray.GetValue()) {
-{ result &= (MatchSchema63091(item, depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (MatchSchema63092(item, depth + 1, ref remaining)); if (result == false) return false; }
 }
 return result;
 }
 
-private static bool? MatchSchema63115(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
-if (depth > 64 || --remaining < 0) return null;
-bool? result = true;
-{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
-return result;
-}
-
-private static bool? MatchSchema63117(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema63116(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
@@ -74253,24 +74247,21 @@ bool? result = true;
 return result;
 }
 
-private static bool? MatchSchema63120(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema63119(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
-{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
-if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
-foreach (var field in fields) {
-{ result &= (MatchSchema63121(field.Value, depth + 1, ref remaining)); if (result == false) return false; }
-}
-}
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 return result;
 }
 
 private static bool? MatchSchema63121(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
-{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray); if (result == false) return false; }
-if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray itemsArray) foreach (var item in itemsArray.GetValue()) {
-{ result &= (MatchSchema63122(item, depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
+if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
+foreach (var field in fields) {
+{ result &= (MatchSchema63122(field.Value, depth + 1, ref remaining)); if (result == false) return false; }
+}
 }
 return result;
 }
@@ -74278,37 +74269,47 @@ return result;
 private static bool? MatchSchema63122(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
-{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray); if (result == false) return false; }
+if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray itemsArray) foreach (var item in itemsArray.GetValue()) {
+{ result &= (MatchSchema63123(item, depth + 1, ref remaining)); if (result == false) return false; }
+}
 return result;
 }
 
 private static bool? MatchSchema63123(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
-{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
-if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
-foreach (var field in fields) {
-{ result &= (MatchSchema63124(field.Value, depth + 1, ref remaining)); if (result == false) return false; }
-}
-}
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 return result;
 }
 
 private static bool? MatchSchema63124(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
-{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
+if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
+foreach (var field in fields) {
+{ result &= (MatchSchema63125(field.Value, depth + 1, ref remaining)); if (result == false) return false; }
+}
+}
 return result;
 }
 
 private static bool? MatchSchema63125(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
-{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 return result;
 }
 
 private static bool? MatchSchema63126(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
+return result;
+}
+
+private static bool? MatchSchema63127(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
@@ -74318,27 +74319,20 @@ bool? enumMatch = false;
 return result;
 }
 
-private static bool? MatchSchema63129(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema63130(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
 if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
 { result &= (fields.ContainsKey("dayOfWeek")); if (result == false) return false; }
 { result &= (fields.ContainsKey("referenceType")); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("dayOfWeek") ? (bool?)true : MatchSchema63137(fields["dayOfWeek"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("hour") ? (bool?)true : MatchSchema63132(fields["hour"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("millisecond") ? (bool?)true : MatchSchema63133(fields["millisecond"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("minute") ? (bool?)true : MatchSchema63134(fields["minute"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("dayOfWeek") ? (bool?)true : MatchSchema63138(fields["dayOfWeek"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("hour") ? (bool?)true : MatchSchema63133(fields["hour"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("millisecond") ? (bool?)true : MatchSchema63134(fields["millisecond"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("minute") ? (bool?)true : MatchSchema63135(fields["minute"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("referenceType") ? (bool?)true : MatchSchema42587(fields["referenceType"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("second") ? (bool?)true : MatchSchema63136(fields["second"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("second") ? (bool?)true : MatchSchema63137(fields["second"], depth + 1, ref remaining)); if (result == false) return false; }
 }
-return result;
-}
-
-private static bool? MatchSchema63132(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
-if (depth > 64 || --remaining < 0) return null;
-bool? result = true;
-{ result &= (Number(node) is decimal integer ? integer % 1 == 0 : IsNumber(node) ? (bool?)null : false); if (result == false) return false; }
 return result;
 }
 
@@ -74356,7 +74350,7 @@ bool? result = true;
 return result;
 }
 
-private static bool? MatchSchema63136(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema63135(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (Number(node) is decimal integer ? integer % 1 == 0 : IsNumber(node) ? (bool?)null : false); if (result == false) return false; }
@@ -74364,6 +74358,13 @@ return result;
 }
 
 private static bool? MatchSchema63137(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (Number(node) is decimal integer ? integer % 1 == 0 : IsNumber(node) ? (bool?)null : false); if (result == false) return false; }
+return result;
+}
+
+private static bool? MatchSchema63138(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
@@ -74379,7 +74380,7 @@ bool? enumMatch = false;
 return result;
 }
 
-private static bool? MatchSchema63146(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema63147(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
@@ -74389,7 +74390,7 @@ bool? enumMatch = false;
 return result;
 }
 
-private static bool? MatchSchema63149(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema63150(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
@@ -74399,7 +74400,7 @@ bool? enumMatch = false;
 return result;
 }
 
-private static bool? MatchSchema63152(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema63153(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
@@ -74409,30 +74410,30 @@ bool? enumMatch = false;
 return result;
 }
 
-private static bool? MatchSchema63155(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema63156(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
 if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
 { result &= (fields.ContainsKey("enclosedInParentheses")); if (result == false) return false; }
 { result &= (fields.ContainsKey("operator")); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("enclosedInParentheses") ? (bool?)true : MatchSchema63157(fields["enclosedInParentheses"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("inputs") ? (bool?)true : MatchSchema63158(fields["inputs"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema63163(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("propertyName") ? (bool?)true : MatchSchema63161(fields["propertyName"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("value") ? (bool?)true : MatchSchema63162(fields["value"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("enclosedInParentheses") ? (bool?)true : MatchSchema63158(fields["enclosedInParentheses"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("inputs") ? (bool?)true : MatchSchema63159(fields["inputs"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema63164(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("propertyName") ? (bool?)true : MatchSchema63162(fields["propertyName"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("value") ? (bool?)true : MatchSchema63163(fields["value"], depth + 1, ref remaining)); if (result == false) return false; }
 }
 return result;
 }
 
-private static bool? MatchSchema63157(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema63158(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedBoolean); if (result == false) return false; }
 return result;
 }
 
-private static bool? MatchSchema63158(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema63159(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray); if (result == false) return false; }
@@ -74442,21 +74443,21 @@ if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray item
 return result;
 }
 
-private static bool? MatchSchema63161(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema63162(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 return result;
 }
 
-private static bool? MatchSchema63162(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema63163(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedBoolean); if (result == false) return false; }
 return result;
 }
 
-private static bool? MatchSchema63163(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema63164(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
@@ -74466,21 +74467,21 @@ bool? enumMatch = false;
 return result;
 }
 
-private static bool? MatchSchema63166(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema63167(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
 if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
 { result &= (fields.ContainsKey("operator")); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("inputs") ? (bool?)true : MatchSchema63168(fields["inputs"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema63173(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("propertyName") ? (bool?)true : MatchSchema63171(fields["propertyName"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("value") ? (bool?)true : MatchSchema63172(fields["value"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("inputs") ? (bool?)true : MatchSchema63169(fields["inputs"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("operator") ? (bool?)true : MatchSchema63174(fields["operator"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("propertyName") ? (bool?)true : MatchSchema63172(fields["propertyName"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("value") ? (bool?)true : MatchSchema63173(fields["value"], depth + 1, ref remaining)); if (result == false) return false; }
 }
 return result;
 }
 
-private static bool? MatchSchema63168(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema63169(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray); if (result == false) return false; }
@@ -74490,21 +74491,21 @@ if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray item
 return result;
 }
 
-private static bool? MatchSchema63171(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema63172(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 return result;
 }
 
-private static bool? MatchSchema63172(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema63173(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedInteger or global::Microsoft.Kiota.Abstractions.Serialization.UntypedLong or global::Microsoft.Kiota.Abstractions.Serialization.UntypedFloat or global::Microsoft.Kiota.Abstractions.Serialization.UntypedDouble or global::Microsoft.Kiota.Abstractions.Serialization.UntypedDecimal); if (result == false) return false; }
 return result;
 }
 
-private static bool? MatchSchema63173(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema63174(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
@@ -74514,7 +74515,7 @@ bool? enumMatch = false;
 return result;
 }
 
-private static bool? MatchSchema63176(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema63177(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
@@ -74522,21 +74523,14 @@ if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj
 { result &= (fields.ContainsKey("day")); if (result == false) return false; }
 { result &= (fields.ContainsKey("month")); if (result == false) return false; }
 { result &= (fields.ContainsKey("referenceType")); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("day") ? (bool?)true : MatchSchema63178(fields["day"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("hour") ? (bool?)true : MatchSchema63179(fields["hour"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("millisecond") ? (bool?)true : MatchSchema63180(fields["millisecond"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("minute") ? (bool?)true : MatchSchema63181(fields["minute"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("month") ? (bool?)true : MatchSchema63182(fields["month"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("day") ? (bool?)true : MatchSchema63179(fields["day"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("hour") ? (bool?)true : MatchSchema63180(fields["hour"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("millisecond") ? (bool?)true : MatchSchema63181(fields["millisecond"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("minute") ? (bool?)true : MatchSchema63182(fields["minute"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("month") ? (bool?)true : MatchSchema63183(fields["month"], depth + 1, ref remaining)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("referenceType") ? (bool?)true : MatchSchema42590(fields["referenceType"], depth + 1, ref remaining)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("second") ? (bool?)true : MatchSchema63184(fields["second"], depth + 1, ref remaining)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("second") ? (bool?)true : MatchSchema63185(fields["second"], depth + 1, ref remaining)); if (result == false) return false; }
 }
-return result;
-}
-
-private static bool? MatchSchema63178(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
-if (depth > 64 || --remaining < 0) return null;
-bool? result = true;
-{ result &= (Number(node) is decimal integer ? integer % 1 == 0 : IsNumber(node) ? (bool?)null : false); if (result == false) return false; }
 return result;
 }
 
@@ -74568,7 +74562,7 @@ bool? result = true;
 return result;
 }
 
-private static bool? MatchSchema63184(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+private static bool? MatchSchema63183(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (Number(node) is decimal integer ? integer % 1 == 0 : IsNumber(node) ? (bool?)null : false); if (result == false) return false; }
@@ -74576,6 +74570,13 @@ return result;
 }
 
 private static bool? MatchSchema63185(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (Number(node) is decimal integer ? integer % 1 == 0 : IsNumber(node) ? (bool?)null : false); if (result == false) return false; }
+return result;
+}
+
+private static bool? MatchSchema63186(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth, ref int remaining) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }

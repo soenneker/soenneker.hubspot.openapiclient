@@ -341734,6 +341734,7 @@
           "DATE_TIME",
           "MONTH_AND_DAY",
           "OBJECT_COORDINATE",
+          "OBJECT_PROPERTY",
           "OBJECT_TYPE",
           "TIME",
           "URI"
@@ -341760,6 +341761,10 @@
             {
               "value": "OBJECT_COORDINATE",
               "name": "ObjectCoordinate"
+            },
+            {
+              "value": "OBJECT_PROPERTY",
+              "name": "ObjectProperty"
             },
             {
               "value": "OBJECT_TYPE",
