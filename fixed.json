@@ -17982,6 +17982,11 @@
             "url_mappings_oauth2": [
               "content"
             ]
+          },
+          {
+            "url_mappings_oauth2": [
+              "cms.url_redirects.read"
+            ]
           }
         ],
         "servers": [
@@ -18014,6 +18019,11 @@
           }
         },
         "security": [
+          {
+            "url_mappings_oauth2": [
+              "cms.url_redirects.write"
+            ]
+          },
           {
             "url_mappings_oauth2": [
               "content"
@@ -18070,6 +18080,11 @@
             "url_mappings_oauth2": [
               "content"
             ]
+          },
+          {
+            "url_mappings_oauth2": [
+              "cms.url_redirects.read"
+            ]
           }
         ],
         "servers": [
@@ -18108,6 +18123,11 @@
           }
         },
         "security": [
+          {
+            "url_mappings_oauth2": [
+              "cms.url_redirects.write"
+            ]
+          },
           {
             "url_mappings_oauth2": [
               "content"
@@ -652613,11 +652633,27 @@
             "authorizationUrl": "https://app.hubspot.com/oauth/authorize",
             "tokenUrl": "https://api.hubapi.com/oauth/v1/token",
             "scopes": {
+              "cms.url_redirects.read": "",
+              "cms.url_redirects.write": "",
               "content": ""
             }
           }
         },
         "x-hubspot-app-availability": {
+          "cms.url_redirects.read": {
+            "portal": [
+              "public",
+              "private"
+            ],
+            "developer": false
+          },
+          "cms.url_redirects.write": {
+            "portal": [
+              "public",
+              "private"
+            ],
+            "developer": false
+          },
           "content": {
             "portal": [
               "public",
