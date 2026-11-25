@@ -1625,7 +1625,17 @@
           },
           {
             "automation_oauth2": [
+              "workflows.trigger"
+            ]
+          },
+          {
+            "automation_oauth2": [
               "workflows.write"
+            ]
+          },
+          {
+            "automation_oauth2": [
+              "workflows.publish"
             ]
           },
           {
@@ -1693,7 +1703,17 @@
           },
           {
             "automation_oauth2": [
+              "workflows.trigger"
+            ]
+          },
+          {
+            "automation_oauth2": [
               "workflows.write"
+            ]
+          },
+          {
+            "automation_oauth2": [
+              "workflows.publish"
             ]
           },
           {
@@ -337433,6 +337453,8 @@
           "JOINED_PORTAL_VIA_DOMAIN_BASED_INVITE",
           "LEGAL_BASIS_REQUIREMENT_DISABLED",
           "LEGAL_BASIS_REQUIREMENT_ENABLED",
+          "LIVE_CHAT_SENSITIVE_DATA_DISABLED",
+          "LIVE_CHAT_SENSITIVE_DATA_ENABLED",
           "MANUAL_PASSWORD_RESET_EMAIL_SEND",
           "MANUAL_REGISTRATION_EMAIL_SEND",
           "MARKETING_CONTACTS_APP_SETTINGS_DISABLED",
@@ -337803,6 +337825,14 @@
             {
               "value": "LEGAL_BASIS_REQUIREMENT_ENABLED",
               "name": "LegalBasisRequirementEnabled"
+            },
+            {
+              "value": "LIVE_CHAT_SENSITIVE_DATA_DISABLED",
+              "name": "LiveChatSensitiveDataDisabled"
+            },
+            {
+              "value": "LIVE_CHAT_SENSITIVE_DATA_ENABLED",
+              "name": "LiveChatSensitiveDataEnabled"
             },
             {
               "value": "MANUAL_PASSWORD_RESET_EMAIL_SEND",
@@ -491963,6 +491993,7 @@
           "hs_messaging_engagement_score",
           "hs_mobile_sdk_push_tokens",
           "hs_next_renewal_date",
+          "hs_normalized_email",
           "hs_notes_last_activity",
           "hs_notes_next_activity",
           "hs_notes_next_activity_type",
@@ -493132,6 +493163,10 @@
             {
               "value": "hs_next_renewal_date",
               "name": "HsNextRenewalDate"
+            },
+            {
+              "value": "hs_normalized_email",
+              "name": "HsNormalizedEmail"
             },
             {
               "value": "hs_notes_last_activity",
@@ -635552,6 +635587,10 @@
             "type": "boolean",
             "description": "A boolean indicating whether the subscription is active. If true, the subscription is active; if false, it is inactive.",
             "example": null
+          },
+          "enabled": {
+            "type": "boolean",
+            "example": null
           }
         },
         "example": null
@@ -652017,7 +652056,9 @@
             "scopes": {
               "automation": "",
               "workflows.delete": "",
+              "workflows.publish": "",
               "workflows.read": "",
+              "workflows.trigger": "",
               "workflows.write": ""
             }
           }
@@ -652037,7 +652078,21 @@
             ],
             "developer": false
           },
+          "workflows.publish": {
+            "user": [
+              "public",
+              "private"
+            ],
+            "developer": false
+          },
           "workflows.read": {
+            "user": [
+              "public",
+              "private"
+            ],
+            "developer": false
+          },
+          "workflows.trigger": {
             "user": [
               "public",
               "private"

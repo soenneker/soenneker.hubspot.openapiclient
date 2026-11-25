@@ -287,6 +287,14 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         #pragma warning disable CS1591
         LegalBasisRequirementEnabled,
         #pragma warning restore CS1591
+        [EnumMember(Value = "LIVE_CHAT_SENSITIVE_DATA_DISABLED")]
+        #pragma warning disable CS1591
+        LiveChatSensitiveDataDisabled,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "LIVE_CHAT_SENSITIVE_DATA_ENABLED")]
+        #pragma warning disable CS1591
+        LiveChatSensitiveDataEnabled,
+        #pragma warning restore CS1591
         [EnumMember(Value = "MANUAL_PASSWORD_RESET_EMAIL_SEND")]
         #pragma warning disable CS1591
         ManualPasswordResetEmailSend,

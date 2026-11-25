@@ -996,6 +996,10 @@ namespace Soenneker.HubSpot.OpenApiClient.Models
         #pragma warning disable CS1591
         HsNextRenewalDate,
         #pragma warning restore CS1591
+        [EnumMember(Value = "hs_normalized_email")]
+        #pragma warning disable CS1591
+        HsNormalizedEmail,
+        #pragma warning restore CS1591
         [EnumMember(Value = "hs_notes_last_activity")]
         #pragma warning disable CS1591
         HsNotesLastActivity,
